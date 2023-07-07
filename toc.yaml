@@ -1,0 +1,136 @@
+toc:
+  properties:
+    subcollection: watsonxdata
+    category: database
+    audience: service
+    href: /docs/watsonxdata
+    console-page: /catalog/services/lakehouse
+    product-page: https://www.ibm.com/products/watsonx-data
+    path: watsonxdata
+    label: IBM watsonx.data
+
+  entries:
+  - navgroup:
+      id: learn
+      topics:
+      - getting-started.md
+      - topicgroup:
+          label: watsonx.data components
+          topics:
+          - presto_overview.md
+          - db2_connector.md
+          - hudi_connector.md
+          - netezza_connector.md
+          - hms_overview.md
+      - release.md
+
+  - navgroup:
+      id: tutorial
+      topics:
+      - happy_path.md
+      - quick_start.md
+      - tut_provi_ibmbckt.md
+      - tut_provi_custbckt.md
+      - tut_ingest_manual.md
+
+  - navgroup:
+      id: howto
+      topics:
+      - start_console.md
+      - topicgroup:
+          label: Configuring watsonx.data components
+          topics:
+          - prov_engine.md
+          - edit-eng-tags.md
+          - scale-engine.md
+          - pause_engine.md
+          - resume-engine.md
+          - del_engine.md
+          - asso-cat-eng.md
+          - explore-cat-obj.md
+          - disso-cat-eng.md
+          - reg_database.md
+          - update-db-cred.md
+          - edit-db-tags.md
+          - delete_database.md
+          - reg_bucket.md
+          - explor-buck-obj.md
+          - edit-buck-tags.md
+          - delete_bucket.md
+      - topicgroup:
+          label: Loading data
+          topics:
+            - ingestdata.md
+            - ingest_data_cli.md
+            - cli_commands.md
+            - ingest_datafiles_cli.md
+            - ingest_datafiles_config.md
+      - topicgroup:
+          label: Exploring data
+          topics:
+            - exp_objects.md
+            - import_data.md
+            - create_table.md
+            - create_schema.md
+      - topicgroup:
+          label: Querying data
+          topics:
+            - run_sql.md
+            - run_sql_updated.md
+            - explain_sql_query.md
+      - topicgroup:
+          label: Query history
+          topics:
+            - query_history.md
+            - exp-imp-qh.md
+      - conn-presto-thr-cli.md
+      - delete_lh.md
+      - topicgroup:
+          label: Working with Spark engine
+          topics:
+            - provisioning-spark.md
+            - config_spark.md
+            - spark-use-case.md
+            - hms_credentials.md
+      - topicgroup:
+          label: Enhancing security
+          topics:
+            - arch_wl_isolation.md
+            - data_security.md
+      - iam.md
+      - topicgroup:
+          label: Access control
+          topics:
+            - manage_access.md
+            - role_priv.md
+            - data_policy.md
+      - notifications.md
+      - event_notifications.md
+      - topicgroup:
+          label: Logging and monitoring
+          topics:
+            - at_events_docs.md
+            - log_analysis.md
+            - monitoring_wxdcloud.md
+
+  - navgroup:
+      id: reference
+      topics:
+      - supported_sql_statements.md
+      - response.md
+      - high_availability_lh.md
+      - update-process.md
+      - link:
+            label: watsonx.data APIs
+            href: https://cloud.ibm.com/apidocs/watsonxdata
+
+  - navgroup:
+      id: help
+      topics:
+      - faqs.md
+      - known_issues.md
+      - topicgroup:
+          label: Troubleshooting
+          topics:
+            - ts_cs_issue.md
+      - get-help.md

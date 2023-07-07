@@ -1,0 +1,41 @@
+{
+    "title": "watsonx.data docs",
+    "lastupdated": "2023-06-25",
+    "introduction": "Welcome to the watsonx.data product documentation.",
+    "section_devtools": {
+      "api": "/apidocs/watsonxdata"
+    },
+    "section_recommended": [
+      {
+        "title": "Getting started",
+        "description": "A brief tutorial to introduce using watsonx.data.",
+        "href": "/docs/watsonxdata?topic=watsonxdata-getting-started"
+      },
+      {
+        "title": "FAQs",
+        "description": "Answers to frequently asked questions about watsonx.data.",
+        "href": "/docs/watsonxdata?topic=watsonxdata-faqs"
+      }
+    ],
+    "section_learn": {
+      "developer": "https://developer.ibm.com/depmodels/cloud/",
+      "architecture": "https://www.ibm.com/cloud/architecture",
+      "training": "https://www.ibm.com/training/cloud",
+      "community": "https://community.ibm.com/community/user/publiccloud/home"
+    },
+    "section_updates": {
+      "view_more": "/docs/watsonxdata?topic=watsonxdata-release",
+      "tiles": [
+        {
+          "date": "07 July 2023",
+          "title": "watsonx.data GA",
+          "description": "Coming soon"
+        },
+        {
+          "date": "17 April 2023",
+          "title": "watsonx.data beta",
+          "description": "The IBM watsonx.data closed beta is now live."
+        }
+      ]
+    }
+  }
