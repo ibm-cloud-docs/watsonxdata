@@ -15,8 +15,8 @@ subcollection: watsonxdata
 {: #lh-provisioning-serverless}
 
 For {{site.data.keyword.lakehouse_short}}, it is recommend to use {{site.data.keyword.iae_full_notm}} Spark to achieve below use-cases:
-1. Ingesting large volume of data into {{site.data.keyword.lakehouse_short}} tables. You can also cleanse and transform data before ingestion.
-2. Table maintenance operation to enhance the {{site.data.keyword.lakehouse_short}} performance of the table
+1. Ingesting large volumes of data into {{site.data.keyword.lakehouse_short}} tables. You can also cleanse and transform data before ingestion.
+2. Table maintenance operation to enhance {{site.data.keyword.lakehouse_short}} performance of the table
 3. Complex analytics workload which are difficult to represent as queries.
 
 
@@ -43,7 +43,7 @@ To create an {{site.data.keyword.iae_full_notm}} instance:
 1. Choose the location that is closer to the region where you have provisioned {{site.data.keyword.lakehouse_short}} for deploying the service instance. Currently, **us-south** and **eu-de** are the only supported regions.
 1. Select a plan. Currently, **Standard Serverless for Apache Spark** is the only supported serverless plan.
 1. Configure the instance by entering a name of your choice, selecting a resource group and adding tags.
-1. Select latest runtime version available ( for example 3.3).
+1. Select latest runtime version available (for example 3.3).
 1. Select the {{site.data.keyword.cloud_notm}} Object Storage instance from your account that you want to use as the {{site.data.keyword.iae_short}} **instance home** to store instance-related data.
 1. Click **Create** to provision the service instance in the background.
 
@@ -55,7 +55,7 @@ To create an {{site.data.keyword.iae_full_notm}} instance:
 To create a service instance by using the {{site.data.keyword.Bluemix_short}} command-line interface:
 
 
-1. Download and configure the {{site.data.keyword.Bluemix_short}} CLI. Follow the instructions in [Getting started with the {{site.data.keyword.Bluemix_short}} CLI](/docs/cli?topic=cli-getting-started).
+1. Download and configure the {{site.data.keyword.Bluemix_short}} CLI. Follow the instructions in [Getting started with the {{site.data.keyword.Bluemix_short}} CLI](/docs/cli?topic=cli-getting-started){: external}.
 
 1. Set the API endpoint for your region and log in:
     ```bash
@@ -86,7 +86,11 @@ To create a service instance by using the {{site.data.keyword.Bluemix_short}} co
     Parameter value:
     * SERVICE_INSTANCE_NAME: Specify a name for the instance.
     * PLAN_NAME: Specify the plan name as **plan_name8afde05e-5fd8-4359-a597-946d8432dd45**.
-    * REGION: Specify the region where you like to provision the instance. Note that currently, standard-serverless-spark is the only supported serverless plan and us-south and eu-de the only supported regions. Choose one that is closer to the region where you have provisioned watsonx.data
+    * REGION: Specify the region where you like to provision the instance.
+
+    Note that currently, standard-serverless-spark is the only supported serverless plan and us-south and eu-de the only supported regions. Choose one that is closer to the region where you have provisioned watsonx.data.
+    {: note}
+
     * PATH_to JSON file: Include the path to the JSON file that contains the provisioning parameters.
 
     For example, for the Dallas region:
@@ -95,15 +99,17 @@ To create a service instance by using the {{site.data.keyword.Bluemix_short}} co
     ```
     {: codeblock}
 
-    You can give the service instance any name you choose. Note that currently, **standard-serverless-spark** is the only supported serverless plan and **us-south** and **eu-de** the only supported regions.
+    You can give the service instance any name you choose.
+    Note that currently, **standard-serverless-spark** is the only supported serverless plan and **us-south** and **eu-de** the only supported regions.
+    {: note}
 
-    The provision.json file contains the provisioning parameters for the instance that you want to create.
+    The `provision.json` file contains the provisioning parameters for the instance that you want to create.
 
-    The endpoint to your {{site.data.keyword.Bluemix_short}} Object Storage instance in the payload JSON file should be the direct endpoint. Direct endpoints provide better performance than public endpoints and do not incur charges for any outgoing or incoming bandwidth.
+    The endpoint to your {{site.data.keyword.Bluemix_short}} Object Storage instance in the payload JSON file must be the direct endpoint. Direct endpoints provide better performance than public endpoints and do not incur charges for any outgoing or incoming bandwidth.
 
-This is a sample of what the provision.json file can look like.
+    Following is a sample provision.json file.
 
-```bash
+    ```bash
     {
       "default_runtime": {
         "spark_version": "3.3"
@@ -143,44 +149,44 @@ This is a sample of what the provision.json file can look like.
     Last Operation:
                         Status    create in progress
                         Message   Started create instance operation
-```
-{: codeblock}
+    ```
+    {: codeblock}
 
-The sample response to the create instance command is:
-```bash
-Creating service instance MyServiceInstance in resource group Default of account <your account name> as <your user name>...
-OK
-Service instance MyServiceInstance was created.
+    The sample response to the create instance command is:
+    ```bash
+    Creating service instance MyServiceInstance in resource group Default of account <your account name> as <your user name>...
+    OK
+    Service instance MyServiceInstance was created.
 
-Name:                MyServiceInstance
-ID:                  crn:v1:staging:public:ibmanalyticsengine:us-south:a/d628eae2cc7e4373bb0c9d2229f2ece5:1e32e***-afd9-483a-b1**-724ba5cf4***::
-GUID:                1e32e***-afd9-483a-b1**-724ba5cf4***
-Location:            us-south
-State:               provisioning
-Type:                service_instance
-Sub Type:
-Service Endpoints:   public
-Allow Cleanup:       false
-Locked:              false
-Created at:          2021-11-29T07:20:40Z
-Updated at:          2021-11-29T07:20:42Z
-Last Operation:
+    Name:                MyServiceInstance
+    ID:                  crn:v1:staging:public:ibmanalyticsengine:us-south:a/d628eae2cc7e4373bb0c9d2229f2ece5:1e32e***-afd9-483a-b1**-724ba5cf4***::
+    GUID:                1e32e***-afd9-483a-b1**-724ba5cf4***
+    Location:            us-south
+    State:               provisioning
+    Type:                service_instance
+    Sub Type:
+    Service Endpoints:   public
+    Allow Cleanup:       false
+    Locked:              false
+    Created at:          2021-11-29T07:20:40Z
+    Updated at:          2021-11-29T07:20:42Z
+    Last Operation:
                     Status    create in progress
                     Message   Started create instance operation
-```
-{: codeblock}
+    ```
+    {: codeblock}
 
 
-Make a note of the instance ID from the output. You will need the instance ID when you call instance management or Spark application management APIs. See [Spark application REST API](/docs/AnalyticsEngine?topic=AnalyticsEngine-spark-app-rest-api).
-{: important}
+    Make a note of the instance ID from the output. You will need the instance ID when you call instance management or Spark application management APIs. See [Spark application REST API](/docs/AnalyticsEngine?topic=AnalyticsEngine-spark-app-rest-api){: external}.
+    {: important}
 
-1. [Track instance readiness](#instance-readiness).
+5. [Track instance readiness](#lh-instance-readiness).
 
 
 ## Creating a service instance by using the Resource controller REST API
 {: #lh-rest-api-provisioning}
 
-An {{site.data.keyword.iae_full_notm}} serverless instance must reside in an {{site.data.keyword.Bluemix_short}} resource group. As a first step toward creating an {{site.data.keyword.iae_full_notm}} serverless instance through the Resource controller REST API, you need to have the resource group ID and serverless plan ID close at hand.
+An {{site.data.keyword.iae_full_notm}} serverless instance must reside in an {{site.data.keyword.Bluemix_short}} resource group. As a first step toward creating an {{site.data.keyword.iae_full_notm}} serverless instance through the Resource controller REST API, you must have the resource group ID and serverless plan ID close at hand.
 
 To create a service instance by using the Resource controller REST API:
 
@@ -203,7 +209,7 @@ To create a service instance by using the Resource controller REST API:
     ```
     {: codeblock}
 
-1. Get the IAM token by performing the following [steps](/docs/AnalyticsEngine?topic=AnalyticsEngine-retrieve-iam-token-serverless).
+1. Get the IAM token. For instructions, see [steps](/docs/AnalyticsEngine?topic=AnalyticsEngine-retrieve-iam-token-serverless){: external}.
 1. Create an instance by using the Resource controller REST API:
     ```bash
     curl -X POST https://resource-controller.cloud.ibm.com/v2/resource_instances/
@@ -211,10 +217,10 @@ To create a service instance by using the Resource controller REST API:
     ```
     {: codeblock}
 
-    The provision.json file contains the provisioning parameters for the instance that you want to create. See [Architecture and concepts in serverless instances](/docs/AnalyticsEngine?topic=AnalyticsEngine-serverless-architecture-concepts) for a description of the provisioning parameters in the payload.
+    The provision.json file contains the provisioning parameters for the instance that you want to create. See [Architecture and concepts in serverless instances](/docs/AnalyticsEngine?topic=AnalyticsEngine-serverless-architecture-concepts){: external} for a description of the provisioning parameters in the payload.
 
 
-    This is a sample of what the provision.json file can look like:
+    Following is a sample of the `provision.json` file.
     ```bash
     {
       "name": "your-service-instance-name",
@@ -238,7 +244,7 @@ To create a service instance by using the Resource controller REST API:
 
 1. [Track instance readiness](#lh-instance-readiness).
 
-For more information on the Resource controller REST API for creating an instance, see [Create (provision) a new resource instance](/apidocs/resource-controller/resource-controller#create-resource-instance).
+For more information on the Resource controller REST API for creating an instance, see [Create (provision) a new resource instance](/apidocs/resource-controller/resource-controller#create-resource-instance){: external}.
 
 ## Tracking instance readiness
 {: #lh-instance-readiness}
@@ -282,4 +288,4 @@ To track instance readiness:
 ## Learn more
 {: #lh-learnmore}
 
-When provisioning serverless instances, follow the recommended [Best practices](/docs/AnalyticsEngine?topic=AnalyticsEngine-best-practices-serverless).
+When provisioning serverless instances, follow the recommended [Best practices](/docs/AnalyticsEngine?topic=AnalyticsEngine-best-practices-serverless){: external}.

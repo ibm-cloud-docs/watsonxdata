@@ -43,4 +43,4 @@ The query history page in {{site.data.keyword.lakehouse_short}} provides the fol
 
 In the **Query history** page, you can search, refresh, filter, and customize the queries. You can select a **Query** from the page, view or copy the details of query statement, logical execution plan, and distributed execution plan. You can open the queries directly in a workspace, and also get the explain details of a query from the overflow menu of each query listed.
 
-For more information about exporting and importing query history, see [Exporting and importing the query history](watsonxdata?topic=watsonxdata-exp-imp-qh).
+For more information about exporting and importing query history, see [Exporting and importing the query history](watsonxdata?topic=watsonxdata-eximp-q-hist).

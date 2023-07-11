@@ -33,12 +33,12 @@ Data ingestion is the process of importing and loading data into {{site.data.key
 {: shortdesc}
 
 When you ingest a data file into the {{site.data.keyword.lakehouse_short}}, the table schema is generated and inferred when a query is run.
-Data ingestion in {{site.data.keyword.lakehouse_short}} supports CSV and Parquet formats. The files to be ingested must be of the same format type and same schema. The {{site.data.keyword.lakehouse_short}} auto-discovers the schema based on the source file being ingested.
+Data ingestion in {{site.data.keyword.lakehouse_short}} supports CSV and Parquet formats. The files to be ingested must be of the same format type and same schema. {{site.data.keyword.lakehouse_short}} auto-discovers the schema based on the source file being ingested.
 
 ## Loading or ingesting data through CLI
 {: #load_ingest_datacli}
 
-An ingestion job in {{site.data.keyword.lakehouse_short}} can be run with the **ibm-lh** tool. The tool must be pulled from the `ibm-lh-client` and installed in the local system to run the ingestion job through the CLI.
+An ingestion job in {{site.data.keyword.lakehouse_short}} can be run with the **ibm-lh** tool. The tool must be pulled from the `ibm-lh-client` and installed in the local system to run the ingestion job through the CLI. For more details and instructions to install `ibm-lh-client` package and use the **ibm-lh** tool for ingestion, see [Installing ibm-lh-client](https://www.ibm.com/docs/en/watsonxdata/1.0.x?topic=package-installing-lh-client){: external} and [Setting up the ibm-lh command-line utility](https://www.ibm.com/docs/en/watsonxdata/1.0.x?topic=package-setting-up-lh-cli-utility){: external}.
 
 The **ibm-lh** tool supports the following features:
 

@@ -28,7 +28,7 @@ completion-time: 9h
 In this tutorial, you learn how to set up two data sources, Db2 and Netezza in your {{site.data.keyword.lakehouse_full}} instance and to analyse the combined data from these sources.
 {: shortdesc}
 
-**Sample Scenario** : You are the Data Engineer for your company. The company stores the sales data in Db2 Warehouse whearas the customer data resides in Netezza. Your task is to combine and analyze the two data sets and gain knowldege about the customer behaviour.
+**Sample Scenario** : You are the Data Engineer for your company. The company stores the sales data in Db2 Warehouse whereas, the customer data resides in Netezza. Your task is to combine and analyze the two data sets and gain knowldege about the customer behaviour.
 In this scenario, you explore the process of obtaining data from two seperate data sources, combining them, and creating a comprehensive view in {{site.data.keyword.lakehouse_short}} instance.
 
 ## Objective
@@ -76,7 +76,7 @@ In this section of the tutorial, you are going to deploy a {{site.data.keyword.l
 
    b. **Private endpoint only** - Private endpoints route traffic through the IBM Cloud Private network (single endpoint).
 
-   c. **Both public and private endpoints** - Public endpoints provide a connection to your deployment on the public network. Private endpoints route traffic through the IBM Cloud Private network. (Two separate endpoints).
+   c. **Both public and private endpoints** - Public endpoints provide a connection to your deployment on the public network. Private endpoints route traffic through the IBM Cloud Private network. (two separate endpoints).
 
 2. After selecting the appropriate settings, click **Create** to start the provisioning process. The **Resource List** page opens with the **{{site.data.keyword.lakehouse_short}}** service that is listed under **Databases**.
 
@@ -152,9 +152,9 @@ Next, you learn the steps to setup the two specific databases, Db2 and Netezza, 
    | Tags (optional) | Enter the tag name or select from drop-down list.|
    {: caption="Table 1. Register database" caption-side="bottom"}
 
-   Based on the database you are adding, enter related details in appropriate fields. For example, hostname, username, and password.
+   Based on the database you are adding, enter related details in appropriate fields. For example, hostname, username, and password. For more information, see [Db2 connector](watsonxdata?topic=watsonxdata-db2_connector){: external} details and [Netezza connector](watsonxdata?topic=watsonxdata-netezza_connector){: external} details.
 
-   When the **SSL Connection** is checked, the server-side certificate that is used by the database must be issued by one of the global trusted certification authorities (CA) such as DigiCert. This is a typical case for cloud-hosted databases.
+   When the **SSL Connection** is selected, the server-side certificate that is used by the database must be issued by one of the global trusted certification authorities (CA) such as DigiCert. This is a typical case for cloud-hosted databases.
    {: note}
 
 5. Click **Add**.
@@ -184,20 +184,17 @@ In this section of the tutorial, you learn how to load the data into the catalog
 
 1. In the {{site.data.keyword.lakehouse_short}} console, select **Data manager** from the navigation menu.
 1. Select the Presto engine from the **Engine** drop-down. The catalogs that are associated with the selected engine are displayed.
-1. Select the **Db2** catalog and follow the steps to [create a schema](watsonxdata?topic=watsonxdata-create_schema).
+1. Select the **Db2** catalog and follow the steps to [create a schema](watsonxdata?topic=watsonxdata-create_schema){: external}.
     1. Select the schema that you created now. Click the **Create** drop-down and select **Create table**. The **Create ingestion job** page appears.
 
     1. In the **Create ingestion job** page, drag the files to the rectangle box or click to upload.
-
-      For Beta, remote upload is disabled through the web console. You can upload files from your local system only.
-      {: note}
 
     2. If required, make the necessary changes in the **Configure** options section and click **Next**. You can also preview the file being uploaded.
     3. In the **Target** form, select the Presto query engine, the target table, Db2 catalog, and schema for the file you are ingesting.
     4. Enter a name for the table in the **Table** field and click **Next**.
     5. Verify the details in the **Summary** page and click **Ingest**.
 
-1. Select the **Netezza** catalog and repeat the sub steps(from a to e) to create a schema and table for Netezza.
+1. Select the **Netezza** catalog and repeat the sub steps (from a to e) to create a schema and table for Netezza.
 
 ## Combine data
 {: #ibmbckt_stp7}
@@ -231,4 +228,4 @@ To run the SQL query to join two tables, do the following steps:
 5. Click the **Run on** button to run the query.
 6. Select **Result set** or **Details** tab to view the combined result. If required, you can save the query.
 7. Click **Saved queries** to view the saved queries.
-8. Click [**Explain**](watsonxdata?topic=watsonxdata-explain_sql_query) to view the logical or distributed plan of execution for a specified SQL query.
+8. Click [**Explain**](watsonxdata?topic=watsonxdata-explain_sql_query){: external} to view the logical or distributed plan of execution for a specified SQL query.

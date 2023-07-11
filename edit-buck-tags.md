@@ -34,7 +34,7 @@ To edit the description and tags of a bucket, use one of the following methods:
 
 - **Editing bucket description and tags in list view**
 
-1. Click the name of bucket. Bucket information window opens.
+1. Click the name of bucket. The bucket information page opens.
 2. In the **Details** tab, click **Edit**.
 3. In the **Description** field, enter the description of the bucket or edit the existing description.
 4. In the **Tags** field, select the tags from the list or start typing to define a new tag.
@@ -42,7 +42,7 @@ To edit the description and tags of a bucket, use one of the following methods:
 
 - **Editing bucket description and tags in topology view**
 
-1. Click the bucket. Bucket information window opens.
+1. Click the bucket. The bucket information page opens.
 2. In the **Details** tab, click **Edit**.
 3. In the **Description** field, enter the description of the bucket or edit the existing description.
 4. In the **Tags** field, select the tags from the list or start typing to define a new tag.

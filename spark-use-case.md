@@ -20,7 +20,7 @@ This page demonstrates the procedure to run Spark use cases for {{site.data.keyw
 {: #spk_preq}
 
 * Provision an {{site.data.keyword.lakehouse_full}} instance.
-* Configure an {{site.data.keyword.iae_full_notm}} instance against a {{site.data.keyword.lakehouse_short}} instance.
+* Configure an {{site.data.keyword.iae_full_notm}} instance.
 * Cloud Object Storage bucket connection details.
 
 ## About the sample use case

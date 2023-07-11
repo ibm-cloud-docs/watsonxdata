@@ -34,10 +34,10 @@ To explore the objects in a catalog, use one of the following methods:
 
 - **Exploring catalog objects in list view**
 
-1. Click the name of catalog that you want to explore. Catalog information window opens.
+1. Click the name of catalog that you want to explore. The catalog information page opens.
 2. Click **Objects**.
 
 - **Exploring catalog objects in topology view**
 
-1. Click the catalog that you want to explore. Catalog information window opens.
+1. Click the catalog that you want to explore. The catalog information page opens.
 2. Click **Objects**.

@@ -32,7 +32,7 @@ subcollection: watsonxdata
 ## Hive Metastore
 {: #hms_intro}
 
-Hive Metastore (HMS) is a service that stores metadata related to presto and other services in a backend Relational Database Management System (RDBMS) or Hadoop Distributed File System (HDFS).
+Hive Metastore (HMS) is a service that stores metadata related to Presto and other services in a backend Relational Database Management System (RDBMS) or Hadoop Distributed File System (HDFS).
 {: shortdesc}
 
 When you create a new table, information related to the schema such as column names, data types etc is stored in the metastore relational database. A metastore enables the user to see the data files in the HDFS object storage as if they are stored in tables with HMS.

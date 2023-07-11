@@ -27,15 +27,15 @@ subcollection: watsonxdata
 {:video: .video}
 
 # Exporting and importing the query history
-{: #eximp-qhist}
+{: #eximp-q-hist}
 
-The Presto coordinator stores the query history in `system.runtime.queries` table. But `system.runtime.queries` table truncates when you restart the Presto, resulting in loss of query history.
+The Presto coordinator stores the query history in `system.runtime.queries` table. But `system.runtime.queries` table truncates when you restart Presto, resulting in loss of query history.
 To mitigate this issue, you can export query history as a csv file and also import the query history from the system.runtime.queries table to a non-system table.
 {: shortdesc}
 
-You must do this process periodically to avoid the loss of query history.
+It is recommended to periodically export the query history to avoid losing it.
 
-To import and export the query history, you must install the Presto CLI. For more information, see [Connecting to Presto server in watsonx.data on IBM Cloud](watsonxdata?topic=watsonxdata-conn-presto-thr-cli).
+To import and export the query history, you must install the Presto CLI. For more information, see [Connecting to Presto server](watsonxdata?topic=watsonxdata-con-presto-serv){: external}.
 
 ## Exporting query history
 {: #export-qh}
@@ -43,11 +43,16 @@ To import and export the query history, you must install the Presto CLI. For mor
 To export the query history, run the following command.
 
 ```bash
+export PRESTO_PASSWORD=<your api_key>
+```
+{: codeblock}
+
+
+```bash
 ./presto --server https://<port:host> --catalog system \
 --schemaruntime --execute "select * from queries" \
 --user ibmlhapikey --output-format CSV_HEADER > history.csv --password
 ```
-`export PRESTO_PASSWORD=<your api_key>`
 {: codeblock}
 
 This command generates a CSV file, which contains exported query history.
@@ -83,7 +88,10 @@ ce8de101f7cf.cdc406pd09pasng7elgg.databases.appdomain.cloud:30929 \
     ```
     {: codeblock}
 
-2. Create a table in same catalog. This table must have same metadata as that of `system.runtime.queries` table. Use `CREATE TABLE AS SELECT` statement to create this table.
+2. Create a table in same catalog.
+
+    This table must have same metadata as that of `system.runtime.queries` table. Use `CREATE TABLE AS SELECT` statement to create this table.
+    {: note}
 
     ```bash
     create table <non-system-table-name> as select * from system.runtime.queries where 1=0;
@@ -120,7 +128,7 @@ ce8de101f7cf.cdc406pd09pasng7elgg.databases.appdomain.cloud:30929 \
     ```
     {: codeblock}
 
-4. To retrieve query history from both tables, use following statement
+4. To retrieve query history from both tables, use following statement.
 
     ```bash
     select * from <non-system-table-name> union select * from `system.runtime.queries` order by created;

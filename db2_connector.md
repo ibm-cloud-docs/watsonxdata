@@ -33,7 +33,7 @@ subcollection: watsonxdata
 Db2 connector for Presto is a customized connector for {{site.data.keyword.lakehouse_full}}.
 {: shortdesc}
 
-For more information about SQL statements supported by Db2 connector, see [Supported SQL statements](watsonxdata?topic=watsonxdata-supported_sql_statements).
+For more information about SQL statements supported by Db2 connector, see [Supported SQL statements](watsonxdata?topic=watsonxdata-supported_sql_statements){: external}.
 
 ## Connectivity
 {: #db2_connectivity}
@@ -52,17 +52,17 @@ To connect Presto to your Db2 database, you need the following database details.
 | Database name | The name of the Db2 database.|
 {: caption="Table 1. Database details" caption-side="bottom"}
 
-### Connect credentials
+### Connection credentials
 {: #db2_connect_credentials}
 
-To connect Presto to your Db2 database, you need the following connect credentials.
+To connect Presto to your Db2 database, you need the following connection credentials.
 
 | Credential | Description |
 |-------------|----------------|
 | IBM ID| IBM ID is the ID that you used to log in to IBM Cloud. **NOTE:** Do not use the ID that you use to connect applications or tools to your Db2 database.|
 | Db2 database credentials | Use your database user ID and password.|
 | Administrator-created users | Db2 Warehouse and some Db2 managed service plans allow administrative users to create new users. These administrator-created user IDs and passwords can be used to log in to the web console URL and connect to the Db2 database from applications or tools.|
-{: caption="Table 12. Connect credentials" caption-side="bottom"}
+{: caption="Table 12. Connection credentials" caption-side="bottom"}
 
 
 If you are not the owner or administrator of your Db2 instance, you can get your database details and connect credentials from your administrator.

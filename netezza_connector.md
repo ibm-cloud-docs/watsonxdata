@@ -29,10 +29,10 @@ subcollection: watsonxdata
 # Netezza connector for Presto
 {: #netezza_connector}
 
-Netezza connector for Presto is a customized connector for IBM {{site.data.keyword.lakehouse_full}}.
+Netezza connector for Presto is a customized connector for {{site.data.keyword.lakehouse_full}}.
 {: shortdesc}
 
-For more information about SQL statements supported by Netezza connector, see [Supported SQL statements](watsonxdata?topic=watsonxdata-supported_sql_statements).
+For more information about SQL statements supported by Netezza connector, see [Supported SQL statements](watsonxdata?topic=watsonxdata-supported_sql_statements){: external}.
 
 ## Connectivity
 {: #nz_connectivity}
@@ -51,15 +51,15 @@ To connect Presto to your Netezza database, you need the following database deta
 | Database name | The name of the Netezza database|
 {: caption="Table 1. Database details" caption-side="bottom"}
 
-### Connect credentials
+### Connection credentials
 {: #connect_credentials}
 
-To connect Presto to your Netezza database, you need the following connect credentials.
+To connect Presto to your Netezza database, you need the following connection credentials.
 
 | Credential | Description |
 |-------------|----------------|
 | Netezza database credentials | Use your database user ID and password.|
-{: caption="Table 12. Connect credentials" caption-side="bottom"}
+{: caption="Table 12. Connection credentials" caption-side="bottom"}
 
 ## Configuring Netezza connector
 {: #config_netezza}

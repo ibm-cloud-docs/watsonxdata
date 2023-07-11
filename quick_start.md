@@ -105,5 +105,3 @@ When the setup is complete, the {{site.data.keyword.lakehouse_short}} home page 
 {: #qs_next_steps}
 
 You are all set to use the {{site.data.keyword.lakehouse_short}} or you can configure it further.
-
-If you don’t want to go through the wizard, you can skip and return to the {{site.data.keyword.lakehouse_short}} home page. You can set up your {{site.data.keyword.lakehouse_short}} from the home page anytime.

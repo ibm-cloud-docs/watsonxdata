@@ -34,10 +34,10 @@ To explore the objects in a bucket, use one of the following methods:
 
 - **Exploring bucket objects in list view**
 
-1. Click the name of bucket that you want to explore. Bucket information window opens.
+1. Click the name of bucket that you want to explore. The bucket information page opens.
 2. Click **Objects**.
 
 - **Exploring bucket objects in topology view**
 
-1. Click the bucket that you want to explore. Bucket information window opens.
+1. Click the bucket that you want to explore. The bucket information page opens.
 2. Click **Objects**.

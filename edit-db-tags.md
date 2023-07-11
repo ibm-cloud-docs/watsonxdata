@@ -34,7 +34,7 @@ To edit the description and tags of a database, use one of the following methods
 
 - **Editing database description and tags in list view**
 
-1. Click the name of database. Database information window opens.
+1. Click the name of database. The database information page opens.
 2. In the **Details** tab, click **Edit**.
 3. In the **Description** field, enter the description of the bucket or edit the existing description.
 4. In the **Tags** field, select the tags from list or start typing to define a new tag.
@@ -42,7 +42,7 @@ To edit the description and tags of a database, use one of the following methods
 
 - **Editing database description and tags in topology view**
 
-1. Click the database. Database information window opens.
+1. Click the database. The database information page opens.
 2. In the **Details** tab, click **Edit**.
 3. In the **Description** field, enter the description of the bucket or edit the existing description.
 4. In the **Tags** field, select the tags from list or start typing to define a new tag.

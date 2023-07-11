@@ -30,7 +30,10 @@ subcollection: watsonxdata
 # Getting started with the web console
 {: #getstarted-console}
 
-To start {{site.data.keyword.lakehouse_full}} web console, complete the following steps.
+If you are logging in to watsonx.data instance for the first time, you will be presented with a quick start wizard. For details about the wizard, see the [Quick start watsonx.data console](watsonxdata?topic=watsonxdata-quick_start){: external}.
+{: note}
+
+To start {{site.data.keyword.lakehouse_full}} web console, complete the following steps:
 {: shortdesc}
 
 1. Log in to your {{site.data.keyword.cloud_notm}} Account.

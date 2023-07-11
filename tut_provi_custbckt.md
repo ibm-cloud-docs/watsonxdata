@@ -85,7 +85,7 @@ In this section of the tutorial, you are going to deploy a {{site.data.keyword.l
 
    b. **Private endpoint only** - Private endpoints route traffic through the IBM Cloud Private network (single endpoint).
 
-   c. **Both public and private endpoints** - Public endpoints provide a connection to your deployment on the public network. Private endpoints route traffic through the IBM Cloud Private network. (Two separate endpoints).
+   c. **Both public and private endpoints** - Public endpoints provide a connection to your deployment on the public network. Private endpoints route traffic through the IBM Cloud Private network. (two separate endpoints).
 
 2. After selecting the appropriate settings, click **Create** to start the provisioning process. The **Resource List** page opens with the **{{site.data.keyword.lakehouse_short}}** service that is listed under **Databases**.
 
@@ -151,11 +151,9 @@ Complete the following steps:
    When the setup is complete, the {{site.data.keyword.lakehouse_short}} home page is displayed.
    You are all set to use the {{site.data.keyword.lakehouse_short}} or you can configure it further.
 
-   If you don’t want to go through the wizard, you can skip and return to the {{site.data.keyword.lakehouse_short}} home page. You can set up your {{site.data.keyword.lakehouse_short}} from the home page anytime.
-
 8. Click **Finish and go**. This displays the **Infrastructure manager** page.
 
-You can add more engines, catalogs, buckets, and databases in the **Infrastructure manager** page if you want to. For more information about creating engines, catalogs, buckets, databases, see the Configuring watsonx.data components section.
+You can add more engines, catalogs, buckets, and databases in the **Infrastructure manager** page if you want to. For more information about creating engines, catalogs, buckets, databases, see the [Configuring watsonx.data components section](watsonxdata?topic=watsonxdata-prov_engine){: external}.
 _______
 
 ## Querying data
@@ -188,4 +186,4 @@ To run the SQL queries, do the following steps:
 5. Click the **Run on** button to run the query.
 6. Select **Result set** or **Details** tab to view the results. If required, you can save the query.
 7. Click **Saved queries** to view the saved queries.
-8. Click [**Explain**](watsonxdata?topic=watsonxdata-explain_sql_query) to view the logical or distributed plan of execution for a specified SQL query.
+8. Click [**Explain**](watsonxdata?topic=watsonxdata-explain_sql_query){: external} to view the logical or distributed plan of execution for a specified SQL query.

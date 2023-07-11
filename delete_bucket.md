@@ -33,7 +33,7 @@ To delete a bucket-catalog pair, complete the following steps:
 {: shortdesc}
 
 
-1. Dissociate the catalog that is associated with the bucket from the engine. For instructions, see [Dissociating a catalog from an engine](watsonxdata?topic=watsonxdata-disso-cat-eng).
+1. Dissociate the catalog that is associated with the bucket from the engine. For instructions, see [Dissociating a catalog from an engine](watsonxdata?topic=watsonxdata-disso-cat-eng){: external}.
 
 2. In **Infrastructure manager**, go to the **Buckets** tab.
 

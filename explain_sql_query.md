@@ -32,7 +32,7 @@ subcollection: watsonxdata
 The visual explain feature in {{site.data.keyword.lakehouse_full}} shows the execution plan for a specified SQL query. This feature also validates the SQL query. The output results can be visualized in different formats, which can be rendered into a graph or a flow chart. Data exchange happens between single or multiple nodes within a fragment. Each fragment has a set of data that is distributed between the nodes.
 {: shortdesc}
 
-With this visual explain feature, you can run the query and show the output in a distributed environment. You can output the results in different formats. When queries are run, they make a scan through the database. The queries retrieve table metadata to fetch the correct output.
+With this visual explain feature, you can run the query and show the output in a distributed environment. You can output the results in different formats. When queries are run, they scan through the database. The queries retrieve table metadata to fetch the correct output.
 
 With this visual explain feature, you can visualize the query in a graphical representation. When a query is run in the SQL editor and selects the **Explain** option, {{site.data.keyword.lakehouse_short}} uses an EXPLAIN SQL statement on the query to create a corresponding graph. This graph can be used to analyze, fix, and improve the efficiency of your queries by saving time and cost.
 

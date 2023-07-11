@@ -61,7 +61,7 @@ You need to have an [{{site.data.keyword.cloud_notm}} account](https://cloud.ibm
 
 1. Click **Create**.
 
-   After you click `Create`, the system displays a message to say that the instance is being provisioned, which returns you to the **Resource list**. From the **Resource list**, under **Databases** category, you see that the status for your instance is, `Provision in progress`.
+   After you click **Create**, the system displays a message to say that the instance is being provisioned, which returns you to the **Resource list**. From the **Resource list**, under **Databases** category, you see that the status for your instance is, `Provision in progress`.
 
 1.  When the status changes to `Active`, select the instance.
 

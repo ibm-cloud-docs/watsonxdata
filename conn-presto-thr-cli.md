@@ -27,14 +27,22 @@ subcollection: watsonxdata
 {:video: .video}
 
 # Connecting to Presto server
-{: #con-presto-thru-cli}
+{: #con-presto-serv}
 
 Presto CLI provides a terminal-based interactive shell to run queries.
 {: shortdesc}
 
-Complete the following steps to connect to Presto server in watsonx.data SaaS edition through Presto CLI.
+In {{site.data.keyword.lakehouse_full}}, you can connect to the Presto server in multiple ways based on the platform and utilities you are using. See the following sections for more details:
 
-## Getting the Presto engine hostname and port details
+- [Connecting to Presto engine using Presto CLI (Remote)](#conn-to-prestoeng)
+- [Connecting to Presto engine using Java/JDBC](#conn-to-prestjava)
+- [Connecting to Presto engine using Python scripts](#conn-to-prestpython)
+
+## Pre-requisites
+{: #con-presto-prereq}
+
+
+### Getting the Presto engine hostname and port details
 {: #get-host-port}
 
 1. Log in to the {{site.data.keyword.lakehouse_short}} service instance in {{site.data.keyword.cloud_notm}}.
@@ -47,7 +55,7 @@ Complete the following steps to connect to Presto server in watsonx.data SaaS ed
 
 5. Copy the host details to a notepad.
 
-## Getting the IBM API key or IBM IAM token
+### Getting the IBM API key or IBM IAM token
 {: #get-api-iam-token}
 
 Use either IBM API key or IBM IAM token according to your requirement.
@@ -55,7 +63,7 @@ Use either IBM API key or IBM IAM token according to your requirement.
 It is recommended to use IAM token for stress workload.
 {: tip}
 
-### Getting IBM API Key
+#### Getting IBM API Key
 {: #get-ibmapi-key}
 
 1. Log in to the [IBM Cloud console](http://test.cloud.ibm.com/).
@@ -74,7 +82,7 @@ It is recommended to use IAM token for stress workload.
 
 8. Open the downloaded file and copy the API key to a notepad file.
 
-### Getting IBM Access Management (IAM) token
+#### Getting IBM Access Management (IAM) token
 {: #get-ibmiam-token}
 
 1. Call the REST endpoint in IAM to get the IAM token.
@@ -137,7 +145,7 @@ It is recommended to use IAM token for stress workload.
    {: codeblock}
 
 ## Connecting to Presto engine using Java/JDBC
-{: #conn-to-prestoeng1}
+{: #conn-to-prestjava}
 
 1. Download and install the [presto-jdbc-0.279.jar](https://prestodb.io/docs/current/installation/jdbc.html) on the client machine.
 
@@ -233,9 +241,9 @@ It is recommended to use IAM token for stress workload.
 4. Compile and run the command.
 
 ## Connecting to Presto engine using Python scripts
-{: #conn-to-prestoeng2}
+{: #conn-to-prestpython}
 
-1. Download and install the [presto-python-client](https://prestodb.io/docs/current/installation/jdbc.html) on the client machine by using the package installer for Python (pip3).
+1. Install python 3.x (3.10 or later recommended) and `pip3` on your client workstation.
 
 2. Use the DBAPI interface to query Presto. Following is a sample python script.
 

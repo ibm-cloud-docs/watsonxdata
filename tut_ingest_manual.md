@@ -115,7 +115,7 @@ If you want to use the data without creating a new copy for a different table fo
    ```
    {: screen}
 
-## Convert data to analytics optimized formats (Optional)
+## Convert data to analytics optimized formats (optional)
 {: #convert_stp4}
 {: step}
 
@@ -167,7 +167,7 @@ For example:
    ```
    {: screen}
 
-   You can also include any additional SQL into the select clause for any transformations or conversion business logic or sort the data for optimized access. You can also add column partitions for additional performance improvements.
+   You can also include any additional SQL into the **SELECT** clause for any transformations or conversion business logic or sort the data for optimized access. You can also add column partitions for additional performance improvements.
    {: note}
 
    Statistics are automatically generated as part of the ingest of the new table.

@@ -52,25 +52,25 @@ A Presto installation includes three server types - Coordinator, Worker, and Res
 
 The following connectors are supported in {{site.data.keyword.lakehouse_short}}:
 
--	[Iceberg](https://prestodb.io/docs/current/connector/iceberg.html)
--	[Db2](watsonxdata?topic=watsonxdata-db2_connector)
--	[Netezza](watsonxdata?topic=watsonxdata-netezza_connector)
--	[Hive](https://prestodb.io/docs/current/connector/hive.html)
-- [Hudi](https://prestodb.io/docs/current/connector/hudi.html)
--	[JMX](https://prestodb.io/docs/current/connector/jmx.html)
--	[Kafka](https://prestodb.io/docs/current/connector/kafka.html)
--	[Memory](https://prestodb.io/docs/current/connector/memory.html)
--	[MongoDB](https://prestodb.io/docs/current/connector/mongodb.html)
--	[MySQL](https://prestodb.io/docs/current/connector/mysql.html)
--	[PostgreSQL](https://prestodb.io/docs/current/connector/postgresql.html)
--	[TPCDS](https://prestodb.io/docs/current/connector/tpcds.html)
--	[TPCH](https://prestodb.io/docs/current/connector/tpch.html)
+-	[Iceberg](https://prestodb.io/docs/current/connector/iceberg.html){: external}
+-	[Db2](watsonxdata?topic=watsonxdata-db2_connector){: external}
+-	[Netezza](watsonxdata?topic=watsonxdata-netezza_connector){: external}
+-	[Hive](https://prestodb.io/docs/current/connector/hive.html){: external}
+- [Hudi](https://prestodb.io/docs/current/connector/hudi.html){: external} (For more information about using Hudi connector with {{site.data.keyword.lakehouse_short}}, see [Integrating Presto with Apache Hudi using a Hudi connector](watsonxdata?topic=watsonxdata-hudi-conn){: external}.)
+-	[JMX](https://prestodb.io/docs/current/connector/jmx.html){: external}
+-	[Kafka](https://prestodb.io/docs/current/connector/kafka.html){: external}
+-	[Memory](https://prestodb.io/docs/current/connector/memory.html){: external}
+-	[MongoDB](https://prestodb.io/docs/current/connector/mongodb.html){: external}
+-	[MySQL](https://prestodb.io/docs/current/connector/mysql.html){: external}
+-	[PostgreSQL](https://prestodb.io/docs/current/connector/postgresql.html){: external}
+-	[TPCDS](https://prestodb.io/docs/current/connector/tpcds.html){: external}
+-	[TPCH](https://prestodb.io/docs/current/connector/tpch.html){: external}
 
 
 ## Presto SQL Language
 {: #lh-presto_lang}
 
-For more information about SQL language used in Presto, see [SQL Language](https://prestodb.io/docs/current/language.html) in Presto documentation.
+For more information about SQL language used in Presto, see [SQL Language](https://prestodb.io/docs/current/language.html){: external} in Presto documentation.
 
 ### Data types
 {: #lh-presto_datatypes}
@@ -91,15 +91,15 @@ By default, Presto supports the following data types. More types can be provided
 - Quantile Digest
 - T-Digest
 
-For more information about the data types, see [Data types](https://prestodb.io/docs/current/language/types.html) in Presto documentation.
+For more information about the data types, see [Data types](https://prestodb.io/docs/current/language/types.html){: external} in Presto documentation.
 
 ### Reserved keywords
 {: #lh-presto_keywords}
 
 Presto has a set of reserved keywords for SQL queries. These keywords must be quoted in double quotation marks to be used as an identifier.
-For the list of reserved keywords, see [Reserved keywords](https://prestodb.io/docs/current/language/reserved.html) in Presto documentation.
+For the list of reserved keywords, see [Reserved keywords](https://prestodb.io/docs/current/language/reserved.html){: external} in Presto documentation.
 
 ### SQL Syntax
 {: #lh-presto_syntax}
 
-For more information about SQL syntax used in Presto, see [SQL Statement Syntax](https://prestodb.io/docs/current/sql.html) in Presto documentation.
+For more information about SQL syntax used in Presto, see [SQL statements](https://www.ibm.com/docs/SSDZ38_1.0.x/lh-prestosql/topics/sql_intro.html){: external}.
