@@ -34,9 +34,10 @@ In this scenario, you explore the process of obtaining data from two seperate da
 ## Objective
 {: #ibmbckt_obj}
 
-* Setting up Db2 and Neteeza data source
-* Ingesting data
-* Joining data from Db2 and Neteeza
+* Setting up Db2 and Netezza data source
+
+<!-- * Ingesting data -->
+* Joining data from Db2 and Netezza
 
 ![Workflow diagram](images/ibm_infrastructure.svg){: caption="Figure 1. Workflow diagram" caption-side="bottom"}
 
@@ -175,7 +176,7 @@ To associate Db2 with the Presto engine, do the following steps:
 Similarly, select the Netezza database and link it to the Presto engine.
 {: note}
 
-## Explore the data
+<!-- ## Explore the data
 {: #ibmbckt_stp6}
 {: step}
 
@@ -194,7 +195,7 @@ In this section of the tutorial, you learn how to load the data into the catalog
     4. Enter a name for the table in the **Table** field and click **Next**.
     5. Verify the details in the **Summary** page and click **Ingest**.
 
-1. Select the **Netezza** catalog and repeat the sub steps (from a to e) to create a schema and table for Netezza.
+1. Select the **Netezza** catalog and repeat the sub steps (from a to e) to create a schema and table for Netezza. -->
 
 ## Combine data
 {: #ibmbckt_stp7}

@@ -40,3 +40,6 @@ Wait for a few minutes to view the changes after a schema or table is dropped.
 Adding, renaming, or dropping a column are the other tasks that can be performed in the **Data manager** page.
 
 You can browse the **Table schema** and upto 25 rows of **Data sample** for some tables. You can view the **Time travel** snapshots and use the **Rollback** feature to rollback to a given snapshot for Iceberg tables.
+
+Presto cannot roll back to the snapshots that are not ancestors of the current snapshot.
+{: note}

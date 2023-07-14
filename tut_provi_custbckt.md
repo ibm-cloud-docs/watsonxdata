@@ -153,7 +153,7 @@ Complete the following steps:
 
 8. Click **Finish and go**. This displays the **Infrastructure manager** page.
 
-You can add more engines, catalogs, buckets, and databases in the **Infrastructure manager** page if you want to. For more information about creating engines, catalogs, buckets, databases, see the [Configuring watsonx.data components section](watsonxdata?topic=watsonxdata-prov_engine){: external}.
+You can add more engines, catalogs, buckets, and databases in the **Infrastructure manager** page if you want to. For more information about creating engines, catalogs, buckets, databases, see Configuring watsonx.data components in the How To section.
 _______
 
 ## Querying data

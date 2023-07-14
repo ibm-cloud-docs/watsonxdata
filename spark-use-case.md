@@ -14,7 +14,7 @@ subcollection: watsonxdata
 # Getting started with Spark use case
 {: #run_samp_file}
 
-This page demonstrates the procedure to run Spark use cases for {{site.data.keyword.lakehouse_short}} by using Python samples. All the samples are written by using Spark Python APIs.
+This topic provides the procedure to run Spark use cases for {{site.data.keyword.lakehouse_short}} by using Python samples. All the samples are written by using Spark Python APIs.
 
 ## Prerequisites
 {: #spk_preq}
