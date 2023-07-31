@@ -14,7 +14,7 @@ subcollection: watsonxdata
 # Retrieving Hive metastore(HMS) credentials
 {: #hms}
 
-{{site.data.keyword.lakehouse_full}} integrates with multiple entities like Spark, Db2, Netezza, and the like. You require {{site.data.keyword.lakehouse_short}} HMS credentials to establish connection with the entities at the time of integration.
+{{site.data.keyword.lakehouse_full}} integrates with multiple entities like Spark, Db2, {{site.data.keyword.netezza_short}}, and the like. You require {{site.data.keyword.lakehouse_short}} HMS credentials to establish connection with the entities at the time of integration.
 {: shortdesc}
 
 You must generate the following HMS credentials.
