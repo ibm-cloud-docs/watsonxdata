@@ -15,6 +15,7 @@ subcollection: watsonxdata
 {: #run_samp_file}
 
 This topic provides the procedure to run Spark use cases for {{site.data.keyword.lakehouse_short}} by using Python samples. All the samples are written by using Spark Python APIs.
+{: shortdesc}
 
 ## Prerequisites
 {: #spk_preq}
@@ -34,12 +35,7 @@ The sample file demonstrates the following functionalities:
 
 * Ingesting data to {{site.data.keyword.lakehouse_short}}
 
-    The **Ingest parquet data into a lakehouse table** section from the [sample python file](#python_file) allows you to ingest data in parquet and CSV format from a source Cloud Object Storage bucket **source-bucket** into a {{site.data.keyword.lakehouse_short}} table. Sample data in parquet format is inserted from source COS bucket **source-bucket** into the {{site.data.keyword.lakehouse_short}} table **yellow_taxi_2022**. It also shows ingesting data in CSV format from COS bucket **source-bucket** into the table **zipcode** in the database **demodb**.
-
-    You can download the sample formats from:
-
-    * [Sample parquet file](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page).
-    * [Sample CSV file](https://raw.githubusercontent.com/spark-examples/spark-scala-examples/3ea16e4c6c1614609c2bd7ebdffcee01c0fe6017/src/main/resources/zipcodes.csv)
+    The **Ingest parquet data into a lakehouse table** section from the [sample python file](#python_file) allows you to ingest data in parquet and CSV format from a source Cloud Object Storage bucket **source-bucket** into a {{site.data.keyword.lakehouse_short}} table. Sample data in parquet format is inserted from source COS bucket **source-bucket** into the {{site.data.keyword.lakehouse_short}} table **yellow_taxi_2022** (see the [steps](#insert_samp_usecase) for inserting sample data into the source COS bucket). It also shows ingesting data in CSV format from COS bucket **source-bucket** into the table **zipcode** in the database **demodb**.
 
 * Modifying schema in {{site.data.keyword.lakehouse_short}}
 
@@ -184,3 +180,30 @@ Follow the steps to run the Spark sample python file.
 
 This sample is tested on the Cloud Object Storage buckets in the **us-south** region. Change the region in the Cloud Object Storage endpoint configuration as per the region where your Cloud Object Storage buckets reside. It is recommended to provision the COS buckets in the region where {{site.data.keyword.iae_short}} instance is provisioned.
 {: note}
+
+## Inserting sample data into the COS bucket
+{: #insert_samp_usecase}
+
+To insert data to COS, follow the steps below.
+
+1. Create the COS bucket.
+
+    ```bash
+    ibmcloud plugin install cloud-object-storage
+    ```
+    {: codeblock}
+
+
+    As a user of Object Storage, you not only need to know the API key or the HMAC keys to configure Object Storage, but also the IBM Analytics Engine service endpoints to connect to Object Storage. See [Selecting regions and endpoints](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-endpoints) for more information on the endpoints to use based on your Object Storage bucket type, such as regional versus cross-regional. You can also view the endpoints across regions for your Object Storage service by selecting the service on your IBM Cloud dashboard and clicking **Endpoint** in the navigation pane. Always choose the **direct endpoint**. Direct endpoint provide better performance and do not incur charges. An example of an endpoint for US-South Cross region is `s3.direct.us.cloud-object-storage.appdomain.cloud`.
+
+2.  Download first six months taxi data sample for the year 2022. Choose the required data format and download from the corresponding locations:
+
+    * [Sample parquet file](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page).
+    * [Sample CSV file](https://raw.githubusercontent.com/spark-examples/spark-scala-examples/3ea16e4c6c1614609c2bd7ebdffcee01c0fe6017/src/main/resources/zipcodes.csv)
+
+3. Use the COS cli to upload the sample data into COS bucket.
+
+    ```bash
+    ibmcloud cos upload --bucket test-cos-storage-bucket --key <your sample data file name> --file <your sample data file name>
+    ```
+    {: codeblock}

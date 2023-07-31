@@ -46,7 +46,7 @@ Following SQL statements are supported in {{site.data.keyword.lakehouse_full}} t
 | **System**| `X`    | `X`   | `X`  | ✓  | ✓  | `X`  | `X`   | `X`  | `X`  | `X`  | ✓  | `X`  | `X`  | `X`  | `X`  | `X`  | `X`  | `X`  | `X`  |
 | **JMX**| `X`    | `X`   | `X`  | ✓  | ✓  | `X`  | `X`   | `X`  | `X`  | `X`  | ✓  | `X`  | `X`  | `X`  | `X`  | `X`  | `X`  | `X`  | `X`  |
 |**Db2**| ✓    | ✓   | ✓  | ✓  |  -- | ✓  | `X`   | `X`  | `X`  | `X`  | ✓  | `X`  | `X`  | `X`  | ✓  | `X`  | ✓  | ✓  | `X`  |
-|**Netezza**| ✓    | ✓   | ✓  | ✓  |  -- | ✓  | `X`   | `X`  | `X`  | `X`  | ✓  | `X`  | `X`  | `X`  | ✓  | `X`  | ✓  | ✓  | X  |
+|**{{site.data.keyword.netezza_short}}**| ✓    | ✓   | ✓  | ✓  |  -- | ✓  | `X`   | `X`  | `X`  | `X`  | ✓  | `X`  | `X`  | `X`  | ✓  | `X`  | ✓  | ✓  | X  |
 |**Hudi**| `X`    | `X`   | `X`  | ✓  |  -- | `X`  | `X`   | `X`  | `X`  | `X`  | ✓  | `X`  | `X`  | `X`  | `X`  | `X`  | `X`  | `X`  | `X`  |
 {: caption="Table 1. SQL statements and supporting connectors" caption-side="bottom"}
 
@@ -56,6 +56,6 @@ Following SQL statements are supported in {{site.data.keyword.lakehouse_full}} t
 1. For `CREATE TABLE`, **MySQL** connector supports only `CREATE TABLE AS`.
 2. For `ALTER TABLE`, **MongoDB** connector supports only table rename.
 3. **Db2** connector partially supports `ALTER TABLE`, `CREATE VIEW`, and `DROP SCHEMA`.
-4. **Netezza** connector partially supports `ALTER TABLE` and `CREATE VIEW`.
-5. **MySQL**, **PostgreSQL**, **MongoDB**, **Db2**, and **Netezza** connectors support `DROP TABLE` only when enabled in catalog.
+4. **{{site.data.keyword.netezza_short}}** connector partially supports `ALTER TABLE` and `CREATE VIEW`.
+5. **MySQL**, **PostgreSQL**, **MongoDB**, **Db2**, and **{{site.data.keyword.netezza_short}}** connectors support `DROP TABLE` only when enabled in catalog.
 6. The `CREATE SCHEMA`, `CREATE TABLE`, `DROP SCHEMA`, `DROP TABLE`, `DELETE`, `DROP VIEW`, `ALTER TABLE`, and `ALTER SCHEMA` are not available for database based catalogs in the **Data Manager** UI.

@@ -41,6 +41,9 @@ Run the following command to do multiple ingestion jobs after you update the con
    ```
    {: codeblock}
 
+The commands must be run within the ibm-lh container. For more details and instructions to install `ibm-lh-client` package and use the **ibm-lh** tool for ingestion, see [Installing ibm-lh-client](https://www.ibm.com/docs/en/watsonxdata/1.0.x?topic=package-installing-lh-client){: external} and [Setting up the ibm-lh command-line utility](https://www.ibm.com/docs/en/watsonxdata/1.0.x?topic=package-setting-up-lh-cli-utility){: external}.
+{: note}
+
 To access IBM Cloud Object Storage (COS) and MinIO object storage, specify the ENDPOINT_URL in --source-s3-creds and --staging-s3-creds to pass the corresponding url to the tool. For more information about IBM COS, see https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-endpoints.
 {: note}
 

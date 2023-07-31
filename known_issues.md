@@ -46,7 +46,7 @@ Schema
 
 **Workaround:** Provide select privilege for the schema the user created.
 
-## Issue: Access denied message occurs when querying an external database
+## Issue: Access denied when querying an external database
 {: #known_issues2}
 
 When a user with the User role and Create access (the user only has Create access), is added to an external database, they cannot run the select query from the table they have created. Though the user can connect to the Presto engine and create tables and schemas, they cannot query from the table. The system displays an `Access Denied` message.
@@ -76,10 +76,10 @@ In Db2, the schema can be dropped only if it is empty. Initiating `DROP SCHEMA` 
 
 Db2 connector partially supports `CREATE VIEW` statement. The Presto supported SQL syntax does not include creating views with custom column names (different than the table column names).
 
-## Issue: CREATE VIEW statement that is partially supported by Netezza
+## Issue: CREATE VIEW statement that is partially supported by {{site.data.keyword.netezza_short}}
 {: #known_issues9}
 
-Netezza connector partially supports `CREATE VIEW` statement. The Presto Supported SQL syntax does not include creating views with custom column names (different than the table column names).
+{{site.data.keyword.netezza_short}} connector partially supports `CREATE VIEW` statement. The Presto Supported SQL syntax does not include creating views with custom column names (different than the table column names).
 
 ## Issue: Data ingestion through CLI
 {: #known_issues10}
@@ -201,7 +201,7 @@ Creating a database of the type Memory gives an error, `pq: invalid input syntax
 ## Issue: Presto does not support `AS OF` with iceberg tables
 {: #known_issues21}
 
-Presto does not support `AS OF <time stamp>` in a SELECT query.
+Presto does not support `AS OF <time stamp>` command in a SELECT query.
 
 **Workaround:** Invoke `CALL iceberg_data_rollback_to_snapshot` to move to the desired timestamp.
 

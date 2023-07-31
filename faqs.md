@@ -53,7 +53,7 @@ You can connect to data in multiple locations and get started in minutes with bu
 Key features of {{site.data.keyword.lakehouse_short}} are:
 - The architecture fully separates compute, metadata, and storage to provide ultimate flexibility.
 - Fit for purpose query engines designed to handle modern data formats that are highly elastic and scalable.
-- Data sharing between {{site.data.keyword.lakehouse_short}}, {{site.data.keyword.dashdbshort}}, and Netezza or any other data management solution through common Iceberg table format support, connectors, and a shareable metadata store.
+- Data sharing between {{site.data.keyword.lakehouse_short}}, {{site.data.keyword.dashdbshort}}, and {{site.data.keyword.netezza_short}} or any other data management solution through common Iceberg table format support, connectors, and a shareable metadata store.
 
 ## How can I create a {{site.data.keyword.lakehouse_short}} service instance?
 {: #q_create}

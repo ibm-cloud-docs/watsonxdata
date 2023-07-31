@@ -38,6 +38,10 @@ In {{site.data.keyword.lakehouse_full}}, you can connect to the Presto server in
 - [Connecting to Presto engine using Java/JDBC](#conn-to-prestjava)
 - [Connecting to Presto engine using Python scripts](#conn-to-prestpython)
 
+You must specify the location when you create schema using CLI. For example,
+`location = s3a://<bucket-name>/`
+{: note}
+
 ## Pre-requisites
 {: #con-presto-prereq}
 
@@ -151,82 +155,82 @@ It is recommended to use IAM token for stress workload.
 
 2. Add presto-jdbc-0.279.jar to the class path of your Java application.
 
-3. Create a Java application by using JDBC interface. Following is an example for Java snippet:
+3. Use your `ibmlhapikey` as username and API key as password. For more information, see [Getting IBM API Key](#get-ibmapi-key).
+
+4. Get the hostname and port. For more information, see [Getting the Presto engine hostname and port details](#get-host-port).
+
+5. Create a Java application by using JDBC interface. Following is an example for Java snippet:
 
 
    ```bash
+
+   import java.sql.Connection;
+   import java.sql.DriverManager;
+   import java.sql.ResultSet;
+   import java.sql.Statement;
+   import java.util.Properties;
+
    public class PrestoJdbcSample
    {
-   public static void main(String[] args) throws Exception
-   {
-   /**
-   * example of fetching the location and credentials needed to connect, from
-   environment variables
-   **/
-   String username = System.getenv("ENG_USERNAME");
-   String password = System.getenv("ENG_PASSWORD");
-   String hostname = System.getenv("ENG_HOST");
-   String portnumber = System.getenv("ENG_PORT");
-   String presto_url = "jdbc:presto://" + hostname + ":" + portnumber;
-   String ts_location = System.getenv("TRUSTSTORE");
-   // example: “ibm-lh-client/localstorage/volumes/infra/tls/truststore.jks";
-   String ts_password = System.getenv("TRUSTSTORE_PASSWORD");
-   // example: "changeit";
-   Connection connection = null;
-   Statement statement = null;
-   ResultSet resultSet = null;
-   try
-   {
-   /** load the Presto JDBC Driver class **/
-   String driverClass = "com.facebook.presto.jdbc.PrestoDriver";
-   Class.forName(driverClass);
-   /** Set the connection properties**/
-   Properties properties = new Properties();
-   properties.setProperty("user", username);
-   properties.setProperty("password", password);
-   properties.setProperty("SSL", "true");
-   /**
-   * identify where the java truststore is located.
-   * skip if the default JDK truststore already has the Presto Server's certificate
-   * or if the Presto server has signed certificates
-   **/
-   properties.setProperty("SSLTrustStorePath", ts_location);
-   properties.setProperty("SSLTrustStorePassword", ts_password);
-   /** Connect **/
-   connection = DriverManager.getConnection(presto_url, properties);
-   /** Issue a Query **/
-   String query = "SELECT * FROM tpch.tiny.customer LIMIT 10";
-   statement = connection.createStatement();
-   resultSet = statement.executeQuery(query);
-   /** iterate through the results **/
-   while (resultSet.next())
-   {
-   String phone = resultSet.getString("phone");
-   String name = resultSet.getString("name");
-   System.out.println("phone = " + phone + ", name = " + name);
-   }
-   }
-   catch (Exception e)
-   {
-   e.printStackTrace();
-   }
-   finally
-   {
-   /** clean up at the end always **/
-   if (resultSet != null)
-   {
-   resultSet.close();
-   }
-   if (statement != null)
-   {
-   statement.close();
-   }
-   if (connection != null)
-   {
-   connection.close();
-   }
-   }
-   }
+       public static void main(String[] args) throws Exception
+       {
+           /*
+            * example of fetching the location and credentials needed to connect, from
+            * environment variables
+            */
+           String username = System.getenv("ENG_USERNAME");
+           String password = System.getenv("ENG_PASSWORD");
+           String hostname = System.getenv("ENG_HOST");
+           String portnumber = System.getenv("ENG_PORT");
+           String presto_url = "jdbc:presto://" + hostname + ":" + portnumber;
+           Connection connection = null;
+           Statement statement = null;
+           ResultSet resultSet = null;
+           try
+           {
+               /* load the Presto JDBC Driver class  */
+               String driverClass = "com.facebook.presto.jdbc.PrestoDriver";
+               Class.forName(driverClass);
+               /* Set the connection properties */
+               Properties properties = new Properties();
+               properties.setProperty("user", username);
+               properties.setProperty("password", password);
+               properties.setProperty("SSL", "true");
+               /* Connect */
+               connection = DriverManager.getConnection(presto_url, properties);
+               /* Issue a Query */
+               String query = "SELECT * FROM tpch.tiny.customer LIMIT 10";
+               statement = connection.createStatement();
+               resultSet = statement.executeQuery(query);
+               /* iterate through the results */
+               while (resultSet.next())
+               {
+                   String phone = resultSet.getString("phone");
+                   String name = resultSet.getString("name");
+                   System.out.println("phone = " + phone + ", name = " + name);
+               }
+           }
+           catch (Exception e)
+           {
+               e.printStackTrace();
+           }
+           finally
+           {
+               /* clean up at the end always **/
+               if (resultSet != null)
+               {
+                   resultSet.close();
+               }
+               if (statement != null)
+               {
+                   statement.close();
+               }
+               if (connection != null)
+               {
+                   connection.close();
+               }
+           }
+       }
    }
    ```
    {: codeblock}
@@ -238,7 +242,7 @@ It is recommended to use IAM token for stress workload.
    If you are using IBM IAM token, replace `ibmapikey` with `ibmiamtoken` and pass the token.
    {: note}
 
-4. Compile and run the command.
+6. Compile and run the command.
 
 ## Connecting to Presto engine using Python scripts
 {: #conn-to-prestpython}
@@ -254,22 +258,20 @@ It is recommended to use IAM token for stress workload.
    password=os.environ["ENG_PASSWORD"]
    hostname=os.environ["ENG_HOST"]
    portnumber=os.environ["ENG_PORT"]
-   cert_location='./ibm-lh-client/localstorage/volumes/infra/tls/aliases/' + hostname + ':' +
-   portnumber + '.crt'
-   with prestodb.dbapi.connect(
-   host=hostname,
-   port=portnumber,
-   user=username,
-   catalog='tpch',
-   schema='tiny',
-   http_scheme='https',
-   auth=prestodb.auth.BasicAuthentication(username,password)
-   ) as conn:
-   conn._http_session.verify = cert_location
+      with prestodb.dbapi.connect(
+      host=hostname,
+      port=portnumber,
+      user=username,
+      catalog='tpch',
+      schema='tiny',
+      http_scheme='https',
+      auth=prestodb.auth.BasicAuthentication(username,password)
+      ) as conn:
    cur = conn.cursor()
    cur.execute('select * from tpch.tiny.customer limit 10')
    rows = cur.fetchall()
    print(rows)
+
    ```
    {: codeblock}
 

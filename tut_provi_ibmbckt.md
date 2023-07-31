@@ -146,11 +146,16 @@ Next, you learn the steps to setup the two specific databases, Db2 and Netezza, 
    The database name must be unique. Two databases having the same name cannot be added.
    {: note}
 
-   | Field | Description |
-   |--------------------------|----------------|
-   | Name | Enter the name of your database.|
-   | Description (optional) | Describe the databse.|
-   | Tags (optional) | Enter the tag name or select from drop-down list.|
+
+   | Field           | Netezza        | Db2 |
+   |------------------|--------------------|---|
+   | Database type    | Netezza | Db2|
+   | Database name     | data1 | data2|
+   | Hostname            | Hostname of netezza  | Host name of Db2|
+   | Port             | Port number of netezza | Port number of Db2|
+   | Username           | Enter the port username of Netezza | Enter the port username of Db2|
+   | Password           | Enter the password for Netezza| Enter the password for Db2|
+   | Associated catalog definition | nzdemo | dbdemo|
    {: caption="Table 1. Register database" caption-side="bottom"}
 
    Based on the database you are adding, enter related details in appropriate fields. For example, hostname, username, and password. For more information, see [Db2 connector](watsonxdata?topic=watsonxdata-db2_connector){: external} details and [Netezza connector](watsonxdata?topic=watsonxdata-netezza_connector){: external} details.
@@ -176,26 +181,52 @@ To associate Db2 with the Presto engine, do the following steps:
 Similarly, select the Netezza database and link it to the Presto engine.
 {: note}
 
-<!-- ## Explore the data
+## Creating necessary tables
+{: #ibmbckt_stp19}
+{: step}
+
+In this section of the tutorial, you learn how to create tables inside the Netezza and Db2 catalogs.
+{: shortdesc}
+
+1. From the navigation menu, select **Data manager**.
+1. Select the engine from the **Engine** menu. Catalogs that are associated with the selected engine are listed.
+1. Create the following tables for the respective catalogs in the table:
+
+
+   | Catalogs           | Tables        |
+   |------------------|--------------------|
+   | Netezza     | tablex |
+   | Db2    | tabley |
+   | Iceberg            | tablea |
+   | Iceberg             | tableb |
+   {: caption="Table 1. Creating tables" caption-side="bottom"}
+
+1. For more information about creating tables, see [Creating tables](watsonxdata?topic=watsonxdata-create_table){: external}.
+
+## Insert the data
 {: #ibmbckt_stp6}
 {: step}
 
-In this section of the tutorial, you learn how to load the data into the catalog.
+In this section of the tutorial, you learn how to insert the data into the catalogs.
 {: shortdesc}
 
-1. In the {{site.data.keyword.lakehouse_short}} console, select **Data manager** from the navigation menu.
-1. Select the Presto engine from the **Engine** drop-down. The catalogs that are associated with the selected engine are displayed.
-1. Select the **Db2** catalog and follow the steps to [create a schema](watsonxdata?topic=watsonxdata-create_schema){: external}.
-    1. Select the schema that you created now. Click the **Create** drop-down and select **Create table**. The **Create ingestion job** page appears.
+1. From the navigation menu, select **SQL**. The **Query workspace** page opens.
+2. Select the Presto engine from the **Engine** drop-down.
+1. Select **Netezza**. run the following query:
 
-    1. In the **Create ingestion job** page, drag the files to the rectangle box or click to upload.
+   ```bash
+   insert into iceberg_data.default.tablea select * from nzdemo.data1.tablex
+   ```
+   {: codeblock}
 
-    2. If required, make the necessary changes in the **Configure** options section and click **Next**. You can also preview the file being uploaded.
-    3. In the **Target** form, select the Presto query engine, the target table, Db2 catalog, and schema for the file you are ingesting.
-    4. Enter a name for the table in the **Table** field and click **Next**.
-    5. Verify the details in the **Summary** page and click **Ingest**.
+1. Select **Db2**. run the following query:
 
-1. Select the **Netezza** catalog and repeat the sub steps (from a to e) to create a schema and table for Netezza. -->
+   ```bash
+   insert into iceberg_data.default.tableb select * from nzdemo.data2.tabley
+   ```
+   {: codeblock}
+
+
 
 ## Combine data
 {: #ibmbckt_stp7}
@@ -204,18 +235,24 @@ In this section of the tutorial, you learn how to load the data into the catalog
 You can also navigate to the **Query workspace** to create SQL queries to query your data.
 {: shortdesc}
 
-To run the SQL query to join two tables, do the following steps:
+<!-- To run the SQL query to join two tables, use the following query:
 
 1. From the navigation menu, select **SQL**. The **Query workspace** page opens.
 2. Select the Presto engine from the **Engine** drop-down.
 4. Click the overflow menu and select the required query.
    * For a catalog and schema, you can run the Generate Path query.
    * For a table, you can run the Generate path, Generate SELECT, Generate ALTER, and Generate DROP query.
-   * For a column, you can run the Generate path, Generate SELECT, and Generate DROP query.
+   * For a column, you can run the Generate path, Generate SELECT, and Generate DROP query. -->
 
-   Consider the following sample query to join the details from **Db2** and **Netezza**:
+1. Consider the following sample query to join the details from **Db2** and **Netezza**:
 
-   Example:
+    ```bash
+    #!/bin/bash
+    select n.col1, m.col2 from iceberg_data"."default"."tablex" n, "iceberg_data"."default"."tablea" m where m.id = n.id;
+    ```
+   {: codeblock}
+
+<!--
 
    ```bash
    #!/bin/bash
@@ -224,7 +261,7 @@ To run the SQL query to join two tables, do the following steps:
    ON details.order_number=header.order_number
    LIMIT 10;
    ```
-   {: codeblock}
+   {: codeblock} -->
 
 5. Click the **Run on** button to run the query.
 6. Select **Result set** or **Details** tab to view the combined result. If required, you can save the query.

@@ -14,7 +14,7 @@ subcollection: watsonxdata
 # Provisioning an {{site.data.keyword.iae_short}} instance
 {: #lh-provisioning-serverless}
 
-For {{site.data.keyword.lakehouse_short}}, it is recommend to use {{site.data.keyword.iae_full_notm}} Spark to achieve below use-cases:
+For {{site.data.keyword.lakehouse_short}}, it is recommended to use {{site.data.keyword.iae_full_notm}} Spark to achieve below use-cases:
 1. Ingesting large volumes of data into {{site.data.keyword.lakehouse_short}} tables. You can also cleanse and transform data before ingestion.
 2. Table maintenance operation to enhance {{site.data.keyword.lakehouse_short}} performance of the table
 3. Complex analytics workload which are difficult to represent as queries.

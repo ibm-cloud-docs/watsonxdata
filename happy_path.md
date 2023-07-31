@@ -31,7 +31,7 @@ IBM provides promotion credits to allow a trial experience. The promotion code i
 {: shortdesc}
 
 In this tutorial you learn how to claim your free promo code, apply it, monitor the usage of the credit, get started, size your starter instance of {{site.data.keyword.lakehouse_short}} and try it out.
-
+For more information, you can also watch the [watsonx.data demo: Get started with watsonx.data](https://mediacenter.ibm.com/media/watsonx.data+demoA+Get+started+with+watsonx.data/1_brvv64az).
 
 After you fully use the promo credits, you are automatically billed at the advertised rate. So, watch the usage and consumption of the promotion code credits closely.
 {: important}

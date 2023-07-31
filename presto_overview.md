@@ -54,7 +54,7 @@ The following connectors are supported in {{site.data.keyword.lakehouse_short}}:
 
 -	[Iceberg](https://prestodb.io/docs/current/connector/iceberg.html){: external}
 -	[Db2](watsonxdata?topic=watsonxdata-db2_connector){: external}
--	[Netezza](watsonxdata?topic=watsonxdata-netezza_connector){: external}
+-	[{{site.data.keyword.netezza_short}}](watsonxdata?topic=watsonxdata-netezza_connector){: external}
 -	[Hive](https://prestodb.io/docs/current/connector/hive.html){: external}
 - [Hudi](https://prestodb.io/docs/current/connector/hudi.html){: external} (For more information about using Hudi connector with {{site.data.keyword.lakehouse_short}}, see [Integrating Presto with Apache Hudi using a Hudi connector](watsonxdata?topic=watsonxdata-hudi-conn){: external}.)
 -	[JMX](https://prestodb.io/docs/current/connector/jmx.html){: external}

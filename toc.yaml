@@ -29,8 +29,6 @@ toc:
       topics:
       - happy_path.md
       - quick_start.md
-      - tut_provi_ibmbckt.md
-      - tut_provi_custbckt.md
       - tut_ingest_manual.md
 
   - navgroup:
@@ -91,7 +89,7 @@ toc:
             - provisioning-spark.md
             - config_spark.md
             - spark-use-case.md
-            - hms_credentials.md
+            - spark-table-maint.md
       - topicgroup:
           label: Enhancing security
           topics:
@@ -104,6 +102,7 @@ toc:
             - manage_access.md
             - role_priv.md
             - data_policy.md
+      - hms_credentials.md
       - notifications.md
       - event_notifications.md
       - topicgroup:
