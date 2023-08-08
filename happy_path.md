@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-07-07"
+lastupdated: "2023-08-08"
 
 keywords: watsonx.data, promotion, credits, offers
 
@@ -253,20 +253,12 @@ The promotion credits consumption begins immediately after you configure and the
 Ensure that you pause the Presto engine when it is not used. This helps in optimizing the usage credit.
 {: important}
 
-## Ingesting data
+## Adding data
 {: #hp_ingest}
 {: step}
 
+You can use the **Create table** option from the **Data manager** page to load local or external sources of data files to create tables. You can also ingest large files using the CLI. See more [About data ingestion](watsonxdata?topic=watsonxdata-ingestdata){: external}.
 
-The data files are ingested into {{site.data.keyword.lakehouse_short}} using CLI. For the steps to perform ingestion, see the [Ingesting data through the command-line interface (CLI)](watsonxdata?topic=watsonxdata-ingest_data_cli){: external}
-<!--
-1. Log in to the {{site.data.keyword.lakehouse_short}} console.
-1. Open **Ingestion hub** from the navigation menu.
-1. Click **Create ingestion job**. Drag the files to the rectangle box or click to upload.
-1. If required, make the necessary changes in the **Configure** options section and click **Next**. You can also preview the file that is uploaded.
-1. In the **Target** form, select the query engine, the target table, catalog, and schema for the file you are ingesting.
-1. Enter a name for the table in the **Table** field and click **Next**.
-1. Verify the details in the **Summary** page and click **Ingest**. -->
 
 ## Querying data
 {: #hp_qury}
