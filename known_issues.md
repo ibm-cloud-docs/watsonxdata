@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-07-07"
+lastupdated: "2023-08-23"
 
 keywords: lakehouse
 
@@ -30,6 +30,23 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues, apply to {{site.data.keyword.lakehouse_full}}.
+
+## Issue: User is not removed from the catalog access control on revoking data access
+{: #known_issues1.0.0_3}
+
+When you grant user access to a user by adding them to the data control policies by using the **Access Control** screen, the user is successfully listed against the catalog. On revoking user access from the **Access Control** page, the user stays listed against the catalog and continues to have user access.
+
+## Issue: Unable to view expected catalogs from Presto
+{: #known_issues1.0.0_2}
+
+Users with administrator privileges are unable to view the expected Hive and PostgreSQL catalogs from Presto.
+
+## Issue: Console UI lists invalid users
+{: #known_issues1.0.0_1}
+
+{{site.data.keyword.lakehouse_short}} user (user1) invites a new user (user2) to the account by using the **Manage access and users** screen (**Manage > Access (IAM) > Manage access and users**) and grants access to a role (MetastoreAccess, Viewer, Operator, Editor, Administrator). User2 gets access to resources in the {{site.data.keyword.lakehouse_short}} instance through user1's account. Additionally, user2 is granted data access at the resource level by adding to the data control policies by using the **Access Control** screen.
+When user1 removes user2 from the user1's account, user2 is still listed in **Access Control** tab at resource level.
+
 
 ## Issue: Unable to view created schema
 {: #known_issues1}

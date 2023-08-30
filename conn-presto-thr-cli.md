@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-07-07"
+lastupdated: "2023-08-23"
 
 keywords: lakehouse, watsonx.data, presto, cli
 
@@ -120,14 +120,14 @@ It is recommended to use IAM token for stress workload.
    1. If you are using API key, run the following command.
 
        ```bash
-       ./presto --server <https://Prestoengine host details> --catalog iceberg_data --schema default --username ibmlhapikey_<your-username> --password
+       ./presto --server <https://Prestoengine host details> --catalog iceberg_data --schema default --user ibmlhapikey_<your-username> --password
        ```
        {: codeblock}
 
    2. If you are using IBM IAM token, run the following command.
 
        ```bash
-       ./presto --server <https://Prestoengine host details> --catalog iceberg_data --schema default --username ibmlhtoken_<your-username> --password
+       ./presto --server <https://Prestoengine host details> --catalog iceberg_data --schema default --user ibmlhtoken_<your-username> --password
        ```
        {: codeblock}
 

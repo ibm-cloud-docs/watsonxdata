@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-07-07"
+lastupdated: "2023-08-24"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -55,106 +55,139 @@ Follow the steps to run the Spark sample python file.
 
 ```bash
 
-    from pyspark.sql import SparkSession
-    import os
+from pyspark.sql import SparkSession
+import os
 
-    def init_spark():
-    spark = SparkSession.builder \
+def init_spark():
+  spark = SparkSession.builder \
     .appName("lh-hms-cloud") \
     .config("spark.hadoop.fs.s3a.bucket.lakehouse-bucket.endpoint" ,"s3.direct.us-south.cloud-object-storage.appdomain.cloud") \
-    .config("spark.hadoop.fs.s3a.bucket.lakehouse-bucket.access.key" ,"<access-key-for-source-bucket>") \
-    .config("spark.hadoop.fs.s3a.bucket.lakehouse-bucket.secret.key" ,"<secret-key-for-source-bucket>") \
+    .config("spark.hadoop.fs.s3a.bucket.lakehouse-bucket.access.key" ,"7a7cd3bf09324bc189b517e56a5c8abe") \
+    .config("spark.hadoop.fs.s3a.bucket.lakehouse-bucket.secret.key" ,"94b221a671dc99774fbd0d41a1b1869aede11e696745edfa") \
     .config("spark.hadoop.fs.s3a.bucket.source-bucket.endpoint" ,"s3.direct.us-south.cloud-object-storage.appdomain.cloud") \
-    .config("spark.hadoop.fs.s3a.bucket.source-bucket.access.key" ,"<access-key-for-lakehous-bucket>") \
-    .config("spark.hadoop.fs.s3a.bucket.source-bucket.secret.key" ,"<secret-key-for-lakehouse-bucket>") \
+    .config("spark.hadoop.fs.s3a.bucket.source-bucket.access.key" ,"7bc01b1d231f45af96569874ce3f3e24") \
+    .config("spark.hadoop.fs.s3a.bucket.source-bucket.secret.key" ,"3202083599c917cf575010c5d308b11990db4fd5d5747d27") \
     .enableHiveSupport() \
     .getOrCreate()
+  return spark
 
-    return spark
+def create_database(spark):
+    # Create a database in the lakehouse catalog
+    spark.sql("create database if not exists lakehouse.demodb LOCATION 's3a://lakehouse-bucket/'")
 
-    def main():
+def list_databases(spark):
+    # list the database under lakehouse catalog
+    spark.sql("show databases from lakehouse").show()
+
+def basic_iceberg_table_operations(spark):
+    # demonstration: Create a basic Iceberg table, insert some data and then query table
+    spark.sql("create table if not exists lakehouse.demodb.testTable(id INTEGER, name VARCHAR(10), age INTEGER, salary DECIMAL(10, 2)) using iceberg").show()
+    spark.sql("insert into lakehouse.demodb.testTable values(1,'Alan',23,3400.00),(2,'Ben',30,5500.00),(3,'Chen',35,6500.00)")
+    spark.sql("select * from lakehouse.demodb.testTable").show()
+
+def create_table_from_parquet_data(spark):
+    # load parquet data into dataframce
+    df = spark.read.option("header",True).parquet("s3a://source-bucket/nyc-taxi/yellow_tripdata_2022-01.parquet")
+    # write the dataframe into an Iceberg table
+    df.writeTo("lakehouse.demodb.yellow_taxi_2022").create()
+    # describe the table created
+    spark.sql('describe table lakehouse.demodb.yellow_taxi_2022').show(25)
+    # query the table
+    spark.sql('select * from lakehouse.demodb.yellow_taxi_2022').count()
+
+def ingest_from_csv_temp_table(spark):
+    # load csv data into a dataframe
+    csvDF = spark.read.option("header",True).csv("s3a://source-bucket/zipcodes.csv")
+    csvDF.createOrReplaceTempView("tempCSVTable")
+    # load temporary table into an Iceberg table
+    spark.sql('create or replace table lakehouse.demodb.zipcodes using iceberg as select * from tempCSVTable')
+    # describe the table created
+    spark.sql('describe table lakehouse.demodb.zipcodes').show(25)
+    # query the table
+    spark.sql('select * from lakehouse.demodb.zipcodes').show()
+
+def ingest_monthly_data(spark):
+    df_feb = spark.read.option("header",True).parquet("s3a://source-bucket//nyc-taxi/yellow_tripdata_2022-02.parquet")
+    df_march = spark.read.option("header",True).parquet("s3a://source-bucket//nyc-taxi/yellow_tripdata_2022-03.parquet")
+    df_april = spark.read.option("header",True).parquet("s3a://source-bucket//nyc-taxi/yellow_tripdata_2022-04.parquet")
+    df_may = spark.read.option("header",True).parquet("s3a://source-bucket//nyc-taxi/yellow_tripdata_2022-05.parquet")
+    df_june = spark.read.option("header",True).parquet("s3a://source-bucket//nyc-taxi/yellow_tripdata_2022-06.parquet")
+
+    df_q1_q2 = df_feb.union(df_march).union(df_april).union(df_may).union(df_june)
+    df_q1_q2.write.insertInto("lakehouse.demodb.yellow_taxi_2022")
+
+def perform_table_maintenance_operations(spark):
+    # Query the metadata files table to list underlying data files
+    spark.sql("SELECT file_path, file_size_in_bytes FROM lakehouse.demodb.yellow_taxi_2022.files").show()
+
+    # There are many smaller files compact them into files of 200MB each using the
+    # `rewrite_data_files` Iceberg Spark procedure
+    spark.sql(f"CALL lakehouse.system.rewrite_data_files(table => 'demodb.yellow_taxi_2022', options => map('target-file-size-bytes','209715200'))").show()
+
+    # Again, query the metadata files table to list underlying data files; 6 files are compacted
+    # to 3 files
+    spark.sql("SELECT file_path, file_size_in_bytes FROM lakehouse.demodb.yellow_taxi_2022.files").show()
+
+    # List all the snapshots
+    # Expire earlier snapshots. Only latest one with comacted data is required
+    # Again, List all the snapshots to see only 1 left
+    spark.sql("SELECT committed_at, snapshot_id, operation FROM lakehouse.demodb.yellow_taxi_2022.snapshots").show()
+    #retain only the latest one
+    latest_snapshot_committed_at = spark.sql("SELECT committed_at, snapshot_id, operation FROM lakehouse.demodb.yellow_taxi_2022.snapshots").tail(1)[0].committed_at
+    print (latest_snapshot_committed_at)
+    spark.sql(f"CALL lakehouse.system.expire_snapshots(table => 'demodb.yellow_taxi_2022',older_than => TIMESTAMP '{latest_snapshot_committed_at}',retain_last => 1)").show()
+    spark.sql("SELECT committed_at, snapshot_id, operation FROM lakehouse.demodb.yellow_taxi_2022.snapshots").show()
+
+    # Removing Orphan data files
+    spark.sql(f"CALL lakehouse.system.remove_orphan_files(table => 'demodb.yellow_taxi_2022')").show(truncate=False)
+
+    # Rewriting Manifest Files
+    spark.sql(f"CALL lakehouse.system.rewrite_manifests('demodb.yellow_taxi_2022')").show()
+
+
+def evolve_schema(spark):
+    # demonstration: Schema evolution
+    # Add column fare_per_mile to the table
+    spark.sql('ALTER TABLE lakehouse.demodb.yellow_taxi_2022 ADD COLUMN(fare_per_mile double)')
+    # describe the table
+    spark.sql('describe table lakehouse.demodb.yellow_taxi_2022').show(25)
+
+
+def clean_database(spark):
+    # clean-up the demo database
+    spark.sql('drop table if exists lakehouse.demodb.testTable purge')
+    spark.sql('drop table if exists lakehouse.demodb.zipcodes purge')
+    spark.sql('drop table if exists lakehouse.demodb.yellow_taxi_2022 purge')
+    spark.sql('drop database if exists lakehouse.demodb cascade')
+
+def main():
     try:
         spark = init_spark()
-        # Create a database in lakehouse catalog
-        spark.sql("create database if not exists lakehouse.demodb LOCATION 's3a://lakehouse-bucket/'")
-        # list the database under lakehouse catalog
-        spark.sql("show databases from lakehouse").show()
 
-        # demonstration: Create a basic Iceberg table, insert some data and then query table
-        spark.sql("create table if not exists lakehouse.demodb.testTable(id INTEGER, name VARCHAR(10), age INTEGER, salary DECIMAL(10, 2)) using iceberg").show()
-        spark.sql("insert into lakehouse.demodb.testTable values(1,'Alan',23,3400.00),(2,'Ben',30,5500.00),(3,'Chen',35,6500.00)")
-        spark.sql("select * from lakehouse.demodb.testTable").show()
+        create_database(spark)
+        list_databases(spark)
+
+        basic_iceberg_table_operations(spark)
 
         # demonstration: Ingest parquet and csv data into a wastonx.data Iceberg table
-        # load parquet data into dataframce
-        df = spark.read.option("header",True).parquet("s3a://source-bucket/nyc-taxi/yellow_tripdata_2022-01.parquet")
-        # write the dataframe into an Iceberg table
-        df.writeTo("lakehouse.demodb.yellow_taxi_2022").create()
-        # describe the table created
-        spark.sql('describe table lakehouse.demodb.yellow_taxi_2022').show(25)
-        # query the table
-        spark.sql('select * from lakehouse.demodb.yellow_taxi_2022').count()
+        create_table_from_parquet_data(spark)
+        ingest_from_csv_temp_table(spark)
 
-        # load csv data into a dataframe
-        csvDF = spark.read.option("header",True).csv("s3a://source-bucket/zipcodes.csv")
-        csvDF.createOrReplaceTempView("tempCSVTable")
-        # load temporary table into an Iceberg table
-        spark.sql('create or replace table lakehouse.demodb.zipcodes using iceberg as select * from tempCSVTable')
-        # describe the table created
-        spark.sql('describe table lakehouse.demodb.zipcodes').show(25)
-        # query the table
-        spark.sql('select * from lakehouse.demodb.zipcodes').show()
+        # load data for the month of Feburary to June into the table yellow_taxi_2022 created above
+        ingest_monthly_data(spark)
 
         # demonstration: Table maintenance
-        # load data for the month of Feburary to June into the table yellow_taxi_2022 created above
-        df_feb = spark.read.option("header",True).parquet("s3a://source-bucket/nyc-taxi/yellow_tripdata_2022-02.parquet")
-        df_march = spark.read.option("header",True).parquet("s3a://source-bucket/nyc-taxi/yellow_tripdata_2022-03.parquet")
-        df_april = spark.read.option("header",True).parquet("s3a://source-bucket/nyc-taxi/yellow_tripdata_2022-04.parquet")
-        df_may = spark.read.option("header",True).parquet("s3a://source-bucket/nyc-taxi/yellow_tripdata_2022-05.parquet")
-        df_june = spark.read.option("header",True).parquet("s3a://source-bucket/nyc-taxi/yellow_tripdata_2022-06.parquet")
-
-        df_q1_q2 = df_feb.union(df_march).union(df_april).union(df_may).union(df_june)
-        df_q1_q2.write.insertInto("lakehouse.demodb.yellow_taxi_2022")
-        # Query the metadata files table to list underlying data files
-        spark.sql("SELECT file_path, file_size_in_bytes FROM lakehouse.demodb.yellow_taxi_2022.files").show()
-
-        # There are many smaller files compact them into files of 200MB each using the
-        # `rewrite_data_files` Iceberg Spark procedure
-        spark.sql(f"CALL lakehouse.system.rewrite_data_files(table => 'demodb.yellow_taxi_2022', options => map('target-file-size-bytes','209715200'))").show()
-
-        # Query the metadata files table to list underlying data files, 6 files are compacted
-        # to 3 files
-        spark.sql("SELECT file_path, file_size_in_bytes FROM lakehouse.demodb.yellow_taxi_2022.files").show()
-
-        # Expire earlier snapshots only latest one with comacted data is required
-        # list all the snapshots
-        spark.sql("SELECT committed_at, snapshot_id, operation FROM lakehouse.demodb.yellow_taxi_2022.snapshots").show()
-        #retain only the latest one
-        latest_snapshot_committed_at=spark.sql("SELECT committed_at, snapshot_id, operation FROM lakehouse.demodb.yellow_taxi_2022.snapshots").tail(1)[0].committed_at
-        print (latest_snapshot_committed_at)
-        spark.sql(f"CALL lakehouse.system.expire_snapshots(table => 'demodb.yellow_taxi_2022',older_than => TIMESTAMP '{latest_snapshot_committed_at}',retain_last => 1)").show()
-
-        # Removing Orphan data files
-        spark.sql(f"CALL lakehouse.system.remove_orphan_files(table => 'demodb.yellow_taxi_2022')").show(truncate=False)
-
-        # Rewriting Manifest Files
-        spark.sql(f"CALL lakehouse.system.rewrite_manifests('demodb.yellow_taxi_2022')").show()
+        perform_table_maintenance_operations(spark)
 
         # demonstration: Schema evolution
-        # Add column fare_per_mile to the table
-        spark.sql('ALTER TABLE lakehouse.demodb.yellow_taxi_2022 ADD COLUMN(fare_per_mile double)')
-        # describe the table
-        spark.sql('describe table lakehouse.demodb.yellow_taxi_2022').show(25)
+        evolve_schema(spark)
     finally:
         # clean-up the demo database
-        spark.sql('drop table if exists lakehouse.demodb.testTable purge')
-        spark.sql('drop table if exists lakehouse.demodb.zipcodes purge')
-        spark.sql('drop table if exists lakehouse.demodb.yellow_taxi_2022 purge')
-        spark.sql('drop database if exists lakehouse.demodb cascade')
+        clean_database(spark)
         spark.stop()
 
-    if __name__ == '__main__':
-    main()
+if __name__ == '__main__':
+  main()
 ```
 {: codeblock}
 
