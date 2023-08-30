@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-07-07"
+lastupdated: "2023-08-30"
 
 keywords: lakehouse, SQL statements, connectors, watsonx.data
 
@@ -47,7 +47,6 @@ Following SQL statements are supported in {{site.data.keyword.lakehouse_full}} t
 | **JMX**| `X`    | `X`   | `X`  | ✓  | ✓  | `X`  | `X`   | `X`  | `X`  | `X`  | ✓  | `X`  | `X`  | `X`  | `X`  | `X`  | `X`  | `X`  | `X`  |
 |**Db2**| ✓    | ✓   | ✓  | ✓  |  -- | ✓  | `X`   | `X`  | `X`  | `X`  | ✓  | `X`  | `X`  | `X`  | ✓  | `X`  | ✓  | ✓  | `X`  |
 |**{{site.data.keyword.netezza_short}}**| ✓    | ✓   | ✓  | ✓  |  -- | ✓  | `X`   | `X`  | `X`  | `X`  | ✓  | `X`  | `X`  | `X`  | ✓  | `X`  | ✓  | ✓  | X  |
-|**Hudi**| `X`    | `X`   | `X`  | ✓  |  -- | `X`  | `X`   | `X`  | `X`  | `X`  | ✓  | `X`  | `X`  | `X`  | `X`  | `X`  | `X`  | `X`  | `X`  |
 {: caption="Table 1. SQL statements and supporting connectors" caption-side="bottom"}
 
 ## Limitations

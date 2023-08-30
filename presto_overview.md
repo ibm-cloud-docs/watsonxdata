@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-07-07"
+lastupdated: "2023-08-30"
 
 keywords: lakehouse, watsonx.data, presto
 
@@ -56,7 +56,6 @@ The following connectors are supported in {{site.data.keyword.lakehouse_short}}:
 -	[Db2](watsonxdata?topic=watsonxdata-db2_connector){: external}
 -	[{{site.data.keyword.netezza_short}}](watsonxdata?topic=watsonxdata-netezza_connector){: external}
 -	[Hive](https://prestodb.io/docs/current/connector/hive.html){: external}
-- [Hudi](https://prestodb.io/docs/current/connector/hudi.html){: external} (For more information about using Hudi connector with {{site.data.keyword.lakehouse_short}}, see [Integrating Presto with Apache Hudi using a Hudi connector](watsonxdata?topic=watsonxdata-hudi-conn){: external}.)
 -	[JMX](https://prestodb.io/docs/current/connector/jmx.html){: external}
 -	[Kafka](https://prestodb.io/docs/current/connector/kafka.html){: external}
 -	[Memory](https://prestodb.io/docs/current/connector/memory.html){: external}
