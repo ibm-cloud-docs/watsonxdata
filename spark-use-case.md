@@ -62,11 +62,11 @@ def init_spark():
   spark = SparkSession.builder \
     .appName("lh-hms-cloud") \
     .config("spark.hadoop.fs.s3a.bucket.lakehouse-bucket.endpoint" ,"s3.direct.us-south.cloud-object-storage.appdomain.cloud") \
-    .config("spark.hadoop.fs.s3a.bucket.lakehouse-bucket.access.key" ,"7a7cd3bf09324bc189b517e56a5c8abe") \
-    .config("spark.hadoop.fs.s3a.bucket.lakehouse-bucket.secret.key" ,"94b221a671dc99774fbd0d41a1b1869aede11e696745edfa") \
+    .config("spark.hadoop.fs.s3a.bucket.lakehouse-bucket.access.key" ,"<lakehouse-bucket-access-key>") \
+    .config("spark.hadoop.fs.s3a.bucket.lakehouse-bucket.secret.key" ,"<lakehouse-bucket-secret-key>") \
     .config("spark.hadoop.fs.s3a.bucket.source-bucket.endpoint" ,"s3.direct.us-south.cloud-object-storage.appdomain.cloud") \
-    .config("spark.hadoop.fs.s3a.bucket.source-bucket.access.key" ,"7bc01b1d231f45af96569874ce3f3e24") \
-    .config("spark.hadoop.fs.s3a.bucket.source-bucket.secret.key" ,"3202083599c917cf575010c5d308b11990db4fd5d5747d27") \
+    .config("spark.hadoop.fs.s3a.bucket.source-bucket.access.key" ,"<source-bucket-access-key>") \
+    .config("spark.hadoop.fs.s3a.bucket.source-bucket.secret.key" ,"<source-bucket-secret-key>") \
     .enableHiveSupport() \
     .getOrCreate()
   return spark
