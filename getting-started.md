@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-07-07"
+lastupdated: "2023-09-27"
 
 keywords: lakehouse, watsonx data, provision, endpoint, resource
 subcollection: watsonxdata
@@ -32,6 +32,9 @@ This tutorial is a short introduction to using a {{site.data.keyword.lakehouse_s
 {: #prereqs}
 
 You need to have an [{{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external}.
+
+To provision an instance, you must have IBM Cloud permissions for resource creation. For more information about the permissions, see [IAM access](/docs/account?topic=account-userroles).
+{: note}
 
 ## Provision an instance
 {: #create}

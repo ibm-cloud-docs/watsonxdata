@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-08-30"
+lastupdated: "2023-09-27"
 
 keywords: lakehouse, watsonx.data, presto
 

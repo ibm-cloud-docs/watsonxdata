@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-07-07"
+lastupdated: "2023-09-27"
 
 keywords: lakehouse, access, data, policy, watsonx data
 
@@ -44,7 +44,7 @@ To maintain data security, you can create access policies for the following at t
 
 1. Log in to {{site.data.keyword.lakehouse_short}} console.
 1. From the navigation menu, select **Access control**.
-1. Select **Policies** from the **Access control** page, click **Add policy**. **Create Access policy** page opens.
+1. Select **Policies** from the **Access control** page, click **Add policy**. **Create access control policy** page opens.
 1. In the **Basics** page, enter a policy name, policy description and select the policy status after creation. Click **Next**.
 1. In the **Data** page, select a catalog and choose a single or all schema, table, or column where you want to add the data policy.
 1. Click **Next** to add rules.

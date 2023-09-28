@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-07-07"
+lastupdated: "2023-09-27"
 
 keywords: watsonxdata, data manager, create table
 
@@ -40,6 +40,7 @@ You can generate, configure, and run DDL from the **Data manager** page by using
 
    .CSV, .Parquet, .json, .txt are the supported data file formats.
    For .json file, you must enclose the content in `[]`.
+   For .json file, multilevel data is not supported.
    {: note}
 
 1. Click the data type and choose the required data types for each column. Click **Next**.

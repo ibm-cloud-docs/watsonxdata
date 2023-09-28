@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-08-24"
+lastupdated: "2023-09-27"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -219,24 +219,32 @@ This sample is tested on the Cloud Object Storage buckets in the **us-south** re
 
 To insert data to COS, follow the steps below.
 
-1. Create the COS bucket.
-
-    ```bash
-    ibmcloud plugin install cloud-object-storage
-    ```
-    {: codeblock}
+1. Create a COS bucket(say, source-bucket) to store sample data to be ingested into wxd instance. For information about creating COS bucket, [Getting started with IBM Cloud Object Storage] see (https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage#gs-create-buckets).
 
 
     As a user of Object Storage, you not only need to know the API key or the HMAC keys to configure Object Storage, but also the IBM Analytics Engine service endpoints to connect to Object Storage. See [Selecting regions and endpoints](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-endpoints) for more information on the endpoints to use based on your Object Storage bucket type, such as regional versus cross-regional. You can also view the endpoints across regions for your Object Storage service by selecting the service on your IBM Cloud dashboard and clicking **Endpoint** in the navigation pane. Always choose the **direct endpoint**. Direct endpoint provide better performance and do not incur charges. An example of an endpoint for US-South Cross region is `s3.direct.us.cloud-object-storage.appdomain.cloud`.
 
-2.  Download first six months taxi data sample for the year 2022. Choose the required data format and download from the corresponding locations:
+2. Download a sample csv file (say, zipcodes.csv) and parquet sample data (say, six months taxi data for year 2022) from the links give below.
 
     * [Sample parquet file](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page).
     * [Sample CSV file](https://raw.githubusercontent.com/spark-examples/spark-scala-examples/3ea16e4c6c1614609c2bd7ebdffcee01c0fe6017/src/main/resources/zipcodes.csv)
 
-3. Use the COS cli to upload the sample data into COS bucket.
+3. Install IBM Cloud Object Storage plug-in. For more information about how to install plug-in, see [IBM Cloud Object Storage CLI](https://cloud.ibm.com/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-plugin-ic-cos-cli).
+
+4. Use the COS cli to upload the sample data into COS bucket.
 
     ```bash
-    ibmcloud cos upload --bucket test-cos-storage-bucket --key <your sample data file name> --file <your sample data file name>
+    ibmcloud cos upload --bucket <cos_bucket_name> --key <source_file_name> --file <path_to_source_file>
     ```
     {: codeblock}
+
+    Parameter values:
+    * <cos_bucket_name>: name of the bucket created in step1.
+    * <source_file_name>: the name of the sample data file that you downloaded. Here, **key zipcodes.csv** is the file name (see the example below).
+    * <path_to_source_file>: the path to the location in your machine where the file resides. Here, **path/zipcodes.csv** is the file path (see the example below).
+
+    For example:
+    ```bash
+    ibmcloud cos upload --bucket source-bucket --key zipcodes.csv --file <path/zipcodes.csv>
+    ```
+    {: screen}
