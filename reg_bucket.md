@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-09-27"
+lastupdated: "2023-10-11"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
 
@@ -58,5 +58,8 @@ To add a bucket-catalog pair, complete the following steps.
    | Catalog type | Select the catalog type from the list.|
    | Catalog name | Enter the name of your catalog. This catalog is automatically associated with your bucket.|
    {: caption="Table 1. Register bucket" caption-side="bottom"}
+
+The bucket name must be unique. You must use unique names while creating buckets in different object stores.
+{: important}
 
 5. Click **Add**.

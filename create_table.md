@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-09-27"
+lastupdated: "2023-10-11"
 
 keywords: watsonxdata, data manager, create table
 
@@ -50,3 +50,11 @@ You can generate, configure, and run DDL from the **Data manager** page by using
 1. Click **Create**.
 1. Verify that the table creation status in the **Result set** is successful, indicated as true.
 1. Go to the **Data manager** page and select the schema under which you created the table and click the refresh icon. The newly created table is listed.
+
+Following are the requirements or limitations when ingesting data through web console:
+* Iceberg target table is the only supported format.
+* Partitioning is not supported.
+* Source CSV file containing TAB or space as delimiter is not supported.
+* Configure options are disabled for GA.
+* Target table output format is Iceberg and the target data format is Parquet.
+* Target storage path is default and cannot be changed.

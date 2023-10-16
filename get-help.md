@@ -4,7 +4,7 @@
 
 copyright:
   years: 2023
-lastupdated: "2023-09-27"
+lastupdated: "2023-10-11"
 
 keywords: watsonx data, lakehouse, support, help
 

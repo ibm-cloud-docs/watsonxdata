@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-09-27"
+lastupdated: "2023-10-11"
 
 keywords: lakehouse
 
@@ -29,7 +29,7 @@ subcollection: watsonxdata
 # Known issues (Limitations)
 {: #known_issues}
 
-The following limitations and known issues, apply to {{site.data.keyword.lakehouse_full}}.
+The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
 ## Issue: User is not removed from the catalog access control on revoking data access
 {: #known_issues1.0.0_3}
@@ -45,13 +45,13 @@ Users with administrator privileges are unable to view the expected Hive and Pos
 {: #known_issues1.0.0_1}
 
 {{site.data.keyword.lakehouse_short}} user (user1) invites a new user (user2) to the account by using the **Manage access and users** screen (**Manage > Access (IAM) > Manage access and users**) and grants access to a role (MetastoreAccess, Viewer, Operator, Editor, Administrator). User2 gets access to resources in the {{site.data.keyword.lakehouse_short}} instance through user1's account. Additionally, user2 is granted data access at the resource level by adding to the data control policies by using the **Access Control** screen.
-When user1 removes user2 from the user1's account, user2 is still listed in **Access Control** tab at resource level.
+When user1 removes user2 from the user1's account, user2 is still listed in the **Access Control** tab at resource level.
 
 
 ## Issue: Unable to view created schema
 {: #known_issues1}
 
-When a user with the User role and the Create access (the user only has the Create access) is added to an external database, they cannot see the schemas that they created. Though the user can create schemas, they cannot view them. Following is the system response:
+When a user with the User role and the Create access (the user only has the Create access) is added to an external database, they cannot see the schemas that they created. Though the user can create schemas, they cannot view them. The following is the system response:
 
 ```bash
 presto:default> show schemas;
@@ -66,7 +66,7 @@ Schema
 ## Issue: Access denied when querying an external database
 {: #known_issues2}
 
-When a user with the User role and Create access (the user only has Create access), is added to an external database, they cannot run the select query from the table they have created. Though the user can connect to the Presto engine and create tables and schemas, they cannot query from the table. The system displays an `Access Denied` message.
+When a user with the User role and Create access (the user only has Create access), is added to an external database, they cannot run the select query from the table they have created. Though the user can connect to the Presto engine and create tables and schemas, they cannot query from the table. The system displays a `Access Denied` message.
 
 ```bash
 Query 20230608_132213_00042_wpmk2 failed: Access Denied: Cannot select from columns [id] in table or view tab_appiduser_01
@@ -147,8 +147,8 @@ Assigning **Grant** or **Revoke** privilege to a user through access policy does
 
 1. User_A adds a bucket and a Hive catalog (for example, `useracat02`).
 2. User_A creates a schema and a table.
-3. User_B and User_C are assigned **User** role to the catalog.
-4. User_A adds allow grant policy to User_B
+3. User_B and User_C are assigned **User** roles to the catalog.
+4. User_A adds allow grant policy to User_B.
 5. User_B connects to the catalog and runs `grant select` to User_C.
 
    ```sql
@@ -176,7 +176,7 @@ For example, if you create a schema without specifying the location of the bucke
 {: #known_issues15}
 
 A schema and a bucket cannot be created with the same name.
-For example, if you create a schema named “sales” in one catalog, the same name cannot be used for another schema in another catalog. Similarly, if you register a bucket with the name “salesbucket”, another bucket with the same cannot be registered, even if the bucket is located in a different object store.
+For example, if you create a schema that is named “sales” in one catalog, the same name cannot be used for another schema in another catalog. Similarly, if you register a bucket with the name “salesbucket”, another bucket with the same cannot be registered, even if the bucket is located in a different object store.
 
 **Workaround:** Use unique names when creating schemas and buckets.
 
@@ -185,7 +185,7 @@ For example, if you create a schema named “sales” in one catalog, the same n
 
 When you restart the Presto engine, the following error is displayed:
 `com.googlecode.aviator.exception.CompileExpressionErrorException`.
-This error is displayed only once and for the first action you perform after the engine restart.
+This error is displayed only once and for the first action that you perform after the engine restart.
 
 **Workaround:** If you see any of the define class error or name or service not known errors, wait for a few minutes for the server to completely restart. Then, retry the query for successful execution.
 
@@ -213,14 +213,14 @@ Though you can use a location pointing to a bucket only with or without a traili
 ## Issue: Creating the database of type Memory gives an error
 {: #known_issues20}
 
-Creating a database of the type Memory gives an error, `pq: invalid input syntax for type integer: ""`.
+Creating a database of the type Memory gives an error `pq: invalid input syntax for type integer: ""`.
 
-## Issue: Presto does not support `AS OF` with iceberg tables
+## Issue: Presto do not support `AS OF` with iceberg tables
 {: #known_issues21}
 
-Presto does not support `AS OF <time stamp>` command in a SELECT query.
+Presto do not support `AS OF <time stamp>` command in a SELECT query.
 
-**Workaround:** Invoke `CALL iceberg_data_rollback_to_snapshot` to move to the desired timestamp.
+**Workaround:** Invoke `CALL iceberg_data_rollback_to_snapshot` to move to the required timestamp.
 
 If you use `CALL iceberg_data_rollback_to_snapshot` with a timestamp, you cannot call the stored procedure to move to a later timestamp. Use Spark SQL as an alternative.
 {: note}
@@ -228,12 +228,12 @@ If you use `CALL iceberg_data_rollback_to_snapshot` with a timestamp, you cannot
 ## Issue: Only the creator has DROP access on the table in Apache Hive (API)
 {: #known_issues22}
 
-Only the creator of a table can drop the table that is created in Apache Hive catalog. Other users cannot drop the table even if they have an explicit DROP access to the table. They will get the `Access Denied` message.
+Only the creator of a table can drop the table that is created in the Apache Hive catalog. Other users cannot drop the table even if they have an explicit DROP access to the table. They get the `Access Denied` message.
 
-## Issue: User provided certificates are not supported by {{site.data.keyword.lakehouse_short}}
+## Issue: User-provided certificates are not supported by {{site.data.keyword.lakehouse_short}}
 {: #known_issues23}
 
-Currently, user provided certificates are not supported in {{site.data.keyword.lakehouse_short}} when adding database connections, object store buckets, or when using ibm-lh utility.
+Currently, user-provided certificates are not supported in {{site.data.keyword.lakehouse_short}} when adding database connections, object store buckets, or when using ibm-lh utility.
 
 ## Issue: CTAS query that uses Parquet format fails
 {: #known_issues24}
@@ -265,4 +265,22 @@ No columns to parse from file
 ```
 {: screen}
 
-**Workaround:** First list the folders inside the bucket using `aws s3 ls` command. If no empty files are listed, copy all the files to another folder using `aws s3 cp` command.
+**Workaround:** First list the folders inside the bucket by using `aws s3 ls` command. If no empty files are listed, copy all the files to another folder by using `aws s3 cp` command.
+
+## Issue: A persistent java.lang.NullPointerException error occurs
+{: #known_issues26}
+
+When you run complex and concurrent SQL query workloads, a persistent `java.lang.NullPointerException, 500: Internal Server Error` error occurs in one of the Presto workers as follows:
+
+```bash
+2023-08-30T22:12:20.741Z        ERROR   remote-task-callback-3095       com.facebook.presto.execution.StageExecutionStateMachine        Stage execution 20230830_221206_31201_z3xuz.14.0 failed
+com.facebook.presto.spi.PrestoException: Expected response code from https://172-17-151-136.fd034d239041414591df37bc2533573e.pod.cluster.local:8480/v1/task/20230830_221206_31201_z3xuz.14.0.5?summarize to be 200, but was 500: Internal Server Error
+java.lang.NullPointerException
+        at io.airlift.units.Duration.millisPerTimeUnit(Duration.java:237)
+        at io.airlift.units.Duration.getValue(Duration.java:94)
+        at io.airlift.units.Duration.convertTo(Duration.java:109)
+        ....
+```
+{: screen}
+
+**Workaround:** Pause and resume the engine to restart all worker nodes.

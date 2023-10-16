@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-09-27"
+lastupdated: "2023-10-11"
 
 keywords: lakehouse, SQL statements, connectors, watsonx.data
 
@@ -34,7 +34,7 @@ Following SQL statements are supported in {{site.data.keyword.lakehouse_full}} t
 
 | Connector | `CREATE SCHEMA` | `CREATE TABLE` | `INSERT INTO` | `SELECT` | `SELECT` (Complex) | `ALTER TABLE` | `ALTER SCHEMA` | `DELETE` | `GRANT` | `REVOKE` | `SHOW GRANTS` | `SHOW ROLES` | `SHOW ROLE GRANTS` | `UPDATE` | `DROP TABLE` | `CREATE ROLE` | `CREATE VIEW` | `DROP SCHEMA` | `DROP VIEW` |
 | :-------------- | :-------------: | :-------------:| :-------------:| :-------------:| :-------------: | :-------------: | :-------------: | :-------------: | :-------------: | :-------------:| :-------------:| :-------------: | :-------------: | :-------------: | :-------------: | :-------------: | :-------------: | :-------------: | :-------------: |
-|**Iceberg**| ✓    | ✓   | ✓  | ✓  | ✓  | ✓  | `X`   | ✓  | `X`  | `X`  | ✓  | `X`  | `X`  | `X`  | ✓  | `X`  | `X`  | ✓  | `X`  |
+|**Iceberg**| ✓    | ✓   | ✓  | ✓  | ✓  | ✓  | `X`   | `X`  | `X`  | `X`  | ✓  | `X`  | `X`  | `X`  | ✓  | `X`  | `X`  | ✓  | `X`  |
 |**MySQL**| `X`    | ✓  | ✓  | ✓  | ✓  | `X`  | `X`   | `X`  | `X`  | `X`  | `X`  | `X`  | `X`  | `X`  | ✓   | `X`  | `X`  | `X`  | `X`  |
 |**PostgreSQL**| `X`    | ✓   | ✓  | ✓  | ✓  | ✓  | `X`   | `X`  | `X`  | `X`  | `X`  | `X`  | `X`  | `X`  | ✓  | `X`  | `X`  | `X`  | `X`  |
 |**MongoDB**| `X`    | ✓   | ✓  | ✓  | ✓  | ✓  | `X`   | `X`  | `X`  | `X`  | ✓  | `X`  | `X`  | `X`  | ✓  | `X`  | `X`  | `X`  | `X`  |

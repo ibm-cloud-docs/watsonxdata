@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-09-27"
+lastupdated: "2023-10-11"
 
 keywords: watsonxdata, ingesting, object storage bucket, data files, table format. SQL query
 

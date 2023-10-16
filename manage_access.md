@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-09-27"
+lastupdated: "2023-10-11"
 
 keywords: lakehouse, watsonx data, roles, access
 subcollection: watsonxdata
@@ -43,9 +43,9 @@ To manage access, complete the following steps:
 1. Click the overflow icon in the components row and then click **Manage access**. Alternatively, you can click the **Display name** of the component.
    The selected component page opens.
 
-1. Under the **Access control** tab, click **Add users**.
+1. Under the **Access control** tab, click **Add access**.
 
-1. In the **Add users** window, provide the following details.
+1. In the **Add access** window, provide the following details.
 
    | Field | Description |
    |--------------------------|----------------|
