@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-10-11"
+lastupdated: "2023-11-29"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -86,7 +86,7 @@ def basic_iceberg_table_operations(spark):
     spark.sql("select * from lakehouse.demodb.testTable").show()
 
 def create_table_from_parquet_data(spark):
-    # load parquet data into dataframce
+    # load parquet data into dataframe
     df = spark.read.option("header",True).parquet("s3a://source-bucket/nyc-taxi/yellow_tripdata_2022-01.parquet")
     # write the dataframe into an Iceberg table
     df.writeTo("lakehouse.demodb.yellow_taxi_2022").create()
@@ -129,7 +129,7 @@ def perform_table_maintenance_operations(spark):
     spark.sql("SELECT file_path, file_size_in_bytes FROM lakehouse.demodb.yellow_taxi_2022.files").show()
 
     # List all the snapshots
-    # Expire earlier snapshots. Only latest one with comacted data is required
+    # Expire earlier snapshots. Only latest one with compacted data is required
     # Again, List all the snapshots to see only 1 left
     spark.sql("SELECT committed_at, snapshot_id, operation FROM lakehouse.demodb.yellow_taxi_2022.snapshots").show()
     #retain only the latest one
@@ -169,11 +169,11 @@ def main():
 
         basic_iceberg_table_operations(spark)
 
-        # demonstration: Ingest parquet and csv data into a wastonx.data Iceberg table
+        # demonstration: Ingest parquet and csv data into a watsonx.data Iceberg table
         create_table_from_parquet_data(spark)
         ingest_from_csv_temp_table(spark)
 
-        # load data for the month of Feburary to June into the table yellow_taxi_2022 created above
+        # load data for the month of February to June into the table yellow_taxi_2022 created above
         ingest_monthly_data(spark)
 
         # demonstration: Table maintenance

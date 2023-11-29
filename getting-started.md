@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-10-11"
+lastupdated: "2023-11-29"
 
 keywords: lakehouse, watsonx data, provision, endpoint, resource
 subcollection: watsonxdata
@@ -33,40 +33,83 @@ This tutorial is a short introduction to using a {{site.data.keyword.lakehouse_s
 
 You need to have an [{{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external}.
 
-To provision an instance, you must have IBM Cloud permissions for resource creation. For more information about the permissions, see [IAM access](/docs/account?topic=account-userroles).
+The access to provision IBM Cloud resources is governed by using [IAM access](https://test.cloud.ibm.com/docs/account?topic=account-userroles#platformroles) and [account management services](https://test.cloud.ibm.com/docs/account?topic=account-account-services&interface=ui#account-management-actions-roles). You must have **Administrator** privileges to access the resource group in which you need to create the resources.
 {: note}
 
 ## Provision an instance
 {: #create}
 {: step}
 
+### Provision an instance through UI
+{: #create-by-ui}
+
 1. Go to the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog) page.
 
-1. Find the **{{site.data.keyword.lakehouse_short}}** tile and click it. You are redirected to the provisioning page.
+2. Find the **{{site.data.keyword.lakehouse_short}}** tile and click it. You are redirected to the provisioning page.
 
-1. Select the cloud platform (IBM Cloud or Amazon Web Services) you want to deploy {{site.data.keyword.lakehouse_short}}.
+3. Select the cloud platform (IBM Cloud or Amazon Web Services) you want to deploy {{site.data.keyword.lakehouse_short}}.
 
-1. Select a location from the list of available locations for {{site.data.keyword.lakehouse_short}} service.
+4. In the **Management method** field, **Fully managed** is the default option, which indicates that IBM manages all the network complexities.
 
-1. Enter the service name. The service name can be any string. This service name is used in the web console to identify the new deployment.
+5. Select a location from the list of available locations for {{site.data.keyword.lakehouse_short}} service.
 
-1. Select a resource group. If you are organizing your services into resource groups, specify the resource group.
+6. Enter the service name. The service name can be any string. This service name is used in the web console to identify the new deployment.
 
-1. Enter a tag name.
+7. Select a resource group. If you are organizing your services into resource groups, specify the resource group.
 
-1. Select the type of network endpoints that is used for accessing the service.
+8. Enter a tag name.
 
+9. Enter the access management tags.
+
+   <!-- 1. Select the type of network endpoints that is used for accessing the service.
    a. **Public endpoint only** - Public endpoints provide a connection to your deployment on the public network (single endpoint).
-
    b. **Private endpoint only** - Private endpoints route traffic through the IBM Cloud Private network (single endpoint).
+   c. **Both public and private endpoints** - Public endpoints provide a connection to your deployment on the public network. Private endpoints route traffic through the IBM Cloud Private network. (Two separate endpoints). -->
 
-   c. **Both public and private endpoints** - Public endpoints provide a connection to your deployment on the public network. Private endpoints route traffic through the IBM Cloud Private network. (Two separate endpoints).
+10. Click **Create**.
 
-1. Click **Create**.
+    After you click **Create**, the system displays a message to say that the instance is being provisioned, which returns you to the **Resource list**. From the **Resource list**, under **Databases** category, you see that the status for your instance is, `Provision in progress`.
 
-   After you click **Create**, the system displays a message to say that the instance is being provisioned, which returns you to the **Resource list**. From the **Resource list**, under **Databases** category, you see that the status for your instance is, `Provision in progress`.
+11. When the status changes to `Active`, select the instance.
 
-1.  When the status changes to `Active`, select the instance.
+### Provision an instance through CLI
+{: #create-by-cli}
+
+1. Log in to `cloud.ibm.com`.
+
+   ```bash
+   ibmcloud login --sso -a https://cloud.ibm.com
+   ```
+   {: codeblock}
+
+2. Select an account on which you want to create an instance.
+
+3. Create a new formation.
+
+    ```bash
+    ibmcloud resource service-instance-create <instance-name> lakehouse lakehouse-enterprise <region> -g Default -p '{"datacenter": ""}'
+    ```
+    {: codeblock}
+
+    - `instance-name:` name of the formation. For example, watsonx.data-abc.
+    - `lakehouse-enterprise:` Plan ID
+    - `lakehouse:` {{site.data.keyword.lakehouse_short}} service
+    - `datacenter:` Required parameter. For example, `ibm:us-south:dal`, `aws:us-west-2`, `aws:us-east-1`, `aws:eu-central-1`, `ibm:us-east:wdc`, and `ibm:eu-de:fra`.
+    - Regions are `eu-de`, `us-east`, `us-south` and `jp-tok`.
+
+    Example:
+
+    ```bash
+    ibmcloud resource service-instance-create watsonx.data-abc lakehouse lakehouse-enterprise us-south -g Default -p '{"datacenter": "ibm:us-south:dal"}'
+    ```
+    {: codeblock}
+
+4. Check the status of the new instance.
+
+    ```bash
+    ibmcloud resource service-instance <instance-name>
+    ```
+    {: codeblock}
 
 ## Open the web console
 {: #open_console}
@@ -74,11 +117,11 @@ To provision an instance, you must have IBM Cloud permissions for resource creat
 
 1. Go to **Resource list** **>** **Databases**.
 
-1. Click your {{site.data.keyword.lakehouse_short}} instance link. The service instance page opens.
+2. Click your {{site.data.keyword.lakehouse_short}} instance link. The service instance page opens.
 
-1. Click **Open web console** to start the web console.
+3. Click **Open web console**. The {{site.data.keyword.lakehouse_short}} web console opens.
 
-1. Log in to the console with your IBMid and password. The {{site.data.keyword.lakehouse_short}} web console opens.
+    <!-- 1. Log in to the console with your IBMid and password. The {{site.data.keyword.lakehouse_short}} web console opens. -->
 
 ## Next steps
 {: #gs_ns}

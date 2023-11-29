@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-10-11"
+lastupdated: "2023-11-29"
 
 keywords: watsonx.data, promotion, credits, offers
 
@@ -10,7 +10,7 @@ subcollection: watsonxdata
 
 content-type: tutorial
 account-plan: paid
-completion-time: 6h
+completion-time: 2h
 ---
 
 
@@ -24,10 +24,10 @@ completion-time: 6h
 # Allowing trial experience
 {: #tutorial_hp_intro}
 {: toc-content-type="tutorial"}
-{: toc-completion-time="6h"}
+{: toc-completion-time="2h"}
 
 
-IBM provides promotion credits to allow a trial experience. The promotion code is sized to allow free trial of {{site.data.keyword.lakehouse_full}} for seven days, if you carefully follow the tutorial. In this trial, you can explore and familiarize yourself with {{site.data.keyword.lakehouse_short}}.
+IBM provides promotion credits to allow a trial experience. The promotion code is sized to allow free trial of {{site.data.keyword.lakehouse_full}} for seven (7) days, if you carefully follow the tutorial. In this trial, you can explore and familiarize yourself with {{site.data.keyword.lakehouse_short}}.
 {: shortdesc}
 
 In this tutorial you learn how to claim your free promo code, apply it, monitor the usage of the credit, get started, size your starter instance of {{site.data.keyword.lakehouse_short}} and try it out.
@@ -35,6 +35,9 @@ For more information, you can also watch the [watsonx.data demo: Get started wit
 
 After you fully use the promo credits, you are automatically billed at the advertised rate. So, watch the usage and consumption of the promotion code credits closely.
 {: important}
+
+You will not receive any default notification on the usage. To track the usage and ensure that you are within the trial limit, configure spending notification by following the steps in [Setting spending notification](#hp_spend_noti).
+{: attention}
 
 ## Objective
 {: #hp_obj}
@@ -50,79 +53,68 @@ After you fully use the promo credits, you are automatically billed at the adver
 ## Before you begin
 {: #hp_byb}
 
-* To use the promotion credits, you must have an {{site.data.keyword.Bluemix_short}} account with a payment method added.
+To use the promotion credits, you must have an {{site.data.keyword.Bluemix_short}} account with a payment method added.
 
 ## Exploring key features
 {: #hp_get_explore}
 {: step}
 
-Explore and review the following information in the **{{site.data.keyword.lakehouse_short}} {{site.data.keyword.Bluemix_short}} catalog** page.
+Explore and review the following information in the [**{{site.data.keyword.lakehouse_short}}** **{{site.data.keyword.Bluemix_short}} catalog**](https://cloud.ibm.com/watsonxdata) page.
 
 ### Viewing promotion code
 {: #hp_view}
 
 To view the promotion code and to know about the free credits, follow the steps:
 
-1. Go to the **{{site.data.keyword.lakehouse_short}}** **{{site.data.keyword.Bluemix_short}} catalog** page.
+1. Go to the [**{{site.data.keyword.lakehouse_short}}** **{{site.data.keyword.Bluemix_short}} catalog**](https://cloud.ibm.com/watsonxdata) page.
 1. The **Summary** section displays an information dialog box with the promotion code and the free credits information.
 
 ### Review price estimate and plan resource
 {: #hp_review}
 
-Your {{site.data.keyword.lakehouse_short}} features an elastic scalable computation method with cost per hour that is computed in Resource Units per Hour (RU/Hr). The cost varies depending on the resources that you add. It is important to right size the resources so that you can maximize the promotion credits. Take the time to carefully review the section and select minimum resources to conserve your promotion credits.
-You can estimate the Resource Unit per Hour consumption of your starter sized {{site.data.keyword.lakehouse_short}} by using the pricing estimator in the **About** tab on the **{{site.data.keyword.lakehouse_short}}** **{{site.data.keyword.Bluemix_short}} catalog** page.
+Your {{site.data.keyword.lakehouse_short}} features an elastic scalable computation method with cost per hour that is computed in Resource Units per Hour (RU/Hr). The cost varies depending on the resources that you add. It is important to right size the resources so that you can maximize the promotion credits. Take the time to carefully review the section and select the minimum resources to conserve your promotion credits.
+You can estimate the Resource Unit per Hour consumption of your starter sized {{site.data.keyword.lakehouse_short}} by using the pricing estimator in the **About** tab on the [**{{site.data.keyword.lakehouse_short}}** **{{site.data.keyword.Bluemix_short}} catalog**](https://cloud.ibm.com/watsonxdata) page.
 
 
 Here, you learn how to review the price estimate and plan the resources.
 
-1. Go to the **{{site.data.keyword.lakehouse_short}}** **{{site.data.keyword.Bluemix_short}} catalog** page.
+1. Go to the [**{{site.data.keyword.lakehouse_short}}** **{{site.data.keyword.Bluemix_short}} catalog**](https://cloud.ibm.com/watsonxdata) page.
 1. Select the **About** tab.
 1. You can read through the **Summary** and **Features**.
 1. In the **Pricing estimator**, you can provide the following inputs and review the **Estimate summary** so that you can assess the hourly cost for the resource units added.
 
-The provisioning of your engine with the infrastructures
-(bucket, database) happens after you create the {{site.data.keyword.lakehouse_short}} instance. For more information about provisioning, see [Getting started](#hp_start). The price estimation helps you to have an idea of the hourly resource consumption before you create the {{site.data.keyword.lakehouse_short}} instance.
-{: important}
+    The provisioning of your engine with the infrastructures (bucket, database) happens after you create the {{site.data.keyword.lakehouse_short}} instance. For more information about provisioning, see [Getting started](#hp_start). The price estimation helps you to have an idea of the hourly resource consumption before you create the {{site.data.keyword.lakehouse_short}} instance.
+    {: important}
 
 
    | Field | Description |
    |--------------------------|----------------|
-   |Coordinator node type | Select either **storage optimized** or **compute optimized**. Recommend **storage optimized** to reduce promo credit consumption. |
+   |Coordinator node type | Select either **cache optimized** or **compute optimized**. Select **cache optimized** to reduce promo credit consumption. |
    |Number of coordinator nodes |By default, it is one.|
    |Resource units|Displays the cost per hour for the type and number of coordinator nodes that you selected|
-   |Worker node type | Select either storage optimized or **compute optimized**. Recommend **storage optimized** to reduce promo credit consumption.|
+   |Worker node type | Select either cache optimized or **compute optimized**. Select **cache optimized** to reduce promo credit consumption.|
    |Number of worker nodes|By default, it is one. Select the required number of worker nodes. Adding more worker nodes increases the cost per hour and the consumption of your promo code credit. |
    {: caption="Table 1. Pricing Estimator" caption-side="bottom"}
 
-   If you add more than one worker nodes, engines or if you choose compute optimized, the cost per hour increases and drains the promo code credit. For the trial, it is recommended to go with a single Presto engine (memory or storage optimized) that has one head node and one worker node.
+   The following image displays [**{{site.data.keyword.lakehouse_short}}** **{{site.data.keyword.Bluemix_short}} catalog**](https://cloud.ibm.com/watsonxdata) page.
+
+   ![Catalog page](images/happy_path_screen_new.svg){: caption="Figure 2. Price estimator" caption-side="bottom"}
+
+   If you add more than one worker nodes, engines or if you choose compute optimized, the cost per hour increases and drains the promo code credit. For the trial, it is recommended to go with a single Presto engine (memory or cache optimized) that has one head node and one worker node.
    {: important}
 
    Support services are required and cannot be turned off. They consume 3 RU/Hr.
-   A Presto engine (memory or storage optimized) with one head node and one worker node each consumes 2.8 RU/Hr.
+   A Presto engine (cache optimized) with one head node and one worker node consumes 2.8 RU/Hr each for a total of 5.6 RU/Hr, resulting in an instance cost of 8.6 RU/Hr.
    {: note}
 
-1. After configuring the resources from the **Pricing Estimator** details, you can scroll to the **Estimate summary** for the total estimated cost per hour.
+1. After configuring the resources from the **Pricing Estimator** details, scroll to the **Estimate summary** for the total estimated cost per hour. The following image displays the **Estimate summary** details.
 
-    Example:
-    For a sample configuration below, the total cost estimate is : 8.6 RU/Hr.
+    ![Estimate summary](images/pricing_estimator.svg){: caption="Figure 3. Estimate summary" caption-side="bottom"}
 
-    | Field | Field values |
-    |--------------------------|----------------|
-    | Coordinator node type | **Storage optimized** |
-    | Number of coordinator nodes |**1**|
-    |Resource units| Displays 2.8 RU/Hr|
-    | Worker node type | **Storage optimized**|
-    |Number of worker nodes|**1** |
-    |Resource units| Displays 2.8 RU/Hr|
-    {: caption="Table 1. Sample Configuration" caption-side="bottom"}
 
-The following image displays **{{site.data.keyword.lakehouse_short}}** **{{site.data.keyword.Bluemix_short}} catalog** page.
+The following are some of the scenarios to illustrate the consumption of promotion credits, an example case of $1,500.
 
-![Catalogpage](images/happy_path_screen.svg){: caption="Figure 2. Price estimator" caption-side="bottom"}
-
-The following are some of the scenarios to illustrate consumption of promotion credits, an example case of $1,500.
-
-* If you leave the query engine in the running state, with a head node and a worker node for the entire day, then the cost estimate is 8.6 RU/Hrs * 24 Hrs = 206.4 RU/Day. At this rate there would be seven days until the promo code is consumed and billing begins automatically.
+* If you leave the query engine in the running state, with a head node and a worker node for the entire day, then the cost estimate is 8.6 RU/Hrs * 24 Hrs = 206.4 RU/Day. At this rate there would be seven (7) days until the promo code is consumed and billing begins automatically.
 
 * If you leave the engine paused without resuming, the support services still continue to have 3 RU/Hr in cost per hour to maintain your support services. This consumes the promo credit within 20 days even though the engine was paused.
 
@@ -130,8 +122,8 @@ The following are some of the scenarios to illustrate consumption of promotion c
 Best practice:
 
 * For the trial, pause the engine whenever you are not using it for queries.
-* For the trial, it is recommend to go with a single Presto engine (memory or storage optimized) that has one head node and one worker node.
-* If you choose not to continue, buy and build on with your {{site.data.keyword.lakehouse_short}} you must manually delete your instance from the resource list before the promo credits are consumed. For more information about how to delete an instance, see [Viewing Usage](#hp_monitor_usg)
+* For the trial, it is recommend going with a single Presto engine (memory or cache optimized) that has one head node and one worker node.
+* If you choose not to continue, buy and build on with your {{site.data.keyword.lakehouse_short}} you must manually delete your instance from the resource list before the promo credits are consumed. For more information about how to delete an instance, see [Viewing Usage](#hp_monitor_usg).
 
 ## Applying the promotion code
 {: #hp_get_promo}
@@ -140,9 +132,11 @@ Best practice:
 In this section of the tutorial, you are going to learn how to apply the promotion code.
 
 
-1. Go to the **{{site.data.keyword.lakehouse_short}}** **{{site.data.keyword.Bluemix_short}} catalog** page.
+1. Go to the [**{{site.data.keyword.lakehouse_short}}** **{{site.data.keyword.Bluemix_short}} catalog**](https://cloud.ibm.com/watsonxdata) page.
 1. Select the **Create** tab.
 1. Select {{site.data.keyword.Bluemix_short}} as the cloud platform to deploy {{site.data.keyword.lakehouse_short}}.
+
+1. In the **Management method** field, **Fully managed** is the default option, which indicates that IBM manages all the network complexities.
 
 1. Select a location from the list of available locations for {{site.data.keyword.lakehouse_short}} service.
 
@@ -152,20 +146,21 @@ In this section of the tutorial, you are going to learn how to apply the promoti
 
 1. Enter a tag name. This is optional.
 
-1. Select the type of network endpoints that is used for accessing the service.(optional).
+1. Enter the access management tags.
+
+<!-- 1. Select the type of network endpoint that is used for accessing the service.(optional).
 
    a. **Public endpoint only** - Public endpoints provide a connection to your deployment on the public network (single endpoint).
 
    b. **Private endpoint only** - Private endpoints route traffic through the {{site.data.keyword.Bluemix_short}} Private network (single endpoint).
 
-   c. **Both public and private endpoints** - Public endpoints provide a connection to your deployment on the public network. Private endpoints route traffic through the {{site.data.keyword.Bluemix_short}} Private network. (two separate endpoints).
+   c. **Both public and private endpoints** - Public endpoints provide a connection to your deployment on the public network. Private endpoints route traffic through the {{site.data.keyword.Bluemix_short}} Private network. -->
 
-1. In the **Summary** pane, the promotion code appears.
+1. In the **Summary** page, the promotion code appears.
 1. Enter the promotion code in the **Apply a code** field and click **Apply**.
 1. Review the license agreement and select the checkbox to acknowledge the agreement.
-1. Click **Create**. The **{{site.data.keyword.Bluemix_short}} manage resource** page is displayed.
-
-   After you click **Create**, the message stating that the “instance is being provisioned” is displayed and you are taken to the **Resource list**. From the **Resource list**, under **Databases** category, you can see that the status for your instance is, **Provision in progress**.
+1. Click **Create**. The message stating that the “instance is being provisioned” is displayed and the **Resource list** opens.
+1. From the **Resource list** page, under the **Databases** category, you can see that the status for your instance is, **Provision in progress**.
 
 1. Select the instance when the status changes to **Active**.
 
@@ -175,7 +170,7 @@ In this section of the tutorial, you are going to learn how to apply the promoti
 
 1. Click **Open web console** to start the web console.
 
-1. Log in to the console with your IBMid and password. The {{site.data.keyword.lakehouse_short}} web console opens.
+<!-- 1. Log in to the console with your IBMid and password. The {{site.data.keyword.lakehouse_short}} web console opens. -->
 
 You can also apply the promotion code directly from your {{site.data.keyword.Bluemix_short}} promo credit dashboard.
 {: note}
@@ -185,13 +180,12 @@ You can also apply the promotion code directly from your {{site.data.keyword.Blu
 {: #hp_spend_noti}
 {: step}
 
-You can set up email spending notifications. You receive notifications when you reach 80%, 90%, and 100% of the spending thresholds that you specify.
+You can set up email spending notifications. You receive notifications when you reach 80%, 90%, and 100% of the monthly spending thresholds that you specify.
 
+1. In the {{site.data.keyword.Bluemix_short}} console, go to **Manage** > **Billing and usage**, and select **Spending notifications**. The **Spending notifications** page opens.
 
-Promotion code consumption does not trigger spend notifications. You can trigger spending notification only after the promo code is consumed. You must choose an amount that you are comfortable spending after the promo code is consumed. Spend notifications trigger on an hourly basis after promo credit is consumed. For example, if you set a spend notification of $20, you receive a notification within 2 hours after the full consumption of the promo credit (for example $1,500).
-{: important}
+    ![Spending notifications](images/spend_noti.svg){: caption="Figure 4. Spending notifications" caption-side="bottom"}
 
-1. In the {{site.data.keyword.Bluemix_short}} console, go to **Manage** > **Billing and usage**, and select **Spending notifications**.
 2. Set the **Enable** option to on for the specific service area to enable email notifications.
 3. Click the **Edit** option from the **Actions** icon.
 4. Next, you can add email recipients. You can select up to 10 users from your {{site.data.keyword.Bluemix_short}} account to receive email notifications about a service.
@@ -207,18 +201,33 @@ You can also monitor the promotion credit usage level and plan subscription in t
 
 1. In the {{site.data.keyword.Bluemix_short}} console, go to **Manage** > **Billing and usage**. Select **Promotions and credits**.
 1. Click a promotion to expand the table and view a description of each promotion and the products it applies to.
+
+    The following image displays the **Promotions and credits** page.
+
+     ![Promotions and credits](images/pro_cred.svg){: caption="Figure 5. Promotions and credits" caption-side="bottom"}
+
+
 1. If your promo credits are exhausted and you do not want to continue paying, you must manually delete your {{site.data.keyword.lakehouse_short}} instance by following the steps:
 
     1. Log in to your {{site.data.keyword.Bluemix_short}} account.
+    2. Click **Resource list**. The list of resources appears.
+    3. In **Resource list**, expand **Databases**.
+    4. To delete an instance, click the overflow menu icon at the end of the row and click **Delete**. A delete confirmation dialog appears
+    5. Click **Delete**.
 
-    1. From the **Resource** list, select your deployment.
+    For more information on manually deleting an instance, see [Deleting instance](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-delete_lh).
 
-    1. Click **Delete** from the list.
 
+    The following image displays the **Resource list** page.
+
+     ![Deleting {{site.data.keyword.lakehouse_short}} instance](images/del_inst.svg){: caption="Figure 6. Deleting {{site.data.keyword.lakehouse_short}} instance" caption-side="bottom"}
 
 ## Getting started with {{site.data.keyword.lakehouse_short}}
 {: #hp_start}
 {: step}
+
+The trial usage consumption starts as soon as you complete quickstart and create the support services (for example, the metastore that holds your catalog). The resource units (RU) are consumed even when the {{site.data.keyword.lakehouse_short}} instance is not being used or the engine is paused because 3 RUs/Hr are required to support services. Therefore, please ensure to monitor the usage to avoid incurring charges beyond the trial credit if you do not wish to.
+{: attention}
 
 When you log in to the {{site.data.keyword.lakehouse_short}} web console for the first time, you are presented with the quick start wizard.
 
@@ -233,11 +242,11 @@ In this section of the tutorial, you perform the following:
 
 Complete the following steps:
 
-1. In the **Bucket configuration** page, select **Provision new IBM-managed bucket**.
+1. In the **Configure bucket** page, select **Provision new IBM-managed bucket**.
 2. Click **Next**. This displays the **Catalogs configuration** page.
-3. In the **Catalogs configuration** page, select a catalog.
-4. Click **Next**. This displays the **Engine configuration** page.
-5. In the **Engine configuration** page, select the **Presto engine** and smallest starter (1 coordinator node 1 worker node memory optimized).
+3. In the **Configure catalog** page, select a catalog.
+4. Click **Next**. This displays the **Configure engine** page.
+5. In the **Configure engine** page, select the **Presto engine** and smallest starter (1 coordinator node 1 worker node memory optimized).
 6. Click **Next**. This displays the **Summary** page.
 7. In the **Summary** page, review the configurations before you finish setting up your data infrastructure.
 
@@ -257,7 +266,7 @@ Ensure that you pause the Presto engine when it is not used. This helps in optim
 {: #hp_ingest}
 {: step}
 
-You can use the **Create table** option from the **Data manager** page to load local or external sources of data files to create tables. You can also ingest large files using the CLI. See more [About data ingestion](watsonxdata?topic=watsonxdata-ingestdata){: external}.
+You can use the **Create table** option from the **Data manager** page to load local or external sources of data files to create tables. You can also ingest large files by using the CLI. See more [About data ingestion](watsonxdata?topic=watsonxdata-load_ingest_data){: external}.
 
 
 ## Querying data
@@ -267,9 +276,9 @@ You can use the **Create table** option from the **Data manager** page to load l
 In this section of the tutorial, you learn how to navigate to the **Query workspace**, and create SQL queries to query your data from the bucket.
 
 
-To run the SQL queries, do the following steps:
+To run SQL query, do the following steps:
 
-1. From the navigation menu, select **SQL**.  The **Query workspace** page opens.
+1. From the navigation menu, select **SQL**. The **Query workspace** page opens.
 2. Select the Presto engine from the **Engine** drop-down.
 3. Select a catalog, for example, **default** schema, and a table, for example, **order_detail**, to run the query.
 4. Click the overflow menu and select the required query.
@@ -288,7 +297,7 @@ To run the SQL queries, do the following steps:
    {: codeblock}
 
 5. Click **Run on** to run the query.
-6. Select **Result set** or **Details** tab to view the results. If required, you can save the query.
+6. Select the **Result set** or **Details** tab to view the results. If required, you can save the query.
 7. Click **Saved queries** to view the saved queries.
 8. Click [**Explain**](watsonxdata?topic=watsonxdata-explain_sql_query){: external} to view the logical or distributed plan of execution for a specified SQL query.
 

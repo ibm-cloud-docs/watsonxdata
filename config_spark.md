@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2023
-lastupdated: "2023-10-11"
+lastupdated: "2023-11-29"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -51,7 +51,6 @@ To configure your {{site.data.keyword.iae_short}} instance from the {{site.data.
 
     ```bash
     spark.sql.catalogImplementation = hive
-    spark.driver.extraClassPath = /opt/ibm/connectors/iceberg-lakehouse/iceberg-3.3.2-1.2.1-hms-4.0.0-shaded.jar
     spark.sql.extensions = org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions
     spark.sql.iceberg.vectorization.enabled = false
     spark.sql.catalog.lakehouse = org.apache.iceberg.spark.SparkCatalog
@@ -68,9 +67,9 @@ To configure your {{site.data.keyword.iae_short}} instance from the {{site.data.
     {: codeblock}
 
 Parameter value:
-* Hms-thrift-endpoint-from-watsonx.Data: Specify the credentials for watsonx.data.
-* Hms-user-from-watsonx.Data: The watsonx.data username.
-* Hms-password-from-watsonx.Data: The watsonx.data password.
+* hms-thrift-endpoint-from-watsonx.Data: Specify the credentials for watsonx.data.
+* hms-user-from-watsonx.Data: The watsonx.data username.
+* hms-password-from-watsonx.Data: The watsonx.data password.
 
 ## Configuring {{site.data.keyword.iae_short}} instance by using {{site.data.keyword.iae_short}} API
 {: #lh-api-config-ae}
@@ -95,7 +94,6 @@ Parameter value:
     ```bash
     {
     "spark.sql.catalogImplementation": "hive",
-    "spark.driver.extraClassPath": "/opt/ibm/connectors/iceberg-lakehouse/iceberg-3.3.2-1.2.1-hms-4.0.0-shaded.jar",
     "spark.sql.extensions": "org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions",
     "spark.sql.iceberg.vectorization.enabled": "false",
     "spark.sql.catalog.lakehouse": "org.apache.iceberg.spark.SparkCatalog",
@@ -136,7 +134,6 @@ Parameter value:
     ```bash
     {
     "spark.sql.catalogImplementation": "hive",
-    "spark.driver.extraClassPath": "/opt/ibm/connectors/iceberg-lakehouse/iceberg-3.3.2-1.2.1-hms-4.0.0-shaded.jar",
     "spark.sql.extensions": "org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions",
     "spark.sql.iceberg.vectorization.enabled": "false",
     "spark.sql.catalog.lakehouse": "org.apache.iceberg.spark.SparkCatalog",
@@ -154,9 +151,9 @@ Parameter value:
     {: codeblock}
 
 * INSTANCE_ID: The {{site.data.keyword.iae_short}} instance ID. For more information about how to retrieve an instance ID, see [Obtaining the service endpoints](https://cloud.ibm.com/docs/AnalyticsEngine?topic=AnalyticsEngine-retrieve-endpoints-serverless#endpoints-cli)
-* Hms-thrift-endpoint-from-watsonx.Data: Specify the credentials for {{site.data.keyword.lakehouse_short}}. For more information on getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials](watsonxdata?topic=watsonxdata-hms).
-* Hms-user-from-watsonx.Data: The {{site.data.keyword.lakehouse_short}} username. For more information on getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials](watsonxdata?topic=watsonxdata-hms){: external}.
-* Hms-password-from-watsonx.Data: The {{site.data.keyword.lakehouse_short}} password. For more information on getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials](watsonxdata?topic=watsonxdata-hms){: external}.
+* hms-thrift-endpoint-from-watsonx.data: Specify the credentials for {{site.data.keyword.lakehouse_short}}. For more information on getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials](watsonxdata?topic=watsonxdata-hms).
+* hms-user-from-watsonx.data: The {{site.data.keyword.lakehouse_short}} username. For more information on getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials](watsonxdata?topic=watsonxdata-hms){: external}.
+* hms-password-from-watsonx.data: The {{site.data.keyword.lakehouse_short}} password. For more information on getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials](watsonxdata?topic=watsonxdata-hms){: external}.
 
 To view logs of Spark application ran on {{site.data.keyword.iae_full_notm}} you have to enable logging. For more information, see [Configuring and viewing logs](https://cloud.ibm.com/docs/AnalyticsEngine?topic=AnalyticsEngine-viewing-logs){: external}.
 {: note}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-10-11"
+lastupdated: "2023-11-29"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
 
@@ -49,11 +49,13 @@ To add a bucket-catalog pair, complete the following steps.
    | Field | Description |
    |--------------------------|----------------|
    | Bucket type | Select the bucket type from the list.|
+   | Region | Select the region where the bucket is available. This field does not appear for **MinIO** and **IBM Storage Ceph** buckets. |
    | Bucket name | Enter your existing object storage bucket name.|
    | Display name | Enter the name to be displayed.|
    | Endpoint | Enter the endpoint URL.|
    | Access key | Enter your access key. |
    | Secret key | Enter your secret key. |
+   |Connection Status | Click the Test connection link to test the bucket connection. If the bucket connection is successful, a success message displays.|
    | Activation| Activate the bucket immediately or activate it later. |
    | Catalog type | Select the catalog type from the list.|
    | Catalog name | Enter the name of your catalog. This catalog is automatically associated with your bucket.|

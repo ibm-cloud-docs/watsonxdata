@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-10-11"
+lastupdated: "2023-11-29"
 
 keywords: watsonxdata, staging, config file, target iceberg table, parquet, csv, command line, cli
 
@@ -29,7 +29,7 @@ subcollection: watsonxdata
 # Creating an ingestion job by using commands
 {: #create_ingestioncli}
 
-After installing the **ibm-lh** tool, you can run the tool to ingest data into {{site.data.keyword.lakehouse_full}} through the CLI. The commands to run the ingestion job and examples are listed in this topic.
+You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehouse_full}} through the command line interface (CLI). The commands to run the ingestion job and examples are listed in this topic.
 {: shortdesc}
 
 The commands must be run within the ibm-lh container. For more details and instructions to install `ibm-lh-client` package and use the **ibm-lh** tool for ingestion, see [Installing ibm-lh-client](https://www.ibm.com/docs/en/watsonxdata/1.0.x?topic=package-installing-lh-client){: external} and [Setting up the ibm-lh command-line utility](https://www.ibm.com/docs/en/watsonxdata/1.0.x?topic=package-setting-up-lh-cli-utility){: external}.
@@ -38,7 +38,7 @@ The commands must be run within the ibm-lh container. For more details and instr
 To access IBM Cloud Object Storage (COS) and MinIO object storage, specify the ENDPOINT_URL in --source-s3-creds and --staging-s3-creds to pass the corresponding url to the tool. For more information about IBM COS, see https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-endpoints.
 {: note}
 
-Replace the absolute values inside the angular brackets of command examples or config file examples with the values applicable to your environment. See [Options and variables supported in **ibm-lh** tool](watsonxdata?topic=watsonxdata-cli_commands).
+Replace the absolute values in the command examples with the values applicable to your environment. See [Options and variables supported in **ibm-lh** tool](watsonxdata?topic=watsonxdata-cli_commands).
 {: note}
 
 Following are the details of the command line option to ingest data files from S3 or local location to {{site.data.keyword.lakehouse_short}} Iceberg table:
@@ -49,13 +49,27 @@ Following are the details of the command line option to ingest data files from S
 To ingest a single CSV/Parquet file from a S3 location, run the following command:
 
 ```bash
-ibm-lh data-copy --source-data-files <SOURCE_DATA_FILE> --source-s3-creds "AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ASSESS_KEY>,AWS_ACCESS_KEY_ID=<YOUR_ACCESS_KEY_ID>,AWS_REGION=<YOUR_REGION>, BUCKET_NAME=<YOUR_BUCKET>, ENDPOINT_URL=<YOUR_ENDPOINT_URL>" --staging-location <STAGING_LOCATION> --staging-s3-creds "AWS_SECRET_ACCESS_KEY=<YOUR_TARGET_SECRET_ASSESS_KEY>,AWS_ACCESS_KEY_ID=<YOUR_TARGET_ACCESS_KEY_ID>,AWS_REGION=<YOUR_TARGET_REGION>, BUCKET_NAME=<YOUR_TARGET_BUCKET>, ENDPOINT_URL=<YOUR_TARGET_ENDPOINT_URL>” --target-tables <TARGET_TABLES> --ingestion-engine-endpoint <INGESTION_ENGINE_ENDPOINT> --dbuser <DBUSER> --dbpassword <DBPASSWORD> --create-if-not-exist
+ibm-lh data-copy --source-data-files SOURCE_DATA_FILE \
+--source-s3-creds "AWS_SECRET_ACCESS_KEY=YOUR_SECRET_ASSESS_KEY,AWS_ACCESS_KEY_ID=YOUR_ACCESS_KEY_ID,AWS_REGION=YOUR_REGION, BUCKET_NAME=YOUR_BUCKET, ENDPOINT_URL=YOUR_ENDPOINT_URL" \
+--staging-location s3://lh-target/staging \
+--staging-s3-creds "AWS_SECRET_ACCESS_KEY=YOUR_TARGET_SECRET_ASSESS_KEY,AWS_ACCESS_KEY_ID=YOUR_TARGET_ACCESS_KEY_ID,AWS_REGION=YOUR_TARGET_REGION, BUCKET_NAME=YOUR_TARGET_BUCKET, ENDPOINT_URL=YOUR_TARGET_ENDPOINT_URL” \
+--target-tables TARGET_TABLES \
+--ingestion-engine-endpoint INGESTION_ENGINE_ENDPOINT \
+--dbuser DBUSER \
+--dbpassword DBPASSWORD \
+--create-if-not-exist
 ```
 {: codeblock}
 
 For example:
 ```bash
-ibm-lh data-copy --source-data-files s3://cust-bucket/warehouse/a_source_file.parquet --source-s3-creds "AWS_ACCESS_KEY_ID=xxxxxx,AWS_SECRET_ACCESS_KEY=yyyyyy,AWS_REGION=us-east-1,BUCKET_NAME=cust-bucket" --staging-location s3://cust-bucket/warehouse/staging/ --staging-s3-creds "AWS_ACCESS_KEY_ID=zzzzzz,AWS_SECRET_ACCESS_KEY=vvvvvvv,AWS_REGION=us-east-1,BUCKET_NAME=cust-bucket" --target-tables iceberg_target_catalog.ice_schema.cust_tab1 --ingestion-engine-endpoint "hostname=localhost,port=8080" --create-if-not-exist
+ibm-lh data-copy --source-data-files s3://cust-bucket/warehouse/a_source_file.parquet \
+--source-s3-creds "AWS_ACCESS_KEY_ID=xxxxxx,AWS_SECRET_ACCESS_KEY=yyyyyy,AWS_REGION=us-east-1,BUCKET_NAME=cust-bucket" \
+--staging-location s3://cust-bucket/warehouse/staging/ \
+--staging-s3-creds "AWS_ACCESS_KEY_ID=zzzzzz,AWS_SECRET_ACCESS_KEY=vvvvvvv,AWS_REGION=us-east-1,BUCKET_NAME=cust-bucket" \
+--target-tables iceberg_target_catalog.ice_schema.cust_tab1 \
+--ingestion-engine-endpoint "hostname=localhost,port=8080" \
+--create-if-not-exist
 ```
 {: screen}
 
@@ -65,18 +79,38 @@ ibm-lh data-copy --source-data-files s3://cust-bucket/warehouse/a_source_file.pa
 To ingest multiple CSV/Parquet files and CSV folders from a S3 location, run the following command:
 
 ```bash
-ibm-lh data-copy --source-data-files <SOURCE_DATA_FILE> --source-s3-creds "AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ASSESS_KEY>, AWS_ACCESS_KEY_ID=<YOUR_ACCESS_KEY_ID>,AWS_REGION=<YOUR_REGION>, BUCKET_NAME=<YOUR_BUCKET>, ENDPOINT_URL=<YOUR_ENDPOINT_URL>" --staging-location <STAGING_LOCATION> --staging-s3-creds "AWS_SECRET_ACCESS_KEY=<YOUR_TARGET_SECRET_ASSESS_KEY>,AWS_ACCESS_KEY_ID=<YOUR_TARGET_ACCESS_KEY_ID>,AWS_REGION=<YOUR_TARGET_REGION>, BUCKET_NAME=<YOUR_TARGET_BUCKET>, ENDPOINT_URL=<YOUR_TARGET_ENDPOINT_URL>” --target-tables <TARGET_TABLES> --ingestion-engine-endpoint <INGESTION_ENGINE_ENDPOINT> --dbuser <DBUSER> --dbpassword <DBPASSWORD> --create-if-not-exist
+ibm-lh data-copy --source-data-files SOURCE_DATA_FILE \
+--source-s3-creds "AWS_SECRET_ACCESS_KEY=YOUR_SECRET_ASSESS_KEY,AWS_ACCESS_KEY_ID=YOUR_ACCESS_KEY_ID,AWS_REGION=YOUR_REGION, BUCKET_NAME=YOUR_BUCKET, ENDPOINT_URL=YOUR_ENDPOINT_URL" \
+--staging-location s3://lh-target/staging \
+--staging-s3-creds "AWS_SECRET_ACCESS_KEY=YOUR_TARGET_SECRET_ASSESS_KEY,AWS_ACCESS_KEY_ID=YOUR_TARGET_ACCESS_KEY_ID,AWS_REGION=YOUR_TARGET_REGION, BUCKET_NAME=YOUR_TARGET_BUCKET, ENDPOINT_URL=YOUR_TARGET_ENDPOINT_URL” \
+--target-tables TARGET_TABLES \
+--ingestion-engine-endpoint INGESTION_ENGINE_ENDPOINT \
+--dbuser DBUSER \
+--dbpassword DBPASSWORD \
+--create-if-not-exist
 ```
 {: codeblock}
 
-For example:
+For examples:
 ```bash
-ibm-lh data-copy --source-data-files s3://cust-bucket/warehouse/a_source_file1.csv, s3://cust-bucket/warehouse/a_source_file2.csv --source-s3-creds "AWS_ACCESS_KEY_ID=xxxxxx,AWS_SECRET_ACCESS_KEY=yyyyyy,AWS_REGION=us-east-1,BUCKET_NAME=cust-bucket" --staging-location s3://cust-bucket/warehouse/staging/ --staging-s3-creds "AWS_ACCESS_KEY_ID=zzzzzz,AWS_SECRET_ACCESS_KEY=vvvvvvv,AWS_REGION=us-east-1,BUCKET_NAME=cust-bucket" --target-tables iceberg_target_catalog.ice_schema.cust_tab1 --ingestion-engine-endpoint "hostname=localhost,port=8080" --create-if-not-exist
+ibm-lh data-copy --source-data-files s3://cust-bucket/warehouse/a_source_file1.csv,s3://cust-bucket/warehouse/a_source_file2.csv \
+--source-s3-creds "AWS_ACCESS_KEY_ID=xxxxxx,AWS_SECRET_ACCESS_KEY=yyyyyy,AWS_REGION=us-east-1,BUCKET_NAME=cust-bucket" \
+--staging-location s3://cust-bucket/warehouse/staging/ \
+--staging-s3-creds "AWS_ACCESS_KEY_ID=zzzzzz,AWS_SECRET_ACCESS_KEY=vvvvvvv,AWS_REGION=us-east-1,BUCKET_NAME=cust-bucket" \
+--target-tables iceberg_target_catalog.ice_schema.cust_tab1 \
+--ingestion-engine-endpoint "hostname=localhost,port=8080" \
+--create-if-not-exist
 ```
 {: screen}
 
 ```bash
-ibm-lh data-copy --source-data-files s3://cust-bucket/warehouse/ --source-s3-creds "AWS_ACCESS_KEY_ID=xxxxxx,AWS_SECRET_ACCESS_KEY=yyyyyy,AWS_REGION=us-east-1,BUCKET_NAME=cust-bucket" --staging-location s3://cust-bucket/warehouse/staging/ --staging-s3-creds "AWS_ACCESS_KEY_ID=zzzzzz,AWS_SECRET_ACCESS_KEY=vvvvvvv,AWS_REGION=us-east-1,BUCKET_NAME=cust-bucket" --target-tables iceberg_target_catalog.ice_schema.cust_tab1 --ingestion-engine-endpoint "hostname=localhost,port=8080" --create-if-not-exist
+ibm-lh data-copy --source-data-files s3://cust-bucket/warehouse/ \
+--source-s3-creds "AWS_ACCESS_KEY_ID=xxxxxx,AWS_SECRET_ACCESS_KEY=yyyyyy,AWS_REGION=us-east-1,BUCKET_NAME=cust-bucket" \
+--staging-location s3://cust-bucket/warehouse/staging/ \
+--staging-s3-creds "AWS_ACCESS_KEY_ID=zzzzzz,AWS_SECRET_ACCESS_KEY=vvvvvvv,AWS_REGION=us-east-1,BUCKET_NAME=cust-bucket" \
+--target-tables iceberg_target_catalog.ice_schema.cust_tab1 \
+--ingestion-engine-endpoint "hostname=localhost,port=8080" \
+--create-if-not-exist
 ```
 {: screen}
 
@@ -86,38 +120,148 @@ ibm-lh data-copy --source-data-files s3://cust-bucket/warehouse/ --source-s3-cre
 To ingest all Parquet files in a folder from a S3 location, run the following command:
 
 ```bash
-ibm-lh data-copy --source-data-files <SOURCE_DATA_FILE> --source-s3-creds "AWS_SECRET_ACCESS_KEY=<YOUR_SECRET_ASSESS_KEY>,AWS_ACCESS_KEY_ID=<YOUR_ACCESS_KEY_ID>,AWS_REGION=<YOUR_REGION>, BUCKET_NAME=<YOUR_BUCKET, ENDPOINT_URL=<YOUR_ENDPOINT_URL>>" --target-tables <TARGET_TABLES> --ingestion-engine-endpoint <INGESTION_ENGINE_ENDPOINT> --dbuser <DBUSER> --dbpassword <DBPASSWORD> --create-if-not-exist
+ibm-lh data-copy --source-data-files SOURCE_DATA_FILE \
+--source-s3-creds "AWS_SECRET_ACCESS_KEY=YOUR_SECRET_ASSESS_KEY,AWS_ACCESS_KEY_ID=YOUR_ACCESS_KEY_ID,AWS_REGION=YOUR_REGION, BUCKET_NAME=YOUR_BUCKET, ENDPOINT_URL=YOUR_ENDPOINT_URL" \
+--target-tables TARGET_TABLES \
+--ingestion-engine-endpoint INGESTION_ENGINE_ENDPOINT \
+--dbuser DBUSER \
+--dbpassword DBPASSWORD \
+--create-if-not-exist
 ```
 {: codeblock}
 
 For example:
 ```bash
-ibm-lh data-copy --source-data-files s3://cust-bucket/warehouse/ --source-s3-creds "AWS_ACCESS_KEY_ID=xxxxxx,AWS_SECRET_ACCESS_KEY=yyyyyy,AWS_REGION=us-east-1,BUCKET_NAME=cust-bucket" --target-tables iceberg_target_catalog.ice_schema.cust_tab1 --ingestion-engine-endpoint "hostname=localhost,port=8080" --create-if-not-exist
+ibm-lh data-copy --source-data-files s3://cust-bucket/warehouse/ \
+--source-s3-creds "AWS_ACCESS_KEY_ID=xxxxxx,AWS_SECRET_ACCESS_KEY=yyyyyy,AWS_REGION=us-east-1,BUCKET_NAME=cust-bucket" \
+--target-tables iceberg_target_catalog.ice_schema.cust_tab1 \
+--ingestion-engine-endpoint "hostname=localhost,port=8080" \
+--create-if-not-exist
 ```
 {: screen}
 
-In general, this option does not require a staging location. However, there are a few exception scenarios when a staging location must be specified. When the staging location is not used, ensure that the hive catalog configured with Presto can be used with source-data-files location. Following are the exception cases where staging location is required:
-- Any or all of the parquet files in the folder are huge.
-- Any or all of the parquet files in the folder have special columns, such as date or decimal.
+In general, this option does not require a staging location. However, a few exceptional scenarios are there when a staging location must be specified. When the staging location is not used, make sure that the hive catalog configured with Presto can be used with source-data-files location. The following are the exceptional cases where a staging location is required:
+- Any or all parquet files in the folder are huge.
+- Any or all parquet files in the folder have special columns, such as date or decimal.
 {: note}
 
-## Ingest a  CSV/Parquet file or folder from a local file system by using a command
+## Ingest a CSV/Parquet file or folder from a local file system by using a command
 {: #example4}
 
 To ingest a CSV/Parquet file or a folder of files from a local file system, run the following command:
 
 ```bash
-ibm-lh data-copy --source-data-files <SOURCE_DATA_FILE> --staging-location <STAGING_LOCATION> --staging-s3-creds "AWS_SECRET_ACCESS_KEY=<YOUR_TARGET_SECRET_ASSESS_KEY>,AWS_ACCESS_KEY_ID=<YOUR_TARGET_ACCESS_KEY_ID>,AWS_REGION=<YOUR_TARGET_REGION>, BUCKET_NAME=<YOUR_TARGET_BUCKET>, ENDPOINT_URL=<YOUR_TARGET_ENDPOINT_URL>” --target-tables <TARGET_TABLES> --ingestion-engine-endpoint <INGESTION_ENGINE_ENDPOINT> --dbuser <DBUSER> --dbpassword <DBPASSWORD> --create-if-not-exist
+ibm-lh data-copy --source-data-files SOURCE_DATA_FILE \
+--staging-location s3://lh-target/staging \
+--staging-s3-creds "AWS_SECRET_ACCESS_KEY=YOUR_TARGET_SECRET_ASSESS_KEY,AWS_ACCESS_KEY_ID=YOUR_TARGET_ACCESS_KEY_ID,AWS_REGION=YOUR_TARGET_REGION, BUCKET_NAME=YOUR_TARGET_BUCKET, ENDPOINT_URL=YOUR_TARGET_ENDPOINT_URL” \
+--target-tables TARGET_TABLES \
+--ingestion-engine-endpoint INGESTION_ENGINE_ENDPOINT \
+--dbuser DBUSER \
+--dbpassword DBPASSWORD \
+--create-if-not-exist
 ```
 {: codeblock}
 
 For example:
 ```bash
-ibm-lh data-copy --source-data-files /cust-bucket/warehouse/a_source_file1.parquet --staging-location s3://cust-bucket/warehouse/staging/ --staging-s3-creds "AWS_ACCESS_KEY_ID=zzzzzz,AWS_SECRET_ACCESS_KEY=vvvvvvv,AWS_REGION=us-east-1,BUCKET_NAME=cust-bucket" --target-tables iceberg_target_catalog.ice_schema.cust_tab1 --ingestion-engine-endpoint "hostname=localhost,port=8080" --create-if-not-exist
+ibm-lh data-copy --source-data-files /cust-bucket/warehouse/a_source_file1.parquet \
+--staging-location s3://cust-bucket/warehouse/staging/ \
+--staging-s3-creds "AWS_ACCESS_KEY_ID=zzzzzz,AWS_SECRET_ACCESS_KEY=vvvvvvv,AWS_REGION=us-east-1,BUCKET_NAME=cust-bucket" \
+--target-tables iceberg_target_catalog.ice_schema.cust_tab1 \
+--ingestion-engine-endpoint "hostname=localhost,port=8080" \
+--create-if-not-exist
 ```
 {: screen}
 
 ```bash
-ibm-lh data-copy --source-data-files /cust-bucket/warehouse/ --staging-location s3://cust-bucket/warehouse/staging/ --staging-s3-creds "AWS_ACCESS_KEY_ID=zzzzzz,AWS_SECRET_ACCESS_KEY=vvvvvvv,AWS_REGION=us-east-1,BUCKET_NAME=cust-bucket" --target-tables iceberg_target_catalog.ice_schema.cust_tab1 --ingestion-engine-endpoint "hostname=localhost,port=8080" --create-if-not-exist
+ibm-lh data-copy --source-data-files /cust-bucket/warehouse/ \
+--staging-location s3://cust-bucket/warehouse/staging/ \
+--staging-s3-creds "AWS_ACCESS_KEY_ID=zzzzzz,AWS_SECRET_ACCESS_KEY=vvvvvvv,AWS_REGION=us-east-1,BUCKET_NAME=cust-bucket" \
+--target-tables iceberg_target_catalog.ice_schema.cust_tab1 \
+--ingestion-engine-endpoint "hostname=localhost,port=8080" \
+--create-if-not-exist
 ```
 {: screen}
+
+## Ingest any data file from local file system by using a command
+{: #example5}
+
+To ingest any data file from a local location, run the following command:
+
+To ingest any type of data files from a local file system, data files are needed to be copied to ~ /ibm-lh-client/localstorage/volumes/ibm-lh directory. Now, you can access data files from /ibmlhdata/ directory by using the `ibm-lh data-copy` command.
+{: note}
+
+```bash
+ibm-lh data-copy --source-data-files SOURCE_DATA_FILE \" \
+--staging-location s3://lh-target/staging \
+--staging-s3-creds "AWS_SECRET_ACCESS_KEY=YOUR_TARGET_SECRET_ASSESS_KEY,AWS_ACCESS_KEY_ID=YOUR_TARGET_ACCESS_KEY_ID,AWS_REGION=YOUR_TARGET_REGION, BUCKET_NAME=YOUR_TARGET_BUCKET, ENDPOINT_URL=YOUR_TARGET_ENDPOINT_URL” \
+--target-tables TARGET_TABLES \
+--staging-hive-catalog <catalog_name> \
+--schema <SCHEMA> \
+--ingestion-engine-endpoint INGESTION_ENGINE_ENDPOINT \
+--trust-store-path <TRUST_STORE_PATH> \
+--trust-store-password <TRUST_STORE_PASSWORD> \
+--dbuser DBUSER \
+--dbpassword DBPASSWORD \
+--create-if-not-exist
+```
+{: codeblock}
+
+For example:
+```bash
+ibm-lh data-copy --source-data-files /ibmlhdata/reptile.csv \
+--staging-location  s3://watsonx.data/staging \
+--staging-s3-creds "AWS_ACCESS_KEY_ID=xxxxxxx,AWS_SECRET_ACCESS_KEY=xxxxxxxx,AWS_REGION=us-west-2,BUCKET_NAME=watsonx.data" \
+--target-tables iceberg_data.ivt_sanity_test_1.reptile \
+--staging-hive-catalog hive_test \
+--schema /ibmlhdata/schema.cfg \
+--ingestion-engine-endpoint "hostname=ibm-lh-lakehouse-presto-01-presto-svc-cpd-instance.apps.ivt384.cp.fyre.ibm.com,port=443" \
+--trust-store-path /mnt/infra/tls/aliases/ibm-lh-lakehouse-presto-01-presto-svc-cpd-instance.apps.ivt384.cp.fyre.ibm.com:443.crt \
+--trust-store-password changeit \
+--dbuser xxxx\
+--dbpassword xxxx \
+--create-if-not-exist
+```
+{: screen}
+
+## Ingest CSV or local Parquet or S3 Parquet files that use staging location
+{: #example6}
+
+To ingest any data file from a local location, run the following command:
+
+```bash
+ibm-lh data-copy --source-data-files SOURCE_DATA_FILE \
+--source-s3-creds "AWS_SECRET_ACCESS_KEY=YOUR_SECRET_ASSESS_KEY,AWS_ACCESS_KEY_ID=YOUR_ACCESS_KEY_ID,AWS_REGION=YOUR_REGION, BUCKET_NAME=YOUR_BUCKET, ENDPOINT_URL=YOUR_ENDPOINT_URL" \
+--staging-location s3://lh-target/staging \
+--staging-s3-creds "AWS_SECRET_ACCESS_KEY=YOUR_TARGET_SECRET_ASSESS_KEY,AWS_ACCESS_KEY_ID=YOUR_TARGET_ACCESS_KEY_ID,AWS_REGION=YOUR_TARGET_REGION, BUCKET_NAME=YOUR_TARGET_BUCKET, ENDPOINT_URL=YOUR_TARGET_ENDPOINT_URL” \
+--target-tables TARGET_TABLES \
+--staging-hive-catalog <catalog_name> \
+--staging-hive-schema <schema_name> \
+--ingestion-engine-endpoint INGESTION_ENGINE_ENDPOINT \
+--trust-store-path <TRUST_STORE_PATH> \
+--trust-store-password <TRUST_STORE_PASSWORD> \
+--dbuser DBUSER \
+--dbpassword DBPASSWORD \
+--create-if-not-exist
+```
+{: codeblock}
+
+For example:
+```bash
+ibm-lh data-copy --source-data-files s3://watsonx-data-0823-2/test_icos/GVT-DATA-C.csv \
+--source-s3-creds "AWS_ACCESS_KEY_ID=xxxxxx,AWS_SECRET_ACCESS_KEY=yyyyyy,AWS_REGION=us-east-1,BUCKET_NAME=cust-bucket" \
+--staging-location  s3://watsonx.data-staging \
+--staging-s3-creds "AWS_ACCESS_KEY_ID=xxx,AWS_SECRET_ACCESS_KEY=xxx,AWS_REGION=us-east-1,BUCKET_NAME=watsonx.data-staging,ENDPOINT_URL=https://s3.jp-tok.cloud-object-storage.appdomain.cloud" \
+--target-tables iceberg_data.test_iceberg.gvt_data_v \
+--staging-hive-catalog staging_catalog \
+--staging-hive-schema staging_schema \
+--ingestion-engine-endpoint "hostname=ibm-lh-lakehouse-presto-01-presto-svc-cpd-instance.apps.ivt384.cp.fyre.ibm.com,port=443" \
+--trust-store-path /mnt/infra/tls/aliases/ibm-lh-lakehouse-presto-01-presto-svc-cpd-instance.apps.ivt384.cp.fyre.ibm.com:443.crt \
+--trust-store-password changeit \
+--dbuser xxxx\
+--dbpassword xxxx \
+--create-if-not-exist
+```
+{: screen}
+
+Here, `--staging-location` is `s3://watsonx.data-staging`. The `--staging-hive-catalog` that is `staging_catalog` must be associated with the bucket `watsonx.data-staging`.

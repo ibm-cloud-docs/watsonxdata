@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-10-11"
+lastupdated: "2023-11-29"
 
 keywords: lakehouse
 
@@ -30,6 +30,11 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+## Issue: Using special characters in schema, table, or column names
+{: #known_issues1.0.0_4}
+
+It is recommended to not use special characters such as question mark (?) or asterisk (*) in table, column names and schema names. Though these special characters are supported and tables, columns and schemas can be created, using these special characters might cause issues when running the `INSERT` command.
 
 ## Issue: User is not removed from the catalog access control on revoking data access
 {: #known_issues1.0.0_3}

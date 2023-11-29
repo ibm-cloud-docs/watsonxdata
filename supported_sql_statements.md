@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-10-11"
+lastupdated: "2023-11-29"
 
 keywords: lakehouse, SQL statements, connectors, watsonx.data
 
@@ -29,6 +29,8 @@ subcollection: watsonxdata
 # Supported SQL statements
 {: #supported_sql_statements}
 
+Presto queries are case-sensitive. For more information see [Presto case-sensitive behavior](watsonxdata?topic=watsonxdata-presto_behavior){: external}.
+
 Following SQL statements are supported in {{site.data.keyword.lakehouse_full}} through different connectors.
 {: shortdesc}
 
@@ -47,14 +49,22 @@ Following SQL statements are supported in {{site.data.keyword.lakehouse_full}} t
 | **JMX**| `X`    | `X`   | `X`  | ✓  | ✓  | `X`  | `X`   | `X`  | `X`  | `X`  | ✓  | `X`  | `X`  | `X`  | `X`  | `X`  | `X`  | `X`  | `X`  |
 |**Db2**| ✓    | ✓   | ✓  | ✓  |  -- | ✓  | `X`   | `X`  | `X`  | `X`  | ✓  | `X`  | `X`  | `X`  | ✓  | `X`  | ✓  | ✓  | `X`  |
 |**{{site.data.keyword.netezza_short}}**| ✓    | ✓   | ✓  | ✓  |  -- | ✓  | `X`   | `X`  | `X`  | `X`  | ✓  | `X`  | `X`  | `X`  | ✓  | `X`  | ✓  | ✓  | X  |
+|**SingleStore**| `X`    | ✓   | ✓  | ✓  | ✓  | ✓  | `X`   | `X`  | `X`  | `X`  | ✓  | `X`  | `X`  | `X`  | ✓  | `X`  | `X`  | `X`  | `X`  |
+|**Elasticsearch**| `X`    | `X`   | `X`  | ✓  | ✓  | `X`  | `X`   | `X`  | `X`  | ✓  | `X`  | `X`  | `X`  | `X`  | `X`  | `X`  | `X`  | `X`  | `X`  |
+|**Teradata**| `X`    | ✓   | ✓  | ✓  | ✓   | ✓  | `X`   | `X`  | `X`  | `X`  | ✓  | `X`  | `X`  | `X`  | ✓  | `X`  | `X`  | `X`  | `X`  |
+|**Snowflake**| `X`    | ✓   | ✓  | ✓  | ✓   | ✓  | `X`   | `X`  | `X`  | `X`  | ✓  | `X`  | `X`  | `X`  | ✓  | `X`  | `X`  | `X`  | `X`  |
 {: caption="Table 1. SQL statements and supporting connectors" caption-side="bottom"}
 
 ## Limitations
 {: #connector_limitations}
 
 1. For `CREATE TABLE`, **MySQL** connector supports only `CREATE TABLE AS`.
-2. For `ALTER TABLE`, **MongoDB** connector supports only table rename.
+1. For `CREATE TABLE`, **Snowflake** connector also supports `CREATE TABLE AS`.
+2. For `ALTER TABLE`, **MongoDB** connector supports only `TABLE RENAME`.
+2. For `ALTER TABLE`, **Teradata** connector supports only `ADD COLUMN`.
 3. **Db2** connector partially supports `ALTER TABLE`, `CREATE VIEW`, and `DROP SCHEMA`.
 4. **{{site.data.keyword.netezza_short}}** connector partially supports `ALTER TABLE` and `CREATE VIEW`.
-5. **MySQL**, **PostgreSQL**, **MongoDB**, **Db2**, and **{{site.data.keyword.netezza_short}}** connectors support `DROP TABLE` only when enabled in catalog.
+5. **MySQL**, **PostgreSQL**, **MongoDB**, **Db2**, **Teradata**, **Snowflake**, **SQL Server** and **{{site.data.keyword.netezza_short}}** connectors support `DROP TABLE` only when enabled in catalog.
 6. The `CREATE SCHEMA`, `CREATE TABLE`, `DROP SCHEMA`, `DROP TABLE`, `DELETE`, `DROP VIEW`, `ALTER TABLE`, and `ALTER SCHEMA` are not available for database based catalogs in the **Data Manager** UI.
+7. For **Db2**, you can create the view for a table only if that table is in the same catalog and same schema.
+8. For **{{site.data.keyword.netezza_short}}**, you can create the view for a table only if that table is in the same catalog and same schema.

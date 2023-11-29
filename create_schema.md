@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-10-11"
+lastupdated: "2023-11-29"
 
 keywords: watsonxdata, schema
 
@@ -38,3 +38,6 @@ You can create schema from the **Data manager** page by using the web console.
 1. Click the **Create** drop-down and select **Create schema**.
     1. In the **Create schema** form, select the catalog and enter schema name.
     1. Click **Create**. The schema is created under the selected catalog.
+
+Do not use special character such as question mark (?) or asterisk (*) in schema name.
+{: note}

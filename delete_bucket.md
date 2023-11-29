@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-10-11"
+lastupdated: "2023-11-29"
 
 keywords: lakehouse, bucket, watsonx.data
 
@@ -41,6 +41,6 @@ To delete a bucket-catalog pair, complete the following steps:
 
 4. In the **Confirm deactivation** window, click **Deactivate**.
 
-5. Click the overflow menu and then click **Remove**.
+5. Click the overflow menu and then click **Delete**.
 
-6. In the **Confirm removal** window, click **Remove**.
+6. In the **Confirm removal** window, click **Delete**.

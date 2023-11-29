@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-10-11"
+lastupdated: "2023-11-29"
 
 keywords: watsonxdata, data manager, create table
 
@@ -35,8 +35,8 @@ You can generate, configure, and run DDL from the **Data manager** page by using
 1. Log in to {{site.data.keyword.lakehouse_full}} console.
 1. From the navigation menu, select **Data manager**.
 1. Select the engine from the **Engine** menu. Catalogs that are associated with the selected engine are listed.
-1. Click **Create** and select **Create table**.
-1. In the **Create table** form, drag a file to the box or click to upload.
+1. Click **Create table from file** and select **Create table from file**.
+1. In the **Creating table from a file** form, drag a file to the box or click to upload.
 
    .CSV, .Parquet, .json, .txt are the supported data file formats.
    For .json file, you must enclose the content in `[]`.
@@ -44,8 +44,8 @@ You can generate, configure, and run DDL from the **Data manager** page by using
    {: note}
 
 1. Click the data type and choose the required data types for each column. Click **Next**.
-1. In the **Target** form, select the **Engine**, **Catalog**, and **Schema** in which the table is created.
-1. Enter a name for the table in the **Table name** field and click **Next**.
+1. In the **Target** form, select the **Catalog**, and **Schema** in which the table is created.
+1. Enter a name for the table in the **Table name** field, select **Table format**, **Date format**, and click **Next**. Do not use special character such as question mark (?) or asterisk (*) in table or column name.
 1. Verify the details in the **Summary** page and scroll down to view the **DDL preview**.
 1. Click **Create**.
 1. Verify that the table creation status in the **Result set** is successful, indicated as true.

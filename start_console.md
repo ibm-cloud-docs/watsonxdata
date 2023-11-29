@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-10-11"
+lastupdated: "2023-11-29"
 
 keywords: lakehouse, web console, watsonx.data
 
@@ -39,13 +39,14 @@ To start {{site.data.keyword.lakehouse_full}} web console, complete the followin
 1. Log in to your {{site.data.keyword.cloud_notm}} Account.
 2. Go to **Resource list** **>** **Databases**.
 3. Click your {{site.data.keyword.lakehouse_full}} instance link. The service instance page opens.
-4. Click **Open web console** to start the web console.
-5. Log in to the console with your IBM ID and password.
+4. Click **Open web console** to load the home page.
 
-After you log in to the {{site.data.keyword.lakehouse_short}} web console, you are on the home page.
+<!-- 5. Log in to the console with your IBM ID and password.
+
+After you log in to the {{site.data.keyword.lakehouse_short}} web console, you are on the home page. -->
 
 The home page provides information about the logged in user, the login timestamp, and region where the {{site.data.keyword.lakehouse_short}} is created.
 
-From the home page, you can go to the **Infrastructure manager** page where you can design your {{site.data.keyword.lakehouse_short}} by provisioning engines, catalogs, buckets, and databases. You can also go to the **Query workspace** to create SQL queries to query your data.
+From the home page, you can go to the **Infrastructure manager** page where you can design your {{site.data.keyword.lakehouse_short}} by provisioning engines, services, buckets, and databases. You can also go to the **Query workspace** to create SQL queries to query your data.
 
 The home page also shows alerts about your infrastructure and active queries.

@@ -2,7 +2,7 @@
 
 copyright:
   years:  2022, 2023
-lastupdated: "2023-10-11"
+lastupdated: "2023-11-29"
 
 keywords: lakehouse, watsonx data, iam, access, role
 
@@ -42,7 +42,7 @@ The following table describes the privileges that you can assign to platform man
 | Scale the internal HMS | Y | N |
 | Unregister own or an external bucket | Y | N |
 | Unregister any database  | Y | N |
-| Activate catloged buckets (restart HMS) | Y | N |
+| Activate cataloged buckets (restart HMS) | Y | N |
 | Register own buckets | Y | Y |
 | Unregister own buckets | Y | Y |
 | Register own databases | Y | Y |

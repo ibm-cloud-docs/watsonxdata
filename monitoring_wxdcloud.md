@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-10-11"
+lastupdated: "2023-11-29"
 
 keywords: monitoring, watsonx.data
 
@@ -49,6 +49,21 @@ To see your {{site.data.keyword.lakehouse_full}} customer metrics dashboards in 
 3. Click **Dashboards** in the sidepane, open the **{{site.data.keyword.lakehouse_full}}** dashboard to view your {{site.data.keyword.lakehouse_short}} metrics.
 4. For more information, see [{{site.data.keyword.mon_short}} Getting started tutorial](https://cloud.ibm.com/docs/monitoring?topic=monitoring-getting-started).
 {: important}
+
+## Requesting Access Permission for Non-Operation User
+{: #req_access_nopuser}
+
+1. Go to the [IBM Access Hub](https://ibm-support.saviyntcloud.com/ECMv6/request/applicationRequest).
+
+2. Search `HDM-Lakehouse-IBM-Cloud-Dev-IAM-2592207`.
+
+3. Click the tile that appears.
+
+4. In **Application Details** window, click **Modify**.
+
+5. In **Modify Access** window, search for the `icd:user:ops group`.
+
+6. Click **Add**. Now you can access the **Sysdig** dashboard.
 
 
 ## Metrics available by Service Plan

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-10-11"
+lastupdated: "2023-11-29"
 
 keywords: watsonxdata, query history
 
@@ -41,6 +41,6 @@ The query history page in {{site.data.keyword.lakehouse_short}} provides the fol
 * User
 * Created
 
-In the **Query history** page, you can search, refresh, filter, and customize the queries. You can select a **Query** from the page, view or copy the details of query statement, logical execution plan, and distributed execution plan. You can open the queries directly in a workspace, and also get the explain details of a query from the overflow menu of each query listed.
+In the **Query history** page, you can search, refresh, filter, download, and customize the queries. You can select a **Query** from the page, view or copy the details of query statement, logical execution plan, distributed execution plan, and explain analyze. You can open the queries directly in a workspace, and also get the explain details of a query from the overflow menu of each query listed.
 
 For more information about exporting and importing query history, see [Exporting and importing the query history](watsonxdata?topic=watsonxdata-eximp-q-hist).

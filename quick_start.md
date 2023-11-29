@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2023
-lastupdated: "2023-10-11"
+lastupdated: "2023-11-29"
 
 keywords: lakehouse, watsonx data, quick start, engine, catalog, bucket
 subcollection: watsonxdata
@@ -33,7 +33,7 @@ The wizard guides you through the initial configuration process for the infrastr
 
 Your {{site.data.keyword.lakehouse_short}} needs an object storage bucket to store your raw data files. You can provision a new IBM-managed bucket or register your own bucket. You can add more buckets and register them later.
 
-In the **Bucket configuration** page, complete the following steps:
+In the **Configure bucket** page, complete the following steps:
 
 1. Select one of the following options and provide details.
    - Provision new IBM-managed bucket
@@ -41,11 +41,14 @@ In the **Bucket configuration** page, complete the following steps:
 
      | Field | Description |
      |--------------------------|----------------|
-     | Type | Select from Amazon S3 or IBM Cloud Object Storage.|
-     | Name | Enter your bucket name.|
+     | Bucket Type | Select from Amazon S3, IBM Storage Ceph, or IBM Cloud Object Storage.|
+     |Region | The region where the data bucket is available.|
+     | Bucket Name | Enter your bucket name.|
+     | Display name | Enter the bucket name to be displayed on-screen.|
      | Endpoint | Enter the endpoint URL.|
      | Access key | Enter your access key. |
      | Secret key | Enter your secret key. |
+     | Connection status | Click the **Test connection** link to test whether the bucket connection with {{site.data.keyword.lakehouse_short}} is successfull or not. The system displays the status message.|
      {: caption="Table 1. Add bucket " caption-side="bottom"}
 
 2. Click **Next**.
@@ -61,7 +64,7 @@ When you register your own bucket, ensure to provide the correct details for buc
 
 Your {{site.data.keyword.lakehouse_short}} needs metadata catalogs to manage your table schemas.
 
-In the **Catalogs configuration** page, complete the following steps:
+In the **Configure catalog** page, complete the following steps:
 
 1. Select the table format for managing your data. Apache Hive and Apache Iceberg catalogs are selected by default.
 
@@ -73,7 +76,7 @@ In the **Catalogs configuration** page, complete the following steps:
 
 Your {{site.data.keyword.lakehouse_short}} needs a query engine to work with your data.
 
-In the **Engine configuration** page, complete the following steps:
+In the **Configure engine** page, complete the following steps:
 
 1. Select the engine to run and process the data that you attached.
 
