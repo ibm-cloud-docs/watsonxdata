@@ -21,7 +21,7 @@ completion-time: 2h
 {:shortdesc: .shortdesc}
 
 
-# Allowing trial experience
+# Trial experience
 {: #tutorial_hp_intro}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="2h"}
