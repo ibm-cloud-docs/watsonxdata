@@ -37,9 +37,7 @@ From the **Data manager** page, you can create schemas and tables by using the *
 Wait for a few minutes to view the changes after a schema or table is dropped.
 {: note}
 
-Adding, renaming, or dropping a column are the other tasks that can be performed in the **Data manager** page.
+You can create Ingestion jobs from the Data manager page.
+Other tasks that can be performed in the **Data manager** page include adding, renaming, or dropping a column.
 
-You can browse the **Table schema** and upto 25 rows of **Data sample** for some tables. You can view the **Time travel** snapshots and use the **Rollback** feature to rollback to a given snapshot for Iceberg tables.
-
-Presto cannot roll back to the snapshots that are not ancestors of the current snapshot.
-{: note}
+You can browse the **Table schema** and up to 25 rows of **Data sample** for some tables. You can view the **Time travel** snapshots and use the **Rollback** feature to rollback or rollforward to any snapshots for Iceberg tables.
