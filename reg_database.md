@@ -188,7 +188,7 @@ To add a database-catalog pair, complete the following steps.
     Two databases with the same name cannot be added.
    {: note}
 
-   For more information, see
+   For more information, see [Custom database feature](watsonxdata?topic=watsonxdata-custom_database).
 
     | Field           | Description        |
     |------------------|--------------------|
