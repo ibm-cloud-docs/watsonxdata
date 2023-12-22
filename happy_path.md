@@ -27,7 +27,7 @@ completion-time: 2h
 {: toc-completion-time="2h"}
 
 
-IBM provides promotion credits to allow a trial experience. The promotion code is sized to allow free trial of {{site.data.keyword.lakehouse_full}} for seven (7) days, if you carefully follow the tutorial. In this trial, you can explore and familiarize yourself with {{site.data.keyword.lakehouse_short}}.
+IBM provides promotion credits to allow a trial experience. The promotion code is sized to allow free trial of {{site.data.keyword.lakehouse_full}} for seven (7) to twelve (12) days, if you carefully follow the tutorial. In this trial, you can explore and familiarize yourself with {{site.data.keyword.lakehouse_short}}.
 {: shortdesc}
 
 In this tutorial you learn how to claim your free promo code, apply it, monitor the usage of the credit, get started, size your starter instance of {{site.data.keyword.lakehouse_short}} and try it out.
@@ -83,46 +83,46 @@ Here, you learn how to review the price estimate and plan the resources.
 1. You can read through the **Summary** and **Features**.
 1. In the **Pricing estimator**, you can provide the following inputs and review the **Estimate summary** so that you can assess the hourly cost for the resource units added.
 
-    The provisioning of your engine with the infrastructures (bucket, database) happens after you create the {{site.data.keyword.lakehouse_short}} instance. For more information about provisioning, see [Getting started](#hp_start). The price estimation helps you to have an idea of the hourly resource consumption before you create the {{site.data.keyword.lakehouse_short}} instance.
+    The provisioning of your engine with the infrastructure (bucket, database) happens after you create the {{site.data.keyword.lakehouse_short}} instance. For more information about provisioning, see [Getting started](#hp_start). The price estimation helps you to have an idea of the hourly resource consumption before you create the {{site.data.keyword.lakehouse_short}} instance.
     {: important}
 
 
    | Field | Description |
    |--------------------------|----------------|
-   |Coordinator node type | Select either **cache optimized** or **compute optimized**. Select **cache optimized** to reduce promo credit consumption. |
+   |Coordinator node type | Select either **starter** or **cache optimized**. Select a **starter** to reduce promo credit consumption. |
    |Number of coordinator nodes |By default, it is one.|
    |Resource units|Displays the cost per hour for the type and number of coordinator nodes that you selected|
-   |Worker node type | Select either cache optimized or **compute optimized**. Select **cache optimized** to reduce promo credit consumption.|
+   |Worker node type | Select either **starter** or **cache optimized**. Select a **starter** to reduce promo credit consumption.|
    |Number of worker nodes|By default, it is one. Select the required number of worker nodes. Adding more worker nodes increases the cost per hour and the consumption of your promo code credit. |
    {: caption="Table 1. Pricing Estimator" caption-side="bottom"}
 
    The following image displays [**{{site.data.keyword.lakehouse_short}}** **{{site.data.keyword.Bluemix_short}} catalog**](https://cloud.ibm.com/watsonxdata) page.
 
-   ![Catalog page](images/happy_path_screen_new.svg){: caption="Figure 2. Price estimator" caption-side="bottom"}
+   ![Catalog page](images/happy_path_screen_new.svg){: caption="Figure 2. Price estimator - Starter size and profile selected" caption-side="bottom"}
 
-   If you add more than one worker nodes, engines or if you choose compute optimized, the cost per hour increases and drains the promo code credit. For the trial, it is recommended to go with a single Presto engine (memory or cache optimized) that has one head node and one worker node.
+   If you add more than one worker nodes, engines or if you choose cache optimized, the cost per hour increases and drains the promo code credit. For the trial, it is recommended to go with a single Presto engine (cache optimized or starter) that has one coordinator node and one worker node.
    {: important}
 
    Support services are required and cannot be turned off. They consume 3 RU/Hr.
-   A Presto engine (cache optimized) with one head node and one worker node consumes 2.8 RU/Hr each for a total of 5.6 RU/Hr, resulting in an instance cost of 8.6 RU/Hr.
+   A Presto engine (starter) with one coordinator node and one worker node consumes 1 RU/Hr each for a total of 2 RU/Hr, resulting in an instance cost of 5 RU/Hr.
    {: note}
 
 1. After configuring the resources from the **Pricing Estimator** details, scroll to the **Estimate summary** for the total estimated cost per hour. The following image displays the **Estimate summary** details.
 
-    ![Estimate summary](images/pricing_estimator.svg){: caption="Figure 3. Estimate summary" caption-side="bottom"}
+    ![Estimate summary](images/pricing_estimator.svg){: caption="Figure 3. Estimate summary - Cache Optimized coordinator and worker selected (note the increase in run rate cost)" caption-side="bottom"}
 
 
 The following are some of the scenarios to illustrate the consumption of promotion credits, an example case of $1,500.
 
-* If you leave the query engine in the running state, with a head node and a worker node for the entire day, then the cost estimate is 8.6 RU/Hrs * 24 Hrs = 206.4 RU/Day. At this rate there would be seven (7) days until the promo code is consumed and billing begins automatically.
-
-* If you leave the engine paused without resuming, the support services still continue to have 3 RU/Hr in cost per hour to maintain your support services. This consumes the promo credit within 20 days even though the engine was paused.
+* If you leave the query engine in the running state, with a coordinator node and a worker node for the entire day, then the cost estimate is 5 RU/Hrs * 24 Hrs = 120 RU/Day. At this rate there would be twelve (12) days until the promo code is consumed and billing begins automatically.
+* If you select a **Cache Optimized** coordinator and worker node, and leave the query engine in the running state, with a head node and a worker node for the entire day, then the cost estimate is 8.6 RU/Hrs * 24 Hrs = 206.4 RU/Day. At this rate, there would be seven (7) days until the promo code is consumed and billing begins automatically.
+* If you leave the engine paused or deleted without resuming, the support services still continue to have 3 RU/Hr in cost per hour to maintain your support services. This consumes the promo credit within 20 days even though the engine was paused or deleted.
 
 
 Best practice:
 
 * For the trial, pause the engine whenever you are not using it for queries.
-* For the trial, it is recommend going with a single Presto engine (memory or cache optimized) that has one head node and one worker node.
+* For the trial, it is recommend going with a single Presto engine (starter) that has one coordinator node and one worker node.
 * If you choose not to continue, buy and build on with your {{site.data.keyword.lakehouse_short}} you must manually delete your instance from the resource list before the promo credits are consumed. For more information about how to delete an instance, see [Viewing Usage](#hp_monitor_usg).
 
 ## Applying the promotion code
@@ -172,7 +172,7 @@ In this section of the tutorial, you are going to learn how to apply the promoti
 
 <!-- 1. Log in to the console with your IBMid and password. The {{site.data.keyword.lakehouse_short}} web console opens. -->
 
-You can also apply the promotion code directly from your {{site.data.keyword.Bluemix_short}} promo credit dashboard.
+After applying the promo code, you will receive a notification indicating that the promo code is successfully applied or not. You can verify the application of the promo code or can also can also apply the promotion code directly from your {{site.data.keyword.Bluemix_short}} promo credit dashboard.
 {: note}
 
 
@@ -226,7 +226,7 @@ You can also monitor the promotion credit usage level and plan subscription in t
 {: #hp_start}
 {: step}
 
-The trial usage consumption starts as soon as you complete quickstart and create the support services (for example, the metastore that holds your catalog). The resource units (RU) are consumed even when the {{site.data.keyword.lakehouse_short}} instance is not being used or the engine is paused because 3 RUs/Hr are required to support services. Therefore, please ensure to monitor the usage to avoid incurring charges beyond the trial credit if you do not wish to.
+The trial usage consumption starts as soon as you complete quickstart and create the support services (for example, the metastore that holds your catalog). The resource units (RU) are consumed even when the {{site.data.keyword.lakehouse_short}} instance is not being used or the engine is paused or deleted because 3 RUs/Hr are required to power the supporting services. Therefore, please ensure to monitor the usage to avoid incurring charges beyond the trial credit if you do not wish to.
 {: attention}
 
 When you log in to the {{site.data.keyword.lakehouse_short}} web console for the first time, you are presented with the quick start wizard.
@@ -246,7 +246,7 @@ Complete the following steps:
 2. Click **Next**. This displays the **Catalogs configuration** page.
 3. In the **Configure catalog** page, select a catalog.
 4. Click **Next**. This displays the **Configure engine** page.
-5. In the **Configure engine** page, select the **Presto engine** and smallest starter (1 coordinator node 1 worker node memory optimized).
+5. In the **Configure engine** page, select the **Presto engine** and smallest starter (1 coordinator node 1 worker node starter).
 6. Click **Next**. This displays the **Summary** page.
 7. In the **Summary** page, review the configurations before you finish setting up your data infrastructure.
 

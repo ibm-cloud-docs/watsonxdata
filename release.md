@@ -44,28 +44,12 @@ A new version of {{site.data.keyword.lakehouse_short}} was released in November 
 
 This release includes the following features and updates:
 
-**Time-travel and roll-back queries**
+**Roll-back feature**
 {: #wn_01}
 
-You can now run the following time-travel queries to access historical data in Apache Iceberg tables:
+You can use the Rollback feature to rollback or rollforward to any snapshots for Iceberg tables.
 
-```SQL
-SELECT <columns> FROM <iceberg-table> FOR TIMESTAMP AS OF TIMESTAMP <timestamp>;
-SELECT <columns> FROM <iceberg-table> FOR VERSION AS OF <snapshotId>;
-```
-{: codeblock}
-
-You can use time-travel queries to query and restore data that was updated or deleted in the past.
-You can also roll back an Apache Iceberg table to any existing snapshot.
-
-**Capture historical data about Presto queries**
-{: #wn_02}
-
-The Query History Monitoring and Management (QHMM) service captures historical data about Presto queries and events. The historical data is stored in a MinIO bucket and you can use the data to understand the queries that were run and to debug the Presto engine.
-
-For more information, see [Monitoring and managing diagnostic data](https://www.ibm.com/docs/SSDZ38_1.1.x/lh-console/topics/qhmm.html). {: external}
-
-**Improved query performance with caching**
+<!-- **Improved query performance with caching**
 {: #wn_03}
 
 You can use the following types of caching to improve Presto query performance:
@@ -74,27 +58,27 @@ You can use the following types of caching to improve Presto query performance:
 - File list caching
 - File metadata caching
 
-For more information, see [Enhancing query performance through caching](https://www.ibm.com/docs/SSDZ38_1.1.x/wxd/admin/enhance_qry.html). {: external}
+For more information, see [Enhancing query performance through caching](https://www.ibm.com/docs/SSDZ38_1.1.x/wxd/admin/enhance_qry.html). {: external} -->
 
-**Capture Data Definition Language (DDL) changes**
+<!-- **Capture Data Definition Language (DDL) changes**
 {: #wn_04}
 
 You can now capture and track the DDL changes in {{site.data.keyword.lakehouse_short}} by using an event listener.
-For more information, see [Capturing DDL changes](https://www.ibm.com/docs/SSDZ38_1.1.x/lh-console/topics/ddl_changes.html).
+For more information, see [Capturing DDL changes](https://www.ibm.com/docs/SSDZ38_1.1.x/lh-console/topics/ddl_changes.html). -->
 
 **Ingest data by using Spark**
 {: #wn_05}
 
 You can now use the IBM Analytics Engine powered by Apache Spark to run ingestion jobs in {{site.data.keyword.lakehouse_short}}.
 
-For more information, see [Ingesting data by using Spark](https://www.ibm.com/docs/SSDZ38_1.1.x/lh-console/topics/ingestion_spark.html). {: external}
+For more information, see [Ingesting data by using Spark](watsonxdata?topic=watsonxdata-ingest_spark_ui).
 
 **Integration with Db2 and Netezza Performance Server**
 {: #wn_06}
 
 You can now register Db2 or Netezza Performance Server engines in {{site.data.keyword.lakehouse_short}} console.
 
-For more information, see [Registering an engine](https://www.ibm.com/docs/SSDZ38_1.1.x/lh-console/topics/reg_engine.html). {: external}
+For more information, see [Registering an engine](watsonxdata?topic=watsonxdata-reg_engine).
 
 **New connectors**
 {: #wn_07}
@@ -104,12 +88,21 @@ You can now use connectors in {{site.data.keyword.lakehouse_short}} to establish
 - Teradata
 - Delta Lake
 - Elasticsearch
-- SAP HANA
 - SingleStoreDB
 - Snowflake
-- Teradata
 
-For more information, see [Adding a database](https://www.ibm.com/docs/SSDZ38_1.1.x/lh-console/topics/add_db.html). {: external}
+For more information, see [Adding a database](watsonxdata?topic=watsonxdata-reg_database).
+
+**AWS EMR for Spark**
+{: #wn_08}
+
+You can now run Spark applications from Amazon Web Services Elastic MapReduce (AWS EMR) to achieve the {{site.data.keyword.lakehouse_short}} Spark use cases:
+
+- Data ingestion
+- Data querying
+- Table maintenance
+
+For more information, see [Using AWS EMR for Spark use case](watsonxdata?topic=watsonxdata-spark-emr).
 
 ## 7 July 2023
 {: #lakehouse_july72023}

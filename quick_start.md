@@ -22,7 +22,7 @@ completion-time: 20m
 {: toc-services=""}
 {: toc-completion-time="20m"}
 
-When you log in to the {{site.data.keyword.lakehouse_full}} web console for the first time, you are presented with the quick start wizard. In this tutorial, you learn how to use the quick start wizard to configure the core components and get started with {{site.data.keyword.lakehouse_short}} in few minutes.
+When you log in to the {{site.data.keyword.lakehouse_full}} web console for the first time, you are presented with the quick start wizard. In this tutorial, you learn how to use the quick start wizard to configure the core components and get started with {{site.data.keyword.lakehouse_short}} in a few minutes.
 {: shortdesc}
 
 The wizard guides you through the initial configuration process for the infrastructure components of {{site.data.keyword.lakehouse_short}}.
@@ -48,21 +48,21 @@ In the **Configure bucket** page, complete the following steps:
      | Endpoint | Enter the endpoint URL.|
      | Access key | Enter your access key. |
      | Secret key | Enter your secret key. |
-     | Connection status | Click the **Test connection** link to test whether the bucket connection with {{site.data.keyword.lakehouse_short}} is successfull or not. The system displays the status message.|
+     | Connection status | Click the **Test connection** link to test whether the bucket connection with {{site.data.keyword.lakehouse_short}} is successful or not. The system displays the status message.|
      {: caption="Table 1. Add bucket " caption-side="bottom"}
 
 2. Click **Next**.
 
 The IBM-managed bucket is a default 10 GB bucket. It is meant for an exploratory purpose and cannot be used to store production or sensitive data. The {{site.data.keyword.lakehouse_short}} instance administrators can disable this bucket for compliance reasons.
 
-When you register your own bucket, ensure to provide the correct details for bucket configuration. Quick start wizard does not validate the bucket configuration details and you cannot modify them later.
+When you register your own bucket, ensure to provide the correct details for bucket configuration. The quick start wizard does not validate the bucket configuration details and you cannot modify them later.
 {: note}
 
 ## Configure a catalog
 {: #qs_catalogs}
 {: step}
 
-Your {{site.data.keyword.lakehouse_short}} needs metadata catalogs to manage your table schemas.
+Your {{site.data.keyword.lakehouse_short}} needs metadata catalogs to manage your table schemas. Creating the support services for the metadata catalog adds 3 RUs/Hr to your instance run rate when you complete the quickstart process.
 
 In the **Configure catalog** page, complete the following steps:
 
@@ -84,10 +84,11 @@ In the **Configure engine** page, complete the following steps:
 
    | Size | Description |
    |--------------------------|----------------|
-   | Starter (5.6 RUs/hour) | Includes 1 coordinator node and 1 worker node. All nodes are storage-optimized. |
-   | Small (11.2 RUs/hour) | Includes 1 coordinator node and 3 worker nodes. All nodes are storage-optimized. |
-   | Medium (19.6 RUs/hour) | Includes 1 coordinator node and 6 worker nodes. All nodes are storage-optimized. |
-   | Large (36.4 RUs/hour) | Includes 1 coordinator node and 12 worker nodes. All nodes are storage-optimized. |
+   | Starter (IBM) (2 RUs/hour) | Includes 1 coordinator node and 1 worker node. All nodes are **Starter**. |
+   | Starter (AWS) (5.6 RUs/hour) | Includes 1 coordinator node and 1 worker node. All nodes are cache-optimized. |
+   | Small (11.2 RUs/hour) | Includes 1 coordinator node and 3 worker nodes. All nodes are cache-optimized. |
+   | Medium (19.6 RUs/hour) | Includes 1 coordinator node and 6 worker nodes. All nodes are cache-optimized. |
+   | Large (36.4 RUs/hour) | Includes 1 coordinator node and 12 worker nodes. All nodes are cache-optimized. |
    {: caption="Table 2. Engine size " caption-side="bottom"}
 
 3. Click **Next**.
@@ -102,7 +103,7 @@ In the **Summary** page, complete the following steps:
 
 2. Click **Finish and go**.
 
-When the setup is complete, the {{site.data.keyword.lakehouse_short}} home page appears.
+When the setup is complete, the {{site.data.keyword.lakehouse_short}} home page appears. Resource Unit consumption begins soon after creating the support services by using the quick start wizard. You can view the run rate that is submitted for billing from the billing and usage tab. For more information, see [Billing and usage](watsonxdata?topic=watsonxdata-manage_bill){: external}
 
 ## Next steps
 {: #qs_next_steps}

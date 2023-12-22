@@ -31,6 +31,27 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
+<!-- ## Issue: Longer `omrgc_spinlock_acquire` calls slow down {{site.data.keyword.lakehouse_short}} performance
+{: #known_issues1.0.0_7}
+
+As a result of Intel's CPU upgrade, the `omrgc_spinlock_acquire` call takes longer to complete, making {{site.data.keyword.lakehouse_short}} slower. -->
+<!--
+**Workaround:**: Do the following steps:
+
+   1. Go to Presto folder path (/opt/presto/etc folder).
+   2. Update the jvm.config file to include the new JVM parameter, `-Xgc:tlhInitialSize=8096,tlhIncrementSize=16384,tlhMaximumSize=1048576`.
+   3. Restart the Presto coordinator and worker node. -->
+
+<!-- ## Issue: Unable to create views in Presto
+{: #known_issues1.0.0_6}
+
+Presto describes a view in a mapped database as a TABLE rather than a VIEW. This is apparent to JDBC program connecting to the Presto engine.
+
+## Issue: Presto fails to identify non null constraints defined in columns
+{: #known_issues1.0.0_5}
+
+Even if a column in a database is set as not null, Presto accepts null values, impacting the tables. -->
+
 ## Issue: Using special characters in schema, table, or column names
 {: #known_issues1.0.0_4}
 
@@ -289,3 +310,12 @@ java.lang.NullPointerException
 {: screen}
 
 **Workaround:** Pause and resume the engine to restart all worker nodes.
+
+## Issue: The staging folder is not dropped when ingestion is interrupted
+{: #known_issues27}
+
+When you do an ingestion job by using a staging folder, the staging folder is dropped when ingestion is completed successful or when ingestion fails due to an exception error.
+
+But the staging folder is not dropped if ingestion is interrupted or forcefully terminated by pressing Ctrl+C.
+
+**Workaround:** Delete the staging folder manually.

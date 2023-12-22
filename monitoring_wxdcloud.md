@@ -252,10 +252,10 @@ The following attributes are available for segmenting one or more attributes as 
 
 | Attribute | Attribute Name | Attribute Description |
 |-----------|----------------|-----------------------|
-|`Catalog in the Presto Server`|`ibm_catalog`|Catalog in the Presto Server|
-|`Catalog name`|`ibm_catalog_name`|Catalog name|
-|`Resource role`|`ibm_resource_role`|Role in the resource group|
-|`Role associated with Catalog`|`ibm_catalog_role`|Role associated with Catalog|
-|`Schema in the Presto Server`|`ibm_schema`|Schema in the Presto Server|
-|`Service instance` | `ibm_service_instance` | The service instance segment identifies the instance that the metric is associated with |
+|`Catalog in the Presto Server`|`ibm_watsonx_data_catalog`|Catalog in the Presto Server|
+|`Catalog name`|`ibm_watsonx_data_catalog_name`|Catalog name|
+|`Resource role`|`ibm_watsonx_data_resource_role`|Role in the resource group|
+|`Role associated with Catalog`|`ibm_watsonx_data_catalog_role`|Role associated with Catalog|
+|`Schema in the Presto Server`|`ibm_watsonx_data_schema`|Schema in the Presto Server|
+|`Service instance` | `ibm_service_instance` | The service instance segment identifies the instance that the metric is associated with. |
 {: caption="Table 14: Additional attributes" caption-side="top"}

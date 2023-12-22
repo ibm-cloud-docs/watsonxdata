@@ -26,6 +26,7 @@ toc:
       topics:
       - happy_path.md
       - quick_start.md
+      # - tut_query_db.md
       - tut_ingest_manual.md
 
   - navgroup:
@@ -60,10 +61,23 @@ toc:
           label: Loading data
           topics:
             - ingestdata.md
-            - ingest_data_cli.md
-            - cli_commands.md
-            - ingest_datafiles_cli.md
-            - ingest_datafiles_config.md
+            - ingest_spark_ui.md
+            - topicgroup:
+                label: Ingesting data by using command line interface (CLI)
+                topics:
+                  - link:
+                         label: Options and parameters supported in ibm-lh tool
+                         href: https://www.ibm.com/docs/en/watsonxdata/1.1.x?topic=cli-options-parameters-supported-in-lh-tool
+                  - link:
+                         label: Creating an ingestion job by using commands
+                         href: https://www.ibm.com/docs/en/watsonxdata/1.1.x?topic=cli-creating-ingestion-job-by-using-commands
+                  - link:
+                         label: Creating an ingestion job by using the configuration file
+                         href: https://www.ibm.com/docs/en/watsonxdata/1.1.x?topic=cli-creating-ingestion-job-by-using-configuration-file
+                  - link:
+                         label: Spark ingestion through ibm-lh tool command line
+                         href: https://www.ibm.com/docs/en/watsonxdata/1.1.x?topic=cli-spark-ingestion-through-lh-tool-command-line
+
       - topicgroup:
           label: Exploring data
           topics:
@@ -83,6 +97,10 @@ toc:
             - query_history.md
             - exp-imp-qh.md
       - conn-presto-thr-cli.md
+      # - integrate_wkc.md
+      # - link:
+      #       label: Capturing DDL changes in watsonx.data through event listener
+      #       href: https://www.ibm.com/docs/en/watsonxdata/1.1.x?topic=wdo-capturing-ddl-changes-in-watsonxdata-through-event-listener
       - presto_behavior.md
       - delete_lh.md
       - topicgroup:

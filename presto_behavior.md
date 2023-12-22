@@ -32,6 +32,9 @@ subcollection: watsonxdata
 The Presto behavior is changed from case-insensitive to case-sensitive. User needs to provide the query name in original case format as in database.
 {: shortdesc}
 
+Access control policies might also be affected after an upgrade.
+{: note}
+
 ## Code changes
 {: #code_changes}
 
@@ -46,20 +49,7 @@ Catalog names are still converted to lowercase letters.
 ## Case-sensitive behavior for JDBC connectors
 {: #case-sensitive_behavior}
 
-JDBC connectors had an extra conversion to uppercase based on the flag setting in the corresponding driver jar - the method, storesUpperCaseIdentifiers(), from DatabaseMetadata object of the JDBC driver. If the method returns true for a particular connector, for example, Db2, the object name that the user entered gets converted to uppercase before it is moved to the database. To override this behavior, a new connector level parameter is introduced. The new parameter checkDriverCaseSupport is by default false, which means presto doesn't consider driver-specific case, but if configured as true, it can go back to the old behavior for that connector.
-
-Users can add the parameter check-driver-case-support in their catalog.porperties file to use the connector's default case format. For example, Db2 and {{site.data.keyword.netezza_full}} store identifiers in uppercase by default unless user wraps the identifier name within double quotation marks. For example, the following query creates a table as EMPLOYEE if it is run in Db2:
-
-   `create table employee(id int, name varchar(10));`
-
-In presto, double quotation marks are intentionally added around schema names and table names to enable mixed case support.
-
-If a user wants to create objects in Db2 or {{site.data.keyword.netezza_full}} through presto in uppercase, they can add the following property in the catalog.properties file:
-
-   `check-driver-case-support = true`
-
-This feature is only applicable to JDBC connectors.
-{: note}
+In the open source Presto, the JDBC databases that internally store objects in uppercase, for example, Db2 and Netezza® Performance Server, the object names that the user entered used to get converted to uppercase. As Presto now supports mixed case, this behavior is slightly changed. A new connector level parameter check-driver-case-support is introduced. This parameter is by default false, indicating that Presto doesn't consider database-specific case. This parameter is expected to be available in the UI in the future releases so that it can be set as true or false.
 
 ## Changes in User Experience
 {: #changes_ux}
@@ -82,12 +72,12 @@ The following queries result in the error "Table 'db2.ampers.departments' does n
 1. SELECT * FROM "db2"."ampers"."departments";
 2. SELECT * FROM "db2".ampers.departments;
 
-## Impact on connectors
+## Impact on Iceberg and Hive catalogs
 {: #Impact_connectors}
 
 Since the HMS stores objects in lowercase, no change is observed in the behavior, though Presto behavior is changed.
 
-For Hive and Iceberg connectors, the following query combinations are valid:
+For Hive and Iceberg catalogs, the following query combinations are valid:
 1. SELECT * FROM "iceberg_data"."testsch"."employee";
 2. SELECT * FROM "iceberg_data".testsch.employee;
 3. SELECT * FROM "iceberg_data"."TESTSCH"."employee";

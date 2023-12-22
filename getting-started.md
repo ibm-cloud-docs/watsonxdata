@@ -28,6 +28,8 @@ completion-time: 20m
 This tutorial is a short introduction to using a {{site.data.keyword.lakehouse_short}} deployment.
 {: shortdesc}
 
+See [{{site.data.keyword.lakehouse_full}} on Cloud Pak for Data](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.8.x?topic=services-watsonxdata) and [{{site.data.keyword.lakehouse_full}}](https://www.ibm.com/docs/en/watsonxdata/1.1.x) for {{site.data.keyword.lakehouse_short}} developer edition and {{site.data.keyword.lakehouse_short}} on Red Hat OpenShift.
+
 ## Before you begin
 {: #prereqs}
 
@@ -127,3 +129,8 @@ The access to provision IBM Cloud resources is governed by using [IAM access](ht
 {: #gs_ns}
 
 To quickly get started with the {{site.data.keyword.lakehouse_short}} web console by configuring the infrastructure components, see [Quick start {{site.data.keyword.lakehouse_short}} console](watsonxdata?topic=watsonxdata-quick_start).
+
+Once you complete quick start, Resource Unit consumption begins and will be reported for billing.
+If you do not complete the quick start and provision support services, Resource Units are not consumed and reported for billing.
+If no Resource Units are consumed within seven (7) days after an instance creation, the unused instance is deleted, after which a new instance can be re-created. For more information, see [Provisioning an instance](#create-by-ui).
+{: important}

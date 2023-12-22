@@ -55,6 +55,7 @@ IBM supports the following database types:
 
 
 
+
 To add a database-catalog pair, complete the following steps.
 
 1. Log in to the {{site.data.keyword.lakehouse_short}} console.
@@ -74,7 +75,8 @@ To add a database-catalog pair, complete the following steps.
     * Snowflake
     * SingleStore
 
-    You can now use the custom catalog to create connections to data stores that are not provided by the built-in connectors. For example, you can set up the custom connector that is hosted and managed by AWS Glue. For more information see, {: #custom_database}
+
+    You can now use the custom catalog to create connections to data stores that are not provided by the built-in connectors. For example, you can set up the custom connector that is hosted and managed by AWS Glue. For more information see, [Custom database feature](watsonxdata?topic=watsonxdata-custom_database).
     {: note}
 
 5. Based on the database type selected, click the respective link to configure the database details.
@@ -194,7 +196,7 @@ To add a database-catalog pair, complete the following steps.
     | connector.name     | Enter the name of the database connector that you want to add.  |
     | Property value             | Enter the properties (and their values) to be configured for the database. |
     | Port           | Enter the port number.  |
-    | Encryption           | Enable if you want to include encryption.  |
+    | Encryption           | Encrypting values of the keys are stored.  |
     | Associated catalog definition | Enter the name of the catalog. This catalog is automatically associated with your database. |
     {: caption="Table 5. Register database" caption-side="bottom"}
 

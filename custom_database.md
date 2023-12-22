@@ -58,7 +58,7 @@ To add a custom database-catalog pair, complete the following steps.
     | connector.name     | Enter the name of the database connector that you want to add.  |
     | Property value             | Enter the properties (and their values) to be configured for the database. |
     | Port           | Enter the port number.  |
-    | Encryption           | Enable if you want to include encryption.  |
+    | Encryption           | Encrypting values of the keys are stored.  |
     | Associated catalog definition | Enter the name of the catalog. This catalog is automatically associated with your database. |
     {: caption="Table 1. Register database" caption-side="bottom"}
 
