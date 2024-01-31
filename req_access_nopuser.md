@@ -1,7 +1,7 @@
 ---
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-11-29"
+  years: 2022, 2024
+lastupdated: "2024-01-31"
 
 keywords: lakehouse, private cloud
 

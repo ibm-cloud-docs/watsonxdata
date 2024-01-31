@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-11-29"
+  years: 2022, 2024
+lastupdated: "2024-01-31"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -11,7 +11,7 @@ subcollection: watsonxdata
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Configuring {{site.data.keyword.iae_short}} instance
+# Configuring {{site.data.keyword.iae_short}}
 {: #lh-config-ae}
 
 You can configure {{site.data.keyword.iae_full_notm}} instance to connect to the {{site.data.keyword.lakehouse_full}} instance by setting {{site.data.keyword.lakehouse_short}} configurations and Spark related configuration as the default configuration for the {{site.data.keyword.iae_full_notm}} instance.

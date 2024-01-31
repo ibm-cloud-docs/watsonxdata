@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-11-29"
+  years: 2022, 2024
+lastupdated: "2024-01-31"
 
 keywords: lakehouse, watsonx.data, presto
 
@@ -53,8 +53,8 @@ A Presto installation includes three server types - Coordinator, Worker, and Res
 The following connectors are supported in {{site.data.keyword.lakehouse_short}}:
 
 -	[Iceberg](https://prestodb.io/docs/current/connector/iceberg.html){: external}
--	[Db2](watsonxdata?topic=watsonxdata-db2_connector){: external}
--	[{{site.data.keyword.netezza_short}}](watsonxdata?topic=watsonxdata-netezza_connector){: external}
+-	Db2
+-	**{{site.data.keyword.netezza_short}}**
 -	[Hive](https://prestodb.io/docs/current/connector/hive.html){: external}
 -	[JMX](https://prestodb.io/docs/current/connector/jmx.html){: external}
 -	[Kafka](https://prestodb.io/docs/current/connector/kafka.html){: external}

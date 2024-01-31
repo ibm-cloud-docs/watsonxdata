@@ -42,15 +42,25 @@ As a result of Intel's CPU upgrade, the `omrgc_spinlock_acquire` call takes long
    2. Update the jvm.config file to include the new JVM parameter, `-Xgc:tlhInitialSize=8096,tlhIncrementSize=16384,tlhMaximumSize=1048576`.
    3. Restart the Presto coordinator and worker node. -->
 
-<!-- ## Issue: Unable to create views in Presto
+## Issue: Unable to create views in Presto
 {: #known_issues1.0.0_6}
 
 Presto describes a view in a mapped database as a TABLE rather than a VIEW. This is apparent to JDBC program connecting to the Presto engine.
 
-## Issue: Presto fails to identify non null constraints defined in columns
+<!-- ## Issue: Presto fails to restrict NULL values on a column with NOT NULL constraint
 {: #known_issues1.0.0_5}
 
-Even if a column in a database is set as not null, Presto accepts null values, impacting the tables. -->
+When you define a table with columns that have a NOT NULL constraint, the Presto engine fails to restrict the NULL values in columns that are defined with a NOT NULL constraint. Allowing NULL values leads to data inconsistency, resulting in read failure when executing queries. -->
+
+## Issue: Unable to view schemas while creating an access control policy
+{: #known_issues1.0.0_6}
+
+When a user attempts to create an access control policy from the **Access control** page, the list of available schemas for the selected catalog are not displayed in the **Data objects** section. This problem occurs due to an internal issue. As a workaround, to view the list of schemas while creating an access policy, the user must first view the schemas for the selected catalog from the **Data manager** page and then create an access policy from the **Access Control** page.
+
+## Issue: Connections to MongoDB or MySQL database catalog fails
+{: #known_issues1.0.0_5}
+
+When {{site.data.keyword.lakehouse_short}} is upgraded to Version 1.1.0, the user is unable to access the MySQL or MongoDB database catalog, if SSL is enabled for those connections before upgrade. As a workaround, after you upgrade {{site.data.keyword.lakehouse_short}}, remove and readd the SSL-enabled connections to MySQL or MongoDB databases by providing an SSL certificate file. For more information, see [Adding a database](watsonxdata?topic=watsonxdata-reg_database).
 
 ## Issue: Using special characters in schema, table, or column names
 {: #known_issues1.0.0_4}
@@ -319,3 +329,15 @@ When you do an ingestion job by using a staging folder, the staging folder is dr
 But the staging folder is not dropped if ingestion is interrupted or forcefully terminated by pressing Ctrl+C.
 
 **Workaround:** Delete the staging folder manually.
+
+## Test connection with SSL enabled is not supported
+{: #known_issues28}
+
+When a user enables SSL connection for data sources, the test connection is not supported through the web console.
+
+## Spark CLI ingestion removes existing data when using `--create-if-not-exist`
+{: #known_issues29}
+
+When a user is using the command `--create-if-not-exist` during Spark CLI ingestion, the existing data is removed.
+
+**Workaround:** User must not use the command `--create-if-not-exist` if target table already exists.

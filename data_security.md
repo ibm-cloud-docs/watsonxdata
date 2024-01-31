@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-11-29"
+  years: 2022, 2024
+lastupdated: "2024-01-31"
 
 keywords: security, data and keys, encrypted
 
@@ -65,6 +65,9 @@ The chart that follows, shows which keys can be used in which region.
 |---|---|---|
 | Dallas (US-South) | US-South | US-South  |
 | Washington (US-East) | US-South  |US-East  |
+| Frankfurt (EU-DE) | EU-DE  | N/A  |
+| London (EU-GB) | EU-DE  | N/A  |
+| Tokyo (JP-Tok) | JP-Tok | N/A  |
 {: caption="Table 1. Regions - IBM" caption-side="bottom"}
 
 | **{{site.data.keyword.lakehouse_short}} Regions (AWS)**   |**Key Protect Region Available**  | **HPCS Region Available** |
@@ -72,6 +75,7 @@ The chart that follows, shows which keys can be used in which region.
 | N. Virginia (US-East-1) | US-South | US-East  |
 | Oregon (US-West-2) | US-South  |US-South  |
 | Frankfurt (EU-Central-1) | EU-DE  | N/A  |
+| Tokyo (JP-Tok)| JP-Tok | N/A |
 {: caption="Table 1. Regions - AWS" caption-side="bottom"}
 
 ## Granting service authorization

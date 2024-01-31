@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-11-29"
+  years: 2022, 2024
+lastupdated: "2024-01-31"
 
 keywords: high availability, disaster revecory, watsonx.data
 
@@ -97,9 +97,13 @@ Several minutes of unavailability or connection interruptions are not expected. 
 1. Oregon (us-west-2)
 2. N. Virginia (us-east-1)
 3. Frankfurt (eu-central-1)
+4. Tokyo (jp-tok)
 
 ### IBM Regions
 {: #ibm_regns}
 
 1. Dallas (us-south)
 2. Washington (us-east)
+3. Frankfurt (eu-de)
+4. London (eu-gb)
+5. Tokyo (jp-tok)

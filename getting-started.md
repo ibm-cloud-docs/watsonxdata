@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-11-29"
+  years: 2022, 2024
+lastupdated: "2024-01-31"
 
 keywords: lakehouse, watsonx data, provision, endpoint, resource
 subcollection: watsonxdata
@@ -28,7 +28,9 @@ completion-time: 20m
 This tutorial is a short introduction to using a {{site.data.keyword.lakehouse_short}} deployment.
 {: shortdesc}
 
-See [{{site.data.keyword.lakehouse_full}} on Cloud Pak for Data](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.8.x?topic=services-watsonxdata) and [{{site.data.keyword.lakehouse_full}}](https://www.ibm.com/docs/en/watsonxdata/1.1.x) for {{site.data.keyword.lakehouse_short}} developer edition and {{site.data.keyword.lakehouse_short}} on Red Hat OpenShift.
+For more information about the developer edition of {{site.data.keyword.lakehouse_short}} and {{site.data.keyword.lakehouse_short}} on Red Hat OpenShift, see [{{site.data.keyword.lakehouse_full}}](https://www.ibm.com/docs/en/watsonxdata/1.1.x).
+
+For more information about using {{site.data.keyword.lakehouse_full}} on Cloud Pak for Data, see [{{site.data.keyword.lakehouse_full}} on Cloud Pak for Data](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.8.x?topic=services-watsonxdata).
 
 ## Before you begin
 {: #prereqs}
@@ -89,7 +91,7 @@ The access to provision IBM Cloud resources is governed by using [IAM access](ht
 3. Create a new formation.
 
     ```bash
-    ibmcloud resource service-instance-create <instance-name> lakehouse lakehouse-enterprise <region> -g Default -p '{"datacenter": ""}'
+    ibmcloud resource service-instance-create <instance-name> lakehouse lakehouse-enterprise <region> -g Default -p <cloud_type> '{"datacenter": ""}'`
     ```
     {: codeblock}
 
@@ -97,12 +99,13 @@ The access to provision IBM Cloud resources is governed by using [IAM access](ht
     - `lakehouse-enterprise:` Plan ID
     - `lakehouse:` {{site.data.keyword.lakehouse_short}} service
     - `datacenter:` Required parameter. For example, `ibm:us-south:dal`, `aws:us-west-2`, `aws:us-east-1`, `aws:eu-central-1`, `ibm:us-east:wdc`, and `ibm:eu-de:fra`.
+    - `cloud_type:` the type of cloud environment you want to use. For Blueray service instance creation, cloud type is `aws_vpc`.
     - Regions are `eu-de`, `us-east`, `us-south` and `jp-tok`.
 
     Example:
 
     ```bash
-    ibmcloud resource service-instance-create watsonx.data-abc lakehouse lakehouse-enterprise us-south -g Default -p '{"datacenter": "ibm:us-south:dal"}'
+    ibmcloud resource service-instance-create watsonx.data-abc lakehouse lakehouse-enterprise us-south -g Default -p aws_vpc '{"datacenter": "ibm:us-south:dal"}'
     ```
     {: codeblock}
 

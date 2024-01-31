@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-11-29"
+  years: 2017, 2024
+lastupdated: "2024-01-31"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -11,7 +11,7 @@ subcollection: watsonxdata
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Provisioning an {{site.data.keyword.iae_short}} instance
+# Provisioning {{site.data.keyword.iae_short}}
 {: #lh-provisioning-serverless}
 
 For {{site.data.keyword.lakehouse_short}}, it is recommended to use {{site.data.keyword.iae_full_notm}} Spark to achieve below use-cases:

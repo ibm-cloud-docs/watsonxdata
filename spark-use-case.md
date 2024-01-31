@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-11-29"
+  years: 2017, 2024
+lastupdated: "2024-01-31"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -44,6 +44,42 @@ The sample file demonstrates the following functionalities:
 * Performing table maintenance activities in {{site.data.keyword.lakehouse_short}}
 
     Table maintenance helps in keeping the {{site.data.keyword.lakehouse_short}} table performant. Iceberg provides table maintenance procedures out of the box that allows performing powerful table optimizations in a declarative fashion. The sample below demonstrates how to do some table maintenance operations by using Spark. For more information about the Iceberg Spark table maintenance operations, see [Table Operations](https://iceberg.apache.org/docs/1.2.1/spark-procedures/).
+
+## Inserting sample data into the COS bucket
+{: #insert_samp_usecase}
+
+To insert data to COS, follow the steps below.
+
+1. Create a COS bucket(say, source-bucket) to store sample data to be ingested into {{site.data.keyword.lakehouse_short}} instance. For information about creating COS bucket see, [Getting started with IBM Cloud Object Storage](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage#gs-create-buckets).
+
+
+    As a user of Object Storage, you not only need to know the API key or the HMAC keys to configure Object Storage, but also the IBM Analytics Engine service endpoints to connect to Object Storage. See [Selecting regions and endpoints](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-endpoints) for more information on the endpoints to use based on your Object Storage bucket type, such as regional versus cross-regional. You can also view the endpoints across regions for your Object Storage service by selecting the service on your IBM Cloud dashboard and clicking **Endpoint** in the navigation pane. Always choose the **direct endpoint**. Direct endpoint provide better performance and do not incur charges. An example of an endpoint for US-South Cross region is `s3.direct.us.cloud-object-storage.appdomain.cloud`.
+
+2. Download a sample csv file (say, zipcodes.csv) and parquet sample data (say, six months taxi data for year 2022) from the links give below.
+
+    * [Sample parquet file](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page).
+    * [Sample CSV file](https://raw.githubusercontent.com/spark-examples/spark-scala-examples/3ea16e4c6c1614609c2bd7ebdffcee01c0fe6017/src/main/resources/zipcodes.csv)
+
+3. Install IBM Cloud Object Storage plug-in. For more information about how to install plug-in, see [IBM Cloud Object Storage CLI](https://cloud.ibm.com/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-plugin-ic-cos-cli).
+
+4. Use the COS cli to upload the sample data into COS bucket.
+
+    ```bash
+    ibmcloud cos upload --bucket <cos_bucket_name> --key <source_file_name> --file <path_to_source_file>
+    ```
+    {: codeblock}
+
+    Parameter values:
+    * <cos_bucket_name>: name of the bucket created in step1.
+    * <source_file_name>: the name of the sample data file that you downloaded. Here, **key zipcodes.csv** is the file name (see the example below).
+    * <path_to_source_file>: the path to the location in your machine where the file resides. Here, **path/zipcodes.csv** is the file path (see the example below).
+
+    For example:
+    ```bash
+    ibmcloud cos upload --bucket source-bucket --key zipcodes.csv --file <path/zipcodes.csv>
+    ```
+    {: screen}
+
 
 ## Running the sample use case
 {: #abt_samp_run}
@@ -193,7 +229,7 @@ if __name__ == '__main__':
 
 1. Save the following sample python file.
 1. Upload the Python file to the Cloud Object Storage bucket. You must maintain the Spark applications and their dependencies in a Cloud Object Storage bucket and not mix them with data buckets.
-1. Generate the IAM token for the {{site.data.keyword.iae_full_notm}} token. For more information about how to generate an IAM token, see [IAM token](https://test.cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-con-presto-thru-cli#get-api-iam-token)
+1. Generate the IAM token for the {{site.data.keyword.iae_full_notm}} token. For more information about how to generate an IAM token, see [IAM token](https://test.cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token)
 1. Run the following curl command to submit the Spark application:
 
    ```bash
@@ -213,38 +249,3 @@ if __name__ == '__main__':
 
 This sample is tested on the Cloud Object Storage buckets in the **us-south** region. Change the region in the Cloud Object Storage endpoint configuration as per the region where your Cloud Object Storage buckets reside. It is recommended to provision the COS buckets in the region where {{site.data.keyword.iae_short}} instance is provisioned.
 {: note}
-
-## Inserting sample data into the COS bucket
-{: #insert_samp_usecase}
-
-To insert data to COS, follow the steps below.
-
-1. Create a COS bucket(say, source-bucket) to store sample data to be ingested into wxd instance. For information about creating COS bucket, [Getting started with IBM Cloud Object Storage] see (https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage#gs-create-buckets).
-
-
-    As a user of Object Storage, you not only need to know the API key or the HMAC keys to configure Object Storage, but also the IBM Analytics Engine service endpoints to connect to Object Storage. See [Selecting regions and endpoints](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-endpoints) for more information on the endpoints to use based on your Object Storage bucket type, such as regional versus cross-regional. You can also view the endpoints across regions for your Object Storage service by selecting the service on your IBM Cloud dashboard and clicking **Endpoint** in the navigation pane. Always choose the **direct endpoint**. Direct endpoint provide better performance and do not incur charges. An example of an endpoint for US-South Cross region is `s3.direct.us.cloud-object-storage.appdomain.cloud`.
-
-2. Download a sample csv file (say, zipcodes.csv) and parquet sample data (say, six months taxi data for year 2022) from the links give below.
-
-    * [Sample parquet file](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page).
-    * [Sample CSV file](https://raw.githubusercontent.com/spark-examples/spark-scala-examples/3ea16e4c6c1614609c2bd7ebdffcee01c0fe6017/src/main/resources/zipcodes.csv)
-
-3. Install IBM Cloud Object Storage plug-in. For more information about how to install plug-in, see [IBM Cloud Object Storage CLI](https://cloud.ibm.com/docs/cloud-object-storage-cli-plugin?topic=cloud-object-storage-cli-plugin-ic-cos-cli).
-
-4. Use the COS cli to upload the sample data into COS bucket.
-
-    ```bash
-    ibmcloud cos upload --bucket <cos_bucket_name> --key <source_file_name> --file <path_to_source_file>
-    ```
-    {: codeblock}
-
-    Parameter values:
-    * <cos_bucket_name>: name of the bucket created in step1.
-    * <source_file_name>: the name of the sample data file that you downloaded. Here, **key zipcodes.csv** is the file name (see the example below).
-    * <path_to_source_file>: the path to the location in your machine where the file resides. Here, **path/zipcodes.csv** is the file path (see the example below).
-
-    For example:
-    ```bash
-    ibmcloud cos upload --bucket source-bucket --key zipcodes.csv --file <path/zipcodes.csv>
-    ```
-    {: screen}

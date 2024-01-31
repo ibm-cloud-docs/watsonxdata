@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2023, 2023
-lastupdated: "2023-11-29"
+  years: 2023, 2024
+lastupdated: "2024-01-31"
 
 keywords: watsonxdata, release notes
 
@@ -34,15 +34,46 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.lakehouse_full}} that are grouped by date.
 {: shortdesc}
 
-## 29 Nov 2023
-{: #lakehouse_Nov292023}
+## 31 Jan 2024 - Version 1.1.1
+{: #lakehouse_Jan312024}
 
-## Version 1.1.0
-{: #version_110}
+
+A new version of {{site.data.keyword.lakehouse_short}} was released in January 2024.
+
+This release includes the following features and updates:
+
+**IBM Data Virtualization Manager for z/OS® connector**
+{: #wn_01_2024}
+
+You can now use the new IBM Data Virtualization Manager for z/OS® connector to read and write IBM Z® without moving, replicating, or transforming the data. For more information, see [Connecting to an IBM Data Virtualization Manager (DVM) data source](https://www.ibm.com/docs/en/iis/11.7?topic=analyzer-connecting-data-virtualization-manager-dvm-data-source).
+
+**Teradata connector is enabled for multiple `ALTER TABLE` statements**
+{: #wn_03_2024}
+
+Teradata connector now supports the `ALTER TABLE RENAME TO`, `ALTER TABLE DROP COLUMN`, and `ALTER TABLE RENAME COLUMN column_name TO new_column_name` statements.
+
+**Support for time travel queries**
+{: #wn_05_2024}
+
+Iceberg connector for Presto now supports time travel queries.
+
+**The property `format_version` now shows the current version**
+{: #wn_06_2024}
+
+The property `format_version` now shows the correct value (current version) when you create an Iceberg table.
+
+
+## 29 Nov 2023 - Version 1.1.0
+{: #lakehouse_Nov292023}
 
 A new version of {{site.data.keyword.lakehouse_short}} was released in November 2023.
 
 This release includes the following features and updates:
+
+**Presto case-sensitive behavior**
+{: #wn_00}
+
+The Presto behavior is changed from case-insensitive to case-sensitive. Now you can provide the object names in the original case format as in the database. For more information, see [Case-sensitive search configuration with Presto](watsonxdata?topic=watsonxdata-ts_cs).
 
 **Roll-back feature**
 {: #wn_01}
@@ -60,16 +91,16 @@ You can use the following types of caching to improve Presto query performance:
 
 For more information, see [Enhancing query performance through caching](https://www.ibm.com/docs/SSDZ38_1.1.x/wxd/admin/enhance_qry.html). {: external} -->
 
-<!-- **Capture Data Definition Language (DDL) changes**
+**Capture Data Definition Language (DDL) changes**
 {: #wn_04}
 
 You can now capture and track the DDL changes in {{site.data.keyword.lakehouse_short}} by using an event listener.
-For more information, see [Capturing DDL changes](https://www.ibm.com/docs/SSDZ38_1.1.x/lh-console/topics/ddl_changes.html). -->
+For more information, see [Capturing DDL changes](watsonxdata?topic=watsonxdata-dll_changes).
 
 **Ingest data by using Spark**
 {: #wn_05}
 
-You can now use the IBM Analytics Engine powered by Apache Spark to run ingestion jobs in {{site.data.keyword.lakehouse_short}}.
+You can now use the IBM Analytics Engine that is powered by Apache Spark to run ingestion jobs in {{site.data.keyword.lakehouse_short}}.
 
 For more information, see [Ingesting data by using Spark](watsonxdata?topic=watsonxdata-ingest_spark_ui).
 
@@ -104,11 +135,8 @@ You can now run Spark applications from Amazon Web Services Elastic MapReduce (A
 
 For more information, see [Using AWS EMR for Spark use case](watsonxdata?topic=watsonxdata-spark-emr).
 
-## 7 July 2023
+## 7 July 2023 - Version 1.0.0
 {: #lakehouse_july72023}
-
-## Version 1.0.0
-{: #version_100}
 
 {{site.data.keyword.lakehouse_short}} is a new open architecture that combines the elements of the data warehouse and data lake models. The best-in-class features and optimizations available on the {{site.data.keyword.lakehouse_short}} make it an optimal choice for next generation data analytics and automation. In the first release ({{site.data.keyword.lakehouse_short}} 1.0.0), the following features are supported:
 

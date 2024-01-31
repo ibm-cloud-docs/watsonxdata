@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2023
-lastupdated: "2023-11-29"
+  years: 2017, 2024
+lastupdated: "2024-01-31"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata

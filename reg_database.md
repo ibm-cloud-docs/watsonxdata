@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-11-29"
+  years: 2022, 2024
+lastupdated: "2024-01-31"
 
 keywords: lakehouse, database, watsonx.data
 
@@ -52,6 +52,7 @@ IBM supports the following database types:
 * Elasticsearch: Elastic search is a NoSQL database that stores data in an unstructured manner.
 * Snowflake: Snowflake is a cloud hosted relational database for building data warehouse.
 * SingleStore: SingleStore is a relational database management system designed for data-intensive applications.
+* IBM Data Virtualization Manager for z/OS: IBM Data Virtualization Manager for z/OS provides virtual, integrated views of data residing on IBM Z. It enables users and applications read/write access to IBM Z data in place, without having to move, replicate, or transform the data.
 
 
 
@@ -74,9 +75,13 @@ To add a database-catalog pair, complete the following steps.
     * Elasticsearch
     * Snowflake
     * SingleStore
+    * IBM Data Virtualization Manager for z/OS
 
 
     You can now use the custom catalog to create connections to data stores that are not provided by the built-in connectors. For example, you can set up the custom connector that is hosted and managed by AWS Glue. For more information see, [Custom database feature](watsonxdata?topic=watsonxdata-custom_database).
+    {: note}
+
+    For a database type as Netezza, select the latest version 11.2.2.x.
     {: note}
 
 5. Based on the database type selected, click the respective link to configure the database details.
@@ -92,6 +97,7 @@ To add a database-catalog pair, complete the following steps.
     * [Elasticsearch](#sql)
     * [Snowflake](#snowflake)
     * [SingleStore](#singlestore)
+    * [IBM Data Virtualization Manager for z/OS](#dvm)
 
 
 
@@ -235,5 +241,22 @@ To add a database-catalog pair, complete the following steps.
     | Password           | Enter the password.  |
     | Associated catalog definition | Enter the name of the catalog. This catalog is automatically associated with your database. |
     {: caption="Table 7. Register database" caption-side="bottom"}
+
+ * **IBM Data Virtualization Manager for z/OS**{: #dvm}
+
+    If you select **IBM Data Virtualization Manager for z/OS** from the **Database type** drop-down list, configure the following details:
+
+    Two databases with the same name cannot be added.
+   {: note}
+
+    | Field           | Description        |
+    |------------------|--------------------|
+    | Display name    | Enter the database name to be displayed on the screen. |
+    | Hostname            | Enter the hostname.  |
+    | Port             | Enter the port number. |
+    | Username           | Enter the port username.  |
+    | Password           | Enter the password.  |
+    | Associated catalog definition | Enter the name of the catalog. This catalog is automatically associated with your database. |
+    {: caption="Table 8. Register database" caption-side="bottom"}
 
 6. Click **Add**.
