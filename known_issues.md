@@ -342,9 +342,7 @@ When a user is using the command `--create-if-not-exist` during Spark CLI ingest
 
 **Workaround:** User must not use the command `--create-if-not-exist` if target table already exists.
 
-## Period (".") in Target Table Names Can Cause Ingestion Failures
+## Special characters in target table names can cause ingestion failures
 {: #known_issues30}
 
-If a target table name contains a period ("."), ingestion into the table will fail.
-
-**Workaround:** To avoid ingestion failures, you must not use Period (".") in the target table names.
+If a target table name contains special characters such as "`.`", "`,`", "`(`", "`!`" etc, ingestion into the table will fail.
