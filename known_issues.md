@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2023
-lastupdated: "2023-11-29"
+  years: 2022, 2024
+lastupdated: "2023-1-31"
 
 keywords: lakehouse
 
@@ -134,9 +134,9 @@ Db2 connector partially supports `CREATE VIEW` statement. The Presto supported S
 
 {{site.data.keyword.netezza_short}} connector partially supports `CREATE VIEW` statement. The Presto Supported SQL syntax does not include creating views with custom column names (different than the table column names).
 
-## Issue: Data ingestion through CLI
+<!-- ## Issue: Data ingestion through CLI
 {: #known_issues10}
-
+Git issue: https://github.ibm.com/lakehouse/tracker/issues/8231
 Following are the limitations when ingesting data through the CLI:
 * Schema evolution is not supported.
 * Partitioning is not supported.
@@ -154,7 +154,7 @@ Following are the limitations when ingesting data through the web console:
 * Source CSV file containing TAB or space as delimiter is not supported.
 * Configure options are disabled for GA.
 * Target table output format is Iceberg and the target data format is Parquet.
-* Target storage path is default and cannot be changed.
+* Target storage path is default and cannot be changed. -->
 
 ## Issue: Presto does not recognize the path as a directory
 {: #known_issues12}
@@ -216,14 +216,14 @@ For example, if you create a schema that is named “sales” in one catalog, th
 
 **Workaround:** Use unique names when creating schemas and buckets.
 
-## Issue: Define class error and Name or service not known
+<!-- ## Issue: Define class error and Name or service not known
 {: #known_issues16}
-
+Git issue: https://github.ibm.com/lakehouse/tracker/issues/3385#issuecomment-71951519
 When you restart the Presto engine, the following error is displayed:
 `com.googlecode.aviator.exception.CompileExpressionErrorException`.
 This error is displayed only once and for the first action that you perform after the engine restart.
 
-**Workaround:** If you see any of the define class error or name or service not known errors, wait for a few minutes for the server to completely restart. Then, retry the query for successful execution.
+**Workaround:** If you see any of the define class error or name or service not known errors, wait for a few minutes for the server to completely restart. Then, retry the query for successful execution. -->
 
 ## Issue: Creating schema for target table
 {: #known_issues17}
@@ -271,9 +271,9 @@ Only the creator of a table can drop the table that is created in the Apache Hiv
 
 Currently, user-provided certificates are not supported in {{site.data.keyword.lakehouse_short}} when adding database connections, object store buckets, or when using ibm-lh utility.
 
-## Issue: CTAS query that uses Parquet format fails
+<!-- ## Issue: CTAS query that uses Parquet format fails
 {: #known_issues24}
-
+Git issue: https://github.ibm.com/lakehouse/tracker/issues/3739#issuecomment-71949146
 When you do a CTAS operation to Iceberg tables in Parquet format, you may get the following error:
 
 ```bash
@@ -289,7 +289,7 @@ set session task_writer_count=32
 {: codeblock}
 
 For details about connecting to a Presto server through a CLI, see [Connecting to a Presto Server](watsonxdata?topic=watsonxdata-con-presto-cli).
-{: note}
+{: note} -->
 
 ## Issue: No columns to parse from file error
 {: #known_issues25}
@@ -341,3 +341,10 @@ When a user enables SSL connection for data sources, the test connection is not 
 When a user is using the command `--create-if-not-exist` during Spark CLI ingestion, the existing data is removed.
 
 **Workaround:** User must not use the command `--create-if-not-exist` if target table already exists.
+
+## Period (".") in Target Table Names Can Cause Ingestion Failures
+{: #known_issues30}
+
+If a target table name contains a period ("."), ingestion into the table will fail.
+
+**Workaround:** To avoid ingestion failures, you must not use Period (".") in the target table names.
