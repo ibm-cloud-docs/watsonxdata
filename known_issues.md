@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2023-1-31"
+lastupdated: "2024-1-31"
 
 keywords: lakehouse
 
@@ -265,15 +265,6 @@ java.lang.NullPointerException
 
 **Workaround:** Pause and resume the engine to restart all worker nodes.
 
-## Issue: The staging folder is not dropped when ingestion is interrupted
-{: #known_issues27}
-
-When you do an ingestion job by using a staging folder, the staging folder is dropped when ingestion is completed successful or when ingestion fails due to an exception error.
-
-But the staging folder is not dropped if ingestion is interrupted or forcefully terminated by pressing Ctrl+C.
-
-**Workaround:** Delete the staging folder manually.
-
 ## Test connection with SSL enabled is not supported
 {: #known_issues28}
 
@@ -290,3 +281,13 @@ When a user is using the command `--create-if-not-exist` during Spark CLI ingest
 {: #known_issues30}
 
 If a target table name contains special characters such as "`.`", "`,`", "`(`", "`!`" etc, ingestion into the table will fail.
+
+## Limitation: Presto does not support `VARBINARY` datatype
+{: #known_issues31}
+
+The current version of Presto does not support `VARBINARY` datatype. Execution of an `ALTER TABLE` statement on a database results in the following error:
+
+`Unknown type 'VARBINARY(20)' for column 'testcolumn'`
+
+This is a limitation in Preso and not a limitation in {{site.data.keyword.lakehouse_short}}.
+{: note}
