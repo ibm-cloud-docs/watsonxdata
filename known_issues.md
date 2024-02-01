@@ -47,11 +47,6 @@ As a result of Intel's CPU upgrade, the `omrgc_spinlock_acquire` call takes long
 
 Presto describes a view in a mapped database as a TABLE rather than a VIEW. This is apparent to JDBC program connecting to the Presto engine.
 
-<!-- ## Issue: Presto fails to restrict NULL values on a column with NOT NULL constraint
-{: #known_issues1.0.0_5}
-
-When you define a table with columns that have a NOT NULL constraint, the Presto engine fails to restrict the NULL values in columns that are defined with a NOT NULL constraint. Allowing NULL values leads to data inconsistency, resulting in read failure when executing queries. -->
-
 ## Issue: Unable to view schemas while creating an access control policy
 {: #known_issues1.0.0_6}
 
@@ -134,28 +129,6 @@ Db2 connector partially supports `CREATE VIEW` statement. The Presto supported S
 
 {{site.data.keyword.netezza_short}} connector partially supports `CREATE VIEW` statement. The Presto Supported SQL syntax does not include creating views with custom column names (different than the table column names).
 
-<!-- ## Issue: Data ingestion through CLI
-{: #known_issues10}
-Git issue: https://github.ibm.com/lakehouse/tracker/issues/8231
-Following are the limitations when ingesting data through the CLI:
-* Schema evolution is not supported.
-* Partitioning is not supported.
-* Iceberg target table is the only supported output format.
-* Source CSV file containing TAB or space as delimiter is not supported.
-* `pathStyleAccess` property for object storage is not supported.
-* Source files must be of the same format type and only Parquet and csv file formats are supported.
-
-## Issue: Data ingestion through web console
-{: #known_issues11}
-
-Following are the limitations when ingesting data through the web console:
-* Iceberg target table is the only supported format.
-* Partitioning is not supported.
-* Source CSV file containing TAB or space as delimiter is not supported.
-* Configure options are disabled for GA.
-* Target table output format is Iceberg and the target data format is Parquet.
-* Target storage path is default and cannot be changed. -->
-
 ## Issue: Presto does not recognize the path as a directory
 {: #known_issues12}
 
@@ -216,15 +189,6 @@ For example, if you create a schema that is named “sales” in one catalog, th
 
 **Workaround:** Use unique names when creating schemas and buckets.
 
-<!-- ## Issue: Define class error and Name or service not known
-{: #known_issues16}
-Git issue: https://github.ibm.com/lakehouse/tracker/issues/3385#issuecomment-71951519
-When you restart the Presto engine, the following error is displayed:
-`com.googlecode.aviator.exception.CompileExpressionErrorException`.
-This error is displayed only once and for the first action that you perform after the engine restart.
-
-**Workaround:** If you see any of the define class error or name or service not known errors, wait for a few minutes for the server to completely restart. Then, retry the query for successful execution. -->
-
 ## Issue: Creating schema for target table
 {: #known_issues17}
 
@@ -270,26 +234,6 @@ Only the creator of a table can drop the table that is created in the Apache Hiv
 {: #known_issues23}
 
 Currently, user-provided certificates are not supported in {{site.data.keyword.lakehouse_short}} when adding database connections, object store buckets, or when using ibm-lh utility.
-
-<!-- ## Issue: CTAS query that uses Parquet format fails
-{: #known_issues24}
-Git issue: https://github.ibm.com/lakehouse/tracker/issues/3739#issuecomment-71949146
-When you do a CTAS operation to Iceberg tables in Parquet format, you may get the following error:
-
-```bash
-Size is greater than maximum int value
-```
-{: screen}
-
-**Workaround:** Use the presto-cli to do the CTAS operation and set the following session parameter before the CTAS query:
-
-```bash
-set session task_writer_count=32
-```
-{: codeblock}
-
-For details about connecting to a Presto server through a CLI, see [Connecting to a Presto Server](watsonxdata?topic=watsonxdata-con-presto-cli).
-{: note} -->
 
 ## Issue: No columns to parse from file error
 {: #known_issues25}
