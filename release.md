@@ -42,6 +42,16 @@ A new version of {{site.data.keyword.lakehouse_short}} was released in January 2
 
 This release includes the following features and updates:
 
+**IBM Data Virtualization Manager for z/OS® connector**
+{: #wn_01_2024}
+
+You can now use the new IBM Data Virtualization Manager for z/OS® connector to read and write IBM Z® without moving, replicating, or transforming the data. For more information, see [Connecting to an IBM Data Virtualization Manager (DVM) data source](https://www.ibm.com/docs/en/iis/11.7?topic=analyzer-connecting-data-virtualization-manager-dvm-data-source).
+
+**Teradata connector is enabled for multiple `ALTER TABLE` statements**
+{: #wn_03_2024}
+
+Teradata connector now supports the `ALTER TABLE RENAME TO`, `ALTER TABLE DROP COLUMN`, and `ALTER TABLE RENAME COLUMN column_name TO new_column_name` statements.
+
 **Support for time travel queries**
 {: #wn_05_2024}
 
