@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-01-31"
+lastupdated: "2024-02-28"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -38,7 +38,8 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} by using {{site.da
 * You must have the **Administrator** role and privileges in the catalog to do ingestion through the web console.
 * Add and register {{site.data.keyword.iae_full_notm}} (Spark). See [Registering an engine](watsonxdata?topic=watsonxdata-reg_engine).
 * Add a bucket for the target catalog. See [Adding a bucket-catalog pair](watsonxdata?topic=watsonxdata-reg_bucket).
-* Create a schema and table in the catalog for the data to be ingested. See [Creating schemas](watsonxdata?topic=watsonxdata-create_schema) and [Creating tables](watsonxdata?topic=watsonxdata-create_table).
+* Create a schema in the catalog for the target table. See [Creating schemas](watsonxdata?topic=watsonxdata-create_schema).
+* Optionally, you can also create a target table in the schema. See [Creating tables](watsonxdata?topic=watsonxdata-create_table).
 
 ## Ingesting data
 {: #spk_ingest_data}
@@ -54,8 +55,14 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} by using {{site.da
 
 1. Select a source directory from the **Source bucket** menu. Data objects in the source directory are displayed.
 1. Select the data objects to be ingested from the source directory. Click **Next**.
+
+     Only Parquet and CSV file formats are supported as source for ingestion.
+     {: note}
+
      You can apply the configuration for **Encoding**, **Escape character**, **Field delimiter**, and **Line delimiter** for the CSV files.
      {: note}
 
-1. Specify the target details such as **Catalog**, **Schema**, and **Table**.
-1. Click **Ingest**.
+1. Specify the target details for **Catalog** and **Schema**.
+1. Select **Target table** option as **Existing table** to ingest source data into an existing table. Corresponding target tables are listed in the Table drop down.
+1. Select **Target table** option as **New table** and enter the name of the target table to create a new table from the source data. Click **Next**.
+1. Validate the details in **Summary** page. Click Ingest.

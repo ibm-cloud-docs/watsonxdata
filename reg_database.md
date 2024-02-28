@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-01-31"
+lastupdated: "2024-02-28"
 
 keywords: lakehouse, database, watsonx.data
 
@@ -52,7 +52,7 @@ IBM supports the following database types:
 * Elasticsearch: Elastic search is a NoSQL database that stores data in an unstructured manner.
 * Snowflake: Snowflake is a cloud hosted relational database for building data warehouse.
 * SingleStore: SingleStore is a relational database management system designed for data-intensive applications.
-* IBM Data Virtualization Manager for z/OS: IBM Data Virtualization Manager for z/OS provides virtual, integrated views of data residing on IBM Z. It enables users and applications read/write access to IBM Z data in place, without having to move, replicate, or transform the data.
+* IBM Data Virtualization Manager for z/OS: IBM Data Virtualization Manager for z/OS provides virtual, integrated views of data residing on IBM Z. It enables users and applications to have read or write access to IBM Z data in place, without having to move, replicate, or transform the data.
 
 
 
@@ -86,24 +86,24 @@ To add a database-catalog pair, complete the following steps.
 
 5. Based on the database type selected, click the respective link to configure the database details.
     * [IBM Db2](#db2)
-    * [IBM Netezza](#db2)
+    * [IBM Netezza](#netezza)
     * [Apache Kafka](#kafka)
-    * [MongoDB](#db2)
-    * [MySQL](#sql)
-    * [PostgreSQL](#postgrsql)
-    * [SQL Server](#postgrsql)
+    * [MongoDB](#mongo)
+    * [MySQL](#mysql)
+    * [PostgreSQL](#postgresql)
+    * [SQL Server](#sql)
     * [Custom](#cust)
-    * [Teradata](#singlestore)
-    * [Elasticsearch](#sql)
+    * [Teradata](#teradata)
+    * [Elasticsearch](#elastic)
     * [Snowflake](#snowflake)
     * [SingleStore](#singlestore)
     * [IBM Data Virtualization Manager for z/OS](#dvm)
 
 
 
- * **IBM Db2, MongoDB, or IBM Netezza**{: #db2}
+ * **IBM Db2**{: #db2}
 
-    If you select **IBM Db2, MongoDB, or IBM Netezza** from the **Database type** drop-down list, configure the following details:
+    If you select **IBM Db2** from the **Database type** drop-down list, configure the following details:
 
     Two databases with the same name cannot be added.
    {: note}
@@ -117,12 +117,51 @@ To add a database-catalog pair, complete the following steps.
     | Username           | Enter the port username.  |
     | Password           | Enter the password.  |
     |Test connection     | Click the Test connection link to test the database connection. If the database connection is successful, a success message displays.|
-    | SSL Connection   | Upload the SSL certificate to secure the database connection. To establish a secure connection, do the following steps: \n i. Select the SSL Connection checkbox. The Upload SSL certificate (pem or crt) link is enabled. \n ii. Click the Upload SSL certificate (pem or crt) link. \n iii. Browse the SSL certificate and upload.|
+    | Port is SSL enabled   | To establish a secure connection, do the following steps: \n i. Select the Port is SSL enabled checkbox. The Upload SSL certificate (.pem, .crt or .cer) link is enabled. \n ii. Click the Upload SSL certificate (.pem, .crt or .cer) link. \n iii. Browse the SSL certificate and upload.|
     | Associated catalog definition | Enter the name of the catalog. This catalog is automatically associated with your database. |
     {: caption="Table 1. Register database" caption-side="bottom"}
 
-    You can add multiple host information for MongoDB. To add, click the **Add** icon. A new row appears for adding hostname and port. Enter the details.
-    {: note}
+
+ * **IBM Netezza**{: #netezza}
+
+    If you select **IBM Netezza** from the **Database type** drop-down list, configure the following details:
+
+    Two databases with the same name cannot be added.
+   {: note}
+
+    | Field           | Description        |
+    |------------------|--------------------|
+    | Database name     | Enter the name of your database. For MongoDB, enter the name of your authentication database.|
+    | Display name    | Enter the database name to be displayed on the screen. |
+    | Hostname            | Enter the hostname.  |
+    | Port             | Enter the port number. |
+    | Username           | Enter the port username.  |
+    | Password           | Enter the password.  |
+    |Test connection     | Click the Test connection link to test the database connection. If the database connection is successful, a success message displays.|
+    | SSL Connection   | Enable SSL connection to establish a secure connection.|
+    | Associated catalog definition | Enter the name of the catalog. This catalog is automatically associated with your database. |
+    {: caption="Table 2. Register database" caption-side="bottom"}
+
+
+ * **MongoDB**{: #mongo}
+
+    If you select **MongoDB** from the **Database type** drop-down list, configure the following details:
+
+    Two databases with the same name cannot be added.
+   {: note}
+
+    | Field           | Description        |
+    |------------------|--------------------|
+    | Database name     | Enter the name of your authentication database.|
+    | Display name    | Enter the database name to be displayed on the screen. |
+    | Hostname            | Enter the hostname. You can add multiple host information. To add, click the **Add** icon. A new row appears for adding hostname and port. Enter the details  |
+    | Port             | Enter the port number. |
+    | Username           | Enter the port username.  |
+    | Password           | Enter the password.  |
+    |Test connection     | Click the Test connection link to test the database connection. If the database connection is successful, a success message displays.|
+    | SSL Connection   | To establish a secure connection, do the following steps: \n i. Select the SSL Connection checkbox. The Upload SSL certificate (.pem, .crt or .cer) link is enabled. \n ii. Click the Upload SSL certificate (.pem, .crt or .cer) link. \n iii. Browse the SSL certificate and upload.|
+    | Associated catalog definition | Enter the name of the catalog. This catalog is automatically associated with your database. |
+    {: caption="Table 3. Register database" caption-side="bottom"}
 
 
  * **Apache Kafka**{: #kafka}
@@ -135,7 +174,7 @@ To add a database-catalog pair, complete the following steps.
     | Field           | Description        |
     |------------------|--------------------|
     | Display name    | Enter the database name to be displayed on the screen. |
-    | Hostname            | Enter the hostname.  |
+    | Hostname            | Enter the hostname. You can add multiple host information. To add, click the **Add** icon. A new row appears for adding hostname and port. Enter the details.  |
     | Port             | Enter the port number. |
     | Username           | Enter the port username.  |
     | Password           | Enter the password.  |
@@ -143,14 +182,12 @@ To add a database-catalog pair, complete the following steps.
     | SASL connection   | Enable the Simple Authentication Security Layer (SASL) to include authentication mechanism. If you enable SASL, specify the username and API key.|
     |Test connection     | Click the Test connection link to test the database connection. If the database connection is successful, a success message displays.|
     | Associated catalog definition | Enter the name of the catalog. This catalog is automatically associated with your database. |
-    {: caption="Table 2. Register database" caption-side="bottom"}
+    {: caption="Table 4. Register database" caption-side="bottom"}
 
-    You can add multiple host information for **Apache Kafka**. To add, click the **Add** icon. A new row appears for adding hostname and port. Enter the details.
-    {: note}
 
-    * **MySQL or Elasticsearch**{: #sql}
+ * **MySQL**{: #mysql}
 
-    If you select **MySQL or Elastcisearch** from the **Database type** drop-down list, configure the following details:
+    If you select **MySQL** from the **Database type** drop-down list, configure the following details:
 
     Two databases with the same name cannot be added.
    {: note}
@@ -162,14 +199,34 @@ To add a database-catalog pair, complete the following steps.
     | Port             | Enter the port number. |
     | Username           | Enter the port username.  |
     | Password           | Enter the password.  |
-    | SSL Connection   | Upload the SSL certificate to secure the database connection. To establish a secure connection, do the following steps: \n i. Select the SSL Connection checkbox. The Upload SSL certificate (pem or crt) link is enabled. \n ii. Click the Upload SSL certificate (pem or crt) link. \n iii. Browse the SSL certificate and upload.|
+    | SSL Connection   | To establish a secure connection, do the following steps: \n i. Select the SSL Connection checkbox. The Upload SSL certificate (.pem, .crt or .cer) link is enabled. \n ii. Click the Upload SSL certificate (.pem, .crt or .cer) link. \n iii. Browse the SSL certificate and upload.|
     |Test connection     | Click the Test connection link to test the database connection. If the database connection is successful, a success message displays.|
     | Associated catalog definition | Enter the name of the catalog. This catalog is automatically associated with your database. |
-    {: caption="Table 3. Register database" caption-side="bottom"}
+    {: caption="Table 5. Register database" caption-side="bottom"}
 
- * **PostgreSQL or SQL Server**{: #postgrsql}
 
-    If you select **PostgreSQL or SQL Server** from the **Database type** drop-down list, configure the following details:
+ * **Elasticsearch**{: #elastic}
+
+    If you select **Elastcisearch** from the **Database type** drop-down list, configure the following details:
+
+    Two databases with the same name cannot be added.
+   {: note}
+
+    | Field           | Description        |
+    |------------------|--------------------|
+    | Display name    | Enter the database name to be displayed on the screen. |
+    | Hostname            | Enter the hostname.  |
+    | Port             | Enter the port number. |
+    | Username           | Enter the port username.  |
+    | Password           | Enter the password.  |
+    | SSL Connection   | To establish a secure connection, do the following steps: \n i. Select the SSL Connection checkbox. The Upload SSL certificate (.pem, .crt or .cer) link is enabled. \n ii. Click the Upload SSL certificate (.pem, .crt or .cer) link. \n iii. Browse the SSL certificate and upload.|
+    | Associated catalog definition | Enter the name of the catalog. This catalog is automatically associated with your database. |
+    {: caption="Table 6. Register database" caption-side="bottom"}
+
+
+ * **SQL Server**{: #sql}
+
+    If you select **SQL Server** from the **Database type** drop-down list, configure the following details:
 
     Two databases with the same name cannot be added.
    {: note}
@@ -183,8 +240,31 @@ To add a database-catalog pair, complete the following steps.
     | Username           | Enter the port username.  |
     | Password           | Enter the password.  |
     |Test connection     | Click the Test connection link to test the database connection. If the database connection is successful, a success message displays.|
+    | SSL Connection   | To establish a secure connection, do the following steps: \n i. Select the SSL Connection checkbox. The Upload SSL certificate (.pem, .crt or .cer) link is enabled. \n ii. Click the Upload SSL certificate (.pem, .crt or .cer) link. \n iii. Browse the SSL certificate and upload.|
     | Associated catalog definition | Enter the name of the catalog. This catalog is automatically associated with your database. |
-    {: caption="Table 4. Register database" caption-side="bottom"}
+    {: caption="Table 7. Register database" caption-side="bottom"}
+
+
+ * **PostgreSQL**{: #postgresql}
+
+    If you select **PostgreSQL** from the **Database type** drop-down list, configure the following details:
+
+    Two databases with the same name cannot be added.
+   {: note}
+
+    | Field           | Description        |
+    |------------------|--------------------|
+    | Database name     | Enter the name of your database.|
+    | Display name    | Enter the database name to be displayed on the screen. |
+    | Hostname            | Enter the hostname.  |
+    | Port             | Enter the port number. |
+    | Username           | Enter the port username.  |
+    | Password           | Enter the password.  |
+    |Test connection     | Click the Test connection link to test the database connection. If the database connection is successful, a success message displays.|
+    | Port is SSL enabled   | To establish a secure connection, do the following steps: \n i. Select the SSL Connection checkbox. The Upload SSL certificate (.pem, .crt or .cer) link is enabled. \n ii. Click the Upload SSL certificate (.pem, .crt or .cer) link. \n iii. Browse the SSL certificate and upload.|
+    | Validate Certificate           | Enable it to validate whether the SSL certificate that is returned by the host is trusted or not.  |
+    | Associated catalog definition | Enter the name of the catalog. This catalog is automatically associated with your database. |
+    {: caption="Table 8. Register database" caption-side="bottom"}
 
 
  * **Custom**{: #cust}
@@ -204,11 +284,11 @@ To add a database-catalog pair, complete the following steps.
     | Port           | Enter the port number.  |
     | Encryption           | Encrypting values of the keys are stored.  |
     | Associated catalog definition | Enter the name of the catalog. This catalog is automatically associated with your database. |
-    {: caption="Table 5. Register database" caption-side="bottom"}
+    {: caption="Table 9. Register database" caption-side="bottom"}
 
- * **SingleStore or Teradata**{: #singlestore}
+ * **SingleStore**{: #singlestore}
 
-    If you select **SingleStore or Teradata** from the **Database type** drop-down list, configure the following details:
+    If you select **SingleStore** from the **Database type** drop-down list, configure the following details:
 
     Two databases with the same name cannot be added.
    {: note}
@@ -221,9 +301,29 @@ To add a database-catalog pair, complete the following steps.
     | Port             | Enter the port number. |
     | Username           | Enter the port username.  |
     | Password           | Enter the password.  |
-    |SSL Connection     | Upload the SSL certificate to secure the database connection. To establish a secure connection, do the following steps: \n i. Select the SSL Connection checkbox. The Upload SSL certificate (pem or crt) link is enabled. \n ii. Click the Upload SSL certificate (pem or crt) link. \n iii. Browse the SSL certificate and upload.|
+    |SSL Connection     | To establish a secure connection, do the following steps: \n i. Select the SSL Connection checkbox. The Upload SSL certificate (.pem, .crt or .cer) link is enabled. \n ii. Click the Upload SSL certificate (.pem, .crt or .cer) link. \n iii. Browse the SSL certificate and upload.|
     | Associated catalog definition | Enter the name of the catalog. This catalog is automatically associated with your database. |
-    {: caption="Table 6. Register database" caption-side="bottom"}
+    {: caption="Table 10. Register database" caption-side="bottom"}
+
+
+ * **Teradata**{: #teradata}
+
+    If you select **Teradata** from the **Database type** drop-down list, configure the following details:
+
+    Two databases with the same name cannot be added.
+   {: note}
+
+    | Field           | Description        |
+    |------------------|--------------------|
+    | Database name     | Enter the name of your database.|
+    | Display name    | Enter the database name to be displayed on the screen. |
+    | Hostname            | Enter the hostname.  |
+    | Port             | Enter the port number. |
+    | Username           | Enter the port username.  |
+    | Password           | Enter the password.  |
+    |SSL Connection     | To establish a secure connection, do the following steps: \n i. Select the SSL Connection checkbox. The Upload SSL certificate (.pem, .crt or .cer) link is enabled. \n ii. Click the Upload SSL certificate (.pem, .crt or .cer) link. \n iii. Browse the SSL certificate and upload.|
+    | Associated catalog definition | Enter the name of the catalog. This catalog is automatically associated with your database. |
+    {: caption="Table 11. Register database" caption-side="bottom"}
 
  * **Snowflake**{: #snowflake}
 
@@ -240,7 +340,7 @@ To add a database-catalog pair, complete the following steps.
     | Username           | Enter the port username.  |
     | Password           | Enter the password.  |
     | Associated catalog definition | Enter the name of the catalog. This catalog is automatically associated with your database. |
-    {: caption="Table 7. Register database" caption-side="bottom"}
+    {: caption="Table 12. Register database" caption-side="bottom"}
 
  * **IBM Data Virtualization Manager for z/OS**{: #dvm}
 
@@ -257,6 +357,7 @@ To add a database-catalog pair, complete the following steps.
     | Username           | Enter the port username.  |
     | Password           | Enter the password.  |
     | Associated catalog definition | Enter the name of the catalog. This catalog is automatically associated with your database. |
-    {: caption="Table 8. Register database" caption-side="bottom"}
+    {: caption="Table 13. Register database" caption-side="bottom"}
+
 
 6. Click **Add**.

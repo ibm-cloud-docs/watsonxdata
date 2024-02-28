@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-01-31"
+lastupdated: "2024-02-28"
 
 keywords: lakehouse, watsonx.data, presto, cli
 
@@ -151,9 +151,9 @@ It is recommended to use IAM token for stress workload.
 ## Connecting to Presto engine using Java/JDBC
 {: #conn-to-prestjava}
 
-1. Download and install the [presto-jdbc-0.279.jar](https://prestodb.io/docs/current/installation/jdbc.html) on the client machine.
+1. Download and install the [latest JDBC drivers](https://prestodb.io/docs/current/installation/jdbc.html) on the client machine.
 
-2. Add presto-jdbc-0.279.jar to the class path of your Java application.
+2. Add the downloaded `jar` file to the class path of your Java application.
 
 3. Use your `ibmlhapikey` as username and API key as password. For more information, see [Getting IBM API Key](#get-ibmapi-key).
 
@@ -239,7 +239,7 @@ It is recommended to use IAM token for stress workload.
    `<PRESTO_URL>` Identifies the jdbc URL to the Presto server.
    `<EMAIL_ID>` with your email ID
    `<API_KEY>` with the API key that you downloaded from IBM Cloud.
-   If you are using IBM IAM token, replace `ibmapikey` with `ibmiamtoken` and pass the token.
+   If you are using IBM IAM token, replace `ibmapikey` with `ibmlhtoken` and pass the token.
    {: note}
 
 6. Compile and run the command.

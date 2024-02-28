@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-01-31"
+lastupdated: "2024-02-28"
 
 keywords: watsonxdata, watsonx.data, presto, jdbc client, cloud
 
@@ -92,7 +92,7 @@ Use either IBM API key or IBM IAM token according to your requirement.
 
 1. Download and install the [latest JDBC drivers](https://prestodb.io/docs/current/installation/jdbc.html) on the client machine.
 
-2. Add presto-jdbc-0.279.jar to the class path of your Java application.
+2. Add the downloaded `jar` file to the class path of your Java application.
 
 3. Create a Java application by using JDBC interface. Following is an example for PrestoJdbcSample.Java:
 

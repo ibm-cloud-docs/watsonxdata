@@ -127,6 +127,7 @@ toc:
       id: reference
       topics:
       - supported_sql_statements.md
+      - supported_datatypes.md
       - link:
             label: SQL statements
             href: https://www.ibm.com/docs/SSDZ38_1.1.x/lh-prestosql/topics/sql_intro.html

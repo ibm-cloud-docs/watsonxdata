@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-01-31"
+lastupdated: "2024-02-28"
 
 keywords: watsonxdata, release notes
 
@@ -33,6 +33,100 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.lakehouse_full}} that are grouped by date.
 {: shortdesc}
+
+
+## 28 Feb 2024 - Version 1.1.2
+{: #lakehouse_Feb282024}
+
+
+A new version of {{site.data.keyword.lakehouse_short}} was released in February 2024.
+
+This release includes the following features and updates:
+
+**SSL connection for data sources**
+{: #feb_01_2024}
+
+You can now enable SSL connection for the following data sources by using the **Add database** user interface to secure and encrypt the database connection.  :
+
+* Db2
+
+* PostgreSQL
+
+For more information, see [Adding a database](watsonxdata?topic=watsonxdata-reg_database).
+
+<!-- Issue-https://github.ibm.com/lakehouse/tracker/issues/5494
+
+Issue-https://github.ibm.com/lakehouse/tracker/issues/2467
+
+Issue-https://github.ibm.com/lakehouse/tracker/issues/6107  removed DVM as per slack conversationa and git issue comment from SAAS-Shanavi-->
+
+**Secure ingestion job history**
+{: #feb_02_2024}
+
+Now, users can view only their own ingestion job history. Administrators can view the ingestion job history for all users.
+
+<!-- Issue- https://github.ibm.com/lakehouse/tracker/issues/6500 -->
+
+
+**Use more SQL statements**
+{: #feb_03_2024}
+
+You can now use the following SQL statements in the Query workspace to build and run queries against your data:
+
+   * Apache Iceberg data sources
+        - CREATE VIEW
+        - DROP VIEW
+   * MongoDB data sources
+        - DELETE
+
+<!-- Issue- https://github.ibm.com/lakehouse/tracker/issues/4678
+
+Issue- https://github.ibm.com/lakehouse/tracker/issues/5782 -->
+
+
+**New data types BLOB and CLOB for Teradata data source**
+{: #feb_04_2024}
+
+New data types BLOB and CLOB are available for Teradata data source. You can use these data types only with SELECT statements in the Query workspace to build and run queries against your data.
+
+<!-- Issue- https://github.ibm.com/lakehouse/tracker/issues/7966 -->
+
+
+**Create a new table during data ingestion**
+{: #feb_06_2024}
+
+Previously, you had to have a target table in {{site.data.keyword.lakehouse_short}} for ingesting data. Now, you can create a new table directly from the source data file (available in parquet or CSV format) by using data ingestion from the **Data Manager**. You can create the table by using the following methods of ingestion:
+
+* Ingesting data by using Iceberg copy loader.
+
+* Ingesting data by using Spark.
+
+<!-- Issue- https://github.ibm.com/lakehouse/tracker/issues/7714
+
+https://github.ibm.com/lakehouse/tracker/issues/7665 -->
+
+
+**Perform ALTER TABLE operations on a column**
+{: #feb_07_2024}
+
+With an Iceberg data source, you can now perform ALTER TABLE operations on a column for the following data type conversions:
+
+* int to bigint
+
+* float to double
+
+* decimal (num1, dec_digits) to decimal (num2, dec_digits), where num2>num1.
+
+<!-- Issue: https://github.ibm.com/lakehouse/tracker/issues/7360  -->
+
+**Better query performance by using sorted files**
+{: #feb_09_2024}
+
+With an Apache Iceberg data source, you can generate sorted files, which reduce the query result latency and improve the performance of Presto. Data in the Iceberg table is sorted during the writing process within each file. 
+
+You can configure the order to sort the data by using the `sorted_by` table property. When you create the table, specify an array of one or more columns involved in sorting. To disable the feature, set the session property `sorted_writing_enabled` to false. 
+
+<!-- Issue : https://github.ibm.com/lakehouse/tracker/issues/5201  -->
 
 ## 31 Jan 2024 - Version 1.1.1
 {: #lakehouse_Jan312024}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-1-31"
+lastupdated: "2024-02-28"
 
 keywords: lakehouse
 
@@ -210,11 +210,6 @@ Use one of the following location options when creating a schema:
 Though you can use a location pointing to a bucket only with or without a trailing `/`, it might lead to failure. Therefore, it is recommended to use a subpath.
 {: note}
 
-## Issue: Creating the database of type Memory gives an error
-{: #known_issues20}
-
-Creating a database of the type Memory gives an error `pq: invalid input syntax for type integer: ""`.
-
 ## Issue: Presto do not support `AS OF` with iceberg tables
 {: #known_issues21}
 
@@ -247,35 +242,10 @@ No columns to parse from file
 
 **Workaround:** First list the folders inside the bucket by using `aws s3 ls` command. If no empty files are listed, copy all the files to another folder by using `aws s3 cp` command.
 
-## Issue: A persistent java.lang.NullPointerException error occurs
-{: #known_issues26}
-
-When you run complex and concurrent SQL query workloads, a persistent `java.lang.NullPointerException, 500: Internal Server Error` error occurs in one of the Presto workers as follows:
-
-```bash
-2023-08-30T22:12:20.741Z        ERROR   remote-task-callback-3095       com.facebook.presto.execution.StageExecutionStateMachine        Stage execution 20230830_221206_31201_z3xuz.14.0 failed
-com.facebook.presto.spi.PrestoException: Expected response code from https://172-17-151-136.fd034d239041414591df37bc2533573e.pod.cluster.local:8480/v1/task/20230830_221206_31201_z3xuz.14.0.5?summarize to be 200, but was 500: Internal Server Error
-java.lang.NullPointerException
-        at io.airlift.units.Duration.millisPerTimeUnit(Duration.java:237)
-        at io.airlift.units.Duration.getValue(Duration.java:94)
-        at io.airlift.units.Duration.convertTo(Duration.java:109)
-        ....
-```
-{: screen}
-
-**Workaround:** Pause and resume the engine to restart all worker nodes.
-
 ## Test connection with SSL enabled is not supported
 {: #known_issues28}
 
 When a user enables SSL connection for data sources, the test connection is not supported through the web console.
-
-## Spark CLI ingestion removes existing data when using `--create-if-not-exist`
-{: #known_issues29}
-
-When a user is using the command `--create-if-not-exist` during Spark CLI ingestion, the existing data is removed.
-
-**Workaround:** User must not use the command `--create-if-not-exist` if target table already exists.
 
 ## Special characters in target table names can cause ingestion failures
 {: #known_issues30}
@@ -285,9 +255,9 @@ If a target table name contains special characters such as "`.`", "`,`", "`(`", 
 ## Limitation: Presto does not support `VARBINARY` datatype
 {: #known_issues31}
 
-The current version of Presto does not support `VARBINARY` datatype. Execution of an `ALTER TABLE` statement on a database results in the following error:
+The current version of Presto does not support binary strings with length. Execution of an `ALTER TABLE` statement on a database results in the following error:
 
-`Unknown type 'VARBINARY(20)' for column 'testcolumn'`
+`Unknown type 'varbinary(n)' for column 'testcolumn'`
 
 This is a limitation in Preso and not a limitation in {{site.data.keyword.lakehouse_short}}.
 {: note}

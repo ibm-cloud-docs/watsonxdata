@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-01-31"
+lastupdated: "2024-02-28"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -43,19 +43,19 @@ The sample file demonstrates the following functionalities:
 
 * Performing table maintenance activities in {{site.data.keyword.lakehouse_short}}
 
-    Table maintenance helps in keeping the {{site.data.keyword.lakehouse_short}} table performant. Iceberg provides table maintenance procedures out of the box that allows performing powerful table optimizations in a declarative fashion. The sample below demonstrates how to do some table maintenance operations by using Spark. For more information about the Iceberg Spark table maintenance operations, see [Table Operations](https://iceberg.apache.org/docs/1.2.1/spark-procedures/).
+    Table maintenance helps in keeping the {{site.data.keyword.lakehouse_short}} table performant. Iceberg provides table maintenance procedures out of the box that allows performing powerful table optimizations in a declarative fashion. The following sample demonstrates how to do some table maintenance operations by using Spark. For more information about the Iceberg Spark table maintenance operations, see [Table Operations](https://iceberg.apache.org/docs/latest/spark-procedures/).
 
 ## Inserting sample data into the COS bucket
 {: #insert_samp_usecase}
 
-To insert data to COS, follow the steps below.
+To insert data to COS, do the following steps.
 
-1. Create a COS bucket(say, source-bucket) to store sample data to be ingested into {{site.data.keyword.lakehouse_short}} instance. For information about creating COS bucket see, [Getting started with IBM Cloud Object Storage](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage#gs-create-buckets).
+1. Create a COS bucket(for example, source-bucket) to store sample data to be ingested into {{site.data.keyword.lakehouse_short}} instance. For information about creating COS bucket see, [Getting started with IBM Cloud Object Storage](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage#gs-create-buckets).
 
 
     As a user of Object Storage, you not only need to know the API key or the HMAC keys to configure Object Storage, but also the IBM Analytics Engine service endpoints to connect to Object Storage. See [Selecting regions and endpoints](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-endpoints) for more information on the endpoints to use based on your Object Storage bucket type, such as regional versus cross-regional. You can also view the endpoints across regions for your Object Storage service by selecting the service on your IBM Cloud dashboard and clicking **Endpoint** in the navigation pane. Always choose the **direct endpoint**. Direct endpoint provide better performance and do not incur charges. An example of an endpoint for US-South Cross region is `s3.direct.us.cloud-object-storage.appdomain.cloud`.
 
-2. Download a sample csv file (say, zipcodes.csv) and parquet sample data (say, six months taxi data for year 2022) from the links give below.
+2. Download sample csv file (for example, zipcodes.csv) and parquet sample data (for example, six months taxi data for year 2022) from the following links.
 
     * [Sample parquet file](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page).
     * [Sample CSV file](https://raw.githubusercontent.com/spark-examples/spark-scala-examples/3ea16e4c6c1614609c2bd7ebdffcee01c0fe6017/src/main/resources/zipcodes.csv)
@@ -71,8 +71,8 @@ To insert data to COS, follow the steps below.
 
     Parameter values:
     * <cos_bucket_name>: name of the bucket created in step1.
-    * <source_file_name>: the name of the sample data file that you downloaded. Here, **key zipcodes.csv** is the file name (see the example below).
-    * <path_to_source_file>: the path to the location in your machine where the file resides. Here, **path/zipcodes.csv** is the file path (see the example below).
+    * <source_file_name>: the name of the sample data file that you downloaded. Here, **key zipcodes.csv** is the file name (see the following example).
+    * <path_to_source_file>: the path to the location in your machine where the file resides. Here, **path/zipcodes.csv** is the file path (see the following example).
 
     For example:
     ```bash
