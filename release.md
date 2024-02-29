@@ -68,7 +68,7 @@ Now, users can view only their own ingestion job history. Administrators can vie
 <!-- Issue- https://github.ibm.com/lakehouse/tracker/issues/6500 -->
 
 
-**Use more SQL statements**
+**SQL enhancements**
 {: #feb_03_2024}
 
 You can now use the following SQL statements in the Query workspace to build and run queries against your data:

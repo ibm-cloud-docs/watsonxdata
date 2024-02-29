@@ -28,7 +28,7 @@ content-type: faq
 # FAQs
 {: #faqs}
 
-This is a collection of frequently asked questions (FAQ) about the {{site.data.keyword.lakehouse_full}} service.
+This is a collection of frequently asked questions (FAQs) about the {{site.data.keyword.lakehouse_full}} service.
 {: shortdesc}
 
 
@@ -37,43 +37,34 @@ This is a collection of frequently asked questions (FAQ) about the {{site.data.k
 {: faq}
 {: support}
 
-**What is IBM {{site.data.keyword.lakehouse_short}}?**
+**What is IBM® {{site.data.keyword.lakehouse_short}}?**
 {: #feb_01_2024}
 
-{{site.data.keyword.lakehouse_short}} is an open, hybrid, and governed fit-for-purpose data store optimized to scale all data, analytics and AI workloads to get greater value from your analytics ecosystem. It is a data management solution for collecting, storing, querying, and analyzing all your enterprise data (structured, semi-structured, and unstructured) with a single unified data platform. It provides a flexible and reliable platform that is optimized to work on open data formats.
+IBM® {{site.data.keyword.lakehouse_short}} is an open, hybrid, and governed fit-for-purpose data store optimized to scale all data, analytics and AI workloads to get greater value from your analytics ecosystem. It is a data management solution for collecting, storing, querying, and analyzing all your enterprise data (structured, semi-structured, and unstructured) with a single unified data platform. It provides a flexible and reliable platform that is optimized to work on open data formats.
 
 
-**What can I do with IBM {{site.data.keyword.lakehouse_short}}?**
+**What can I do with IBM® {{site.data.keyword.lakehouse_short}}?**
 {: #feb_03_2024}
 
-You can use {{site.data.keyword.lakehouse_short}} to collect, store, query, and analyze all your enterprise data with a single unified data platform. You can connect to data in multiple locations and get started in minutes with built-in governance, security and automation. You can leverage multiple query engines to run analytics and AI workloads, reducing your data warehouse costs by up to 50%.
+You can use IBM® {{site.data.keyword.lakehouse_short}} to collect, store, query, and analyze all your enterprise data with a single unified data platform. You can connect to data in multiple locations and get started in minutes with built-in governance, security, and automation. You can use multiple query engines to run analytics and AI workloads, reducing your data warehouse costs by up to 50%.
 
-**Which data formats are supported in {{site.data.keyword.lakehouse_short}}?**
+**Which data formats are supported in IBM® {{site.data.keyword.lakehouse_short}}?**
 {: #feb_04_2024}
 
-The following data formats are supported in watsonx.data:
-
-Ingestion: Data ingestion in watsonx.data supports .CSV and .Parquet data file formats.
-
-Create Table: Create table in watsonx.data supports CSV, Parquet, JSON, TXT data file formats.
+The following data formats are supported in IBM® {{site.data.keyword.lakehouse_short}}:
+1. Ingestion: Data ingestion in IBM® {{site.data.keyword.lakehouse_short}} supports .CSV and .Parquet data file formats.
+2. Create Table: Create table in IBM® {{site.data.keyword.lakehouse_short}} supports .CSV, .Parquet, .JSON, .TXT data file formats.
 
 **What are the key features of IBM {{site.data.keyword.lakehouse_short}}?**
 {: #feb_05_2024}
 
-The key features of watsonx.data are:
-
+The key features of IBM® {{site.data.keyword.lakehouse_short}} are:
 * An architecture that fully separates compute, metadata, and storage to offer ultimate flexibility.
-
 * Multiple engines such as Presto and Spark that provide fast, reliable, and efficient processing of big data at scale.
-
 * Open formats for analytic data sets, allowing different engines to access and share the data at the same time.
-
 * Data sharing between watsonx.data, Db2® Warehouse, and Netezza Performance Server or any other data management solution through common Iceberg table format support, connectors, and a shareable metadata store.
-
 * Built-in governance that is compatible with existing solutions, including IBM Knowledge Catalog.
-
 * Cost-effective, simple object storage is available across hybrid-cloud and multicloud environments.
-
 * Integration with a robust ecosystem of IBM’s best-in-class solutions and third-party services to enable easy development and deployment of key use cases.
 
 **What is the maximum size of the default IBM managed bucket?**
@@ -96,10 +87,10 @@ Presto is a distributed SQL query engine, with the capability to query vast data
 
 A Presto installation includes three server types: Coordinator, Worker, and Resource manager.
 
-**What SQL statements are supported in {{site.data.keyword.lakehouse_short}}?**
+**What SQL statements are supported in IBM {{site.data.keyword.lakehouse_short}}?**
 {: #feb_09_2024}
 
-For information on supported SQL statements, see
+For information on supported SQL statements, see [Supported SQL statements](watsonxdata?topic=watsonxdata-supported_sql_statements).
 
 
 ## Metastore
@@ -117,57 +108,51 @@ Hive Metastore (HMS) is a service that stores metadata related to Presto and oth
 {: faq}
 {: support}
 
-**What version of Cloud Pak for Data do I need to use the latest version of {{site.data.keyword.lakehouse_short}}?**
-{: #feb_11_2024}
 
-For version updates, see
-
-**How can I provision an IBM {{site.data.keyword.lakehouse_short}} service instance?**
+**How can I provision an IBM® {{site.data.keyword.lakehouse_short}} service instance?**
 {: #feb_12_2024}
 
-To provision an instance, see
+To provision an instance, see [Getting started with watsonx.data](watsonxdata?topic=watsonxdata-getting-started).
 
-**How can I delete my {{site.data.keyword.lakehouse_short}} instance?**
+**How can I delete my IBM® {{site.data.keyword.lakehouse_short}} instance?**
 {: #feb_13_2024}
 
-To delete an instance, see [Deleting watsonx.data instance](watsonxdata?topic=watsonxdata-delete_lh)
+To delete an instance, see [Deleting watsonx.data instance](watsonxdata?topic=watsonxdata-delete_lh).
 
-**How can I access the IBM {{site.data.keyword.lakehouse_short}} web console?**
+**How can I access the IBM® {{site.data.keyword.lakehouse_short}} web console?**
 {: #feb_14_2024}
 
-To access the IBM {{site.data.keyword.lakehouse_short}} web console web console, login to your IBM Cloud account and follow the steps as mentioned here [Open the web console](watsonxdata?topic=watsonxdata-getting-started) in [Getting started with watsonx.data](watsonxdata?topic=watsonxdata-getting-started).
+To access the IBM® {{site.data.keyword.lakehouse_short}} web console web console, login to your IBM Cloud account and follow the steps as mentioned here [Open the web console](watsonxdata?topic=watsonxdata-getting-started) in [Getting started with watsonx.data](watsonxdata?topic=watsonxdata-getting-started).
 
-**How can I configure an engine?**
+**How can I provision an engine?**
 {: #feb_15_2024}
 
-From the watsonx.data web console, go to Infrastructure manager to configure an engine. For more information, see
+From the IBM® {{site.data.keyword.lakehouse_short}} web console, go to Infrastructure manager to provision an engine. For more information, see [Provisioning an Engine](watsonxdata?topic=watsonxdata-prov_engine).
 
 **How can I configure catalog or metastore?**
 {: #feb_16_2024}
 
-To configure a catalog with an engine, see
+To configure a catalog with an engine, see [Associating a catalog with an engine](watsonxdata?topic=watsonxdata-asso-cat-eng).
 
 **How can I configure a bucket?**
 {: #feb_17_2024}
 
-From the watsonx.data web console, go to Infrastructure manager to configure a bucket. For more information, see
+From the IBM® {{site.data.keyword.lakehouse_short}} web console, go to Infrastructure manager to configure a bucket. For more information, see [Adding a bucket-catalog pair](watsonxdata?topic=watsonxdata-reg_bucket).
 
 ## Access
 {: #access}
 {: faq}
 {: support}
 
-**How can I manage IAM access for {{site.data.keyword.lakehouse_short}}?**
+**How can I manage IAM access for IBM® {{site.data.keyword.lakehouse_short}}?**
 {: #feb_18_2024}
 
-{{site.data.keyword.Bluemix}} Identity and Access Management (IAM) controls access to {{site.data.keyword.lakehouse_short}} service instances for users in your account. Every user that accesses the watsonx.data service in your account must be assigned an access policy with an IAM role. For more information about IAM access for {{site.data.keyword.lakehouse_short}}, see [Managing IAM access for watsonx.data](watsonxdata?topic=watsonxdata-iam).
-
+{{site.data.keyword.Bluemix}} Identity and Access Management (IAM) controls access to IBM® {{site.data.keyword.lakehouse_short}} service instances for users in your account. Every user that accesses the IBM® {{site.data.keyword.lakehouse_short}} service in your account must be assigned an access policy with an IAM role. For more information, see [Managing IAM access for watsonx.data](watsonxdata?topic=watsonxdata-iam).
 
 **How can I add and remove the users?**
 {: #feb_19_2024}
 
 To add or remove users in a component, see [Managing user access](watsonxdata?topic=watsonxdata-manage_access).
-
 
 **How is the access control for users provided?**
 {: #feb_20_2024}
@@ -177,12 +162,12 @@ To provide access control for users to restrict unauthorized access, see [Managi
 **What is the process to assign access to a user?**
 {: #feb_21_2024}
 
-To assign access to a user, see
+To assign access to a user, see [Managing roles and privileges](watsonxdata?topic=watsonxdata-role_priv).
 
 **What is the process to assign access to a group?**
 {: #feb_22_2024}
 
-To assign access to a group, see
+To assign access to a group, see [Managing roles and privileges](watsonxdata?topic=watsonxdata-role_priv).
 
 ## Presto Engine
 {: #presto_engine}
@@ -192,44 +177,24 @@ To assign access to a group, see
 **How can I create an engine?**
 {: #feb_23_2024}
 
-To create an engine, see
+To create an engine, see [Provisioning an Engine](watsonxdata?topic=watsonxdata-prov_engine).
 
 **How can I pause and resume an engine?**
 {: #feb_24_2024}
 
-To pause an engine, use one of the following methods:
+To pause an engine, see [Pause an Engine](watsonxdata?topic=watsonxdata-pause_engine).
 
-- Pausing an engine in list view
-
-* Click the overflow menu icon at the end of the row and click Pause. A pause confirmation dialog appears.
-
-* Click Pause.
-
-- Pausing an engine in topology view
-
-* Hover over the engine that you want to pause and click the Pause icon. A pause confirmation dialog appears.
-
-* Click Pause.
-
-To resume a paused engine, use one of the following methods:
-
-- Resuming an engine in list view
-
-* Click the overflow menu icon at the end of the row and click Resume.
-
-- Resuming an engine in topology view
-
-* Hover over the engine that you want to resume and click the Resume icon.
+To resume a paused engine, see [Resume an Engine](watsonxdata?topic=watsonxdata-resume_engine).
 
 **How can I delete an engine?**
 {: #feb_25_2024}
 
-To delete an engine, see
+To delete an engine, see [Deleting an engine](watsonxdata?topic=watsonxdata-delete_engine).
 
 **How can I run SQL queries?**
 {: #feb_26_2024}
 
-You can use the Query workspace interface in IBM® watsonx.data to run SQL queries and scripts against your data. For more information, see
+You can use the Query workspace interface in IBM® {{site.data.keyword.lakehouse_short}} to run SQL queries and scripts against your data. For more information, see [Running SQL queries](watsonxdata?topic=watsonxdata-run_sql).
 
 
 ## Databases and Connectors
@@ -240,82 +205,55 @@ You can use the Query workspace interface in IBM® watsonx.data to run SQL que
 **How can I add a database?**
 {: #feb_27_2024}
 
-To add a database, see
+To add a database, see [Adding a database-catalog pair](watsonxdata?topic=watsonxdata-reg_database).
 
 **How can I remove a database?**
 {: #feb_28_2024}
 
-To remove a database, see
+To remove a database, see [Deleting a database-catalog pair](watsonxdata?topic=watsonxdata-delete_database).
 
-**What data sources does watsonx.data currently support?**
+**What data sources does IBM® {{site.data.keyword.lakehouse_short}} currently support?**
 {: #feb_29_2024}
 
-Watsonx.data currently supports the following data sources:
+IBM® {{site.data.keyword.lakehouse_short}} currently supports the following data sources:
 
-·       IBM Db2
+1. IBM Db2
+2. IBM Netezza
+3. Apache Kafka
+4. MongoDB
+5. MySQL
+6. PostgreSQL
+7. SQL Server
+8. Custom
+9. Teradata
+10. SAP HANA
+11. Elasticsearch
+12. SingleStore
+13. Snowflake
+14. IBM Data Virtualization Manager for z/OS
 
-·       IBM Netezza
-
-·       Apache Kafka
-
-·       MongoDB
-
-·       MySQL
-
-·       PostgreSQL
-
-·       SQL Server
-
-·       Custom
-
-·       Teradata
-
-·       SAP HANA
-
-·       Elasticsearch
-
-·       SingleStore
-
-·       Snowflake
-
-·       IBM Data Virtualization Manager for z/OS
-
-**How can I load the data into {{site.data.keyword.lakehouse_short}}?**
+**How can I load the data into IBM® {{site.data.keyword.lakehouse_short}}?**
 {: #feb_30_2024}
 
-There are 3 ways to load the data into watsonx.data .
-
-Web console: You can use the Ingestion jobs tab from the Data manager page to securely and easily load data into watsonx.data console. For more information, see
-
-CLI: You can load data into watsonx.data either through CLI. For more information, see
-
-Creating tables: You can also load or ingest local data files to create tables using the Create table option. For more information,
-
-**How can I import data from a file?**
-{: #feb_31_2024}
-
-There are 3 ways to load the data into watsonx.data .
-
-Web console: You can use the Ingestion jobs tab from the Data manager page to securely and easily load data into watsonx.data console. For more information, see
-
-CLI: You can load data into watsonx.data either through CLI. For more information, see
-
-Creating tables: You can also load or ingest local data files to create tables using the Create table option. For more information,
+There are 3 ways to load the data into IBM® {{site.data.keyword.lakehouse_short}}.
+1. Web console: You can use the Ingestion jobs tab from the Data manager page to securely and easily load data into IBM® {{site.data.keyword.lakehouse_short}} console. For more information, see [Ingesting data by using Spark](watsonxdata?topic=watsonxdata-ingest_spark_ui).
+2. Command Line Interface: You can load data into IBM® {{site.data.keyword.lakehouse_short}} through CLI. For more information, see [Loading or ingesting data through CLI](watsonxdata?topic=watsonxdata-load_ingest_data#load_ingest_datacli).
+3. Creating tables: You can load or ingest local data files to create tables using the Create table option. For more information, see [Creating tables](watsonxdata?topic=watsonxdata-create_table).
 
 **How can I create tables?**
 {: #feb_32_2024}
 
-You can create table through Data manager page by using the web console. For more information, see
+You can create table through the Data manager page by using the web console. For more information, see [Creating tables](watsonxdata?topic=watsonxdata-create_table).
 
 **How can I create schema?**
 {: #feb_33_2024}
 
-You can create schema through Data manager page by using the web console. For more information, see
+You can create schema through the Data manager page by using the web console. For more information, see [Creating schema](watsonxdata?topic=watsonxdata-create_schema).
 
 **How can I query the loaded data?**
 {: #feb_34_2024}
 
-You can use the Query workspace interface in IBM® watsonx.data to run SQL queries and scripts against your data. For more information, see
+You can use the Query workspace interface in IBM® {{site.data.keyword.lakehouse_short}} to run SQL queries and scripts against your data. For more information, see [Running SQL queries](watsonxdata?topic=watsonxdata-run_sql).
 
 ## Ingestion
 {: #ingestion}
@@ -335,20 +273,9 @@ Only Parquet and CSV data files can be ingested.
 **Can a folder of multiple files be ingested together?**
 {: #feb_37_2024}
 
-Yes a folder of multiple data files be ingested. S3 folder must be created with data files in it for ingesting. The source folder must contain either all parquet file or all CSV files. For detailed information on S3 folder creation, see
+Yes a folder of multiple data files be ingested. S3 folder must be created with data files in it for ingesting. The source folder must contain either all parquet file or all CSV files. For detailed information on S3 folder creation, see [Preparing for ingesting data](watsonxdata?topic=watsonxdata-prepare_ingest_data).
 
 **What commands are supported in command line interface during ingestion?**
 {: #feb_38_2024}
 
-For commands supported in command line interface during ingestion, see
-
-**What are the different options in watsonx.data to ingest or import files?**
-{: #feb_39_2024}
-
-There are 3 ways to load the data into watsonx.data .
-
-Web console: You can use the Ingestion jobs tab from the Data manager page to securely and easily load data into watsonx.data console. For more information, see
-
-CLI: You can load data into watsonx.data either through CLI. For more information, see
-
-Creating tables: You can also load or ingest local data files to create tables using the Create table option. For more information, see
+For commands supported in command line interface during ingestion, see [Loading or ingesting data through CLI](watsonxdata?topic=watsonxdata-load_ingest_data#load_ingest_datacli).
