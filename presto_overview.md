@@ -101,4 +101,4 @@ For the list of reserved keywords, see [Reserved keywords](https://prestodb.io/d
 ### SQL Syntax
 {: #lh-presto_syntax}
 
-For more information about SQL syntax used in Presto, see [SQL statements](https://www.ibm.com/docs/SSDZ38_1.0.x/lh-prestosql/topics/sql_intro.html){: external}.
+For more information about SQL syntax used in Presto, see [SQL statements](https://www.ibm.com/docs/en/watsonxdata/1.1.x?topic=sql-statements){: external}.

@@ -33,7 +33,7 @@ Security in {{site.data.keyword.lakehouse_full}} is based on roles. A role is a 
 
 Authorization is granted by assigning a specific role to the user account. Use the Role Based Access Control feature in {{site.data.keyword.lakehouse_short}} to grant users the access privileges they require for their role.
 
-Access to provision IBM Cloud resources is governed by using [IAM access](https://test.cloud.ibm.com/docs/account?topic=account-userroles#platformroles) and [account management services](https://test.cloud.ibm.com/docs/account?topic=account-account-services&interface=ui#account-management-actions-roles). You must have **Administrator** privileges to access the resource group in which you need to create the resources.
+Access to provision IBM Cloud resources is governed by using [IAM access](https://cloud.ibm.com/docs/account?topic=account-userroles&interface=ui) and [account management services](https://cloud.ibm.com/docs/account?topic=account-account-services&interface=ui). You must have **Administrator** privileges to access the resource group in which you need to create the resources.
 {: note}
 
 To manage access, complete the following steps:

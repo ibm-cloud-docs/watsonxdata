@@ -37,7 +37,7 @@ For more information about using {{site.data.keyword.lakehouse_full}} on Cloud P
 
 You need to have an [{{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external}.
 
-The access to provision IBM Cloud resources is governed by using [IAM access](https://test.cloud.ibm.com/docs/account?topic=account-userroles#platformroles) and [account management services](https://test.cloud.ibm.com/docs/account?topic=account-account-services&interface=ui#account-management-actions-roles). You must have **Administrator** privileges to access the resource group in which you need to create the resources.
+The access to provision IBM Cloud resources is governed by using [IAM access](https://cloud.ibm.com/docs/account?topic=account-userroles&interface=ui) and [account management services](https://cloud.ibm.com/docs/account?topic=account-account-services&interface=ui). You must have **Administrator** privileges to access the resource group in which you need to create the resources.
 {: note}
 
 ## Provision an instance
