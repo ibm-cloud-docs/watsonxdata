@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-28"
+lastupdated: "2024-04-03"
 
 keywords: lakehouse
 
@@ -42,15 +42,78 @@ As a result of Intel's CPU upgrade, the `omrgc_spinlock_acquire` call takes long
    2. Update the jvm.config file to include the new JVM parameter, `-Xgc:tlhInitialSize=8096,tlhIncrementSize=16384,tlhMaximumSize=1048576`.
    3. Restart the Presto coordinator and worker node. -->
 
+
+## Issue: Milvus unresponsive to queries
+{: #known_issues9946}
+
+Milvus may not respond to queries when attempting to load collections or partitions that exceed available memory capacity. This occurs because all search and query operations within Milvus are executed in memory, requiring the entire collection or partition to be loaded before querying.
+
+**Workaround:**
+
+* Consider the memory limitations of your Milvus deployment and avoid loading excessively large collections or partitions.
+
+* If Milvus becomes unresponsive to queries, employ the appropriate Milvus API to unload or release some collections from memory. An example using Python SDK: `collection.release()`
+
+## Issue: Inaccurate row count after deletions in Milvus
+{: #known_issues9947}
+
+The `collection.num_entities` property might not reflect the actual number of rows in a Milvus collection after deletion operations. This property provides an estimate and may not account for deleted entities.
+
+To get an accurate count of rows, execute a `count(*)` query on the collection. This provides an accurate count even after deletions.
+
+Pymilvus syntax:
+```bash
+collection = pymilvus.Collection(...)
+collection.query(expr='', fields=['count(*)'])
+```
+{: codeblock}
+
+## Issue: Potential data loss during batch insert of large data collection in Milvus
+{: #known_issues9484}
+
+Potential data loss may occur when inserting large dataset (5 million vectors) through the Milvus batch insert API with a single final flush. A subset of rows might be missing from the ingested data.
+
+**Workaround:**
+* Flush the collection manually every 500,000 rows.
+* Use the bulk insert API for data ingestion, see [Insert Entities from Files](https://milvus.io/docs/v2.3.x/bulk_insert.md). This is the recommended way to ingest large data sets.
+
+## Issue: Case sensitivity of column names in queries
+{: #known_issues7248}
+
+Queries referencing column names are case-insensitive. The results will display columns using the exact casing provided in the query, regardless of the actual casing in the database.
+
+## Limitations: Unsupported Db2 operations
+{: #known_issues7895}
+
+{{site.data.keyword.lakehouse_short}} currently does not support the ALTER TABLE DROP COLUMN operation for Db2 column-organized tables.
+
+   By default, Db2 instances create tables in column-organized format.
+   {: note}
+
+{{site.data.keyword.lakehouse_short}} does not support creating row-organized tables in Db2.
+
+## Limitations: Handling Null Values in Elasticsearch
+{: #known_issues8294}
+
+**Elasticsearch** connector requires explicit definition of index mappings for fields to handle null values when loading data.
+
+## Limitations: Loading Nested JSON with Elasticsearch
+{: #known_issues8294(2)}
+
+**Elasticsearch** connector requires users to explicitly specify nested JSON structures as arrays of type ROW for proper loading and querying. To process such structures, use the UNNEST operation.
+
+## Limitation: Users can create 3 instances of Milvus service for a single instance of watsonx.data in IBM Cloud.
+{: #known_issues6821}
+
+## Issue: Unrestricted access to SQL statements in worksheets
+{: #known_issues18111}
+
+SQL statements within worksheets can be shared with all users who have access to the instance. These statements could be viewed, edited, or deleted by any of these users.
+
 ## Issue: Unable to create views in Presto
 {: #known_issues1.0.0_6}
 
 Presto describes a view in a mapped database as a TABLE rather than a VIEW. This is apparent to JDBC program connecting to the Presto engine.
-
-## Issue: Unable to view schemas while creating an access control policy
-{: #known_issues1.0.0_6}
-
-When a user attempts to create an access control policy from the **Access control** page, the list of available schemas for the selected catalog are not displayed in the **Data objects** section. This problem occurs due to an internal issue. As a workaround, to view the list of schemas while creating an access policy, the user must first view the schemas for the selected catalog from the **Data manager** page and then create an access policy from the **Access Control** page.
 
 ## Issue: Connections to MongoDB or MySQL database catalog fails
 {: #known_issues1.0.0_5}
@@ -152,7 +215,6 @@ Objects in a file system are stored as objects and their path. The object and pa
 {: #known_issues13}
 
 Assigning **Grant** or **Revoke** privilege to a user through access policy does not work as expected in the following scenarios:
-
 
 1. User_A adds a bucket and a Hive catalog (for example, `useracat02`).
 2. User_A creates a schema and a table.

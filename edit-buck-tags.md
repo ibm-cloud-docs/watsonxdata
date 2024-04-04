@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-28"
+lastupdated: "2024-04-03"
 
 keywords: lakehouse, bucket, tags, description, watsonx.data
 
@@ -26,26 +26,26 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Editing bucket details
+# Editing storage details
 {: #edit-buck-tags}
 
-To edit the display name, description and tags of a bucket, use one of the following methods:
+To edit the display name, description and tags of a storage, use one of the following methods:
 {: shortdesc}
 
-- **Editing bucket details in list view**
+- **Editing storage details in list view**
 
-1. Click the name of bucket. The bucket information page opens.
+1. Click the name of storage. The storage information page opens.
 2. In the **Details** tab, click **Edit**.
 3. In the **Display name** field, enter the name to be displayed.
-3. In the **Description** field, enter the description of the bucket or edit the existing description.
+3. In the **Description** field, enter the description of the storage or edit the existing description.
 4. In the **Tags** field, select the tags from the list or start typing to define a new tag.
 5. Click **Save**.
 
-- **Editing bucket details in topology view**
+- **Editing storage details in topology view**
 
-1. Click the bucket. The bucket information page opens.
+1. Click the storage. The storage information page opens.
 2. In the **Details** tab, click **Edit**.
 3. In the **Display name** field, enter the name to be displayed.
-3. In the **Description** field, enter the description of the bucket or edit the existing description.
+3. In the **Description** field, enter the description of the storage or edit the existing description.
 4. In the **Tags** field, select the tags from the list or start typing to define a new tag.
 5. Click **Save**.

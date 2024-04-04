@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-28"
+lastupdated: "2024-04-03"
 
 keywords: lakehouse, database, watsonx.data
 
@@ -30,9 +30,7 @@ subcollection: watsonxdata
 # Custom database feature
 {: #custom_database}
 
-A database is one of the data sources that you can register and use in {{site.data.keyword.lakehouse_full}}. A catalog defines the schemas and metadata for a data
-source. You can now use the custom catalog to create connections to data stores that are not provided by the built-in connectors. Any database that you bring in,
-it can be configured. For example, you can set-up the custom connector that is hosted and managed by AWS Glue.
+A database is one of the data sources that you can register and use in IBM® {{site.data.keyword.lakehouse_full}}. A catalog defines the schemas and metadata for a data source. You can now use the custom catalog to create connections to data stores that are not provided by the built-in connectors. Custom database feature can be used for connectors that are already supported by Presto but not listed in IBM {{site.data.keyword.lakehouse_full}} supported connectors or databases.
 {: shortdesc}
 
 
@@ -56,10 +54,26 @@ To add a custom database-catalog pair, complete the following steps.
     |------------------|--------------------|
     | Display name    | Enter the database name to be displayed on the screen. |
     | connector.name     | Enter the name of the database connector that you want to add.  |
-    | Property value             | Enter the properties (and their values) to be configured for the database. |
+    | Property value             | Enter the properties (and their values) to be configured for the database. Enter the property name-value pair as specified in Presto. |
     | Port           | Enter the port number.  |
     | Encryption           | Encrypting values of the keys are stored.  |
     | Associated catalog definition | Enter the name of the catalog. This catalog is automatically associated with your database. |
     {: caption="Table 1. Register database" caption-side="bottom"}
 
 6. Click **Add**.
+
+    **The following is the list of additional data sources from Presto that Custom database supports:**
+    -Prometheus
+    -AWS Redshift
+    -BigQuery
+    -Apache Pinot
+    -ClickHouse
+    -Cassandra
+    -Apache Druid
+    -Thrift
+    -Redis
+    -Apache Accumulo
+    -Apache Kudu
+    -Local File
+    -Black Hole
+    -Lark Sheets

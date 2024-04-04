@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-28"
+lastupdated: "2024-04-03"
 
 keywords: watsonxdata, data explorer, associated catalogs, iceberg tables, data sample, time travel information, ingestion hub
 

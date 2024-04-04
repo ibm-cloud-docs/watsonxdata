@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-28"
+lastupdated: "2024-04-03"
 
 keywords: lakehouse, bucket, objects, watsonx.data
 
@@ -26,18 +26,18 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Exploring bucket objects
+# Exploring storage objects
 {: #buck-obj}
 
-To explore the objects in a bucket, use one of the following methods:
+To explore the objects in a storage, use one of the following methods:
 {: shortdesc}
 
-- **Exploring bucket objects in list view**
+- **Exploring storage objects in list view**
 
-1. Click the name of bucket that you want to explore. The bucket information page opens.
+1. Click the name of storage that you want to explore. The storage information page opens.
 2. Click **Objects**.
 
-- **Exploring bucket objects in topology view**
+- **Exploring storage objects in topology view**
 
-1. Click the bucket that you want to explore. The bucket information page opens.
+1. Click the storage that you want to explore. The storage information page opens.
 2. Click **Objects**.

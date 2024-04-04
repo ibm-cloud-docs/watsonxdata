@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-28"
+lastupdated: "2024-04-03"
 
 keywords: lakehouse, ingesting data, create table
 
@@ -56,9 +56,17 @@ Files can also be ingested or imported to {{site.data.keyword.lakehouse_full}} t
 
 1. In the **Creating table from a file** form, drag a file to the box or click to upload.
 
-   .CSV, .Parquet, .json, .txt are the supported data file formats.
-   For .json file, you must enclose the content in `[]`.
-   For .json file, multilevel data is not supported.
+   CSV, .Parquet, .JSON, .TXT are the supported data file formats.
+   Creating a table from a file is only supported by iceberg catalogs.
+   For JSON file, you must enclose the content in `[]`.
+   The default file format for Hive is ORC and for Iceberg is Parquet.
+   {: note}
+
+   You can apply the configuration for Encoding, Escape character, Field delimiter, and Line delimiter prior to uploading any .CSV and .TXT files. Default values are as follows:
+   Encoding value: UTF-8
+   Escape character: \\
+   Field delimiter: ,
+   Line delimiter: \n
    {: note}
 
 1. Click the data type and choose the required data types for each column. Click **Next**.
@@ -69,13 +77,6 @@ Files can also be ingested or imported to {{site.data.keyword.lakehouse_full}} t
 1. Verify that the table creation status in the **Result set** is successful, indicated as true.
 1. Go to the **Data manager** page and select the schema under which you created the table and click the refresh icon. The newly created table is listed.
 
-Following are the requirements or limitations when ingesting data through web console:
-* Iceberg target table is the only supported format.
-* Partitioning is not supported.
-* Source CSV file containing TAB or space as delimiter is not supported.
-* Configure options are disabled for GA.
-* Target table output format is Iceberg and the target data format is Parquet.
-* Target storage path is default and cannot be changed.
 
 
 <!-- 1. Follow the steps in the [Creating tables](watsonxdata?topic=watsonxdata-create_table) topic to complete importing the file. -->

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-28"
+lastupdated: "2024-04-03"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -82,32 +82,72 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
    |IBM_LH_SPARK_DRIVER_MEMORY|Optional spark engine configuration setting for driver memory|
    {: caption="Table 1" caption-side="bottom"}
 
-2. Run the following command to ingest data:
+2. You can run ingestion jobs to ingest data in 2 ways, using a simple command line or a config file.
 
-   ```bash
-   ibm-lh data-copy --source-data-files s3://path/to/file/or/folder \
-   --target-tables <catalog>.<schema>.<table> \
-   --ingestion-engine-endpoint "hostname=<hostname>,port=<port>,type=spark" \
-   --trust-store-password <truststore password> \
-   --trust-store-path <truststore path> \
-   --target-catalog-uri 'thrift://<hms_thrift_uri>'
-   ```
-   {: codeblock}
+   1. Run the following command to ingest data from a single or multiple source data files:
 
-   |Parameter|Description|
-   |------------|----------|
-   |--source-data-files|Path to s3 parquet or CSV file or folder. Folder paths must end with “/”|
-   |--target-tables|Target table in format `<catalog>.<schema>.<table>`. Catalog name will be the name of the spark catalog that will be initiated. Schema should be pre-existent. Table name will be the table to insert into or create.|
-   |--ingestion-engine-endpoint|Ingestion engine endpoint will be in the format hostname=’’,port=’’,type=spark”. Type is required to be set to spark.|
-   |--trust-store-password|Password of the truststore cert inside the spark job pod. Current implementation of Spark for CPD and SaaS requires: changeit|
-   |--trust-store-path|Path of the truststore cert inside the spark job pod. Current implementation of Spark for CPD and SaaS requires: file:///opt/ibm/jdk/lib/security/cacerts|
-   |--target-catalog-uri|HMS thrift endpoint.|
-   |    |CPD endpoint example: `thrift://ibm-lh-lakehouse-hive-metastore-svc.cpd-instance.svc.cluster.local:9083`|
-   |    |SaaS endpoint example: `thrift://<identifier>.<identifier>.lakehouse.dev.appdomain.cloud:31894`.
-   |--create-if-not-exist|Pass in this option if the target table is not created and the tool should create it. Do not pass in this option if the target table is already created and the tool should insert into that table.|
-   |--schema|Pass in this option with value in the format path/to/csvschema/config/file. Pass in the path to a schema.cfg file which specifies header and delimiter values for CSV source file or folder.|
-   {: caption="Table 2" caption-side="bottom"}
+     ```bash
+     ibm-lh data-copy --source-data-files s3://path/to/file/or/folder \
+     --target-tables <catalog>.<schema>.<table> \
+     --ingestion-engine-endpoint "hostname=<hostname>,port=<port>,type=spark" \
+     --trust-store-password <truststore password> \
+     --trust-store-path <truststore path> \
+     --target-catalog-uri 'thrift://<hms_thrift_uri>'
+     ```
+     {: codeblock}
 
+     Where the parameters used are listed as follows:
+     |Parameter|Description|
+     |------------|----------|
+     |--source-data-files|Path to s3 parquet or CSV file or folder. Folder paths must end with “/”|
+     |--target-tables|Target table in format `<catalogname>.<schemaname>.<tablename>`.|
+     |--ingestion-engine-endpoint|Ingestion engine endpoint will be in the format `hostname=’’,port=’’,type=spark”`. Type must be set to spark.|
+     |--trust-store-password|Password of the truststore certificate inside the spark job pod. Current password for Spark in CPD and SaaS is `changeit`.|
+     |--trust-store-path|Path of the truststore cert inside the spark job pod. Current path of Spark in CPD and SaaS is `file:///opt/ibm/jdk/lib/security/cacerts`.|
+     |--target-catalog-uri|HMS thrift endpoint.|
+     |    |CPD endpoint example: `thrift://<metastore_host_value>`. `<metastore_host_value>` is taken from the details tab of the catalog in the Infrastructure page.|
+     |    |SaaS endpoint example: `thrift://<metastore_host_value>`. `<metastore_host_value>` is taken from the details tab of the catalog in the Infrastructure page.|
+     |--create-if-not-exist|Use this option if the target schema or table is not created. Do not use if the target schema or table is already created.|
+     |--schema|Use this option with value in the format path/to/csvschema/config/file. Use the path to a schema.cfg file which specifies header and delimiter values for CSV source file or folder.|
+     {: caption="Table 2" caption-side="bottom"}
+
+   2. Run the following command to ingest data from a config file:
+
+     ```bash
+     ibm-lh data-copy --ingest-config /<your_ingest_configfilename>
+     ```
+     {: codeblock}
+
+     Where the config file has the following information:
+     ```bash
+     [global-ingest-config]
+     target-tables:<catalog>.<schema>.<table>
+     ingestion-engine:hostname='',port='',type=spark
+     create-if-not-exist:true/false
+
+     [ingest-config1]
+     source-files:s3://path/to/file/or/folder
+     target-catalog-uri:thrift://<hms_thrift_uri>
+     trust-store-path:<truststore path>
+     trust-store-password:<truststore password>
+     schema:/path/to/csvschema/config/file [Optional]
+     ```
+     {: codeblock}
+
+     The parameters used in the config file ingestion job is listed as follows:
+     |Parameter|Description|
+     |------------|----------|
+     |source-files|Path to s3 parquet or CSV file or folder. Folder paths must end with “/”|
+     |target-tables|Target table in format `<catalogname>.<schemaname>.<tablename>`.|
+     |ingestion-engine|Ingestion engine endpoint will be in the format `hostname=’’,port=’’,type=spark”`. Type must be set to spark.|
+     |trust-store-password|Password of the truststore certificate inside the spark job pod. Current password for Spark in CPD and SaaS is `changeit`.|
+     |trust-store-path|Path of the truststore cert inside the spark job pod. Current path of Spark in CPD and SaaS is `file:///opt/ibm/jdk/lib/security/cacerts`.|
+     |target-catalog-uri|HMS thrift endpoint.|
+     |    |CPD endpoint example: `thrift://<metastore_host_value>`. `<metastore_host_value>` is taken from the details tab of the catalog in the Infrastructure page.|
+     |    |SaaS endpoint example: `thrift://<metastore_host_value>`. `<metastore_host_value>` is taken from the details tab of the catalog in the Infrastructure page.|
+     |create-if-not-exist|Use this option if the target schema or table is not created. Do not use if the target schema or table is already created.|
+     |schema|Use this option with value in the format path/to/csvschema/config/file. Use the path to a schema.cfg file which specifies header and delimiter values for CSV source file or folder.|
+     {: caption="Table 3" caption-side="bottom"}
 
 ## Limitations
 {: #limits}
@@ -116,11 +156,3 @@ Following are some of the limitations of Spark ingestion:
 
 - Spark ingestion supports only source data files from object storage bucket. Local files are not supported.
 - The default buckets in watsonx.data are not exposed to Spark engine. Hence, iceberg-bucket and hive-bucket are not supported for source or target table. Users can use their own MinIo or S3 compatible buckets that are exposed and accessible by Spark engine.
-- Source files must be a single file or folder of files with same data type and the data is of same ddl.
-- Advanced table customization for CSV files supports only header and field delimiter. Customization for encoding value, line delimiter and escape character is ignored and default values are considered. Default values are as follows:
-
-   - Encoding value: UTF-8
-
-   - Escape character: \\\
-
-   - Line delimiter: \n

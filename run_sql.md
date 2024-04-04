@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-28"
+lastupdated: "2024-04-03"
 
 keywords: watsonxdata, sql queries, query workspace
 
@@ -66,4 +66,8 @@ To run the SQL queries, do the following steps:
 1. Click the **Run** button to run the query. Using **Run to cursor** or **Run from cursor**, you can run queries from or until your cursor position.
 1. Select **Result set** or **Details** tab to view the results. You can export the result as a csv file using **Export to CSV** icon.
 1. Click **Saved queries** to view the saved queries.
+
+   SQL statements within worksheets can be shared with all users who have access to the instance. These statements could be viewed, edited, or deleted by any of these users.
+   {: note}
+
 1. Click [**Explain**](watsonxdata?topic=watsonxdata-explain_sql_query) to view the logical or distributed plan of execution for a specified SQL query.

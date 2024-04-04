@@ -14,11 +14,6 @@ toc:
       id: learn
       topics:
       - getting-started.md
-      - topicgroup:
-          label: watsonx.data components
-          topics:
-          - presto_overview.md
-          - hms_overview.md
       - release.md
 
   - navgroup:
@@ -57,6 +52,13 @@ toc:
           - delete_bucket.md
           - sync_logs.md
       - topicgroup:
+          label: Exploring data
+          topics:
+            - exp_objects.md
+            - create_schema.md
+            - create_table.md
+            - ddl_changes.md
+      - topicgroup:
           label: Loading data
           topics:
             - ingestdata.md
@@ -69,14 +71,6 @@ toc:
                   - ingest_datafiles_cli.md
                   - ingest_datafiles_config.md
                   - ingest_spark_cli.md
-      - topicgroup:
-          label: Exploring data
-          topics:
-            - exp_objects.md
-            - import_data.md
-            - create_table.md
-            - create_schema.md
-            - ddl_changes.md
       - topicgroup:
           label: Querying data
           topics:
@@ -101,6 +95,12 @@ toc:
             - spark-table-maint.md
             - spark-emr.md
       - topicgroup:
+          label: Milvus
+          topics:
+            - adding-milvus-service.md
+            - conn-to-milvus.md
+            - working_with_milvus.md
+      - topicgroup:
           label: Enhancing security
           topics:
             - arch_wl_isolation.md
@@ -114,6 +114,7 @@ toc:
             - data_policy.md
       - billing_usage.md
       - hms_credentials.md
+      - cas-ep.md
       - notifications.md
       - event_notifications.md
       - topicgroup:
@@ -129,7 +130,7 @@ toc:
       - supported_sql_statements.md
       - supported_datatypes.md
       - link:
-            label: SQL statements
+            label: Presto SQL statements
             href: https://www.ibm.com/docs/SSDZ38_1.1.x/lh-prestosql/topics/sql_intro.html
       - response.md
       - high_availability_lh.md
@@ -147,4 +148,5 @@ toc:
           label: Troubleshooting
           topics:
             - ts_cs_issue.md
+            - ts_ip_restrict_issue.md
       - get-help.md

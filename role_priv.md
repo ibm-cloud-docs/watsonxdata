@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-28"
+lastupdated: "2024-04-03"
 
 keywords: lakehouse, watsonx data, privileges, roles, access
 
@@ -38,95 +38,253 @@ Use the **Access control** page to manage users and roles in {{site.data.keyword
 
 The following tables describe the privileges that you can assign to roles and associated permissions:
 
+## Formation, Instance, and Install
+{: #formation_instance_install}
+
+### Default admin access
+{: #default_admin1}
+
+Formation admins (IAM) have the default admin access.
+
+### Default user access
+{: #default_user1}
+
+IAM formation non-admins (Operator, Editor, Viewer) have the default user access.
+
+### Resource-level permissions
+{: #rl_premission1}
+
+| Action | Admin | User | Metastore Access |
+|-------|------|------|---------|
+| Create Presto engines | ✓ |   |    |
+| Register Spark engines | ✓ |   |    |
+| Create Milvus services | ✓ |   |    |
+| Delete Milvus services | ✓ |   |    |
+| View Milvus services | ✓ |   |    |
+| Restart the internal HMS | ✓ |   |    |
+| Scale the Presto engines | ✓ |   |    |
+| Unregister any bucket | ✓ |   |    |
+| Unregister any DB Connection | ✓ |   |    |
+| Activate cataloged buckets (restart HMS) | ✓ |   |    |
+| Register and unregister own bucket | ✓ | ✓ | ✓ |
+| Register and unregister own DB connection | ✓ | ✓ | ✓ |
+| Access the metastore | ✓ |   | ✓ |
+{: caption="Table 1. Resource-level permissions" caption-side="bottom"}
+
 ## Engine (Presto)
-{: #engine_role}
+{: #engine_presto}
 
-| Privileges | Administrator | Manager | User without a role |
-|--------------------------|----------------|--------|--------|
-| Delete an engine | Y | N | N |
-| Grant access  | Y | N | N |
-| Revoke access | Y | N | N |
-| Pause an engine | Y | Y | N |
-| Resume an engine | Y | Y | N |
-| Restart an engine | Y | Y | N |
-| Associate a catalog | Y | Y | N |
-| Disassociate a catalog | Y | Y | N |
-| Access the Presto query monitor UI | Y | Y | N |
-| View existence  | Y | Y | N |
-{: caption="Table 1. Roles and privileges for an engine" caption-side="bottom"}
+### Default admin access
+{: #default_admin2}
 
-## Catalog
-{: #catalog_role}
+Formation admins (IAM) have the default admin access.
 
-| Privileges | Administrator | User | User without a role |
-|--------------------------|----------------|--------|--------|
-| Delete a catalog | Y | N | N |
-| Grant access | Y | N | N |
-| Revoke access | Y | N | N |
-| Create any schema | Y | N | N |
-| Drop any schema | Y | N | N |
-| Select from data | Y | Y | N |
-| Drop own schema | Y | N | N |
-| View existance | Y | Y | Y |
-{: caption="Table 2. Roles and privileges for a catalog" caption-side="bottom"}
+### Resource-level permissions
+{: #rl_premission2}
+
+| Action | Admin | Manager | User | Users without an explicit role |
+|-------|------|------|---------|---------|
+| Delete | ✓ |   |    |     |
+| Grant and revoke access | ✓ |   |    |     |
+| Pause and resume | ✓ | ✓ |    |     |
+| Restart | ✓ | ✓ |    |     |
+| Associate and disassociate catalog | ✓ | ✓ |    |     |
+| Access the Presto query monitor UI | ✓ | ✓ |    |     |
+| View existence (infra page and `…/api/…/` engines) | ✓ | ✓ | ✓ |     |
+| Run workloads against the engine | ✓ | ✓ | ✓ |     |
+{: caption="Table 2. Resource-level permissions" caption-side="bottom"}
+
+## Engine (External Spark)
+{: #external_spark}
+
+### Default admin access
+{: #default_admin3}
+
+Formation admins (IAM) have the default admin access.
+
+### Resource-level permissions
+{: #rl_premission3}
+
+| Action | Admin | Manager | User | Users without an explicit role |
+|-------|------|------|---------|---------|
+| Delete | ✓ |   |    |     |
+| Grant and revoke access | ✓ |   |    |     |
+| Update Spark engine metadata (like tags and description) | ✓ | ✓ |    |     |
+| Scale Spark engine | ✓ | ✓ |    |     |
+| View existence (infra page and `…/api/…/` engines) | ✓ | ✓ | ✓ |     |
+| Run workloads against the engine | ✓ | ✓ | ✓ |     |
+{: caption="Table 3. Resource-level permissions" caption-side="bottom"}
+
+## Service (Milvus)
+{: #milvus}
+
+### Default admin access
+{: #default_admin5}
+
+Formation admins (IAM) have the default admin access.
+
+### Resource-level permissions
+{: #rl_premission5}
+
+| Action | Admin | Editor | Viewer | Users without an explicit role |
+| --- | --- | --- | --- | --- |
+| View assigned Milvus service | ✓ | ✓ | ✓ |  |
+| Delete assigned Milvus service | ✓ |  |  |  |
+| Grant access to assigned Milvus service | ✓ |  |  |  |
+| Revoke access from assigned Milvus service | ✓ |  |  |  |
+| Collection `CreateIndex` | ✓ | ✓ |  |  |
+| Collection `DropIndex` | ✓ | ✓ |  |  |
+| Global `CreateCollection`  | ✓ | ✓ |  |  |
+| Global `DescribeCollection` | ✓ | ✓ | ✓ |  |
+| Global `ShowCollections` | ✓ | ✓ | ✓ |  |
+| Collection `CreateAlias` | ✓ | ✓ |  |  |
+| Collection `DropAlias` | ✓ | ✓ |  |  |
+| Collection `DescribeAlias` | ✓ | ✓ | ✓ |  |
+| Collection `ListAliases` | ✓ | ✓ | ✓ |  |
+| Global `FlushAll` | ✓ | ✓ |  |  |
+| Global `CreateResourceGroup` | ✓ |  |  |  |
+| Global `DropResourceGroup` | ✓ |  |  |  |
+| Global `DescribeResourceGroup` | ✓ |  |  |  |
+| Global `ListResourceGroups` | ✓ |  |  |  |
+| Global `TransferNode` | ✓ |  |  |  |
+| Global `TransferReplica` | ✓ |  |  |  |
+| Global `CreateDatabase` | ✓ | ✓ |  |  |
+| Global `DropDatabase` | ✓ | ✓ |  |  |
+| Global `ListDatabases` | ✓ | ✓ | ✓ |  |
+| Collection `IndexDetail` | ✓ | ✓ | ✓ |  |
+| Collection `Search` | ✓ | ✓ | ✓ |  |
+| Collection `Query` | ✓ | ✓ | ✓ |  |
+| Collection `Load` | ✓ | ✓ |  |  |
+| Collection `GetLoadState` | ✓ | ✓ |  |  |
+| Collection `Release` | ✓ | ✓ |  |  |
+| Collection `RenameCollection` | ✓ | ✓ |  |  |
+| Collection `DropCollection` | ✓ | ✓ |  |  |
+| Collection `Insert` | ✓ | ✓ |  |  |
+| Collection `Delete` | ✓ | ✓ |  |  |
+| Collection `Flush` | ✓ | ✓ |  |  |
+| Collection `GetFlushState` | ✓ | ✓ |  |  |
+| Collection `Upsert` | ✓ | ✓ |  |  |
+| Collection `GetStatistics` | ✓ | ✓ |  |  |
+| Collection `Compaction` | ✓ | ✓ |  |  |
+| Collection `Import` | ✓ | ✓ |  |  |
+| Collection `LoadBalance` | ✓ | ✓ |  |  |
+| Collection `CreatePartition` | ✓ | ✓ |  |  |
+| Collection `DropPartition` | ✓ | ✓ |  |  |
+| Collection `ShowPatitions` | ✓ | ✓ | ✓ |  |
+| Collection `HasPatition` | ✓ | ✓ | ✓ |  |
+{: caption="Table 4. Resource-level permissions" caption-side="bottom"}
 
 ## Bucket
-{: #bucket_role}
+{: #bucket}
 
-| Privileges | Administrator | Writer | Reader | User without a role |
-|--------------------------|----------------|--------|--------|--------|
-| Unregister | Y | N | N | N |
-| Update bucket properties (credentials) | Y | N | N | N |
-| Grant access | Y | N | N | N |
-| Revoke access | Y | N | N | N |
-| Create catalog | Y | N | N | N |
-| Modify files into the bucket | Y | Y | N | N |
-| Browse (bucket browser in UI) | Y | Y | Y | N |
-| View existance | Y | Y | Y | Y |
-{: caption="Table 3. Roles and privileges for a bucket" caption-side="bottom"}
+### Default admin access (only if creator)
+{: #default_admin6}
+
+Formation admins (IAM) have the default admin access.
+
+### Resource-level permissions
+{: #rl_premission6}
+
+| Action | Admin | Writer | Reader | Users without an explicit role |
+|-------|------|------|---------|---------|
+| Unregister | ✓ |   |    |     |
+| Update bucket properties (credentials) | ✓ |   |    |     |
+| Grant and revoke access | ✓ |   |    |     |
+| Modify files | ✓ | ✓ |    |     |
+| Browse (bucket browser in UI) | ✓ | ✓ | ✓ |     |
+| View existence (infra page and `…/api/…/` buckets) | ✓ | ✓ | ✓ | ✓ |
+{: caption="Table 5. Resource-level permissions" caption-side="bottom"}
 
 ## Database
-{: #database_role}
+{: #db_connection}
 
-| Privileges | Administrator | Writer | Reader | User without a role |
-|--------------------------|----------------|--------|--------|--------|
-| Unregister | Y | N | N | N |
-| Update database connection properties (credentials) | Y | N | N | N |
-| Grant access| Y | N | N | N |
-| Revoke access | Y | N | N | N |
-| Create catalog | Y | N | N | N |
-| Modify database objects | Y | Y | N | N |
-| Browse remote data (when connected to an engine) | Y | Y | Y | N |
-| View existance | Y | Y | Y | Y | Y |
-{: caption="Table 4. Roles and privileges for a database" caption-side="bottom"}
+### Default admin access (only if creator)
+{: #default_admin7}
+
+Formation admins (IAM) have the default admin access.
+
+### Resource-level permissions
+{: #rl_premission7}
+
+| Action | Admin | Writer | Reader | Users without an explicit role |
+|-------|------|------|---------|---------|
+| Unregister | ✓ |   |    |     |
+| Update `db conn` properties (credentials) | ✓ |   |    |     |
+| Grant and revoke access | ✓ |   |    |     |
+| Modify database objects | ✓ | ✓ |    |     |
+| View existance (infra page and `…/api/…/extdb`) | ✓ | ✓ | ✓ | ✓ |
+{: caption="Table 6. Resource-level permissions" caption-side="bottom"}
+
+## Catalog
+{: #catalog}
+
+### Default admin access (based on access data control policies defined in {{site.data.keyword.lakehouse_short}} by admin)
+{: #default_admin8}
+
+Formation admins (IAM) have the default admin access.
+
+### Default user access (based on access data control policies defined in {{site.data.keyword.lakehouse_short}} by admin)
+{: #default_user8}
+
+IAM formation non-admins (Operator, Editor, Viewer) have the Default user access.
+
+### Resource-level permissions
+{: #rl_premission8}
+
+| Action | Admin | User | Users without an explicit role |
+|-------|------|------|---------|
+| Delete | ✓ |   |     |
+| Grant and revoke access | ✓ |   |     |
+| Access to data | ✓ | Based on data policy |     |
+| View existence (infra page and `…/`) | ✓ | ✓ |     |
+{: caption="Table 7. Resource-level permissions" caption-side="bottom"}
 
 ## Schema
-{: #schema_role}
+{: #schema}
 
-| Privileges |Catalog Administrator or Schema creator | Others |
-|--------------------------|----------------|--------|
-| Grant access| Y | N |
-| Revoke access | Y | N |
-| Column access | Y | N |
-| Create table | Y | N |
-{: caption="Table 4. Roles and privileges for a schema" caption-side="bottom"}
+### Default admin access (based on access data control policies defined in {{site.data.keyword.lakehouse_short}} by admin)
+{: #default_admin9}
+
+Formation admins (IAM) have the default admin access.
+
+### Default user access (based on access data control policies defined in {{site.data.keyword.lakehouse_short}} by admin)
+{: #default_user9}
+
+IAM formation non-admins (Operator, Editor, Viewer) have the Default user access.
+
+### Resource-level permissions
+{: #rl_premission9}
+
+| Action | Catalog Admin or schema creator | Others |
+|-------|------|------|
+| Grant and revoke access | ✓ |   |
+| Drop | ✓ |   |
+| Access | ✓ | based on access data control policies defined in {{site.data.keyword.lakehouse_short}} by admin |
+| Create table | ✓ | based on access data control policies defined in {{site.data.keyword.lakehouse_short}} by admin |
+{: caption="Table 8. Resource-level permissions" caption-side="bottom"}
 
 ## Table
-{: #table_role}
+{: #table}
 
-| Privileges |Catalog Administrator or Schema Administrator or Table creator | Others |
-|--------------------------|----------------|--------|
-| Create | Y | N |
-| Drop | Y | N |
-| Alter | Y | N |
-| Column access | Y | N |
-| Select | Y | N |
-| Insert | Y | N |
-| Update | Y | N |
-| Delete | Y | N |
-{: caption="Table 4. Roles and privileges for a table" caption-side="bottom"}
+### Default admin access (based on access data control policies defined in {{site.data.keyword.lakehouse_short}} by admin)
+{: #default_admin10}
 
-Where
+Formation admins (IAM) have the default admin access.
 
-Y indicates that members of this role have this permission.
-N indicates that members of this role do not have this permission.
+### Default user access (based on access data control policies defined in {{site.data.keyword.lakehouse_short}} by admin)
+{: #default_user10}
+
+IAM formation non-admins (Operator, Editor, Viewer) have the Default user access.
+
+### Resource-level permissions
+{: #rl_premission10}
+
+| Action | Catalog Admin or schema admin or table creator | Others |
+|-------|------|------|
+| Create, drop, and alter | ✓ | based on access data control policies defined in {{site.data.keyword.lakehouse_short}} by admin |
+| Column access | ✓ | based on access data control policies defined in {{site.data.keyword.lakehouse_short}} by admin |
+| Select | ✓ | based on access data control policies defined in {{site.data.keyword.lakehouse_short}} by admin |
+| Insert | ✓ | based on access data control policies defined in {{site.data.keyword.lakehouse_short}} by admin |
+| Update | ✓ | based on access data control policies defined in {{site.data.keyword.lakehouse_short}} by admin |
+| Delete | ✓ | based on access data control policies defined in {{site.data.keyword.lakehouse_short}} by admin |
+{: caption="Table 9. Resource-level permissions" caption-side="bottom"}

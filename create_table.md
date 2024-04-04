@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-28"
+lastupdated: "2024-04-03"
 
 keywords: watsonxdata, data manager, create table
 
@@ -35,12 +35,31 @@ You can generate, configure, and run DDL from the **Data manager** page by using
 1. Log in to {{site.data.keyword.lakehouse_full}} console.
 1. From the navigation menu, select **Data manager**.
 1. Select the engine from the **Engine** menu. Catalogs that are associated with the selected engine are listed.
-1. Click **Create table from file** and select **Create table from file**.
-1. In the **Creating table from a file** form, drag a file to the box or click to upload.
+1. There are two ways to import a file into a table. Select the required option.
 
-   .CSV, .Parquet, .json, .txt are the supported data file formats.
-   For .json file, you must enclose the content in `[]`.
-   For .json file, multilevel data is not supported.
+   Option 1: To import file to any available schema under a catalog, do the following steps:
+   1. Click Create drop-down.
+   1. Click **Create table from file**. The **Create table from file** page opens.
+   1. Go to step 5.
+
+   Option 2: To import file to a particular schema under the catalog, do the following steps:
+   1. Select a schema under a catalog where you want to import a file to create table.
+   1. Click the overflow menu of the selected schema and select **Create table from file**. The **Create table from file** page opens.
+   1. Go to step 5.
+
+1. In the **Create table from file** form, drag a file to the box or click to upload.
+
+   .CSV, .Parquet, .JSON, .TXT are the supported data file formats.
+   Creating a table from a file is only supported by iceberg catalogs.
+   The default file format for Iceberg is Parquet.
+   For JSON file, you must enclose the content in [].
+   {: note}
+
+   You can apply the configuration for Encoding, Escape character, Field delimiter, and Line delimiter prior to uploading any .CSV and .TXT files. Default values are as follows:
+   Encoding value: `UTF-8`,
+   Escape character: `\\`,
+   Field delimiter: `,`,
+   Line delimiter: `\n`
    {: note}
 
 1. Click the data type and choose the required data types for each column. Click **Next**.
@@ -50,11 +69,3 @@ You can generate, configure, and run DDL from the **Data manager** page by using
 1. Click **Create**.
 1. Verify that the table creation status in the **Result set** is successful, indicated as true.
 1. Go to the **Data manager** page and select the schema under which you created the table and click the refresh icon. The newly created table is listed.
-
-Following are the requirements or limitations when ingesting data through web console:
-* Iceberg target table is the only supported format.
-* Partitioning is not supported.
-* Source CSV file containing TAB or space as delimiter is not supported.
-* Configure options are disabled for GA.
-* Target table output format is Iceberg and the target data format is Parquet.
-* Target storage path is default and cannot be changed.

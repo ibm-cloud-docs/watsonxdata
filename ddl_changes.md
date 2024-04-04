@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-28"
+lastupdated: "2024-04-03"
 
 keywords: lakehouse, access, data, policy, watsonx data, DDL, event listener
 
@@ -97,14 +97,12 @@ Deploy a Kafka server to subscribe and publish the captured event. The server ca
     **Data is captured for the following events:**
 
     - Create schema
-    - Alter schema
-    - Delete schema
+    - Drop schema
     - Create table
     - Alter table
-    - Delete table
+    - Drop table
     - Add partition
     - Alter partition
-    - Delete partition
 
 4. When an event is triggered, details about the event are pushed to the Kafka server. You must subscribe to the Kafka topic through an application or Kafka client, and then the event is pushed by the Kafka server. The changed object (table/schema) details are included in the event. For alter event, the event includes the object details before and after the alter.
 

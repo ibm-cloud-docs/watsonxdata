@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-02-28"
+lastupdated: "2024-04-03"
 
 keywords: watsonxdata, release notes
 
@@ -33,6 +33,129 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.lakehouse_full}} that are grouped by date.
 {: shortdesc}
+
+## 27 Mar 2024 - Version 1.1.3
+{: #lakehouse_Mar272024}
+
+
+A new version of {{site.data.keyword.lakehouse_short}} was released in March 2024.
+
+This release includes the following features and updates:
+
+**New data type for some data sources**
+{: #mar_01_2024}
+
+You can now use the BINARY data type  with the SELECT statement in the Query workspace to build and run queries against your data for the following data sources:
+
+* Elasticsearch
+* SQL Server
+* MySQL
+* Oracle
+* Kudu
+
+New data types: BLOB and CLOB are available for MySQL, PostgreSQL, Snowflake, SQL Server, and Db2 data sources. You can use these data types only with SELECT statements in the Query workspace to build and run queries against your data.
+
+<!-- Issue-New DataType : Binary - #8397 , New DataType : BLOB & CLOB : [Release-2] - #8398 -->
+
+**Delete data by using the DELETE FROM feature for Iceberg data sources**
+{: #mar_02_2024}
+
+You can now delete data from tables in Iceberg data sources by using the DELETE FROM feature.
+
+You can specify the table property delete mode for new tables by using either copy-on-write mode or merge-on-read mode (default). For more information, see [SQL statements](watsonxdata?topic=watsonxdata-supported_sql_statements).
+
+<!-- Support deleting whole partitions in Iceberg table - #8753
+
+Support DELETEs on Iceberg tables via presto - #1563. - parent of 7767 and 7768
+
+#7768#7767 -->
+
+**ALTER VIEW statement for Iceberg data source**
+{: #mar_03_2024}
+
+You can now use the following SQL statement in the Query workspace to build and run queries against your data for ALTER VIEW:
+
+ALTER VIEW name RENAME TO new_name
+
+<!-- Support ALTER RENAME view in iceberg - #7610  -->
+
+**Upload SSL certificates for Netezza Performance Server data sources**
+{: #mar_03_2024}
+
+You can now browse and upload the SSL certificate for SSL connections in Netezza Performance Server data sources. The valid file formats for SSL certificate are .pem, .crt, and .cer. You can upload SSL certificates by using the Adding a database-catalog pair option in the Infrastructure manager.
+
+<!-- Enable Netezza connector for SSL connections - #7965   -->
+
+**Query data from Db2 and Watson Query**
+{: #mar_04_2024}
+
+You can now query nicknames that are created in Db2 and virtualized tables from  Watson Query instances.
+<!-- Support more table types in Db2 connector - #4724    -->
+
+
+**SSL connection for IBM Data Virtualization Manager for z/OS data source**
+{: #mar_05_2024}
+
+You can now enable SSL connection for the IBM Data Virtualization Manager for z/OS data source by using the Add database user interface to secure and encrypt the database connection. Select Validate certificate to validate whether the SSL certificate that is returned by the host is trusted. You can choose to provide the hostname in the SSL certificate.
+
+<!-- https://github.ibm.com/lakehouse/tracker/issues/6107    -->
+
+**Use data from Apache Hudi catalog**
+{: #mar_05_2024}
+
+You can now connect to and use data from Apache Hudi catalog.
+
+<!-- https://github.ibm.com/lakehouse/tracker/issues/8804
+
+https://github.ibm.com/lakehouse/tracker/issues/9008    -->
+
+**Add Milvus as a service in {{site.data.keyword.lakehouse_short}}**
+{: #mar_06_2024}
+
+You can now provision Milvus as a service in {{site.data.keyword.lakehouse_short}} with the following features:
+
+* Provision different storage variants such as starter, medium, and large nodes.
+
+* Assign Admin or User roles for Milvus users: User access policy is now available for Milvus users. Using the Access Control UI, you can assign Admin or User roles for Milvus users and also grant, revoke, or update the privilege. 
+
+* Configure the Object storage for Milvus to store data. You can add or configure a custom bucket and specify the username, password, region, and bucket URL.
+
+For more information, see [Milvus](watsonxdata?topic=watsonxdata-adding-milvus-service).
+<!-- https://github.ibm.com/lakehouse/tracker/issues/7569
+https://github.ibm.com/lakehouse/tracker/issues/7772
+
+    -->
+
+**Load data in batch by using the ibm-lh ingestion tool**
+{: #mar_07_2024}
+
+You can now use the ibm-lh ingestion tool to run batch ingestion procedures in non-interactive mode (from outside the ibm-lh-tools container), by using the ibm-lh-client package. For more information, see [ibm-lh commands and usage](https://www.ibm.com/docs/SSDZ38_1.1.x/wxd-client/topics/ibm_lh_commands.html).
+
+ <!-- https://github.ibm.com/lakehouse/tracker/issues/9132     -->
+
+**Creating schema by using bulk ingestion in web console**
+{: #mar_08_2024}
+
+You can now create a schema by using the bulk ingestion process in the web console, if the schema is not previously created.
+
+<!-- https://github.ibm.com/lakehouse/tracker/issues/8885     -->
+
+**Use time-travel queries in Apache Iceberg tables**
+{: #mar_09_2024}
+
+You can now run the following time-travel queries by using branches and tags in Apache Iceberg table snapshots:
+
+- SELECT *FROM `<table name>` FOR VERSION AS OF 'historical-tag'
+
+- SELECT *FROM `<table name>` FOR VERSION AS OF 'test-branch'
+
+<!-- https://github.ibm.com/lakehouse/tracker/issues/7651     -->
+
+
+**Access Cloud Object Storage without credentials**
+You can now access your Cloud Object Storage bucket without credentials, by using the Content Aware Storage (CAS) endpoint. For more information about getting CAS endpoint, see [Getting CAS endpoint](watsonxdata?topic=watsonxdata-cas_ep).
+
+<!-- https://github.ibm.com/lakehouse/tracker/issues/8993     -->
 
 
 ## 28 Feb 2024 - Version 1.1.2

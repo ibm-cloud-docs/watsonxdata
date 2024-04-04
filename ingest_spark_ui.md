@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-02-28"
+lastupdated: "2024-04-03"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -38,7 +38,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} by using {{site.da
 * You must have the **Administrator** role and privileges in the catalog to do ingestion through the web console.
 * Add and register {{site.data.keyword.iae_full_notm}} (Spark). See [Registering an engine](watsonxdata?topic=watsonxdata-reg_engine).
 * Add buckets for the source data files and target catalog. See [Adding a bucket-catalog pair](watsonxdata?topic=watsonxdata-reg_bucket).
-* Create a schema in the catalog for the target table. See [Creating schemas](watsonxdata?topic=watsonxdata-create_schema).
+* Optionally, you can create a schema in the catalog for the target table. See [Creating schemas](watsonxdata?topic=watsonxdata-create_schema).
 * Optionally, you can also create a target table in the schema. See [Creating tables](watsonxdata?topic=watsonxdata-create_table).
 
 ## Ingesting data
@@ -46,23 +46,36 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} by using {{site.da
 
 1. Log in to {{site.data.keyword.lakehouse_full}} console.
 1. From the navigation menu, select **Data manager**.
-1. Select the **Ingestion jobs** tab and click **Create ingestion** job.
-1. Select **sparkengine** from the **Select engine** menu.
-1. Configure **Spark driver** cores, executor cores, and memory resources. Click **Next**.
+1. Select the **Ingestion jobs** tab and click **Create ingestion job**. The **Ingest data** window opens with an auto-generated job ID.
+1. If required, modify the auto-generated ingestion job ID in the Enter job ID field.
+1. Select a registered IBM Analytics Engine (Spark) from the **Select engine** list.
+1. Configure Spark driver cores, executor cores, and memory resources. Click **Next**.
 
-    For IBM Cloud, the Spark driver, executor vCPU and memory combinations must be in a 1:2, 1:4, or 1:8 ratio. See [Default limits and quotas for Analytics Engine instances](https://cloud.ibm.com/docs/AnalyticsEngine?topic=AnalyticsEngine-limits).
+    For IBM Cloud, the Spark driver, executor vCPU and memory combinations must be in a 1:2, 1:4, or 1:8 ratio. The default configuration values are filled. See [Default limits and quotas for Analytics Engine instances](https://cloud.ibm.com/docs/AnalyticsEngine?topic=AnalyticsEngine-limits).
     {: note}
 
-1. Select a source directory from the **Source bucket** menu. Data objects in the source directory are displayed.
-1. Select the data objects to be ingested from the source directory. Click **Next**.
+1. In the **Select file(s)** tab, click **Select remote files**.
+1. From the **Bucket** drop-down, select the bucket from where you want to ingest the data.
+1. Select the required file type based on the source data. The available options are CSV and Parquet.
+1. From the source directory, select the source data files to be ingested and click **Next**.
 
-     Only Parquet and CSV file formats are supported as source for ingestion.
-     {: note}
+    You can apply the configuration for **Header**, **Encoding**, **Escape character**, **Field delimiter**, and **Line delimiter** for the CSV files.
+    {: note}
 
-     You can apply the configuration for **Encoding**, **Escape character**, **Field delimiter**, and **Line delimiter** for the CSV files.
-     {: note}
+1. In the **Target** tab, select the target catalog from the **Select catalog** list.
+1. Select one of the schema options:
+   1. **Existing schema**: To ingest source data into an existing schema. Corresponding target schemas are listed in the **Select schema** dropdown.
+   2. **New schema**: Enter the target schema name in **Schema name** to create a new schema from the source data.
+1. Select the corresponding **Target table** options based on the selection in step 12.
+   1. **Existing table**:To ingest source data into an existing table. Corresponding target tables are listed in the **Select table** dropdown.
+   2. **New table**: Enter the target table name in **Table name** to create a new table from the source data.
+1. Click **Next**.
+1. Validate the details in the summary page. Click **Ingest**.
 
-1. Specify the target details for **Catalog** and **Schema**.
-1. Select **Target table** option as **Existing table** to ingest source data into an existing table. Corresponding target tables are listed in the Table drop down.
-1. Select **Target table** option as **New table** and enter the name of the target table to create a new table from the source data. Click **Next**.
-1. Validate the details in **Summary** page. Click Ingest.
+## Limitations
+{: #limits001}
+
+Following are some of the limitations of Spark ingestion:
+
+- Spark ingestion supports only source data files from object storage bucket. Local files are not supported.
+- The default buckets in watsonx.data are not exposed to Spark engine. Hence, iceberg-bucket and hive-bucket are not supported for source or target table. Users can use their own MinIo or S3 compatible buckets that are exposed and accessible by Spark engine.
