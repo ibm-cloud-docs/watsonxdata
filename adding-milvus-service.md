@@ -52,7 +52,7 @@ Complete the following steps to add Milvus as a service in {{site.data.keyword.l
     | Path | For external buckets, specify the path where you want to store vectorized data files.|
     {: caption="Table 1. Adding Milvus service" caption-side="bottom"}
 
-    For more information about adding external buckets, see [Adding a bucket-catalog pair](watsonxdata?topic=watsonxdata-reg_bucket){: external}.
+    For more information about adding external buckets, see [Adding a storage-catalog pair](watsonxdata?topic=watsonxdata-reg_bucket){: external}.
 
     Milvus service can connect to a storage without a catalog. You can erform the actions on Milvus even after such storage is disabled.
     {: note}
