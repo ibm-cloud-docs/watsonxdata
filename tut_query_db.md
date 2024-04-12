@@ -58,7 +58,7 @@ This scenario assumes that you already have a data bucket that is associated wit
 This tutorial requires:
 
 * Subscribe to {{site.data.keyword.lakehouse_short}} on IBM Cloud.
-* Provision your {{site.data.keyword.lakehouse_short}} instance. For more information, see [Trial experience](watsonxdata?topic=watsonxdata-tutorial_hp_intro){: external}.
+* Provision your {{site.data.keyword.lakehouse_short}} instance. For more information, see [Provision an instance](watsonxdata?topic=watsonxdata-getting-started){: external}.
 
 
 ## Running test queries

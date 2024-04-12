@@ -50,8 +50,6 @@ You can now use the BINARY data type  with the SELECT statement in the Query wor
 * Elasticsearch
 * SQL Server
 * MySQL
-* Oracle
-* Kudu
 
 New data types: BLOB and CLOB are available for MySQL, PostgreSQL, Snowflake, SQL Server, and Db2 data sources. You can use these data types only with SELECT statements in the Query workspace to build and run queries against your data.
 

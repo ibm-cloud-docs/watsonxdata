@@ -17,13 +17,13 @@ subcollection: watsonxdata
 Use a CAS endpoint to access {{site.data.keyword.lakehouse_short}} Object Storage bucket data to avoid exposing bucket credentials by any chance. Your CAS endpoint is:
 
 ```bash
-https://cas-<region>.lakehouse.cloud.ibm.com
+https://cas-<region>.lakehouse.appdomain.cloud
 ```
 {: codeblock}
 
 Replace `<region>` with your {{site.data.keyword.lakehouse_short}} instance location. For example:
 
 ```bash
-https://cas-us-south.lakehouse.cloud.ibm.com
+https://cas-ussouth.lakehouse.appdomain.cloud
 ```
 {: codeblock}
