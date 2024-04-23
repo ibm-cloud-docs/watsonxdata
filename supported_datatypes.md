@@ -36,7 +36,7 @@ The following data types are supported in {{site.data.keyword.lakehouse_full}} f
 | Data types |**Db2**|**Hive**|**Iceberg**|**MySQL**|**{{site.data.keyword.netezza_short}}**|**SQL Server**|**PostgreSQL**|**SingleStore**|**MongoDB**|**Teradata**|**Kafka**|**Elasticsearch**|**TPCH**|**TPCDS**|**Snowflake**|
 | :-------------- | :-------------: | :-------------:| :-------------:| :-------------:| :-------------: | :-------------: | :-------------: | :-------------: | :-------------: | :-------------:| :-------------:| :-------------: | :-------------: | :-------------: | :-------------: |
 | `TINYINT` | `X`    | ✓   | `X`  | ✓  | `X`  | ✓  | `X`   | ✓  | `X`  | `X`  | `X`  | `X`  | `X`  | `X`  | ✓  |
-| `SAMLLINT` | ✓    | ✓  |`X`  | ✓  | ✓  | ✓  | ✓   | ✓  | `X`  | ✓  | `X`  | `X`  | `X`  | `X`  | ✓  |
+| `SMALLINT` | ✓    | ✓  |`X`  | ✓  | ✓  | ✓  | ✓   | ✓  | `X`  | ✓  | `X`  | `X`  | `X`  | `X`  | ✓  |
 | `INTEGER` | ✓    | ✓   | ✓  | ✓  | ✓  | ✓  | ✓   | ✓  | ✓  | ✓  | `X`  | `X`  | `X`  | `X`  | ✓  |
 | `BIGINT` | ✓    | ✓   | ✓  | ✓  | ✓  | ✓  | ✓   | ✓  | ✓  | ✓  | `X`  | `X`  | `X`  | `X`  | ✓  |
 | `REAL` | ✓    | ✓   | ✓  | ✓  | ✓  | ✓  | ✓   | ✓  | `X`  | ✓  | `X`  | `X`  | `X`  | `X`  | ✓  |
