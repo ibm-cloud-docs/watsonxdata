@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-03"
+lastupdated: "2024-04-30"
 
 keywords: watsonx.data, promotion, credits, offers
 
@@ -22,7 +22,7 @@ completion-time: 2h
 
 
 # Trial experience
-{: #tutorial_hp_intro}
+{: #tutorial_hp_introduct}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="2h"}
 

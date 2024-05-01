@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-03"
+lastupdated: "2024-04-30"
 
 keywords: lakehouse, milvus, watsonx.data
 subcollection: watsonxdata
@@ -45,11 +45,11 @@ For more information, see [Insert data to Milvus](https://milvus.io/docs/v2.3.x/
 
 It is recommended to insert your data in batches due to following reasons:
 
-   - The number of vectors that can be ingested in a single GRPC API call is limited by the maximum message size allowed by Kafka.
+   - The number of vectors that can be ingested in a single GRPC API call is limited by the maximum message size allowed by Kafka. In IBM Cloud, the maximum limit of message size is limited to 1 MB.
 
    - The maximum number of rows that can be inserted at a time depends on the total size of the data you are trying to ingest. The exact number decreases with the increase in the dimensions of the vector and the presence of non-vector fields in the row.
 
-It is recommended to use to use the bulk insert API  for inserting the data-sets greater than 500,000 vectors. Ingest performance of the bulk insert API is better than that of the batch insert API.
+Use the bulk insert API for inserting the data sets larger than 500,000 vectors. The bulk insert API performs better than the batch insert API when ingesting larger data sets. If you are using batch insert API, manually flush the collection after every 500,000 rows. For more information, see [Insert Entities from Files](https://milvus.io/docs/v2.3.x/bulk_insert.md).
 {: note}
 
 

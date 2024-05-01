@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-03"
+lastupdated: "2024-04-30"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -28,7 +28,18 @@ subcollection: watsonxdata
 # Provisioning a Presto engine
 {: #prov_engine}
 
-To provision a Presto engine, complete the following steps. For more information about Presto engine, see [Presto overview](watsonxdata?topic=watsonxdata-presto_overview).
+The engine runs SQL queries on your data source and fetches the queried data. {{site.data.keyword.lakehouse_short}} allows provisioning a Presto engine.
+
+The following versions of Presto engine are supported as per specified {{site.data.keyword.lakehouse_short}} versions:
+
+1. {{site.data.keyword.lakehouse_short}} v1.0.0, v1.0.1 and v1.0.2: [Presto version 0.279][def]
+
+2. {{site.data.keyword.lakehouse_short}} v1.0.3, v1.1.1 and v1.1.3: [Presto version 0.282][def1]
+
+3. {{site.data.keyword.lakehouse_short}} v1.1.4: [Presto version 0.285.1][def2]
+
+
+To provision a Presto engine, complete the following steps.
 {: shortdesc}
 
 1. Log in to {{site.data.keyword.lakehouse_short}} console.
@@ -53,3 +64,7 @@ To provision a Presto engine, complete the following steps. For more information
 
 
 5. Click **Provision(0+RUs/hour)** to provision the Presto engine.
+
+[def]: https://prestodb.io/docs/0.279/
+[def1]: https://prestodb.io/docs/0.282/
+[def2]: https://prestodb.io/docs/0.285.1/

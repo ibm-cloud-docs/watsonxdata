@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-04-03"
+lastupdated: "2024-04-30"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -84,155 +84,158 @@ To insert data to COS, do the following steps.
 ## Running the sample use case
 {: #abt_samp_run}
 
-Follow the steps to run the Spark sample python file.
+Follow the steps to run the Spark sample Python file.
 
-### Spark sample python file
+### Spark sample Python file
 {: #python_file}
+
 
 ```bash
 
-from pyspark.sql import SparkSession
-import os
+    from pyspark.sql import SparkSession
+    import os
 
-def init_spark():
-  spark = SparkSession.builder \
-    .appName("lh-hms-cloud") \
-    .config("spark.hadoop.fs.s3a.bucket.lakehouse-bucket.endpoint" ,"s3.direct.us-south.cloud-object-storage.appdomain.cloud") \
-    .config("spark.hadoop.fs.s3a.bucket.lakehouse-bucket.access.key" ,"<lakehouse-bucket-access-key>") \
-    .config("spark.hadoop.fs.s3a.bucket.lakehouse-bucket.secret.key" ,"<lakehouse-bucket-secret-key>") \
-    .config("spark.hadoop.fs.s3a.bucket.source-bucket.endpoint" ,"s3.direct.us-south.cloud-object-storage.appdomain.cloud") \
-    .config("spark.hadoop.fs.s3a.bucket.source-bucket.access.key" ,"<source-bucket-access-key>") \
-    .config("spark.hadoop.fs.s3a.bucket.source-bucket.secret.key" ,"<source-bucket-secret-key>") \
-    .enableHiveSupport() \
-    .getOrCreate()
-  return spark
+    def init_spark():
+    spark = SparkSession.builder \
+        .appName("lh-hms-cloud") \
+        .config("spark.hadoop.fs.s3a.bucket.lakehouse-bucket.endpoint" ,"s3.direct.us-south.cloud-object-storage.appdomain.cloud") \
+        .config("spark.hadoop.fs.s3a.bucket.lakehouse-bucket.access.key" ,"<lakehouse-bucket-access-key>") \
+        .config("spark.hadoop.fs.s3a.bucket.lakehouse-bucket.secret.key" ,"<lakehouse-bucket-secret-key>") \
+        .config("spark.hadoop.fs.s3a.bucket.source-bucket.endpoint" ,"s3.direct.us-south.cloud-object-storage.appdomain.cloud") \
+        .config("spark.hadoop.fs.s3a.bucket.source-bucket.access.key" ,"<source-bucket-access-key>") \
+        .config("spark.hadoop.fs.s3a.bucket.source-bucket.secret.key" ,"<source-bucket-secret-key>") \
+        .enableHiveSupport() \
+        .getOrCreate()
+    return spark
 
-def create_database(spark):
-    # Create a database in the lakehouse catalog
-    spark.sql("create database if not exists lakehouse.demodb LOCATION 's3a://lakehouse-bucket/'")
+    def create_database(spark):
+        # Create a database in the lakehouse catalog
+        spark.sql("create database if not exists lakehouse.demodb LOCATION 's3a://lakehouse-bucket/'")
 
-def list_databases(spark):
-    # list the database under lakehouse catalog
-    spark.sql("show databases from lakehouse").show()
+    def list_databases(spark):
+        # list the database under lakehouse catalog
+        spark.sql("show databases from lakehouse").show()
 
-def basic_iceberg_table_operations(spark):
-    # demonstration: Create a basic Iceberg table, insert some data and then query table
-    spark.sql("create table if not exists lakehouse.demodb.testTable(id INTEGER, name VARCHAR(10), age INTEGER, salary DECIMAL(10, 2)) using iceberg").show()
-    spark.sql("insert into lakehouse.demodb.testTable values(1,'Alan',23,3400.00),(2,'Ben',30,5500.00),(3,'Chen',35,6500.00)")
-    spark.sql("select * from lakehouse.demodb.testTable").show()
+    def basic_iceberg_table_operations(spark):
+        # demonstration: Create a basic Iceberg table, insert some data and then query table
+        spark.sql("create table if not exists lakehouse.demodb.testTable(id INTEGER, name VARCHAR(10), age INTEGER, salary DECIMAL(10, 2)) using iceberg").show()
+        spark.sql("insert into lakehouse.demodb.testTable values(1,'Alan',23,3400.00),(2,'Ben',30,5500.00),(3,'Chen',35,6500.00)")
+        spark.sql("select * from lakehouse.demodb.testTable").show()
 
-def create_table_from_parquet_data(spark):
-    # load parquet data into dataframe
-    df = spark.read.option("header",True).parquet("s3a://source-bucket/nyc-taxi/yellow_tripdata_2022-01.parquet")
-    # write the dataframe into an Iceberg table
-    df.writeTo("lakehouse.demodb.yellow_taxi_2022").create()
-    # describe the table created
-    spark.sql('describe table lakehouse.demodb.yellow_taxi_2022').show(25)
-    # query the table
-    spark.sql('select * from lakehouse.demodb.yellow_taxi_2022').count()
+    def create_table_from_parquet_data(spark):
+        # load parquet data into dataframe
+        df = spark.read.option("header",True).parquet("s3a://source-bucket/nyc-taxi/yellow_tripdata_2022-01.parquet")
+        # write the dataframe into an Iceberg table
+        df.writeTo("lakehouse.demodb.yellow_taxi_2022").create()
+        # describe the table created
+        spark.sql('describe table lakehouse.demodb.yellow_taxi_2022').show(25)
+        # query the table
+        spark.sql('select * from lakehouse.demodb.yellow_taxi_2022').count()
 
-def ingest_from_csv_temp_table(spark):
-    # load csv data into a dataframe
-    csvDF = spark.read.option("header",True).csv("s3a://source-bucket/zipcodes.csv")
-    csvDF.createOrReplaceTempView("tempCSVTable")
-    # load temporary table into an Iceberg table
-    spark.sql('create or replace table lakehouse.demodb.zipcodes using iceberg as select * from tempCSVTable')
-    # describe the table created
-    spark.sql('describe table lakehouse.demodb.zipcodes').show(25)
-    # query the table
-    spark.sql('select * from lakehouse.demodb.zipcodes').show()
+    def ingest_from_csv_temp_table(spark):
+        # load csv data into a dataframe
+        csvDF = spark.read.option("header",True).csv("s3a://source-bucket/zipcodes.csv")
+        csvDF.createOrReplaceTempView("tempCSVTable")
+        # load temporary table into an Iceberg table
+        spark.sql('create or replace table lakehouse.demodb.zipcodes using iceberg as select * from tempCSVTable')
+        # describe the table created
+        spark.sql('describe table lakehouse.demodb.zipcodes').show(25)
+        # query the table
+        spark.sql('select * from lakehouse.demodb.zipcodes').show()
 
-def ingest_monthly_data(spark):
-    df_feb = spark.read.option("header",True).parquet("s3a://source-bucket//nyc-taxi/yellow_tripdata_2022-02.parquet")
-    df_march = spark.read.option("header",True).parquet("s3a://source-bucket//nyc-taxi/yellow_tripdata_2022-03.parquet")
-    df_april = spark.read.option("header",True).parquet("s3a://source-bucket//nyc-taxi/yellow_tripdata_2022-04.parquet")
-    df_may = spark.read.option("header",True).parquet("s3a://source-bucket//nyc-taxi/yellow_tripdata_2022-05.parquet")
-    df_june = spark.read.option("header",True).parquet("s3a://source-bucket//nyc-taxi/yellow_tripdata_2022-06.parquet")
+    def ingest_monthly_data(spark):
+        df_feb = spark.read.option("header",True).parquet("s3a://source-bucket//nyc-taxi/yellow_tripdata_2022-02.parquet")
+        df_march = spark.read.option("header",True).parquet("s3a://source-bucket//nyc-taxi/yellow_tripdata_2022-03.parquet")
+        df_april = spark.read.option("header",True).parquet("s3a://source-bucket//nyc-taxi/yellow_tripdata_2022-04.parquet")
+        df_may = spark.read.option("header",True).parquet("s3a://source-bucket//nyc-taxi/yellow_tripdata_2022-05.parquet")
+        df_june = spark.read.option("header",True).parquet("s3a://source-bucket//nyc-taxi/yellow_tripdata_2022-06.parquet")
 
-    df_q1_q2 = df_feb.union(df_march).union(df_april).union(df_may).union(df_june)
-    df_q1_q2.write.insertInto("lakehouse.demodb.yellow_taxi_2022")
+        df_q1_q2 = df_feb.union(df_march).union(df_april).union(df_may).union(df_june)
+        df_q1_q2.write.insertInto("lakehouse.demodb.yellow_taxi_2022")
 
-def perform_table_maintenance_operations(spark):
-    # Query the metadata files table to list underlying data files
-    spark.sql("SELECT file_path, file_size_in_bytes FROM lakehouse.demodb.yellow_taxi_2022.files").show()
+    def perform_table_maintenance_operations(spark):
+        # Query the metadata files table to list underlying data files
+        spark.sql("SELECT file_path, file_size_in_bytes FROM lakehouse.demodb.yellow_taxi_2022.files").show()
 
-    # There are many smaller files compact them into files of 200MB each using the
-    # `rewrite_data_files` Iceberg Spark procedure
-    spark.sql(f"CALL lakehouse.system.rewrite_data_files(table => 'demodb.yellow_taxi_2022', options => map('target-file-size-bytes','209715200'))").show()
+        # There are many smaller files compact them into files of 200MB each using the
+        # `rewrite_data_files` Iceberg Spark procedure
+        spark.sql(f"CALL lakehouse.system.rewrite_data_files(table => 'demodb.yellow_taxi_2022', options => map('target-file-size-bytes','209715200'))").show()
 
-    # Again, query the metadata files table to list underlying data files; 6 files are compacted
-    # to 3 files
-    spark.sql("SELECT file_path, file_size_in_bytes FROM lakehouse.demodb.yellow_taxi_2022.files").show()
+        # Again, query the metadata files table to list underlying data files; 6 files are compacted
+        # to 3 files
+        spark.sql("SELECT file_path, file_size_in_bytes FROM lakehouse.demodb.yellow_taxi_2022.files").show()
 
-    # List all the snapshots
-    # Expire earlier snapshots. Only latest one with compacted data is required
-    # Again, List all the snapshots to see only 1 left
-    spark.sql("SELECT committed_at, snapshot_id, operation FROM lakehouse.demodb.yellow_taxi_2022.snapshots").show()
-    #retain only the latest one
-    latest_snapshot_committed_at = spark.sql("SELECT committed_at, snapshot_id, operation FROM lakehouse.demodb.yellow_taxi_2022.snapshots").tail(1)[0].committed_at
-    print (latest_snapshot_committed_at)
-    spark.sql(f"CALL lakehouse.system.expire_snapshots(table => 'demodb.yellow_taxi_2022',older_than => TIMESTAMP '{latest_snapshot_committed_at}',retain_last => 1)").show()
-    spark.sql("SELECT committed_at, snapshot_id, operation FROM lakehouse.demodb.yellow_taxi_2022.snapshots").show()
+        # List all the snapshots
+        # Expire earlier snapshots. Only latest one with compacted data is required
+        # Again, List all the snapshots to see only 1 left
+        spark.sql("SELECT committed_at, snapshot_id, operation FROM lakehouse.demodb.yellow_taxi_2022.snapshots").show()
+        #retain only the latest one
+        latest_snapshot_committed_at = spark.sql("SELECT committed_at, snapshot_id, operation FROM lakehouse.demodb.yellow_taxi_2022.snapshots").tail(1)[0].committed_at
+        print (latest_snapshot_committed_at)
+        spark.sql(f"CALL lakehouse.system.expire_snapshots(table => 'demodb.yellow_taxi_2022',older_than => TIMESTAMP '{latest_snapshot_committed_at}',retain_last => 1)").show()
+        spark.sql("SELECT committed_at, snapshot_id, operation FROM lakehouse.demodb.yellow_taxi_2022.snapshots").show()
 
-    # Removing Orphan data files
-    spark.sql(f"CALL lakehouse.system.remove_orphan_files(table => 'demodb.yellow_taxi_2022')").show(truncate=False)
+        # Removing Orphan data files
+        spark.sql(f"CALL lakehouse.system.remove_orphan_files(table => 'demodb.yellow_taxi_2022')").show(truncate=False)
 
-    # Rewriting Manifest Files
-    spark.sql(f"CALL lakehouse.system.rewrite_manifests('demodb.yellow_taxi_2022')").show()
-
-
-def evolve_schema(spark):
-    # demonstration: Schema evolution
-    # Add column fare_per_mile to the table
-    spark.sql('ALTER TABLE lakehouse.demodb.yellow_taxi_2022 ADD COLUMN(fare_per_mile double)')
-    # describe the table
-    spark.sql('describe table lakehouse.demodb.yellow_taxi_2022').show(25)
+        # Rewriting Manifest Files
+        spark.sql(f"CALL lakehouse.system.rewrite_manifests('demodb.yellow_taxi_2022')").show()
 
 
-def clean_database(spark):
-    # clean-up the demo database
-    spark.sql('drop table if exists lakehouse.demodb.testTable purge')
-    spark.sql('drop table if exists lakehouse.demodb.zipcodes purge')
-    spark.sql('drop table if exists lakehouse.demodb.yellow_taxi_2022 purge')
-    spark.sql('drop database if exists lakehouse.demodb cascade')
-
-def main():
-    try:
-        spark = init_spark()
-
-        create_database(spark)
-        list_databases(spark)
-
-        basic_iceberg_table_operations(spark)
-
-        # demonstration: Ingest parquet and csv data into a watsonx.data Iceberg table
-        create_table_from_parquet_data(spark)
-        ingest_from_csv_temp_table(spark)
-
-        # load data for the month of February to June into the table yellow_taxi_2022 created above
-        ingest_monthly_data(spark)
-
-        # demonstration: Table maintenance
-        perform_table_maintenance_operations(spark)
-
+    def evolve_schema(spark):
         # demonstration: Schema evolution
-        evolve_schema(spark)
-    finally:
-        # clean-up the demo database
-        clean_database(spark)
-        spark.stop()
+        # Add column fare_per_mile to the table
+        spark.sql('ALTER TABLE lakehouse.demodb.yellow_taxi_2022 ADD COLUMN(fare_per_mile double)')
+        # describe the table
+        spark.sql('describe table lakehouse.demodb.yellow_taxi_2022').show(25)
 
-if __name__ == '__main__':
-  main()
+
+    def clean_database(spark):
+        # clean-up the demo database
+        spark.sql('drop table if exists lakehouse.demodb.testTable purge')
+        spark.sql('drop table if exists lakehouse.demodb.zipcodes purge')
+        spark.sql('drop table if exists lakehouse.demodb.yellow_taxi_2022 purge')
+        spark.sql('drop database if exists lakehouse.demodb cascade')
+
+    def main():
+        try:
+            spark = init_spark()
+
+            create_database(spark)
+            list_databases(spark)
+
+            basic_iceberg_table_operations(spark)
+
+            # demonstration: Ingest parquet and csv data into a watsonx.data Iceberg table
+            create_table_from_parquet_data(spark)
+            ingest_from_csv_temp_table(spark)
+
+            # load data for the month of February to June into the table yellow_taxi_2022 created above
+            ingest_monthly_data(spark)
+
+            # demonstration: Table maintenance
+            perform_table_maintenance_operations(spark)
+
+            # demonstration: Schema evolution
+            evolve_schema(spark)
+        finally:
+            # clean-up the demo database
+            clean_database(spark)
+            spark.stop()
+
+    if __name__ == '__main__':
+    main()
 ```
 {: codeblock}
+
+
 
 1. Save the following sample python file.
 1. Upload the Python file to the Cloud Object Storage bucket. You must maintain the Spark applications and their dependencies in a Cloud Object Storage bucket and not mix them with data buckets.
 1. Generate the IAM token for the {{site.data.keyword.iae_full_notm}} token. For more information about how to generate an IAM token, see [IAM token](https://test.cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token)
 1. Run the following curl command to submit the Spark application:
 
-   ```bash
+```bash
     curl https://api.<region>.ae.cloud.ibm.com/v3/analytics_engines/<iae-instance-guid>/spark_applications -H "Authorization: Bearer <iam-bearer-token>" -X POST -d '{
     "application_details": {
         "application": "s3a://<application_bucket>/lakehouse-hms-test-cloud-doc-sample.py",
@@ -243,8 +246,8 @@ if __name__ == '__main__':
         }
     }
     }'
-   ```
-   {: codeblock}
+```
+{: codeblock}
 
 
 This sample is tested on the Cloud Object Storage buckets in the **us-south** region. Change the region in the Cloud Object Storage endpoint configuration as per the region where your Cloud Object Storage buckets reside. It is recommended to provision the COS buckets in the region where {{site.data.keyword.iae_short}} instance is provisioned.

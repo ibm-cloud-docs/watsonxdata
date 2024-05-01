@@ -13,15 +13,29 @@ toc:
   - navgroup:
       id: learn
       topics:
-      - getting-started.md
+      - topicgroup:
+          label: Provisioning watsonx.data
+          topics:
+          - prov_wxd.md
+          - prov_lite_plan.md
+          - byol_plan.md
+          - getting-started.md
       - release.md
 
   - navgroup:
       id: tutorial
       topics:
-      - happy_path.md
+      - lite_plan.md
       - quick_start.md
       - tut_query_db.md
+      - tut_custbckt.md
+      # - topicgroup:
+      #     label: RAG use case
+      #     topics:
+      #     - tut_ai_usecase.md
+      #     - ret_credentials.md
+
+
 
   - navgroup:
       id: howto
@@ -87,19 +101,71 @@ toc:
       - presto_behavior.md
       - delete_lh.md
       - topicgroup:
-          label: Working with Spark engine
+          label: Spark
           topics:
-            - provisioning-spark.md
-            - config_spark.md
-            - spark-use-case.md
-            - spark-table-maint.md
-            - spark-emr.md
+            # - spk_overview.md
+            # - topicgroup:
+            #     label: Working with Native Spark engine
+            #     topics:
+            #     #  - Intro_nativespark.md
+            #       - prov-native-spark.md
+            #       - view-edit-native-park.md
+            #       - mng-acs-nspark.md
+            #       - scale_nspark.md
+            #       - paus_rsm_nsp.md
+            #       - asso_nspark_cat.md
+            #       - sbmt_appln_nsp.md
+            #       - sbmt_cas_nsp.md
+            #       - mng_appln_nspark.md
+            #       - logs_native_spk.md
+            #       - spark-history-ui.md
+            #       - spark-user-interface.md
+            #       - lnative_spk_lab.md
+            #       - run_nativespk_hudi.md
+            #       - run_nativespk_delta.md
+            #       - tab_view.md
+            - topicgroup:
+                label: Working with external Spark engine
+                topics:
+                  - provisioning-spark.md
+                  - config_spark.md
+                  - spark-use-case.md
+                  - run_extspk_delta.md
+                  - run_extspk_hudi.md
+                  - spark-table-maint.md
+                  - spark-emr.md
+
+            # - topicgroup:
+            #     label: Working with Native Spark engine
+            #     topics:
+            #       - Intro_nativespark.md
+            #       - prov-native-spark.md
+            #       - mng-nspark-eng.md
+            #       - submit-nsp-appln.md
+            #       - lnative_spk_lab.md
+            # - topicgroup:
+            #     label: Miscellaneous section
+            #     topics:
+            #       - view-edit-native-park.md
+            #       - mng-acs-nspark.md
+            #       - mng_appln_nspark.md
+            #       - scale_nspark.md
+            #       - paus_rsm_nsp.md
+            #       - spark-history-ui.md
+            #       - spark-user-interface.md
+            #       - sbmt_appln_nsp.md
+            #       - sbmt_cas_nsp.md
+            #       - logs_native_spk.md
+            #       - run_nativespk_hudi.md
+            #       - run_nativespk_delta.md
       - topicgroup:
           label: Milvus
           topics:
+            - milvus_overview.md
             - adding-milvus-service.md
             - conn-to-milvus.md
             - working_with_milvus.md
+            - pause-resume-milvus.md
       - topicgroup:
           label: Enhancing security
           topics:
@@ -129,6 +195,7 @@ toc:
       topics:
       - supported_sql_statements.md
       - supported_datatypes.md
+      - pricing_plan.md
       - link:
             label: Presto SQL statements
             href: https://www.ibm.com/docs/SSDZ38_1.1.x/lh-prestosql/topics/sql_intro.html
@@ -138,6 +205,7 @@ toc:
       - link:
             label: watsonx.data APIs
             href: https://cloud.ibm.com/apidocs/watsonxdata
+
 
   - navgroup:
       id: help

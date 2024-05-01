@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-03"
+lastupdated: "2024-04-30"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
 
@@ -29,13 +29,13 @@ subcollection: watsonxdata
 # Adding a storage-catalog pair
 {: #reg_bucket}
 
-A storage is an existing, externally managed object storage. It is one of the data sources for {{site.data.keyword.lakehouse_full}}. A catalog defines the schemas and metadata for a data source.
+A storage is an existing, externally managed storage. It is one of the data sources for {{site.data.keyword.lakehouse_full}}. A catalog defines the schemas and metadata for a data source.
 {: shortdesc}
 
-When you add your own object storage bucket or database, or query the data in these data sources through the query engines of {{site.data.keyword.lakehouse_short}}, egress charges for pulling data out of these sources might apply depending on your service provider. If you are using managed services, consult your service provider's documentation or support for details about these charges.
+When you add your own storage bucket or database, or query the data in these data sources through the query engines of {{site.data.keyword.lakehouse_short}}, egress charges for pulling data out of these sources might apply depending on your service provider. If you are using managed services, consult your service provider's documentation or support for details about these charges.
 {: important}
 
-To reduce the latency issues, it is recommended to colocate your additional object storage buckets or databases in the region where {{site.data.keyword.lakehouse_short}} instance is provisioned.
+To reduce the latency issues, it is recommended to colocate your additional storage buckets or databases in the region where {{site.data.keyword.lakehouse_short}} instance is provisioned.
 {: important}
 
 
@@ -44,7 +44,7 @@ To add a storage-catalog pair, complete the following steps.
 1. Log in to the {{site.data.keyword.lakehouse_short}} console.
 2. From the navigation menu, select **Infrastructure manager**.
 3. To define and connect a storage, click **Add component** and select **Add storage**.
-4. In the **Add storage** window, select a storage from the storage type drop-down list and provide the required details to connect to existing externally managed object storage. The list includes the following storage types:
+4. In the **Add storage** window, select a storage from the storage type drop-down list and provide the required details to connect to existing externally managed storage. The list includes the following storage types:
     * IBM Cloud Object Storage
     * IBM Storage Ceph
     * Amazon S3
@@ -75,7 +75,7 @@ To add a storage-catalog pair, complete the following steps.
    | Connection Status | Click the Test connection link to test the storage connection. If the connection is successful, a success message appears.|
    | Associate Catalog | Select the checkbox to add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within. |
    | Activate now| Activate the storage immediately or activate it later. |
-   | Catalog type | Select the catalog type from the list. The recommended catalog is Apache Iceberg. The other options for catalog are Apache Hive, Apache Hudi and Delta Lake.|
+   | Catalog type | Select the catalog type from the list. The recommended catalog is Apache Iceberg. The other options for catalog are Apache Hive, Apache Hudi, and Delta Lake.|
    | Catalog name | Enter the name of your catalog.|
    {: caption="Table 1. Register bucket" caption-side="bottom"}
 
@@ -102,7 +102,7 @@ To add a storage-catalog pair, complete the following steps.
 
     * **Hadoop Distributed File System (HDFS)**{: #hdfs}
 
-    If you select **Hadoop Distributed File System (HDFS)* from the **Storage type** drop-down list, configure the following details:
+    If you select **Hadoop Distributed File System (HDFS)** from the **Storage type** drop-down list, configure the following details:
 
    | Field | Description |
    |--------------------------|----------------|
@@ -110,6 +110,7 @@ To add a storage-catalog pair, complete the following steps.
    | Display name | Enter the name to be displayed.|
    | Thrift URI | Enter the Thrift URI.|
    | Thrift Port | Enter the Thrift port. |
+   | Kerberos authentication | Select the checkbox **Kerberos authentication** for secure connection.  \n a. Enter the following information: \n i. HDFS principal \n ii. Hive client principal \n iii. Hive server principal \n b. Upload the following files: \n i. Kerberos config file (.config) \n ii. HDFS keytab file (.keytab) \n iii. Hive keytab file (.keytab) |
    | Upload core site file (.xml) | Upload core site file (.xml) |
    | Upload HDFS site file (.xml) | Upload HDFS site file (.xml) |
    | Associated Catalog | Add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within. |
@@ -117,7 +118,7 @@ To add a storage-catalog pair, complete the following steps.
    | Catalog name | Enter the name of your catalog. |
    {: caption="Table 1. Register bucket" caption-side="bottom"}
 
-The object storage bucket name must be unique. You must use unique names while creating buckets in different object stores.
+The storage bucket name must be unique.
 {: important}
 
 5. Click **Add**.

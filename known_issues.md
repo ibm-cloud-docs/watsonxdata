@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-03"
+lastupdated: "2024-04-30"
 
 keywords: lakehouse
 
@@ -42,6 +42,83 @@ As a result of Intel's CPU upgrade, the `omrgc_spinlock_acquire` call takes long
    2. Update the jvm.config file to include the new JVM parameter, `-Xgc:tlhInitialSize=8096,tlhIncrementSize=16384,tlhMaximumSize=1048576`.
    3. Restart the Presto coordinator and worker node. -->
 
+## LDAP authentication is not supported for Teradata connector
+{: #known_issues11180}
+
+The {{site.data.keyword.lakehouse_short}} Teradata connector does not currently support LDAP (Lightweight Directory Access Protocol) for user authentication.
+
+## Spark history UI shows temporary 502 error on startup
+{: #known_issues10425}
+
+When attempting to access the Spark History UI immediately after starting the Spark History Server, users might encounter a temporary 502 Bad Gateway error in their web browser.
+
+**Workaround:** If you encounter the 502 error, reload the Spark history UI page after waiting 1-5 seconds. This should allow enough time for the server to become operational.
+
+## Cross catalog schema creation anomaly in Presto
+{: #known_issues8937}
+
+An anomaly exists in schema creation for Hive and Iceberg catalogs managed by Presto. When using a common Hive Metastore Service for multiple catalogs (Example, an Iceberg catalog and a Hive catalog, or two Iceberg or Hive catalogs), creating a schema in one catalog might create it in a wrong catalog. This occurs if the location specified during schema creation belongs to a different catalog than intended.
+
+**Workaround:** You must always explicitly provide the correct storage path associated with the target catalog when using `CREATE SCHEMA` statements in Presto. This ensures the schema is created in the desired location.
+
+## Presto queries with many columns and size exceeding default limit
+{: #known_issues3177}
+
+Presto queries involving multiple tables with a large number of columns (for example, 1000 columns per table or more) in the `SELECT` clause might encounter performance issues across all deployment environments.
+
+The iterative optimizer times out when `max_reorder_joins` is set to 5 or higher (the default timeout is 3 minutes) and gives the following error:
+
+```bash
+The optimizer exhausted the time limit of 180000 ms
+```
+{: codeblock}
+
+For queries exceeding the default `max-task-update-size` limit (16MB in Presto), you might observe a `TaskUpdate size exceeding this limit` error (the specific value of limit depends on the actual query).
+**Workaround:**
+- You can improve query performance by temporarily disabling the `reorder_joins` rule using the following session property:
+
+```bash
+set session reorder_joins = false;
+```
+{: codeblock}
+
+- Increase the `max-task-update-size` value in the **config.properties** file if the issue involves a `TaskUpdate size exceeding the limit` error and restart Presto.
+
+Example:
+```bash
+experimental.internal-communication.max-task-update-size=64MB
+```
+{: codeblock}
+
+## Limitation: Redshift connector case sensitivity
+{: #known_issues10427}
+
+The Redshift connector may not handle mixed-case database, table, and column names if the Redshift cluster configuration `enable_case_sensitive_identifier` is set to `false` (default). When this configuration is `false`, Redshift treats all identifiers as lowercase.
+
+When user comes up with Redshift cluster configuration `enable_case_sensitive_identifier` set to `true`, then mixed-case will work.
+
+## Limitation: Transactions not supported in unlogged Informix databases
+{: #known_issues9782}
+
+In {{site.data.keyword.lakehouse_short}}, when attempting to execute queries with transactional implications on unlogged Informix databases, queries will fail. This is because unlogged Informix databases, by design, do not support transactions.
+
+## Limitation: Netezza Performance Server INSERT statement limitation
+{: #known_issues9230}
+
+Netezza Performance Server currently does not support inserting multiple rows directly into a table using VALUES clause. This functionality is limited to single-row insertions. Refer to the official Netezza Performance Server [documentation](https://www.ibm.com/docs/hr/psfa/7.1.0?topic=reference-insert) for details on the INSERT statement.
+
+The following example using VALUES for multiple rows is not supported:
+```bash
+INSERT INTO EMPLOYEE VALUES (3,'Roy',45,'IT','CityB'),(2,'Joe',45,'IT','CityC');
+```
+{: codeblock}
+
+
+**Workaround:** Use a subquery with SELECT and UNION ALL to construct a temporary result set and insert it into the target table.
+```bash
+INSERT INTO EMPLOYEE SELECT * FROM(SELECT 4,'Steve',35,'FIN','CityC' UNION ALL SELECT 5,'Paul',37,'OP','CityA') As temp;
+```
+{: codeblock}
 
 ## Issue: Milvus unresponsive to queries
 {: #known_issues9946}
@@ -312,7 +389,9 @@ When a user enables SSL connection for data sources, the test connection is not 
 ## Special characters in target table names can cause ingestion failures
 {: #known_issues30}
 
-If a target table name contains special characters such as "`.`", "`,`", "`(`", "`!`" etc, ingestion into the table will fail.
+Ingestion fails if a target table name contains special characters in it when ingesting through the web console.
+
+**Workaround:** You can ingest data by using ingestion through Spark CLI.
 
 ## Limitation: Presto does not support `VARBINARY` datatype
 {: #known_issues31}
@@ -323,3 +402,12 @@ The current version of Presto does not support binary strings with length. Execu
 
 This is a limitation in Preso and not a limitation in {{site.data.keyword.lakehouse_short}}.
 {: note}
+
+## Query exceeding local memory limit
+{: #known_issues32}
+
+When you run a query, you might get following error:
+
+`Query exceeded per-node user memory limit of 614.40MB`
+
+If you get this error, contact [IBM Support](https://www.ibm.com/mysupport/s/?language=en_US&lnk=flathl).

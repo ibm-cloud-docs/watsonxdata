@@ -2,26 +2,21 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-03"
+lastupdated: "2024-04-30"
 
 keywords: lakehouse, watsonx data, provision, endpoint, resource
 subcollection: watsonxdata
 
-content-type: tutorial
-services:
-account-plan: paid
-completion-time: 20m
+
 
 ---
 
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Getting started with {{site.data.keyword.lakehouse_short}}
-{: #getting-started}
-{: toc-content-type="tutorial"}
-{: toc-services=""}
-{: toc-completion-time="20m"}
+# {{site.data.keyword.lakehouse_short}} enterprise plan
+{: #getting-started_1}
+
 
 
 {{site.data.keyword.lakehouse_full}} is a data management solution for collecting, storing, querying, and analyzing all your enterprise data with a single unified data platform. It provides a flexible and reliable platform that is optimized to work on open data formats.
@@ -40,9 +35,13 @@ You need to have an [{{site.data.keyword.cloud_notm}} account](https://cloud.ibm
 The access to provision IBM Cloud resources is governed by using [IAM access](https://cloud.ibm.com/docs/account?topic=account-userroles&interface=ui) and [account management services](https://cloud.ibm.com/docs/account?topic=account-account-services&interface=ui). You must have **Administrator** privileges to access the resource group in which you need to create the resources.
 {: note}
 
+
 ## Provision an instance
 {: #create}
 {: step}
+
+* [Provision an instance through UI](#create-by-ui)
+* [Provision an instance through CLI](#create-by-cli)
 
 ### Provision an instance through UI
 {: #create-by-ui}

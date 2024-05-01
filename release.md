@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-04-03"
+lastupdated: "2024-04-30"
 
 keywords: watsonxdata, release notes
 
@@ -34,6 +34,75 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.lakehouse_full}} that are grouped by date.
 {: shortdesc}
 
+
+## 30 Apr 2024 - Version 1.1.4
+{: #lakehouse_Apr242024}
+
+
+A new version of {{site.data.keyword.lakehouse_short}} was released in April 2024.
+
+This release includes the following features and updates:
+
+**Kerberos authentication for HDFS connections**
+{: #APR_01_2024}
+
+You can now enable Kerberos authentication for secure Apache Hadoop Distributed File System (HDFS) connections. For more information, see [HDFS](watsonxdata?topic=watsonxdata-reg_bucket#hdfs).
+
+**New data sources**
+{: #APR_02_2024}
+
+The following new data sources are now available:
+* Oracle
+* Amazon Redshift
+* Informix
+* Prometheus
+
+For more information, see [Data sources](watsonxdata?topic=watsonxdata-reg_database).
+
+**Test SSL connections**
+{: #APR_03_2024}
+
+You can now test SSL connections for the MongoDB and SingleStore data sources.
+
+
+**Uploading description files for Apache Kafka data source**
+{: #APR_04_2024}
+
+The Apache Kafka data source stores data as byte messages that producers and consumers must interpret. To query this data, consumers must first map it into columns. Now, you can upload topic description files that convert raw data into a table format. Each file must be a JSON file that contains a definition for a table. To upload these JSON files from the UI, go to the overview page of the Apache Kafka database that you registered and select the **Add topic** option. For more information, see [Apache Kafka](watsonxdata?topic=watsonxdata-reg_database#kafka).
+
+**License plans for {{site.data.keyword.lakehouse_short}}**
+{: #APR_05_2024}
+
+{{site.data.keyword.lakehouse_full}} now offers the following license plans.
+
+* Lite plan
+* BYOL plan
+* Enterprise plan
+
+For more information about the different license plans, see [IBM® watsonx.data pricing plans](watsonxdata?topic=watsonxdata-pricing-plans-1).
+
+
+**Presto engine version upgrade**
+{: #APR_06_2024}
+
+The Presto engine is now upgraded to version 0.285.1.
+
+**Pause or resume Milvus**
+{: #APR_07_2024}
+
+You can now pause or resume Milvus service. Pausing your service can avoid incurring charges.
+
+<!--
+**Spark is now available as a native engine**
+{: #APR_08_2024}
+
+In addition to registering external Spark engines, you can now provision native Spark engine on your IBM watsonx.data instance. With native Spark engine, you can fully manage Spark Engine configuration, manage access to Spark Engines and view applications by using watsonx.data UI and REST API endpoints. For more information, see [Introduction to Native Spark engine](watsonxdata?topic=watsonxdata-intro_nativespark).
+
+**Ingest data using native Spark Engines**
+{: #APR_09_2024}
+
+You can now submit ingestion jobs using native Spark Engines. For more information, see [Working with Apache Hudi catalog](watsonxdata?topic=watsonxdata-hudi_nsp) and [Working with Delta Lake catalog](watsonxdata?topic=watsonxdata-delta_nsp). -->
+
 ## 27 Mar 2024 - Version 1.1.3
 {: #lakehouse_Mar272024}
 
@@ -41,6 +110,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 A new version of {{site.data.keyword.lakehouse_short}} was released in March 2024.
 
 This release includes the following features and updates:
+
 
 **New data type for some data sources**
 {: #mar_01_2024}

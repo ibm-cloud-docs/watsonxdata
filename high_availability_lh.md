@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-03"
+lastupdated: "2024-04-30"
 
 keywords: high availability, disaster revecory, watsonx.data
 
@@ -43,13 +43,13 @@ Multi-tenant components support multiple customers and are configured with multi
 ## Active-Only
 {: #Act-Oly}
 
-Single-tenant components in this category are dedicated to a single customer. This category consists of the Presto engine and metastore. These components restart in a new zone if there is a failure.
+Single-tenant components in this category are dedicated to a single customer. This category consists of the Presto engine and metastore. These components restart in a new zone during failure.
 
-**In Multi Zone Regions (MZRs), Presto and HMS are distributed across different zones.**
+**In Multi-Zone Regions (MZRs), Presto and HMS are distributed across different zones.**
 
 When a single availability zone fails in an MZR, or a hardware failure occurs in any region, the workloads automatically fail and restart in other zones within that region. Every {{site.data.keyword.lakehouse_short}} instance comes with a default cross-regional Metadata bucket and an optional Trial bucket(10 GB). Both the buckets are enabled with IBM Cloud® Object Storage Versioning. The data is backed up by enabling replication to a separate IBM Cloud Object Storage Account. However, for any external bucket that the customer brings into {{site.data.keyword.lakehouse_short}} instance, the customer is responsible for those backups.
 
-In case of a regional disaster, you will receive an email that includes all the steps that you need to follow. See responsibilities for {{site.data.keyword.lakehouse_short}}.
+In a regional disaster, you receive an email that includes all the steps that you need to follow. See responsibilities for {{site.data.keyword.lakehouse_short}}.
 Single-tenant components operate on an 'Active Only' model, ensuring immediate restart on new nodes that provide the same service if there is a failure.
 
 Single-tenant components are strategically distributed across 3 AZs to enhance reliability. When an AZ fails, sufficient capacity to initiate the required services on the available AZs is ensured. This minimizes any impact that is caused by an AZ outage.
@@ -71,7 +71,7 @@ Applications that communicate over networks and cloud services are subject to tr
 
 Your applications must be designed to handle temporary interruptions to the service, implement error handling for failed commands, and implement retry logic to recover from a temporary interruption.
 
-**Following are some of the error codes that might be expected during the temporary service interruptions:**
+**The following are some of the error codes that might be expected during the temporary service interruptions:**
 
 If a Presto coordinator node restarts, be it for maintenance purposes or due to a system failure, applications are required to reestablish their connection with the Presto engine.
 
@@ -87,6 +87,9 @@ Several minutes of unavailability or connection interruptions are not expected. 
 | RPO                           |  <= 24 hours |
 | RTO                           |  < 24 hours  |
 {: caption="Table 2. Disaster Recovery Strategy" caption-side="bottom"}
+
+The backup interval is reduced for the service Milvus in SaaS to improve the restore RPO from 24 hours to 2 hours.
+{: note}
 
 ## Locations
 {: #locations}

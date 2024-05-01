@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-03"
+lastupdated: "2024-04-30"
 
 keywords: lakehouse, watsonx data, privileges, roles, access
 
@@ -57,7 +57,7 @@ IAM formation non-admins (Operator, Editor, Viewer) have the default user access
 | Action | Admin | User | Metastore Access |
 |-------|------|------|---------|
 | Create Presto engines | ✓ |   |    |
-| Register Spark engines | ✓ |   |    |
+| Create or register Spark engines | ✓ |   |    |
 | Create Milvus services | ✓ |   |    |
 | Delete Milvus services | ✓ |   |    |
 | View Milvus services | ✓ |   |    |
@@ -114,6 +114,39 @@ Formation admins (IAM) have the default admin access.
 | View existence (infra page and `…/api/…/` engines) | ✓ | ✓ | ✓ |     |
 | Run workloads against the engine | ✓ | ✓ | ✓ |     |
 {: caption="Table 3. Resource-level permissions" caption-side="bottom"}
+
+## Engine (Native Spark)
+{: #native_spark}
+
+### Default admin access
+{: #default_admin3}
+
+Default user access is granted to:
+
+- Formation admins (IAM)
+- Instance admins (CPD)
+- Install admins (Dev)
+
+### Resource-level permissions
+{: #rl_premission4}
+
+| Action | Admin | Manager | User | Users without an explicit role |
+|-------|------|------|---------|---------|
+|Create and delete engine | ✓ |   |    |     |
+| Grant and revoke access | ✓ |   |    |     |
+|Scale engine | ✓ | ✓ |    |     |
+| Pause and resume  | ✓ | ✓ |    |     |
+| Update Spark engine metadata (like tags and description) | ✓ | ✓ |    |     |
+| Update Spark default version | ✓ | ✓ |    |     |
+| Update Spark default configuration | ✓ | ✓ |    |     |
+| Scale Spark engine | ✓ | ✓ |    |     |
+| Start and stop Spark history server | ✓ | ✓ | ✓ |     |
+| View Spark history UI | ✓ | ✓ | ✓ |     |
+| View Spark UI | ✓ | ✓ | ✓ |     |
+| Associate and disassociate catalog | ✓ | ✓ |    |     |
+| View existence (infra page and `…/api/…/` engines) | ✓ | ✓ | ✓ |     |
+| Run workloads against the engine | ✓ | ✓ | ✓ |     |
+{: caption="Table 2. Resource-level permissions" caption-side="bottom"}
 
 ## Service (Milvus)
 {: #milvus}

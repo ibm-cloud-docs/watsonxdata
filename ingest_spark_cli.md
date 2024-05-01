@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-03"
+lastupdated: "2024-04-30"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -148,6 +148,11 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
      |create-if-not-exist|Use this option if the target schema or table is not created. Do not use if the target schema or table is already created.|
      |schema|Use this option with value in the format path/to/csvschema/config/file. Use the path to a schema.cfg file which specifies header and delimiter values for CSV source file or folder.|
      {: caption="Table 3" caption-side="bottom"}
+
+   The ability to handle special characters in table and schema names for ingestion is constrained by the underlying engines (Spark, Presto) and their respective special character support.
+   - Regular syntax: `--target-tables <catalogname>.<schemaname>.<tablename>`.
+   - Syntax with special character option 1: `--target-tables <catalogname>.<schemaname>."table\.name"`. Using this syntax, escape character `\` is used within double quotes to escape period(.). Escape character `\` is used only when special character period(.) is in the table name.
+   - Syntax with special character option 2: `--target-tables <catalogname>.<schemaname>."'table.name'"`. Using this syntax, period(.) is not escaped nor need to use the escape character when using additional single quotes.
 
 ## Limitations
 {: #limits}
