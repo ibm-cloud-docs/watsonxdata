@@ -35,7 +35,7 @@ subcollection: watsonxdata
    | Type | Select **Spark** engine from the list. |
    | Display name | Enter your compute engine name. |
    | Default Spark version | Select **Spark runtime version** that must be considered for processing the applications. |
-   | System bucket | Select the registered Cloud Object Storage bucket from the list to stores the Spark events and logs that are generated while running spark applications. \n Make sure you do not select the IBM-managed bucket as Spark Engine home. If you select system bucket, you cannot access it to view the logs.{: note} |
+   | System bucket | Select the registered Cloud Object Storage bucket from the list to stores the Spark events and logs that are generated while running spark applications. \n Make sure you do not select the IBM-managed bucket as Spark Engine home. If you select IBM-managed bucket, you cannot access it to view the logs.{: note} |
    {: caption="Table 1. Provisioning Spark engine" caption-side="bottom"}
 
 1. Reserve compute capacity for the Spark engine.

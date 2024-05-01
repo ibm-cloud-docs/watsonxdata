@@ -103,27 +103,26 @@ toc:
       - topicgroup:
           label: Spark
           topics:
-            # - spk_overview.md
-            # - topicgroup:
-            #     label: Working with Native Spark engine
-            #     topics:
-            #     #  - Intro_nativespark.md
-            #       - prov-native-spark.md
-            #       - view-edit-native-park.md
-            #       - mng-acs-nspark.md
-            #       - scale_nspark.md
-            #       - paus_rsm_nsp.md
-            #       - asso_nspark_cat.md
-            #       - sbmt_appln_nsp.md
-            #       - sbmt_cas_nsp.md
-            #       - mng_appln_nspark.md
-            #       - logs_native_spk.md
-            #       - spark-history-ui.md
-            #       - spark-user-interface.md
-            #       - lnative_spk_lab.md
-            #       - run_nativespk_hudi.md
-            #       - run_nativespk_delta.md
-            #       - tab_view.md
+            - spk_overview.md
+            - topicgroup:
+                label: Working with Native Spark engine
+                topics:
+                #  - Intro_nativespark.md
+                  - prov-native-spark.md
+                  - view-edit-native-park.md
+                  - mng-acs-nspark.md
+                  - scale_nspark.md
+                  - paus_rsm_nsp.md
+                  - asso_nspark_cat.md
+                  - sbmt_appln_nsp.md
+                  - sbmt_cas_nsp.md
+                  - mng_appln_nspark.md
+                  - logs_native_spk.md
+                  - spark-history-ui.md
+                  - spark-user-interface.md
+                  - lnative_spk_lab.md
+                  - run_nativespk_hudi.md
+                  - run_nativespk_delta.md
             - topicgroup:
                 label: Working with external Spark engine
                 topics:

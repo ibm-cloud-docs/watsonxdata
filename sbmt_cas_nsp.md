@@ -140,3 +140,16 @@ You can submit Spark application by accessing watsonx.data data without object s
 
 5. After you submit the Spark application, you receive a confirmation message with the application ID and Spark version. Save it for reference.
 6. Log in to the watsonx.data cluster, access the Engine details page. In the Applications tab, use the application ID to list the application and you can track the stages. For more information, see [View and manage applications](watsonxdata?topic=watsonxdata-mng_appltn).
+
+
+## Working with the watsonx.data catalog and storage
+{: #view_smbit_nsp}
+
+To enable your Spark application to work with the watsonx.data catalog and storage, add the following configuration to your application payload:
+
+```bash
+spark.hive.metastore.client.plain.username=ibmlhapikey
+spark.hive.metastore.client.plain.password=<api-key-of-the-user-which-has-metastore-admin-role>
+spark.hadoop.wxd.apiKey=Basic base64(ibmlhapikey_ibmcloudid:apikey)
+```
+{: codeblock}

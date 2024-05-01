@@ -92,16 +92,16 @@ The Presto engine is now upgraded to version 0.285.1.
 
 You can now pause or resume Milvus service. Pausing your service can avoid incurring charges.
 
-<!--
+
 **Spark is now available as a native engine**
 {: #APR_08_2024}
 
-In addition to registering external Spark engines, you can now provision native Spark engine on your IBM watsonx.data instance. With native Spark engine, you can fully manage Spark Engine configuration, manage access to Spark Engines and view applications by using watsonx.data UI and REST API endpoints. For more information, see [Introduction to Native Spark engine](watsonxdata?topic=watsonxdata-intro_nativespark).
+In addition to registering external Spark engines, you can now provision native Spark engine on your IBM watsonx.data instance. With native Spark engine, you can fully manage Spark Engine configuration, manage access to Spark Engines and view applications by using watsonx.data UI and REST API endpoints. For more information, see [Provisioning Native Spark engine](watsonxdata?topic=watsonxdata-prov_nspark).
 
 **Ingest data using native Spark Engines**
 {: #APR_09_2024}
 
-You can now submit ingestion jobs using native Spark Engines. For more information, see [Working with Apache Hudi catalog](watsonxdata?topic=watsonxdata-hudi_nsp) and [Working with Delta Lake catalog](watsonxdata?topic=watsonxdata-delta_nsp). -->
+You can now submit ingestion jobs using native Spark Engines. For more information, see [Working with Apache Hudi catalog](watsonxdata?topic=watsonxdata-hudi_nsp) and [Working with Delta Lake catalog](watsonxdata?topic=watsonxdata-delta_nsp).
 
 ## 27 Mar 2024 - Version 1.1.3
 {: #lakehouse_Mar272024}

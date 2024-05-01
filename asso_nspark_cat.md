@@ -18,4 +18,7 @@ In IBM® watsonx.data, you can associate (or dissociate an already associated ca
 
 To associate a catalog with an engine, see [Associating a catalog with an engine](watsonxdata?topic=watsonxdata-asso-cat-eng).
 
+When you associate a catalog with a Spark engine, connection properties for the associated catalog are added to the Spark engine's default configuration. Do not overwrite these properties in default configuration manually.
+{: note}
+
 To dissociate a catalog with an engine, see [Dissociating a catalog from an engine](watsonxdata?topic=watsonxdata-disso-cat-eng).
