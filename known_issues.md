@@ -74,21 +74,22 @@ The optimizer exhausted the time limit of 180000 ms
 {: codeblock}
 
 For queries exceeding the default `max-task-update-size` limit (16MB in Presto), you might observe a `TaskUpdate size exceeding this limit` error (the specific value of limit depends on the actual query).
+
 **Workaround:**
 - You can improve query performance by temporarily disabling the `reorder_joins` rule using the following session property:
 
-```bash
-set session reorder_joins = false;
-```
-{: codeblock}
+   ```bash
+   set session reorder_joins = false;
+   ```
+   {: codeblock}
 
 - Increase the `max-task-update-size` value in the **config.properties** file if the issue involves a `TaskUpdate size exceeding the limit` error and restart Presto.
 
 Example:
-```bash
-experimental.internal-communication.max-task-update-size=64MB
-```
-{: codeblock}
+   ```bash
+   experimental.internal-communication.max-task-update-size=64MB
+   ```
+   {: codeblock}
 
 ## Limitation: Redshift connector case sensitivity
 {: #known_issues10427}
