@@ -32,7 +32,7 @@ subcollection: watsonxdata
 The **Data manager** page in {{site.data.keyword.lakehouse_full}} is the entry point to browse the schemas and tables by engine. You can select an engine to view the associated catalogs, schemas, and tables.
 {: shortdesc}
 
-From the **Data manager** page, you can create schemas and tables by using the **Create** option that is provided in the left window. You can also select a catalog or schema, click the overflow menu, and use the corresponding **Create** option to create a schema or table. **Create table from file** option in the overflow menu of schema is also used to ingest a data file into {{site.data.keyword.lakehouse_short}}. Similarly, schemas and tables can be dropped from the catalogs.
+From the **Data manager** page, you can create schemas and tables by using the **Create** option. You can also select a catalog or schema, click the overflow menu, and use the corresponding **Create** option to create a schema or table. **Create table from file** option in the overflow menu of schema is also used to ingest a data file into {{site.data.keyword.lakehouse_short}}. Similarly, schemas and tables can be dropped from the catalogs.
 
 Wait for a few minutes to view the changes after a schema or table is dropped.
 {: note}

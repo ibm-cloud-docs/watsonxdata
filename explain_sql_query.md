@@ -41,4 +41,4 @@ To view the execution plans for a query that is run in {{site.data.keyword.lakeh
 1. In the **Query workspace** page, enter the query and click **Run on starter** to get the results.
 1. Click **Explain** on the screen to visualize the graphical representation of the query.
 
-On the **Explain** window, click a stage to view the details on the right window. The details of each stage that is displayed are the estimate values for rows, CPU, memory, and network.
+On the **Explain** window, click a stage to view the details on the side window. The details of each stage that is displayed are the estimate values for rows, CPU, memory, and network.
