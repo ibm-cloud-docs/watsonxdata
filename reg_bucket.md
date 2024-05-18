@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-30"
+lastupdated: "2024-05-16"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
 
@@ -42,83 +42,81 @@ To reduce the latency issues, it is recommended to colocate your additional stor
 To add a storage-catalog pair, complete the following steps.
 
 1. Log in to the {{site.data.keyword.lakehouse_short}} console.
-2. From the navigation menu, select **Infrastructure manager**.
-3. To define and connect a storage, click **Add component** and select **Add storage**.
-4. In the **Add storage** window, select a storage from the storage type drop-down list and provide the required details to connect to existing externally managed storage. The list includes the following storage types:
+1. From the navigation menu, select **Infrastructure manager**.
+1. To define and connect a storage, click **Add component** and select **Add storage**.
+1. In the **Add storage** window, select a storage from the storage type drop-down list and provide the required details to connect to existing externally managed storage. The list includes the following storage types:
     * IBM Cloud Object Storage
     * IBM Storage Ceph
     * Amazon S3
     * Hadoop Distributed File System (HDFS)
     * MinIO
-5. Based on the storage type selected, click the respective link to configure the storage details.
+1. Based on the storage type selected, click the respective link to configure the storage details.
 
-    * [IBM Cloud Object Storage](#cos)
-    * [IBM Storage Ceph](#ceph)
-    * [Amazon S3](#cos)
-    * [Hadoop Distributed File System (HDFS)](#hdfs)
-    * [MinIO](#ceph)
+   * [IBM Cloud Object Storage](#cos)
+   * [IBM Storage Ceph](#ceph)
+   * [Amazon S3](#cos)
+   * [Hadoop Distributed File System (HDFS)](#hdfs)
+   * [MinIO](#ceph)
 
+   * **IBM Cloud Object Storage or Amazon S3**{: #cos}
 
- * **IBM Cloud Object Storage or Amazon S3**{: #cos}
+       If you select **IBM Cloud Object Storage or Amazon S3** from the **Storage type** drop-down list, configure the following details:
 
-    If you select **IBM Cloud Object Storage or Amazon S3** from the **Storage type** drop-down list, configure the following details:
+      | Field | Description |
+      |--------------------------|----------------|
+      | Storage type | Select the storage type from the list.|
+      | Region | Select the region where the storage is available.|
+      | Bucket name | Enter your existing object storage bucket name.|
+      | Display name | Enter the name to be displayed.|
+      | Endpoint | Enter the endpoint URL.|
+      | Access key | Enter your access key. |
+      | Secret key | Enter your secret key. |
+      | Connection Status | Click the Test connection link to test the storage connection. If the connection is successful, a success message appears.|
+      | Associate Catalog | Select the checkbox to add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within. |
+      | Activate now| Activate the storage immediately or activate it later. |
+      | Catalog type | Select the catalog type from the list. The recommended catalog is Apache Iceberg. The other options for catalog are Apache Hive, Apache Hudi, and Delta Lake.|
+      | Catalog name | Enter the name of your catalog.|
+      {: caption="Table 1. Register bucket" caption-side="bottom"}
 
-   | Field | Description |
-   |--------------------------|----------------|
-   | Storage type | Select the storage type from the list.|
-   | Region | Select the region where the storage is available.|
-   | Bucket name | Enter your existing object storage bucket name.|
-   | Display name | Enter the name to be displayed.|
-   | Endpoint | Enter the endpoint URL.|
-   | Access key | Enter your access key. |
-   | Secret key | Enter your secret key. |
-   | Connection Status | Click the Test connection link to test the storage connection. If the connection is successful, a success message appears.|
-   | Associate Catalog | Select the checkbox to add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within. |
-   | Activate now| Activate the storage immediately or activate it later. |
-   | Catalog type | Select the catalog type from the list. The recommended catalog is Apache Iceberg. The other options for catalog are Apache Hive, Apache Hudi, and Delta Lake.|
-   | Catalog name | Enter the name of your catalog.|
-   {: caption="Table 1. Register bucket" caption-side="bottom"}
+   * **IBM Storage Ceph or MinIO**{: #ceph}
 
+       If you select **IBM Storage Ceph or MinIO** from the **Storage type** drop-down list, configure the following details:
 
- * **IBM Storage Ceph or MinIO**{: #ceph}
+      | Field | Description |
+      |--------------------------|----------------|
+      | Storage type | Select the storage type from the list.|
+      | Bucket name | Enter your existing object storage bucket name.|
+      | Display name | Enter the name to be displayed.|
+      | Endpoint | Enter the endpoint URL.|
+      | Access key | Enter your access key. |
+      | Secret key | Enter your secret key. |
+      | Connection Status | Click the Test connection link to test the storage connection. If the connection is successful, a success message appears.|
+      | Associate Catalog | Select the checkbox to add a catalog for your storage. This catalog is automatically associated with your storage and serves as your query interface with the data stored within. |
+      | Activate now| Activate the storage immediately or activate it later. |
+      | Catalog type | Select the catalog type from the list. The recommended catalog is Apache Iceberg. The other options for catalog are Apache Hive, Apache Hudi and Delta Lake.|
+      | Catalog name | Enter the name of your catalog.|
+      {: caption="Table 1. Register bucket" caption-side="bottom"}
 
-    If you select **IBM Storage Ceph or MinIO** from the **Storage type** drop-down list, configure the following details:
+   * **Hadoop Distributed File System (HDFS)**{: #hdfs}
 
-   | Field | Description |
-   |--------------------------|----------------|
-   | Storage type | Select the storage type from the list.|
-   | Bucket name | Enter your existing object storage bucket name.|
-   | Display name | Enter the name to be displayed.|
-   | Endpoint | Enter the endpoint URL.|
-   | Access key | Enter your access key. |
-   | Secret key | Enter your secret key. |
-   | Connection Status | Click the Test connection link to test the storage connection. If the connection is successful, a success message appears.|
-   | Associate Catalog | Select the checkbox to add a catalog for your storage. This catalog is automatically associated with your storage and serves as your query interface with the data stored within. |
-   | Activate now| Activate the storage immediately or activate it later. |
-   | Catalog type | Select the catalog type from the list. The recommended catalog is Apache Iceberg. The other options for catalog are Apache Hive, Apache Hudi and Delta Lake.|
-   | Catalog name | Enter the name of your catalog.|
-   {: caption="Table 1. Register bucket" caption-side="bottom"}
+       If you select **Hadoop Distributed File System (HDFS)** from the **Storage type** drop-down list, configure the following details:
 
+      | Field | Description |
+      |--------------------------|----------------|
+      | Storage type | Select the storage type from the list.|
+      | Display name | Enter the name to be displayed.|
+      | Thrift URI | Enter the Thrift URI.|
+      | Thrift Port | Enter the Thrift port. |
+      | Kerberos authentication | Select the checkbox **Kerberos authentication** for secure connection.  \n a. Enter the following information: \n i. HDFS principal \n ii. Hive client principal \n iii. Hive server principal \n b. Upload the following files: \n i. Kerberos config file (.config) \n ii. HDFS keytab file (.keytab) \n iii. Hive keytab file (.keytab) |
+      | Upload core site file (.xml) | Upload core site file (.xml) |
+      | Upload HDFS site file (.xml) | Upload HDFS site file (.xml) |
+      | Associated Catalog | Add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within. |
+      | Catalog type | The supported catalog is Apache Hive.|
+      | Catalog name | Enter the name of your catalog. |
+      {: caption="Table 1. Register bucket" caption-side="bottom"}
+   **Important information**{: #important_info}
+   * The storage bucket name must be unique and must contain only the characters A–Z, a–z, 0–9, and hypen (-).
+   * You must use a service credential with `Writer` role because the schema is written to the storage bucket. Make sure that you choose the endpoint that matches the type of access that the bucket allows. That is, if no public access is allowed (**Public access** is **No**) to the bucket, choose the **Direct** endpoint.
+   
 
-    * **Hadoop Distributed File System (HDFS)**{: #hdfs}
-
-    If you select **Hadoop Distributed File System (HDFS)** from the **Storage type** drop-down list, configure the following details:
-
-   | Field | Description |
-   |--------------------------|----------------|
-   | Storage type | Select the storage type from the list.|
-   | Display name | Enter the name to be displayed.|
-   | Thrift URI | Enter the Thrift URI.|
-   | Thrift Port | Enter the Thrift port. |
-   | Kerberos authentication | Select the checkbox **Kerberos authentication** for secure connection.  \n a. Enter the following information: \n i. HDFS principal \n ii. Hive client principal \n iii. Hive server principal \n b. Upload the following files: \n i. Kerberos config file (.config) \n ii. HDFS keytab file (.keytab) \n iii. Hive keytab file (.keytab) |
-   | Upload core site file (.xml) | Upload core site file (.xml) |
-   | Upload HDFS site file (.xml) | Upload HDFS site file (.xml) |
-   | Associated Catalog | Add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within. |
-   | Catalog type | The supported catalog is Apache Hive.|
-   | Catalog name | Enter the name of your catalog. |
-   {: caption="Table 1. Register bucket" caption-side="bottom"}
-
-The storage bucket name must be unique.
-{: important}
-
-5. Click **Add**.
+1. Click **Add**.
