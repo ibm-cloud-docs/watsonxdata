@@ -82,7 +82,7 @@ The topic describes the procedure to run a Spark application that ingests data i
     {: codeblock}
 
 Parameter values:
-* `<wxd_host_name>`: The hostname of your watsonx.data or Cloud Pak for Data cluster.
+* `<wxd_host_name>`: The hostname of your watsonx.data Cloud instance.
 * `<instance_id>` : The instance ID from the watsonx.data cluster instance URL. For example, 1609968977179454.
 * `<spark_engine_id>` : The Engine ID of the native Spark engine.
 * `<token>` : The bearer token. For more information about generating the token, see [IAM token](https://test.cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).

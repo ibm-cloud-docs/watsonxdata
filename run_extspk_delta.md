@@ -12,7 +12,7 @@ subcollection: watsonxdata
 {{site.data.keyword.attribute-definition-list}}
 
 # Working with Delta Lake catalog
-{: #delta_nsp}
+{: #delta_ext_sp}
 
 The topic describes the procedure to run a Spark application that ingests data into a Delta Lake catalog.
 

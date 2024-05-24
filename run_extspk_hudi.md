@@ -12,7 +12,7 @@ subcollection: watsonxdata
 {{site.data.keyword.attribute-definition-list}}
 
 # Working with Apache Hudi catalog
-{: #hudi_nsp}
+{: #hudi_ext_sp}
 
 The topic describes the procedure to run a Spark application that ingests data into an Apache Hudi catalog.
 
