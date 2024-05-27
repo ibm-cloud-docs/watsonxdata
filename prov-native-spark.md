@@ -43,7 +43,7 @@ subcollection: watsonxdata
    1. Enter the number of nodes in the **No of nodes** field.
 1. Click **Provision**. An acknowledgment message is displayed.
 
-   It takes about 15-30 minutes to provision the engine, depending on the number and type of nodes you add to the engine.
+   Provisioning time of the native Spark engine varies depending on the number and type of nodes you add to the engine.
    {: note}
 
 
