@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-04-30"
+lastupdated: "2024-05-31"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -11,7 +11,7 @@ subcollection: watsonxdata
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Spark lab
+# Spark labs - Development environment
 {: #lab_nsp}
 
 Spark lab is a Spark-based development environment that enables you to interactively program, debug, submit, and test Spark applications on a Spark cluster running on the Spark engine.
@@ -33,6 +33,8 @@ It is available as a Visual Studio Code extension and you can install it in your
 {: #lab_nsp-preq-1}
 
 
+## Creating a Spark lab
+{: #creat_lab}
 
 1. Install watsonx.data extension.
 
@@ -49,7 +51,7 @@ It is available as a Visual Studio Code extension and you can install it in your
 
     * `Environment Type`: Select IBM Public cloud as the environment type.
 
-    * `watsonx-data.host`: Hostname of the region where your watsonx.data SaaS instance is provisioned, `<region>.lakehouse.cloud.ibm.com`.
+    * `watsonx-data.host`: Hostname of the region where your watsonx.data SaaS instance is provisioned, `<region>`.lakehouse.cloud.ibm.com`.
 
     * `watsonx-data`: Instance ID : CRN of the watsonx.data SaaS instance.
 
@@ -76,46 +78,36 @@ It is available as a Visual Studio Code extension and you can install it in your
     To delete an already running Spark lab, hover the mouse over the name of the Spark lab in the watsonx.data left navigation pane and click on Delete icon.
     {: note}
 
-4. Develop a Spark application in the Spark lab.
+## Developing a Spark application
+{: #dev_lab}
 
-    a. Creating Spark context in Spark Lab. To create a Spark Context, you must explicitly set spark.master and spark.driver.host to the IP address of the Pod. The following example demonstrates on how to create a Spark context in python.
+Develop a Spark application in the Spark lab. You can work with a Spark application in one of the following ways:
 
-    ```bash
-    from pyspark.sql import SparkSession
-    import socket
+* [Create your own Python file](#dev_lab_01)
+* [Create Jupyter Notebooks](#dev_lab_02)
 
-    def getSparkMaster():
-        ## getting the hostname by socket.gethostname() method
-        hostname = socket.gethostname()
-        ## getting the IP address using socket.gethostbyname() method
-        ip_address = socket.gethostbyname(hostname)
-        return ip_address
+### Create your own Python file
+{: #dev_lab_01}
 
-    def init_spark(sparkMaster):
-      spark = SparkSession.builder.appName("auto-scale-test") \
-              .master("spark://{}:7077".format(sparkMaster)) \
-              .config("spark.driver.host",sparkMaster).getOrCreate()
-      sc = spark.sparkContext
-      return spark,sc
-    ```
-    {: codeblock}
+1. Create, upload or drag the Python application file to the **Explorer** window. The file opens in the right pane of Visual Studio Code application.
 
-    b. Create, upload or drag the Python application file to the **Explorer** window. The file opens in the right pane of Visual Studio Code application.
-
-    c. Run the following command in the terminal. This initiates a Python session and you can see the acknowledgment message in the terminal.
+2. Run the following command in the terminal. This initiates a Python session and you can see the acknowledgment message in the terminal.
 
     ```bash
     python <filename>
     ```
     {: codeblock}
 
-## Debug the Spark application
-{: #lab_nsp-preq-2}
+### Create Jupyter Notebooks
+{: #dev_lab_02}
 
-The Spark lab also allows you to debug the Spark application that you submit. To do that:
-1. Go to Visual Studio Code > **Extensions**.
-1. Browse for the debugging tool to debug the code. For each Spark application type (Python, Java, Scalar, R), you need to choose the official extension to debug. For example, if you submit a Spark application written in Python language, install **Python** extension.
-1. After you install the debugging tool extension, open the file that you want to debug and click **Run and Debug** from the Visual Studio Code.
-1. The Visual Studio code window prompts for the language of the Spark application code and default configuration.
-1. Select the language and provide the default configuration based on your Spark application type (Python, Java, Scalar, R).
-1. Click **Run and Debug**. The debugging process starts and you can view the result in the **Terminal**.
+
+1. Browse for the `Jupyter` extension from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) and install the extension.
+
+2. You can either create a new Jupyter Notebook file with the extension `.ipynb` or drag and drop the existing notebook to the **Explorer** window.
+
+3. From the **Explorer** window, double-click to open the Jupyter Notebook.
+
+4. From the Jupyter Notebook, click the **Change Kernel** link to select the **Python Environment**.
+
+5. The Jupyter Notebook is now ready to use. You can write your code and execute it cell by cell.

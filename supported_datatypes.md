@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-30"
+lastupdated: "2024-05-31"
 
 keywords: lakehouse, data types, connectors, watsonx.data
 
@@ -81,13 +81,13 @@ For **Iceberg** connector, `ALTER TABLE` operations on a column support data typ
 {: #connector_limitations}
 
 1. For **Teradata** connector, `BLOB` and `CLOB` data types support only `SELECT` and `CREATE` statements.
-2. For **MySQL**, **Db2**, **PostgreSQL**, **Snowflake** and **SQL server** connectors, `BLOB` and `CLOB` data types support only `SELECT` statement.
-3. For **MySQL**, **Oracle**, **Kudu**, **Elasticsearch** and **SQL server** connectors, `BINARY` data type supports only `SELECT` statement.
-4. For **Iceberg** connector, the maximum number of digits that can be accommodated in a column of data type FLOAT and DOUBLE is 37. Trying to insert anything larger ends up in Decimal overflow error.
-5. For **MySQL**, **PostgreSQL**, **Snowflake**, **SQL Server** , **Teradata** and **Db2** connectors, the data shown from the UI for `BLOB` data type is in Base64 format, while the result from presto-cli is in hexadecimal format.
+2. For **MySQL**, **Db2**, **PostgreSQL**, **Snowflake**, and **SQL server** connectors, `BLOB` and `CLOB` data types support `SELECT` statement but do not support operations such as `equal`, `like`, and `in`.
+3. For **MySQL**, **Oracle**, **Kudu**, **Elasticsearch**, and **SQL server** connectors, `BINARY` data type supports only `SELECT` statement.
+4. For **Iceberg** connector, the maximum number of digits that can be accommodated in a column of data type FLOAT and DOUBLE is 37. Trying to insert anything larger ends up in a decimal overflow error.
+5. For **MySQL**, **PostgreSQL**, **Snowflake**, **SQL Server** , **Teradata**, and **Db2** connectors, the data shown from the UI for `BLOB` data type is in Base64 format, while the result from presto-cli is in hexadecimal format.
 6. For **MySQL** and **SQL Server** connectors, the data shown from the UI for `BINARY` data type is in Base64 format, while the result from presto-cli is in hexadecimal format.
-7. For **Db2**, **Snowflake**, **PostgreSQL** and **Teradata** connectors, `BINARY` data type supports only `SELECT` statement.
+7. For **Db2**, **Snowflake**, **PostgreSQL**, and **Teradata** connectors, `BINARY` data type supports only `SELECT` statement.
 8. For **PostgreSQL** and **Teradata** connectors, `BYTEA` and `VARBYTE` are the `BINARY` alternative data types respectively.
-9. When the fields of data type `REAL` have 6 digits or more in the decimal part with the digits being predominately zero, the values when queried are rounded off. It is observed that the rounding off occurs differently based on the precision of the values. For example, a decimal number 1.654 when rounded to 3-digits after decimal point will be the same. Another example, is 10.890009 and 10.89000. It is noticed that 10.89000 is rounded to 10.89, where as 10.89009 is not rounded off. This is an inherent issue because of the representational limitations of binary floating point formats. This might have a significant impact when querying involves sorting.
+9. When the fields of data type `REAL` have 6 digits or more in the decimal part with the digits being predominately zero, the values when queried are rounded off. It is observed that the rounding off occurs differently based on the precision of the values. For example, a decimal number 1.654 when rounded to 3-digits after decimal point are the same. Another example, is 10.890009 and 10.89000. It is noticed that 10.89000 is rounded to 10.89, whereas 10.89009 is not rounded off. This is an inherent issue because of the representational limitations of binary floating point formats. This might have a significant impact when querying involves sorting.
 
 For more information on supported SQL statements, see [Supported SQL statements](watsonxdata?topic=watsonxdata-supported_sql_statements){: external}.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-30"
+lastupdated: "2024-05-31"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -71,7 +71,7 @@ Example:
 
 
 ```bash
-    ibmcloud resource service-instance-create byol-case lakehouse lakehouse-enterprise-dev us-east -g Default -p '{"datacenter": "ibm:us-east:wdc", "license": "byol"}'
+    ibmcloud resource service-instance-create <instance-name> lakehouse lakehouse-enterprise us-south -g Default -p '{"datacenter": "ibm:us-south:dal", "license": "byol"}'
 ```
 {: codeblock}
 

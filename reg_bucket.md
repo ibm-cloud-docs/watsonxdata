@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-16"
+lastupdated: "2024-05-31"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
 
@@ -117,6 +117,6 @@ To add a storage-catalog pair, complete the following steps.
    **Important information**{: #important_info}
    * The storage bucket name must be unique and must contain only the characters A–Z, a–z, 0–9, and hypen (-).
    * You must use a service credential with `Writer` role because the schema is written to the storage bucket. Make sure that you choose the endpoint that matches the type of access that the bucket allows. That is, if no public access is allowed (**Public access** is **No**) to the bucket, choose the **Direct** endpoint.
-   
+
 
 1. Click **Add**.

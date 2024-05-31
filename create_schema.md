@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-16"
+lastupdated: "2024-05-31"
 
 keywords: watsonxdata, schema
 

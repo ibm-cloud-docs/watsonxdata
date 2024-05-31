@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-30"
+lastupdated: "2024-05-31"
 
 keywords: security, data and keys, encrypted
 
@@ -35,7 +35,7 @@ Know, how your data is encrypted in {{site.data.keyword.lakehouse_full}} to ensu
 
 The {{site.data.keyword.lakehouse_short}} service has security that is built into all levels of its architecture.
 
-1. Web Console UI, API, Presto, and Hive metastore data in motion is encrypted by using SSL/TLS 1.3.
+1. Web Console UI, API, Presto, Milvus, and Hive metastore data in motion is encrypted by using SSL/TLS 1.3.
 2. Web Console UI, API, Presto, and Hive metastore authentication and authorization is via IBM Cloud IAM.
 3. Presto Kubernetes worker node NVMe SSDs used for local ephemeral RaptorX caching are encrypted by using AES-256.
 4. Hive metastore backend database is encrypted by using Key Protect.
@@ -68,6 +68,7 @@ The chart that follows, shows which keys can be used in which region.
 | Frankfurt (EU-DE) | EU-DE  | N/A  |
 | London (EU-GB) | EU-DE  | N/A  |
 | Tokyo (JP-Tok) | JP-Tok | N/A  |
+| Sydney (AU-Syd) | AU-Syd | N/A  |
 {: caption="Table 1. Regions - IBM" caption-side="bottom"}
 
 | **{{site.data.keyword.lakehouse_short}} Regions (AWS)**   |**Key Protect Region Available**  | **HPCS Region Available** |

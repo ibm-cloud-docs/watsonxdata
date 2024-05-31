@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-30"
+lastupdated: "2024-05-31"
 
 keywords: lakehouse, watsonx data, quick start, engine, catalog, bucket
 subcollection: watsonxdata
@@ -84,7 +84,7 @@ In the **Configure engine** page, complete the following steps:
 
    | Size | Description |
    |--------------------------|----------------|
-   | Starter (IBM) (2 RUs/hour) | Includes 1 coordinator node and 1 worker node. All nodes are **Starter**. |
+   | Starter/Lite (IBM) (2 RUs/hour) | Includes 1 coordinator node and 1 worker node. All nodes are **Starter**. |
    | Starter (AWS) (5.6 RUs/hour) | Includes 1 coordinator node and 1 worker node. All nodes are cache-optimized. |
    | Small (11.2 RUs/hour) | Includes 1 coordinator node and 3 worker nodes. All nodes are cache-optimized. |
    | Medium (19.6 RUs/hour) | Includes 1 coordinator node and 6 worker nodes. All nodes are cache-optimized. |

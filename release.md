@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-04-30"
+lastupdated: "2024-05-31"
 
 keywords: watsonxdata, release notes
 
@@ -34,6 +34,28 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.lakehouse_full}} that are grouped by date.
 {: shortdesc}
 
+## 31 May 2024 - Version 1.1.5
+{: #lakehouse_May312024}
+
+**Provision Spark engine in {{site.data.keyword.lakehouse_short}} Lite plan**
+{: #MAY_01_2024}
+
+You can now add a small-sized Spark engine (single node) in the {{site.data.keyword.lakehouse_short}} Lite plan instance. For more information, see [watsonx.data Lite plan](watsonxdata?topic=watsonxdata-tutorial_prov_lite_1).
+
+
+**Updates related to Spark labs**
+{: #MAY_02_2024}
+
+* **Working with Jupyter Notebooks from Spark labs**
+: You can now install the Jupyter extension from the VS Code Marketplace inside your Spark lab and work with Jupyter Notebooks. For more information, see [Create Jupyter Notebooks](watsonxdata?topic=watsonxdata-lab_nsp#dev_lab_02).
+
+* **Accessing Spark UI from Spark labs**
+You can now access the Spark user interface (UI) from Spark labs to monitor various aspects of running a Spark application. For more information, see [Accessing Spark UI from Spark labs](watsonxdata?topic=watsonxdata-smbit_nsp#lab_nsp-ui).
+
+**New region to provision for IBM Cloud instance**
+{: #MAY_03_2024}
+
+You can now provision your IBM Cloud instance in the Sydney region.
 
 ## 30 Apr 2024 - Version 1.1.4
 {: #lakehouse_Apr242024}

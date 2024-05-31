@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-30"
+lastupdated: "2024-05-31"
 
 keywords: lakehouse, watsonx.data, presto, cli
 
@@ -155,7 +155,7 @@ It is recommended to use IAM token for stress workload.
 
 2. Add the downloaded `jar` file to the class path of your Java application.
 
-3. Use your `ibmlhapikey` as username and API key as password. For more information, see [Getting IBM API Key](#get-ibmapi-key).
+3. Use `ibmlhapikey` as the username and API key as password. For more information, see [Getting IBM API Key](#get-ibmapi-key).
 
 4. Get the hostname and port. For more information, see [Getting the Presto engine hostname and port details](#get-host-port).
 

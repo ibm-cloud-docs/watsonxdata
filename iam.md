@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-30"
+lastupdated: "2024-05-31"
 
 keywords: lakehouse, watsonx data, iam, access, role
 
@@ -48,3 +48,32 @@ The following table describes the privileges that you can assign to platform man
 | Register own databases | Y | Y |
 | Unregister own databases | Y | Y |
 {: caption="Table 1. Roles and privileges for {{site.data.keyword.lakehouse_short}} formation" caption-side="bottom"}
+
+## Platform access roles
+{: #platform_access_role}
+
+Following are the {{site.data.keyword.cloud}} IAM platform management roles.
+
+### User roles
+{: #user_roles}
+
+- Viewer
+- Operator
+- Editor
+
+### Administrator roles
+{: #admin_roles}
+
+- Administrator
+
+The **Service Configuration Reader** and **Key Manager** roles are not relevant for {{site.data.keyword.lakehouse_short}}.
+{: note}
+
+## Service access roles
+{: #platform_access_role}
+
+Following are the service access roles:
+
+- MetadataAdmin: External users with read and write access to the metadata through Thrift APIs in {{site.data.keyword.lakehouse_short}}.
+- DataAccess: Only supports IKC-{{site.data.keyword.lakehouse_short}} service-to-service authorization to profile data in {{site.data.keyword.lakehouse_short}}.
+- MetastoreView: External users with read access to the metadata through HMS REST APIs in {{site.data.keyword.lakehouse_short}}.

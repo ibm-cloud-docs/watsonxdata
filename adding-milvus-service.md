@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-30"
+lastupdated: "2024-05-31"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -33,6 +33,11 @@ subcollection: watsonxdata
 Milvus is a vector database that stores, indexes, and manages massive embedding vectors that are developed by deep neural networks and other machine learning (ML) models. It is developed to empower embedding similarity search and AI applications. Milvus makes unstructured data search more accessible and consistent across various environments.
 {: shortdesc}
 
+watsonx.data uses version 2.4x of Milvus.
+
+The version **2.4.0** of `pymilvus` is recommended for Milvus 2.4x. You must uninstall the earlier version and install the latest version of `pymilvus`.
+{: note}
+
 Complete the following steps to add Milvus as a service in {{site.data.keyword.lakehouse_full}}.
 
 1. Log in to {{site.data.keyword.lakehouse_short}} console.
@@ -54,7 +59,7 @@ Complete the following steps to add Milvus as a service in {{site.data.keyword.l
 
     For more information about adding external buckets, see [Adding a storage-catalog pair](watsonxdata?topic=watsonxdata-reg_bucket){: external}.
 
-    Milvus service can connect to a storage without a catalog. You can erform the actions on Milvus even after such storage is disabled.
+    Milvus service can connect to a storage without a catalog. You can perform the actions on Milvus even after such storage is disabled.
     {: note}
 
 5. Click **Provision**.

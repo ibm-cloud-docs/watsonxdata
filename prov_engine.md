@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-30"
+lastupdated: "2024-05-31"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -32,11 +32,11 @@ The engine runs SQL queries on your data source and fetches the queried data. {{
 
 The following versions of Presto engine are supported as per specified {{site.data.keyword.lakehouse_short}} versions:
 
-1. {{site.data.keyword.lakehouse_short}} v1.0.0, v1.0.1 and v1.0.2: [Presto version 0.279][def]
+   - {{site.data.keyword.lakehouse_short}} v1.0.0, v1.0.1 and v1.0.2: [Presto version 0.279][def]
 
-2. {{site.data.keyword.lakehouse_short}} v1.0.3, v1.1.1 and v1.1.3: [Presto version 0.282][def1]
+   - {{site.data.keyword.lakehouse_short}} v1.0.3, v1.1.1 and v1.1.3: [Presto version 0.282][def1]
 
-3. {{site.data.keyword.lakehouse_short}} v1.1.4: [Presto version 0.285.1][def2]
+   - {{site.data.keyword.lakehouse_short}} v1.1.4: [Presto version 0.285.1][def2]
 
 
 To provision a Presto engine, complete the following steps.

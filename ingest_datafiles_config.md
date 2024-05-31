@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-30"
+lastupdated: "2024-05-31"
 
 keywords: watsonxdata, staging, config file, target iceberg table, parquet, csv, command line, cli
 
@@ -26,14 +26,21 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Creating an ingestion job by using the configuration file
+# Config file ingestion in Presto ingestion mode
 {: #create_ingestconfig}
 
 You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehouse_full}} through the CLI. The configuration file and examples are listed in this topic.
 {: shortdesc}
 
 ## Before you begin:
-{: #byb}
+{: #bybconfig}
+
+Set the mandatory environment variable `ENABLED_INGEST_MODE` to `PRESTO` before starting an ingestion job by running the following command:
+
+```bash
+export ENABLED_INGEST_MODE=PRESTO
+```
+{: codeblock}
 
 Set the environment variables for `SOURCE_S3_CREDS` and `STAGING_S3_CREDS` based on the requirements before starting an ingestion job by running the following commands:
 
@@ -77,7 +84,7 @@ To ingest a single Parquet file from a S3 location, run the following command:
 
 ```bash
 [global-ingest-config]
-target-tables:table_name
+target-table:table_name
 ingestion-engine:hostname=<hostname>,port=<port>
 create-if-not-exist:<true>
 [ingest-config1]
@@ -89,7 +96,7 @@ staging-location:STAGING_LOCATION
 For example:
 ```bash
 [global-ingest-config]
-target-tables:iceberg_cat.ice_schema.customer1_tab
+target-table:iceberg_cat.ice_schema.customer1_tab
 ingestion-engine:hostname=localhost,port=8080
 create-if-not-exist:true
 
@@ -106,7 +113,7 @@ To ingest multiple Parquet files from a S3 location, run the following command:
 
 ```bash
 [global-ingest-config]
-target-tables:table_name
+target-table:table_name
 ingestion-engine:hostname=<hostname>,port=<port>
 create-if-not-exist:<true>
 [ingest-config1]
@@ -118,7 +125,7 @@ staging-location:STAGING_LOCATION
 For example:
 ```bash
 [global-ingest-config]
-target-tables:iceberg_cat.ice_schema.customer1_tab
+target-table:iceberg_cat.ice_schema.customer1_tab
 ingestion-engine:hostname=localhost,port=8080
 create-if-not-exist:true
 
@@ -130,7 +137,7 @@ staging-location:s3://cust-bucket/warehouse/staging/
 
 ```bash
 [global-ingest-config]
-target-tables:iceberg_cat.ice_schema.customer1_tab
+target-table:iceberg_cat.ice_schema.customer1_tab
 ingestion-engine:hostname=localhost,port=8080
 create-if-not-exist:true
 
@@ -147,7 +154,7 @@ To ingest all Parquet files in a folder from a S3 location, run the following co
 
 ```bash
 [global-ingest-config]
-target-tables:table_name
+target-table:table_name
 ingestion-engine:hostname=<hostname>,port=<port>
 create-if-not-exist:<true>
 [ingest-config1]
@@ -158,7 +165,7 @@ source-files:SOURCE_DATA_FILE
 For example:
 ```bash
 [global-ingest-config]
-target-tables:iceberg_cat.ice_schema.customer1_tab
+target-table:iceberg_cat.ice_schema.customer1_tab
 ingestion-engine:hostname=localhost,port=8080
 create-if-not-exist:true
 
@@ -179,7 +186,7 @@ To ingest a single CSV file from a local location, run the following command:
 
 ```bash
 [global-ingest-config]
-target-tables:table_name
+target-table:table_name
 ingestion-engine:hostname=<hostname>,port=<port>
 create-if-not-exist:<true>
 [ingest-config1]
@@ -191,7 +198,7 @@ staging-location:STAGING_LOCATION
 For example:
 ```bash
 [global-ingest-config]
-target-tables:iceberg_cat.ice_schema.customer1_tab
+target-table:iceberg_cat.ice_schema.customer1_tab
 ingestion-engine:hostname=localhost,port=8080
 create-if-not-exist:true
 
@@ -203,7 +210,7 @@ staging-location:s3://cust-bucket/warehouse/staging/
 
 ```bash
 [global-ingest-config]
-target-tables:iceberg_cat.ice_schema.customer1_tab
+target-table:iceberg_cat.ice_schema.customer1_tab
 ingestion-engine:hostname=localhost,port=8080
 create-if-not-exist:true
 
@@ -223,7 +230,7 @@ To ingest any type of data files from a local file system, data files are needed
 
 ```bash
 [global-ingest-config]
-target-tables:table_name
+target-table:table_name
 ingestion-engine:hostname=<hostname>,port=<port>
 create-if-not-exist:<true>
 
@@ -241,7 +248,7 @@ trust-store-password:<TRUST_STORE_PASSWORD>
 For example:
 ```bash
 [global-ingest-config]
-target-tables:iceberg_data.ivt_sanity_test_1.reptile
+target-table:iceberg_data.ivt_sanity_test_1.reptile
 ingestion-engine:hostname=ibm-lh-lakehouse-presto-01-presto-svc-cpd-instance.apps.ivt384.cp.fyre.ibm.com,port=443
 create-if-not-exist:true
 
@@ -264,7 +271,7 @@ To ingest CSV/local Parquet/S3 Parquet files that use staging location:
 
 ```bash
 [global-ingest-config]
-target-tables:table_name
+target-table:table_name
 ingestion-engine:hostname=<hostname>,port=<port>
 create-if-not-exist:<true>
 
@@ -283,7 +290,7 @@ trust-store-password:<TRUST_STORE_PASSWORD>
 For example:
 ```bash
 [global-ingest-config]
-target-tables:iceberg_data.test_iceberg.gvt_data_v
+target-table:iceberg_data.test_iceberg.gvt_data_v
 ingestion-engine:hostname=ibm-lh-lakehouse-presto-01-presto-svc-cpd-instance.apps.ivt384.cp.fyre.ibm.com,port=443
 create-if-not-exist:true
 

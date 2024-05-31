@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-30"
+lastupdated: "2024-05-31"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -30,7 +30,7 @@ subcollection: watsonxdata
 {: #conn-to-milvus}
 
 Run any one of the following commands to connect with Milvus:
-{{: shortdesc}}
+{: shortdesc}
 
 ## By using API key:
 {: #conn-to-milvusapikey}
@@ -61,3 +61,4 @@ connections.connect( alias="default", uri="https://<host>:<grpc-port>", user = "
 has = utility.has_collection("hello_milvus")
 print(f"Does collection hello_milvus exist in Milvus: {has}")
 ```
+For getting API keys, see [Getting the IBM API key](watsonxdata?topic=watsonxdata-con-presto-serv#get-api-iam-token){: external}.

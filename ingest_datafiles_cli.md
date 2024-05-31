@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-30"
+lastupdated: "2024-05-31"
 
 keywords: watsonxdata, staging, config file, target iceberg table, parquet, csv, command line, cli
 
@@ -26,14 +26,21 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Creating an ingestion job by using commands
+# Command line ingestion in Presto ingestion mode
 {: #create_ingestioncli}
 
-You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehouse_full}} through the command line interface (CLI). The commands to run the ingestion job and examples are listed in this topic.
+You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehouse_full}} through the command line interface (CLI). This topic provides details of using the command line for ingestion in the Presto ingestion mode.
 {: shortdesc}
 
 ## Before you begin
-{: #byb}
+{: #bybcmndlne}
+
+Set the mandatory environment variable `ENABLED_INGEST_MODE` to `PRESTO` before starting an ingestion job by running the following command:
+
+```bash
+export ENABLED_INGEST_MODE=PRESTO
+```
+{: codeblock}
 
 Set the environment variables for `SOURCE_S3_CREDS` and `STAGING_S3_CREDS` based on the requirements before starting an ingestion job by running the following commands:
 
@@ -59,17 +66,17 @@ To access IBM Cloud Object Storage (COS) and MinIO object storage, specify the E
 Replace the absolute values in the command examples with the values applicable to your environment. See [Options and variables supported in **ibm-lh** tool](watsonxdata?topic=watsonxdata-cli_commands).
 {: note}
 
-Following are the details of the command line option to ingest data files from S3 or local location to {{site.data.keyword.lakehouse_short}} Iceberg table:
+Following are the details of the command line option to ingest data files from S3 or local location to {{site.data.keyword.lakehouse_short}} Iceberg table, in Presto ingestion mode:
 
 ## Ingest a single CSV/Parquet file from S3 location by using command
 {: #example1}
 
-To ingest a single CSV/Parquet file from a S3 location, run the following command:
+To ingest a single CSV/Parquet file from an S3 location, run the following command:
 
 ```bash
 ibm-lh data-copy --source-data-files SOURCE_DATA_FILE \
 --staging-location s3://lh-target/staging \
---target-tables TARGET_TABLES \
+--target-table TARGET_TABLES \
 --ingestion-engine-endpoint INGESTION_ENGINE_ENDPOINT \
 --dbuser DBUSER \
 --dbpassword DBPASSWORD \
@@ -81,7 +88,7 @@ For example:
 ```bash
 ibm-lh data-copy --source-data-files s3://cust-bucket/warehouse/a_source_file.parquet \
 --staging-location s3://cust-bucket/warehouse/staging/ \
---target-tables iceberg_target_catalog.ice_schema.cust_tab1 \
+--target-table iceberg_target_catalog.ice_schema.cust_tab1 \
 --ingestion-engine-endpoint "hostname=localhost,port=8080" \
 --create-if-not-exist
 ```
@@ -90,12 +97,12 @@ ibm-lh data-copy --source-data-files s3://cust-bucket/warehouse/a_source_file.pa
 ## Ingest multiple CSV/Parquet files and CSV folders from S3 location by using a command
 {: #example2}
 
-To ingest multiple CSV/Parquet files and CSV folders from a S3 location, run the following command:
+To ingest multiple CSV/Parquet files and CSV folders from an S3 location, run the following command:
 
 ```bash
 ibm-lh data-copy --source-data-files SOURCE_DATA_FILE \
 --staging-location s3://lh-target/staging \
---target-tables TARGET_TABLES \
+--target-table TARGET_TABLES \
 --ingestion-engine-endpoint INGESTION_ENGINE_ENDPOINT \
 --dbuser DBUSER \
 --dbpassword DBPASSWORD \
@@ -103,11 +110,11 @@ ibm-lh data-copy --source-data-files SOURCE_DATA_FILE \
 ```
 {: codeblock}
 
-For examples:
+For example:
 ```bash
 ibm-lh data-copy --source-data-files s3://cust-bucket/warehouse/a_source_file1.csv,s3://cust-bucket/warehouse/a_source_file2.csv \
 --staging-location s3://cust-bucket/warehouse/staging/ \
---target-tables iceberg_target_catalog.ice_schema.cust_tab1 \
+--target-table iceberg_target_catalog.ice_schema.cust_tab1 \
 --ingestion-engine-endpoint "hostname=localhost,port=8080" \
 --create-if-not-exist
 ```
@@ -116,7 +123,7 @@ ibm-lh data-copy --source-data-files s3://cust-bucket/warehouse/a_source_file1.c
 ```bash
 ibm-lh data-copy --source-data-files s3://cust-bucket/warehouse/ \
 --staging-location s3://cust-bucket/warehouse/staging/ \
---target-tables iceberg_target_catalog.ice_schema.cust_tab1 \
+--target-table iceberg_target_catalog.ice_schema.cust_tab1 \
 --ingestion-engine-endpoint "hostname=localhost,port=8080" \
 --create-if-not-exist
 ```
@@ -125,11 +132,11 @@ ibm-lh data-copy --source-data-files s3://cust-bucket/warehouse/ \
 ## Ingest all Parquet files in a folder from S3 location by using a command
 {: #example3}
 
-To ingest all Parquet files in a folder from a S3 location, run the following command:
+To ingest all Parquet files in a folder from an S3 location, run the following command:
 
 ```bash
 ibm-lh data-copy --source-data-files SOURCE_DATA_FILE \
---target-tables TARGET_TABLES \
+--target-table TARGET_TABLES \
 --ingestion-engine-endpoint INGESTION_ENGINE_ENDPOINT \
 --dbuser DBUSER \
 --dbpassword DBPASSWORD \
@@ -140,18 +147,18 @@ ibm-lh data-copy --source-data-files SOURCE_DATA_FILE \
 For example:
 ```bash
 ibm-lh data-copy --source-data-files s3://cust-bucket/warehouse/ \
---target-tables iceberg_target_catalog.ice_schema.cust_tab1 \
+--target-table iceberg_target_catalog.ice_schema.cust_tab1 \
 --ingestion-engine-endpoint "hostname=localhost,port=8080" \
 --create-if-not-exist
 ```
 {: screen}
 
-In general, this option does not require a staging location. However, a few exceptional scenarios are there when a staging location must be specified. When the staging location is not used, make sure that the hive catalog configured with Presto can be used with source-data-files location. The following are the exceptional cases where a staging location is required:
-- Any or all parquet files in the folder are huge.
-- Any or all parquet files in the folder have special columns, such as TIME.
+In general, this option does not require a staging location. However, a staging location must be specified in some exceptional scenarios. When the staging location is not used, make sure that the Hive catalog configured with Presto can be used with source-data-files location. The following are the exceptional cases where a staging location is required:
+- Any or all Parquet files in the folder are huge.
+- Any or all Parquet files in the folder have special columns, such as TIME.
 {: note}
 
-## Ingest a CSV/Parquet file or folder from a local file system by using command.
+## Ingest a CSV/Parquet file or folder from a local file system by using command
 {: #example4}
 
 To ingest a single Parquet file from a local location, run the following command:
@@ -159,7 +166,7 @@ To ingest a single Parquet file from a local location, run the following command
 ```bash
 ibm-lh data-copy --source-data-files SOURCE_DATA_FILE \
 --staging-location s3://lh-target/staging \
---target-tables TARGET_TABLES \
+--target-table TARGET_TABLES \
 --ingestion-engine-endpoint INGESTION_ENGINE_ENDPOINT \
 --dbuser DBUSER \
 --dbpassword DBPASSWORD \
@@ -171,7 +178,7 @@ For example:
 ```bash
 ibm-lh data-copy --source-data-files /cust-bucket/warehouse/a_source_file1.parquet \
 --staging-location s3://cust-bucket/warehouse/staging/ \
---target-tables iceberg_target_catalog.ice_schema.cust_tab1 \
+--target-table iceberg_target_catalog.ice_schema.cust_tab1 \
 --ingestion-engine-endpoint "hostname=localhost,port=8080" \
 --create-if-not-exist
 ```
@@ -180,7 +187,7 @@ ibm-lh data-copy --source-data-files /cust-bucket/warehouse/a_source_file1.parqu
 ```bash
 ibm-lh data-copy --source-data-files /cust-bucket/warehouse/ \
 --staging-location s3://cust-bucket/warehouse/staging/ \
---target-tables iceberg_target_catalog.ice_schema.cust_tab1 \
+--target-table iceberg_target_catalog.ice_schema.cust_tab1 \
 --ingestion-engine-endpoint "hostname=localhost,port=8080" \
 --create-if-not-exist
 ```
@@ -191,13 +198,13 @@ ibm-lh data-copy --source-data-files /cust-bucket/warehouse/ \
 
 To ingest any data file from a local location, run the following command:
 
-To ingest any type of data files from a local file system, data files are needed to be copied to ~ /ibm-lh-client/localstorage/volumes/ibm-lh directory. Now, you can access data files from /ibmlhdata/ directory by using the `ibm-lh data-copy` command.
+To ingest any type of data files from a local file system, data files must be copied to ~ /ibm-lh-client/localstorage/volumes/ibm-lh directory. Now, you can access data files from /ibmlhdata/ directory by using the `ibm-lh data-copy` command.
 {: note}
 
 ```bash
 ibm-lh data-copy --source-data-files SOURCE_DATA_FILE \" \
 --staging-location s3://lh-target/staging \
---target-tables TARGET_TABLES \
+--target-table TARGET_TABLES \
 --staging-hive-catalog <catalog_name> \
 --schema <SCHEMA> \
 --ingestion-engine-endpoint INGESTION_ENGINE_ENDPOINT \
@@ -213,7 +220,7 @@ For example:
 ```bash
 ibm-lh data-copy --source-data-files /ibmlhdata/reptile.csv \
 --staging-location  s3://watsonx.data/staging \
---target-tables iceberg_data.ivt_sanity_test_1.reptile \
+--target-table iceberg_data.ivt_sanity_test_1.reptile \
 --staging-hive-catalog hive_test \
 --schema /ibmlhdata/schema.cfg \
 --ingestion-engine-endpoint "hostname=ibm-lh-lakehouse-presto-01-presto-svc-cpd-instance.apps.ivt384.cp.fyre.ibm.com,port=443" \
@@ -228,12 +235,12 @@ ibm-lh data-copy --source-data-files /ibmlhdata/reptile.csv \
 ## Ingest CSV or local Parquet or S3 Parquet files that use staging location
 {: #example6}
 
-To ingest CSV/local Parquet/S3 Parquet files that use staging location:
+To ingest CSV or local or S3 Parquet files that use staging location:
 
 ```bash
 ibm-lh data-copy --source-data-files SOURCE_DATA_FILE \
 --staging-location s3://lh-target/staging \
---target-tables TARGET_TABLES \
+--target-table TARGET_TABLES \
 --staging-hive-catalog <catalog_name> \
 --staging-hive-schema <schema_name> \
 --ingestion-engine-endpoint INGESTION_ENGINE_ENDPOINT \
@@ -249,7 +256,7 @@ For example:
 ```bash
 ibm-lh data-copy --source-data-files s3://watsonx-data-0823-2/test_icos/GVT-DATA-C.csv \
 --staging-location  s3://watsonx.data-staging \
---target-tables iceberg_data.test_iceberg.gvt_data_v \
+--target-table iceberg_data.test_iceberg.gvt_data_v \
 --staging-hive-catalog staging_catalog \
 --staging-hive-schema staging_schema \
 --ingestion-engine-endpoint "hostname=ibm-lh-lakehouse-presto-01-presto-svc-cpd-instance.apps.ivt384.cp.fyre.ibm.com,port=443" \

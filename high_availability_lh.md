@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-30"
+lastupdated: "2024-05-31"
 
 keywords: high availability, disaster revecory, watsonx.data
 
@@ -110,3 +110,4 @@ The backup interval is reduced for the service Milvus in SaaS to improve the res
 3. Frankfurt (eu-de)
 4. London (eu-gb)
 5. Tokyo (jp-tok)
+6. Sydney (au-syd)

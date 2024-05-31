@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-30"
+lastupdated: "2024-05-31"
 
 keywords: lakehouse, watsonx data, roles, access
 subcollection: watsonxdata
@@ -79,3 +79,6 @@ To manage access, complete the following steps:
    1. Click the overflow menu for the selected user and then select **Remove**.
 
    1. In the **Confirm removal** window, click **Remove**.
+
+      The user remains in the **Access control** tab after removing from {{site.data.keyword.Bluemix_notm}} or Cloud Pak for Data. You must remove the user manually from the **Access control** tab. You might see the user in the **Access control** tab of the engine after confirming the removal. It takes up to 20 minutes for the access revoke to be effective for the user and disappear from the tab.
+      {: note}

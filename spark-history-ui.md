@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2024-04-30"
+lastupdated: "2024-05-31"
 keywords: watsonx.data, history, Spark, server
 
 subcollection: watsonxdata

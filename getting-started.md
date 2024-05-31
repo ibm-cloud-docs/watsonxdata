@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-30"
+lastupdated: "2024-05-31"
 
 keywords: lakehouse, watsonx data, provision, endpoint, resource
 subcollection: watsonxdata
@@ -32,9 +32,8 @@ For more information about using {{site.data.keyword.lakehouse_full}} on Cloud P
 
 You need to have an [{{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external}.
 
-The access to provision IBM Cloud resources is governed by using [IAM access](https://cloud.ibm.com/docs/account?topic=account-userroles&interface=ui) and [account management services](https://cloud.ibm.com/docs/account?topic=account-account-services&interface=ui). You must have **Administrator** privileges to access the resource group in which you need to create the resources.
+The access to provision IBM Cloud resources is governed by using [IAM access](https://cloud.ibm.com/docs/account?topic=account-userroles&interface=ui) and [account management services](https://cloud.ibm.com/docs/account?topic=account-account-services&interface=ui). You must have **Administrator** privileges to provision a {{site.data.keyword.lakehouse_short}} instance.
 {: note}
-
 
 ## Provision an instance
 {: #create}
@@ -90,21 +89,33 @@ The access to provision IBM Cloud resources is governed by using [IAM access](ht
 3. Create a new formation.
 
     ```bash
-    ibmcloud resource service-instance-create <instance-name> lakehouse lakehouse-enterprise <region> -g Default -p <cloud_type> '{"datacenter": ""}'`
+    ibmcloud resource service-instance-create <instance-name> lakehouse lakehouse-enterprise <region> -g <resource-group> -p '{"datacenter": "<data-center>","cloud_type": "<cloud-type>"}'
     ```
     {: codeblock}
 
-    - `instance-name:` name of the formation. For example, watsonx.data-abc.
-    - `lakehouse-enterprise:` Plan ID
-    - `lakehouse:` {{site.data.keyword.lakehouse_short}} service
-    - `datacenter:` Required parameter. For example, `ibm:us-south:dal`, `aws:us-west-2`, `aws:us-east-1`, `aws:eu-central-1`, `ibm:us-east:wdc`, and `ibm:eu-de:fra`.
-    - `cloud_type:` the type of cloud environment you want to use. For Blueray service instance creation, cloud type is `aws_vpc`.
-    - Regions are `eu-de`, `us-east`, `us-south` and `jp-tok`.
+    - `instance-name`: Name of the instance. For example, watsonx.data-abc.
+    - `lakehouse`: {{site.data.keyword.lakehouse_short}} service
+    - `lakehouse-enterprise`: Plan ID
+    - `region`: The available regions are `eu-de`, `us-east`, `us-south`, `jp-tok`, `eu-gb`, and `au-syd`.
+    - `resource-group`: Choose one of the available resource groups in your {{site.data.keyword.cloud_notm}} account. Most accounts have a `Default` group. For more information, see [Managing resource groups](https://cloud.ibm.com/docs/account?topic=account-rgs&interface=ui).
+    - `datacenter`: Use one of the following. This parameter must match the region that you have selected.
+       - `ibm:us-south:dal`
+       - `ibm:us-east:wdc`
+       - `ibm:eu-de:fra`
+       - `ibm:eu-gb:lon`
+       - `ibm:au-syd:syd`
+       - `ibm:jp-tok:tok`
+    - `cloud_type`:
+       - `ibm`: For fully managed account instances (default).
+       - `aws_vpc`: For customer-owned account instances.
+
+         For availability and general information related to customer-owned account deployed instances, contact your IBM sales representative or [open a support ticket](https://cloud.ibm.com/unifiedsupport/cases/form).
+         {: note}
 
     Example:
 
     ```bash
-    ibmcloud resource service-instance-create watsonx.data-abc lakehouse lakehouse-enterprise us-south -g Default -p aws_vpc '{"datacenter": "ibm:us-south:dal"}'
+    ibmcloud resource service-instance-create watsonx.data-abc lakehouse lakehouse-enterprise us-south -g Default -p '{"datacenter": "ibm:us-south:dal","cloud_type": "ibm"}'
     ```
     {: codeblock}
 

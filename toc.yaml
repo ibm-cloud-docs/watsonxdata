@@ -21,6 +21,7 @@ toc:
           - byol_plan.md
           - getting-started.md
       - release.md
+      - wxd_api_chg_log.md
 
   - navgroup:
       id: tutorial
@@ -29,11 +30,11 @@ toc:
       - quick_start.md
       - tut_query_db.md
       - tut_custbckt.md
-      # - topicgroup:
-      #     label: RAG use case
-      #     topics:
-      #     - tut_ai_usecase.md
-      #     - ret_credentials.md
+      - topicgroup:
+          label: RAG use case
+          topics:
+          - tut_ai_usecase.md
+          - ret_credentials.md
 
 
 
@@ -68,23 +69,25 @@ toc:
       - topicgroup:
           label: Exploring data
           topics:
-            - exp_objects.md
-            - create_schema.md
-            - create_table.md
-            - ddl_changes.md
+          - exp_objects.md
+          - create_schema.md
+          - create_table.md
+          - ddl_changes.md
       - topicgroup:
           label: Loading data
           topics:
-            - ingestdata.md
-            - ingest_spark_ui.md
-            - prepare_ingest_data.md
-            - topicgroup:
-                label: Ingesting data by using command line interface (CLI)
-                topics:
-                  - cli_commands.md
-                  - ingest_datafiles_cli.md
-                  - ingest_datafiles_config.md
-                  - ingest_spark_cli.md
+          - ingestdata.md
+          - ingest_spark_ui.md
+          - prepare_ingest_data.md
+          - topicgroup:
+              label: Ingesting data by using command line interface (CLI)
+              topics:
+              - cli_commands.md
+              - ingest_presto_cli.md
+              - ingest_datafiles_cli.md
+              - ingest_datafiles_config.md
+              - ingest_rstapi_cli.md
+              - ingest_spark_cli.md
       - topicgroup:
           label: Querying data
           topics:
@@ -98,65 +101,152 @@ toc:
             - exp-imp-qh.md
       - conn-presto-thr-cli.md
       # - integrate_wkc.md
+      - ikc_integration.md
       - presto_behavior.md
       - delete_lh.md
       - topicgroup:
-          label: Spark
+          label: Working with native Spark engine
           topics:
-            - spk_overview.md
+            - Intro_nativespark.md
+            - prov-native-spark.md
             - topicgroup:
-                label: Working with Native Spark engine
+                label: Managing native Spark engine details
                 topics:
-                #  - Intro_nativespark.md
-                  - prov-native-spark.md
+                  - mng-nspark-eng.md
                   - view-edit-native-park.md
-                  - mng-acs-nspark.md
+                  # - mng-acs-nspark.md
                   - scale_nspark.md
-                  - paus_rsm_nsp.md
-                  - asso_nspark_cat.md
-                  - sbmt_appln_nsp.md
-                  - sbmt_cas_nsp.md
+                  # - paus_rsm_nsp.md
+                  # - asso_nspark_cat.md
                   - mng_appln_nspark.md
+                  # - ae_customizing-instance.md
+                  # - ae_create-lib-set.md
+                  # - ae_cust-with-script.md
+                  # - ae_combining-lib-sets.md
+                  # - ae_parquet-encryption-serverless.md
+                  # - ae_key-management-by-application-serverless.md
+                  # - ae_key-management-by-kms-serverless.md
+            - topicgroup:
+                label: Submitting Spark application by using native Spark engine
+                topics:
+                  - sbmt_appln_nsp.md
+                  # - ae_spark-app-rest-api.md
+                  - sbmt_cas_nsp.md
+                  - run_nativespk_hudi.md
+                  # - run_nativespk_delta.md
+                  # - ae_use-lib-set.md
+            - topicgroup:
+                label: Native Spark Monitoring and logging
+                topics:
                   - logs_native_spk.md
                   - spark-history-ui.md
                   - spark-user-interface.md
-                  - lnative_spk_lab.md
-                  - run_nativespk_hudi.md
-                  - run_nativespk_delta.md
             - topicgroup:
-                label: Working with external Spark engine
+                label: Spark labs
                 topics:
-                  - provisioning-spark.md
-                  - config_spark.md
+                  - lnative_spk_lab.md
+                  - nsp_lab_mon.md
+
+      - topicgroup:
+          label: Working with external Spark engine
+          topics:
+            - Intro_extspark.md
+            - provisioning-spark.md
+            - config_spark.md
+            - topicgroup:
+                label: Submitting Spark application by using external Spark engine
+                topics:
                   - spark-use-case.md
                   - run_extspk_delta.md
                   - run_extspk_hudi.md
                   - spark-table-maint.md
                   - spark-emr.md
 
-            # - topicgroup:
-            #     label: Working with Native Spark engine
-            #     topics:
-            #       - Intro_nativespark.md
-            #       - prov-native-spark.md
-            #       - mng-nspark-eng.md
-            #       - submit-nsp-appln.md
-            #       - lnative_spk_lab.md
-            # - topicgroup:
-            #     label: Miscellaneous section
-            #     topics:
-            #       - view-edit-native-park.md
-            #       - mng-acs-nspark.md
-            #       - mng_appln_nspark.md
-            #       - scale_nspark.md
-            #       - paus_rsm_nsp.md
-            #       - spark-history-ui.md
-            #       - spark-user-interface.md
-            #       - sbmt_appln_nsp.md
-            #       - sbmt_cas_nsp.md
-            #       - logs_native_spk.md
-            #       - run_nativespk_hudi.md
-            #       - run_nativespk_delta.md
+      # - topicgroup:
+      #     label: Spark samples
+      #     topics:
+      #       - ae_spark-examples.md
+
+
+#            - spk_overview.md
+
+      # - topicgroup:
+      #     label: Spark
+      #     topics:
+      #       - spk_overview.md
+      #       - topicgroup:
+      #           label: Working with Native Spark engine
+      #           topics:
+      #           #  - Intro_nativespark.md
+      #             - prov-native-spark.md
+      #             - view-edit-native-park.md
+      #             - mng-acs-nspark.md
+      #             - scale_nspark.md
+      #             - paus_rsm_nsp.md
+      #             - asso_nspark_cat.md
+      #             - sbmt_appln_nsp.md
+      #             - sbmt_cas_nsp.md
+      #             - mng_appln_nspark.md
+      #             - logs_native_spk.md
+      #             - spark-history-ui.md
+      #             - spark-user-interface.md
+      #             - lnative_spk_lab.md
+      #             - run_nativespk_hudi.md
+      #             - run_nativespk_delta.md
+      #       - topicgroup:
+      #           label: Working with external Spark engine
+      #           topics:
+      #             - provisioning-spark.md
+      #             - config_spark.md
+      #             - spark-use-case.md
+      #             - run_extspk_delta.md
+      #             - run_extspk_hudi.md
+      #             - spark-table-maint.md
+      #             - spark-emr.md
+      #       - topicgroup:
+      #           label: Customizing a service instance
+      #           topics:
+      #             - ae_customizing-instance.md
+      #             - ae_create-lib-set.md
+      #             - ae_cust-with-script.md
+      #             - ae_use-lib-set.md
+      #             - ae_combining-lib-sets.md
+      #       - topicgroup:
+      #           label: Working with Spark batch applications
+      #           topics:
+      #             - ae_Spark-Batch-serverless.md
+      #             - ae_spark-app-rest-api.md
+      #             - ae_spark-examples.md
+      #             - ae_auto-scaling-serverless-apps.md
+      #       - topicgroup:
+      #           label: Working with Parquet Modular Encryption
+      #           topics:
+      #             - ae_parquet-encryption-serverless.md
+      #             - ae_key-management-by-application-serverless.md
+      #             - ae_key-management-by-kms-serverless.md
+      #       - topicgroup:
+      #           label: Working with Native Spark engine
+      #           topics:
+      #             - Intro_nativespark.md
+      #             - prov-native-spark.md
+      #             - mng-nspark-eng.md
+      #             - submit-nsp-appln.md
+      #             - lnative_spk_lab.md
+      #       - topicgroup:
+      #           label: Miscellaneous section
+      #           topics:
+      #             - view-edit-native-park.md
+      #             - mng-acs-nspark.md
+      #             - mng_appln_nspark.md
+      #             - scale_nspark.md
+      #             - paus_rsm_nsp.md
+      #             - spark-history-ui.md
+      #             - spark-user-interface.md
+      #             - sbmt_appln_nsp.md
+      #             - sbmt_cas_nsp.md
+      #             - logs_native_spk.md
+      #             - run_nativespk_hudi.md
+      #             - run_nativespk_delta.md
       - topicgroup:
           label: Milvus
           topics:
@@ -188,10 +278,14 @@ toc:
             - at_events_docs.md
             - log_analysis.md
             - monitoring_wxdcloud.md
+            # - ae_at-tracker-serverless.md
 
   - navgroup:
       id: reference
       topics:
+      # - ae_provisioning-concepts.md
+      # - ae_limits.md
+      # - ae_best-practices-serverless.md
       - supported_sql_statements.md
       - supported_datatypes.md
       - pricing_plan.md
@@ -216,4 +310,10 @@ toc:
           topics:
             - ts_cs_issue.md
             - ts_ip_restrict_issue.md
+            - topicgroup:
+                label: Spark
+                topics:
+                  - nsp_trbleshtng_cert-error.md
+                  - nsp_trbleshtng_permisn.md
+                  - nsp_trbleshtng_timout.md
       - get-help.md

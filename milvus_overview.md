@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-30"
+lastupdated: "2024-05-31"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -30,6 +30,7 @@ subcollection: watsonxdata
 {: #whatismilvus}
 
 Milvus is a vector database that stores, indexes, and manages massive embedding vectors that are developed by deep neural networks and other machine learning (ML) models. It is developed to empower embedding similarity search and AI applications. Milvus makes unstructured data search more accessible and consistent across various environments.
+
 watsonx.data uses version 2.3x of Milvus.
 
 ## What can you do with Milvus

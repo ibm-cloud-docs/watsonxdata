@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-04-30"
+lastupdated: "2024-05-31"
 
 keywords: lakehouse, SQL statements, connectors, watsonx.data
 
@@ -104,11 +104,12 @@ The following SQL statements are supported in {{site.data.keyword.lakehouse_full
 3. **MongoDB** connector supports only `TABLE RENAME` for `ALTER TABLE` statement.
 4. **MongoDB** connector does not support complex `DELETE` involving `OR` statements with different columns for `DELETE` statement.
 5. **Teradata** connector supports only `ADD COLUMN` and `DROP COLUMN` for `ALTER TABLE` statement. `DROP COLUMN` does not drop the first column.
-6. **Db2** connector partially supports `ALTER TABLE`, `CREATE VIEW`, and `DROP SCHEMA` statements.
-7. **{{site.data.keyword.netezza_short}}** connector partially supports `ALTER TABLE` and `CREATE VIEW` statements.
-8. **MySQL**, **PostgreSQL**, **MongoDB**, **Db2**, **Teradata**, **Snowflake**, **SQL Server**, and **{{site.data.keyword.netezza_short}}** connectors support `DROP TABLE` statement only when enabled in the catalog.
-9. For database-based catalogs the `CREATE SCHEMA`, `CREATE TABLE`, `DROP SCHEMA`, `DROP TABLE`, `DELETE`, `DROP VIEW`, `ALTER TABLE`, and `ALTER SCHEMA` statements are not available in the **Data Manager** UI.
-10. For **Db2** and **{{site.data.keyword.netezza_short}}** connectors, you can create the view for a table only if that table is in the same catalog and the same schema.
-11. For **Iceberg**, **Db2**, **{{site.data.keyword.netezza_short}}**, **Memory** and **Hive** connectors, `DROP SCHEMA` can do `RESTRICT` by default.
+6. **Db2** connector does not support the `ALTER TABLE DROP COLUMN` operation for column-organized tables.
+7. **Db2** connector does not support `SELECT` operations on `VIEWS` statements.
+8. **{{site.data.keyword.netezza_short}}** connector partially supports `ALTER TABLE` and `CREATE VIEW` statements.
+9. **MySQL**, **PostgreSQL**, **MongoDB**, **Db2**, **Teradata**, **Snowflake**, **SQL Server**, and **{{site.data.keyword.netezza_short}}** connectors support `DROP TABLE` statement only when enabled in the catalog.
+10. For database-based catalogs the `CREATE SCHEMA`, `CREATE TABLE`, `DROP SCHEMA`, `DROP TABLE`, `DELETE`, `DROP VIEW`, `ALTER TABLE`, and `ALTER SCHEMA` statements are not available in the **Data Manager** UI.
+11. For **Db2** and **{{site.data.keyword.netezza_short}}** connectors, you can create the view for a table only if that table is in the same catalog and the same schema.
+12. For **Iceberg**, **Db2**, **{{site.data.keyword.netezza_short}}**, **Memory** and **Hive** connectors, `DROP SCHEMA` can do `RESTRICT` by default.
 
 For more information on supported data types, see [Supported data types](watsonxdata?topic=watsonxdata-supported_datatypes){: external}.
