@@ -21,7 +21,7 @@ toc:
           - byol_plan.md
           - getting-started.md
       - release.md
-      - wxd_api_chg_log.md
+      # - wxd_api_chg_log.md
 
   - navgroup:
       id: tutorial
