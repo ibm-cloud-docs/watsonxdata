@@ -30,11 +30,11 @@ toc:
       - quick_start.md
       - tut_query_db.md
       - tut_custbckt.md
-      - topicgroup:
-          label: RAG use case
-          topics:
-          - tut_ai_usecase.md
-          - ret_credentials.md
+      # - topicgroup:
+      #     label: RAG use case
+      #     topics:
+      #     - tut_ai_usecase.md
+      #     - ret_credentials.md
 
 
 
