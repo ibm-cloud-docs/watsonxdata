@@ -35,6 +35,8 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} by using {{site.da
 ## Before you begin
 {: #spk_ing}
 
+To enable your Spark application to work with the watsonx.data catalog and storage, you must have `Metastore admin` role. Without `Metastore admin` privilege, you cannot ingest data to storage using Native Spark engine. For more information about the Spark configuration, see [Working with the watsonx.data catalog and storage](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-smbit_nsp#view_smbit_nsp)
+
 * You must have the **Administrator** role and privileges in the catalog to do ingestion through the web console.
 * Add and register {{site.data.keyword.iae_full_notm}} (Spark). See [Registering an engine](watsonxdata?topic=watsonxdata-reg_engine).
 * Add buckets for the source data files and target catalog. See [Adding a bucket-catalog pair](watsonxdata?topic=watsonxdata-reg_bucket).
@@ -50,10 +52,9 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} by using {{site.da
 1. If required, modify the auto-generated ingestion job ID in the **Enter job ID** field.
 1. Select a registered IBM Analytics Engine (Spark) from the **Select engine** list.
 
-   <!-- 1. Configure Spark driver cores, executor cores, and memory resources. Click **Next**. -->
+   
 
-    <!-- For IBM Cloud, the Spark driver, executor vCPU and memory combinations must be in a 1:2, 1:4, or 1:8 ratio. The default configuration values are filled. See [Default limits and quotas for Analytics Engine instances](https://cloud.ibm.com/docs/AnalyticsEngine?topic=AnalyticsEngine-limits).
-    {: note} -->
+    
 
 1. Select size (**Small**, **Medium**, **Large**, or **Custom**) for Spark engine resource configurations based on the size of source data that is getting ingested. If you want to customize the configurations, select  **Custom**, and configure your own Spark driver cores, executor cores, and memory resources.
 1. In the **Select file(s)** tab, click **Select remote files**.

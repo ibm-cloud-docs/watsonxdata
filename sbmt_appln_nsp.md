@@ -122,6 +122,8 @@ You can submit a Spark application by running a CURL command. Complete the follo
    * `<s3 bucket HMAC access key>` : The access key for object storage. For more information, see [Create HMAC credentials using the CLI](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main#uhc-create-hmac-credentials-cli).
    * `<s3 bucket HMAC secret key>` : The secret key for object storage. For more information, see [Create HMAC credentials using the CLI](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main#uhc-create-hmac-credentials-cli).
 
+
+
 6. After you submit the Spark application, you receive a confirmation message with the application ID and Spark version. Save it for reference.
 7. Log in to the watsonx.data cluster, access the **Engine details** page. In the **Applications** tab, use the application ID to list the application and you can track the stages. For more information, see [View and manage applications](watsonxdata?topic=watsonxdata-mng_appltn).
 

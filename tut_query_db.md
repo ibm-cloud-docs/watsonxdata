@@ -25,8 +25,8 @@ completion-time: 0.5h
 {: toc-content-type="tutorial"}
 {: toc-completion-time="0.5h"}
 
-<!-- / Getting familiarized with Presto query engine -->
-<!-- Exploring Presto functionality for a first time user -->
+
+
 
 After successfully provisioning the Presto engine, kickstart your {{site.data.keyword.lakehouse_short}} experience by exploring the capabilities of Presto by running test queries, creating your first schema, and tables.
 {: shortdesc}
@@ -39,10 +39,7 @@ In this tutorial, you learn to execute some test queries to understand the capab
 * About the data available for kick start
 * To learn how to create schemas and tables to store, organize and query data.
 
-<!-- For this scenario, you must create the Presto query engine, establish connection, read data from the data bucket and display the result in {{site.data.keyword.lakehouse_short}} instance.
 
-This scenario assumes that you already have a data bucket that is associated with data for querying.
-{: note} -->
 
 
 ## Objective
