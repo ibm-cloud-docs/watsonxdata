@@ -148,7 +148,13 @@ In this section of the tutorial, you are going to learn how to apply the promoti
 
 1. Enter the access management tags.
 
+<!-- 1. Select the type of network endpoint that is used for accessing the service.(optional).
 
+   a. **Public endpoint only** - Public endpoints provide a connection to your deployment on the public network (single endpoint).
+
+   b. **Private endpoint only** - Private endpoints route traffic through the {{site.data.keyword.Bluemix_short}} Private network (single endpoint).
+
+   c. **Both public and private endpoints** - Public endpoints provide a connection to your deployment on the public network. Private endpoints route traffic through the {{site.data.keyword.Bluemix_short}} Private network. -->
 
 1. In the **Summary** page, the promotion code appears.
 1. Enter the promotion code in the **Apply a code** field and click **Apply**.
@@ -164,7 +170,7 @@ In this section of the tutorial, you are going to learn how to apply the promoti
 
 1. Click **Open web console** to start the web console.
 
-
+<!-- 1. Log in to the console with your IBMid and password. The {{site.data.keyword.lakehouse_short}} web console opens. -->
 
 After applying the promo code, you will receive a notification indicating that the promo code is successfully applied or not. You can verify the application of the promo code or can also can also apply the promotion code directly from your {{site.data.keyword.Bluemix_short}} promo credit dashboard.
 {: note}

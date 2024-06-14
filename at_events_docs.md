@@ -151,15 +151,3 @@ The following table lists the actions that generate an event:
 | `lakehouse.datapolicy.update`     | An event is generated when you update a data policy. |
 | `lakehouse.datapolicy.delete`     | An event is generated when you delete a data policy. |
 {: caption="Table 11. Lists of data policy events" caption-side="bottom"}
-
-
-## Events for Spark
-{: #at_actions_spark}
-
-| Action                            | Description |
-|-----------------------------------|-------------|
-| `lakehouse.spark_engine.list`     | An event is generated when you list Spark engine. |
-| `lakehouse.spark_engine.create`     | An event is generated when you create a Spark engine. |
-| `lakehouse.spark_engine.delete`     | An event is generated when you delete a Spark engine. |
-| `lakehouse.spark_engine_application.get`     | An event is generated when you retrieve details of a Spark application. |
-{: caption="Table 11. Lists of data policy events" caption-side="bottom"}

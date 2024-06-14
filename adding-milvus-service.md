@@ -49,10 +49,10 @@ Complete the following steps to add Milvus as a service in {{site.data.keyword.l
     | -------- | -------- |
     | Display name | Enter the Milvus service name to be displayed on the screen.|
     | Size | Select the suitable size. |
-    |   | **Starter:** Recommended for **1 million vectors**, 64 index parameters, 1024 segment size, 384 dimensions, and IVF_SQ8 index type.|
-    |   | **Small:** Recommended for **10 million vectors**, 64 index parameters, 1024 segment size, 384 dimensions, and IVF_SQ8 index type.|
-    |   | **Medium:** Recommended for **50 million vectors**, 64 index parameters, 1024 segment size, 384 dimensions, and IVF_SQ8 index type.|
-    |   | **Large:** Recommended for **100 million vectors**, 64 index parameters, 1024 segment size, 384 dimensions, and IVF_SQ8 index type.|
+    |   | **Starter:** Recommended for **1 million vectors**, 64 index parameters, 1024 segment size, and 384 dimensions.|
+    |   | **Small:** Recommended for **10 million vectors**, 64 index parameters, 1024 segment size, and 384 dimensions.|
+    |   | **Medium:** Recommended for **50 million vectors**, 64 index parameters, 1024 segment size, and 384 dimensions.|
+    |   | **Large:** Recommended for **100 million vectors**, 64 index parameters, 1024 segment size, and 384 dimensions.|
     | Storage bucket | Associate an external bucket for the **Small**, **Medium**, or **Large** sizes. For **Starter** size, you can also select an IBM-managed bucket.|
     | Path | For external buckets, specify the path where you want to store vectorized data files.|
     {: caption="Table 1. Adding Milvus service" caption-side="bottom"}

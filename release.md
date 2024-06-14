@@ -145,7 +145,7 @@ You can now use the BINARY data type  with the SELECT statement in the Query wor
 
 New data types: BLOB and CLOB are available for MySQL, PostgreSQL, Snowflake, SQL Server, and Db2 data sources. You can use these data types only with SELECT statements in the Query workspace to build and run queries against your data.
 
-
+<!-- Issue-New DataType : Binary - #8397 , New DataType : BLOB & CLOB : [Release-2] - #8398 -->
 
 **Delete data by using the DELETE FROM feature for Iceberg data sources**
 {: #mar_02_2024}
@@ -154,7 +154,11 @@ You can now delete data from tables in Iceberg data sources by using the DELETE 
 
 You can specify the table property delete mode for new tables by using either copy-on-write mode or merge-on-read mode (default). For more information, see [SQL statements](watsonxdata?topic=watsonxdata-supported_sql_statements).
 
+<!-- Support deleting whole partitions in Iceberg table - #8753
 
+Support DELETEs on Iceberg tables via presto - #1563. - parent of 7767 and 7768
+
+#7768#7767 -->
 
 **ALTER VIEW statement for Iceberg data source**
 {: #mar_03_2024}
@@ -163,20 +167,20 @@ You can now use the following SQL statement in the Query workspace to build and 
 
 ALTER VIEW name RENAME TO new_name
 
-
+<!-- Support ALTER RENAME view in iceberg - #7610  -->
 
 **Upload SSL certificates for Netezza Performance Server data sources**
 {: #mar_03_2024}
 
 You can now browse and upload the SSL certificate for SSL connections in Netezza Performance Server data sources. The valid file formats for SSL certificate are .pem, .crt, and .cer. You can upload SSL certificates by using the Adding a database-catalog pair option in the Infrastructure manager.
 
-
+<!-- Enable Netezza connector for SSL connections - #7965   -->
 
 **Query data from Db2 and Watson Query**
 {: #mar_04_2024}
 
 You can now query nicknames that are created in Db2 and virtualized tables from  Watson Query instances.
-
+<!-- Support more table types in Db2 connector - #4724    -->
 
 
 **SSL connection for IBM Data Virtualization Manager for z/OS data source**
@@ -184,14 +188,16 @@ You can now query nicknames that are created in Db2 and virtualized tables from 
 
 You can now enable SSL connection for the IBM Data Virtualization Manager for z/OS data source by using the Add database user interface to secure and encrypt the database connection. Select Validate certificate to validate whether the SSL certificate that is returned by the host is trusted. You can choose to provide the hostname in the SSL certificate.
 
-
+<!-- https://github.ibm.com/lakehouse/tracker/issues/6107    -->
 
 **Use data from Apache Hudi catalog**
 {: #mar_05_2024}
 
 You can now connect to and use data from Apache Hudi catalog.
 
+<!-- https://github.ibm.com/lakehouse/tracker/issues/8804
 
+https://github.ibm.com/lakehouse/tracker/issues/9008    -->
 
 **Add Milvus as a service in {{site.data.keyword.lakehouse_short}}**
 {: #mar_06_2024}
@@ -205,21 +211,24 @@ You can now provision Milvus as a service in {{site.data.keyword.lakehouse_shor
 * Configure the Object storage for Milvus to store data. You can add or configure a custom bucket and specify the username, password, region, and bucket URL.
 
 For more information, see [Milvus](watsonxdata?topic=watsonxdata-adding-milvus-service).
+<!-- https://github.ibm.com/lakehouse/tracker/issues/7569
+https://github.ibm.com/lakehouse/tracker/issues/7772
 
+    -->
 
 **Load data in batch by using the ibm-lh ingestion tool**
 {: #mar_07_2024}
 
 You can now use the ibm-lh ingestion tool to run batch ingestion procedures in non-interactive mode (from outside the ibm-lh-tools container), by using the ibm-lh-client package. For more information, see [ibm-lh commands and usage](https://www.ibm.com/docs/SSDZ38_1.1.x/wxd-client/topics/ibm_lh_commands.html).
 
- 
+ <!-- https://github.ibm.com/lakehouse/tracker/issues/9132     -->
 
 **Creating schema by using bulk ingestion in web console**
 {: #mar_08_2024}
 
 You can now create a schema by using the bulk ingestion process in the web console, if the schema is not previously created.
 
-
+<!-- https://github.ibm.com/lakehouse/tracker/issues/8885     -->
 
 **Use time-travel queries in Apache Iceberg tables**
 {: #mar_09_2024}
@@ -230,13 +239,13 @@ You can now run the following time-travel queries by using branches and tags in 
 
 - SELECT *FROM `<table name>` FOR VERSION AS OF 'test-branch'
 
-
+<!-- https://github.ibm.com/lakehouse/tracker/issues/7651     -->
 
 
 **Access Cloud Object Storage without credentials**
 You can now access your Cloud Object Storage bucket without credentials, by using the Content Aware Storage (CAS) endpoint. For more information about getting CAS endpoint, see [Getting CAS endpoint](watsonxdata?topic=watsonxdata-cas_ep).
 
-
+<!-- https://github.ibm.com/lakehouse/tracker/issues/8993     -->
 
 
 ## 28 Feb 2024 - Version 1.1.2
@@ -258,14 +267,18 @@ You can now enable SSL connection for the following data sources by using the **
 
 For more information, see [Adding a database](watsonxdata?topic=watsonxdata-reg_database).
 
+<!-- Issue-https://github.ibm.com/lakehouse/tracker/issues/5494
 
+Issue-https://github.ibm.com/lakehouse/tracker/issues/2467
+
+Issue-https://github.ibm.com/lakehouse/tracker/issues/6107  removed DVM as per slack conversationa and git issue comment from SAAS-Shanavi-->
 
 **Secure ingestion job history**
 {: #feb_02_2024}
 
 Now, users can view only their own ingestion job history. Administrators can view the ingestion job history for all users.
 
-
+<!-- Issue- https://github.ibm.com/lakehouse/tracker/issues/6500 -->
 
 
 **SQL enhancements**
@@ -279,7 +292,9 @@ You can now use the following SQL statements in the Query workspace to build and
    * MongoDB data sources
         - DELETE
 
+<!-- Issue- https://github.ibm.com/lakehouse/tracker/issues/4678
 
+Issue- https://github.ibm.com/lakehouse/tracker/issues/5782 -->
 
 
 **New data types BLOB and CLOB for Teradata data source**
@@ -287,7 +302,7 @@ You can now use the following SQL statements in the Query workspace to build and
 
 New data types BLOB and CLOB are available for Teradata data source. You can use these data types only with SELECT statements in the Query workspace to build and run queries against your data.
 
-
+<!-- Issue- https://github.ibm.com/lakehouse/tracker/issues/7966 -->
 
 
 **Create a new table during data ingestion**
@@ -299,7 +314,9 @@ Previously, you had to have a target table in {{site.data.keyword.lakehouse_shor
 
 * Ingesting data by using Spark.
 
+<!-- Issue- https://github.ibm.com/lakehouse/tracker/issues/7714
 
+https://github.ibm.com/lakehouse/tracker/issues/7665 -->
 
 
 **Perform ALTER TABLE operations on a column**
@@ -313,7 +330,7 @@ With an Iceberg data source, you can now perform ALTER TABLE operations on a c
 
 * decimal (num1, dec_digits) to decimal (num2, dec_digits), where num2>num1.
 
-
+<!-- Issue: https://github.ibm.com/lakehouse/tracker/issues/7360  -->
 
 **Better query performance by using sorted files**
 {: #feb_09_2024}
@@ -322,7 +339,7 @@ With an Apache Iceberg data source, you can generate sorted files, which reduce 
 
 You can configure the order to sort the data by using the `sorted_by` table property. When you create the table, specify an array of one or more columns involved in sorting. To disable the feature, set the session property `sorted_writing_enabled` to false. 
 
-
+<!-- Issue : https://github.ibm.com/lakehouse/tracker/issues/5201  -->
 
 ## 31 Jan 2024 - Version 1.1.1
 {: #lakehouse_Jan312024}
@@ -370,7 +387,16 @@ The Presto behavior is changed from case-insensitive to case-sensitive. Now you 
 
 You can use the Rollback feature to rollback or rollforward to any snapshots for Iceberg tables.
 
+<!-- **Improved query performance with caching**
+{: #wn_03}
 
+You can use the following types of caching to improve Presto query performance:
+
+- Metastore caching
+- File list caching
+- File metadata caching
+
+For more information, see [Enhancing query performance through caching](https://www.ibm.com/docs/SSDZ38_1.1.x/wxd/admin/enhance_qry.html). {: external} -->
 
 **Capture Data Definition Language (DDL) changes**
 {: #wn_04}

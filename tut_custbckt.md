@@ -53,7 +53,18 @@ This tutorial requires:
 * The configuration details of data bucket that you bring in. This is required for establishing connetion with the {{site.data.keyword.lakehouse_short}}.
 * Provision {{site.data.keyword.lakehouse_short}} service instance
 
+<!-- ## Connecting to web console
+{: #custbckt_stp2}
+{: step}
 
+After creating the {{site.data.keyword.lakehouse_short}} instance, you need to log in to the {{site.data.keyword.lakehouse_short}} web console. Complete the following steps:
+{: shortdesc}
+
+1. Log in to your IBM Cloud Account.
+2. Go to **Resource list** **>** **Databases**.
+3. Click your {{site.data.keyword.lakehouse_short}} instance link. The service instance page opens.
+4. Click the **Open web console** button to start the web console.
+5. Log in to the console with your IBM ID and password. -->
 
 
 ## Adding the storage that you own and ingesting data

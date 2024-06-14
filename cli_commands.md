@@ -215,17 +215,11 @@ Examples:
 
 `ibm-lh data-copy --target-table 'catalog."schema 2.0"."my table!"'`
 
-```bash
-ibm-lh data-copy --target-table 'catalog.`schema 2.0`.`my table!`'
-```
-{: codeblock}
+`ibm-lh data-copy --target-table 'catalog.`schema 2.0`.`my table!`'`
 
 `ibm-lh data-copy --target-table catalog.'"schema 2.0"'.'"my table!"'`
 
-```bash
-ibm-lh data-copy --target-table "catalog.\`schema 2.0\`.\`my table!\`"
-```
-{: codeblock}
+`ibm-lh data-copy --target-table "catalog.\`schema 2.0\`.\`my table!\`"`
 
 `ibm-lh data-copy --target-table catalog.\"schema\ 2.0\".\"my\ table!\"`
 
