@@ -41,9 +41,7 @@ To start {{site.data.keyword.lakehouse_full}} web console, complete the followin
 3. Click your {{site.data.keyword.lakehouse_full}} instance link. The service instance page opens.
 4. Click **Open web console** to load the home page.
 
-<!-- 5. Log in to the console with your IBM ID and password.
 
-After you log in to the {{site.data.keyword.lakehouse_short}} web console, you are on the home page. -->
 
 The home page provides information about the logged in user, the login timestamp, and region where the {{site.data.keyword.lakehouse_short}} is created.
 

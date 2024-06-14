@@ -225,6 +225,15 @@ Default user access is granted to:
 | View existence (infra page and `…/api/…/` buckets) | ✓ | ✓ | ✓ | ✓ |
 {: caption="Table 5. Resource-level permissions" caption-side="bottom"}
 
+Users can get relative bucket role for all sub-folders and files in a bucket or can be granted file action for particular folders or files. The following table explains file actions and bucket roles:
+
+| File action | Bucket role |
+| ----------- | ----------- |
+| Write       | Admin or Writer |
+| Read        | Reader |
+| Delete      | Admin or Writer |
+{: caption="Table 6. File action and bucket role" caption-side="bottom"}
+
 ## DB connection
 {: #db_connection}
 
@@ -247,7 +256,7 @@ Default user access is granted to:
 | Grant and revoke access | ✓ |   |    |     |
 | Modify database objects | ✓ | ✓ |    |     |
 | View existance (infra page and `…/api/…/extdb`) | ✓ | ✓ | ✓ | ✓ |
-{: caption="Table 6. Resource-level permissions" caption-side="bottom"}
+{: caption="Table 7. Resource-level permissions" caption-side="bottom"}
 
 ## Catalog
 {: #catalog}
@@ -279,7 +288,7 @@ Default user access is granted to:
 | Grant and revoke access | ✓ |   |     |
 | Access to data | ✓ | Based on data policy |     |
 | View existence (infra page and `…/`) | ✓ | ✓ |     |
-{: caption="Table 7. Resource-level permissions" caption-side="bottom"}
+{: caption="Table 8. Resource-level permissions" caption-side="bottom"}
 
 ## Schema
 {: #schema}
@@ -311,7 +320,7 @@ Default user access is granted to:
 | Drop | ✓ |   |
 | Access | ✓ | based on access data control policies defined in {{site.data.keyword.lakehouse_short}} by admin |
 | Create table | ✓ | based on access data control policies defined in {{site.data.keyword.lakehouse_short}} by admin |
-{: caption="Table 8. Resource-level permissions" caption-side="bottom"}
+{: caption="Table 9. Resource-level permissions" caption-side="bottom"}
 
 ## Table
 {: #table}
@@ -345,4 +354,4 @@ Default user access is granted to:
 | Insert | ✓ | based on access data control policies defined in {{site.data.keyword.lakehouse_short}} by admin |
 | Update | ✓ | based on access data control policies defined in {{site.data.keyword.lakehouse_short}} by admin |
 | Delete | ✓ | based on access data control policies defined in {{site.data.keyword.lakehouse_short}} by admin |
-{: caption="Table 9. Resource-level permissions" caption-side="bottom"}
+{: caption="Table 10. Resource-level permissions" caption-side="bottom"}

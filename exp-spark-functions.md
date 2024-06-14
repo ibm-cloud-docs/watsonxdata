@@ -22,7 +22,7 @@ The functions achievable through the {{site.data.keyword.iae_full_notm}} integra
 ## Prerequisites
 {: #exp_preq}
 
-<!-- Inputs required -->
+
 
 
 

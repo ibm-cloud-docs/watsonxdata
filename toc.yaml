@@ -8,7 +8,6 @@ toc:
     product-page: https://www.ibm.com/products/watsonx-data
     path: watsonxdata
     label: IBM watsonx.data
-
   entries:
   - navgroup:
       id: learn
@@ -22,7 +21,6 @@ toc:
           - getting-started.md
       - release.md
       # - wxd_api_chg_log.md
-
   - navgroup:
       id: tutorial
       topics:
@@ -30,14 +28,15 @@ toc:
       - quick_start.md
       - tut_query_db.md
       - tut_custbckt.md
-      # - topicgroup:
-      #     label: RAG use case
-      #     topics:
-      #     - tut_ai_usecase.md
-      #     - ret_credentials.md
-
-
-
+      - topicgroup:
+          label: RAG use case
+          topics:
+            - tut_ai_usecase.md
+            - ret_credentials.md
+      - topicgroup:
+          label: Data federation use case
+          topics:
+            - tut_data_federation.md
   - navgroup:
       id: howto
       topics:
@@ -101,6 +100,8 @@ toc:
             - exp-imp-qh.md
       - conn-presto-thr-cli.md
       # - integrate_wkc.md
+      - ikc_integration.md
+      - s2s_auth.md
       - presto_behavior.md
       - delete_lh.md
       - topicgroup:
@@ -145,7 +146,6 @@ toc:
                 topics:
                   - lnative_spk_lab.md
                   - nsp_lab_mon.md
-
       - topicgroup:
           label: Working with external Spark engine
           topics:
@@ -160,15 +160,11 @@ toc:
                   - run_extspk_hudi.md
                   - spark-table-maint.md
                   - spark-emr.md
-
       # - topicgroup:
       #     label: Spark samples
       #     topics:
       #       - ae_spark-examples.md
-
-
 #            - spk_overview.md
-
       # - topicgroup:
       #     label: Spark
       #     topics:
@@ -266,9 +262,10 @@ toc:
             - manage_access.md
             - role_priv.md
             - data_policy.md
+            - cas-proxy.md
       - billing_usage.md
       - hms_credentials.md
-      - cas-ep.md
+      # - cas-ep.md
       - notifications.md
       - event_notifications.md
       - topicgroup:
@@ -278,7 +275,6 @@ toc:
             - log_analysis.md
             - monitoring_wxdcloud.md
             # - ae_at-tracker-serverless.md
-
   - navgroup:
       id: reference
       topics:
@@ -288,6 +284,7 @@ toc:
       - supported_sql_statements.md
       - supported_datatypes.md
       - pricing_plan.md
+      - cas_proxy_ov.md
       - link:
             label: Presto SQL statements
             href: https://www.ibm.com/docs/SSDZ38_1.1.x/lh-prestosql/topics/sql_intro.html

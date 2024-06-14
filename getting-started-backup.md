@@ -96,10 +96,7 @@ To understand about the resource unit consumption for the components in the {{si
 
 9. Enter the access management tags.
 
-   <!-- 1. Select the type of network endpoints that is used for accessing the service.
-   a. **Public endpoint only** - Public endpoints provide a connection to your deployment on the public network (single endpoint).
-   b. **Private endpoint only** - Private endpoints route traffic through the IBM Cloud Private network (single endpoint).
-   c. **Both public and private endpoints** - Public endpoints provide a connection to your deployment on the public network. Private endpoints route traffic through the IBM Cloud Private network. (Two separate endpoints). -->
+   
 
 10. Click **Create**.
 
@@ -157,7 +154,7 @@ To understand about the resource unit consumption for the components in the {{si
 
 3. Click **Open web console**. The {{site.data.keyword.lakehouse_short}} web console opens.
 
-    <!-- 1. Log in to the console with your IBMid and password. The {{site.data.keyword.lakehouse_short}} web console opens. -->
+    
 
 ## Next steps
 {: #gs_ns}
