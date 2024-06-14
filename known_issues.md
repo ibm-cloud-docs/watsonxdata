@@ -42,6 +42,17 @@ As a result of Intel's CPU upgrade, the `omrgc_spinlock_acquire` call takes long
    2. Update the jvm.config file to include the new JVM parameter, `-Xgc:tlhInitialSize=8096,tlhIncrementSize=16384,tlhMaximumSize=1048576`.
    3. Restart the Presto coordinator and worker node. -->
 
+## Some Lite plan users are not able to create schemas in the data manager UI
+{: #known_issues21826}
+
+Some Lite plan users are currently experiencing an issue where they are unable to create schemas using the **Create schema** option in the data manager user interface window. This prevents users from creating tables.
+
+**Workaround:** Try creating a schema using SQL commands through the **Query workspace**. Many users have found this functional."
+
+```bash
+`CREATE SCHEMA iceberg_data.test434 WITH (location = [your bucket])`
+```
+{: codeblock}
 
 ## Assigning user role access with Japanese browser language
 {: #known_issues21826}
