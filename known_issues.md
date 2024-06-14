@@ -34,17 +34,6 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
-## Some Lite plan users are not able to create schemas in the data manager UI
-{: #known_issues21826}
-
-Some Lite plan users are currently experiencing an issue where they are unable to create schemas using the **Create schema** option in the data manager user interface window. This prevents users from creating tables.
-
-**Workaround:** Try creating a schema using SQL commands through the **Query workspace**. Many users have found this functional."
-
-```bash
-`CREATE SCHEMA iceberg_data.test434 WITH (location = [your bucket])`
-```
-{: codeblock}
 
 ## Assigning user role access with Japanese browser language
 {: #known_issues21826}
