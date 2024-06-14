@@ -31,16 +31,8 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
-<!-- ## Issue: Longer `omrgc_spinlock_acquire` calls slow down {{site.data.keyword.lakehouse_short}} performance
-{: #known_issues1.0.0_7}
 
-As a result of Intel's CPU upgrade, the `omrgc_spinlock_acquire` call takes longer to complete, making {{site.data.keyword.lakehouse_short}} slower. -->
-<!--
-**Workaround:**: Do the following steps:
 
-   1. Go to Presto folder path (/opt/presto/etc folder).
-   2. Update the jvm.config file to include the new JVM parameter, `-Xgc:tlhInitialSize=8096,tlhIncrementSize=16384,tlhMaximumSize=1048576`.
-   3. Restart the Presto coordinator and worker node. -->
 
 ## Some Lite plan users are not able to create schemas in the data manager UI
 {: #known_issues21826}
@@ -61,17 +53,14 @@ Users with browser language set to Japanese may encounter difficulties assigning
 
 **Workaround:** Users can switch the browser language to English and assign User access to different components.
 
-## Synchronization failure with special characters or mixed case in table or schema names
+## Special characters and mixed case impacting data synchronization
 {: #known_issues11040}
 
-When you attempt to synchronize data between buckets containing tables or schemas with special characters or mixed case letters in their names, synchronization fails.
+When synchronizing data between buckets containing tables or schemas with special characters or mixed case letters in their names, you might encounter with the following unexpected behaviors:
+- Tables or schemas with certain special characters `%`, `,`, `{`, `)`, `(`, `@`, `$`, `[`, `:` will have their data entirely skipped during synchronization.
+- Tables or schemas with mixed case or uppercase letters will be converted to lowercase before synchronization.
 
 **Workaround:** Avoid using special characters and mixed case in table and schema names. Rename existing tables and schemas to use only the supported characters.
-
-## Accessing Hive and Iceberg tables in the same glue metastore catalog
-{: #known_issues11921}
-
-When using the AWS Glue Data Catalog to manage a bucket or storage location containing both Iceberg and Hive tables, attempting to access Iceberg tables from the Hive catalog gives `Not a Hive table` error and attempting to access Hive tables from the Iceberg catalog gives `Not an Iceberg table` error.
 
 ## Missing data validation for Amazon S3 storage endpoints
 {: #known_issues11921}

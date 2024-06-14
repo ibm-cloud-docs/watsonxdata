@@ -68,6 +68,7 @@ Indexes that are not listed in this list might work, but are not validated by IB
    - FLAT
    - IVF_FLAT
    - IVF_PQ
+   - IVF_SQ8
 
 GPU based indexes do not work in {{site.data.keyword.lakehouse_short}}.
 
