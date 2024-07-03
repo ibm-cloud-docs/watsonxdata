@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-07-03"
 
 keywords: lakehouse
 
@@ -42,17 +42,107 @@ As a result of Intel's CPU upgrade, the `omrgc_spinlock_acquire` call takes long
    2. Update the jvm.config file to include the new JVM parameter, `-Xgc:tlhInitialSize=8096,tlhIncrementSize=16384,tlhMaximumSize=1048576`.
    3. Restart the Presto coordinator and worker node. -->
 
-## Some Lite plan users are not able to create schemas in the data manager UI
-{: #known_issues21826}
+## Limitations - Presto (C++)
+{: #known_issues22601}
 
-Some Lite plan users are currently experiencing an issue where they are unable to create schemas using the **Create schema** option in the data manager user interface window. This prevents users from creating tables.
+- Presto (C++) engine currently does not support database catalogs.
+- Only file formats such as Parquet and DWRF are supported.
+- Hive connector is supported.
+- Default iceberg Table has only read support with Parquet v1 format.
+- TPC-H/TPC-DS queries are supported.
+- The following SQL statements are supported:
+   - SELECT all clauses
+   - CTAS statements
+- `DELETE FROM` and `CALL SQL` statements are not supported.
+- `START`, `COMMIT`, and `ROLLBACK` transactions are not supported.
+- Data types `CHAR`, `TIME`, and `TIME WITH TIMEZONE` are not supported. These data types are subsumed by `VARCHAR`, `TIMESTAMP`, and `TIMESTAMP WITH TIMEZONE`.
+   - `IPADDRESS`, `IPPREFIX`, `UUID`, `kHYPERLOGLOG`, `P4HYPERLOGLOG`, `QDIGEST`, and `TDIGEST` are not supported.
+   - `VARCHAR` supports only a limited length. `Varchar(n)` with a maximum length bound is not supported.
+   - `TIME` and `TIME WITH TIMEZONE` is supported in community development.
+   - `TIMESTAMP` columns in Parquet files cannot be read.
+- Scalar functions:
+   - `IPFunctions`, `QDigest`, `HyperLogLog`, and Geospatial internationalization are not supported.
+- Aggregate functions:
+   - `QDigest`, Classification metrics, and Differential entropy are not supported.
+- S3 and S3 compatible file systems (both read and write) are supported.
 
-**Workaround:** Try creating a schema using SQL commands through the **Query workspace**. Many users have found this functional."
+## Presto (C++) does not support NULLIF() SQL function
+{: #known_issues9897_1}
 
-```bash
-`CREATE SCHEMA iceberg_data.test434 WITH (location = [your bucket])`
-```
-{: codeblock}
+Presto (C++) does not appear to support the `NULLIF()` function, which is used to return `NULL` if two arguments are equal, otherwise returning the second argument. While Presto (Java) itself has support for `NULLIF()`, Presto (C++) seems to be missing this functionality.
+
+## Presto (C++) fails to query an external partitioned table
+{: #known_issues9897_2}
+
+When you query an external table with `CHAR` data type columns, the query fails to run. This issue occurs due to the limitation that Presto (C++) does not support `CHAR` data types.
+
+Workaround: Change the `CHAR` data type column to `VARCHAR` data type.
+
+## Accessing Hive and Iceberg tables in the same glue metastore catalog
+{: #known_issues11296}
+
+When using the AWS Glue Data Catalog to manage a bucket or storage location containing both Iceberg and Hive tables, attempting to access Iceberg tables from the Hive catalog gives, `Not a Hive table` error and attempting to access Hive tables from the Iceberg catalog gives, `Not an Iceberg table` error.
+
+## MinIO bucket access through S3 proxy is unavailable
+{: #known_issues12143}
+
+Currently, it is not possible to access buckets stored in MinIO object storage using an S3 proxy functionality.
+
+## Presto SQL operations with Spark 3.3 and Iceberg timestamp data
+{: #known_issues12328}
+
+When data containing `timestampz` is ingested using Spark, Presto queries on these tables fail with the following error Iceberg column type `timestamptz` is not supported.
+
+Workaround: To ensure interoperability between Spark and Presto for datasets containing `timestampz`, you must use Spark 3.4 applications with the `configuration spark.sql.timestampType` set to `TIMESTAMP_NTZ`.
+
+## Using ID as a column name in Cassandra `CREATE TABLE`
+{: #known_issues12069}
+
+In Cassandra, you cannot create a table with a column named `ID` while using a Cassandra connector through Presto. This is because `ID` is a reserved keyword for the Cassandra driver that is used by Presto, which automatically generates a UUID for each row. Attempting to create a table with a column name ID results in an error message indicating a duplicate column declaration as follows:
+Duplicate column `id` declaration for table `tm_lakehouse_engine_ks.testtable12`
+
+Workaround: Avoid using `ID` as a column name when creating Cassandra tables through Presto.
+
+## Incorrect table name syntax in DB2 `CREATE VIEW` statements
+{: #known_issues21683}
+
+When creating views in DB2, using specific table name formats within the `CREATE VIEW` statement may encounter errors as follows:
+
+- Fully qualified table name: Specifying the catalog, schema, and table name as `create view my_view as select * from my_catalog.my_schema.my_table;` might result in error.
+
+- Unqualified table name: Using only the table name without any qualifiers as `create view my_view as select * from my_table;` might also result in error.
+
+**Workaround:** To ensure successful view creation, use a schema-qualified table name within the `CREATE VIEW` statement. This involves:
+
+Specifying the schema:
+
+1. Use the `USE` statement to set the active schema for the session:
+
+   ```bash
+   USE my_catalog.my_schema;
+   ```
+   {: codeblock}
+
+1. Reference the table name qualified by the schema in the `CREATE VIEW` statement.
+
+   ```bash
+   create view my_view as select * from my_schema.my_table;
+   ```
+   {: codeblock}
+
+## User role with `CreateCollection` L3 policy fails to create collection in Milvus
+{: #known_issues12918}
+
+Users with `User role` while creating collections in Milvus with pymilvus can fail when using the `ORM Connection` and `MilvusClient Connection` methods.
+
+Workaround: You must follow the instructions:
+
+`ORM Connection`: The user requires both DescribeCollection and CreateCollection privileges granted in the L3 policy page. You must select all collections in a database while granting `DescribeCollection` privilege in the L3 policy through web console.
+
+`MilvusClient Connection`: Only `CreateCollection` privilege is necessary in the L3 policy page. However, the first attempt to create a collection will fail.
+
+   1. Run the `create_collection` function once.
+   2. Re-run the `create_collection` function again. This allows the policies to synchronise and the collection creation will succeed.
 
 ## Assigning user role access with Japanese browser language
 {: #known_issues21826}
@@ -61,17 +151,14 @@ Users with browser language set to Japanese may encounter difficulties assigning
 
 **Workaround:** Users can switch the browser language to English and assign User access to different components.
 
-## Synchronization failure with special characters or mixed case in table or schema names
+## Special characters and mixed case impacting data synchronization
 {: #known_issues11040}
 
-When you attempt to synchronize data between buckets containing tables or schemas with special characters or mixed case letters in their names, synchronization fails.
+When synchronizing data between buckets containing tables or schemas with special characters or mixed case letters in their names, you might encounter with the following unexpected behaviors:
+- Tables or schemas with certain special characters `%`, `,`, `{`, `)`, `(`, `@`, `$`, `[`, `:` will have their data entirely skipped during synchronization.
+- Tables or schemas with mixed case or uppercase letters will be converted to lowercase before synchronization.
 
 **Workaround:** Avoid using special characters and mixed case in table and schema names. Rename existing tables and schemas to use only the supported characters.
-
-## Accessing Hive and Iceberg tables in the same glue metastore catalog
-{: #known_issues11921}
-
-When using the AWS Glue Data Catalog to manage a bucket or storage location containing both Iceberg and Hive tables, attempting to access Iceberg tables from the Hive catalog gives `Not a Hive table` error and attempting to access Hive tables from the Iceberg catalog gives `Not an Iceberg table` error.
 
 ## Missing data validation for Amazon S3 storage endpoints
 {: #known_issues11921}
@@ -100,22 +187,22 @@ Table does not exist
 
 It is noticed that user defined access policies are not enforced when unauthorized users perform data ingestion by using `ibm-lh data-copy` utility. Whereas, the same policy restricts unauthorized users from performing data ingestion in the UI. This inconsistency in access policy enforcement can lead to unintended data ingestion by unauthorized users.
 
-## String literal interpretation in Presto
+## String literal interpretation in Presto (Java)
 {: #known_issues6042}
 
-Presto, by default interprets string literals as VARCHAR, unlike many other database systems that treat them as CHAR.
+Presto (Java), by default interprets string literals as VARCHAR, unlike many other database systems that treat them as CHAR.
 
-In Presto, string comparisons are performed on the actual characters present in the string, excluding trailing spaces. This can cause queries to return incorrect results when working with strings that may contain trailing spaces, as these spaces are not considered during comparison.
+In Presto (Java), string comparisons are performed on the actual characters present in the string, excluding trailing spaces. This can cause queries to return incorrect results when working with strings that may contain trailing spaces, as these spaces are not considered during comparison.
 
 ## Table names with multiple dots
 {: #known_issues9908}
 
-Presto does not support creating or querying table names that contain three or more consecutive dots in its name. Attempts to reference such tables in queries may result in errors.
+Presto (Java) does not support creating or querying table names that contain three or more consecutive dots in its name. Attempts to reference such tables in queries may result in errors.
 
 ## Skipping header lines during table creation
 {: #known_issues11299}
 
-`skip.header.line.count` property is not supported by default in Presto and cannot be used in the `CREATE TABLE` statement to skip header lines when defining a table based on external data. However, the property can be used to skip a specific number of header lines when creating table from Hive, as the property is supported in Hive.
+`skip.header.line.count` property is not supported by default in Presto (Java) and cannot be used in the `CREATE TABLE` statement to skip header lines when defining a table based on external data. However, the property can be used to skip a specific number of header lines when creating table from Hive, as the property is supported in Hive.
 
 ## User is still visible in the Access control page of an engine after removing the user from IAM.
 {: #known_issues5081}
@@ -132,17 +219,17 @@ When attempting to access the Spark History UI immediately after starting the Sp
 
 **Workaround:** If you encounter the 502 error, reload the Spark history UI page after waiting 1-5 seconds. This should allow enough time for the server to become operational.
 
-## Cross catalog schema creation anomaly in Presto.
+## Cross catalog schema creation anomaly in Presto (Java).
 {: #known_issues8937}
 
-An anomaly exists in schema creation for Hive and Iceberg catalogs managed by Presto. When using a common Hive Metastore Service for multiple catalogs (Example, an Iceberg catalog and a Hive catalog, or two Iceberg or Hive catalogs), creating a schema in one catalog might create it in a wrong catalog. This occurs if the location specified during schema creation belongs to a different catalog than intended.
+An anomaly exists in schema creation for Hive and Iceberg catalogs managed by Presto (Java). When using a common Hive Metastore Service for multiple catalogs (Example, an Iceberg catalog and a Hive catalog, or two Iceberg or Hive catalogs), creating a schema in one catalog might create it in a wrong catalog. This occurs if the location specified during schema creation belongs to a different catalog than intended.
 
-**Workaround:** You must always explicitly provide the correct storage path associated with the target catalog when using `CREATE SCHEMA` statements in Presto. This ensures the schema is created in the desired location.
+**Workaround:** You must always explicitly provide the correct storage path associated with the target catalog when using `CREATE SCHEMA` statements in Presto (Java). This ensures the schema is created in the desired location.
 
-## Presto queries with many columns and size exceeding default limit.
+## Presto (Java) queries with many columns and size exceeding default limit.
 {: #known_issues3177}
 
-Presto queries involving multiple tables with a large number of columns (for example, 1000 columns per table or more) in the `SELECT` clause might encounter performance issues across all deployment environments.
+Presto (Java) queries involving multiple tables with a large number of columns (for example, 1000 columns per table or more) in the `SELECT` clause might encounter performance issues across all deployment environments.
 
 The iterative optimizer times out when `max_reorder_joins` is set to 5 or higher (the default timeout is 3 minutes) and gives the following error:
 
@@ -151,7 +238,7 @@ The optimizer exhausted the time limit of 180000 ms
 ```
 {: codeblock}
 
-For queries exceeding the default `max-task-update-size` limit (16MB in Presto), you might observe a `TaskUpdate size exceeding this limit` error (the specific value of limit depends on the actual query).
+For queries exceeding the default `max-task-update-size` limit (16MB in Presto (Java)), you might observe a `TaskUpdate size exceeding this limit` error (the specific value of limit depends on the actual query).
 
 **Workaround:**
 - You can improve query performance by temporarily disabling the `reorder_joins` rule using the following session property:
@@ -161,20 +248,13 @@ For queries exceeding the default `max-task-update-size` limit (16MB in Presto),
    ```
    {: codeblock}
 
-- Increase the `max-task-update-size` value in the **config.properties** file if the issue involves a `TaskUpdate size exceeding the limit` error and restart Presto.
+- Increase the `max-task-update-size` value in the **config.properties** file if the issue involves a `TaskUpdate size exceeding the limit` error and restart Presto (Java).
 
 Example:
    ```bash
    experimental.internal-communication.max-task-update-size=64MB
    ```
    {: codeblock}
-
-## Limitation: Redshift connector case sensitivity.
-{: #known_issues10427}
-
-The Redshift connector may not handle mixed-case database, table, and column names if the Redshift cluster configuration `enable_case_sensitive_identifier` is set to `false` (default). When this configuration is `false`, Redshift treats all identifiers as lowercase.
-
-When user comes up with Redshift cluster configuration `enable_case_sensitive_identifier` set to `true`, then mixed-case will work.
 
 ## Limitation: Transactions not supported in unlogged Informix databases.
 {: #known_issues9782}
@@ -233,11 +313,6 @@ Potential data loss may occur when inserting large dataset (5 million vectors) t
 * Flush the collection manually every 500,000 rows.
 * Use the bulk insert API for data ingestion, see [Insert Entities from Files](https://milvus.io/docs/v2.3.x/bulk_insert.md). This is the recommended way to ingest large data sets.
 
-## Issue: Case sensitivity of column names in queries.
-{: #known_issues7248}
-
-Queries referencing column names are case-insensitive. The results will display columns using the exact casing provided in the query, regardless of the actual casing in the database.
-
 ## Limitations: Unsupported Db2 operations.
 {: #known_issues7895}
 
@@ -266,30 +341,25 @@ Queries referencing column names are case-insensitive. The results will display 
 
 SQL statements within worksheets can be shared with all users who have access to the instance. These statements could be viewed, edited, or deleted by any of these users.
 
-## Issue: Unable to create views in Presto.
+## Issue: Unable to create views in Presto (Java).
 {: #known_issues1.0.0_6}
 
-Presto describes a view in a mapped database as a TABLE rather than a VIEW. This is apparent to JDBC program connecting to the Presto engine.
-
-## Issue: Connections to MongoDB or MySQL database catalog fails.
-{: #known_issues1.0.0_5}
-
-When {{site.data.keyword.lakehouse_short}} is upgraded to Version 1.1.0, the user is unable to access the MySQL or MongoDB database catalog, if SSL is enabled for those connections before upgrade. As a workaround, after you upgrade {{site.data.keyword.lakehouse_short}}, remove and readd the SSL-enabled connections to MySQL or MongoDB databases by providing an SSL certificate file. For more information, see [Adding a database](watsonxdata?topic=watsonxdata-reg_database).
+Presto (Java) describes a view in a mapped database as a TABLE rather than a VIEW. This is apparent to JDBC program connecting to the Presto (Java) engine.
 
 ## Issue: Using special characters in schema, table, or column names.
 {: #known_issues1.0.0_4}
 
-It is recommended to not use special characters such as question mark (?) or asterisk (*) in table, column names and schema names. Though these special characters are supported and tables, columns and schemas can be created, using these special characters might cause issues when running the `INSERT` command.
+It is recommended to not use special characters such as question mark (?), hyphen (-), or asterisk (*) in table, column names and schema names. Though these special characters are supported and tables, columns and schemas can be created, using these special characters might cause issues when running the `INSERT` command.
 
 ## Issue: User is not removed from the catalog access control on revoking data access.
 {: #known_issues1.0.0_3}
 
 When you grant user access to a user by adding them to the data control policies by using the **Access Control** screen, the user is successfully listed against the catalog. On revoking user access from the **Access Control** page, the user stays listed against the catalog and continues to have user access.
 
-## Issue: Unable to view expected catalogs from Presto.
+## Issue: Unable to view expected catalogs from Presto (Java).
 {: #known_issues1.0.0_2}
 
-Users with administrator privileges are unable to view the expected Hive and PostgreSQL catalogs from Presto.
+Users with administrator privileges are unable to view the expected Hive and PostgreSQL catalogs from Presto (Java).
 
 ## Issue: Console UI lists invalid users.
 {: #known_issues1.0.0_1}
@@ -316,7 +386,7 @@ Schema
 ## Issue: Access denied when querying an external database.
 {: #known_issues2}
 
-When a user with the User role and Create access (the user only has Create access), is added to an external database, they cannot run the select query from the table they have created. Though the user can connect to the Presto engine and create tables and schemas, they cannot query from the table. The system displays a `Access Denied` message.
+When a user with the User role and Create access (the user only has Create access), is added to an external database, they cannot run the select query from the table they have created. Though the user can connect to the Presto (Java) engine and create tables and schemas, they cannot query from the table. The system displays a `Access Denied` message.
 
 ```bash
 Query 20230608_132213_00042_wpmk2 failed: Access Denied: Cannot select from columns [id] in table or view tab_appiduser_01
@@ -330,7 +400,7 @@ Query 20230608_132213_00042_wpmk2 failed: Access Denied: Cannot select from colu
 
 Schemas are available across Iceberg and Hive catalogs. When a schema is created under Iceberg catalog, it is listed under Hive catalog and vice versa.
 
-## Issue: Presto does not support deletion of Iceberg tables.
+## Issue: Presto (Java) does not support deletion of Iceberg tables.
 {: #known_issues6}
 
 ## Issue: DROP SCHEMA in Db2.
@@ -341,17 +411,17 @@ In Db2, the schema can be dropped only if it is empty. Initiating `DROP SCHEMA` 
 ## Issue: CREATE VIEW statement that is partially supported by Db2.
 {: #known_issues8}
 
-Db2 connector partially supports `CREATE VIEW` statement. The Presto supported SQL syntax does not include creating views with custom column names (different than the table column names).
+Db2 connector partially supports `CREATE VIEW` statement. The Presto (Java) supported SQL syntax does not include creating views with custom column names (different than the table column names).
 
 ## Issue: CREATE VIEW statement that is partially supported by {{site.data.keyword.netezza_short}}.
 {: #known_issues9}
 
-{{site.data.keyword.netezza_short}} connector partially supports `CREATE VIEW` statement. The Presto Supported SQL syntax does not include creating views with custom column names (different than the table column names).
+{{site.data.keyword.netezza_short}} connector partially supports `CREATE VIEW` statement. The Presto (Java) Supported SQL syntax does not include creating views with custom column names (different than the table column names).
 
-## Issue: Presto does not recognize the path as a directory.
+## Issue: Presto (Java) does not recognize the path as a directory.
 {: #known_issues12}
 
-When you create a new table with a Presto Hive connector that uses an S3 folder from an external location, Presto does not recognize the path as a directory and an error might occur.
+When you create a new table with a Presto (Java) Hive connector that uses an S3 folder from an external location, Presto (Java) does not recognize the path as a directory and an error might occur.
 
 For example, when creating a customer table in the target directory `DBCERT/tbint` in a bucket that is called `dqmdbcertpq` by using the IBM Cloud UX and Aspera S3 console, the following error is encountered: `External location must be a directory`.
 
@@ -365,7 +435,7 @@ Query 20230509_113537_00355_cn58z failed: External location must be a directory
 ```
 {: codeblock}
 
-Objects in a file system are stored as objects and their path. The object and path must have an associated metadata. If the path is not associated with the metadata, Presto fails to recognize the object and responds that the path is not a directory.
+Objects in a file system are stored as objects and their path. The object and path must have an associated metadata. If the path is not associated with the metadata, Presto (Java) fails to recognize the object and responds that the path is not a directory.
 
 ## Issue: Assigning Grant or Revoke privilege.
 {: #known_issues13}
@@ -428,10 +498,10 @@ Use one of the following location options when creating a schema:
 Though you can use a location pointing to a bucket only with or without a trailing `/`, it might lead to failure. Therefore, it is recommended to use a subpath.
 {: note}
 
-## Issue: Presto do not support `AS OF` with iceberg tables.
+## Issue: Presto (Java) do not support `AS OF` with iceberg tables.
 {: #known_issues21}
 
-Presto do not support `AS OF <time stamp>` command in a SELECT query.
+Presto (Java) do not support `AS OF <time stamp>` command in a SELECT query.
 
 **Workaround:** Invoke `CALL iceberg_data_rollback_to_snapshot` to move to the required timestamp.
 
@@ -472,10 +542,10 @@ Ingestion fails if a target table name contains special characters in it when in
 
 **Workaround:** You can ingest data by using ingestion through Spark CLI.
 
-## Limitation: Presto does not support `VARBINARY` datatype.
+## Limitation: Presto (Java) does not support `VARBINARY` datatype.
 {: #known_issues31}
 
-The current version of Presto does not support binary strings with length. Execution of an `ALTER TABLE` statement on a database results in the following error:
+The current version of Presto (Java) does not support binary strings with length. Execution of an `ALTER TABLE` statement on a database results in the following error:
 
 `Unknown type 'varbinary(n)' for column 'testcolumn'`
 

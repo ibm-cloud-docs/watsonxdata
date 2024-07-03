@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-07-03"
 
 keywords:  query, engine, infrastructure
 
@@ -30,7 +30,7 @@ In this tutorial, you learn to add a storage that you own and explore how the {{
 
 **Sample Scenario** : Your team is working on developing an automated data pipeline that requires querying data from the data bucket that you have. Your manager requests you to retrieve data from the data bucket by using the {{site.data.keyword.lakehouse_short}} instance.
 
-For this scenario, you must create the Presto query engine, establish connection with the storage, ingest data to the data bucket and display the result in {{site.data.keyword.lakehouse_short}} instance.
+For this scenario, you must create the Presto (Java) query engine, establish connection with the storage, ingest data to the data bucket and display the result in {{site.data.keyword.lakehouse_short}} instance.
 
 
 ## Objective
@@ -86,7 +86,7 @@ In this section of the tutorial, you learn how to navigate to the **Query worksp
 To run SQL query, do the following steps:
 
 1. From the navigation menu, select **SQL**. The **Query workspace** page opens.
-2. Select the Presto engine from the **Engine** drop-down.
+2. Select the Presto (Java) engine from the **Engine** drop-down.
 3. Select a catalog, for example, **default** schema, and a table, for example, **order_detail**, to run the query.
 4. Click the overflow menu and select the required query.
    * For a catalog and schema, you can run the **Generate Path** query.

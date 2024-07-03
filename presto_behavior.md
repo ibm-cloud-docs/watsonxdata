@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-07-03"
 
 keywords: lakehouse, netezza, connector, watsonx.data
 
@@ -26,10 +26,10 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Presto case-sensitive behavior
+# Presto (Java) case-sensitive behavior
 {: #presto_behavior}
 
-The Presto behavior is changed from case-insensitive to case-sensitive. User needs to provide the query name in original case format as in database.
+The Presto (Java) behavior is changed from case-insensitive to case-sensitive. User needs to provide the query name in original case format as in database.
 {: shortdesc}
 
 Access control policies might also be affected after an upgrade.
@@ -49,7 +49,7 @@ Catalog names are still converted to lowercase letters.
 ## Case-sensitive behavior for JDBC connectors
 {: #case-sensitive_behavior}
 
-In the open source Presto, the JDBC databases that internally store objects in uppercase, for example, Db2 and Netezza® Performance Server, the object names that the user entered used to get converted to uppercase. As Presto now supports mixed case, this behavior is slightly changed. A new connector level parameter check-driver-case-support is introduced. This parameter is by default false, indicating that Presto doesn't consider database-specific case. This parameter is expected to be available in the UI in the future releases so that it can be set as true or false.
+In the open source Presto (Java), the JDBC databases that internally store objects in uppercase, for example, Db2 and Netezza® Performance Server, the object names that the user entered used to get converted to uppercase. As Presto (Java) now supports mixed case, this behavior is slightly changed. A new connector level parameter check-driver-case-support is introduced. This parameter is by default false, indicating that Presto (Java) doesn't consider database-specific case. This parameter is expected to be available in the UI in the future releases so that it can be set as true or false.
 
 ## Changes in User Experience
 {: #changes_ux}
@@ -57,14 +57,14 @@ In the open source Presto, the JDBC databases that internally store objects in u
 The following features are available for UI:
 
 * The objects are visible as they are stored in the database.
-* Users can create Schemas, Tables and Columns in mixed case that is, uppercase and lowercase through Presto if the database supports it.
+* Users can create Schemas, Tables and Columns in mixed case that is, uppercase and lowercase through Presto (Java) if the database supports it.
 * Users must write case-sensitive queries. For example, all the following query combinations that used to work for a Db2 connector earlier, even though the TABLE NAME was stored as DEPARTMENTS in the database:
 1. SELECT * FROM "db2"."AMPERS"."DEPARTMENTS";
 2. SELECT * FROM "db2".AMPERS.DEPARTMENTS;
 3. SELECT * FROM "db2"."ampers"."departments";
 4. SELECT * FROM "db2".ampers.departments;
 
-Now, as Presto is case-sensitive, only the following queries are valid:
+Now, as Presto (Java) is case-sensitive, only the following queries are valid:
 1. SELECT * FROM "db2"."AMPERS"."DEPARTMENTS";
 2. SELECT * FROM "db2".AMPERS.DEPARTMENTS;
 
@@ -75,7 +75,7 @@ The following queries result in the error "Table 'db2.ampers.departments' does n
 ## Impact on Iceberg and Hive catalogs
 {: #Impact_connectors}
 
-Since the HMS stores objects in lowercase, no change is observed in the behavior, though Presto behavior is changed.
+Since the HMS stores objects in lowercase, no change is observed in the behavior, though Presto (Java) behavior is changed.
 
 For Hive and Iceberg catalogs, the following query combinations are valid:
 1. SELECT * FROM "iceberg_data"."testsch"."employee";

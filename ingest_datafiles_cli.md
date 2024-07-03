@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-07-03"
 
 keywords: watsonxdata, staging, config file, target iceberg table, parquet, csv, command line, cli
 
@@ -26,10 +26,10 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Command line ingestion in Presto ingestion mode
+# Command line ingestion in Presto (Java) ingestion mode
 {: #create_ingestioncli}
 
-You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehouse_full}} through the command line interface (CLI). This topic provides details of using the command line for ingestion in the Presto ingestion mode.
+You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehouse_full}} through the command line interface (CLI). This topic provides details of using the command line for ingestion in the Presto (Java) ingestion mode.
 {: shortdesc}
 
 ## Before you begin
@@ -66,7 +66,7 @@ To access IBM Cloud Object Storage (COS) and MinIO object storage, specify the E
 Replace the absolute values in the command examples with the values applicable to your environment. See [Options and variables supported in **ibm-lh** tool](watsonxdata?topic=watsonxdata-cli_commands).
 {: note}
 
-Following are the details of the command line option to ingest data files from S3 or local location to {{site.data.keyword.lakehouse_short}} Iceberg table, in Presto ingestion mode:
+Following are the details of the command line option to ingest data files from S3 or local location to {{site.data.keyword.lakehouse_short}} Iceberg table, in Presto (Java) ingestion mode:
 
 ## Ingest a single CSV/Parquet file from S3 location by using command
 {: #example1}
@@ -153,7 +153,7 @@ ibm-lh data-copy --source-data-files s3://cust-bucket/warehouse/ \
 ```
 {: screen}
 
-In general, this option does not require a staging location. However, a staging location must be specified in some exceptional scenarios. When the staging location is not used, make sure that the Hive catalog configured with Presto can be used with source-data-files location. The following are the exceptional cases where a staging location is required:
+In general, this option does not require a staging location. However, a staging location must be specified in some exceptional scenarios. When the staging location is not used, make sure that the Hive catalog configured with Presto (Java) can be used with source-data-files location. The following are the exceptional cases where a staging location is required:
 - Any or all Parquet files in the folder are huge.
 - Any or all Parquet files in the folder have special columns, such as TIME.
 {: note}

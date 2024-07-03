@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-07-03"
 
 keywords: lakehouse, watsonx data, events, audit, activity
 
@@ -28,10 +28,10 @@ The following table lists the actions that generate an event:
 | Action                            | Description |
 |-----------------------------------|-------------|
 | `lakehouse.lakehouse.create`      | An event is generated when you provision a service instance. |
-| `lakehouse.presto.create`         | An event is generated when you provision a Presto group. |
+| `lakehouse.presto.create`         | An event is generated when you provision a Presto (Java) group. |
 | `lakehouse.hms.create`            | An event is generated when you provision a metastore.|
 | `lakehouse.lakehouse.delete`      | An event is generated when a service instance is deleted.|
-| `lakehouse.presto.delete`         | An event is generated when a when a Presto group is deleted. |
+| `lakehouse.presto.delete`         | An event is generated when a when a Presto (Java) group is deleted. |
 | `lakehouse.hms.delete`            | An event is generated when a metastore is deleted. |
 {: caption="Table 1. Actions that generate platform events" caption-side="bottom"}
 
@@ -150,4 +150,37 @@ The following table lists the actions that generate an event:
 | `lakehouse.datapolicy.create`     | An event is generated when you create a data policy. |
 | `lakehouse.datapolicy.update`     | An event is generated when you update a data policy. |
 | `lakehouse.datapolicy.delete`     | An event is generated when you delete a data policy. |
+{: caption="Table 11. Lists of data policy events" caption-side="bottom"}
+
+
+## Events for Spark
+{: #at_actions_spark}
+
+| Action                            | Description |
+|-----------------------------------|-------------|
+|`lakehouse.spark_engine.list` | An event that is generated when you list Spark engines.|
+|`lakehouse.spark_engine.create` | An event that is generated when you create a Spark engine.|
+|`lakehouse.spark_engine.update` | An event that is generated when you update the details of a Spark engine.|
+|`lakehouse.spark_engine.delete` | An event that is generated when you delete a Spark engine.|
+|`lakehouse.spark_engine_application.list` | An event that is generated when you list the Spark applications under a Spark engine.|
+|`lakehouse.spark_engine_application.get`| An event that is generated when you get the details of a Spark application.|
+|`lakehouse.spark_engine_application.create` | An event that is generated when you run a Spark application.|
+|`lakehouse.spark_engine_application.delete` | An event that is generated when your stop a running Spark application.|
+|`lakehouse_spark_engine_application.ui`| An event that is generated when you access the Spark UI of an application.|
+|`lakehouse.spark_engine_history_server.get` | An event that is generated when you get the Spark history server details.|
+|`lakehouse.spark_engine_history_server.start` | An event that is generated when you start the Spark history server.|
+|`lakehouse.spark_engine_history_server.stop` | An event that is generated when you stop the Spark history server.|
+|`lakehouse.spark_engine_history_server.ui` | An event that is generated when you access Spark history UI.|
+|`lakehouse.spark_engine_catalog.list` | An event that is generated when you list Spark engine associated catalogs.|
+|`lakehouse.spark_engine_catalog.add` | An event that is generated when catalogs are associated with a Spark engine.|
+|`lakehouse.spark_engine_catalog.remove` | An event that is generated when catalogs are dissociated from a Spark engine.|
+|`lakehouse.spark_engine_catalog.get` | An event that is generated when you get the details of a Spark engine catalog.|
+|`lakehouse.spark_engine_cluster.list` | An event that is generated when you list Spark lab clusters.|
+|`lakehouse.spark_engine_cluster.create` | An event that is generated when you create a Spark lab cluster.|
+|`lakehouse.spark_engine_cluster.get` | An event that is generated when you get the details of a Spark lab cluster.|
+|`lakehouse.spark_engine_cluster.delete` | An event that is generated when you delete a Spark lab cluster.|
+|`lakehouse.spark_engine_cluster.connect` | An event that is generated when you connect with a Spark lab cluster.|
+|`lakehouse.spark_engine.pause` | An event that is generated when you pause a Spark engine.|
+|`lakehouse.spark_engine.resume` | An event that is generated when you resume a Spark engine.|
+|`lakehouse.spark_engine.scale` | An event that is generated when you scale a Spark engine.|
 {: caption="Table 11. Lists of data policy events" caption-side="bottom"}

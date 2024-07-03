@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-07-03"
 
 keywords: watsonxdata, watsonx.data, presto, jdbc client, cloud
 
@@ -26,15 +26,15 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Connecting to Presto server using Java JDBC
+# Connecting to Presto (Java) server using Java JDBC
 {: #con-presto-cloud-jdbc}
 
-Presto CLI provides a terminal-based interactive shell to run queries.
+Presto (Java) CLI provides a terminal-based interactive shell to run queries.
 {: shortdesc}
 
-Complete the following steps to connect to Presto engine in {{site.data.keyword.lakehouse_full}} instance on {{site.data.keyword.cloud_notm}} through a JDBC Java client or application.
+Complete the following steps to connect to Presto (Java) engine in {{site.data.keyword.lakehouse_full}} instance on {{site.data.keyword.cloud_notm}} through a JDBC Java client or application.
 
-## Getting the Presto engine hostname and port details
+## Getting the Presto (Java) engine hostname and port details
 {: #get-host-port1}
 
 1. Log in to the {{site.data.keyword.lakehouse_short}} service instance in {{site.data.keyword.cloud_notm}}.
@@ -87,7 +87,7 @@ Use either IBM API key or IBM IAM token according to your requirement.
    ```
    {: codeblock}
 
-## Connecting to Presto engine
+## Connecting to Presto (Java) engine
 {: #conn-to-prestoeng1}
 
 1. Download and install the [latest JDBC drivers](https://prestodb.io/docs/current/installation/jdbc.html) on the client machine.
@@ -129,7 +129,7 @@ Use either IBM API key or IBM IAM token according to your requirement.
    {: codeblock}
 
    Replace the parameters in the command with the following:
-   `<PRESTO_URL>` with Presto JDBC URL
+   `<PRESTO_URL>` with Presto (Java) JDBC URL
    `<EMAIL_ID>` with your email ID
    `<API_KEY>` with the API key that you downloaded from IBM Cloud.
    If you are using IBM IAM token, replace `ibmapikey` with `ibmiamtoken` and pass the token.

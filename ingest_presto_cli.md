@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-07-03"
 
 keywords: watsonxdata, commands, command line interface, cli
 
@@ -26,7 +26,7 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Presto ingestion through **ibm-lh** tool command line
+# Presto (Java) ingestion through **ibm-lh** tool command line
 {: #ingest_presto_cli}
 
 Ingesting data files from S3 or local location into {{site.data.keyword.lakehouse_full}} is done by using two options that are supported in the **ibm-lh** tool.
@@ -46,7 +46,7 @@ export ENABLED_INGEST_MODE=PRESTO
 ```
 {: codeblock}
 
-Set the environment variables for `SOURCE_S3_CREDS` and `STAGING_S3_CREDS` based on the requirements before starting an ingestion job by using Presto by running the following commands:
+Set the environment variables for `SOURCE_S3_CREDS` and `STAGING_S3_CREDS` based on the requirements before starting an ingestion job by using Presto (Java) by running the following commands:
 
 ```bash
 export SOURCE_S3_CREDS="AWS_ACCESS_KEY_ID=,AWS_SECRET_ACCESS_KEY=,ENDPOINT_URL=,AWS_REGION=,BUCKET_NAME="

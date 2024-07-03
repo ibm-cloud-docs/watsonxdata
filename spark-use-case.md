@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-07-03"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -23,6 +23,7 @@ This topic provides the procedure to run Spark use cases for {{site.data.keyword
 * Provision an {{site.data.keyword.lakehouse_full}} instance.
 * Configure an {{site.data.keyword.iae_full_notm}} instance.
 * Cloud Object Storage bucket connection details.
+* To enable your Spark application to work with the {{site.data.keyword.lakehouse_short}} catalog and storage, you must have Metastore admin role. Without Metastore admin privilege, you cannot ingest data to storage using Native Spark engine. For more information about the Spark configuration, see [Working with the watsonx.data catalog and storage](#view_smbit_nsp1).
 
 ## About the sample use case
 {: #abt_samp_usecase}
@@ -252,3 +253,15 @@ Follow the steps to run the Spark sample Python file.
 
 This sample is tested on the Cloud Object Storage buckets in the **us-south** region. Change the region in the Cloud Object Storage endpoint configuration as per the region where your Cloud Object Storage buckets reside. It is recommended to provision the COS buckets in the region where {{site.data.keyword.iae_short}} instance is provisioned.
 {: note}
+
+## Working with the watsonx.data catalog and storage
+{: #view_smbit_nsp1}
+
+To enable your Spark application to work with the watsonx.data catalog and storage, add the following configuration to your application payload:
+
+```bash
+spark.hive.metastore.client.plain.username=ibmlhapikey
+spark.hive.metastore.client.plain.password=<api-key-of-the-user-which-has-metastore-admin-role>
+spark.hadoop.wxd.apiKey=Basic base64(ibmlhapikey_ibmcloudid:apikey)
+```
+{: codeblock}

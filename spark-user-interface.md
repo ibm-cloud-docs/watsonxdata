@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-07-03"
 keywords: spark, interface
 subcollection: watsonxdata
 

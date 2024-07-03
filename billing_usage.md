@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-07-03"
 
 keywords: lakehouse, watsonx data, roles, access
 subcollection: watsonxdata
@@ -28,7 +28,7 @@ subcollection: watsonxdata
 # Billing and usage
 {: #manage_bill}
 
-Billing in {{site.data.keyword.lakehouse_full}} is based on the charge metrics defined by {{site.data.keyword.Bluemix_short}} service.
+Billing in {{site.data.keyword.lakehouse_full}} is based on the charge metrics that are defined by {{site.data.keyword.Bluemix_short}} service.
 {: shortdesc}
 
 The following charge matrices apply to {{site.data.keyword.lakehouse_short}}:
@@ -41,7 +41,7 @@ The following charge matrices apply to {{site.data.keyword.lakehouse_short}}:
 
 The resource unit consumption begins after you provision the support services. The RUs are consumed on a per-hour basis and continue until you delete the instance.
 
-You can view the estimate of the expected per hour run rate consumption of **Resource Units** from the **About** tab in the [**{{site.data.keyword.lakehouse_short}}** **{{site.data.keyword.Bluemix_short}} catalog**](https://cloud.ibm.com/watsonxdata) page.
+You can view the estimate of the expected per-hour run rate consumption of **Resource Units** from the **About** tab in the [**{{site.data.keyword.lakehouse_short}}** **{{site.data.keyword.Bluemix_short}} catalog**](https://cloud.ibm.com/watsonxdata) page.
 
 The **Billing and Usage** page provides the latest information about RU consumption breakdown of the instance (based on the resource utilization).
 
@@ -55,11 +55,9 @@ To view current billing and usage details, complete the following steps:
 
     The billable infrastructure components are listed in the table. You can also type the component name in the **Search** field to list a particular component.
 
-To customize the table display, click the **Customize columns** icon to select the columns to display.
-{: note}
+1. Click the **Customize columns** icon and select the columns to display.
 
-To manage the billing and usage functions from IBM Cloud, click **Manage in IBM Cloud** link. The [IBM Cloud Billing and usage](https://cloud.ibm.com/billing) page appear.
-{: note}
+1. Click the **Manage resource usage** link. The [IBM Cloud Billing and usage](https://cloud.ibm.com/billing) page opens.
 
 The following are the fields in the **Billing and usage** page:
 

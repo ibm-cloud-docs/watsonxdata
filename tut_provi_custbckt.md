@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-07-03"
 
 keywords: provisioning, query, engine, infrastructure
 
@@ -25,12 +25,12 @@ completion-time: 8h
 {: toc-content-type="tutorial"}
 {: toc-completion-time="8h"}
 
-In this tutorial, you learn to provision the {{site.data.keyword.lakehouse_full}} instance with a Presto engine, catalog, and a bucket. You also explore how the {{site.data.keyword.lakehouse_short}} service interacts with the data you bring in.
+In this tutorial, you learn to provision the {{site.data.keyword.lakehouse_full}} instance with a Presto (Java) engine, catalog, and a bucket. You also explore how the {{site.data.keyword.lakehouse_short}} service interacts with the data you bring in.
 {: shortdesc}
 
 **Sample Scenario** : Your team is working on developing an automated data pipeline that requires querying data from the data bucket that you have. Your manager requests you to retrieve data from the data bucket by using the {{site.data.keyword.lakehouse_short}} instance.
 
-For this scenario, you must create the Presto query engine, establish connection, read data from the data bucket and display the result in {{site.data.keyword.lakehouse_short}} instance.
+For this scenario, you must create the Presto (Java) query engine, establish connection, read data from the data bucket and display the result in {{site.data.keyword.lakehouse_short}} instance.
 
 This scenario assumes that you already have a data bucket that is associated with data for querying.
 {: note}
@@ -142,7 +142,7 @@ Complete the following steps:
 4. Click **Next**. This displays the **Engine configuration** page.
 5. In the **Engine configuration** page, select the engine type and size.
 
-   Depending on the workload that you have, you can select the type and size of the Presto engine.
+   Depending on the workload that you have, you can select the type and size of the Presto (Java) engine.
    {: note}
 
 6. Click **Next**. This displays the **Summary** page.
@@ -166,7 +166,7 @@ In this section of the tutorial, you learn how to navigate to the **Query worksp
 To run the SQL queries, do the following steps:
 
 1. From the navigation menu, select **SQL**.  The **Query workspace** page opens.
-2. Select the Presto engine from the **Engine** drop-down.
+2. Select the Presto (Java) engine from the **Engine** drop-down.
 3. Select the catalog. In this scenario, consider the **Apache Iceberg** catalog, **default** schema, **order_detail** table, to run the query.
 4. Click the overflow menu and select the required query.
    * For a catalog and schema, you can run the Generate Path query.

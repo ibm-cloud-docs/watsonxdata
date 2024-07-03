@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-07-03"
 
 keywords: lakehouse, watsonx.data, presto, cli
 
@@ -26,17 +26,17 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Connecting to Presto server
+# Connecting to Presto (Java) server
 {: #con-presto-serv}
 
-Presto CLI provides a terminal-based interactive shell to run queries.
+Presto (Java) CLI provides a terminal-based interactive shell to run queries.
 {: shortdesc}
 
-In {{site.data.keyword.lakehouse_full}}, you can connect to the Presto server in multiple ways based on the platform and utilities you are using. See the following sections for more details:
+In {{site.data.keyword.lakehouse_full}}, you can connect to the Presto (Java) server in multiple ways based on the platform and utilities you are using. See the following sections for more details:
 
-- [Connecting to Presto engine using Presto CLI (Remote)](#conn-to-prestoeng)
-- [Connecting to Presto engine using Java/JDBC](#conn-to-prestjava)
-- [Connecting to Presto engine using Python scripts](#conn-to-prestpython)
+- [Connecting to Presto (Java) engine using Presto (Java) CLI (Remote)](#conn-to-prestoeng)
+- [Connecting to Presto (Java) engine using Java/JDBC](#conn-to-prestjava)
+- [Connecting to Presto (Java) engine using Python scripts](#conn-to-prestpython)
 
 You must specify the location when you create schema using CLI. For example,
 `location = s3a://<bucket-name>/`
@@ -46,7 +46,7 @@ You must specify the location when you create schema using CLI. For example,
 {: #con-presto-prereq}
 
 
-### Getting the Presto engine hostname and port details
+### Getting the Presto (Java) engine hostname and port details
 {: #get-host-port}
 
 1. Log in to the {{site.data.keyword.lakehouse_short}} service instance in {{site.data.keyword.cloud_notm}}.
@@ -103,16 +103,16 @@ It is recommended to use IAM token for stress workload.
    {: codeblock}
 
 
-## Connecting to Presto engine using Presto CLI (Remote)
+## Connecting to Presto (Java) engine using Presto (Java) CLI (Remote)
 {: #conn-to-prestoeng}
 
-1. Download the Presto executable `jar` from [https://prestodb.io/docs/current/installation/cli.html](https://prestodb.io/docs/current/installation/cli.html)
+1. Download the Presto (Java) executable `jar` from [https://prestodb.io/docs/current/installation/cli.html](https://prestodb.io/docs/current/installation/cli.html)
 
 2. Rename the downloaded file as **presto**. Make it executable with `chmod +x` and run it.
 
-3. To check whether Presto CLI is installed, run `./presto --version`. Presto cli version displays. For example, `Presto CLI 0.281-cfbc6eb`
+3. To check whether Presto (Java) CLI is installed, run `./presto --version`. Presto (Java) cli version displays. For example, `Presto CLI 0.281-cfbc6eb`
 
-4. Run one of the following commands in the system where Presto CLI is installed.
+4. Run one of the following commands in the system where Presto (Java) CLI is installed.
 
    `<your-username>` is optional if you have multiple connections with different users and want to differentiate them.
    {: note}
@@ -133,7 +133,7 @@ It is recommended to use IAM token for stress workload.
 
 5. Enter your IBM API key or IBM IAM token at the prompt.
 
-6. At the Presto prompt, type `show catalogs;`. The catalog list appears. Now you are connected to Presto engine in {{site.data.keyword.lakehouse_short}} through Presto CLI.
+6. At the Presto (Java) prompt, type `show catalogs;`. The catalog list appears. Now you are connected to Presto (Java) engine in {{site.data.keyword.lakehouse_short}} through Presto (Java) CLI.
 
    ```bash
    presto:default> show catalogs;
@@ -148,7 +148,7 @@ It is recommended to use IAM token for stress workload.
    ```
    {: codeblock}
 
-## Connecting to Presto engine using Java/JDBC
+## Connecting to Presto (Java) engine using Java/JDBC
 {: #conn-to-prestjava}
 
 1. Download and install the [latest JDBC drivers](https://prestodb.io/docs/current/installation/jdbc.html) on the client machine.
@@ -157,7 +157,7 @@ It is recommended to use IAM token for stress workload.
 
 3. Use `ibmlhapikey` as the username and API key as password. For more information, see [Getting IBM API Key](#get-ibmapi-key).
 
-4. Get the hostname and port. For more information, see [Getting the Presto engine hostname and port details](#get-host-port).
+4. Get the hostname and port. For more information, see [Getting the Presto (Java) engine hostname and port details](#get-host-port).
 
 5. Create a Java application by using JDBC interface. Following is an example for Java snippet:
 
@@ -236,7 +236,7 @@ It is recommended to use IAM token for stress workload.
    {: codeblock}
 
    Replace the parameters in the command with the following:
-   `<PRESTO_URL>` Identifies the jdbc URL to the Presto server.
+   `<PRESTO_URL>` Identifies the jdbc URL to the Presto (Java) server.
    `<EMAIL_ID>` with your email ID
    `<API_KEY>` with the API key that you downloaded from IBM Cloud.
    If you are using IBM IAM token, replace `ibmapikey` with `ibmlhtoken` and pass the token.
@@ -244,12 +244,12 @@ It is recommended to use IAM token for stress workload.
 
 6. Compile and run the command.
 
-## Connecting to Presto engine using Python scripts
+## Connecting to Presto (Java) engine using Python scripts
 {: #conn-to-prestpython}
 
 1. Install python 3.x (3.10 or later recommended) and `pip3` on your client workstation.
 
-2. Use the DBAPI interface to query Presto. Following is a sample python script.
+2. Use the DBAPI interface to query Presto (Java). Following is a sample python script.
 
    ```bash
    import os
@@ -275,7 +275,7 @@ It is recommended to use IAM token for stress workload.
    ```
    {: codeblock}
 
-   The command queries the `system.runtime.nodes` system tables that show the nodes in the Presto cluster.
+   The command queries the `system.runtime.nodes` system tables that show the nodes in the Presto (Java) cluster.
    The DBAPI implementation in `prestodb.dbapi` provides methods to retrieve few rows. For example, `Cursorfetchone()` or `Cursor.fetchmany()`. By default `Cursor.fetchmany()` fetches one row. Set `prestodb.dbapi.Cursor.arraysize` accordingly.
    {: note}
 

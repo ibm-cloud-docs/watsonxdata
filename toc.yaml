@@ -8,11 +8,22 @@ toc:
     product-page: https://www.ibm.com/products/watsonx-data
     path: watsonxdata
     label: IBM watsonx.data
-
   entries:
   - navgroup:
       id: learn
       topics:
+      - topicgroup:
+          label: Overview
+          topics:
+          - milvus_overview.md
+          - about_optimizer.md
+          - sal_title.md
+          - qhmm-overview.md
+          - cas_proxy_ov.md
+          - presto_overview.md
+          - pcpp_ov.md
+          - api_custom_ov.md
+          - mixed_case_overview.md
       - topicgroup:
           label: Provisioning watsonx.data
           topics:
@@ -22,7 +33,6 @@ toc:
           - getting-started.md
       - release.md
       # - wxd_api_chg_log.md
-
   - navgroup:
       id: tutorial
       topics:
@@ -33,11 +43,12 @@ toc:
       # - topicgroup:
       #     label: RAG use case
       #     topics:
-      #     - tut_ai_usecase.md
-      #     - ret_credentials.md
-
-
-
+      #       - tut_ai_usecase.md
+      #       - ret_credentials.md
+      - topicgroup:
+          label: Data federation use case
+          topics:
+            - tut_data_federation.md
   - navgroup:
       id: howto
       topics:
@@ -46,6 +57,7 @@ toc:
           label: Configuring watsonx.data components
           topics:
           - prov_engine.md
+          - pcpp_prov.md
           - reg_engine.md
           - edit-eng-tags.md
           - scale-engine.md
@@ -56,16 +68,47 @@ toc:
           - asso-cat-eng.md
           - explore-cat-obj.md
           - disso-cat-eng.md
-          - reg_database.md
-          - custom_database.md
-          - update-db-cred.md
-          - edit-db-tags.md
-          - delete_database.md
-          - reg_bucket.md
-          - explor-buck-obj.md
-          - edit-buck-tags.md
-          - delete_bucket.md
-          - sync_logs.md
+      - topicgroup:
+              label: Database-catalog pair
+              topics:
+              - reg_database.md
+              - redshift_conn.md
+              - kafka_conn.md
+              - pinot_conn.md
+              - bigquery_conn.md
+              - cassandra_conn.md
+              - clickhouse_conn.md
+              - elasticsearch_conn.md
+              - dvm_conn.md
+              - db2_conn.md
+              - netezza_conn.md
+              - informix_conn.md
+              - mongodb_conn.md
+              - mysql_conn.md
+              - oracle_conn.md
+              - postgresql_conn.md
+              - prometheus_conn.md
+              - singlestore_conn.md
+              - snowflake_conn.md
+              - sqlserver_conn.md
+              - teradata_conn.md
+              - custom_database.md
+      - topicgroup:
+              label: Arrow Flight service
+              topics:
+              - arrow_flight_service.md
+              - derby_conn.md
+              - greenplum_conn.md
+              - mariadb_conn.md
+              - salesforce_conn.md
+      - update-db-cred.md
+      - edit-db-tags.md
+      - delete_database.md
+      - reg_bucket.md
+      - explor-buck-obj.md
+      - edit-buck-tags.md
+      - delete_bucket.md
+      - sync_logs.md
       - topicgroup:
           label: Exploring data
           topics:
@@ -95,13 +138,24 @@ toc:
             - run_sql_updated.md
             - explain_sql_query.md
       - topicgroup:
+          label: Query Optimizer
+          topics:
+            - install_optimizer.md
+            - sync_optimizer_meta.md
+            - exec_inspect_optimizer.md
+            - uninstall_optimizer.md
+      - topicgroup:
           label: Query history
           topics:
             - query_history.md
             - exp-imp-qh.md
+            - qhmm.md
+            - qhmm_querying.md
       - conn-presto-thr-cli.md
       # - integrate_wkc.md
-      - presto_behavior.md
+      - ikc_integration.md
+      - s2s_auth.md
+      # - presto_behavior.md
       - delete_lh.md
       - topicgroup:
           label: Working with native Spark engine
@@ -145,7 +199,6 @@ toc:
                 topics:
                   - lnative_spk_lab.md
                   - nsp_lab_mon.md
-
       - topicgroup:
           label: Working with external Spark engine
           topics:
@@ -160,15 +213,12 @@ toc:
                   - run_extspk_hudi.md
                   - spark-table-maint.md
                   - spark-emr.md
-
+                  - spark-notebook.md
       # - topicgroup:
       #     label: Spark samples
       #     topics:
       #       - ae_spark-examples.md
-
-
 #            - spk_overview.md
-
       # - topicgroup:
       #     label: Spark
       #     topics:
@@ -249,11 +299,15 @@ toc:
       - topicgroup:
           label: Milvus
           topics:
-            - milvus_overview.md
             - adding-milvus-service.md
             - conn-to-milvus.md
             - working_with_milvus.md
             - pause-resume-milvus.md
+      - topicgroup:
+          label: Semantic automation for data enrichment
+          topics:
+            - sal_register.md
+            - sal_enrich_data.md
       - topicgroup:
           label: Enhancing security
           topics:
@@ -266,9 +320,11 @@ toc:
             - manage_access.md
             - role_priv.md
             - data_policy.md
+            - cas-proxy.md
+            - wxd_ranger.md
       - billing_usage.md
       - hms_credentials.md
-      - cas-ep.md
+      # - cas-ep.md
       - notifications.md
       - event_notifications.md
       - topicgroup:
@@ -278,22 +334,32 @@ toc:
             - log_analysis.md
             - monitoring_wxdcloud.md
             # - ae_at-tracker-serverless.md
-
   - navgroup:
       id: reference
       topics:
       # - ae_provisioning-concepts.md
       # - ae_limits.md
       # - ae_best-practices-serverless.md
-      - supported_sql_statements.md
-      - supported_datatypes.md
+      # - supported_sql_statements.md
+      # - supported_datatypes.md
       - pricing_plan.md
       - link:
             label: Presto SQL statements
-            href: https://www.ibm.com/docs/SSDZ38_1.1.x/lh-prestosql/topics/sql_intro.html
+            href: https://www.ibm.com/docs/en/watsonx/watsonxdata/2.0.0?topic=presto-sql-statements
+      - link:
+            label: Presto data types
+            href: https://www.ibm.com/docs/en/watsonx/watsonxdata/2.0.0?topic=presto-data-types
+      - mixed_case_behavior.md
       - response.md
       - high_availability_lh.md
       - update-process.md
+      - api_custom_prm_pjcw.md
+      - api_custom_jvm_pjcw.md
+      - api_custom_ctg_pjcw.md
+      - api_custom_wkr_pcpp.md
+      - api_custom_pcpp_cood.md
+      - api_custom_pcpp_ctg.md
+      - api_custom_pcpp_vlx.md
       - link:
             label: watsonx.data APIs
             href: https://cloud.ibm.com/apidocs/watsonxdata

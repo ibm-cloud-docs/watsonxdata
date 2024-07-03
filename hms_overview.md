@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-07-03"
 
 keywords: lakehouse, hms, watsonx.data, hive, metastore
 
@@ -32,14 +32,14 @@ subcollection: watsonxdata
 ## Hive Metastore
 {: #hms_intro}
 
-Hive Metastore (HMS) is a service that stores metadata related to Presto and other services in a backend Relational Database Management System (RDBMS) or Hadoop Distributed File System (HDFS).
+Hive Metastore (HMS) is a service that stores metadata related to Presto (Java) and other services in a backend Relational Database Management System (RDBMS) or Hadoop Distributed File System (HDFS).
 {: shortdesc}
 
 When you create a new table, information related to the schema such as column names, data types etc is stored in the metastore relational database. A metastore enables the user to see the data files in the HDFS object storage as if they are stored in tables with HMS.
 
 Metastore acts as a bridge between the schema of the table and the data files stored in object storages. HMS holds the definitions, schema, and other metadata for each table and maps the data files and directories to the table representation which is viewed by the user. Therefore, HMS is used as a storage location for the schema and tables. HMS is a metastore server that connects to the object storage to store data and keeps its related metadata on PostgreSQL.
 
-Any database with a JDBC driver can be used as a metastore. Presto makes requests through thrift protocol to HMS. The Presto instance reads and writes data to HMS. HMS supports 5 backend databases as follows. In {{site.data.keyword.lakehouse_full}}, PostgreSQL database is used.
+Any database with a JDBC driver can be used as a metastore. Presto (Java) makes requests through thrift protocol to HMS. The Presto (Java) instance reads and writes data to HMS. HMS supports 5 backend databases as follows. In {{site.data.keyword.lakehouse_full}}, PostgreSQL database is used.
 * Derby
 * MySQL
 * MS SQL Server

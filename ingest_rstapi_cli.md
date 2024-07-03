@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-07-03"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -45,59 +45,87 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
 
 1. Set the mandatory environment variable `ENABLED_INGEST_MODE` to `SPARK` before starting an ingestion job by running the following command:
 
-```bash
-export ENABLED_INGEST_MODE=SPARK
-```
-{: codeblock}
+   ```bash
+   export ENABLED_INGEST_MODE=SPARK
+   ```
+   {: codeblock}
 
 2. Set the optional environment variables from the following as required before starting an ingestion job by running the following commands:
 
-```bash
-export IBM_LH_SPARK_EXECUTOR_CORES=1
-export IBM_LH_SPARK_EXECUTOR_MEMORY=2G
-export IBM_LH_SPARK_EXECUTOR_COUNT=1
-export IBM_LH_SPARK_DRIVER_CORES=1
-export IBM_LH_SPARK_DRIVER_MEMORY=2G
-```
-{: codeblock}
+   ```bash
+   export IBM_LH_SPARK_EXECUTOR_CORES=1
+   export IBM_LH_SPARK_EXECUTOR_MEMORY=2G
+   export IBM_LH_SPARK_EXECUTOR_COUNT=1
+   export IBM_LH_SPARK_DRIVER_CORES=1
+   export IBM_LH_SPARK_DRIVER_MEMORY=2G
+   ```
+   {: codeblock}
 
-For IBM Cloud, the Spark driver, executor vCPU and memory combinations must be in a 1:2, 1:4, or 1:8 ratio. See [Default limits and quotas for Analytics Engine instances](https://cloud.ibm.com/docs/AnalyticsEngine?topic=AnalyticsEngine-limits).
-{: note}
+   For IBM Cloud, the Spark driver, executor vCPU and memory combinations must be in a 1:2, 1:4, or 1:8 ratio. See [Default limits and quotas for Analytics Engine instances](https://cloud.ibm.com/docs/AnalyticsEngine?topic=AnalyticsEngine-limits).
+   {: note}
 
-|Environment variable name|Description|
-|-------|-----|
-|`IBM_LH_SPARK_EXECUTOR_CORES`|Optional spark engine configuration setting for executor cores|
-|`IBM_LH_SPARK_EXECUTOR_MEMORY`|Optional spark engine configuration setting for executor memory|
-|`IBM_LH_SPARK_EXECUTOR_COUNT`|Optional spark engine configuration setting for executor count|
-|`IBM_LH_SPARK_DRIVER_CORES`|Optional spark engine configuration setting for driver cores|
-|`IBM_LH_SPARK_DRIVER_MEMORY`|Optional spark engine configuration setting for driver memory|
-{: caption="Table 1" caption-side="bottom"}
+   |Environment variable name|Description|
+   |-------|-----|
+   |`IBM_LH_SPARK_EXECUTOR_CORES`|Optional spark engine configuration setting for executor cores|
+   |`IBM_LH_SPARK_EXECUTOR_MEMORY`|Optional spark engine configuration setting for executor memory|
+   |`IBM_LH_SPARK_EXECUTOR_COUNT`|Optional spark engine configuration setting for executor count|
+   |`IBM_LH_SPARK_DRIVER_CORES`|Optional spark engine configuration setting for driver cores|
+   |`IBM_LH_SPARK_DRIVER_MEMORY`|Optional spark engine configuration setting for driver memory|
+   {: caption="Table 1" caption-side="bottom"}
 
 3. Run the following command to ingest data from a single or multiple source data files:
 
-```bash
-ibm-lh data-copy --target-table iceberg_data.ice_schema.ytab \
---source-data-files "s3://lh-ingest/hive/warehouse/folder_ingestion/" \
---user someuser@us.ibm.com \
---password **** \
---url https://us-south.lakehouse.dev.cloud.ibm.com/lakehouse/ \
---instance-id crn:v1:staging:public:lakehouse:us-south:a/fd160ae2ce454503af0d051dfadf29f3:25fdad6d-1576-4d98-8768-7c31e2452597:: \
---schema /home/nz/config/schema.cfg \
---engine-id spark214 \
---create-if-not-exist
-```
-{: codeblock}
+   ```bash
+   ibm-lh data-copy --target-table iceberg_data.ice_schema.ytab \
+   --source-data-files "s3://lh-ingest/hive/warehouse/folder_ingestion/" \
+   --user someuser@us.ibm.com \
+   --password **** \
+   --url https://us-south.lakehouse.dev.cloud.ibm.com/lakehouse/ \
+   --instance-id crn:v1:staging:public:lakehouse:us-south:a/fd160ae2ce454503af0d051dfadf29f3:25fdad6d-1576-4d98-8768-7c31e2452597:: \
+   --schema /home/nz/config/schema.cfg \
+   --engine-id spark214 \
+   --create-if-not-exist
+   ```
+   {: codeblock}
 
-Where the parameters used are listed as follows:
-|Parameter|Description|
-|------------|----------|
-|`--create-if-not-exist`|Use this option if the target schema or table is not created. Do not use if the target schema or table is already created.|
-|`--engine-id`|Engine id of Spark engine when using REST API based `SPARK` ingestion.|
-|`--instance-id`|Identify unique instances. In SaaS environment, CRN is the instance id.|
-|`--password`|Password of the user connecting to the instance. In SaaS, API key to the isntance is used.|
-|`--schema`|Use this option with value in the format path/to/csvschema/config/file. Use the path to a schema.cfg file which specifies header and delimiter values for CSV source file or folder.|
-|`--source-data-files`|Path to s3 parquet or CSV file or folder. Folder paths must end with “/”. File names are case sensitive.|
-|`--target-table`|Target table in format `<catalogname>.<schemaname>.<tablename>`.|
-|`--user`|User name of the user connecting to the instance.|
-|`--url`|Base url of the location of {{site.data.keyword.lakehouse_full}} cluster.|
-{: caption="Table 2" caption-side="bottom"}
+   Where the parameters used are listed as follows:
+   |Parameter|Description|
+   |------------|----------|
+   |`--create-if-not-exist`|Use this option if the target schema or table is not created. Do not use if the target schema or table is already created.|
+   |`--engine-id`|Engine id of Spark engine when using REST API based `SPARK` ingestion.|
+   |`--instance-id`|Identify unique instances. In SaaS environment, CRN is the instance id.|
+   |`--password`|Password of the user connecting to the instance. In SaaS, API key to the isntance is used.|
+   |`--schema`|Use this option with value in the format path/to/csvschema/config/file. Use the path to a schema.cfg file which specifies header and delimiter values for CSV source file or folder.|
+   |`--source-data-files`|Path to s3 parquet or CSV file or folder. Folder paths must end with “/”. File names are case sensitive.|
+   |`--target-table`|Target table in format `<catalogname>.<schemaname>.<tablename>`.|
+   |`--user`|User name of the user connecting to the instance.|
+   |`--url`|Base url of the location of {{site.data.keyword.lakehouse_full}} cluster.|
+   {: caption="Table 2" caption-side="bottom"}
+
+4. Run the following command to get the status of the ingest job:
+
+   ```bash
+   ibm-lh get-status --job-id <Job-id> --instance-id --url --user --password
+   ```
+   {: codeblock}
+
+   Where the parameter used is listed as follows:
+
+   |Parameter|Description|
+   |-----|----|
+   |`--job-id<Job id>`|Job id is generated when REST API or UI based ingestion is initiated. This job id is used in getting the status of ingestion job. This parameter is used only used with `ibm-lh get-status` command. The short command for this parameter is `-j`.|
+   {: caption="Table 3" caption-side="bottom"}
+
+5. Run the following command to get the history of all ingestion jobs:
+
+   ```bash
+   ibm-lh get-status --all-jobs --instance-id --url --user --password
+   ```
+   {: codeblock}
+
+   Where the parameter used is listed as follows:
+
+   |Parameter|Description|
+   |-----|----|
+   |`--all-jobs`|This all-jobs parameter gives the history of all ingestion jobs. This parameter is used only used with `ibm-lh get-status` command.|
+   {: caption="Table 4" caption-side="bottom"}

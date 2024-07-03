@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-07-03"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -25,7 +25,7 @@ It is available as a Visual Studio Code extension and you can install it in your
 
 1. Install a desktop version of Visual Studio Code.
 1. Install watsonx.data extension from [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.watsonx-data).
-1. Ensure you have public-private SSH key pair to establish SSH connection with the Spark lab. For more information about generating the key, open watsonx.data extension in Visual 1. Studio Code, go to Details tab, see the section, Set up SSH on your machine.
+1. Ensure you have public-private SSH key pair to establish SSH connection with the Spark lab. For more information about generating the key, open watsonx.data extension in Visual Studio Code, go to Details tab, see the section, Set up SSH on your machine.
 1. Install the Visual Studio Code extension, **Remote - SSH** from [Visual Studio Code marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh).
 
 
@@ -51,15 +51,15 @@ It is available as a Visual Studio Code extension and you can install it in your
 
     * `Environment Type`: Select IBM Public cloud as the environment type.
 
-    * `watsonx-data.host`: Hostname of the region where your watsonx.data SaaS instance is provisioned, `<region>`.lakehouse.cloud.ibm.com`.
+    * `host`: Hostname of the region where your watsonx.data SaaS instance is provisioned, `<region>`.lakehouse.cloud.ibm.com`.
 
     * `watsonx-data`: Instance ID : CRN of the watsonx.data SaaS instance.
 
-    * `watsonx-data.username`: The user name by which you want to connect to watsonx.data IBM cloud instance. The format is - `ibmlhapikey_userid`. Here ,userid is the IBM id of the user connecting to the watsonx.data instance.
+    * `username`: The user name by which you want to connect to watsonx.data IBM cloud instance. The format is - `ibmlhapikey_userid`. Here ,userid is the IBM id of the user connecting to the watsonx.data instance.
 
-    * `watsonx-data.privateKeyPath`: Path to your private SSH key file.
+    * `privateKeyPath`: Path to your private SSH key file.
 
-    * `watsonx-data.publicKeyPath`: Path to your public SSH key file.
+    * `publicKeyPath`: Path to your public SSH key file.
 
     b. Click **Refresh**. The Visual Studio code window prompts for IBM Cloud IAM APIkey of the user that you specified in setting field watsonx-data.userName. To generate the API key, see [Managing user API key](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui).
 

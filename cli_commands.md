@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-07-03"
 
 keywords: watsonxdata, commands, command line interface, cli
 
@@ -29,7 +29,7 @@ subcollection: watsonxdata
 # Options and parameters supported in **ibm-lh** tool
 {: #cli_commands}
 
-Ingesting data files from S3 or local location into {{site.data.keyword.lakehouse_full}} is done by using the **ibm-lh** tool. The parameters supported in the **ibm-lh** tool is described in this topic.
+Ingesting data files from S3 or local location into {{site.data.keyword.lakehouse_full}} is done by using the **ibm-lh** tool. The parameters that are supported in the **ibm-lh** tool is described in this topic.
 {: shortdesc}
 
 ## Before you begin:
@@ -42,12 +42,17 @@ export ENABLED_INGEST_MODE=SPARK
 ```
 {: codeblock}
 
-The different ingestion modes supported are `PRESTO`, `SPARK_LEGACY`, and `SPARK`. The default mode is `SPARK`.
+There are sample scripts and config file templates available for CLI ingestion commands in the `/Ingestion-Examples/` folder inside the `ibm-lh-tool` container. Follow the steps to access the sample files:
+
+1. Run `./ibm-lh data-copy --interactive` to enter the container in interactive mode.
+1. Run `cd /Ingestion-Examples/` to access the example scripts and config files.
+
+The different ingestion modes that are supported are `PRESTO`, `SPARK_LEGACY`, and `SPARK`. The default mode is `SPARK`.
 
 ## Options and parameters
 {: #optionsparams}
 
-Different options and variables that are supported in a **ibm-lh** tool invoked by `ibm-lh data-copy` command are listed as follows:
+Different options and variables that are supported in a **ibm-lh** tool that is invoked by `ibm-lh data-copy` command are listed as follows:
 
 |Parameter|Description|Declaration|Modes of ingestion|
 |----|----|----|----|
@@ -58,29 +63,30 @@ Different options and variables that are supported in a **ibm-lh** tool invoked 
 |ingest-config|Configuration file for data migration|`--ingest-config <INGEST_CONFIGFILE>`|`PRESTO` and `SPARK_LEGACY`|
 |ingestion-engine-endpoint|Endpoint of ingestion engine. hostname=`<hostname>`, port=`<port>`. This is a mandatory parameter to run an ingestion job.|`--ingestion-engine-endpoint <INGESTION_ENGINE_ENDPOINT>`|`PRESTO` and `SPARK_LEGACY`|
 |instance-id|Identify unique instances. In SaaS environment, CRN is the instance id. The short command for this parameter is `-i`.|`--instance-id <instance-CRN>`|`SPARK`|
-|job-id|Job id is generated when REST API or UI based ingestion is initiated. This job id is used in getting the status of ingestion job. This parameter is used only used with `ibm-lh get-status` command. The short command for this parameter is `-j`|`ibm-lh get-status --job-id <Job id>`|`SPARK`|
+|job-id|Job id is generated when REST API or UI-based ingestion is initiated. This job id is used in getting the status of ingestion job. This parameter is used only used with `ibm-lh get-status` command. The short command for this parameter is `-j`.|`ibm-lh get-status --job-id <Job id>`|`SPARK`|
+|all-jobs|This all-jobs parameter gives the history of all ingestion jobs. This parameter is used only used with ibm-lh get-status command.|`ibm-lh get-status --all-jobs`|`SPARK`|
 |log-directory|This option is used to specify the location of log files. See [Log directory](#log_direc).|`--ingest-config <ingest_config_file> --log-directory <directory_path>`|`PRESTO`, `SPARK_LEGACY`, and `SPARK`|
-|password|Password of the user connecting to the instance. In SaaS, API key to the isntance is used. The short command for this parameter is `-pw`.|`--password <apikey>`|`SPARK`|
+|password|Password of the user connecting to the instance. In SaaS, API key to the instance is used. The short command for this parameter is `-pw`.|`--password <apikey>`|`SPARK`|
 |schema|Schema file that includes CSV specifications, and more. See [Schema file specifications](#schema_spec).|`--schema </path/to/schemaconfig/file>`|`PRESTO`, `SPARK_LEGACY`, and `SPARK`|
-|source-data-files|Data files or folders for data migration. File name ending with `/` is considered a folder. Single or multiple files can be used. This is a mandatory parameter to run an ingestion job. Example: `<file1_path>,<file2_path>,<folder1_path>`. File names are case sensitive. The short command for this parameter is `-s`.|`--source-data-files <SOURCE_DATA_FILE>`|`PRESTO`, `SPARK_LEGACY`, and `SPARK`|
+|source-data-files|Data files or folders for data migration. File name ending with `/` is considered a folder. Single or multiple files can be used. This is a mandatory parameter to run an ingestion job. Example: `<file1_path>,<file2_path>,<folder1_path>`. File names are case-sensitive. The short command for this parameter is `-s`.|`--source-data-files <SOURCE_DATA_FILE>`|`PRESTO`, `SPARK_LEGACY`, and `SPARK`|
 |staging-location|Location where CSV files and in some circumstances parquet files are staged, see [Staging location](#stag_loc). This is a mandatory parameter to run an ingestion job.|`--staging-location <STAGING_LOCATION>`|`PRESTO`|
 |staging-hive-catalog|The hive catalog name configured in the watsonx.data if not using the default catalog for staging. Default catalog: hive_data.|`--staging-hive-catalog <catalog_name>`|`PRESTO`|
 |staging-hive-schema|The schema name associated with the staging hive catalog for ingestion. Create and pass in a custom schema name by using this parameter. Default schema: `lhingest_staging_schema`. If schema is created as default, this parameter is not required.|`--staging-hive-schema <schema_name>`|`PRESTO`|
-|sync-status|This parameter is used in REST API based ingestion. Default value is `false`. When this parameter is set to `true`, `ibm-lh data-copy` tool waits and polls to get continuous status after an ingestion job is submitted.|`--sync-status <IS THERE ANY ENTRY?>`|`SPARK`|
-|system-config|This parameter is used to specify system related parameters. See [System config](#sys_config).|`--system-config <path/to/system/configfile>`|`PRESTO`, `SPARK_LEGACY`, and `SPARK`|
+|sync-status|This parameter is used in REST API based ingestion. The default value is `false`. When this parameter is set to `true`, `ibm-lh data-copy` tool waits and polls to get continuous status after an ingestion job is submitted.|`--sync-status <IS THERE ANY ENTRY?>`|`SPARK`|
+|system-config|This parameter is used to specify system-related parameters. See [System config](#sys_config).|`--system-config <path/to/system/configfile>`|`PRESTO`, `SPARK_LEGACY`, and `SPARK`|
 |target-catalog-uri|Target catalog uri|`--target-catalog-uri <TARGET_CATALOG_URI>`|`SPARK_LEGACY`|
 |target-tables|Data migration target table. `<catalog>.<schema>.<table1>`. This is a mandatory parameter to run an ingestion job. Example: `<iceberg.demo.customer1>`. This parameter is deprecated and replaced with `target-table`.|`--target-tables <TARGET_TABLES>`|`PRESTO` and `SPARK_LEGACY`|
 |target-table|Data migration target table. `<catalog>.<schema>.<table1>`. This is a mandatory parameter to run an ingestion job. Example: `<iceberg.demo.customer1>`. The short command for this parameter is `-t`. See [Target table](#target_table).|`--target-table <TARGET_TABLE>`|`PRESTO`, `SPARK_LEGACY`, and `SPARK`|
 |trust-store-path|Path of the truststore to access the ingestion engine. This is used to establish SSL connections. This is a mandatory parameter to run an ingestion job.|`--trust-store-path <TRUST_STORE_PATH>`|`PRESTO` and `SPARK_LEGACY`|
 |trust-store-password|Password of truststore to access the ingestion engine. This is used to establish SSL connections. This is a mandatory parameter to run an ingestion job.|`--trust-store-password <TRUST_STORE_PASSWORD>`|`PRESTO` and `SPARK_LEGACY`|
-|user|User name of the user connecting to the instance. The short command for this parameter is `-u`.|`--user <username>`|`SPARK`|
+|user|Username of the user connecting to the instance. The short command for this parameter is `-u`.|`--user <username>`|`SPARK`|
 |url|Base url of the location of {{site.data.keyword.lakehouse_full}} cluster. The short command for this parameter is `-w`.|`--url <url>`|`SPARK`|
 {: caption="Table 1. Command line options and variables" caption-side="bottom"}
 
 ## System config
 {: #sys_config}
 
-The `system-config` parameter refers to a file and is used to specify system related parameters.
+The `system-config` parameter refers to a file and is used to specify system-related parameters.
 
 For the command line, the parameter is declared as follows:
 
@@ -100,9 +106,9 @@ The format of the system config parameter is as follows:
 ```
 {: codeblock}
 
-Currently, only the memory-limit parameter is supported. This parameter specifies the maximum memory in watsonx.data that an ingestion job can use. Default value for memory-limit is 500M. The limit can be in bytes, K, M or G. The `system-config` is applicable for `PRESTO`, `SPARK_LEGACY`, and `SPARK` ingestion modes.
+Currently, only the memory-limit parameter is supported. This parameter specifies the maximum memory in watsonx.data that an ingestion job can use. The default value for memory-limit is 500 M. The limit can be in bytes, K, M, or G. The `system-config` is applicable for `PRESTO`, `SPARK_LEGACY`, and `SPARK` ingestion modes.
 
-Following are some examples of how the `memory-limit` parameter can be specified in the system-config  file.
+The following are some examples of how the `memory-limit` parameter can be specified in the system-config file.
 
 ```bash
 [system-config]
@@ -161,18 +167,20 @@ HEADER:<true|false> #default 'true'
 #single character value
 ESCAPECHAR:<escape_char>   #default '\\'
 
-#Example encodings:
-#utf-8, cp1252, iso-88509-1, latin1 etc
+#Encoding (Example:"utf-8")
 ENCODING:<encoding>    #default None
 ```
 {: codeblock}
+
+The encodings supported by Presto and Spark ingestion are directly dependent on encodings supported by [Python](https://docs.python.org/3/library/codecs.html#standard-encodings). The encoding value must be enclosed in double quotation marks.
+{: note}
 
 The following is an example of schema specification:
 
 ```bash
 $ more /tmp/schema.cfg
 [CSV]
-DELIMITER:,
+DELIMITER:','
 HEADER:false
 LINE_DELIMITER:'\n'
 ```
@@ -183,7 +191,7 @@ LINE_DELIMITER:'\n'
 
 The ingest log files are generated in the log directory. By default, the ingest log file is generated as `/tmp/ingest.log`. By using the `--log-directory` parameter, you can specify a new location for ingest log files. A separate log file is created for each ingest command invocation. The new log file name is in the format `ingest_<timestamp)_<pid>.log`. The log directory must exist before invocation of the **ibm-lh** ingest tool.
 
-This parameter is applicable only in the command line option for `PRESTO`, `SPARK_LEGACY`, and `SPARK` ingestion modes.
+This parameter is applicable only in the command-line option for `PRESTO`, `SPARK_LEGACY`, and `SPARK` ingestion modes.
 
 Example when using the command line:
 
@@ -207,21 +215,33 @@ ibm-lh data-copy --ingest-config ext.cfg --log-directory /tmp/mylogs
 ## Target table
 {: #target_table}
 
-The ability to handle special characters in table and schema names for ingestion is constrained by the underlying engines (Presto, Legacy Spark, Spark) and the special characters they support. When using schema or table names with special characters, not all special characters will be accepted or handled by Spark, Presto, Legacy Spark. Consult the documentation for the special characters support.
+The ability to handle special characters in table and schema names for ingestion is constrained by the underlying engines (Presto, Legacy Spark, Spark) and the special characters they support. When using schema or table names with special characters, not all special characters are accepted by Spark, Presto, Legacy Spark. Consult the documentation for the special characters support.
 
-The SQL identifier of the target table for data migration is `<catalog>.<schema>.<table>`. Use double quotes " or backticks ` to escape parts with special characters.
+The SQL identifier of the target table for data migration is `<catalog>.<schema>.<table>`. Use double quotation marks " or backticks ` to escape parts with special characters.
 
 Examples:
 
+```bash
 `ibm-lh data-copy --target-table 'catalog."schema 2.0"."my table!"'`
+{: codeblock}
 
-`ibm-lh data-copy --target-table 'catalog.`schema 2.0`.`my table!`'`
+```bash
+ibm-lh data-copy --target-table 'catalog.`schema 2.0`.`my table!`'
+```
+{: codeblock}
 
+```bash
 `ibm-lh data-copy --target-table catalog.'"schema 2.0"'.'"my table!"'`
+{: codeblock}
 
-`ibm-lh data-copy --target-table "catalog.\`schema 2.0\`.\`my table!\`"`
+```bash
+ibm-lh data-copy --target-table "catalog.\`schema 2.0\`.\`my table!\`"
+```
+{: codeblock}
 
+```bash
 `ibm-lh data-copy --target-table catalog.\"schema\ 2.0\".\"my\ table!\"`
+{: codeblock}
 
-Both double quotes " and backticks ` are accepted, but quote styles cannot be mixed. In order to include a literal quote inside an identifier, double the quoting character (e.g., "" or ``).
+Both double quotation marks " and backticks ` are accepted, but quotation mark styles cannot be mixed. In order to include a literal quotation inside an identifier, double the quoting character (for example, "" or ``).
 {: note}

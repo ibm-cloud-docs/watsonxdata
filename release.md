@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-07-03"
 
 keywords: watsonxdata, release notes
 
@@ -33,6 +33,163 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.lakehouse_full}} that are grouped by date.
 {: shortdesc}
+
+## 03 July 2024 - Version 2.0.0
+{: #lakehouse_July032024}
+
+**New data types for data sources**
+{: #JULY_01_2024}
+
+The following new data types are now available for some data sources. You can access these data types on the **Data manager** page under the **Add column** option.
+
+* **BLOB**
+
+     * Db2
+     * Teradata
+     * Oracle
+     * MySQL
+     * SingleStore
+
+* **CLOB**
+
+     * Db2
+     * Teradata
+     * Oracle
+
+* **BINARY**
+
+     * SQL Server
+     * MySQL
+
+Because the numeric data type is not supported in watsonx.data, you can use the decimal data type as an equivalent alternative to the numeric data type for Netezza data source.
+
+You can now use the BLOB and CLOB data types with the SELECT statement in the Query workspace to build and run queries against your data for Oracle and SingleStore data sources.
+
+You can now use the BLOB and CLOB data types for MySQL and PostgreSQL data sources as equivalents to LONGTEXT, BYTEA, and TEXT because these data types are not compatible with Presto (Java). These data types are mapped to CLOB and BLOB in Presto (Java) if data sources have existing tables with LONGTEXT, TEXT, and BYTEA data types.
+
+* MySQL (CLOB as equivalent to LONGTEXT)
+* PostgreSQL (CLOB as equivalent to TEXT)
+* PostgreSQL (BLOB as equivalent to BYTEA)
+* Netezza (decimal as equivalent to numeric)
+* Oracle (BLOB and CLOB with the SELECT statement)
+* SingleStore (BLOB and CLOB with the SELECT statement)
+
+**New operations for Db2 data source**
+{: #JULY_02_2024}
+
+You can perform the following operations for BLOB and CLOB data types for Db2 data source:
+* INSERT
+* CREATE
+* CTAS
+* ALTER
+* DROP
+
+**New Arrow Flight service based data sources**
+{: #JULY_03_2024}
+
+You can now use the following data sources with Arrow Flight service:
+
+* Greenplum
+* Salesforce
+* MariaDB
+* Apache Derby
+
+For more information, see [Arrow Flight service](watsonxdata?topic=watsonxdata-arrow_database).
+
+**New data sources**
+{: #JULY_04_2024}
+
+You can now use the following data sources:
+
+* Cassandra
+* BigQuery
+* ClickHouse
+* Apache Pinot
+
+For more information, see [Adding a database-catalog pair](watsonxdata?topic=watsonxdata-reg_database).
+
+**Command to retrieve ingestion history**
+{: #JULY_05_2024}
+
+You can now retrieve the status of all ingestion jobs that are submitted by using the ibm-lh get-status --all-jobs CLI command. You can retrieve the status of all ingestion jobs that are submitted. You get the history records that you have access to.
+For more information, see [Options and parameters supported in ibm-lh tool](watsonxdata?topic=watsonxdata-cli_commands).
+
+
+**Additional roles for IBM Knowledge Catalog (IKC) S2S authorization**
+{: #JULY_06_2024}
+
+Besides data access, IBM Knowledge Catalog S2S authorization needs metadata access and Console API access to integrate with watsonx.data. The following new roles are created for IKC service access configuration:
+
+* Viewer
+* Metastore viewer
+
+**Apache Ranger policies**
+{: #JULY_07_2024}
+
+IBM watsonx.data now supports Apache Ranger policies to allow integration with Presto engines.
+For more information, see [Apache Ranger policy](watsonxdata?topic=watsonxdata-ranger_1).
+
+
+**Version upgrade**
+{: #JULY_08_2024}
+
+* Presto (Java) engine is now upgraded to version 0.286.
+* Milvus service is now upgraded to version to 2.4.0. Important features include:
+     * Better Performance (Low Memory Utilisation)
+     * Support Sparse Data
+     * Inbuilt SPLADE Engine for Sparse Vector Embedding
+     * BGE M3 Hybrid (Dense+Sparse) Search
+
+**Hive Metastore (HMS) access in watsonx.data**
+{: #JULY_09_2024}
+
+You can now fetch metadata information for Hive Metastore by using REST APIs instead of getting the information from the engine details. HMS details are used by external entities to integrate with watsonx.data. You must have an Admin, Metastore Admin, or Metastore Viewer role to run the API.
+
+
+**Semantic automation for data enrichment**
+{: #JULY_10_2024}
+
+Semantic automation for data enrichment leverages generative AI with IBM Knowledge Catalog to understand your data on a deeper level and enhance data with automated enrichment to make it valuable for analysis. Semantic layer integration is available for Lite plan users only as a 30 days trial version.
+For more information, see [Semantic automation for data enrichment in watsonx.data](watsonxdata?topic=watsonxdata-sal_title).
+
+
+**Query Optimizer to improve query performance**
+{: #JULY_11_2024}
+
+You can now use Query Optimizer, to improve the performance of queries that are processed by the Presto (C++) engine. If Query Optimizer determines that optimization is feasible, the query undergoes rewriting; otherwise, the native engine optimization takes precedence.
+For more information, see [Query Optimizer overview](watsonxdata?topic=watsonxdata-about_optimizer).
+
+
+
+**New name for Presto engine in watsonx.data**
+{: #JULY_12_2024}
+
+Presto is renamed to Presto (Java).
+
+
+**New engine (Presto C++) in watsonx.data**
+{: #JULY_13_2024}
+
+You can provision a Presto (C++) engine ( version 0.286) in watsonx.data to run SQL queries on your data source and fetch the queried data.
+For more information, see Presto (C++) overview.
+
+**Using proxy to access S3 and S3 compatible buckets**
+{: #JULY_14_2024}
+
+External applications and query engines can access the S3 and S3 compatible buckets managed by watsonx.data through an S3 proxy.
+For more information, see [Using S3 proxy to access S3 and S3 compatible buckets](watsonxdata?topic=watsonxdata-cas_proxy).
+
+**Mixed case feature flag for Presto (Java) engine**
+{: #JULY_16_2024}
+
+The mixed case feature flag, which allows to switch between case sensitive and case insensitive behavior in Presto (Java), is available. The flag is set to OFF by default and can be set to ON during the deployment of watsonx.data.
+For more information, see[ Presto (Java) mixed-case support overview](watsonxdata?topic=watsonxdata-mixed_case_overview).
+
+**New storage type Google Cloud Storage**
+{: #JULY_17_2024}
+
+You can now use new storage type Google Cloud Storage. For more information, see [Adding storage-catalog pair](watsonxdata?topic=watsonxdata-reg_bucket#gcs).
+
 
 ## 31 May 2024 - Version 1.1.5
 {: #lakehouse_May312024}
@@ -104,10 +261,10 @@ The Apache Kafka data source stores data as byte messages that producers and con
 For more information about the different license plans, see [IBM® watsonx.data pricing plans](watsonxdata?topic=watsonxdata-pricing-plans-1).
 
 
-**Presto engine version upgrade**
+**Presto (Java) engine version upgrade**
 {: #APR_06_2024}
 
-The Presto engine is now upgraded to version 0.285.1.
+The Presto (Java) engine is now upgraded to version 0.285.1.
 
 **Pause or resume Milvus**
 {: #APR_07_2024}
@@ -335,7 +492,7 @@ With an Iceberg data source, you can now perform ALTER TABLE operations on a c
 **Better query performance by using sorted files**
 {: #feb_09_2024}
 
-With an Apache Iceberg data source, you can generate sorted files, which reduce the query result latency and improve the performance of Presto. Data in the Iceberg table is sorted during the writing process within each file. 
+With an Apache Iceberg data source, you can generate sorted files, which reduce the query result latency and improve the performance of Presto (Java). Data in the Iceberg table is sorted during the writing process within each file. 
 
 You can configure the order to sort the data by using the `sorted_by` table property. When you create the table, specify an array of one or more columns involved in sorting. To disable the feature, set the session property `sorted_writing_enabled` to false. 
 
@@ -362,7 +519,7 @@ Teradata connector now supports the `ALTER TABLE RENAME TO`, `ALTER TABLE DROP C
 **Support for time travel queries**
 {: #wn_05_2024}
 
-Iceberg connector for Presto now supports time travel queries.
+Iceberg connector for Presto (Java) now supports time travel queries.
 
 **The property `format_version` now shows the current version**
 {: #wn_06_2024}
@@ -377,10 +534,10 @@ A new version of {{site.data.keyword.lakehouse_short}} was released in November 
 
 This release includes the following features and updates:
 
-**Presto case-sensitive behavior**
+**Presto (Java) case-sensitive behavior**
 {: #wn_00}
 
-The Presto behavior is changed from case-insensitive to case-sensitive. Now you can provide the object names in the original case format as in the database. For more information, see [Case-sensitive search configuration with Presto](watsonxdata?topic=watsonxdata-ts_cs).
+The Presto (Java) behavior is changed from case-insensitive to case-sensitive. Now you can provide the object names in the original case format as in the database. For more information, see [Case-sensitive search configuration with Presto (Java)](watsonxdata?topic=watsonxdata-ts_cs).
 
 **Roll-back feature**
 {: #wn_01}
@@ -447,7 +604,7 @@ For more information, see [Using AWS EMR for Spark use case](watsonxdata?topic=w
 
 {{site.data.keyword.lakehouse_short}} is a new open architecture that combines the elements of the data warehouse and data lake models. The best-in-class features and optimizations available on the {{site.data.keyword.lakehouse_short}} make it an optimal choice for next generation data analytics and automation. In the first release ({{site.data.keyword.lakehouse_short}} 1.0.0), the following features are supported:
 
-- Creating, scaling, pausing, resuming, and deleting the Presto query engine
+- Creating, scaling, pausing, resuming, and deleting the Presto (Java) query engine
 - Associating and dissociating a catalog with an engine
 - Exploring catalog objects
 - Adding and deleting a database-catalog pair

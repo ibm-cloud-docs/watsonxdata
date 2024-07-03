@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-07-03"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -34,6 +34,8 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} by using {{site.da
 
 ## Before you begin
 {: #spk_ing}
+
+To enable your Spark application to work with the watsonx.data catalog and storage, you must have `Metastore admin` role. Without `Metastore admin` privilege, you cannot ingest data to storage using Native Spark engine. For more information about the Spark configuration, see [Working with the watsonx.data catalog and storage](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-smbit_nsp#view_smbit_nsp)
 
 * You must have the **Administrator** role and privileges in the catalog to do ingestion through the web console.
 * Add and register {{site.data.keyword.iae_full_notm}} (Spark). See [Registering an engine](watsonxdata?topic=watsonxdata-reg_engine).

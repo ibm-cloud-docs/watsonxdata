@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-07-03"
 
 keywords: Joining, query, table, infrastructure
 
@@ -95,7 +95,7 @@ After creating the {{site.data.keyword.lakehouse_short}} instance, you need to l
 4. Click the **Open web console** button to start the web console.
 5. Log in to the console with your IBM ID and password.
 
-## Adding a Presto engine
+## Adding a Presto (Java) engine
 {: #ibmbckt_step3}
 {: step}
 
@@ -107,7 +107,7 @@ In this part of the tutorial, you learn how to navigate to the **Infrastructure 
 This scenario assumes that it is not the first log in attempt to {{site.data.keyword.lakehouse_short}} web console.
 {: note}
 
-To create a Presto engine, complete the following steps:
+To create a Presto (Java) engine, complete the following steps:
 
 2. From the navigation menu, select **Infrastructure manager**.
 
@@ -118,7 +118,7 @@ To create a Presto engine, complete the following steps:
    | Field | Description |
    |--------------------------|----------------|
    | Name | Enter your compute engine name. |
-   | Type | Select Presto v0.279. |
+   | Type | Select Presto (Java) v0.286. |
    | Size | Select the required size based on whether your workload is compute intense or storage intense. |
    | Description (optional) | Describe the intended purpose of engine. |
    | Tags (optional) | Enter the tag name or select from drop-down list. |
@@ -169,16 +169,16 @@ Next, you learn the steps to setup the two specific databases, Db2 and Netezza, 
 {: #ibmbckt_stp5}
 {: step}
 
-You must link the Db2 and Netezza databases to the Presto engine that is used to process the data.
+You must link the Db2 and Netezza databases to the Presto (Java) engine that is used to process the data.
 {: shortdesc}
 
-To associate Db2 with the Presto engine, do the following steps:
+To associate Db2 with the Presto (Java) engine, do the following steps:
 
 1. From the **Infrastructure manager**, select Db2 database. Click the overflow menu icon at the end of the row and click **Associate**.
-2. In the **Associate with engine** form, select the Presto engine that you want to use to process the data.
-3. Click **Associate and restart engine**. The Db2 database is associated with the Presto engine.
+2. In the **Associate with engine** form, select the Presto (Java) engine that you want to use to process the data.
+3. Click **Associate and restart engine**. The Db2 database is associated with the Presto (Java) engine.
 
-Similarly, select the Netezza database and link it to the Presto engine.
+Similarly, select the Netezza database and link it to the Presto (Java) engine.
 {: note}
 
 ## Creating necessary tables
@@ -211,7 +211,7 @@ In this section of the tutorial, you learn how to insert the data into the catal
 {: shortdesc}
 
 1. From the navigation menu, select **SQL**. The **Query workspace** page opens.
-2. Select the Presto engine from the **Engine** drop-down.
+2. Select the Presto (Java) engine from the **Engine** drop-down.
 1. Select **Netezza**. run the following query:
 
    ```bash

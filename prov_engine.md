@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-07-03"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -25,21 +25,22 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Provisioning a Presto engine
+# Provisioning a Presto (Java) engine
 {: #prov_engine}
 
-The engine runs SQL queries on your data source and fetches the queried data. {{site.data.keyword.lakehouse_short}} allows provisioning a Presto engine.
+The engine runs SQL queries on your data source and fetches the queried data. {{site.data.keyword.lakehouse_short}} allows provisioning a Presto (Java) engine.
 
-The following versions of Presto engine are supported as per specified {{site.data.keyword.lakehouse_short}} versions:
+The following versions of Presto (Java) engine are supported as per specified {{site.data.keyword.lakehouse_short}} versions:
 
-   - {{site.data.keyword.lakehouse_short}} v1.0.0, v1.0.1 and v1.0.2: [Presto version 0.279][def]
+   - {{site.data.keyword.lakehouse_short}} v1.0.0, v1.0.1 and v1.0.2: [Presto (Java) version 0.279][def]
 
-   - {{site.data.keyword.lakehouse_short}} v1.0.3, v1.1.1 and v1.1.3: [Presto version 0.282][def1]
+   - {{site.data.keyword.lakehouse_short}} v1.0.3, v1.1.1 and v1.1.3: [Presto (Java) version 0.282][def1]
 
-   - {{site.data.keyword.lakehouse_short}} v1.1.4: [Presto version 0.285.1][def2]
+   - {{site.data.keyword.lakehouse_short}} v1.1.4, v1.1.5: [Presto (Java) version 0.285.1][def2]
 
+   - {{site.data.keyword.lakehouse_short}} v2.0.0: [Presto (Java) version 0.286][def3]
 
-To provision a Presto engine, complete the following steps.
+To provision a Presto (Java) engine, complete the following steps.
 {: shortdesc}
 
 1. Log in to {{site.data.keyword.lakehouse_short}} console.
@@ -48,7 +49,7 @@ To provision a Presto engine, complete the following steps.
 
 3. To provision an engine, click **Add component** and select **Add engine**.
 
-4. In the **Add engine** window, select **Presto(version)** from the **Type** drop-down list.
+4. In the **Add engine** window, select **Presto (Java) (version)** from the **Type** drop-down list.
 
 5. Configure the following engine details.
 
@@ -63,8 +64,9 @@ To provision a Presto engine, complete the following steps.
    {: caption="Table 1. Provision engine" caption-side="bottom"}
 
 
-5. Click **Provision(0+RUs/hour)** to provision the Presto engine.
+5. Click **Provision(0+RUs/hour)** to provision the Presto (Java) engine.
 
 [def]: https://prestodb.io/docs/0.279/
 [def1]: https://prestodb.io/docs/0.282/
 [def2]: https://prestodb.io/docs/0.285.1/
+[def3]: https://prestodb.io/docs/0.286/

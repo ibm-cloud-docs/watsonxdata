@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-07-03"
 
 keywords: watsonxdata, faq
 
@@ -56,7 +56,7 @@ The following data formats are supported in IBM® {{site.data.keyword.lakehouse_
 
 The key features of IBM® {{site.data.keyword.lakehouse_short}} are:
 * An architecture that fully separates compute, metadata, and storage to offer ultimate flexibility.
-* Multiple engines such as Presto and Spark that provide fast, reliable, and efficient processing of big data at scale.
+* Multiple engines such as Presto (Java), Presto (C++), and Spark that provide fast, reliable, and efficient processing of big data at scale.
 * Open formats for analytic data sets, allowing different engines to access and share the data at the same time.
 * Data sharing between watsonx.data, Db2® Warehouse, and Netezza Performance Server or any other data management solution through common Iceberg table format support, connectors, and a shareable metadata store.
 * Built-in governance that is compatible with existing solutions, including IBM Knowledge Catalog.
@@ -67,18 +67,18 @@ The key features of IBM® {{site.data.keyword.lakehouse_short}} are:
 
 The IBM-managed bucket is a default 10 GB bucket.
 
-## Presto
+## Presto (Java)
 {: #presto}
 {: faq}
 {: support}
 
- **What is Presto?**
+ **What is Presto (Java)?**
 
-Presto is a distributed SQL query engine, with the capability to query vast data sets located in different data sources, thus solving data problems at scale.
+Presto (Java) is a distributed SQL query engine, with the capability to query vast data sets located in different data sources, thus solving data problems at scale.
 
-**What are the Presto server types?**
+**What are the Presto (Java) server types?**
 
-A Presto installation includes three server types: coordinator, worker, and resource manager.
+A Presto (Java) installation includes three server types: coordinator, worker, and resource manager.
 
 **What SQL statements are supported in IBM {{site.data.keyword.lakehouse_short}}?**
 
@@ -92,7 +92,7 @@ For information on supported SQL statements, see [Supported SQL statements](wats
 
 **What is HMS (Hive Metastore)?**
 
-Hive Metastore (HMS) is a service that stores metadata that is related to Presto and other services in a backend Relational Database Management System (RDBMS) or Hadoop Distributed File System (HDFS).
+Hive Metastore (HMS) is a service that stores metadata that is related to Presto (Java) and other services in a backend Relational Database Management System (RDBMS) or Hadoop Distributed File System (HDFS).
 
 ## Installation and setup
 {: #install}
@@ -149,7 +149,7 @@ To assign access to a user, see [Managing roles and privileges](watsonxdata?topi
 
 To assign access to a group, see [Managing roles and privileges](watsonxdata?topic=watsonxdata-role_priv).
 
-## Presto Engine
+## Presto (Java) Engine
 {: #presto_engine}
 {: faq}
 {: support}
@@ -272,14 +272,14 @@ Yes, if you use an IBM cloud trial account the lite plan is credit card free. Yo
 The lite plan is provided for you to try the basic features of watsonx.data and is available to all IBM Cloud account types like trial, pay-as-you-go, and subscription. It supports the basic features only. It is not available on AWS and is limited to one watsonx.data instance per IBM Cloud account (cross-regional).
 
 Key supported features:
-1. Ability to pause and resume Presto engine.
+1. Ability to pause and resume Presto (Java) engine.
 2. Ability to connect to an IBM Cloud-provided Cloud Object Storage (COS) bucket and provide credentials to your own COS or S3 bucket.
-3. Ability to delete Presto, Milvus, and connections to your own bucket.
+3. Ability to delete Presto (Java), Milvus, and connections to your own bucket.
 
 Limitations:
 1. It is limited to provisioning a single instance per resource group.
 2. It is limited to 2000 resource units (RUs) before the instance is suspended. The cap value is displayed on the [{{site.data.keyword.Bluemix_notm}} catalog provisioning][def] page and is reflected on your billing page within your {{site.data.keyword.lakehouse_short}} instance upon provisioning. Your license expires on reaching either the cap limit of 2000 RUs or exceeding the trial period of 30 days.
-3. It is limited to a maximum of one Presto engine or Milvus service with starter size (1.25 RUs per hour) or both.
+3. It is limited to a maximum of one Presto (Java) engine or Milvus service with starter size (1.25 RUs per hour) or both.
 4. It is limited to the smallest node sizes and profiles for each engine and service. You cannot increase the node size.
 5. The lite instances cannot be used for production purposes.
 6. The lite instances might be removed any time and are unrecoverable (no BCDR).
@@ -311,11 +311,11 @@ You may create an IBM Cloud Object Store (COS) bucket that you own and connect i
 
 In addition to the lite plan, the enterprise plan includes the following features:
 1. You pay by hour for each infrastructure resource that you add. Starting with support services then build the engines and services that you want. This has an hourly rate that is computed in Resource Units that maps to your payment method whether ‘Pay as You Go’ or ‘Subscription’.
-2. Presto and external Spark engine and Milvus service.
+2. Presto (Java) and external Spark engine and Milvus service.
 3. Hive metastore and Iceberg catalog.
 4. Infrastructure manager and query editor.
 5. Db2 Warehouse and Netezza integration.
-6. Ability to scale (increase and decrease) node sizes for Presto engines.
+6. Ability to scale (increase and decrease) node sizes for Presto (Java) engines.
 7. Available on both IBM Cloud and AWS environments.
 
 **What are the different payment plans under the enterprise plan?**

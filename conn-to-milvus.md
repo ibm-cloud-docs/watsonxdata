@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-07-03"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -32,7 +32,17 @@ subcollection: watsonxdata
 Run any one of the following commands to connect with Milvus:
 {: shortdesc}
 
-## By using API key:
+## Before you begin
+{: #prereq_conn_milvus}
+
+Make sure that the following items are installed or available:
+
+- Python and Pymilvus package. For more information, see [About PyMilvus](https://milvus.io/api-reference/pymilvus/v2.4.x/About.md).
+- Hostname and port for the Milvus instance. You can get Milvus `host` and `port` information from **Infrastructure manager** (click the Milvus service to open the **Details** page and note the `host` and `port` information from the GRPC host).
+- Authorized user credentials to access the Milvus instance.
+- Assign a role to the user or [service ID](https://cloud.ibm.com/docs/account?topic=account-serviceids&interface=ui) from **Infrastructure manager**. For more information about user roles, see [Managing roles and privileges](watsonxdata?topic=watsonxdata-role_priv#milvus){: external}.
+
+## By using API key
 {: #conn-to-milvusapikey}
 
 ```bash
@@ -42,17 +52,19 @@ has = utility.has_collection("hello_milvus")
 print(f"Does collection hello_milvus exist in Milvus: {has}")
 ```
 
-## By using Token:
+## By using Token
 {: #conn-to-milvusatoken}
 
 ```bash
 connections.connect(host="<host>", port="<port>", secure=True, server_name="localhost", user="ibmlhtoken", password="<token>")
 ```
 
+For more information about getting a token, see [Getting IBM Access Management (IAM) token](watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token){: external}.
+
 ## By using URI
 {: #conn-to-milvusuri}
 
-This an alternate method of connecting to Milvus instead of the `host` and `port` parameters.
+This is an alternate method of connecting to Milvus without using the `host` and `port` parameters.
 {: note}
 
 ```bash
@@ -62,3 +74,17 @@ has = utility.has_collection("hello_milvus")
 print(f"Does collection hello_milvus exist in Milvus: {has}")
 ```
 For getting API keys, see [Getting the IBM API key](watsonxdata?topic=watsonxdata-con-presto-serv#get-api-iam-token){: external}.
+
+## What to do next
+{: #postreq}
+
+You can perform the following operations after establishing a connection with a Milvus service:
+
+- **Manage databases**: A Milvus cluster supports a maximum of 64 databases. For more information, see [Manage Databases](https://milvus.io/docs/manage_databases.md).
+- **Manage collections**: A Milvus cluster supports a maximum of 65,536 collections. For more information, see [Manage Collections](https://milvus.io/docs/manage-collections.md#Manage-Collections).
+- **Manage partitions**: A Milvus cluster supports a maximum of 4095 partitions. For more information, see [Manage Partitions](https://milvus.io/docs/manage-partitions.md#Manage-Partitions).
+- **Manage data**: For more information, see:
+  - [Insert, Upsert & Delete](https://milvus.io/docs/insert-update-delete.md)
+  - [Data Import](https://milvus.io/docs/prepare-source-data.md)
+- **Manage indexes**: For more information, see [Manage Indexes](https://milvus.io/docs/index-vector-fields.md?tab=floating).
+- **Search and Query**: For more information, see [Search, Query & Get](https://milvus.io/docs/single-vector-search.md).

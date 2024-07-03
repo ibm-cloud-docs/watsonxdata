@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-07-03"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
 
@@ -56,3 +56,4 @@ The following table shows the service behavior changes for each version date. Sw
 |--------------|--------------------|
 | 2024-05-29   | Updated {{site.data.keyword.lakehouse_short}} AMS API. |
 | 2023-07-07   | Base version |
+{: caption="Table 1. Active version dates" caption-side="bottom"}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-07-03"
 
 keywords: provisioning, query, engine, infrastructure
 
@@ -28,14 +28,14 @@ completion-time: 0.5h
 <!-- / Getting familiarized with Presto query engine -->
 <!-- Exploring Presto functionality for a first time user -->
 
-After successfully provisioning the Presto engine, kickstart your {{site.data.keyword.lakehouse_short}} experience by exploring the capabilities of Presto by running test queries, creating your first schema, and tables.
+After successfully provisioning the Presto (Java) engine, kickstart your {{site.data.keyword.lakehouse_short}} experience by exploring the capabilities of Presto (Java) by running test queries, creating your first schema, and tables.
 {: shortdesc}
 
-In this tutorial, you learn to execute some test queries to understand the capabilities of Presto and create your first schema to establish a foundational structure for organizing your data. When your schema is in place, you can proceed to create your table. Tables are essential components for storing and organizing data.
+In this tutorial, you learn to execute some test queries to understand the capabilities of Presto (Java) and create your first schema to establish a foundational structure for organizing your data. When your schema is in place, you can proceed to create your table. Tables are essential components for storing and organizing data.
 
 
 **Sample Scenario** : To understand:
-* Querying tables by using Presto in {{site.data.keyword.lakehouse_short}}
+* Querying tables by using Presto (Java) in {{site.data.keyword.lakehouse_short}}
 * About the data available for kick start
 * To learn how to create schemas and tables to store, organize and query data.
 
@@ -65,12 +65,12 @@ This tutorial requires:
 {: #gtstrtd_stp1}
 {: step}
 
-This section of the tutorial describes how to use the **Query workspace**, and run test queries to familiarize with the working of the Presto engine.
+This section of the tutorial describes how to use the **Query workspace**, and run test queries to familiarize with the working of the Presto (Java) engine.
 
 To run the SQL query, do the following steps:
 
 1. From the navigation menu, select **SQL**. The **Query workspace** page opens.
-2. Select the Presto engine from the **Engine** list.
+2. Select the Presto (Java) engine from the **Engine** list.
 3. Go to **System and benchmarking data**. {{site.data.keyword.lakehouse_short}} provides default catalogs **tpcds**, and **tpch**. These catalogs provide auto-generated data for benchmarking. You can also use it for running sample queries and data.
 4. Select a schema from the **tpch** catalog (for example, `Tiny`) and then select a table, for example, `Customer`. Click the overflow menu to select **Generate Path**, or **Generate SELECT**.
 4. Select **Generate Select** and select a limit, for example 100.

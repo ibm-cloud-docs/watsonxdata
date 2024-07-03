@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-07-03"
 
 keywords: lakehouse, watsonx data, quick start, engine, catalog, bucket
 subcollection: watsonxdata
@@ -93,6 +93,41 @@ In the **Configure engine** page, complete the following steps:
 
 3. Click **Next**.
 
+## Configure query monitoring
+{: #qs_montr}
+{: step}
+
+You can enable, or disable query monitoring feature (For more information about query monitoring, see [Query monitoring](watsonxdata?topic=watsonxdata-qhmm){: external}) for your instance. If you enable the feature, you must specify the storage that is required to store QHMM related data. You have the provison to use the default storage (that the system provision for you) or you can bring your own bucket (BYOB).
+
+1. Use the toggle switch to enable (or disable) the query monitoring feature.
+2. If you enable the QHMM feature, you need to configure the storage details for storing QHMM data. Else, you can navigate to the next step using the **Next** button.
+2. You can view the following storage details that is available in the system by default to store the QHMM data.
+    * The **Bucket name** field displays the default bucket (that the system provision) to which the query history is stored.
+    * The **Catalog type** is by default `Apache hive`. QHMM supports only Apache hive.
+    * The **Catalog name** is by default `wxd_system_data`.
+
+3. You can continue using the default storage details or you can change the default bucket and configure the details of the bucket that you bring in (BYOB) to store the QHMM data. To do that:
+
+    a. Use the **Back** button to navigate backwards to the **Configure bucket** page.
+
+    b. Select **Register my own** from the **How would you like to proceed?** field.
+
+    c. Configure the details of your bucket. For more information, see [Configure a bucket](#qs_bucket).
+
+    d. Click **Next**.
+
+    e. From the **Configure catalog** page, select the catalog **Type** as **Apache hive**. QHMM supports only Apache hive.
+
+    f. Use the **Next** button to navigate to the **Query monitoring** page.
+
+    g. In the **Query monitoring** page, from the **Bucket name** field, select the bucket that you registered.
+
+The storage (default or BYOB) can be changed at later point from the {{site.data.keyword.lakehouse_short}} console page. See [Query monitoring](watsonxdata?topic=watsonxdata-qhmm){: external}.
+{: important}
+
+4. Click **Next**.
+
+
 ## Review the configuration details
 {: #qs_summary}
 {: step}
@@ -103,7 +138,7 @@ In the **Summary** page, complete the following steps:
 
 2. Click **Finish and go**.
 
-When the setup is complete, the {{site.data.keyword.lakehouse_short}} home page appears. Resource Unit consumption begins soon after creating the support services by using the quick start wizard. You can view the run rate that is submitted for billing from the billing and usage tab. For more information, see [Billing and usage](watsonxdata?topic=watsonxdata-manage_bill){: external}
+When the setup is complete, the {{site.data.keyword.lakehouse_short}} home page appears. Resource Unit consumption begins soon after creating the support services by using the quick start wizard. You can view the run rate that is submitted for billing from the billing and usage tab. For more information, see [Billing and usage](watsonxdata?topic=watsonxdata-manage_bill){: external}.
 
 ## Next steps
 {: #qs_next_steps}

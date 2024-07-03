@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-07-03"
 
 keywords: watsonxdata, watsonx.data, presto, python client, cloud
 
@@ -26,15 +26,15 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Connecting to Presto server using Python client
+# Connecting to Presto (Java) server using Python client
 {: #con-presto-cloud-pythn}
 
-Presto CLI provides a terminal-based interactive shell to run queries.
+Presto (Java) CLI provides a terminal-based interactive shell to run queries.
 {: shortdesc}
 
-Complete the following steps to connect to Presto engine in {{site.data.keyword.lakehouse_full}} instance on {{site.data.keyword.cloud_notm}} through a Python client or application.
+Complete the following steps to connect to Presto (Java) engine in {{site.data.keyword.lakehouse_full}} instance on {{site.data.keyword.cloud_notm}} through a Python client or application.
 
-## Getting the Presto engine hostname and port details
+## Getting the Presto (Java) engine hostname and port details
 {: #get-host-port2}
 
 1. Log in to the {{site.data.keyword.lakehouse_short}} service instance in {{site.data.keyword.cloud_notm}}.
@@ -87,12 +87,12 @@ Use either IBM API key or IBM IAM token according to your requirement.
    ```
    {: codeblock}
 
-## Connecting to Presto engine
+## Connecting to Presto (Java) engine
 {: #conn-to-prestoeng2}
 
 1. Download and install the [presto-python-client](https://prestodb.io/docs/current/installation/jdbc.html) on the client machine by using the package installer for Python (pip3).
 
-2. Use the DBAPI interface to query Presto:
+2. Use the DBAPI interface to query Presto (Java):
 
    ```bash
    import prestodb
@@ -113,7 +113,7 @@ Use either IBM API key or IBM IAM token according to your requirement.
    ```
    {: codeblock}
 
-   The command queries the `system.runtime.nodes` system tables that show the nodes in the Presto cluster.
+   The command queries the `system.runtime.nodes` system tables that show the nodes in the Presto (Java) cluster.
    The DBAPI implementation in `prestodb.dbapi` provides methods to retrieve few rows. For example, `Cursorfetchone()` or `Cursor.fetchmany()`. By default `Cursor.fetchmany()` fetches one row. Set `prestodb.dbapi.Cursor.arraysize` accordingly.
    {: note}
 

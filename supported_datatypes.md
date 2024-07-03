@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-05-31"
+lastupdated: "2024-07-03"
 
 keywords: lakehouse, data types, connectors, watsonx.data
 
@@ -26,11 +26,11 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Data types supported in {{site.data.keyword.lakehouse_full}} for Presto
+# Data types supported in {{site.data.keyword.lakehouse_full}} for Presto (Java)
 {: #supported_datatypes}
 
 
-The following data types are supported in {{site.data.keyword.lakehouse_full}} for Presto through different connectors.
+The following data types are supported in {{site.data.keyword.lakehouse_full}} for Presto (Java) through different connectors.
 {: shortdesc}
 
 | Data types |**Db2**|**Hive**|**Iceberg**|**MySQL**|**{{site.data.keyword.netezza_short}}**|**SQL Server**|**PostgreSQL**|**SingleStore**|**MongoDB**|**Teradata**|**Kafka**|**Elasticsearch**|**TPCH**|**TPCDS**|**Snowflake**|**Oracle**|**Informix**|**Amazon Redshift**|**Prometheus**|
