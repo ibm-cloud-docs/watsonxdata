@@ -45,10 +45,10 @@ toc:
       #     topics:
       #       - tut_ai_usecase.md
       #       - ret_credentials.md
-      - topicgroup:
-          label: Data federation use case
-          topics:
-            - tut_data_federation.md
+      # - topicgroup:
+      #     label: Data federation use case
+      #     topics:
+      #       - tut_data_federation.md
   - navgroup:
       id: howto
       topics:
