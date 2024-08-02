@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: watsonxdata, faq
 
@@ -255,7 +255,7 @@ For commands supported in the command-line interface during ingestion, see [Load
 {{site.data.keyword.lakehouse_short}} as a service offers three pricing plans:
 1. Lite plan: It provides a free usage limit of 2000 Resource Units (monitored on the Billing and usage page of IBM Cloud) within a time frame of 30 days. The cap value is displayed on the IBM Cloud catalog provisioning page and is reflected on your billing page within your {{site.data.keyword.lakehouse_short}} instance upon provisioning.
 2. Enterprise plan: You pay by hour for each infrastructure resource that you add. Start with support services then build the engines and services that you want. This has an hourly rate that is computed in Resource Units that maps to your payment method whether ‘Pay as You Go’ or ‘Subscription’.
-3. Enterprise BYOL plan: With the Enterprise BYOL plan, you have everything that is included in the Enterprise plan. If you have already purchased an on-premises {{site.data.keyword.lakehouse_short}} self-managed environment (paid per VPC) perpetual or subscription license, you can choose to use the license to apply for a discount on your SaaS Enterprise usage.
+
 
 For more information, see [Pricing plans](watsonxdata?topic=watsonxdata-pricing-plans-1).
 
@@ -326,25 +326,6 @@ The different payment plans under the enterprise plan are ‘Subscription’ or 
 
 Yes, Milvus service is included in the enterprise plan.
 
-## Bring Your Own License (modifications to pricing from enterprise plan)
-{: #byol}
-{: faq}
 
-**How does Bring Your Own License work?**
-
-With the Enterprise BYOL plan, you have everything that is included in the [Enterprise plan](watsonxdata?topic=watsonxdata-pricing-plans-1#enterprise-plan). If you have already purchased an on-premises {{site.data.keyword.lakehouse_short}} self-managed environment (paid per VPC) perpetual or subscription license, you can choose to use the license to apply for a discount on your SaaS Enterprise usage. For more information, see [BYOL Enterprise plan](watsonxdata?topic=watsonxdata-tutorial_prov_byol).
-
-You cannot use both the VPCs in your own environment and on SaaS.
-{: note}
-
-**What platforms is it currently available on?**
-
-Bring Your Own License is available only on the IBM Cloud platform now.
-
-**What entitlements can I use for Bring Your Own License?**
-
-The following are two parts that are eligible for a discount:
-1. 5900-AYS perpetual license
-2. 5900-AXD subscription software license
 
 [def]: https://cloud.ibm.com/watsonxdata

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: lakehouse, database, watsonx.data
 
@@ -38,9 +38,9 @@ BigQuery database allows querying the data stored in BigQuery. This can be used 
  |------------------|--------------------|
  | Display name    | Enter the database name to be displayed on the screen. |
  | Project id            | Enter the Project id.  |
- | Authentication type             | Select the type of authentication: \n i. JSON key (Base 64 encoded) : Enter the Base 64 encoded Google service account key. \n ii. JSON key (JSON) : Enter the Google service account JSON key.|
+ | Authentication type             | Select the type of authentication: \n i. JSON key (Base 64 encoded) : Enter the JSON key (Base 64 encoded). \n ii. JSON key (JSON) : Enter the JSON key.|
  | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your database. |
- | Add | Click Add to add the database. |
+ | Create | Click Create to create the database. |
  {: caption="Table 1. Register database" caption-side="bottom"}
 
 ## Limitations for SQL statements

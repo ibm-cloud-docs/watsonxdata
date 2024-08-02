@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -32,7 +32,7 @@ You can view the Native Spark engine details in list and topology views.
    | Description | The description of the engine. |
    | Tags | The tag that is specified at the time of registering an engine. |
    | Default Spark version | The Spark runtime version that is used by default for any application that is submitted to the Spark engine. |
-   | System bucket | The Spark engine home bucket. |
+   | Engine Home bucket | Specify the bucket name that store the events and logs related to Spark. |
    | Type | The engine type (here, Spark). |
    | {{site.data.keyword.lakehouse_short}} application endpoint | The endpoint is used at the time of application submission. To submit an application by using API, see [API Docs][def2]. |
    | Spark engine endpoint | The Native Spark endpoint. |

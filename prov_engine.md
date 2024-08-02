@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -28,9 +28,9 @@ subcollection: watsonxdata
 # Provisioning a Presto (Java) engine
 {: #prov_engine}
 
-The engine runs SQL queries on your data source and fetches the queried data. {{site.data.keyword.lakehouse_short}} allows provisioning a Presto (Java) engine.
+An engine in {{site.data.keyword.lakehouse_short}} runs SQL queries on your data source and fetches the queried data. Presto (Java) is one of the engines supported in watsonx.data.
 
-The following versions of Presto (Java) engine are supported as per specified {{site.data.keyword.lakehouse_short}} versions:
+The versions of Presto (Java) supported depends on the {{site.data.keyword.lakehouse_short}} versions. The following is the list of supported versions:
 
    - {{site.data.keyword.lakehouse_short}} v1.0.0, v1.0.1 and v1.0.2: [Presto (Java) version 0.279][def]
 
@@ -47,24 +47,19 @@ To provision a Presto (Java) engine, complete the following steps.
 
 2. From the navigation menu, select **Infrastructure manager**.
 
-3. To provision an engine, click **Add component** and select **Add engine**.
+3. Click **Add component**, select **IBM Presto**, and click **Next**.
 
-4. In the **Add engine** window, select **Presto (Java) (version)** from the **Type** drop-down list.
-
-5. Configure the following engine details.
+4. In the **Add component - IBM Presto** window, provide the following details to sign up new compute to work with your data:
 
    | Field      | Description    |
    |--------------------------------|--------------------------------------------------------------------------------------------|
+   | Type | Select the **Presto (Java) (version)** engine from the list. |
    | Display name   | Enter your compute engine name.  |
-   | Configuration mode | Select Standard for predefined engine sizes or Custom for customized engine configuration.  |
-   | Size   | Select the engine size. For all sizes, coordinator and worker nodes are storage-optimized. The field appears when you select the **Configuration mode** as **Standard**. |
-   | Coordinator nodes (max.1) | Select the size for the coordinator node. The field appears when you select the **Configuration mode** as **Custom**. |
-   | Worker nodes (max.18) | Select the size required for worker node. The field appears when you select the **Configuration mode** as **Custom**.|
-   | Associated Catalogs (optional) | Associate the available catalogs with the engine if necessary.  |
+   | Configuration mode | **Standard:**<br>Select **Standard** for predefined engine sizes:<br> - **Starter:** Includes 1 coordinator node and 1 worker node, both starter.<br> - **Small:** Includes 1 coordinator node and 3 worker nodes, all cache-optimized.<br> - **Medium:** Includes 1 coordinator node and 6 worker nodes, all cache-optimized.<br> - **Large:** Includes 1 coordinator node and 12 worker nodes, all cache-optimized.<br>**Custom:**<br>Select **Custom** for customized engine configuration:<br> - **Coordinator nodes (max. 1):** Select the run rate for coordinator node (you can have a maximum of 1 node).<br> - **Worker nodes (max. 18):** Select the number of worker nodes and run rate (you can have a maximum of 18 nodes). |
+   | Associated catalogs (optional) | Associate the available catalogs with the engine if necessary.  |
    {: caption="Table 1. Provision engine" caption-side="bottom"}
 
-
-5. Click **Provision(0+RUs/hour)** to provision the Presto (Java) engine.
+5. Click **Create**.
 
 [def]: https://prestodb.io/docs/0.279/
 [def1]: https://prestodb.io/docs/0.282/

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: lakehouse, database, watsonx.data
 
@@ -36,25 +36,24 @@ IBM Cloud Databases for MongoDB is a MongoDB database that is managed by IBM Clo
 
  | Field           | Description        |
  |------------------|--------------------|
- | Database name     | Enter the name of your authentication database.|
  | Display name    | Enter the database name to be displayed on the screen. |
+ | Authentication database name     | Enter the name of your authentication database. |
  | Hostname            | Enter the hostname. You can add multiple host information. To add, click the **Add** icon. A new row appears for adding hostname and port. Enter the details  |
  | Port             | Enter the port number. |
  | Username           | Enter the  username.  |
  | Password           | Enter the password.  |
- | Test connection     | Click the Test connection link to test the database connection. If the database connection is successful, a success message appears.|
  | Port is SSL enabled   | Use the toggle switch to enable or disable SSL connection. If enabled, \n i. The Upload SSL certificate (.pem, .crt, .cert or .cer) link is enabled. \n ii. Click the Upload SSL certificate (.pem, .crt, .cert or .cer) link. \n iii. Browse the SSL certificate and upload.|
+ | Test connection     | Click the Test connection link to test the database connection. If the database connection is successful, a success message appears.|
  | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your database. |
- | Add | Click Add to add the database. |
+ | Create | Click Create to create the database. |
  {: caption="Table 1. Register database" caption-side="bottom"}
 
 ## Limitations for SQL statements
 {: #connector_limitations}
 
-1. Only `TABLE RENAME` is supported for `ALTER TABLE` statement.
-2. **MongoDB** connector does not support complex `DELETE` involving `OR` statements with different columns for `DELETE` statement.
-3. `DROP TABLE` statement is supported only when enabled in the catalog.
-4. For database-based catalogs the `CREATE SCHEMA`, `CREATE TABLE`, `DROP SCHEMA`, `DROP TABLE`, `DELETE`, `DROP VIEW`, `ALTER TABLE`, and `ALTER SCHEMA` statements are not available in the **Data Manager** UI.
+1. **MongoDB** connector does not support complex `DELETE` involving `OR` statements with different columns for `DELETE` statement.
+2. `DROP TABLE` statement is supported only when enabled in the catalog.
+3. For database-based catalogs the `CREATE SCHEMA`, `CREATE TABLE`, `DROP SCHEMA`, `DROP TABLE`, `DELETE`, `DROP VIEW`, `ALTER TABLE`, and `ALTER SCHEMA` statements are not available in the **Data Manager** UI.
 
 ## Limitations for data types
 {: #connector_limitations2}

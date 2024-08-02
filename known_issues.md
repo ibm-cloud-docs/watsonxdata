@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: lakehouse
 
@@ -31,16 +31,137 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
-<!-- ## Issue: Longer `omrgc_spinlock_acquire` calls slow down {{site.data.keyword.lakehouse_short}} performance
-{: #known_issues1.0.0_7}
 
-As a result of Intel's CPU upgrade, the `omrgc_spinlock_acquire` call takes longer to complete, making {{site.data.keyword.lakehouse_short}} slower. -->
-<!--
-**Workaround:**: Do the following steps:
 
-   1. Go to Presto folder path (/opt/presto/etc folder).
-   2. Update the jvm.config file to include the new JVM parameter, `-Xgc:tlhInitialSize=8096,tlhIncrementSize=16384,tlhMaximumSize=1048576`.
-   3. Restart the Presto coordinator and worker node. -->
+
+## Attempting to read Parquet v2 tables through Presto (C++) results in an error
+{: #known_issues12582trial}
+
+When you attempt to read Parquet v2 tables through Presto (C++) that were created via Data manager in watsonx.data, it gives the following error:
+
+   ```bash
+   Error in ZlibDecompressionStream::Next
+   ```
+   {: codeblock}
+
+**Workaround:** Presto (C++) currently does not support reading Parquet v2 tables. You must copy the data to a new table in v1 format to be compatible for reading using Presto (C++).
+
+1. Set the session property to PARQUET_1_0:
+
+   ```bash
+   set session <catalog_name>.parquet_writer_version = 'PARQUET_1_0';
+   ```
+   {: codeblock}
+
+2. Run the following command to copy the data to a new table:
+
+   ```bash
+   create table <catalog name>.<schema name>.<table name> as (select * from <originaltablename>;
+   ```
+   {: codeblock}
+
+## Users are able to search data without specifying a partition in Milvus service
+{: #known_issues14562}
+
+Users can search data without specifying a partition in the `partition_names` field, bypassing intended access controls and potentially exposing sensitive data.
+
+**Workaround:** You must explicitly specify the partitions that you are authorized to access in the `partition_names` field.
+
+## Spark ingestion currently does not support special characters like quotation marks, back ticks, and parentheses for partitioned table column names.
+{: #known_issues12970}
+
+## Attempting to query Query History and Monitoring Management (QHMM) related tables using Presto (C++) engines might encounter errors
+{: #known_issues12582}
+
+When you attempt to query QHMM related tables using Presto (C++) engines, you might encounter errors due to unsupported file formats. Presto (C++) supports only DWRF and Parquet v1 formats. You can not use Presto (C++) to query data or tables in other formats.
+
+**Workaround:** You can switch to use Presto (Java) engines to query QHMM related tables.
+
+## `SELECT` queries may fail in Hive table
+{: #known_issues13086}
+
+When a column is dropped from a Hive table, subsequent `SELECT` queries may fail with the following error:
+
+   ```bash
+   The file used to create the table is not an ORC file. Based on the file type, specify the file type or use an ORC file. Supported file types are ORC, Parquet, Avro, RCFile, SequenceFile, JSON, and Text. Only if you are using an ORC file, it is not mandatory to specify the file type.
+   ```
+   {: codeblock}
+
+The column drop operation succeeds, but `SELECT *` queries fail due to a file format issue.
+
+**Workaround:** Add the following properties to the catalog through customization PATCH API. See [Update presto engine](https://cloud.ibm.com/apidocs/watsonxdata#update-presto-engine).
+
+   ```bash
+   hive.orc.use-column-names=true
+   hive.parquet.use-column-names=true
+   ```
+   {: codeblock}
+
+## `CreateIndex` permission denied due to policy sync delay of collection creator
+{: #known_issues13701}
+
+When attempting to create an index immediately following the creation of a collection in Milvus, users with the `Viewer` or `User` role might encounter a `CreateIndex permission denied` error. Apart from the `CreateIndex` operation, this error can happen to other Milvus operations within a Collection like `Insert`, `CreatePartition`, etc.
+
+**Workaround:** Wait for 5–10 seconds after collection creation to create index.
+
+## Server concurrency limit reached error in flight server
+{: #known_issues13725}
+
+You might encounter a Server concurrency limit reached error when using the flight server to run queries. This occurs when the server experiences high memory usage due to a large number of concurrent requests.
+
+**Workaround:** Pause the query or request and try after few minutes.
+
+## Incorrect recognition of Gregorian dates in Presto with Hive Parquet tables
+{: #known_issues12050}
+
+Presto exhibits issues when processing historical dates prior to `0200-01-01`, specifically when they are stored in Hive tables formatted as Parquet. This issue occurs due to the conversion between the Gregorian and Julian calendars, which were implemented in `1582-10-15`. Dates before this cutoff date are misinterpreted by Presto.
+
+## Incomplete information on column length in SHOW COLUMNS output
+{: #known_issues16248}
+
+The `SHOW COLUMNS` query in Presto currently provides information about columns including name, data type, additional details (extra), and comments. This issue highlights that the existing functionality lacks details about the length of character-based data types (CHAR and VARCHAR). While some connectors return the actual length defined during table creation, others might provide a default value or no information at all.
+
+To address this limitation, three new columns have been added to the `SHOW COLUMNS` output:
+
+* Scale: Applicable to DECIMAL data type, indicating the number of digits after the decimal point.
+
+* Precision: Applicable to numerical data types, specifying the total number of digits. (Default: 10)
+
+* Length: Intended for CHAR and VARCHAR data types, representing the maximum number of characters allowed.
+
+Current Limitations:
+
+* The reported length in the `Length` column might not always reflect the actual size defined in the table schema due to connector limitations.
+
+* Connectors that don't provide length information will display a default value or null depending upon connector.
+
+## Calculation error for OPT_SORTHEAP in Query Optimizer
+{: #known_issues11380}
+
+Due to a calculation error in the configuration setting of Query Optimizer for the value of `OPT_SORTHEAP`, the performance of Query Optimizer might be affected.
+
+**Workaround:** To resolve the calculation error for `OPT_SORTHEAP` in Query Optimizer, complete the following steps to update the configuration as `OPT_SORTHEAP= <initial_value>` to `OPT_SORTHEAP <initial_value>/20`.
+
+   1. Set up the `PROJECT_CPD_INSTANCE` environment variable pointing to the namespace where {{site.data.keyword.lakehouse_short}} is installed.
+
+   ```bash
+   export PROJECT_CPD_INSTANCE=<wxd_namespace
+   ```
+   {: codeblock}
+
+   2. Edit the value of `OPT_SORTHEAP` to `OPT_SORTHEAP <initial_value>/20` by running the following command.
+
+   ```bash
+   oc edit db2uinstance lakehouse-oaas -n $PROJECT_CPD_INSTANCE
+   ```
+   {: codeblock}
+
+   3. Wait for sometime for the `STATE` to change to `Ready` for `lakehouse-oaas` and run the following command.
+
+   ```bash
+   watch "oc get db2uinstance  -n $PROJECT_CPD_INSTANCE"
+   ```
+   {: codeblock}
 
 ## Limitations - Presto (C++)
 {: #known_issues22601}
@@ -66,10 +187,6 @@ As a result of Intel's CPU upgrade, the `omrgc_spinlock_acquire` call takes long
    - `QDigest`, Classification metrics, and Differential entropy are not supported.
 - S3 and S3 compatible file systems (both read and write) are supported.
 
-## Presto (C++) does not support NULLIF() SQL function
-{: #known_issues9897_1}
-
-Presto (C++) does not appear to support the `NULLIF()` function, which is used to return `NULL` if two arguments are equal, otherwise returning the second argument. While Presto (Java) itself has support for `NULLIF()`, Presto (C++) seems to be missing this functionality.
 
 ## Presto (C++) fails to query an external partitioned table
 {: #known_issues9897_2}
@@ -103,33 +220,6 @@ Duplicate column `id` declaration for table `tm_lakehouse_engine_ks.testtable12`
 
 Workaround: Avoid using `ID` as a column name when creating Cassandra tables through Presto.
 
-## Incorrect table name syntax in DB2 `CREATE VIEW` statements
-{: #known_issues21683}
-
-When creating views in DB2, using specific table name formats within the `CREATE VIEW` statement may encounter errors as follows:
-
-- Fully qualified table name: Specifying the catalog, schema, and table name as `create view my_view as select * from my_catalog.my_schema.my_table;` might result in error.
-
-- Unqualified table name: Using only the table name without any qualifiers as `create view my_view as select * from my_table;` might also result in error.
-
-**Workaround:** To ensure successful view creation, use a schema-qualified table name within the `CREATE VIEW` statement. This involves:
-
-Specifying the schema:
-
-1. Use the `USE` statement to set the active schema for the session:
-
-   ```bash
-   USE my_catalog.my_schema;
-   ```
-   {: codeblock}
-
-1. Reference the table name qualified by the schema in the `CREATE VIEW` statement.
-
-   ```bash
-   create view my_view as select * from my_schema.my_table;
-   ```
-   {: codeblock}
-
 ## User role with `CreateCollection` L3 policy fails to create collection in Milvus
 {: #known_issues12918}
 
@@ -143,13 +233,6 @@ Workaround: You must follow the instructions:
 
    1. Run the `create_collection` function once.
    2. Re-run the `create_collection` function again. This allows the policies to synchronise and the collection creation will succeed.
-
-## Assigning user role access with Japanese browser language
-{: #known_issues21826}
-
-Users with browser language set to Japanese may encounter difficulties assigning access to components for **User** roles within the {{site.data.keyword.lakehouse_short}}.
-
-**Workaround:** Users can switch the browser language to English and assign User access to different components.
 
 ## Special characters and mixed case impacting data synchronization
 {: #known_issues11040}
@@ -199,11 +282,6 @@ In Presto (Java), string comparisons are performed on the actual characters pres
 
 Presto (Java) does not support creating or querying table names that contain three or more consecutive dots in its name. Attempts to reference such tables in queries may result in errors.
 
-## Skipping header lines during table creation
-{: #known_issues11299}
-
-`skip.header.line.count` property is not supported by default in Presto (Java) and cannot be used in the `CREATE TABLE` statement to skip header lines when defining a table based on external data. However, the property can be used to skip a specific number of header lines when creating table from Hive, as the property is supported in Hive.
-
 ## User is still visible in the Access control page of an engine after removing the user from IAM.
 {: #known_issues5081}
 
@@ -211,11 +289,6 @@ Presto (Java) does not support creating or querying table names that contain thr
 {: #known_issues11180}
 
 The {{site.data.keyword.lakehouse_short}} Teradata connector does not currently support LDAP (Lightweight Directory Access Protocol) for user authentication.
-
-## Spark history UI shows temporary 502 error on startup.
-{: #known_issues10425}
-
-When attempting to access the Spark History UI immediately after starting the Spark History Server, users might encounter a temporary 502 Bad Gateway error in their web browser.
 
 **Workaround:** If you encounter the 502 error, reload the Spark history UI page after waiting 1-5 seconds. This should allow enough time for the server to become operational.
 
@@ -304,15 +377,6 @@ collection.query(expr='', fields=['count(*)'])
 ```
 {: codeblock}
 
-## Issue: Potential data loss during batch insert of large data collection in Milvus.
-{: #known_issues9484}
-
-Potential data loss may occur when inserting large dataset (5 million vectors) through the Milvus batch insert API with a single final flush. A subset of rows might be missing from the ingested data.
-
-**Workaround:**
-* Flush the collection manually every 500,000 rows.
-* Use the bulk insert API for data ingestion, see [Insert Entities from Files](https://milvus.io/docs/v2.3.x/bulk_insert.md). This is the recommended way to ingest large data sets.
-
 ## Limitations: Unsupported Db2 operations.
 {: #known_issues7895}
 
@@ -335,11 +399,6 @@ Potential data loss may occur when inserting large dataset (5 million vectors) t
 
 ## Limitation: Users can create 3 instances of Milvus service for a single instance of watsonx.data in IBM Cloud.
 {: #known_issues6821}
-
-## Issue: Unrestricted access to SQL statements in worksheets.
-{: #known_issues18111}
-
-SQL statements within worksheets can be shared with all users who have access to the instance. These statements could be viewed, edited, or deleted by any of these users.
 
 ## Issue: Unable to create views in Presto (Java).
 {: #known_issues1.0.0_6}
@@ -529,11 +588,6 @@ No columns to parse from file
 {: screen}
 
 **Workaround:** First list the folders inside the bucket by using `aws s3 ls` command. If no empty files are listed, copy all the files to another folder by using `aws s3 cp` command.
-
-## Test connection with SSL enabled is not supported.
-{: #known_issues28}
-
-When a user enables SSL connection for data sources, the test connection is not supported through the web console.
 
 ## Special characters in target table names can cause ingestion failures.
 {: #known_issues30}

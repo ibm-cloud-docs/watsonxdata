@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -39,7 +39,6 @@ Following are some of the requirements or limitations of the **ibm-lh** tool:
 
 * Schema evolution is not supported.
 * Target table must be an iceberg format table.
-* Partitioning is not supported.
 * IBM Storage Ceph, IBM Cloud Object Storage (COS), AWS S3, and MinIO object storage are supported.
 * `pathStyleAccess` property for object storage is not supported.
 * Only Parquet and CSV file formats are supported as source data files.

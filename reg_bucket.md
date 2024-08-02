@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
 
@@ -52,6 +52,8 @@ To add a storage-catalog pair, complete the following steps:
 * [Hadoop Distributed File System (HDFS)](#hdfs)
 * [MinIO](#ceph)
 * [Google Cloud Storage](#gcs)
+* [Azure Data Lake Storage Gen1 Blob](#genblob)
+* [Azure Data Lake Storage Gen2](#gen)
 
    * **IBM Cloud Object Storage or Amazon S3**{: #cos}
 
@@ -59,10 +61,9 @@ To add a storage-catalog pair, complete the following steps:
 
       | Field | Description |
       |--------------------------|----------------|
-      | Storage type | Select the storage type from the list.|
-      | Region | Select the region where the storage is available.|
-      | Bucket name | Enter your existing object storage bucket name.|
       | Display name | Enter the name to be displayed.|
+      | Bucket name | Enter your existing object storage bucket name.|
+      | Region | Select the region where the storage is available.|
       | Endpoint | Enter the endpoint URL.|
       | Access key | Enter your access key. |
       | Secret key | Enter your secret key. |
@@ -79,14 +80,13 @@ To add a storage-catalog pair, complete the following steps:
 
       | Field | Description |
       |--------------------------|----------------|
-      | Storage type | Select the storage type from the list.|
-      | Bucket name | Enter your existing object storage bucket name.|
       | Display name | Enter the name to be displayed.|
+      | Bucket name | Enter your existing object storage bucket name.|
       | Endpoint | Enter the endpoint URL.|
       | Access key | Enter your access key. |
       | Secret key | Enter your secret key. |
       | Connection Status | Click the Test connection link to test the storage connection. If the connection is successful, a success message appears.|
-      | Associate Catalog | Select the checkbox to add a catalog for your storage. This catalog is automatically associated with your storage and serves as your query interface with the data stored within. |
+      | Associate catalog | Select the checkbox to add a catalog for your storage. This catalog is automatically associated with your storage and serves as your query interface with the data stored within. |
       | Activate now| Activate the storage immediately or activate it later. |
       | Catalog type | Select the catalog type from the list. The recommended catalog is Apache Iceberg. The other options for catalog are Apache Hive, Apache Hudi and Delta Lake.|
       | Catalog name | Enter the name of your catalog.|
@@ -98,14 +98,13 @@ To add a storage-catalog pair, complete the following steps:
 
       | Field | Description |
       |--------------------------|----------------|
-      | Storage type | Select the storage type from the list.|
       | Display name | Enter the name to be displayed.|
       | Thrift URI | Enter the Thrift URI.|
       | Thrift Port | Enter the Thrift port. |
       | Kerberos authentication | Select the checkbox **Kerberos authentication** for secure connection.  \n a. Enter the following information: \n i. HDFS principal \n ii. Hive client principal \n iii. Hive server principal \n b. Upload the following files: \n i. Kerberos config file (.config) \n ii. HDFS keytab file (.keytab) \n iii. Hive keytab file (.keytab) |
       | Upload core site file (.xml) | Upload core site file (.xml) |
       | Upload HDFS site file (.xml) | Upload HDFS site file (.xml) |
-      | Associated Catalog | Add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within. |
+      | Associate catalog | Add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within. |
       | Catalog type | The supported catalog is Apache Hive.|
       | Catalog name | Enter the name of your catalog. |
       {: caption="Table 1. Register bucket" caption-side="bottom"}
@@ -116,9 +115,9 @@ To add a storage-catalog pair, complete the following steps:
 
       | Field | Description |
       |--------------------------|----------------|
-      | Bucket name | Enter the bucket name.|
       | Display name | Enter the name to be displayed.|
-      | Upload JSON key file (.json) | Upload the JSON key file. JSON key file is used to authenticate a Google Cloud service account with Google Cloud Storage. |
+      | Bucket name | Enter the bucket name.|
+      | Upload JSON key file (.json) | Upload the JSON key file. |
       | Associate Catalog | Select the checkbox to add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within. |
       | Activate now| Activate the storage immediately or activate it later. |
       | Catalog type | Select the catalog type from the list. The supported catalogs are Apache Iceberg and Apache Hive. |
@@ -128,8 +127,47 @@ To add a storage-catalog pair, complete the following steps:
      For Google Cloud Storage, multiple buckets of different service accounts cannot be configured.
     {: note}
 
+   * **Azure Data Lake Storage Gen1 Blob**{: #genblob}
 
-5. Click **Register**.
+       If you select **Azure Data Lake Storage Gen1 Blob** from the **Storage type** drop-down list, configure the following details:
+
+      | Field | Description |
+      |--------------------------|----------------|
+      | Display name | Enter the name to be displayed.|
+      | Container name | Enter the container name. |
+      | Storage account name | Enter the Storage account name. |
+      | Endpoint | Enter the Endpoint URL. |
+      | Authentication mode | Select the Authentication mode. \n * SAS: Enter your SAS token. \n * Account key: Enter your access key. |
+      | Associate catalog | Add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within. |
+      | Activate now| Activate the storage immediately or activate it later. |
+      | Catalog type | Select the catalog type from the list. The recommended catalog is Apache Iceberg. The other options for catalog are Apache Hive, Apache Hudi, and Delta Lake. |
+      | Catalog name | Enter the name of your catalog. |
+      {: caption="Table 1. Register bucket" caption-side="bottom"}
+
+   * **Azure Data Lake Storage Gen2**{: #gen}
+
+       If you select **Azure Data Lake Storage Gen2** from the **Storage type** drop-down list, configure the following details:
+
+      | Field | Description |
+      |--------------------------|----------------|
+      | Display name | Enter the name to be displayed.|
+      | Container name | Enter the container name. |
+      | Storage account name | Enter the Storage account name. |
+      | Endpoint | Enter the Endpoint URL. |
+      | Authentication mode | Select the Authentication mode. \n * SAS: Enter your SAS token. \n * Service Principle: Enter the Application id, Directory id and Secret key. |
+      | Associate catalog | Add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within. |
+      | Activate now| Activate the storage immediately or activate it later. |
+      | Catalog type | Select the catalog type from the list. The recommended catalog is Apache Iceberg. The other options for catalog are Apache Hive, Apache Hudi, and Delta Lake. |
+      | Catalog name | Enter the name of your catalog. |
+      {: caption="Table 1. Register bucket" caption-side="bottom"}
+
+     Azure Data Lake Storage Gen2 and Azure Data Lake Storage Gen1 Blob storage do not support SAS authentication mode for Presto (Java) engine.
+     {: note}
+
+5. Click **Create**.
+
+     You can modify the access key and secret key of a user-registered bucket for a storage. This feature is only available for user-registered buckets and is not applicable to default buckets, ADLS, or Google Cloud Storage. This feature can only be used if the new credentials successfully pass the test connection.
+     {: note}
 
    **Important information**{: #important_info}
    * The storage bucket name must be unique and must contain only the characters A–Z, a–z, 0–9, and hypen (-).
@@ -144,13 +182,18 @@ To add a storage-catalog pair, complete the following steps:
 2. For `DELETE FROM` statement for **Iceberg** connector:
 * Filtered columns only support comparison operators, such as EQUALS, LESS THAN, or LESS THAN EQUALS.
 * Deletes must only occur on the latest snapshot.
-* For V1 tables, the **Iceberg** connector can only delete data in one or more entire partitions. Columns in the filter must all be identity-transformed partition columns of the target table.
+* For V1 tables, the **Iceberg** connector can delete data only in one or more entire partitions. Columns in the filter must all be identity-transformed partition columns of the target table.
 3. For `CREATE TABLE`, **Iceberg** connector supports `sorted_by` table property.
 * When you create the table, specify an array of one or more columns that are involved.
 4. For **Iceberg** connector, `ALTER TABLE` operations on a column support data type conversions from:
 * `INT` to `BIGINT`
 * `FLOAT` to `DOUBLE`
 * `DECIMAL` (num1, dec_digits) to `DECIMAL` (num2, dec_digits), where num2>num1.
+
+## Limitations
+{: #a_limitations}
+
+* Use separate containers and storage accounts for ADLS Gen1 and ADLS Gen2 storage for complete metadata synchronization, including tables. Otherwise, a PARTIAL SUCCESS message appears in the sync logs when SYNC finishes.
 
 ## Limitations for SQL statements
 {: #sql_limitations}

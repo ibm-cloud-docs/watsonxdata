@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -26,14 +26,15 @@ You can customize the coordinator configuration properties through an API for Pr
 | `node-scheduler.max-pending-splits-per-task` | Integer | Limit {1, 1000} |
 | `node-scheduler.max-splits-per-node` | Integer | Limit {1, 1000} |
 | `optimizer.joins-not-null-inference-strategy` | String | Any string |
-| `optimizer.default-filter-factor-enabled` | Boolean | True or false values |
-| `optimizer.exploit-constraints` | Boolean | True or false values |
-| `optimizer.in-predicates-as-inner-joins-enabled` | Boolean | True or false values |
+| `optimizer.default-filter-factor-enabled` | Boolean |  True or False |
+| `optimizer.exploit-constraints` | Boolean | True or False |
+| `optimizer.in-predicates-as-inner-joins-enabled` | Boolean | True or False |
 | `optimizer.partial-aggregation-strategy` | String | Any string |
-| `optimizer.prefer-partial-aggregation` | Boolean | True or false values |
-| `optimizer.infer-inequality-predicates` | Boolean | True or false values |
-| `optimizer.handle-complex-equi-joins` | Boolean | True or false values |
-| `optimizer.generate-domain-filters` | Boolean | True or false values |
+| `optimizer.prefer-partial-aggregation` | Boolean | True or False |
+| `optimizer.infer-inequality-predicates` | Boolean | True or False |
+| `optimizer.handle-complex-equi-joins` | Boolean | True or False |
+| `optimizer.generate-domain-filters` | Boolean | True or False |
+| `optimizer.size-based-join-flipping-enabled` | Boolean | True or False |
 | `join-max-broadcast-table-size` | String | Limit {1, 1e13}; supported values are numbers with or without units TB, MB, GB, B, KB |
 | `query.client.timeout` | String | Limit {1, 1e13}; supported values are numbers with or without units m, s, ms, h |
 | `query.execution-policy` | String | Any string |
@@ -49,7 +50,7 @@ You can customize the coordinator configuration properties through an API for Pr
 | `query.min-schedule-split-batch-size` | Integer | Limit {1, 10000} |
 | `query.stage-count-warning-threshold` | Integer | Limit {1, 10000} |
 | `query.max-length` | Integer | Limit {1, 10000} |
-| `scale-writers` | Boolean | True or false values |
+| `scale-writers` | Boolean | True or False |
 | `scheduler.http-client.max-requests-queued-per-destination` | Integer | Limit {1, 100000} |
 | `shutdown.grace-period` | String | Limit {1, 1e13}; supported values are numbers with or without units m, s, ms, h |
 {: caption="Table 1. Configuration properties for Presto (C++) - coordinator nodes" caption-side="bottom"}

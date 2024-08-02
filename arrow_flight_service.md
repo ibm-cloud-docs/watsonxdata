@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: lakehouse, database, watsonx.data
 
@@ -29,7 +29,7 @@ subcollection: watsonxdata
 # Arrow Flight service overview
 {: #arrow_database}
 
-You can connect to the databases through the Arrow Flight service that is deployed on IBM Cloud. You need to enter the details that are related to API key and Flight service URL.
+You can connect to the databases through the Arrow Flight service that is deployed on IBM Cloud. You need to enter the details that are related to API key and Flight service URL. This feature is applicable for both Presto (Java) and Presto (C++) engines.
 {: shortdesc}
 
 ## Prerequisites

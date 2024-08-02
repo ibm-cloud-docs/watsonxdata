@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: lakehouse, semantic automation, {{site.data.keyword.lakehouse_short}}, data enrichment, register
 
@@ -50,7 +50,7 @@ Follow the procedure in this topic to enrich your data with business terms and d
    Social Security Number,glossary_term,The unique number assigned to an Individual by a governmental agency for the purposes of qualifying for Social Security benefits.
    Rating Provider,glossary_term,"Identifies a Rating Issuer that supplies the Rating; for example, Credit Agency XYZ Provides Rating For a customer's Credit Risk Rating."
    ```
-  {: codeblock}
+   {: codeblock}
 
 ## Procedure
 {: #sal_enrichprcdre}

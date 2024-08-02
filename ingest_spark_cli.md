@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -35,10 +35,9 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
 ## Before you begin
 {: #byblegsprk}
 
-* You must have the Administrator role and privileges in the catalog to do ingestion through the web console.
-* Add and register IBM Analytics Engine (Spark). See [Registering an engine](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-reg_engine).
-* Add storage for the target catalog. See [Adding a storage-catalog pair](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-reg_bucket).
-* Create schema and table in the catalog for the data to be ingested. See [Creating schemas](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-create_schema) and [Creating tables](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-create_table).
+* Add and register IBM Analytics Engine (Spark). See [Registering an engine]({{site.data.keyword.ref-reg_engine-link}}).
+* Add storage for the target catalog. See [Adding a storage-catalog pair]({{site.data.keyword.ref-reg_bucket-link}}).
+* Create schema and table in the catalog for the data to be ingested. See [Creating schemas]({{site.data.keyword.ref-create_schema-link}}) and [Creating tables]({{site.data.keyword.ref-create_table-link}}).
 
 ## Procedure
 {: #procdre}
@@ -100,6 +99,8 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
       --ingestion-engine-endpoint "hostname=<hostname>,port=<port>,type=spark" \
       --trust-store-password <truststore password> \
       --trust-store-path <truststore path> \
+      --log-directory /tmp/mylogs \
+      --partition-by "<columnname1>, <columnname2> \
       --target-catalog-uri 'thrift://<hms_thrift_uri>'
       ```
       {: codeblock}
@@ -109,7 +110,9 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
       |------------|----------|
       |`--source-data-files`|Path to s3 parquet or CSV file or folder. Folder paths must end with “/”. File names are case sensitive.|
       |`--target-table`|Target table in format `<catalogname>.<schemaname>.<tablename>`.|
+      |`--log-directory`|This option is used to specify the location of log files.|
       |`--ingestion-engine-endpoint`|Ingestion engine endpoint will be in the format `hostname=’’,port=’’,type=spark”`. Type must be set to spark.|
+      |`--partition-by`|This parameter supports the functions for years, months, days, hours for timestamp in the `partition-by` list. If a target table already exist or the `create-if-not-exist` parameter is not mentioned the partition-by shall not make any effect on the data.|
       |`--trust-store-password`|Password of the truststore certificate inside the spark job pod. Current password for Spark in CPD and SaaS is `changeit`.|
       |`--trust-store-path`|Path of the truststore cert inside the spark job pod. Current path of Spark in CPD and SaaS is `file:///opt/ibm/jdk/lib/security/cacerts`.|
       |`--target-catalog-uri`|HMS thrift endpoint.|
@@ -138,6 +141,8 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
       target-catalog-uri:thrift://<hms_thrift_uri>
       trust-store-path:<truststore path>
       trust-store-password:<truststore password>
+      log-directory /tmp/mylogs
+      partition-by "<columnname1>, <columnname2>
       schema:/path/to/csvschema/config/file [Optional]
       ```
       {: codeblock}
@@ -148,6 +153,8 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
       |`source-files`|Path to s3 parquet or CSV file or folder. Folder paths must end with “/”|
       |`target-table`|Target table in format `<catalogname>.<schemaname>.<tablename>`.|
       |`ingestion-engine`|Ingestion engine endpoint will be in the format `hostname=’’, port=’’,type=spark”`. Type must be set to spark.|
+      |`log-directory`|This option is used to specify the location of log files.|
+      |`--partition-by`|This parameter supports the functions for years, months, days, hours for timestamp in the `partition-by` list. If a target table already exist or the `create-if-not-exist` parameter is not mentioned the partition-by shall not make any effect on the data.|
       |`trust-store-password`|Password of the truststore certificate inside the spark job pod. Current password for Spark in CPD and SaaS is `changeit`.|
       |`trust-store-path`|Path of the truststore cert inside the spark job pod. Current path of Spark in CPD and SaaS is `file:///opt/ibm/jdk/lib/security/cacerts`.|
       |`target-catalog-uri`|HMS thrift endpoint.|

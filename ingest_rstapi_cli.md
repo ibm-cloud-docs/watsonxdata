@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -36,9 +36,9 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
 {: #bybspkrstapi}
 
 * You must have the Administrator role and privileges in the catalog to do ingestion through the web console.
-* Add and register IBM Analytics Engine (Spark). See [Registering an engine](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-reg_engine).
-* Add storage for the target catalog. See [Adding a storage-catalog pair](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-reg_bucket).
-* Create schema and table in the catalog for the data to be ingested. See [Creating schemas](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-create_schema) and [Creating tables](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-create_table).
+* Add and register IBM Analytics Engine (Spark). See [Registering an engine]({{site.data.keyword.ref-reg_engine-link}}).
+* Add storage for the target catalog. See [Adding a storage-catalog pair]({{site.data.keyword.ref-reg_bucket-link}}).
+* Create schema and table in the catalog for the data to be ingested. See [Creating schemas]({{site.data.keyword.ref-create_schema-link}}) and [Creating tables]({{site.data.keyword.ref-create_table-link}}).
 
 ## Procedure
 {: #procdresprkapi}
@@ -84,6 +84,8 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
    --instance-id crn:v1:staging:public:lakehouse:us-south:a/fd160ae2ce454503af0d051dfadf29f3:25fdad6d-1576-4d98-8768-7c31e2452597:: \
    --schema /home/nz/config/schema.cfg \
    --engine-id spark214 \
+   --log-directory /tmp/mylogs \
+   --partition-by "<columnname1>, <columnname2> \
    --create-if-not-exist
    ```
    {: codeblock}
@@ -94,6 +96,8 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
    |`--create-if-not-exist`|Use this option if the target schema or table is not created. Do not use if the target schema or table is already created.|
    |`--engine-id`|Engine id of Spark engine when using REST API based `SPARK` ingestion.|
    |`--instance-id`|Identify unique instances. In SaaS environment, CRN is the instance id.|
+   |`--log-directory`|This option is used to specify the location of log files.|
+   |`--partition-by`|This parameter supports the functions for years, months, days, hours for timestamp in the `partition-by` list. If a target table already exist or the `create-if-not-exist` parameter is not mentioned the partition-by shall not make any effect on the data.|
    |`--password`|Password of the user connecting to the instance. In SaaS, API key to the isntance is used.|
    |`--schema`|Use this option with value in the format path/to/csvschema/config/file. Use the path to a schema.cfg file which specifies header and delimiter values for CSV source file or folder.|
    |`--source-data-files`|Path to s3 parquet or CSV file or folder. Folder paths must end with “/”. File names are case sensitive.|

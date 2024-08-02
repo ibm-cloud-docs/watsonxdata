@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: watsonxdata, release notes
 
@@ -33,6 +33,109 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.lakehouse_full}} that are grouped by date.
 {: shortdesc}
+
+## 01 August 2024 - Version 2.0.1
+{: #lakehouse_31July032024}
+
+**Data sources**
+{: #31JULY_1_2024}
+
+* You can now connect to Db2 data sources by using IBM API key as the authentication mechanism. For more information, see [IBM Db2](watsonxdata?topic=watsonxdata-db2_database).
+* Presto (C++) engine can now be associated with Arrow Flight service data sources. Read only operations are supported. The following Arrow Flight service data sources are supported:
+     * Salesforce
+     * MariaDB
+     * Greenplum
+     * Apache Derby
+
+For more information, see [Arrow Flight service](watsonxdata?topic=watsonxdata-arrow_database){: external}.
+
+* The following new databases are available for Presto (Java) engine:
+     * Redis
+     * Apache Druid
+     * For more information, see [Redis](watsonxdata?topic=watsonxdata-redis_database){: external} and [Apache Druid](watsonxdata?topic=watsonxdata-druid_database){: external}.
+
+**Integrations**
+{: #31JULY_2_2024}
+
+* When integrating IBM Knowledge Catalog with IBM {{site.data.keyword.lakehouse_short}}, you can configure data protection rules for individual rows in a table, allowing users to access a subset of rows in a table. For more information, see [Filtering rows](https://dataplatform.cloud.ibm.com/docs/content/wsj/governance/filter-rows.html?context=cpdaas&audience=wdp){: external}.
+* You can now apply the following Apache Ranger policies for Presto (Java) engines:
+     * Row-level filtering: Users can access a subset of rows in a table. For more information, see [Adding row-level filtering policy](watsonxdata?topic=watsonxdata-row_ranger){: external}.
+     * Column masking: Restrict users to seeing masked values instead of displaying sensitive data. For more information, see [Adding column masking policy](watsonxdata?topic=watsonxdata-colmn_ranger_1){: external}.
+
+* You can now integrate IBM {{site.data.keyword.lakehouse_short}} with on-premises IBM DataStage. You can use DataStage service to load and to read data from IBM {{site.data.keyword.lakehouse_short}}. For more information, [Integrating with DataStage](watsonxdata?topic=watsonxdata-dc_integration){: external}.
+
+**Authentication and authorization**
+{: #31JULY_3_2024}
+
+* The Spark access control extension allows additional authorization, enhancing security at the time of application submission. If you enable the extension in the spark configuration, only authorized users are allowed to access and operate IBM {{site.data.keyword.lakehouse_short}} catalogs through Spark jobs. For more information, see [Enhancing Spark application submission using Spark access control extension](watsonxdata?topic=watsonxdata-spark-extnsn){: external}.
+
+* IBM {{site.data.keyword.lakehouse_short}} now supports object storage proxy and signature for Azure Data Lake Storage and Azure Blob Storage. For more information, see [Using CAS proxy to access ADLS and ABS compatible buckets](watsonxdata?topic=watsonxdata-cas_proxy_adls){: external}.
+
+* Lightweight Directory Access Protocol (LDAP) is now provided for Teradata and Db2 data sources. The user needs to set up this configuration at the server level. For Teradata, explicitly choose the authentication mechanism type as LDAP in the UI. For more information, [Teradata](watsonxdata?topic=watsonxdata-teradata_database){: external}.
+
+CAS proxy to access ADLS and ABS buckets and LDAP enhancements are Tech preview in version 2.0.1.
+{: note}
+
+* Milvus now supports partition-level isolation for users. Administrators can authorize specific user actions on partitions. For more information, see [Service (Milvus)](watsonxdata?topic=watsonxdata-role_priv#milvus){: external}.
+
+**Storage**
+{: #31JULY_4_2024}
+
+* You can now add the following storage to Presto (Java) engine in IBM {{site.data.keyword.lakehouse_short}}:
+     * Azure Data Lake Storage Gen2
+     * Azure Data Lake Storage Gen1 Blob
+
+For more information, see [Azure Data Lake Storage Gen2](watsonxdata?topic=watsonxdata-reg_bucket#gen) and [Azure Data Lake Storage Gen1 Blob](watsonxdata?topic=watsonxdata-reg_bucket#genblob){: external}.
+
+* You can modify the access key and secret key of a user-registered bucket for a storage. This feature is not applicable to default buckets, ADLS, or Google Cloud Storage. This feature can only be used if the new credentials successfully pass the test connection.
+
+**Engines**
+{: #31JULY_5_2024}
+
+* You can now use the ALTER TABLE ADD, DROP, and RENAME column statements for MongoDB data source.
+* You can now configure how Presto handles unsupported data types. For more information, see [ignore-unsupported-datatypes](watsonxdata?topic=watsonxdata-api_custom_ctg_pjcw&q=catalog&tags=watsonxdata#ignore){: external}.
+
+**Catalogs**
+{: #31JULY_6_2024}
+
+* You can now associate and disassociate catalogs to an engine in bulk through UI under Manage associations in the Infrastructure manager page.
+
+**API Customization and properties**
+{: #31JULY_7_2024}
+
+* The following customization parameters are added for Presto (C++) workers:
+
+     * system-mem-limit-gb
+     * system-mem-shrink-gb
+     * system-mem-pushback-enabled
+
+   For more information, see [Configuration properties for Presto (C++) - worker nodes](watsonxdata?topic=watsonxdata-api_custom_wkr_pcpp){: external}.
+
+* The configuration property `optimizer.size-based-join-flipping-enabled` is added for Presto (C++) coordinator nodes. For more information, see [Configuration properties for Presto (C++) - coordinator nodes](watsonxdata?topic=watsonxdata-aapi_custom_pcpp_cood){: external}.
+
+* Enhanced API customization to support data cache and fragment result cache for performance improvement.For more information, see [Configuration properties for Presto (Java) - coordinator and worker nodes](watsonxdata?topic=watsonxdata-api_custom_prm_pjcw){: external} and [Catalog properties for Presto (Java)](watsonxdata?topic=watsonxdata-api_custom_ctg_pjcw){: external}.
+
+**Infrastructure manager**
+{: #31JULY_9_2024}
+
+* You can use search feature for the following values on the Infrastructure manager page:
+     * database name
+     * database username
+     * registered hostname
+     * created by username
+* You can now use the ‘Do Not Disturb’ toggle switch in the Notifications section under the bell icon to enable or disable pop-up notifications.
+* You can find the connectivity information under the Connect information tile in the Configurations page. This information can be copied and downloaded to a JSON snippet.
+
+**Query Workspace**
+{: #31JULY_10_2024}
+
+* You can run queries on all tables under a schema through the SQL query workspace without specifying the path <catalog>.<schema> by selecting the required catalogs and schemas from the new drop down list. For more information, [Running SQL queries](watsonxdata?topic=watsonxdata-run_sql){: external}.
+
+**watsonx.data pricing plans**
+{: #31JULY_11_2024}
+
+* You can now delete the existing Lite plan instance before reaching the account cap limit of 2000 RUs, and create a new instance and consume the remaining resource units available in the account. For more information, see [watsonx.data Lite plan](watsonxdata?topic=watsonxdata-tutorial_prov_lite_1){: external}.
+
 
 ## 03 July 2024 - Version 2.0.0
 {: #lakehouse_July032024}
@@ -94,7 +197,7 @@ You can now use the following data sources with Arrow Flight service:
 * MariaDB
 * Apache Derby
 
-For more information, see [Arrow Flight service](watsonxdata?topic=watsonxdata-arrow_database).
+For more information, see [Arrow Flight service](watsonxdata?topic=watsonxdata-arrow_database){: external}.
 
 **New data sources**
 {: #JULY_04_2024}
@@ -106,13 +209,13 @@ You can now use the following data sources:
 * ClickHouse
 * Apache Pinot
 
-For more information, see [Adding a database-catalog pair](watsonxdata?topic=watsonxdata-reg_database).
+For more information, see [Adding a database-catalog pair](watsonxdata?topic=watsonxdata-reg_database){: external}.
 
 **Command to retrieve ingestion history**
 {: #JULY_05_2024}
 
 You can now retrieve the status of all ingestion jobs that are submitted by using the ibm-lh get-status --all-jobs CLI command. You can retrieve the status of all ingestion jobs that are submitted. You get the history records that you have access to.
-For more information, see [Options and parameters supported in ibm-lh tool](watsonxdata?topic=watsonxdata-cli_commands).
+For more information, see [Options and parameters supported in ibm-lh tool](watsonxdata?topic=watsonxdata-cli_commands){: external}.
 
 
 **Additional roles for IBM Knowledge Catalog (IKC) S2S authorization**
@@ -127,7 +230,7 @@ Besides data access, IBM Knowledge Catalog S2S authorization needs metadata acce
 {: #JULY_07_2024}
 
 IBM watsonx.data now supports Apache Ranger policies to allow integration with Presto engines.
-For more information, see [Apache Ranger policy](watsonxdata?topic=watsonxdata-ranger_1).
+For more information, see [Apache Ranger policy](watsonxdata?topic=watsonxdata-ranger_1){: external}.
 
 
 **Version upgrade**
@@ -255,7 +358,7 @@ The Apache Kafka data source stores data as byte messages that producers and con
 {{site.data.keyword.lakehouse_full}} now offers the following license plans.
 
 * Lite plan
-* BYOL plan
+
 * Enterprise plan
 
 For more information about the different license plans, see [IBM® watsonx.data pricing plans](watsonxdata?topic=watsonxdata-pricing-plans-1).
@@ -302,7 +405,7 @@ You can now use the BINARY data type  with the SELECT statement in the Query wor
 
 New data types: BLOB and CLOB are available for MySQL, PostgreSQL, Snowflake, SQL Server, and Db2 data sources. You can use these data types only with SELECT statements in the Query workspace to build and run queries against your data.
 
-<!-- Issue-New DataType : Binary - #8397 , New DataType : BLOB & CLOB : [Release-2] - #8398 -->
+
 
 **Delete data by using the DELETE FROM feature for Iceberg data sources**
 {: #mar_02_2024}
@@ -311,11 +414,7 @@ You can now delete data from tables in Iceberg data sources by using the DELETE 
 
 You can specify the table property delete mode for new tables by using either copy-on-write mode or merge-on-read mode (default). For more information, see [SQL statements](watsonxdata?topic=watsonxdata-supported_sql_statements).
 
-<!-- Support deleting whole partitions in Iceberg table - #8753
 
-Support DELETEs on Iceberg tables via presto - #1563. - parent of 7767 and 7768
-
-#7768#7767 -->
 
 **ALTER VIEW statement for Iceberg data source**
 {: #mar_03_2024}
@@ -324,20 +423,20 @@ You can now use the following SQL statement in the Query workspace to build and 
 
 ALTER VIEW name RENAME TO new_name
 
-<!-- Support ALTER RENAME view in iceberg - #7610  -->
+
 
 **Upload SSL certificates for Netezza Performance Server data sources**
 {: #mar_03_2024}
 
 You can now browse and upload the SSL certificate for SSL connections in Netezza Performance Server data sources. The valid file formats for SSL certificate are .pem, .crt, and .cer. You can upload SSL certificates by using the Adding a database-catalog pair option in the Infrastructure manager.
 
-<!-- Enable Netezza connector for SSL connections - #7965   -->
+
 
 **Query data from Db2 and Watson Query**
 {: #mar_04_2024}
 
 You can now query nicknames that are created in Db2 and virtualized tables from  Watson Query instances.
-<!-- Support more table types in Db2 connector - #4724    -->
+
 
 
 **SSL connection for IBM Data Virtualization Manager for z/OS data source**
@@ -345,16 +444,14 @@ You can now query nicknames that are created in Db2 and virtualized tables from 
 
 You can now enable SSL connection for the IBM Data Virtualization Manager for z/OS data source by using the Add database user interface to secure and encrypt the database connection. Select Validate certificate to validate whether the SSL certificate that is returned by the host is trusted. You can choose to provide the hostname in the SSL certificate.
 
-<!-- https://github.ibm.com/lakehouse/tracker/issues/6107    -->
+
 
 **Use data from Apache Hudi catalog**
 {: #mar_05_2024}
 
 You can now connect to and use data from Apache Hudi catalog.
 
-<!-- https://github.ibm.com/lakehouse/tracker/issues/8804
 
-https://github.ibm.com/lakehouse/tracker/issues/9008    -->
 
 **Add Milvus as a service in {{site.data.keyword.lakehouse_short}}**
 {: #mar_06_2024}
@@ -368,24 +465,21 @@ You can now provision Milvus as a service in {{site.data.keyword.lakehouse_shor
 * Configure the Object storage for Milvus to store data. You can add or configure a custom bucket and specify the username, password, region, and bucket URL.
 
 For more information, see [Milvus](watsonxdata?topic=watsonxdata-adding-milvus-service).
-<!-- https://github.ibm.com/lakehouse/tracker/issues/7569
-https://github.ibm.com/lakehouse/tracker/issues/7772
 
-    -->
 
 **Load data in batch by using the ibm-lh ingestion tool**
 {: #mar_07_2024}
 
 You can now use the ibm-lh ingestion tool to run batch ingestion procedures in non-interactive mode (from outside the ibm-lh-tools container), by using the ibm-lh-client package. For more information, see [ibm-lh commands and usage](https://www.ibm.com/docs/SSDZ38_1.1.x/wxd-client/topics/ibm_lh_commands.html).
 
- <!-- https://github.ibm.com/lakehouse/tracker/issues/9132     -->
+ 
 
 **Creating schema by using bulk ingestion in web console**
 {: #mar_08_2024}
 
 You can now create a schema by using the bulk ingestion process in the web console, if the schema is not previously created.
 
-<!-- https://github.ibm.com/lakehouse/tracker/issues/8885     -->
+
 
 **Use time-travel queries in Apache Iceberg tables**
 {: #mar_09_2024}
@@ -396,13 +490,13 @@ You can now run the following time-travel queries by using branches and tags in 
 
 - SELECT *FROM `<table name>` FOR VERSION AS OF 'test-branch'
 
-<!-- https://github.ibm.com/lakehouse/tracker/issues/7651     -->
+
 
 
 **Access Cloud Object Storage without credentials**
 You can now access your Cloud Object Storage bucket without credentials, by using the Content Aware Storage (CAS) endpoint. For more information about getting CAS endpoint, see [Getting CAS endpoint](watsonxdata?topic=watsonxdata-cas_ep).
 
-<!-- https://github.ibm.com/lakehouse/tracker/issues/8993     -->
+
 
 
 ## 28 Feb 2024 - Version 1.1.2
@@ -424,18 +518,14 @@ You can now enable SSL connection for the following data sources by using the **
 
 For more information, see [Adding a database](watsonxdata?topic=watsonxdata-reg_database).
 
-<!-- Issue-https://github.ibm.com/lakehouse/tracker/issues/5494
 
-Issue-https://github.ibm.com/lakehouse/tracker/issues/2467
-
-Issue-https://github.ibm.com/lakehouse/tracker/issues/6107  removed DVM as per slack conversationa and git issue comment from SAAS-Shanavi-->
 
 **Secure ingestion job history**
 {: #feb_02_2024}
 
 Now, users can view only their own ingestion job history. Administrators can view the ingestion job history for all users.
 
-<!-- Issue- https://github.ibm.com/lakehouse/tracker/issues/6500 -->
+
 
 
 **SQL enhancements**
@@ -449,9 +539,7 @@ You can now use the following SQL statements in the Query workspace to build and
    * MongoDB data sources
         - DELETE
 
-<!-- Issue- https://github.ibm.com/lakehouse/tracker/issues/4678
 
-Issue- https://github.ibm.com/lakehouse/tracker/issues/5782 -->
 
 
 **New data types BLOB and CLOB for Teradata data source**
@@ -459,7 +547,7 @@ Issue- https://github.ibm.com/lakehouse/tracker/issues/5782 -->
 
 New data types BLOB and CLOB are available for Teradata data source. You can use these data types only with SELECT statements in the Query workspace to build and run queries against your data.
 
-<!-- Issue- https://github.ibm.com/lakehouse/tracker/issues/7966 -->
+
 
 
 **Create a new table during data ingestion**
@@ -471,9 +559,7 @@ Previously, you had to have a target table in {{site.data.keyword.lakehouse_shor
 
 * Ingesting data by using Spark.
 
-<!-- Issue- https://github.ibm.com/lakehouse/tracker/issues/7714
 
-https://github.ibm.com/lakehouse/tracker/issues/7665 -->
 
 
 **Perform ALTER TABLE operations on a column**
@@ -487,7 +573,7 @@ With an Iceberg data source, you can now perform ALTER TABLE operations on a c
 
 * decimal (num1, dec_digits) to decimal (num2, dec_digits), where num2>num1.
 
-<!-- Issue: https://github.ibm.com/lakehouse/tracker/issues/7360  -->
+
 
 **Better query performance by using sorted files**
 {: #feb_09_2024}
@@ -496,7 +582,7 @@ With an Apache Iceberg data source, you can generate sorted files, which reduce 
 
 You can configure the order to sort the data by using the `sorted_by` table property. When you create the table, specify an array of one or more columns involved in sorting. To disable the feature, set the session property `sorted_writing_enabled` to false. 
 
-<!-- Issue : https://github.ibm.com/lakehouse/tracker/issues/5201  -->
+
 
 ## 31 Jan 2024 - Version 1.1.1
 {: #lakehouse_Jan312024}
@@ -544,16 +630,7 @@ The Presto (Java) behavior is changed from case-insensitive to case-sensitive. N
 
 You can use the Rollback feature to rollback or rollforward to any snapshots for Iceberg tables.
 
-<!-- **Improved query performance with caching**
-{: #wn_03}
 
-You can use the following types of caching to improve Presto query performance:
-
-- Metastore caching
-- File list caching
-- File metadata caching
-
-For more information, see [Enhancing query performance through caching](https://www.ibm.com/docs/SSDZ38_1.1.x/wxd/admin/enhance_qry.html). {: external} -->
 
 **Capture Data Definition Language (DDL) changes**
 {: #wn_04}

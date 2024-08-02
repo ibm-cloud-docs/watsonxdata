@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -122,38 +122,7 @@ You can submit a Spark application by running a CURL command. Complete the follo
    * `<s3 bucket HMAC access key>` : The access key for object storage. For more information, see [Create HMAC credentials using the CLI](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main#uhc-create-hmac-credentials-cli).
    * `<s3 bucket HMAC secret key>` : The secret key for object storage. For more information, see [Create HMAC credentials using the CLI](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main#uhc-create-hmac-credentials-cli).
 
-<!-- 5. If your Spark application resides in Cloud Object Storage, specify the parameter values and run the following curl command. The following example shows the command to submit read.py application.
 
-    Example 3:
-    ```bash
-    curl --request POST   --url https://<region>.lakehouse.cloud.ibm.com/lakehouse/api/v2/spark_engines/<spark_engine_id>/applications   --header 'Authorization: Bearer <token>'   --header 'Content-Type: application/json'   --header 'AuthInstanceID: <crn_instance>'   --data '{
-      "application_details": {
-        "application": "abfss://<storage_account>@<storage_container>.dfs.core.windows.net/adls-read.py",
-        "conf": {
-            "spark.hadoop.fs.azure.account.auth.type.<storage_account>.dfs.core.windows.net", "OAuth",
-            "spark.hadoop.fs.azure.account.oauth.provider.type.<storage_account>.dfs.core.windows.net", "org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider",
-            "spark.hadoop.fs.azure.account.oauth2.client.id.<storage_account>.dfs.core.windows.net", "<application_id>",
-            "spark.hadoop.fs.azure.account.oauth2.client.secret.<storage_account>.dfs.core.windows.net","<secret>",
-            "spark.hadoop.fs.azure.account.oauth2.client.endpoint.<storage_account>.dfs.core.windows.net", "https://login.microsoftonline.com/<directory_id>/oauth2/token",
-            "spark.hadoop.fs.azure.createRemoteFileSystemDuringInitialization", "false",
-            "spark.app.name": "reader-app",
-        }
-      }
-    }'
-    ```
-    {: codeblock}
-
-
-   Parameter values:
-   * `<region>`: The region where the Spark instance is provisioned.
-   * `<spark_engine_id>` : The Engine ID of the native Spark engine.
-   * `<token>` : The bearer token. For more information about generating the token, see [Generating a bearer token](https://cloud.ibm.com/apidocs/watsonxdata#authentication).
-   * `<crn_instance>` : The CRN of the watsonx.data instance.
-   * `<storage_account>` : The name of the azure storage account.
-   * `<storage_container>` : The name of the azure storage container name.
-   * `<application_id>` : The Application ID of the ServicePrinciple.
-   * `<secret>`: The Client Secret of the ServicePrinciple. For more information, see [Create a service principal](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal).
-   * `<directory_id>` : The Directory ID of the ServicePrinciple. For more information, see [Create a service principal](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal). -->
 
 6. After you submit the Spark application, you receive a confirmation message with the application ID and Spark version. Save it for reference.
 7. Log in to the watsonx.data cluster, access the **Engine details** page. In the **Applications** tab, use the application ID to list the application and you can track the stages. For more information, see [View and manage applications](watsonxdata?topic=watsonxdata-mng_appltn).
