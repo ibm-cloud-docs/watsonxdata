@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: lakehouse, mixed-case behavior, watsonx.data
 
@@ -29,7 +29,7 @@ subcollection: watsonxdata
 # Mixed-case behavior
 {: #mixed_case_behavior}
 
-From IBM® watsonx.data version 2.0.0, a new feature is available to switch between both case-sensitive and case-insensitive behavior in Presto (Java) by using a mixed-case feature flag. The mixed-case feature flag is set to OFF in Presto (Java) by default. The flag can be set to ON or OFF as required during deployment of the Presto (Java) engine. It is advised not to toggle between ON and OFF configurations after the deployment, as it may result in inconsistent system behavior.
+From IBM® watsonx.data version 2.0.0, a new feature is available to switch between both case-sensitive and case-insensitive behavior in Presto (Java) by using a mixed-case feature flag. The mixed-case feature flag is set to OFF in Presto (Java) by default. The flag can be set to ON or OFF as required during deployment of the Presto (Java) engine. It is advised not to toggle between ON and OFF configurations after the deployment, as it may result in inconsistent system behavior. This feature is not applicable for Presto (C++) engine.
 {: shortdesc}
 
 ## Mixed-case feature flag: ON
@@ -48,7 +48,6 @@ The following section lists the behaviors of connectors if mixed-case feature fl
 
    * **Hive**:
 
-     * Column names in the `CREATE TABLE` statement with partition is case-sensitive within a single query.
      * When referencing the data within the `WITH` clause, it is essential to use the alias name in lowercase during its definition.
      * The `CREATE TABLE` statement is case-sensitive within a single query in `WHERE` clause.
      * Table names that are provided in the keywords `WHERE`, `HAVING`, and `GROUP BY` are case-sensitive.
@@ -70,10 +69,6 @@ The following section lists the behaviors of connectors if mixed-case feature fl
    * **IBM **{{site.data.keyword.netezza_short}}****:
 
      * Tables with the same name and case cannot exist in multiple schemas that have the same name but different cases.
-
-   * **Informix**:
-
-     * Table and column names are stored in lowercase, regardless of the case specified.
 
    * **Delta Lake**:
 
@@ -100,6 +95,10 @@ The following section lists the behaviors of connectors if mixed-case feature fl
 
      * Enable case-sensitive collation in the SQL Server to create duplicate tables in mixed-case.
 
+   * **Apache Pinot**:
+
+     * Schema name is case insensitive irrespective of the case sensitivity of Presto (Java) engine behavior.
+
 ## Mixed-case feature flag: OFF
 {: #flagoff_features}
 
@@ -107,7 +106,7 @@ The following section lists the behaviors of connectors if mixed-case feature fl
 
    * **MariaDB**:
 
-     * Table and schema names should be in uppercase.
+     * Table and schema names should be in lowercase.
 
    * **Greenplum**:
 

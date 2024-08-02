@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: lakehouse, watsonx data, privileges, roles, access
 
@@ -34,7 +34,7 @@ A role is a set of privileges that is assigned to a user to allow the user to pe
 
 {{site.data.keyword.lakehouse_short}} provides a set of predefined roles: Administrator, User, Manager, Writer, and Reader.
 
-Use the **Access control** page to manage users and roles in {{site.data.keyword.lakehouse_short}}. For more information, see [Managing user access](watsonxdata?topic=watsonxdata-manage_access).
+Use the **Access control** page to manage users and roles in {{site.data.keyword.lakehouse_short}}. For more information, see [Managing user access]({{site.data.keyword.ref-manage_access-link}}){: external}.
 
 The following tables describe the privileges that you can assign to roles and associated permissions:
 
@@ -56,13 +56,13 @@ IAM formation non-admins (Operator, Editor, Viewer) have the default user access
 
 | Action | Admin | User | Metastore Access |
 |-------|------|------|---------|
-| Create Presto (Java) or Presto (C++) engines | ✓ |   |    |
+| Create Presto engines | ✓ |   |    |
 | Create or register Spark engines | ✓ |   |    |
 | Create Milvus services | ✓ |   |    |
 | Delete Milvus services | ✓ |   |    |
 | View Milvus services | ✓ |   |    |
 | Restart the internal HMS | ✓ |   |    |
-| Scale the Presto (Java) or Presto (C++) engines | ✓ |   |    |
+| Scale the Presto engines | ✓ |   |    |
 | Unregister any bucket | ✓ |   |    |
 | Unregister any DB Connection | ✓ |   |    |
 | Activate cataloged buckets (restart HMS) | ✓ |   |    |
@@ -71,7 +71,7 @@ IAM formation non-admins (Operator, Editor, Viewer) have the default user access
 | Access the metastore | ✓ |   | ✓ |
 {: caption="Table 1. Resource-level permissions" caption-side="bottom"}
 
-## Engine (Presto (Java) or Presto (C++))
+## Engine (Presto)
 {: #engine_presto}
 
 ### Default admin access
@@ -89,7 +89,7 @@ Formation admins (IAM) have the default admin access.
 | Pause and resume | ✓ | ✓ |    |     |
 | Restart | ✓ | ✓ |    |     |
 | Associate and disassociate catalog | ✓ | ✓ |    |     |
-| Access the Presto (Java) or Presto (C++) query monitor UI | ✓ | ✓ |    |     |
+| Access the Presto query monitor UI | ✓ | ✓ |    |     |
 | View existence (infra page and `…/api/…/` engines) | ✓ | ✓ | ✓ |     |
 | Run workloads against the engine | ✓ | ✓ | ✓ |     |
 {: caption="Table 2. Resource-level permissions" caption-side="bottom"}
@@ -159,52 +159,55 @@ Formation admins (IAM) have the default admin access.
 ### Resource-level permissions
 {: #rl_premission5}
 
-| Action | Admin | Editor | Viewer | Users without an explicit role | Database creator (Implicit role) | Collection creator (Implicit role) |
-| --- | --- | --- | --- | --- | --- | --- |
-| View assigned Milvus service | ✓ | ✓ | ✓ | ✓ |  |  |
-| Delete assigned Milvus service | ✓ |  |  |  |  |  |
-| Grant access to assigned Milvus service | ✓ |  |  |  |  |  |
-| Revoke access from assigned Milvus service | ✓ |  |  |  |  |  |
-| Collection `CreateIndex` | ✓ | ✓ |  |  |✓| ✓ |
-| Collection `DropIndex` | ✓ | ✓ |  |  | ✓ |✓  |
-| Global `CreateCollection`  | ✓ | ✓ |  |  | ✓ |  |
-| Global `DescribeCollection` | ✓ | ✓ | ✓ |  | ✓ |✓  |
-| Global `ShowCollections` | ✓ | ✓ | ✓ |  |✓  |  |
-| Collection `CreateAlias` | ✓ | ✓ |  |  |  ✓|  |
-| Collection `DropAlias` | ✓ | ✓ |  |  | ✓ |  |
-| Collection `DescribeAlias` | ✓ | ✓ | ✓ |  | ✓ |  |
-| Collection `ListAliases` | ✓ | ✓ | ✓ |  |  ✓| ✓ |
-| Global `FlushAll` | ✓ | ✓ |  |  |  |  |
-| Global `CreateResourceGroup` | ✓ |  |  |  |  |  |
-| Global `DropResourceGroup` | ✓ |  |  |  |  |  |
-| Global `DescribeResourceGroup` | ✓ |  |  |  |  |  |
-| Global `ListResourceGroups` | ✓ |  |  |  |  |  |
-| Global `TransferNode` | ✓ |  |  |  |  |  |
-| Global `TransferReplica` | ✓ |  |  |  |  |  |
-| Global `CreateDatabase` | ✓ | ✓ |  |  |   |  |
-| Global `DropDatabase` | ✓ | ✓ |  |  |  |  |
-| Global `ListDatabases` | ✓ | ✓ | ✓ |  |  |  |
-| Collection `IndexDetail` | ✓ | ✓ | ✓ |  | ✓ | ✓ |
-| Collection `Search` | ✓ | ✓ | ✓ |  | ✓ |✓  |
-| Collection `Query` | ✓ | ✓ | ✓ |  | ✓ |✓  |
-| Collection `Load` | ✓ | ✓ |  |  | ✓ |✓  |
-| Collection `GetLoadState` | ✓ | ✓ |  |  |  ✓| ✓ |
-| Collection `Release` | ✓ | ✓ |  |  | ✓ |  ✓|
-| Collection `RenameCollection` | ✓ | ✓ |  |  |✓  | ✓ |
-| Collection `DropCollection` | ✓ | ✓ |  |  | ✓ |✓  |
-| Collection `Insert` | ✓ | ✓ |  |  | ✓ |  ✓|
-| Collection `Delete` | ✓ | ✓ |  |  | ✓ |  ✓|
-| Collection `Flush` | ✓ | ✓ |  |  | ✓ | ✓ |
-| Collection `GetFlushState` | ✓ | ✓ |  |  | ✓ |✓  |
-| Collection `Upsert` | ✓ | ✓ |  |  | ✓ |✓  |
-| Collection `GetStatistics` | ✓ | ✓ |  |  | ✓ | ✓ |
-| Collection `Compaction` | ✓ | ✓ |  |  | ✓ | ✓ |
-| Collection `Import` | ✓ | ✓ |  |  | ✓ |  ✓|
-| Collection `LoadBalance` | ✓ | ✓ |  |  | ✓ | ✓ |
-| Collection `CreatePartition` | ✓ | ✓ |  |  |  ✓| ✓ |
-| Collection `DropPartition` | ✓ | ✓ |  |  | ✓ |✓  |
-| Collection `ShowPatitions` | ✓ | ✓ | ✓ |  | ✓ |✓  |
-| Collection `HasPatition` | ✓ | ✓ | ✓ |  |✓  | ✓ |
+| Action | Admin | Editor | Viewer | User | Database creator (implicit role) | Collection creator (implicit role) | Partition creator (implicit role) |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| View assigned Milvus service | ✓ | ✓ | ✓ | ✓ |  |  |  |
+| Delete assigned Milvus service | ✓ |  |  |  |  |  |  |
+| Grant access to assigned Milvus service | ✓ |  |  |  |  |  |  |
+| Revoke access from assigned Milvus service | ✓ |  |  |  |  |  |  |
+| Pause Milvus service | ✓ |  |  |  |  |  |  |
+| Resume Milvus service | ✓ |  |  |  |  |  |  |
+| Collection `CreateIndex` | ✓ | ✓ |  |  | ✓ | ✓ |  |
+| Collection `DropIndex` | ✓ | ✓ |  |  | ✓ | ✓ |  |
+| Global `CreateCollection` | ✓ | ✓ |  |  | ✓ |  |  |
+| Global `DescribeCollection` | ✓ | ✓ | ✓ |  | ✓ | ✓ |  |
+| Global `ShowCollections` | ✓ | ✓ | ✓ |  | ✓ |  |  |
+| Global `CreateAlias` | ✓ | ✓ |  |  | ✓ |  |  |
+| Global `DropAlias` | ✓ | ✓ |  |  | ✓ |  |  |
+| Global `DescribeAlias` | ✓ | ✓ | ✓ |  | ✓ |  |  |
+| Global `ListAliases` | ✓ | ✓ | ✓ |  | ✓ | ✓ |  |
+| Global `FlushAll` | ✓ | ✓ |  |  |  |  |  |
+| Global `CreateResourceGroup` | ✓ |  |  |  |  |  |  |
+| Global `DropResourceGroup` | ✓ |  |  |  |  |  |  |
+| Global `DescribeResourceGroup` | ✓ |  |  |  |  |  |  |
+| Global `ListResourceGroups` | ✓ |  |  |  |  |  |  |
+| Global `TransferNode` | ✓ |  |  |  |  |  |  |
+| Global `TransferReplica` | ✓ |  |  |  |  |  |  |
+| Global `CreateDatabase` | ✓ | ✓ |  |  |  |  |  |
+| Global `DropDatabase` | ✓ | ✓ |  |  | ✓ |  |  |
+| Global `ListDatabases` | ✓ | ✓ | ✓ |  |  |  |  |
+| Collection `IndexDetail` | ✓ | ✓ | ✓ |  | ✓ | ✓ |  |
+| Collection `Search` | ✓ | ✓ | ✓ |  | ✓ | ✓ | ✓ |
+| Collection `Query` | ✓ | ✓ | ✓ |  | ✓ | ✓ | ✓ |
+| Collection `Load` | ✓ | ✓ |  |  | ✓ | ✓ | ✓ |
+| Collection `GetLoadingProgress` | ✓ | ✓ |  |  | ✓ | ✓ |  |
+| Collection `GetLoadState` | ✓ | ✓ |  |  | ✓ | ✓ |  |
+| Collection `Release` | ✓ | ✓ |  |  | ✓ | ✓ | ✓ |
+| Collection `RenameCollection` | ✓ | ✓ |  |  | ✓ | ✓ |  |
+| Collection `DropCollection` | ✓ | ✓ |  |  | ✓ | ✓ |  |
+| Collection `Insert` | ✓ | ✓ |  |  | ✓ | ✓ | ✓ |
+| Collection `Delete` | ✓ | ✓ |  |  | ✓ | ✓ | ✓ |
+| Collection `Flush` | ✓ | ✓ |  |  | ✓ | ✓ |  |
+| Collection `GetFlushState` | ✓ | ✓ |  |  | ✓ | ✓ |  |
+| Collection `Upsert` | ✓ | ✓ |  |  | ✓ | ✓ | ✓ |
+| Collection `GetStatistics` | ✓ | ✓ |  |  | ✓ | ✓ |  |
+| Collection `Compaction` | ✓ | ✓ |  |  | ✓ | ✓ |  |
+| Collection `Import` | ✓ | ✓ |  |  | ✓ | ✓ |  |
+| Collection `LoadBalance` | ✓ | ✓ |  |  | ✓ | ✓ |  |
+| Collection `CreatePartition` | ✓ | ✓ |  |  | ✓ | ✓ |  |
+| Collection `DropPartition` | ✓ | ✓ |  |  | ✓ | ✓ | ✓  |
+| Collection `ShowPartitions` | ✓ | ✓ | ✓ |  | ✓ | ✓ |   |
+| Collection `HasPartition` | ✓ | ✓ | ✓ |  | ✓ | ✓ | ✓  |
 {: caption="Table 4. Resource-level permissions" caption-side="bottom"}
 
 ## Bucket

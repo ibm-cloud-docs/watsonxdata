@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -35,8 +35,10 @@ IBM watsonx.data now supports Apache Ranger policies to allow comprehensive data
 ## Before you begin
 {: #ranger_2}
 
+Ensure you have the following details:
+
 * IBM watsonx.data instance.
-* Apache Ranger environment.
+* Apache Ranger is provisioned.
 * The Presto (Java) JDBC URL and credentials in watsonx.data.
 * Administrator must add users and groups manually.
 
@@ -112,6 +114,6 @@ IBM watsonx.data now supports Apache Ranger policies to allow comprehensive data
 ## Limitations
 {: #ranger_4}
 
-* For the Apache Iceberg catalog that does not have policy that is defined for snapshot views related to tables in Ranger, an error occurs. Manually define policies in the Apache Ranger to eliminate the error.
-* The Ranger integration is only supported in the Presto (Java) engine.
-* watsonx.data supports access control for Apache Ranger integration.
+* In Apache Iceberg catalog, an error occurs if a policy is not defined for the snapshots views related to the tables in Ranger. You must manually define policies in Apache Ranger to eliminate the error.
+* The Ranger integration is supported only for the Presto (Java) engine.
+* watsonx.data supports only access control feature for Apache Ranger integration in 2.0.0 release.

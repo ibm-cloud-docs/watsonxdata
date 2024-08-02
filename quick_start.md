@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: lakehouse, watsonx data, quick start, engine, catalog, bucket
 subcollection: watsonxdata
@@ -97,7 +97,7 @@ In the **Configure engine** page, complete the following steps:
 {: #qs_montr}
 {: step}
 
-You can enable, or disable query monitoring feature (For more information about query monitoring, see [Query monitoring](watsonxdata?topic=watsonxdata-qhmm){: external}) for your instance. If you enable the feature, you must specify the storage that is required to store QHMM related data. You have the provison to use the default storage (that the system provision for you) or you can bring your own bucket (BYOB).
+You can enable, or disable query monitoring feature (For more information about query monitoring, see [Query monitoring]({{site.data.keyword.ref-qhmm-link}}){: external}) for your instance. If you enable the feature, you must specify the storage that is required to store QHMM related data. You have the provison to use the default storage (that the system provision for you) or you can bring your own bucket (BYOB).
 
 1. Use the toggle switch to enable (or disable) the query monitoring feature.
 2. If you enable the QHMM feature, you need to configure the storage details for storing QHMM data. Else, you can navigate to the next step using the **Next** button.
@@ -122,7 +122,7 @@ You can enable, or disable query monitoring feature (For more information about 
 
     g. In the **Query monitoring** page, from the **Bucket name** field, select the bucket that you registered.
 
-The storage (default or BYOB) can be changed at later point from the {{site.data.keyword.lakehouse_short}} console page. See [Query monitoring](watsonxdata?topic=watsonxdata-qhmm){: external}.
+The storage (default or BYOB) can be changed at later point from the {{site.data.keyword.lakehouse_short}} console page. See [Query monitoring]({{site.data.keyword.ref-qhmm-link}}){: external}.
 {: important}
 
 4. Click **Next**.
@@ -138,7 +138,7 @@ In the **Summary** page, complete the following steps:
 
 2. Click **Finish and go**.
 
-When the setup is complete, the {{site.data.keyword.lakehouse_short}} home page appears. Resource Unit consumption begins soon after creating the support services by using the quick start wizard. You can view the run rate that is submitted for billing from the billing and usage tab. For more information, see [Billing and usage](watsonxdata?topic=watsonxdata-manage_bill){: external}.
+When the setup is complete, the {{site.data.keyword.lakehouse_short}} home page appears. Resource Unit consumption begins soon after creating the support services by using the quick start wizard. You can view the run rate that is submitted for billing from the billing and usage tab. For more information, see [Billing and usage]({{site.data.keyword.ref-manage_bill-link}}){: external}.
 
 ## Next steps
 {: #qs_next_steps}

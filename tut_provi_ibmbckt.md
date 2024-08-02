@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: Joining, query, table, infrastructure
 
@@ -36,7 +36,7 @@ In this scenario, you explore the process of obtaining data from two seperate da
 
 * Setting up Db2 and Netezza data source
 
-<!-- * Ingesting data -->
+
 * Joining data from Db2 and Netezza
 
 ![Workflow diagram](images/ibm_infrastructure.svg){: caption="Figure 1. Workflow diagram" caption-side="bottom"}
@@ -235,14 +235,7 @@ In this section of the tutorial, you learn how to insert the data into the catal
 You can also navigate to the **Query workspace** to create SQL queries to query your data.
 {: shortdesc}
 
-<!-- To run the SQL query to join two tables, use the following query:
 
-1. From the navigation menu, select **SQL**. The **Query workspace** page opens.
-2. Select the Presto engine from the **Engine** drop-down.
-4. Click the overflow menu and select the required query.
-   * For a catalog and schema, you can run the Generate Path query.
-   * For a table, you can run the Generate path, Generate SELECT, Generate ALTER, and Generate DROP query.
-   * For a column, you can run the Generate path, Generate SELECT, and Generate DROP query. -->
 
 1. Consider the following sample query to join the details from **Db2** and **Netezza**:
 
@@ -252,16 +245,7 @@ You can also navigate to the **Query workspace** to create SQL queries to query 
     ```
    {: codeblock}
 
-<!--
 
-   ```bash
-   #!/bin/bash
-   SELECT * FROM "Db2"."default"."order_detail" AS details
-   LEFT JOIN "Netezza"."gosales"."order_detail" AS header
-   ON details.order_number=header.order_number
-   LIMIT 10;
-   ```
-   {: codeblock} -->
 
 5. Click the **Run on** button to run the query.
 6. Select **Result set** or **Details** tab to view the combined result. If required, you can save the query.

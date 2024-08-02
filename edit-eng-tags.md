@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: lakehouse, engine, tags, description, watsonx.data
 
@@ -34,8 +34,8 @@ To edit the display name, description and tags of an engine, use one of the foll
 
 - **Editing engine details in list view**
 
-1. Click the name of engine. Engine information window opens.
-2. In **Details** tab, click **Edit**.
+1. Click the name of the engine. Engine information window opens.
+2. In the **Details** tab, click **Edit**.
 3. In the **Display name** field, enter the display name for the engine.
 3. In the **Description** field, enter the description of the engine or edit the existing description.
 4. In the **Tags** field, select the tags from the list or start typing to define a new tag.
@@ -44,7 +44,7 @@ To edit the display name, description and tags of an engine, use one of the foll
 - **Editing engine details in topology view**
 
 1. Click the engine. Engine information window opens.
-2. In **Details** tab, click **Edit**.
+2. In the **Details** tab, click **Edit**.
 3. In the **Display name** field, enter the display name for the engine.
 3. In the **Description** field, enter the description of the engine or edit the existing description.
 4. In the **Tags** field, select the tags from the list or start typing to define a new tag.

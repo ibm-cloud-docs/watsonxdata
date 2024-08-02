@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: lakehouse, data types, connectors, watsonx.data
 
@@ -39,6 +39,7 @@ The Lite plan is provided for you to try the basic features of {{site.data.keywo
 ### Key supported features
 {: #supported-features-lite}
 
+- Ability to monitor Resource Unit usage across Lite plan instances per an account and provision a new Lite plan instance based on the Resource Unit availability.
 - Ability to pause and resume Presto engine.
 - Ability to provision, unprovision, pause and resume Spark engine.
 - Ability to connect to an {{site.data.keyword.Bluemix_notm}}-provided Cloud Object Storage (COS) bucket and provide credentials to your own COS or S3 bucket.
@@ -47,7 +48,7 @@ The Lite plan is provided for you to try the basic features of {{site.data.keywo
 ### Limitations
 {: #limitations-lite}
 
-- The Lite plan is limited to provision a single instance per account. You cannot create a new instance again if your existing Lite plan expires or you delete your provisioned instance.
+
 - The Lite plan is limited to 2000 resource units (RUs) before the instance is suspended. The cap value is displayed on the [{{site.data.keyword.Bluemix_notm}} catalog provisioning][def] page and is reflected on your billing page within your {{site.data.keyword.lakehouse_short}} instance upon provisioning. Your plan expires on reaching either the cap limit of 2000 RUs or exceeding the trial period of 30 days.
 - The Lite plan is limited to a maximum of one Presto engine, one Spark engine (small size, single node) or Milvus service with starter size (1.25 RUs per hour) or all three.
 - The Lite plan is limited to the smallest node sizes and profiles for each engine and service. You cannot increase the node size.
@@ -73,9 +74,6 @@ You must have a pay-as-you-go or subscription {{site.data.keyword.Bluemix_notm}}
 - Ability to scale (increase and decrease) node sizes for Presto engines.
 - Ability pause and resume Presto engines.
 
-## Enterprise with BYOL (Bring Your Own License)
-{: #enterprise-byol}
 
-With this plan, you have everything from the [Enterprise plan](#enterprise-plan) in addition to a discount on IBM-managed SaaS by allocating your previously purchased self-managed environment (on-premises) perpetual or subscription licenses.
 
 [def]: https://cloud.ibm.com/watsonxdata

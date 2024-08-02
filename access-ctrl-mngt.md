@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: access, access control, access management
 
@@ -57,12 +57,12 @@ Default user access is granted to:
 
 | Action | Admin | User | Metastore Access |
 |-------|------|------|---------|
-| Create Presto (Java) or Presto (C++) engines | ✓ |   |    |
+| Create Presto engines | ✓ |   |    |
 | Create Spark engines | ✓ |   |    |
 | Create Milvus services | ✓ |   |    |
 | Delete Milvus services | ✓ |   |    |
 | Restart the internal HMS | ✓ |   |    |
-| Scale the Presto (Java) or Presto (C++) engines | ✓ |   |    |
+| Scale the Presto engines | ✓ |   |    |
 | Unregister any bucket | ✓ |   |    |
 | Unregister any DB Connection | ✓ |   |    |
 | Activate cataloged buckets (restart HMS) | ✓ |   |    |
@@ -71,7 +71,7 @@ Default user access is granted to:
 | Access the metastore | ✓ |   | ✓ |
 {: caption="Table 1. Resource-level permissions" caption-side="bottom"}
 
-## Engine (Presto (Java) or Presto (C++))
+## Engine (Presto)
 {: #engine_presto}
 
 ### Default admin access
@@ -93,7 +93,7 @@ Default user access is granted to:
 | Pause and resume | ✓ | ✓ |    |     |
 | Restart | ✓ | ✓ |    |     |
 | Associate and disassociate catalog | ✓ | ✓ |    |     |
-| Access the Presto (Java) or Presto (C++) query monitor UI | ✓ | ✓ |    |     |
+| Access the Presto query monitor UI | ✓ | ✓ |    |     |
 | View existence (infra page and `…/api/…/` engines) | ✓ | ✓ | ✓ |     |
 | Run workloads against the engine | ✓ | ✓ | ✓ |     |
 {: caption="Table 2. Resource-level permissions" caption-side="bottom"}

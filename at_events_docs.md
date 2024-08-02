@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: lakehouse, watsonx data, events, audit, activity
 
@@ -18,169 +18,282 @@ subcollection: watsonxdata
 As a security officer, auditor, or manager, you can use the {{site.data.keyword.at_full}} service to track how users and applications interact with the {{site.data.keyword.lakehouse_full}} service in {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
-{{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use this service to investigate abnormal activity and critical actions and to comply with regulatory audit requirements. In addition, you can be alerted about actions as they happen. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standard. For more information, see the [getting started tutorial for {{site.data.keyword.at_full_notm}}](/docs/activity-tracker?topic=activity-tracker-getting-started).
+{{site.data.keyword.at_full_notm}} records user-initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use this service to investigate abnormal activities and critical actions and to comply with regulatory audit requirements. Additionally, you can receive alerts about any activities in real time. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standards. For more information, see the [getting started tutorial for {{site.data.keyword.at_full_notm}}](/docs/activity-tracker?topic=activity-tracker-getting-started).
 
-## List of platform events
+## Platform events
 {: #at_actions_platform}
 
-The following table lists the actions that generate an event:
+The following table lists the events generated at watsonx.data (platform) level:
 
 | Action                            | Description |
 |-----------------------------------|-------------|
-| `lakehouse.lakehouse.create`      | An event is generated when you provision a service instance. |
-| `lakehouse.presto.create`         | An event is generated when you provision a Presto (Java) group. |
-| `lakehouse.hms.create`            | An event is generated when you provision a metastore.|
-| `lakehouse.lakehouse.delete`      | An event is generated when a service instance is deleted.|
-| `lakehouse.presto.delete`         | An event is generated when a when a Presto (Java) group is deleted. |
-| `lakehouse.hms.delete`            | An event is generated when a metastore is deleted. |
+| `lakehouse.lakehouse.create`      | Generated when a watsonx.data instance is provisioned. |
+| `lakehouse.presto.create`         | Generated when a Presto (Java) group is provisioned. |
+| `lakehouse.hms.create`            | Generated when a metastore is provisioned.|
+| `lakehouse.lakehouse.delete`      | Generated when a watsonx.data instance is deleted.|
+| `lakehouse.presto.delete`         | Generated when a Presto (Java) group is deleted. |
+| `lakehouse.hms.delete`            | Generated when a metastore is deleted. |
 {: caption="Table 1. Actions that generate platform events" caption-side="bottom"}
 
-## Events for engines
+## Engines events
 {: #at_actions_engines}
+
 
 | Action                            | Description |
 |-----------------------------------|-------------|
-| `lakehouse.engines.create`        | An event is generated when you create an engine. |
-| `lakehouse.engines.get`           | An event is generated when you get engines. |
-| `lakehouse.engines.update`        | An event is generated when you update an engine. |
-| `lakehouse.engines.delete`        | An event is generated when you delete an engine. |
-| `lakehouse.engines.pause`         | An event is generated when you pause an engine. |
-| `lakehouse.engines.resume`        | An event is generated when you resume an engine. |
+| `lakehouse.engines.list`           | Generated when engines are listed. |
 {: caption="Table 2. Lists of engine events" caption-side="bottom"}
 
 
-## Events for buckets
-{: #at_actions_buckets}
+
+## Presto (Java) events
+{: #at_presto_engines}
+
 
 | Action                            | Description |
 |-----------------------------------|-------------|
-| `lakehouse.buckets.create`        | An event is generated when you create a bucket. |
-| `lakehouse.buckets.get`           | An event is generated when you get buckets. |
-| `lakehouse.buckets.update`        | An event is generated when you update a bucket. |
-| `lakehouse.buckets.delete`        | An event is generated when you delete a bucket. |
-| `lakehouse.buckets.activate`      | An event is generated when you activate a bucket. |
-{: caption="Table 3. Lists of bucket events" caption-side="bottom"}
+|`lakehouse.presto_engine.list`      | Generated when all Presto (Java) engines are listed. |
+|`lakehouse.presto_engine.create`    | Generated when Presto (Java) engine is created.   |
+|`lakehouse.presto_engine.get`       | Generated when Presto (Java) engine details are retrieved.      |
+|`lakehouse.presto_engine.delete` | Generated when Presto (Java) engine is deleted.      |
+|`lakehouse.presto_engine.update` | Generated when Presto (Java) engine is updated.      |
+|`lakehouse.presto_engine.pause` | Generated when Presto (Java) engine is paused.        |
+|`lakehouse.presto_engine.resume` | Generated when Presto (Java) engine is resumed.      |
+|`lakehouse.presto_engine.scale` | Generated when Presto (Java) engine is scaled.        |
+|`lakehouse.presto_engine.refresh` | Generated when Presto (Java) is restarted.           |
+|`lakehouse.presto_engine_catalog.add` | Generated when catalog is added to Presto (Java) engine.|
+|`lakehouse.instance.list` | Generated when list of deployments is fetched.          |
+{: caption="Table 2. Lists of Presto (Java) engine events" caption-side="bottom"}
 
-## Events for catalogs
-{: #at_actions_catalogs}
+
+## Presto (C++) events
+{: #at_prestissimo_engines}
+
 
 | Action                            | Description |
 |-----------------------------------|-------------|
-| `lakehouse.catalogs.create`       | An event is generated when you create a catalog. |
-| `lakehouse.catalogs.get`          | An event is generated when you get catalogs. |
-| `lakehouse.catalogs.update`       | An event is generated when you update a catalog. |
-| `lakehouse.catalogs.delete`       | An event is generated when you delete a catalog. |
-{: caption="Table 1. Lists of catalog events" caption-side="bottom"}
-
-## Events for databases
-{: #at_actions_databases}
-
-| Action                            | Description |
-|-----------------------------------|-------------|
-| `lakehouse.databases.create`      | An event is generated when you create a database. |
-| `lakehouse.databases.get`         | An event is generated when you get databases. |
-| `lakehouse.databases.update`      | An event is generated when you update a database. |
-| `lakehouse.databases.delete`      | An event is generated when you delete a database. |
-{: caption="Table 4. Lists of database events" caption-side="bottom"}
-
-## Events for authentication
-{: #at_actions_authentication}
-
-| Action                            | Description |
-|-----------------------------------|-------------|
-| `lakehouse.authtoken.create`      | An event is generated when a user logs in. |
-| `lakehouse.authtoken.delete`      | An event is generated when a user logs out. |
-{: caption="Table 5. Lists of events for authentication" caption-side="bottom"}
-
-## Events for engine users
-{: #at_actions_engine_users}
-
-| Action                            | Description |
-|---------------------------------|---------------|
-| `lakehouse.engineusers.create`    | An event is generated when you create an engine user. |
-| `lakehouse.engineusers.update`    | An event is generated when you update an engine user. |
-| `lakehouse.engineusers.delete`    | An event is generated when you delete an engine user. |
-{: caption="Table 6. Lists of engine user events" caption-side="bottom"}
-
-## Events for bucket users
-{: #at_actions_bucket_users}
-
-| Action                            | Description |
-|-----------------------------------|-------------|
-| `lakehouse.bucketusers.create`    | An event is generated when you create a bucket user. |
-| `lakehouse.bucketusers.update`    | An event is generated when you update a bucket user. |
-| `lakehouse.bucketusers.delete`    | An event is generated when you delete a bucket user. |
-{: caption="Table 7. Lists of bucket user events" caption-side="bottom"}
-
-## Events for catalog users
-{: #at_actions_catalog_users}
-
-| Action                            | Description |
-|-----------------------------------|-------------|
-| `lakehouse.catalogusers.create`   | An event is generated when you create a catalog user. |
-| `lakehouse.catalogusers.update`   | An event is generated when you update a catalog user. |
-| `lakehouse.catalogusers.delete`   | An event is generated when you delete a catalog user. |
-{: caption="Table 8. Lists of catalog user events" caption-side="bottom"}
-
-## Events for database connection users
-{: #at_actions_database_connection_users}
-
-| Action                            | Description |
-|-----------------------------------|-------------|
-| `lakehouse.dbconnusers.create`    | An event is generated when you create a database connection user. |
-| `lakehouse.dbconnusers.update`    | An event is generated when you update a database connection user. |
-| `lakehouse.dbconnusers.delete`    | An event is generated when you delete a database connection user. |
-{: caption="Table 9. Lists of database connection user events" caption-side="bottom"}
-
-## Events for metastore users
-{: #at_actions_metastore_users}
-
-| Action                            | Description |
-|-----------------------------------|-------------|
-| `lakehouse.metastoreusers.create` | An event is generated when you create a metastore user. |
-| `lakehouse.metastoreusers.update` | An event is generated when you update a metastore user. |
-| `lakehouse.metastoreusers.delete` | An event is generated when you delete a metastore user. |
-{: caption="Table 10. Lists of metastore user events" caption-side="bottom"}
-
-## Events for data policy
-{: #at_actions_data_policy}
-
-| Action                            | Description |
-|-----------------------------------|-------------|
-| `lakehouse.datapolicy.create`     | An event is generated when you create a data policy. |
-| `lakehouse.datapolicy.update`     | An event is generated when you update a data policy. |
-| `lakehouse.datapolicy.delete`     | An event is generated when you delete a data policy. |
-{: caption="Table 11. Lists of data policy events" caption-side="bottom"}
+|`lakehouse.prestissimo_engine.create`  |Generated when Presto (C++) engine is created.|
+|`lakehouse.prestissimo_engine.list`  |Generated when all Presto (C++) engines are listed.|
+|`lakehouse.prestissimo_engine.get`  |Generated when Presto (C++) engine details are fetched.|
+|`lakehouse.prestissimo_engine.delete`  |Generated when Presto (C++) engine is deleted.|
+|`lakehouse.prestissimo_engine.update`  |Generated when Presto (C++) engine is updated.|
+|`lakehouse.prestissimo_engine.pause`   |Generated when Presto (C++) engine is paused.|
+|`lakehouse.prestissimo_engine.resume`   |Generated when Presto (C++) engine is resumed.|
+|`lakehouse.prestissimo_engine.scale`   |Generated when Presto (C++) engine is scaled.|
+|`lakehouse.prestissimo_engine.refresh`   |Generated when Presto (C++) is restarted.|
+|`lakehouse.prestissimo_engine_catalog.add` | Generated when catalog is added to Presto (C++) engine.|
+{: caption="Table 2. Lists of Presto (C++) engine events" caption-side="bottom"}
 
 
-## Events for Spark
+## Spark engine events
 {: #at_actions_spark}
 
 | Action                            | Description |
 |-----------------------------------|-------------|
-|`lakehouse.spark_engine.list` | An event that is generated when you list Spark engines.|
-|`lakehouse.spark_engine.create` | An event that is generated when you create a Spark engine.|
-|`lakehouse.spark_engine.update` | An event that is generated when you update the details of a Spark engine.|
-|`lakehouse.spark_engine.delete` | An event that is generated when you delete a Spark engine.|
-|`lakehouse.spark_engine_application.list` | An event that is generated when you list the Spark applications under a Spark engine.|
-|`lakehouse.spark_engine_application.get`| An event that is generated when you get the details of a Spark application.|
-|`lakehouse.spark_engine_application.create` | An event that is generated when you run a Spark application.|
-|`lakehouse.spark_engine_application.delete` | An event that is generated when your stop a running Spark application.|
-|`lakehouse_spark_engine_application.ui`| An event that is generated when you access the Spark UI of an application.|
-|`lakehouse.spark_engine_history_server.get` | An event that is generated when you get the Spark history server details.|
-|`lakehouse.spark_engine_history_server.start` | An event that is generated when you start the Spark history server.|
-|`lakehouse.spark_engine_history_server.stop` | An event that is generated when you stop the Spark history server.|
-|`lakehouse.spark_engine_history_server.ui` | An event that is generated when you access Spark history UI.|
-|`lakehouse.spark_engine_catalog.list` | An event that is generated when you list Spark engine associated catalogs.|
-|`lakehouse.spark_engine_catalog.add` | An event that is generated when catalogs are associated with a Spark engine.|
-|`lakehouse.spark_engine_catalog.remove` | An event that is generated when catalogs are dissociated from a Spark engine.|
-|`lakehouse.spark_engine_catalog.get` | An event that is generated when you get the details of a Spark engine catalog.|
-|`lakehouse.spark_engine_cluster.list` | An event that is generated when you list Spark lab clusters.|
-|`lakehouse.spark_engine_cluster.create` | An event that is generated when you create a Spark lab cluster.|
-|`lakehouse.spark_engine_cluster.get` | An event that is generated when you get the details of a Spark lab cluster.|
-|`lakehouse.spark_engine_cluster.delete` | An event that is generated when you delete a Spark lab cluster.|
-|`lakehouse.spark_engine_cluster.connect` | An event that is generated when you connect with a Spark lab cluster.|
-|`lakehouse.spark_engine.pause` | An event that is generated when you pause a Spark engine.|
-|`lakehouse.spark_engine.resume` | An event that is generated when you resume a Spark engine.|
-|`lakehouse.spark_engine.scale` | An event that is generated when you scale a Spark engine.|
+|`lakehouse.spark_engine.list` | Generated when Spark engines are listed.|
+|`lakehouse.spark_engine.create` | Generated when Spark engine is created.|
+|`lakehouse.spark_engine.update` | Generated when the details of a Spark engine is updated.|
+|`lakehouse.spark_engine.delete` | Generated when a Spark engine is deleted.|
+|`lakehouse.spark_engine_application.list` | Generated when the Spark applications under a Spark engine is listed.|
+|`lakehouse.spark_engine_application.get`| Generated when the details of a Spark application is listed.|
+|`lakehouse.spark_engine_application.create` | Generated when a Spark application is run.|
+|`lakehouse.spark_engine_application.delete` | Generated when a running Spark application is stopped.|
+|`lakehouse_spark_engine_application.ui`| Generated when the Spark UI of an application is accessed.|
+|`lakehouse.spark_engine_history_server.get` | Generated when the Spark history server details are listed.|
+|`lakehouse.spark_engine_history_server.start` | Generated when the Spark history server is started.|
+|`lakehouse.spark_engine_history_server.stop` | Generated when the Spark history server is stopped.|
+|`lakehouse.spark_engine_history_server.ui` | Generated when Spark history UI is accessed.|
+|`lakehouse.spark_engine_catalog.list` | Generated when Spark engine associated catalogs are listed.|
+|`lakehouse.spark_engine_catalog.add` | Generated when catalogs are associated with a Spark engine.|
+|`lakehouse.spark_engine_catalog.remove` | Generated when catalogs are dissociated from a Spark engine.|
+|`lakehouse.spark_engine_catalog.get` | Generated when the details of a Spark engine catalog are listed.|
+|`lakehouse.spark_engine_cluster.list` | Generated when Spark lab clusters is listed.|
+|`lakehouse.spark_engine_cluster.create` | Generated when a Spark lab cluster is created.|
+|`lakehouse.spark_engine_cluster.get` | Generated when the details of a Spark lab cluster is retrieved.|
+|`lakehouse.spark_engine_cluster.delete` | Generated when a Spark lab cluster is deleted.|
+|`lakehouse.spark_engine_cluster.connect` | Generated when a Spark lab cluster is connected.|
+|`lakehouse.spark_engine.pause` | Generated when a Spark engine is paused.|
+|`lakehouse.spark_engine.resume` | Generated when a Spark engine is resumed.|
+|`lakehouse.spark_engine.scale` | Generated when a Spark engine is scaled.|
 {: caption="Table 11. Lists of data policy events" caption-side="bottom"}
+
+
+
+## Db2 engine events
+{: #at_Db2_engines}
+
+
+| Action                            | Description |
+|-----------------------------------|-------------|
+|`lakehouse.db2_engine.list`     |Generated when all Db2 engines are listed.|
+|`lakehouse.db2_engine.create`   |Generated when a new Db2 engine is created.|
+|`lakehouse.db2_engine.delete`   |Generated when a Db2 engine is deleted.|
+|`lakehouse.db2_engine.update`   |Generated when a Db2 engine is updated.|
+{: caption="Table 2. Lists of Db2 engine events" caption-side="bottom"}
+
+
+## Netezza engines events
+{: #at_Netezza_engines}
+
+| Action                            | Description |
+|-----------------------------------|-------------|
+|`lakehouse.netezza_engine.list`|  Generated when all netezza engines are listed.|
+|`lakehouse.netezza_engine.create`|  Generated when netezza engine is created.|
+|`lakehouse.netezza_engine.delete`|  Generated when netezza engine is deleted.|
+|`lakehouse.netezza_engine.update`|  Generated when netezza engine is updated.|
+{: caption="Table 2. Lists of Netezza engine events" caption-side="bottom"}
+
+## Other engine events
+{: #at_other_engines}
+
+| Action                            | Description |
+|-----------------------------------|-------------|
+|`lakehouse.other_engine.list`|   Generated when other engines are listed.|
+|`lakehouse.other_engine.create`|   Generated when other engine is created.|
+|`lakehouse.other_engine.delete`| Generated when other engine is deleted.|
+{: caption="Table 2. Lists of other engine events" caption-side="bottom"}
+
+
+## Storage events
+{: #at_actions_buckets}
+
+| Action                            | Description |
+|-----------------------------------|-------------|
+|`lakehouse.bucket_registration.list`|Generated when list of registered storages are listed.|
+|`lakehouse.bucket_registration.create`|Generated when storage is registered.|
+|`lakehouse.bucket_registration.get`|Generated when a registered storage is listed.|
+|`lakehouse.bucket_registration.update`|Generated when storage is updated.|
+|`lakehouse.bucket_registration.delete`|Generated when storage is deregistered.|
+|`lakehouse.bucket.object.properties`|Generated when storage object properties are listed.|
+|`lakehouse.bucket_registration_object.list`|Generated when storage object is listed.|
+|`lakehouse.test_bucket_connection.evaluate`|Generated when storage credential is validated.|
+|`lakehouse.bucket_registration_activate.add`|Generated when storage is activated.|
+|`lakehouse.bucket_registration_activate.remove`|Generated when storage is deactivated.|
+|`lakehouse.storage_hdfs_registration.create`|Generated when HDFS storage is added/created.|
+{: caption="Table 3. Lists of storage events" caption-side="bottom"}
+
+
+
+## Catalog events
+{: #at_actions_catalogs}
+
+| Action                            | Description |
+|-----------------------------------|-------------|
+| `lakehouse.catalogs.create`       | Generated when a catalog is created. |
+| `lakehouse.catalogs.get`          | Generated when catalogs are listed. |
+| `lakehouse.catalogs.update`       | Generated when a catalog is updated. |
+| `lakehouse.catalogs.delete`       | Generated when a catalog is deleted. |
+|`lakehouse.catalog_sync.update`|Generated when the external Iceberg table registration for a catalog is synchronized.|
+|`lakehouse.schema.list`|Generated when all schemas in catalog is listed.|
+|`lakehouse.schema.create`|Generated when schema is created.|
+|`lakehouse.schema.delete`|Generated when schema is deleted.|
+|`lakehouse.table.list`|Generated when all tables in a schema in a catalog for a given engine is listed.|
+|`lakehouse.table.get`|Generated when details of a given table in a catalog and schema is listed.|
+|`lakehouse.table.update`|Generated when table is renamed.|
+|`lakehouse.table.delete`|Generated when table is deleted.|
+|`lakehouse.table_snapshot.list`|Generated when all table snapshots are listed.|
+|`lakehouse.table_rollback.set`|Generated when a rollback is performed to a table snapshot.|
+|`lakehouse.column.list`|Generated when all columns of a table is listed.|
+|`lakehouse.column.create`|Generated when one or multiple columns to a table in a schema for a given catalog is added.|
+|`lakehouse.column.update`|Generated when the given column - rename column is updated.|
+{: caption="Table 1. Lists of catalog events" caption-side="bottom"}
+
+
+
+## Database events
+{: #at_actions_databases}
+
+| Action                            | Description |
+|-----------------------------------|-------------|
+| `lakehouse.databases.create`      | Generated when a database is created. |
+| `lakehouse.databases.get`         | Generated when databases are listed. |
+| `lakehouse.databases.update`      | Generated when database is updated. |
+| `lakehouse.databases.delete`      | Generated when a database is deleted. |
+|`lakehouse.database_registration.list`|Generated when list of databases are retrieved.|
+|`lakehouse.database_registration.create`|Generated when a new database is added or created.|
+|`lakehouse.database_registration.get`|Generated when a registered database is listed.|
+|`lakehouse.database_registration.delete`|Generated when database is deleted.|
+|`lakehouse.database_registration.update`|Generated when database is updated.|
+|`lakehouse.test_database_connection.evaluate`|Generated when database connection is validated.|
+{: caption="Table 4. Lists of database events" caption-side="bottom"}
+
+## Authentication events
+{: #at_actions_authentication}
+
+| Action                            | Description |
+|-----------------------------------|-------------|
+| `lakehouse.authtoken.create`      | Generated when a user logs in. |
+| `lakehouse.authtoken.delete`      | Generated when a user logs out. |
+{: caption="Table 5. Lists of events for authentication" caption-side="bottom"}
+
+## Engine user events
+{: #at_actions_engine_users}
+
+| Action                            | Description |
+|---------------------------------|---------------|
+| `lakehouse.engineusers.create`    | Generated when an engine user is created. |
+| `lakehouse.engineusers.update`    | Generated when an engine user is updated. |
+| `lakehouse.engineusers.delete`    | Generated when an engine user is deleted. |
+{: caption="Table 6. Lists of engine user events" caption-side="bottom"}
+
+## Storage user events
+{: #at_actions_bucket_users}
+
+| Action                            | Description |
+|-----------------------------------|-------------|
+| `lakehouse.bucketusers.create`    | Generated when a bucket user is created. |
+| `lakehouse.bucketusers.update`    | Generated when a bucket user is updated. |
+| `lakehouse.bucketusers.delete`    | Generated when a bucket user is deleted. |
+{: caption="Table 7. Lists of bucket user events" caption-side="bottom"}
+
+## Catalog user events
+{: #at_actions_catalog_users}
+
+| Action                            | Description |
+|-----------------------------------|-------------|
+| `lakehouse.catalogusers.create`   | Generated when a catalog user is created. |
+| `lakehouse.catalogusers.update`   | Generated when a catalog user is updated. |
+| `lakehouse.catalogusers.delete`   | Generated when a catalog user is deleted. |
+{: caption="Table 8. Lists of catalog user events" caption-side="bottom"}
+
+## Database connection users events
+{: #at_actions_database_connection_users}
+
+| Action                            | Description |
+|-----------------------------------|-------------|
+| `lakehouse.dbconnusers.create`    | Generated when a database connection user is created. |
+| `lakehouse.dbconnusers.update`    | Generated when a database connection user is updated. |
+| `lakehouse.dbconnusers.delete`    | Generated when a database connection user is deleted. |
+{: caption="Table 9. Lists of database connection user events" caption-side="bottom"}
+
+## Metastore user events
+{: #at_actions_metastore_users}
+
+| Action                            | Description |
+|-----------------------------------|-------------|
+| `lakehouse.metastoreusers.create` | Generated when a metastore user is created. |
+| `lakehouse.metastoreusers.update` | Generated when a metastore user is updated. |
+| `lakehouse.metastoreusers.delete` | Generated when a metastore user is deleted. |
+{: caption="Table 10. Lists of metastore user events" caption-side="bottom"}
+
+## Data policy events
+{: #at_actions_data_policy}
+
+| Action                            | Description |
+|-----------------------------------|-------------|
+| `lakehouse.datapolicy.create`     | Generated when a data policy is created. |
+| `lakehouse.datapolicy.update`     | Generated when a data policy is updated. |
+| `lakehouse.datapolicy.delete`     | Generated when a data policy is deleted. |
+{: caption="Table 11. Lists of data policy events" caption-side="bottom"}
+
+
+## Events for Drivers
+{: #at_actions_data_policy}
+
+| Action                            | Description |
+|-----------------------------------|-------------|
+| `lakehouse.driver_registration.create`     | Generated when driver is registered. |
+| `lakehouse.driver_registration.list`     | Generated all driver details are listed. |
+| `delete_driver_registration`     | Generated when a driver is deleted. |
+| `lakehouse.driver_registration_engine.add`     | Generated when a driver is associated with engines. |
+{: caption="Table 12. Lists of Driver events" caption-side="bottom"}

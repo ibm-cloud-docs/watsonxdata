@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: lakehouse, engine, catalog, watsonx.data
 
@@ -29,10 +29,10 @@ subcollection: watsonxdata
 # Dissociating a catalog from an engine
 {: #disso-cat-eng}
 
-To dissociate a catalog from an engine, use one of the following methods:
+To dissociate a catalog or catalogs from an engine, use one of the following methods:
 {: shortdesc}
 
-- **Dissociating a catalog from an engine in list view**
+- **Dissociating a catalog or catalogs from an engine in list view**
 
 1. Click the overflow menu and then click **Manage associations**.
 
@@ -40,7 +40,7 @@ To dissociate a catalog from an engine, use one of the following methods:
 
 3. Click **Save and restart engine**.
 
-- **Dissociating a catalog from an engine in topology view**
+- **Dissociating a catalog or catalogs from an engine in topology view**
 
 1. Hover over the catalog that you want to associate with an engine and click the **Manage associations** icon.
 

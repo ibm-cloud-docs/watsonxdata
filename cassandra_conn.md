@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: lakehouse, database, watsonx.data
 
@@ -36,7 +36,6 @@ Cassandra is an open-source NoSQL distributed database that handles a huge amoun
 
  | Field           | Description        |
  |------------------|--------------------|
- | Database name     | Enter the name of your database. |
  | Display name    | Enter the database name to be displayed on the screen. |
  | Hostname            | Enter the hostname.  |
  | Port             | Enter the port number. |
@@ -44,15 +43,14 @@ Cassandra is an open-source NoSQL distributed database that handles a huge amoun
  | Password           | Enter the password.  |
  | Port is SSL enabled   | Use the toggle switch to enable or disable SSL connection. If enabled,  \n i. The Upload SSL certificate (.pem, .crt, .cert or .cer) link is enabled. \n ii. Click the Upload SSL certificate (.pem, .crt, .cert or .cer) link. \n iii. Browse the SSL certificate and upload.|
  | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your database. |
- | Add | Click Add to add the database. |
+ | Create | Click Create to create the database. |
  {: caption="Table 1. Register database" caption-side="bottom"}
 
 ## Limitations for SQL statements
 {: #connector_limitations}
 
 1. Standard `INSERT INTO` statement is not supported.
-2. `SELECT` statement is not supported if the table contains columns of type `SMALLINT` and `TINYINT`.
-3. For database-based catalogs the `CREATE SCHEMA`, `CREATE TABLE`, `DROP SCHEMA`, `DROP TABLE`, `DELETE`, `DROP VIEW`, `ALTER TABLE`, and `ALTER SCHEMA` statements are not available in the **Data Manager** UI.
+2. For database-based catalogs the `CREATE SCHEMA`, `CREATE TABLE`, `DROP SCHEMA`, `DROP TABLE`, `DELETE`, `DROP VIEW`, `ALTER TABLE`, and `ALTER SCHEMA` statements are not available in the **Data Manager** UI.
 
 ## Limitations for data types
 {: #connector_limitations2}

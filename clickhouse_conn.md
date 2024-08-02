@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: lakehouse, database, watsonx.data
 
@@ -36,16 +36,15 @@ ClickHouse is a high-performance, column-oriented SQL database management system
 
  | Field           | Description        |
  |------------------|--------------------|
- | Database name     | Enter the name of your database. |
  | Display name    | Enter the database name to be displayed on the screen. |
  | Hostname            | Enter the hostname.  |
+ | Port             | Enter the port number. |
  | Username           | Enter the  username.  |
  | Password           | Enter the password.  |
- | Port             | Enter the port number. |
  | Port is SSL enabled   | Use the toggle switch to enable or disable SSL connection. If enabled,  \n i. The Upload SSL certificate (.pem, .crt, .cert or .cer) link is enabled. \n ii. Click the Upload SSL certificate (.pem, .crt, .cert or .cer) link. \n iii. Browse the SSL certificate and upload.|
  | Validate certificate | Use the toggle switch to validate that the SSL certificate returned by the host is trusted or not. |
  | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your database. |
- | Add | Click Add to add the database. |
+ | Create | Click Create to create the database. |
  {: caption="Table 1. Register database" caption-side="bottom"}
 
 ## Limitations for SQL statements

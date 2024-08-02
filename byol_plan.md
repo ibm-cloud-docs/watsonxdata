@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -85,7 +85,7 @@ Example:
 
 3. Click **Open web console**. The {{site.data.keyword.lakehouse_short}} web console opens.
 
-    <!-- 1. Log in to the console with your IBMid and password. The {{site.data.keyword.lakehouse_short}} web console opens. -->
+    
 
 ## Next steps
 {: #gs_ns-1}

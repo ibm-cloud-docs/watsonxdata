@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -40,14 +40,14 @@ Make sure that the following items are installed or available:
 - Python and Pymilvus package. For more information, see [About PyMilvus](https://milvus.io/api-reference/pymilvus/v2.4.x/About.md).
 - Hostname and port for the Milvus instance. You can get Milvus `host` and `port` information from **Infrastructure manager** (click the Milvus service to open the **Details** page and note the `host` and `port` information from the GRPC host).
 - Authorized user credentials to access the Milvus instance.
-- Assign a role to the user or [service ID](https://cloud.ibm.com/docs/account?topic=account-serviceids&interface=ui) from **Infrastructure manager**. For more information about user roles, see [Managing roles and privileges](watsonxdata?topic=watsonxdata-role_priv#milvus){: external}.
+- Assign a role to the user or [service ID](https://cloud.ibm.com/docs/account?topic=account-serviceids&interface=ui) from **Infrastructure manager**. For more information about user roles, see [Managing roles and privileges]({{site.data.keyword.ref-role_priv-link}}#milvus){: external}.
 
 ## By using API key
 {: #conn-to-milvusapikey}
 
 ```bash
 print(fmt.format("start connecting to Milvus"))
-connections.connect(host="<host>", port="<port>", secure=True, server_name="localhost", user="ibmlhapikey", password="<api-key>")
+connections.connect(host="<host>", port="<port>", secure=True, server_name="localhost", user="apikey", password="<api-key>")
 has = utility.has_collection("hello_milvus")
 print(f"Does collection hello_milvus exist in Milvus: {has}")
 ```
@@ -59,7 +59,7 @@ print(f"Does collection hello_milvus exist in Milvus: {has}")
 connections.connect(host="<host>", port="<port>", secure=True, server_name="localhost", user="ibmlhtoken", password="<token>")
 ```
 
-For more information about getting a token, see [Getting IBM Access Management (IAM) token](watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token){: external}.
+For more information about getting a token, see [Getting IBM Access Management (IAM) token]({{site.data.keyword.ref-con-presto-serv-link}}#get-ibmiam-token){: external}.
 
 ## By using URI
 {: #conn-to-milvusuri}
@@ -73,7 +73,7 @@ connections.connect( alias="default", uri="https://<host>:<grpc-port>", user = "
 has = utility.has_collection("hello_milvus")
 print(f"Does collection hello_milvus exist in Milvus: {has}")
 ```
-For getting API keys, see [Getting the IBM API key](watsonxdata?topic=watsonxdata-con-presto-serv#get-api-iam-token){: external}.
+For getting API keys, see [Getting the IBM API key]({{site.data.keyword.ref-con-presto-serv-link}}#get-api-iam-token){: external}.
 
 ## What to do next
 {: #postreq}

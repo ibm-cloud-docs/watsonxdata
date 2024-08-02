@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -41,14 +41,14 @@ You can submit Spark application by accessing watsonx.data data without object s
       --data '{
       "application_details": {
       "conf": {
-            "spark.hadoop.fs.s3a.bucket.<wxd-data-bucket-name>.endpoint": "<wxd-data-bucket-endpoint>",
-            "spark.hadoop.fs.s3a.bucket.<user-application-bucket-name>.endpoint": "<user-application-bucket-endpoint>",
-            "spark.hadoop.fs.s3a.bucket.<user-application-bucket-name>.access.key": "<user-application-bucket-accesskey>",
-            "spark.hadoop.fs.s3a.bucket.<user-application-bucket-name>.secret.key": "<user-application-bucket-secretkey>",
-            "spark.sql.catalogImplementation": "hive",
+          "spark.hadoop.fs.s3a.bucket.<wxd-data-bucket-name>.endpoint": "<wxd-data-bucket-endpoint>",
+          "spark.hadoop.fs.s3a.bucket.<user-application-bucket-name>.endpoint": "<user-application-bucket-endpoint>",
+          "spark.hadoop.fs.s3a.bucket.<user-application-bucket-name>.access.key": "<user-application-bucket-accesskey>",
+          "spark.hadoop.fs.s3a.bucket.<user-application-bucket-name>.secret.key": "<user-application-bucket-secretkey>",
+          "spark.sql.catalogImplementation": "hive",
           "spark.sql.extensions":"org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions",
           "spark.sql.iceberg.vectorization.enabled":"false",
-            "spark.sql.catalog.<wxd-bucket-catalog-name>":"org.apache.iceberg.spark.SparkCatalog",
+          "spark.sql.catalog.<wxd-bucket-catalog-name>":"org.apache.iceberg.spark.SparkCatalog",
           "spark.sql.catalog.<wxd-bucket-catalog-name>.type":"hive",
           "spark.sql.catalog.<wxd-bucket-catalog-name>.uri":"thrift://ibm-lh-lakehouse-hive-metastore-svc.cpd-instance.svc.cluster.local:9083",
           "spark.hive.metastore.client.auth.mode":"PLAIN",
@@ -58,12 +58,12 @@ You can submit Spark application by accessing watsonx.data data without object s
           "spark.hive.metastore.truststore.type":"JKS",
           "spark.hive.metastore.truststore.path":"file:///opt/ibm/jdk/lib/security/cacerts",
           "spark.hive.metastore.truststore.password":"changeit",
-            "spark.hadoop.fs.s3a.bucket.<wxd-data-bucket-name>.aws.credentials.provider":"com.ibm.iae.s3.credentialprovider.WatsonxCredentialsProvider",
-            "spark.hadoop.fs.s3a.bucket.<wxd-data-bucket-name>.custom.signers":"WatsonxAWSV4Signer:com.ibm.iae.s3.credentialprovider.WatsonxAWSV4Signer",
-            "spark.hadoop.fs.s3a.bucket.<wxd-data-bucket-name>.s3.signing-algorithm":"WatsonxAWSV4Signer",
-            "spark.hadoop.wxd.cas.endpoint":"<cas_endpoint>/cas/v1/signature",
-            "spark.hadoop.wxd.instanceId":"1711014406109108",
-            "spark.hadoop.wxd.cas.apiKey":"xxx"
+          "spark.hadoop.fs.s3a.bucket.<wxd-data-bucket-name>.aws.credentials.provider":"com.ibm.iae.s3.credentialprovider.WatsonxCredentialsProvider",
+          "spark.hadoop.fs.s3a.bucket.<wxd-data-bucket-name>.custom.signers":"WatsonxAWSV4Signer:com.ibm.iae.s3.credentialprovider.WatsonxAWSV4Signer",
+          "spark.hadoop.fs.s3a.bucket.<wxd-data-bucket-name>.s3.signing-algorithm":"WatsonxAWSV4Signer",
+          "spark.hadoop.wxd.cas.endpoint":"<cas_endpoint>/cas/v1/signature",
+          "spark.hadoop.wxd.instanceId":"1711014406109108",
+          "spark.hadoop.wxd.cas.apiKey":"xxx"
         },
         "application": "s3a://<user-application-bucket-name>/iceberg.py"
       }

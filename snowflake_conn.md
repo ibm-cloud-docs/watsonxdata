@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: lakehouse, database, watsonx.data
 
@@ -36,13 +36,14 @@ Snowflake is a cloud hosted relational database for building data warehouse.
 
  | Field           | Description        |
  |------------------|--------------------|
- | Database name     | Enter the name of your database.|
  | Display name    | Enter the database name to be displayed on the screen. |
+ | Database name     | Enter the name of your database.|
  | Hostname            | Enter the hostname.  |
+ | Warehouse name           | Enter the Warehouse name.  |
  | Username           | Enter the  username.  |
  | Password           | Enter the password.  |
  | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your database. |
- | Add | Click Add to add the database. |
+ | Create | Click Create to create the database. |
  {: caption="Table 1. Register database" caption-side="bottom"}
 
 ## Limitations for SQL statements

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: watsonxdata, qhmm
 
@@ -29,7 +29,7 @@ subcollection: watsonxdata
 # QHMM
 {: #ovrvw_qhmm}
 
-Query History Monitoring and Management (QHMM) is a service that stores and manages the diagnostic data such as, queries history and query event-related information of the Presto (Java) engine in a storage bucket. You can retrieve the stored history files for analysis, debugging and monitoring purpose.
+Query History Monitoring and Management (QHMM) is a service that stores and manages the diagnostic data such as, queries history and query event-related information of the Presto(Java) and Presto(C++) engine in a storage bucket. You can retrieve the stored history files for analysis, debugging and monitoring purpose.
 
 You can enable or disable the QHMM service for your {{site.data.keyword.lakehouse_short}} instance. If you enable the QHMM service, you must specify the storage to be used for storing the query data.
 {{site.data.keyword.lakehouse_short}} allows using the default storage, `wxd-system` to store the QHMM data or register your own storage (BYOB). To use BYOB, register your bucket in watsonx.data and configure it to use as QHMM storage. You can do that either from Quick start or from {{site.data.keyword.lakehouse_short}} console page. For more information, see [Retrieving query information from QHMM data](watsonxdata?topic=watsonxdata-ret_qhmm){: external}.

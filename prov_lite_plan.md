@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -22,37 +22,21 @@ subcollection: watsonxdata
 {: #tutorial_prov_lite_1}
 
 
-The **Lite** plan allows you to provision an {{site.data.keyword.lakehouse_full}} instance that is free to use, with limits on capacity (2000 Resource Units), and features for a time frame of 30 days. You can use the account to explore and familiarize yourself with {{site.data.keyword.lakehouse_short}}. For more information about the features and limitations of Lite plan, see [Lite plan](watsonxdata?topic=watsonxdata-pricing-plans-1#limitations-lite){: external}.
+The **Lite** plan allows you to provision a {{site.data.keyword.lakehouse_full}} instance that is free to use, with limits on capacity (2000 Resource Units), and features for a time frame of 30 days. You can use the account to explore and familiarize yourself with {{site.data.keyword.lakehouse_short}}. For more information about the features and limitations of Lite plan, see [Lite plan](watsonxdata?topic=watsonxdata-pricing-plans-1#limitations-lite){: external}.
 {: shortdesc}
+
+
+After provisioning the Lite plan instance, you can monitor the resource unit usage from the Billing and Usage page available in the watsonx.data console.
+IBM Cloud trial account users can have only a single active lite plan instance per account. However, if you delete the existing Lite plan instance before reaching the account cap limit of 2000 RUs, you can create a new instance and consume the remaining resource units available in the account. This applies to the paid IBM Cloud account users also. In addition, they can create multiple Lite plan instances in different [resource groups](https://cloud.ibm.com/docs/account?topic=account-rgs&interface=ui). If the account has multiple Lite instances active at the same time, the resource unit consumption for the account will be the sum of resource units consumed by each individual instance.
+When the usage cap is reached, any active Lite plan instances owned by the account are disabled and you cannot create any new Lite plan instances.
 
 To access all the features and functionalities without resource or time limit, you must have an Enterprise {{site.data.keyword.lakehouse_short}} instance in the paid IBM Cloud account.
 In this tutorial, you learn how to provision {{site.data.keyword.lakehouse_short}} instance (Lite plan) and explore its features.
 
 
-<!-- ## Lite plan features and limitations
-{: #tut_lite_pln}
 
 
-* Enables provisioning of a single lite plan instance per account.
-* Lite plan provides a free usage limit of 2000 Resource Units (RUs)(monitored on the **Billing and usage** page of IBM Cloud) or a time frame of 30 days. Your license expires on reaching either the cap limit of 2000 Resource Units or exceeding the trial period of 30 days.
 
-    When the lite plan license expires, the instance becomes inactive and resources are spun down. You can delete the instance from the resource group or IBM cloud resource collection removes it after a period of 40 days.
-    {: note}
-
-* With the lite plan instance, you can create one starter Presto group which consists of 1 worker and 1 coordinator (x RUs per hour), or one starter (1.25 RUs per hour) size Milvus service, or both.
-* Engine scaling functionality is not available in the lite plan.
-* The Quick start path is simplified in the lite plan. For more information, see [Getting started](#hp_start).
-* The **Billing and usage** facilitates monitoring of resource usage. -->
-
-<!--
-## Objective
-{: #tut_lite_obj}
-
-* Provisioning {{site.data.keyword.lakehouse_short}} instance (lite plan)
-* Loading data
-* Querying data
-
-![Workflow diagram](images/lite_userjourney.svg){: caption="Figure 1. User journey" caption-side="bottom"} -->
 
 ## Before you begin
 {: #hp_byb}
@@ -93,7 +77,7 @@ Trial IBM Cloud accounts can have only one resource group.
 
 1. Click **Open web console** and provide the Multi-Factor Authentication (MFA) details to launch the {{site.data.keyword.lakehouse_short}} Console.
 
-<!-- 1. Log in to the console with your IBMid and password. The {{site.data.keyword.lakehouse_short}} web console opens. -->
+
 
 ## Open the web console
 {: #open_console-2}

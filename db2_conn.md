@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: lakehouse, database, watsonx.data
 
@@ -36,16 +36,15 @@ IBM Db2 is a database that contains relational data.
 
  | Field           | Description        |
  |------------------|--------------------|
- | Database name     | Enter the name of your database. |
  | Display name    | Enter the database name to be displayed on the screen. |
+ | Database name     | Enter the name of your database. |
  | Hostname            | Enter the hostname.  |
  | Port             | Enter the port number. |
- | Username           | Enter the  username.  |
- | Password           | Enter the password.  |
- | Test connection     | Click the Test connection link to test the database connection. If the database connection is successful, a success message appears.|
+ | Authentication type   | Choose and enter the Authentication type details. \n * Username and password: Enter the username and password. \n * API key: Enter the API key. |
  | Port is SSL enabled   | Use the toggle switch to enable or disable SSL connection. If enabled, \n i. The Upload SSL certificate (.pem, .crt, .cert or .cer) link is enabled. \n ii. Click the Upload SSL certificate (.pem, .crt, .cert or .cer) link. \n iii. Browse the SSL certificate and upload.|
+ | Test connection     | Click the Test connection link to test the database connection. If the database connection is successful, a success message appears.|
  | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your database. |
- | Add | Click Add to add the database. |
+ | Create | Click Create to create the database. |
  {: caption="Table 1. Register database" caption-side="bottom"}
 
  Select IBM Db2 from the Database Type drop-down list to add IBM Watson Query.
@@ -82,10 +81,10 @@ IBM Db2 is a database that contains relational data.
 {: #connector_limitations}
 
 1. `ALTER TABLE DROP COLUMN` operation is not supported for column-organized tables.
-2. `SELECT` operation is not supported on `VIEW` statements.
-3. `DROP TABLE` statement is supported only when enabled in the catalog.
-4. `CREATE VIEW` can be used for a table only if that table is in the same catalog and the same schema.
-5. `DROP SCHEMA` can do `RESTRICT` by default.
+2. `DROP TABLE` statement is supported only when enabled in the catalog.
+3. `CREATE VIEW` can be used for a table only if that table is in the same catalog and the same schema.
+4. `DROP SCHEMA` can do `RESTRICT` by default.
+5. `CREATE VIEW` with `JOINS` is not supported.
 6. For database-based catalogs the `CREATE SCHEMA`, `CREATE TABLE`, `DROP SCHEMA`, `DROP TABLE`, `DELETE`, `DROP VIEW`, `ALTER TABLE`, and `ALTER SCHEMA` statements are not available in the **Data Manager** UI.
 
 ## Limitations for data types

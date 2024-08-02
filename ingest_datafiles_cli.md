@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: watsonxdata, staging, config file, target iceberg table, parquet, csv, command line, cli
 
@@ -57,13 +57,13 @@ export STAGING_S3_CREDS="AWS_ACCESS_KEY_ID=,AWS_SECRET_ACCESS_KEY=,ENDPOINT_URL=
 ## About this task
 {: #attask}
 
-The commands must be run within the ibm-lh container. For more details and instructions to install `ibm-lh-client` package and use the **ibm-lh** tool for ingestion, see [Installing ibm-lh-client](https://www.ibm.com/docs/en/watsonxdata/1.0.x?topic=package-installing-lh-client){: external} and [Setting up the ibm-lh command-line utility](https://www.ibm.com/docs/en/watsonxdata/1.0.x?topic=package-setting-up-lh-cli-utility){: external}.
+The commands must be run within the ibm-lh container. For more details and instructions to install `ibm-lh-client` package and use the **ibm-lh** tool for ingestion, see [Installing ibm-lh-client](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.0.x?topic=package-installing-lh-client){: external} and [Setting up the ibm-lh command-line utility](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.0.x?topic=package-setting-up-lh-cli-utility){: external}.
 {: note}
 
 To access IBM Cloud Object Storage (COS) and MinIO object storage, specify the ENDPOINT_URL to pass the corresponding url to the tool. For more information about IBM COS, see [Endpoints and storage locations](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-endpoints){: external}.
 {: note}
 
-Replace the absolute values in the command examples with the values applicable to your environment. See [Options and variables supported in **ibm-lh** tool](watsonxdata?topic=watsonxdata-cli_commands).
+Replace the absolute values in the command examples with the values applicable to your environment. See [Options and variables supported in **ibm-lh** tool]({{site.data.keyword.ref-cli_commands-link}}).
 {: note}
 
 Following are the details of the command line option to ingest data files from S3 or local location to {{site.data.keyword.lakehouse_short}} Iceberg table, in Presto (Java) ingestion mode:

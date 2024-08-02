@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -40,22 +40,18 @@ Complete the following steps to add Milvus as a service in {{site.data.keyword.l
 
 1. Log in to the {{site.data.keyword.lakehouse_short}} console.
 2. From the navigation menu, select **Infrastructure Manager**.
-3. To define and connect to a service, click **Add component** and select **Add service**.
-4. In the **Add service** window, select **Milvus** from the **Type** list.
+3. To define and connect to a service, click **Add component**, select **Milvus**, and click **Next**.
+4. In the **Add component - Milvus** window, provide the following details.
 
     | Field | Description |
     | -------- | -------- |
     | Display name | Enter the Milvus service name to be displayed on the screen.|
-    | Size | Select the suitable size. |
-    |   | **Starter:** Recommended for **1 million vectors**, 64 index parameters, 1024 segment size, and 384 dimensions.|
-    |   | **Small:** Recommended for **10 million vectors**, 64 index parameters, 1024 segment size, and 384 dimensions.|
-    |   | **Medium:** Recommended for **50 million vectors**, 64 index parameters, 1024 segment size, and 384 dimensions.|
-    |   | **Large:** Recommended for **100 million vectors**, 64 index parameters, 1024 segment size, and 384 dimensions.|
+    | Size | Select the suitable size.<br> - **Starter:** Recommended for **1 million vectors**, 64 index parameters, 1024 segment size, and 384 dimensions.<br> - **Small:** Recommended for **10 million vectors**, 64 index parameters, 1024 segment size, and 384 dimensions.<br> - **Medium:** Recommended for **50 million vectors**, 64 index parameters, 1024 segment size, and 384 dimensions.<br> - **Large:** Recommended for **100 million vectors**, 64 index parameters, 1024 segment size, and 384 dimensions. |
     | Add storage bucket | Associate an external bucket for the **Small**, **Medium**, or **Large** sizes. For **Starter** size, you can also select an IBM-managed bucket. To associate an external bucket, you must have the bucket configured.|
     | Path | For external buckets, specify the path where you want to store vectorized data files.|
     {: caption="Table 1. Adding Milvus service" caption-side="bottom"}
 
-    For more information about adding external buckets, see [Adding a storage-catalog pair](watsonxdata?topic=watsonxdata-reg_bucket){: external}.
+    For more information about adding external buckets, see [Adding a storage-catalog pair]({{site.data.keyword.ref-reg_bucket-link}}){: external}.
 
     If the schema of the collection changes (an increase in the number of fields in a collection or increase in the size of the `varchar` field beyond 256 characters, or if multiple vector fields are added into the collection), the number of records might decrease.
     {: important}
@@ -66,4 +62,4 @@ Complete the following steps to add Milvus as a service in {{site.data.keyword.l
     You must provide the endpoint for buckets used by Milvus with the region for region-specific buckets like S3 and without trailing slashes. For example: `https://s3.<REGION>.amazonaws.com`.
     {: important}
 
-5. Click **Provision**.
+5. Click **Create**.

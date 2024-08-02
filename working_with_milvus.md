@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: lakehouse, milvus, watsonx.data
 subcollection: watsonxdata
@@ -112,7 +112,7 @@ For more information, see [Delete Entities](https://milvus.io/docs/insert-update
 Dropping a collection from Milvus is irreversible. You cannot recover the deleted data.
 {: attention }
 
-Run the following Python command to drop a collection.
+Add the following to your `.ipynb` or Python script to drop a collection..
 
 ```bash
 from pymilvus import utility
@@ -130,4 +130,4 @@ Following are some best practices:
 - While loading collections by using batch insert, follow the pattern: Insert in a batch, release the memory, and then repeat the process.
 - Don't ingest in parallel to all of the collections at once. Ingest sequentially and flush between ingests.
 - Each collection's maximum size should be corresponding to the maximum number of vectors supported in a T-shirt size.
-- If you have multiple collections or partitions loaded, ensure that the sum of vectors in all loaded entities do not exceed the limit of the T-shirt size. You can still store more vectors than the T-shirt size limit as long as the number of vectors that are loaded is within the limit.
+- If you have multiple collections or partitions loaded, ensure that the sum of vectors in all loaded entities does not exceed the limit of the T-shirt size. You can still store more vectors than the T-shirt size limit as long as the number of vectors that are loaded is within the limit.

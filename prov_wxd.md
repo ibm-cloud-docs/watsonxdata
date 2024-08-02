@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: lakehouse, watsonx data, provision, endpoint, resource
 subcollection: watsonxdata
@@ -66,5 +66,5 @@ To understand about the resource unit consumption for the components in the {{si
 
 To provision an instance, choose one of the following.
 * [Lite plan](watsonxdata?topic=watsonxdata-tutorial_prov_lite_1)
-* [BYOL plan](watsonxdata?topic=watsonxdata-tutorial_prov_byol)
+
 * [Enterprise plan](watsonxdata?topic=watsonxdata-getting-started_1)

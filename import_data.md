@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: lakehouse, ingesting data, create table
 
@@ -79,17 +79,8 @@ Files can also be ingested or imported to {{site.data.keyword.lakehouse_full}} t
 
 
 
-<!-- 1. Follow the steps in the [Creating tables](watsonxdata?topic=watsonxdata-create_table) topic to complete importing the file. -->
 
 
 
-<!--
-1. Select the engine from the **Engine** drop-down. Catalogs that are associated with the selected engine are listed.
 
-1. Click **Create table from file**. The **Create table from a file** page opens.
-    You can also import a file into a particular schema. To do that, follow the steps:
 
-      a. Select a schema under a catalog where you want to import a file to create table.
-      b. Click the overflow menu of the selected schema and select **Create table from a file**. The **Create table from a file** page opens.
-
-1. Follow the steps in the [Creating tables](watsonxdata?topic=watsonxdata-create_table) topic to complete importing the file. -->

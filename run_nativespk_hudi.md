@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -72,94 +72,9 @@ The value of `<user-authentication-string>` must be in the format `echo -n '<use
 
 
 
-    <!-- ```bash
-    curl --request POST \
-    --url https://<wxd_host_name>/lakehouse/api/v2/spark_engines/<spark_engine_id>/applications \
-    --header 'Authorization: Bearer <token>' \
-    --header 'Content-Type: application/json' \
-    --header 'LhInstanceId: <instance_id>' \
-    --data '{
-        "application_details": {
-            "conf": {
-            "spark.serializer" : "org.apache.spark.serializer.KryoSerializer",
-            "spark.hadoop.fs.s3a.path.style.access" : "true",
-            "spark.hive.metastore.client.plain.username":"ibmlhapikey",
-            "spark.hive.metastore.client.plain.password":"<wxd_api_key>",
-            "spark.driver.extraJavaOptions" : "-Dcom.sun.jndi.ldap.object.disableEndpointIdentification=true -Djdk.tls.trustNameService=true",
-            "spark.executor.extraJavaOptions" : "-Dcom.sun.jndi.ldap.object.disableEndpointIdentification=true -Djdk.tls.trustNameService=true",
-
-            "spark.kryo.registrator": "org.apache.spark.HoodieSparkKryoRegistrar",
-            "spark.sql.catalog.spark_catalog.type": "hudi",
-            "spark.sql.catalog.spark_catalog": "org.apache.spark.sql.hudi.catalog.HoodieCatalog",
-
-            "spark.hadoop.wxd.cas.endpoint":"<cas_endpoint>/cas/v1/signature",
-            "spark.hadoop.wxd.cas.apiKey":"<user-authentication-string>"
-
-            },
-            "application": "s3a://hudi-connector-test/hudi_demo.py"
-        }
-    }
-    ```
-    {: codeblock}
-
-<!-- Parameter values:
-* `<wxd_host_name>`: The hostname of your watsonx.data Cloud instance.
-* `<instance_id>`: The instance ID from the watsonx.data instance URL. For example, 1609968977179454.
-* `<spark_engine_id>`: The Engine ID of the native Spark engine.
-* `<token>`: The bearer token. For more information about generating the token, see [IAM token](https://test.cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
-* `<wxd_api_key>`: To generate API key, log in into the watsonx.data console and navigate to Profile > Profile and Settings > API Keys and generate a new API key.
-* `<cas_endpoint>`: The CAS endpoint. To generate CAS endpoint, see [Content Aware Storage (CAS) endpoint](watsonxdata?topic=watsonxdata-cas_ep).
-* `<user-authentication-string>`: The value must be in the format : `base64 encoding(ibmlhapikey_<wxd-user-name>:<user_apikey>)`. To generate API key, log in into the watsonx.data console and navigate to Profile > Profile and Settings > API Keys and generate a new API key.
- If you generate a new API key, your old API key becomes invalid. If you generate the encoded string from a Mac machine, remove last 4 characters from resulted string.
- {: note} -->
+    
 
 
 
 
-<!--
-- This is a list item.
 
-    | Header | Header |
-    | --- | --- |
-    | Cell | Cell |
-    {: caption="Table 1. A cool table for testing" caption-side="bottom"}
-
-- This is a list item.
-- This is step with a complex table.
-    |  | One or all IAM-enabled services  | Selected service in a resource group  | Resource group access |
-    |----|--------------------------------|---------------------------------------|-----------------------|
-    | Viewer role        | View instances, aliases, bindings, and credentials                                   | View only specified instances in the resource group | View resource  group     |
-    | Operator role      |  View instances and manage aliases, bindings, and credentials                        |  Not applicable                                     | Not  applicable          |
-    | Editor role        |  Create, delete, edit, and view instances. Manage aliases, bindings, and credentials | Create, delete, edit, suspend, resume, view, and bind only specified  instances in the resource group | View and edit name of resource group |
-    | Administrator role |  All management actions for services                                                 | All management actions for the specified instances in the resource group  | View, edit, and manage access for the resource group |
-    {: row-headers}
-    {: caption="Table 1. Example platform management roles and actions for services in an account" caption-side="bottom"}
-    {: summary="The first row of the table describes separate options that you can choose from when creating a policy, and the first column describes the selected roles for the policy.  The remaining cells map to the selected role from the first column, and to the selected policy from the first row to describe how the roles apply in each context."}
-    {: #platformrolestable1}
-
-- This is a step with a comparison tab table.
-    | Service | Montreal 01 |
-    |-----|-----|
-    | Bare Metal Server | ![Checkmark icon](../icons/checkmark-icon.svg) |
-    | Block Storage | ![Checkmark icon](../icons/checkmark-icon.svg) |
-    | Citrix NetScaler VPX | ![Checkmark icon](../icons/checkmark-icon.svg) |
-    {: caption="Table 1. Americas infrastructure availability - Montreal" caption-side="bottom"}
-    {: summary="This table has row and column headers. The row headers identify the service. The column headers identify where that service is located. To understand where a service is  located in the table, navigate to the row, and find the for the location you are interested in."}
-    {: #table07}
-    {: tab-title="Montreal"}
-    {: tab-group="Americas"}
-    {: class="comparison-tab-table"}
-    {: row-headers}
-
-    | Service | Toronto 01 |
-    |-----|-----|
-    | Bare Metal Server | ![Checkmark icon](../icons/checkmark-icon.svg) |
-    | Block Storage | ![Checkmark icon](../icons/checkmark-icon.svg) |
-    | Citrix NetScaler VPX | ![Checkmark icon](../icons/checkmark-icon.svg) |
-    {: caption="Table 1. Americas infrastructure availability - Toronto" caption-side="bottom"}
-    {: summary="This table has row and column headers. The row headers identify the service. The column headers identify where that service is located. To understand where a service is  located in the table, navigate to the row, and find the for the location you are interested in."}
-    {: #table08}
-    {: tab-title="Toronto"}
-    {: tab-group="Americas"}
-    {: class="comparison-tab-table"}
-    {: row-headers} -->

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: lakehouse, web console, watsonx.data
 
@@ -41,9 +41,7 @@ To start {{site.data.keyword.lakehouse_full}} web console, complete the followin
 3. Click your {{site.data.keyword.lakehouse_full}} instance link. The service instance page opens.
 4. Click **Open web console** to load the home page.
 
-<!-- 5. Log in to the console with your IBM ID and password.
 
-After you log in to the {{site.data.keyword.lakehouse_short}} web console, you are on the home page. -->
 
 The home page provides information about the logged in user, the login timestamp, and region where the {{site.data.keyword.lakehouse_short}} is created.
 

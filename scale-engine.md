@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -34,11 +34,11 @@ To scale engine, use one of the following methods:
 - **Scaling an engine in list view**
 
 1. Click the overflow menu icon at the end of the row and click **Scale**.
-2. In **Scale engine** window, move the slider to set the number of required nodes.
+2. In the **Scale engine** window, move the slider to set the number of required nodes.
 3. Click **Scale**.
 
 - **Scaling an engine in topology view**
 
 1. Hover over the engine that you want to scale and click the **Scale** icon.
-2. In **Scale engine** window, move the slider to set the number of required nodes.
+2. In the **Scale engine** window, move the slider to set the number of required nodes.
 3. Click **Scale**.

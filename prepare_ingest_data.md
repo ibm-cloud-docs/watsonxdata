@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-02"
 
 keywords: watsonxdata, ingesting, object storage bucket, data files, table format. SQL query
 
@@ -55,10 +55,10 @@ The objectives of this tutorial are listed as follows:
 * Establishing connection with the customer data bucket.
 * Querying from the bucket
 
-You can use [Spark ingestion](watsonxdata?topic=watsonxdata-ingest_spark_ui) to ingest data.
+You can use [Spark ingestion]({{site.data.keyword.ref-ingest_spark_ui-link}}) to ingest data.
 {: note}
 
-For detailed information on the usage of different parameters, see [Options and parameters supported in ibm-lh tool](watsonxdata?topic=watsonxdata-cli_commands), and for ingesting data files into {{site.data.keyword.lakehouse_short}} by using Spark CLI, commands and configuration file, see [Spark ingestion through ibm-lh tool command line](watsonxdata?topic=watsonxdata-ingest_spark_cli), [Creating an ingestion job by using commands](watsonxdata?topic=watsonxdata-create_ingestioncli), and [Creating an ingestion job by using the configuration file](watsonxdata?topic=watsonxdata-create_ingestconfig).
+For detailed information on the usage of different parameters, see [Options and parameters supported in ibm-lh tool]({{site.data.keyword.ref-watsonxdata-cli_commands-link}}), and for ingesting data files into {{site.data.keyword.lakehouse_short}} by using Spark CLI, commands and configuration file, see [Spark ingestion through ibm-lh tool command line]({{site.data.keyword.ref-ingest_spark_cli-link}}), [Creating an ingestion job by using commands]({{site.data.keyword.ref-create_ingestioncli-link}}), and [Creating an ingestion job by using the configuration file]({{site.data.keyword.ref-create_ingestconfig-link}}).
 {: note}
 
 ## Procedure
@@ -74,13 +74,13 @@ In this section, you have a collection of Parquet/CSV files in an S3 folder that
 1. Specify staging directory (For CLI ingestion):
    * Provide the staging-location parameter to designate a staging directory for CSV or specific Parquet files to Parquet conversion. The ingest tool will create it if it does not exist.
 
-   See [Staging location](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-cli_commands#stag_loc){: external} for more details.
+   See [Staging location]({{site.data.keyword.ref-watsonxdata-cli_commands-link#stag_loc}}){: external} for more details.
    {: note}
 
 1. Create schema file to specify CSV file properties:
    * Provide the schema parameter to specify CSV file properties such as field delimiter, line delimiter, escape character, encoding and whether header exists in the CSV file.
 
-   See [Schema file specifications](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-cli_commands#schema_spec){: external} for more details.
+   See [Schema file specifications]({{site.data.keyword.ref-watsonxdata-cli_commands-link#schema_spec}}){: external} for more details.
    {: note}
 
 1. Initiate server-mode ingestion:
