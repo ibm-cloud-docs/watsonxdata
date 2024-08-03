@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-03"
 
 keywords: lakehouse, database, watsonx.data
 
@@ -43,11 +43,14 @@ IBM Cloud Databases for PostgreSQL is an open source object-relational database 
  | Username           | Enter the  username.  |
  | Password           | Enter the password.  |
  | Port is SSL enabled   | Use the toggle switch to enable or disable SSL connection. If enabled, \n i. The Upload SSL certificate (.pem, .crt, .cert or .cer) link is enabled. \n ii. Click the Upload SSL certificate (.pem, .crt, .cert or .cer) link. \n iii. Browse the SSL certificate and upload.|
- | Validate certificate           | Use the toggle switch to validate whether the SSL certificate that is returned by the host is trusted or not.  |
+ | Validate certificate           | The toggle switch must be enabled to Validate certificate. If disabled, the test connection feature does not work and the PostgreSQL database cannot be added to the engine.  |
  | Test connection     | Click the Test connection link to test the database connection. If the database connection is successful, a success message appears.|
  | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your database. |
  | Create | Click Create to create the database. |
  {: caption="Table 1. Register database" caption-side="bottom"}
+
+Enable the toggle switch for Validate certificate option to create the PostgreSQL database. If disabled, the Test connection feature does not work and the database cannot be added to the engine.
+{: note}
 
 ## Limitations for SQL statements
 {: #connector_limitations}
