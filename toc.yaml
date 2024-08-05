@@ -145,6 +145,7 @@ toc:
             - exp-imp-qh.md
             - qhmm.md
             - qhmm_querying.md
+            - qhmm_gen.md
       - conn-presto-thr-cli.md
       # - integrate_wkc.md
       - ikc_integration.md
