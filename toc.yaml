@@ -164,7 +164,6 @@ toc:
                   - view-edit-native-park.md
                   - scale_nspark.md
                   - mng_appln_nspark.md
-                  - ae_auto-scaling-serverless-apps.md
             - topicgroup:
                 label: Submitting Spark application by using native Spark engine
                 topics:
@@ -172,6 +171,7 @@ toc:
                   - spark-extnsn.md
                   - sbmt_cas_nsp.md
                   - run_nativespk_hudi.md
+                  - ae_auto-scaling-serverless-apps.md
             - topicgroup:
                 label: Native Spark Monitoring and logging
                 topics:
