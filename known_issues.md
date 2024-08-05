@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-05"
 
 keywords: lakehouse
 
@@ -71,7 +71,7 @@ Users can search data without specifying a partition in the `partition_names` fi
 {: #known_issues12970}
 
 ## Attempting to query Query History and Monitoring Management (QHMM) related tables using Presto (C++) engines might encounter errors
-{: #known_issues12582}
+{: #known_issues14083}
 
 When you attempt to query QHMM related tables using Presto (C++) engines, you might encounter errors due to unsupported file formats. Presto (C++) supports only DWRF and Parquet v1 formats. You can not use Presto (C++) to query data or tables in other formats.
 
