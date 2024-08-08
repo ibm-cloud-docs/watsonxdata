@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-08"
 
 keywords: watsonxdata, release notes
 
@@ -120,7 +120,6 @@ For more information, see [Azure Data Lake Storage Gen2](watsonxdata?topic=watso
 
 * You can use search feature for the following values on the Infrastructure manager page:
      * database name
-     * database username
      * registered hostname
      * created by username
 * You can now use the ‘Do Not Disturb’ toggle switch in the Notifications section under the bell icon to enable or disable pop-up notifications.
