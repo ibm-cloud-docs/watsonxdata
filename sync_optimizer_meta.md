@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-11"
 
 keywords: lakehouse, hms, {{site.data.keyword.lakehouse_short}}, hive, metastore
 
@@ -26,7 +26,7 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Syncing Query Optimizer with {{site.data.keyword.lakehouse_short}} metastore
+# Manually syncing Query Optimizer with {{site.data.keyword.lakehouse_short}} metastore
 {: #sync_optimizer_meta}
 
 ## Before you begin
@@ -43,9 +43,13 @@ To sync tables from {{site.data.keyword.lakehouse_full}}, the following items ar
 ## About this task
 {: #optimizer_abtsync}
 
-To provide optimized queries, **Query Optimizer** pulls data about table definitions and hive statistics to synchronize with Hive metastore in {{site.data.keyword.lakehouse_short}}. You can select the specific Hive table that must be available for **Query Optimizer**. It is recommended to generate hive statistics and label which columns are primary and foreign keys to get the best results.
+To provide optimized queries, **Query Optimizer** pulls data about table definitions and hive statistics to synchronize with Hive metastore in {{site.data.keyword.lakehouse_short}}. You can select the specific Hive table that must be available for **Query Optimizer**. It is recommended to generate Hive statistics and label columns for primary and foreign keys to get the best results.
 
-Enabling **Query Optimizer** automatically synchronizes metadata for catalogs that are connected to Presto (C++) engines. However, metadata for inaccessible or corrupted catalogs or schemas at deployment might be missing. Use the following commands to validate existing metadata in the optimizer engine. You will need to run the following steps if any changes are made significantly to a table or when new tables are introduced after the initial sync operation.
+Enabling **Query Optimizer** automatically synchronizes metadata for catalogs that are connected to Presto (C++) engines. However, you will need to run the following steps if:
+* Metadata for inaccessible or corrupted catalogs or schemas during deployment are missing.
+* Significant changes are made to a table.
+* New tables are introduced after the initial sync operation.
+* An intermittent issue is preventing tables from being synced during the automatic syncing process upon activation.
 
 ## Procedure
 {: #optimizer_prosync}
@@ -84,6 +88,9 @@ Enabling **Query Optimizer** automatically synchronizes metadata for catalogs th
    * `<SCHEMA_NAME>`: The name of the schema where the tables to synchronize belong to.
    * `<SYNC MODE>`: `SKIP` is a sync mode indicating the objects that are already defined should be skipped. `REPLACE` is another sync mode used to update the object if it has been modified since last synched.
    * `CONTINUE`: The error is logged, but processing continues if multiple tables are to be imported.
+
+   When synchrnization is completed, the output displays the list of synced tables. The total count of synced tables must be double the number of tables within the catalog or schema. This is because, each table are synced two times. Once from the external metastore to the local metastore, and then from the local metastore to the Db2 catalog.
+   {: note}
 
 6. Identify the list of catalogs and schemas in watsonx.data that you require for **Query Optimizer**.
 
