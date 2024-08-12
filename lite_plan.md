@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-12"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -21,7 +21,7 @@ completion-time: 0.25h
 {:shortdesc: .shortdesc}
 
 
-# {{site.data.keyword.lakehouse_short}} Lite plan
+# Working with {{site.data.keyword.lakehouse_short}} Lite plan
 {: #tutorial_hp_intro}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="0.25h"}
