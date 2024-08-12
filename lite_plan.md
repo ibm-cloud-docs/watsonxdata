@@ -21,7 +21,7 @@ completion-time: 0.25h
 {:shortdesc: .shortdesc}
 
 
-# Working with {{site.data.keyword.lakehouse_short}} Lite plan
+# Working with the {{site.data.keyword.lakehouse_short}} Lite plan
 {: #tutorial_hp_intro}
 {: toc-content-type="tutorial"}
 {: toc-completion-time="0.25h"}
