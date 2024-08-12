@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-11"
+lastupdated: "2024-08-12"
 
 keywords: lakehouse, hms, {{site.data.keyword.lakehouse_short}}, hive, metastore
 
@@ -45,7 +45,7 @@ To sync tables from {{site.data.keyword.lakehouse_full}}, the following items ar
 
 To provide optimized queries, **Query Optimizer** pulls data about table definitions and hive statistics to synchronize with Hive metastore in {{site.data.keyword.lakehouse_short}}. You can select the specific Hive table that must be available for **Query Optimizer**. It is recommended to generate Hive statistics and label columns for primary and foreign keys to get the best results.
 
-Enabling **Query Optimizer** automatically synchronizes metadata for catalogs that are connected to Presto (C++) engines. However, you will need to run the following steps if:
+Activating **Query Optimizer** automatically synchronizes metadata for catalogs that are connected to Presto (C++) engines. However, you will need to run the following steps if:
 * Metadata for inaccessible or corrupted catalogs or schemas during deployment are missing.
 * Significant changes are made to a table.
 * New tables are introduced after the initial sync operation.
