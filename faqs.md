@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-12"
 
 keywords: watsonxdata, faq
 
@@ -255,7 +255,6 @@ For commands supported in the command-line interface during ingestion, see [Load
 {{site.data.keyword.lakehouse_short}} as a service offers three pricing plans:
 1. Lite plan: It provides a free usage limit of 2000 Resource Units (monitored on the Billing and usage page of IBM Cloud) within a time frame of 30 days. The cap value is displayed on the IBM Cloud catalog provisioning page and is reflected on your billing page within your {{site.data.keyword.lakehouse_short}} instance upon provisioning.
 2. Enterprise plan: You pay by hour for each infrastructure resource that you add. Start with support services then build the engines and services that you want. This has an hourly rate that is computed in Resource Units that maps to your payment method whether ‘Pay as You Go’ or ‘Subscription’.
-
 
 For more information, see [Pricing plans](watsonxdata?topic=watsonxdata-pricing-plans-1).
 

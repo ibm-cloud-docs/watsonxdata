@@ -32,14 +32,9 @@ The **Lite** plan allows you to provision an {{site.data.keyword.lakehouse_full}
 When the allocated Resource Units or time runs out, the instance becomes inactive and you can no longer access it.
 {: important}
 
-To access all the features and functionalities without resource or time limit, you must have an [Enterprise {{site.data.keyword.lakehouse_short}} instance](watsonxdata?topic=watsonxdata-tutorial_prov_byol){: external} in a paid IBM Cloud account.
+To access all the features and functionalities without resource or time limit, you must have an [Enterprise {{site.data.keyword.lakehouse_short}} instance](watsonxdata?topic=watsonxdata-getting-started_1){: external} in a paid IBM Cloud account.
 
 In this tutorial, you learn how to provision {{site.data.keyword.lakehouse_short}} instance (lite plan) and explore its features.
-
-
-
-
-
 
 ## Before you begin
 {: #hp_byb}
@@ -53,8 +48,6 @@ IBM Cloud trial accounts can have only one resource group. To create an IBM Clou
 {: step}
 
 To provision a Lite plan instance, see [Provisioning {{site.data.keyword.lakehouse_short}} Lite plan](watsonxdata?topic=watsonxdata-tutorial_prov_lite_1).
-
-
 
 ## Viewing usage
 {: #hp_monitor_usg_lite}
