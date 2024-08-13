@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-13"
 
 keywords: watsonxdata, commands, command line interface, cli
 
@@ -82,10 +82,9 @@ Different options and variables that are supported in a **ibm-lh** tool that is 
 |`sync-status`|This parameter is used in REST API based ingestion. The default value is `false`. When this parameter is set to `true`, `ibm-lh data-copy` tool waits and polls to get continuous status after an ingestion job is submitted.|`--sync-status <IS THERE ANY ENTRY?>`|`SPARK`|
 |`system-config`|This parameter is used to specify system-related parameters. For more information, see [System config](#sys_config).|`--system-config <path/to/system/configfile>`|`PRESTO`, `SPARK_LEGACY`, and `SPARK`|
 |`target-catalog-uri`|Target catalog uri|`--target-catalog-uri <TARGET_CATALOG_URI>`|`SPARK_LEGACY`|
-|`target-tables`|Data migration target table. `<catalog>.<schema>.<table1>`. This is a mandatory parameter to run an ingestion job. Example: `<iceberg.demo.customer1>`. This parameter is deprecated and replaced with `target-table`.|`--target-tables <TARGET_TABLES>`|`PRESTO` and `SPARK_LEGACY`|
 |`target-table`|Data migration target table. `<catalog>.<schema>.<table1>`. This is a mandatory parameter to run an ingestion job. Example: `<iceberg.demo.customer1>`. The short command for this parameter is `-t`. For more information, see [Target table](#target_table).|`--target-table <TARGET_TABLE>`|`PRESTO`, `SPARK_LEGACY`, and `SPARK`|
-|`trust-store-path`|Path of the truststore to access the ingestion engine. This is used to establish SSL connections. This is a mandatory parameter to run an ingestion job.|`--trust-store-path <TRUST_STORE_PATH>`|`PRESTO` and `SPARK_LEGACY`|
-|`trust-store-password`|Password of truststore to access the ingestion engine. This is used to establish SSL connections. This is a mandatory parameter to run an ingestion job.|`--trust-store-password <TRUST_STORE_PASSWORD>`|`PRESTO` and `SPARK_LEGACY`|
+|`trust-store-path`|Path of the truststore to access the ingestion engine. This is used to establish SSL connections.|`--trust-store-path <TRUST_STORE_PATH>`|`PRESTO` and `SPARK_LEGACY`|
+|`trust-store-password`|Password of truststore to access the ingestion engine. This is used to establish SSL connections.|`--trust-store-password <TRUST_STORE_PASSWORD>`|`PRESTO` and `SPARK_LEGACY`|
 |`user`|Username of the user connecting to the instance. The short command for this parameter is `-u`.|`--user <username>`|`SPARK`|
 |`url`|Base url of the location of {{site.data.keyword.lakehouse_full}} cluster. The short command for this parameter is `-w`.|`--url <url>`|`SPARK`|
 {: caption="Table 1. Command line options and variables" caption-side="bottom"}
