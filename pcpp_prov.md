@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-13"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -26,9 +26,16 @@ An engine in {{site.data.keyword.lakehouse_short}} runs SQL queries on your data
 
     | Field | Description |
     | --- | --- |
-    | Type | Select the **Presto (C++) (version)** engine from the list. |
+    | Type | Select the **Presto (C++) <*version*> engine from the list. |
     | Display name   | Enter your compute engine name.  |
-    | Configuration mode | **Standard:**<br>Select **Standard** for predefined engine sizes:<br> - **Starter:** Includes 1 coordinator node and 1 worker node, both starter.<br> - **Small:** Includes 1 coordinator node and 3 worker nodes, all cache-optimized.<br> - **Medium:** Includes 1 coordinator node and 6 worker nodes, all cache-optimized.<br> - **Large:** Includes 1 coordinator node and 12 worker nodes, all cache-optimized.<br>**Custom:**<br>Select **Custom** for customized engine configuration:<br> - **Coordinator nodes (max. 1):** Select the run rate for coordinator node (you can have a maximum of 1 node).<br> - **Worker nodes (max. 18):** Select the number of worker nodes and run rate (you can have a maximum of 18 nodes). |
+    | Configuration mode | **Standard**: Select **Standard** for predefined engine sizes: |
+    |   |**Starter**: Includes 1 coordinator node and 1 worker node, both starter.   |
+    |   | **Small**: Includes 1 coordinator node and 3 worker nodes, all cache-optimized.  |
+    |   | **Medium**: Includes 1 coordinator node and 6 worker nodes, all cache-optimized.  |
+    |   |**Large**: Includes 1 coordinator node and 12 worker nodes, all cache-optimized.  |
+    |   | **Custom**: Select **Custom** for customized engine configuration:    |
+    |    |  **Coordinator nodes (max. 1)**: Select the run rate for coordinator node (you can have a maximum of 1 node).  |
+    |    |  **Worker nodes (max. 18)**: Select the number of worker nodes and run rate (you can have a maximum of 18 nodes).  |
     | Associated catalogs (optional) | Associate the available catalogs with the engine if necessary.  |
     {: caption="Table 1. Add engine details" caption-side="bottom"}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-13"
 
 keywords: lakehouse, data types, connectors, watsonx.data
 
@@ -47,7 +47,6 @@ The Lite plan is provided for you to try the basic features of {{site.data.keywo
 
 ### Limitations
 {: #limitations-lite}
-
 
 - The Lite plan is limited to 2000 resource units (RUs) before the instance is suspended. The cap value is displayed on the [{{site.data.keyword.Bluemix_notm}} catalog provisioning][def] page and is reflected on your billing page within your {{site.data.keyword.lakehouse_short}} instance upon provisioning. Your plan expires on reaching either the cap limit of 2000 RUs or exceeding the trial period of 30 days.
 - The Lite plan is limited to a maximum of one Presto engine, one Spark engine (small size, single node) or Milvus service with starter size (1.25 RUs per hour) or all three.

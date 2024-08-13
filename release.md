@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-08-08"
+lastupdated: "2024-08-13"
 
 keywords: watsonxdata, release notes
 
@@ -357,7 +357,6 @@ The Apache Kafka data source stores data as byte messages that producers and con
 {{site.data.keyword.lakehouse_full}} now offers the following license plans.
 
 * Lite plan
-
 * Enterprise plan
 
 For more information about the different license plans, see [IBM® watsonx.data pricing plans](watsonxdata?topic=watsonxdata-pricing-plans-1).
