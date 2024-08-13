@@ -29,18 +29,21 @@ subcollection: watsonxdata
 # Hadoop Distributed File System
 {: #hdfs_storage}
 
-       If you select **Hadoop Distributed File System (HDFS)** from the **Storage type** drop-down list, configure the following details:
+Hadoop Distributed File System (HDFS) is a file system that manages large data sets that can run on commodity hardware.
+{: shortdesc}
 
-      | Field | Description |
-      |--------------------------|----------------|
-      | Display name | Enter the name to be displayed.|
-      | Thrift URI | Enter the Thrift URI.|
-      | Thrift Port | Enter the Thrift port. |
-      | Kerberos authentication | Select the checkbox **Kerberos authentication** for secure connection.  \n a. Enter the following information: \n i. HDFS principal \n ii. Hive client principal \n iii. Hive server principal \n b. Upload the following files: \n i. Kerberos config file (.config) \n ii. HDFS keytab file (.keytab) \n iii. Hive keytab file (.keytab) |
-      | Upload core site file (.xml) | Upload core site file (.xml) |
-      | Upload HDFS site file (.xml) | Upload HDFS site file (.xml) |
-      | Associate catalog | Add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within. |
-      | Catalog type | The supported catalog is Apache Hive.|
-      | Catalog name | Enter the name of your catalog. |
-      | Create | Click Create to create the storage. |
-      {: caption="Table 1. Register bucket" caption-side="bottom"}
+ If you select **Hadoop Distributed File System (HDFS)** from the **Storage** section, configure the following details:
+
+ | Field | Description |
+ |--------------------------|----------------|
+ | Display name | Enter the name to be displayed.|
+ | Thrift URI | Enter the Thrift URI.|
+ |Thrift Port | Enter the Thrift port. |
+ | Kerberos authentication | Select the checkbox **Kerberos authentication** for secure connection.  \n a. Enter the following information: \n i. HDFS principal \n ii. Hive client principal \n iii. Hive server principal \n b. Upload the following files: \n i. Kerberos config file (.config) \n ii. HDFS keytab file (.keytab) \n iii. Hive keytab file (.keytab) |
+ | Upload core site file (.xml) | Upload core site file (.xml) |
+ | Upload HDFS site file (.xml) | Upload HDFS site file (.xml) |
+ | Associate catalog | Add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within. |
+ | Catalog type | The supported catalog is Apache Hive.|
+ | Catalog name | Enter the name of your catalog. |
+ | Create | Click Create to create the storage. |
+ {: caption="Table 1. Register bucket" caption-side="bottom"}

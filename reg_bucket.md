@@ -29,7 +29,7 @@ subcollection: watsonxdata
 # Adding a storage-catalog pair
 {: #reg_bucket}
 
-A storage is an existing, externally managed storage. It is one of the data sources for {{site.data.keyword.lakehouse_full}}. A catalog defines the schemas and metadata for a data source.
+In {{site.data.keyword.lakehouse_full}}, the data is stored either in an internal storage created during instance provisioning or in an externally managed storage. It is one of the catalogs for {{site.data.keyword.lakehouse_full}}. A catalog defines the schemas and metadata for a data source.
 {: shortdesc}
 
 When you add your own storage bucket or database, or query the data in these data sources through the query engines of {{site.data.keyword.lakehouse_short}}, egress charges for pulling data out of these sources might apply depending on your service provider. If you are using managed services, consult your service provider's documentation or support for details about these charges.
@@ -43,8 +43,8 @@ To add a storage-catalog pair, complete the following steps:
 
 1. Log in to the {{site.data.keyword.lakehouse_short}} console.
 2. From the navigation menu, select **Infrastructure manager**.
-3. To define and connect a storage, click **Add component** and select **Add storage**.
-4. In the **Add storage** window, select a storage from the storage type drop-down list and provide the required details to connect to existing externally managed storage.  Based on the storage type selected, click the respective link to configure the storage details.
+3. To define and connect a storage, click **Add component**.
+4. In the **Add component** window, select a storage from the **Storage** section and provide the details to connect to existing externally managed storage.
 
      You can modify the access key and secret key of a user-registered bucket for a storage. This feature is only available for user-registered buckets and is not applicable to default buckets, ADLS, or Google Cloud Storage. This feature can only be used if the new credentials successfully pass the test connection.
      {: note}
