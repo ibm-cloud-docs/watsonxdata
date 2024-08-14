@@ -29,10 +29,9 @@ subcollection: watsonxdata
 # Adding a storage-catalog pair
 {: #reg_bucket}
 
-In {{site.data.keyword.lakehouse_full}}, the data is stored either in an internal storage created during instance provisioning or in an externally managed storage. It is one of the catalogs for {{site.data.keyword.lakehouse_full}}. A catalog defines the schemas and metadata for a data source.
-{: shortdesc}
+In {{site.data.keyword.lakehouse_full}}, the data is stored either in an internal storage created during instance provisioning or in an externally managed storage. You can associate a catalog with a storage. A catalog defines the schemas and metadata for a storage.
 
-When you add your own storage bucket or database, or query the data in these data sources through the query engines of {{site.data.keyword.lakehouse_short}}, egress charges for pulling data out of these sources might apply depending on your service provider. If you are using managed services, consult your service provider's documentation or support for details about these charges.
+When you add your own storage bucket or data source, or query the data in these data sources through the query engines of {{site.data.keyword.lakehouse_short}}, egress charges for pulling data out of these sources might apply depending on your service provider. If you are using managed services, consult your service provider's documentation or support for details about these charges.
 {: important}
 
 To reduce the latency issues, it is recommended to colocate your additional storage buckets or databases in the region where {{site.data.keyword.lakehouse_short}} instance is provisioned.

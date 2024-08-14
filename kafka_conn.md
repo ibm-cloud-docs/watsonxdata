@@ -2,9 +2,9 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-14"
 
-keywords: lakehouse, database, watsonx.data
+keywords: lakehouse, data source, watsonx.data
 
 subcollection: watsonxdata
 
@@ -33,25 +33,25 @@ Apache Kafka is a distributed event streaming platform. Connect to an Apache Kaf
 {: shortdesc}
 
 
- If you select **Apache Kafka** from the **Database type** drop-down list, configure the following details:
+ Configure the following details for Apache Kafka data source:
 
  | Field           | Description        |
  |------------------|--------------------|
- | Display name    | Enter the database name to be displayed on the screen. |
+ | Display name    | Enter the data source name to be displayed on the screen. |
  | Hostname            | Enter the hostname. You can add multiple host information. To add, click the **Add** icon. A new row appears for adding hostname and port. Enter the details.  |
  | Port             | Enter the port number. |
  | SASL connection   | Enable the Simple Authentication Security Layer (SASL) to include authentication mechanism. If you enable SASL, specify the username and API key/password.|
- | Test connection     | Click the Test connection link to test the database connection. If the database connection is successful, a success message appears.|
- | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your database. |
- | Add topics    | You can add topics after you create the database.  \n i. Go to the **Infrastructure manager**. \n ii. Click on the **Apache Kafka** database. \n iii. Click **Add topics** option. \n iv. Upload .json definition files. You can either drag the files or use the **Click to upload** option. Topic names are determined from the definition files. \n v. Use the **Edit** option to view and edit the topic files.|
- | Create | Click Create to create the database. |
- {: caption="Table 1. Register database" caption-side="bottom"}
+ | Test connection     | Click the Test connection link to test the data source connection. If the data source connection is successful, a success message appears.|
+ | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your data source. |
+ | Add topics    | You can add topics after you create the data source.  \n i. Go to the **Infrastructure manager**. \n ii. Click on the **Apache Kafka** data source. \n iii. Click **Add topics** option. \n iv. Upload .json definition files. You can either drag the files or use the **Click to upload** option. Topic names are determined from the definition files. \n v. Use the **Edit** option to view and edit the topic files.|
+ | Create | Click Create to create the data source. |
+ {: caption="Table 1. Register data source" caption-side="bottom"}
 
 
 ## Limitations for SQL statements
 {: #connector_limitations}
 
-1. For database-based catalogs the `CREATE SCHEMA`, `CREATE TABLE`, `DROP SCHEMA`, `DROP TABLE`, `DELETE`, `DROP VIEW`, `ALTER TABLE`, and `ALTER SCHEMA` statements are not available in the **Data Manager** UI.
+1. For data source-based catalogs the `CREATE SCHEMA`, `CREATE TABLE`, `DROP SCHEMA`, `DROP TABLE`, `DELETE`, `DROP VIEW`, `ALTER TABLE`, and `ALTER SCHEMA` statements are not available in the **Data Manager** UI.
 
 ## Limitations for data types
 {: #connector_limitations2}

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-14"
 
-keywords: lakehouse, database, watsonx.data
+keywords: lakehouse, data source, watsonx.data
 
 subcollection: watsonxdata
 
@@ -29,27 +29,27 @@ subcollection: watsonxdata
 # Elasticsearch
 {: #elasticsearch_database}
 
-Elastic search is a NoSQL database that stores data in an unstructured manner.
+Elastic search is a NoSQL data source that stores data in an unstructured manner.
 {: shortdesc}
 
- If you select **Elastcisearch** from the **Database type** drop-down list, configure the following details:
+ Configure the following details for Elasticsearch data source:
 
  | Field           | Description        |
  |------------------|--------------------|
- | Display name    | Enter the database name to be displayed on the screen. |
+ | Display name    | Enter the data source name to be displayed on the screen. |
  | Hostname            | Enter the hostname.  |
  | Port             | Enter the port number. |
  | Username           | Enter the  username.  |
  | Password           | Enter the password.  |
  | SSL Connection   | Use the toggle switch to enable or disable SSL connection. If enabled, \n i. The Upload SSL certificate (.pem, .crt, .cert or .cer) link is enabled. \n ii. Click the Upload SSL certificate (.pem, .crt, .cert or .cer) link. \n iii. Browse the SSL certificate and upload.|
- | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your database. |
- | Create | Click Create to create the database. |
- {: caption="Table 1. Register database" caption-side="bottom"}
+ | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your data source. |
+ | Create | Click Create to create the data source. |
+ {: caption="Table 1. Register data source" caption-side="bottom"}
 
 ## Limitations for SQL statements
 {: #connector_limitations}
 
-1. For database-based catalogs the `CREATE SCHEMA`, `CREATE TABLE`, `DROP SCHEMA`, `DROP TABLE`, `DELETE`, `DROP VIEW`, `ALTER TABLE`, and `ALTER SCHEMA` statements are not available in the **Data Manager** UI.
+1. For data source-based catalogs the `CREATE SCHEMA`, `CREATE TABLE`, `DROP SCHEMA`, `DROP TABLE`, `DELETE`, `DROP VIEW`, `ALTER TABLE`, and `ALTER SCHEMA` statements are not available in the **Data Manager** UI.
 
 ## Limitations for data types
 {: #connector_limitations2}

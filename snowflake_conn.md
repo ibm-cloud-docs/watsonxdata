@@ -2,9 +2,9 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-14"
 
-keywords: lakehouse, database, watsonx.data
+keywords: lakehouse, data source, watsonx.data
 
 subcollection: watsonxdata
 
@@ -32,26 +32,26 @@ subcollection: watsonxdata
 Snowflake is a cloud hosted relational database for building data warehouse.
 {: shortdesc}
 
- If you select **Snowflake** from the **Database type** drop-down list, configure the following details:
+ Configure the following details for Snowflake data source:
 
  | Field           | Description        |
  |------------------|--------------------|
- | Display name    | Enter the database name to be displayed on the screen. |
+ | Display name    | Enter the data source name to be displayed on the screen. |
  | Database name     | Enter the name of your database.|
  | Hostname            | Enter the hostname.  |
  | Warehouse name           | Enter the Warehouse name.  |
  | Username           | Enter the  username.  |
  | Password           | Enter the password.  |
- | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your database. |
- | Create | Click Create to create the database. |
- {: caption="Table 1. Register database" caption-side="bottom"}
+ | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your data source. |
+ | Create | Click Create to create the data source. |
+ {: caption="Table 1. Register data source" caption-side="bottom"}
 
 ## Limitations for SQL statements
 {: #connector_limitations}
 
 1. `CREATE TABLE AS` is also supported for `CREATE TABLE` statement.
 2. `DROP TABLE` statement only when enabled in the catalog.
-3. For database-based catalogs the `CREATE SCHEMA`, `CREATE TABLE`, `DROP SCHEMA`, `DROP TABLE`, `DELETE`, `DROP VIEW`, `ALTER TABLE`, and `ALTER SCHEMA` statements are not available in the **Data Manager** UI.
+3. For data source-based catalogs the `CREATE SCHEMA`, `CREATE TABLE`, `DROP SCHEMA`, `DROP TABLE`, `DELETE`, `DROP VIEW`, `ALTER TABLE`, and `ALTER SCHEMA` statements are not available in the **Data Manager** UI.
 
 ## Limitations for data types
 {: #connector_limitations2}
