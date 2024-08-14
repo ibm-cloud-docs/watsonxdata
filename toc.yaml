@@ -157,8 +157,8 @@ toc:
             - qhmm_gen.md
       - conn-presto-thr-cli.md
       - ikc_integration.md
-      - ds_integration.md
       - s2s_auth.md
+      - ds_integration.md
       # - presto_behavior.md
       - delete_lh.md
       - topicgroup:
