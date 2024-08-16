@@ -46,7 +46,7 @@ Ingestion is not possible in non-interactive mode when using the Presto mode of 
 
 After a successful ingestion job, the schema or table may not be immediately visible in the user interface (UI). This is due to the background execution of the ingestion process.
 
-**Workaround:** Refresh your browser after an ingestion job status is changed to **Finished** to make sure that the UI is updated with the newly created schema or table. Once the UI is refreshed, you can proceed to run another ingestion job on the same schema or tables that were just created.
+**Workaround:** Refresh your browser or refresh the catalogs or schemas from the **Data manager** page after an ingestion job status is changed to **Finished** to make sure that the UI is updated with the newly created schema or table. Once the UI is refreshed, you can proceed to run another ingestion job on the same schema or tables that were just created.
 
 ## Spark application submission fails when CAS (Content Aware Storage) is enabled
 {: #known_issues15132}
