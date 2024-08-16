@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-05"
+lastupdated: "2024-08-16"
 
 keywords: lakehouse
 
@@ -33,6 +33,34 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+
+## Ingestion is not possible in non-interactive mode using Presto
+{: #known_issues22131}
+
+Ingestion is not possible in non-interactive mode when using the Presto mode of ingestion due to an issue.
+
+**Workaround:** You can set the environment variable in interactive mode to run the ingestion job using Presto.
+
+## Delayed UI update after successful ingestion jobs
+{: #known_issues24181}
+
+After a successful ingestion job, the schema or table may not be immediately visible in the user interface (UI). This is due to the background execution of the ingestion process.
+
+**Workaround:** Refresh your browser after an ingestion job status is changed to **Finished** to make sure that the UI is updated with the newly created schema or table. Once the UI is refreshed, you can proceed to run another ingestion job on the same schema or tables that were just created.
+
+## Spark application submission fails when CAS (Content Aware Storage) is enabled
+{: #known_issues15132}
+
+CAS does not currently support buckets or object storage that use HTTP endpoints.
+
+**Workaround:** You can disable CAS or make sure that your buckets or object storage are configured with HTTPS endpoints.
+
+## Disabled Next button when selecting source files during data ingestion
+{: #known_issues24186}
+
+During data ingestion, when you select data sources from either bucket or system, the **Next** button might appear disabled. However, clicking these options will directly take you to the next page.
+
+**Workaround:** To select data files, click the **Back** button to return to the **Select file(s)** page, review the options, and then click the desired option that will take you to the next page.
 
 ## Attempting to read Parquet v2 tables through Presto (C++) results in an error
 {: #known_issues12582trial}
