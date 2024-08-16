@@ -60,7 +60,7 @@ CAS does not currently support buckets or object storage that use HTTP endpoints
 
 During data ingestion, when you select data sources from either bucket or system, the **Next** button might appear disabled. However, clicking these options will directly take you to the next page.
 
-**Workaround:** To select data files, click the **Back** button to return to the **Select file(s)** page, review the options, and then click the desired option that will take you to the next page.
+**Workaround:** To select data files, click the **Cancel** button to return to the **Select file(s)** page, review the options, and then click the desired option that will take you to the next page.
 
 ## Attempting to read Parquet v2 tables through Presto (C++) results in an error
 {: #known_issues12582trial}
