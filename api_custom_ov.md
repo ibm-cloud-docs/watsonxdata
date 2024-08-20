@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-20"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -186,3 +186,5 @@ For the list of properties that can be customized through an API for Presto (C++
 - [Velox properties for Presto (C++)](watsonxdata?topic=watsonxdata-api_custom_pcpp_vlx)
 
 For properties that must be customized under the guidance of the watsonx.data support team, see [Properties to be customized under support guidance](watsonxdata?topic=watsonxdata-api_custom_wkr_pcpp#api_custom_sprt_pcpp).
+
+
