@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-16"
 
 keywords: lakehouse
 
@@ -33,6 +33,27 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+
+## Ingestion is not possible in non-interactive mode using Presto
+{: #known_issues22131}
+
+Ingestion is not possible in non-interactive mode when using the Presto mode of ingestion due to an issue.
+
+**Workaround:** You can set the environment variable in interactive mode to run the ingestion job using Presto.
+
+## Delayed UI update after successful ingestion jobs
+{: #known_issues24181}
+
+After a successful ingestion job, the schema or table may not be immediately visible in the user interface (UI). This is due to the background execution of the ingestion process.
+
+**Workaround:** Refresh your browser or refresh the catalogs or schemas from the **Data manager** page after an ingestion job status is changed to **Finished** to make sure that the UI is updated with the newly created schema or table. Once the UI is refreshed, you can proceed to run another ingestion job on the same schema or tables that were just created.
+
+## Spark application submission fails when CAS (Content Aware Storage) is enabled
+{: #known_issues15132}
+
+CAS does not currently support buckets or object storage that use HTTP endpoints.
+
+**Workaround:** You can disable CAS or make sure that your buckets or object storage are configured with HTTPS endpoints.
 
 ## Attempting to read Parquet v2 tables through Presto (C++) results in an error
 {: #known_issues12582trial}
@@ -71,7 +92,7 @@ Users can search data without specifying a partition in the `partition_names` fi
 {: #known_issues12970}
 
 ## Attempting to query Query History and Monitoring Management (QHMM) related tables using Presto (C++) engines might encounter errors
-{: #known_issues12582}
+{: #known_issues14083}
 
 When you attempt to query QHMM related tables using Presto (C++) engines, you might encounter errors due to unsupported file formats. Presto (C++) supports only DWRF and Parquet v1 formats. You can not use Presto (C++) to query data or tables in other formats.
 

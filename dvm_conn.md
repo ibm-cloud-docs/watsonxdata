@@ -2,9 +2,9 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-14"
 
-keywords: lakehouse, database, watsonx.data
+keywords: lakehouse, data source, watsonx.data
 
 subcollection: watsonxdata
 
@@ -32,11 +32,11 @@ subcollection: watsonxdata
 IBM Data Virtualization Manager for z/OS provides virtual, integrated views of data residing on IBM Z. It enables users and applications to have read or write access to IBM Z data in place, without having to move, replicate, or transform the data.
 {: shortdesc}
 
- If you select **IBM Data Virtualization Manager for z/OS** from the **Database type** drop-down list, configure the following details:
+ Configure the following details for IBM Data Virtualization Manager for z/OS data source:
 
  | Field           | Description        |
  |------------------|--------------------|
- | Display name    | Enter the database name to be displayed on the screen. |
+ | Display name    | Enter the data source name to be displayed on the screen. |
  | Hostname            | Enter the hostname.  |
  | Port             | Enter the port number. |
  | Username           | Enter the  username.  |
@@ -44,14 +44,14 @@ IBM Data Virtualization Manager for z/OS provides virtual, integrated views of d
  | Port is SSL enabled   | Use the toggle switch to enable or disable SSL connection. If enabled,  \n i. The Upload SSL certificate (.pem, .crt, .cert or .cer) link is enabled. \n ii. Click the Upload SSL certificate (.pem, .crt, .cert or .cer) link. \n iii. Browse the SSL certificate and upload.|
  | Validate certificate           | Use the toggle switch to validate whether the SSL certificate that is returned by the host is trusted or not.  |
  | Hostname in SSL certificate           | Provide the hostname in SSL certificate. This step is optional.  |
- | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your database. |
- | Create | Click Create to create the database. |
- {: caption="Table 1. Register database" caption-side="bottom"}
+ | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your data source. |
+ | Create | Click Create to create the data source. |
+ {: caption="Table 1. Register data source" caption-side="bottom"}
 
 ## Limitations for SQL statements
 {: #connector_limitations}
 
-1. For database-based catalogs the `CREATE SCHEMA`, `CREATE TABLE`, `DROP SCHEMA`, `DROP TABLE`, `DELETE`, `DROP VIEW`, `ALTER TABLE`, and `ALTER SCHEMA` statements are not available in the **Data Manager** UI.
+1. For data source-based catalogs the `CREATE SCHEMA`, `CREATE TABLE`, `DROP SCHEMA`, `DROP TABLE`, `DELETE`, `DROP VIEW`, `ALTER TABLE`, and `ALTER SCHEMA` statements are not available in the **Data Manager** UI.
 
 ## Limitations for data types
 {: #connector_limitations2}

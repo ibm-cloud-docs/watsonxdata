@@ -2,9 +2,9 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-14"
 
-keywords: lakehouse, database, watsonx.data
+keywords: lakehouse, data source, watsonx.data
 
 subcollection: watsonxdata
 
@@ -32,19 +32,19 @@ subcollection: watsonxdata
 Teradata is a relational database management system.
 {: shortdesc}
 
- If you select **Teradata** from the **Database type** drop-down list, configure the following details:
+ Configure the following details for Teradata data source:
 
  | Field           | Description        |
  |------------------|--------------------|
- | Display name    | Enter the database name to be displayed on the screen. |
+ | Display name    | Enter the data source name to be displayed on the screen. |
  | Database name     | Enter the name of your database.|
  | Hostname            | Enter the hostname.  |
  | Port             | Enter the port number. |
  | Authentication type   | Choose and enter the Authentication type details. \n * TD2: Enter the username and password. \n * LDAP: Enter the username and password. |
  | Port is SSL enabled     | Use the toggle switch to enable or disable SSL connection. If enabled,  \n i. The Upload SSL certificate (.pem, .crt, .cert or .cer) link is enabled. \n ii. Click the Upload SSL certificate (.pem, .crt, .cert or .cer) link. \n iii. Browse the SSL certificate and upload.|
- | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your database. |
- | Create | Click Create to create the database. |
- {: caption="Table 1. Register database" caption-side="bottom"}
+ | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your data source. |
+ | Create | Click Create to create the data source. |
+ {: caption="Table 1. Register data source" caption-side="bottom"}
 
 ## Limitations for SQL statements
 {: #connector_limitations}

@@ -29,10 +29,8 @@ toc:
           topics:
           - prov_wxd.md
           - prov_lite_plan.md
-          # - byol_plan.md
           - getting-started.md
       - release.md
-      # - wxd_api_chg_log.md
   - navgroup:
       id: tutorial
       topics:
@@ -98,7 +96,18 @@ toc:
       - update-db-cred.md
       - edit-db-tags.md
       - delete_database.md
-      - reg_bucket.md
+      - topicgroup:
+              label: Adding a storage-catalog pair
+              topics:
+              - reg_bucket.md
+              - cos_storage.md
+              - amazons_storage.md
+              - ceph_storage.md
+              - minio_storage.md
+              - hdfs_storage.md
+              - google_cloud_storage.md
+              - adls_genblob_storage.md
+              - adls_gentwo_storage.md
       - explor-buck-obj.md
       - edit-buck-tags.md
       - delete_bucket.md
@@ -145,11 +154,11 @@ toc:
             - exp-imp-qh.md
             - qhmm.md
             - qhmm_querying.md
+            - qhmm_gen.md
       - conn-presto-thr-cli.md
-      # - integrate_wkc.md
       - ikc_integration.md
-      - ds_integration.md
       - s2s_auth.md
+      - ds_integration.md
       # - presto_behavior.md
       - delete_lh.md
       - topicgroup:
@@ -164,7 +173,6 @@ toc:
                   - view-edit-native-park.md
                   - scale_nspark.md
                   - mng_appln_nspark.md
-                  - ae_auto-scaling-serverless-apps.md
             - topicgroup:
                 label: Submitting Spark application by using native Spark engine
                 topics:
@@ -172,6 +180,7 @@ toc:
                   - spark-extnsn.md
                   - sbmt_cas_nsp.md
                   - run_nativespk_hudi.md
+                  - ae_auto-scaling-serverless-apps.md
             - topicgroup:
                 label: Native Spark Monitoring and logging
                 topics:
@@ -229,7 +238,6 @@ toc:
             - wxd_ranger_colmn.md
       - billing_usage.md
       - hms_credentials.md
-      # - cas-ep.md
       - notifications.md
       - event_notifications.md
       - topicgroup:

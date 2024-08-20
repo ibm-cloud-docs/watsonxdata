@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-12"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -41,9 +41,13 @@ To enable **Query Optimizer**, make sure at least one Presto (C++) engine is pro
 
 1. Log in to {{site.data.keyword.lakehouse_short}} console.
 1. From the navigation menu, select **Configurations** and click **Query Optimizer Manager** tile.
-1. Click **Activate**. A **Activate query optimizer** window displays. Click **Activate and restart engines**.
+1. Click **Activate** and confirm the activation and restarting of the engines in the **Activate query optimizer** window.
 
    **Query Optimizer** takes approximately 20 minutes to deploy and sync over metadata for all Hive catalogs and schemas. This time may vary based on the metadata size to be synced.
    {: note}
 
-1. Click **Cancel activation** to cancel the deployment of **Query Optimizer** in {{site.data.keyword.lakehouse_short}}.
+   Verify that all expected tables have been synced. If tables are found missing during the automatic syncing process, you can manually sync the tables. See [Manually syncing Query Optimizer](watsonxdata?topic=watsonxdata-sync_optimizer_meta).
+   {: note}
+
+   You can click **Cancel activation** to cancel the deployment of **Query Optimizer Manager** during the deployment.
+   {: note}

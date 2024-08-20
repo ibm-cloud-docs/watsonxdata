@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-13"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -29,7 +29,7 @@ subcollection: watsonxdata
 # Ingesting data by using Spark through the web console
 {: #ingest_spark_ui}
 
-You can ingest data into {{site.data.keyword.lakehouse_full}} by using the web console. Ingestion through web console is supported only by using a {{site.data.keyword.iae_full_notm}} (Spark) engine.
+You can ingest data into {{site.data.keyword.lakehouse_full}} through the web console. Ingestion through web console is supported only by using {{site.data.keyword.iae_full_notm}} (Spark).
 {: shortdesc}
 
 ## Before you begin
@@ -37,7 +37,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} by using the web c
 
 * You must have the **Administrator** role and privileges in the catalog to do ingestion through the web console.
 * Add and register {{site.data.keyword.iae_full_notm}} (Spark). See [Registering an engine]({{site.data.keyword.ref-reg_engine-link}}).
-* Add buckets for the source data files and target catalog. See [Adding a bucket-catalog pair]({{site.data.keyword.ref-reg_bucket-link}}).
+* Add storage for the source data files and target catalog. See [Adding a bucket-catalog pair]({{site.data.keyword.ref-reg_bucket-link}}).
 * Optionally, you can create a schema in the catalog for the target table. See [Creating schemas]({{site.data.keyword.ref-create_schema-link}}).
 * Optionally, you can also create a target table in the schema. See [Creating tables]({{site.data.keyword.ref-create_table-link}}).
 

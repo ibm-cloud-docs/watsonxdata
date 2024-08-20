@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-16"
 
 keywords: lakehouse, watsonx.data, presto, cli
 
@@ -45,7 +45,6 @@ You must specify the location when you create schema using CLI. For example,
 5. Copy the host details to a notepad.
 
 
-For [IBM Cloud]{: tag-blue}:
 - [Getting the IBM API key or IBM IAM token](#get-api-iam-token)
 - [Getting IBM API Key](#get-ibmapi-key)
 - [Getting IBM Access Management (IAM) token](#get-ibmiam-token)
@@ -61,7 +60,7 @@ It is recommended to use IAM token for stress workload.
 #### Getting IBM API Key
 {: #get-ibmapi-key}
 
-1. Log in to the [IBM Cloud console](http://test.cloud.ibm.com/).
+1. Log in to the [IBM Cloud console](http://cloud.ibm.com/).
 
 2. In the navigation bar, click **Manage** and select **Access (IAM)**.
 
@@ -93,23 +92,6 @@ It is recommended to use IAM token for stress workload.
    ```
    {: codeblock}
 
-For [Amazon Web Services (AWS)]{: tag-magenta}:
-- [Creating service IDs](#get_sid-aws)
-- [Creating API keys](#get-ibmapi-key-aws)
-
-### Creating service IDs
-{: #get_sid-aws}
-
-To know about creating service ID, see [Creating service IDs](https://www.ibm.com/docs/watsonx/watsonxdata/aws?topic=2u-granting-access-through-service-ids-from-saas-console#creating_service_IDs).
-
-### Creating API keys
-{: #get-ibmapi-key-aws}
-
-To know about creating API key, see [Creating API keys](https://www.ibm.com/docs/en/watsonx/watsonxdata/1.1.x?topic=2u-granting-access-through-service-ids-from-saas-console#creating_APIkeys)
-
-You must name the API key as `ibmlhapikey_Serviceid-<ID_OF_THE_NEW_SERVICE_ID_CREATED>`. You can obtain the `ID_OF_THE_NEW_SERVICE_ID_CREATED` from the IBM SaaS console. For example: `ibmlhapikey_Serviceid-b8fd5bbf-a95e-4664-85f7-282047433195`.
-   {: note}
-
 ## Connecting to Presto (Java) engine using Presto (Java) CLI (Remote)
 {: #conn-to-prestoeng}
 
@@ -120,8 +102,6 @@ You must name the API key as `ibmlhapikey_Serviceid-<ID_OF_THE_NEW_SERVICE_ID_CR
 3. To check whether Presto (Java) CLI is installed, run `./presto --version`. Presto (Java) cli version displays. For example, `Presto CLI 0.281-cfbc6eb`
 
 4. Run the following commands in the system where Presto (Java) CLI is installed.
-
-   For [IBM Cloud]{: tag-blue}:
 
    - If you are using API key, run the following command:
 
@@ -141,17 +121,6 @@ You must name the API key as `ibmlhapikey_Serviceid-<ID_OF_THE_NEW_SERVICE_ID_CR
    {: note}
 
    Enter your IBM API key or IBM IAM token at the prompt.
-
-   **For [Amazon Web Services (AWS)]{: tag-magenta}:**
-
-   ```bash
-   ./presto --server https://<Prestoengine host details:POST> --user ibmlhapikey_Serviceid-<ID_OF_SERVICE_ID_CREATED> --password
-   ```
-   {: codeblock}
-
-   Enter your API key as password at the prompt.
-
-5. Enter your IBM API key or IBM IAM token at the prompt.
 
 6. At the Presto (Java) prompt, type `show catalogs;`. The catalog list appears. Now you are connected to Presto (Java) engine in {{site.data.keyword.lakehouse_short}} through Presto (Java) CLI.
 
@@ -177,11 +146,7 @@ You must name the API key as `ibmlhapikey_Serviceid-<ID_OF_THE_NEW_SERVICE_ID_CR
 
 3. Get the API key.
 
-   For [IBM Cloud]{: tag-blue}:
    Use `ibmlhapikey` as the username and API key as password. For more information, see [Getting IBM API Key](#get-ibmapi-key).
-
-   For [Amazon Web Services (AWS)]{: tag-magenta}:
-   Use `ibmlhapikey_Serviceid-<ID_OF_THE_NEW_SERVICE_ID_CREATED>` as the username and API key from the IBM SaaS console as password. For more information, see [Creating API Key](#get-ibmapi-key-aws).
 
 4. Get the hostname and port. For more information, see [Getting the Presto (Java) engine hostname and port details](#get-host-port).
 
@@ -266,7 +231,6 @@ You must name the API key as `ibmlhapikey_Serviceid-<ID_OF_THE_NEW_SERVICE_ID_CR
    `<EMAIL_ID>` with your email ID
    `<API_KEY>` with the API key
 
-   For [IBM Cloud]{: tag-blue}:
    If you are using IBM IAM token, replace `ibmapikey` with `ibmlhtoken` and pass the token.
    {: note}
 

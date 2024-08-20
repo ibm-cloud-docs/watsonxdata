@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-13"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -84,7 +84,7 @@ You can perform the following operations after establishing a connection with a 
 - **Manage collections**: A Milvus cluster supports a maximum of 65,536 collections. For more information, see [Manage Collections](https://milvus.io/docs/manage-collections.md#Manage-Collections).
 - **Manage partitions**: A Milvus cluster supports a maximum of 4095 partitions. For more information, see [Manage Partitions](https://milvus.io/docs/manage-partitions.md#Manage-Partitions).
 - **Manage data**: For more information, see:
-  - [Insert, Upsert & Delete](https://milvus.io/docs/insert-update-delete.md)
-  - [Data Import](https://milvus.io/docs/prepare-source-data.md)
+      - [Insert, Upsert & Delete](https://milvus.io/docs/insert-update-delete.md)
+      - [Data Import](https://milvus.io/docs/prepare-source-data.md)
 - **Manage indexes**: For more information, see [Manage Indexes](https://milvus.io/docs/index-vector-fields.md?tab=floating).
 - **Search and Query**: For more information, see [Search, Query & Get](https://milvus.io/docs/single-vector-search.md).

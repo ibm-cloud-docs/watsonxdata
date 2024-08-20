@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-20"
 
 keywords: lakehouse, watsonx data, roles, access
 subcollection: watsonxdata
@@ -48,13 +48,15 @@ To manage access, complete the following steps:
 
 1. Under the **Access control** tab, click **Add access**.
 
-1. In the **Add access** window, provide the following details.
+1. In the **Grant access to users and user groups** window, provide the following details.
 
    | Field | Description |
    |--------------------------|----------------|
    | Name | You can select individual users or a user group.|
    | Role | Select the role from the drop-down list. You can assign roles based on the component type. For more information, see [Roles and privileges.]({{site.data.keyword.ref-role_priv-link}}){: external} |
    {: caption="Table 1. Add user" caption-side="bottom"}
+
+   
 
 1. Click **Add**. The user is added and assigned the role.
 
