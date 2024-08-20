@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-20"
 
 keywords: lakehouse, watsonx data, roles, access
 subcollection: watsonxdata
@@ -48,7 +48,7 @@ To manage access, complete the following steps:
 
 1. Under the **Access control** tab, click **Add access**.
 
-1. In the **Add access** window, provide the following details.
+1. In the **Grant access to users and user groups** window, provide the following details.
 
    | Field | Description |
    |--------------------------|----------------|
