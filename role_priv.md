@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-21"
 
 keywords: lakehouse, watsonx data, privileges, roles, access
 
@@ -38,7 +38,7 @@ Use the **Access control** page to manage users and roles in {{site.data.keyword
 
 The following tables describe the privileges that you can assign to roles and associated permissions:
 
-## Formation, Instance, and Install
+## Instance and Install
 {: #formation_instance_install}
 
 ### Default admin access
@@ -56,13 +56,13 @@ IAM formation non-admins (Operator, Editor, Viewer) have the default user access
 
 | Action | Admin | User | Metastore Access |
 |-------|------|------|---------|
-| Create Presto engines | ✓ |   |    |
+| Create Presto (Java) or Presto (C++) engines | ✓ |   |    |
 | Create or register Spark engines | ✓ |   |    |
 | Create Milvus services | ✓ |   |    |
 | Delete Milvus services | ✓ |   |    |
 | View Milvus services | ✓ |   |    |
 | Restart the internal HMS | ✓ |   |    |
-| Scale the Presto engines | ✓ |   |    |
+| Scale the Presto (Java) or Presto (C++) engines | ✓ |   |    |
 | Unregister any bucket | ✓ |   |    |
 | Unregister any DB Connection | ✓ |   |    |
 | Activate cataloged buckets (restart HMS) | ✓ |   |    |
@@ -71,7 +71,7 @@ IAM formation non-admins (Operator, Editor, Viewer) have the default user access
 | Access the metastore | ✓ |   | ✓ |
 {: caption="Table 1. Resource-level permissions" caption-side="bottom"}
 
-## Engine (Presto)
+## Engine (Presto (Java) or Presto (C++))
 {: #engine_presto}
 
 ### Default admin access
@@ -89,7 +89,7 @@ Formation admins (IAM) have the default admin access.
 | Pause and resume | ✓ | ✓ |    |     |
 | Restart | ✓ | ✓ |    |     |
 | Associate and disassociate catalog | ✓ | ✓ |    |     |
-| Access the Presto query monitor UI | ✓ | ✓ |    |     |
+| Access the Presto (Java) or Presto (C++) query monitor UI | ✓ | ✓ |    |     |
 | View existence (infra page and `…/api/…/` engines) | ✓ | ✓ | ✓ |     |
 | Run workloads against the engine | ✓ | ✓ | ✓ |     |
 {: caption="Table 2. Resource-level permissions" caption-side="bottom"}
