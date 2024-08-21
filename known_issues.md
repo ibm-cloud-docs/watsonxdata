@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-16"
+lastupdated: "2024-08-21"
 
 keywords: lakehouse
 
@@ -33,6 +33,15 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+
+## `ALTER TABLE` operation fails in Spark job submission
+{: #known_issues13596}
+
+Spark jobs that creates a schema, table, and then attempt an `ALTER TABLE` operation may encounter an `authz.AccessControlException` due to insufficient permissions.
+
+This occurs because, even though the schema and table creation are successful, the job tries to execute the `ALTER TABLE` operation before the metastore data is updated with the newly created schema and table details.
+
+**Workaround:** To prevent access denied errors, you must provide a delay in time between each operations that involves creation of new schemas or tables within the same Python script.
 
 ## Ingestion is not possible in non-interactive mode using Presto
 {: #known_issues22131}
