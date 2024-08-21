@@ -24,18 +24,10 @@ To access the ADLS and ABS compatible buckets:
 1. Get the DAS endpoint from the {{site.data.keyword.lakehouse_short}} information window. Click the `i` icon on the home page to open the information window.
 2. Replace the ADLS or ABS endpoint with the DAS endpoint in your Java code. Replace the access name with the encoded value as follows:
 
-    **[IBM Cloud]{: tag-blue}**
       ```bash
       base64{<crn>|Basic base64{ibmlhapikey_<user_id>:<IAM_APIKEY>}}
       ```
       {: codeblock}
-
-    **[Amazon Web Services (AWS)]{: tag-magenta}**
-      ```bash
-      base64{<crn>|Basic base64{ibmlhapikey_ServiceId-<service_id>:<APIKEY>}}
-      ```
-      {: codeblock}
-
 
       To get the Base64 encoded string, use one of the following commands:
 
