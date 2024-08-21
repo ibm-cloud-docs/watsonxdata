@@ -289,8 +289,4 @@ toc:
                   - nsp_trbleshtng_cert-error.md
                   - nsp_trbleshtng_permisn.md
                   - nsp_trbleshtng_timout.md
-            - topicgroup:
-                label: Milvus
-                topics:
-                  - milvus_memory_ts.md
       - get-help.md
