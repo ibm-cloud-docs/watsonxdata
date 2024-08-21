@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-21"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -11,10 +11,10 @@ subcollection: watsonxdata
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Submitting Spark application by using CAS to access data
+# Submitting Spark application by using DAS to access data
 {: #smbit_cas_nsp}
 
-You can submit Spark application by accessing watsonx.data data without object store credentials. If the Spark application (that you want to submit) uses data that resides in an Object Store (COS, AWS S3 and Minio), you can use Content Aware Storage (CAS) to access the data (without using the object store credentials) and submit the application.
+You can submit Spark application by accessing watsonx.data data without object store credentials. If the Spark application (that you want to submit) uses data that resides in an Object Store (COS, AWS S3 and Minio), you can use Data Access Service (DAS) to access the data (without using the object store credentials) and submit the application.
 
 ## Prerequisites
 {: #smbit_cas_preq}
@@ -77,7 +77,7 @@ You can submit Spark application by accessing watsonx.data data without object s
     * `<token>` : The bearer token. For more information about generating the token, see [Generating a bearer token](https://cloud.ibm.com/apidocs/watsonxdata#authentication).
     * `<crn_instance>` : The CRN of the watsonx.data instance.
     * `<cos_endpoint>`: The direct endpoint of the Cloud Object Storage bucket. For example, s3.direct.us-south.cloud-object-storage.appdomain.cloud.
-    * `<cas_endpoint>` : The Content Aware Storage (CAS) endpoint. To get the CAS endpoint, see [Getting CAS endpoint](watsonxdata?topic=watsonxdata-cas_ep).
+    * `<cas_endpoint>` : The Data Access Service (DAS) endpoint. To get the DAS endpoint, see [Getting DAS endpoint](watsonxdata?topic=watsonxdata-cas_ep).
     * `<username>` : The username for your watsonx.data instance. Here, ibmlhapikey.
     * `<apikey>` : The value must be in the format : `echo -n "<username>:<your Zen API key>" | base64`. Here, `<user_id>` is the IBM Cloud id of the user whose apikey is used to access the data bucket. The `<IAM_APIKEY>` here is the API key of the user accessing the Object store bucket. To generate API key, log in into the watsonx.data console and navigate to Profile > Profile and Settings > API Keys and generate a new API key.
     * `<user-application-bucket-name>` : The name of the Cloud Object Storage.

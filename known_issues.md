@@ -57,12 +57,12 @@ After a successful ingestion job, the schema or table may not be immediately vis
 
 **Workaround:** Refresh your browser or refresh the catalogs or schemas from the **Data manager** page after an ingestion job status is changed to **Finished** to make sure that the UI is updated with the newly created schema or table. Once the UI is refreshed, you can proceed to run another ingestion job on the same schema or tables that were just created.
 
-## Spark application submission fails when CAS (Content Aware Storage) is enabled
+## Spark application submission fails when DAS (Data Access Service) is enabled
 {: #known_issues15132}
 
-CAS does not currently support buckets or object storage that use HTTP endpoints.
+DAS does not currently support buckets or object storage that use HTTP endpoints.
 
-**Workaround:** You can disable CAS or make sure that your buckets or object storage are configured with HTTPS endpoints.
+**Workaround:** You can disable DAS or make sure that your buckets or object storage are configured with HTTPS endpoints.
 
 ## Attempting to read Parquet v2 tables through Presto (C++) results in an error
 {: #known_issues12582trial}

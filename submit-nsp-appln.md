@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-21"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -19,8 +19,8 @@ subcollection: watsonxdata
 Submitting Spark application by using native Spark engine
 : To do that, see [Submitting Spark application by using native Spark engine](watsonxdata?topic=watsonxdata-smbit_nsp).
 
-Submitting Spark application by using CAS to access data
-: You can submit Spark application by accessing watsonx.data data without object store credentials. For more information, see [Submitting Spark application by using CAS to access data](watsonxdata?topic==watsonxdata-smbit_cas_nsp).
+Submitting Spark application by using DAS to access data
+: You can submit Spark application by accessing watsonx.data data without object store credentials. For more information, see [Submitting Spark application by using DAS to access data](watsonxdata?topic==watsonxdata-smbit_cas_nsp).
 
 Submitting Spark application that ingests data into a Delta Lake catalog
 : To do that, see [Working with Delta Lake catalog](watsonxdata?topic=watsonxdata-delta_nsp).

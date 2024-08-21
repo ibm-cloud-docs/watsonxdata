@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-21"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -11,10 +11,10 @@ subcollection: watsonxdata
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Content Aware Storage (CAS) endpoint
+# Data Access Service (DAS) endpoint
 {: #cas_ep}
 
-Use a CAS endpoint to access {{site.data.keyword.lakehouse_short}} Object Storage bucket data to avoid exposing bucket credentials by any chance. Your CAS endpoint is:
+Use a DAS endpoint to access {{site.data.keyword.lakehouse_short}} Object Storage bucket data to avoid exposing bucket credentials by any chance. Your DAS endpoint is:
 
 ```bash
 https://cas-<region>.lakehouse.appdomain.cloud

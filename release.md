@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-08-13"
+lastupdated: "2024-08-21"
 
 keywords: watsonxdata, release notes
 
@@ -69,11 +69,11 @@ For more information, see [Arrow Flight service](watsonxdata?topic=watsonxdata-a
 
 * The Spark access control extension allows additional authorization, enhancing security at the time of application submission. If you enable the extension in the spark configuration, only authorized users are allowed to access and operate IBM {{site.data.keyword.lakehouse_short}} catalogs through Spark jobs. For more information, see [Enhancing Spark application submission using Spark access control extension](watsonxdata?topic=watsonxdata-spark-extnsn){: external}.
 
-* IBM {{site.data.keyword.lakehouse_short}} now supports object storage proxy and signature for Azure Data Lake Storage and Azure Blob Storage. For more information, see [Using CAS proxy to access ADLS and ABS compatible buckets](watsonxdata?topic=watsonxdata-cas_proxy_adls){: external}.
+* IBM {{site.data.keyword.lakehouse_short}} now supports object storage proxy and signature for Azure Data Lake Storage and Azure Blob Storage. For more information, see [Using DAS proxy to access ADLS and ABS compatible buckets](watsonxdata?topic=watsonxdata-cas_proxy_adls){: external}.
 
 * Lightweight Directory Access Protocol (LDAP) is now provided for Teradata and Db2 data sources. The user needs to set up this configuration at the server level. For Teradata, explicitly choose the authentication mechanism type as LDAP in the UI. For more information, [Teradata](watsonxdata?topic=watsonxdata-teradata_database){: external}.
 
-CAS proxy to access ADLS and ABS buckets and LDAP enhancements are Tech preview in version 2.0.1.
+DAS proxy to access ADLS and ABS buckets and LDAP enhancements are Tech preview in version 2.0.1.
 {: note}
 
 * Milvus now supports partition-level isolation for users. Administrators can authorize specific user actions on partitions. For more information, see [Service (Milvus)](watsonxdata?topic=watsonxdata-role_priv#milvus){: external}.
@@ -492,7 +492,7 @@ You can now run the following time-travel queries by using branches and tags in 
 
 
 **Access Cloud Object Storage without credentials**
-You can now access your Cloud Object Storage bucket without credentials, by using the Content Aware Storage (CAS) endpoint. For more information about getting CAS endpoint, see [Getting CAS endpoint](watsonxdata?topic=watsonxdata-cas_ep).
+You can now access your Cloud Object Storage bucket without credentials, by using the Data Access Service (DAS) endpoint. For more information about getting DAS endpoint, see [Getting DAS endpoint](watsonxdata?topic=watsonxdata-cas_ep).
 
 
 
