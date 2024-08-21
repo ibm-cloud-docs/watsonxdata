@@ -42,5 +42,5 @@ If a single collection doesn't fit in the memory, you cannot query the collectio
 
 - Reduce the collection size by doing the following:
 
-    - Delete rows
+    - Delete rows.
     - Extract the required data from the collection, drop the collection, and then reset the size. Alternatively, continue to use the upgraded size without modifying the collection.
