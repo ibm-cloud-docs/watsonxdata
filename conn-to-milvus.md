@@ -47,23 +47,23 @@ Make sure that the following items are installed or available:
 
 - For REST API calls:
 
-  ```bash
-  print(fmt.format("start connecting to Milvus"))
-  connections.connect(host="<host>", port="<port>", secure=True, server_name="localhost", user="apikey", password="<api-key>")
-  has = utility.has_collection("hello_milvus")
-  print(f"Does collection hello_milvus exist in Milvus: {has}")
-  ```
-  {: codeblock}
+    ```bash
+    print(fmt.format("start connecting to Milvus"))
+    connections.connect(host="<host>", port="<port>", secure=True, server_name="localhost", user="apikey", password="<api-key>")
+    has = utility.has_collection("hello_milvus")
+    print(f"Does collection hello_milvus exist in Milvus: {has}")
+    ```
+    {: codeblock}
 
 - For GRPC calls:
 
-   ```bash
-  print(fmt.format("start connecting to Milvus"))
-  connections.connect(host="<host>", port="<port>", secure=True, server_name="localhost", user="ibmlhapikey", password="<api-key>")
-  has = utility.has_collection("hello_milvus")
-  print(f"Does collection hello_milvus exist in Milvus: {has}")
-  ```
-  {: codeblock}
+    ```bash
+    print(fmt.format("start connecting to Milvus"))
+    connections.connect(host="<host>", port="<port>", secure=True, server_name="localhost", user="ibmlhapikey", password="<api-key>")
+    has = utility.has_collection("hello_milvus")
+    print(f"Does collection hello_milvus exist in Milvus: {has}")
+    ```
+    {: codeblock}
 
 ## By using Token
 {: #conn-to-milvusatoken}
