@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-08-21"
+lastupdated: "2024-08-22"
 
 keywords: watsonxdata, release notes
 
@@ -128,7 +128,7 @@ For more information, see [Azure Data Lake Storage Gen2](watsonxdata?topic=watso
 **Query Workspace**
 {: #31JULY_10_2024}
 
-* You can run queries on all tables under a schema through the SQL query workspace without specifying the path <catalog>.<schema> by selecting the required catalogs and schemas from the new drop down list. For more information, [Running SQL queries](watsonxdata?topic=watsonxdata-run_sql){: external}.
+* You can run queries on all tables under a schema through the SQL query workspace without specifying the path `<catalog>.<schema>` by selecting the required catalogs and schemas from the new drop down list. For more information, [Running SQL queries](watsonxdata?topic=watsonxdata-run_sql){: external}.
 
 **watsonx.data pricing plans**
 {: #31JULY_11_2024}
@@ -285,7 +285,7 @@ For more information, see [Using S3 proxy to access S3 and S3 compatible buckets
 {: #JULY_16_2024}
 
 The mixed case feature flag, which allows to switch between case sensitive and case insensitive behavior in Presto (Java), is available. The flag is set to OFF by default and can be set to ON during the deployment of watsonx.data.
-For more information, see[ Presto (Java) mixed-case support overview](watsonxdata?topic=watsonxdata-mixed_case_overview).
+For more information, see [Presto (Java) mixed-case support overview](watsonxdata?topic=watsonxdata-mixed_case_overview).
 
 **New storage type Google Cloud Storage**
 {: #JULY_17_2024}

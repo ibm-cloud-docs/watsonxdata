@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-21"
+lastupdated: "2024-08-22"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -62,7 +62,7 @@ The topic describes the procedure to run a Spark application that ingests data i
    {: class="comparison-tab-table"}
    {: row-headers}
 
-The value of `<user-authentication-string>` must be in the format `echo -n '<user>:<apikey>' | base64 `.  Here, `<user_id>` is the IBM Cloud ID of the user whose apikey is used to access the data bucket. The `<IAM_APIKEY>` here is the API key of the user accessing the Object store bucket. To generate API key, log in into the watsonx.data console and navigate to Profile > Profile and Settings > API Keys and generate a new API key. If you generate a new API key, your old API key becomes invalid.
+The value of `<user-authentication-string>` must be in the format `echo -n '<user>:<apikey>' | base64`.  Here, `<user_id>` is the IBM Cloud ID of the user whose apikey is used to access the data bucket. The `<IAM_APIKEY>` here is the API key of the user accessing the Object store bucket. To generate API key, log in into the watsonx.data console and navigate to Profile > Profile and Settings > API Keys and generate a new API key. If you generate a new API key, your old API key becomes invalid.
 {: important}
 
 8. After you submit the Spark application, you receive a confirmation message with the application ID and Spark version. Save it for reference.
