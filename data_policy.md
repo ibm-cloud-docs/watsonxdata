@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-22"
 
 keywords: lakehouse, access, data, policy, watsonx data
 
@@ -68,9 +68,9 @@ To maintain data security, you can create access policies for the following at t
         If you choose a single table, you can select one, more than one, or all columns. If you choose more than one table, you cannot select any columns. The policy applies to all columns of the tables.
         {: note}
 
-   - **Buckets**
+   - **Storage**
 
-     1. Select a bucket.
+     1. Select a storage.
      1. Choose an object. Choose **Regular Expression** to enter the object path manually or **Explore object path** to search and select the object.
 
    - **Eligible services**

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-21"
+lastupdated: "2024-08-22"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -11,15 +11,15 @@ subcollection: watsonxdata
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Using Data Access Service (DAS) to access ADLS and ABS compatible buckets
+# Using Data Access Service (DAS) to access ADLS and ABS compatible storages
 {: #cas_proxy_adls}
 
-External applications and query engines can access the Azure Data Lake Storage (ADLS) and Azure Blob Storage (ABS) compatible buckets that are managed by {{site.data.keyword.lakehouse_short}} through DAS proxy.
+External applications and query engines can access the Azure Data Lake Storage (ADLS) and Azure Blob Storage (ABS) compatible storages that are managed by {{site.data.keyword.lakehouse_short}} through DAS proxy.
 
 DAS proxy support for ADLS and ABS works only with AccountKey to pass {{site.data.keyword.lakehouse_short}} credential. Using SASToken to pass {{site.data.keyword.lakehouse_short}} credential is not supported.
 {: important}
 
-To access the ADLS and ABS compatible buckets:
+To access the ADLS and ABS compatible storages:
 
 1. Get the DAS endpoint from the {{site.data.keyword.lakehouse_short}} information window. Click the `i` icon on the home page to open the information window.
 2. Replace the ADLS or ABS endpoint with the DAS endpoint in your Java code. Replace the access name with the encoded value as follows:
@@ -45,7 +45,7 @@ To access the ADLS and ABS compatible buckets:
 3. Replace the container name in the Java code as follows:
 
    ```bash
-   cas/v1/proxy/<bucketname in watsonx.data>
+   cas/v1/proxy/<storage name in watsonx.data>
    ```
    {: codeblock}
 
@@ -58,7 +58,7 @@ To access the ADLS and ABS compatible buckets:
       String accountName = "<ADLS or ABS account name>|base64{<instanceid>|ZenApikey base64{username:<apikey>}}";
       String accountKey = "any string";
       String endPoint = "<DAS endpoint>";
-      String containerName ="cas/v1/proxy/<bucketname in watsonx.data>";
+      String containerName ="cas/v1/proxy/<storagename in watsonx.data>";
       String endpoint = String.format(endPoint,accountName);
 
       BlobServiceClient blobServiceClient = new BlobServiceClientBuilder()

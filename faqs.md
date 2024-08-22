@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-12"
+lastupdated: "2024-08-22"
 
 keywords: watsonxdata, faq
 
@@ -63,9 +63,9 @@ The key features of IBM® {{site.data.keyword.lakehouse_short}} are:
 * Cost-effective, simple object storage is available across hybrid-cloud and multicloud environments.
 * Integration with a robust ecosystem of IBM’s best-in-class solutions and third-party services to enable easy development and deployment of key use cases.
 
-**What is the maximum size of the default IBM managed bucket?**
+**What is the maximum size of the default IBM managed storage?**
 
-The IBM-managed bucket is a default 10 GB bucket.
+The IBM-managed storage is a default 10 GB storage.
 
 ## Presto (Java)
 {: #presto}
@@ -120,9 +120,9 @@ From the IBM® {{site.data.keyword.lakehouse_short}} web console, go to Infrastr
 
 To configure a catalog with an engine, see [Associating a catalog with an engine](watsonxdata?topic=watsonxdata-asso-cat-eng).
 
-**How can I configure a bucket?**
+**How can I configure a storage?**
 
-From the IBM® {{site.data.keyword.lakehouse_short}} web console, go to Infrastructure manager to configure a bucket. For more information, see [Adding a bucket-catalog pair](watsonxdata?topic=watsonxdata-reg_bucket).
+From the IBM® {{site.data.keyword.lakehouse_short}} web console, go to Infrastructure manager to configure a storage. For more information, see [Adding a storage-catalog pair](watsonxdata?topic=watsonxdata-reg_bucket).
 
 ## Access
 {: #access}
@@ -229,9 +229,9 @@ You can use the Query workspace interface in IBM® {{site.data.keyword.lakehous
 {: faq}
 {: support}
 
-**What are the storage bucket options available?**
+**What are the storage options available?**
 
-The storage bucket options available are IBM Storage Ceph, IBM Cloud Object Storage (COS), AWS S3, and MinIO object storage.
+The storage options available are IBM Storage Ceph, IBM Cloud Object Storage (COS), AWS S3, and MinIO object storage.
 
 **What type of data files can be ingested?**
 
@@ -272,8 +272,8 @@ The lite plan is provided for you to try the basic features of watsonx.data and 
 
 Key supported features:
 1. Ability to pause and resume Presto (Java) engine.
-2. Ability to connect to an IBM Cloud-provided Cloud Object Storage (COS) bucket and provide credentials to your own COS or S3 bucket.
-3. Ability to delete Presto (Java), Milvus, and connections to your own bucket.
+2. Ability to connect to an IBM Cloud-provided Cloud Object Storage (COS) and provide credentials to your own COS or S3 storage.
+3. Ability to delete Presto (Java), Milvus, and connections to your own storage.
 
 Limitations:
 1. It is limited to provisioning a single instance per resource group.
@@ -295,7 +295,7 @@ You can delete the lite plan instance from the resource group or IBM cloud resou
 **The lite plan has ended. How do I upgrade to the enterprise plan?**
 
 Either before or after your lite plan has concluded, you can create a paid account whether 'Subscription' or 'Pay as you go' IBM Cloud. Now, you can create your new {{site.data.keyword.lakehouse_short}} instance. The enterprise plan is available on IBM Cloud and AWS environments.
-You may create an enterprise plan instance once you have created a paid IBM cloud account (either 'Subscription' or 'Pay as you go') and then you can use a Cloud Object Store bucket that you own to store data.
+You may create an enterprise plan instance once you have created a paid IBM cloud account (either 'Subscription' or 'Pay as you go') and then you can use a Cloud Object Store storage that you own to store data.
 For more information, see [How to create instance for {{site.data.keyword.lakehouse_short}} enterprise plan](watsonxdata?topic=watsonxdata-getting-started) and see [How to use a Cloud Object Store bucket that you own to store data](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-quick_start).
 
 **How do I save data from a lite plan to an enterprise plan?**

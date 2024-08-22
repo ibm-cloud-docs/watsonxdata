@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-12"
+lastupdated: "2024-08-22"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -85,7 +85,7 @@ To simplify the steps, when you log in to the {{site.data.keyword.lakehouse_shor
 
 2. Click **Finish and go**. This displays the **Infrastructure manager** page.
 
-3. In the **Infrastructure manager** page, you can view the engine (Presto (Java)), and already provisioned bucket and catalogs. You can add single Starter sized Milvus service, small sized Spark engine, additional buckets and catalogs from the **Add Components** list.
+3. In the **Infrastructure manager** page, you can view the engine (Presto (Java)), and already provisioned storage and catalogs. You can add single Starter sized Milvus service, small sized Spark engine, additional storages and catalogs from the **Add Components** list.
 
 You cannot scale the existing engine or service or add a new engine (or service). To add a new engine or service, you must delete the existing engine or service.
 

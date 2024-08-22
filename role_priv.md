@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-21"
+lastupdated: "2024-08-22"
 
 keywords: lakehouse, watsonx data, privileges, roles, access
 
@@ -63,10 +63,10 @@ IAM formation non-admins (Operator, Editor, Viewer) have the default user access
 | View Milvus services | ✓ |   |    |
 | Restart the internal HMS | ✓ |   |    |
 | Scale the Presto (Java) or Presto (C++) engines | ✓ |   |    |
-| Unregister any bucket | ✓ |   |    |
+| Unregister any storage | ✓ |   |    |
 | Unregister any DB Connection | ✓ |   |    |
-| Activate cataloged buckets (restart HMS) | ✓ |   |    |
-| Register and unregister own bucket | ✓ | ✓ | ✓ |
+| Activate cataloged storagees (restart HMS) | ✓ |   |    |
+| Register and unregister own storage | ✓ | ✓ | ✓ |
 | Register and unregister own DB connection | ✓ | ✓ | ✓ |
 | Access the metastore | ✓ |   | ✓ |
 {: caption="Table 1. Resource-level permissions" caption-side="bottom"}
@@ -210,7 +210,7 @@ Formation admins (IAM) have the default admin access.
 | Collection `HasPartition` | ✓ | ✓ | ✓ |  | ✓ | ✓ | ✓  |
 {: caption="Table 4. Resource-level permissions" caption-side="bottom"}
 
-## Bucket
+## storage
 {: #bucket}
 
 ### Default admin access (only if creator)
@@ -224,30 +224,30 @@ Formation admins (IAM) have the default admin access.
 | Action | Admin | Writer | Reader | Users without an explicit role |
 |-------|------|------|---------|---------|
 | Unregister | ✓ |   |    |     |
-| Update bucket properties (credentials) | ✓ |   |    |     |
+| Update storage properties (credentials) | ✓ |   |    |     |
 | Grant and revoke access | ✓ |   |    |     |
 | Modify files | ✓ | ✓ |    |     |
-| Browse (bucket browser in UI) | ✓ | ✓ | ✓ |     |
-| View existence (infra page and `…/api/…/` buckets) | ✓ | ✓ | ✓ | ✓ |
+| Browse (storage browser in UI) | ✓ | ✓ | ✓ |     |
+| View existence (infra page and `…/api/…/` storages) | ✓ | ✓ | ✓ | ✓ |
 {: caption="Table 5. Resource-level permissions" caption-side="bottom"}
 
-If you want to unregister or delete a bucket, you must first deactivate the bucket.
+If you want to unregister or delete a storage, you must first deactivate the storage.
 {: note}
 
 #### S3 REST API permissions (specific to IBM Spark and S3 proxy)
 {: #s3restapi}
 
-Users can get relative bucket role for all sub-folders and files in a bucket or can be granted file action for particular folders or files. The following tables explain the bucket-level and data-object-level S3 REST API permissions.
+Users can get relative storage role for all sub-folders and files in a storage or can be granted file action for particular folders or files. The following tables explain the storage-level and data-object-level S3 REST API permissions.
 
 The following tables are applicable only if you are using IBM Spark that by default uses an S3 signature or if you are using S3 proxy.
 {: note}
 
-| Bucket role | S3 REST API permission |
+| storage role | S3 REST API permission |
 | --- | --- |
 | Writer |GET; HEAD; PUT; POST; PATCH; DELETE  |
 | Reader |GET; HEAD  |
 | Admin | GET; HEAD; PUT; POST; PATCH; DELETE |
-{: caption="Table 6. Bucket level access control in Access control > Infrastructure or Infrastructure manger > select bucket and assign roles" caption-side="bottom"}
+{: caption="Table 6. storage level access control in Access control > Infrastructure or Infrastructure manger > select storage and assign roles" caption-side="bottom"}
 
 | Data object action | S3 REST API permission |
 | --- | --- |

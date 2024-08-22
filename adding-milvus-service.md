@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-13"
+lastupdated: "2024-08-22"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -50,11 +50,11 @@ Complete the following steps to add Milvus as a service in {{site.data.keyword.l
     |  | **Small**: Recommended for **10 million vectors**, 64 index parameters, 1024 segment size, and 384 dimensions. |
     |  | **Medium**: Recommended for **50 million vectors**, 64 index parameters, 1024 segment size, and 384 dimensions. |
     |  | **Large**: Recommended for **100 million vectors**, 64 index parameters, 1024 segment size, and 384 dimensions. |
-    | Add storage bucket | Associate an external bucket for the **Small**, **Medium**, or **Large** sizes. For **Starter** size, you can also select an IBM-managed bucket. To associate an external bucket, you must have the bucket configured.|
-    | Path | For external buckets, specify the path where you want to store vectorized data files.|
+    | Add storage bucket | Associate an external storage for the **Small**, **Medium**, or **Large** sizes. For **Starter** size, you can also select an IBM-managed storage. To associate an external storage, you must have the storage configured.|
+    | Path | For external storages, specify the path where you want to store vectorized data files.|
     {: caption="Table 1. Adding Milvus service" caption-side="bottom"}
 
-    For more information about adding external buckets, see [Adding a storage-catalog pair]({{site.data.keyword.ref-reg_bucket-link}}){: external}.
+    For more information about adding external storages, see [Adding a storage-catalog pair]({{site.data.keyword.ref-reg_bucket-link}}){: external}.
 
     If the schema of the collection changes (an increase in the number of fields in a collection or increase in the size of the `varchar` field beyond 256 characters, or if multiple vector fields are added into the collection), the number of records might decrease.
     {: important}
@@ -62,7 +62,7 @@ Complete the following steps to add Milvus as a service in {{site.data.keyword.l
     Milvus service can connect to a storage without a catalog. You can perform the actions on Milvus even after disabling the storage.
     {: note}
 
-    You must provide the endpoint for buckets used by Milvus with the region for region-specific buckets like S3 and without trailing slashes. For example: `https://s3.<REGION>.amazonaws.com`.
+    You must provide the endpoint for storages used by Milvus with the region for region-specific storages like S3 and without trailing slashes. For example: `https://s3.<REGION>.amazonaws.com`.
     {: important}
 
 5. Click **Create**.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-21"
+lastupdated: "2024-08-22"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -11,12 +11,12 @@ subcollection: watsonxdata
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Using Data Access Service (DAS) proxy to access S3 and S3 compatible buckets
+# Using Data Access Service (DAS) proxy to access S3 and S3 compatible storages
 {: #cas_proxy}
 
-External applications and query engines can access the S3 and S3 compatible buckets that are managed by {{site.data.keyword.lakehouse_short}} through DAS proxy.
+External applications and query engines can access the S3 and S3 compatible storages that are managed by {{site.data.keyword.lakehouse_short}} through DAS proxy.
 
-To access the S3 and S3 compatible buckets:
+To access the S3 and S3 compatible storages:
 
 1. Get the DAS endpoint from the {{site.data.keyword.lakehouse_short}} information window. Click the `i` icon on the home page to open the information window.
 1. Replace the S3 endpoint with the DAS endpoint in your Java code.
