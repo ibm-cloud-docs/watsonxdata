@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-22"
+lastupdated: "2024-08-23"
 
 keywords: watsonxdata, faq
 
@@ -295,7 +295,7 @@ You can delete the lite plan instance from the resource group or IBM cloud resou
 **The lite plan has ended. How do I upgrade to the enterprise plan?**
 
 Either before or after your lite plan has concluded, you can create a paid account whether 'Subscription' or 'Pay as you go' IBM Cloud. Now, you can create your new {{site.data.keyword.lakehouse_short}} instance. The enterprise plan is available on IBM Cloud and AWS environments.
-You may create an enterprise plan instance once you have created a paid IBM cloud account (either 'Subscription' or 'Pay as you go') and then you can use a Cloud Object Store storage that you own to store data.
+You may create an enterprise plan instance once you have created a paid IBM cloud account (either 'Subscription' or 'Pay as you go') and then you can use a Cloud Object Store bucket that you own to store data.
 For more information, see [How to create instance for {{site.data.keyword.lakehouse_short}} enterprise plan](watsonxdata?topic=watsonxdata-getting-started) and see [How to use a Cloud Object Store bucket that you own to store data](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-quick_start).
 
 **How do I save data from a lite plan to an enterprise plan?**

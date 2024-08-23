@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-23"
 
 keywords: watsonx.data, ikc, configuring, knowledgecatalog
 subcollection: watsonxdata
@@ -89,7 +89,7 @@ For Enabling IKC Integration, ensure to have the following prerequisites.
    | Field | Description |
    |-------|-------------|
    | Service | Select **IBM Knowledge Catalog**. |
-   | Bucket catalogs | Select the applicable bucket catalogs for IKC governance. |
+   | Storage catalogs | Select the applicable storage catalogs for IKC governance. |
    | IKC endpoint  | Configure the IKC API url. |
    {: caption="Table 1. Ingrate service" caption-side="bottom"}
 
