@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-21"
+lastupdated: "2024-08-23"
 
 keywords: lakehouse
 
@@ -43,13 +43,6 @@ This occurs because, even though the schema and table creation are successful, t
 
 **Workaround:** To prevent access denied errors, you must provide a delay in time between each operations that involves creation of new schemas or tables within the same Python script.
 
-## Ingestion is not possible in non-interactive mode using Presto
-{: #known_issues22131}
-
-Ingestion is not possible in non-interactive mode when using the Presto mode of ingestion due to an issue.
-
-**Workaround:** You can set the environment variable in interactive mode to run the ingestion job using Presto.
-
 ## Delayed UI update after successful ingestion jobs
 {: #known_issues24181}
 
@@ -89,13 +82,6 @@ When you attempt to read Parquet v2 tables through Presto (C++) that were create
    create table <catalog name>.<schema name>.<table name> as (select * from <originaltablename>;
    ```
    {: codeblock}
-
-## Users are able to search data without specifying a partition in Milvus service
-{: #known_issues14562}
-
-Users can search data without specifying a partition in the `partition_names` field, bypassing intended access controls and potentially exposing sensitive data.
-
-**Workaround:** You must explicitly specify the partitions that you are authorized to access in the `partition_names` field.
 
 ## Spark ingestion currently does not support special characters like quotation marks, back ticks, and parentheses for partitioned table column names.
 {: #known_issues12970}
@@ -294,11 +280,6 @@ Schema must be specified when session schema is not set
 Table does not exist
 ```
 {: codeblock}
-
-## Discrepancy in access policy enforcement between user interface (UI) and `ibm-lh data-copy` utility
-{: #known_issues6438}
-
-It is noticed that user defined access policies are not enforced when unauthorized users perform data ingestion by using `ibm-lh data-copy` utility. Whereas, the same policy restricts unauthorized users from performing data ingestion in the UI. This inconsistency in access policy enforcement can lead to unintended data ingestion by unauthorized users.
 
 ## String literal interpretation in Presto (Java)
 {: #known_issues6042}
