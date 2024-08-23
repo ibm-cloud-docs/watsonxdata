@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-23"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -233,7 +233,7 @@ Follow the steps to run the Spark sample Python file.
 
 1. Save the following sample python file.
 1. Upload the Python file to the Cloud Object Storage bucket. You must maintain the Spark applications and their dependencies in a Cloud Object Storage bucket and not mix them with data buckets.
-1. Generate the IAM token for the {{site.data.keyword.iae_full_notm}} token. For more information about how to generate an IAM token, see [IAM token](https://test.cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token)
+1. Generate the IAM token for the {{site.data.keyword.iae_full_notm}} token. For more information about how to generate an IAM token, see [IAM token](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-con-presto-serv).
 1. Run the following curl command to submit the Spark application:
 
 ```bash
