@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-23"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -115,5 +115,4 @@ Ensure you have the following details:
 {: #ranger_4}
 
 * In Apache Iceberg catalog, an error occurs if a policy is not defined for the snapshots views related to the tables in Ranger. You must manually define policies in Apache Ranger to eliminate the error.
-* The Ranger integration is supported only for the Presto (Java) engine.
 * watsonx.data supports only access control feature for Apache Ranger integration in 2.0.0 release.
