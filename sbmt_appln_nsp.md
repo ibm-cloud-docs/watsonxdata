@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-23"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -136,6 +136,8 @@ To enable your Spark application to work with the watsonx.data catalog and stora
 ```bash
 spark.hive.metastore.client.plain.username=ibmlhapikey
 spark.hive.metastore.client.plain.password=<api-key-of-the-user-which-has-metastore-admin-role>
-spark.hadoop.wxd.apiKey=Basic base64(ibmlhapikey_ibmcloudid:apikey)
+spark.hadoop.wxd.apiKey=Basic base64(ibmlhapikey_<ibmcloudid>:<apikey>)
 ```
 {: codeblock}
+
+The username is by default `ibmlhapikey`. The apiKey must be in the format : echo -n "ibmlhapikey_<ibmcloudid>:<apikey>" | base64.
