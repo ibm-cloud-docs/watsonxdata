@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-08-22"
+lastupdated: "2024-08-23"
 
 keywords: watsonxdata, release notes
 
@@ -306,9 +306,11 @@ You can now add a small-sized Spark engine (single node) in the {{site.data.keyw
 {: #MAY_02_2024}
 
 * **Working with Jupyter Notebooks from Spark labs**
+
 : You can now install the Jupyter extension from the VS Code Marketplace inside your Spark lab and work with Jupyter Notebooks. For more information, see [Create Jupyter Notebooks](watsonxdata?topic=watsonxdata-lab_nsp#dev_lab_02).
 
 * **Accessing Spark UI from Spark labs**
+
 You can now access the Spark user interface (UI) from Spark labs to monitor various aspects of running a Spark application. For more information, see [Accessing Spark UI from Spark labs](watsonxdata?topic=watsonxdata-smbit_nsp#lab_nsp-ui).
 
 **New region to provision for IBM Cloud instance**

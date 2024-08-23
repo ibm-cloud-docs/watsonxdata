@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-22"
+lastupdated: "2024-08-23"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -67,14 +67,3 @@ The value of `<user-authentication-string>` must be in the format `echo -n '<use
 
 8. After you submit the Spark application, you receive a confirmation message with the application ID and Spark version. Save it for reference.
 9. Log in to the watsonx.data cluster, access the Engine details page. In the Applications tab, use application ID to list the application and track the stages. For more information, see [View and manage applications](watsonxdata?topic=watsonxdata-mng_appltn).
-
-
-
-
-
-    
-
-
-
-
-
