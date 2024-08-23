@@ -134,10 +134,13 @@ You can submit a Spark application by running a CURL command. Complete the follo
 To enable your Spark application to work with the watsonx.data catalog and storage, add the following configuration to your application payload:
 
 ```bash
-spark.hive.metastore.client.plain.username=ibmlhapikey
-spark.hive.metastore.client.plain.password=<api-key-of-the-user-which-has-metastore-admin-role>
-spark.hadoop.wxd.apiKey=Basic base64(ibmlhapikey_<ibmcloudid>:<apikey>)
+spark.hadoop.wxd.apiKey=Basic <base64value>
 ```
 {: codeblock}
 
-The username is by default `ibmlhapikey`. The apiKey must be in the format : echo -n "ibmlhapikey_<ibmcloudid>:<apikey>" | base64.
+The username is by default `ibmlhapikey` and `<base64value>` is derieved using the following command
+
+```bash
+ echo -n "ibmlhapikey_<ibmcloudid>:<apikey>" | base64
+```
+{: codeblock}
