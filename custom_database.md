@@ -30,7 +30,7 @@ subcollection: watsonxdata
 # Custom data source
 {: #custom_database}
 
-You can now use the Custom data source to create data sources that are not provided by the built-in connectors. Custom data source can be used for connectors that are already supported by Presto as per the Presto documentation but not listed in IBM {{site.data.keyword.lakehouse_full}} supported connectors or data sources. This feature is applicable for Presto (Java) and Presto (C++) engines. For Presto (C++) engine, only Hive, Apache Iceberg and Arrow Flight service custom catalogs can be associated.
+You can now use the Custom data source to create data sources that are not provided by the built-in connectors. Custom data source can be used for connectors that are already supported by Presto as per the Presto documentation but not listed in IBM {{site.data.keyword.lakehouse_full}} supported connectors or data sources. This feature is applicable for Presto (Java) and Presto (C++) engines. For Presto (C++) engine, only Hive, Apache Iceberg, Arrow Flight service, and Custom data sources can be associated.
 {: shortdesc}
 
 
