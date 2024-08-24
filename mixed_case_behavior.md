@@ -49,14 +49,10 @@ The following section lists the behaviors of connectors if mixed-case feature fl
    * **Hive**:
 
      * The alias name is case-sensitive for `WITH` clause.
-     * The `CREATE TABLE` statement is case-sensitive within a single query in `WHERE` clause.
-     * Table names that are provided in the keywords `WHERE`, `HAVING`, and `GROUP BY` are case-sensitive.
 
    * **Iceberg**:
 
      * The alias name is case-sensitive for `WITH` clause.
-     * The `CREATE TABLE` statement is case-sensitive within a single query in `WHERE` clause.
-     * Table names provided in the keywords `WHERE`, `HAVING`, and `GROUP BY` are case-sensitive.
      * Column names in the `ALTER table RENAME` and `ALTER table DROP` are case-sensitive and accept only lowercase.
 
    * **MongoDB**:
