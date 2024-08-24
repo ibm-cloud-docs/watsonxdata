@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-24"
 
 keywords: lakehouse, mixed-case behavior, watsonx.data
 
@@ -48,12 +48,13 @@ The following section lists the behaviors of connectors if mixed-case feature fl
 
    * **Hive**:
 
-     * When referencing the data within the `WITH` clause, it is essential to use the alias name in lowercase during its definition.
+     * The alias name is case-sensitive for `WITH` clause.
      * The `CREATE TABLE` statement is case-sensitive within a single query in `WHERE` clause.
      * Table names that are provided in the keywords `WHERE`, `HAVING`, and `GROUP BY` are case-sensitive.
 
    * **Iceberg**:
 
+     * The alias name is case-sensitive for `WITH` clause.
      * The `CREATE TABLE` statement is case-sensitive within a single query in `WHERE` clause.
      * Table names provided in the keywords `WHERE`, `HAVING`, and `GROUP BY` are case-sensitive.
      * Column names in the `ALTER table RENAME` and `ALTER table DROP` are case-sensitive and accept only lowercase.
