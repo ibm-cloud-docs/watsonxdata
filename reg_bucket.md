@@ -77,8 +77,10 @@ To add a storage-catalog pair, complete the following steps:
 ## Limitations for SQL statements
 {: #sql_limitations}
 
-1. For **Iceberg**, **Memory** and **Hive** connectors, `DROP SCHEMA` can do `RESTRICT` by default.
-2. For database-based catalogs the `CREATE SCHEMA`, `CREATE TABLE`, `DROP SCHEMA`, `DROP TABLE`, `DELETE`, `DROP VIEW`, `ALTER TABLE`, and `ALTER SCHEMA` statements are not available in the **Data Manager** UI.
+1. For **Iceberg** connector, `UPDATE` query with sub-query is not supported.
+2. For **Iceberg** connector, `UPDATE` query with mixed-case column is not supported.
+3. For **Iceberg**, **Memory** and **Hive** connectors, `DROP SCHEMA` can do `RESTRICT` by default.
+4. For database-based catalogs the `CREATE SCHEMA`, `CREATE TABLE`, `DROP SCHEMA`, `DROP TABLE`, `DELETE`, `DROP VIEW`, `ALTER TABLE`, and `ALTER SCHEMA` statements are not available in the **Data Manager** UI.
 
 ## Limitations for data types
 {: #datatypes_limitations}
