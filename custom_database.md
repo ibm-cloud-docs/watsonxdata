@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-24"
 
 keywords: lakehouse, database, watsonx.data
 
@@ -27,20 +27,20 @@ subcollection: watsonxdata
 {:video: .video}
 
 
-# Custom database feature
+# Custom data source
 {: #custom_database}
 
-A database is one of the data sources that you can register and use in IBM® {{site.data.keyword.lakehouse_full}}. A catalog defines the schemas and metadata for a data source. You can now use the custom catalog to create connections to data stores that are not provided by the built-in connectors. Custom database feature can be used for connectors that are already supported by Presto as per the Presto documentation but not listed in IBM {{site.data.keyword.lakehouse_full}} supported connectors or databases. This feature is applicable for Presto (Java) and Presto (C++) engines. For Presto (C++) engine, only Hive, Apache Iceberg and Arrow Flight service custom catalogs can be associated.
+You can now use the Custom data source to create data sources that are not provided by the built-in connectors. Custom data source can be used for connectors that are already supported by Presto as per the Presto documentation but not listed in IBM {{site.data.keyword.lakehouse_full}} supported connectors or data sources. This feature is applicable for Presto (Java) and Presto (C++) engines. For Presto (C++) engine, only Hive, Apache Iceberg and Arrow Flight service custom catalogs can be associated.
 {: shortdesc}
 
 
-To add a custom database-catalog pair, complete the following steps.
+To add a custom data source, complete the following steps.
 
 1. Log in to the {{site.data.keyword.lakehouse_short}} console.
 2. From the navigation menu, select **Infrastructure manager**.
-3. To add a database, click **Add component** and select **Add database**.
-4. In the **Add database** window, select custom database from the **Database type** drop-down list.
-5. Configure the following deatils for Custom database:
+3. To define and connect a data source, click **Add component**.
+4. In the **Data sources** section, select **Custom data source**.
+5. Configure the following details:
 
 
     Use of this feature may crash your Presto (Java) engine if configured incorrectly. IBM does not provide support for use of this feature..
@@ -58,6 +58,14 @@ To add a custom database-catalog pair, complete the following steps.
     | connector.name=     | Enter the name of the database connector that you want to add as specified in Presto (Java) documentation.  |
     | Encryption           | Encrypting values of the keys are stored.  |
     | Associated catalog | Enter the name of the catalog. This catalog is automatically associated with your database. |
+    | Create |  Click Create to create the data source.|
     {: caption="Table 1. Register database" caption-side="bottom"}
 
-6. Click **Create**.
+You can use the Custom data source for the following connectors in IBM watsonx.data for Presto (Java) engine:
+
+1. Local File connector: The Local File connector is used to display the http request logs of a worker. Use the custom data source option with the following properties:
+* connector.name=localfile
+* presto-logs.http-request-log.location=var/log
+* presto-logs.http-request-log.pattern=http-request.log*
+2. Black Hole connector: The Black Hole connector is designed for high-performance testing of other components. Use the custom data source option with the following property:
+* connector.name=blackhole
