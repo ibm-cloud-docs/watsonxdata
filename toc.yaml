@@ -251,6 +251,7 @@ toc:
       topics:
       - pricing_plan.md
       - ae_limits.md
+      - connection_info.md
       - link:
             label: Presto SQL statements
             href: https://www.ibm.com/docs/en/watsonx/watsonxdata/2.0.0?topic=presto-sql-statements
