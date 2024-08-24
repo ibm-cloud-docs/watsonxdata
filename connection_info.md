@@ -40,7 +40,6 @@ You can now find the connectivity information for {{site.data.keyword.lakehouse_
  * **Engine and service connection details**
  * Select the checkbox for Generate JSON for IBM Cloud Pak for Data and watsonx if you are connecting to IBM watsonx.data from IBM Cloud Pak for Data or from watsonx.ai.
  * You can select one engine for the JSON snippet.
-
 2. The **Instance details** page provides the following details. To open the Instance details, click the i icon on the home page.
  * Region
  * Plan type
