@@ -26,6 +26,6 @@ Resource groups help to manage query execution and resource allocation. Using re
 
 For more information about resource groups, see [Resource Groups](https://prestodb.io/docs/current/admin/resource-groups.html).
 
-For more information about Presto resource group configuration in watsonx.data, see [Configuring Presto resource groups](watsonxdata?topic=watsonxdata-conf_rcrs_grp).
+For more information about Presto resource group configuration in {{site.data.keyword.lakehouse_short}}, see [Configuring Presto resource groups](watsonxdata?topic=watsonxdata-conf_rcrs_grp).
 
 For more information about the resource group properties that you can define in the resource group JSON file, see [Resource group properties](watsonxdata?topic=watsonxdata-resource_grp_pptys).
