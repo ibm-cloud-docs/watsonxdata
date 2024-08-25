@@ -24,9 +24,9 @@ The following sections cover the resource group properties that you can configur
 
 | Property name | Type | Required/Optional | Description |
 | --- | --- | --- | --- |
-| [`rootGroups`](#rootgroups-properties) | Array | Required | Defines the specifications for resource groups. |
-| [`selectors`](#selectors-properties) | Array | Required | Specifies the selector configurations for the resource groups. |
-| [`cpuQuotaPeriod`](#cpuquotaperiod-properties) | String | Optional | Specifies the CPU quota period. This property must match with the pattern `^\d+(.\d+)?[smhd]$`. |
+| [`rootGroups`](#rootGroups_pptys) | Array | Required | Defines the specifications for resource groups. |
+| [`selectors`](#selectors_pptys) | Array | Required | Specifies the selector configurations for the resource groups. |
+| [`cpuQuotaPeriod`](#cpuQuotaPeriod_prpty) | String | Optional | Specifies the CPU quota period. This property must match with the pattern `^\d+(.\d+)?[smhd]$`. |
 {: caption="Table 1. Main properties" caption-side="bottom"}
 
 ## `rootGroups` properties
@@ -40,7 +40,7 @@ The following sections cover the resource group properties that you can configur
 | `softConcurrencyLimit` | Integer or null | Optional | Specifies the soft concurrency limit. Minimum value: 0. Maximum value: 2147483647. The value must not start with `0`. For example, `01`, `05`. Specify the values as `1`, `5`. `0` alone is a valid value. |
 | `maxRunning` | Integer or null | Optional | Specifies the maximum running count. Minimum value: 0. Maximum value: 2147483647. The value must not start with `0`. For example, `01`, `05`. Specify the values as `1`, `5`. `0` alone is a valid value.|
 | `hardConcurrencyLimit` | Integer | Required (If `maxRunning` value is available, `hardConcurrencyLimit` takes up that value. If `maxRunning` is not set, you must set a value for `hardConcurrencyLimit`.) | Specifies the hard concurrency limit. Minimum value: 0. Maximum value: 2147483647. The value must be greater than or equal to `softConcurrencyLimit`. It must not start with `0`. For example, `01`, `05`. Specify the values as `1`, `5`. `0` alone is a valid value. |
-| `schedulingPolicy` | String (Following are the available values:`fair`, `weighted`, `weighted_fair`, `query_priority`. These values are not case-sensitive. | Optional | Specifies the scheduling policy. |
+| `schedulingPolicy` | String (Following are the available values: `fair`, `weighted`, `weighted_fair`, `query_priority`. These values are not case-sensitive.) | Optional | Specifies the scheduling policy. |
 | `schedulingWeight` | Integer or null | Optional | Specifies the scheduling weight. Allowed values (minimum to maximum): 1 to 2147483647. The value must not start with `0`. For example, `01`, `05`. Specify the values as `1`, `5`. `0` alone is a valid value. If a subgroup has `schedulingWeight`, all of the corresponding siblings in that subgroup must have `schedulingWeight`. |
 | `subGroups` | Array or null | Optional | Specifies the subgroups within the resource group. Subgroups have the same rules for different properties as in the resource group. |
 | `jmxExport` | Boolean or null | Optional | Indicates whether JMX export is enabled. |
