@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-25"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -74,3 +74,15 @@ You can customize the coordinator and worker configuration properties through an
 | `http-server.max-request-header-size` | String | Limit {1, 1e13}; supported values are numbers with or without units TB, MB, GB, B, KB |
 | `experimental.internal-communication.max-task-update-size` | String | Limit {1, 1e13}; supported values are numbers with or without units TB, MB, GB, B, KB |
 {: caption="Table 1. Configuration properties for Presto (Java) - coordinator and worker nodes" caption-side="bottom"}
+
+To enable fragment cache, you must set up a cache-enabled environment. To set up, patch the following properties into `/opt/presto/etc/config.properties`.
+
+```bash
+fragment-result-cache.enabled: true
+fragment-result-cache.base-directory: file:///mnt/tmpfs/fragment
+fragment-result-cache.max-cached-entries: 1000000
+fragment-result-cache.cache-ttl: 24h
+```
+{: codeblock}
+
+The mount path `/mnt/tmpfs/fragment` is by default available on a cache-enabled environment with the system's volume mounted on it.
