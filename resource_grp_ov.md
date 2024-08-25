@@ -11,7 +11,7 @@ subcollection: watsonxdata
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Resource groups overview
+# Resource groups
 {: #rg_ov}
 
 Resource groups help to manage query execution and resource allocation. Using resource groups, administrators can control the allocation and utilization of resources on a Presto cluster. Resource groups limit resource usage and enforce policy queues on queries.
