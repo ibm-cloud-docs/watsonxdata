@@ -44,7 +44,7 @@ To configure resource groups:
    The uploaded JSON file structure must match with the sample resource group file structure. To download the sample file, click **Download sample resource group**. The maximum allowed size of a file is 2 MB and the only file format that is supported is `.json`.
    {: important}
 
-   For more information about the resource group properties that you can define in the JSON file, see Resource group properties.
+   For more information about the resource group properties that you can define in the JSON file, see [Resource group properties](watsonxdata?topic=watsonxdata-resource_grp_pptys).
 1. Click **Add** to add the resource group.
 
    To delete a resource group, go to the overflow menu of the resource group and click **Delete**. A confirmation box opens. Click **Delete** to confirm deletion. You cannot delete a resource group if it is assigned to an engine.
