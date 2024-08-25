@@ -24,6 +24,7 @@ toc:
           - pcpp_ov.md
           - api_custom_ov.md
           - mixed_case_overview.md
+          - resource_grp_ov.md
       - topicgroup:
           label: Provisioning watsonx.data
           topics:
@@ -58,6 +59,7 @@ toc:
           - asso-cat-eng.md
           - explore-cat-obj.md
           - disso-cat-eng.md
+          - conf_rcrs_grp.md
       - topicgroup:
               label: Database-catalog pair
               topics:
@@ -269,6 +271,7 @@ toc:
       - api_custom_pcpp_cood.md
       - api_custom_pcpp_ctg.md
       - api_custom_pcpp_vlx.md
+      - resource_grp_pptys.md
       - link:
             label: watsonx.data APIs
             href: https://cloud.ibm.com/apidocs/watsonxdata
