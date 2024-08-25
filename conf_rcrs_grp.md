@@ -28,7 +28,7 @@ subcollection: watsonxdata
 # Configuring Presto resource groups
 {: #conf_rcrs_grp}
 
-You can configure one or more Presto resource groups in watsonx.data.
+You can configure one or more Presto resource groups in {{site.data.keyword.lakehouse_short}}.
 {: shortdesc}
 
 To configure resource groups:
