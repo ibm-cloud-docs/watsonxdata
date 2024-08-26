@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-13"
+lastupdated: "2024-08-26"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -90,6 +90,73 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 To enable your Spark application and ingestion to work with the {{site.data.keyword.lakehouse_short}} catalog and storage, you must have `MetastoreAdmin`, and `DataAccess` roles in the Service access and `Administrator` role in the Platform access, see [Managing IAM access for watsonx.data](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-iam).
  Without `Metastore admin` privilege, you cannot ingest data to storage using Native Spark engine. For more information about the Spark configuration, see [Working with the watsonx.data catalog and storage](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-smbit_nsp#view_smbit_nsp).
 {: note}
+
+Ingesting data
+
+1. Log in to {{site.data.keyword.lakehouse_full}} console.
+2. From the navigation menu, select **Data manager**.
+3. Click the **Ingest data** module. The **Ingest data** window opens.
+4. Select one of the storage options to proceed to the next page:
+
+   a. **Local System**: To select your files from your local system.
+
+   b. **Storages**: To select remote file(s) from your connected S3 compatible bucket(s).
+
+5. Follow the steps to ingest data from **Local system**:
+
+   i. Select a bucket from the **Select storage** drop-down. (You can also add a new storage bucket by clicking **Add +**).
+
+   ii. Select the required file type based on the source data. The available options are CSV, Parquet, and JSON.
+
+   iii. Select the files to be ingested from the **All files** tab. Selected files are listed in the **Files selected** tab. You can also preview the details of the selected files in the **File details** pane.
+
+   iv. In the **Target table** pane, select the target catalog from the **Select catalog** list. The selected catalog must be active to perform an ingestion job.
+
+   v. Choose one of the schema options:
+
+      1.  Existing schema: To ingest source data into an existing schema. Search or select a target schema listed in the **Select schema or enter new schema name (New)** dropdown.
+
+      2. New schema: Enter the target schema name in the **Select schema or enter new schema name (New)** to create a new schema from the source data.
+
+   vi. Select the corresponding Target table options based on the selection (above).
+
+      1. Existing table:To ingest source data into an existing table. Search or select a target table listed in the **Select table or enter new table name** dropdown.
+
+      2. New table: Enter the target table name in the **Select table or enter new table name** to create a new table from the source data.
+
+   vii. If required, modify the auto-generated ingestion Job ID in the **Job Details**.
+
+   viii. Select the IBM Analytics Engine (Spark) from the **Select engine** list. The registered Spark engines are listed here.
+
+   xi. Click **Done**. The submitted ingestion job can be found in the **Ingestion history** tab of the **Data manager** page.
+
+6. Follow the steps to ingest data from **Storages**:
+
+   i. Select a bucket from the **Select storage** drop-down. (You can also add a new storage bucket by clicking **Add +**).
+
+   ii. Select the required file type based on the source data. The available options are CSV, Parquet, and JSON.
+
+   iii. Select the files to be ingested from the **All files** tab. Selected files are listed in the **Files selected** tab. You can also preview the details of the selected files in the **File details** pane.
+
+   iv. In the **Target table** pane, select the target catalog from the **Select catalog** list. The selected catalog must be active to perform an ingestion job.
+
+   v. Choose one of the schema options:
+
+      1.  Existing schema: To ingest source data into an existing schema. Search or select a target schema listed in the **Select schema or enter new schema name (New)** dropdown.
+
+      2. New schema: Enter the target schema name in the **Select schema or enter new schema name (New)** to create a new schema from the source data.
+
+   vi. Select the corresponding Target table options based on the selection (above).
+
+      1. Existing table:To ingest source data into an existing table. Search or select a target table listed in the **Select table or enter new table name** dropdown.
+
+      2. New table: Enter the target table name in the **Select table or enter new table name** to create a new table from the source data.
+
+   vii. If required, modify the auto-generated ingestion Job ID in the **Job Details**.
+
+   viii. Select the IBM Analytics Engine (Spark) from the **Select engine** list. The registered Spark engines are listed here.
+
+   xi. Click **Done**. The submitted ingestion job can be found in the **Ingestion history** tab of the **Data manager** page.
 
 ## Limitations
 {: #limits001}
