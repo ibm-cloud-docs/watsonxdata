@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-23"
+lastupdated: "2024-08-26"
 
 keywords: watsonx.data, ikc, configuring, knowledgecatalog
 subcollection: watsonxdata
@@ -58,8 +58,8 @@ For Enabling IKC Integration, ensure to have the following prerequisites.
    | Name | Enter the name of the connection. |
    | Description | Enter a connection description. |
    |Connect to IBM watsonx.data on Cloud Pak for Data| Do not select the checkbox. |
-   | Hostname or IP address | Enter the {{site.data.keyword.lakehouse_short}} instance URL. |
-   | Port | Enter the port number. |
+   | Hostname or IP address | Enter the {{site.data.keyword.lakehouse_short}} instance URL. For more information about retrieving the Hostname, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection). |
+   | Port | Enter the port number. For more information about retrieving the Port, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection). |
    | Instance ID | Enter the instance ID. You can get the instance ID from the {{site.data.keyword.lakehouse_short}} instance home page (information icon). |
    | Instance name | Enter the {{site.data.keyword.lakehouse_short}} instance name. |
    | CRN | Enter the Cloud Resource Name. You can get the CRN from the {{site.data.keyword.lakehouse_short}} instance home page (information icon). |
