@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-23"
+lastupdated: "2024-08-26"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -190,4 +190,16 @@ For the list of properties that can be customized through an API for Presto (C++
 
 For properties that must be customized under the guidance of the watsonx.data support team, see [Properties to be customized under support guidance](watsonxdata?topic=watsonxdata-api_custom_wkr_pcpp#api_custom_sprt_pcpp).
 
+You can get System Access Control (SAC) plug-in logs with `DEBUG` information. To enable `DEBUG` logs of SAC plug-in in Presto, trigger the customization API and add `"com.ibm.openlakehouse.prestodb": "DEBUG"` under `logConfig`.
 
+```jason
+"logConfig": {
+           "coordinator": {
+               "com.ibm.openlakehouse.prestodb": "DEBUG"
+           },
+           "worker": {}
+       }
+```
+{: codeblock}
+
+For more information, see [Update presto engine](https://cloud.ibm.com/apidocs/watsonxdata#update-presto-engine).
