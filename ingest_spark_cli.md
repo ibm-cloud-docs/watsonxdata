@@ -77,7 +77,7 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
 
    |Environment variable name|Description|
    |-------|-----|
-   |`IBM_LH_BEARER_TOKEN`|Authorization bearer token. For more information, see https://cloud.ibm.com/docs/account?topic=account-iamtoken_from_apikey|
+   |`IBM_LH_BEARER_TOKEN`|Authorization bearer token. For more information, see https://cloud.ibm.com/docs/account?topic=account-iamtoken_from_apikey. For `USE_EXTERNAL_SPARK=true`, the bearer token should be generated with external Spark engine API key.|
    |`IBM_LH_SPARK_JOB_ENDPOINT`|Spark applications v4 endpoint for CPD and v3 endpoint for SaaS. To retrieve SaaS Spark Endpoint: https://cloud.ibm.com/docs/AnalyticsEngine?topic=AnalyticsEngine-retrieve-endpoints-serverless|
    |`HMS_CLIENT_USER`|User for Hive Metastore client. SaaS Spark implementation uses `ibmlhapikey`.|
    |`HMS_CLIENT_PASSWORD`|Password for Hive Metastore client. For SaaS, you can use the API key named `ibmlhapikey` from the cloud account where {{site.data.keyword.lakehouse_short}} has been deployed.|
@@ -92,7 +92,7 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
    |`USE_NATIVE_SPARK`|When native spark is used for ingestion, thigh parameter value must be `true`.|
    |`USE_EXTERNAL_SPARK`|When external spark is used for ingestion, thigh parameter value must be `true`.|
    |`IBM_LH_URL`|This parameter is used only when `USE_EXTERNAL_SPARK=true`. The value is `https://<lh_hostname>`. `<lh_hostname>` is the hostname of {{site.data.keyword.lakehouse_short}} instance.|
-   |`IBM_LH_USER_BEARER_TOKEN`|This parameter is used only when `USE_EXTERNAL_SPARK=true`. For more information, see https://cloud.ibm.com/docs/account?topic=account-iamtoken_from_apikey|
+   |`IBM_LH_USER_BEARER_TOKEN`|This parameter is used only when `USE_EXTERNAL_SPARK=true`. The bearer token should be generated with User API key. For more information, see https://cloud.ibm.com/docs/account?topic=account-iamtoken_from_apikey.|
    {: caption="Table 1" caption-side="bottom"}
 
 2. You can run ingestion jobs to ingest data in 2 ways, using a simple command line or a config file.
