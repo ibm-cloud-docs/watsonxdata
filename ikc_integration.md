@@ -7,6 +7,7 @@ lastupdated: "2024-08-26"
 keywords: watsonx.data, ikc, configuring, knowledgecatalog
 subcollection: watsonxdata
 
+
 ---
 
 {{site.data.keyword.attribute-definition-list}}
@@ -14,7 +15,7 @@ subcollection: watsonxdata
 # Integrating with IBM Knowledge Catalog (IKC)
 {: #ikc_integration}
 
-Integrating {{site.data.keyword.lakehouse_full}} with IBM Knowledge Catalog (IKC) provides self-service access to data assets for knowledge workers who need to use those data assets to gain insights.
+Integrating {{site.data.keyword.lakehouse_full}} with IBM Knowledge Catalog (IKC) provides self-service access to data assets (tables and views) for knowledge workers who need to use those data assets to gain insights.
 
 ## Before you begin
 {: #prereq_ikc}
@@ -28,7 +29,7 @@ For Enabling IKC Integration, ensure to have the following prerequisites.
 
 
 
-## Connect and import the table metadata from {{site.data.keyword.lakehouse_short}} to IKC
+## Connect and import the asset metadata from {{site.data.keyword.lakehouse_short}} to IKC
 {: #connect_import}
 {: step}
 
@@ -75,8 +76,8 @@ For Enabling IKC Integration, ensure to have the following prerequisites.
 1. Optional: Click **Test connection** to test the connection.
 1. Click **Create**. The connection is added to the catalog.
 1. Go to **Add to catalog** > **Connected assets**.
-1. In the connected asset, click **Select source** and navigate to the table you want to import.
-1. Select the table and click **Add**. The table asset is successfully added to IKC.
+1. In the connected asset, click **Select source** and navigate to the asset you want to import.
+1. Select the asset and click **Add**. The asset is successfully added to IKC.
 
 ## Configure IKC in {{site.data.keyword.lakehouse_full}} UI
 {: #conf_ikc}
