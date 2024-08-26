@@ -101,7 +101,7 @@ In this example, `sampleName` is a dynamic value. Special characters are not all
 - `peakMemory`
     - `min`:
         The property type is string. This property must match the pattern `^\s*(\d+(?:\.\d+)?)\s*([a-zA-Z]+)\s*$`.
-   - `max`
+    - `max`
         The property type is string. This property must match the pattern `^\s*(\d+(?:\.\d+)?)\s*([a-zA-Z]+)\s*$`.
 
 - `cpuTime`
