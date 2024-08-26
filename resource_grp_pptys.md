@@ -110,7 +110,7 @@ In this example, `sampleName` is a dynamic value. Special characters are not all
     - `max`:
       The property type is string. This property must match the pattern  `^\\d+(\\.\\d+)?[smhd]$`.
 
-## cpuQuotaPeriod properties
+## `cpuQuotaPeriod` properties
 {: #cpuQuotaPeriod_prpty}
 
 | Property name | Type   | Required/Optional | Description |
