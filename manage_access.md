@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-23"
+lastupdated: "2024-08-26"
 
 keywords: lakehouse, watsonx data, roles, access
 subcollection: watsonxdata
@@ -56,7 +56,8 @@ To manage access, complete the following steps:
    | Role | Select the role from the drop-down list. You can assign roles based on the component type. For more information, see [Roles and privileges.]({{site.data.keyword.ref-role_priv-link}})|
    {: caption="Table 1. Add user" caption-side="bottom"}
 
-   
+   You can select one or more users or user groups at the same time and select roles.
+   {: note}
 
 1. Click **Add**. The user is added and assigned the role.
 
