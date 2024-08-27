@@ -52,16 +52,16 @@ This release includes the following new data sources and storage enhancements:
 **Integration enhancements**
 {: #28Aug_2_2024}
 
-This release of watsonx.data introduces the following new or enhanced integrations with other services:
+This release of {{site.data.keyword.lakehouse_short}} introduces the following new or enhanced integrations with other services:
 
-* You can now use the governance capabilities of IBM Knowledge Catalog (IKC) for SQL views within the watsonx.data platform. For more information, see [Integrating with IBM Knowledge Catalog (IKC)](watsonxdata?topic=watsonxdata-ikc_integration){: external}.
+* You can now use the governance capabilities of IBM Knowledge Catalog (IKC) for SQL views within the {{site.data.keyword.lakehouse_short}} platform. For more information, see [Integrating with IBM Knowledge Catalog (IKC)](watsonxdata?topic=watsonxdata-ikc_integration){: external}.
 
-* IBM watsonx.data now supports Apache Ranger policies to govern data with Presto (C++) engines. For more information, see [Apache Ranger policy](watsonxdata?topic=watsonxdata-ranger_1){: external}.
+* IBM {{site.data.keyword.lakehouse_short}} now supports Apache Ranger policies to govern data with Presto (C++) engines. For more information, see [Apache Ranger policy](watsonxdata?topic=watsonxdata-ranger_1){: external}.
 
 **Engine and service enhancements**
 {: #28Aug_3_2024}
 
-This release of watsonx.data introduces the following engine and service enhancements:
+This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
 
 * Instance administrators can now configure resource groups in Presto. For more information, see `<link to be defined (to the associated topic>`.
 
@@ -71,18 +71,16 @@ This release of watsonx.data introduces the following engine and service enhance
 
 * You can now generate Number of Distinct Values (NDV) column statistics with the Iceberg Spark Analyze procedure to enhance the Spark Cost-Based Optimizer (CBO) for improved query planning.
 
-* You can now use the custom database option to connect to Black Hole and Local File connectors for the Presto (Java) engine. [Custom data source](watsonxdata?topic=watsonxdata-custom_database){: external}.
+* You can now use the custom data source option to connect to Black Hole and Local File connectors for the Presto (Java) engine. For more information, see [Custom data source](watsonxdata?topic=watsonxdata-custom_database){: external}.
 
-* You can now generate JSON snippet for Presto engine and copy/paste it over to the watonx.data Presto connector UI in IBM Cloud Pak for Data and watsonx to simplify the connection creation.
+* You can now generate JSON snippet for Presto engine and Milvus service. You can copy/paste it over to the {{site.data.keyword.lakehouse_short}} Presto and Milvus connector UI in IBM Cloud Pak for Data and watsonx to simplify the connection creation. For more information, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection){: external}.
 
-* You can now generate JSON snippet for Milvus service and copy/paste it over to the Milvus connector UI in IBM Cloud Pak for Data and watsonx to simplify the connection creation.
-
-The default value of the task.max-drivers-per-task property for Presto (Java) and Presto (C++) workers is now set based on the number of vCPUs.
+* The default value of the task.max-drivers-per-task property for Presto (Java) and Presto (C++) workers is now set based on the number of vCPUs.
 
 **Access management enhancements**
 {: #28Aug_4_2024}
 
-This release of watsonx.data introduces the following access management enhancements:
+This release of {{site.data.keyword.lakehouse_short}} introduces the following access management enhancements:
 
 * You can now control access to Presto (C++) engines. For more information, see [Engine (Presto (Java) or Presto (C++))](watsonxdata?topic=watsonxdata-role_priv#engine_presto){: external}.
 
@@ -93,9 +91,9 @@ This release of watsonx.data introduces the following access management enhancem
 **Ingestion enhancements**
 {: #28Aug_5_2024}
 
-This release of watsonx.data introduces the following ingestion enhancements:
+This release of {{site.data.keyword.lakehouse_short}} introduces the following ingestion enhancements:
 
-* Ingestion workflow in watsonx.data is now simplified to submit an ingestion job, and support local file ingestion. For more information, see [Ingesting data by using Spark through the web console](watsonxdata?topic=watsonxdata-ingest_spark_ui).
+* Ingestion workflow in {{site.data.keyword.lakehouse_short}} is now simplified to submit an ingestion job, and support local file ingestion. For more information, see [Ingesting data by using Spark through the web console](watsonxdata?topic=watsonxdata-ingest_spark_ui).
 * You can now ingest data using JSON file format. For more information, see [About data ingestion](watsonxdata?topic=watsonxdata-load_ingest_data).
 * CSV file properties are now available as parameters supporting `ibm-lh data-copy`. For more information, see [Options and parameters supported in ibm-lh tool](watsonxdata?topic=watsonxdata-cli_commands).
 * New environment variables are available for Spark ingestion through `ibm-lh tool` command line. For more information, see [Spark ingestion through ibm-lh tool command line](watsonxdata?topic=watsonxdata-ingest_spark_cli).
