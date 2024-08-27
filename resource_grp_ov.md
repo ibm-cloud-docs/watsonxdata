@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-25"
+lastupdated: "2024-08-27"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -21,7 +21,6 @@ Resource groups help to manage query execution and resource allocation. Using re
 {: #key_feat}
 
 - Resource groups can set limits on resource usage such as CPU time, memory usage, or total number of queries (especially in multi-tenant environments to ensure that no single user or query monopolizes the system resources).
-- Resource groups do not cause query failure in complete resource consumption. Instead, new queries are queued until the resources become available again.
 - Subgroups in resource groups allow hierarchical resource allocation. Each subgroup can have its own resource limits and policy queues.
 
 For more information about resource groups, see [Resource Groups](https://prestodb.io/docs/current/admin/resource-groups.html).
