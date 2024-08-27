@@ -178,10 +178,8 @@ toc:
             - topicgroup:
                 label: Submitting Spark application by using native Spark engine
                 topics:
-                  - sbmt_appln_nsp.md
                   - sbmt_das_spk.md
                   - spark-extnsn.md
-                  - sbmt_cas_nsp.md
                   - run_nativespk_hudi.md
                   - ae_auto-scaling-serverless-apps.md
             - topicgroup:
