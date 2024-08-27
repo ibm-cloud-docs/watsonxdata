@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-23"
+lastupdated: "2024-08-27"
 
 keywords: lakehouse
 
@@ -34,6 +34,22 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+## DB2 connector cannot access views created using external tools
+{: #known_issues24380}
+
+The DB2 connector in {{site.data.keyword.lakehouse_short}} currently allows access to the views created through the {{site.data.keyword.lakehouse_short}} instance or DBeaver. However, accessing views created with other tools such as Data Manager Console (DMC), Db2 command line (DB2 cmd), or any other third-party tools is not supported.
+
+## Unsupported special characters in schema and table creation
+{: #known_issues12662}
+
+The following special characters are not supported while creating schemas and tables:
+
+Schemas (Hive and Iceberg):  `{`, `[`, `(`, `)`
+
+Tables (Hive): `{`, `(`, `[`, `)`
+
+Tables (Iceberg): `$`, `@`, `{`, `[`, `)`, `(`
+
 ## `ALTER TABLE` operation fails in Spark job submission
 {: #known_issues13596}
 
@@ -60,7 +76,7 @@ DAS does not currently support buckets or object storage that use HTTP endpoints
 ## Attempting to read Parquet v2 tables through Presto (C++) results in an error
 {: #known_issues12582trial}
 
-When you attempt to read Parquet v2 tables through Presto (C++) that were created via Data manager in watsonx.data, it gives the following error:
+When you attempt to read Parquet v2 tables through Presto (C++) that were created via Data manager in {{site.data.keyword.lakehouse_short}}, it gives the following error:
 
    ```bash
    Error in ZlibDecompressionStream::Next
