@@ -39,6 +39,10 @@ toc:
       - quick_start.md
       - tut_query_db.md
       - tut_custbckt.md
+      - topicgroup:
+          label: Data federation use case
+          topics:
+            - tut_data_federation.md
   - navgroup:
       id: howto
       topics:
