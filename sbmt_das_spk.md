@@ -29,7 +29,7 @@ This topic provides the procedure to submit a Spark application by using native 
     {: note}
 
 
-### Submitting a Spark application without accessing the watsonx.data catalog
+## Submitting a Spark application without accessing the watsonx.data catalog
 {: #nsppk_preq_3}
 
 You can submit a Spark application by running a CURL command. Complete the following steps to submit a Python application.
@@ -60,7 +60,7 @@ Run the following curl command to submit the word count application.
     * `<spark_engine_id>` : The engine ID of the Spark engine.
     * `<token>` : The bearer token. For more information about generating the token, see Generating a bearer token.
 
-### Submitting a Spark application by accessing the watsonx.data catalog
+## Submitting a Spark application by accessing the watsonx.data catalog
 {: #nsppk_preq_2}
 
 To access data from a catalog that is associated with the Spark engine and perform some basic operations on that catalog, do the following:
@@ -90,7 +90,7 @@ Run the following curl command:
    * `<application_bucket_name>` : The name of the object storage containing your application code. You must pass the credentials of this storage if it is not registered with watsonx.data.
 
 
-### Sample Python application for Iceberg catalog Operations
+## Sample Python application for Iceberg catalog Operations
 {: #nsppk_preq_5}
 
 The following is the sample Python application to perform basic operations on data stored in an Iceberg catalog:
@@ -131,10 +131,10 @@ The following is the sample Python application to perform basic operations on da
 {: codeblock}
 
 
-## Accessing a non-catalog based storage
+## Accessing a non-catalog storage without using DAS
 {: #view_smbit_nsp-2}
 
-To access watsonx.data storage without using DAS, or to access the data from a non-catalog storage, pass HMAC credentials (access and secret keys) of the data bucket.
+To access watsonx.data storage without using Data Access Service (DAS), or to access the data from a non-catalog storage, pass HMAC credentials (access and secret keys) of the data bucket.
 
 ```bash
 curl --request POST --url
