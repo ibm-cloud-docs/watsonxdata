@@ -132,5 +132,5 @@ Following are some best practices:
 - Each collection's maximum size should be corresponding to the maximum number of vectors supported in a T-shirt size.
 - If you have multiple collections or partitions loaded, ensure that the sum of vectors in all loaded entities does not exceed the limit of the T-shirt size. You can still store more vectors than the T-shirt size limit as long as the number of vectors that are loaded is within the limit.
 
-During Milvus upgrade, there can be a slight delay in response for about 20 seconds. On-going searches and upsert queries might fail. You can retrieve the queries immediately after the upgrade.
+During Milvus upgrade, there can be a slight delay in response for about 20 seconds. On-going searches and upsert queries might fail. You can retrieve the queries immediately.
 {: note}
