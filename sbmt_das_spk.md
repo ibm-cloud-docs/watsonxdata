@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-26"
+lastupdated: "2024-08-27"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -66,7 +66,7 @@ You can submit a Spark application by running a CURL command. Complete the follo
 
 To access data from a catalog that is associated with the Spark engine and perform some basic operations on that catalog, do the following:
 
-Run the following curl command:
+    Run the following curl command:
 
 
     ```bash
