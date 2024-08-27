@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-24"
+lastupdated: "2024-08-27"
 
 keywords: lakehouse, database, watsonx.data
 
@@ -63,9 +63,9 @@ To add a custom data source, complete the following steps.
 
 You can use the Custom data source for the following connectors in IBM watsonx.data for Presto (Java) engine:
 
-1. Local File connector: The Local File connector is used to display the http request logs of a worker. Use the custom data source option with the following properties:
-* connector.name=localfile
-* presto-logs.http-request-log.location=var/log
-* presto-logs.http-request-log.pattern=http-request.log*
-2. Black Hole connector: The Black Hole connector is designed for high-performance testing of other components. Use the custom data source option with the following property:
-* connector.name=blackhole
+1. Local File connector: The Local File connector is used to display the http request logs of a worker. Use the custom data source option with the following properties. For more information, see [Local File connector](https://prestodb.io/docs/current/connector/localfile.html).
+ * connector.name=localfile
+ * presto-logs.http-request-log.location=var/log
+ * presto-logs.http-request-log.pattern=http-request.log*
+2. Black Hole connector: The Black Hole connector is designed for high-performance testing of other components. Use the custom data source option with the following property. For more information, see [Black Hole connector](https://prestodb.io/docs/current/connector/blackhole.html).
+ * connector.name=blackhole
