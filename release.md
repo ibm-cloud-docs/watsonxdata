@@ -97,7 +97,10 @@ This release of watsonx.data introduces the following access management enhancem
 
 This release of watsonx.data introduces the following ingestion enhancements:
 
+* Ingestion workflow in watsonx.data is now simplified to submit an ingestion job, and support local file ingestion. For more information, see [Ingesting data by using Spark through the web console](watsonxdata?topic=watsonxdata-ingest_spark_ui).
 * You can now ingest data using JSON file format. For more information, see [About data ingestion](watsonxdata?topic=watsonxdata-load_ingest_data).
+* CSV file properties are now available as parameters supporting `ibm-lh data-copy`. For more information, see [Options and parameters supported in ibm-lh tool](watsonxdata?topic=watsonxdata-cli_commands).
+* New environment variables are available for Spark ingestion through `ibm-lh tool` command line. For more information, see [Spark ingestion through ibm-lh tool command line](watsonxdata?topic=watsonxdata-ingest_spark_cli).
 
 
 ## 01 August 2024 - Version 2.0.1
