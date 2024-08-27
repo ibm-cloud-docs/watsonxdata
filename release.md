@@ -92,6 +92,12 @@ This release of watsonx.data introduces the following access management enhancem
 
 * You can now have System Access Control (SAC) plug-in logs with DEBUG information in Presto. For more information, see [API customization](watsonxdata?topic=watsonxdata-api_custom_ov){: external}.
 
+**Ingestion enhancements**
+{: #28Aug_5_2024}
+
+This release of watsonx.data introduces the following ingestion enhancements:
+
+* You can now ingest data using JSON file format. For more information, see [About data ingestion](watsonxdata?topic=watsonxdata-load_ingest_data).
 
 
 ## 01 August 2024 - Version 2.0.1
