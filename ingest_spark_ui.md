@@ -131,6 +131,5 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
 Following are some of the limitations of Spark ingestion:
 
-- Spark ingestion supports only source data files from object storage bucket.
 - The default buckets in {{site.data.keyword.lakehouse_short}} are not exposed to Spark engine. Hence, iceberg-bucket and hive-bucket are not supported for source or target table. Users can use their own MinIo or S3 compatible buckets that are exposed and accessible by Spark engine.
 - Multiple files of same file type must be selected in a single ingestion job.
