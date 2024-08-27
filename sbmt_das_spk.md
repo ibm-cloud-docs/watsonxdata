@@ -66,10 +66,10 @@ You can submit a Spark application by running a CURL command. Complete the follo
 
 To access data from a catalog that is associated with the Spark engine and perform some basic operations on that catalog, do the following:
 
-    Run the following curl command:
+Run the following curl command:
 
 
-    ```bash
+```bash
     curl --request POST --url
     https://<region>.lakehouse.cloud.ibm.com/lakehouse/api/v2/spark_engines/<spark_engine_id>/a
     pplications --header 'Authorization: Bearer <token>' --header 'Content-Type: application/json'
@@ -81,8 +81,8 @@ To access data from a catalog that is associated with the Spark engine and perfo
     "application": "s3a://<application-bucket-name>/iceberg.py"
     }
     }
-    ```
-    {: codeblock}
+```
+{: codeblock}
 
 
 
