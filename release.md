@@ -54,7 +54,7 @@ This release includes the following new data sources and storage enhancements:
 
 This release of watsonx.data introduces the following new or enhanced integrations with other services:
 
-* You can now use the governance capabilities of IBM Knowledge Catalog (IKC) for SQL views within the watsonx.data platform. For more information, see [Integrating with IBM Knowledge Catalog (IKC)](watsonxdata?topic=watsonxdata-ikc_integration){: external}).
+* You can now use the governance capabilities of IBM Knowledge Catalog (IKC) for SQL views within the watsonx.data platform. For more information, see [Integrating with IBM Knowledge Catalog (IKC)](watsonxdata?topic=watsonxdata-ikc_integration){: external}.
 
 * IBM watsonx.data now supports Apache Ranger policies to govern data with Presto (C++) engines. For more information, see [Apache Ranger policy](watsonxdata?topic=watsonxdata-ranger_1){: external}.
 
