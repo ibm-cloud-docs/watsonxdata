@@ -54,7 +54,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    a. **Local System**: To select your files from your local system.
 
-   b. **Storages**: To select remote file(s) from your connected S3 compatible bucket(s).
+   b. **Storages**: To select remote file(s) from your connected S3 compatible storages.
 
 5. If you selected **Local system**, complete the following steps:
 
@@ -90,7 +90,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
 6. If you selected **Storages**, complete the following steps:
 
-   i. Select a bucket from the **Select storage** drop-down.
+   i. Select a storage bucket from the **Select storage** drop-down.
 
     You can also add a new storage bucket by clicking **Add +** icon and **Add Storage** window opens. For more information on how to add storage, see [Add Storage](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-reg_bucket). You can add the new storage bucket as a permanent storage or a temporary storage by making a selection.
     {: note}

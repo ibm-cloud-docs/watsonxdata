@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-27"
 
 keywords: watsonxdata, schema
 
@@ -68,13 +68,13 @@ You can create schema from the **Data manager** page by using the web console.
 
    d. Do not use special character such as question mark (?) or asterisk (*) in schema name.
 
-Make sure to fulfil the [requirements]({{site.data.keyword.ref-reg_bucket-link}}) before creating a schema against a registed bucket. Otherwise, the system returns the following error message.
+Make sure to fulfil the [requirements]({{site.data.keyword.ref-reg_bucket-link}}) before creating a schema against a registed storage. Otherwise, the system returns the following error message.
 
 ```text
 Failed to create schema. Try the following measures to resolve the error:
  - Ensure you have the required permissions.
  - Enter the correct credentials.
- - Enter the correct storage path for the bucket.
- - Ensure the bucket is registered with watsonx.data and then retry.
+ - Enter the correct storage path for the storage.
+ - Ensure the storage is registered with watsonx.data and then retry.
 ```
 {: screen}

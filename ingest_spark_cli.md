@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-26"
+lastupdated: "2024-08-27"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -81,8 +81,8 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
    |`IBM_LH_SPARK_JOB_ENDPOINT`|Spark applications v4 endpoint for CPD and v3 endpoint for SaaS. To retrieve SaaS Spark Endpoint: https://cloud.ibm.com/docs/AnalyticsEngine?topic=AnalyticsEngine-retrieve-endpoints-serverless|
    |`HMS_CLIENT_USER`|User for Hive Metastore client. SaaS Spark implementation uses `ibmlhapikey`.|
    |`HMS_CLIENT_PASSWORD`|Password for Hive Metastore client. For SaaS, you can use the API key named `ibmlhapikey` from the cloud account where {{site.data.keyword.lakehouse_short}} has been deployed.|
-   |`SOURCE_S3_CREDS`|S3 credentials for the source file bucket in the format:`“AWS_ACCESS_KEY_ID=<access_key>,AWS_SECRET_ACCESS_KEY=<secret_key>,ENDPOINT_URL=<endpoint_url>,AWS_REGION=<region>,BUCKET_NAME=<bucket_name>”`|
-   |`TARGET_S3_CREDS`|S3 credentials for the target table bucket in the format: `“AWS_ACCESS_KEY_ID=<access_key>,AWS_SECRET_ACCESS_KEY=<secret_key>,ENDPOINT_URL=<endpoint_url>,AWS_REGION=<region>,BUCKET_NAME=<bucket_name>”`|
+   |`SOURCE_S3_CREDS`|S3 credentials for the source file storage in the format:`“AWS_ACCESS_KEY_ID=<access_key>,AWS_SECRET_ACCESS_KEY=<secret_key>,ENDPOINT_URL=<endpoint_url>,AWS_REGION=<region>,BUCKET_NAME=<bucket_name>”`|
+   |`TARGET_S3_CREDS`|S3 credentials for the target table storage in the format: `“AWS_ACCESS_KEY_ID=<access_key>,AWS_SECRET_ACCESS_KEY=<secret_key>,ENDPOINT_URL=<endpoint_url>,AWS_REGION=<region>,BUCKET_NAME=<bucket_name>”`|
    |`IBM_LH_SPARK_EXECUTOR_CORES`|Optional spark engine configuration setting for executor cores.|
    |`IBM_LH_SPARK_EXECUTOR_MEMORY`|Optional spark engine configuration setting for executor memory.|
    |`IBM_LH_SPARK_EXECUTOR_COUNT`|Optional spark engine configuration setting for executor count.|
@@ -175,11 +175,3 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
    - Regular syntax: `--target-tables <catalogname>.<schemaname>.<tablename>`.
    - Syntax with special character option 1: `--target-tables <catalogname>.<schemaname>."table\.name"`. Using this syntax, escape character `\` is used within double quotes to escape period(.). Escape character `\` is used only when special character period(.) is in the table name.
    - Syntax with special character option 2: `--target-tables <catalogname>.<schemaname>."'table.name'"`. Using this syntax, period(.) is not escaped nor need to use the escape character when using additional single quotes.
-
-## Limitations
-{: #limits}
-
-Following are some of the limitations of Spark ingestion:
-
-- Spark ingestion supports only source data files from object storage bucket. Local files are not supported.
-- The default buckets in watsonx.data are not exposed to Spark engine. Hence, iceberg-bucket and hive-bucket are not supported for source or target table. Users can use their own MinIo or S3 compatible buckets that are exposed and accessible by Spark engine.
