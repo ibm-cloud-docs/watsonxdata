@@ -52,12 +52,12 @@ Run the following curl command to submit the word count application.
 {: codeblock}
 
 
-    Parameters:
+Parameters:
 
-    * `<crn_instance>` : The CRN of the watsonx.data instance.
-    * `<region>`: The region where the Spark instance is provisioned.
-    * `<spark_engine_id>` : The engine ID of the Spark engine.
-    * `<token>` : The bearer token. For more information about generating the token, see Generating a bearer token.
+* `<crn_instance>` : The CRN of the watsonx.data instance.
+* `<region>`: The region where the Spark instance is provisioned.
+* `<spark_engine_id>` : The engine ID of the Spark engine.
+* `<token>` : The bearer token. For more information about generating the token, see Generating a bearer token.
 
 ## Submitting a Spark application by accessing the watsonx.data catalog
 {: #nsppk_preq_2}
