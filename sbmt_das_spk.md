@@ -36,9 +36,7 @@ You can submit a Spark application by running a CURL command. Complete the follo
 
 Run the following curl command to submit the word count application.
 
-
-
-    ```bash
+```bash
     curl --request POST --url
     https://<region>.lakehouse.cloud.ibm.com/lakehouse/api/v2/spark_engines/<spark_engine_id>/a
     pplications --header 'Authorization: Bearer <token>' --header 'Content-Type: application/json'
@@ -50,8 +48,9 @@ Run the following curl command to submit the word count application.
     ]
     }
     }'
-    ```
-    {: codeblock}
+```
+{: codeblock}
+
 
     Parameters:
 
