@@ -35,7 +35,6 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 ## Before you begin
 {: #spk_ing}
 
-* You must have the **Administrator** role and privileges in the catalog to do ingestion through the web console.
 * Add and register {{site.data.keyword.iae_full_notm}} (Spark). See [Registering an engine]({{site.data.keyword.ref-reg_engine-link}}).
 * Add storage for the source data files and target catalog. See [Adding a bucket-catalog pair]({{site.data.keyword.ref-reg_bucket-link}}).
 * Optionally, you can create a schema in the catalog for the target table. See [Creating schemas]({{site.data.keyword.ref-create_schema-link}}).
@@ -75,7 +74,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
       1.  Existing schema: To ingest source data into an existing schema. Search or select a target schema listed in the **Select schema or enter new schema name (New)** dropdown.
 
-      2. New schema: You can also create a new schema from the source data by typing the target schema name in the **Select schema or enter new schema name (New)**.
+      2. New schema: You can create a new schema from the source data by typing the target schema name in the **Select schema or enter new schema name (New)** filed and explicitly click Create.
 
    iv. Select the corresponding Target table options based on the selection (above).
 
@@ -125,11 +124,3 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
    viii. Select the IBM Analytics Engine (Spark) from the **Select engine** list. The registered Spark engines are listed here.
 
    xi. Click **Done**. The submitted ingestion job can be found in the **Ingestion history** tab of the **Data manager** page.
-
-## Limitations
-{: #limits001}
-
-Following are some of the limitations of Spark ingestion:
-
-- The default buckets in {{site.data.keyword.lakehouse_short}} are not exposed to Spark engine. Hence, iceberg-bucket and hive-bucket are not supported for source or target table. Users can use their own MinIo or S3 compatible buckets that are exposed and accessible by Spark engine.
-- Multiple files of same file type must be selected in a single ingestion job.
