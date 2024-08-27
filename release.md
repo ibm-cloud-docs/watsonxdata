@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-08-23"
+lastupdated: "2024-08-27"
 
 keywords: watsonxdata, release notes
 
@@ -63,6 +63,8 @@ This release of watsonx.data introduces the following new or enhanced integratio
 **Engine and service enhancements**
 {: #28Aug_3_2024}
 
+This release of watsonx.data introduces the following engine and service enhancements:
+
 * Instance administrators can now configure resource groups in Presto. For more information, see `<link to be defined (to the associated topic>`.
 
 * You can now use an API to execute queries and retrieve results. For more information, see [API](https://cloud.ibm.com/apidocs/watsonxdata#create-execute-query).
@@ -82,23 +84,13 @@ The default value of the task.max-drivers-per-task property for Presto (Java) an
 **Access management enhancements**
 {: #28Aug_4_2024}
 
+This release of watsonx.data introduces the following access management enhancements:
+
 * You can now control access to Presto (C++) engines. For more information, see [Engine (Presto (Java) or Presto (C++))](watsonxdata?topic=watsonxdata-role_priv#engine_presto){: external}.
 
 * You can now grant component access to users and user groups in batch. For more information, see [Managing user access](watsonxdata?topic=watsonxdata-manage_access){: external}.
 
 * You can now have System Access Control (SAC) plug-in logs with DEBUG information in Presto. For more information, see [API customization](watsonxdata?topic=watsonxdata-api_custom_ov){: external}.
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
