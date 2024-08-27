@@ -74,7 +74,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
       1.  Existing schema: To ingest source data into an existing schema. Search or select a target schema listed in the **Select schema or enter new schema name (New)** dropdown.
 
-      2. New schema: Enter a new schema name in the **Select schema or enter new schema name (New)** filed and explicitly click **Create `<new schema name>`** to create a new schema from the source data.
+      2. New schema: Enter a new schema name in the **Select schema or enter new schema name (New)** field and explicitly click **Create `<new schema name>`** to create a new schema from the source data.
 
    iv. Select the corresponding Target table options based on the selection (above).
 
@@ -111,7 +111,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
       1.  Existing schema: To ingest source data into an existing schema. Search or select a target schema listed in the **Select schema or enter new schema name (New)** dropdown.
 
-      2. New schema: Enter a new schema name in the **Select schema or enter new schema name (New)** filed and explicitly click **Create `<new schema name>`** to create a new schema from the source data.
+      2. New schema: Enter a new schema name in the **Select schema or enter new schema name (New)** field and explicitly click **Create `<new schema name>`** to create a new schema from the source data.
 
    vi. Select the corresponding Target table options based on the selection (above).
 
