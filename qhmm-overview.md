@@ -35,7 +35,7 @@ Query History Monitoring and Management (QHMM) is a service that stores and mana
 QHMM primarily aims to address the issue of data persistence for serviceability data. When the engine restarts or go offline, there are chances of losing valuable diagnostic data they generate. QHMM resolves the issue by storing such data in object storage solutions like COS (Cloud Object Storage) or Minio buckets. The data is organized in a structured folder hierarchy, making it easily accessible for users to retrieve and analyze.
 
 QHMM allows to retrieve the following diagnostic data:
-* Events generated against a running query in presto, following are the query events:
+* Events generated against a running query in Presto, following are the query events:
     * Query created event - event logged when a query is initiated.
     * Split completed event - split correspond to an individual task in a query execution. An event is logged when a split or a task is completed.
     * Query completed event - event logged when a query execution is completed.
