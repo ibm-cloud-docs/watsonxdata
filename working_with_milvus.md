@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-27"
 
 keywords: lakehouse, milvus, watsonx.data
 subcollection: watsonxdata
@@ -44,7 +44,7 @@ Milvus supports default values for scalar fields except a primary key field. You
 For more information, see [Insert entries](https://milvus.io/docs/insert-update-delete.md#Insert-Upsert--Delete).
 
 
-It is recommended to insert your data in batches due to following reasons:
+It is recommended to insert your data in batches due to the following reasons:
 
 - The number of vectors that can be ingested in a single GRPC API call is limited by the maximum message size that is allowed by Kafka. In IBM Cloud, the maximum limit of message size is limited to 1 MB.
 
@@ -131,3 +131,6 @@ Following are some best practices:
 - Don't ingest in parallel to all of the collections at once. Ingest sequentially and flush between ingests.
 - Each collection's maximum size should be corresponding to the maximum number of vectors supported in a T-shirt size.
 - If you have multiple collections or partitions loaded, ensure that the sum of vectors in all loaded entities does not exceed the limit of the T-shirt size. You can still store more vectors than the T-shirt size limit as long as the number of vectors that are loaded is within the limit.
+
+During Milvus upgrade, there can be a slight delay in response for about 20 seconds. On-going searches and upsert queries might fail. You can retrieve the queries immediately after the upgrade.
+{: note}
