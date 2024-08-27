@@ -34,9 +34,8 @@ This topic provides the procedure to submit a Spark application by using native 
 
 You can submit a Spark application by running a CURL command. Complete the following steps to submit a Python application.
 
-4. Run the following curl command to submit the word count application.
+Run the following curl command to submit the word count application.
 
-    Example 1:
 
 
     ```bash
