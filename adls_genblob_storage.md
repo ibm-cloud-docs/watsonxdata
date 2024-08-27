@@ -2,9 +2,9 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-13"
+lastupdated: "2024-08-22"
 
-keywords: lakehouse, bucket, catalog, watsonx.data
+keywords: lakehouse, storage, catalog, watsonx.data
 
 subcollection: watsonxdata
 
@@ -46,7 +46,7 @@ If you select **Azure Data Lake Storage Gen1 Blob** from the **Storage** section
  | Catalog type | Select the catalog type from the list. The recommended catalog is Apache Iceberg. The other options for catalog are Apache Hive, Apache Hudi, and Delta Lake. |
  | Catalog name | Enter the name of your catalog. |
  | Create | Click Create to create the storage. |
- {: caption="Table 1. Register bucket" caption-side="bottom"}
+ {: caption="Table 1. Register storage" caption-side="bottom"}
 
  Azure Data Lake Storage Gen2 and Azure Data Lake Storage Gen1 Blob storage do not support SAS authentication mode for Presto (Java) engine.
  {: note}

@@ -2,10 +2,11 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-26"
 
 keywords: watsonx.data, ikc, configuring, knowledgecatalog
 subcollection: watsonxdata
+
 
 ---
 
@@ -14,7 +15,7 @@ subcollection: watsonxdata
 # Integrating with IBM Knowledge Catalog (IKC)
 {: #ikc_integration}
 
-Integrating {{site.data.keyword.lakehouse_full}} with IBM Knowledge Catalog (IKC) provides self-service access to data assets for knowledge workers who need to use those data assets to gain insights.
+Integrating {{site.data.keyword.lakehouse_full}} with IBM Knowledge Catalog (IKC) provides self-service access to data assets (tables and views) for knowledge workers who need to use those data assets to gain insights.
 
 ## Before you begin
 {: #prereq_ikc}
@@ -24,10 +25,11 @@ For Enabling IKC Integration, ensure to have the following prerequisites.
 - A working {{site.data.keyword.lakehouse_short}} environment.
 - A working IBM Knowledge Catalog (IKC) environment.
 - Make sure that IBM Knowledge Catalog and {{site.data.keyword.lakehouse_short}} are configured with [service-to-service authorization](watsonxdata?topic=watsonxdata-s2s_auth) in {{site.data.keyword.Bluemix_notm}}.
+- Both {{site.data.keyword.lakehouse_short}} and IKC must be present in the {{site.data.keyword.Bluemix_notm}} environment.
 
 
 
-## Connect and import the table metadata from {{site.data.keyword.lakehouse_short}} to IKC
+## Connect and import the asset metadata from {{site.data.keyword.lakehouse_short}} to IKC
 {: #connect_import}
 {: step}
 
@@ -57,8 +59,8 @@ For Enabling IKC Integration, ensure to have the following prerequisites.
    | Name | Enter the name of the connection. |
    | Description | Enter a connection description. |
    |Connect to IBM watsonx.data on Cloud Pak for Data| Do not select the checkbox. |
-   | Hostname or IP address | Enter the {{site.data.keyword.lakehouse_short}} instance URL. |
-   | Port | Enter the port number. |
+   | Hostname or IP address | Enter the {{site.data.keyword.lakehouse_short}} instance URL. For more information about retrieving the Hostname, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection). |
+   | Port | Enter the port number. For more information about retrieving the Port, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection). |
    | Instance ID | Enter the instance ID. You can get the instance ID from the {{site.data.keyword.lakehouse_short}} instance home page (information icon). |
    | Instance name | Enter the {{site.data.keyword.lakehouse_short}} instance name. |
    | CRN | Enter the Cloud Resource Name. You can get the CRN from the {{site.data.keyword.lakehouse_short}} instance home page (information icon). |
@@ -74,8 +76,8 @@ For Enabling IKC Integration, ensure to have the following prerequisites.
 1. Optional: Click **Test connection** to test the connection.
 1. Click **Create**. The connection is added to the catalog.
 1. Go to **Add to catalog** > **Connected assets**.
-1. In the connected asset, click **Select source** and navigate to the table you want to import.
-1. Select the table and click **Add**. The table asset is successfully added to IKC.
+1. In the connected asset, click **Select source** and navigate to the asset you want to import.
+1. Select the asset and click **Add**. The asset is successfully added to IKC.
 
 ## Configure IKC in {{site.data.keyword.lakehouse_full}} UI
 {: #conf_ikc}
@@ -89,7 +91,7 @@ For Enabling IKC Integration, ensure to have the following prerequisites.
    | Field | Description |
    |-------|-------------|
    | Service | Select **IBM Knowledge Catalog**. |
-   | Bucket catalogs | Select the applicable bucket catalogs for IKC governance. |
+   | Storage catalogs | Select the applicable storage catalogs for IKC governance. |
    | IKC endpoint  | Configure the IKC API url. |
    {: caption="Table 1. Ingrate service" caption-side="bottom"}
 

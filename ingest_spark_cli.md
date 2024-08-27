@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-27"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -64,6 +64,11 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
    export IBM_LH_SPARK_EXECUTOR_COUNT=<value>
    export IBM_LH_SPARK_DRIVER_CORES=<value>
    export IBM_LH_SPARK_DRIVER_MEMORY=<value>
+   export INSTANCE_ID=<instance_id>
+   export USE_NATIVE_SPARK=<true/false>
+   export USE_EXTERNAL_SPARK=<true/false>
+   export IBM_LH_URL=https://<lh_hostname>
+   export IBM_LH_USER_BEARER_TOKEN=<token>
    ```
    {: codeblock}
 
@@ -72,21 +77,22 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
 
    |Environment variable name|Description|
    |-------|-----|
-   |`IBM_LH_BEARER_TOKEN`|Authorization bearer token.|
-   |   |CPD: https://cloud.ibm.com/apidocs/cloud-pak-data/cloud-pak-data-4.7.0#getauthorizationtoken|
-   |   |SaaS: https://cloud.ibm.com/docs/account?topic=account-iamtoken_from_apikey|
-   |`IBM_LH_SPARK_JOB_ENDPOINT`|Spark applications v4 endpoint for CPD and v3 endpoint for SaaS.|
-   |    |Refer to Step 1 in document: https://www.ibm.com/docs/en/cloud-paks/cp-data/4.7.x?topic=administering-managing-instances to retrieve CPD Spark Endpoint|
-   |    |To retrieve SaaS Spark Endpoint: https://cloud.ibm.com/docs/AnalyticsEngine?topic=AnalyticsEngine-retrieve-endpoints-serverless|
-   |`HMS_CLIENT_USER`|User for Hive Metastore client. CPD Spark implementation uses lakehouse. SaaS Spark implementation uses ibmlhapikey.|
-   |`HMS_CLIENT_PASSWORD`|Password for Hive Metastore client.|
-   |`SOURCE_S3_CREDS`|S3 credentials for the source file bucket in the format:`“AWS_ACCESS_KEY_ID=<access_key>,AWS_SECRET_ACCESS_KEY=<secret_key>,ENDPOINT_URL=<endpoint_url>,AWS_REGION=<region>,BUCKET_NAME=<bucket_name>”`|
-   |`TARGET_S3_CREDS`|S3 credentials for the target table bucket in the format: `“AWS_ACCESS_KEY_ID=<access_key>,AWS_SECRET_ACCESS_KEY=<secret_key>,ENDPOINT_URL=<endpoint_url>,AWS_REGION=<region>,BUCKET_NAME=<bucket_name>”`|
-   |`IBM_LH_SPARK_EXECUTOR_CORES`|Optional spark engine configuration setting for executor cores|
-   |`IBM_LH_SPARK_EXECUTOR_MEMORY`|Optional spark engine configuration setting for executor memory|
-   |`IBM_LH_SPARK_EXECUTOR_COUNT`|Optional spark engine configuration setting for executor count|
-   |`IBM_LH_SPARK_DRIVER_CORES`|Optional spark engine configuration setting for driver cores|
-   |`IBM_LH_SPARK_DRIVER_MEMORY`|Optional spark engine configuration setting for driver memory|
+   |`IBM_LH_BEARER_TOKEN`|Authorization bearer token. For more information, see https://cloud.ibm.com/docs/account?topic=account-iamtoken_from_apikey. For `USE_EXTERNAL_SPARK=true`, the bearer token should be generated with external Spark engine API key.|
+   |`IBM_LH_SPARK_JOB_ENDPOINT`|Spark applications v4 endpoint for CPD and v3 endpoint for SaaS. To retrieve SaaS Spark Endpoint: https://cloud.ibm.com/docs/AnalyticsEngine?topic=AnalyticsEngine-retrieve-endpoints-serverless|
+   |`HMS_CLIENT_USER`|User for Hive Metastore client. SaaS Spark implementation uses `ibmlhapikey`.|
+   |`HMS_CLIENT_PASSWORD`|Password for Hive Metastore client. For SaaS, you can use the API key named `ibmlhapikey` from the cloud account where {{site.data.keyword.lakehouse_short}} has been deployed.|
+   |`SOURCE_S3_CREDS`|S3 credentials for the source file storage in the format:`“AWS_ACCESS_KEY_ID=<access_key>,AWS_SECRET_ACCESS_KEY=<secret_key>,ENDPOINT_URL=<endpoint_url>,AWS_REGION=<region>,BUCKET_NAME=<bucket_name>”`|
+   |`TARGET_S3_CREDS`|S3 credentials for the target table storage in the format: `“AWS_ACCESS_KEY_ID=<access_key>,AWS_SECRET_ACCESS_KEY=<secret_key>,ENDPOINT_URL=<endpoint_url>,AWS_REGION=<region>,BUCKET_NAME=<bucket_name>”`|
+   |`IBM_LH_SPARK_EXECUTOR_CORES`|Optional spark engine configuration setting for executor cores.|
+   |`IBM_LH_SPARK_EXECUTOR_MEMORY`|Optional spark engine configuration setting for executor memory.|
+   |`IBM_LH_SPARK_EXECUTOR_COUNT`|Optional spark engine configuration setting for executor count.|
+   |`IBM_LH_SPARK_DRIVER_CORES`|Optional spark engine configuration setting for driver cores.|
+   |`IBM_LH_SPARK_DRIVER_MEMORY`|Optional spark engine configuration setting for driver memory.|
+   |`INSTANCE_ID`|Identify unique instances. In SaaS environment, CRN is the instance id.|
+   |`USE_NATIVE_SPARK`|When native spark is used for ingestion, thigh parameter value must be `true`.|
+   |`USE_EXTERNAL_SPARK`|When external spark is used for ingestion, thigh parameter value must be `true`.|
+   |`IBM_LH_URL`|This parameter is used only when `USE_EXTERNAL_SPARK=true`. The value is `https://<lh_hostname>`. `<lh_hostname>` is the hostname of {{site.data.keyword.lakehouse_short}} instance.|
+   |`IBM_LH_USER_BEARER_TOKEN`|This parameter is used only when `USE_EXTERNAL_SPARK=true`. The bearer token should be generated with User API key. For more information, see https://cloud.ibm.com/docs/account?topic=account-iamtoken_from_apikey.|
    {: caption="Table 1" caption-side="bottom"}
 
 2. You can run ingestion jobs to ingest data in 2 ways, using a simple command line or a config file.
@@ -169,11 +175,3 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
    - Regular syntax: `--target-tables <catalogname>.<schemaname>.<tablename>`.
    - Syntax with special character option 1: `--target-tables <catalogname>.<schemaname>."table\.name"`. Using this syntax, escape character `\` is used within double quotes to escape period(.). Escape character `\` is used only when special character period(.) is in the table name.
    - Syntax with special character option 2: `--target-tables <catalogname>.<schemaname>."'table.name'"`. Using this syntax, period(.) is not escaped nor need to use the escape character when using additional single quotes.
-
-## Limitations
-{: #limits}
-
-Following are some of the limitations of Spark ingestion:
-
-- Spark ingestion supports only source data files from object storage bucket. Local files are not supported.
-- The default buckets in watsonx.data are not exposed to Spark engine. Hence, iceberg-bucket and hive-bucket are not supported for source or target table. Users can use their own MinIo or S3 compatible buckets that are exposed and accessible by Spark engine.

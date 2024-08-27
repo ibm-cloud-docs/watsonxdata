@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-13"
+lastupdated: "2024-08-23"
 
 keywords: lakehouse, data types, connectors, watsonx.data
 
@@ -55,6 +55,7 @@ The Lite plan is provided for you to try the basic features of {{site.data.keywo
 - The Lite plan might be removed anytime.
 - The Lite instances are unrecoverable (no BCDR).
 - Engine scaling functionality is not available in the Lite plan.
+- Milvus back up is not available with the Lite plan.
 
 You must be connected to your own bucket to save and backup any data that is external to the Lite instance before full consumption of the Lite plan resource units.
 {: important}

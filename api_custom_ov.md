@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-26"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -170,6 +170,9 @@ This customization method does not require you to add the parameters inside the 
 The GET API also supports customization, but is available for internal use only.
 {: note}
 
+For the PATCH API to function correctly, make sure that the {{site.data.keyword.lakehouse_short}} version and the console build version are the same. To verify, open the **Instance details** page by clicking the `i` icon from the home page and check the **Version** and **Console build** information.
+{: note}
+
 You can find the curl example for API customization in [Update presto engine](https://cloud.ibm.com/apidocs/watsonxdata#update-presto-engine).
 
 For the list of properties that can be customized through an API for Presto (Java), see:
@@ -186,3 +189,17 @@ For the list of properties that can be customized through an API for Presto (C++
 - [Velox properties for Presto (C++)](watsonxdata?topic=watsonxdata-api_custom_pcpp_vlx)
 
 For properties that must be customized under the guidance of the watsonx.data support team, see [Properties to be customized under support guidance](watsonxdata?topic=watsonxdata-api_custom_wkr_pcpp#api_custom_sprt_pcpp).
+
+You can get System Access Control (SAC) plug-in logs with `DEBUG` information. To enable `DEBUG` logs of SAC plug-in in Presto, trigger the customization API and add `"com.ibm.openlakehouse.prestodb": "DEBUG"` under `logConfig`.
+
+```jason
+"logConfig": {
+           "coordinator": {
+               "com.ibm.openlakehouse.prestodb": "DEBUG"
+           },
+           "worker": {}
+       }
+```
+{: codeblock}
+
+For more information, see [Update presto engine](https://cloud.ibm.com/apidocs/watsonxdata#update-presto-engine).

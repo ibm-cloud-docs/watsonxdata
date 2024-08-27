@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-16"
+lastupdated: "2024-08-27"
 
 keywords: lakehouse
 
@@ -34,12 +34,30 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
-## Ingestion is not possible in non-interactive mode using Presto
-{: #known_issues22131}
+## DB2 connector cannot access views created using external tools
+{: #known_issues24380}
 
-Ingestion is not possible in non-interactive mode when using the Presto mode of ingestion due to an issue.
+The DB2 connector in {{site.data.keyword.lakehouse_short}} currently allows access to the views created through the {{site.data.keyword.lakehouse_short}} instance or DBeaver. However, accessing views created with other tools such as Data Manager Console (DMC), Db2 command line (DB2 cmd), or any other third-party tools is not supported.
 
-**Workaround:** You can set the environment variable in interactive mode to run the ingestion job using Presto.
+## Unsupported special characters in schema and table creation
+{: #known_issues12662}
+
+The following special characters are not supported while creating schemas and tables:
+
+Schemas (Hive and Iceberg):  `{`, `[`, `(`, `)`
+
+Tables (Hive): `{`, `(`, `[`, `)`
+
+Tables (Iceberg): `$`, `@`, `{`, `[`, `)`, `(`
+
+## `ALTER TABLE` operation fails in Spark job submission
+{: #known_issues13596}
+
+Spark jobs that creates a schema, table, and then attempt an `ALTER TABLE` operation may encounter an `authz.AccessControlException` due to insufficient permissions.
+
+This occurs because, even though the schema and table creation are successful, the job tries to execute the `ALTER TABLE` operation before the metastore data is updated with the newly created schema and table details.
+
+**Workaround:** To prevent access denied errors, you must provide a delay in time between each operations that involves creation of new schemas or tables within the same Python script.
 
 ## Delayed UI update after successful ingestion jobs
 {: #known_issues24181}
@@ -48,17 +66,17 @@ After a successful ingestion job, the schema or table may not be immediately vis
 
 **Workaround:** Refresh your browser or refresh the catalogs or schemas from the **Data manager** page after an ingestion job status is changed to **Finished** to make sure that the UI is updated with the newly created schema or table. Once the UI is refreshed, you can proceed to run another ingestion job on the same schema or tables that were just created.
 
-## Spark application submission fails when CAS (Content Aware Storage) is enabled
+## Spark application submission fails when DAS (Data Access Service) is enabled
 {: #known_issues15132}
 
-CAS does not currently support buckets or object storage that use HTTP endpoints.
+DAS does not currently support buckets or object storage that use HTTP endpoints.
 
-**Workaround:** You can disable CAS or make sure that your buckets or object storage are configured with HTTPS endpoints.
+**Workaround:** You can disable DAS or make sure that your buckets or object storage are configured with HTTPS endpoints.
 
 ## Attempting to read Parquet v2 tables through Presto (C++) results in an error
 {: #known_issues12582trial}
 
-When you attempt to read Parquet v2 tables through Presto (C++) that were created via Data manager in watsonx.data, it gives the following error:
+When you attempt to read Parquet v2 tables through Presto (C++) that were created via Data manager in {{site.data.keyword.lakehouse_short}}, it gives the following error:
 
    ```bash
    Error in ZlibDecompressionStream::Next
@@ -80,13 +98,6 @@ When you attempt to read Parquet v2 tables through Presto (C++) that were create
    create table <catalog name>.<schema name>.<table name> as (select * from <originaltablename>;
    ```
    {: codeblock}
-
-## Users are able to search data without specifying a partition in Milvus service
-{: #known_issues14562}
-
-Users can search data without specifying a partition in the `partition_names` field, bypassing intended access controls and potentially exposing sensitive data.
-
-**Workaround:** You must explicitly specify the partitions that you are authorized to access in the `partition_names` field.
 
 ## Spark ingestion currently does not support special characters like quotation marks, back ticks, and parentheses for partitioned table column names.
 {: #known_issues12970}
@@ -285,11 +296,6 @@ Schema must be specified when session schema is not set
 Table does not exist
 ```
 {: codeblock}
-
-## Discrepancy in access policy enforcement between user interface (UI) and `ibm-lh data-copy` utility
-{: #known_issues6438}
-
-It is noticed that user defined access policies are not enforced when unauthorized users perform data ingestion by using `ibm-lh data-copy` utility. Whereas, the same policy restricts unauthorized users from performing data ingestion in the UI. This inconsistency in access policy enforcement can lead to unintended data ingestion by unauthorized users.
 
 ## String literal interpretation in Presto (Java)
 {: #known_issues6042}

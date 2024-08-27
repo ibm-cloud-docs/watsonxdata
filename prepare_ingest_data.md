@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-27"
 
 keywords: watsonxdata, ingesting, object storage bucket, data files, table format. SQL query
 
@@ -52,8 +52,8 @@ Scenario: You have a collection of data files in an S3 folder that you need to i
 
 The objectives of this tutorial are listed as follows:
 * Creating infrastructure within the watsonx.data service.
-* Establishing connection with the customer data bucket.
-* Querying from the bucket
+* Establishing connection with the customer data storage.
+* Querying from the storage
 
 You can use [Spark ingestion]({{site.data.keyword.ref-ingest_spark_ui-link}}) to ingest data.
 {: note}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-27"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -41,10 +41,10 @@ You can customize the coordinator configuration properties through an API for Pr
 | `query.low-memory-killer.policy` | String | Any string |
 | `query.max-execution-time` | String | Limit {1, 1e13}; supported values are numbers with or without units m,s,ms,h |
 | `query.max-history` | Integer | Limit {1, 10000} |
-| `query.max-total-memory-per-node` | String | Limit {1, 1e13}; supported values are numbers with or without units TB, MB, GB, B, KB |
-| `query.max-total-memory` | String | Limit {1, 1e13}; supported values are numbers with or without units TB, MB, GB, B, KB |
-| `query.max-memory-per-node` | String | Limit {1, 1e13}; supported values are numbers with or without units TB, MB, GB, B, KB |
-| `query.max-memory` | String | Limit {1, 1e13} supported values are numbers with or without units TB, MB, GB, B, KB |
+| `query.max-total-memory-per-node` | String | Limit {1, 1e13}; supported values are numbers with units TB, MB, GB, B, KB |
+| `query.max-total-memory` | String | Limit {1, 1e13}; supported values are numbers with units TB, MB, GB, B, KB |
+| `query.max-memory-per-node` | String | Limit {1, 1e13}; supported values are numbers with units TB, MB, GB, B, KB |
+| `query.max-memory` | String | Limit {1, 1e13} supported values are numbers with units TB, MB, GB, B, KB |
 | `query.max-stage-count` | Integer | Limit {1, 10000} |
 | `query.min-expire-age` | String | supported values are numbers with or without units m, s, ms, h |
 | `query.min-schedule-split-batch-size` | Integer | Limit {1, 10000} |

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-22"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -57,7 +57,7 @@ To integrate {{site.data.keyword.lakehouse_short}} with IBM Knowledge Catalog, c
    | Field           | Description        |
    |------------------|--------------------|
    | Service     | Select the service (Knowledge Catalog) to be integrated. |
-   | Bucket catalogs      | Select the bucket catalogs for Knowledge Catalog governance. |
+   | Storage catalogs      | Select the storage catalogs for Knowledge Catalog governance. |
    | WKC endpoint            | Specify the Knowledge Catalog endpoint URL. |
    {: caption="Table 1." caption-side="bottom"}
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-16"
+lastupdated: "2024-08-22"
 
 keywords: lakehouse, watsonx.data, presto, cli
 
@@ -25,7 +25,7 @@ In {{site.data.keyword.lakehouse_full}}, you can connect to the Presto (Java) se
 - [Connecting to Presto (Java) engine using Python scripts](#conn-to-prestpython)
 
 You must specify the location when you create schema using CLI. For example,
-`location = s3a://<bucket-name>/`
+`location = s3a://<storage-name>/`
 {: note}
 
 ## Pre-requisites

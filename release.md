@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-08-13"
+lastupdated: "2024-08-27"
 
 keywords: watsonxdata, release notes
 
@@ -33,6 +33,71 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.lakehouse_full}} that are grouped by date.
 {: shortdesc}
+
+## 27 August 2024 - Version 2.0.2
+{: #lakehouse_28Aug032024}
+
+
+**Data sources and storage enhancements**
+{: #28Aug_1_2024}
+
+This release includes the following new data sources and storage enhancements:
+
+* Content Aware Storage (CAS) is now called Data Access Service (DAS).
+
+* Apache Hive is upgraded to version 4.0.0.
+
+* You can now view the DAS endpoint from the **Storage details** page. For more information, see [Exploring storage objects](watsonxdata?topic=watsonxdata-buck-obj){: external}.
+
+**Integration enhancements**
+{: #28Aug_2_2024}
+
+This release of {{site.data.keyword.lakehouse_short}} introduces the following new or enhanced integrations with other services:
+
+* You can now use the governance capabilities of IBM Knowledge Catalog (IKC) for SQL views within the {{site.data.keyword.lakehouse_short}} platform. For more information, see [Integrating with IBM Knowledge Catalog (IKC)](watsonxdata?topic=watsonxdata-ikc_integration){: external}.
+
+* IBM {{site.data.keyword.lakehouse_short}} now supports Apache Ranger policies to govern data with Presto (C++) engines. For more information, see [Apache Ranger policy](watsonxdata?topic=watsonxdata-ranger_1){: external}.
+
+**Engine and service enhancements**
+{: #28Aug_3_2024}
+
+This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
+
+* Instance administrators can now configure resource groups in Presto. For more information, see `<link to be defined (to the associated topic>`.
+
+* You can now use an API to execute queries and retrieve results. For more information, see [API](https://cloud.ibm.com/apidocs/watsonxdata#create-execute-query).
+
+* You can now configure or change the log level of Presto (Java) through API customization. For more information, [API](https://cloud.ibm.com/apidocs/watsonxdata#update-presto-engine).
+
+* You can now generate Number of Distinct Values (NDV) column statistics with the Iceberg Spark Analyze procedure to enhance the Spark Cost-Based Optimizer (CBO) for improved query planning.
+
+* You can now use the custom data source option to connect to Black Hole and Local File connectors for the Presto (Java) engine. For more information, see [Custom data source](watsonxdata?topic=watsonxdata-custom_database){: external}.
+
+* You can now generate JSON snippet for Presto engine and Milvus service. You can copy/paste it over to the {{site.data.keyword.lakehouse_short}} Presto and Milvus connector UI in IBM Cloud Pak for Data and watsonx to simplify the connection creation. For more information, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection){: external}.
+
+* The default value of the task.max-drivers-per-task property for Presto (Java) and Presto (C++) workers is now set based on the number of vCPUs.
+
+**Access management enhancements**
+{: #28Aug_4_2024}
+
+This release of {{site.data.keyword.lakehouse_short}} introduces the following access management enhancements:
+
+* You can now control access to Presto (C++) engines. For more information, see [Engine (Presto (Java) or Presto (C++))](watsonxdata?topic=watsonxdata-role_priv#engine_presto){: external}.
+
+* You can now grant component access to users and user groups in batch. For more information, see [Managing user access](watsonxdata?topic=watsonxdata-manage_access){: external}.
+
+* You can now have System Access Control (SAC) plug-in logs with DEBUG information in Presto. For more information, see [API customization](watsonxdata?topic=watsonxdata-api_custom_ov){: external}.
+
+**Ingestion enhancements**
+{: #28Aug_5_2024}
+
+This release of {{site.data.keyword.lakehouse_short}} introduces the following ingestion enhancements:
+
+* Ingestion workflow in {{site.data.keyword.lakehouse_short}} is now simplified to submit an ingestion job, and support local file ingestion. For more information, see [Ingesting data by using Spark through the web console](watsonxdata?topic=watsonxdata-ingest_spark_ui).
+* You can now ingest data using JSON file format. For more information, see [About data ingestion](watsonxdata?topic=watsonxdata-load_ingest_data).
+* CSV file properties are now available as parameters supporting `ibm-lh data-copy`. For more information, see [Options and parameters supported in ibm-lh tool](watsonxdata?topic=watsonxdata-cli_commands).
+* New environment variables are available for Spark ingestion through `ibm-lh tool` command line. For more information, see [Spark ingestion through ibm-lh tool command line](watsonxdata?topic=watsonxdata-ingest_spark_cli).
+
 
 ## 01 August 2024 - Version 2.0.1
 {: #lakehouse_31July032024}
@@ -69,11 +134,11 @@ For more information, see [Arrow Flight service](watsonxdata?topic=watsonxdata-a
 
 * The Spark access control extension allows additional authorization, enhancing security at the time of application submission. If you enable the extension in the spark configuration, only authorized users are allowed to access and operate IBM {{site.data.keyword.lakehouse_short}} catalogs through Spark jobs. For more information, see [Enhancing Spark application submission using Spark access control extension](watsonxdata?topic=watsonxdata-spark-extnsn){: external}.
 
-* IBM {{site.data.keyword.lakehouse_short}} now supports object storage proxy and signature for Azure Data Lake Storage and Azure Blob Storage. For more information, see [Using CAS proxy to access ADLS and ABS compatible buckets](watsonxdata?topic=watsonxdata-cas_proxy_adls){: external}.
+* IBM {{site.data.keyword.lakehouse_short}} now supports object storage proxy and signature for Azure Data Lake Storage and Azure Blob Storage. For more information, see [Using DAS proxy to access ADLS and ABS compatible buckets](watsonxdata?topic=watsonxdata-cas_proxy_adls){: external}.
 
 * Lightweight Directory Access Protocol (LDAP) is now provided for Teradata and Db2 data sources. The user needs to set up this configuration at the server level. For Teradata, explicitly choose the authentication mechanism type as LDAP in the UI. For more information, [Teradata](watsonxdata?topic=watsonxdata-teradata_database){: external}.
 
-CAS proxy to access ADLS and ABS buckets and LDAP enhancements are Tech preview in version 2.0.1.
+DAS proxy to access ADLS and ABS buckets and LDAP enhancements are Tech preview in version 2.0.1.
 {: note}
 
 * Milvus now supports partition-level isolation for users. Administrators can authorize specific user actions on partitions. For more information, see [Service (Milvus)](watsonxdata?topic=watsonxdata-role_priv#milvus){: external}.
@@ -128,7 +193,7 @@ For more information, see [Azure Data Lake Storage Gen2](watsonxdata?topic=watso
 **Query Workspace**
 {: #31JULY_10_2024}
 
-* You can run queries on all tables under a schema through the SQL query workspace without specifying the path <catalog>.<schema> by selecting the required catalogs and schemas from the new drop down list. For more information, [Running SQL queries](watsonxdata?topic=watsonxdata-run_sql){: external}.
+* You can run queries on all tables under a schema through the SQL query workspace without specifying the path `<catalog>.<schema>` by selecting the required catalogs and schemas from the new drop down list. For more information, [Running SQL queries](watsonxdata?topic=watsonxdata-run_sql){: external}.
 
 **watsonx.data pricing plans**
 {: #31JULY_11_2024}
@@ -285,7 +350,7 @@ For more information, see [Using S3 proxy to access S3 and S3 compatible buckets
 {: #JULY_16_2024}
 
 The mixed case feature flag, which allows to switch between case sensitive and case insensitive behavior in Presto (Java), is available. The flag is set to OFF by default and can be set to ON during the deployment of watsonx.data.
-For more information, see[ Presto (Java) mixed-case support overview](watsonxdata?topic=watsonxdata-mixed_case_overview).
+For more information, see [Presto (Java) mixed-case support overview](watsonxdata?topic=watsonxdata-mixed_case_overview).
 
 **New storage type Google Cloud Storage**
 {: #JULY_17_2024}
@@ -306,9 +371,11 @@ You can now add a small-sized Spark engine (single node) in the {{site.data.keyw
 {: #MAY_02_2024}
 
 * **Working with Jupyter Notebooks from Spark labs**
+
 : You can now install the Jupyter extension from the VS Code Marketplace inside your Spark lab and work with Jupyter Notebooks. For more information, see [Create Jupyter Notebooks](watsonxdata?topic=watsonxdata-lab_nsp#dev_lab_02).
 
 * **Accessing Spark UI from Spark labs**
+
 You can now access the Spark user interface (UI) from Spark labs to monitor various aspects of running a Spark application. For more information, see [Accessing Spark UI from Spark labs](watsonxdata?topic=watsonxdata-smbit_nsp#lab_nsp-ui).
 
 **New region to provision for IBM Cloud instance**
@@ -492,7 +559,7 @@ You can now run the following time-travel queries by using branches and tags in 
 
 
 **Access Cloud Object Storage without credentials**
-You can now access your Cloud Object Storage bucket without credentials, by using the Content Aware Storage (CAS) endpoint. For more information about getting CAS endpoint, see [Getting CAS endpoint](watsonxdata?topic=watsonxdata-cas_ep).
+You can now access your Cloud Object Storage bucket without credentials, by using the Data Access Service (DAS) endpoint. For more information about getting DAS endpoint, see [Getting DAS endpoint](watsonxdata?topic=watsonxdata-cas_ep).
 
 
 

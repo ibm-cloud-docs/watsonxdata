@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-21"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -212,7 +212,7 @@ Parameter values:
 * `<access_key>` : Provide the access_key_id. For more information, see [storage details](watsonxdata?topic=watsonxdata-run_samp_file#insert_samp_usecase).
 * `<secret_key>` : Provide the secret_access_key. For more information, see [storage details](watsonxdata?topic=watsonxdata-run_samp_file#insert_samp_usecase).
 * `<truststore_path>`  : Provide the COS path where the trustore certificate is uploaded. For example `cos://di-bucket.di-test/1902xx-truststore.jks`. For more information about generating the trustore, see [Importing self-signed certificates](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.0.x?topic=administering-importing-hms-self-signed-certificates-java-truststore).
-* `<cas_endpoint>` : The Content Aware Storage (CAS) endpoint. To get the CAS endpoint, see [Getting CAS endpoint](watsonxdata?topic=watsonxdata-cas_ep_ov).
+* `<cas_endpoint>` : The Data Access Service (DAS) endpoint. To get the DAS endpoint, see [Getting DAS endpoint](watsonxdata?topic=watsonxdata-cas_ep_ov).
 * `<username>` : The username for your watsonx.data instance. Here, ibmlhapikey.
 * `<apikey>` : The base64 encoded `ibmlhapikey_<user_id>:<IAM_APIKEY>. Here, <user_id> is the IBM Cloud id of the user whose apikey is used to access the data bucket. To generate API key, log in into the watsonx.data console and navigate to Profile > Profile and Settings > API Keys and generate a new API key.
 * `<OBJECT_NAME>`: The IBM Cloud Object Storage name.

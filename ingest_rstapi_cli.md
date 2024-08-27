@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-20"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -80,7 +80,7 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
    --source-data-files "s3://lh-ingest/hive/warehouse/folder_ingestion/" \
    --user someuser@us.ibm.com \
    --password **** \
-   --url https://us-south.lakehouse.dev.cloud.ibm.com/lakehouse/ \
+   --url https://us-south.lakehouse.dev.cloud.ibm.com/ \
    --instance-id crn:v1:staging:public:lakehouse:us-south:a/fd160ae2ce454503af0d051dfadf29f3:25fdad6d-1576-4d98-8768-7c31e2452597:: \
    --schema /home/nz/config/schema.cfg \
    --engine-id spark214 \

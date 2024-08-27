@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-05"
+lastupdated: "2024-08-22"
 
 keywords: watsonxdata, qhmm
 
@@ -38,7 +38,7 @@ CREATE SCHEMA IF NOT EXISTS <catalog>.diag WITH (location = 's3a://wxd-system/di
 ```
 {: codeblock}
 
-Here, the <catalog> name is wxd_system_data.
+Here, the `<catalog>` name is wxd_system_data.
 
 2. Run the following command to create a table to store the query event data.
 
@@ -55,7 +55,7 @@ WITH (
 ```
 {: codeblock}
 
-Here, the <catalog> name is wxd_system_data.
+Here, the `<catalog>` name is wxd_system_data.
 
 3. Run the following command to create a table to store the query history data in JSON format.
 
@@ -78,7 +78,7 @@ WITH (
 ```
 {: codeblock}
 
-Here, the <catalog> name is wxd_system_data.
+Here, the `<catalog>` name is wxd_system_data.
 
 ## Procedure
 {: #gen_qhmm-pro}

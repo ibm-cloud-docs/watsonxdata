@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-08-27"
 
 keywords: watsonxdata, qhmm
 
@@ -29,14 +29,26 @@ subcollection: watsonxdata
 # QHMM
 {: #ovrvw_qhmm}
 
+
 Query History Monitoring and Management (QHMM) is a service that stores and manages the diagnostic data such as, queries history and query event-related information of the Presto(Java) and Presto(C++) engine in a storage bucket. You can retrieve the stored history files for analysis, debugging and monitoring purpose.
 
-You can enable or disable the QHMM service for your {{site.data.keyword.lakehouse_short}} instance. If you enable the QHMM service, you must specify the storage to be used for storing the query data.
-{{site.data.keyword.lakehouse_short}} allows using the default storage, `wxd-system` to store the QHMM data or register your own storage (BYOB). To use BYOB, register your bucket in watsonx.data and configure it to use as QHMM storage. You can do that either from Quick start or from {{site.data.keyword.lakehouse_short}} console page. For more information, see [Retrieving query information from QHMM data](watsonxdata?topic=watsonxdata-ret_qhmm){: external}.
+QHMM primarily aims to address the issue of data persistence for serviceability data. When the engine restarts or go offline, there are chances of losing valuable diagnostic data they generate. QHMM resolves the issue by storing such data in object storage solutions like COS (Cloud Object Storage) or Minio buckets. The data is organized in a structured folder hierarchy, making it easily accessible for users to retrieve and analyze.
 
-You can choose the QHMM storage (default QHMM bucket or your own bucket) from:
+QHMM allows to retrieve the following diagnostic data:
+* Events generated against a running query in Presto, following are the query events:
+    * Query created event - event logged when a query is initiated.
+    * Split completed event - split correspond to an individual task in a query execution. An event is logged when a split or a task is completed.
+    * Query completed event - event logged when a query execution is completed.
+    * Query Optimiser event - event logged when the query optimizer is enabled.
+* Tables and views that hold relevant information related to query event.
+* Histories of the queries executed by Presto in the form of a json file.
+* Query history table created where user can execute a query to view the histories of the queries executed by Presto.
 
-* Quick start wizard (see [Configure query monitoring](watsonxdata?topic=watsonxdata-quick_start#qs_montr){: external})
-* {{site.data.keyword.lakehouse_short}} console page (see [Query monitoring](watsonxdata?topic=watsonxdata-qhmm){: external})
 
-You can retrieve the history files to analyze, debug, or monitor the queries. from the Query workspace (see ([Retrieving query information from QHMM data](watsonxdata?topic=watsonxdata-ret_qhmm){: external})).
+
+## Related topics
+{: #data_qhmm_rel}
+
+* Configuring QHMM, see [Query monitoring](watsonxdata?topic=watsonxdata-qhmm)
+
+* Diagnostics Data Retrieval for Presto Engine Serviceability, see [Retrieving query information from QHMM data](watsonxdata?topic=watsonxdata-ret_qhmm)

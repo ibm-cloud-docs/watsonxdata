@@ -4,7 +4,7 @@ copyright:
   years: 2022, 2024
 lastupdated: "2024-08-01"
 
-keywords: lakehouse, bucket, catalog, watsonx.data
+keywords: lakehouse, storage, catalog, watsonx.data
 
 subcollection: watsonxdata
 
