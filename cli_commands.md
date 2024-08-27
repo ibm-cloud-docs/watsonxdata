@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-20"
+lastupdated: "2024-08-27"
 
 keywords: watsonxdata, commands, command line interface, cli
 
@@ -66,11 +66,16 @@ Different options and variables that are supported in a **ibm-lh** tool that is 
 |`dbpassword`|Database password that is used to do ingestion. This is a mandatory parameter to run an ingestion job unless the default user is used.|`--dbpassword <DBPASSWORD>`|`PRESTO`|
 |`dbuser`|Database username that is used to do ingestion. This is a mandatory parameter to run an ingestion job unless the default user is used.|`--dbuser <DBUSER>`|`PRESTO`|
 |`engine-id`| Engine id of Spark engine when using REST API based `SPARK` ingestion. The short command for this parameter is `-e`.|`--engine-id <spark-enginename>`|`SPARK`|
+|`escape-char`| CSV escape property character. Default value is `\`.|`--escape-char <escape_character_value>`|`PRESTO`, `SPARK_LEGACY`, and `SPARK`|
+|`encoding`| CSV encoding property character. Default value is `utf-8`.|`--encoding <encoding_value>`|`PRESTO`, `SPARK_LEGACY`, and `SPARK`|
+|`field-delimiter`| CSV file field delimiter value. Default value is `,`.|`--field-delimiter <field_delimiter_value>`|`PRESTO`, `SPARK_LEGACY`, and `SPARK`|
+|`header`| Mandatory parameter for CSV files with or without a header. Default value is `true`.|`--header <true/false>`|`PRESTO`, `SPARK_LEGACY`, and `SPARK`|
 |`ingest-config`|Configuration file for data migration|`--ingest-config <INGEST_CONFIGFILE>`|`PRESTO` and `SPARK_LEGACY`|
 |`ingestion-engine-endpoint`|Endpoint of ingestion engine. hostname=`<hostname>`, port=`<port>`. This is a mandatory parameter to run an ingestion job.|`--ingestion-engine-endpoint <INGESTION_ENGINE_ENDPOINT>`|`PRESTO` and `SPARK_LEGACY`|
 |`instance-id`|Identify unique instances. In SaaS environment, CRN is the instance id. The short command for this parameter is `-i`.|`--instance-id <instance-CRN>`|`SPARK`|
 |`job-id`|Job id is generated when REST API or UI-based ingestion is initiated. This job id is used in getting the status of ingestion job. This parameter is used only used with `ibm-lh get-status` command. The short command for this parameter is `-j`.|`ibm-lh get-status --job-id <Job id>`|`SPARK`|
 |`all-jobs`|This all-jobs parameter gives the history of all ingestion jobs. This parameter is used only used with ibm-lh get-status command.|`ibm-lh get-status --all-jobs`|`SPARK`|
+|`line-delimiter`| CSV file line delimiter value. Default value is `\n`.|`--line-delimiter <line_delimiter_value>`|`PRESTO`, `SPARK_LEGACY`, and `SPARK`|
 |`log-directory`|This option is used to specify the location of log files. See [Log directory](#log_direc).|`--ingest-config <ingest_config_file> --log-directory <directory_path>`|`PRESTO`, `SPARK_LEGACY`, and `SPARK`|
 |`partition-by`|Supports the functions for year, month, day, and hour for timestamp in the `partition-by` list. If a target table already exists or the `create-if-not-exist` parameter is not specified, partition-by does not effect the data.|`ibm-lh data-copy --partition-by "<columnname1>, <columnname2>"`|`SPARK_LEGACY` and `SPARK`|
 |`password`|Password of the user connecting to the instance. In SaaS, API key of the instance is used. The short command for this parameter is `-pw`.|`--password <apikey>`|`SPARK`|
