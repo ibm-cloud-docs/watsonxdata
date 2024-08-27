@@ -71,7 +71,7 @@ This release of watsonx.data introduces the following engine and service enhance
 
 * You can now generate Number of Distinct Values (NDV) column statistics with the Iceberg Spark Analyze procedure to enhance the Spark Cost-Based Optimizer (CBO) for improved query planning.
 
-* You can now use the custom database option to connect to Black Hole and Local File connectors for the Presto (Java) engine.
+* You can now use the custom database option to connect to Black Hole and Local File connectors for the Presto (Java) engine. [Custom data source](watsonxdata?topic=watsonxdata-custom_database){: external}.
 
 * You can now generate JSON snippet for Presto engine and copy/paste it over to the watonx.data Presto connector UI in IBM Cloud Pak for Data and watsonx to simplify the connection creation.
 
