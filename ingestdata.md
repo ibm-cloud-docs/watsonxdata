@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-27"
+lastupdated: "2024-08-28"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -47,7 +47,6 @@ Following are some of the requirements or behavior of data ingestion:
 * Complex JSON files shall be ingested as-is, resulting in arrays as table entries. This is not recommended for optimal data visualization and analysis.
 * JSON files exceeding 2 MB cannot be previewed, but they will still be ingested successfully.
 * Keys within JSON files must be enclosed in quotation marks for proper parsing and interpretation.
-* Supported file types with different schemas is allowed to be ingested now resulting in columns with distinct schemas being set to null.
 
 ## Loading or ingesting data through CLI
 {: #load_ingest_datacli}
