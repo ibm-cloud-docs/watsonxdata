@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-27"
+lastupdated: "2024-08-28"
 
 keywords: Data, federation,
 
@@ -51,7 +51,9 @@ Analyzing purchasing methods across multiple data sources
 : The objective of this use case is to analyze the purchasing methods associated with the largest orders.
 The sales data is available in Db2. A portion of this data is moved to Iceberg tables within watsonx.data. The sales data is now in two places - Db2 and watsonx.data and you need to perform a Presto (Java) query from both Db2 and Iceberg to analyze the data, aiming to identify the purchasing method that is linked to the largest orders.
 
+The following video provides a visual method to learn the concepts and tasks in this documentation.
 
+![Connecting and querying across multiple data sources in watsonx.data](https://www.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/27941801/partner_id/1773841?iframeembed=true&entry_id=1_pov4erdb){: video output="iframe" data-script="none" id="mediacenterplayer" frameborder="0" width="560" height="315" allowfullscreen webkitallowfullscreen mozAllowFullScreen}
 
 ## Objective
 {: #Db2ibmbckt_obj1}
@@ -168,7 +170,3 @@ Now, the sales data is split between Db2 and Iceberg catalogs. You can run query
 7. Click the **Explain** link. The **Explain** page opens, which displays the visual explain output for the query. You can scroll through the visual explain output to view the five **ScanProject** leaf nodes (here, five tables are used in the query) in the tree. These correspond to the five tables being read.
 
 With these capabilities, your enterprise can drive smarter operations, optimize purchasing methods, and ultimately improve overall business performance.
-
-The following video provides a visual method to learn the concepts and tasks in this documentation.
-
-![Connecting and querying across multiple data sources in watsonx.data](https://www.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/27941801/partner_id/1773841?iframeembed=true&entry_id=1_pov4erdb){: video output="iframe" data-script="none" id="mediacenterplayer" frameborder="0" width="560" height="315" allowfullscreen webkitallowfullscreen mozAllowFullScreen}
