@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-28"
+lastupdated: "2024-08-29"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -42,7 +42,7 @@ Following are some of the requirements or behavior of data ingestion:
 * IBM Storage Ceph, IBM Cloud Object Storage (COS), AWS S3, and MinIO object storage are supported.
 * `pathStyleAccess` property for object storage is not supported.
 * Only Parquet, CSV, and JSON file formats are supported as source data files.
-* Parquet files exceeding 20 MB cannot be previewed, but they will still be ingested successfully.
+* Parquet files exceeding 2 MB cannot be previewed, but they will still be ingested successfully.
 * JSON files with complex nested objects and arrays shall not be previewed in the UI.
 * Complex JSON files shall be ingested as-is, resulting in arrays as table entries. This is not recommended for optimal data visualization and analysis.
 * JSON files exceeding 2 MB cannot be previewed, but they will still be ingested successfully.
