@@ -85,12 +85,12 @@ For example, if your custom library is a `.so` file, you need to add `"EXTRA_LD_
 
 If your custom library is a JAR file and you need it to be accessible on the Spark classpath, you must specify the JAR file in the extra classpath for driver/executor depending on where you require the JAR file. For example, to add it in front of the driver classpath, add the following property, where the library set name is `java_library`:
 
-```
+```bash
 "spark.driver.extraClassPath":"/home/spark/shared/user-libs/java_library/custom/*"
 ```
 
 If your custom library is a certificate file, for example a self signed ICD Postgres certificate, you can specify it in the connection URL in the following way:
-```
+```bash
 sslrootcert=/home/spark/shared/user-libs/customize_integration_custom_lib/custom/postgres.cert`
 ```
 
