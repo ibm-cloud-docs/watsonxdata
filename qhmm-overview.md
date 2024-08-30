@@ -49,6 +49,8 @@ QHMM allows to retrieve the following diagnostic data:
 ## Related topics
 {: #data_qhmm_rel}
 
-* Configuring QHMM, see [Query monitoring](watsonxdata?topic=watsonxdata-qhmm)
+* Configuring QHMM, see [Configuring Query monitoring](watsonxdata?topic=watsonxdata-qhmm)
 
-* Diagnostics Data Retrieval for Presto Engine Serviceability, see [Retrieving query information from QHMM data](watsonxdata?topic=watsonxdata-ret_qhmm)
+* Managing diagnostic data from user interface, see [Configuring Query monitoring](watsonxdata?topic=watsonxdata-ret_qhmm)
+
+* Managing diagnostic data by manual method, see [Configuring Query monitoring](watsonxdata?topic=watsonxdata-mon_mng)
