@@ -185,6 +185,10 @@ toc:
                   - view-edit-native-park.md
                   - scale_nspark.md
                   - mng_appln_nspark.md
+                  - ae_customizing-instance.md
+                  - ae_create-lib-set.md
+                  - ae_cust-with-script.md
+                  - ae_combining-lib-sets.md
             - topicgroup:
                 label: Submitting Spark application by using native Spark engine
                 topics:
