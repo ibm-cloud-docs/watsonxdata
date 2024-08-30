@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-27"
+lastupdated: "2024-08-30"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -69,8 +69,8 @@ Run the following curl command:
 
 ```bash
     curl --request POST --url
-    https://<region>.lakehouse.cloud.ibm.com/lakehouse/api/v2/spark_engines/<spark_engine_id>/a
-    pplications --header 'Authorization: Bearer <token>' --header 'Content-Type: application/json'
+    https://<region>.lakehouse.cloud.ibm.com/lakehouse/api/v2/spark_engines/<spark_engine_id>/
+    applications --header 'Authorization: Bearer <token>' --header 'Content-Type: application/json'
     --header 'AuthInstanceID: <crn_instance>' --data '{
     "application_details": {
     "conf": {

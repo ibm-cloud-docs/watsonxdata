@@ -54,18 +54,12 @@ To create a library set:
 1. Get the [IAM token](/docs/AnalyticsEngine?topic=AnalyticsEngine-retrieve-iam-token-serverless).
 1. Pass the JSON file as `"arguments"` in the following REST API call. Make sure that you escape the quotes as required, while passing to the REST API call.
     ```sh
-    curl -X POST https://api.us-south.ae.cloud.ibm.com/v3/analytics_engines/<instance_id>/spark_applications --header "Authorization: Bearer <IAM token>" -H "content-type: application/json" -d @createLibraryset.json
-    ```
-    {: codeblock}
-
-    Example for createLibraryset.json:
-    ```json
-    {
-      "application_details": {
-        "application": "/opt/ibm/customization-scripts/customize_instance_app.py",
-        "arguments": ["{\"library_set\":{\"action\":\"add\",\"name\":\"my_library_set\",\"libraries\":{\"conda\":{\"python\":{\"packages\":[\"numpy\"]}}}}}"]
-        }
-    }
+    curl --request POST
+        --url https://<region>.lakehouse.cloud.ibm.com/lakehouse/api/v2/spark_engines/<spark_engine_id>/applications
+        --header 'Authorization: Bearer <token>'
+        --header 'Content-Type: application/json'
+        --header 'AuthInstanceID: <crn_instance>'
+        -d @createLibraryset.json
     ```
     {: codeblock}
 
