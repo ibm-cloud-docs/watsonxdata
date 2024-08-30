@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-22"
+lastupdated: "2024-08-30"
 
 keywords: watsonxdata, qhmm
 
@@ -13,7 +13,7 @@ subcollection: watsonxdata
 {{site.data.keyword.attribute-definition-list}}
 
 
-# Monitoring and managing diagnostic data
+# Managing diagnostic data by manual method
 {: #mon_mng}
 
 Query History Monitoring and Management (QHMM) is a service that stores and manages the diagnostic data such as queries history and query event-related information of the Presto engine in the Minio bucket, {{site.data.keyword.lakehouse_short}}. You can retrieve the stored history files for analysis, debugging and monitoring purpose.

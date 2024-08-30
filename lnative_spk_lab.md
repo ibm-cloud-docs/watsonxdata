@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-08-30"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -11,10 +11,10 @@ subcollection: watsonxdata
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Spark labs - Development environment
+# Working with VS Code development environment - Spark labs
 {: #lab_nsp}
 
-Spark lab is a Spark-based development environment that enables you to interactively program, debug, submit, and test Spark applications on a Spark cluster running on the Spark engine.
+The VS Code development environment - Spark labs is a Spark-based development environment that enables you to interactively program, debug, submit, and test Spark applications on a Spark cluster running on the Spark engine.
 
 It is available as a Visual Studio Code extension and you can install it in your local system to access Spark IDE using Visual Studio Code. It reduces the time for development and increases usability.
 
@@ -33,7 +33,7 @@ It is available as a Visual Studio Code extension and you can install it in your
 {: #lab_nsp-preq-1}
 
 
-## Creating a Spark lab
+## Setting up the Spark labs
 {: #creat_lab}
 
 1. Install watsonx.data extension.

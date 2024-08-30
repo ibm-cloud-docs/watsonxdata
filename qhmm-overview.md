@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-27"
+lastupdated: "2024-08-30"
 
 keywords: watsonxdata, qhmm
 
@@ -40,9 +40,9 @@ QHMM allows to retrieve the following diagnostic data:
     * Split completed event - split correspond to an individual task in a query execution. An event is logged when a split or a task is completed.
     * Query completed event - event logged when a query execution is completed.
     * Query Optimiser event - event logged when the query optimizer is enabled.
-* Tables and views that hold relevant information related to query event.
 * Histories of the queries executed by Presto in the form of a json file.
 * Query history table created where user can execute a query to view the histories of the queries executed by Presto.
+* Heap dump by using API.
 
 
 

@@ -158,9 +158,15 @@ toc:
           topics:
             - query_history.md
             - exp-imp-qh.md
-            - qhmm.md
-            - qhmm_querying.md
-            - qhmm_gen.md
+            - topicgroup:
+                label: QHMM
+                topics:
+                - link:
+                      label: QHMM overview
+                      href: https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-ovrvw_qhmm
+                - qhmm.md
+                - qhmm_querying.md
+                - qhmm_gen.md
       - conn-presto-thr-cli.md
       - ikc_integration.md
       - s2s_auth.md
@@ -193,7 +199,7 @@ toc:
                   - spark-history-ui.md
                   - spark-user-interface.md
             - topicgroup:
-                label: Spark labs
+                label: VS Code development environment - Spark labs
                 topics:
                   - lnative_spk_lab.md
                   - nsp_lab_mon.md
