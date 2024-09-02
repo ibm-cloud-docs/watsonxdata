@@ -296,9 +296,10 @@ toc:
       - topicgroup:
           label: Troubleshooting
           topics:
+            - ts_sal_gls_enrch.md
+            - ts_optimizer.md
             - ts_cs_issue.md
             - ts_ip_restrict_issue.md
-            - ts_optimizer.md
             - ts_hive.md
             - topicgroup:
                 label: Spark

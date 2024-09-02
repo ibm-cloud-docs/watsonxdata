@@ -27,7 +27,7 @@ subcollection: watsonxdata
 {:video: .video}
 
 ## Re-enrichment not reflecting glossary updates in semantic automation
-{: #ts_salglsenrch}
+{: #ts_sal_gls_enrch}
 
 ### What’s happening
 {: #ts_salglsenrch1}
