@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-02"
+lastupdated: "2024-09-03"
 
 keywords: watsonxdata, troubleshoot, case sensitivity
 
@@ -26,20 +26,20 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-## Re-enrichment not reflecting glossary updates in semantic automation
+# Re-enrichment not reflecting glossary updates in semantic automation
 {: #ts_sal_gls_enrch}
 
-### What’s happening
+## What’s happening
 {: #ts_salglsenrch1}
 
 Updating a watsonx.data glossary in semantic automation does not impact previously enriched watsonx.data tables.
 
-### Why it’s happening
+## Why it’s happening
 {: #ts_salglsenrch2}
 
 Metadata enrichment run determines that the data has already been enriched and skips re-evaluation. Therefore, subsequent metadata enrichment runs immediately gets terminated due to the existing enriched state.
 
-### How to fix it
+## How to fix it
 {: #ts_salglsenrch3}
 
 Try the following to resolve the issue:
