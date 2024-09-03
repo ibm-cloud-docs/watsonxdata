@@ -29,7 +29,7 @@ subcollection: watsonxdata
 # Elasticsearch
 {: #elasticsearch_database}
 
-Elastic search is a NoSQL data source that stores data in an unstructured manner.
+Elastic search is a NoSQL data source that stores data in a semi-structured manner using a JSON-based document format.
 {: shortdesc}
 
  Configure the following details for Elasticsearch data source:
