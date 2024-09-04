@@ -130,6 +130,7 @@ toc:
           topics:
           - ingestdata.md
           - ingest_spark_ui.md
+          - prepare_ingest_data2.md
           - prepare_ingest_data.md
           - topicgroup:
               label: Ingesting data by using command line interface (CLI)
