@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-27"
+lastupdated: "2024-09-04"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -57,7 +57,6 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
    export HMS_CLIENT_USER=lakehouse
    export HMS_CLIENT_PASSWORD=<instance secret>
    export SOURCE_S3_CREDS="AWS_ACCESS_KEY_ID=*******,AWS_SECRET_ACCESS_KEY=*******,ENDPOINT_URL=<endpoint_url>,AWS_REGION=<region>,BUCKET_NAME=<bucket_name>"
-   export STAGING_S3_CREDS="AWS_ACCESS_KEY_ID=*******,AWS_SECRET_ACCESS_KEY=*******,ENDPOINT_URL=<endpoint_url>,AWS_REGION=<region>,BUCKET_NAME=<bucket_name>"
    export TARGET_S3_CREDS="AWS_ACCESS_KEY_ID=*******,AWS_SECRET_ACCESS_KEY=*******,ENDPOINT_URL=<endpoint_url>,AWS_REGION=<region>,BUCKET_NAME=<bucket_name>"
    export IBM_LH_SPARK_EXECUTOR_CORES=<value>
    export IBM_LH_SPARK_EXECUTOR_MEMORY=<value>
