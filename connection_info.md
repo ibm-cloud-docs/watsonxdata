@@ -29,16 +29,16 @@ subcollection: watsonxdata
 # Getting connection information
 {: #get_connection}
 
-You can now find the connectivity information for {{site.data.keyword.lakehouse_full}} in the **Connect information** tile in the **Configurations** page and in the **Instance details** page. You can copy JSON snippet and export JSON. This information is useful to create connections between IBM Cloud Pak for Data and {{site.data.keyword.lakehouse_short}}.
+You can now find the connectivity information for {{site.data.keyword.lakehouse_full}} in the **Connection information** tile in the **Configurations** page and in the **Instance details** page. You can copy JSON snippet and export JSON. This information is useful to create connections between IBM Cloud Pak for Data and {{site.data.keyword.lakehouse_short}}.
 
-1. The **Connect information** tile in the **Configurations** page provides the following information:
+1. The **Connection information** tile in the **Configurations** page provides the following information:
  * **Instance details**:
  * Host IP address
  * Port
- * Instance CRN
+ * Instance Id
  * SSL certificate
  * **Engine and service connection details**
- * Select the checkbox for Generate JSON for IBM Cloud Pak for Data and watsonx if you are connecting to IBM watsonx.data from IBM Cloud Pak for Data or from watsonx.ai.
+ * Select the checkbox for **Generate JSON for IBM Cloud Pak for Data and watsonx** if you are connecting to {{site.data.keyword.lakehouse_full}} from IBM Cloud Pak for Data or from watsonx.ai.
  * You can select one engine for the JSON snippet.
 2. The **Instance details** page provides the following details. To open the Instance details, click the i icon on the home page.
  * Region
