@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-05"
+lastupdated: "2024-09-06"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -15,4 +15,9 @@ subcollection: watsonxdata
 {: #abt_bi}
 
 
-watsonx.data can integrate with varoious power bi tools to leverga ethe functionality of visualizing the data in watsonx.data using their capability of visualization of data.
+watsonx.data can integrate with varoious power bi tools to levergae the functionality of data visualization. You can integrate with the following BI visualization tools and get your watsonx.data data visualy analyzed and generate insights from the analysis.
+
+
+
+
+ the data in watsonx.data using their capability of visualization of data.
