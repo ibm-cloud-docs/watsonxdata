@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-30"
+lastupdated: "2024-09-09"
 
 keywords: watsonxdata, qhmm
 
@@ -74,6 +74,25 @@ Perform these steps to create a library set using script based customization:
            print("Successfully downloaded file...")
     ```
     {: codeblock}
+
+    To run the application, us teh following command.
+
+    ```sh
+    curl --request POST
+        --url https://<region>.lakehouse.cloud.ibm.com/lakehouse/api/v2/spark_engines/<spark_engine_id>/applications
+        --header 'Authorization: Bearer <token>'
+        --header 'Content-Type: application/json'
+        --header 'AuthInstanceID: <crn_instance>'
+        -d @createLibraryset.json
+    ```
+    {: codeblock}
+
+
+    Parameter values:
+    * `<region>` : The region where the Spark instance is provisioned.
+    * `<spark_engine_id>` : The Engine ID of the native Spark engine.
+    * `<crn_instance>` : The CRN of the watsonx.data instance.
+    * `<token>` : The bearer token. For more information about generating the token, see [Generating a bearer token](https://cloud.ibm.com/apidocs/watsonxdata#authentication).
 
 ## Using the library set created using script based customization
 {: #script-cust-using1}

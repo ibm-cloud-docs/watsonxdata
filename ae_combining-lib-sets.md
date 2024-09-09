@@ -1,22 +1,19 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2024-08-30"
+  years: 2017, 2024
+lastupdated: "2024-09-09"
 
-subcollection: AnalyticsEngine
+keywords: watsonx.data, spark, analytics, provisioning
+subcollection: watsonxdata
 
 ---
 
+{{site.data.keyword.attribute-definition-list}}
 
-{:new_window: target="_blank"}
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:pre: .pre}
 
 # Combining library sets
-{: #combining-lib-sets}
+{: #combining-lib-sets1}
 
 You can install a Python packages via pip or conda, as well as download a file as part of the library set by combining these options when you create the library set and prepare the JSON file tp pass in the REST API call.
 
@@ -63,4 +60,5 @@ To increase readability, the unescaped JSON for the arguments would look as foll
         }
     }
 }
+```
 {: codeblock}

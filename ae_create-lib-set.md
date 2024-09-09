@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-30"
+lastupdated: "2024-09-09"
 
 keywords: watsonxdata, qhmm
 
@@ -64,6 +64,12 @@ To create a library set:
     {: codeblock}
 
     **Important**: You must escape all double quote characters in the strings that are passed as application arguments.
+
+    Parameter values:
+    * `<region>` : The region where the Spark instance is provisioned.
+    * `<spark_engine_id>` : The Engine ID of the native Spark engine.
+    * `<crn_instance>` : The CRN of the watsonx.data instance.
+    * `<token>` : The bearer token. For more information about generating the token, see [Generating a bearer token](https://cloud.ibm.com/apidocs/watsonxdata#authentication).
 
     If the application is accepted, you will receive a response like the following:
     ```json

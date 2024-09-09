@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-30"
+lastupdated: "2024-09-09"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -57,7 +57,7 @@ Parameters:
 * `<crn_instance>` : The CRN of the watsonx.data instance.
 * `<region>`: The region where the Spark instance is provisioned.
 * `<spark_engine_id>` : The engine ID of the Spark engine.
-* `<token>` : The bearer token. For more information about generating the token, see Generating a bearer token.
+* `<token>` : The bearer token. For more information about generating the token, see [Generating a bearer token](https://cloud.ibm.com/apidocs/watsonxdata#authentication).
 
 ## Submitting a Spark application by accessing the watsonx.data catalog
 {: #nsppk_preq_2}

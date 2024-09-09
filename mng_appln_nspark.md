@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-09-09"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -30,6 +30,8 @@ Application status can be : ACCEPTED, FINISHED, FAILED, ERROR, RUNNING, SUBMITTE
 
 You can also filter the applications based on status using the **Filter** icon.
 {: note}
+
+Track the status of the application by invoking the application status API, see [API](https://cloud.ibm.com/apidocs/watsonxdata#get-spark-engine-application-status).
 
 
 ## Stopping applications in {{site.data.keyword.lakehouse_short}}
