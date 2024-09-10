@@ -38,6 +38,7 @@ Google Cloud Storage is a service for storing objects in Google Cloud. An object
  |--------------------------|----------------|
  | Display name | Enter the name to be displayed.|
  | Bucket name | Enter the bucket name.|
+ | Endpoint | The default endpoint is selected.|
  | Upload JSON key file (.json) | Upload the JSON key file. |
  | Associate Catalog | Select the checkbox to add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within. |
  | Activate now| Activate the storage immediately or activate it later. |
