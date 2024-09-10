@@ -63,7 +63,7 @@ It is available as a Visual Studio Code extension and you can install it in your
 
     b. Click **Refresh**. The Visual Studio code window prompts for IBM Cloud IAM APIkey of the user that you specified in setting field watsonx-data.userName. To generate the API key, see [Managing user API key](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui).
 
-    c. Provide the API key and press Enter. Refresh your window to view the Spark engine in the left pane of Visual Studio Code application.
+    c. Provide the API key and press **Enter**. Refresh your window to view the Spark engine in the left pane of Visual Studio Code application.
 
 3. Create a Spark lab.
 
