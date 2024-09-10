@@ -39,7 +39,7 @@ The access to provision IBM Cloud resources is governed by using [IAM access](ht
 ## Review resource unit consumption
 {: #hp_view_lit}
 
-To understand about the resource unit consumption for the components in the {{site.data.keyword.lakehouse_short}}instance, follow the steps:
+To understand about the resource unit consumption for the components in the {{site.data.keyword.lakehouse_short}} instance, follow the steps:
 
 1. Go to the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog) page, find the **{{site.data.keyword.lakehouse_short}}** tile and click it. The [{{site.data.keyword.lakehouse_short}} provisioning](https://cloud.ibm.com/watsonxdata) page opens.
 
