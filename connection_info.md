@@ -35,7 +35,7 @@ You can now find the connectivity information for {{site.data.keyword.lakehouse_
  * **Instance details**:
  * Host IP address
  * Port
- * Instance Id
+ * Instance CRN
  * SSL certificate
  * **Engine and service connection details**
  * Select the checkbox for **Generate JSON for IBM Cloud Pak for Data and watsonx** if you are connecting to {{site.data.keyword.lakehouse_full}} from IBM Cloud Pak for Data or from watsonx.ai.
