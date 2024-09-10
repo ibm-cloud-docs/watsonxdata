@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-30"
+lastupdated: "2024-09-10"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -51,15 +51,15 @@ It is available as a Visual Studio Code extension and you can install it in your
 
     * `Environment Type`: Select IBM Public cloud as the environment type.
 
-    * `host`: Hostname of the region where your watsonx.data SaaS instance is provisioned, `<region>`.lakehouse.cloud.ibm.com`.
+    * `Host`: Hostname of the region where your watsonx.data SaaS instance is provisioned, `<region>`.lakehouse.cloud.ibm.com`.
 
-    * `watsonx-data`: Instance ID : CRN of the watsonx.data SaaS instance.
+    * `Instance ID` : CRN of the watsonx.data SaaS instance.
 
-    * `username`: The user name by which you want to connect to watsonx.data IBM cloud instance. The format is - `ibmlhapikey_userid`. Here ,userid is the IBM id of the user connecting to the watsonx.data instance.
+    * `User Name`: The user name by which you want to connect to watsonx.data IBM cloud instance. The format is - `ibmlhapikey_userid`. Here ,userid is the IBM id of the user connecting to the watsonx.data instance.
 
-    * `privateKeyPath`: Path to your private SSH key file.
+    * `Private Key Path`: Path to your private SSH key file.
 
-    * `publicKeyPath`: Path to your public SSH key file.
+    * `Public Key Path`: Path to your public SSH key file.
 
     b. Click **Refresh**. The Visual Studio code window prompts for IBM Cloud IAM APIkey of the user that you specified in setting field watsonx-data.userName. To generate the API key, see [Managing user API key](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui).
 
