@@ -54,7 +54,7 @@ An administrator can create the heap and thread memory dumps either by using API
 
 The API can trigger the `heap_thread_dumper.sh` shell script for creating the heap and thread memory dump. This API allows you to initiate heap and thread memory dump creation on-demand by sending an HTTP POST request with the following details:
 
-Endpoint URL: `https:///v1/lh_engine/dump`
+Endpoint URL: `https://localhost:8481/v1/lh_engine/dump`
 
 GET Request:
 
@@ -62,23 +62,25 @@ GET Request:
 {
     "type": "thread",
     "file_name": "test",
-    "path": "/var/presto/data/var/dump/nw"
+
 }
 ```
 {: codeblock}
 
 The `type` can be set to either `thread` or `heap` depending on the type of dump you want to create.
 The `file_name` is optional and is used to provide a custom name for the dump file.
-The `path` allows you to specify a custom path for storing the dump files.
 
 
-You can verify the heap and thread memory dump creation by using API. Run the following CURL command to trigger heap or thread memory dump creation:
 
+Run the following CURL command to trigger heap or thread memory dump creation:
+
+Example:
 
 ``` bash
-curl --location 'https://localhost:8086/v1/lh_engine/dump' \
---header 'secret: secret' \
+curl --location 'https://localhost:8481/v1/lh_engine/dump' \
+--header 'secret: <LH-instance-secret>' \
 --header 'Content-Type: application/json' \
+-k \
 --data '{
     "type": "thread",
     "file_name": "test"
@@ -99,7 +101,7 @@ The `heap_thread_dumper.sh` shell scripts present in {{site.data.keyword.lakehou
 
 
     ``` bash
-    cd /scripts./heap_thread_dumper.sh -f `<filename_without_extension>` -t `<thread|heap>` -p /var/presto/data/var/dump -c `<maximum_dump_files>`
+    cd /scripts./heap_thread_dumper.sh -f `<filename_without_extension>` -t `<thread|heap>` -c `<maximum_dump_files>`
     ```
     {: codeblock}
 
@@ -113,7 +115,7 @@ The `heap_thread_dumper.sh` shell scripts present in {{site.data.keyword.lakehou
 
     Example shell script:
 
-    cd /scripts./heap_thread_dumper.sh -f presto_node_01 -t heap -p /var/presto/data/var/dump -c 5
+    cd /scripts./heap_thread_dumper.sh -f presto_node_01 -t heap -c 5
 
 
 
