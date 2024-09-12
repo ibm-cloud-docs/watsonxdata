@@ -120,7 +120,7 @@ The `heap_thread_dumper.sh` shell scripts present in {{site.data.keyword.lakehou
 ## Extracting heap and thread memory dump data
 {: #extrct}
 
-Retrieve
+Retrieve heap and thread memory dump data from the MinIO storage using teh following procedure.
 
 1. Log in to **MinIO** user interface.
 
