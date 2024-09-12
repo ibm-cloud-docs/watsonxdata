@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-30"
+lastupdated: "2024-09-12"
 
 keywords: watsonxdata, qhmm
 
@@ -29,7 +29,7 @@ subcollection: watsonxdata
 # Configuring Query monitoring
 {: #qhmm}
 
-Query History Monitoring and Management (QHMM) is a service that stores and manages diagnostic data, such as query history and query event-related information of the Presto engine (Presto) in the default Minio bucket, wxd-system. You can retrieve the history files to analyze, debug or monitor the queries. You can also store the data in your own bucket.
+Query History Monitoring and Management (QHMM) is a service that stores and manages diagnostic data, such as  heap dumps, thread dumps, query history and query event-related information of the Presto engine (Presto) in the default Minio bucket, wxd-system. You can retrieve the history files to analyze, debug or monitor the queries. You can also store the data in your own bucket.
 {: shortdesc}
 
 You can enable or disable the QHMM service for your {{site.data.keyword.lakehouse_short}} instance. If you enable the QHMM service, you must specify the storage to be used for storing the query data.
