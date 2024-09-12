@@ -43,17 +43,29 @@ The administrator must get the QHMM Shell Script from IBM Support team.
 This script allows users to bundle diagnostic data files from their QHMM diagnostic bucket and share the compressed diagnostic file with support team for further analysis. (This can be done by uploading them to an Enhanced Customer Data Repository (ECuRep)). The script accepts command-line arguments for configuration or can be run with default values.
 
 •	-e: ENDPOINT (default: none) - The storage endpoint.
+
 •	-r: REGION (default: none) - The storage region.
+
 •	-b: BUCKET_NAME (default: none) - The name of the bucket.
+
 •	-a: ACCESS_KEY (default: none) - The access key for the storage.
+
 •	-s: SECRET_KEY (default: none) - The secret key for the storage.
+
 •	-i: WXD_INSTANCE_ID (default: none) - The instance ID of WXD.
+
 •	-t: ENGINE_TYPE (default: none) - The type of the engine (e.g., Presto).
+
 •	-d: ENGINE_ID (default: none) - The ID of the engine.
+
 •	-p: DOWNLOAD_DIR (default: /root/data) - The target folder for downloaded files.
+
 •	-x: START_DATE (default: last 24 hours) - The start date for filtering objects.
+
 •	-y: END_DATE (default: current date) - The end date for filtering objects.
-•	-h, --base-path Base path in the bucket"
+
+•	-h, --base-path - Base path in the bucket.
+
 
 Example command:
 
@@ -65,14 +77,23 @@ Example command:
 This script is intended for the support team to retrieve diagnostic data from an Enhanced Customer Data Repository (ECuRep), and upload it to a support team bucket for further analysis. Similar to the first script, it can be configured using command-line arguments or run with default values.
 
 •	-e: ENDPOINT (default: none) - The storage endpoint.
+
 •	-r: REGION (default: none) - The storage region.
+
 •	-b: BUCKET_NAME (default: none) - The name of the bucket.
+
 •	-a: ACCESS_KEY (default: none) - The access key for the storage.
+
 •	-s: SECRET_KEY (default: none) - The secret key for the storage.
+
 •	-i: WXD_INSTANCE_ID (default: none) - The instance ID of WXD.
+
 •	-t: ENGINE_TYPE (default: none) - The type of the engine (e.g., Presto).
+
 •	-d: ENGINE_ID (default: none) - The ID of the engine.
+
 •	-p: COMPRESSED_FILE (default: /root/data/bundle.zip) - The source folder for the compressed file.
+
 
 Example command:
 
