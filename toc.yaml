@@ -206,6 +206,9 @@ toc:
                   - logs_native_spk.md
                   - spark-history-ui.md
                   - spark-user-interface.md
+                  - spark-databand.md
+                  - spark-db-trk.md
+                  - spark-db-inv.md
             - topicgroup:
                 label: VS Code development environment - Spark labs
                 topics:
