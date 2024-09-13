@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-09-10"
+lastupdated: "2024-09-13"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -28,6 +28,9 @@ It is available as a Visual Studio Code extension and you can install it in your
 1. Ensure you have public-private SSH key pair to establish SSH connection with the Spark lab. For more information about generating the key, open watsonx.data extension in Visual Studio Code, go to Details tab, see the section, Set up SSH on your machine.
 1. Install the Visual Studio Code extension, **Remote - SSH** from [Visual Studio Code marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh).
 
+
+As Spark labs are ephemeral in nature, you must back up the data stored periodically to prevent potential data loss during upgrades or a Spark master crash.
+{: important}
 
 ## Procedure
 {: #lab_nsp-preq-1}

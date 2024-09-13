@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-28"
+lastupdated: "2024-09-13"
 
 keywords: lakehouse
 
@@ -637,3 +637,8 @@ The current version of Presto (Java) does not support binary strings with length
 
 This is a limitation in Preso and not a limitation in {{site.data.keyword.lakehouse_short}}.
 {: note}
+
+## Limitation: Back up your data to prevent data loss.
+{: #known_issues32}
+
+As Spark labs are ephemeral in nature, you must back up the data stored periodically to prevent potential data loss during upgrades or a Spark master crash.
