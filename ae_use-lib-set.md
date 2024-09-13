@@ -14,7 +14,8 @@ subcollection: watsonxdata
 # Using a library set
 {: #use-lib-set-1}
 
-After you have created a library set, you can reference and consume it in your Spark applications. When you run your Spark application in the {{site.data.keyword.iae_full_notm}} instance, the library set is loaded from the instance home and is made available to the Spark application.
+After you have created a library set, you can reference and consume it in your Spark applications. When you run your Spark application in the {{site.data.keyword.lakehouse_short}} instance, the library set is loaded from the instance home and is made available to the Spark application.
+
 
 A library set is referenced in a Spark application using the `"ae.spark.librarysets"` parameter in the `"conf"` section of the Spark application submission payload.
 
@@ -23,7 +24,7 @@ To reference a library set when submitting a Spark application:
 1. Get the IAM token. See [Generating a bearer token](https://cloud.ibm.com/apidocs/watsonxdata#authentication).
 1. Issue the following cURL command:
     ```sh
-    curl -X POST https://api.us-south.ae.cloud.ibm.com/v3/analytics_engines/<instance_id>/spark_applications --header "Authorization: Bearer <IAM token>" -H "content-type: application/json"  -d @submit-spark-app.json
+    curl -X POST https://<region>.lakehouse.cloud.ibm.com/lakehouse/api/v2/spark_engines/<spark_engine_id>/applications --header "Authorization: Bearer <IAM token>" -H "content-type: application/json"  -d @submit-spark-app.json
     ```
     {: codeblock}
 
