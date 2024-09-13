@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-08-27"
+lastupdated: "2024-09-13"
 
 keywords: watsonxdata, release notes
 
@@ -75,7 +75,6 @@ This release of {{site.data.keyword.lakehouse_short}} introduces the following e
 
 * You can now generate JSON snippet for Presto engine and Milvus service. You can copy/paste it over to the {{site.data.keyword.lakehouse_short}} Presto and Milvus connector UI in IBM Cloud Pak for Data and watsonx to simplify the connection creation. For more information, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection){: external}.
 
-* The default value of the task.max-drivers-per-task property for Presto (Java) and Presto (C++) workers is now set based on the number of vCPUs.
 
 **Access management enhancements**
 {: #28Aug_4_2024}
