@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-09"
+lastupdated: "2024-09-13"
 
 keywords: watsonxdata, qhmm
 
@@ -19,13 +19,13 @@ If you want to customize your instance by adding libraries to a library set that
 {: shortdesc}
 
 
-With script based customization, you create a Python script using the module naming convention expected by {{site.data.keyword.iae_full_notm}}. Also, you need to implement a Python function that acts as the executable entry point to your script. In this script, you can add your own logic for downloading the libraries and placing them in a predesignated directory, which is `/home/spark/shared/user-libs/<libraryset_name>/custom/<subdir_if_applicable>`, so that they become part of the library set and get stored for later consumption in your application.
+With script based customization, you create a Python script using the module naming convention expected by {{site.data.keyword.lakehouse_short}}. Also, you need to implement a Python function that acts as the executable entry point to your script. In this script, you can add your own logic for downloading the libraries and placing them in a predesignated directory, which is `/home/spark/shared/user-libs/<libraryset_name>/custom/<subdir_if_applicable>`, so that they become part of the library set and get stored for later consumption in your application.
 
 ## Creating a library set using script based customization
 {: #lib-set-script-cust1}
 
 Perform these steps to create a library set using script based customization:
-1. Create a Python file named `customization_script.py`. {{site.data.keyword.iae_short}}'s customization component looks for a Python module with this name.
+1. Create a Python file named `customization_script.py`. {{site.data.keyword.lakehouse_short}}'s customization component looks for a Python module with this name.
 1. In your `customization_script.py`, implement a function called `customize(<install_path>, <params>)`, where `<install_path>` is the predesignated location where the libraries are downloaded to, namely `/home/spark/shared/user-libs/<libraryset_name>/custom/<subdir_if_applicable>`. You can't change this path. `<params>` is a list of the parameters required by the customization script.
 1. Store the `customization_script.py` file in {{site.data.keyword.cos_full_notm}} or in GitHub.
 1. Pass the location of the `customization_script.py` file to the customization Spark application through the `"application_details" > "conf" > "spark.submit.pyFiles"` parameter.
@@ -75,7 +75,7 @@ Perform these steps to create a library set using script based customization:
     ```
     {: codeblock}
 
-    To run the application, us teh following command.
+    To run the application, use the following command.
 
     ```sh
     curl --request POST

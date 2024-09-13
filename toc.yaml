@@ -265,6 +265,13 @@ toc:
             - at_events_docs.md
             - log_analysis.md
             - monitoring_wxdcloud.md
+      - topicgroup:
+          label: Workload Orchestration
+          topics:
+            - topicgroup:
+                label: Orchestration using Apache Airflow
+                topics:
+                  - airflow.md
   - navgroup:
       id: reference
       topics:
