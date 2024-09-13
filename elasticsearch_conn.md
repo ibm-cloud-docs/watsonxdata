@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-14"
+lastupdated: "2024-09-03"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -29,7 +29,7 @@ subcollection: watsonxdata
 # Elasticsearch
 {: #elasticsearch_database}
 
-Elastic search is a NoSQL data source that stores data in an unstructured manner.
+Elastic search is a NoSQL data source that stores data in a semi-structured manner using a JSON-based document format.
 {: shortdesc}
 
  Configure the following details for Elasticsearch data source:
@@ -42,6 +42,7 @@ Elastic search is a NoSQL data source that stores data in an unstructured manner
  | Username           | Enter the  username.  |
  | Password           | Enter the password.  |
  | SSL Connection   | Use the toggle switch to enable or disable SSL connection. If enabled, \n i. The Upload SSL certificate (.pem, .crt, .cert or .cer) link is enabled. \n ii. Click the Upload SSL certificate (.pem, .crt, .cert or .cer) link. \n iii. Browse the SSL certificate and upload.|
+ | Test connection     | Click the Test connection link to test the data source connection. If the data source connection is successful, a success message appears.|
  | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your data source. |
  | Create | Click Create to create the data source. |
  {: caption="Table 1. Register data source" caption-side="bottom"}

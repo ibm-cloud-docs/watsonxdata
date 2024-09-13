@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2024-08-02"
+lastupdated: "2024-09-10"
 
 subcollection: AnalyticsEngine
 
@@ -48,5 +48,5 @@ The following table shows the supported vCPU to memory size combinations.
 
 | Lower value | Upper value |
 | ------------|-------------|
-| 1 vCPU x 1 GB | 1o vCPU x 48 GB |
+| 1 vCPU x 1 GB | 10 vCPU x 48 GB |
 {: caption="Supported vCPU to memory size combinations" caption-side="top"}

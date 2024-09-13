@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-27"
+lastupdated: "2024-09-12"
 
 keywords: watsonxdata, qhmm
 
@@ -30,7 +30,7 @@ subcollection: watsonxdata
 {: #ovrvw_qhmm}
 
 
-Query History Monitoring and Management (QHMM) is a service that stores and manages the diagnostic data such as, queries history and query event-related information of the Presto(Java) and Presto(C++) engine in a storage bucket. You can retrieve the stored history files for analysis, debugging and monitoring purpose.
+Query History Monitoring and Management (QHMM) is a service that stores and manages the diagnostic data such as, heap dumps, thread dumps, queries history and query event-related information of the Presto(Java) and Presto(C++) engine in a storage bucket. You can retrieve the stored history files for analysis, debugging and monitoring purpose.
 
 QHMM primarily aims to address the issue of data persistence for serviceability data. When the engine restarts or go offline, there are chances of losing valuable diagnostic data they generate. QHMM resolves the issue by storing such data in object storage solutions like COS (Cloud Object Storage) or Minio buckets. The data is organized in a structured folder hierarchy, making it easily accessible for users to retrieve and analyze.
 
@@ -40,15 +40,17 @@ QHMM allows to retrieve the following diagnostic data:
     * Split completed event - split correspond to an individual task in a query execution. An event is logged when a split or a task is completed.
     * Query completed event - event logged when a query execution is completed.
     * Query Optimiser event - event logged when the query optimizer is enabled.
-* Tables and views that hold relevant information related to query event.
 * Histories of the queries executed by Presto in the form of a json file.
 * Query history table created where user can execute a query to view the histories of the queries executed by Presto.
+* Heap dump by using API.
 
 
 
 ## Related topics
 {: #data_qhmm_rel}
 
-* Configuring QHMM, see [Query monitoring](watsonxdata?topic=watsonxdata-qhmm)
+* Configuring QHMM, see [Configuring Query monitoring](watsonxdata?topic=watsonxdata-qhmm)
 
-* Diagnostics Data Retrieval for Presto Engine Serviceability, see [Retrieving query information from QHMM data](watsonxdata?topic=watsonxdata-ret_qhmm)
+* Managing diagnostic data from user interface, see [Configuring Query monitoring](watsonxdata?topic=watsonxdata-ret_qhmm)
+
+* Managing diagnostic data by manual method, see [Configuring Query monitoring](watsonxdata?topic=watsonxdata-mon_mng)

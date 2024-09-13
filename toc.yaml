@@ -130,6 +130,7 @@ toc:
           topics:
           - ingestdata.md
           - ingest_spark_ui.md
+          - prepare_ingest_data2.md
           - prepare_ingest_data.md
           - topicgroup:
               label: Ingesting data by using command line interface (CLI)
@@ -158,9 +159,15 @@ toc:
           topics:
             - query_history.md
             - exp-imp-qh.md
-            - qhmm.md
-            - qhmm_querying.md
-            - qhmm_gen.md
+            - topicgroup:
+                label: QHMM
+                topics:
+                - link:
+                      label: QHMM overview
+                      href: https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-ovrvw_qhmm
+                - qhmm.md
+                - qhmm_querying.md
+                - qhmm_gen.md
       - conn-presto-thr-cli.md
       - ikc_integration.md
       - s2s_auth.md
@@ -179,6 +186,11 @@ toc:
                   - view-edit-native-park.md
                   - scale_nspark.md
                   - mng_appln_nspark.md
+                  - ae_customizing-instance.md
+                  - ae_create-lib-set.md
+                  - ae_cust-with-script.md
+                  - ae_use-lib-set.md
+                  - ae_combining-lib-sets.md
             - topicgroup:
                 label: Submitting Spark application by using native Spark engine
                 topics:
@@ -192,8 +204,11 @@ toc:
                   - logs_native_spk.md
                   - spark-history-ui.md
                   - spark-user-interface.md
+                  - spark-databand.md
+                  - spark-db-trk.md
+                  - spark-db-inv.md
             - topicgroup:
-                label: Spark labs
+                label: VS Code development environment - Spark labs
                 topics:
                   - lnative_spk_lab.md
                   - nsp_lab_mon.md
@@ -251,6 +266,13 @@ toc:
             - at_events_docs.md
             - log_analysis.md
             - monitoring_wxdcloud.md
+      - topicgroup:
+          label: Workload Orchestration
+          topics:
+            - topicgroup:
+                label: Orchestration using Apache Airflow
+                topics:
+                  - airflow.md
   - navgroup:
       id: reference
       topics:
@@ -286,9 +308,10 @@ toc:
       - topicgroup:
           label: Troubleshooting
           topics:
+            - ts_sal_gls_enrch.md
+            - ts_optimizer.md
             - ts_cs_issue.md
             - ts_ip_restrict_issue.md
-            - ts_optimizer.md
             - ts_hive.md
             - topicgroup:
                 label: Spark

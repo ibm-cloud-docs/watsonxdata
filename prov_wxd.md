@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-13"
+lastupdated: "2024-09-10"
 
 keywords: lakehouse, watsonx data, provision, endpoint, resource
 subcollection: watsonxdata
@@ -15,7 +15,6 @@ subcollection: watsonxdata
 
 # Choosing {{site.data.keyword.lakehouse_short}} plan and provisioning an instance
 {: #getting-started}
-
 
 {{site.data.keyword.lakehouse_full}} is a data management solution for collecting, storing, querying, and analyzing all your enterprise data with a single unified data platform. It provides a flexible and reliable platform that is optimized to work on open data formats.
 {: shortdesc}
@@ -40,7 +39,7 @@ The access to provision IBM Cloud resources is governed by using [IAM access](ht
 ## Review resource unit consumption
 {: #hp_view_lit}
 
-To understand about the resource unit consumption for the components in the {{site.data.keyword.lakehouse_short}}instance, follow the steps:
+To understand about the resource unit consumption for the components in the {{site.data.keyword.lakehouse_short}} instance, follow the steps:
 
 1. Go to the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog) page, find the **{{site.data.keyword.lakehouse_short}}** tile and click it. The [{{site.data.keyword.lakehouse_short}} provisioning](https://cloud.ibm.com/watsonxdata) page opens.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-27"
+lastupdated: "2024-08-28"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -74,13 +74,13 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
       1.  Existing schema: To ingest source data into an existing schema. Search or select a target schema listed in the **Select schema or enter new schema name (New)** dropdown.
 
-      2. New schema: Enter a new schema name in the **Select schema or enter new schema name (New)** filed and explicitly click **Create `<new schema name>`** to create a new schema from the source data.
+      2. New schema: Enter a new schema name in the **Select schema or enter new schema name (New)** field and explicitly click **Create: `<new schema name>`** to create a new schema from the source data.
 
    iv. Select the corresponding Target table options based on the selection (above).
 
       1. Existing table: To ingest source data into an existing table. Search or select a target table listed in the **Select table or enter new table name** dropdown.
 
-      2. New table: Enter a new target table name in the **Select table or enter new table name** and explicitly click **Create `<new table name>`** to create a new table from the source data.
+      2. New table: Enter a new target table name in the **Select table or enter new table name** and explicitly click **Create: `<new table name>`** to create a new table from the source data.
 
    v. If required, modify the auto-generated ingestion Job ID in the **Job Details**.
 
@@ -92,7 +92,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    i. Select a storage bucket from the **Select storage** drop-down.
 
-    You can also add a new storage bucket by clicking **Add +** icon and **Add Storage** window opens. For more information on how to add storage, see [Add Storage](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-reg_bucket). You can add the new storage bucket as a permanent storage or a temporary storage by making a selection.
+    You can also add a new storage bucket by clicking the Add + icon. For more information, see [Add Storage](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-reg_bucket). The new storage can be permanent or temporary, you can make appropriate selection based on your requirement.
     {: note}
 
    ii. Select the required file type based on the source data. The available options are CSV, Parquet, and JSON.
@@ -111,7 +111,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
       1.  Existing schema: To ingest source data into an existing schema. Search or select a target schema listed in the **Select schema or enter new schema name (New)** dropdown.
 
-      2. New schema: Enter a new schema name in the **Select schema or enter new schema name (New)** filed and explicitly click **Create `<new schema name>`** to create a new schema from the source data.
+      2. New schema: Enter a new schema name in the **Select schema or enter new schema name (New)** field and explicitly click **Create `<new schema name>`** to create a new schema from the source data.
 
    vi. Select the corresponding Target table options based on the selection (above).
 

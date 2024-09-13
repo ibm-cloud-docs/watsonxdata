@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-09-03"
 
 keywords: watsonxdata, troubleshoot, case sensitivity
 
@@ -26,20 +26,20 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-## Updating the configuration settings for Query Optimizer
+# Updating the configuration settings for Query Optimizer
 {: #ts_optimizer}
 
-### What’s happening
+## What’s happening
 {: #ts_optimizer1}
 
 The configuration settings for Query Optimizer might not be updated resulting in a poor performance of Query Optimizer.
 
-### Why it’s happening
+## Why it’s happening
 {: #ts_optimizer2}
 
 The query results are not optimized since the configuration settings were not updated resulting in a unoptimized output.
 
-### How to fix it
+## How to fix it
 {: #ts_optimizer3}
 
 You have to verify and update the configuration settings for Query Optimizer to improve the performance of Query Optimizer.

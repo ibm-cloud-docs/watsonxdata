@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-27"
+lastupdated: "2024-09-13"
 
 keywords: lakehouse
 
@@ -33,6 +33,11 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+
+## Files with different schemas result in null values
+{: #known_issues15665}
+
+watsonx.data now supports ingesting supported file types with varying schemas. However, when columns within these files have distinct schemas, the values in those columns is set to null.
 
 ## DB2 connector cannot access views created using external tools
 {: #known_issues24380}
@@ -632,3 +637,8 @@ The current version of Presto (Java) does not support binary strings with length
 
 This is a limitation in Preso and not a limitation in {{site.data.keyword.lakehouse_short}}.
 {: note}
+
+## Limitation: Back up your data to prevent data loss while working with VS Code development environment - Spark Labs.
+{: #known_issues32}
+
+As Spark labs are ephemeral in nature, you must back up the data stored periodically to prevent potential data loss during upgrades or a Spark master crash.

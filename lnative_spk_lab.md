@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-09-13"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -11,10 +11,10 @@ subcollection: watsonxdata
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Spark labs - Development environment
+# Working with VS Code development environment
 {: #lab_nsp}
 
-Spark lab is a Spark-based development environment that enables you to interactively program, debug, submit, and test Spark applications on a Spark cluster running on the Spark engine.
+The VS Code development environment is a Spark-based development environment that enables you to interactively program, debug, submit, and test Spark applications on a Spark cluster running on the Spark engine.
 
 It is available as a Visual Studio Code extension and you can install it in your local system to access Spark IDE using Visual Studio Code. It reduces the time for development and increases usability.
 
@@ -29,11 +29,14 @@ It is available as a Visual Studio Code extension and you can install it in your
 1. Install the Visual Studio Code extension, **Remote - SSH** from [Visual Studio Code marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh).
 
 
+As Spark labs are ephemeral in nature, you must back up the data stored periodically to prevent potential data loss during upgrades or a Spark master crash.
+{: important}
+
 ## Procedure
 {: #lab_nsp-preq-1}
 
 
-## Creating a Spark lab
+## Setting up the Spark labs
 {: #creat_lab}
 
 1. Install watsonx.data extension.
@@ -51,19 +54,19 @@ It is available as a Visual Studio Code extension and you can install it in your
 
     * `Environment Type`: Select IBM Public cloud as the environment type.
 
-    * `host`: Hostname of the region where your watsonx.data SaaS instance is provisioned, `<region>`.lakehouse.cloud.ibm.com`.
+    * `Host`: Hostname of the region where your watsonx.data SaaS instance is provisioned, `<region>`.lakehouse.cloud.ibm.com`.
 
-    * `watsonx-data`: Instance ID : CRN of the watsonx.data SaaS instance.
+    * `Instance ID` : CRN of the watsonx.data SaaS instance.
 
-    * `username`: The user name by which you want to connect to watsonx.data IBM cloud instance. The format is - `ibmlhapikey_userid`. Here ,userid is the IBM id of the user connecting to the watsonx.data instance.
+    * `User Name`: The user name by which you want to connect to watsonx.data IBM cloud instance. The format is - `ibmlhapikey_userid`. Here ,userid is the IBM id of the user connecting to the watsonx.data instance.
 
-    * `privateKeyPath`: Path to your private SSH key file.
+    * `Private Key Path`: Path to your private SSH key file.
 
-    * `publicKeyPath`: Path to your public SSH key file.
+    * `Public Key Path`: Path to your public SSH key file.
 
     b. Click **Refresh**. The Visual Studio code window prompts for IBM Cloud IAM APIkey of the user that you specified in setting field watsonx-data.userName. To generate the API key, see [Managing user API key](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui).
 
-    c. Provide the API key and press Enter. Refresh your window to view the Spark engine in the left pane of Visual Studio Code application.
+    c. Provide the API key and press **Enter**. Refresh your window to view the Spark engine in the left pane of Visual Studio Code application.
 
 3. Create a Spark lab.
 

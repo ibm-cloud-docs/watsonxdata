@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-20"
+lastupdated: "2024-09-04"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -133,3 +133,7 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
    |-----|----|
    |`--all-jobs`|This all-jobs parameter gives the history of all ingestion jobs. This parameter is used only used with `ibm-lh get-status` command.|
    {: caption="Table 4" caption-side="bottom"}
+
+
+   `get-status` is supported with ibm-lh only in the interactive mode of ingestion.
+   {: note}
