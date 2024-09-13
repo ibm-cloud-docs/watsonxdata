@@ -167,9 +167,7 @@ toc:
                       href: https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-ovrvw_qhmm
                 - qhmm.md
                 - qhmm_querying.md
-                - qhmm_heap_thread.md
                 - qhmm_gen.md
-                - shell_script.md
       - conn-presto-thr-cli.md
       - ikc_integration.md
       - s2s_auth.md
