@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-04"
+lastupdated: "2024-09-16"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -61,7 +61,7 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
    ```
    {: codeblock}
 
-   For IBM Cloud, the Spark driver, executor vCPU and memory combinations must be in a 1:2, 1:4, or 1:8 ratio. See [Default limits and quotas for Analytics Engine instances](https://cloud.ibm.com/docs/AnalyticsEngine?topic=AnalyticsEngine-limits).
+   If IBM Analytics Engine Serverless instance on IBM Cloud is registered as external Spark on {{site.data.keyword.lakehouse_short}}, the Spark driver, executor vCPU and memory combinations must be in a 1:2, 1:4, or 1:8 ratio. See Default limits and quotas for Analytics Engine instances.
    {: note}
 
    |Environment variable name|Description|
