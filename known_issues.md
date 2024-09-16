@@ -34,6 +34,10 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+## Inconsistent CSV and Parquet file ingestion behaviour
+{: #known_issues26920}
+
+Despite the design specifications stating that CSV files should only be ingested into tables created from CSV files, and parquet files should only be ingested into tables created from parquet files, there is a discrepancy in the actual behaviour where users are able to ingest CSV files into parquet tables and vice versa. This can result in unexpected results, data quality issues, or performance problems if the schema or formatting of the CSV or parquet file does not align with the expected structure of the target table.
 
 ## Schema not visible in the data enrichment list
 {: #known_issues28447}
