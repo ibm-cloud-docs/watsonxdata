@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-03"
+lastupdated: "2024-09-16"
 
 keywords: watsonxdata, troubleshoot, case sensitivity
 
@@ -32,7 +32,7 @@ subcollection: watsonxdata
 ## What’s happening
 {: #ts_salglsenrch1}
 
-Updating a watsonx.data glossary in semantic automation does not impact previously enriched watsonx.data tables.
+Updating a {{site.data.keyword.lakehouse_short}} glossary in semantic automation does not impact previously enriched {{site.data.keyword.lakehouse_short}} tables.
 
 ## Why it’s happening
 {: #ts_salglsenrch2}
@@ -44,23 +44,8 @@ Metadata enrichment run determines that the data has already been enriched and s
 
 Try the following to resolve the issue:
 
-1. Locate the corresponding Semantic automation project in CPD for the affected watsonx.data table.
-
-   ```bash
-   ???
-   ```
-   {: codeblock}
+1. Locate the corresponding Semantic automation project in CPD for the affected {{site.data.keyword.lakehouse_short}} table.
 
 1. Delete the metadata enrichment asset associated with the Semantic automation project. This will also delete the metadata enrichment job.
 
-   ```bash
-   ???
-   ```
-   {: codeblock}
-
-1. Return to watsonx.data and re-enrich the table. The updated glossary terms will now be used for the new enrichment process.
-
-   ```bash
-   ???
-   ```
-   {: codeblock}
+1. Return to {{site.data.keyword.lakehouse_short}} and re-enrich the table. The updated glossary terms will now be used for the new enrichment process.

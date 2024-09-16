@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-13"
+lastupdated: "2024-09-16"
 
 keywords: lakehouse
 
@@ -34,10 +34,38 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+## Inconsistent CSV and Parquet file ingestion behaviour
+{: #known_issues26920}
+
+Despite the design specifications stating that CSV files should only be ingested into tables created from CSV files, and parquet files should only be ingested into tables created from parquet files, there is a discrepancy in the actual behaviour where users are able to ingest CSV files into parquet tables and vice versa. This can result in unexpected results, data quality issues, or performance problems if the schema or formatting of the CSV or parquet file does not align with the expected structure of the target table.
+
+## Schema not visible in the data enrichment list
+{: #known_issues28447}
+
+In {{site.data.keyword.lakehouse_short}} cluster with semantic automation registered, creating a new schema and then ingesting a table may result in the newly created schema not being immediately visible in the **Enrich data** tab.
+
+**Workaround:** Refresh the **Enrich data** tab in {{site.data.keyword.lakehouse_short}}. This will trigger a re-sync with IKC, and the newly created schema should become visible.
+
+## Invalid file associations in Pesto resource group through UI and engine restart issues
+{: #known_issues14722}
+
+When an invalid file is associated for an engine in Pesto resource group through {{site.data.keyword.lakehouse_short}} UI, the engine will experience a restart. However, the user interface may incorrectly display that the engine is using the newly assigned file.
+
+**Workaround:** If you find that the new file is not associated with {{site.data.keyword.lakehouse_short}} environment, reach out to IBM support for further assistance.
+
+## Time data type support in Hive and Iceberg
+{: #known_issues13651}
+
+Hive: The Hive catalog does not natively support the time data type.
+
+Iceberg: Iceberg does support the time data type.
+
+**Workaround:** To enable correct handling of time data in Iceberg tables, the `hive.parquet-batch-read-optimization-enabled property` must be set to `false`.
+
 ## Files with different schemas result in null values
 {: #known_issues15665}
 
-watsonx.data now supports ingesting supported file types with varying schemas. However, when columns within these files have distinct schemas, the values in those columns is set to null.
+{{site.data.keyword.lakehouse_short}} now supports ingesting supported file types with varying schemas. However, when columns within these files have distinct schemas, the values in those columns is set to null.
 
 ## DB2 connector cannot access views created using external tools
 {: #known_issues24380}
@@ -51,7 +79,7 @@ The following special characters are not supported while creating schemas and ta
 
 Schemas (Hive and Iceberg):  `{`, `[`, `(`, `)`
 
-Tables (Hive): `{`, `(`, `[`, `)`
+Tables (Hive): `{`, `(`, `[`, `)`. (Creation of tables within a schema name that starts with the special character `@` shall result in an error).
 
 Tables (Iceberg): `$`, `@`, `{`, `[`, `)`, `(`
 
@@ -146,7 +174,7 @@ When attempting to create an index immediately following the creation of a colle
 
 You might encounter a Server concurrency limit reached error when using the flight server to run queries. This occurs when the server experiences high memory usage due to a large number of concurrent requests.
 
-**Workaround:** Pause the query or request and try after few minutes.
+**Workaround:** Simplify the query and try after few minutes.
 
 ## Incorrect recognition of Gregorian dates in Presto with Hive Parquet tables
 {: #known_issues12050}
@@ -201,16 +229,13 @@ Due to a calculation error in the configuration setting of Query Optimizer for t
    {: codeblock}
 
 ## Limitations - Presto (C++)
-{: #known_issues22601}
+{: #known_issues22601_26741}
 
 - Presto (C++) engine currently does not support database catalogs.
 - Only file formats such as Parquet and DWRF are supported.
 - Hive connector is supported.
 - Default iceberg Table has only read support with Parquet v1 format.
 - TPC-H/TPC-DS queries are supported.
-- The following SQL statements are supported:
-   - SELECT all clauses
-   - CTAS statements
 - `DELETE FROM` and `CALL SQL` statements are not supported.
 - `START`, `COMMIT`, and `ROLLBACK` transactions are not supported.
 - Data types `CHAR`, `TIME`, and `TIME WITH TIMEZONE` are not supported. These data types are subsumed by `VARCHAR`, `TIMESTAMP`, and `TIMESTAMP WITH TIMEZONE`.
@@ -224,30 +249,29 @@ Due to a calculation error in the configuration setting of Query Optimizer for t
    - `QDigest`, Classification metrics, and Differential entropy are not supported.
 - S3 and S3 compatible file systems (both read and write) are supported.
 
-
 ## Presto (C++) fails to query an external partitioned table
 {: #known_issues9897_2}
 
 When you query an external table with `CHAR` data type columns, the query fails to run. This issue occurs due to the limitation that Presto (C++) does not support `CHAR` data types.
 
-Workaround: Change the `CHAR` data type column to `VARCHAR` data type.
+**Workaround:** Change the `CHAR` data type column to `VARCHAR` data type.
 
 ## Accessing Hive and Iceberg tables in the same glue metastore catalog
 {: #known_issues11296}
 
 When using the AWS Glue Data Catalog to manage a bucket or storage location containing both Iceberg and Hive tables, attempting to access Iceberg tables from the Hive catalog gives, `Not a Hive table` error and attempting to access Hive tables from the Iceberg catalog gives, `Not an Iceberg table` error.
 
-## MinIO bucket access through S3 proxy is unavailable
-{: #known_issues12143}
+## Default MinIO bucket access through S3 proxy is unavailable
+{: #known_issues12143_15986}
 
-Currently, it is not possible to access buckets stored in MinIO object storage using an S3 proxy functionality.
+Currently, it is not possible to access buckets stored in the default MinIO object storages created during instance provisioning using an S3 proxy functionality.
 
 ## Presto SQL operations with Spark 3.3 and Iceberg timestamp data
 {: #known_issues12328}
 
 When data containing `timestampz` is ingested using Spark, Presto queries on these tables fail with the following error Iceberg column type `timestamptz` is not supported.
 
-Workaround: To ensure interoperability between Spark and Presto for datasets containing `timestampz`, you must use Spark 3.4 applications with the `configuration spark.sql.timestampType` set to `TIMESTAMP_NTZ`.
+**Workaround:** To ensure interoperability between Spark and Presto for datasets containing `timestampz`, you must use Spark 3.4 applications with the `configuration spark.sql.timestampType` set to `TIMESTAMP_NTZ`.
 
 ## Using ID as a column name in Cassandra `CREATE TABLE`
 {: #known_issues12069}
@@ -255,14 +279,14 @@ Workaround: To ensure interoperability between Spark and Presto for datasets con
 In Cassandra, you cannot create a table with a column named `ID` while using a Cassandra connector through Presto. This is because `ID` is a reserved keyword for the Cassandra driver that is used by Presto, which automatically generates a UUID for each row. Attempting to create a table with a column name ID results in an error message indicating a duplicate column declaration as follows:
 Duplicate column `id` declaration for table `tm_lakehouse_engine_ks.testtable12`
 
-Workaround: Avoid using `ID` as a column name when creating Cassandra tables through Presto.
+**Workaround:** Avoid using `ID` as a column name when creating Cassandra tables through Presto.
 
 ## User role with `CreateCollection` L3 policy fails to create collection in Milvus
 {: #known_issues12918}
 
 Users with `User role` while creating collections in Milvus with pymilvus can fail when using the `ORM Connection` and `MilvusClient Connection` methods.
 
-Workaround: You must follow the instructions:
+**Workaround:** You must follow the instructions:
 
 `ORM Connection`: The user requires both DescribeCollection and CreateCollection privileges granted in the L3 policy page. You must select all collections in a database while granting `DescribeCollection` privilege in the L3 policy through web console.
 
@@ -376,7 +400,6 @@ The following example using VALUES for multiple rows is not supported:
 INSERT INTO EMPLOYEE VALUES (3,'Roy',45,'IT','CityB'),(2,'Joe',45,'IT','CityC');
 ```
 {: codeblock}
-
 
 **Workaround:** Use a subquery with SELECT and UNION ALL to construct a temporary result set and insert it into the target table.
 ```bash
