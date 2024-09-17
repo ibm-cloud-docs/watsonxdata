@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-09-13"
+lastupdated: "2024-09-17"
 
 keywords: watsonxdata, release notes
 
@@ -63,7 +63,7 @@ This release of {{site.data.keyword.lakehouse_short}} introduces the following n
 
 This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
 
-* Instance administrators can now configure resource groups in Presto. For more information, see `<link to be defined (to the associated topic>`.
+* Instance administrators can now configure resource groups in Presto. For more information, see [Resource groups](watsonxdata?topic=watsonxdata-rg_ov){: external}.
 
 * You can now use an API to execute queries and retrieve results. For more information, see [API](https://cloud.ibm.com/apidocs/watsonxdata#create-execute-query).
 
