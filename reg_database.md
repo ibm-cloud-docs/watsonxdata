@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-14"
+lastupdated: "2024-09-17"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -49,5 +49,36 @@ To add data source-catalog pair, complete the following steps.
 
     Two data source with the same name cannot be added.
    {: note}
+
+The following data sources are supported:
+* [Amazon Redshift](watsonxdata?topic=watsonxdata-redshift_database)
+* [Apache Druid](watsonxdata?topic=watsonxdata-druid_database)
+* [Apache Kafka](watsonxdata?topic=watsonxdata-kafka_database)
+* [Apache Pinot](watsonxdata?topic=watsonxdata-pinot_database)
+* [BigQuery](watsonxdata?topic=watsonxdata-bigquery_database)
+* [Cassandra](watsonxdata?topic=watsonxdata-cassandra_database)
+* [ClickHouse](watsonxdata?topic=watsonxdata-clickhouse_database)
+* [Elasticsearch](watsonxdata?topic=watsonxdata-elasticsearch_database)
+* [IBM Data Virtualization Manager for z/OS](watsonxdata?topic=watsonxdata-dvm_database)
+* [IBM Db2](watsonxdata?topic=watsonxdata-db2_database)
+* [IBM NPSaaS](watsonxdata?topic=watsonxdata-netezza_database)
+* [Informix](watsonxdata?topic=watsonxdata-informix_database)
+* [MongoDB](watsonxdata?topic=watsonxdata-mongodb_database)
+* [MySQL](watsonxdata?topic=watsonxdata-mysql_database)
+* [Oracle](watsonxdata?topic=watsonxdata-oracle_database)
+* [PostgreSQL](watsonxdata?topic=watsonxdata-postgresql_database)
+* [Prometheus](watsonxdata?topic=watsonxdata-prometheus_database)
+* [Redis](watsonxdata?topic=watsonxdata-redis_database)
+* [SingleStore](watsonxdata?topic=watsonxdata-singlestore_database)
+* [Snowflake](watsonxdata?topic=watsonxdata-snowflake_database)
+* [SQL Server](watsonxdata?topic=watsonxdata-sqlserver_database)
+* [Teradata](watsonxdata?topic=watsonxdata-teradata_database)
+* [Custom data source](watsonxdata?topic=watsonxdata-custom_database)
+* Arrow Flight Service:
+* [Apache Derby](watsonxdata?topic=watsonxdata-derby_database)
+* [Greenplum](watsonxdata?topic=watsonxdata-greenplum_database)
+* [MariaDB](watsonxdata?topic=watsonxdata-mariadb_database)
+* [Salesforce](watsonxdata?topic=watsonxdata-salesforce_database)
+
 
 For more information on mixed-case feature flag behavior, supported SQL statements and supported data types matrices, see [Support content](https://www.ibm.com/support/pages/node/7157339){: external}.
