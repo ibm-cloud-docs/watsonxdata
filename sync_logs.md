@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-09-18"
 
 keywords: lakehouse, database, tags, description, watsonx.data
 
@@ -29,20 +29,19 @@ subcollection: watsonxdata
 # Syncing external Iceberg data into {{site.data.keyword.lakehouse_short}}
 {: #sync_log}
 
-You can write data to object store by using Spark and other external tools like Snowflake in Iceberg table format that is outside {{site.data.keyword.lakehouse_short}}. You can sync the object store (bucket) metadata with {{site.data.keyword.lakehouse_short}} without moving the data physically.
+You can write data to object store by using any engine and other external tools in Iceberg table format that is outside {{site.data.keyword.lakehouse_short}}. You can sync the object store (bucket) metadata of the storage with {{site.data.keyword.lakehouse_short}} without moving the data physically. The Apache Iceberg catalog is to be attached to the storage for this feature.
 {: shortdesc}
 
 
-1. In Infrastructure Manager, click **Add component**.
-2. Click **Add bucket**.
-3. Enter the bucket details.
+1. In the **Infrastructure Manager** page, click **Add component**.
+2. Select the storage from the **Storage** section.
+3. Enter the storage details.
 3. Select **Activate now**.
 4. Select **Catalog type** as **Apache Iceberg**.
 5. Enter the catalog name.
-6. Select all the data present on the bucket to sync or create a catalog without any preexisting data.
-7. After registration, click the catalog and go to **Sync logs**. You can see the status of synchronization (success, failure, partial success) and the last sync time.
-8. After completing the synchronization, go to the **Data manager**. You can see the catalog that you created and the tables that are pulled from the bucket created by Snowflake.
-9. If Snowflake user makes data changes in the bucket and watsonx.data wants to pull those changes in the bucket, then click **Sync data** from UI for three strategy options:
-* **Sync all data**: Synchronize all the data or update the existing table that was promoted earlier.
-* **Sync new data only**: Pull the newly created table only.
-* **Sync existing data only**: Update the table registered earlier to the latest changes only.
+6. Click **Create** to create the storage.
+7. If you change the data in the storage bucket in {{site.data.keyword.lakehouse_short}} and you want to pull those changes then, go to the **Infrastructure manager** page, hover over the Apache Iceberg catalog and click Sync metadata. You can see three options to select the Mode and the corresponding possibility for metadata loss.
+8. The following are the three sync options:
+* **Register new objects only**: Schemas, tables, and metadata that are created by external applications since the last sync operations are added to this catalog. Existing schemas and tables in this catalog are not modified.
+* **Update existing objects only**: Schemas, tables, and metadata already present in this catalog are updated or deleted to match the current state found in the associated bucket. Any other schemas, tables, and metadata in the associated bucket are ignored.
+* **Sync all objects**: Schemas, tables, and metadata already present in this catalog are updated to match the exact state of the associated bucket. All the new objects are added and all the existing objects are updated or removed.

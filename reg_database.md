@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-17"
+lastupdated: "2024-09-18"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -46,8 +46,9 @@ To add data source-catalog pair, complete the following steps.
 3. To add a data source, click **Add component**.
 4. In the **Add component**, select a data source from the **Data source** section.
 5. Based on the data source type selected, configure the data source details.
+6. You can attach a catalog to the data source. This catalog can be associated with an engine. A catalog defines the schemas and metadata for a storage or data source. Depending on the storage type, Apache Iceberg, Apache Hive, Apache Hudi, and Delta Lake catalogs are supported.
 
-    Two data source with the same name cannot be added.
+    Two data sources with the same name cannot be added.
    {: note}
 
 The following data sources are supported:
