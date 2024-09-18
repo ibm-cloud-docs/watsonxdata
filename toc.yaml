@@ -103,7 +103,7 @@ toc:
       - edit-db-tags.md
       - delete_database.md
       - topicgroup:
-              label: Adding a storage-catalog pair
+              label: Storage-catalog pair
               topics:
               - reg_bucket.md
               - cos_storage.md
