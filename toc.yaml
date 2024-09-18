@@ -65,7 +65,7 @@ toc:
           - disso-cat-eng.md
           - conf_rcrs_grp.md
       - topicgroup:
-              label: Database-catalog pair
+              label: Data source-catalog pair
               topics:
               - reg_database.md
               - redshift_conn.md
