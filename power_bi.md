@@ -59,15 +59,15 @@ You can select one of the following ODBC drivers to connect to Presto from Power
 6.	 Provide the following details:
 
 
-    * Data source name : Enter a name for your data source connection.
-    * Description : Provide a description for the Presto driver setup.
-    * Authentication Type : Select LDAP from the list.
-    * Username : The username is `ibmlhapikey` or `ibmlhapikey_<watsonx.datauser_id>`.
-    * Password : The API key of the {{site.data.keyword.lakehouse_short}} user. For more information about retrieving the API key, see [Generating the API key](watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmapi-key).
-    * Host : Hostname of the Presto engine in watsonx.data that you want to connect to. For more information about retrieving the hostname, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection).
-    * Port : For information about retrieving the port number, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection).
-    * Catalog : Select the Iceberg catalog (Iceberg_data) that is associated with the Presto engine in watsonx.data.
-    * Schema : Select the schema that is associated with your data.
+   * Data source name : Enter a name for your data source connection.
+   * Description : Provide a description for the Presto driver setup.
+   * Authentication Type : Select LDAP from the list.
+   * Username : The username is `ibmlhapikey` or `ibmlhapikey_<watsonx.datauser_id>`.
+   * Password : The API key of the {{site.data.keyword.lakehouse_short}} user. For more information about retrieving the API key, see [Generating the API key](watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmapi-key).
+   * Host : Hostname of the Presto engine in watsonx.data that you want to connect to. For more information about retrieving the hostname, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection).
+   * Port : For information about retrieving the port number, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection).
+   * Catalog : Select the Iceberg catalog (Iceberg_data) that is associated with the Presto engine in watsonx.data.
+   * Schema : Select the schema that is associated with your data.
 
 
 7.	Click **Test** to verify that the connection is successful. The Test results window opens to display the success message. Click **Ok**. The **Simba Presto ODBC Driver DSN Setup** page opens.
