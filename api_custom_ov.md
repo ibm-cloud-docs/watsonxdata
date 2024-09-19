@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-26"
+lastupdated: "2024-09-19"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -168,9 +168,6 @@ This customization method does not require you to add the parameters inside the 
 {: codeblock}
 
 The GET API also supports customization, but is available for internal use only.
-{: note}
-
-For the PATCH API to function correctly, make sure that the {{site.data.keyword.lakehouse_short}} version and the console build version are the same. To verify, open the **Instance details** page by clicking the `i` icon from the home page and check the **Version** and **Console build** information.
 {: note}
 
 You can find the curl example for API customization in [Update presto engine](https://cloud.ibm.com/apidocs/watsonxdata#update-presto-engine).
