@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-17"
+lastupdated: "2024-09-19"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -38,13 +38,11 @@ Snowflake is a cloud hosted relational database for building data warehouse.
  |------------------|--------------------|
  | Display name    | Enter the data source name to be displayed on the screen. |
  | Database name     | Enter the name of your database.|
- | Account name            | Enter your Snowflake Account name. This may include region information (e.g., account_name.region_id). If you do not have region information, use the account name provided by your Snowflake administrator.  |
+ | Hostname            | Enter the hostname.  |
  | Warehouse name           | Enter the Warehouse name.  |
- | Username           | Enter the username.  |
+ | Username           | Enter the  username.  |
  | Password           | Enter the password.  |
- | Test connection    | Click the Test connection link to test the database connection. If the database connection is successful, a success message appears. |
- | Associate catalog  | Select the checkbox to associate the catalog. |
- | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your data source and serves as your query interface with the data stored within. |
+ | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your data source. |
  | Create | Click Create to create the data source. |
  {: caption="Table 1. Register data source" caption-side="bottom"}
 
