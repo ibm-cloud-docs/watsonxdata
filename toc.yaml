@@ -113,7 +113,7 @@ toc:
               - hdfs_storage.md
               - google_cloud_storage.md
               - adls_genblob_storage.md
-              - ozone_storage.md
+              - adls_gentwo_storage.md
       - explor-buck-obj.md
       - edit-buck-tags.md
       - delete_bucket.md
