@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-28"
+lastupdated: "2024-09-19"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -35,14 +35,11 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 ## Before you begin
 {: #spk_ing}
 
-* Add and register {{site.data.keyword.iae_full_notm}} (Spark). See [Registering an engine]({{site.data.keyword.ref-reg_engine-link}}).
-* Add storage for the source data files and target catalog. See [Adding a bucket-catalog pair]({{site.data.keyword.ref-reg_bucket-link}}).
-* Optionally, you can create a schema in the catalog for the target table. See [Creating schemas]({{site.data.keyword.ref-create_schema-link}}).
-* Optionally, you can also create a target table in the schema. See [Creating tables]({{site.data.keyword.ref-create_table-link}}).
-* To enable your Spark application and ingestion to work with the {{site.data.keyword.lakehouse_short}} catalog and storage, you must have `MetastoreAdmin`, and `DataAccess` roles in the Service access and `Administrator` role in the Platform access, see [Managing IAM access for watsonx.data](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-iam).
-
- Without `Metastore admin` privilege, you cannot ingest data to storage using Native Spark engine. For more information about the Spark configuration, see [Working with the watsonx.data catalog and storage](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-smbit_nsp#view_smbit_nsp).
- {: note}
+* Add and register {{site.data.keyword.iae_full_notm}} (Spark). See [Provisioning a Spark engine](watsonxdata?topic=watsonxdata-spl_engine).
+* Add storage for the source data files and target catalog. See [Adding a storage-catalog pair](watsonxdata?topic=watsonxdata-reg_bucket).
+* Optionally, you can create a schema in the catalog for the target table. See [Creating schemas](watsonxdata?topic=watsonxdata-create_schema).
+* Optionally, you can also create a target table in the schema. See [Creating tables](watsonxdata?topic=watsonxdata-create_table).
+* To enable your Spark application and ingestion to work with the {{site.data.keyword.lakehouse_short}} catalog and storage, you must have `MetastoreAdmin`, and `DataAccess` roles in the Service access and `Administrator` role in the Platform access, see [Assigning access to account management services](https://cloud.ibm.com/docs/account?topic=account-account-services&interface=ui).
 
 ## Ingesting data
 {: #spk_ingest_data}
@@ -74,7 +71,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
       1.  Existing schema: To ingest source data into an existing schema. Search or select a target schema listed in the **Select schema or enter new schema name (New)** dropdown.
 
-      2. New schema: Enter a new schema name in the **Select schema or enter new schema name (New)** field and explicitly click **Create: `<new schema name>`** to create a new schema from the source data.
+      2. New schema: Enter a new schema name in the **Select schema or enter new schema name** field and explicitly click **Create: `<new schema name>`** to create a new schema from the source data.
 
    iv. Select the corresponding Target table options based on the selection (above).
 
