@@ -267,6 +267,15 @@ toc:
             - log_analysis.md
             - monitoring_wxdcloud.md
       - topicgroup:
+          label: Integrating with BI visualization tools
+          topics:
+            - bi_tools.md
+            - tableau.md
+            - looker.md
+            - Domo.md
+            - Qlik.md
+            - power_bi.md
+      - topicgroup:
           label: Workload Orchestration
           topics:
             - topicgroup:
