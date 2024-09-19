@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-28"
+lastupdated: "2024-09-19"
 
 keywords: watsonx.data, ikc, configuring, knowledgecatalog
 subcollection: watsonxdata
@@ -16,6 +16,14 @@ subcollection: watsonxdata
 {: #ikc_integration}
 
 Integrating {{site.data.keyword.lakehouse_full}} with IBM Knowledge Catalog (IKC) provides self-service access to data assets (tables and views) for knowledge workers who need to use those data assets to gain insights.
+
+IBM Knowledge Catalog supports non-database catalogs and the following database catalogs   :
+* Oracle
+* Postgresql
+* Mysql
+* SQL server
+* Db2
+
 
 ## Before you begin
 {: #prereq_ikc}
