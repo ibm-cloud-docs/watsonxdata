@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-09-09"
+lastupdated: "2024-09-19"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -19,7 +19,7 @@ This topic provides the procedure to submit a Spark application by using native 
 ## Prerequisites
 {: #nsppk_preq_1}
 
-* Metastore admin role : To enable your Spark application to work with the watsonx.data catalog and storage, you must have `Metastore admin` role. Without `Metastore admin` privilege, you cannot ingest data to storage by using Native Spark engine. For more information about the Spark configuration, see [Working with the watsonx.data catalog and storage](#view_smbit_nsp).
+* Metastore admin role : To enable your Spark application to work with the watsonx.data catalog and storage, you must have `Metastore admin` role. Without `Metastore admin` privilege, you cannot ingest data to storage by using Native Spark engine.
 
 * Create an object storage : To store the Spark application and related output, create a storage bucket. To create Cloud Object Storage and a bucket, see [Creating a storage bucket](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-secure-content-store#create-cos-bucket). Maintain separate storage for application and data. Register only data buckets with {{site.data.keyword.lakehouse_short}}.
 
