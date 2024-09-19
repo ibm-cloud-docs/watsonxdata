@@ -44,7 +44,7 @@ To add a storage-catalog pair, complete the following steps:
 2. From the navigation menu, select **Infrastructure manager**.
 3. To define and connect a storage, click **Add component**.
 4. In the **Add component** window, select a storage from the **Storage** section and provide the details to connect to existing externally managed storage.
-5. You can attach a catalog to the storage. This catalog can be associated with an engine. A catalog defines the schemas and metadata for a storage or data source. Depending on the storage type, Apache Iceberg, Apache Hive, Apache Hudi, and Delta Lake catalogs are supported.
+5. You can associate a catalog to the storage. This catalog can be associated with an engine. A catalog defines the schemas and metadata for a storage or data source. Depending on the storage type, Apache Iceberg, Apache Hive, Apache Hudi, and Delta Lake catalogs are supported.
 
      You can modify the access key and secret key of a user-registered bucket for a storage. This feature is only available for user-registered buckets and is not applicable to default buckets, ADLS, or Google Cloud Storage. This feature can be used if the new credentials successfully pass the test connection.
      {: note}
