@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-16"
+lastupdated: "2024-09-18"
 
 keywords: lakehouse
 
@@ -33,6 +33,11 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+
+## Performance issue with multiple groups of large user counts
+{: #known_issues15126}
+
+{{site.data.keyword.lakehouse_short}} might experience performance degradation when there are more than five groups with 100 users each. This limitation is attributed to performance constraints within the Zen-core API used for fetching group details.
 
 ## Inconsistent CSV and Parquet file ingestion behaviour
 {: #known_issues26920}

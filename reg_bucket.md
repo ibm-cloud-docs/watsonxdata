@@ -44,8 +44,9 @@ To add a storage-catalog pair, complete the following steps:
 2. From the navigation menu, select **Infrastructure manager**.
 3. To define and connect a storage, click **Add component**.
 4. In the **Add component** window, select a storage from the **Storage** section and provide the details to connect to existing externally managed storage.
+5. You can associate a catalog to the storage. This catalog can be associated with an engine. A catalog defines the schemas and metadata for a storage or data source. Depending on the storage type, Apache Iceberg, Apache Hive, Apache Hudi, and Delta Lake catalogs are supported.
 
-     You can modify the access key and secret key of a user-registered bucket for a storage. This feature is only available for user-registered buckets and is not applicable to default buckets, ADLS, or Google Cloud Storage. This feature can only be used if the new credentials successfully pass the test connection.
+     You can modify the access key and secret key of a user-registered bucket for a storage. This feature is only available for user-registered buckets and is not applicable to default buckets, ADLS, or Google Cloud Storage. This feature can be used if the new credentials successfully pass the test connection.
      {: note}
 
    **Important information**{: #important_info}
@@ -87,5 +88,15 @@ To add a storage-catalog pair, complete the following steps:
 
 1. For **Iceberg** connector, the maximum number of digits that can be accommodated in a column of data type FLOAT and DOUBLE is 37. Trying to insert anything larger ends up in a decimal overflow error.
 2. When the fields of data type `REAL` have 6 digits or more in the decimal part with the digits being predominately zero, the values when queried are rounded off. It is observed that the rounding off occurs differently based on the precision of the values. For example, a decimal number 1.654 when rounded to 3-digits after decimal point are the same. Another example, is 10.890009 and 10.89000. It is noticed that 10.89000 is rounded to 10.89, whereas 10.89009 is not rounded off. This is an inherent issue because of the representational limitations of binary floating point formats. This might have a significant impact when querying involves sorting.
+
+The following storages are supported:
+* [IBM Cloud Object Storage](watsonxdata?topic=watsonxdata-cos_storage)
+* [Amazon S3](watsonxdata?topic=watsonxdata-amazons_storage)
+* [IBM Storage Ceph](watsonxdata?topic=watsonxdata-ceph_storage)
+* [MinIO](watsonxdata?topic=watsonxdata-minio_storage)
+* [Hadoop Distributed File System](watsonxdata?topic=watsonxdata-hdfs_storage)
+* [Google Cloud Storage](watsonxdata?topic=watsonxdata-gcs_storage)
+* [Azure Data Lake Storage](watsonxdata?topic=watsonxdata-adls_genblob_storage)
+* [Apache Ozone](watsonxdata?topic=watsonxdata-ozone_storage)
 
 For more information on mixed-case feature flag behavior, supported SQL statements and supported data types matrices, see [Support content](https://www.ibm.com/support/pages/node/7157339){: external}.

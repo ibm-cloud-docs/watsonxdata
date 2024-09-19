@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-22"
+lastupdated: "2024-09-19"
 
 keywords: lakehouse, access, data, policy, watsonx data
 
@@ -94,7 +94,7 @@ To maintain data security, you can create access policies for the following at t
 1. Select a user or user group from the drop-down list.
 1. Click **Add** to add the rule. You can add more rules or click **Review**, the **Summary** page opens.
 1. In the **Summary** page:
-   - You can review the policy.
-   - Click **Back** to go to the previous page.
-   - Click **Cancel** to cancel the process.
-   - Click **Save** to save the policy.
+    - You can review the policy.
+    - Click **Back** to go to the previous page.
+    - Click **Cancel** to cancel the process.
+    - Click **Save** to save the policy.

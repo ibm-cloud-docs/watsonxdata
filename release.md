@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-09-13"
+lastupdated: "2024-09-19"
 
 keywords: watsonxdata, release notes
 
@@ -47,33 +47,33 @@ This release includes the following new data sources and storage enhancements:
 
 * Apache Hive is upgraded to version 4.0.0.
 
-* You can now view the DAS endpoint from the **Storage details** page. For more information, see [Exploring storage objects](watsonxdata?topic=watsonxdata-buck-obj){: external}.
+* You can now view the DAS endpoint from the **Storage details** page. For more information, see [Exploring storage objects](watsonxdata?topic=watsonxdata-buck-obj).
 
 **Integration enhancements**
 {: #28Aug_2_2024}
 
 This release of {{site.data.keyword.lakehouse_short}} introduces the following new or enhanced integrations with other services:
 
-* You can now use the governance capabilities of IBM Knowledge Catalog (IKC) for SQL views within the {{site.data.keyword.lakehouse_short}} platform. For more information, see [Integrating with IBM Knowledge Catalog (IKC)](watsonxdata?topic=watsonxdata-ikc_integration){: external}.
+* You can now use the governance capabilities of IBM Knowledge Catalog (IKC) for SQL views within the {{site.data.keyword.lakehouse_short}} platform. For more information, see [Integrating with IBM Knowledge Catalog (IKC)](watsonxdata?topic=watsonxdata-ikc_integration).
 
-* IBM {{site.data.keyword.lakehouse_short}} now supports Apache Ranger policies to govern data with Presto (C++) engines. For more information, see [Apache Ranger policy](watsonxdata?topic=watsonxdata-ranger_1){: external}.
+* IBM {{site.data.keyword.lakehouse_short}} now supports Apache Ranger policies to govern data with Presto (C++) engines. For more information, see [Apache Ranger policy](watsonxdata?topic=watsonxdata-ranger_1).
 
 **Engine and service enhancements**
 {: #28Aug_3_2024}
 
 This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
 
-* Instance administrators can now configure resource groups in Presto. For more information, see `<link to be defined (to the associated topic>`.
+* Instance administrators can now configure resource groups in Presto. For more information, see [Resource groups](watsonxdata?topic=watsonxdata-rg_ov).
 
-* You can now use an API to execute queries and retrieve results. For more information, see [API](https://cloud.ibm.com/apidocs/watsonxdata#create-execute-query).
+* You can now use an API to execute queries and retrieve results. For more information, see [API](https://cloud.ibm.com/apidocs/watsonxdata#create-execute-query){: external}.
 
-* You can now configure or change the log level of Presto (Java) through API customization. For more information, [API](https://cloud.ibm.com/apidocs/watsonxdata#update-presto-engine).
+* You can now configure or change the log level of Presto (Java) through API customization. For more information, [API](https://cloud.ibm.com/apidocs/watsonxdata#update-presto-engine){: external}.
 
 * You can now generate Number of Distinct Values (NDV) column statistics with the Iceberg Spark Analyze procedure to enhance the Spark Cost-Based Optimizer (CBO) for improved query planning.
 
-* You can now use the custom data source option to connect to Black Hole and Local File connectors for the Presto (Java) engine. For more information, see [Custom data source](watsonxdata?topic=watsonxdata-custom_database){: external}.
+* You can now use the custom data source option to connect to Black Hole and Local File connectors for the Presto (Java) engine. For more information, see [Custom data source](watsonxdata?topic=watsonxdata-custom_database).
 
-* You can now generate JSON snippet for Presto engine and Milvus service. You can copy/paste it over to the {{site.data.keyword.lakehouse_short}} Presto and Milvus connector UI in IBM Cloud Pak for Data and watsonx to simplify the connection creation. For more information, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection){: external}.
+* You can now generate JSON snippet for Presto engine and Milvus service. You can copy/paste it over to the {{site.data.keyword.lakehouse_short}} Presto and Milvus connector UI in IBM Cloud Pak for Data and watsonx to simplify the connection creation. For more information, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection).
 
 
 **Access management enhancements**
@@ -81,11 +81,11 @@ This release of {{site.data.keyword.lakehouse_short}} introduces the following e
 
 This release of {{site.data.keyword.lakehouse_short}} introduces the following access management enhancements:
 
-* You can now control access to Presto (C++) engines. For more information, see [Engine (Presto (Java) or Presto (C++))](watsonxdata?topic=watsonxdata-role_priv#engine_presto){: external}.
+* You can now control access to Presto (C++) engines. For more information, see [Engine (Presto (Java) or Presto (C++))](watsonxdata?topic=watsonxdata-role_priv#engine_presto).
 
-* You can now grant component access to users and user groups in batch. For more information, see [Managing user access](watsonxdata?topic=watsonxdata-manage_access){: external}.
+* You can now grant component access to users and user groups in batch. For more information, see [Managing user access](watsonxdata?topic=watsonxdata-manage_access).
 
-* You can now have System Access Control (SAC) plug-in logs with DEBUG information in Presto. For more information, see [API customization](watsonxdata?topic=watsonxdata-api_custom_ov){: external}.
+* You can now have System Access Control (SAC) plug-in logs with DEBUG information in Presto. For more information, see [API customization](watsonxdata?topic=watsonxdata-api_custom_ov).
 
 **Ingestion enhancements**
 {: #28Aug_5_2024}

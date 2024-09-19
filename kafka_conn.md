@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-14"
+lastupdated: "2024-09-19"
 
 keywords: lakehouse, data source, watsonx.data
 

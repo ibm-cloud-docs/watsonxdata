@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-22"
+lastupdated: "2024-09-19"
 
 keywords: lakehouse, storage, catalog, watsonx.data
 
@@ -40,7 +40,7 @@ If you select **Azure Data Lake Storage Gen1 Blob** from the **Storage** section
  | Container name | Enter the container name. |
  | Storage account name | Enter the Storage account name. |
  | Endpoint | Enter the Endpoint URL. |
- | Authentication mode | Select the Authentication mode. \n * SAS: Enter your SAS token. \n * Account key: Enter your access key. |
+ | Access key | Enter your access key. |
  | Associate catalog | Add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within. |
  | Activate now| Activate the storage immediately or activate it later. |
  | Catalog type | Select the catalog type from the list. The recommended catalog is Apache Iceberg. The other options for catalog are Apache Hive, Apache Hudi, and Delta Lake. |

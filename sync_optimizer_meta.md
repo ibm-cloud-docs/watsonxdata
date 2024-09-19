@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-12"
+lastupdated: "2024-09-17"
 
 keywords: lakehouse, hms, {{site.data.keyword.lakehouse_short}}, hive, metastore
 
@@ -66,7 +66,7 @@ Activating **Query Optimizer** automatically synchronizes metadata for catalogs 
 4. Run the following command to register {{site.data.keyword.lakehouse_short}} catalog with **Query Optimizer**:
 
    ```bash
-   ExecuteWxdQueryOptimizer "CALL SYSHADOOP.REGISTER_EXT_METASTORE('<CATALOG_NAME>','type=watsonx-data,uri=thrift://$LOCAL_HMS_URL,use.SSL=true,auth.mode=PLAIN,auth.plain.credentials=ibmlhapikey:<apikey>', ?, ?);
+   ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.REGISTER_EXT_METASTORE('<CATALOG_NAME>','type=watsonx-data,uri=thrift://$LOCAL_HMS_URL,use.SSL=true,auth.mode=PLAIN,auth.plain.credentials=ibmlhapikey:<apikey>', ?, ?)';
    ```
    {: codeblock}
 
