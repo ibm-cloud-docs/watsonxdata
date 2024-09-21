@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-09-19"
+lastupdated: "2024-09-21"
 
 keywords: watsonxdata, release notes
 
@@ -33,6 +33,81 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.lakehouse_full}} that are grouped by date.
 {: shortdesc}
+
+## 25 September 2024 - Version 2.0.3
+{: #lakehouse_25Sep01}
+
+
+**Data sources and storage enhancements**
+{: #25Sep_1_2024}
+
+This release includes the following new data sources and storage enhancements:
+
+* You can now enable Azure Data Lake Storage Gen1 Blob and Google Cloud Storage for Milvus. For more information, see [ADLS Gen1 Blob](watsonxdata?topic=watsonxdata-adls_genblob_storage) and [Google Cloud Storage](watsonxdata?topic=watsonxdata-gcs_storage).
+
+* You can create or add a new data source to the engine without attaching a catalog to it. A catalog can be attached to the data source at a later stage.
+
+* You can now use Apache Ozone storage for the Presto (Java) engine. For more information, see [Apache Ozone](watsonxdata?topic=watsonxdata-ozone_storage).
+
+* You can now configure the Apache Kafka data source to use the Salted Challenge Response Authentication Mechanism (SCRAM) authentication mechanism. You can upload a self-signed certificate. For more information, see [Apache Kafka](watsonxdata?topic=watsonxdata-kafka_database).
+
+**Integration enhancements**
+{: #25Sep_2_2024}
+
+This release of {{site.data.keyword.lakehouse_short}} introduces the following new or enhanced integrations with other services:
+
+* You can now integrate {{site.data.keyword.lakehouse_short}} with data build tool (dbt) for Spark engine for in-place data transformation within {{site.data.keyword.lakehouse_short}}.
+
+* You can integrate {{site.data.keyword.lakehouse_short}} with the following Business Intelligence (BI) visualization tools to access the connected data sources and build compelling and interactive data visualizations:
+
+* Looker
+* Tableau
+* Qlik
+* Domo
+* IBM Cognos Analytics
+
+**Engine and service enhancements**
+{: #25Sep_3_2024}
+
+This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
+
+* You can now use Apache Iceberg catalog with Query Optimizer.
+
+* You can now use the data build tool (dbt-watsonx-presto) adapter to build, test, and document data models for the Presto (Java) engine.
+
+
+**Access management enhancements**
+{: #25Sep_4_2024}
+
+This release of {{site.data.keyword.lakehouse_short}} introduces the following access management enhancements:
+
+* You can now add users and user groups to define data policy rules. For more information, see [Data policy](watsonxdata?topic=watsonxdata-data_policy).
+
+* Administrators can now select TPCDS and TPCH catalogs to create access control policies. ‘Select’ is the only allowed operation to define rules with these catalogs. To define data policies, see [Data policy](watsonxdata?topic=watsonxdata-data_policy).
+
+**IBM Knowledge Catalog governance policies for data sources**
+{: #25Sep_5_2024}
+
+You can now apply IBM Knowledge Catalog governance policies to the following data sources in Presto:
+
+* Oracle
+* PostgreSQL
+* MySQL
+* SQL Server
+* Db2
+
+**Ingestion enhancements**
+{: #25Sep_6_2024}
+
+This release of {{site.data.keyword.lakehouse_short}} includes the following improvements to the ingestion workflow:
+
+* You can now submit an ingestion job using the data sources. For more information, see [Ingesting data by using Spark through the web console](watsonxdata?topic=watsonxdata-ingest_spark_ui).
+
+* You can now ingest data using AVRO, and ORC file formats. For more information, see [About data ingestion](watsonxdata?topic=watsonxdata-load_ingest_data).
+
+* You can preview uploaded files and click table headers to edit column names. For more information, see Accessing Spark logs for ingestion jobs.
+
+* You can access and view Spark logs associated with an ingestion job. For more information, see Accessing Spark logs for ingestion jobs.
 
 ## 27 August 2024 - Version 2.0.2
 {: #lakehouse_28Aug032024}
