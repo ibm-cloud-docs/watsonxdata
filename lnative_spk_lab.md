@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-09-13"
+lastupdated: "2024-09-22"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -25,7 +25,6 @@ It is available as a Visual Studio Code extension and you can install it in your
 
 1. Install a desktop version of Visual Studio Code.
 1. Install watsonx.data extension from [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.watsonx-data).
-1. Ensure you have public-private SSH key pair to establish SSH connection with the Spark lab. For more information about generating the key, open watsonx.data extension in Visual Studio Code, go to Details tab, see the section, Set up SSH on your machine.
 1. Install the Visual Studio Code extension, **Remote - SSH** from [Visual Studio Code marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh).
 
 
@@ -45,32 +44,35 @@ As Spark labs are ephemeral in nature, you must back up the data stored periodic
 
     b. Browse for the watsonx.data extension from [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.watsonx-data) and install the extension.
 
-    c. You can also see the watsonx.data icon in the left navigation window. Click the icon. The **Settings** window opens.
+    c. You can also see the watsonx.data icon in the left navigation window. Click the icon. The **Welcome to IBM watsonx.data extension** window opens.
 
 
-2. Configure the watsonx.data extension.
+2. From the **Welcome to IBM watsonx.data extension** window, click **Manage Connection**. The **Manage Connection watsonx.data** window opens.
 
-    a. Click **Go to Settings**. Configure the following items:
+3. Configure one of the following details:
+    **JSON Inputs**
+    **Form Inputs**
 
-    * `Environment Type`: Select IBM Public cloud as the environment type.
+4. If you are configuring **JSON Inputs**, click **JSON Inputs** and configure the following details:
 
-    * `Host`: Hostname of the region where your watsonx.data SaaS instance is provisioned, `<region>`.lakehouse.cloud.ibm.com`.
+    * **API Key** : Provide the platform API key. To generate the API key, see [API key]().
+    * **Connection JSON** : Provide the connection details from the watsonx.data user interface. To do that:
+        * Log in to your watsonx.data page.
+        * Click **Infrastructure manager**.
+        * Click your Spark engine that is in running status. In the **Details** tab, from the **VS Code connection configuration** field, click the **View configurations** link. Copy the configuration and use this as the **Connection JSON** field value.
 
-    * `Instance ID` : CRN of the watsonx.data SaaS instance.
-
-    * `User Name`: The user name by which you want to connect to watsonx.data IBM cloud instance. The format is - `ibmlhapikey_userid`. Here ,userid is the IBM id of the user connecting to the watsonx.data instance.
-
-    * `Private Key Path`: Path to your private SSH key file.
-
-    * `Public Key Path`: Path to your public SSH key file.
-
-    b. Click **Refresh**. The Visual Studio code window prompts for IBM Cloud IAM APIkey of the user that you specified in setting field watsonx-data.userName. To generate the API key, see [Managing user API key](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui).
-
-    c. Provide the API key and press **Enter**. Refresh your window to view the Spark engine in the left pane of Visual Studio Code application.
+5. If you are configuring **Form Inputs**, click **Form Inputs** and configure the following details:
+    * **Host address of watsonx.data console** : Provide the host IP address of watsonx.data. To retrieve the host IP address, see [Getting connection information]().
+    * **Environment Type** : Select `SAAS`.
+    * **Username** : The watsonx.data login username.
+    * **API Key** : Provide the platform API key. To generate the API key, see [API key]().
 
 3. Create a Spark lab.
 
-    a. To create a new Spark lab, click the + icon. The Create Spark Lab window opens. Specify your **public SSH key** and the **public SSH keys** of the users whom you want to grant access to Spark lab. Specify each public SSH key on a new line.
+    a. To create a new Spark lab, click the + icon. The Create Spark Lab window opens. Specify a unique name for the Spark lab and select the **Spark Version**. The default Spark version is 3.4. You can modify the other optional fields if required.
+
+    The `spark.hadoop.wxd.apikey` parameter is configured in the **Spark configurations** field by default while creating Spark lab and need not be explicitly specified.
+    {: note}
 
     b. Click **Create**. Click **Refresh** to see the Spark lab in the left window. This is the dedicated Spark cluster for application development.
 
