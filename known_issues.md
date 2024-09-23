@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-18"
+lastupdated: "2024-09-23"
 
 keywords: lakehouse
 
@@ -51,10 +51,10 @@ In {{site.data.keyword.lakehouse_short}} cluster with semantic automation regist
 
 **Workaround:** Refresh the **Enrich data** tab in {{site.data.keyword.lakehouse_short}}. This will trigger a re-sync with IKC, and the newly created schema should become visible.
 
-## Invalid file associations in Pesto resource group through UI and engine restart issues
+## Invalid file associations in Presto resource group through UI and engine restart issues
 {: #known_issues14722}
 
-When an invalid file is associated for an engine in Pesto resource group through {{site.data.keyword.lakehouse_short}} UI, the engine will experience a restart. However, the user interface may incorrectly display that the engine is using the newly assigned file.
+When an invalid file is associated for an engine in Presto resource group through {{site.data.keyword.lakehouse_short}} UI, the engine will experience a restart. However, the user interface may incorrectly display that the engine is using the newly assigned file.
 
 **Workaround:** If you find that the new file is not associated with {{site.data.keyword.lakehouse_short}} environment, reach out to IBM support for further assistance.
 
