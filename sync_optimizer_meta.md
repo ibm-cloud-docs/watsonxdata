@@ -121,27 +121,27 @@ Activating **Query Optimizer** automatically synchronizes metadata for catalogs 
 
 7. Optional: Run the following command to get enhanced statistics for an Iceberg table that is synced:
 
-```bash
-ExecuteWxdQueryOptimizer 'CALL EXT_METASTORE_STATS_SYNC(
-  '<CATALOG_NAME>',
-  '<SCHEMA_NAME>',
-  '<TABLE_NAME>',
-  '<PRESTO_HOST>',
-  '<PRESTO_USER>',
-  '<PRESTO_PWD>',
-  'true'
-)';
-```
-{: codeblock}
+   ```bash
+   ExecuteWxdQueryOptimizer 'CALL EXT_METASTORE_STATS_SYNC(
+     '<CATALOG_NAME>',
+     '<SCHEMA_NAME>',
+     '<TABLE_NAME>',
+     '<PRESTO_HOST>',
+     '<PRESTO_USER>',
+     '<PRESTO_PWD>',
+     'true'
+   )';
+   ```
+   {: codeblock}
 
-`<CATALOG_NAME>`: The name of catalog (case-sensitive).
+   `<CATALOG_NAME>`: The name of catalog (case-sensitive).
 
-`<SCHEMA_NAME>`: The name of schema in uppercase.
+   `<SCHEMA_NAME>`: The name of schema in uppercase.
 
-`<TABLE_NAME>`: The name of table in uppercase. It is recommended to gather statistics for each table individually.
+   `<TABLE_NAME>`: The name of table in uppercase. It is recommended to gather statistics for each table individually.
 
-`<PRESTO_HOST>`: The hostname of Presto engine of which the statistics is collected from. You can find the connection details of Presto engine by clicking on the engine in the Infrastructure manager page of watsonx.data.
+   `<PRESTO_HOST>`: The hostname of Presto engine of which the statistics is collected from. You can find the connection details of Presto engine by clicking on the engine in the Infrastructure manager page of watsonx.data.
 
-`<PRESTO_USER>`: The Presto username that is used to run the statistics collection. Username can be CPD username, `ibmlhapikey` or `ibmlhtoken`. It is recommended to use `ibmlhapikey`.
+   `<PRESTO_USER>`: The Presto username that is used to run the statistics collection. Username can be CPD username, `ibmlhapikey` or `ibmlhtoken`. It is recommended to use `ibmlhapikey`.
 
-`<PRESTO_PWD>`: The Presto username that is used to run the statistics collection. Username can be the CPD password, a base64 API key or token corresponding to the username.
+   `<PRESTO_PWD>`: The Presto username that is used to run the statistics collection. Username can be the CPD password, a base64 API key or token corresponding to the username.
