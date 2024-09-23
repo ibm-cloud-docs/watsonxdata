@@ -38,7 +38,7 @@ To configure resource groups:
 1. Click the **Presto resource groups** tile.
    The **Presto resource groups** window opens.
 1. Click **Create group**.
-1. In the **Create resource group** window, enter the resource group details
+1. In the **Create resource group** window, enter the resource group details.
 
    | Field | Description |
    | --- | --- |
@@ -47,18 +47,22 @@ To configure resource groups:
    | Resource group configuration | Browse and select a resource group JSON file. Alternatively, you can drag and drop a resource group file. |
    {: caption="Table 1. Resource group details" caption-side="bottom"}
 
-   The uploaded JSON file structure must match with the sample resource group file structure. To download the sample file, click **Download sample resource group**. The maximum allowed size of a file is 2 MB and the only file format that is supported is `.json`.
+   The uploaded JSON file structure must match with the sample resource group file structure. To download the sample file, click **Download resource group template**. The maximum allowed size of a file is 2 MB and the only file format that is supported is `.json`.
    {: important}
 
-1. From the **Add Resource Group** window, browse and select a resource group JSON file.
-   Alternatively, you can drag and drop a resource group file.
-
-
-
    For more information about the resource group properties that you can define in the JSON file, see [Resource group properties](watsonxdata?topic=watsonxdata-resource_grp_pptys).
-1. Click **Add** to add the resource group.
+
+1. Click **Create** to create the resource group.
 
    To delete a resource group, go to the overflow menu of the resource group and click **Delete**. A confirmation box opens. Click **Delete** to confirm deletion. You cannot delete a resource group if it is assigned to an engine.
+   {: note}
+
+1. To edit the resource group file:
+     1. Go to the overflow menu of the resource group and click **View details**.
+     1. Click **Edit**. The resource group editor opens.
+     1. Make the changes in the **Resource group details** and  **Resource manager configuration** sections, and click **Save**.
+
+   If you edit an already assigned resource group file, the assigned engines restart with the changes.
    {: note}
 
 1. To assign the resource group to engines, click the overflow menu of the resource group and select **Assign**.
