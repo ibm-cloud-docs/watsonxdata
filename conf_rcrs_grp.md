@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-25"
+lastupdated: "2024-09-23"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -37,12 +37,23 @@ To configure resource groups:
 1. From the navigation menu, go to **Configurations**.
 1. Click the **Presto resource groups** tile.
    The **Presto resource groups** window opens.
-1. Click **Add Resource Group**.
-1. From the **Add Resource Group** window, browse and select a resource group JSON file.
-   Alternatively, you can drag and drop a resource group file.
+1. Click **Create group**.
+1. In the **Create resource group** window, enter the resource group details
+
+   | Field | Description |
+   | --- | --- |
+   | File name | Enter the JSON file name. If you upload a JSON file, the name of that file appears here. |
+   | Description | Enter a resource group description. |
+   | Resource group configuration | Browse and select a resource group JSON file. Alternatively, you can drag and drop a resource group file. |
+   {: caption="Table 1. Resource group details" caption-side="bottom"}
 
    The uploaded JSON file structure must match with the sample resource group file structure. To download the sample file, click **Download sample resource group**. The maximum allowed size of a file is 2 MB and the only file format that is supported is `.json`.
    {: important}
+
+1. From the **Add Resource Group** window, browse and select a resource group JSON file.
+   Alternatively, you can drag and drop a resource group file.
+
+
 
    For more information about the resource group properties that you can define in the JSON file, see [Resource group properties](watsonxdata?topic=watsonxdata-resource_grp_pptys).
 1. Click **Add** to add the resource group.
