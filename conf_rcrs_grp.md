@@ -65,7 +65,7 @@ To configure resource groups:
    If you edit an already assigned resource group file, the assigned engines restart with the changes.
    {: note}
 
-1. To assign the resource group to engines, click the overflow menu of the resource group and select **Assign**.
+1. To assign the resource group to engines, click the overflow menu of the resource group and select **Assign engines**.
 1. Select one or more Presto engines from the **Available engines** section and click **Assign**.
    A confirmation box opens.
 
