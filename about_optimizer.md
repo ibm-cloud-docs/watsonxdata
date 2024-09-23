@@ -55,7 +55,7 @@ The query optimization feature of Db2 is leveraged in {{site.data.keyword.lakeho
 * Enhanced Query Performance: **Query Optimizer** effectively optimizes queries, leading to significant performance improvements.
 * Seamless Integration: **Query Optimizer** seamlessly integrates with existing {{site.data.keyword.lakehouse_short}} infrastructure, ensuring a smooth adoption process.
 * Flexible Optimization: **Query Optimizer** operates flexibly as users can enable and disable the feature either at global or session level.
-* * **Query Optimizer** supports Hive and Iceberg tables.
+* **Query Optimizer** supports Hive and Iceberg tables.
 
 ## Limitation of **Query Optimizer**
 {: #queryopti_limits}
