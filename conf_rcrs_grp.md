@@ -82,7 +82,7 @@ You can unassign a resource group from engines.
 
 To unassign:
 
-1. Click the overflow menu of the resource group and select **Unassign**.
+1. Click the overflow menu of the resource group and select **Unassign engines**.
 1. From the **Currently assigned engines** section, select one or more engines that you want to unassign the resource group from.
 1. Click **Unassign**. A confirmation box opens.
 
