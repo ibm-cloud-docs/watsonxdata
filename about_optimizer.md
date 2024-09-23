@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-09-23"
 
 keywords: lakehouse, **Query Optimizer**, {{site.data.keyword.lakehouse_short}}
 
@@ -55,12 +55,12 @@ The query optimization feature of Db2 is leveraged in {{site.data.keyword.lakeho
 * Enhanced Query Performance: **Query Optimizer** effectively optimizes queries, leading to significant performance improvements.
 * Seamless Integration: **Query Optimizer** seamlessly integrates with existing {{site.data.keyword.lakehouse_short}} infrastructure, ensuring a smooth adoption process.
 * Flexible Optimization: **Query Optimizer** operates flexibly as users can enable and disable the feature either at global or session level.
+* * **Query Optimizer** supports Hive and Iceberg tables.
 
 ## Limitation of **Query Optimizer**
 {: #queryopti_limits}
 
 * **Query Optimizer** only support Presto C++.
-* **Query Optimizer** supports only Hive tables and not Iceberg tables.
 * When metastores are synced, all schemas and tables are in the uppercase. For example, `"catalog".SCHEMA.TABLE`.
 * Three-part name queries need quotation marks around the catalog name in lowercase (`"catalog".SCHEMA.TABLE`). Query returns an error otherwise.
 * For optimal performance, you must define constraints like NOT NULL, Primary key, and Foreign key in `Query Optimizer engine` after the tables are synced.
