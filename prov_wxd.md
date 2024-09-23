@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-10"
+lastupdated: "2024-09-23"
 
 keywords: lakehouse, watsonx data, provision, endpoint, resource
 subcollection: watsonxdata
@@ -58,6 +58,7 @@ To understand about the resource unit consumption for the components in the {{si
    |Engine/Service 1|Select the engine or service of your choice.|
    |If you select **Presto**|**a**. Select the coordinated node type and number of coordinated nodes. The resource unit quantity is visible on the right. \n **b**. Select the worker node type and number of worker nodes. The resource unit quantity is visible on the right.|
    |If you select **Milvus**|Select the size of your choice. The resource unit quantity is visible on the right.|
+   |If you select **Spark**|Select the size of your choice. The resource unit quantity is visible on the right.|
    {: caption="Table 1. Pricing estimator" caption-side="bottom"}
 
 ## Provision an instance

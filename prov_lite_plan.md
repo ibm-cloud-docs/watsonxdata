@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-09-23"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -24,6 +24,13 @@ subcollection: watsonxdata
 
 The **Lite** plan allows you to provision a {{site.data.keyword.lakehouse_full}} instance that is free to use, with limits on capacity (2000 Resource Units), and features for a time frame of 30 days. You can use the account to explore and familiarize yourself with {{site.data.keyword.lakehouse_short}}. For more information about the features and limitations of Lite plan, see [Lite plan](watsonxdata?topic=watsonxdata-pricing-plans-1#limitations-lite){: external}.
 {: shortdesc}
+
+
+Provisioning a Lite plan instance is use case driven. Depending on the use case selected, you are presented with a Console UI that include components (engines and services) that are specific to the selected use case. The following are the three use cases:
+
+* **Generative AI** : You can explore Generative AI usecases using this use case. The provisioned instance includes Presto, Milvus and Spark.
+* **High Performance BI** : You can explore BI visualization functionalities using this use case. The provisioned instance includes Presto C++ and Spark only.
+* **Data Engineering Workloads** : Data engineers can use the option to explore various workloads driven use cases. The provisioned instance includes Presto Java + and Spark only.
 
 
 After provisioning the Lite plan instance, you can monitor the resource unit usage from the Billing and Usage page available in the watsonx.data console.
@@ -69,13 +76,17 @@ Trial IBM Cloud accounts can have only one resource group.
 
 1. Optional: Enter the tags and access management tags.
 
+1. You can provision the Lite plan instance based on the following use cases. Select one of the use cases from the list to proceed.
+
+    * **Generative AI** : The provisioned instance includes Presto, Milvus and Spark.
+    * **High Performance BI** : The provisioned instance includes Presto C++ and Spark only.
+    * **Data Engineering Workloads** : The provisioned instance includes Presto Java + and Spark only.
+
+
 1. In the **Summary** page, review the license agreement and select the checkbox to acknowledge the agreement.
 
 1. Click **Create**. The message “instance is being provisioned” is displayed and the **Resource list** opens.
 
-1. From the **Resource list** page, under the **Databases** category, you can see that the status for your instance as, **Provision in progress**. Click the {{site.data.keyword.lakehouse_short}} instance link when the status changes to **Active**.
-
-1. Click **Open web console** and provide the Multi-Factor Authentication (MFA) details to launch the {{site.data.keyword.lakehouse_short}} Console.
 
 
 
@@ -83,11 +94,12 @@ Trial IBM Cloud accounts can have only one resource group.
 {: #open_console-2}
 {: step}
 
-1. Go to **Resource list** **>** **Databases**.
 
-2. Click your {{site.data.keyword.lakehouse_short}} instance link. The service instance page opens.
+1. From the **Resource list** page, under the **Databases** category, you can see that the status for your instance as, **Provision in progress**. Click the {{site.data.keyword.lakehouse_short}} instance link when the status changes to **Active**.
 
-3. Click **Open web console**. The {{site.data.keyword.lakehouse_short}} web console opens.
+1. Click **Open web console** and provide the Multi-Factor Authentication (MFA) details to launch the {{site.data.keyword.lakehouse_short}} Console. A **Preparing watsonx.data** page is displayed until your instance is completely provisioned.
+
+1. After the provisioning process is complete, you can view the **Welcome to {{site.data.keyword.lakehouse_short}}** landing page.
 
 ## Reference
 {: #gs_ns_2}
