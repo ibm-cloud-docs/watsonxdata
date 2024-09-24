@@ -31,12 +31,12 @@ subcollection: watsonxdata
 This topic provides the steps required to locate and view Spark logs associated with submitted ingestion jobs within {{site.data.keyword.lakehouse_full}}. By accessing these logs, you can gain valuable insights into the execution details, potential error messages related to the ingestion process, and troubleshooting ingestion jobs.
 {: shortdesc}
 
-# Before you begin
+## Before you begin
 {: #ingest_sparklogshistorybyb}
 
 You must start the Spark history server to get the details of Spark ingestion logs. For more information, see (watsonxdata?topic=watsonxdata-wxd_spk_histry)
 
-# Procedure
+## Procedure
 {: #ingest_sparklogshistoryprcdre}
 
 1. Log in to {{site.data.keyword.lakehouse_short}} console.
