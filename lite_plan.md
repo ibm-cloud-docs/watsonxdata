@@ -154,13 +154,6 @@ You can add your own storage and ingest data into it.
 
 To explore how the {{site.data.keyword.lakehouse_short}} service interacts with the data you bring in, see [Adding your storage and querying data](watsonxdata?topic=watsonxdata-tutorial_prov_custbckt1).
 
-## Exploring the Query History Monitoring and Management
-{: #qhm_func}
-{: step}
-
-The feature is disabled by default for Lite plan instance. To enable the feature, see [Enabling QHMM](watsonxdata?topic=watsonxdata-tutorial_prov_custbckt1)
-and explore more, see [QHMM](watsonxdata?topic=watsonxdata-ovrvw_qhmm).
-
 
 ## Saving data from a lite plan to an enterprise plan
 {: #post_expry}
