@@ -26,7 +26,7 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Adding a storage-catalog pair
+# Add storage
 {: #reg_bucket}
 
 In {{site.data.keyword.lakehouse_full}}, the data is stored either in an internal storage created during instance provisioning or in an externally managed storage. You can associate a catalog with a storage. A catalog defines the schemas and metadata for a storage.
@@ -38,13 +38,22 @@ To reduce the latency issues, it is recommended to colocate your additional stor
 {: important}
 
 
-To add a storage-catalog pair, complete the following steps:
+To add a storage, complete the following steps:
 
 1. Log in to the {{site.data.keyword.lakehouse_short}} console.
 2. From the navigation menu, select **Infrastructure manager**.
 3. To define and connect a storage, click **Add component**.
 4. In the **Add component** window, select a storage from the **Storage** section and provide the details to connect to existing externally managed storage.
 5. You can associate a catalog to the storage. This catalog can be associated with an engine. A catalog defines the schemas and metadata for a storage or data source. Depending on the storage type, Apache Iceberg, Apache Hive, Apache Hudi, and Delta Lake catalogs are supported.
+6. The following storages are supported:
+* [IBM Cloud Object Storage](watsonxdata?topic=watsonxdata-cos_storage)
+* [Amazon S3](watsonxdata?topic=watsonxdata-amazons_storage)
+* [IBM Storage Ceph](watsonxdata?topic=watsonxdata-ceph_storage)
+* [MinIO](watsonxdata?topic=watsonxdata-minio_storage)
+* [Hadoop Distributed File System](watsonxdata?topic=watsonxdata-hdfs_storage)
+* [Google Cloud Storage](watsonxdata?topic=watsonxdata-gcs_storage)
+* [Azure Data Lake Storage](watsonxdata?topic=watsonxdata-adls_genblob_storage)
+* [Apache Ozone](watsonxdata?topic=watsonxdata-ozone_storage)
 
      You can modify the access key and secret key of a user-registered bucket for a storage. This feature is only available for user-registered buckets and is not applicable to default buckets, ADLS, or Google Cloud Storage. This feature can be used if the new credentials successfully pass the test connection.
      {: note}
@@ -56,19 +65,19 @@ To add a storage-catalog pair, complete the following steps:
 ## Features
 {: #connector_features}
 
-1. For **Iceberg** connector:
-* You can delete data from tables by using `DELETE FROM` statement for **Iceberg** connector.
-* You can specify the table property delete_mode for new tables by using either copy-on-write mode or merge-on-read mode (default).
-2. For `DELETE FROM` statement for **Iceberg** connector:
-* Filtered columns only support comparison operators, such as EQUALS, LESS THAN, or LESS THAN EQUALS.
-* Deletes must only occur on the latest snapshot.
-* For V1 tables, the **Iceberg** connector can delete data only in one or more entire partitions. Columns in the filter must all be identity-transformed partition columns of the target table.
-3. For `CREATE TABLE`, **Iceberg** connector supports `sorted_by` table property.
-* When you create the table, specify an array of one or more columns that are involved.
-4. For **Iceberg** connector, `ALTER TABLE` operations on a column support data type conversions from:
-* `INT` to `BIGINT`
-* `FLOAT` to `DOUBLE`
-* `DECIMAL` (num1, dec_digits) to `DECIMAL` (num2, dec_digits), where num2>num1.
+* For **Iceberg** connector:
+    * You can delete data from tables by using `DELETE FROM` statement for **Iceberg** connector.
+    * You can specify the table property delete_mode for new tables by using either copy-on-write mode or merge-on-read mode (default).
+* For `DELETE FROM` statement for **Iceberg** connector:
+    * Filtered columns only support comparison operators, such as EQUALS, LESS THAN, or LESS THAN EQUALS.
+    * Deletes must only occur on the latest snapshot.
+    * For V1 tables, the **Iceberg** connector can delete data only in one or more entire partitions. Columns in the filter must all be identity-transformed partition columns of the target table.
+* For `CREATE TABLE`, **Iceberg** connector supports `sorted_by` table property.
+    * When you create the table, specify an array of one or more columns that are involved.
+* For **Iceberg** connector, `ALTER TABLE` operations on a column support data type conversions from:
+    * `INT` to `BIGINT`
+    * `FLOAT` to `DOUBLE`
+    * `DECIMAL` (num1, dec_digits) to `DECIMAL` (num2, dec_digits), where num2>num1.
 
 ## Limitations
 {: #a_limitations}
@@ -78,25 +87,15 @@ To add a storage-catalog pair, complete the following steps:
 ## Limitations for SQL statements
 {: #sql_limitations}
 
-1. For **Iceberg** connector, `UPDATE` query with sub-query is not supported.
-2. For **Iceberg** connector, `UPDATE` query with mixed-case column is not supported.
-3. For **Iceberg**, **Memory** and **Hive** connectors, `DROP SCHEMA` can do `RESTRICT` by default.
-4. For database-based catalogs the `CREATE SCHEMA`, `CREATE TABLE`, `DROP SCHEMA`, `DROP TABLE`, `DELETE`, `DROP VIEW`, `ALTER TABLE`, and `ALTER SCHEMA` statements are not available in the **Data Manager** UI.
+* For **Iceberg** connector, `UPDATE` query with sub-query is not supported.
+* For **Iceberg** connector, `UPDATE` query with mixed-case column is not supported.
+* For **Iceberg**, **Memory** and **Hive** connectors, `DROP SCHEMA` can do `RESTRICT` by default.
+* For database-based catalogs the `CREATE SCHEMA`, `CREATE TABLE`, `DROP SCHEMA`, `DROP TABLE`, `DELETE`, `DROP VIEW`, `ALTER TABLE`, and `ALTER SCHEMA` statements are not available in the **Data Manager** UI.
 
 ## Limitations for data types
 {: #datatypes_limitations}
 
-1. For **Iceberg** connector, the maximum number of digits that can be accommodated in a column of data type FLOAT and DOUBLE is 37. Trying to insert anything larger ends up in a decimal overflow error.
-2. When the fields of data type `REAL` have 6 digits or more in the decimal part with the digits being predominately zero, the values when queried are rounded off. It is observed that the rounding off occurs differently based on the precision of the values. For example, a decimal number 1.654 when rounded to 3-digits after decimal point are the same. Another example, is 10.890009 and 10.89000. It is noticed that 10.89000 is rounded to 10.89, whereas 10.89009 is not rounded off. This is an inherent issue because of the representational limitations of binary floating point formats. This might have a significant impact when querying involves sorting.
-
-The following storages are supported:
-* [IBM Cloud Object Storage](watsonxdata?topic=watsonxdata-cos_storage)
-* [Amazon S3](watsonxdata?topic=watsonxdata-amazons_storage)
-* [IBM Storage Ceph](watsonxdata?topic=watsonxdata-ceph_storage)
-* [MinIO](watsonxdata?topic=watsonxdata-minio_storage)
-* [Hadoop Distributed File System](watsonxdata?topic=watsonxdata-hdfs_storage)
-* [Google Cloud Storage](watsonxdata?topic=watsonxdata-gcs_storage)
-* [Azure Data Lake Storage](watsonxdata?topic=watsonxdata-adls_genblob_storage)
-* [Apache Ozone](watsonxdata?topic=watsonxdata-ozone_storage)
+* For **Iceberg** connector, the maximum number of digits that can be accommodated in a column of data type FLOAT and DOUBLE is 37. Trying to insert anything larger ends up in a decimal overflow error.
+* When the fields of data type `REAL` have 6 digits or more in the decimal part with the digits being predominately zero, the values when queried are rounded off. It is observed that the rounding off occurs differently based on the precision of the values. For example, a decimal number 1.654 when rounded to 3-digits after decimal point are the same. Another example, is 10.890009 and 10.89000. It is noticed that 10.89000 is rounded to 10.89, whereas 10.89009 is not rounded off. This is an inherent issue because of the representational limitations of binary floating point formats. This might have a significant impact when querying involves sorting.
 
 For more information on mixed-case feature flag behavior, supported SQL statements and supported data types matrices, see [Support content](https://www.ibm.com/support/pages/node/7157339){: external}.

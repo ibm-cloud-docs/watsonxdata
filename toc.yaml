@@ -65,7 +65,7 @@ toc:
           - disso-cat-eng.md
           - conf_rcrs_grp.md
       - topicgroup:
-              label: Data source-catalog pair
+              label: Data sources
               topics:
               - reg_database.md
               - redshift_conn.md
@@ -103,7 +103,7 @@ toc:
       - edit-db-tags.md
       - delete_database.md
       - topicgroup:
-              label: Storage-catalog pair
+              label: Storages
               topics:
               - reg_bucket.md
               - cos_storage.md
