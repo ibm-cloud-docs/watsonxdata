@@ -118,7 +118,7 @@ Use the **Start working with data** option to query data.
 {: #hp_04}
 {: step}
 
-Use the **Ingest data into watsonx.data** option to do data ingestion. Before performing data ingestion, you must associate a storage. If you use a trial account, a new IBM Cloud Object Storage instance is automatically provisioned with default name, and a new bucket is attached with standard name (wxd-inst ID). If you use a paid account, you must provision a new IBM Cloud Object Storage instance from [provisioning](https://cloud.ibm.com/watsonxdata) page.
+Use the **Ingest data into watsonx.data** option for data ingestion. Before performing data ingestion, associate a storage. If you use a trial account, a new IBM Cloud Object Storage instance is automatically provisioned with default name (watsonx-data-cos), and a new bucket is attached with default name (watsonx-data-instanceId). If you use a paid account, you must provision a new IBM Cloud Object Storage instance from [Create COS instance](https://cloud.ibm.com/objectstorage/create){: external} page.
 
 6. If you select **Ingest data into watsonx.data**, the **Data manager** page opens.
 
@@ -127,29 +127,38 @@ Use the **Ingest data into watsonx.data** option to do data ingestion. Before pe
 8. Click **Set up now**. The **Finish set up** page opens.
 
 
-    b. If you use a trial account with no existing IBM COS instance:
+    a. If you use a trial account with no existing IBM COS instance:
 
-      * a new IBM COS instance is provisioned with default name and a new bucket is attached to it with standard name (wxd-inst id).
+      * A new IBM COS instance is provisioned with default name (watsonx-data-cos) and a new bucket is attached to it with default name (watsonx-data-instanceId).
       * Click **Finish**.
 
 
-    a. If you use a paid account:
+    b. If you use a Paygo account:
 
 
-      * If the user has a COS instance in a paid account, it is fetched and a new bucket with standard name is attached to it.
+      * If the user has a COS instance in a Paygo account, it is fetched and a new bucket with default name is attached to it.
       * If the user does not have a COS instance, you must provision a new IBM COS instance. From the **Finish set up** page, click **Create new instance** to create a new COS instance. Select the storage.
       * Click **Finish**.
 
 
-    You can also add storage from **Infranstructure manager** page and ingest data into it.
+    You can also add storage from **Infrastructure manager** page and ingest data into it.
 
-    1. From **Add Component** > **Storage** > **IBM COS storage** :
+    1. From **Add Component** > **Storage** > Select the storage :
+
+       To add the first bucket, some tiles for storages are disabled with the message: "Register a bucket from the available options first." Buckets to be added are enabled based on the available engines and services at that time. The buckets that meet the criteria for the available engines are enabled to be added as the first bucket.
+
+       * For Spark: IBM COS storage, Amazon S3.
+       * For Presto (Java): IBM COS storage, Amazon S3, Google Cloud Storage.
+       * For Presto (C++): IBM COS storage, Amazon S3, Google Cloud Storage.
+       * For Milvus: IBM COS storage, Amazon S3, MinIO, Azure Data Lake Storage, Google Cloud Storage.
+
+    2. From **Add Component** > **Storage** > **IBM COS storage** :
 
         For Lite plan instance, there are two options:
 
         a. **Discover COS instance** : Select the existing IBM COS instance and the bucket to be attached to it.
 
-        b. **Register my own** : Provision a new IBM COS instance. See [Adding a storage-catalog pair](watsonxdata?topic=watsonxdata-reg_bucket#cos). You must provision and register new instance.
+        b. **Register my own** : Provision a new IBM COS instance. See [Create COS instance](https://cloud.ibm.com/objectstorage/create){: external}. You must provision and register new instance.
 
 
     To explore how the {{site.data.keyword.lakehouse_short}} service interacts with the data you bring in, see [Adding your storage and querying data](watsonxdata?topic=watsonxdata-tutorial_prov_custbckt1).
