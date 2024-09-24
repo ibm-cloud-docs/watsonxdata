@@ -106,7 +106,7 @@ Trial IBM Cloud accounts can have only one resource group.
 3. Create a new formation.
 
     ```bash
-    ibmcloud resource service-instance-create <instance-name> lakehouse lakehouse-lite <region> -g <resource-group> -p '{"datacenter": "<data-center>","cloud_type": "<cloud-type>"}'
+    ibmcloud resource service-instance-create <instance-name> lakehouse lakehouse-lite <region> -g <resource-group> -p '{"datacenter": "<data-center>","cloud_type": "<cloud-type>","use_case": "<use_case_template>"}'
     ```
     {: codeblock}
 
@@ -124,6 +124,7 @@ Trial IBM Cloud accounts can have only one resource group.
     - `cloud_type`:
        - `ibm`: For fully managed account instances (default).
        - `aws_vpc`: For customer-owned account instances.
+    - `use_case_template`: You can provision the Lite plan instance based on three use cases. The valid values accepted by the parameter are ai (Generative AI), workloads (Data Engineering workloads), and performance (High Performance BI). The default value is `workloads`.
 
          For availability and general information related to customer-owned account deployed instances, contact your IBM sales representative or [open a support ticket](https://cloud.ibm.com/unifiedsupport/cases/form).
          {: note}
