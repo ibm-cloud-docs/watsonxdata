@@ -36,7 +36,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 {: #spk_ing}
 
 * Add and register IBM Analytics Engine (Spark). See [Provisioning a Spark engine](watsonxdata?topic=watsonxdata-spl_engine).
-* For target table, Iceberg catalog connected to Presto engine is required. See [Adding a storage-catalog pair](watsonxdata?topic=watsonxdata-reg_bucket).
+* For target table, an active Iceberg catalog connected to a running Presto engine is required. See [Adding a storage-catalog pair](watsonxdata?topic=watsonxdata-reg_bucket).
 * Add remote storage for source data files. See [Adding a storage-catalog pair](watsonxdata?topic=watsonxdata-reg_bucket).
 * Add data sources for source data files. See [Adding a data source-catalog pair](watsonxdata?topic=watsonxdata-reg_database).
 * Optionally, you can create a schema in the catalog for the target table. See [Creating schemas](watsonxdata?topic=watsonxdata-create_schema).
@@ -50,11 +50,11 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 2. From the navigation menu, select **Data manager** and click **Ingest data**.
 4. Select one of the following storage options to proceed to the next page:
 
-   a. **Local System**: To select your files from your local system.
+   a. **Local System**: To select files from your local system.
 
    b. **Storages**: To select remote files from your connected S3 compatible storage.
 
-   c. **Data sources**: To select your files from your connected data sources.
+   c. **Data sources**: To select files from your connected data sources.
 
 5. If you selected **Local system**, complete the following steps:
 
@@ -125,7 +125,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    i. Select a storage bucket from the **Select storage** drop-down.
 
-    You can also add a new storage bucket by clicking the **Add +** icon. For more information, see [Add Storage](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-reg_bucket). You can create a permanent storage connections accessible to all users based on permissions. in the infrastructure manager page by selecting **Keep permanent on infrastructure manager**. You can also create a temporary storage connections accessible to you for the time period during the ingestion by selecting **Temporary Database**. This temporary storage shall not be available in the infrastructure manager page nor can be accessed by other users.
+    You can also add a new storage bucket by clicking the **Add +** icon. For more information, see [Add Storage](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-reg_bucket). You can create a permanent storage connections accessible to all users based on permissions. in the infrastructure manager page by selecting **Create permanent connection**. You can also create a temporary storage connections accessible to you for the time period during the ingestion by selecting **Create temporary connection**. This temporary storage shall not be available in the infrastructure manager page nor can be accessed by other users.
     {: note}
 
    ii. Select the required file type based on the source data. The available options are CSV, Parquet, and JSON.
@@ -195,7 +195,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    i. Select a database from the **Select database** drop-down.
 
-    You can also add a new database by clicking the **Add +** icon. For more information, see [Add Database](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-reg_database). You can create a permanent database connections accessible to all users based on permissions in the infrastructure manager page by selecting **Keep permanent on infrastructure manager**. You can also create a temporary database connections accessible to you for the time period during the ingestion by selecting **Temporary Database**. This temporary database shall not be available in the infrastructure manager page nor can be accessed by other users.
+    You can also add a new database by clicking the **Add +** icon. For more information, see [Add Database](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-reg_database). You can create a permanent database connections accessible to all users based on permissions in the infrastructure manager page by selecting **Create permanent connection**. You can also create a temporary database connections accessible to you for the time period during the ingestion by selecting **Create temporary connection**. This temporary database shall not be available in the infrastructure manager page nor can be accessed by other users.
     {: note}
 
    ii. Select a schema from the **Schemas** window.
