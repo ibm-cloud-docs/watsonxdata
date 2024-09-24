@@ -121,9 +121,9 @@ This release of {{site.data.keyword.lakehouse_short}} includes the following imp
 
 * You can now ingest data using AVRO, and ORC file formats. For more information, see [About data ingestion](watsonxdata?topic=watsonxdata-load_ingest_data).
 
-* You can preview uploaded files and click table headers to edit column names. For more information, see Accessing Spark logs for ingestion jobs.
+* You can preview uploaded files and click table headers to edit column names. For more information, see [Ingesting data by using Spark through the web console](watsonxdata?topic=watsonxdata-ingest_spark_ui).
 
-* You can access and view Spark logs associated with an ingestion job. For more information, see Accessing Spark logs for ingestion jobs.
+* You can access and view Spark logs associated with an ingestion job. For more information, see [Accessing Spark logs for ingestion jobs](watsonxdata?topic=watsonxdata-ingest_sparklogshistory).
 
 **Lite plan**
 {: #25Sep_7_2024}
