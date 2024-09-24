@@ -130,6 +130,7 @@ toc:
           topics:
           - ingestdata.md
           - ingest_spark_ui.md
+          - ingest_sparklogshistory.md
           - prepare_ingest_data2.md
           - prepare_ingest_data.md
           - topicgroup:
