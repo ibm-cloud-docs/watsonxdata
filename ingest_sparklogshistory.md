@@ -34,7 +34,7 @@ This topic provides the steps required to locate and view Spark logs associated 
 ## Before you begin
 {: #ingest_sparklogshistorybyb}
 
-You must start the Spark history server to get the details of Spark ingestion logs. For more information, see (watsonxdata?topic=watsonxdata-wxd_spk_histry)
+You must start the Spark history server to get the details of Spark ingestion logs. For more information, see [Accessing the Spark history server](watsonxdata?topic=watsonxdata-wxd_spk_histry).
 
 ## Procedure
 {: #ingest_sparklogshistoryprcdre}
