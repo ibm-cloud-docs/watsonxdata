@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-22"
+lastupdated: "2024-09-24"
 
 keywords: watsonx.data, ikc, configuring, knowledgecatalog
 subcollection: watsonxdata
@@ -18,7 +18,6 @@ subcollection: watsonxdata
 Integrating {{site.data.keyword.lakehouse_full}} with IBM Knowledge Catalog (IKC) provides self-service access to data assets (tables and views) for knowledge workers who need to use those data assets to gain insights.
 
 IBM Knowledge Catalog - {{site.data.keyword.lakehouse_short}} integration supports only the following connectors for governance :
-* Hive
 * Hive
 * Iceberg
 * Hudi
