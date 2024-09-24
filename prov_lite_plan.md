@@ -132,7 +132,7 @@ Trial IBM Cloud accounts can have only one resource group.
     Example:
 
     ```bash
-    ibmcloud resource service-instance-create watsonx.data-abc lakehouse lakehouse-lite us-south -g Default -p '{"datacenter": "ibm:us-south:dal","cloud_type": "ibm"}'
+    ibmcloud resource service-instance-create watsonx.data-abc lakehouse lakehouse-lite us-south -g Default -p '{"datacenter": "ibm:us-east:wdc", "use_case": "workloads"}'
     ```
     {: codeblock}
 
