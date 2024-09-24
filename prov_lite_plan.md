@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-23"
+lastupdated: "2024-09-24"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -26,7 +26,7 @@ The **Lite** plan allows you to provision a {{site.data.keyword.lakehouse_full}}
 {: shortdesc}
 
 
-Provisioning a Lite plan instance is use case driven. Depending on the use case selected, you are presented with a Console UI that include components (engines and services) that are specific to the selected use case. The following are the three use cases:
+Provisioning a Lite plan instance is use case driven. Depending on the following use cases, you are presented with a Console UI that include components (engines, services and storages) that are specific to the selected use case.
 
 * **Generative AI** : You can explore Generative AI usecases using this use case. The provisioned instance includes Presto, Milvus and Spark.
 * **High Performance BI** : You can explore BI visualization functionalities using this use case. The provisioned instance includes Presto C++ and Spark only.
