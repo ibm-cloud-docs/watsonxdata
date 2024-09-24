@@ -72,32 +72,37 @@ You can monitor the Resource Units usage level.
     For more information to manually delete an instance, see [Deleting instance](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-delete_lh).
 
 
-## Getting started with {{site.data.keyword.lakehouse_short}}
+## Getting started with {{site.data.keyword.lakehouse_short}} Lite plan UI
 {: #hp_start}
 {: step}
 
 The Lite plan usage consumption starts after you provision the instance. The resource units (RU) are consumed even when the {{site.data.keyword.lakehouse_short}} instance is not being used. However, RU consumption reduces if you pause or delete the engine. Therefore, pause the engines and services when not in use, to maximize the IBM Cloud Lite plan availability.
 {: attention}
 
-
-To simplify the steps, when you log in to the {{site.data.keyword.lakehouse_short}} web console for the first time, you are directly presented with the **Welcome to {{site.data.keyword.lakehouse_short}}** landing page and the UI includes components (engines, services and storages) based on the use case selected.
-
-For more information about the different use cases, see [watsonx.data Lite plan](watsonxdata?topic=watsonxdata-tutorial_prov_lite_1).
-
-To begin with, {{site.data.keyword.lakehouse_short}} UI provides on-sctreen instructions that guide you through the steps to run a Presto query using sample worksheet and perform data ingestion.
-
-### Querying data using sample worksheet and performing ingestion
-{: #hp_start-step}
-
-1. From the [**Resource list**](https://cloud.ibm.com/resources) page, under the **Databases** category, you can see that the status for your instance as, **Provision in progress**. Click the {{site.data.keyword.lakehouse_short}} instance link when the status changes to **Active**.
+To simplify the steps, after you provision Lite plan instance, you are directly presented with the **Welcome to {{site.data.keyword.lakehouse_short}}** window and the UI includes components (engines, services and storages) based on the use case selected.
 
 
-2. From the **Welcome to {{site.data.keyword.lakehouse_short}}** page, you can select one of the following options :
-    **Take a homepage tour** : to view a guided home page tour to learn more about the entry points in the home page.
+## Selecting the guided workflow
+{: #hp_02}
+{: step}
+
+To begin with the {{site.data.keyword.lakehouse_short}} features, UI provides on-sctreen instructions that take you through guided workflows to run a Presto query using sample worksheet and perform data ingestion.
+
+
+2. From the **Welcome to {{site.data.keyword.lakehouse_short}}** window, select one of the following options :
+
+    **Take a homepage tour** : to view the home page tour to learn more about the entry points in the home page.
     **Start working with data** : to run sample query using the sample worksheets and to try ingetsing data in watsonx.data.
+    **Skip for now** link : to view the watsonx.data home page without proceeding to home tour or to work with watsonx.data.
 
     You can also skip this step (use the **Skip for now** link) and go to the Welcome page directly and explore the UI features.
     {: note}
+
+## Querying data using sample worksheet
+{: #hp_03}
+{: step}
+
+Use the **Start working with data** option to query data.
 
 3. If you select the **Start working with data** option and click **Continue**, you can view the following tiles:
     **Explore a sample worksheet** : {{site.data.keyword.lakehouse_short}} Lite plan instance provides sample worksheets (includes query) that help users to run Presto query easily. Select this tile and follow the on-screen instructions to run your first Presto query.
@@ -105,9 +110,15 @@ To begin with, {{site.data.keyword.lakehouse_short}} UI provides on-sctreen inst
 
 4. If you select **Explore a sample worksheet**, the **Query workspace** page opens and the **Sample worksheets** section is highlighted.
 
-5. Select the worksheet and click **Run on Prestoplus**. The query is executed successfully and you can view the query result in the **Results** section..
+5. Select the worksheet and click **Run on `<engine>`**. The query is executed successfully and you can view the query result in the **Results** section..
 
     You can also explore more **Query workspace** related functionalities. See, [Running SQL queries](watsonxdata?topic=watsonxdata-run_sql).
+
+## Selecting storage and performing data ingestion
+{: #hp_04}
+{: step}
+
+Use the **Ingest data into watsonx.data** option to do data ingestion. Before performing data ingestion, you must associate a storage. If you use a trial account, a new IBM COS instance is automatically provisioned with default name and a new bucket is attached with standard name (wxd-inst id). If you use a paid account, you must provision a new IBM COS instance from [provisioning](https://cloud.ibm.com/watsonxdata) page.
 
 6. If you select **Ingest data into watsonx.data**, the **Data manager** page opens.
 
@@ -115,19 +126,33 @@ To begin with, {{site.data.keyword.lakehouse_short}} UI provides on-sctreen inst
 
 8. Click **Set up now**. The **Finish set up** page opens.
 
-    a. With no existing IBM COS instance:
 
-      * If user does not have an existing IBM COS instance, a new IBM COS instance is provisioned with default name and a new bucket is attached to it with standard name (wxd-inst id).
+    b. If you use a trial account with no existing IBM COS instance:
 
+      * a new IBM COS instance is provisioned with default name and a new bucket is attached to it with standard name (wxd-inst id).
       * Click **Finish**.
 
-      * In the IBM COS account, the new IBM COS instance and the new bucket exists.
 
-    b. With existing IBM COS instance:
+    a. If you use a paid account:
 
 
-      If the user has COS instance in a trial account, it is fetched and a new bucket with standard name is attached to it.
+      * If the user has a COS instance in a paid account, it is fetched and a new bucket with standard name is attached to it.
+      * If the user does not have a COS instance, you must provision a new IBM COS instance. From the **Finish set up** page, click **Create new instance** to create a new COS instance. Select the storage.
+      * Click **Finish**.
 
+
+    You can also add storage from **Infranstructure manager** page and ingest data into it.
+
+    1. From **Add Component** > **Storage** > **IBM COS storage** :
+
+        For Lite plan instance, there are two options:
+
+        a. **Discover COS instance** : Select the existing IBM COS instance and the bucket to be attached to it.
+
+        b. **Register my own** : Provision a new IBM COS instance. See [Adding a storage-catalog pair](watsonxdata?topic=watsonxdata-reg_bucket#cos). You must provision and register new instance.
+
+
+    To explore how the {{site.data.keyword.lakehouse_short}} service interacts with the data you bring in, see [Adding your storage and querying data](watsonxdata?topic=watsonxdata-tutorial_prov_custbckt1).
 
 9. Go to the **Infrastructure manager** and verify that the storage is associated with the engine and the Spark engine is in running status, without which you cannot perform ingestion.
 
@@ -138,22 +163,7 @@ You cannot scale the existing engine or service or add a new engine (or service)
 You can add only one Presto (Java) engine, Spark engine (single node, small size - 8 vCPU, 32GB node) and Milvus service (Milvus with size specification, Starter - 1 Million vectors, Index Parameters - 64, Segment size (1024)). To understand the restrictions, see [Lite plan features and restrictions](watsonxdata?topic=watsonxdata-pricing-plans-1).
 {: important}
 
-## Adding your own storage and querying data
-{: #hp_ingest}
-{: step}
 
-You can add your own storage and ingest data into it.
-
-1. From **Add Component** > **Storage** > **IBM COS storage** :
-
-    For Lite plan instance, there are two options:
-
-    a. **Discover COS instance** : Select the existing IBM COS instance and the bucket to be attached to it.
-
-    b. **Register my own** : Provision a new IBM COS instance. See [Adding a storage-catalog pair](watsonxdata?topic=watsonxdata-reg_bucket#cos). You must provision and register new instance.
-
-
-To explore how the {{site.data.keyword.lakehouse_short}} service interacts with the data you bring in, see [Adding your storage and querying data](watsonxdata?topic=watsonxdata-tutorial_prov_custbckt1).
 
 ## Exploring the Query History Monitoring and Management
 {: #qhm_func}
