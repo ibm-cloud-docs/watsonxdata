@@ -26,6 +26,7 @@ completion-time: 10 minutes
 {: toc-content-type="tutorial"}
 {: toc-completion-time="0.25h"}
 
+
 The **Lite** plan allows you to provision an {{site.data.keyword.lakehouse_full}} instance that is free to use, with limits on capacity (2000 Resource Units), and features for a time frame of 30 days. You can use the account to create Lite plan instance based on three different use cases (Generative AI, High Performance BI and Data Engineering Workloads), explore and familiarize yourself with {{site.data.keyword.lakehouse_short}}. For more information about the features and limitations of Lite plan, see [Lite plan](watsonxdata?topic=watsonxdata-pricing-plans-1#limitations-lite){: external}.
 {: shortdesc}
 
@@ -153,6 +154,13 @@ You can add your own storage and ingest data into it.
 
 
 To explore how the {{site.data.keyword.lakehouse_short}} service interacts with the data you bring in, see [Adding your storage and querying data](watsonxdata?topic=watsonxdata-tutorial_prov_custbckt1).
+
+## Exploring the Query History Monitoring and Management
+{: #qhm_func}
+{: step}
+
+The feature is disabled by default for Lite plan instance. To enable the feature, see [Enabling QHMM](watsonxdata?topic=watsonxdata-tutorial_prov_custbckt1)
+and explore more, see [QHMM](watsonxdata?topic=watsonxdata-ovrvw_qhmm).
 
 
 ## Saving data from a lite plan to an enterprise plan
