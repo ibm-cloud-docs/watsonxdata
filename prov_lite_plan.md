@@ -91,7 +91,7 @@ Trial IBM Cloud accounts can have only one resource group.
 
 
 
-### Provision an instance through CLI
+## Provisioning {{site.data.keyword.lakehouse_short}} Lite plan through CLI
 {: #create-lite-cli}
 
 1. Log in to `cloud.ibm.com`.
