@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-19"
+lastupdated: "2024-09-24"
 
 keywords: lakehouse, access, data, policy, watsonx data
 
@@ -90,11 +90,13 @@ To maintain data security, you can create access policies for the following at t
 1. In the **Rules** page, click **Add rule** to go to the **Add rule** page.
 1. Select the rule type **Allow** or **Deny**.
 1. Select the actions on the data objects. The list of actions depend on the data object chosen in the earlier page. You can select one or more actions.
-1. Choose if you want to grant access to individual users or a group of users from the **Users/groups** section.
-1. Select a user or user group from the drop-down list.
-1. Click **Add** to add the rule. You can add more rules or click **Review**, the **Summary** page opens.
+1. In the **Authorized users and groups** section, click **Add**. The **Add users and groups to rule** page opens.
+1. Search and select one or more users or user groups to add to the rule.
+1. Click **Add**. The added users and user groups appear under the **Authorized users and groups** section.
+1. Click **Add**. The added rule appears in the **Rules** page.
+1. You can add more rules or click **Review**. The **Summary** page opens.
 1. In the **Summary** page:
-    - You can review the policy.
-    - Click **Back** to go to the previous page.
-    - Click **Cancel** to cancel the process.
-    - Click **Save** to save the policy.
+   - You can review the policy.
+   - Click **Back** to go to the previous page.
+   - Click **Cancel** to cancel the process.
+   - Click **Create** to save the policy.

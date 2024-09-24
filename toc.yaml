@@ -167,8 +167,25 @@ toc:
                       href: https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-ovrvw_qhmm
                 - qhmm.md
                 - qhmm_querying.md
+                - qhmm_heap_thread.md
                 - qhmm_gen.md
+                - shell_script.md
       - conn-presto-thr-cli.md
+      - topicgroup:
+          label: Integrating with Data Build Tool(dbt)
+          topics:
+            - about_dbt.md
+            - topicgroup:
+                label: dbt adapter for Presto
+                topics:
+                  - dbt-watsonx-presto.md
+                  - dbt-watsonx-presto-conf.md
+                  - dbt-watsonx-presto-inst.md
+            - topicgroup:
+                label: dbt adapter for Spark
+                topics:
+                  - dbt-watsonx-spk-inst.md
+                  - dbt-watsonx-spk-conf.md
       - ikc_integration.md
       - s2s_auth.md
       - ds_integration.md
@@ -234,6 +251,7 @@ toc:
             - conn-to-milvus.md
             - working_with_milvus.md
             - pause-resume-milvus.md
+            - wxd_wxai_milvus_conn.md
       - topicgroup:
           label: Semantic automation for data enrichment
           topics:
@@ -266,6 +284,8 @@ toc:
             - at_events_docs.md
             - log_analysis.md
             - monitoring_wxdcloud.md
+            - jmx_metrics.md
+            - milvus_exp_mtrcs.md
       - topicgroup:
           label: Integrating with BI visualization tools
           topics:
@@ -287,7 +307,10 @@ toc:
       topics:
       - pricing_plan.md
       - ae_limits.md
+      - cluster_limits.md
       - connection_info.md
+      - presto_exp_jmx.md
+      - milvus_exp_mtrcs_list.md
       - link:
             label: Presto SQL statements
             href: https://www.ibm.com/docs/en/watsonx/watsonxdata/2.0.0?topic=presto-sql-statements
