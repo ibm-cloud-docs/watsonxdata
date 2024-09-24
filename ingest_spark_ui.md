@@ -128,7 +128,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
     You can also add a new storage bucket by clicking the **Add +** icon. For more information, see [Add Storage](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-reg_bucket). You can create a permanent storage connections accessible to all users based on permissions. in the infrastructure manager page by selecting **Create permanent connection**. You can also create a temporary storage connections accessible to you for the time period during the ingestion by selecting **Create temporary connection**. This temporary storage shall not be available in the infrastructure manager page nor can be accessed by other users.
     {: note}
 
-   ii. Select the required file type based on the source data. The available options are CSV, Parquet, and JSON.
+   ii. Select the required file type based on the source data. The available options are CSV, Parquet, JSON, ORC, and AVRO..
 
    iii. Select the files to be ingested from the **All files** tab. Selected files are listed in the **Files selected** tab. You can see the details of the selected files in the **File details** section.
 
