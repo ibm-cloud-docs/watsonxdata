@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-23"
+lastupdated: "2024-09-24"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -62,7 +62,7 @@ To configure resource groups:
      1. Click **Edit**. The resource group editor opens.
      1. Make the changes in the **Resource group details** and  **Resource manager configuration** sections, and click **Save**.
 
-   If you edit an already assigned resource group file, the assigned engines restart with the changes.
+   If you edit an already assigned resource group file (file name or file content), the assigned engines restart with the changes.
    {: note}
 
 1. To assign the resource group to engines, click the overflow menu of the resource group and select **Assign engines**.
