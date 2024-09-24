@@ -52,7 +52,7 @@ To provision {{site.data.keyword.lakehouse_short}} Lite plan instance, you must 
 Trial IBM Cloud accounts can have only one resource group.
 
 
-## Provisioning {{site.data.keyword.lakehouse_short}} Lite plan
+## Provisioning {{site.data.keyword.lakehouse_short}} Lite plan through UI
 {: #hp_view_1}
 
 
@@ -89,6 +89,58 @@ Trial IBM Cloud accounts can have only one resource group.
 
 
 
+
+
+### Provision an instance through CLI
+{: #create-lite-cli}
+
+1. Log in to `cloud.ibm.com`.
+
+   ```bash
+   ibmcloud login --sso -a https://cloud.ibm.com
+   ```
+   {: codeblock}
+
+2. Select an account on which you want to create an instance.
+
+3. Create a new formation.
+
+    ```bash
+    ibmcloud resource service-instance-create <instance-name> lakehouse lakehouse-lite <region> -g <resource-group> -p '{"datacenter": "<data-center>","cloud_type": "<cloud-type>"}'
+    ```
+    {: codeblock}
+
+    - `instance-name`: Name of the instance. For example, watsonx.data-abc.
+    - `lakehouse`: {{site.data.keyword.lakehouse_short}} service
+    - `lakehouse-lite`: Plan ID
+    - `region`: The available regions are `eu-de`, `us-south`, `jp-tok`, `eu-gb`, and `au-syd`.
+    - `resource-group`: Choose one of the available resource groups in your {{site.data.keyword.cloud_notm}} account. Most accounts have a `Default` group. For more information, see [Managing resource groups](https://cloud.ibm.com/docs/account?topic=account-rgs&interface=ui).
+    - `datacenter`: Use one of the following. This parameter must match the region that you have selected.
+       - `ibm:us-south:dal`
+       - `ibm:eu-de:fra`
+       - `ibm:eu-gb:lon`
+       - `ibm:au-syd:syd`
+       - `ibm:jp-tok:tok`
+    - `cloud_type`:
+       - `ibm`: For fully managed account instances (default).
+       - `aws_vpc`: For customer-owned account instances.
+
+         For availability and general information related to customer-owned account deployed instances, contact your IBM sales representative or [open a support ticket](https://cloud.ibm.com/unifiedsupport/cases/form).
+         {: note}
+
+    Example:
+
+    ```bash
+    ibmcloud resource service-instance-create watsonx.data-abc lakehouse lakehouse-lite us-south -g Default -p '{"datacenter": "ibm:us-south:dal","cloud_type": "ibm"}'
+    ```
+    {: codeblock}
+
+4. Check the status of the new instance.
+
+    ```bash
+    ibmcloud resource service-instance <instance-name>
+    ```
+    {: codeblock}
 
 ## Open the web console
 {: #open_console-2}
