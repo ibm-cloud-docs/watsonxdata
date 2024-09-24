@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-09-24"
 
 keywords: watsonxdata, commands, command line interface, cli
 
@@ -26,7 +26,7 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Presto (Java) ingestion through **ibm-lh** tool command line
+# Presto (Java) ingestion through **ibm-lh** tool
 {: #ingest_presto_cli}
 
 Ingesting data files from S3 or local location into {{site.data.keyword.lakehouse_full}} is done by using two options that are supported in the **ibm-lh** tool.
