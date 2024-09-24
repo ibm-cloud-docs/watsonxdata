@@ -24,3 +24,4 @@ You can customize the catalog properties through an API for Presto (C++).
 {: caption="Table 1. Catalog properties for Presto (C++)" caption-side="bottom"}
 
 The `file-column-names-read-as-lower-case` property is set to `False` by default on Presto (C++) worker and must not be set to `True`. This property must not be set anywhere else because it might cause the engine to crash.
+{: note}
