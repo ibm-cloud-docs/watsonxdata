@@ -61,7 +61,7 @@ You can monitor the Resource Units usage level.
     You can also view the Resource Unit consumption from the **{{site.data.keyword.lakehouse_short}} console** UI > **Welcome** page > **Current plan** tile.
     {: note}
 
-1. If the allocated Resource Units or time runs out, your Lite instance will be suspended. However, you can still launch the IBM Cloud instance , cannot use it. You can manually delete your IBM Cloud Lite instance by following the steps:
+1. If the allocated Resource Units or time runs out, your Lite instance will be suspended. However, you can still launch the IBM Cloud instance, but cannot use it. You can manually delete your IBM Cloud Lite instance by following the steps:
 
     1. Log in to your IBM Cloud account.
     2. Click **Resource list**. The list of resources appears.
@@ -79,26 +79,26 @@ You can monitor the Resource Units usage level.
 The Lite plan usage consumption starts after you provision the instance. The resource units (RU) are consumed even when the {{site.data.keyword.lakehouse_short}} instance is not being used. However, RU consumption reduces if you pause or delete the engine. Therefore, pause the engines and services when not in use, to maximize the IBM Cloud Lite plan availability.
 {: attention}
 
-To simplify the steps, after you provision Lite plan instance, you are directly presented with the **Welcome to {{site.data.keyword.lakehouse_short}}** window and the UI includes components (engines, services and storages) based on the use case selected.
+To simplify the steps, after you provision a Lite plan instance, you are directly presented with the **Welcome to {{site.data.keyword.lakehouse_short}}** window and the UI includes components (engines, services, and storages) based on the use case selected.
 
 
 ## Selecting the guided workflow
 {: #hp_02}
 {: step}
 
-To begin with the {{site.data.keyword.lakehouse_short}} features, UI provides on-sctreen instructions that take you through guided workflows to run a Presto query using sample worksheet and perform data ingestion.
+To begin with the {{site.data.keyword.lakehouse_short}} features, UI provides on-screen instructions that take you through guided workflows to run a Presto query by using sample worksheet and perform data ingestion.
 
 
 2. From the **Welcome to {{site.data.keyword.lakehouse_short}}** window, select one of the following options :
 
-    **Take a homepage tour** : to view the home page tour to learn more about the entry points in the home page.
-    **Start working with data** : to run sample query using the sample worksheets and to try ingetsing data in watsonx.data.
-    **Skip for now** link : to view the watsonx.data home page without proceeding to home tour or to work with watsonx.data.
+    **Take a home page tour** : to view the home page tour to learn more about the entry points in the home page.
+    **Start working with data** : to run sample query by using the sample worksheets and to try ingesting data in watsonx.data.
+    **Skip for now** link : to view the watsonx.data home page without proceeding to the home tour or to work with watsonx.data.
 
     You can also skip this step (use the **Skip for now** link) and go to the Welcome page directly and explore the UI features.
     {: note}
 
-## Querying data using sample worksheet
+## Querying data by using sample worksheet
 {: #hp_03}
 {: step}
 
@@ -118,7 +118,7 @@ Use the **Start working with data** option to query data.
 {: #hp_04}
 {: step}
 
-Use the **Ingest data into watsonx.data** option to do data ingestion. Before performing data ingestion, you must associate a storage. If you use a trial account, a new IBM COS instance is automatically provisioned with default name and a new bucket is attached with standard name (wxd-inst id). If you use a paid account, you must provision a new IBM COS instance from [provisioning](https://cloud.ibm.com/watsonxdata) page.
+Use the **Ingest data into watsonx.data** option to do data ingestion. Before performing data ingestion, you must associate a storage. If you use a trial account, a new IBM Cloud Object Storage instance is automatically provisioned with default name, and a new bucket is attached with standard name (wxd-inst ID). If you use a paid account, you must provision a new IBM Cloud Object Storage instance from [provisioning](https://cloud.ibm.com/watsonxdata) page.
 
 6. If you select **Ingest data into watsonx.data**, the **Data manager** page opens.
 
