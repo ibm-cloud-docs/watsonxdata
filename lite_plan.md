@@ -112,7 +112,21 @@ To begin with, {{site.data.keyword.lakehouse_short}} UI provides on-sctreen inst
 
 7. Before you begin to ingest data, configure the storage for ingestion.
 
-8. Click **Set up now**. The **Finish set up** page opens displaying the default storage for the Lite plan instance. You can review the information and click **Finish**.
+8. Click **Set up now**. The **Finish set up** page opens.
+
+    a. With no existing IBM COS instance:
+
+      * If user does not have an existing IBM COS instance, a new IBM COS instance is provisioned with default name and a new bucket is attached to it with standard name (wxd-inst id).
+
+      * Click **Finish**.
+
+      * In the IBM COS account, the new IBM COS instance and the new bucket exists.
+
+    b. With existing IBM COS instance:
+
+
+      If the user has COS instance in a trial account, it is fetched and a new bucket with standard name is attached to it.
+
 
 9. Go to the **Infrastructure manager** and verify that the storage is associated with the engine and the Spark engine is in running status, without which you cannot perform ingestion.
 
@@ -127,7 +141,18 @@ You can add only one Presto (Java) engine, Spark engine (single node, small size
 {: #hp_ingest}
 {: step}
 
-For more information about how to add a storage that you own and explore how the {{site.data.keyword.lakehouse_short}} service interacts with the data you bring in, see [Adding your storage and querying data](watsonxdata?topic=watsonxdata-tutorial_prov_custbckt1).
+You can add your own storage and ingest data into it.
+
+1. From **Add Component** > **Storage** > **IBM COS storage** :
+
+    For Lite plan instance, there are two options:
+
+    a. **Discover COS instance** : Select the existing IBM COS instance and the bucket to be attached to it.
+
+    b. **Register my own** : Provision a new IBM COS instance. See [Adding a storage-catalog pair](watsonxdata?topic=watsonxdata-reg_bucket#cos). You must provision and register new instance.
+
+
+To explore how the {{site.data.keyword.lakehouse_short}} service interacts with the data you bring in, see [Adding your storage and querying data](watsonxdata?topic=watsonxdata-tutorial_prov_custbckt1).
 
 ## Exploring the Query History Monitoring and Management
 {: #qhm_func}
