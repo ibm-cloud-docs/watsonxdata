@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-23"
+lastupdated: "2024-09-24"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -95,7 +95,7 @@ To begin with, {{site.data.keyword.lakehouse_short}} UI provides on-sctreen inst
     **Take a homepage tour** : to view a guided home page tour to learn more about the entry points in the home page.
     **Start working with data** : to run sample query using the sample worksheets and to try ingetsing data in watsonx.data.
 
-    You can also skip this step to go to the Welcome page directly.
+    You can also skip this step and go to the Welcome page directly. Use the **Skip for now** link.
     {: note}
 
 3. If you select the **Start working with data** option and click **Continue**, you can view the following tiles:
