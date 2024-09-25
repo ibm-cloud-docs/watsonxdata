@@ -34,6 +34,11 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+## Data protection rule for row filtering
+{: #known_issues28556}
+
+When a column name that contains spaces is applied with a data protection row filtering rule in watsonx.data, non-owners of the asset may encounter errors when attempting to preview the table.
+
 ## Performance issue with multiple groups of large user counts
 {: #known_issues15126}
 
