@@ -279,7 +279,7 @@ keyword:
     /docs/watsonxdata?topic=watsonxdata-prov_engine
   ref-tutorial_prov_lite_1-link:
     /docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1
-  lh-provisioning-serverless-link:
+  ref-lh-provisioning-serverless-link:
     /docs/watsonxdata?topic=watsonxdata-lh-provisioning-serverless
   ref-prov_nspark-link:
     /docs/watsonxdata?topic=watsonxdata-prov_nspark
@@ -409,3 +409,51 @@ keyword:
     /docs/watsonxdata?topic=watsonxdata-api-change-log
   ref-ranger_1-link:
     /docs/watsonxdata?topic=watsonxdata-ranger_1
+  ref-druid_database-link:
+    /docs/watsonxdata?topic=watsonxdata-druid_database
+  ref-conf_rcrs_grp-link:
+    /docs/watsonxdata?topic=watsonxdata-conf_rcrs_grp
+  ref-spl_engine-link:
+    /docs/watsonxdata?topic=watsonxdata-spl_engine
+  ref-ozone_storage-link:
+    /docs/watsonxdata?topic=watsonxdata-ozone_storage
+  ref-ingest_sparklogshistory-link:
+    /docs/watsonxdata?topic=watsonxdata-ingest_sparklogshistory
+  ref-prepare_ingest_data2-link:
+    /docs/watsonxdata?topic=watsonxdata-prepare_ingest_data2
+  ref-heap_qhmm-link:
+    /docs/watsonxdata?topic=watsonxdata-heap_qhmm
+  ref-mon_mng-link:
+    /docs/watsonxdata?topic=watsonxdata-mon_mng
+  ref-qhmm_shell-link:
+    /docs/watsonxdata?topic=watsonxdata-qhmm_shell
+  ref-dc_integration-link:
+    /docs/watsonxdata?topic=watsonxdata-dc_integration
+  ref-abt_dbt-link:
+    /docs/watsonxdata?topic=watsonxdata-abt_dbt
+  ref-dbt_watsonx_presto-link:
+    /docs/watsonxdata?topic=watsonxdata-dbt_watsonx_presto
+  ref-dbt_watsonx_presto_conf-link:
+    /docs/watsonxdata?topic=watsonxdata-dbt_watsonx_presto_conf
+  ref-dbt_watsonx_presto_inst-link:
+    /docs/watsonxdata?topic=watsonxdata-dbt_watsonx_presto_inst
+  ref-dbt_watsonx_spark_inst-link:
+    /docs/watsonxdata?topic=watsonxdata-dbt_watsonx_spark_inst
+  ref-dbt_watsonx_spark_conf-link:
+    /docs/watsonxdata?topic=watsonxdata-dbt_watsonx_spark_conf
+  ref-abt_bi-link:
+    (/docs/watsonxdata?topic=watsonxdata-abt_bi
+  ref-tableau-link:
+    /docs/watsonxdata?topic=watsonxdata-tableau
+  ref-looker-link:
+    /docs/watsonxdata?topic=watsonxdata-looker
+  ref-domo-link:
+    /docs/watsonxdata?topic=watsonxdata-domo
+  ref-qlik-link:
+    /docs/watsonxdata?topic=watsonxdata-qlik
+  ref-bi_intro-link:
+    /docs/watsonxdata?topic=watsonxdata-bi_intro
+  ref-airflow-link:
+    /docs/watsonxdata?topic=watsonxdata-airflow
+  ref-redis_database-link:
+    /docs/watsonxdata?topic=watsonxdata-redis_database
