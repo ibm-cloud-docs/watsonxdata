@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-24"
+lastupdated: "2024-09-25"
 
 keywords: lakehouse, watsonx.data, spark, cli
 
@@ -22,6 +22,7 @@ This section covers the steps to install and use `dbt-watsonx-spark`.
 
 * Subscription to watsonx.data on IBM Cloud.
 * Provision native Spark engine in watsonx.data.
+* Install [DBT core](https://pypi.org/project/dbt-watsonx-spark/).
 
 ## Procedure
 {: #dbt_watsonx_spark_inst_pros}
@@ -53,7 +54,7 @@ You can view the query server details like, the name, ID, status, server start t
 
 To configure the profile file in dbt tool, you must save the query server connection details.
 
-1. From the **Query servers** tab, select the query server that is in RUNNING state.
+1. From the **Query servers** tab, select the query server that is in ACTIVE state.
 1. Click the overflow menu against the query server that you select.
 1. Click **View connection details**. The **Connection details** page opens with the profile configuration.
 1. Copy the connection details.
@@ -81,7 +82,7 @@ To configure the profile file in dbt tool, you must save the query server connec
 1. Run the following command to verify the dbt version.
 
    ```bash
-   dbt –version
+   dbt --version
    ```
    {: codeblock}
 
