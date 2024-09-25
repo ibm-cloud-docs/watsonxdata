@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-24"
+lastupdated: "2024-09-25"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -28,9 +28,9 @@ The **Lite** plan allows you to provision a {{site.data.keyword.lakehouse_full}}
 
 Provisioning a Lite plan instance is use case driven. Depending on the following use cases, you are presented with a Console UI that include components (engines, services and storages) that are specific to the selected use case.
 
-* **Generative AI** : You can explore Generative AI usecases using this use case. The provisioned instance includes Presto, Milvus and Spark.
-* **High Performance BI** : You can explore BI visualization functionalities using this use case. The provisioned instance includes Presto C++ and Spark only.
-* **Data Engineering Workloads** : Data engineers can use the option to explore various workloads driven use cases. The provisioned instance includes Presto Java + and Spark only.
+* **Generative AI** : AI developers or Data engineers can explore the Generative AI use cases using this option. The provisioned instance includes Presto, Milvus, and Spark.
+* **High Performance BI** : Data engineers can explore BI visualization functionalities using this option. The provisioned instance includes Presto (C++) and Spark.
+* **Data Engineering Workloads** : Data engineers can explore various workload driven use cases using this option. The provisioned instance includes Presto (Java) and Spark.
 
 
 After provisioning the Lite plan instance, you can monitor the resource unit usage from the Billing and Usage page available in the watsonx.data console.
@@ -40,6 +40,9 @@ When the usage cap is reached, any active Lite plan instances owned by the accou
 To access all the features and functionalities without resource or time limit, you must have an Enterprise {{site.data.keyword.lakehouse_short}} instance in the paid IBM Cloud account.
 In this tutorial, you learn how to provision {{site.data.keyword.lakehouse_short}} instance (Lite plan) and explore its features.
 
+* [Provisioning {{site.data.keyword.lakehouse_short}} Lite plan through UI](#hp_view_1)
+
+* [Provisioning {{site.data.keyword.lakehouse_short}} Lite plan through CLI](#create-lite-cli)
 
 
 
@@ -55,6 +58,7 @@ Trial IBM Cloud accounts can have only one resource group.
 ## Provisioning {{site.data.keyword.lakehouse_short}} Lite plan through UI
 {: #hp_view_1}
 
+Perform the following steps to provision a Lite plan instance from watsonx.data UI.
 
 
 1. Go to the [{{site.data.keyword.lakehouse_short}} provisioning](https://cloud.ibm.com/watsonxdata) page.
@@ -85,7 +89,7 @@ Trial IBM Cloud accounts can have only one resource group.
 
 1. In the **Summary** page, review the license agreement and select the checkbox to acknowledge the agreement.
 
-1. Click **Create**. The message “instance is being provisioned” is displayed and the **Resource list** opens.
+1. Click **Create**. The **Preparing watsonx.data** page opens that displays the progress of provisioning. The {{site.data.keyword.lakehouse_short}} Console opens after provisioning is complete.
 
 
 
@@ -93,6 +97,8 @@ Trial IBM Cloud accounts can have only one resource group.
 
 ## Provisioning {{site.data.keyword.lakehouse_short}} Lite plan through CLI
 {: #create-lite-cli}
+
+Perform the following steps to provision a Lite plan instance by using CLI.
 
 1. Log in to `cloud.ibm.com`.
 
@@ -145,14 +151,12 @@ Trial IBM Cloud accounts can have only one resource group.
 
 ## Open the web console
 {: #open_console-2}
-{: step}
 
+Perform the following steps to relaunch the watsonx.data console at later point of time.
 
-1. From the **Resource list** page, under the **Databases** category, you can see that the status for your instance as, **Provision in progress**. Click the {{site.data.keyword.lakehouse_short}} instance link when the status changes to **Active**.
+1. From the **Resource list** page, under the **Databases** category, you can see your instance in **Active** state.
 
-1. Click **Open web console** and provide the Multi-Factor Authentication (MFA) details to launch the {{site.data.keyword.lakehouse_short}} Console. A **Preparing watsonx.data** page is displayed until your instance is completely provisioned.
-
-1. After the provisioning process is complete, you can view the **Welcome to {{site.data.keyword.lakehouse_short}}** landing page.
+1. Click the instance name. Click **Open web console** to launch the {{site.data.keyword.lakehouse_short}} Console. You can view the **Welcome to {{site.data.keyword.lakehouse_short}}** landing page.
 
 ## Reference
 {: #gs_ns_2}
