@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-09-25"
 
 keywords: monitoring, watsonx.data
 
@@ -79,8 +79,6 @@ To see your {{site.data.keyword.lakehouse_full}} customer metrics dashboards in 
 * [Total number of active nodes](#ibm_watsonx_data_active_nodes_total)
 * [Total number of inactive nodes](#ibm_watsonx_data_inactive_nodes_total)
 * [Total number of nodes](#ibm_watsonx_data_nodes_total)
-* [List of roles](#ibm_watsonx_data_roles_name)
-* [List of tables](#ibm_watsonx_data_table_total)
 
 
 ### HMS health status
@@ -202,29 +200,6 @@ To see your {{site.data.keyword.lakehouse_full}} customer metrics dashboards in 
 {: caption="Table 12: Total Number Of Nodes metric metadata" caption-side="top"}
 
 
-### List of roles
-{: #ibm_watsonx_data_roles_name}
-
-
-| Metadata | Description |
-|----------|-------------|
-| `Metric Name` | ibm_watsonx_data_roles_name|
-| `Metric Type` | gauge |
-| `Value Type`  | none |
-| `Segment By` | Service Instance, Resource group |
-{: caption="Table 4: List Of Roles metric metadata" caption-side="top"}
-
-### List of tables
-{: #ibm_watsonx_data_table_total}
-
-
-| Metadata | Description |
-|----------|-------------|
-| `Metric Name` | ibm_watsonx_data_table_total|
-| `Metric Type` | gauge |
-| `Value Type`  | none |
-| `Segment By` | Service Instance, Resource group |
-{: caption="Table 5: List Of Tables metric metadata" caption-side="top"}
 
 ## Attributes for segmentation
 {: #attributes}
