@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-23"
+lastupdated: "2024-09-25"
 
 keywords: lakehouse
 
@@ -44,13 +44,6 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 Despite the design specifications stating that CSV files should only be ingested into tables created from CSV files, and parquet files should only be ingested into tables created from parquet files, there is a discrepancy in the actual behaviour where users are able to ingest CSV files into parquet tables and vice versa. This can result in unexpected results, data quality issues, or performance problems if the schema or formatting of the CSV or parquet file does not align with the expected structure of the target table.
 
-## Schema not visible in the data enrichment list
-{: #known_issues28447}
-
-In {{site.data.keyword.lakehouse_short}} cluster with semantic automation registered, creating a new schema and then ingesting a table may result in the newly created schema not being immediately visible in the **Enrich data** tab.
-
-**Workaround:** Refresh the **Enrich data** tab in {{site.data.keyword.lakehouse_short}}. This will trigger a re-sync with IKC, and the newly created schema should become visible.
-
 ## Invalid file associations in Presto resource group through UI and engine restart issues
 {: #known_issues14722}
 
@@ -72,11 +65,6 @@ Iceberg: Iceberg does support the time data type.
 
 {{site.data.keyword.lakehouse_short}} now supports ingesting supported file types with varying schemas. However, when columns within these files have distinct schemas, the values in those columns is set to null.
 
-## DB2 connector cannot access views created using external tools
-{: #known_issues24380}
-
-The DB2 connector in {{site.data.keyword.lakehouse_short}} currently allows access to the views created through the {{site.data.keyword.lakehouse_short}} instance or DBeaver. However, accessing views created with other tools such as Data Manager Console (DMC), Db2 command line (DB2 cmd), or any other third-party tools is not supported.
-
 ## Unsupported special characters in schema and table creation
 {: #known_issues12662}
 
@@ -96,18 +84,6 @@ Spark jobs that creates a schema, table, and then attempt an `ALTER TABLE` opera
 This occurs because, even though the schema and table creation are successful, the job tries to execute the `ALTER TABLE` operation before the metastore data is updated with the newly created schema and table details.
 
 **Workaround:** To prevent access denied errors, you must provide a delay in time between each operations that involves creation of new schemas or tables within the same Python script.
-
-## Delayed UI update after successful ingestion jobs
-{: #known_issues24181}
-
-After a successful ingestion job, the schema or table may not be immediately visible in the user interface (UI). This is due to the background execution of the ingestion process.
-
-**Workaround:** Refresh your browser or refresh the catalogs or schemas from the **Data manager** page after an ingestion job status is changed to **Finished** to make sure that the UI is updated with the newly created schema or table. Once the UI is refreshed, you can proceed to run another ingestion job on the same schema or tables that were just created.
-
-## Spark application submission fails when DAS (Data Access Service) is enabled
-{: #known_issues15132}
-
-DAS does not currently support buckets or object storage that use HTTP endpoints.
 
 **Workaround:** You can disable DAS or make sure that your buckets or object storage are configured with HTTPS endpoints.
 
@@ -146,33 +122,6 @@ When you attempt to read Parquet v2 tables through Presto (C++) that were create
 When you attempt to query QHMM related tables using Presto (C++) engines, you might encounter errors due to unsupported file formats. Presto (C++) supports only DWRF and Parquet v1 formats. You can not use Presto (C++) to query data or tables in other formats.
 
 **Workaround:** You can switch to use Presto (Java) engines to query QHMM related tables.
-
-## `SELECT` queries may fail in Hive table
-{: #known_issues13086}
-
-When a column is dropped from a Hive table, subsequent `SELECT` queries may fail with the following error:
-
-   ```bash
-   The file used to create the table is not an ORC file. Based on the file type, specify the file type or use an ORC file. Supported file types are ORC, Parquet, Avro, RCFile, SequenceFile, JSON, and Text. Only if you are using an ORC file, it is not mandatory to specify the file type.
-   ```
-   {: codeblock}
-
-The column drop operation succeeds, but `SELECT *` queries fail due to a file format issue.
-
-**Workaround:** Add the following properties to the catalog through customization PATCH API. See [Update presto engine](https://cloud.ibm.com/apidocs/watsonxdata#update-presto-engine).
-
-   ```bash
-   hive.orc.use-column-names=true
-   hive.parquet.use-column-names=true
-   ```
-   {: codeblock}
-
-## `CreateIndex` permission denied due to policy sync delay of collection creator
-{: #known_issues13701}
-
-When attempting to create an index immediately following the creation of a collection in Milvus, users with the `Viewer` or `User` role might encounter a `CreateIndex permission denied` error. Apart from the `CreateIndex` operation, this error can happen to other Milvus operations within a Collection like `Insert`, `CreatePartition`, etc.
-
-**Workaround:** Wait for 5–10 seconds after collection creation to create index.
 
 ## Server concurrency limit reached error in flight server
 {: #known_issues13725}
@@ -237,9 +186,9 @@ Due to a calculation error in the configuration setting of Query Optimizer for t
 {: #known_issues22601_26741}
 
 - Presto (C++) engine currently does not support database catalogs.
-- Only file formats such as Parquet and DWRF are supported.
+- Parquet is the only supported file format.
 - Hive connector is supported.
-- Default iceberg Table has only read support with Parquet v1 format.
+- Default Iceberg table has only read support with Parquet v1 format.
 - TPC-H/TPC-DS queries are supported.
 - `DELETE FROM` and `CALL SQL` statements are not supported.
 - `START`, `COMMIT`, and `ROLLBACK` transactions are not supported.
