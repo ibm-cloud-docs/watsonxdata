@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-24"
+lastupdated: "2024-09-25"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -100,7 +100,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    x. Select the corresponding target table options based on the selection above.
 
-      1. Existing table: To ingest source data into an existing table. Search or select a target table listed in the **Select table or enter new table name** drop-down.
+      1. Existing table: To ingest source data into an existing table. Search or select a target table listed in the **Select table or enter new table name** drop-down. The existing table will be appended or replaced with the new ingested data. Default action being append.
 
       2. New table: Enter a new target table name in the **Select table or enter new table name** and explicitly click **Create: `<new table name>`** to create a new table from the source data.
 
@@ -110,11 +110,38 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    xiii. Select a pre-defined **Job size** from the options listed:
 
-      **Small:** Driver memory (GB): 2GB, Driver cores: 1 vCPU, Number of executors: 1, Executor cores: 1 vCPU, and Executor memory (GB): 2GB.
+      **Small:**
 
-      **Medium:** Driver memory (GB): 4GB, Driver cores: 2 vCPU, Number of executors: 2, Executor cores: 2 vCPU, and Executor memory (GB): 4GB.
+      |Configuration|Value|
+      |----|----|
+      |Driver memory|2GB|
+      |Driver cores|1 vCPU|
+      |Number of executors|1|
+      |Executor cores|1 vCPU|
+      |Executor memory|2GB|
+      {: caption="Table 1" caption-side="bottom"}
 
-      **Large:** Driver memory (GB): 8GB, Driver cores: 4 vCPU, Number of executors: 4, Executor cores: 4 vCPU, and Executor memory (GB): 8GB.
+      **Medium:**
+
+      |Configuration|Value|
+      |----|----|
+      |Driver memory|4GB|
+      |Driver cores|2 vCPU|
+      |Number of executors|2|
+      |Executor cores|2 vCPU|
+      |Executor memory|4GB|
+      {: caption="Table 2" caption-side="bottom"}
+
+      **Large:**
+
+      |Configuration|Value|
+      |----|----|
+      |Driver memory|8GB|
+      |Driver cores|4 vCPU|
+      |Number of executors|4|
+      |Executor cores|4 vCPU|
+      |Executor memory|8GB|
+      {: caption="Table 3" caption-side="bottom"}
 
    xiv. Click **Done**. The submitted ingestion job can be found in the **Ingestion history** tab of the **Data manager** page.
 
@@ -170,7 +197,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    xii. Select the corresponding Target table options based on the selection (above).
 
-      1. Existing table:To ingest source data into an existing table. Search or select a target table listed in the **Select table or enter new table name** dropdown.
+      1. Existing table:To ingest source data into an existing table. Search or select a target table listed in the **Select table or enter new table name** dropdown. The existing table will be appended or replaced with the new ingested data. Default action being append.
 
       2. New table: Enter a new target table name in the **Select table or enter new table name** and explicitly click **Create `<new table name>`** to create a new table from the source data.
 
@@ -180,11 +207,38 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    xv. Select a pre-defined **Job size** from the options listed:
 
-      **Small:** Driver memory (GB): 2GB, Driver cores: 1 vCPU, Number of executors: 1, Executor cores: 1 vCPU, and Executor memory (GB): 2GB.
+      **Small:**
 
-      **Medium:** Driver memory (GB): 4GB, Driver cores: 2 vCPU, Number of executors: 2, Executor cores: 2 vCPU, and Executor memory (GB): 4GB.
+      |Configuration|Value|
+      |----|----|
+      |Driver memory|2GB|
+      |Driver cores|1 vCPU|
+      |Number of executors|1|
+      |Executor cores|1 vCPU|
+      |Executor memory|2GB|
+      {: caption="Table 1" caption-side="bottom"}
 
-      **Large:** Driver memory (GB): 8GB, Driver cores: 4 vCPU, Number of executors: 4, Executor cores: 4 vCPU, and Executor memory (GB): 8GB.
+      **Medium:**
+
+      |Configuration|Value|
+      |----|----|
+      |Driver memory|4GB|
+      |Driver cores|2 vCPU|
+      |Number of executors|2|
+      |Executor cores|2 vCPU|
+      |Executor memory|4GB|
+      {: caption="Table 2" caption-side="bottom"}
+
+      **Large:**
+
+      |Configuration|Value|
+      |----|----|
+      |Driver memory|8GB|
+      |Driver cores|4 vCPU|
+      |Number of executors|4|
+      |Executor cores|4 vCPU|
+      |Executor memory|8GB|
+      {: caption="Table 3" caption-side="bottom"}
 
    xvi. Click **Done**. The submitted ingestion job can be found in the **Ingestion history** tab of the **Data manager** page.
 
@@ -212,7 +266,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    xii. Select the corresponding Target table options based on the selection (above).
 
-      1. Existing table:To ingest source data into an existing table. Search or select a target table listed in the **Select table or enter new table name** dropdown.
+      1. Existing table:To ingest source data into an existing table. Search or select a target table listed in the **Select table or enter new table name** dropdown. The existing table will be appended or replaced with the new ingested data. Default action being append.
 
       2. New table: Enter a new target table name in the **Select table or enter new table name** and explicitly click **Create `<new table name>`** to create a new table from the source data.
 
@@ -222,10 +276,37 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    xv. Select a pre-defined **Job size** from the options listed:
 
-      **Small:** Driver memory (GB): 2GB, Driver cores: 1 vCPU, Number of executors: 1, Executor cores: 1 vCPU, and Executor memory (GB): 2GB.
+      **Small:**
 
-      **Medium:** Driver memory (GB): 4GB, Driver cores: 2 vCPU, Number of executors: 2, Executor cores: 2 vCPU, and Executor memory (GB): 4GB.
+      |Configuration|Value|
+      |----|----|
+      |Driver memory|2GB|
+      |Driver cores|1 vCPU|
+      |Number of executors|1|
+      |Executor cores|1 vCPU|
+      |Executor memory|2GB|
+      {: caption="Table 1" caption-side="bottom"}
 
-      **Large:** Driver memory (GB): 8GB, Driver cores: 4 vCPU, Number of executors: 4, Executor cores: 4 vCPU, and Executor memory (GB): 8GB.
+      **Medium:**
+
+      |Configuration|Value|
+      |----|----|
+      |Driver memory|4GB|
+      |Driver cores|2 vCPU|
+      |Number of executors|2|
+      |Executor cores|2 vCPU|
+      |Executor memory|4GB|
+      {: caption="Table 2" caption-side="bottom"}
+
+      **Large:**
+
+      |Configuration|Value|
+      |----|----|
+      |Driver memory|8GB|
+      |Driver cores|4 vCPU|
+      |Number of executors|4|
+      |Executor cores|4 vCPU|
+      |Executor memory|8GB|
+      {: caption="Table 3" caption-side="bottom"}
 
    xvi. Click **Done**. The submitted ingestion job can be found in the **Ingestion history** tab of the **Data manager** page.
