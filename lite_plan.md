@@ -113,17 +113,17 @@ Use the **Ingest data into watsonx.data** option for data ingestion. Before perf
 8. Click **Set up now**. The **Finish set up** page opens.
 
 
-    a. If you use a trial account with no existing IBM COS instance:
+    a. If you use a trial account:
 
-      * A new IBM COS instance is provisioned with default name (watsonx-data-cos) and a new bucket is attached to it with default name (watsonx-data-instanceId).
+      * If the user does not have an IBM COS instance, a new IBM COS instance is provisioned with default name (watsonx-data-cos) and a new bucket is attached to it with default name (watsonx-data-instanceId). If the user has an IBM COS instance, a new bucket is attached to it with default name (watsonx-data-instanceId) to that instance.
       * Click **Finish**.
 
 
     b. If you use a Paygo account:
 
 
-      * If the user has a COS instance in a Paygo account, it is fetched and a new bucket with default name is attached to it.
-      * If the user does not have a COS instance, you must provision a new IBM COS instance. From the **Finish set up** page, click **Create new instance** to create a new COS instance. Select the storage.
+      * If the user has an IBM COS instance in a Paygo account, it is fetched and a new bucket with default name is attached to it.
+      * If the user does not have an IBM COS instance, you must provision a new IBM COS instance. From the **Finish set up** page, click **Create new instance** to create a new COS instance. Select the storage.
       * Click **Finish**.
 
 
