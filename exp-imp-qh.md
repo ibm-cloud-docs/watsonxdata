@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-09-26"
 
 keywords: lakehouse, exporting, importing, query history, watsonx.data
 
@@ -35,7 +35,7 @@ To mitigate this issue, you can export query history as a csv file and also impo
 
 It is recommended to periodically export the query history to avoid losing it.
 
-To import and export the query history, you must install the Presto (Java) CLI. For more information, see [Connecting to Presto (Java) server](watsonxdata?topic=watsonxdata-con-presto-serv){: external}.
+To import and export the query history, you must install the Presto (Java) CLI. For more information, see [Connecting to Presto (Java) server]({{site.data.keyword.ref-con-presto-serv-link}}){: external}.
 
 ## Exporting query history
 {: #export-qh}
