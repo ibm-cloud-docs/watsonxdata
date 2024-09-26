@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-25"
+lastupdated: "2024-09-26"
 
 keywords: lakehouse
 
@@ -34,10 +34,15 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+## Sync all objects and metadata deletion
+{: #known_issues26640}
+
+When using the **Sync All Objects** option in {{site.data.keyword.lakehouse_short}}, there may be cases where data is not deleted from the metastore if the corresponding object has been deleted from the object storage.
+
 ## Data protection rule for row filtering
 {: #known_issues28556}
 
-When a column name that contains spaces is applied with a data protection row filtering rule in watsonx.data, non-owners of the asset may encounter errors when attempting to preview the table.
+When a column name that contains spaces is applied with a data protection row filtering rule in {{site.data.keyword.lakehouse_short}}, non-owners of the asset may encounter errors when attempting to preview the table.
 
 ## Performance issue with multiple groups of large user counts
 {: #known_issues15126}
