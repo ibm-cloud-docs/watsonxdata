@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-09-25"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -26,6 +26,13 @@ The **Lite** plan allows you to provision a {{site.data.keyword.lakehouse_full}}
 {: shortdesc}
 
 
+Provisioning a Lite plan instance is use case driven. Depending on the following use cases, you are presented with a Console UI that include components (engines, services and storages) that are specific to the selected use case.
+
+* **Generative AI** : AI developers or Data engineers can explore the Generative AI use cases using this option. The provisioned instance includes Presto, Milvus, and Spark.
+* **High Performance BI** : Data engineers can explore BI visualization functionalities using this option. The provisioned instance includes Presto (C++) and Spark.
+* **Data Engineering Workloads** : Data engineers can explore various workload driven use cases using this option. The provisioned instance includes Presto (Java) and Spark.
+
+
 After provisioning the Lite plan instance, you can monitor the resource unit usage from the Billing and Usage page available in the watsonx.data console.
 IBM Cloud trial account users can have only a single active lite plan instance per account. However, if you delete the existing Lite plan instance before reaching the account cap limit of 2000 RUs, you can create a new instance and consume the remaining resource units available in the account. This applies to the paid IBM Cloud account users also. In addition, they can create multiple Lite plan instances in different [resource groups](https://cloud.ibm.com/docs/account?topic=account-rgs&interface=ui). If the account has multiple Lite instances active at the same time, the resource unit consumption for the account will be the sum of resource units consumed by each individual instance.
 When the usage cap is reached, any active Lite plan instances owned by the account are disabled and you cannot create any new Lite plan instances.
@@ -33,6 +40,9 @@ When the usage cap is reached, any active Lite plan instances owned by the accou
 To access all the features and functionalities without resource or time limit, you must have an Enterprise {{site.data.keyword.lakehouse_short}} instance in the paid IBM Cloud account.
 In this tutorial, you learn how to provision {{site.data.keyword.lakehouse_short}} instance (Lite plan) and explore its features.
 
+* [Provisioning {{site.data.keyword.lakehouse_short}} Lite plan through UI](#hp_view_1)
+
+* [Provisioning {{site.data.keyword.lakehouse_short}} Lite plan through CLI](#create-lite-cli)
 
 
 
@@ -45,9 +55,10 @@ To provision {{site.data.keyword.lakehouse_short}} Lite plan instance, you must 
 Trial IBM Cloud accounts can have only one resource group.
 
 
-## Provisioning {{site.data.keyword.lakehouse_short}} Lite plan
+## Provisioning {{site.data.keyword.lakehouse_short}} Lite plan through UI
 {: #hp_view_1}
 
+Perform the following steps to provision a Lite plan instance from watsonx.data UI.
 
 
 1. Go to the [{{site.data.keyword.lakehouse_short}} provisioning](https://cloud.ibm.com/watsonxdata) page.
@@ -69,25 +80,83 @@ Trial IBM Cloud accounts can have only one resource group.
 
 1. Optional: Enter the tags and access management tags.
 
+1. You can provision the Lite plan instance based on the following use cases. Select one of the use cases from the list to proceed.
+
+    * **Generative AI** : The provisioned instance includes Presto, Milvus and Spark.
+    * **High Performance BI** : The provisioned instance includes Presto C++ and Spark only.
+    * **Data Engineering Workloads** : The provisioned instance includes Presto Java + and Spark only.
+
+
 1. In the **Summary** page, review the license agreement and select the checkbox to acknowledge the agreement.
 
-1. Click **Create**. The message “instance is being provisioned” is displayed and the **Resource list** opens.
-
-1. From the **Resource list** page, under the **Databases** category, you can see that the status for your instance as, **Provision in progress**. Click the {{site.data.keyword.lakehouse_short}} instance link when the status changes to **Active**.
-
-1. Click **Open web console** and provide the Multi-Factor Authentication (MFA) details to launch the {{site.data.keyword.lakehouse_short}} Console.
+1. Click **Create**. The **Preparing watsonx.data** page opens that displays the progress of provisioning. The {{site.data.keyword.lakehouse_short}} Console opens after provisioning is complete.
 
 
+
+
+
+## Provisioning {{site.data.keyword.lakehouse_short}} Lite plan through CLI
+{: #create-lite-cli}
+
+Perform the following steps to provision a Lite plan instance by using CLI.
+
+1. Log in to `cloud.ibm.com`.
+
+   ```bash
+   ibmcloud login --sso -a https://cloud.ibm.com
+   ```
+   {: codeblock}
+
+2. Select an account on which you want to create an instance.
+
+3. Create a new formation.
+
+    ```bash
+    ibmcloud resource service-instance-create <instance-name> lakehouse lakehouse-lite <region> -g <resource-group> -p '{"datacenter": "<data-center>","cloud_type": "<cloud-type>","use_case": "<use_case_template>"}'
+    ```
+    {: codeblock}
+
+    - `instance-name`: Name of the instance. For example, watsonx.data-abc.
+    - `lakehouse`: {{site.data.keyword.lakehouse_short}} service
+    - `lakehouse-lite`: Plan ID
+    - `region`: The available regions are `eu-de`, `us-south`, `jp-tok`, `eu-gb`, and `au-syd`.
+    - `resource-group`: Choose one of the available resource groups in your {{site.data.keyword.cloud_notm}} account. Most accounts have a `Default` group. For more information, see [Managing resource groups](https://cloud.ibm.com/docs/account?topic=account-rgs&interface=ui).
+    - `datacenter`: Use one of the following. This parameter must match the region that you have selected.
+       - `ibm:us-south:dal`
+       - `ibm:eu-de:fra`
+       - `ibm:eu-gb:lon`
+       - `ibm:au-syd:syd`
+       - `ibm:jp-tok:tok`
+    - `cloud_type`:
+       - `ibm`: For fully managed account instances (default).
+       - `aws_vpc`: For customer-owned account instances.
+    - `use_case_template`: You can provision the Lite plan instance based on three use cases. The valid values accepted by the parameter are ai (Generative AI), workloads (Data Engineering workloads), and performance (High Performance BI). The default value is `workloads`.
+
+         For availability and general information related to customer-owned account deployed instances, contact your IBM sales representative or [open a support ticket](https://cloud.ibm.com/unifiedsupport/cases/form).
+         {: note}
+
+    Example:
+
+    ```bash
+    ibmcloud resource service-instance-create watsonx.data-abc lakehouse lakehouse-lite us-south -g Default -p '{"datacenter": "ibm:us-east:wdc", "use_case": "workloads"}'
+    ```
+    {: codeblock}
+
+4. Check the status of the new instance.
+
+    ```bash
+    ibmcloud resource service-instance <instance-name>
+    ```
+    {: codeblock}
 
 ## Open the web console
 {: #open_console-2}
-{: step}
 
-1. Go to **Resource list** **>** **Databases**.
+Perform the following steps to relaunch the watsonx.data console at later point of time.
 
-2. Click your {{site.data.keyword.lakehouse_short}} instance link. The service instance page opens.
+1. From the **Resource list** page, under the **Databases** category, you can see your instance in **Active** state.
 
-3. Click **Open web console**. The {{site.data.keyword.lakehouse_short}} web console opens.
+1. Click the instance name. Click **Open web console** to launch the {{site.data.keyword.lakehouse_short}} Console. You can view the **Welcome to {{site.data.keyword.lakehouse_short}}** landing page.
 
 ## Reference
 {: #gs_ns_2}

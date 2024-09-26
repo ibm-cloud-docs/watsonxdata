@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-16"
+lastupdated: "2024-09-24"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -26,7 +26,7 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Spark ingestion through ibm-lh tool command line
+# Spark ingestion through ibm-lh tool
 {: #ingest_spark_cli}
 
 You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehouse_full}} through the command line interface (CLI) using the IBM Analytics Engine (Spark). The commands to run the ingestion job are listed in this topic.
@@ -35,7 +35,7 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
 ## Before you begin
 {: #byblegsprk}
 
-* Add and register IBM Analytics Engine (Spark). See [Registering an engine]({{site.data.keyword.ref-reg_engine-link}}).
+* Add and register IBM Analytics Engine (Spark). See [Provisioning a Spark engine](watsonxdata?topic=watsonxdata-spl_engine).
 * Add storage for the target catalog. See [Adding a storage-catalog pair]({{site.data.keyword.ref-reg_bucket-link}}).
 * Create schema and table in the catalog for the data to be ingested. See [Creating schemas]({{site.data.keyword.ref-create_schema-link}}) and [Creating tables]({{site.data.keyword.ref-create_table-link}}).
 
@@ -71,7 +71,7 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
    ```
    {: codeblock}
 
-   If IBM Analytics Engine Serverless instance on IBM Cloud is registered as external Spark on {{site.data.keyword.lakehouse_short}}, the Spark driver, executor vCPU and memory combinations must be in a 1:2, 1:4, or 1:8 ratio. See Default limits and quotas for Analytics Engine instances.
+   If IBM Analytics Engine Serverless instance on IBM Cloud is registered as external Spark on {{site.data.keyword.lakehouse_short}}, the Spark driver, executor vCPU and memory combinations must be in a 1:2, 1:4, or 1:8 ratio. See [Default limits and quotas for Analytics Engine instances](https://cloud.ibm.com/docs/AnalyticsEngine?topic=AnalyticsEngine-limits).
    {: note}
 
    |Environment variable name|Description|

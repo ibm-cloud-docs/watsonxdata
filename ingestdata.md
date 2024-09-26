@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-29"
+lastupdated: "2024-09-25"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -32,8 +32,7 @@ subcollection: watsonxdata
 Data ingestion is the process of importing and loading data into {{site.data.keyword.lakehouse_full}}. From the user interface (UI) of {{site.data.keyword.lakehouse_short}}, you can use the **Ingest data** module from the **Data manager** page to securely and easily load data. Alternatively, you can also ingest local or remote data files to create tables by using the **Create table from file** option.
 {: shortdesc}
 
-When you ingest a data file into the {{site.data.keyword.lakehouse_short}}, the table schema is generated and inferred when a query is run.
-Data ingestion in {{site.data.keyword.lakehouse_short}} supports CSV, Parquet, and JSON formats. The files to be ingested must be of the same format type and the same schema. {{site.data.keyword.lakehouse_short}} auto-discovers the schema based on the source file being ingested.
+When you ingest a data file into the {{site.data.keyword.lakehouse_short}}, the table schema is generated and inferred when a query is run. The files to be ingested must be of the same format type and same schema. {{site.data.keyword.lakehouse_short}} auto-discovers the schema based on the source file being ingested.
 
 Following are some of the requirements or behavior of data ingestion:
 
@@ -41,12 +40,15 @@ Following are some of the requirements or behavior of data ingestion:
 * The target table must be an iceberg format table.
 * IBM Storage Ceph, IBM Cloud Object Storage (COS), AWS S3, and MinIO object storage are supported.
 * `pathStyleAccess` property for object storage is not supported.
-* Only Parquet, CSV, and JSON file formats are supported as source data files.
+* Parquet, CSV, JSON, ORC, and AVRO file formats are supported as source data files.
+* The maximum limit for the cumulative size of files must be within 500 MB for local ingestion.
 * Parquet files exceeding 2 MB cannot be previewed, but they will still be ingested successfully.
 * JSON files with complex nested objects and arrays shall not be previewed in the UI.
 * Complex JSON files shall be ingested as-is, resulting in arrays as table entries. This is not recommended for optimal data visualization and analysis.
 * JSON files exceeding 2 MB cannot be previewed, but they will still be ingested successfully.
 * Keys within JSON files must be enclosed in quotation marks for proper parsing and interpretation.
+* AVRO files exceeding 2 MB cannot be previewed, but they will still be ingested successfully.
+* ORC files exceeding 2 MB cannot be previewed, but they will still be ingested successfully.
 
 ## Loading or ingesting data through CLI
 {: #load_ingest_datacli}

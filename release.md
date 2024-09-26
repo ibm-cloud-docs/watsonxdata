@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-09-19"
+lastupdated: "2024-09-25"
 
 keywords: watsonxdata, release notes
 
@@ -34,6 +34,100 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.lakehouse_full}} that are grouped by date.
 {: shortdesc}
 
+## 25 September 2024 - Version 2.0.3
+{: #lakehouse_25Sep01}
+
+
+**Data sources and storage enhancements**
+{: #25Sep_1_2024}
+
+This release includes the following new data sources and storage enhancements:
+
+* You can now enable Azure Data Lake Storage Gen1 Blob and Google Cloud Storage for Milvus. For more information, see [ADLS Gen1 Blob](watsonxdata?topic=watsonxdata-adls_genblob_storage) and [Google Cloud Storage](watsonxdata?topic=watsonxdata-gcs_storage).
+
+* You can create or add a new data source to the engine without attaching a catalog to it. A catalog can be attached to the data source at a later stage.
+
+* You can now use Apache Ozone storage for the Presto (Java) engine. For more information, see [Apache Ozone](watsonxdata?topic=watsonxdata-ozone_storage).
+
+* You can now configure the Apache Kafka data source to use the Salted Challenge Response Authentication Mechanism (SCRAM) authentication mechanism. You can upload a self-signed certificate. For more information, see [Apache Kafka](watsonxdata?topic=watsonxdata-kafka_database).
+
+**Integration enhancements**
+{: #25Sep_2_2024}
+
+This release of {{site.data.keyword.lakehouse_short}} introduces the following new or enhanced integrations with other services:
+
+* You can now integrate {{site.data.keyword.lakehouse_short}} with data build tool (dbt) for Spark engine for in-place data transformation within {{site.data.keyword.lakehouse_short}}. For more information, see [About dbt integration](watsonxdata?topic=watsonxdata-abt_dbt).
+
+* You can integrate {{site.data.keyword.lakehouse_short}} with Databand. This integration can enhance the monitoring capabilities by providing insights that extend beyond Spark UI and Spark History. For more information, see [Monitoring Spark application runs by using Databand](watsonxdata?topic=watsonxdata-mntr_dband).
+
+* You can integrate {{site.data.keyword.lakehouse_short} with the following Business Intelligence (BI) visualization tools to access the connected data sources and build compelling and interactive data visualizations:
+
+* Tableau
+* Looker
+* Domo
+* Qlik
+* PowerBI
+
+For more information, see [About BI visualization tools](watsonxdata?topic=watsonxdata-abt_bi).
+
+**Engine and service enhancements**
+{: #25Sep_3_2024}
+
+This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
+
+* Iceberg tables are supported by Query Optimizer. For more information, see [Query Optimizer](watsonxdata?topic=watsonxdata-about_optimizer).
+
+* You can now use the data build tool (dbt-watsonx-presto) adapter to build, test, and document data models for the Presto (Java) engine. For more information, see [dbt-watsonx-presto](watsonxdata?topic=watsonxdata-dbt_watsonx_presto).
+
+* A new customization property (file-column-names-read-as-lower-case) is now available for Presto (C++) engine to avoid upper case and lower case mismatch in columns names. For more information, see [Catalog properties for Presto (C++)](watsonxdata?topic=watsonxdata-api_custom_pcpp_ctg).
+
+
+**Access management enhancements**
+{: #25Sep_4_2024}
+
+This release of {{site.data.keyword.lakehouse_short}} introduces the following access management enhancements:
+
+* You can now add users and user groups to define data policy rules. For more information, see [Data policy](watsonxdata?topic=watsonxdata-data_policy).
+
+* Administrators can now select TPCDS and TPCH catalogs to create access control policies. ‘Select’ is the only allowed operation to define rules with these catalogs. To define data policies, see [Data policy](watsonxdata?topic=watsonxdata-data_policy).
+
+* Administrators can now edit resource group configuration after creating the resource group. For more information, see [Configuring Presto resource groups](watsonxdata?topic=watsonxdata-conf_rcrs_grp).
+
+**IBM Knowledge Catalog governance policies for data sources**
+{: #25Sep_5_2024}
+
+You can now apply IBM Knowledge Catalog governance policies to the following data sources in Presto:
+
+* Oracle
+* PostgreSQL
+* MySQL
+* SQL Server
+* Db2
+
+**Ingestion enhancements**
+{: #25Sep_6_2024}
+
+This release of {{site.data.keyword.lakehouse_short}} includes the following improvements to the ingestion workflow:
+
+* You can now submit an ingestion job using the data sources. For more information, see [Ingesting data by using Spark through the web console](watsonxdata?topic=watsonxdata-ingest_spark_ui).
+
+* You can now ingest data using AVRO, and ORC file formats. For more information, see [About data ingestion](watsonxdata?topic=watsonxdata-load_ingest_data).
+
+* You can preview uploaded files and click table headers to edit column names. For more information, see [Ingesting data by using Spark through the web console](watsonxdata?topic=watsonxdata-ingest_spark_ui).
+
+* You can access and view Spark logs associated with an ingestion job. For more information, see [Accessing Spark logs for ingestion jobs](watsonxdata?topic=watsonxdata-ingest_sparklogshistory).
+
+**Lite plan**
+{: #25Sep_7_2024}
+
+You can provision your Lite plan instance based on the following three use cases. Select one use case from the list to proceed:
+
+* Generative AI : You can explore Generative AI use cases using this option. The provisioned instance includes Presto, Milvus, and Spark.
+* High Performance BI : You can explore BI visualization functionalities using this option. The provisioned instance includes Presto (C++) and Spark.
+* Data Engineering Workloads : You can use data engineering workload to explore various workload driven use cases. The provisioned instance includes Presto (Java) and Spark.
+
+For more information, see [Lite plan](watsonxdata?topic=watsonxdata-tutorial_prov_lite_1).
+
 ## 27 August 2024 - Version 2.0.2
 {: #lakehouse_28Aug032024}
 
@@ -54,9 +148,10 @@ This release includes the following new data sources and storage enhancements:
 
 This release of {{site.data.keyword.lakehouse_short}} introduces the following new or enhanced integrations with other services:
 
-* You can now use the governance capabilities of IBM Knowledge Catalog (IKC) for SQL views within the {{site.data.keyword.lakehouse_short}} platform. For more information, see [Integrating with IBM Knowledge Catalog (IKC)](watsonxdata?topic=watsonxdata-ikc_integration).
+* You can now use the governance capabilities of IBM Knowledge Catalog for SQL views within the {{site.data.keyword.lakehouse_short}} platform. For more information, see [Integrating with IBM Knowledge Catalog (IKC)](watsonxdata?topic=watsonxdata-ikc_integration).
 
 * IBM {{site.data.keyword.lakehouse_short}} now supports Apache Ranger policies to govern data with Presto (C++) engines. For more information, see [Apache Ranger policy](watsonxdata?topic=watsonxdata-ranger_1).
+
 
 **Engine and service enhancements**
 {: #28Aug_3_2024}

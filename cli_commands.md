@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-10"
+lastupdated: "2024-09-24"
 
 keywords: watsonxdata, commands, command line interface, cli
 
@@ -235,6 +235,7 @@ Examples:
 
 ```bash
 `ibm-lh data-copy --target-table 'catalog."schema 2.0"."my table!"'`
+```
 {: codeblock}
 
 ```bash
@@ -244,6 +245,7 @@ ibm-lh data-copy --target-table 'catalog.`schema 2.0`.`my table!`'
 
 ```bash
 `ibm-lh data-copy --target-table catalog.'"schema 2.0"'.'"my table!"'`
+```
 {: codeblock}
 
 ```bash
@@ -253,6 +255,7 @@ ibm-lh data-copy --target-table "catalog.\`schema 2.0\`.\`my table!\`"
 
 ```bash
 `ibm-lh data-copy --target-table catalog.\"schema\ 2.0\".\"my\ table!\"`
+```
 {: codeblock}
 
 Both double quotation marks " and backticks ` are accepted, but quotation mark styles cannot be mixed. In order to include a literal quotation inside an identifier, double the quoting character (for example, "" or ``).
