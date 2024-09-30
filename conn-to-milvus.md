@@ -69,7 +69,7 @@ Make sure that the following items are installed or available:
 {: #conn-to-milvusatoken}
 
 ```bash
-connections.connect(host="<host>", port="<port>", secure=True, server_name="localhost", user="ibmlhtoken", password="<token>")
+connections.connect(host="<host>", port="<port>", secure=True, user="ibmlhtoken", password="<token>")
 ```
 {: codeblock}
 
