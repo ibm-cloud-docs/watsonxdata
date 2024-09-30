@@ -126,7 +126,7 @@ toc:
           - create_table.md
           - ddl_changes.md
       - topicgroup:
-          label: Loading data
+          label: Ingesting data
           topics:
           - ingestdata.md
           - ingest_spark_ui.md
