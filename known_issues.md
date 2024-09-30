@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-26"
+lastupdated: "2024-09-30"
 
 keywords: lakehouse
 
@@ -129,7 +129,7 @@ When you attempt to read Parquet v2 tables through Presto (C++) that were create
 ## Attempting to query Query History and Monitoring Management (QHMM) related tables using Presto (C++) engines might encounter errors
 {: #known_issues14083}
 
-When you attempt to query QHMM related tables using Presto (C++) engines, you might encounter errors due to unsupported file formats. Presto (C++) supports only DWRF and Parquet v1 formats. You can not use Presto (C++) to query data or tables in other formats.
+When you attempt to query QHMM related tables using Presto (C++) engines, you might encounter errors due to unsupported file formats. Presto (C++) supports only Parquet v1 formats. You can not use Presto (C++) to query data or tables in other formats.
 
 **Workaround:** You can switch to use Presto (Java) engines to query QHMM related tables.
 
