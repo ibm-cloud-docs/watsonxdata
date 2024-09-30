@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-09-25"
+lastupdated: "2024-09-30"
 
 keywords: watsonxdata, release notes
 
@@ -60,7 +60,7 @@ This release of {{site.data.keyword.lakehouse_short}} introduces the following n
 
 * You can integrate {{site.data.keyword.lakehouse_short}} with Databand. This integration can enhance the monitoring capabilities by providing insights that extend beyond Spark UI and Spark History. For more information, see [Monitoring Spark application runs by using Databand](watsonxdata?topic=watsonxdata-mntr_dband).
 
-* You can integrate {{site.data.keyword.lakehouse_short} with the following Business Intelligence (BI) visualization tools to access the connected data sources and build compelling and interactive data visualizations:
+* You can integrate {{site.data.keyword.lakehouse_short}} with the following Business Intelligence (BI) visualization tools to access the connected data sources and build compelling and interactive data visualizations:
 
 * Tableau
 * Looker
