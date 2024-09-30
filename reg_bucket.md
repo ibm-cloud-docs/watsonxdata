@@ -46,14 +46,15 @@ To add a storage, complete the following steps:
 4. In the **Add component** window, select a storage from the **Storage** section and provide the details to connect to existing externally managed storage.
 5. You can associate a catalog to the storage. This catalog can be associated with an engine. A catalog defines the schemas and metadata for a storage or data source. Depending on the storage type, Apache Iceberg, Apache Hive, Apache Hudi, and Delta Lake catalogs are supported.
 6. The following storages are supported:
-* [IBM Cloud Object Storage](watsonxdata?topic=watsonxdata-cos_storage)
-* [Amazon S3](watsonxdata?topic=watsonxdata-amazons_storage)
-* [IBM Storage Ceph](watsonxdata?topic=watsonxdata-ceph_storage)
-* [MinIO](watsonxdata?topic=watsonxdata-minio_storage)
-* [Hadoop Distributed File System](watsonxdata?topic=watsonxdata-hdfs_storage)
-* [Google Cloud Storage](watsonxdata?topic=watsonxdata-gcs_storage)
-* [Azure Data Lake Storage](watsonxdata?topic=watsonxdata-adls_genblob_storage)
-* [Apache Ozone](watsonxdata?topic=watsonxdata-ozone_storage)
+
+   * [IBM Cloud Object Storage](watsonxdata?topic=watsonxdata-cos_storage)
+   * [Amazon S3](watsonxdata?topic=watsonxdata-amazons_storage)
+   * [IBM Storage Ceph](watsonxdata?topic=watsonxdata-ceph_storage)
+   * [MinIO](watsonxdata?topic=watsonxdata-minio_storage)
+   * [Hadoop Distributed File System](watsonxdata?topic=watsonxdata-hdfs_storage)
+   * [Google Cloud Storage](watsonxdata?topic=watsonxdata-gcs_storage)
+   * [Azure Data Lake Storage](watsonxdata?topic=watsonxdata-adls_genblob_storage)
+   * [Apache Ozone](watsonxdata?topic=watsonxdata-ozone_storage)
 
      You can modify the access key and secret key of a user-registered bucket for a storage. This feature is only available for user-registered buckets and is not applicable to default buckets, ADLS, or Google Cloud Storage. This feature can be used if the new credentials successfully pass the test connection.
      {: note}
