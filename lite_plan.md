@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-29"
+lastupdated: "2024-10-03"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -105,6 +105,10 @@ Use the **Start working with data** option to query data.
 {: step}
 
 Use the **Ingest data into watsonx.data** option for data ingestion. Before performing data ingestion, associate a storage. If you use a trial account, a new IBM Cloud Object Storage instance is automatically provisioned with default name (watsonx-data-cos), and a new bucket is attached with default name (watsonx-data-instanceId). If you use a paid account, you must provision a new IBM Cloud Object Storage instance from [Create COS instance](https://cloud.ibm.com/objectstorage/create){: external} page.
+
+
+The storage associated is used as a data bucket by Milvus and as an engine home bucket by Spark.
+{: note}
 
 6. If you select **Ingest data into watsonx.data**, the **Data manager** page opens.
 
