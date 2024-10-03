@@ -12,6 +12,11 @@
         "href": "/docs/watsonxdata?topic=watsonxdata-getting-started"
       },
       {
+        "title": "Public preview",
+        "description": "Some early access features are available in IBM® watsonx.data as public preview.",
+        "href": "/docs/watsonxdata?topic=watsonxdata-faqs"
+      },
+      {
         "title": "FAQs",
         "description": "Answers to frequently asked questions about watsonx.data.",
         "href": "/docs/watsonxdata?topic=watsonxdata-faqs"
