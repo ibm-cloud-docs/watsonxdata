@@ -32,6 +32,10 @@ toc:
           - prov_lite_plan.md
           - getting-started.md
       - release.md
+      - topicgroup:
+          label: Public preview
+          topics:
+          - mv_optimizer.md
   - navgroup:
       id: tutorial
       topics:
