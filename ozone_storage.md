@@ -48,3 +48,8 @@ If you select **Apache Ozone** from the **Storage** section, configure the follo
  | Catalog name | Enter the name of your catalog.|
  | Create | Click Create to create the storage. |
  {: caption="Table 1. Register bucket" caption-side="bottom"}
+
+# Limitations:
+{: #ozone_01storage}
+
+* Apache Ozone storage requires three datanodes to create iceberg tables from {{site.data.keyword.lakehouse_short}}.
