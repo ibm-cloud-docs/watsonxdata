@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-27"
+lastupdated: "2024-10-06"
 
 keywords: lakehouse, database, watsonx.data
 
@@ -43,7 +43,7 @@ To add a custom data source, complete the following steps.
 5. Configure the following details:
 
 
-    Use of this feature may crash your Presto (Java) engine if configured incorrectly. IBM does not provide support for use of this feature..
+    Use of this feature may crash your engine if configured incorrectly. IBM does not provide support for use of this feature..
    {: note}
 
     Two databases with the same name cannot be added. Custom databases do not support SSL configuration.
@@ -54,18 +54,21 @@ To add a custom data source, complete the following steps.
     | Field           | Description        |
     |------------------|--------------------|
     | Display name    | Enter the database name to be displayed on the screen. |
-    | Property value             | Enter the properties and their values to be configured for the database. Enter the property name:value pair as specified in Presto (Java) documentation. You can add multiple properties.|
-    | connector.name=     | Enter the name of the database connector that you want to add as specified in Presto (Java) documentation.  |
+    | Property value             | Enter the properties and their values to be configured for the database. Enter the property name:value pair as specified in Presto documentation. You can add multiple properties.|
+    | connector.name=     | Enter the name of the database connector that you want to add as specified in Presto documentation.  |
     | Encryption           | Encrypting values of the keys are stored.  |
     | Associated catalog | Enter the name of the catalog. This catalog is automatically associated with your database. |
     | Create |  Click Create to create the data source.|
     {: caption="Table 1. Register database" caption-side="bottom"}
 
-You can use the Custom data source for the following connectors in IBM watsonx.data for Presto (Java) engine:
+You can use the Custom data source for the following connectors in IBM watsonx.data for Presto engine:
 
 1. Local File connector: The Local File connector is used to display the http request logs of a worker. Use the custom data source option with the following properties. For more information, see [Local File connector](https://prestodb.io/docs/current/connector/localfile.html).
- * connector.name=localfile
- * presto-logs.http-request-log.location=var/log
- * presto-logs.http-request-log.pattern=http-request.log*
+
+   * connector.name=localfile
+   * presto-logs.http-request-log.location=var/log
+   * presto-logs.http-request-log.pattern=http-request.log*
+
 2. Black Hole connector: The Black Hole connector is designed for high-performance testing of other components. Use the custom data source option with the following property. For more information, see [Black Hole connector](https://prestodb.io/docs/current/connector/blackhole.html).
- * connector.name=blackhole
+
+   * connector.name=blackhole

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-10-06"
 
 keywords:  query, engine, infrastructure
 
@@ -30,7 +30,7 @@ In this tutorial, you learn to add a storage that you own and explore how the {{
 
 **Sample Scenario** : Your team is working on developing an automated data pipeline that requires querying data from the data bucket that you have. Your manager requests you to retrieve data from the data bucket by using the {{site.data.keyword.lakehouse_short}} instance.
 
-For this scenario, you must create the Presto (Java) query engine, establish connection with the storage, ingest data to the data bucket and display the result in {{site.data.keyword.lakehouse_short}} instance.
+For this scenario, you must create the Presto query engine, establish connection with the storage, ingest data to the data bucket and display the result in {{site.data.keyword.lakehouse_short}} instance.
 
 
 ## Objective

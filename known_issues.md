@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-30"
+lastupdated: "2024-10-06"
 
 keywords: lakehouse
 
@@ -312,12 +312,12 @@ The {{site.data.keyword.lakehouse_short}} Teradata connector does not currently 
 
 **Workaround:** If you encounter the 502 error, reload the Spark history UI page after waiting 1-5 seconds. This should allow enough time for the server to become operational.
 
-## Cross catalog schema creation anomaly in Presto (Java).
+## Cross catalog schema creation anomaly in Presto.
 {: #known_issues8937}
 
-An anomaly exists in schema creation for Hive and Iceberg catalogs managed by Presto (Java). When using a common Hive Metastore Service for multiple catalogs (Example, an Iceberg catalog and a Hive catalog, or two Iceberg or Hive catalogs), creating a schema in one catalog might create it in a wrong catalog. This occurs if the location specified during schema creation belongs to a different catalog than intended.
+An anomaly exists in schema creation for Hive and Iceberg catalogs managed by Presto. When using a common Hive Metastore Service for multiple catalogs (Example, an Iceberg catalog and a Hive catalog, or two Iceberg or Hive catalogs), creating a schema in one catalog might create it in a wrong catalog. This occurs if the location specified during schema creation belongs to a different catalog than intended.
 
-**Workaround:** You must always explicitly provide the correct storage path associated with the target catalog when using `CREATE SCHEMA` statements in Presto (Java). This ensures the schema is created in the desired location.
+**Workaround:** You must always explicitly provide the correct storage path associated with the target catalog when using `CREATE SCHEMA` statements in Presto. This ensures the schema is created in the desired location.
 
 ## Presto (Java) queries with many columns and size exceeding default limit.
 {: #known_issues3177}
@@ -419,10 +419,10 @@ collection.query(expr='', fields=['count(*)'])
 ## Limitation: Users can create 3 instances of Milvus service for a single instance of watsonx.data in IBM Cloud.
 {: #known_issues6821}
 
-## Issue: Unable to create views in Presto (Java).
+## Issue: Unable to create views in Presto.
 {: #known_issues1.0.0_6}
 
-Presto (Java) describes a view in a mapped database as a TABLE rather than a VIEW. This is apparent to JDBC program connecting to the Presto (Java) engine.
+Presto describes a view in a mapped database as a TABLE rather than a VIEW. This is apparent to JDBC program connecting to the Presto engine.
 
 ## Issue: Using special characters in schema, table, or column names.
 {: #known_issues1.0.0_4}

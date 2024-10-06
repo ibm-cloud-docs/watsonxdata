@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-25"
+lastupdated: "2024-10-06"
 
 keywords: monitoring, watsonx.data
 
@@ -75,7 +75,7 @@ To see your {{site.data.keyword.lakehouse_full}} customer metrics dashboards in 
 * [Number of total running tasks](#ibm_watsonx_data_tasks_running_total)
 * [Number of total transactions](#ibm_watsonx_data_transactions_total)
 * [List of currently available catalogs](#ibm_watsonx_data_catalogs)
-* [Presto (Java) health status](#ibm_watsonx_data_presto_health)
+* [Presto health status](#ibm_watsonx_data_presto_health)
 * [Total number of active nodes](#ibm_watsonx_data_active_nodes_total)
 * [Total number of inactive nodes](#ibm_watsonx_data_inactive_nodes_total)
 * [Total number of nodes](#ibm_watsonx_data_nodes_total)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-26"
+lastupdated: "2024-10-06"
 
 keywords: lakehouse, exporting, importing, query history, watsonx.data
 
@@ -29,13 +29,13 @@ subcollection: watsonxdata
 # Exporting and importing the query history
 {: #eximp-q-hist}
 
-The Presto (Java) coordinator stores the query history in `system.runtime.queries` table. But `system.runtime.queries` table truncates when you restart Presto (Java), resulting in loss of query history.
+The Presto coordinator stores the query history in `system.runtime.queries` table. But `system.runtime.queries` table truncates when you restart Presto, resulting in loss of query history.
 To mitigate this issue, you can export query history as a csv file and also import the query history from the system.runtime.queries table to a non-system table.
 {: shortdesc}
 
 It is recommended to periodically export the query history to avoid losing it.
 
-To import and export the query history, you must install the Presto (Java) CLI. For more information, see [Connecting to Presto (Java) server]({{site.data.keyword.ref-con-presto-serv-link}}){: external}.
+To import and export the query history, you must install the Presto CLI. For more information, see [Connecting to Presto server]({{site.data.keyword.ref-con-presto-serv-link}}){: external}.
 
 ## Exporting query history
 {: #export-qh}
