@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-03"
+lastupdated: "2024-10-07"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -27,7 +27,7 @@ completion-time: 10 minutes
 {: toc-completion-time="0.25h"}
 
 
-The **Lite** plan allows you to provision an {{site.data.keyword.lakehouse_full}} instance that is free to use, with limits on capacity (2000 Resource Units), and features for a time frame of 30 days. You can use the account to create Lite plan instance based on three different use cases (Generative AI, High Performance BI and Data Engineering Workloads), explore and familiarize yourself with {{site.data.keyword.lakehouse_short}}. For more information about the features and limitations of Lite plan, see [Lite plan](watsonxdata?topic=watsonxdata-pricing-plans-1#limitations-lite){: external}.
+The **Lite** plan allows you to provision an {{site.data.keyword.lakehouse_full}} instance that is free to use, with limits on capacity (2000 Resource Units), and features for a time frame of 30 days. You can use the account to create Lite plan instance based on three different use cases (Generative AI, High Performance BI and Data Engineering), explore and familiarize yourself with {{site.data.keyword.lakehouse_short}}. For more information about the features and limitations of Lite plan, see [Lite plan](watsonxdata?topic=watsonxdata-pricing-plans-1#limitations-lite){: external}.
 {: shortdesc}
 
 When the allocated Resource Units or time runs out, all Lite instances become inactive and you can no longer access it.

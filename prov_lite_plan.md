@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-25"
+lastupdated: "2024-10-07"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -30,7 +30,7 @@ Provisioning a Lite plan instance is use case driven. Depending on the following
 
 * **Generative AI** : AI developers or Data engineers can explore the Generative AI use cases using this option. The provisioned instance includes Presto, Milvus, and Spark.
 * **High Performance BI** : Data engineers can explore BI visualization functionalities using this option. The provisioned instance includes Presto (C++) and Spark.
-* **Data Engineering Workloads** : Data engineers can explore various workload driven use cases using this option. The provisioned instance includes Presto (Java) and Spark.
+* **Data Engineering** : Data engineers can explore various workload driven use cases using this option. The provisioned instance includes Presto (Java) and Spark.
 
 
 After provisioning the Lite plan instance, you can monitor the resource unit usage from the Billing and Usage page available in the watsonx.data console.
@@ -84,7 +84,7 @@ Perform the following steps to provision a Lite plan instance from watsonx.data 
 
     * **Generative AI** : The provisioned instance includes Presto, Milvus and Spark.
     * **High Performance BI** : The provisioned instance includes Presto C++ and Spark only.
-    * **Data Engineering Workloads** : The provisioned instance includes Presto Java + and Spark only.
+    * **Data Engineering** : The provisioned instance includes Presto Java + and Spark only.
 
 
 1. In the **Summary** page, review the license agreement and select the checkbox to acknowledge the agreement.
@@ -130,7 +130,7 @@ Perform the following steps to provision a Lite plan instance by using CLI.
     - `cloud_type`:
        - `ibm`: For fully managed account instances (default).
        - `aws_vpc`: For customer-owned account instances.
-    - `use_case_template`: You can provision the Lite plan instance based on three use cases. The valid values accepted by the parameter are ai (Generative AI), workloads (Data Engineering workloads), and performance (High Performance BI). The default value is `workloads`.
+    - `use_case_template`: You can provision the Lite plan instance based on three use cases. The valid values accepted by the parameter are ai (Generative AI), workloads (Data Engineering), and performance (High Performance BI). The default value is `workloads`.
 
          For availability and general information related to customer-owned account deployed instances, contact your IBM sales representative or [open a support ticket](https://cloud.ibm.com/unifiedsupport/cases/form).
          {: note}
