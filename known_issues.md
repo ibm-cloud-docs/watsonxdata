@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-06"
+lastupdated: "2024-10-07"
 
 keywords: lakehouse
 
@@ -52,7 +52,7 @@ When a column name that contains spaces is applied with a data protection row fi
 ## Inconsistent CSV and Parquet file ingestion behaviour
 {: #known_issues26920}
 
-Despite the design specifications stating that CSV files should only be ingested into tables created from CSV files, and parquet files should only be ingested into tables created from parquet files, there is a discrepancy in the actual behaviour where users are able to ingest CSV files into parquet tables and vice versa. This can result in unexpected results, data quality issues, or performance problems if the schema or formatting of the CSV or parquet file does not align with the expected structure of the target table.
+Despite the design specifications stating that CSV files should only be ingested into tables created from CSV files, and parquet files should only be ingested into tables created from parquet files, there is a discrepancy in the actual behaviour where users are able to ingest CSV files into parquet tables. This can result in unexpected results, data quality issues, or performance problems if the schema or formatting of the CSV or parquet file does not align with the expected structure of the target table.
 
 ## Invalid file associations in Presto resource group through UI and engine restart issues
 {: #known_issues14722}
