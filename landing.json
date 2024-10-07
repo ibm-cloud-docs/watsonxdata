@@ -14,12 +14,12 @@
       {
         "title": "Public preview",
         "description": "Some early access features are available in IBM® watsonx.data as public preview.",
-        "href": "/docs/watsonxdata?topic=watsonxdata-faqs"
+        "href": "/docs/watsonxdata?topic=watsonxdata-mv_optimizer"
       },
       {
         "title": "FAQs",
         "description": "Answers to frequently asked questions about watsonx.data.",
-        "href": "/docs/watsonxdata?topic=watsonxdata-mv_optimizer"
+        "href": "/docs/watsonxdata?topic=watsonxdata-faqs"
       }
     ],
     "section_learn": {
