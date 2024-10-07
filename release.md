@@ -47,64 +47,64 @@ Integration enhancements
 
    * You can integrate {{site.data.keyword.lakehouse_short}} with the following Business Intelligence (BI) visualization tools to access the connected data sources and build compelling and interactive data visualizations:
 
-     * Tableau
-     * Looker
-     * Domo
-     * Qlik
-     * PowerBI
+      * Tableau
+      * Looker
+      * Domo
+      * Qlik
+      * PowerBI
 
-     For more information, see [About BI visualization tools](watsonxdata?topic=watsonxdata-abt_bi).
+      For more information, see [About BI visualization tools](watsonxdata?topic=watsonxdata-abt_bi).
 
 Engine and service enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
 
-* Iceberg tables are supported by Query Optimizer. For more information, see [Query Optimizer](watsonxdata?topic=watsonxdata-about_optimizer).
+   * Iceberg tables are supported by Query Optimizer. For more information, see [Query Optimizer](watsonxdata?topic=watsonxdata-about_optimizer).
 
-* You can now use the data build tool (dbt-watsonx-presto) adapter to build, test, and document data models for the Presto (Java) engine. For more information, see [dbt-watsonx-presto](watsonxdata?topic=watsonxdata-dbt_watsonx_presto).
+   * You can now use the data build tool (dbt-watsonx-presto) adapter to build, test, and document data models for the Presto (Java) engine. For more information, see [dbt-watsonx-presto](watsonxdata?topic=watsonxdata-dbt_watsonx_presto).
 
-* A new customization property (file-column-names-read-as-lower-case) is now available for Presto (C++) engine to avoid upper case and lower case mismatch in columns names. For more information, see [Catalog properties for Presto (C++)](watsonxdata?topic=watsonxdata-api_custom_pcpp_ctg).
+   * A new customization property (file-column-names-read-as-lower-case) is now available for Presto (C++) engine to avoid upper case and lower case mismatch in columns names. For more information, see [Catalog properties for Presto (C++)](watsonxdata?topic=watsonxdata-api_custom_pcpp_ctg).
 
 
 Access management enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following access management enhancements:
 
-* You can now add users and user groups to define data policy rules. For more information, see [Data policy](watsonxdata?topic=watsonxdata-data_policy).
+   * You can now add users and user groups to define data policy rules. For more information, see [Data policy](watsonxdata?topic=watsonxdata-data_policy).
 
-* Administrators can now select TPCDS and TPCH catalogs to create access control policies. ‘Select’ is the only allowed operation to define rules with these catalogs. To define data policies, see [Data policy](watsonxdata?topic=watsonxdata-data_policy).
+   * Administrators can now select TPCDS and TPCH catalogs to create access control policies. ‘Select’ is the only allowed operation to define rules with these catalogs. To define data policies, see [Data policy](watsonxdata?topic=watsonxdata-data_policy).
 
-* Administrators can now edit resource group configuration after creating the resource group. For more information, see [Configuring Presto resource groups](watsonxdata?topic=watsonxdata-conf_rcrs_grp).
+   * Administrators can now edit resource group configuration after creating the resource group. For more information, see [Configuring Presto resource groups](watsonxdata?topic=watsonxdata-conf_rcrs_grp).
 
 IBM Knowledge Catalog governance policies for data sources
 : You can now apply IBM Knowledge Catalog governance policies to the following data sources in Presto:
 
-* Oracle
-* PostgreSQL
-* MySQL
-* SQL Server
-* Db2
+   * Oracle
+   * PostgreSQL
+   * MySQL
+   * SQL Server
+   * Db2
 
 Ingestion enhancements
 : This release of {{site.data.keyword.lakehouse_short}} includes the following improvements to the ingestion workflow:
 
-* You can now submit an ingestion job using the data sources. For more information, see [Ingesting data by using Spark through the web console](watsonxdata?topic=watsonxdata-ingest_spark_ui).
+   * You can now submit an ingestion job using the data sources. For more information, see [Ingesting data by using Spark through the web console](watsonxdata?topic=watsonxdata-ingest_spark_ui).
 
-* You can now ingest data using AVRO, and ORC file formats. For more information, see [About data ingestion](watsonxdata?topic=watsonxdata-load_ingest_data).
+   * You can now ingest data using AVRO, and ORC file formats. For more information, see [About data ingestion](watsonxdata?topic=watsonxdata-load_ingest_data).
 
-* You can preview uploaded files and click table headers to edit column names. For more information, see [Ingesting data by using Spark through the web console](watsonxdata?topic=watsonxdata-ingest_spark_ui).
+   * You can preview uploaded files and click table headers to edit column names. For more information, see [Ingesting data by using Spark through the web console](watsonxdata?topic=watsonxdata-ingest_spark_ui).
 
-* You can access and view Spark logs associated with an ingestion job. For more information, see [Accessing Spark logs for ingestion jobs](watsonxdata?topic=watsonxdata-ingest_sparklogshistory).
+   * You can access and view Spark logs associated with an ingestion job. For more information, see [Accessing Spark logs for ingestion jobs](watsonxdata?topic=watsonxdata-ingest_sparklogshistory).
 
 Lite plan
 
 : You can provision your Lite plan instance based on the following three use cases. Select one use case from the list to proceed:
 
-* Generative AI : You can explore Generative AI use cases using this option. The provisioned instance includes Presto, Milvus, and Spark.
-* High Performance BI : You can explore BI visualization functionalities using this option. The provisioned instance includes Presto (C++) and Spark.
-* Data Engineering Workloads : You can use data engineering workload to explore various workload driven use cases. The provisioned instance includes Presto (Java) and Spark.
+   * Generative AI : You can explore Generative AI use cases using this option. The provisioned instance includes Presto, Milvus, and Spark.
+   * High Performance BI : You can explore BI visualization functionalities using this option. The provisioned instance includes Presto (C++) and Spark.
+   * Data Engineering Workloads : You can use data engineering workload to explore various workload driven use cases. The provisioned instance includes Presto (Java) and Spark.
 
-For more information, see [Lite plan](watsonxdata?topic=watsonxdata-tutorial_prov_lite_1).
+   For more information, see [Lite plan](watsonxdata?topic=watsonxdata-tutorial_prov_lite_1).
 
 ## 27 August 2024 - Version 2.0.2
 {: #lakehouse_28Aug032024}
