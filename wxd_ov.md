@@ -29,7 +29,7 @@ subcollection: watsonxdata
 # {{site.data.keyword.lakehouse_full}} overview
 {: #wxd_ov}
 
-{{site.data.keyword.lakehouse_full}} is a new open architecture lakehouse that combines the elements of the data warehouse and data lakes. The best-in-class features and optimizations available on the {{site.data.keyword.lakehouse_short}} make it an optimal choice for next generation data analytics and automation.
+{{site.data.keyword.lakehouse_full}} is a new open architecture lakehouse that combines the elements of the data warehouse and data lakes. The best-in-class features and optimizations available on the {{site.data.keyword.lakehouse_short}} make it an optimal choice for next-generation data analytics and automation.
 
 {{site.data.keyword.lakehouse_short}} is a unique solution that allows co-existence of open source technologies and proprietary products. It offers a single platform where you can store the data or attach data sources for managing and analyzing your enterprise data.
 
