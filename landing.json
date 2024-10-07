@@ -34,7 +34,7 @@
       "description": "Trainings offered for watsonx.data.",
       "href": "https://www.ibm.com/training/cloud",
       "type": "blog"
-    },
+    }
   ],
   "section_devtools": {
     "api": "/apidocs/watsonxdata",
@@ -42,6 +42,6 @@
     "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_access_group"
   },
   "section_updates": {
-    "view_more": "/docs/watsonxdata?topic=watsonxdata-release",
+    "view_more": "/docs/watsonxdata?topic=watsonxdata-release"
   }
 }
