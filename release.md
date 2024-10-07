@@ -25,36 +25,35 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: #lakehouse_25Sep01}
 {: release-note}
 
-
 Data sources and storage enhancements
 
 : This release includes the following new data sources and storage enhancements:
 
-* You can now enable Azure Data Lake Storage Gen1 Blob and Google Cloud Storage for Milvus. For more information, see [ADLS Gen1 Blob](watsonxdata?topic=watsonxdata-adls_genblob_storage) and [Google Cloud Storage](watsonxdata?topic=watsonxdata-gcs_storage).
+   * You can now enable Azure Data Lake Storage Gen1 Blob and Google Cloud Storage for Milvus. For more information, see [ADLS Gen1 Blob](watsonxdata?topic=watsonxdata-adls_genblob_storage) and [Google Cloud Storage](watsonxdata?topic=watsonxdata-gcs_storage).
 
-* You can create or add a new data source to the engine without attaching a catalog to it. A catalog can be attached to the data source at a later stage.
+   * You can create or add a new data source to the engine without attaching a catalog to it. A catalog can be attached to the data source at a later stage.
 
-* You can now use Apache Ozone storage for the Presto (Java) engine. For more information, see [Apache Ozone](watsonxdata?topic=watsonxdata-ozone_storage).
+   * You can now use Apache Ozone storage for the Presto (Java) engine. For more information, see [Apache Ozone](watsonxdata?topic=watsonxdata-ozone_storage).
 
-* You can now configure the Apache Kafka data source to use the Salted Challenge Response Authentication Mechanism (SCRAM) authentication mechanism. You can upload a self-signed certificate. For more information, see [Apache Kafka](watsonxdata?topic=watsonxdata-kafka_database).
+   * You can now configure the Apache Kafka data source to use the Salted Challenge Response Authentication Mechanism (SCRAM) authentication mechanism. You can upload a self-signed certificate. For more information, see [Apache Kafka](watsonxdata?topic=watsonxdata-kafka_database).
 
 Integration enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following new or enhanced integrations with other services:
 
-* You can now integrate {{site.data.keyword.lakehouse_short}} with data build tool (dbt) for Spark engine for in-place data transformation within {{site.data.keyword.lakehouse_short}}. For more information, see [About dbt integration](watsonxdata?topic=watsonxdata-abt_dbt).
+   * You can now integrate {{site.data.keyword.lakehouse_short}} with data build tool (dbt) for Spark engine for in-place data transformation within {{site.data.keyword.lakehouse_short}}. For more information, see [About dbt integration](watsonxdata?topic=watsonxdata-abt_dbt).
 
-* You can integrate {{site.data.keyword.lakehouse_short}} with Databand. This integration can enhance the monitoring capabilities by providing insights that extend beyond Spark UI and Spark History. For more information, see [Monitoring Spark application runs by using Databand](watsonxdata?topic=watsonxdata-mntr_dband).
+   * You can integrate {{site.data.keyword.lakehouse_short}} with Databand. This integration can enhance the monitoring capabilities by providing insights that extend beyond Spark UI and Spark History. For more information, see [Monitoring Spark application runs by using Databand](watsonxdata?topic=watsonxdata-mntr_dband).
 
-* You can integrate {{site.data.keyword.lakehouse_short}} with the following Business Intelligence (BI) visualization tools to access the connected data sources and build compelling and interactive data visualizations:
+   * You can integrate {{site.data.keyword.lakehouse_short}} with the following Business Intelligence (BI) visualization tools to access the connected data sources and build compelling and interactive data visualizations:
 
-* Tableau
-* Looker
-* Domo
-* Qlik
-* PowerBI
+     * Tableau
+     * Looker
+     * Domo
+     * Qlik
+     * PowerBI
 
-For more information, see [About BI visualization tools](watsonxdata?topic=watsonxdata-abt_bi).
+     For more information, see [About BI visualization tools](watsonxdata?topic=watsonxdata-abt_bi).
 
 Engine and service enhancements
 
@@ -98,6 +97,7 @@ Ingestion enhancements
 * You can access and view Spark logs associated with an ingestion job. For more information, see [Accessing Spark logs for ingestion jobs](watsonxdata?topic=watsonxdata-ingest_sparklogshistory).
 
 Lite plan
+
 : You can provision your Lite plan instance based on the following three use cases. Select one use case from the list to proceed:
 
 * Generative AI : You can explore Generative AI use cases using this option. The provisioned instance includes Presto, Milvus, and Spark.
