@@ -81,6 +81,7 @@ To begin with the {{site.data.keyword.lakehouse_short}} features, UI provides on
 
 
 
+
 ## Querying data by using sample worksheet
 {: #hp_03}
 {: step}

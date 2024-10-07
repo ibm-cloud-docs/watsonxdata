@@ -306,6 +306,10 @@ toc:
   - navgroup:
       id: reference
       topics:
+      - topicgroup:
+          label: Public preview
+          topics:
+            - mv_optimizer.md
       - pricing_plan.md
       - ae_limits.md
       - cluster_limits.md

@@ -3,7 +3,7 @@
   "title": "watsonx.data docs",
   "introduction": "Welcome to the watsonx.data product documentation.",
   "product_page": "https://www.ibm.com/products/watsonx-data",
-  "console_page": "//catalog/services/lakehouse",
+  "console_page": "/catalog/services/lakehouse",
   "section_topics": {
     "links": [
       {
