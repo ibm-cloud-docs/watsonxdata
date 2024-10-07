@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-09-30"
+lastupdated: "2024-10-07"
 
 keywords: watsonxdata, release notes
 
@@ -36,10 +36,12 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 ## 25 September 2024 - Version 2.0.3
 {: #lakehouse_25Sep01}
+{: release-note}
 
 
 **Data sources and storage enhancements**
 {: #25Sep_1_2024}
+{: release-note}
 
 This release includes the following new data sources and storage enhancements:
 
@@ -51,10 +53,11 @@ This release includes the following new data sources and storage enhancements:
 
 * You can now configure the Apache Kafka data source to use the Salted Challenge Response Authentication Mechanism (SCRAM) authentication mechanism. You can upload a self-signed certificate. For more information, see [Apache Kafka](watsonxdata?topic=watsonxdata-kafka_database).
 
-**Integration enhancements**
-{: #25Sep_2_2024}
+### Integration enhancements
+{: #lakehouse_25Sep01}
+{: release-note}
 
-This release of {{site.data.keyword.lakehouse_short}} introduces the following new or enhanced integrations with other services:
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following new or enhanced integrations with other services:
 
 * You can now integrate {{site.data.keyword.lakehouse_short}} with data build tool (dbt) for Spark engine for in-place data transformation within {{site.data.keyword.lakehouse_short}}. For more information, see [About dbt integration](watsonxdata?topic=watsonxdata-abt_dbt).
 
@@ -70,10 +73,8 @@ This release of {{site.data.keyword.lakehouse_short}} introduces the following n
 
 For more information, see [About BI visualization tools](watsonxdata?topic=watsonxdata-abt_bi).
 
-**Engine and service enhancements**
-{: #25Sep_3_2024}
-
-This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
+Engine and service enhancements
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
 
 * Iceberg tables are supported by Query Optimizer. For more information, see [Query Optimizer](watsonxdata?topic=watsonxdata-about_optimizer).
 
