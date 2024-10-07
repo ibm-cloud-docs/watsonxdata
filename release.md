@@ -21,13 +21,14 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.lakehouse_full}} that are grouped by date.
 {: shortdesc}
 
-## 25 September 2024
+## 25 September 2024 - Version 2.0.3
 {: #lakehouse_25Sep01}
 {: release-note}
 
+
 Data sources and storage enhancements
 
-: This release includes the following new data sources and storage enhancements.
+: This release includes the following new data sources and storage enhancements:
 
 * You can now enable Azure Data Lake Storage Gen1 Blob and Google Cloud Storage for Milvus. For more information, see [ADLS Gen1 Blob](watsonxdata?topic=watsonxdata-adls_genblob_storage) and [Google Cloud Storage](watsonxdata?topic=watsonxdata-gcs_storage).
 
