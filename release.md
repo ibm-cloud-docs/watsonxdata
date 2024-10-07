@@ -39,11 +39,9 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: release-note}
 
 
-**Data sources and storage enhancements**
-{: #25Sep_1_2024}
-{: release-note}
+Data sources and storage enhancements
 
-This release includes the following new data sources and storage enhancements:
+: This release includes the following new data sources and storage enhancements:
 
 * You can now enable Azure Data Lake Storage Gen1 Blob and Google Cloud Storage for Milvus. For more information, see [ADLS Gen1 Blob](watsonxdata?topic=watsonxdata-adls_genblob_storage) and [Google Cloud Storage](watsonxdata?topic=watsonxdata-gcs_storage).
 
