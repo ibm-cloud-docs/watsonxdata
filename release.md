@@ -38,9 +38,7 @@ Data sources and storage enhancements
 
 * You can now configure the Apache Kafka data source to use the Salted Challenge Response Authentication Mechanism (SCRAM) authentication mechanism. You can upload a self-signed certificate. For more information, see [Apache Kafka](watsonxdata?topic=watsonxdata-kafka_database).
 
-### Integration enhancements
-{: #lakehouse_25Sep01}
-{: release-note}
+Integration enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following new or enhanced integrations with other services:
 
@@ -59,6 +57,7 @@ Data sources and storage enhancements
 For more information, see [About BI visualization tools](watsonxdata?topic=watsonxdata-abt_bi).
 
 Engine and service enhancements
+
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
 
 * Iceberg tables are supported by Query Optimizer. For more information, see [Query Optimizer](watsonxdata?topic=watsonxdata-about_optimizer).
@@ -68,10 +67,9 @@ Engine and service enhancements
 * A new customization property (file-column-names-read-as-lower-case) is now available for Presto (C++) engine to avoid upper case and lower case mismatch in columns names. For more information, see [Catalog properties for Presto (C++)](watsonxdata?topic=watsonxdata-api_custom_pcpp_ctg).
 
 
-**Access management enhancements**
-{: #25Sep_4_2024}
+Access management enhancements
 
-This release of {{site.data.keyword.lakehouse_short}} introduces the following access management enhancements:
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following access management enhancements:
 
 * You can now add users and user groups to define data policy rules. For more information, see [Data policy](watsonxdata?topic=watsonxdata-data_policy).
 
@@ -79,10 +77,8 @@ This release of {{site.data.keyword.lakehouse_short}} introduces the following a
 
 * Administrators can now edit resource group configuration after creating the resource group. For more information, see [Configuring Presto resource groups](watsonxdata?topic=watsonxdata-conf_rcrs_grp).
 
-**IBM Knowledge Catalog governance policies for data sources**
-{: #25Sep_5_2024}
-
-You can now apply IBM Knowledge Catalog governance policies to the following data sources in Presto:
+IBM Knowledge Catalog governance policies for data sources
+: You can now apply IBM Knowledge Catalog governance policies to the following data sources in Presto:
 
 * Oracle
 * PostgreSQL
@@ -90,10 +86,8 @@ You can now apply IBM Knowledge Catalog governance policies to the following dat
 * SQL Server
 * Db2
 
-**Ingestion enhancements**
-{: #25Sep_6_2024}
-
-This release of {{site.data.keyword.lakehouse_short}} includes the following improvements to the ingestion workflow:
+Ingestion enhancements
+: This release of {{site.data.keyword.lakehouse_short}} includes the following improvements to the ingestion workflow:
 
 * You can now submit an ingestion job using the data sources. For more information, see [Ingesting data by using Spark through the web console](watsonxdata?topic=watsonxdata-ingest_spark_ui).
 
@@ -103,10 +97,8 @@ This release of {{site.data.keyword.lakehouse_short}} includes the following imp
 
 * You can access and view Spark logs associated with an ingestion job. For more information, see [Accessing Spark logs for ingestion jobs](watsonxdata?topic=watsonxdata-ingest_sparklogshistory).
 
-**Lite plan**
-{: #25Sep_7_2024}
-
-You can provision your Lite plan instance based on the following three use cases. Select one use case from the list to proceed:
+Lite plan
+: You can provision your Lite plan instance based on the following three use cases. Select one use case from the list to proceed:
 
 * Generative AI : You can explore Generative AI use cases using this option. The provisioned instance includes Presto, Milvus, and Spark.
 * High Performance BI : You can explore BI visualization functionalities using this option. The provisioned instance includes Presto (C++) and Spark.
