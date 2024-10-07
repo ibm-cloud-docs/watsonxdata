@@ -12,21 +12,8 @@ content-type: release-note
 
 ---
 
-{:javascript: #javascript .ph data-hd-programlang='javascript'}
-{:java: #java .ph data-hd-programlang='java'}
-{:ruby: #ruby .ph data-hd-programlang='ruby'}
-{:php: #php .ph data-hd-programlang='php'}
-{:python: #python .ph data-hd-programlang='python'}
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:tip: .tip}
-{:important: .important}
-{:note: .note}
-{:deprecated: .deprecated}
-{:pre: .pre}
-{:video: .video}
+
+{{site.data.keyword.attribute-definition-list}}
 
 # Release notes for {{site.data.keyword.lakehouse_short}}
 {: #release}
@@ -34,14 +21,13 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.lakehouse_full}} that are grouped by date.
 {: shortdesc}
 
-## 25 September 2024 - Version 2.0.3
+## 25 September 2024
 {: #lakehouse_25Sep01}
 {: release-note}
 
-
 Data sources and storage enhancements
 
-: This release includes the following new data sources and storage enhancements:
+: This release includes the following new data sources and storage enhancements.
 
 * You can now enable Azure Data Lake Storage Gen1 Blob and Google Cloud Storage for Milvus. For more information, see [ADLS Gen1 Blob](watsonxdata?topic=watsonxdata-adls_genblob_storage) and [Google Cloud Storage](watsonxdata?topic=watsonxdata-gcs_storage).
 
