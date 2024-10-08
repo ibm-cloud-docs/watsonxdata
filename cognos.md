@@ -14,11 +14,7 @@ subcollection: watsonxdata
 # Connecting Cognos to Presto in watsonx.data
 {: #cognos}
 
-This topic provides you with the procedure to connect Cognos to Presto.
-
-When you connect to the Presto engine in watsonx.data, Cognos Analytics provides AI-powered automation and insights from the connected data sources.
-
-
+This topic provides you with the procedure to connect Cognos to Presto. Cognos Analytics provides AI-powered automation capabilities and allows you to generate insights from the connected data sources.
 
 ## Pre-requisites
 {: #cognos_preq}
@@ -66,7 +62,7 @@ Tableau uses Lightweight Directory Access Protocol (LDAP) authentication mechani
       *	Password : The API key of the watosnx.data user. For more information about retrieving the API key, see [Generating the API key](watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmapi-key).
 
    1. Clcik **Done**.
-   7.	Click **Test connection** to verify that the connection is successful.
+   7. Click **Test connection** to verify that the connection is successful.
    8.	You can click **Next** when your test connection is successful and create the connection.
 
 1. Go to the **Data server connections** page. Click the watsonx.data connection that you created.

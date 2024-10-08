@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-10-08"
 
 keywords: lakehouse, semantic automation, {{site.data.keyword.lakehouse_short}}, data enrichment, register
 
@@ -64,7 +64,7 @@ Users with the following roles can perform semantic enrichment in {{site.data.ke
 1. From the navigation menu, select **Data manager** and click **Enrich data** tab.
 1. Click **Enrichment settings** and select **Manage glossary** to upload CSV file containing your business terms and descriptions.
 
-   For the LLM to suggest tags and descriptions for the tables and columns in {{site.data.keyword.lakehouse_short}}, upload a CSV file with your business terms (tags) and their corresponding descriptions.
+   For the LLM to suggest tags and descriptions for the tables and columns in watsonx.data, upload a CSV file with your business terms (tags), artifacts type and their corresponding descriptions in the required format. The CSV file must conform the template as follows: Name, Artifact Type, Description as displayed in the UI.
    {: note}
 
 1. In the **Manage glossary** window, click **Upload glossary** and drag the CSV file to the box or click to upload.
@@ -76,6 +76,10 @@ Users with the following roles can perform semantic enrichment in {{site.data.ke
 
 1. Click **Upload glossary**. The glossary displays a list of tags and its descriptions.
 1. Click **Enrichment settings** and select **Adjust thresholds** to modify the thresholds for different types of enrichment. Click **Save all the changes**.
+
+   The accuracy of semantic enrichment results for business terms largely depends on the IKC ability to match uploaded terms to the selected tables and columns. The threshold for suggestions can be adjusted to balance the matches with their confidence level. For more matches with potentially lower confidence, lower the threshold. For fewer matches with higher confidence, increase the threshold.
+   {: note}
+
 1. Select a schema that you want to enrich.
 
    For the Lite plan users, you can only enrich one schema from the list. After enriching a schema, other schemas can not be selected further. The enriched data will have the business terms and descriptions against each columns in each table inside the schema.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-07"
+lastupdated: "2024-10-08"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -139,14 +139,21 @@ Follow the steps to enable Materialized View (MV) feature for **Query Optimizer*
 
 6. Run the following commands to synchronize the newly created Materialized View (MV) table `mv` with the Query Optimizer.
 
-   1. Run the following command to register the Materialized View (MV) table `mv`:
+   1. Run the following command to synchronize the Materialized View table `mv` from {{site.data.keyword.lakehouse_short}} to Db2:
 
    ```bash
    ExecuteWxdQueryOptimizer 'call syshadoop.external_catalog_sync('<catalog>', '<SCHEMA>', '<mvtablename>', 'REPLACE', 'CONTINUE', 'OAAS')';
    ```
    {: codeblock}
 
-   2. Run the following command to add the Materialized View (MV) table `mv`:
+   2. Run the following command to synchronize statistics of Materialized View table `mv` in Db2:
+
+   ```bash
+   ExecuteWxdQueryOptimizer 'call ext_metastore_stats_sync('<catalog>', '<SCHEMA>', '<MVTABLENAME>', '<engine-internal-URL:port>', '<admin>', '<admin-password>', 'true')';
+   ```
+   {: codeblock}
+
+   2. Run the following command to add the Materialized View (MV) table `mv` in Db2:
 
    ```bash
    ExecuteWxdQueryOptimizer 'values (prestosqlddl('alter table <mvtablename> add materialized query (<query>) data initially deferred refresh deferred maintained by user enable query optimization', '<catalog>', '<SCHEMA>'))';
