@@ -33,11 +33,11 @@ Materialized Views (MV) in {{site.data.keyword.lakehouse_full}} are pre-calculat
 
 Following are some of the benefits of Materialized Views (MV):
 
-*. Improved query performance: Materialized View (MV) can significantly reduce query execution time by providing already computed results for frequently used complex queries.
+   * Improved query performance: Materialized View (MV) can significantly reduce query execution time by providing already computed results for frequently used complex queries.
 
-*. Reduced resource consumption and expense: By avoiding repeated calculations, Materialized View (MV) can lower the workload on watsonx.data resources, leading to improved overall system efficiency and reduced cost.
+   * Reduced resource consumption and expense: By avoiding repeated calculations, Materialized View (MV) can lower the workload on watsonx.data resources, leading to improved overall system efficiency and reduced cost.
 
-*. Transparent Integration: Materialized View (MV) are seamlessly integrated into the query execution process, requiring minimal user intervention.
+   * Transparent Integration: Materialized View (MV) are seamlessly integrated into the query execution process, requiring minimal user intervention.
 
 ## Before you begin
 {: #mv_optimizerbyb}
