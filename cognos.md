@@ -26,7 +26,7 @@ When you connect to the Presto engine in watsonx.data, Cognos Analytics provides
 
 * Cognos Analytics: Download and install the latest desktop version of Cognos on your computer.
 * Most data server connections require a database vendor-supplied JDBC driver. Use a version of the JDBC driver that is compatible with Java™ Runtime Environment version 8. Copy the driver to the Cognos® Analytics installation_location\drivers directory, and restart the query service. Restarting the full IBM Cognos service is not necessary.
-* You must be a Data Source Connections administratior to create data server connections.
+* You must have Data source Connections administrator privilege to create data server connections.
 * Subscription to watsonx.data on IBM Cloud.
 * Provision watsonx.data instance with Presto engine.
 
@@ -81,4 +81,4 @@ Tableau uses Lightweight Directory Access Protocol (LDAP) authentication mechani
    1. Click **New** > **Data module**.
    1. Select **Data Servers**.
    1. Select the {{site.data.keyword.lakehouse_short}} connection that you created.
-   1. Click **OK**. You must view the **Data module** page with data from {{site.data.keyword.lakehouse_short}}.
+   1. Click **OK**. View the **Data module** page with data from {{site.data.keyword.lakehouse_short}}.
