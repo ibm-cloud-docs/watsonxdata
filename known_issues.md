@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-07"
+lastupdated: "2024-10-08"
 
 keywords: lakehouse
 
@@ -33,6 +33,12 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+
+
+## Incorrect glossary format for semantic enrichment
+{: #known_issues26909}
+
+A glossary upload to the semantic enrichment feature might appear to be successful, even when the uploaded glossary is in an incorrect format or does not adhere to the recommended file template format.
 
 ## Sync all objects and metadata deletion
 {: #known_issues26640}
