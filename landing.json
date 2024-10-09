@@ -15,12 +15,18 @@
         "href": "/docs/watsonxdata?topic=watsonxdata-faqs"
       },
       {
-        "title": "Public preview",
-        "href": "/docs/watsonxdata?topic=watsonxdata-mv_optimizer"
+        "title": "Known issues (Limitations)",
+        "href": "/docs/watsonxdata?topic=watsonxdata-known_issues"
       }
     ]
   },
   "section_highlights": [
+    {
+      "title": "Public preview",
+      "description": "Trainings offered for watsonx.data.",
+      "href": "https://early-access.ibm.com/software/support/trial/cst/programwebsite.wss?siteId=2129&h=&tabId=5971",
+      "type": "blog"
+    },
     {
       "title": "Resource title",
       "description": "Trainings offered for watsonx.data.",
