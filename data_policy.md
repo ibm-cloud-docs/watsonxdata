@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-24"
+lastupdated: "2024-10-09"
 
 keywords: lakehouse, access, data, policy, watsonx data
 
@@ -60,6 +60,10 @@ To maintain data security, you can create access policies for the following at t
      1. Select a catalog.
      1. Choose one, more than one, or all schemas.
 
+        - Select the **All** checkbox for schemas to include both current and future schemas with all tables and columns.
+        - Select the **All** checkbox for tables to include both current and future tables and columns.
+        - Select the **All** checkbox for columns to include both current and future columns.
+
         If you choose a single schema, you can select one, more than one, or all tables. If you choose more than one schema, you cannot select any tables. The policy applies to all tables within the schemas.
         {: note}
 
@@ -82,6 +86,9 @@ To maintain data security, you can create access policies for the following at t
 
      1. Choose one, more than one, or all databases.
      1. Choose one, more than one, or all collections.
+
+        - Select the **All** checkbox for data sources to include both current and future data sources and all collections.
+        - Select the **All** checkbox for collections to include both current and future collections.
 
         If you choose a single database, you can select one, more than one, or all collections. If you choose more than one database, you cannot select any collections. The policy applies to all collections in the selected databases.
         {: note}
