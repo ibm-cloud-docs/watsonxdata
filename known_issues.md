@@ -429,7 +429,7 @@ collection.query(expr='', fields=['count(*)'])
 
 **Elasticsearch** connector requires users to explicitly specify nested JSON structures as arrays of type ROW for proper loading and querying. To process such structures, use the UNNEST operation.
 
-## Limitation: Users can create 3 instances of Milvus service for a single instance of watsonx.data in IBM Cloud.
+## Limitation: Users can create 3 instances of Milvus service for a single instance of {{site.data.keyword.lakehouse_short}} in IBM Cloud.
 {: #known_issues6821}
 
 ## Issue: Unable to create views in Presto.

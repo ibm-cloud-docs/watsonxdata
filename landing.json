@@ -23,7 +23,7 @@
   "section_highlights": [
     {
       "title": "Public preview",
-      "description": "Trainings offered for watsonx.data.",
+      "description": "Some early access features are available in {{site.data.keyword.lakehouse_long}} as public preview.",
       "href": "https://early-access.ibm.com/software/support/trial/cst/programwebsite.wss?siteId=2129&h=&tabId=5971",
       "type": "blog"
     },
