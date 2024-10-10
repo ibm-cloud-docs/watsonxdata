@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-10-10"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -93,7 +93,7 @@ Follow the steps to run the Spark sample python file.
     |iae_endpoint_url| IAE Endpoint URL (https://api.us-south.ae.cloud.ibm.com/).|
     |api_auth_url| IAE Authorization API URL (https://iam.cloud.ibm.com/identity/token).|
     |iae_instance_id| IAE Instance ID.|
-   {: caption="Table 1. IAE configurations" caption-side="bottom"}
+   {: caption="IAE configurations" caption-side="bottom"}
 
 
 
@@ -111,7 +111,7 @@ Follow the steps to run the Spark sample python file.
     | snapshot_table| Specify the Iceberg table snapshot table name.|
     | spark_catalog| Specify the catalog for register_table action.|
     | metadata_file| Specify the metadata path for register_table action.|
-   {: caption="Table 2. Iceberg configurations" caption-side="bottom"}
+   {: caption="Iceberg configurations" caption-side="bottom"}
 
 
 
@@ -128,7 +128,7 @@ Follow the steps to run the Spark sample python file.
     | lh_access_key| Specify the Cloud Object Storage Access Key.|
     | lh_secret_key| Specify the Cloud Object Storage Secret.|
     | app_URL| Specify the Spark Submit Job URL on Cloud Object Storage.|
-    {: caption="Table 3. {{site.data.keyword.lakehouse_short}} configurations" caption-side="bottom"}
+    {: caption="{{site.data.keyword.lakehouse_short}} configurations" caption-side="bottom"}
 
 
 1. Run the following command to start a Spark procedure that performs the table operations (specified in config.json file) on Iceberg table. Provide the config.json file path as the `file-name`.

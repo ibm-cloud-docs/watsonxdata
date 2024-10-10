@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-14"
+lastupdated: "2024-10-10"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -46,7 +46,7 @@ MongoDB is a distributed data source that stores data in JSON-like documents.
  | Test connection     | Click the Test connection link to test the data source connection. If the data source connection is successful, a success message appears.|
  | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your data source. |
  | Create | Click Create to create the data source. |
- {: caption="Table 1. Register data source" caption-side="bottom"}
+ {: caption="Register data source" caption-side="bottom"}
 
 ## Limitations for SQL statements
 {: #connector_limitations}

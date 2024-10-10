@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-09-24"
+lastupdated: "2024-10-10"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -21,7 +21,7 @@ You can customize the catalog properties through an API for Presto (C++).
 | `hive.orc.use-column-names` | Boolean | True or False |
 | `max-partitions-per-writers` | Integer | Limit{1, 100000} |
 | `file-column-names-read-as-lower-case` | Boolean | True or False |
-{: caption="Table 1. Catalog properties for Presto (C++)" caption-side="bottom"}
+{: caption="Catalog properties for Presto (C++)" caption-side="bottom"}
 
 The `file-column-names-read-as-lower-case` property is set to `False` by default on Presto (C++) worker and must not be set to `True`. This property must not be set anywhere else because it might cause the engine to crash.
 {: note}

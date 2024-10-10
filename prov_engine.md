@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-13"
+lastupdated: "2024-10-10"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -64,7 +64,7 @@ To provision a Presto (Java) engine, complete the following steps.
    |    |  **Coordinator nodes (max. 1)**: Select the run rate for coordinator node (you can have a maximum of 1 node).  |
    |    |  **Worker nodes (max. 18)**: Select the number of worker nodes and run rate (you can have a maximum of 18 nodes).  |
    | Associated catalogs (optional) | Associate the available catalogs with the engine if necessary.  |
-   {: caption="Table 1. Provision engine" caption-side="bottom"}
+   {: caption="Provision engine" caption-side="bottom"}
 
 5. Click **Create**.
 

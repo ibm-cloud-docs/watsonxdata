@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-10-10"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -61,7 +61,7 @@ To register external engines, complete the following steps.
       | Instance URL | Enter the console URL for **IBM Db2 Warehouse**.  |
       | Complete watsonx.data configuration in **IBM Db2 Warehouse**  | External engines require additional {{site.data.keyword.lakehouse_short}} configuration. For more information, see [How to configure watsonx.data in IBM Db2 Warehouse](https://www.ibm.com/docs/en/db2woc?topic=tables-accessing-watsonxdata). |
       | Confirmation checkbox | Select the confirmation checkbox to confirm complete configuration. |
-      {: caption="Table 2. Registering IBM Db2 Warehouse" caption-side="bottom"}
+      {: caption="Registering IBM Db2 Warehouse" caption-side="bottom"}
 
     * **IBM Netezza**{: #Netezza}
 
@@ -73,7 +73,7 @@ To register external engines, complete the following steps.
       | Instance URL | Enter the console URL for **IBM Netezza**.  |
       | Complete watsonx.data configuration in **IBM Netezza**  | External engines require additional {{site.data.keyword.lakehouse_short}} configuration. For more information, see [How to configure watsonx.data in IBM Netezza](https://cloud.ibm.com/docs/netezza?topic=netezza-integratenps_watsonx.data). |
       | Confirmation checkbox | Select the confirmation checkbox to confirm complete configuration. |
-      {: caption="Table 3. Registering IBM Netezza" caption-side="bottom"}
+      {: caption="Registering IBM Netezza" caption-side="bottom"}
 
     * **Other**{: #other}
 
@@ -86,6 +86,6 @@ To register external engines, complete the following steps.
       | Instance URL | Enter your instance URL.  |
       | Complete watsonx.data configuration in **IBM Netezza**  | External engines require additional {{site.data.keyword.lakehouse_short}} configuration. For more information, see your engine's documentation. |
       | Confirmation checkbox | Select the confirmation checkbox to confirm complete configuration. |
-      {: caption="Table 3. Registering other engines" caption-side="bottom"}
+      {: caption="Registering other engines" caption-side="bottom"}
 
 6. Click **Create**.

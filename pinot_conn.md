@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-10-10"
 
 keywords: lakehouse, database, watsonx.data
 
@@ -44,7 +44,7 @@ Apache Pinot is an open source-distributed database that is designed for real-ti
  | Port is SSL enabled   | Use the toggle switch to enable or disable SSL connection. If enabled,  \n i. The Upload SSL certificate (.pem, .crt, .cert or .cer) link is enabled. \n ii. Click the Upload SSL certificate (.pem, .crt, .cert or .cer) link. \n iii. Browse the SSL certificate and upload.|
  | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your database. |
  | Create | Click Create to create the database. |
- {: caption="Table 1. Register database" caption-side="bottom"}
+ {: caption="Register database" caption-side="bottom"}
 
 ## Limitations for SQL statements
 {: #connector_limitations}

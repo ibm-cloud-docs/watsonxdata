@@ -47,7 +47,7 @@ If you select **Apache Ozone** from the **Storage** section, configure the follo
  | Catalog type | Apache Iceberg is the available catalog type.|
  | Catalog name | Enter the name of your catalog.|
  | Create | Click Create to create the storage. |
- {: caption="Table 1. Register bucket" caption-side="bottom"}
+ {: caption="Register bucket" caption-side="bottom"}
 
 ## Limitations:
 {: #ozone_01storage}

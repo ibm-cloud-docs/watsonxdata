@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-06"
+lastupdated: "2024-10-10"
 
 keywords: lakehouse, database, watsonx.data
 
@@ -59,7 +59,7 @@ To add a custom data source, complete the following steps.
     | Encryption           | Encrypting values of the keys are stored.  |
     | Associated catalog | Enter the name of the catalog. This catalog is automatically associated with your database. |
     | Create |  Click Create to create the data source.|
-    {: caption="Table 1. Register database" caption-side="bottom"}
+    {: caption="Register database" caption-side="bottom"}
 
 You can use the Custom data source for the following connectors in IBM watsonx.data for Presto engine:
 

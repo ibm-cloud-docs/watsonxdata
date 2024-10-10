@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-21"
+lastupdated: "2024-10-10"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -46,7 +46,7 @@ Snowflake is a cloud hosted relational database for building data warehouse.
  | Associate catalog  | Select the checkbox to associate the catalog. |
  | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your data source and serves as your query interface with the data stored within. |
  | Create | Click Create to create the data source. |
- {: caption="Table 1. Register data source" caption-side="bottom"}
+ {: caption="Register data source" caption-side="bottom"}
 
 ## Limitations for SQL statements
 {: #connector_limitations}

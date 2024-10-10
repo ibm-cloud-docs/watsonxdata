@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-14"
+lastupdated: "2024-10-10"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -44,7 +44,7 @@ Redis is a fastest in-memory database. It provides solutions for caching, vector
  | Port is SSL enabled   | Use the toggle switch to enable or disable SSL connection. If enabled, \n i. The Upload SSL certificate (.pem, .crt, .cert or .cer) link is enabled. \n ii. Click the Upload SSL certificate (.pem, .crt, .cert or .cer) link. \n iii. Browse the SSL certificate and upload.|
  | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your data source. |
  | Create | Click create to create the data source. |
- {: caption="Table 1. Register data source" caption-side="bottom"}
+ {: caption="Register data source" caption-side="bottom"}
 
 You can add tables after creating the data source from the View database page.
 {: note}

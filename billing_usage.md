@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-10-10"
 
 keywords: lakehouse, watsonx data, roles, access
 subcollection: watsonxdata
@@ -67,4 +67,4 @@ The following are the fields in the **Billing and usage** page:
 | Status      | The status of the component. It can be running, failed, provisioning, restarting, resuming, scaling, updating, or paused. The **Running** status displays a run rate above 0 RUs/hour. |
 | Component type            | The category of the component. |
 | Run rate             | The resource units that are consumed per hour. |
-{: caption="Table 1. Billing and usage" caption-side="bottom"}
+{: caption="Billing and usage" caption-side="bottom"}

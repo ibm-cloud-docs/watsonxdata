@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-10-10"
 
 keywords: high availability, disaster revecory, watsonx.data
 
@@ -48,7 +48,7 @@ Single-tenant components are strategically distributed across 3 AZs to enhance r
 |---|---|---|
 | Backups |{{site.data.keyword.lakehouse_short}} is responsible for automatic daily backups, of all {{site.data.keyword.lakehouse_short}} provided resources. |**The Client is responsible for:** **1)** Create a new instance of IBM {{site.data.keyword.lakehouse_short}} to restore the backups and validate that the IBM backups that are restored properly. **2)** Restore backups of external components that they brought into {{site.data.keyword.lakehouse_short}}.
 |  Restore |{{site.data.keyword.lakehouse_short}} handles the restoration of backups for provided resources.   |**The Client is responsible for:** **1)** Create a new instance of {{site.data.keyword.lakehouse_short}} to restore the backups and validate that the IBM backups that are restored properly. **2)** Restore backups of external components that they brought into {{site.data.keyword.lakehouse_short}}.|
-{: caption="Table 1. Responsibilities" caption-side="bottom"}
+{: caption="Responsibilities" caption-side="bottom"}
 
 ## Application-level high availability
 {: #appl-ha}
@@ -72,7 +72,7 @@ Several minutes of unavailability or connection interruptions are not expected. 
 |-------------------------------|:------------:|
 | RPO                           |  <= 24 hours |
 | RTO                           |  < 24 hours  |
-{: caption="Table 2. Disaster Recovery Strategy" caption-side="bottom"}
+{: caption="Disaster Recovery Strategy" caption-side="bottom"}
 
 The backup interval is reduced for the service Milvus in SaaS to improve the restore RPO from 24 hours to 2 hours.
 {: note}

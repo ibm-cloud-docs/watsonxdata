@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-10-10"
 
 keywords: lakehouse, access, data, policy, watsonx data
 
@@ -50,7 +50,7 @@ To maintain data security, you can create access policies for the following at t
    | Policy name | Enter a name. |
    | Policy description (Optional) | Give a brief description. |
    | Policy status after creation | Set the status to activate the policy at the time of creation or later. |
-   {: caption="Table 1. Policy details" caption-side="bottom"}
+   {: caption="Policy details" caption-side="bottom"}
 
 1. In the **Data objects** page, select a resource from the drop-down list.
 

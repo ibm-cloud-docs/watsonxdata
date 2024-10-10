@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-24"
+lastupdated: "2024-10-10"
 
 keywords: watsonx.data, ikc, configuring, knowledgecatalog
 subcollection: watsonxdata
@@ -85,7 +85,7 @@ Both {{site.data.keyword.lakehouse_short}} and IKC must be present in the {{site
    | Engine's hostname or IP address | Enter the engine hostname available in the {{site.data.keyword.lakehouse_short}} console without port number and `:`. |
    | Engine ID | Enter the engine ID available in the {{site.data.keyword.lakehouse_short}} console. |
    | Engine's port | Enter the engine port number available with the engine host name. |
-   {: caption="Table 1. New connection" caption-side="bottom"}
+   {: caption="New connection" caption-side="bottom"}
 
 1. Optional: Click **Test connection** to test the connection.
 1. Click **Create**. The connection is added to the catalog.
@@ -107,7 +107,7 @@ Both {{site.data.keyword.lakehouse_short}} and IKC must be present in the {{site
    | Service | Select **IBM Knowledge Catalog**. |
    | Storage catalogs | Select the applicable storage catalogs for IKC governance. |
    | IKC endpoint  | Configure the IKC API url. |
-   {: caption="Table 1. Ingrate service" caption-side="bottom"}
+   {: caption="Ingrate service" caption-side="bottom"}
 
 1. Click **Integrate**.
 

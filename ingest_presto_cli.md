@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-06"
+lastupdated: "2024-10-10"
 
 keywords: watsonxdata, commands, command line interface, cli
 
@@ -79,7 +79,7 @@ Different options and variables that are supported in a command line and configu
    |target-table|Data migration target table. `<catalog>.<schema>.<table1>`. This is a mandatory parameter to run an ingestion job. Example: `<iceberg.demo.customer1>`|`--target-table <TARGET_TABLES>`|
    |trust-store-path|Path of the truststore to access the ingestion engine. This is used to establish SSL connections. This is a mandatory parameter to run an ingestion job.|`--trust-store-path <TRUST_STORE_PATH>`|
    |trust-store-password|Password of truststore to access the ingestion engine. This is used to establish SSL connections. This is a mandatory parameter to run an ingestion job.|`--trust-store-password <TRUST_STORE_PASSWORD>`|
-{: caption="Table 1. Command line options and variables" caption-side="bottom"}
+{: caption="Command line options and variables" caption-side="bottom"}
 
 * **Configuration file** option
 
@@ -92,7 +92,7 @@ Different options and variables that are supported in a command line and configu
       |create-if-not-exist|Create target table if not existed|`create-if-not-exist:<true/false>`|
       |ingestion-engine-endpoint|Specifies connection parameters of the ingestion engine. Endpoint of ingestion engine. hostname=`<hostname>`, port=`<port>`|`ingestion-engine:hostname=<hostname>, port=<port>`|
       |target-table|Data migration target table. Only one target table can be specified. `<catalog>.<schema>.<table1>`|`target-table:<table_name>`|
-   {: caption="Table 2. Global ingest config options and variables" caption-side="bottom"}
+   {: caption="Global ingest config options and variables" caption-side="bottom"}
 
    * Individual ingest config section
 
@@ -116,4 +116,4 @@ Different options and variables that are supported in a command line and configu
       |target-table-storage|Target table file storage location|`target-table-storage:<TARGET_TABLE_STORAGE>`|
       |trust-store-path|Path of truststore to access ingestion engine. This is used to establish SSL connections. This is a mandatory parameter to run an ingestion job.|`trust-store-path:<TRUST_STORE_PATH>`|
       |trust-store-password|Password of truststore to access the ingestion engine. This is used to establish SSL connections. This is a mandatory parameter to run an ingestion job.|`trust-store-password:<TRUST_STORE_PASSWORD>`|
-   {: caption="Table 3. Individual ingest config options and variables" caption-side="bottom"}
+   {: caption="Individual ingest config options and variables" caption-side="bottom"}

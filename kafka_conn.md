@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-21"
+lastupdated: "2024-10-10"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -45,7 +45,7 @@ Apache Kafka is a distributed event streaming platform. Connect to an Apache Kaf
  | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your data source. |
  | Add topics    | You can add topics after you create the data source.  \n i. Go to the **Infrastructure manager**. \n ii. Click on the **Apache Kafka** data source. \n iii. Click **Add topics** option. \n iv. Upload .json definition files. You can either drag the files or use the **Click to upload** option. Topic names are determined from the definition files. \n v. Use the **Edit** option to view and edit the topic files.|
  | Create | Click Create to create the data source. |
- {: caption="Table 1. Register data source" caption-side="bottom"}
+ {: caption="Register data source" caption-side="bottom"}
 
 
 ## Limitations for SQL statements

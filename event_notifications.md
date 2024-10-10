@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-10-10"
 
 keywords: events, notifications, lakehouse, watsonx data
 
@@ -39,7 +39,7 @@ The following table lists the {{site.data.keyword.lakehouse_short}} events.
 |Lakehouse Presto Group | `com.ibm.cloud.lakehouse.presto_group` | `presto_group_available` | An event is generated when the Presto group is available | Low |
 |Lakehouse Metastore | `com.ibm.cloud.lakehouse.metastore` | `metastore_unavailable` | An event is generated when the metastore is unavailable due to an unexpected outage | High |
 |Lakehouse Metastore | `com.ibm.cloud.lakehouse.metastore` | `metastore_available` | An event is generated when the metastore is available | Low |
-{: caption="Table 1. Actions that generate event notifications" caption-side="bottom"}
+{: caption="Actions that generate event notifications" caption-side="bottom"}
 
 ## Enabling notifications
 {: #event-notifications-enable}

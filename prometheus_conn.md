@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-10-10"
 
 keywords: lakehouse, database, watsonx.data
 
@@ -43,7 +43,7 @@ Prometheus allows reading Prometheus metrics as tables in Trino by using the Pro
  | Verify hostname | Use the toggle switch to verify hostname in the SSL certificate. |
  | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your database. |
  | Create | Click Create to create the database. |
- {: caption="Table 1. Register database" caption-side="bottom"}
+ {: caption="Register database" caption-side="bottom"}
 
 ## Limitations for SQL statements
 {: #connector_limitations}

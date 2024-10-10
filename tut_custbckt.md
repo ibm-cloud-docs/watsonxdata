@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-06"
+lastupdated: "2024-10-10"
 
 keywords:  query, engine, infrastructure
 
@@ -42,7 +42,7 @@ For this scenario, you must create the Presto query engine, establish connection
 
 * Querying from the bucket
 
-![Workflow diagram](images/customerbucket.svg){: caption="Figure 1. Workflow diagram" caption-side="bottom"}
+![Workflow diagram](images/customerbucket.svg){: caption="Workflow diagram" caption-side="bottom"}
 
 ## Before you begin
 {: #custbckt_byb1}

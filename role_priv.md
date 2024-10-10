@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-22"
+lastupdated: "2024-10-10"
 
 keywords: lakehouse, watsonx data, privileges, roles, access
 
@@ -69,7 +69,7 @@ IAM formation non-admins (Operator, Editor, Viewer) have the default user access
 | Register and unregister own storage | ✓ | ✓ | ✓ |
 | Register and unregister own DB connection | ✓ | ✓ | ✓ |
 | Access the metastore | ✓ |   | ✓ |
-{: caption="Table 1. Resource-level permissions" caption-side="bottom"}
+{: caption="Resource-level permissions" caption-side="bottom"}
 
 ## Engine (Presto (Java) or Presto (C++))
 {: #engine_presto}
@@ -92,7 +92,7 @@ Formation admins (IAM) have the default admin access.
 | Access the Presto (Java) or Presto (C++) query monitor UI | ✓ | ✓ |    |     |
 | View existence (infra page and `…/api/…/` engines) | ✓ | ✓ | ✓ |     |
 | Run workloads against the engine | ✓ | ✓ | ✓ |     |
-{: caption="Table 2. Resource-level permissions" caption-side="bottom"}
+{: caption="Resource-level permissions" caption-side="bottom"}
 
 ## Engine (External Spark)
 {: #external_spark}
@@ -113,7 +113,7 @@ Formation admins (IAM) have the default admin access.
 | Scale Spark engine | ✓ | ✓ |    |     |
 | View existence (infra page and `…/api/…/` engines) | ✓ | ✓ | ✓ |     |
 | Run workloads against the engine | ✓ | ✓ | ✓ |     |
-{: caption="Table 3. Resource-level permissions" caption-side="bottom"}
+{: caption="Resource-level permissions" caption-side="bottom"}
 
 ## Engine (Native Spark)
 {: #native_spark}
@@ -146,7 +146,7 @@ Default user access is granted to:
 | Associate and disassociate catalog | ✓ | ✓ |    |     |
 | View existence (infra page and `…/api/…/` engines) | ✓ | ✓ | ✓ |     |
 | Run workloads against the engine | ✓ | ✓ | ✓ |     |
-{: caption="Table 2. Resource-level permissions" caption-side="bottom"}
+{: caption="Resource-level permissions" caption-side="bottom"}
 
 ## Service (Milvus)
 {: #milvus}
@@ -208,7 +208,7 @@ Formation admins (IAM) have the default admin access.
 | Collection `DropPartition` | ✓ | ✓ |  |  | ✓ | ✓ | ✓  |
 | Collection `ShowPartitions` | ✓ | ✓ | ✓ |  | ✓ | ✓ |   |
 | Collection `HasPartition` | ✓ | ✓ | ✓ |  | ✓ | ✓ | ✓  |
-{: caption="Table 4. Resource-level permissions" caption-side="bottom"}
+{: caption="Resource-level permissions" caption-side="bottom"}
 
 ## storage
 {: #bucket}
@@ -229,7 +229,7 @@ Formation admins (IAM) have the default admin access.
 | Modify files | ✓ | ✓ |    |     |
 | Browse (storage browser in UI) | ✓ | ✓ | ✓ |     |
 | View existence (infra page and `…/api/…/` storages) | ✓ | ✓ | ✓ | ✓ |
-{: caption="Table 5. Resource-level permissions" caption-side="bottom"}
+{: caption="Resource-level permissions" caption-side="bottom"}
 
 If you want to unregister or delete a storage, you must first deactivate the storage.
 {: note}
@@ -247,14 +247,14 @@ The following tables are applicable only if you are using IBM Spark that by defa
 | Writer |GET; HEAD; PUT; POST; PATCH; DELETE  |
 | Reader |GET; HEAD  |
 | Admin | GET; HEAD; PUT; POST; PATCH; DELETE |
-{: caption="Table 6. storage level access control in Access control > Infrastructure or Infrastructure manger > select storage and assign roles" caption-side="bottom"}
+{: caption="storage level access control in Access control > Infrastructure or Infrastructure manger > select storage and assign roles" caption-side="bottom"}
 
 | Data object action | S3 REST API permission |
 | --- | --- |
 | Read | GET; HEAD |
 | Write | GET; HEAD; PUT; PATCH; POST without `?delete` parameter |
 | Delete | DELETE; POST with `?delete` parameter |
-{: caption="Table 7. Data-object-level access control in Access control > Policies" caption-side="bottom"}
+{: caption="Data-object-level access control in Access control > Policies" caption-side="bottom"}
 
 ## Database
 {: #db_connection}
@@ -274,7 +274,7 @@ Formation admins (IAM) have the default admin access.
 | Grant and revoke access | ✓ |   |    |     |
 | Modify database objects | ✓ | ✓ |    |     |
 | View existance (infra page and `…/api/…/extdb`) | ✓ | ✓ | ✓ | ✓ |
-{: caption="Table 8. Resource-level permissions" caption-side="bottom"}
+{: caption="Resource-level permissions" caption-side="bottom"}
 
 ## Catalog
 {: #catalog}
@@ -298,7 +298,7 @@ IAM formation non-admins (Operator, Editor, Viewer) have the Default user access
 | Grant and revoke access | ✓ |   |     |
 | Access to data | ✓ | Based on data policy |     |
 | View existence (infra page and `…/`) | ✓ | ✓ |     |
-{: caption="Table 9. Resource-level permissions" caption-side="bottom"}
+{: caption="Resource-level permissions" caption-side="bottom"}
 
 ## Schema
 {: #schema}
@@ -322,7 +322,7 @@ IAM formation non-admins (Operator, Editor, Viewer) have the Default user access
 | Drop | ✓ |   |
 | Access | ✓ | based on access data control policies defined in {{site.data.keyword.lakehouse_short}} by admin |
 | Create table | ✓ | based on access data control policies defined in {{site.data.keyword.lakehouse_short}} by admin |
-{: caption="Table 10. Resource-level permissions" caption-side="bottom"}
+{: caption="Resource-level permissions" caption-side="bottom"}
 
 ## Table
 {: #table}
@@ -348,4 +348,4 @@ IAM formation non-admins (Operator, Editor, Viewer) have the Default user access
 | Insert | ✓ | based on access data control policies defined in {{site.data.keyword.lakehouse_short}} by admin |
 | Update | ✓ | based on access data control policies defined in {{site.data.keyword.lakehouse_short}} by admin |
 | Delete | ✓ | based on access data control policies defined in {{site.data.keyword.lakehouse_short}} by admin |
-{: caption="Table 11. Resource-level permissions" caption-side="bottom"}
+{: caption="Resource-level permissions" caption-side="bottom"}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-10-10"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -68,7 +68,7 @@ You can customize the catalog properties through an API for Presto (Java).
 | `hive.allow-rename-column` | Boolean | True or False |
 | `hive.metastore-timeout` | String | Limit {1, 1e13}; supported values are numbers with or without units m, s, ms, h |
 | `ignore-unsupported-datatypes` | Boolean | True or False. For more information, see [ignore-unsupported-datatypes](#ignore) |
-{: caption="Table 1. Catalog properties for Presto (Java)" caption-side="bottom"}
+{: caption="Catalog properties for Presto (Java)" caption-side="bottom"}
 
    **ignore-unsupported-datatypes**{: #ignore}
 

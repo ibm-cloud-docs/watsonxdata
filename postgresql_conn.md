@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-03"
+lastupdated: "2024-10-10"
 
 keywords: lakehouse, database, watsonx.data
 
@@ -47,7 +47,7 @@ IBM Cloud Databases for PostgreSQL is an open source object-relational database 
  | Test connection     | Click the Test connection link to test the database connection. If the database connection is successful, a success message appears.|
  | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your database. |
  | Create | Click Create to create the database. |
- {: caption="Table 1. Register database" caption-side="bottom"}
+ {: caption="Register database" caption-side="bottom"}
 
 Enable the toggle switch for Validate certificate option to create the PostgreSQL database. If disabled, the Test connection feature does not work and the database cannot be added to the engine.
 {: note}

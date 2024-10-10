@@ -46,4 +46,4 @@ Hadoop Distributed File System (HDFS) is a file system that manages large data s
  | Catalog type | The supported catalog is Apache Hive.|
  | Catalog name | Enter the name of your catalog. |
  | Create | Click Create to create the storage. |
- {: caption="Table 1. Register bucket" caption-side="bottom"}
+ {: caption="Register bucket" caption-side="bottom"}

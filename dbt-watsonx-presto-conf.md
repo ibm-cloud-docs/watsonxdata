@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-24"
+lastupdated: "2024-10-10"
 
 keywords: lakehouse, watsonx.data, presto, cli
 
@@ -53,7 +53,7 @@ The following table covers the parameter details:
 | `port` | Required | Port for connecting to Presto. You can get the port by clicking View connect details in the engine details page. | 8080 |
 | `threads` | Optional (default is 1) | Number of threads for dbt operations. | 8 |
 | `ssl_verify` | Optional | Path to the SSL certificate.  | `path/to/certificate` |
-{: caption="Table 1. Parameter details" caption-side="bottom"}
+{: caption="Parameter details" caption-side="bottom"}
 
 To obtain the SSL certificate, run the following command and save the certificate to the specified location.
 

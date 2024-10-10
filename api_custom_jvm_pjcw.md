@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-10-10"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -25,4 +25,4 @@ You can customize the coordinator and worker JVM properties through an API for P
 | `-Duser.timezone` | String | Any string |
 | `-xgc` | String | Any string |
 | `-Xmx6G` | String | Any string |
-{: caption="Table 1. JVM properties for Presto (Java) - coordinator and worker nodes" caption-side="bottom"}
+{: caption="JVM properties for Presto (Java) - coordinator and worker nodes" caption-side="bottom"}
