@@ -297,7 +297,6 @@ toc:
             - Domo.md
             - Qlik.md
             - power_bi.md
-            - cognos.md
       - topicgroup:
           label: Workload Orchestration
           topics:
