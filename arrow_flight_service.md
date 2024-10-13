@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-14"
+lastupdated: "2024-10-13"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -29,21 +29,21 @@ subcollection: watsonxdata
 # Arrow Flight service overview
 {: #arrow_database}
 
-You can connect to the data source through the Arrow Flight service that is deployed on IBM Cloud. You need to enter the details that are related to API key and Flight service URL. This feature is applicable for both Presto (Java) and Presto (C++) engines.
+You can connect to the data source through the Arrow Flight service that is deployed on IBM Cloud. You need to enter the details that are related to the API key and Flight service URL. This feature is applicable for both Presto (Java) and Presto (C++) engines.
 {: shortdesc}
 
 ## Prerequisites
 {: #prereq_database}
 
-1. The Arrow Flight connector supports only the IBM Arrow Flight service on an IBM Cloud VM.
-2. The Arrow Flight service should be running for data sources to work with.
+* The Arrow Flight connector supports only the IBM Arrow Flight service on an IBM Cloud VM.
+* The Arrow Flight service should be running for data sources to work with.
 
 ## Features and capabilities
 {: #features_database}
 
-1. The data source that are supported through Arrow Flight service have better performance as compared to JDBC data sources.
-2. Basic query pushdown is available for queries across the tables from the same data source and across the tables from different flight data sources.
-3. The Arrow Flight service data sources support only `SELECT` and `DESCRIBE` queries.
+* The data sources that are supported through Arrow Flight service have better performance as compared to JDBC data sources.
+* Basic query pushdown is available for queries across the tables from the same data source and across the tables from different flight data sources.
+* The Arrow Flight service data sources support only `SELECT` and `DESCRIBE` queries.
 
 ## Procedure
 {: #procedure_database}
