@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-24"
+lastupdated: "2024-10-14"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -91,6 +91,7 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
    {: codeblock}
 
    Where the parameters used are listed as follows:
+
    |Parameter|Description|
    |------------|----------|
    |`--create-if-not-exist`|Use this option if the target schema or table is not created. Do not use if the target schema or table is already created.|
@@ -105,6 +106,9 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
    |`--user`|User name of the user connecting to the instance.|
    |`--url`|Base url of the location of {{site.data.keyword.lakehouse_full}} cluster.|
    {: caption="Table 2" caption-side="bottom"}
+
+   `ibm-lh data-copy` returns the value `0` when ingestion job is completed successfully. When ingestion job has failed, `ibm-lh data-copy` returns a non `0` value.
+   {: tip}
 
 4. Run the following command to get the status of the ingest job:
 
