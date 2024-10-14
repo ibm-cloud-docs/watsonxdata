@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-10-10"
 
 keywords: lakehouse, engine, tags, description, watsonx.data
 
@@ -53,7 +53,7 @@ You can view the Spark details in list and topology views.
    | Instance API endpoint | The IBM Analytics Engine (Spark) API endpoint.|
    | History server endpoint| The IBM Analytics Engine (Spark) history server endpoint.|
    | History server | The history server URL, where you can view the history details of the applications that are run.|
-   {: caption="Table 1. Details tab" caption-side="bottom"}
+   {: caption="Details tab" caption-side="bottom"}
 
 
 ## Editing the Spark engine details

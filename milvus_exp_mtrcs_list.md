@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-24"
+lastupdated: "2024-10-10"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -55,7 +55,7 @@ The following tables cover the metrics that are exposed by Milvus.
 | Milvus_proxy_mutation_latency_sum | Sum | The latency of mutation requests. In Milvus, a mutation request refers to operations that modify the data in a collection. These operations include the following: 1. **Insert**: Adding new vectors (data points) into a collection. Each vector usually comes with an associated unique identifier (ID) and optional metadata. 2. **Delete**: Removing vectors from a collection based on their unique identifiers. This operation marks vectors as deleted but does not immediately remove them from the disk. The actual deletion is handled later during a compaction process. 3. **Update (Upsert)**: Although Milvus traditionally supports only **Insert** and **Delete** operations, recent versions support update operations, where existing vectors are replaced or updated with new data. This involves a combination of **Insert** and **Delete** operations. |
 | milvus_proxy_sq_wait_result_latency_sum | Counter | The latency between sending search and query requests and receiving results this value is determined between dividing the sum/count of the milvus_proxy_sq_wait_result_latency_bucket histogram. |
 | milvus_proxy_msgstream_obj_num | Gauge | The number of msgstream objects created on each physical topic. |
-{: caption="Table 1. Proxy" caption-side="bottom"}
+{: caption="Proxy" caption-side="bottom"}
 
 ## Root coordinator
 {: #milvus_exp_metrics_list_rc}
@@ -74,7 +74,7 @@ The following tables cover the metrics that are exposed by Milvus.
 | milvus_rootcoord_dml_channel_num | Gauge | DML channel number - The total number of DML channels existing in Milvus currently. A DML channel in Milvus refers to a communication channel used for Data Manipulation Language operations. 1 DML operations include insert, delete, and upsert actions in the database. In Milvus, a DML channel is equivalent to a virtual channel (`vchannel`). The system uses a structure where: A physical channel (`pchannel`) is bound to a topic in message queue systems like Pulsar or Kafka. - A `vchannel` is like a logical connection between two components within the system. The DML channel serves several important functions in Milvus: 1. **Data Distribution**: It's used to route incoming insert/delete requests to appropriate shards based on the hash value of primary keys. 2 **Message publishing**: The proxy publishes DML messages through this channel. 3. **Data processing**: Both data nodes and query nodes subscribe to the DML channel to process operations and provide search and query services. |
 | milvus_rootcoord_msgstream_obj_num | Gauge | `Msgstream` number - The total number of `msgstream` in Milvus currently. |
 | milvus_rootcoord_credential_num | Gauge | Credential number - The total number of credentials in Milvus currently. |
-{: caption="Table 2. Root coordinator" caption-side="bottom"}
+{: caption="Root coordinator" caption-side="bottom"}
 
 ## Data coordinator
 {: #milvus_exp_metrics_list_dc}
@@ -86,7 +86,7 @@ The following tables cover the metrics that are exposed by Milvus.
 | milvus_datacoord_collection_num | Gauge | The number of collections recorded in metadata by data-coord. |
 | milvus_datacoord_stored_row_num | Gauge | The total number of rows by collection. |
 | milvus_datacoord_stored_binlog_size | Gauge | The total size of stored binlog. |
-{: caption="Table 3. Data coordinator" caption-side="bottom"}
+{: caption="Data coordinator" caption-side="bottom"}
 
 ## Query coordinator
 {: #milvus_exp_metrics_list_qc}
@@ -100,4 +100,4 @@ The following tables cover the metrics that are exposed by Milvus.
 | milvus_querycoord_load_latency_sum | Counter | The time used to complete a load request. |
 | milvus_querycoord_release_latency_bucket | Histogram | The time used to complete a release request. |
 | milvus_querycoord_release_latency_sum | Counter | The latency of release request. |
-{: caption="Table 4. Query Coordinator" caption-side="bottom"}
+{: caption="Query Coordinator" caption-side="bottom"}

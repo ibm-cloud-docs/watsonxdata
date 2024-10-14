@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-10-10"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -37,7 +37,7 @@ You can view the Native Spark engine details in list and topology views.
    | {{site.data.keyword.lakehouse_short}} application endpoint | The endpoint is used at the time of application submission. To submit an application by using API, see [API Docs][def2]. |
    | Spark engine endpoint | The Native Spark endpoint. |
    | Default Spark Configuration | The Spark configuration properties that are applied to any application that is submitted to the Spark engine. |
-   {: caption="Table 1. Viewing Native Spark engine details" caption-side="bottom"}
+   {: caption="Viewing Native Spark engine details" caption-side="bottom"}
 
 ## Editing Spark details from the console UI
 {: #edit_nspark_ui}
@@ -88,7 +88,7 @@ Following are the details of the parameter values to be used in the curl command
 | `<property_name>` | The default configuration property name. For more information about different properties, see [Available Properties][def6]. |
 | `<property_value>` | The value that must be configured for the property. For more information about different properties, see [Available Properties][def6]. |
 | `<spark_version>` | The Spark runtime. The possible values are `3.3` and `3.4`. |
-{: caption="Table 1. Parameter list" caption-side="bottom"}
+{: caption="Parameter list" caption-side="bottom"}
 
 **Example**:
 ```bash

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-09-24"
+lastupdated: "2024-10-10"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -35,7 +35,7 @@ This topic covers the Presto exposed JMX metrics with details.
 | watsonx_data_presto_alluxio_cache_space_available_value | Gauge | Indicates the available space in Alluxio cache. |
 | watsonx_data_presto_alluxio_cache_space_used_value | Gauge | Indicates the used space in Alluxio cache. |
 | watsonx_data_presto_alluxio_cache_written_cache_external_count | Counter | Tracks the number of bytes written to external cache from Alluxio. |
-{: caption="Table 1. Alluxio cache metrics" caption-side="bottom"}
+{: caption="Alluxio cache metrics" caption-side="bottom"}
 
 ## Presto cache CacheStats metrics
 {: #presto_expd_jmx_2}
@@ -46,7 +46,7 @@ This topic covers the Presto exposed JMX metrics with details.
 | watsonx_data_presto_cache_stats_cache_miss | Counter | Tracks the number of cache misses in Presto cache. |
 | watsonx_data_presto_cache_stats_in_memory_retained_bytes | Gauge | Indicates the number of bytes retained in memory in Presto cache. |
 | watsonx_data_presto_cache_stats_quota_exceeded | Counter | Counts the instances where the cache quota is exceeded. |
-{: caption="Table 2. Presto cache CacheStats metrics" caption-side="bottom"}
+{: caption="Presto cache CacheStats metrics" caption-side="bottom"}
 
 ## Cluster-wide memory usage metrics
 {: #presto_expd_jmx_3}
@@ -58,7 +58,7 @@ This topic covers the Presto exposed JMX metrics with details.
 | watsonx_data_presto_cluster_memory_pool_general_blocked_nodes | Gauge | Indicates the number of nodes that are blocked in the general memory pool. |
 | watsonx_data_presto_cluster_memory_pool_general_free_distributed_bytes | Gauge | Indicates the number of free distributed bytes in the general memory pool. |
 | watsonx_data_presto_cluster_memory_pool_general_total_distributed_bytes | Gauge | Indicates the total distributed bytes in the general memory pool. |
-{: caption="Table 3. Cluster wide memory usage metrics" caption-side="bottom"}
+{: caption="Cluster wide memory usage metrics" caption-side="bottom"}
 
 ## Fragment result cache metrics
 {: #presto_expd_jmx_4}
@@ -70,7 +70,7 @@ This topic covers the Presto exposed JMX metrics with details.
 | watsonx_data_presto_fragment_cache_stats_cache_removal | Counter | Tracks the number of cache removals in the fragment result cache. |
 | watsonx_data_presto_fragment_cache_stats_cache_size_in_bytes | Gauge | Indicates the size of the fragment result cache in bytes. |
 | watsonx_data_presto_fragment_cache_stats_inflight_bytes | Gauge | Indicates the number of inflight bytes in the fragment result cache. |
-{: caption="Table 4. Cluster wide memory usage metrics" caption-side="bottom"}
+{: caption="Cluster wide memory usage metrics" caption-side="bottom"}
 
 ## Java garbage collector metrics
 {: #presto_expd_jmx_5}
@@ -81,7 +81,7 @@ This topic covers the Presto exposed JMX metrics with details.
 | watsonx_data_presto_garbage_collector_global_collection_time_milliseconds | Gauge | Measures the time spent in global garbage collection in milliseconds. |
 | watsonx_data_presto_garbage_collector_scavenge_collection_count | Counter | Tracks the number of scavenge garbage collections. |
 | watsonx_data_presto_garbage_collector_scavenge_collection_time_milliseconds | Gauge | Measures the time spent in scavenge garbage collection in milliseconds. |
-{: caption="Table 5. Java garbage collector metrics" caption-side="bottom"}
+{: caption="Java garbage collector metrics" caption-side="bottom"}
 
 ## File metadata cache metrics
 {: #presto_expd_jmx_6}
@@ -94,7 +94,7 @@ This topic covers the Presto exposed JMX metrics with details.
 | watsonx_data_presto_hive_cache_stats_mbean_parquet_metadata_size | Gauge | Indicates the size of the Parquet metadata cache. |
 | watsonx_data_presto_hive_cache_stats_mbean_partition_hit_rate | Gauge | Indicates the hit rate for partition metadata cache. |
 | watsonx_data_presto_hive_cache_stats_mbean_partition_size | Gauge | Indicates the size of the partition metadata cache. |
-{: caption="Table 6. File metadata cache metrics" caption-side="bottom"}
+{: caption="File metadata cache metrics" caption-side="bottom"}
 
 ## Java heap memory metrics
 {: #presto_expd_jmx_7}
@@ -105,7 +105,7 @@ This topic covers the Presto exposed JMX metrics with details.
 | watsonx_data_presto_memory_heap_memory_usage_init_bytes | Gauge | Indicates the initial bytes in heap memory usage. |
 | watsonx_data_presto_memory_heap_memory_usage_max_bytes | Gauge | Indicates the maximum bytes in heap memory usage. |
 | watsonx_data_presto_memory_heap_memory_usage_used_bytes | Gauge | Indicates the used bytes in heap memory usage. |
-{: caption="Table 7. Java heap memory metrics" caption-side="bottom"}
+{: caption="Java heap memory metrics" caption-side="bottom"}
 
 ## Java non-heap memory metrics
 {: #presto_expd_jmx_8}
@@ -116,7 +116,7 @@ This topic covers the Presto exposed JMX metrics with details.
 | watsonx_data_presto_memory_non_heap_memory_usage_init_bytes | Gauge | Indicates the initial bytes in non-heap memory usage. |
 | watsonx_data_presto_memory_non_heap_memory_usage_max_bytes | Gauge | Indicates the maximum bytes in non-heap memory usage. |
 | watsonx_data_presto_memory_non_heap_memory_usage_used_bytes | Gauge | Indicates the used bytes in non-heap memory usage. |
-{: caption="Table 8. Java non-heap memory metrics" caption-side="bottom"}
+{: caption="Java non-heap memory metrics" caption-side="bottom"}
 
 ## Java memory pool metrics
 {: #presto_expd_jmx_9}
@@ -129,7 +129,7 @@ This topic covers the Presto exposed JMX metrics with details.
 | watsonx_data_presto_memory_pool_MemoryPool_tenured_SOA_usage_used_bytes | Gauge | Indicates the used bytes in the tenured-SOA memory pool (equivalent to G1 Old Gen). |
 | watsonx_data_presto_memory_pool_MemoryPool_tenured_LOA_usage_committed_bytes | Gauge | Indicates the committed bytes in the tenured-LOA memory pool (equivalent to G1 Old Gen). |
 | watsonx_data_presto_memory_pool_MemoryPool_tenured_LOA_usage_used_bytes | Gauge | Indicates the used bytes in the tenured-LOA memory pool (equivalent to G1 Old Gen). |
-{: caption="Table 9. Java memory pool metrics" caption-side="bottom"}
+{: caption="Java memory pool metrics" caption-side="bottom"}
 
 ## Presto memory pool metrics
 {: #presto_expd_jmx_10}
@@ -141,7 +141,7 @@ This topic covers the Presto exposed JMX metrics with details.
 | watsonx_data_presto_memory_pool_general_reserved_bytes | Gauge | Indicates the number of reserved bytes in the general memory pool. |
 | watsonx_data_presto_memory_pool_general_reserved_revocable_bytes | Gauge | Indicates the number of reserved revocable bytes in the general memory pool. |
 | watsonx_data_presto_memory_pool_general_total_bytes | Gauge | Indicates the total number of bytes in the general memory pool. |
-{: caption="Table 10. Presto memory pool metrics" caption-side="bottom"}
+{: caption="Presto memory pool metrics" caption-side="bottom"}
 
 ## Scheduler metrics
 {: #presto_expd_jmx_11}
@@ -152,7 +152,7 @@ This topic covers the Presto exposed JMX metrics with details.
 | watsonx_data_presto_node_selection_stats_non_primary_preferred_node_selected_count_total_count | Counter     | Total count of times a non-primary preferred node was selected by the scheduler.                             |
 | watsonx_data_presto_node_selection_stats_primary_preferred_node_selected_count_five_minute_rate | Gauge       | Rate of times a primary preferred node was selected by the scheduler over the last five minutes.             |
 | watsonx_data_presto_node_selection_stats_primary_preferred_node_selected_count_total_count | Counter     | Total count of times a primary preferred node was selected by the scheduler.                                 |
-{: caption="Table 11. Scheduler metrics" caption-side="bottom"}
+{: caption="Scheduler metrics" caption-side="bottom"}
 
 ## Airlift stats pause meter metrics
 {: #presto_expd_jmx_12}
@@ -167,7 +167,7 @@ This topic covers the Presto exposed JMX metrics with details.
 | watsonx_data_presto_pause_meter_10s_to_1m_pauses                                   | Counter     | Total count of pauses lasting between 10 seconds and 1 minute.                                               |
 | watsonx_data_presto_pause_meter_greater_than_1m_pauses                             | Counter     | Total count of pauses lasting greater than 1 minute.                                                         |
 | watsonx_data_presto_pause_meter_total_pause_seconds                                | Counter     | Total count of all pause seconds.                                                                            |
-{: caption="Table 12. Airlift stats pause meter metrics" caption-side="bottom"}
+{: caption="Airlift stats pause meter metrics" caption-side="bottom"}
 
 ## Presto execution query manager metrics
 {: #presto_expd_jmx_13}
@@ -193,7 +193,7 @@ This topic covers the Presto exposed JMX metrics with details.
 | watsonx_data_presto_query_manager_submitted_queries_five_minute_count              | Counter     | Count of queries submitted in the last five minutes.                                                         |
 | watsonx_data_presto_query_manager_user_error_failures_five_minute_count            | Counter     | Count of queries that failed due to user errors in the last five minutes.                                     |
 | watsonx_data_presto_query_manager_wall_input_bytes_rate_five_minutes_p$1           | Gauge       | Rate of wall input bytes in the last five minutes.                                                           |
-{: caption="Table 13. Presto execution query manager metrics" caption-side="bottom"}
+{: caption="Presto execution query manager metrics" caption-side="bottom"}
 
 ## Java lang runtime metrics
 {: #presto_expd_jmx_14}
@@ -201,7 +201,7 @@ This topic covers the Presto exposed JMX metrics with details.
 | Metric name  |  Metric type  | Metric description  |
 |--------------|---------------|---------------------|
 | watsonx_data_presto_runtime_up_time                                                | Gauge       | Uptime of the Java runtime.                                                                                  |
-{: caption="Table 14. Java lang runtime metrics" caption-side="bottom"}
+{: caption="Java lang runtime metrics" caption-side="bottom"}
 
 ## Presto execution scheduler SplitSchedulerStats metrics
 {: #presto_expd_jmx_15}
@@ -213,7 +213,7 @@ This topic covers the Presto exposed JMX metrics with details.
 | watsonx_data_presto_split_scheduler_stats_sleep_time_five_minutes_p$1              | Gauge       | Sleep time in the last five minutes.                                                                         |
 | watsonx_data_presto_split_scheduler_stats_split_queues_full_five_minute_count      | Counter     | Count of split queues that are full in the last five minutes.                                                |
 | watsonx_data_presto_split_scheduler_stats_waiting_for_source_five_minute_count     | Counter     | Count of waiting for source events in the last five minutes.                                                 |
-{: caption="Table 15. Presto execution scheduler SplitSchedulerStats metrics" caption-side="bottom"}
+{: caption="Presto execution scheduler SplitSchedulerStats metrics" caption-side="bottom"}
 
 ## Presto execution executor TaskExecutor metrics
 {: #presto_expd_jmx_16}
@@ -221,7 +221,7 @@ This topic covers the Presto exposed JMX metrics with details.
 | Metric name  |  Metric type  | Metric description  |
 |--------------|---------------|---------------------|
 | watsonx_data_presto_task_executor_$1                                               | Gauge       | Metrics related to the task executor. Attributes: ActiveTasks, BlockedTasks, CompletedTasks, CorePoolSize, CurrentThreadCount, ExecutedTasks, ExecutorUtilization, FailedTasks, LargestPoolSize, MaximumPoolSize, MinimumIdleThreads, MinimumThreadCount, PendingTasks, PoolSize, QueueSize, TaskCount, TaskExecutionTime, ThreadCount, TotalExecutionTime, UtilizationRate |
-{: caption="Table 16. Presto execution executor TaskExecutor metrics" caption-side="bottom"}
+{: caption="Presto execution executor TaskExecutor metrics" caption-side="bottom"}
 
 ## Presto execution task manager metrics
 {: #presto_expd_jmx_17}
@@ -233,7 +233,7 @@ This topic covers the Presto exposed JMX metrics with details.
 | watsonx_data_presto_task_manager_input_positions_five_minute_count                 | Counter     | Count of input positions in the last five minutes.                                                           |
 | watsonx_data_presto_task_manager_output_data_size_five_minute_count                | Counter     | Count of output data size in the last five minutes.                                                          |
 | watsonx_data_presto_task_manager_output_positions_five_minute_count                | Counter     | Count of output positions in the last five minutes.                                                          |
-{: caption="Table 17. Presto execution task manager metrics" caption-side="bottom"}
+{: caption="Presto execution task manager metrics" caption-side="bottom"}
 
 ## Java NIO buffer pool metrics
 {: #presto_expd_jmx_18}
@@ -241,7 +241,7 @@ This topic covers the Presto exposed JMX metrics with details.
 | Metric name  |  Metric type  | Metric description  |
 |--------------|---------------|---------------------|
 | watsonx_data_presto_java_nio_buffer_pool__$1_memory_used                           | Gauge       | Memory used by the Java NIO buffer pool.                                                                   |
-{: caption="Table 18. Java NIO buffer pool metrics" caption-side="bottom"}
+{: caption="Java NIO buffer pool metrics" caption-side="bottom"}
 
 ## Presto dispatcher metrics
 {: #presto_expd_jmx_19}
@@ -250,7 +250,7 @@ This topic covers the Presto exposed JMX metrics with details.
 |--------------|---------------|---------------------|
 | watsonx_data_presto_dispatch_manager_queued_queries                                | Gauge       | Count of queries queued in the Presto dispatcher.                                                            |
 | watsonx_data_presto_dispatch_manager_running_queries                               | Gauge       | Count of queries currently running in the Presto dispatcher.                                                 |
-{: caption="Table 19. Presto dispatcher metrics" caption-side="bottom"}
+{: caption="Presto dispatcher metrics" caption-side="bottom"}
 
 ## Glue stats metrics
 {: #presto_expd_jmx_20}
@@ -260,7 +260,7 @@ This topic covers the Presto exposed JMX metrics with details.
 | watsonx_data_presto_glue_$2_time_$3_$4                                             | Gauge       | Time taken by Glue Hive Metastore operations.                  |
 | watsonx_data_presto_glue_$2_total_failures_total_count                             | Counter     | Total count of failures for Glue Hive Metastore operations.                                 |
 | watsonx_data_presto_glue_$2_total_failures_fifteen_minute_$3                       | Gauge (rate), Counter (count) | Rate or count of failures for Glue Hive Metastore operations in the last fifteen minutes.           |
-{: caption="Table 20. Glue stats metrics" caption-side="bottom"}
+{: caption="Glue stats metrics" caption-side="bottom"}
 
 ## S3 file system metrics
 {: #presto_expd_jmx_21}
@@ -270,7 +270,7 @@ This topic covers the Presto exposed JMX metrics with details.
 | watsonx_data_presto_hive_s3_presto_s3_file_system_$2_$3_$4                         | Gauge (rate), Counter (count) | Metrics related to the S3 file system in Presto Hive.            |
 | watsonx_data_presto_hive_s3_presto_s3_file_system_$2_total_count                   | Counter     | Total count metric related to the S3 file system in Presto Hive.                              |
 | watsonx_data_presto_s3_$2_$3_$4                                                    | Gauge (avg, max, min, maxerror), Counter (count), other (unit) | Additional metrics related to S3 operations.        |
-{: caption="Table 21. S3 file system metrics" caption-side="bottom"}
+{: caption="S3 file system metrics" caption-side="bottom"}
 
 ## Hive directory list caching metrics
 {: #presto_expd_jmx_22}
@@ -278,7 +278,7 @@ This topic covers the Presto exposed JMX metrics with details.
 | Metric name  |  Metric type  | Metric description  |
 |--------------|---------------|---------------------|
 | watsonx_data_presto_hive_caching_directory_lister_$2                               | Gauge       | Metrics related to the caching directory lister in Presto Hive.                                              |
-{: caption="Table 22. Hive directory list caching metrics" caption-side="bottom"}
+{: caption="Hive directory list caching metrics" caption-side="bottom"}
 
 ## Parquet metadata caching metrics
 {: #presto_expd_jmx_23}
@@ -286,4 +286,4 @@ This topic covers the Presto exposed JMX metrics with details.
 | Metric name  |  Metric type  | Metric description  |
 |--------------|---------------|---------------------|
 | watsonx_data_presto_hive_cache_stats_mbean_parquet_metadata_eviction_count         | Counter     | Eviction count related to Parquet metadata caching in Presto Hive.                                           |
-{: caption="Table 23. Parquet metadata caching metrics" caption-side="bottom"}
+{: caption="Parquet metadata caching metrics" caption-side="bottom"}

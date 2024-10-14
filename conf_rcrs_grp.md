@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-24"
+lastupdated: "2024-10-10"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -45,7 +45,7 @@ To configure resource groups:
    | File name | Enter the JSON file name. If you upload a JSON file, the name of that file appears here. |
    | Description | Enter a resource group description. |
    | Resource group configuration | Browse and select a resource group JSON file. Alternatively, you can drag and drop a resource group file. |
-   {: caption="Table 1. Resource group details" caption-side="bottom"}
+   {: caption="Resource group details" caption-side="bottom"}
 
    The uploaded JSON file structure must match with the sample resource group file structure. To download the sample file, click **Download resource group template**. The maximum allowed size of a file is 2 MB and the only file format that is supported is `.json`.
    {: important}

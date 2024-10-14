@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-10-10"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -60,7 +60,7 @@ To add a Spark engine, complete the following steps.
       | Engine home bucket | Select the registered Cloud Object Storage bucket from the list to store the Spark events and logs that are generated while running spark applications. \n [Note]{: tag-purple} Make sure you do not select the IBM-managed bucket as Spark Engine home. If you select an IBM-managed bucket, you cannot access it to view the logs. \n For more information, see [Before you begin](watsonxdata?topic=watsonxdata-prov_nspark#prereq_nspark_prov).|
       |Reserve capacity| 1. Select the **Node Type**. \n 2. Enter the number of nodes in the **No of nodes** field.     |
       |Associated catalogs (optional)| Select the catalogs that must be associated with the engine.   |
-      {: caption="Table 1. Provisioning Spark engine" caption-side="bottom"}
+      {: caption="Provisioning Spark engine" caption-side="bottom"}
 
       [Note]{: tag-purple} Provisioning time of the native Spark engine varies depending on the number and type of nodes that you add to the engine.
 
@@ -73,7 +73,7 @@ To add a Spark engine, complete the following steps.
       | Display name   | Enter your compute engine name.  |
       | Instance API endpoint | Enter the IBM Analytics engine instance endpoint. For more information, see [Retrieving service endpoints](https://cloud.ibm.com/docs/AnalyticsEngine?topic=AnalyticsEngine-retrieve-endpoints-serverless)  |
       | API key   | Enter the API key. |
-      {: caption="Table 1. Registering IBM Analytics Engine (Spark)" caption-side="bottom"}
+      {: caption="Registering IBM Analytics Engine (Spark)" caption-side="bottom"}
 
 
 6. Click **Create**. The engine is provisioned and is displayed in the **Infrastructure Manager** page.

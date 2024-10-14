@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-10-10"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -20,4 +20,4 @@ You can customize the Velox properties through an API for Presto (C++).
 | --- | --- | --- |
 | `task_writer_count` | Integer | Limit {1, 1000} |
 | `max_split_preload_per_driver` | Integer | Limit {1, 1000} |
-{: caption="Table 1. Velox properties for Presto (C++)" caption-side="bottom"}
+{: caption="Velox properties for Presto (C++)" caption-side="bottom"}

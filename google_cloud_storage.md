@@ -45,7 +45,7 @@ Google Cloud Storage is a service for storing objects in Google Cloud. An object
  | Catalog type | Select the catalog type from the list. The supported catalogs are Apache Iceberg and Apache Hive. |
  | Catalog name | Enter the name of your catalog.|
  | Create | Click Create to create the storage. |
- {: caption="Table 1. Register bucket" caption-side="bottom"}
+ {: caption="Register bucket" caption-side="bottom"}
 
  For Google Cloud Storage, multiple buckets of different service accounts cannot be configured.
 {: note}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-12"
+lastupdated: "2024-09-26"
 
 keywords: watsonxdata, qhmm
 
@@ -33,14 +33,14 @@ Query History Monitoring and Management (QHMM) is a service that stores and mana
 {: shortdesc}
 
 You can enable or disable the QHMM service for your {{site.data.keyword.lakehouse_short}} instance. If you enable the QHMM service, you must specify the storage to be used for storing the query data.
-{{site.data.keyword.lakehouse_short}} allows using the default storage, `wxd-system` to store the QHMM data or register your own storage (BYOB). To use BYOB, register your bucket in watsonx.data and configure it to use as QHMM storage. You can do that either from Quick start or from {{site.data.keyword.lakehouse_short}} console page. For more information, see [Retrieving query information from QHMM data](watsonxdata?topic=watsonxdata-ret_qhmm){: external}.
+{{site.data.keyword.lakehouse_short}} allows using the default storage, `wxd-system` to store the QHMM data or register your own storage (BYOB). To use BYOB, register your bucket in watsonx.data and configure it to use as QHMM storage. You can do that either from Quick start or from {{site.data.keyword.lakehouse_short}} console page. For more information, see [Retrieving query information from QHMM data]({{site.data.keyword.ref-ret_qhmm-link}}).
 
 You can choose the QHMM storage (default QHMM bucket or your own bucket) from:
 
-* Quick start wizard (see [Configure query monitoring](watsonxdata?topic=watsonxdata-quick_start#qs_montr){: external})
-* {{site.data.keyword.lakehouse_short}} console page (see [Query monitoring](watsonxdata?topic=watsonxdata-qhmm){: external})
+* Quick start wizard (see [Configure query monitoring]({{site.data.keyword.ref-quick_start-link}}))
+* {{site.data.keyword.lakehouse_short}} console page (see [Query monitoring]({{site.data.keyword.ref-qhmm-link}}))
 
-You can retrieve the history files to analyze, debug, or monitor the queries. From the Query workspace see, [Retrieving query information from QHMM data](watsonxdata?topic=watsonxdata-ret_qhmm).
+You can retrieve the history files to analyze, debug, or monitor the queries. From the Query workspace see, [Retrieving query information from QHMM data]({{site.data.keyword.ref-ret_qhmm-link}}).
 
 ## Procedure
 {: #prc_qhmm}

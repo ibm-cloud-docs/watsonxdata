@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-24"
+lastupdated: "2024-10-14"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -87,9 +87,9 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
    |`IBM_LH_SPARK_EXECUTOR_COUNT`|Optional spark engine configuration setting for executor count.|
    |`IBM_LH_SPARK_DRIVER_CORES`|Optional spark engine configuration setting for driver cores.|
    |`IBM_LH_SPARK_DRIVER_MEMORY`|Optional spark engine configuration setting for driver memory.|
-   |`INSTANCE_ID`|Identify unique instances. In SaaS environment, CRN is the instance id.|
-   |`USE_NATIVE_SPARK`|When native spark is used for ingestion, thigh parameter value must be `true`.|
-   |`USE_EXTERNAL_SPARK`|When external spark is used for ingestion, thigh parameter value must be `true`.|
+   |`INSTANCE_ID`|Identify unique instances. In SaaS environment, CRN is the instance id. This is a mandatory parameter.|
+   |`USE_NATIVE_SPARK`|When native spark is used for ingestion, this parameter value must be `true`. This is a mandatory parameter.|
+   |`USE_EXTERNAL_SPARK`|When external spark is used for ingestion, this parameter value must be `true`.|
    |`IBM_LH_URL`|This parameter is used only when `USE_EXTERNAL_SPARK=true`. The value is `https://<lh_hostname>`. `<lh_hostname>` is the hostname of {{site.data.keyword.lakehouse_short}} instance.|
    |`IBM_LH_USER_BEARER_TOKEN`|This parameter is used only when `USE_EXTERNAL_SPARK=true`. The bearer token should be generated with User API key. For more information, see https://cloud.ibm.com/docs/account?topic=account-iamtoken_from_apikey.|
    {: caption="Table 1" caption-side="bottom"}
@@ -111,6 +111,7 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
       {: codeblock}
 
       Where the parameters used are listed as follows:
+
       |Parameter|Description|
       |------------|----------|
       |`--source-data-files`|Path to s3 parquet or CSV file or folder. Folder paths must end with “/”. File names are case sensitive.|
@@ -153,6 +154,7 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
       {: codeblock}
 
       The parameters used in the config file ingestion job is listed as follows:
+
       |Parameter|Description|
       |------------|----------|
       |`source-files`|Path to s3 parquet or CSV file or folder. Folder paths must end with “/”|

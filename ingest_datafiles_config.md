@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-27"
+lastupdated: "2024-10-06"
 
 keywords: watsonxdata, staging, config file, target iceberg table, parquet, csv, command line, cli
 
@@ -26,7 +26,7 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Config file ingestion in Presto (Java) ingestion mode
+# Config file ingestion in Presto ingestion mode
 {: #create_ingestconfig}
 
 You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehouse_full}} through the CLI. The configuration file and examples are listed in this topic.
@@ -174,7 +174,7 @@ source-files:s3://cust-bucket/warehouse/
 ```
 {: screen}
 
-In general, this option does not require a staging location. However, a few exceptional scenarios are there when a staging location must be specified. When the staging location is not used, make sure that the hive catalog configured with Presto (Java) can be used with source-files location. The following are the exceptional cases where a staging location is required:
+In general, this option does not require a staging location. However, a few exceptional scenarios are there when a staging location must be specified. When the staging location is not used, make sure that the hive catalog configured with Presto can be used with source-files location. The following are the exceptional cases where a staging location is required:
 - Any or all parquet files in the folder are huge.
 - Any or all parquet files in the folder have special columns, such as TIME.
 {: note}

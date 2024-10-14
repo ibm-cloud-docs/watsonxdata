@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-25"
+lastupdated: "2024-10-07"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -27,7 +27,7 @@ completion-time: 10 minutes
 {: toc-completion-time="0.25h"}
 
 
-The **Lite** plan allows you to provision an {{site.data.keyword.lakehouse_full}} instance that is free to use, with limits on capacity (2000 Resource Units), and features for a time frame of 30 days. You can use the account to create Lite plan instance based on three different use cases (Generative AI, High Performance BI and Data Engineering Workloads), explore and familiarize yourself with {{site.data.keyword.lakehouse_short}}. For more information about the features and limitations of Lite plan, see [Lite plan](watsonxdata?topic=watsonxdata-pricing-plans-1#limitations-lite){: external}.
+The **Lite** plan allows you to provision an {{site.data.keyword.lakehouse_full}} instance that is free to use, with limits on capacity (2000 Resource Units), and features for a time frame of 30 days. You can use the account to create Lite plan instance based on three different use cases (Generative AI, High Performance BI and Data Engineering), explore and familiarize yourself with {{site.data.keyword.lakehouse_short}}. For more information about the features and limitations of Lite plan, see [Lite plan](watsonxdata?topic=watsonxdata-pricing-plans-1#limitations-lite){: external}.
 {: shortdesc}
 
 When the allocated Resource Units or time runs out, all Lite instances become inactive and you can no longer access it.
@@ -81,6 +81,7 @@ To begin with the {{site.data.keyword.lakehouse_short}} features, UI provides on
 
 
 
+
 ## Querying data by using sample worksheet
 {: #hp_03}
 {: step}
@@ -105,6 +106,10 @@ Use the **Start working with data** option to query data.
 {: step}
 
 Use the **Ingest data into watsonx.data** option for data ingestion. Before performing data ingestion, associate a storage. If you use a trial account, a new IBM Cloud Object Storage instance is automatically provisioned with default name (watsonx-data-cos), and a new bucket is attached with default name (watsonx-data-instanceId). If you use a paid account, you must provision a new IBM Cloud Object Storage instance from [Create COS instance](https://cloud.ibm.com/objectstorage/create){: external} page.
+
+
+The storage associated is used as a data bucket by Milvus and as an engine home bucket by Spark.
+{: note}
 
 6. If you select **Ingest data into watsonx.data**, the **Data manager** page opens.
 
@@ -144,7 +149,7 @@ Use the **Ingest data into watsonx.data** option for data ingestion. Before perf
 
         a. **Discover COS instance** : Select the existing IBM COS instance and the bucket to be attached to it.
 
-        b. **Register my own** : Provision a new IBM COS instance. See [Create COS instance](https://cloud.ibm.com/objectstorage/create){: external}. You must provision and register new instance.
+        b. **Register my own** : You can use any existing IBM COS bucket from an existing instance or provision a new instance. To provision a new IBM COS instance, see [Create COS instance](https://cloud.ibm.com/objectstorage/create){: external}.
 
 
     To explore how the {{site.data.keyword.lakehouse_short}} service interacts with the data you bring in, see [Adding your storage and querying data](watsonxdata?topic=watsonxdata-tutorial_prov_custbckt1).
@@ -198,8 +203,8 @@ When the allocated Resource Units or time expires, the instance becomes inactive
 
 If you choose to continue using watsonx.data by creating an Enterprise {{site.data.keyword.lakehouse_short}} instance, you can use the same storage that has data from your Lite plan. 
 
-2. Either before or after your lite plan has concluded, create an enterprise plan instance. For more information, see [Enterprise plan](watsonxdata?topic=watsonxdata-getting-started_1).
+3. Either before or after your lite plan has concluded, create an enterprise plan instance. For more information, see [Enterprise plan](watsonxdata?topic=watsonxdata-getting-started_1).
 
-3. Go to the **Quick start watsonx.data console** > **Configure bucket** page, specify the COS bucket details that you own (which stores data from the Lite plan). For more information, see [Quick start {{site.data.keyword.lakehouse_short}} console](watsonxdata?topic=watsonxdata-quick_start).
+4. Go to the **Quick start watsonx.data console** > **Configure bucket** page, specify the COS bucket details that you own (which stores data from the Lite plan). For more information, see [Quick start {{site.data.keyword.lakehouse_short}} console](watsonxdata?topic=watsonxdata-quick_start).
 
 When the setup is complete, the watsonx.data home page (enterprise plan) opens. From the navigation menu, select **Data manager** to view the COS storage bucket with data from the Lite plan.

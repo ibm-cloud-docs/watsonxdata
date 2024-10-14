@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-22"
+lastupdated: "2024-09-30"
 
 keywords: watsonx.data, ikc, configuring, knowledgecatalog
 subcollection: watsonxdata
@@ -26,8 +26,8 @@ Following are the requirements to integrate {{site.data.keyword.lakehouse_short}
 - Use {{site.data.keyword.lakehouse_short}} connector in DataStage to read or ingest data into {{site.data.keyword.lakehouse_short}}.
 - Make sure that Data Access Service (DAS) is enabled in {{site.data.keyword.lakehouse_short}} to enable data ingestion in DataStage.
 - Presto engine must be provisioned in {{site.data.keyword.lakehouse_short}} to read and ingest data in DataStage.
-- Amazon S3 storage or storage must be connected to {{site.data.keyword.lakehouse_short}} to enable data ingestion in DataStage.
-- The Amazon S3 storage must be connected to the Iceberg catalog, which must be associated to the Presto engine to enable data ingestion in DataStage.
+- Amazon S3 or IBM Cloud Object storage must be connected to {{site.data.keyword.lakehouse_short}} to enable data ingestion in DataStage.
+- The Amazon S3 or IBM Cloud Object storage must be connected to the Iceberg catalog, which must be associated to the Presto engine to enable data ingestion in DataStage.
 
 For more information about connecting to a data source in DataStage, see [Connecting to a data source in DataStage](https://www.ibm.com/docs/en/cloud-paks/cp-data/5.0.x?topic=connectors-connecting-data-source-in-datastage).
 

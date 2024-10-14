@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-13"
+lastupdated: "2024-10-10"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -37,6 +37,6 @@ An engine in {{site.data.keyword.lakehouse_short}} runs SQL queries on your data
     |    |  **Coordinator nodes (max. 1)**: Select the run rate for coordinator node (you can have a maximum of 1 node).  |
     |    |  **Worker nodes (max. 18)**: Select the number of worker nodes and run rate (you can have a maximum of 18 nodes).  |
     | Associated catalogs (optional) | Associate the available catalogs with the engine if necessary.  |
-    {: caption="Table 1. Add engine details" caption-side="bottom"}
+    {: caption="Add engine details" caption-side="bottom"}
 
 1. Click **Create**.

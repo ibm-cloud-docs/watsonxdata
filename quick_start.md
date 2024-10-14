@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-10-10"
 
 keywords: lakehouse, watsonx data, quick start, engine, catalog, bucket
 subcollection: watsonxdata
@@ -49,7 +49,7 @@ In the **Configure bucket** page, complete the following steps:
      | Access key | Enter your access key. |
      | Secret key | Enter your secret key. |
      | Connection status | Click the **Test connection** link to test whether the bucket connection with {{site.data.keyword.lakehouse_short}} is successful or not. The system displays the status message.|
-     {: caption="Table 1. Add bucket " caption-side="bottom"}
+     {: caption="Add bucket " caption-side="bottom"}
 
 2. Click **Next**.
 
@@ -89,7 +89,7 @@ In the **Configure engine** page, complete the following steps:
    | Small (11.2 RUs/hour) | Includes 1 coordinator node and 3 worker nodes. All nodes are cache-optimized. |
    | Medium (19.6 RUs/hour) | Includes 1 coordinator node and 6 worker nodes. All nodes are cache-optimized. |
    | Large (36.4 RUs/hour) | Includes 1 coordinator node and 12 worker nodes. All nodes are cache-optimized. |
-   {: caption="Table 2. Engine size " caption-side="bottom"}
+   {: caption="Engine size " caption-side="bottom"}
 
 3. Click **Next**.
 

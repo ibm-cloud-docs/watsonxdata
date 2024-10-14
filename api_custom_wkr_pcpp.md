@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-10-10"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -27,7 +27,7 @@ You can customize the worker configuration properties through an API for Presto 
 | `system-mem-limit-gb` | Integer | Limit {1, 1e13} |
 | `system-mem-shrink-gb` | Integer | Limit {1, 1e13} |
 | `system-mem-pushback-enabled` | Boolean | True or False |
-{: caption="Table 1. Configuration properties for Presto (C++) - worker nodes" caption-side="bottom"}
+{: caption="Configuration properties for Presto (C++) - worker nodes" caption-side="bottom"}
 
 ## Properties to be customized under support guidance
 {: #api_custom_sprt_pcpp}
@@ -40,4 +40,4 @@ Though most of the properties can be customized by the watsonx.data administrato
 | `system-mem-pushback-enabled` | Boolean | True or False |
 | `system-mem-limit-gb` | Integer | Limit{1, 100000} |
 | `system-mem-shrink-gb` | Integer | Limit{1, 100000} |
-{: caption="Table 2. Properties to be customized under support guidance" caption-side="bottom"}
+{: caption="Properties to be customized under support guidance" caption-side="bottom"}

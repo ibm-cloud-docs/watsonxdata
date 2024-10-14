@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-10-10"
 
 keywords: lakehouse, watsonx data, events, audit, activity
 
@@ -33,7 +33,7 @@ The following table lists the events generated at watsonx.data (platform) level:
 | `lakehouse.lakehouse.delete`      | Generated when a watsonx.data instance is deleted.|
 | `lakehouse.presto.delete`         | Generated when a Presto (Java) group is deleted. |
 | `lakehouse.hms.delete`            | Generated when a metastore is deleted. |
-{: caption="Table 1. Actions that generate platform events" caption-side="bottom"}
+{: caption="Actions that generate platform events" caption-side="bottom"}
 
 ## Engines events
 {: #at_actions_engines}
@@ -42,7 +42,7 @@ The following table lists the events generated at watsonx.data (platform) level:
 | Action                            | Description |
 |-----------------------------------|-------------|
 | `lakehouse.engines.list`           | Generated when engines are listed. |
-{: caption="Table 2. Lists of engine events" caption-side="bottom"}
+{: caption="Lists of engine events" caption-side="bottom"}
 
 
 
@@ -63,7 +63,7 @@ The following table lists the events generated at watsonx.data (platform) level:
 |`lakehouse.presto_engine.refresh` | Generated when Presto (Java) is restarted.           |
 |`lakehouse.presto_engine_catalog.add` | Generated when catalog is added to Presto (Java) engine.|
 |`lakehouse.instance.list` | Generated when list of deployments is fetched.          |
-{: caption="Table 2. Lists of Presto (Java) engine events" caption-side="bottom"}
+{: caption="Lists of Presto (Java) engine events" caption-side="bottom"}
 
 
 ## Presto (C++) events
@@ -82,7 +82,7 @@ The following table lists the events generated at watsonx.data (platform) level:
 |`lakehouse.prestissimo_engine.scale`   |Generated when Presto (C++) engine is scaled.|
 |`lakehouse.prestissimo_engine.refresh`   |Generated when Presto (C++) is restarted.|
 |`lakehouse.prestissimo_engine_catalog.add` | Generated when catalog is added to Presto (C++) engine.|
-{: caption="Table 2. Lists of Presto (C++) engine events" caption-side="bottom"}
+{: caption="Lists of Presto (C++) engine events" caption-side="bottom"}
 
 
 ## Spark engine events
@@ -115,7 +115,7 @@ The following table lists the events generated at watsonx.data (platform) level:
 |`lakehouse.spark_engine.pause` | Generated when a Spark engine is paused.|
 |`lakehouse.spark_engine.resume` | Generated when a Spark engine is resumed.|
 |`lakehouse.spark_engine.scale` | Generated when a Spark engine is scaled.|
-{: caption="Table 11. Lists of data policy events" caption-side="bottom"}
+{: caption="Lists of data policy events" caption-side="bottom"}
 
 
 
@@ -129,7 +129,7 @@ The following table lists the events generated at watsonx.data (platform) level:
 |`lakehouse.db2_engine.create`   |Generated when a new Db2 engine is created.|
 |`lakehouse.db2_engine.delete`   |Generated when a Db2 engine is deleted.|
 |`lakehouse.db2_engine.update`   |Generated when a Db2 engine is updated.|
-{: caption="Table 2. Lists of Db2 engine events" caption-side="bottom"}
+{: caption="Lists of Db2 engine events" caption-side="bottom"}
 
 
 ## Netezza engines events
@@ -141,7 +141,7 @@ The following table lists the events generated at watsonx.data (platform) level:
 |`lakehouse.netezza_engine.create`|  Generated when netezza engine is created.|
 |`lakehouse.netezza_engine.delete`|  Generated when netezza engine is deleted.|
 |`lakehouse.netezza_engine.update`|  Generated when netezza engine is updated.|
-{: caption="Table 2. Lists of Netezza engine events" caption-side="bottom"}
+{: caption="Lists of Netezza engine events" caption-side="bottom"}
 
 ## Other engine events
 {: #at_other_engines}
@@ -151,7 +151,7 @@ The following table lists the events generated at watsonx.data (platform) level:
 |`lakehouse.other_engine.list`|   Generated when other engines are listed.|
 |`lakehouse.other_engine.create`|   Generated when other engine is created.|
 |`lakehouse.other_engine.delete`| Generated when other engine is deleted.|
-{: caption="Table 2. Lists of other engine events" caption-side="bottom"}
+{: caption="Lists of other engine events" caption-side="bottom"}
 
 
 ## Storage events
@@ -170,7 +170,7 @@ The following table lists the events generated at watsonx.data (platform) level:
 |`lakehouse.bucket_registration_activate.add`|Generated when storage is activated.|
 |`lakehouse.bucket_registration_activate.remove`|Generated when storage is deactivated.|
 |`lakehouse.storage_hdfs_registration.create`|Generated when HDFS storage is added/created.|
-{: caption="Table 3. Lists of storage events" caption-side="bottom"}
+{: caption="Lists of storage events" caption-side="bottom"}
 
 
 
@@ -196,7 +196,7 @@ The following table lists the events generated at watsonx.data (platform) level:
 |`lakehouse.column.list`|Generated when all columns of a table is listed.|
 |`lakehouse.column.create`|Generated when one or multiple columns to a table in a schema for a given catalog is added.|
 |`lakehouse.column.update`|Generated when the given column - rename column is updated.|
-{: caption="Table 1. Lists of catalog events" caption-side="bottom"}
+{: caption="Lists of catalog events" caption-side="bottom"}
 
 
 
@@ -215,7 +215,7 @@ The following table lists the events generated at watsonx.data (platform) level:
 |`lakehouse.database_registration.delete`|Generated when database is deleted.|
 |`lakehouse.database_registration.update`|Generated when database is updated.|
 |`lakehouse.test_database_connection.evaluate`|Generated when database connection is validated.|
-{: caption="Table 4. Lists of database events" caption-side="bottom"}
+{: caption="Lists of database events" caption-side="bottom"}
 
 ## Authentication events
 {: #at_actions_authentication}
@@ -224,7 +224,7 @@ The following table lists the events generated at watsonx.data (platform) level:
 |-----------------------------------|-------------|
 | `lakehouse.authtoken.create`      | Generated when a user logs in. |
 | `lakehouse.authtoken.delete`      | Generated when a user logs out. |
-{: caption="Table 5. Lists of events for authentication" caption-side="bottom"}
+{: caption="Lists of events for authentication" caption-side="bottom"}
 
 ## Engine user events
 {: #at_actions_engine_users}
@@ -234,7 +234,7 @@ The following table lists the events generated at watsonx.data (platform) level:
 | `lakehouse.engineusers.create`    | Generated when an engine user is created. |
 | `lakehouse.engineusers.update`    | Generated when an engine user is updated. |
 | `lakehouse.engineusers.delete`    | Generated when an engine user is deleted. |
-{: caption="Table 6. Lists of engine user events" caption-side="bottom"}
+{: caption="Lists of engine user events" caption-side="bottom"}
 
 ## Storage user events
 {: #at_actions_bucket_users}
@@ -244,7 +244,7 @@ The following table lists the events generated at watsonx.data (platform) level:
 | `lakehouse.bucketusers.create`    | Generated when a bucket user is created. |
 | `lakehouse.bucketusers.update`    | Generated when a bucket user is updated. |
 | `lakehouse.bucketusers.delete`    | Generated when a bucket user is deleted. |
-{: caption="Table 7. Lists of bucket user events" caption-side="bottom"}
+{: caption="Lists of bucket user events" caption-side="bottom"}
 
 ## Catalog user events
 {: #at_actions_catalog_users}
@@ -254,7 +254,7 @@ The following table lists the events generated at watsonx.data (platform) level:
 | `lakehouse.catalogusers.create`   | Generated when a catalog user is created. |
 | `lakehouse.catalogusers.update`   | Generated when a catalog user is updated. |
 | `lakehouse.catalogusers.delete`   | Generated when a catalog user is deleted. |
-{: caption="Table 8. Lists of catalog user events" caption-side="bottom"}
+{: caption="Lists of catalog user events" caption-side="bottom"}
 
 ## Database connection users events
 {: #at_actions_database_connection_users}
@@ -264,7 +264,7 @@ The following table lists the events generated at watsonx.data (platform) level:
 | `lakehouse.dbconnusers.create`    | Generated when a database connection user is created. |
 | `lakehouse.dbconnusers.update`    | Generated when a database connection user is updated. |
 | `lakehouse.dbconnusers.delete`    | Generated when a database connection user is deleted. |
-{: caption="Table 9. Lists of database connection user events" caption-side="bottom"}
+{: caption="Lists of database connection user events" caption-side="bottom"}
 
 ## Metastore user events
 {: #at_actions_metastore_users}
@@ -274,7 +274,7 @@ The following table lists the events generated at watsonx.data (platform) level:
 | `lakehouse.metastoreusers.create` | Generated when a metastore user is created. |
 | `lakehouse.metastoreusers.update` | Generated when a metastore user is updated. |
 | `lakehouse.metastoreusers.delete` | Generated when a metastore user is deleted. |
-{: caption="Table 10. Lists of metastore user events" caption-side="bottom"}
+{: caption="Lists of metastore user events" caption-side="bottom"}
 
 ## Data policy events
 {: #at_actions_data_policy}
@@ -284,7 +284,7 @@ The following table lists the events generated at watsonx.data (platform) level:
 | `lakehouse.datapolicy.create`     | Generated when a data policy is created. |
 | `lakehouse.datapolicy.update`     | Generated when a data policy is updated. |
 | `lakehouse.datapolicy.delete`     | Generated when a data policy is deleted. |
-{: caption="Table 11. Lists of data policy events" caption-side="bottom"}
+{: caption="Lists of data policy events" caption-side="bottom"}
 
 
 ## Events for Drivers
@@ -296,4 +296,4 @@ The following table lists the events generated at watsonx.data (platform) level:
 | `lakehouse.driver_registration.list`     | Generated all driver details are listed. |
 | `delete_driver_registration`     | Generated when a driver is deleted. |
 | `lakehouse.driver_registration_engine.add`     | Generated when a driver is associated with engines. |
-{: caption="Table 12. Lists of Driver events" caption-side="bottom"}
+{: caption="Lists of Driver events" caption-side="bottom"}

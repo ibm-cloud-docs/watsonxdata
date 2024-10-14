@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-23"
+lastupdated: "2024-10-10"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -59,7 +59,7 @@ Ensure you have the following details:
      |  Username |	admin|
      |  Password	| UXXXXXXR|
      |jdbc.url |	Provide the JDBC URL.|
-     {: caption="Table 1. Apache Ranger policy " caption-side="bottom"}
+     {: caption="Apache Ranger policy " caption-side="bottom"}
 
 
     d. The service is successfully added in the PRESTO resource list. Click the service name to verify that the default policies are added.
@@ -88,7 +88,7 @@ Ensure you have the following details:
      |List resources|	Click the link to load the resources that are available in the Apache Ranger server.|
      |Resources	|Select the resource for which the Apache Ranger policy must be enabled.|
      |Enable data policy within watsonx.data	|Select the checkbox to enable data policy along with Apache Ranger policy.|
-     {: caption="Table 2. Integrate service " caption-side="bottom"}
+     {: caption="Integrate service " caption-side="bottom"}
 
 
     f. Click **Integrate**. The Apache Ranger policy is integrated and listed in the Access Control page.

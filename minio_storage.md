@@ -47,4 +47,4 @@ MinIO is a high-performance, S3 compatible object store. It is built for large s
  | Catalog type | Select the catalog type from the list. The recommended catalog is Apache Iceberg. The other options for catalog are Apache Hive, Apache Hudi and Delta Lake.|
  | Catalog name | Enter the name of your catalog.|
  | Create | Click Create to create the storage. |
- {: caption="Table 1. Register bucket" caption-side="bottom"}
+ {: caption="Register bucket" caption-side="bottom"}

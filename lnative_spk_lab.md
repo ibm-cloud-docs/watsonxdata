@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-09-22"
+lastupdated: "2024-09-27"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -51,6 +51,7 @@ As Spark labs are ephemeral in nature, you must back up the data stored periodic
 
 3. Configure one of the following details:
     **JSON Inputs**
+
     **Form Inputs**
 
 4. If you are configuring **JSON Inputs**, click **JSON Inputs** and configure the following details:

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-10-10"
 
 keywords: lakehouse, watsonx data, iam, access, role
 
@@ -47,7 +47,7 @@ The following table describes the privileges that you can assign to platform man
 | Unregister own buckets | Y | Y |
 | Register own databases | Y | Y |
 | Unregister own databases | Y | Y |
-{: caption="Table 1. Roles and privileges for {{site.data.keyword.lakehouse_short}} formation" caption-side="bottom"}
+{: caption="Roles and privileges for {{site.data.keyword.lakehouse_short}} formation" caption-side="bottom"}
 
 ## Platform access roles
 {: #platform_access_role}

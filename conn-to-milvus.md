@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-21"
+lastupdated: "2024-09-30"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -49,7 +49,7 @@ Make sure that the following items are installed or available:
 
     ```bash
     print(fmt.format("start connecting to Milvus"))
-    connections.connect(host="<host>", port="<port>", secure=True, server_name="localhost", user="apikey", password="<api-key>")
+    connections.connect(host="<host>", port="<port>", secure=True, user="apikey", password="<api-key>")
     has = utility.has_collection("hello_milvus")
     print(f"Does collection hello_milvus exist in Milvus: {has}")
     ```
@@ -59,7 +59,7 @@ Make sure that the following items are installed or available:
 
     ```bash
     print(fmt.format("start connecting to Milvus"))
-    connections.connect(host="<host>", port="<port>", secure=True, server_name="localhost", user="ibmlhapikey", password="<api-key>")
+    connections.connect(host="<host>", port="<port>", secure=True, user="ibmlhapikey", password="<api-key>")
     has = utility.has_collection("hello_milvus")
     print(f"Does collection hello_milvus exist in Milvus: {has}")
     ```
@@ -69,7 +69,7 @@ Make sure that the following items are installed or available:
 {: #conn-to-milvusatoken}
 
 ```bash
-connections.connect(host="<host>", port="<port>", secure=True, server_name="localhost", user="ibmlhtoken", password="<token>")
+connections.connect(host="<host>", port="<port>", secure=True, user="ibmlhtoken", password="<token>")
 ```
 {: codeblock}
 

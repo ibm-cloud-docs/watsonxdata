@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-24"
+lastupdated: "2024-10-10"
 
 keywords: lakehouse, storage, catalog, watsonx.data
 
@@ -48,7 +48,7 @@ If you select **Azure Data Lake Storage Gen1 Blob** from the **Type** drop-down,
  | Catalog type | Select the catalog type from the list. The recommended catalog is Apache Iceberg. The other options for catalog are Apache Hive, Apache Hudi, and Delta Lake. |
  | Catalog name | Enter the name of your catalog. |
  | Create | Click Create to create the storage. |
- {: caption="Table 1. Register storage" caption-side="bottom"}
+ {: caption="Register storage" caption-side="bottom"}
 
  If you select **Azure Data Lake Storage Gen2** from the **Type** drop-down, configure the following details:
 
@@ -66,4 +66,4 @@ If you select **Azure Data Lake Storage Gen1 Blob** from the **Type** drop-down,
  | Catalog type | Select the catalog type from the list. The recommended catalog is Apache Iceberg. The other options for catalog are Apache Hive, Apache Hudi, and Delta Lake. |
  | Catalog name | Enter the name of your catalog. |
  | Create | Click Create to create the storage. |
- {: caption="Table 1. Register storage" caption-side="bottom"}
+ {: caption="Register storage" caption-side="bottom"}

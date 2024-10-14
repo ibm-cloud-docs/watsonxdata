@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-26"
+lastupdated: "2024-10-09"
 
 keywords: lakehouse
 
@@ -34,6 +34,12 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+
+## Incorrect glossary format for semantic enrichment
+{: #known_issues26909}
+
+A glossary upload to the semantic enrichment feature might appear to be successful, even when the uploaded glossary is in an incorrect format or does not adhere to the recommended file template format.
+
 ## Sync all objects and metadata deletion
 {: #known_issues26640}
 
@@ -52,7 +58,7 @@ When a column name that contains spaces is applied with a data protection row fi
 ## Inconsistent CSV and Parquet file ingestion behaviour
 {: #known_issues26920}
 
-Despite the design specifications stating that CSV files should only be ingested into tables created from CSV files, and parquet files should only be ingested into tables created from parquet files, there is a discrepancy in the actual behaviour where users are able to ingest CSV files into parquet tables and vice versa. This can result in unexpected results, data quality issues, or performance problems if the schema or formatting of the CSV or parquet file does not align with the expected structure of the target table.
+Despite the design specifications stating that CSV files should only be ingested into tables created from CSV files, and parquet files should only be ingested into tables created from parquet files, there is a discrepancy in the actual behaviour where users are able to ingest CSV files into parquet tables. This can result in unexpected results, data quality issues, or performance problems if the schema or formatting of the CSV or parquet file does not align with the expected structure of the target table.
 
 ## Invalid file associations in Presto resource group through UI and engine restart issues
 {: #known_issues14722}
@@ -129,7 +135,7 @@ When you attempt to read Parquet v2 tables through Presto (C++) that were create
 ## Attempting to query Query History and Monitoring Management (QHMM) related tables using Presto (C++) engines might encounter errors
 {: #known_issues14083}
 
-When you attempt to query QHMM related tables using Presto (C++) engines, you might encounter errors due to unsupported file formats. Presto (C++) supports only DWRF and Parquet v1 formats. You can not use Presto (C++) to query data or tables in other formats.
+When you attempt to query QHMM related tables using Presto (C++) engines, you might encounter errors due to unsupported file formats. Presto (C++) supports only Parquet v1 formats. You can not use Presto (C++) to query data or tables in other formats.
 
 **Workaround:** You can switch to use Presto (Java) engines to query QHMM related tables.
 
@@ -225,6 +231,13 @@ When you query an external table with `CHAR` data type columns, the query fails 
 
 When using the AWS Glue Data Catalog to manage a bucket or storage location containing both Iceberg and Hive tables, attempting to access Iceberg tables from the Hive catalog gives, `Not a Hive table` error and attempting to access Hive tables from the Iceberg catalog gives, `Not an Iceberg table` error.
 
+## Spark application submission fails when DAS (Data Access Service) is enabled for default MinIO buckets
+{: #known_issues12143_15986_1}
+
+DAS does not currently support default MinIO buckets or object storage that use HTTP endpoints.
+
+**Workaround:** You can disable DAS or make sure that your default MinIO buckets or object storage are configured with HTTPS endpoints.
+
 ## Default MinIO bucket access through S3 proxy is unavailable
 {: #known_issues12143_15986}
 
@@ -312,12 +325,12 @@ The {{site.data.keyword.lakehouse_short}} Teradata connector does not currently 
 
 **Workaround:** If you encounter the 502 error, reload the Spark history UI page after waiting 1-5 seconds. This should allow enough time for the server to become operational.
 
-## Cross catalog schema creation anomaly in Presto (Java).
+## Cross catalog schema creation anomaly in Presto.
 {: #known_issues8937}
 
-An anomaly exists in schema creation for Hive and Iceberg catalogs managed by Presto (Java). When using a common Hive Metastore Service for multiple catalogs (Example, an Iceberg catalog and a Hive catalog, or two Iceberg or Hive catalogs), creating a schema in one catalog might create it in a wrong catalog. This occurs if the location specified during schema creation belongs to a different catalog than intended.
+An anomaly exists in schema creation for Hive and Iceberg catalogs managed by Presto. When using a common Hive Metastore Service for multiple catalogs (Example, an Iceberg catalog and a Hive catalog, or two Iceberg or Hive catalogs), creating a schema in one catalog might create it in a wrong catalog. This occurs if the location specified during schema creation belongs to a different catalog than intended.
 
-**Workaround:** You must always explicitly provide the correct storage path associated with the target catalog when using `CREATE SCHEMA` statements in Presto (Java). This ensures the schema is created in the desired location.
+**Workaround:** You must always explicitly provide the correct storage path associated with the target catalog when using `CREATE SCHEMA` statements in Presto. This ensures the schema is created in the desired location.
 
 ## Presto (Java) queries with many columns and size exceeding default limit.
 {: #known_issues3177}
@@ -416,13 +429,13 @@ collection.query(expr='', fields=['count(*)'])
 
 **Elasticsearch** connector requires users to explicitly specify nested JSON structures as arrays of type ROW for proper loading and querying. To process such structures, use the UNNEST operation.
 
-## Limitation: Users can create 3 instances of Milvus service for a single instance of watsonx.data in IBM Cloud.
+## Limitation: Users can create 3 instances of Milvus service for a single instance of {{site.data.keyword.lakehouse_short}} in IBM Cloud.
 {: #known_issues6821}
 
-## Issue: Unable to create views in Presto (Java).
+## Issue: Unable to create views in Presto.
 {: #known_issues1.0.0_6}
 
-Presto (Java) describes a view in a mapped database as a TABLE rather than a VIEW. This is apparent to JDBC program connecting to the Presto (Java) engine.
+Presto describes a view in a mapped database as a TABLE rather than a VIEW. This is apparent to JDBC program connecting to the Presto engine.
 
 ## Issue: Using special characters in schema, table, or column names.
 {: #known_issues1.0.0_4}

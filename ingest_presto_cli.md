@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-24"
+lastupdated: "2024-10-10"
 
 keywords: watsonxdata, commands, command line interface, cli
 
@@ -26,7 +26,7 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Presto (Java) ingestion through **ibm-lh** tool
+# Presto ingestion through **ibm-lh** tool
 {: #ingest_presto_cli}
 
 Ingesting data files from S3 or local location into {{site.data.keyword.lakehouse_full}} is done by using two options that are supported in the **ibm-lh** tool.
@@ -46,7 +46,7 @@ export ENABLED_INGEST_MODE=PRESTO
 ```
 {: codeblock}
 
-Set the environment variables for `SOURCE_S3_CREDS` and `STAGING_S3_CREDS` based on the requirements before starting an ingestion job by using Presto (Java) by running the following commands:
+Set the environment variables for `SOURCE_S3_CREDS` and `STAGING_S3_CREDS` based on the requirements before starting an ingestion job by using Presto by running the following commands:
 
 ```bash
 export SOURCE_S3_CREDS="AWS_ACCESS_KEY_ID=,AWS_SECRET_ACCESS_KEY=,ENDPOINT_URL=,AWS_REGION=,BUCKET_NAME="
@@ -79,7 +79,7 @@ Different options and variables that are supported in a command line and configu
    |target-table|Data migration target table. `<catalog>.<schema>.<table1>`. This is a mandatory parameter to run an ingestion job. Example: `<iceberg.demo.customer1>`|`--target-table <TARGET_TABLES>`|
    |trust-store-path|Path of the truststore to access the ingestion engine. This is used to establish SSL connections. This is a mandatory parameter to run an ingestion job.|`--trust-store-path <TRUST_STORE_PATH>`|
    |trust-store-password|Password of truststore to access the ingestion engine. This is used to establish SSL connections. This is a mandatory parameter to run an ingestion job.|`--trust-store-password <TRUST_STORE_PASSWORD>`|
-{: caption="Table 1. Command line options and variables" caption-side="bottom"}
+{: caption="Command line options and variables" caption-side="bottom"}
 
 * **Configuration file** option
 
@@ -92,7 +92,7 @@ Different options and variables that are supported in a command line and configu
       |create-if-not-exist|Create target table if not existed|`create-if-not-exist:<true/false>`|
       |ingestion-engine-endpoint|Specifies connection parameters of the ingestion engine. Endpoint of ingestion engine. hostname=`<hostname>`, port=`<port>`|`ingestion-engine:hostname=<hostname>, port=<port>`|
       |target-table|Data migration target table. Only one target table can be specified. `<catalog>.<schema>.<table1>`|`target-table:<table_name>`|
-   {: caption="Table 2. Global ingest config options and variables" caption-side="bottom"}
+   {: caption="Global ingest config options and variables" caption-side="bottom"}
 
    * Individual ingest config section
 
@@ -116,4 +116,4 @@ Different options and variables that are supported in a command line and configu
       |target-table-storage|Target table file storage location|`target-table-storage:<TARGET_TABLE_STORAGE>`|
       |trust-store-path|Path of truststore to access ingestion engine. This is used to establish SSL connections. This is a mandatory parameter to run an ingestion job.|`trust-store-path:<TRUST_STORE_PATH>`|
       |trust-store-password|Password of truststore to access the ingestion engine. This is used to establish SSL connections. This is a mandatory parameter to run an ingestion job.|`trust-store-password:<TRUST_STORE_PASSWORD>`|
-   {: caption="Table 3. Individual ingest config options and variables" caption-side="bottom"}
+   {: caption="Individual ingest config options and variables" caption-side="bottom"}

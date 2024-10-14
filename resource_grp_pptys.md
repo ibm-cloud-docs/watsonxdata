@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-26"
+lastupdated: "2024-10-10"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -27,7 +27,7 @@ The following sections cover the resource group properties that you can configur
 | [`rootGroups`](#rootGroups_pptys) | Array | Required | Defines the specifications for resource groups. |
 | [`selectors`](#selectors_pptys) | Array | Required | Specifies the selector configurations for the resource groups. |
 | [`cpuQuotaPeriod`](#cpuQuotaPeriod_prpty) | String | Optional | Specifies the CPU quota period. This property must match with the pattern `^\d+(.\d+)?[smhd]$`. |
-{: caption="Table 1. Main properties" caption-side="bottom"}
+{: caption="Main properties" caption-side="bottom"}
 
 ## `rootGroups` properties
 {: #rootGroups_pptys}
@@ -48,7 +48,7 @@ The following sections cover the resource group properties that you can configur
 | `hardCpuLimit` | String | Optional | Specifies the hard CPU limit. It must match the pattern `^\d+(\.\d+)?[smhd]$`. |
 | `perQueryLimits` | Object | Optional | Specifies per-query limits. Example: `"perQueryLimits": { "executionTimeLimit": "30m", "totalMemoryLimit": "2GB", "cpuTimeLimit": "1h" }`. The object can have one, two, or three of the following limits. Negative values are not allowed for any of the following limits. 1. `executionTimeLimit` (**Type**: String, **Pattern**: This property must match with the pattern `^\d+(.\d+)?[smhd]$`.), 2. `totalMemoryLimit` (**Type**: String, **Pattern**: This property must match with the pattern `^\s*(\d+(?:\.\d+)?)\s*([a-zA-Z]+)\s*$`.), 3. `cpuTimeLimit` (**Type**: String, **Pattern**: This property must match with the pattern `^\d+(.\d+)?[smhd]$`.) |
 | `workersPerQueryLimit` | Integer or null | Optional | Specifies the workers per query limit. Allowed values (minimum to maximum): -2147483648 to 2147483647. The value must be greater than or equal to `softConcurrencyLimit`. It must not start with `0`. For example, `01`, `05`. Specify the values as `1`, `5`. `0` alone is a valid value. |
-{: caption="Table 2. rootGroups properties" caption-side="bottom"}
+{: caption="rootGroups properties" caption-side="bottom"}
 
 ## `selectors` properties
 {: #selectors_pptys}
@@ -64,7 +64,7 @@ The following sections cover the resource group properties that you can configur
 | `schema` | String or null (Strings can have any valid regular expression (`.*`).) | Optional | Specifies the schema. |
 | `principal` | String or null (Strings can have any valid regular expression (`.*`).) | Optional | Specifies the principal regex pattern. |
 | `group` | String | Required | The group name must be from the available names in the resource group. For redirecting to a subgroup, use `"group": "groupname.subgroupname"`. You can also use dynamic values like `${SOURCE}`, `${USER}`, and `${SCHEMA}` as used in root group names. You cannot have `null` in `group`. |
-{: caption="Table 3. selectors properties" caption-side="bottom"}
+{: caption="selectors properties" caption-side="bottom"}
 
 In the `source` and `user` regex, you can use the provided name in the format `(?<sampleName>.*)` as a dynamic group name. For example:
 
@@ -116,4 +116,4 @@ In this example, `sampleName` is a dynamic value. Special characters are not all
 | Property name | Type   | Required/Optional | Description |
 |---------------|--------|-------------------|-------------|
 | cpuQuotaPeriod | String | Optional | Specifies the CPU quota period. This property must match with the pattern `^\\d+(\\.\\d+)?[smhd]$` |
-{: caption="Table 4. selectors properties" caption-side="bottom"}
+{: caption="selectors properties" caption-side="bottom"}
