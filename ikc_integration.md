@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-10-15"
 
 keywords: watsonx.data, ikc, configuring, knowledgecatalog
 subcollection: watsonxdata
@@ -15,9 +15,9 @@ subcollection: watsonxdata
 # Integrating with IBM Knowledge Catalog (IKC)
 {: #ikc_integration}
 
-Integrating {{site.data.keyword.lakehouse_full}} with IBM Knowledge Catalog (IKC) provides self-service access to data assets (tables and views) for knowledge workers who need to use those data assets to gain insights.
+Integrating {{site.data.keyword.lakehouse_full}} with IBM Knowledge Catalog (IKC) provides self-service access to data assets (tables and views) for knowledge workers who need to use the data assets to gain insights.
 
-IBM Knowledge Catalog - {{site.data.keyword.lakehouse_short}} integration supports only the following connectors for governance :
+IBM Knowledge Catalog - {{site.data.keyword.lakehouse_short}} integration supports the following connectors for governance:
 * Hive
 * Iceberg
 * Hudi
@@ -32,11 +32,11 @@ IBM Knowledge Catalog - {{site.data.keyword.lakehouse_short}} integration suppor
 ## Before you begin
 {: #prereq_ikc}
 
-For Enabling IKC Integration, ensure to have the following prerequisites.
+To enable IKC integration, ensure the following pre-requisites are met:
 
 - A working {{site.data.keyword.lakehouse_short}} environment.
 - A working IBM Knowledge Catalog (IKC) environment.
-- Make sure that IBM Knowledge Catalog and {{site.data.keyword.lakehouse_short}} are configured with [service-to-service authorization](watsonxdata?topic=watsonxdata-s2s_auth) in {{site.data.keyword.Bluemix_notm}}.
+- IBM Knowledge Catalog and {{site.data.keyword.lakehouse_short}} are configured with [service-to-service authorization](watsonxdata?topic=watsonxdata-s2s_auth) in {{site.data.keyword.Bluemix_notm}}.
 
 Both {{site.data.keyword.lakehouse_short}} and IKC must be present in the {{site.data.keyword.Bluemix_notm}} environment.
 {: note}
@@ -73,8 +73,8 @@ Both {{site.data.keyword.lakehouse_short}} and IKC must be present in the {{site
    | Name | Enter the name of the connection. |
    | Description | Enter a connection description. |
    |Connect to IBM watsonx.data on Cloud Pak for Data| Do not select the checkbox. |
-   | Hostname or IP address | Enter the {{site.data.keyword.lakehouse_short}} instance URL. For more information about retrieving the Hostname, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection). |
-   | Port | Enter the port number. For more information about retrieving the Port, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection). |
+   | Hostname or IP address | Enter the {{site.data.keyword.lakehouse_short}} instance URL. For information about retrieving the Hostname, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection). |
+   | Port | Enter the port number. For information about retrieving the Port, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection). |
    | Instance ID | Enter the instance ID. You can get the instance ID from the {{site.data.keyword.lakehouse_short}} instance home page (information icon). |
    | Instance name | Enter the {{site.data.keyword.lakehouse_short}} instance name. |
    | CRN | Enter the Cloud Resource Name. You can get the CRN from the {{site.data.keyword.lakehouse_short}} instance home page (information icon). |
