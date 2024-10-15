@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-10-15"
 
 keywords: lakehouse, watsonx data, provision, endpoint, resource
 subcollection: watsonxdata
@@ -19,12 +19,11 @@ subcollection: watsonxdata
 {{site.data.keyword.lakehouse_full}} is a data management solution for collecting, storing, querying, and analyzing all your enterprise data with a single unified data platform. It provides a flexible and reliable platform that is optimized to work on open data formats.
 {: shortdesc}
 
-For more information about the developer edition of {{site.data.keyword.lakehouse_short}} and {{site.data.keyword.lakehouse_short}} on Red Hat OpenShift, see [{{site.data.keyword.lakehouse_full}}](https://www.ibm.com/docs/en/watsonxdata/1.1.x).
-
-For more information about using {{site.data.keyword.lakehouse_full}} on Cloud Pak for Data, see [{{site.data.keyword.lakehouse_full}} on Cloud Pak for Data](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.8.x?topic=services-watsonxdata).
-
-
-IBM {{site.data.keyword.lakehouse_short}} as a Service offers three pricing plans. For more information about the pricing plans, see [{{site.data.keyword.lakehouse_short}} pricing plans](watsonxdata?topic=watsonxdata-pricing-plans-1).
+{{site.data.keyword.lakehouse_short}} can be deployed in one of the following ways:
+- Stand-alone software on Red Hat OpenShift. For more information, see [{{site.data.keyword.lakehouse_full}}](https://www.ibm.com/docs/en/watsonxdata/1.1.x).
+- On Cloud Pak for Data. For more information, see [{{site.data.keyword.lakehouse_full}} on Cloud Pak for Data](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.8.x?topic=services-watsonxdata).
+- SaaS - on IBM Cloud and AWS.
+- Additionally the watsonx.data Developer edition can be installed for POC purposes. For more information, see [{{site.data.keyword.lakehouse_full}}](https://www.ibm.com/docs/en/watsonxdata/1.1.x).
 
 
 ## Before you begin

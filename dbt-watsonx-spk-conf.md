@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-25"
+lastupdated: "2024-10-15"
 
 keywords: lakehouse, watsonx.data, spark, cli
 
@@ -15,7 +15,7 @@ subcollection: watsonxdata
 # dbt Configuration (setting up your dbt profile)
 {: #dbt_watsonx_spark_conf}
 
-To connect dbt Core to your Spark engine, configure the `profiles.yml` file that is located in `.dbt` of your home directory.
+To connect dbt core to your Spark engine, configure the `profiles.yml` file that is located in `.dbt` of your home directory.
 
 The following is an example configuration:
 
