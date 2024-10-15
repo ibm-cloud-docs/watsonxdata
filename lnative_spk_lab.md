@@ -84,7 +84,7 @@ As Spark labs are ephemeral in nature, you must back up the data stored periodic
 
     c. In the **Explorer** window, you can view the file system, where you can upload the files, and view logs.
 
-    To delete an already running Spark lab, hover the mouse over the name of the Spark lab in the watsonx.data left navigation pane and click on Delete icon.
+    To delete an already running Spark lab, hover the mouse over the name of the Spark lab in the watsonx.data left navigation pane and click on **Delete** icon.
     {: note}
 
 ## Developing a Spark application
