@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-09-13"
+lastupdated: "2024-10-15"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -25,14 +25,14 @@ Apache airflow supports the following use cases :
 ## Prerequisites
 {: #airflw_spk_preq}
 
-* Apache Airflow standa-lone active instance.
-* User API Keys for watsonx.data (username and api_key).
+* Apache Airflow stand-alone active instance.
+* User API keys for watsonx.data (username and api_key). For example, `username`: `yourid@example.com` and `api_key`: `sfw....cv23`.
 * CRN for watsonx.data (wxd_instance_id). Get the instance ID from the watsonx.data information page.
 * Spark engine id from an active Spark engine (spark_engine_id).
 * Presto external url from an active Presto engine (presto_ext_url).
-* SSL Certificate location which is trusted by the system (if applicable).
-* Catalog associated with Spark and Presto engine (catalog_name).
-* Bucket name associated to the same catalog (bucket_name).
+* SSL certificate location which is trusted by the system (if applicable).
+* Catalog associated with Spark and Presto engines (catalog_name).
+* Name of the bucket associated with the selected catalog. (bucket_name).
 * Install the packages, Pandas and Presto-python-client using the command: `pip install pandas presto-python-client`.
 
 
@@ -40,7 +40,7 @@ Apache airflow supports the following use cases :
 ## Procedure
 {: #airflw_proc}
 
-1. The use case considers a task to ingest the data to Presto. To do that, create a Spark application that ingests Iceberg data to the  watsonx.data catalog. Here,  the sample Python file ingestion-job.py is considered.
+1. The use case considers a task to ingest data to Presto. To do that, create a Spark application that ingests Iceberg data to the watsonx.data catalog. Here,  the sample Python file ingestion-job.py is considered.
 
     ``` bash
     from pyspark.sql import SparkSession
@@ -95,7 +95,7 @@ Apache airflow supports the following use cases :
 
 1. Upload the file to the storage with name, `bucket_name`. For more information, see [Add some objects to your buckets](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage#gs-add-objects).
 
-1. Design a DAG workflow using Python language and save the Python file to the Apache Airflow directory location, `$AIRFLOW_HOME/dags/` directory (Default value of AIRFLOW_HOME is set to ~/airflow).
+1. Design a DAG workflow using Python and save the Python file to the Apache Airflow directory location, `$AIRFLOW_HOME/dags/` directory (Default value of AIRFLOW_HOME is set to ~/airflow).
 
     The following is an example of a workflow, which execute tasks to ingest data to Presto in watsonx.data, and query data from watsonx.data.
     Save the file with the following content, as `wxd_pipeline.py`.
@@ -283,5 +283,5 @@ Apache airflow supports the following use cases :
     ```
     {: codeblock}
 
-1. Log in to the **Apache Airflow**.
+1. Log in to **Apache Airflow**.
 1. Search for `wxd_pipeline.py` job, enable the DAG from **Apache Airflow** console page. The workflow gets executed successfully.
