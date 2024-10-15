@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-24"
+lastupdated: "2024-10-15"
 
 keywords: watsonxdata, qhmm
 
@@ -29,7 +29,7 @@ subcollection: watsonxdata
 # Heap and thread memory dump
 {: #heap_qhmm}
 
-Heap and thread dumps allows you to view and identify memory-related usage issues of an engine. You can create heap and dump on a request basis with the help of an Administrator. After you generate the script, the memory-related diagnostic data will be available in Minio storage.
+Heap and thread dumps allows you to view and identify memory-related usage issues of an engine. You can create heap and dump on a request basis with the help of an administrator. After you generate the script, the memory-related diagnostic data will be available in Minio storage.
 {: shortdesc}
 
 The topic describes the following functions :
@@ -49,10 +49,10 @@ An administrator can create the heap and thread memory dumps either by using API
 * [Creation of heap and memory dump by using Shell script](#shell)
 
 
-### Creation of heap and memory dump by using API
+### Creating heap and memory dump by using API
 {: #api}
 
-The API can trigger the `heap_thread_dumper.sh` shell script for creating the heap and thread memory dump. This API allows you to initiate heap and thread memory dump creation on-demand by sending an HTTP POST request with the following details:
+The API can trigger the `heap_thread_dumper.sh` shell script for creating the heap and thread memory dump. You can use the API to initiate an on-demand HTTP POST request to create heap and thread memory dump. Following are the details:
 
 Endpoint URL: `https://localhost:8481/v1/lh_engine/dump`
 
@@ -88,10 +88,11 @@ curl --location 'https://localhost:8481/v1/lh_engine/dump' \
 ```
 {: codeblock}
 
-### Creation of heap and memory dump by using Shell script
+### Creating heap and memory dump by using Shell script
 {: #shell}
 
-The `heap_thread_dumper.sh` shell scripts present in {{site.data.keyword.lakehouse_short}} facilitates the creation of both heap and thread memory dumps.
+You can use the `heap_thread_dumper.sh` shell script present in {{site.data.keyword.lakehouse_short}} to create heap and thread memory dumps.
+
 
 1. Log in to the {{site.data.keyword.lakehouse_short}} instance where the Presto pods or Docker containers are running.
 
@@ -108,8 +109,11 @@ The `heap_thread_dumper.sh` shell scripts present in {{site.data.keyword.lakehou
 
     Parameter values:
 
+
     `<filename_without_extension>`: The filename of the dump files.
+
     `<thread|heap>`: Specifies whether to create a thread or a heap memory dump.
+
     `<maximum_dump_files>`: The maximum number of dump files to be retained before rolling and archiving.
 
 
@@ -122,7 +126,7 @@ The `heap_thread_dumper.sh` shell scripts present in {{site.data.keyword.lakehou
 ## Extracting heap and thread memory dump data
 {: #extrct}
 
-Retrieve heap and thread memory dump data from the MinIO storage using teh following procedure.
+Retrieve heap and thread memory dump data from the MinIO storage using the following procedure.
 
 1. Log in to **MinIO** user interface.
 
@@ -140,4 +144,4 @@ Retrieve heap and thread memory dump data from the MinIO storage using teh follo
 
 1. Inside each date folder, the data is organized based on the user who executes the queries. The folder name format is `user=<name>`.
 
-1. Use the checkbox(multi or single select) to select the data you want to download and click **Download** button.
+1. Use the checkbox (multi or single select) to select the data you want to download and click the **Download** button.
