@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-09-27"
+lastupdated: "2024-10-15"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -50,11 +50,12 @@ As Spark labs are ephemeral in nature, you must back up the data stored periodic
 2. From the **Welcome to IBM watsonx.data extension** window, click **Manage Connection**. The **Manage Connection watsonx.data** window opens.
 
 3. Configure one of the following details:
-    **JSON Inputs**
 
-    **Form Inputs**
+    * **JSON Inputs**
 
-4. If you are configuring **JSON Inputs**, click **JSON Inputs** and configure the following details:
+    * **Form Inputs**
+
+4. To configure **JSON Inputs**, click **JSON Inputs** and specify the following details:
 
     * **API Key** : Provide the platform API key. To generate the API key, see [Generating the API key](watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmapi-key).
     * **Connection JSON** : Provide the connection details from the watsonx.data user interface. To do that:
@@ -62,7 +63,7 @@ As Spark labs are ephemeral in nature, you must back up the data stored periodic
         2. Click **Infrastructure manager**.
         3. Click your Spark engine that is in running status. In the **Details** tab, from the **VS Code connection configuration** field, click the **View configurations** link. Copy the configuration and use this as the **Connection JSON** field value.
 
-5. If you are configuring **Form Inputs**, click **Form Inputs** and configure the following details:
+5. To configure **Form Inputs**, click **Form Inputs** and specify the following details:
     * **Host address of watsonx.data console** : Provide the host IP address of the watsonx.data install. To retrieve the host IP address, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection).
     * **Environment Type** : Select `SAAS`.
     * **CRN** : The **Instance CRN** of your watsonx.data instance. To retrieve the CRN, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection).
@@ -72,9 +73,9 @@ As Spark labs are ephemeral in nature, you must back up the data stored periodic
 
 3. Create a Spark lab.
 
-    a. To create a new Spark lab, click the + icon. The Create Spark Lab window opens. Specify a unique name for the Spark lab and select the **Spark Version**. The default Spark version is 3.4. You can modify the other optional fields if required.
+    a. To create a new Spark lab, click the + icon. The **Create Spark Lab** window opens. Specify a unique name for the Spark lab and select the **Spark Version**. The default Spark version is 3.4. You can modify the other optional fields if required.
 
-    The `spark.hadoop.wxd.apikey` parameter is configured in the **Spark configurations** field by default while creating Spark lab and need not be explicitly specified.
+    The `spark.hadoop.wxd.apikey` parameter is configured in the **Spark configurations** field by default while creating Spark lab.
     {: note}
 
     b. Click **Create**. Click **Refresh** to see the Spark lab in the left window. This is the dedicated Spark cluster for application development.
