@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-07"
+lastupdated: "2024-10-16"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -83,8 +83,8 @@ Perform the following steps to provision a Lite plan instance from watsonx.data 
 1. You can provision the Lite plan instance based on the following use cases. Select one of the use cases from the list to proceed.
 
     * **Generative AI** : The provisioned instance includes Presto, Milvus and Spark.
-    * **High Performance BI** : The provisioned instance includes Presto C++ and Spark only.
-    * **Data Engineering** : The provisioned instance includes Presto Java + and Spark only.
+    * **High Performance BI** : The provisioned instance includes Presto (C++) and Spark.
+    * **Data Engineering** : The provisioned instance includes Presto (Java) and Spark.
 
 
 1. In the **Summary** page, review the license agreement and select the checkbox to acknowledge the agreement.
