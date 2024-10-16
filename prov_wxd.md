@@ -44,6 +44,8 @@ The new instance cannot be created because of resource capacity restrictions. Pl
 
 The Lite plan is provided for you to try the basic features of {{site.data.keyword.lakehouse_short}} and is available to all {{site.data.keyword.Bluemix_notm}} account types like trial, pay-as-you-go, and subscription. It supports the basic features only. It is not available on AWS and is limited to one {{site.data.keyword.lakehouse_short}} instance per {{site.data.keyword.Bluemix_notm}} account (cross-regional).
 
+To provision a Lite plan instance, see [watsonx.data Lite plan](watsonxdata?topic=watsonxdata-tutorial_prov_lite_1).
+
 ### Key supported features
 {: #supported-features-lite}
 
