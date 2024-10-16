@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-08"
+lastupdated: "2024-10-16"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -11,7 +11,7 @@ subcollection: watsonxdata
 
 {{site.data.keyword.attribute-definition-list}}
 
-# About BI visualization tools
+# Data visualization in {{site.data.keyword.lakehouse_short}} with BI tools
 {: #abt_bi}
 
 

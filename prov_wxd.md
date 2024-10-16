@@ -23,14 +23,14 @@ subcollection: watsonxdata
 - Stand-alone software on Red Hat OpenShift. For more information, see [{{site.data.keyword.lakehouse_full}}](https://www.ibm.com/docs/en/watsonxdata/1.1.x).
 - On IBM Software Hub. For more information, see [{{site.data.keyword.lakehouse_full}} on IBM Software Hub](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.8.x?topic=services-watsonxdata).
 - SaaS - on IBM Cloud and AWS. For more information, see [IBM watsonx.data as a Service on AWS](https://www.ibm.com/docs/en/watsonx/watsonxdata/aws).
-- Additionally the watsonx.data Developer edition can be installed for POC purposes. For more information, see [{{site.data.keyword.lakehouse_full}}](https://www.ibm.com/docs/en/watsonxdata/1.1.x).
+- Additionally the {{site.data.keyword.lakehouse_short}} Developer edition can be installed for POC purposes. For more information, see [{{site.data.keyword.lakehouse_full}}](https://www.ibm.com/docs/en/watsonxdata/1.1.x).
 
 
-The SaaS deployment of watsonx.data is offered under two pricing plans, as follows:
+On IBM Cloud, {{site.data.keyword.lakehouse_short}} is offered under two pricing plans, as follows:
 
-* [Lite plan](#lite-plan-1) - Give link to https://test.cloud.ibm.com/docs-draft/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1
+* [Lite plan](#lite-plan-1) : For information, see [watsonx.data Lite plan](watsonxdata?topic=watsonxdata-tutorial_prov_lite_1).
 
-* [Enterprise plan](#enterprise-plan) - Give link to https://test.cloud.ibm.com/docs-draft/watsonxdata?topic=watsonxdata-getting-started_1
+* [Enterprise plan](#enterprise-plan) : For information, see [watsonx.data enterprise plan](watsonxdata?topic=watsonxdata-getting-started_1).
 
 Each region has a finite number of {{site.data.keyword.lakehouse_short}} instances that are provisioned based on the current compute capacity. Regions might reach their capacity limits temporarily. While IBM adds additional capacity, you can either wait or redirect your request to another region. If the resource capacity is exceeded, you get the following message.
 
