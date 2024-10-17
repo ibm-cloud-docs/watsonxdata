@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-16"
+lastupdated: "2024-10-17"
 
 keywords: lakehouse, watsonx data, provision, endpoint, resource
 subcollection: watsonxdata
@@ -13,7 +13,7 @@ subcollection: watsonxdata
 
 {{site.data.keyword.attribute-definition-list}}
 
-# {{site.data.keyword.lakehouse_full}} subscription plans
+# {{site.data.keyword.lakehouse_short}} subscription plans
 {: #getting-started}
 
 {{site.data.keyword.lakehouse_full}} is a data management solution for collecting, storing, querying, and analyzing all your enterprise data with a single unified data platform. It provides a flexible and reliable platform that is optimized to work on open data formats.
@@ -58,7 +58,7 @@ To provision a Lite plan instance, see [watsonx.data Lite plan](watsonxdata?topi
 ### Limitations
 {: #limitations-lite}
 
-- The Lite plan is limited to 2000 resource units (RUs) before the instance is suspended. The cap value is displayed on the [{{site.data.keyword.Bluemix_notm}} catalog provisioning][def] page and is reflected on your billing page within your {{site.data.keyword.lakehouse_short}} instance upon provisioning. Your plan expires on reaching either the cap limit of 2000 RUs or exceeding the trial period of 30 days.
+- The Lite plan is limited to 2000 resource units (RUs) before the instance is suspended. The cap value is displayed on the [{{site.data.keyword.Bluemix_notm}} catalog provisioning][def] page and is reflected on your billing page within your {{site.data.keyword.lakehouse_short}} instance upon provisioning. Your plan expires on reaching either the limit of 2000 RUs or exceeding the trial period of 30 days.
 - The Lite plan is limited to a maximum of one Presto engine, one Spark engine (small size, single node) or Milvus service with starter size (1.25 RUs per hour) or all three.
 - The Lite plan is limited to the smallest node sizes and profiles for each engine and service. You cannot increase the node size.
 - The Lite plan instances cannot be used for production purposes.
@@ -83,32 +83,3 @@ You must have a pay-as-you-go or subscription {{site.data.keyword.Bluemix_notm}}
 
 - Ability to scale (increase and decrease) node sizes for Presto engines.
 - Ability pause and resume Presto engines.
-
-
-
-
-
-## Review resource unit consumption
-{: #hp_view_lit}
-
-To understand about the resource unit consumption for the components in the {{site.data.keyword.lakehouse_short}} instance, follow the steps:
-
-1. Go to the [{{site.data.keyword.cloud_notm}} catalog](https://cloud.ibm.com/catalog) page, find the **{{site.data.keyword.lakehouse_short}}** tile and click it. The [{{site.data.keyword.lakehouse_short}} provisioning](https://cloud.ibm.com/watsonxdata) page opens.
-
-1. Select the **About** tab.
-
-1. You can read through the **Summary** and **Features**.
-
-1. In the **Pricing estimator**, provide the following inputs and review the **Estimate summary** to assess the hourly cost for the resource units.
-
-
-   | Field | Description |
-   |--------------------------|----------------|
-   |Select platform |Select the platform.|
-   |License |Select the plan.|
-   |Support services|Includes the necessary access control and metastore. The resource unit quantity is visible on the right.|
-   |Engine/Service 1|Select the engine or service of your choice.|
-   |If you select **Presto**|**a**. Select the coordinated node type and number of coordinated nodes. The resource unit quantity is visible on the right. \n **b**. Select the worker node type and number of worker nodes. The resource unit quantity is visible on the right.|
-   |If you select **Milvus**|Select the size of your choice. The resource unit quantity is visible on the right.|
-   |If you select **Spark**|Select the size of your choice. The resource unit quantity is visible on the right.|
-   {: caption="Pricing estimator" caption-side="bottom"}
