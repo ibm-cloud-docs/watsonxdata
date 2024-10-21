@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-10-21"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -39,6 +39,7 @@ You can customize the coordinator and worker configuration properties through an
 | `query.min-expire-age` | String | Limit {1, 1e13}; supported values are numbers with or without units m, s, ms, h |
 | `query.stage-count-warning-threshold` | Integer | Limit {1, 1000} |
 | `task.concurrency` | Integer | Limit {1, 1000} |
+| `task.max-drivers-per-task` | Integer | Limit {1, 100} |
 | `join-distribution-type` | String | Value should be automatic or broadcast or partitioned |
 | `exchange.client-threads` | Integer | Limit {1, 1000} |
 | `exchange.http-client.max-connections` | Integer | Limit {1, 10000} |
