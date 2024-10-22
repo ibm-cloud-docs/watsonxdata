@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-16"
+lastupdated: "2024-10-22"
 
 keywords: watsonxdata, ingesting, object storage bucket, data files, table format. SQL query
 
@@ -74,13 +74,13 @@ In this section, you have a collection of Parquet/CSV files in an S3 folder that
 1. Specify staging directory (For CLI ingestion):
    * Provide the staging-location parameter to designate a staging directory for CSV or specific Parquet files to Parquet conversion. The ingest tool will create it if it does not exist.
 
-   See [Staging location]({{site.data.keyword.ref-cli_commands-link#stag_loc}}){: external} for more details.
+   See [Staging location](watsonxdata?topic=watsonxdata-cli_commands#stag_loc){: external} for more details.
    {: note}
 
 1. Create schema file to specify CSV file properties:
    * Provide the schema parameter to specify CSV file properties such as field delimiter, line delimiter, escape character, encoding and whether header exists in the CSV file.
 
-   See [Schema file specifications]({{site.data.keyword.ref-cli_commands-link#schema_spec}}){: external} for more details.
+   See [Schema file specifications](watsonxdata?topic=watsonxdata-cli_commands#schema_spec){: external} for more details.
    {: note}
 
 1. Initiate server-mode ingestion:
