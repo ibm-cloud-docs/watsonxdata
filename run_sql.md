@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-10-22"
 
 keywords: watsonxdata, sql queries, query workspace
 
@@ -36,9 +36,13 @@ The **Query workspace** has the following components:
 
 - **Engine**: To select an engine and view the associated catalogs.
 
-- **Saved queries**: To view the saved queries.
+- **Filter for tables**: To search the tables and columns.
 
 - **Worksheet**: To write SQL queries.
+
+- **Saved worksheets**: To view the saved queries.
+
+- **Sample worksheets**: To run predefined sample queries to analyze the performance between difference engines on same data set.
 
 The **Query workspace** page provides basic options to **undo, redo, cut, copy, paste, save, clear,** and **delete**.
 
