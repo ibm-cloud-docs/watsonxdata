@@ -42,7 +42,7 @@ The **Query workspace** has the following components:
 
 - **Saved worksheets**: To view the saved queries.
 
-- **Sample worksheets**: To run predefined sample queries to analyze the performance between difference engines on same data set.
+- **Sample worksheets**: To run predefined sample queries to analyze the performance between different engines on the same data set.
 
 The **Query workspace** page provides basic options to **undo, redo, cut, copy, paste, save, clear,** and **delete**.
 
