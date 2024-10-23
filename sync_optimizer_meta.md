@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-23"
+lastupdated: "2024-10-22"
 
 keywords: lakehouse, hms, {{site.data.keyword.lakehouse_short}}, hive, metastore
 
@@ -142,6 +142,6 @@ Activating **Query Optimizer** automatically synchronizes metadata for catalogs 
 
    `<PRESTO_HOST>`: The hostname of Presto engine of which the statistics is collected from. You can find the connection details of Presto engine by clicking on the engine in the Infrastructure manager page of watsonx.data.
 
-   `<PRESTO_USER>`: The Presto username that is used to run the statistics collection. Username can be CPD username, `ibmlhapikey` or `ibmlhtoken`. It is recommended to use `ibmlhapikey`.
+   `<PRESTO_USER>`: The Presto username that is used to run the statistics collection. Username can be `ibmlhapikey` or `ibmlhtoken`. It is recommended to use `ibmlhapikey`.
 
-   `<PRESTO_PWD>`: The Presto username that is used to run the statistics collection. Username can be the CPD password, a base64 API key or token corresponding to the username.
+   `<PRESTO_PWD>`: The Presto password that is used to run the statistics collection. Password can be a base64 API key or token corresponding to the username.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-10-16"
 
 keywords: lakehouse, watsonx data, provision, endpoint, resource
 subcollection: watsonxdata
@@ -55,7 +55,7 @@ The access to provision IBM Cloud resources is governed by using [IAM access](ht
 
 5. Select a location from the list of available locations for {{site.data.keyword.lakehouse_short}} service.
 
-6. Enter the service name. The service name can be any string. This service name is used in the web console to identify the new deployment.
+6. Enter the service name. It can be any string and is used in the web console to identify the new deployment.
 
 7. Select a resource group. If you are organizing your services into resource groups, specify the resource group.
 
@@ -140,7 +140,6 @@ The access to provision IBM Cloud resources is governed by using [IAM access](ht
 
 To quickly get started with the {{site.data.keyword.lakehouse_short}} web console by configuring the infrastructure components, see [Quick start {{site.data.keyword.lakehouse_short}} console](watsonxdata?topic=watsonxdata-quick_start).
 
-Once you complete quick start, Resource Unit consumption begins and will be reported for billing.
-If you do not complete the quick start and provision support services, Resource Units are not consumed and reported for billing.
+After you complete quick start, Resource unit consumption is accounted and billing is started.
 If no Resource Units are consumed within seven (7) days after an instance creation, the unused instance is deleted, after which a new instance can be re-created. For more information, see [Provisioning an instance](#create-by-ui).
 {: important}

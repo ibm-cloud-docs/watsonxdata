@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-24"
+lastupdated: "2024-10-15"
 
 keywords: lakehouse, watsonx.data, presto, cli
 
@@ -12,31 +12,31 @@ subcollection: watsonxdata
 
 {{site.data.keyword.attribute-definition-list}}
 
-# About dbt integration
+# Data Build Tool (dbt) integration
 {: #abt_dbt}
 
-{{site.data.keyword.lakehouse_full}} integrates with Data Build Tool (dbt) which, is a data analytics tool that helps to transform the data in {{site.data.keyword.lakehouse_short}} to simpler and accessible form for business users. It allows analysts and scientists to build data pipelines by using different models and have curated data for decision making. You can run SQL queries by using the db tool and analyse data available in {{site.data.keyword.lakehouse_short}}.
+{{site.data.keyword.lakehouse_full}} integrates with Data Build Tool (dbt), which is a data analytics tool that helps to transform the data in {{site.data.keyword.lakehouse_short}} to simpler and accessible form for business users. It allows analysts and scientists to build data pipelines by using different models and have curated data for decision making. You can run SQL queries by using the db tool and analyse data available in {{site.data.keyword.lakehouse_short}}.
 
-The dbt tool allows analysts and scientists to do the following functions:
+dbt allows analysts and scientists with some of the following data related tasks:
 
    * Manage complex work flows for data transformation and support features like version control, modular code, and continuous integration.
 
    * Prepare data for reporting and analysis by transforming raw data into a structured format, making it easier to create insights.
 
-   * dbt allows to create layered, reusable models that represent different stages of data transformation.
+   * Create layered, reusable models that represent different stages of data transformation.
 
-   * Helps ensure the reliability of your transformations by identifying issues early in the process.
+   * Ensure reliability of the transformations by identifying issues in the process.
 
-   * Generates clear and easy-to-understand documentation for your models and provides visualizations of data lineage to track how data moves through the pipeline.
+   * Generate clear and easy-to-understand documentation for the models and provide visualization of data lineage to track how data moves through the pipeline.
 
-   * Handles dependencies between models helps ensure that transformations run in the correct sequence and can be integrated into larger data workflow.
+   * Handle dependencies between models and ensure the transformations run in the correct sequence and can integrate with larger data workflow.
 
 For more information about dbt, see:
 
 - [What is dbt?](https://docs.getdbt.com/docs/introduction)
 - [About dbt projects](https://docs.getdbt.com/docs/build/projects)
 
-The dbt tool is supported in {{site.data.keyword.lakehouse_short}} for Apache Spark and Presto. The dbt tool uses the following data build tool (dbt) adapters to connect dbt Core with Apache Spark and Presto. The adapters helps to build, test, and document data models.
+dbt is supported in {{site.data.keyword.lakehouse_short}} for Spark and Presto engines. dbt uses the following data build tool (dbt) adapters to connect dbt core with Spark and Presto engines. The adapters helps to build, test, and document data models.
 
 
    * dbt-watsonx-presto to connect to Presto

@@ -307,7 +307,6 @@ toc:
   - navgroup:
       id: reference
       topics:
-      - pricing_plan.md
       - ae_limits.md
       - cluster_limits.md
       - connection_info.md

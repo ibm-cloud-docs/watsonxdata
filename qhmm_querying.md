@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-30"
+lastupdated: "2024-10-15"
 
 keywords: watsonxdata, qhmm
 
@@ -29,7 +29,7 @@ subcollection: watsonxdata
 # Managing diagnostic data from user interface
 {: #ret_qhmm}
 
-You can configure {{site.data.keyword.lakehouse_short}} to store the diagnostic data such as queries history and query event-related information of the Presto engine (Presto) in a storage bucket in {{site.data.keyword.lakehouse_short}} using the **Query monitoring** page. You can retrieve the history files to analyze, debug or monitor the queries. from the Query workspace.
+You can configure {{site.data.keyword.lakehouse_short}} to store the diagnostic data such as queries history and query event-related information of the Presto engine (Presto) in a storage bucket in {{site.data.keyword.lakehouse_short}} using the **Query monitoring** page. You can retrieve the history files to analyze, debug or monitor the queries from the Query workspace.
 {: shortdesc}
 
 ## Procedure

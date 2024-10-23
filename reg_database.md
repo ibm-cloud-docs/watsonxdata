@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-26"
+lastupdated: "2024-10-16"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -26,7 +26,7 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Add data source
+# Adding data source
 {: #reg_database}
 
 You can register and use data source in {{site.data.keyword.lakehouse_full}}. A catalog defines the schemas and metadata for a data source.

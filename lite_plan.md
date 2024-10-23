@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-07"
+lastupdated: "2024-10-23"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -10,7 +10,7 @@ subcollection: watsonxdata
 
 content-type: tutorial
 account-plan: paid
-completion-time: 10 minutes
+completion-time: 0.16h
 ---
 
 
@@ -24,7 +24,7 @@ completion-time: 10 minutes
 # Working with the {{site.data.keyword.lakehouse_short}} Lite plan
 {: #tutorial_hp_intro}
 {: toc-content-type="tutorial"}
-{: toc-completion-time="0.25h"}
+{: toc-completion-time="0.16h"}
 
 
 The **Lite** plan allows you to provision an {{site.data.keyword.lakehouse_full}} instance that is free to use, with limits on capacity (2000 Resource Units), and features for a time frame of 30 days. You can use the account to create Lite plan instance based on three different use cases (Generative AI, High Performance BI and Data Engineering), explore and familiarize yourself with {{site.data.keyword.lakehouse_short}}. For more information about the features and limitations of Lite plan, see [Lite plan](watsonxdata?topic=watsonxdata-pricing-plans-1#limitations-lite){: external}.

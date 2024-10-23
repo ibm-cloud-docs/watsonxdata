@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-10-14"
 
 keywords: watsonxdata, commands, command line interface, cli
 
@@ -92,7 +92,7 @@ Different options and variables that are supported in a **ibm-lh** tool that is 
 |`trust-store-path`|Path of the truststore to access the ingestion engine. This is used to establish SSL connections. This parameter is mandatory for non-root user.|`--trust-store-path <TRUST_STORE_PATH>`|`PRESTO` and `SPARK_LEGACY`|
 |`trust-store-password`|Password of truststore to access the ingestion engine. This is used to establish SSL connections. This parameter is mandatory for non-root user.|`--trust-store-password <TRUST_STORE_PASSWORD>`|`PRESTO` and `SPARK_LEGACY`|
 |`user`|Username of the user connecting to the instance. The short command for this parameter is `-u`.|`--user <username>`|`SPARK`|
-|`url`|Base url of the location of {{site.data.keyword.lakehouse_full}} cluster. The short command for this parameter is `-w`.|`--url <url>`|`SPARK`|
+|`url`|Base url of the location of {{site.data.keyword.lakehouse_short}} cluster. The short command for this parameter is `-w`.|`--url <url>`|`SPARK`|
 {: caption="Command line options and variables" caption-side="bottom"}
 
 ## System config
@@ -259,4 +259,7 @@ ibm-lh data-copy --target-table "catalog.\`schema 2.0\`.\`my table!\`"
 {: codeblock}
 
 Both double quotation marks " and backticks ` are accepted, but quotation mark styles cannot be mixed. In order to include a literal quotation inside an identifier, double the quoting character (for example, "" or ``).
+{: note}
+
+From {{site.data.keyword.lakehouse_short}} version 2.0.0 and later, `target-tables` is deprecated and `target-table` must be used.
 {: note}
