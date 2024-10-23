@@ -66,3 +66,49 @@ The value of `<user-authentication-string>` must be in the format `echo -n '<use
 
 8. After you submit the Spark application, you receive a confirmation message with the application ID and Spark version. Save it for reference.
 9. Log in to the watsonx.data cluster, access the Engine details page. In the Applications tab, use application ID to list the application and track the stages. For more information, see [View and manage applications](watsonxdata?topic=watsonxdata-mng_appltn).
+
+| Column 1 | Column 2 | Column 3 |
+|----------|---------|---------|
+| Cell | Cell | Cell |
+| Cell |      | Cell |
+| Cell | Cell | Cell |
+{: caption="ADD TABLE CAPTION HERE" caption-side="bottom"}
+{: tab-title="Tab 1"}
+{: tab-group="simple-tab-group"}
+{: class="simple-tab-table"}
+{: #simpletabtable1}
+
+| Column 1 | Column 2 | Column 3 |
+|----------|---------|---------|
+|      | Cell | Cell |
+| Cell | Cell | Cell |
+| Cell | Cell |      |
+{: caption="ADD ANOTHER TABLE CAPTION HERE" caption-side="bottom"}
+{: tab-title="Tab 2"}
+{: tab-group="simple-tab-group"}
+{: class="simple-tab-table"}
+{: #simpletabtable2}
+
+
+
+    | Column 1 | Column 2 | Column 3 |
+    |----------|---------|---------|
+    | Cell | Cell | Cell |
+    | Cell |      | Cell |
+    | Cell | Cell | Cell |
+    {: caption="ADD TABLE CAPTION HERE" caption-side="bottom"}
+    {: tab-title="Tab 1"}
+    {: tab-group="simple-tab-group"}
+    {: class="simple-tab-table"}
+    {: #simpletabtable1}
+
+    | Column 1 | Column 2 | Column 3 |
+    |----------|---------|---------|
+    |      | Cell | Cell |
+    | Cell | Cell | Cell |
+    | Cell | Cell |      |
+    {: caption="ADD ANOTHER TABLE CAPTION HERE" caption-side="bottom"}
+    {: tab-title="Tab 2"}
+    {: tab-group="simple-tab-group"}
+    {: class="simple-tab-table"}
+    {: #simpletabtable2}
