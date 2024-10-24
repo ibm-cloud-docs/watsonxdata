@@ -45,7 +45,7 @@ Apache Pinot is an open source-distributed database that is designed for real-ti
  | Test connection     | Click the Test connection link to test the data source connection. If the data source connection is successful, a success message appears.|
  | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your database. |
  | Create | Click Create to create the database. |
- {: caption="Register database" caption-side="bottom"}
+ {: caption="Register data source" caption-side="bottom"}
 
 ## Limitations for SQL statements
 {: #connector_limitations}

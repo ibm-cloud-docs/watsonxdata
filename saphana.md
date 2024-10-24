@@ -46,7 +46,7 @@ Configure the following details for SAP HANA data source:
  | Validate certificate     | Use the toggle switch to validate whether the SSL certificate that the host returns is trusted or not.|
  | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your database. |
  | Create | Click Create to create the database. |
- {: caption="Register database" caption-side="bottom"}
+ {: caption="Register data source" caption-side="bottom"}
 
 ## Bring Your Own JAR (BYOJ) Process
  {: #saphana_byoj}
@@ -61,15 +61,14 @@ The following is the procedure to add your own JAR to the SAP HANA database:
 7. To assign the driver to an engine:
    * Click Assign.
    * Select one or more engines to assign the driver. Once assigned, the driver is set to 'active' status.
-
-Note: You can link the SAP HANA database to the engine only when a driver is associated to that engine. Only one SAP HANA driver can be associated to an engine at a time.
-{: note}
-
 8. To unassign a driver from an engine, users must first introduce another driver.
 9. Click Save and restart engine.
 10. In the Infrastructure manager, hover over the SAP HANA database and click the Manage associations icon.
 11. Select the engine to modify the catalog's association with it. All in-flight queries on the modified engines are stopped.
 12. Click Save and restart engine.
+
+Note: You can link the SAP HANA database to the engine only when a driver is associated to that engine. Only one SAP HANA driver can be associated to an engine at a time.
+{: note}
 
 ## Vulnerabilities in JAR
 {: #saphana_vul}
