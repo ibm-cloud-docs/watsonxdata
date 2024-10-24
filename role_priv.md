@@ -90,7 +90,7 @@ Formation admins (IAM) have the default admin access.
 | Restart | ✓ | ✓ |    |     |
 | Associate and disassociate catalog | ✓ | ✓ |    |     |
 | Access the Presto (Java) or Presto (C++) query monitor UI | ✓ | ✓ |    |     |
-| View instance (UI and API) | ✓ | ✓ | ✓ |     |
+| View (UI and API) | ✓ | ✓ | ✓ |     |
 | Run workloads against the engine | ✓ | ✓ | ✓ |     |
 {: caption="Resource-level permissions" caption-side="bottom"}
 
@@ -111,7 +111,7 @@ Formation admins (IAM) have the default admin access.
 | Grant and revoke access | ✓ |   |    |     |
 | Update Spark engine metadata (like tags and description) | ✓ | ✓ |    |     |
 | Scale Spark engine | ✓ | ✓ |    |     |
-| View instance (UI and API) | ✓ | ✓ | ✓ |     |
+| View (UI and API) | ✓ | ✓ | ✓ |     |
 | Run workloads against the engine | ✓ | ✓ | ✓ |     |
 {: caption="Resource-level permissions" caption-side="bottom"}
 
@@ -144,7 +144,7 @@ Default user access is granted to:
 | View Spark history UI | ✓ | ✓ | ✓ |     |
 | View Spark UI | ✓ | ✓ | ✓ |     |
 | Associate and disassociate catalog | ✓ | ✓ |    |     |
-| View instance (UI and API) | ✓ | ✓ | ✓ |     |
+| View (UI and API) | ✓ | ✓ | ✓ |     |
 | Run workloads against the engine | ✓ | ✓ | ✓ |     |
 {: caption="Resource-level permissions" caption-side="bottom"}
 
@@ -228,7 +228,7 @@ Formation admins (IAM) have the default admin access.
 | Grant and revoke access | ✓ |   |    |     |
 | Modify files | ✓ | ✓ |    |     |
 | Browse (storage browser in UI) | ✓ | ✓ | ✓ |     |
-| View instance (UI and API) | ✓ | ✓ | ✓ | ✓ |
+| View (UI and API) | ✓ | ✓ | ✓ | ✓ |
 {: caption="Resource-level permissions" caption-side="bottom"}
 
 If you want to unregister or delete a storage, you must first deactivate the storage.
@@ -273,7 +273,7 @@ Formation admins (IAM) have the default admin access.
 | Update `db conn` properties (credentials) | ✓ |   |    |     |
 | Grant and revoke access | ✓ |   |    |     |
 | Modify database objects | ✓ | ✓ |    |     |
-| View instance (UI and API) | ✓ | ✓ | ✓ | ✓ |
+| View (UI and API) | ✓ | ✓ | ✓ | ✓ |
 {: caption="Resource-level permissions" caption-side="bottom"}
 
 ## Catalog
@@ -297,7 +297,7 @@ IAM formation non-admins (Operator, Editor, Viewer) have the Default user access
 | Delete | ✓ |   |     |
 | Grant and revoke access | ✓ |   |     |
 | Access to data | ✓ | Based on data policy |     |
-| View instance (UI and API) | ✓ | ✓ |     |
+| View (UI and API) | ✓ | ✓ |     |
 {: caption="Resource-level permissions" caption-side="bottom"}
 
 ## Schema

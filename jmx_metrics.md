@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-24"
+lastupdated: "2024-10-24"
 
 keywords: lakehouse, watsonx.data, presto
 
@@ -41,7 +41,7 @@ You can set up JMX metrics monitoring for your Presto pods on {{site.data.keywor
 
  Sysdig agents are installed on every node within your {{site.data.keyword.cloud_notm}} cluster. They continuously collect data from the management containers.
 
-## Requesting access permission for non-operation User
+## Requesting access permission for non-operation user
 {: #rqst_access_nouser}
 
 To get access permission as a non-operation user, do the following steps:
