@@ -87,6 +87,7 @@ toc:
               - postgresql_conn.md
               - prometheus_conn.md
               - redis_conn.md
+              - saphana.md
               - singlestore_conn.md
               - snowflake_conn.md
               - sqlserver_conn.md
