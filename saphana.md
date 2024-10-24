@@ -32,7 +32,7 @@ subcollection: watsonxdata
 SAP HANA is a column-oriented, in-memory relational database.
 {: shortdesc}
 
-Configure the following details for **SAP HANA**:
+Configure the following details for SAP HANA data source:
 
  | Field | Description |
  |--------------------------|----------------|

@@ -32,7 +32,7 @@ subcollection: watsonxdata
 Apache Pinot is an open source-distributed database that is designed for real-time, user-facing analytics.
 {: shortdesc}
 
- If you select **Apache Pinot** from the **Database type** drop-down list, configure the following details:
+ Configure the following details for Apache Pinot data source:
 
  | Field           | Description        |
  |------------------|--------------------|

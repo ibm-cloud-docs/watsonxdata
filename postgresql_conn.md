@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-13"
+lastupdated: "2024-10-24"
 
 keywords: lakehouse, database, watsonx.data
 
@@ -32,7 +32,7 @@ subcollection: watsonxdata
 IBM Cloud Databases for PostgreSQL is an open source object-relational database that is highly customizable. It’s a feature-rich enterprise database with JSON support.
 {: shortdesc}
 
- If you select **PostgreSQL** from the **Database type** drop-down list, configure the following details:
+ Configure the following details for PostgreSQL data source:
 
  | Field           | Description        |
  |------------------|--------------------|

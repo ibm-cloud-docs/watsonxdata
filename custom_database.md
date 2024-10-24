@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-10-24"
 
 keywords: lakehouse, database, watsonx.data
 
@@ -30,7 +30,7 @@ subcollection: watsonxdata
 # Custom data source
 {: #custom_database}
 
-You can now use the Custom data source to create data sources that are not provided by the built-in connectors. Custom data source can be used for connectors that are supported by Presto as per the Presto documentation but not listed in IBM {{site.data.keyword.lakehouse_full}} supported connectors or data sources. This feature is applicable for Presto (Java) and Presto (C++) engines. For Presto (C++) engine, only Hive, Apache Iceberg, Arrow Flight service, and Custom data sources can be associated.
+You can now use the Custom data source to create data sources that are not provided by the built-in connectors. Custom data source can be used for connectors that are supported by Presto as in the Presto documentation but not listed in IBM {{site.data.keyword.lakehouse_full}} supported connectors or data sources. This feature is applicable for Presto (Java) and Presto (C++) engines. For Presto (C++) engine, only Hive, Apache Iceberg, Arrow Flight service, and Custom data sources can be associated.
 {: shortdesc}
 
 
@@ -43,10 +43,10 @@ To add a custom data source, complete the following steps.
 5. Configure the following details:
 
 
-    Use of this feature may crash your engine if configured incorrectly. IBM does not provide support for use of this feature..
+    Use of this feature may crash your engine if configured incorrectly. IBM does not provide support for use of this feature.
    {: note}
 
-    Two databases with the same name cannot be added. Custom databases do not support SSL configuration.
+    Custom databases do not support SSL configuration.
    {: note}
 
 
@@ -55,7 +55,7 @@ To add a custom data source, complete the following steps.
     |------------------|--------------------|
     | Display name    | Enter the database name to be displayed on the screen. |
     | Property value             | Enter the properties and their values to be configured for the database. Enter the property name:value pair as specified in Presto documentation. You can add multiple properties.|
-    | connector.name=     | Enter the name of the database connector that you want to add as specified in Presto documentation.  |
+    | connector.name=     | Enter the name of the database connector that you want to add as specified in the Presto documentation.  |
     | Encryption           | Encrypting values of the keys are stored.  |
     | Associated catalog | Enter the name of the catalog. This catalog is automatically associated with your database. |
     | Create |  Click Create to create the data source.|

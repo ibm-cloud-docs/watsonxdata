@@ -32,7 +32,7 @@ subcollection: watsonxdata
 Prometheus allows reading Prometheus metrics as tables in Trino by using the Prometheus HTTP API mechanism.
 {: shortdesc}
 
- If you select **Prometheus** from the **Database type** drop-down list, configure the following details:
+ Configure the following details for Prometheus data source:
 
  | Field           | Description        |
  |------------------|--------------------|

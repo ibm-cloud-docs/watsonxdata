@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-13"
+lastupdated: "2024-10-24"
 
 keywords: lakehouse, database, watsonx.data
 
@@ -32,7 +32,7 @@ subcollection: watsonxdata
 Greenplum is a massively parallel processing (MPP) SQL database. It provides access to data in powerful server clusters within a single SQL interface.
 {: shortdesc}
 
- If you select **Greenplum** from the **Database type** drop-down list, configure the following details:
+ Configure the following details for Greenplum data source:
 
  | Field           | Description        |
  |------------------|--------------------|
