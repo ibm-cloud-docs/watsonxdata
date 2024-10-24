@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-13"
+lastupdated: "2024-10-24"
 
 keywords: lakehouse, database, watsonx.data
 
@@ -41,6 +41,7 @@ Prometheus allows reading Prometheus metrics as tables in Trino by using the Pro
  | Port             | Enter the port number. |
  | Port is SSL enabled   | Use the toggle switch to enable or disable SSL connection. If enabled, \n i. The Upload SSL certificate (.pem, .crt, .cert or .cer) link is enabled. \n ii. Click the Upload SSL certificate (.pem, .crt, .cert or .cer) link. \n iii. Browse the SSL certificate and upload.|
  | Verify hostname | Use the toggle switch to verify the hostname in the SSL certificate. |
+ | Test connection     | Click the Test connection link to test the data source connection. If the data source connection is successful, a success message appears.|
  | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your database. |
  | Create | Click Create to create the database. |
  {: caption="Register database" caption-side="bottom"}
