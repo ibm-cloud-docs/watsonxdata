@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-23"
+lastupdated: "2024-10-24"
 
 keywords: lakehouse, **Query Optimizer**, {{site.data.keyword.lakehouse_short}}
 
@@ -71,4 +71,4 @@ The query optimization feature of Db2 is leveraged in {{site.data.keyword.lakeho
 * Decimal and float columns in the projection list might interchange and can cause mismatch in data type.
 * Certain queries (full outer join, anti join) do not return the correct result.
 * Special characters in the identifier do not work properly.
-* Interval is not supported. Use date_add.
+* Interval is not supported. Use `date_add`.

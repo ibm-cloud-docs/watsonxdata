@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-10-24"
 
 keywords: lakehouse, watsonx data, privileges, roles, access
 
@@ -34,7 +34,7 @@ A role is a set of privileges that is assigned to a user to allow the user to pe
 
 {{site.data.keyword.lakehouse_short}} provides a set of predefined roles: Administrator, User, Manager, Writer, and Reader.
 
-Use the **Access control** page to manage users and roles in {{site.data.keyword.lakehouse_short}}. For more information, see [Managing user access]({{site.data.keyword.ref-manage_access-link}}){: external}.
+Use the **Access control** page to manage users and roles in {{site.data.keyword.lakehouse_short}}. For more information, see [Managing user access]({{site.data.keyword.ref-manage_access-link}}).
 
 The following tables describe the privileges that you can assign to roles and associated permissions:
 
@@ -90,7 +90,7 @@ Formation admins (IAM) have the default admin access.
 | Restart | ✓ | ✓ |    |     |
 | Associate and disassociate catalog | ✓ | ✓ |    |     |
 | Access the Presto (Java) or Presto (C++) query monitor UI | ✓ | ✓ |    |     |
-| View existence (infra page and `…/api/…/` engines) | ✓ | ✓ | ✓ |     |
+| View instance (UI and API) | ✓ | ✓ | ✓ |     |
 | Run workloads against the engine | ✓ | ✓ | ✓ |     |
 {: caption="Resource-level permissions" caption-side="bottom"}
 
@@ -111,7 +111,7 @@ Formation admins (IAM) have the default admin access.
 | Grant and revoke access | ✓ |   |    |     |
 | Update Spark engine metadata (like tags and description) | ✓ | ✓ |    |     |
 | Scale Spark engine | ✓ | ✓ |    |     |
-| View existence (infra page and `…/api/…/` engines) | ✓ | ✓ | ✓ |     |
+| View instance (UI and API) | ✓ | ✓ | ✓ |     |
 | Run workloads against the engine | ✓ | ✓ | ✓ |     |
 {: caption="Resource-level permissions" caption-side="bottom"}
 
@@ -144,7 +144,7 @@ Default user access is granted to:
 | View Spark history UI | ✓ | ✓ | ✓ |     |
 | View Spark UI | ✓ | ✓ | ✓ |     |
 | Associate and disassociate catalog | ✓ | ✓ |    |     |
-| View existence (infra page and `…/api/…/` engines) | ✓ | ✓ | ✓ |     |
+| View instance (UI and API) | ✓ | ✓ | ✓ |     |
 | Run workloads against the engine | ✓ | ✓ | ✓ |     |
 {: caption="Resource-level permissions" caption-side="bottom"}
 
@@ -228,7 +228,7 @@ Formation admins (IAM) have the default admin access.
 | Grant and revoke access | ✓ |   |    |     |
 | Modify files | ✓ | ✓ |    |     |
 | Browse (storage browser in UI) | ✓ | ✓ | ✓ |     |
-| View existence (infra page and `…/api/…/` storages) | ✓ | ✓ | ✓ | ✓ |
+| View instance (UI and API) | ✓ | ✓ | ✓ | ✓ |
 {: caption="Resource-level permissions" caption-side="bottom"}
 
 If you want to unregister or delete a storage, you must first deactivate the storage.
@@ -273,7 +273,7 @@ Formation admins (IAM) have the default admin access.
 | Update `db conn` properties (credentials) | ✓ |   |    |     |
 | Grant and revoke access | ✓ |   |    |     |
 | Modify database objects | ✓ | ✓ |    |     |
-| View existance (infra page and `…/api/…/extdb`) | ✓ | ✓ | ✓ | ✓ |
+| View instance (UI and API) | ✓ | ✓ | ✓ | ✓ |
 {: caption="Resource-level permissions" caption-side="bottom"}
 
 ## Catalog
@@ -297,7 +297,7 @@ IAM formation non-admins (Operator, Editor, Viewer) have the Default user access
 | Delete | ✓ |   |     |
 | Grant and revoke access | ✓ |   |     |
 | Access to data | ✓ | Based on data policy |     |
-| View existence (infra page and `…/`) | ✓ | ✓ |     |
+| View instance (UI and API) | ✓ | ✓ |     |
 {: caption="Resource-level permissions" caption-side="bottom"}
 
 ## Schema
