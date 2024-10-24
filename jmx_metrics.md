@@ -41,23 +41,12 @@ You can set up JMX metrics monitoring for your Presto pods on {{site.data.keywor
 
  Sysdig agents are installed on every node within your {{site.data.keyword.cloud_notm}} cluster. They continuously collect data from the management containers.
 
-## Requesting access permission for non-operation user
-{: #rqst_access_nouser}
-
-To get access permission as a non-operation user, do the following steps:
-
-1. Go to [IBM Access Hub](https://ibm-support.saviyntcloud.com/ECMv6/request/applicationRequest).
-1. Search and select **HDM-Lakehouse-IBM-Cloud-Dev-IAM-2592207**. The user details appear under the **Existing Accounts** section of the pop-up window.
-1. Click **Modify**. The **Modify Access** window opens.
-1. Click **Add** and search for the `icd:user:ops` group.
-1. Click **Add** to add the group and click **Done**.
-1. Click **Review & Submit**. You can review the details in the page.
-1. Enter a business justification, select the checkbox to confirm the reviewed details, and click **Submit**.
-
 ## Access your monitoring data
 {: #access_monitoring_data}
 
-1. After getting the Sysdig access, log in to your {{site.data.keyword.cloud_notm}} account and access the {{site.data.keyword.cloud_notm}} console.
+To access your monitoring data, you must have a Sysdig instance running in your account.
+
+1. Log in to your {{site.data.keyword.cloud_notm}} account and access the {{site.data.keyword.cloud_notm}} console.
 1. In the left pane, go to **Observability** > **Monitoring** > **Instances**. You can see a list of entries for different regions.
 1. Choose the region where your Presto cluster is located and click **Open dashboard** to open the Sysdig dashboard. On the Sysdig dashboard, you can either browse through or search for specific metrics that use the instance ID.
 1. Expand the cluster name to reveal the instance ID associated with your Presto instances.
