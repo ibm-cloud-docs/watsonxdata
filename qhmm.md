@@ -64,16 +64,28 @@ You can retrieve the history files to analyze, debug, or monitor the queries. Fr
    {: note}
 
 5. If the QHMM feature is not enabled at the time of provisioning watsonx.data quick start, you can do that from the **Query monitoring** page.
+
     5. Create a storage - catlaog (Apache Hive) pair in watsonx.data. See [Adding a storage-catalog pair]({{site.data.keyword.ref-reg_bucket-link}}){: external}. QHMM supports only the Apache Hive catalog.
+
     5. Click **Edit**.
+
     6. Select the **Enable** check box. You can select the check box only if you have created a Hive catalog in watsonx.data.
+
     7. Select the Hive catalog from the **Storage**.
+
     6. You can also update the sub-path.
+
     6. You can edit the data pruning feature for QHMM. You can do the following:
+
         * Enable the file pruning functionality in QHMM to manage the storage capacity. You can configure the maximum size and threshold percentage for the QHMM storage bucket. When the threshold is met during file upload or when a cleanup scheduler runs (default every 24 hours), older data is deleted.
+
         * Pruning threshod: Threshold at which QHMM triggers pruning or issues a warning when the capacity reaches the threshold percentage (default: 80%).
+
         * Pruning frequency: Frequency in hours at which pruning occurs (default: 24 hours).
+
         * Maximum usage: Maximum capacity of the bucket in MB (default: 10240 MB).
+
         * Pruned records retention period: Record expiry time in days for deleting records from COS (default: 30 days).
+
 
     6. Click **Save** after making the changes.
