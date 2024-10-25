@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-10-25"
 
 keywords: watsonxdata, qhmm
 
@@ -30,9 +30,9 @@ subcollection: watsonxdata
 {: #ovrvw_qhmm}
 
 
-Query History Monitoring and Management (QHMM) is a service that stores and manages the diagnostic data such as, heap dumps, thread dumps, queries history and query event-related information of the Presto(Java) and Presto(C++) engine in a storage bucket. You can retrieve the stored history files for analysis, debugging and monitoring purpose.
+Query History Monitoring and Management (QHMM) is a service that stores and manages the diagnostic data such as, heap dumps, thread dumps, queries history and query event-related information of the Presto(Java) and Presto(C++) engine in a storage bucket that you define. You can retrieve the stored history files for analysis, debugging and monitoring purpose.
 
-QHMM primarily aims to address the issue of data persistence for serviceability data. When the engine restarts or goes offline, there are chances of losing valuable diagnostic data they generate. QHMM resolves the issue by storing such data in object storage solutions like Cloud Object Storage (COS) or Minio buckets. The data is organized in a structured folder hierarchy, making it easily accessible for users to retrieve and analyze.
+QHMM primarily aims to address the issue of data persistence for serviceability data. When the engine restarts or goes offline, there are chances of losing valuable diagnostic data they generate. QHMM resolves the issue by storing such data in Hive storage bucket that you define. The data is organized in a structured folder hierarchy, making it easily accessible for users to retrieve and analyze.
 
 QHMM allows to retrieve the following diagnostic data:
 * Events generated against a running query in Presto, following are the query events:
@@ -45,6 +45,14 @@ QHMM allows to retrieve the following diagnostic data:
 * Heap dump by using API.
 
 
+
+## Enabling QHMM feature
+{: #enb_data_qhmm}
+
+You can enable the QHMM functionality in one of the following ways:
+
+* From [Qucik start wizard](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-quick_start#qs_montr).
+* From [watsonx.data console UI]((watsonxdata?topic=watsonxdata-qhmm)).
 
 ## Related topics
 {: #data_qhmm_rel}

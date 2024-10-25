@@ -171,8 +171,6 @@ toc:
                 - qhmm.md
                 - qhmm_querying.md
                 - qhmm_heap_thread.md
-                - qhmm_gen.md
-                - shell_script.md
       - conn-presto-thr-cli.md
       - topicgroup:
           label: Integrating with Data Build Tool(dbt)
