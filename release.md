@@ -37,6 +37,10 @@ Data sources enhancements
    * Cassandra
    * Prometheus
 
+Deprecated features
+
+: The REST API feature to capture DDL changes in {{site.data.keyword.lakehouse_short}} through event listener is deprecated from {{site.data.keyword.lakehouse_short}} release version 2.0.4 and will be removed from {{site.data.keyword.lakehouse_short}} release version 2.1.
+
 ## 25 September 2024 - Version 2.0.3
 {: #lakehouse_25Sep01}
 

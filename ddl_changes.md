@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-10-25"
 
 keywords: lakehouse, access, data, policy, watsonx data, DDL, event listener
 
@@ -31,6 +31,9 @@ subcollection: watsonxdata
 
 When tables or schemas are created, altered, or deleted in watsonx.data, an event can be captured and notified by enabling an event listener.
 {: shortdesc}
+
+The REST API feature to capture DDL changes in {{site.data.keyword.lakehouse_short}} through event listener will be deprecated from {{site.data.keyword.lakehouse_short}} release version 2.0.4 and will be removed from {{site.data.keyword.lakehouse_short}} release version 2.1.
+{: Important}
 
 ## Before you begin
 {: #dll_changes_01}
