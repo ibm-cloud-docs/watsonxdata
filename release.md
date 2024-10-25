@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-10-07"
+lastupdated: "2024-10-25"
 
 keywords: watsonxdata, release notes
 
@@ -21,9 +21,24 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.lakehouse_full}} that are grouped by date.
 {: shortdesc}
 
+## 28 October 2024 - Version 2.0.4
+{: #lakehouse_28oct01}
+{: release-note}
+
+Engine and service enhancements
+
+: The default value of the `task.max-drivers-per-task` property for Presto (Java) and Presto (C++) workers is now set based on the number of vCPUs.
+
+Data sources enhancements
+
+: Test connection feature is now available for the following data sources:
+
+   * Apache Pinot
+   * Cassandra
+   * Prometheus
+
 ## 25 September 2024 - Version 2.0.3
 {: #lakehouse_25Sep01}
-{: release-note}
 
 Data sources and storage enhancements
 
