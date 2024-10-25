@@ -33,7 +33,7 @@ When tables or schemas are created, altered, or deleted in watsonx.data, an even
 {: shortdesc}
 
 The REST API feature to capture DDL changes in {{site.data.keyword.lakehouse_short}} through event listener will be deprecated from {{site.data.keyword.lakehouse_short}} release version 2.0.4 and will be removed from {{site.data.keyword.lakehouse_short}} release version 2.1.
-{: Important}
+{: note}
 
 ## Before you begin
 {: #dll_changes_01}
