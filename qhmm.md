@@ -65,15 +65,15 @@ You can retrieve the history files to analyze, debug, or monitor the queries. Fr
 
 5. If the QHMM feature is not enabled at the time of provisioning watsonx.data quick start, you can do that from the **Query monitoring** page.
 
-    5. Create a storage - catlaog (Apache Hive) pair in watsonx.data. See [Adding a storage-catalog pair]({{site.data.keyword.ref-reg_bucket-link}}){: external}. QHMM supports only the Apache Hive catalog.
+    1. Create a storage - catlaog (Apache Hive) pair in watsonx.data. See [Adding a storage-catalog pair]({{site.data.keyword.ref-reg_bucket-link}}){: external}. QHMM supports only the Apache Hive catalog.
 
-    5. Click **Edit**.
+    2. Click **Edit**.
 
-    6. Select the **Enable** check box. You can select the check box only if you have created a Hive catalog in watsonx.data.
+    3. Select the **Enable** check box. You can select the check box only if you have created a Hive catalog in watsonx.data.
 
-    7. Select the Hive catalog from the **Storage**.
+    4. Select the Hive catalog from the **Storage**.
 
-    6. You can also update the sub-path.
+    5. You can also update the sub-path.
 
     6. You can edit the data pruning feature for QHMM. You can do the following:
 
