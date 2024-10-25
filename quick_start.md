@@ -66,7 +66,7 @@ Your {{site.data.keyword.lakehouse_short}} needs metadata catalogs to manage you
 
 In the **Configure catalog** page, complete the following steps:
 
-1. Select the table format for managing your data. Apache Hive and Apache Iceberg catalogs are selected by default.
+1. Select the table format for managing your data. Apache Hive and Apache Iceberg catalogs are available.
 
 To enable [Query monitoring]({{site.data.keyword.ref-qhmm-link}}){: external} feature, you must select Apache Hive catalog.
 {: attention}
@@ -100,7 +100,7 @@ In the **Configure engine** page, complete the following steps:
 {: #qs_montr}
 {: step}
 
-The Quick start wizard > **Query** tab will be enabled only if you select Apache Hive catalog from Quick start wizard > **Catalog** tab.
+You can enable QHMM feature only if you select Apache Hive catalog from Quick start wizard > **Catalog** tab.
 {: attention}
 
 You can enable, or disable query monitoring feature (For more information about query monitoring, see [Query monitoring]({{site.data.keyword.ref-qhmm-link}}){: external}) for your instance. To enable the feature, you must specify the storage that is required to store QHMM related data. You have the provison a storage (Hive catalog).
