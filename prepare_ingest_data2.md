@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-04"
+lastupdated: "2024-10-26"
 
 keywords: watsonxdata, ingesting, object storage bucket, data files, table format. SQL query
 
@@ -29,7 +29,7 @@ subcollection: watsonxdata
 # Ingesting data from object storage bucket
 {: #prepare_ingest_data2}
 
-In this tutorial, you learn to move data into a data lake or an object storage bucket and load the data files to Presto. You learn to optimize the file format to choose the table format and run complex SQL query in {{site.data.keyword.lakehouse_full}.
+In this tutorial, you learn to move data into a data lake or an object storage bucket and load the data files to Presto. You learn to optimize the file format to choose the table format and run complex SQL query in {{site.data.keyword.lakehouse_full}}.
 {: shortdesc}
 
 ## Before you begin
@@ -38,7 +38,7 @@ In this tutorial, you learn to move data into a data lake or an object storage b
 This tutorial requires:
 
 - Subscription of {{site.data.keyword.lakehouse_short}} on cloud.
-- The configuration details of data bucket that you bring in. This is required for establishing connection with the {{site.data.keyword.lakehouse_short}.
+- The configuration details of data bucket that you bring in. This is required for establishing connection with the {{site.data.keyword.lakehouse_short}}.
 - Ensure that the data bucket has data.
 
 ## About this task
