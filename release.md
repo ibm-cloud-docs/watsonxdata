@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-10-25"
+lastupdated: "2024-10-28"
 
 keywords: watsonxdata, release notes
 
@@ -36,6 +36,8 @@ Data sources enhancements
    * Apache Pinot
    * Cassandra
    * Prometheus
+
+: New data source **SAP HANA** is now available. Users can use a new dedicated section **Driver manager** under the **Configurations** page to manage drivers for SAP HANA data source. Each of these drivers undergoes a series of validation. For more information on SAP HANA data source and BYOJ process, see [SAP HANA](watsonxdata?topic=watsonxdata-saphana).
 
 Deprecated features
 
