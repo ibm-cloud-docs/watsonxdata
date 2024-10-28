@@ -37,7 +37,7 @@ Data sources enhancements
    * Cassandra
    * Prometheus
 
-: New data source **SAP HANA** is now available. Users can use a new dedicated section **Driver manager** under the **Configurations** page to manage drivers for SAP HANA data source. Each of these drivers undergoes a series of validation. For more information on SAP HANA data source and BYOJ process, see [SAP HANA](watsonxdata?topic=watsonxdata-saphana).
+: New data source **SAP HANA** is now available. Users can use a new dedicated section **Driver manager** under the **Configurations** page to manage drivers for SAP HANA data source. Each of these drivers undergoes a series of validation. For more information on SAP HANA data source and BYOJ process, see [SAP HANA](watsonxdata?topic=watsonxdata-saphana_conn).
 
 Deprecated features
 
