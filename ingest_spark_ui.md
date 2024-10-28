@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-25"
+lastupdated: "2024-10-28"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -119,7 +119,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
       |Number of executors|1|
       |Executor cores|1 vCPU|
       |Executor memory|2GB|
-      {: caption="Table 1" caption-side="bottom"}
+      {: caption="Table 1"}
 
       **Medium:**
 
