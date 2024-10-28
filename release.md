@@ -35,6 +35,8 @@ Engine and service enhancements
 
    * Query History Monitoring and Management (QHMM) no longer stores the diagnostic data in the default IBM Managed trial bucket (wxd-system). To store the diagnostic data, you must now use a storage created in IBM Cloud Object Storage instance in your account. For more information about using your own storage, see [Configuring Query monitoring](watsonxdata?topic=watsonxdata-qhmm#prc_qhmm).
 
+   * You can now verify query optimization status by checking the `wxdQueryOptimized` parameter in the JSON file. For more information, see [Running queries from the Presto (C++) CLI or Query workspace](watsonxdata?topic=watsonxdata-exec_inspect_optimizer).
+
 Data sources enhancements
 
 : This release includes the following data sources and storage enhancements:
