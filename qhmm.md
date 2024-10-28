@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-25"
+lastupdated: "2024-10-28"
 
 keywords: watsonxdata, qhmm
 
@@ -41,7 +41,7 @@ QHMM supports only Hive storage.
 ## Enabling QHMM feature
 {: #enb_qhmm}
 
-You can enable the QHMM storage from:
+You can enable the QHMM feature in one of the following ways:
 
 * Quick start wizard. See [Configure query monitoring](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-quick_start#qs_montr).
 * [{{site.data.keyword.lakehouse_short}} console](#prc_qhmm) page.
