@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-27"
+lastupdated: "2024-10-28"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -31,10 +31,7 @@ subcollection: watsonxdata
 
 Milvus exposes various metrics, which will provide in-depth insights into various system parameters from the observability and serviceability perspectives. You get real-time update on how the Milvus components are performing and utilized.
 
-To view the metrics:
-
-- You must create an IBM Cloud Monitoring instance and enable it for platform metrics.
-- You must have a Sysdig instance running in your account.
+To view the metrics, you must create an IBM Cloud Monitoring instance and enable it for platform metrics.
 
 1. Log in to your {{site.data.keyword.cloud_notm}} account and access the {{site.data.keyword.cloud_notm}} console.
 1. In the left pane, go to **Observability** > **Monitoring** > **Instances**. You can see a list of entries for different regions.
