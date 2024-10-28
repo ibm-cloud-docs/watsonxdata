@@ -34,5 +34,5 @@ You can extend the functionality of the {{site.data.keyword.lakehouse_full}} by 
 
 * [Data Build Tool (dbt) integration](watsonxdata?topic=watsonxdata-abt_dbt).
 * [IBM Knowledge Catalog (IKC)](watsonxdata?topic=watsonxdata-ikc_integration).
-* [DataStage)](watsonxdata?topic=watsonxdata-dc_integration).
-* [BI tools)](watsonxdata?topic=watsonxdata-abt_bi).
+* [DataStage](watsonxdata?topic=watsonxdata-dc_integration).
+* [BI tools](watsonxdata?topic=watsonxdata-abt_bi).
