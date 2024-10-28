@@ -130,7 +130,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
       |Number of executors|2|
       |Executor cores|2 vCPU|
       |Executor memory|4GB|
-      {: caption="Table 2" caption-side="bottom"}
+      {: caption-side="bottom"}
 
       **Large:**
 
@@ -141,7 +141,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
       |Number of executors|4|
       |Executor cores|4 vCPU|
       |Executor memory|8GB|
-      {: caption="Table 3" caption-side="bottom"}
+      {: caption="Table 1. Large configuration"}
 
    xiv. Click **Done**. The submitted ingestion job can be found in the **Ingestion history** tab of the **Data manager** page.
 
@@ -218,7 +218,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
       |Number of executors|1|
       |Executor cores|1 vCPU|
       |Executor memory|2GB|
-      {: caption="Table 1" caption-side="bottom"}
+      {: caption="Table 1." caption-side="bottom"}
 
       **Medium:**
 
