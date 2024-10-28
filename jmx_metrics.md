@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-24"
+lastupdated: "2024-10-28"
 
 keywords: lakehouse, watsonx.data, presto
 
@@ -31,15 +31,7 @@ subcollection: watsonxdata
 
 You can set up JMX metrics monitoring for your Presto pods on {{site.data.keyword.cloud_notm}} using Sysdig. With this monitoring setup, you can collect and visualize JMX metrics from your Presto instances.
 
-## Management containers
-{: #manage_cont}
-
- Ensure that a management container is running on each Presto pod. This container is responsible for querying the JMX endpoint that is exposed by your Presto instances.
-
-## Scraping data with Sysdig agent
-{: #scrap_data}
-
- Sysdig agents are installed on every node within your {{site.data.keyword.cloud_notm}} cluster. They continuously collect data from the management containers.
+To view the metrics, you must create an IBM Cloud Monitoring instance and enable it for platform metrics.
 
 ## Access your monitoring data
 {: #access_monitoring_data}
