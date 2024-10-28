@@ -31,7 +31,7 @@ subcollection: watsonxdata
 
 Milvus exposes various metrics, which will provide in-depth insights into various system parameters from the observability and serviceability perspectives. You get real-time update on how the Milvus components are performing and utilized.
 
-To view the metrics, you must create an IBM Cloud Monitoring instance and enable it for platform metrics. For more information, see [Getting started with IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring?topic=monitoring-getting-started#getting-started).
+To view the metrics, you must create an IBM Cloud Monitoring instance and enable it for platform metrics.
 
 1. Log in to your {{site.data.keyword.cloud_notm}} account and access the {{site.data.keyword.cloud_notm}} console.
 1. In the left pane, go to **Observability** > **Monitoring** > **Instances**. You can see a list of entries for different regions.

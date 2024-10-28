@@ -207,7 +207,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    xiv. Select the IBM Analytics Engine (Spark) from the **Select engine** list. The registered Spark engines are listed here.
 
-   xv. Select a pre-defined **Job size** from the options listed. The job size is set to the preferred option based on the file size automatically. The user can also select one of the following options.
+   xv. Select a pre-defined **Job size** from the options listed:
 
       **Small:**
 
@@ -278,7 +278,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    xiv. Select the IBM Analytics Engine (Spark) from the **Select engine** list. The registered Spark engines are listed here.
 
-   xv. Select a pre-defined **Job size** from the options listed. The job size is set to the preferred option based on the file size automatically. The user can also select one of the following options.
+   xv. Select a pre-defined **Job size** from the options listed:
 
       **Small:**
 

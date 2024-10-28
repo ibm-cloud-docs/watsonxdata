@@ -31,7 +31,7 @@ subcollection: watsonxdata
 
 You can set up JMX metrics monitoring for your Presto pods on {{site.data.keyword.cloud_notm}} using Sysdig. With this monitoring setup, you can collect and visualize JMX metrics from your Presto instances.
 
-To view the metrics, you must create an IBM Cloud Monitoring instance and enable it for platform metrics. For more information, see [Getting started with IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring?topic=monitoring-getting-started#getting-started).
+To view the metrics, you must create an IBM Cloud Monitoring instance and enable it for platform metrics.
 
 ## Access your monitoring data
 {: #access_monitoring_data}

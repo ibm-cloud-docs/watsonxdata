@@ -172,7 +172,7 @@ The topic describes the procedure to run a Spark application that ingests data i
    ``` bash
    from pyspark.sql import SparkSession
    import os
-   \    def init_spark():
+       def init_spark():
             spark = SparkSession.builder.appName("lh-hms-cloud")
             .enableHiveSupport().getOrCreate()
             return spark
