@@ -26,6 +26,7 @@ toc:
           - api_custom_ov.md
           - mixed_case_overview.md
           - resource_grp_ov.md
+          - integration.md
       - topicgroup:
           label: Provisioning watsonx.data
           topics:
