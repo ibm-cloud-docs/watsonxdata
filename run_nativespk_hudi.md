@@ -23,9 +23,6 @@ The topic describes the procedure to run a Spark application that ingests data i
 5. Based on the catalog you select, save the following Spark application (Python file) to your local machine. Here, `iceberg_demo.py`, `hudi_demo.py`, or `delta_demo.py` and upload the Spark application to the COS, see [Uploading data](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-secure-content-store#upload-data).
 7. To submit the Spark application with data residing in Cloud Object Storage, specify the parameter values and run the curl command from the following table.
 
-   
-
-
 
 
    * **Apache Iceberg**
