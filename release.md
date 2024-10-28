@@ -47,7 +47,7 @@ Data sources enhancements
 
    * New data source **SAP HANA** is now available. Users can use a new dedicated section **Driver manager** under the **Configurations** page to manage drivers for SAP HANA data source. Each of these drivers undergoes a series of validation. For more information on SAP HANA data source and BYOJ process, see [SAP HANA](watsonxdata?topic=watsonxdata-saphana_conn).
 
-Lite Plan
+Lite plan
 
 : To enhance usability, the system catalogs (cmx and system) are now hidden for Lite plan users.The Lite plan instance with Presto C++ engine includes `tpch` as the benchmarking catalog and the instance with Presto (Java) engine include `tpch` and `tpcds` as the benchmarking catalogs.
 
