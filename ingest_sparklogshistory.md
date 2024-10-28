@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-25"
+lastupdated: "2024-10-28"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -49,6 +49,6 @@ For a **Failed** or **Finished** status, you must start the Spark history server
 
    **Starting**: If the ingestion job is in **Starting** status, **Spark application history** is disabled.
 
-   **Running**: If the job status is **Running**, clicking **Spark application history** will generally take you to the Spark UI. You can monitor the ingestion job progress, resource usage, and other details in real-time through this web interface. This Spark UI information will be temporarily available only when the job is in the **Running** status.
+   **Running**: If the job status is **Running**, clicking **Spark application UI** will generally take you to the Spark UI. You can monitor the ingestion job progress, resource usage, and other details in real-time through this web interface. This Spark UI information will be temporarily available only when the job is in the **Running** status.
 
    **Failed** or **Finished**: If the job status is **Failed** or **Finished**, clicking **Spark application history** will navigate you to the Spark history UI. This interface provides a summary of the ingestion job execution, including its timeline, resource usage, and any error messages.
