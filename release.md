@@ -31,7 +31,7 @@ Engine and service enhancements
 
    * The default value of the `task.max-drivers-per-task` property for Presto (Java) and Presto (C++) workers is now set based on the number of vCPUs.
 
-   * You can enable the file pruning functionality in Query History Monitoring and Management (QHMM) from the **Query monitoring** page. You can also configure the maximum size and threshold percentage for the QHMM storage bucket. When the threshold is met during file upload or when a cleanup scheduler runs (default every 24 hours), older data is deleted. For more information, see [Configuring query monitoring](watsonxdata?topic=watsonxdata-qhmm#enb_qhmm).
+   * You can enable the file pruning functionality in Query History Monitoring and Management (QHMM) from the **Query monitoring** page. You can also configure the maximum size and threshold percentage for the QHMM storage bucket. When the threshold is met during file upload or when a cleanup scheduler runs (default every 24 hours), older data is deleted. For more information, see [Configuring query monitoring](watsonxdata?topic=watsonxdata-qhmm#prn_qhmm).
 
    * Query History Monitoring and Management (QHMM) no longer stores the diagnostic data in the default IBM Managed trial bucket (`wxd-system`). To store the diagnostic data, you must now use a storage type supported for QHMM. For more information about using your own storage, see [Configuring query monitoring](watsonxdata?topic=watsonxdata-qhmm#cnsl_qhmm).
 

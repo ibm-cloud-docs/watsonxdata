@@ -26,7 +26,7 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Configuring Query monitoring
+# Configuring query monitoring
 {: #qhmm}
 
 Query History Monitoring and Management (QHMM) is a service that stores and manages diagnostic data, such as  heap dumps, thread dumps, query history and query event-related information of the Presto engine in the storage associated with a Hive catalog. You can retrieve the history files to analyze, debug or monitor the queries. You can also store the data in your own bucket.
@@ -85,7 +85,7 @@ If the QHMM feature is not enabled at the time of provisioning watsonx.data quic
 
 
 ### Enabling data pruning feature
-{: #cnsl_qhmm}
+{: #prn_qhmm}
 
 You can enable the data pruning feature for QHMM from the **Query monitoring** page. To do that:
 
