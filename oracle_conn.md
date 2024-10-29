@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-13"
+lastupdated: "2024-10-24"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -32,7 +32,7 @@ subcollection: watsonxdata
 Oracle allows querying and creating tables in an external Oracle database.
 {: shortdesc}
 
- Configure the following details for Oracle :
+ Configure the following details for Oracle data source:
 
  | Field           | Description        |
  |------------------|--------------------|

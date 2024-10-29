@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-10-29"
 
 keywords: lakehouse, hms, {{site.data.keyword.lakehouse_short}}, hive, metastore
 
@@ -98,3 +98,7 @@ Running Presto (C++) queries:
       ./presto-run --engine=$engine_name --session enable_wxd_query_optimizer=false -f $LH_SANDBOX_DIR/sql-files.sql
       ```
       {: codeblock}
+
+3. Copy and browse the host url of Presto (C++) engine from the **Infrastructure manager** window of {{site.data.keyword.lakehouse_short}} web console to get details of the queries from the JSON file that are run using **Query Optimizer**.
+
+   The optimized queries in the JSON file has the parameter `"wxdQueryOptimized" : true`.

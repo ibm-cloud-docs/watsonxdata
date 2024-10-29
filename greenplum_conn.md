@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-13"
+lastupdated: "2024-10-24"
 
 keywords: lakehouse, database, watsonx.data
 
@@ -32,7 +32,7 @@ subcollection: watsonxdata
 Greenplum is a massively parallel processing (MPP) SQL database. It provides access to data in powerful server clusters within a single SQL interface.
 {: shortdesc}
 
- If you select **Greenplum** from the **Database type** drop-down list, configure the following details:
+ Configure the following details for Greenplum data source:
 
  | Field           | Description        |
  |------------------|--------------------|
@@ -46,7 +46,7 @@ Greenplum is a massively parallel processing (MPP) SQL database. It provides acc
  | Connection details: Arrow Flight           |  Enter the following details for Arrow Flight service connection: \n Service hostname: Enter the service hostname from the following options: \n * api.dataplatform.cloud.ibm.com \n * api.eu-gb.dataplatform.cloud.ibm.com \n * api.eu-de.dataplatform.cloud.ibm.com \n * api.jp-tok.dataplatform.cloud.ibm.com. \n Port: Enter the port number. \n API key: Enter the API key. For more information, see [API key](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmapi-key). \n Token URL: Enter the token URL as https://iam.cloud.ibm.com/identity/token. \n Port is SSL enabled: Use the toggle switch to enable or disable SSL connection. \n Validate server certificate: This option can be used when the host certificate is not signed by a known certificate authority. Toggle the switch to enable or disable the server certificate validation. If enabled, \n i. The Upload SSL certificate (.pem, .crt, .cert or .cer) link is enabled. \n ii. Click the Upload SSL certificate (.pem, .crt, .cert or .cer) link. \n iii. Browse the SSL certificate and upload.  |
  | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your database. |
  | Create | Click Create to create the database. |
- {: caption="Register database" caption-side="bottom"}
+ {: caption="Register data source" caption-side="bottom"}
 
 ## Limitations for SQL statements
 {: #connector_limitations}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-10-07"
+lastupdated: "2024-10-29"
 
 keywords: watsonxdata, release notes
 
@@ -21,9 +21,48 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.lakehouse_full}} that are grouped by date.
 {: shortdesc}
 
+## 29 October 2024 - Version 2.0.4
+{: #lakehouse_29oct01}
+{: release-note}
+
+Engine and service enhancements
+
+: This release includes the following engine and service enhancements:
+
+   * The default value of the `task.max-drivers-per-task` property for Presto (Java) and Presto (C++) workers is now set based on the number of vCPUs.
+
+   * You can enable the file pruning functionality in Query History Monitoring and Management (QHMM) from the **Query monitoring** page. You can also configure the maximum size and threshold percentage for the QHMM storage bucket. When the threshold is met during file upload or when a cleanup scheduler runs (default every 24 hours), older data is deleted. For more information, see [Configuring query monitoring](watsonxdata?topic=watsonxdata-qhmm#prn_qhmm).
+
+   * Query History Monitoring and Management (QHMM) no longer stores the diagnostic data in the default IBM Managed trial bucket (`wxd-system`). To store the diagnostic data, you must now use a storage type supported for QHMM. For more information about using your own storage, see [Configuring query monitoring](watsonxdata?topic=watsonxdata-qhmm#cnsl_qhmm).
+
+   * You can now verify query optimization status by checking the `wxdQueryOptimized` parameter in the JSON file. For more information, see [Running queries from the Presto (C++) CLI or Query workspace](watsonxdata?topic=watsonxdata-exec_inspect_optimizer).
+
+Data sources enhancements
+
+: This release includes the following data sources and storage enhancements:
+
+   * Test connection feature is now available for the following data sources:
+      * Apache Pinot
+      * Cassandra
+      * Prometheus
+
+
+   * New data source **SAP HANA** is now available. You can use **Driver manager** under the **Configurations** page to manage drivers for SAP HANA data source. Each of these drivers undergoes a series of validations. For more information on SAP HANA data source and BYOJ process, see [SAP HANA](watsonxdata?topic=watsonxdata-saphana_conn).
+
+Lite plan
+
+: To enhance usability, the system catalogs (cmx and system) are now hidden for Lite plan users. The Lite plan instance with Presto (C++) engine includes `tpch` as the benchmarking catalog and the instance with Presto (Java) engine include `tpch` and `tpcds` as the benchmarking catalogs.
+
+Deprecated features
+
+: The following features are deprecated in this release:
+
+   * The REST API feature to capture DDL changes in {{site.data.keyword.lakehouse_short}} through event listener is deprecated in this release and will be removed from {{site.data.keyword.lakehouse_short}} with version 2.1 release.
+
+   * Support for Apache Spark 3.3 runtime is deprecated. You must upgrade to Spark 3.4. To update the Apache Spark version, see [Editing the Spark engine details](watsonxdata?topic=watsonxdata-view-end#edit-dtls).
+
 ## 25 September 2024 - Version 2.0.3
 {: #lakehouse_25Sep01}
-{: release-note}
 
 Data sources and storage enhancements
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-10-28"
 
 keywords: watsonx.data, ikc, configuring, knowledgecatalog
 subcollection: watsonxdata
@@ -12,7 +12,7 @@ subcollection: watsonxdata
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Integrating with IBM Knowledge Catalog (IKC)
+# Connecting to IBM Knowledge Catalog (IKC)
 {: #ikc_integration}
 
 Integrating {{site.data.keyword.lakehouse_full}} with IBM Knowledge Catalog (IKC) provides self-service access to data assets (tables and views) for knowledge workers who need to use the data assets to gain insights.
@@ -106,7 +106,7 @@ Both {{site.data.keyword.lakehouse_short}} and IKC must be present in the {{site
    |-------|-------------|
    | Service | Select **IBM Knowledge Catalog**. |
    | Storage catalogs | Select the applicable storage catalogs for IKC governance. |
-   | IKC endpoint  | Configure the IKC API url. |
+   | IKC endpoint  | Configure the IKC API url by including `api.` after `https://`. For example, if the URL is `https://dataplatform.cloud.ibm.com`, the endpoint should be `https://api.dataplatform.cloud.ibm.com`. If the URL is with location (`https://<region>.dataplatform.cloud.ibm.com`), the endpoint should be `https://api.<region>.dataplatform.cloud.ibm.com`. |
    {: caption="Ingrate service" caption-side="bottom"}
 
 1. Click **Integrate**.

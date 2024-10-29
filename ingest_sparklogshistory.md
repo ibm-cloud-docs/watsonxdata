@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-25"
+lastupdated: "2024-10-28"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -43,16 +43,12 @@ For a **Failed** or **Finished** status, you must start the Spark history server
 
 2. From the navigation menu, select **Data manager** and click **Ingestion history** tab.
 
-3. Locate the specific ingestion **Job ID** you want to examine.
+3. Click a specific **Job log** to get the details and logs of that ingestion job.
 
-4. Click on the **Spark log ID** associated with the ingestion job to get log details based on the status of the ingestion job as follows:
+4. Click **Spark application history** to get log details based on the status of the ingestion job as follows:
 
-   **Starting**: If the ingestion job is in **Starting** status, clicking the **Spark log ID** may not provide immediate details. You might see a message indicating that the application ID is not available yet.
+   **Starting**: If the ingestion job is in **Starting** status, **Spark application history** is disabled.
 
-   **Running**: If the job status is **Running**, clicking the **Spark log ID** will generally take you to the Spark UI. You can monitor the ingestion job progress, resource usage, and other details in real-time through this web interface. This Spark UI information will be temporarily available only when the job is in the **Running** status.
+   **Running**: If the job status is **Running**, clicking **Spark application UI** will generally take you to the Spark UI. You can monitor the ingestion job progress, resource usage, and other details in real-time through this web interface. This Spark UI information will be temporarily available only when the job is in the **Running** status.
 
-   **Failed** or **Finished**: If the job status is **Failed** or **Finished**, clicking the Spark log ID will navigate you to the Spark history UI. This interface provides a summary of the ingestion job execution, including its timeline, resource usage, and any error messages.
-
-
-   If an ingestion job encountered an issue and failed early in its execution and did not generate a Spark application ID, it is likely that the job did not progress far enough for a Spark log ID to be created. Therefore, the Spark log ID will not be available to provide details about the ingestion process.
-   {: note}
+   **Failed** or **Finished**: If the job status is **Failed** or **Finished**, clicking **Spark application history** will navigate you to the Spark history UI. This interface provides a summary of the ingestion job execution, including its timeline, resource usage, and any error messages.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-10-25"
 
 keywords: lakehouse, watsonx data, quick start, engine, catalog, bucket
 subcollection: watsonxdata
@@ -66,7 +66,10 @@ Your {{site.data.keyword.lakehouse_short}} needs metadata catalogs to manage you
 
 In the **Configure catalog** page, complete the following steps:
 
-1. Select the table format for managing your data. Apache Hive and Apache Iceberg catalogs are selected by default.
+1. Select the table format for managing your data. Apache Hive and Apache Iceberg catalogs are available.
+
+To enable [Query monitoring]({{site.data.keyword.ref-qhmm-link}}){: external} feature, you must select Apache Hive catalog.
+{: attention}
 
 2. Click **Next**.
 
@@ -97,16 +100,19 @@ In the **Configure engine** page, complete the following steps:
 {: #qs_montr}
 {: step}
 
-You can enable, or disable query monitoring feature (For more information about query monitoring, see [Query monitoring]({{site.data.keyword.ref-qhmm-link}}){: external}) for your instance. If you enable the feature, you must specify the storage that is required to store QHMM related data. You have the provison to use the default storage (that the system provision for you) or you can bring your own bucket (BYOB).
+You can enable QHMM feature only if you select Apache Hive catalog from Quick start wizard > **Catalog** tab.
+{: attention}
 
-1. Use the toggle switch to enable (or disable) the query monitoring feature.
+You can enable, or disable query monitoring feature (For more information about query monitoring, see [Query monitoring]({{site.data.keyword.ref-qhmm-link}}){: external}) for your instance. To enable the feature, you must specify the storage that is required to store QHMM related data. You have the provison a storage (Hive catalog).
+
+1. Use the toggle switch to enable (or disable) the query monitoring feature. You can enable the feature only if you have selected the catalog as Apache Hive in previous step of the Quick start wizard.
 2. If you enable the QHMM feature, you need to configure the storage details for storing QHMM data. Else, you can navigate to the next step using the **Next** button.
 2. You can view the following storage details that is available in the system by default to store the QHMM data.
     * The **Bucket name** field displays the default bucket (that the system provision) to which the query history is stored.
     * The **Catalog type** is by default `Apache hive`. QHMM supports only Apache hive.
-    * The **Catalog name** is by default `wxd_system_data`.
+    * The **Catalog name** is by default `hive_data`.
 
-3. You can continue using the default storage details or you can change the default bucket and configure the details of the bucket that you bring in (BYOB) to store the QHMM data. To do that:
+3. You can continue using the default storage details or you can change the default storage and configure the details of the storage that you bring in (BYOB) to store the QHMM data. To do that:
 
     a. Use the **Back** button to navigate backwards to the **Configure bucket** page.
 

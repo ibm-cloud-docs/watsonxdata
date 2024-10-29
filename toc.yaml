@@ -26,6 +26,7 @@ toc:
           - api_custom_ov.md
           - mixed_case_overview.md
           - resource_grp_ov.md
+          - integration.md
       - topicgroup:
           label: Provisioning watsonx.data
           topics:
@@ -40,6 +41,7 @@ toc:
       - quick_start.md
       - tut_query_db.md
       - tut_custbckt.md
+      - tut_data_ingestion.md
       - topicgroup:
           label: Data federation use case
           topics:
@@ -87,6 +89,7 @@ toc:
               - postgresql_conn.md
               - prometheus_conn.md
               - redis_conn.md
+              - saphana.md
               - singlestore_conn.md
               - snowflake_conn.md
               - sqlserver_conn.md
@@ -170,27 +173,7 @@ toc:
                 - qhmm.md
                 - qhmm_querying.md
                 - qhmm_heap_thread.md
-                - qhmm_gen.md
-                - shell_script.md
       - conn-presto-thr-cli.md
-      - topicgroup:
-          label: Integrating with Data Build Tool(dbt)
-          topics:
-            - about_dbt.md
-            - topicgroup:
-                label: dbt adapter for Presto
-                topics:
-                  - dbt-watsonx-presto.md
-                  - dbt-watsonx-presto-conf.md
-                  - dbt-watsonx-presto-inst.md
-            - topicgroup:
-                label: dbt adapter for Spark
-                topics:
-                  - dbt-watsonx-spk-inst.md
-                  - dbt-watsonx-spk-conf.md
-      - ikc_integration.md
-      - s2s_auth.md
-      - ds_integration.md
       # - presto_behavior.md
       - delete_lh.md
       - topicgroup:
@@ -288,6 +271,27 @@ toc:
             - monitoring_wxdcloud.md
             - jmx_metrics.md
             - milvus_exp_mtrcs.md
+      - topicgroup:
+          label: Integrating with Data Build Tool(dbt)
+          topics:
+            - about_dbt.md
+            - topicgroup:
+                label: dbt adapter for Presto
+                topics:
+                  - dbt-watsonx-presto.md
+                  - dbt-watsonx-presto-conf.md
+                  - dbt-watsonx-presto-inst.md
+            - topicgroup:
+                label: dbt adapter for Spark
+                topics:
+                  - dbt-watsonx-spk-inst.md
+                  - dbt-watsonx-spk-conf.md
+      - topicgroup:
+          label: Integrating with IBM Knowledge Catalog (IKC)
+          topics:
+            - ikc_integration.md
+            - s2s_auth.md
+      - ds_integration.md
       - topicgroup:
           label: Integrating with BI visualization tools
           topics:

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-10-25"
 
 keywords: watsonxdata, qhmm
 
@@ -130,7 +130,7 @@ Retrieve heap and thread memory dump data from the MinIO storage using the follo
 
 1. Log in to **MinIO** user interface.
 
-1. Go to **Object Browser**. Click `wxd-system` storage.
+1. Go to **Object Browser**. Click the storage.
 
 1. In this storage, click `qhmm` folder.
 

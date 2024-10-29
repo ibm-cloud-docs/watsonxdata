@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-10-29"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -239,5 +239,5 @@ Parameter values:
 * <<change_endpoint>> : The Hive metastore URI endpoint to access the metastore. For more information on getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials](watsonxdata?topic=watsonxdata-hms){: external}.
 * <<change_pswd>> : The password to access the metastore. For more information on getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials](watsonxdata?topic=watsonxdata-hms){: external}.
 
-To run the Spark python file using EMR-6.11.1 (Spark 3.3.2) cluster, download the iceberg jars from the [location](https://repo1.maven.org/maven2/org/apache/iceberg/iceberg-spark-runtime-3.3_2.12/1.4.1/iceberg-spark-runtime-3.3_2.12-1.4.1.jar) and follow the same [procedure](#abt_emrsamp_run).
+To run the Spark python file using EMR-6.15.0 (Spark 3.4) cluster, download the iceberg jars from the [location](https://repo1.maven.org/maven2/org/apache/iceberg/iceberg-spark-runtime-3.3_2.12/1.4.1/iceberg-spark-runtime-3.3_2.12-1.4.1.jar) and follow the same [procedure](#abt_emrsamp_run).
 {: important}

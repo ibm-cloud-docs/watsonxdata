@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-10-28"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -28,6 +28,9 @@ You can customize the worker configuration properties through an API for Presto 
 | `system-mem-shrink-gb` | Integer | Limit {1, 1e13} |
 | `system-mem-pushback-enabled` | Boolean | True or False |
 {: caption="Configuration properties for Presto (C++) - worker nodes" caption-side="bottom"}
+
+ If the `system-mem-pushback-enabled` property is set to `true`, the default limit of `system-mem-limit-gb` will not be enough. It is recommended to set the value of `system-mem-limit-gb` same as `system-memory-gb`.
+ {: note}
 
 ## Properties to be customized under support guidance
 {: #api_custom_sprt_pcpp}
