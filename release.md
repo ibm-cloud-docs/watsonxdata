@@ -22,7 +22,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: shortdesc}
 
 ## 29 October 2024 - Version 2.0.4
-{: #lakehouse_28oct01}
+{: #lakehouse_29oct01}
 {: release-note}
 
 Engine and service enhancements
