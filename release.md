@@ -21,7 +21,7 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.lakehouse_full}} that are grouped by date.
 {: shortdesc}
 
-## 28 October 2024 - Version 2.0.4
+## 29 October 2024 - Version 2.0.4
 {: #lakehouse_28oct01}
 {: release-note}
 
