@@ -55,7 +55,11 @@ Lite plan
 
 Deprecated features
 
-: The REST API feature to capture DDL changes in {{site.data.keyword.lakehouse_short}} through event listener is deprecated in this release and will be removed from {{site.data.keyword.lakehouse_short}} with version 2.1 release.
+: The following features are deprecated in this release:
+
+   * The REST API feature to capture DDL changes in {{site.data.keyword.lakehouse_short}} through event listener is deprecated in this release and will be removed from {{site.data.keyword.lakehouse_short}} with version 2.1 release.
+
+   * Support for Apache Spark 3.3 runtime is deprecated. You must upgrade to Spark 3.4. To update the Apache Spark version, see [Editing the Spark engine details](watsonxdata?topic=watsonxdata-view-end#edit-dtls).
 
 ## 25 September 2024 - Version 2.0.3
 {: #lakehouse_25Sep01}

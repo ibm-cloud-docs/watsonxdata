@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-10-29"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -43,7 +43,7 @@ To create an {{site.data.keyword.iae_full_notm}} instance:
 1. Choose the location that is closer to the region where you have provisioned {{site.data.keyword.lakehouse_short}} for deploying the service instance. Currently, **us-south** and **eu-de** are the only supported regions.
 1. Select a plan. Currently, **Standard Serverless for Apache Spark** is the only supported serverless plan.
 1. Configure the instance by entering a name of your choice, selecting a resource group and adding tags.
-1. Select latest runtime version available (for example 3.3).
+1. Select latest runtime version available (for example 3.4).
 1. Select the {{site.data.keyword.cloud_notm}} Object Storage instance from your account that you want to use as the {{site.data.keyword.iae_short}} **instance home** to store instance-related data.
 1. Click **Create** to provision the service instance in the background.
 
@@ -112,7 +112,7 @@ To create a service instance by using the {{site.data.keyword.Bluemix_short}} co
     ```bash
     {
       "default_runtime": {
-        "spark_version": "3.3"
+        "spark_version": "3.4"
         },
       "instance_home": {
         "region": "us-south",
@@ -229,7 +229,7 @@ To create a service instance by using the Resource controller REST API:
       "target": "us-south",
       "parameters": {
         "default_runtime": {
-          "spark_version": "3.3"
+          "spark_version": "3.4"
             },
             "instance_home": {
               "region": "us-south",
@@ -266,7 +266,7 @@ To track instance readiness:
       "state": "created",
       "state_change_time": "2021-04-21T04:24:01Z",
       "default_runtime": {
-        "spark_version": "3.3",
+        "spark_version": "3.4",
         "instance_home": {
           "provider": "ibm-cos",
           "type": "objectstore",
