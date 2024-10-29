@@ -31,9 +31,9 @@ Engine and service enhancements
 
    * The default value of the `task.max-drivers-per-task` property for Presto (Java) and Presto (C++) workers is now set based on the number of vCPUs.
 
-   * You can enable the file pruning functionality in Query History Monitoring and Management (QHMM) from the Query monitoring page. You can also configure the maximum size and threshold percentage for the QHMM storage bucket. When the threshold is met during file upload or when a cleanup scheduler runs (default every 24 hours), older data is deleted. For more information, see [Configuring Query monitoring](watsonxdata?topic=watsonxdata-qhmm#prc_qhmm).
+   * You can enable the file pruning functionality in Query History Monitoring and Management (QHMM) from the **Query monitoring** page. You can also configure the maximum size and threshold percentage for the QHMM storage bucket. When the threshold is met during file upload or when a cleanup scheduler runs (default every 24 hours), older data is deleted. For more information, see [Configuring query monitoring](watsonxdata?topic=watsonxdata-qhmm#enb_qhmm).
 
-   * Query History Monitoring and Management (QHMM) no longer stores the diagnostic data in the default IBM Managed trial bucket (wxd-system). To store the diagnostic data, you must now use a storage type supported for QHMM. For more information about using your own storage, see [Configuring Query monitoring](watsonxdata?topic=watsonxdata-qhmm#prc_qhmm).
+   * Query History Monitoring and Management (QHMM) no longer stores the diagnostic data in the default IBM Managed trial bucket (`wxd-system`). To store the diagnostic data, you must now use a storage type supported for QHMM. For more information about using your own storage, see [Configuring query monitoring](watsonxdata?topic=watsonxdata-qhmm#cnsl_qhmm).
 
    * You can now verify query optimization status by checking the `wxdQueryOptimized` parameter in the JSON file. For more information, see [Running queries from the Presto (C++) CLI or Query workspace](watsonxdata?topic=watsonxdata-exec_inspect_optimizer).
 
@@ -47,15 +47,15 @@ Data sources enhancements
       * Prometheus
 
 
-   * New data source **SAP HANA** is now available. Users can use a new dedicated section **Driver manager** under the **Configurations** page to manage drivers for SAP HANA data source. Each of these drivers undergoes a series of validation. For more information on SAP HANA data source and BYOJ process, see [SAP HANA](watsonxdata?topic=watsonxdata-saphana_conn).
+   * New data source **SAP HANA** is now available. You can use **Driver manager** under the **Configurations** page to manage drivers for SAP HANA data source. Each of these drivers undergoes a series of validations. For more information on SAP HANA data source and BYOJ process, see [SAP HANA](watsonxdata?topic=watsonxdata-saphana_conn).
 
 Lite plan
 
-: To enhance usability, the system catalogs (cmx and system) are now hidden for Lite plan users.The Lite plan instance with Presto C++ engine includes `tpch` as the benchmarking catalog and the instance with Presto (Java) engine include `tpch` and `tpcds` as the benchmarking catalogs.
+: To enhance usability, the system catalogs (cmx and system) are now hidden for Lite plan users. The Lite plan instance with Presto (C++) engine includes `tpch` as the benchmarking catalog and the instance with Presto (Java) engine include `tpch` and `tpcds` as the benchmarking catalogs.
 
 Deprecated features
 
-: The REST API feature to capture DDL changes in {{site.data.keyword.lakehouse_short}} through event listener is deprecated from {{site.data.keyword.lakehouse_short}} release version 2.0.4 and will be removed from {{site.data.keyword.lakehouse_short}} release version 2.1.
+: The REST API feature to capture DDL changes in {{site.data.keyword.lakehouse_short}} through event listener is deprecated in this release and will be removed from {{site.data.keyword.lakehouse_short}} with version 2.1 release.
 
 ## 25 September 2024 - Version 2.0.3
 {: #lakehouse_25Sep01}
