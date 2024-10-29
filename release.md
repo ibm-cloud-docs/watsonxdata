@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-10-28"
+lastupdated: "2024-10-29"
 
 keywords: watsonxdata, release notes
 
@@ -33,7 +33,7 @@ Engine and service enhancements
 
    * You can enable the file pruning functionality in Query History Monitoring and Management (QHMM) from the Query monitoring page. You can also configure the maximum size and threshold percentage for the QHMM storage bucket. When the threshold is met during file upload or when a cleanup scheduler runs (default every 24 hours), older data is deleted. For more information, see [Configuring Query monitoring](watsonxdata?topic=watsonxdata-qhmm#prc_qhmm).
 
-   * Query History Monitoring and Management (QHMM) no longer stores the diagnostic data in the default IBM Managed trial bucket (wxd-system). To store the diagnostic data, you must now use a storage created in IBM Cloud Object Storage instance in your account. For more information about using your own storage, see [Configuring Query monitoring](watsonxdata?topic=watsonxdata-qhmm#prc_qhmm).
+   * Query History Monitoring and Management (QHMM) no longer stores the diagnostic data in the default IBM Managed trial bucket (wxd-system). To store the diagnostic data, you must now use a storage type supported for QHMM. For more information about using your own storage, see [Configuring Query monitoring](watsonxdata?topic=watsonxdata-qhmm#prc_qhmm).
 
    * You can now verify query optimization status by checking the `wxdQueryOptimized` parameter in the JSON file. For more information, see [Running queries from the Presto (C++) CLI or Query workspace](watsonxdata?topic=watsonxdata-exec_inspect_optimizer).
 
