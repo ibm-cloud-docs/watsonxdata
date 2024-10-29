@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-28"
+lastupdated: "2024-10-29"
 
 keywords: watsonxdata, qhmm
 
@@ -29,11 +29,11 @@ subcollection: watsonxdata
 # Configuring Query monitoring
 {: #qhmm}
 
-Query History Monitoring and Management (QHMM) is a service that stores and manages diagnostic data, such as  heap dumps, thread dumps, query history and query event-related information of the Presto engine (Presto) in the storage associated with a Hive catalog. You can retrieve the history files to analyze, debug or monitor the queries. You can also store the data in your own bucket.
+Query History Monitoring and Management (QHMM) is a service that stores and manages diagnostic data, such as  heap dumps, thread dumps, query history and query event-related information of the Presto engine in the storage associated with a Hive catalog. You can retrieve the history files to analyze, debug or monitor the queries. You can also store the data in your own bucket.
 {: shortdesc}
 
 You can enable or disable the QHMM service for your {{site.data.keyword.lakehouse_short}} instance. If you enable the QHMM service, you must specify the storage to be used for storing the query data.
-You must create and associate a Hive catalog to store the QHMM data (register your own storage (BYOB)). To use BYOB, register your bucket (Hive storage) in watsonx.data and configure it to use as QHMM storage. You can do that either from Quick start or from {{site.data.keyword.lakehouse_short}} console page.
+You must create and associate a Hive catalog to store the QHMM data (register your own storage (BYOB)). To use BYOB, register your bucket in watsonx.data and configure it to use as QHMM storage.
 
 QHMM supports only Hive storage.
 {: note}
@@ -43,8 +43,8 @@ QHMM supports only Hive storage.
 
 You can enable the QHMM feature in one of the following ways:
 
-* Quick start wizard. See [Configure query monitoring](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-quick_start#qs_montr).
-* [{{site.data.keyword.lakehouse_short}} console](#cnsl_qhmm) page.
+* From quick start wizard while provisioning watsonx.data. See [Configure query monitoring](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-quick_start#qs_montr).
+* From [{{site.data.keyword.lakehouse_short}} console](#cnsl_qhmm) > **Query monitoring** page.
 
 You can retrieve the history files to analyze, debug, or monitor the queries. From the Query workspace see, [Retrieving query information from QHMM data]({{site.data.keyword.ref-ret_qhmm-link}}).
 

@@ -41,6 +41,7 @@ toc:
       - quick_start.md
       - tut_query_db.md
       - tut_custbckt.md
+      - tut_data_ingestion.md
       - topicgroup:
           label: Data federation use case
           topics:
