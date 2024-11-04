@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-09"
+lastupdated: "2024-11-04"
 
 keywords: lakehouse
 
@@ -86,11 +86,11 @@ Iceberg: Iceberg does support the time data type.
 
 The following special characters are not supported while creating schemas and tables:
 
-Schemas (Hive and Iceberg):  `{`, `[`, `(`, `)`
+Schemas (Hive and Iceberg):  `{`, `[`, `(`, `)`, and `/`.
 
-Tables (Hive): `{`, `(`, `[`, `)`. (Creation of tables within a schema name that starts with the special character `@` shall result in an error).
+Tables (Hive): `{`, `(`, `[`, `)`, and `/`. (Creation of tables within a schema name that starts with the special character `@` shall result in an error).
 
-Tables (Iceberg): `$`, `@`, `{`, `[`, `)`, `(`
+Tables (Iceberg): `$`, `@`, `{`, `[`, `)`, `(`, and `/`.
 
 ## `ALTER TABLE` operation fails in Spark job submission
 {: #known_issues13596}
