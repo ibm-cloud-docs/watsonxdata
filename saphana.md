@@ -67,7 +67,7 @@ The following is the procedure to add your own JAR to the SAP HANA database:
 11. Select the engine to modify the catalog's association with it. All in-flight queries on the modified engines are stopped.
 12. Click Save and restart engine.
 
-Note: You can link the SAP HANA database to the engine only when a driver is associated to that engine. Only one SAP HANA driver can be associated to an engine at a time.
+You can link the SAP HANA database to the engine only when a driver is associated to that engine. Only one SAP HANA driver can be associated to an engine at a time.
 {: note}
 
 ## Vulnerabilities in JAR
