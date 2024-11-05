@@ -415,8 +415,22 @@ keyword:
     /docs/watsonxdata?topic=watsonxdata-conf_rcrs_grp
   ref-spl_engine-link:
     /docs/watsonxdata?topic=watsonxdata-spl_engine
+  ref-gcs_storage-link:
+    /docs/watsonxdata?topic=watsonxdata-gcs_storage
+  ref-hdfs_storage-link:
+    /docs/watsonxdata?topic=watsonxdata-hdfs_storage
+  ref-minio_storage-link:
+    /docs/watsonxdata?topic=watsonxdata-minio_storage
+  ref-ceph_storage-link:
+    /docs/watsonxdata?topic=watsonxdata-ceph_storage
+  ref-amazons_storage-link:
+    /docs/watsonxdata?topic=watsonxdata-amazons_storage
+  ref-cos_storage-link:
+    /docs/watsonxdata?topic=watsonxdata-cos_storage
   ref-ozone_storage-link:
     /docs/watsonxdata?topic=watsonxdata-ozone_storage
+  ref-adls_genblob_storage-link:
+    /docs/watsonxdata?topic=watsonxdata-adls_genblob_storage
   ref-ingest_sparklogshistory-link:
     /docs/watsonxdata?topic=watsonxdata-ingest_sparklogshistory
   ref-prepare_ingest_data2-link:
