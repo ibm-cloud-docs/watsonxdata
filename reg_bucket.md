@@ -63,7 +63,7 @@ To add a storage, complete the following steps:
    * The storage bucket name must be unique and must contain only the characters A–Z, a–z, 0–9, and hypen (-).
    * You must use a service credential with `Writer` role because the schema is written to the storage bucket. Make sure that you choose the endpoint that matches the type of access that the bucket allows. That is, if no public access is allowed (**Public access** is **No**) to the bucket, choose the **Direct** endpoint.
 
-## Features
+## Additional information
 {: #connector_features}
 
 * For **Iceberg** connector:
