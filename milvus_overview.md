@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-11-05"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -60,10 +60,10 @@ You can use Milvus to power recommendation systems by finding items similar to y
 
 For more information about Milvus, see:
 
-- [Adding Milvus service](watsonxdata?topic=watsonxdata-adding-milvus-service){: external}
-- [Connecting to Milvus service](watsonxdata?topic=watsonxdata-conn-to-milvus){: external}
-- [Working with Milvus](watsonxdata?topic=watsonxdata-working_with_milvus){: external}
-- [Pause and resume Milvus service](watsonxdata?topic=watsonxdata-pause_resume_milvus){: external}
+- [Adding Milvus service]({{site.data.keyword.ref-adding-milvus-service-link}}){: external}
+- [Connecting to Milvus service]({{site.data.keyword.ref-conn-to-milvus-link}}){: external}
+- [Working with Milvus]({{site.data.keyword.ref-working_with_milvus-link}}){: external}
+- [Pause and resume Milvus service]({{site.data.keyword.ref-pause_resume_milvus-link}}){: external}
 
 You cannot upgrade from the private-preview version to the GA version of Milvus. You must delete the private preview and add the GA version.
 {: important}
