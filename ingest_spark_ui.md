@@ -41,7 +41,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 * Add data sources for source data files. See [Adding a data source-catalog pair]({{site.data.keyword.ref-reg_database-link}}).
 * Optionally, you can create a schema in the catalog for the target table. See [Creating schemas]({{site.data.keyword.ref-create_schema-link}}).
 * Optionally, you can also create a target table in the schema. See [Creating tables]({{site.data.keyword.ref-create_table-link}}).
-* To enable your Spark application and ingestion to work with the watsonx.data catalog and storage, you must have `MetastoreAdmin`, and `DataAccess` roles in the service access and `Administrator` role in the platform access, see [Assigning access to account management services](https://cloud.ibm.com/docs/account?topic=account-account-services&interface=ui) and [Managing roles and privileges](watsonxdata?topic=watsonxdata-role_priv).
+* To enable your Spark application and ingestion to work with the watsonx.data catalog and storage, you must have `MetastoreAdmin`, and `DataAccess` roles in the service access and `Administrator` role in the platform access, see [Assigning access to account management services](https://cloud.ibm.com/docs/account?topic=account-account-services&interface=ui) and [Managing roles and privileges]({{site.data.keyword.ref-role_priv-link}}).
 
 ## Ingesting data from local system
 {: #spk_ingest_datalocal}

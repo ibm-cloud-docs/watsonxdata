@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-22"
+lastupdated: "2024-11-06"
 
 keywords: watsonxdata, commands, command line interface, cli
 
@@ -69,13 +69,13 @@ Different options and variables that are supported in a command line and configu
    |dbuser|Database username that is used to do ingestion. This is a mandatory parameter to run an ingestion job unless the default user is used.|`--dbuser <DBUSER>`|
    |ingest-config|Configuration file for data migration|`--ingest-config <INGEST_CONFIGFILE>`|
    |ingestion-engine-endpoint|Endpoint of ingestion engine. hostname=`<hostname>`, port=`<port>`. This is a mandatory parameter to run an ingestion job.|`--ingestion-engine-endpoint <INGESTION_ENGINE_ENDPOINT>`|
-   |log-directory|This option is used to specify the location of log files. See [Log directory](watsonxdata?topic=watsonxdata-cli_commands#log_direc).|`--ingest-config <ingest_config_file> --log-directory <directory_path>`|
-   |schema|Schema file that includes CSV specifications, and more. See [Schema file specifications](watsonxdata?topic=watsonxdata-cli_commands#schema_spec).|`--schema </path/to/schemaconfig/file>`|
+   |log-directory|This option is used to specify the location of log files. See [Log directory]({{site.data.keyword.ref-cli_commands-link}}#log_direc).|`--ingest-config <ingest_config_file> --log-directory <directory_path>`|
+   |schema|Schema file that includes CSV specifications, and more. See [Schema file specifications]({{site.data.keyword.ref-cli_commands-link}}#schema_spec).|`--schema </path/to/schemaconfig/file>`|
    |source-data-files|Data files or folders for data migration. File name ending with `/` is considered a folder. Single or multiple files can be used. This is a mandatory parameter to run an ingestion job. File names are case sensitive. Example: `<file1_path>,<file2_path>,<folder1_path>`|`--source-data-files <SOURCE_DATA_FILE>`|
-   |staging-location|Location where CSV files and in some circumstances Parquet files are staged, see [Staging location](watsonxdata?topic=watsonxdata-cli_commands#stag_loc). This is a mandatory parameter to run an ingestion job.|`--staging-location <STAGING_LOCATION>`|
+   |staging-location|Location where CSV files and in some circumstances Parquet files are staged, see [Staging location]({{site.data.keyword.ref-cli_commands-link}}#stag_loc). This is a mandatory parameter to run an ingestion job.|`--staging-location <STAGING_LOCATION>`|
    |staging-hive-catalog|The Hive catalog name configured in the watsonx.data, if not using the default catalog for staging. Default catalog: hive_data.|`--staging-hive-catalog <catalog_name>`|
    |staging-hive-schema|The schema name associated with the staging Hive catalog for ingestion. Create and pass in a custom schema name by using this parameter. Default schema: `lhingest_staging_schema`. If schema is created as default, you do not have need to specify this parameter.|`--staging-hive-schema <schema_name>`|
-   |system-config|This parameter is used to specify system related parameters. See [System config](watsonxdata?topic=watsonxdata-cli_commands#sys_config).|`--system-config <path/to/system/configfile>`|
+   |system-config|This parameter is used to specify system related parameters. See [System config]({{site.data.keyword.ref-cli_commands-link}}#sys_config).|`--system-config <path/to/system/configfile>`|
    |target-table|Data migration target table. `<catalog>.<schema>.<table1>`. This is a mandatory parameter to run an ingestion job. Example: `<iceberg.demo.customer1>`|`--target-table <TARGET_TABLES>`|
    |trust-store-path|Path of the truststore to access the ingestion engine. This is used to establish SSL connections. This is a mandatory parameter to run an ingestion job.|`--trust-store-path <TRUST_STORE_PATH>`|
    |trust-store-password|Password of truststore to access the ingestion engine. This is used to establish SSL connections. This is a mandatory parameter to run an ingestion job.|`--trust-store-password <TRUST_STORE_PASSWORD>`|
@@ -105,12 +105,12 @@ Different options and variables that are supported in a command line and configu
       |dbpassword|Database password that is used to do ingestion. This is a mandatory parameter to run an ingestion job unless the default user is used.|`dbpassword:<DBPASSWORD>`|
       |dbuser|Database username that is used to do ingestion. This is a mandatory parameter to run an ingestion job unless the default user is used.|`dbuser:<DBUSER>`|
       |ingestion-engine-endpoint|Endpoint of ingestion engine. hostname=`<hostname>`, port=`<port>`. This is a mandatory parameter to run an ingestion job.|`ingestion-engine-endpoint:<INGESTION_ENGINE_ENDPOINT>`|
-      |schema|Schema file that includes CSV specifications, and more. See [Schema file specifications](watsonxdata?topic=watsonxdata-cli_commands#schema_spec)|`schema:/path/to/schemaconfig/file`|
+      |schema|Schema file that includes CSV specifications, and more. See [Schema file specifications]({{site.data.keyword.ref-cli_commands-link}}#schema_spec)|`schema:/path/to/schemaconfig/file`|
       |source-files|Data files or folders for data migration. File name ending with `/` is considered a folder. This is a mandatory parameter to run an ingestion job.|`source-files:<SOURCE_DATA_FILE>`|
-      |staging-location|Location where CSV files and in some circumstances Parquet files are staged, see [Staging location](watsonxdata?topic=watsonxdata-cli_commands#stag_loc). This is a mandatory parameter to run an ingestion job.|`staging-location:<STAGING_LOCATION>`|
+      |staging-location|Location where CSV files and in some circumstances Parquet files are staged, see [Staging location]({{site.data.keyword.ref-cli_commands-link}}#stag_loc). This is a mandatory parameter to run an ingestion job.|`staging-location:<STAGING_LOCATION>`|
       |staging-hive-catalog|The Hive catalog name configured in the watsonx.data, if not using the default catalog for staging. Default catalog: hive_data.|`--staging-hive-catalog <catalog_name>`|
       |staging-hive-schema|The schema name associated with the staging Hive catalog for ingestion. Create and pass in a custom schema name by using this parameter. Default schema: `lhingest_staging_schema`. If schema is created as default, you do not have need to specify this parameter.|`--staging-hive-schema <schema_name>`|
-      |system-config|This parameter is used to specify system related parameters. See [System config](watsonxdata?topic=watsonxdata-cli_commands#sys_config).|`--system-config <path/to/system/configfile>`|
+      |system-config|This parameter is used to specify system related parameters. See [System config]({{site.data.keyword.ref-cli_commands-link}}#sys_config).|`--system-config <path/to/system/configfile>`|
       |target-catalog-uri|Target catalog uri|`target-catalog-uri:<TARGET_CATALOG_URI>`|
       |target-table|Data migration target table. `<catalog>.<schema>.<table1>`. This is a mandatory parameter to run an ingestion job. Example: `<iceberg.demo.customer1>`|`target-table:<TARGET_TABLES>`|
       |target-table-storage|Target table file storage location|`target-table-storage:<TARGET_TABLE_STORAGE>`|

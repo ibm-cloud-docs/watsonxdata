@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-28"
+lastupdated: "2024-11-06"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -34,7 +34,7 @@ This topic provides the steps required to locate and view Spark logs associated 
 ## Before you begin
 {: #ingest_sparklogshistorybyb}
 
-For a **Failed** or **Finished** status, you must start the Spark history server to get the ingestion log details. For more information, see [Accessing the Spark history server](watsonxdata?topic=watsonxdata-wxd_spk_histry).
+For a **Failed** or **Finished** status, you must start the Spark history server to get the ingestion log details. For more information, see [Accessing the Spark history server]({{site.data.keyword.ref-wxd_spk_histry-link}}).
 
 ## Procedure
 {: #ingest_sparklogshistoryprcdre}
