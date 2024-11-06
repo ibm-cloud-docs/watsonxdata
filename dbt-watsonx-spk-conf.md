@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-11-06"
 
 keywords: lakehouse, watsonx.data, spark, cli
 
@@ -41,8 +41,8 @@ The following table covers the parameter details:
 
 * **profile_name** : Provide the profile name as the dbt project name.
 * **`<wxd-schema>`** : The table schema name that is associated with the Spark engine that you need to run the dbt models.
-* **host IP address** : Provide the host IP address of the watsonx.data install. To retrieve the host IP address, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection).
-* **`<watsonx.data_instance_crn>`** : The **Instance CRN** of your watsonx.data instance. To retrieve the CRN, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection).
+* **host IP address** : Provide the host IP address of the watsonx.data install. To retrieve the host IP address, see [Getting connection information]({{site.data.keyword.ref-get_connection-link}}).
+* **`<watsonx.data_instance_crn>`** : The **Instance CRN** of your watsonx.data instance. To retrieve the CRN, see [Getting connection information]({{site.data.keyword.ref-get_connection-link}}).
 * **`<username>`** : Your email-id if you are using your API key or it should be in the format `<Service-id>-<GUID>`. For more information on generating service id and GUID, see [Creating service IDs](https://www.ibm.com/docs/en/watsonx/watsonxdata/aws?topic=2u-granting-access-through-service-ids-api-keys-from-saas-console#creating_service_IDs).
 * **`<<apikey>`** : Provide the API key. To generate the API key, see [Managing user API keys](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#manage-user-keys).
 * In case you want to create a new schema in your storage then add `location_root` with the value `s3a://{your_bukect_name}/{your_schema_name}`.

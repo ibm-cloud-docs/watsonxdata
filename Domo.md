@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-19"
+lastupdated: "2024-11-06"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -47,13 +47,13 @@ Domo uses Lightweight Directory Access Protocol (LDAP) authentication mechanism 
 
     * Account name: Provide a name for the connection.
 
-    * Host : Hostname of the Presto engine in watsonx.data that you want to connect to. For more information about retrieving the hostname, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection).
+    * Host : Hostname of the Presto engine in watsonx.data that you want to connect to. For more information about retrieving the hostname, see [Getting connection information]({{site.data.keyword.ref-get_connection-link}}).
 
-    * Port (optional) : For information about retrieving the port number, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection).
+    * Port (optional) : For information about retrieving the port number, see [Getting connection information]({{site.data.keyword.ref-get_connection-link}}).
 
     * Username : Username is `ibmlhapikey` or `ibmlhapikey_<watsonx.datauser_id>`.
 
-    *	Password : The API key of the watosnx.data user. For more information about retrieving the API key, see [Generating the API key](watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmapi-key).
+    *	Password : The API key of the watosnx.data user. For more information about retrieving the API key, see [Generating the API key]({{site.data.keyword.ref-con-presto-serv-link}}).
 
 
 6.	Click **Connect**. The **Connect a Federated DataSet** page opens displaying the Presto account you created.

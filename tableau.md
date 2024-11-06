@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-19"
+lastupdated: "2024-11-06"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -42,13 +42,13 @@ Tableau uses Lightweight Directory Access Protocol (LDAP) authentication mechani
 2.	Click **More** and select **Presto**. The **Presto** window opens.
 3.	In the **General** tab, provide the following details:
 
-    * Server : Hostname of the Presto engine in watsonx.data that you want to connect to. For more information about retrieving the hostname, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection).
-    * Port : For more information about retrieving the port number, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection).
+    * Server : Hostname of the Presto engine in watsonx.data that you want to connect to. For more information about retrieving the hostname, see [Getting connection information]({{site.data.keyword.ref-get_connection-link}}).
+    * Port : For more information about retrieving the port number, see [Getting connection information]({{site.data.keyword.ref-get_connection-link}}).
     * Catalog : Enter the Iceberg catalog that is associated with the Presto engine in watsonx.data.
     * Schema (Optional) : Enter the name of the schema that is associated with your data.
     * Authentication : Select LDAP from the list.
     * Username : The username is `ibmlhapikey` or `ibmlhapikey_<watsonx.datauser_id>`.
-    * Password : The API key of the watosnx.data user. For more information about retrieving the API key, see [Generating the API key](watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmapi-key).
+    * Password : The API key of the watosnx.data user. For more information about retrieving the API key, see [Generating the API key]({{site.data.keyword.ref-con-presto-serv-link}}).
 
 
 4.	In the **Initial SQL** tab (Optional), specify the initial SQL query that you want to run when a connection is made to Presto.

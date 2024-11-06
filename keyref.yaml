@@ -471,3 +471,7 @@ keyword:
     /docs/watsonxdata?topic=watsonxdata-airflow
   ref-redis_database-link:
     /docs/watsonxdata?topic=watsonxdata-redis_database
+  ref-get_connection-link:
+    /docs/watsonxdata?topic=watsonxdata-get_connection
+  ref-resource_grp_pptys-link:
+    /docs/watsonxdata?topic=watsonxdata-resource_grp_pptys

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-19"
+lastupdated: "2024-11-06"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -54,12 +54,12 @@ Looker uses Lightweight Directory Access Protocol (LDAP) authentication mechanis
 9.	Provide a name for the connection and the Looker project name.
 10.	From the **Dialect** list, select **PrestoDB** and provide the following Presto details from watsonx.data.
 
-    * Server : Hostname of the Presto engine in watsonx.data that you want to connect to. For more information about retrieving the hostname, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection).
-    * Port : The Presto port that Looker should use to connect to. For more information about retrieving the port number, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection).
+    * Server : Hostname of the Presto engine in watsonx.data that you want to connect to. For more information about retrieving the hostname, see [Getting connection information]({{site.data.keyword.ref-get_connection-link}}).
+    * Port : The Presto port that Looker should use to connect to. For more information about retrieving the port number, see [Getting connection information]({{site.data.keyword.ref-get_connection-link}}).
     * Database : The name of the database in watsonx.data.
     * Schema (Optional) : Enter the name of the schema that is associated with your data.
     * Username: The username is `ibmlhapikey` or `ibmlhapikey_<watsonx.datauser_id>`.
-    * Password : The API key of the watosnx.data user. For more information about retrieving the API key, see [Generating the API key](watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmapi-key).
+    * Password : The API key of the watosnx.data user. For more information about retrieving the API key, see [Generating the API key]({{site.data.keyword.ref-con-presto-serv-link}}).
     * Optional settings : For more information about the optional settings, see [Optional settings](https://cloud.google.com/looker/docs/connecting-to-your-db#optional_settings).
 
 
