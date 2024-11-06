@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-10-29"
+lastupdated: "2024-11-06"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -55,7 +55,7 @@ To create an {{site.data.keyword.iae_full_notm}} instance:
 To create a service instance by using the {{site.data.keyword.Bluemix_short}} command-line interface:
 
 
-1. Download and configure the {{site.data.keyword.Bluemix_short}} CLI. Follow the instructions in [Getting started with the {{site.data.keyword.Bluemix_short}} CLI](/docs/cli?topic=cli-getting-started){: external}.
+1. Download and configure the {{site.data.keyword.Bluemix_short}} CLI. Follow the instructions in [Getting started with the {{site.data.keyword.Bluemix_short}} CLI](https://cloud.ibm.com/docs/cli?topic=cli-getting-started){: external}.
 
 1. Set the API endpoint for your region and log in:
     ```bash
@@ -177,7 +177,7 @@ To create a service instance by using the {{site.data.keyword.Bluemix_short}} co
     {: codeblock}
 
 
-    Make a note of the instance ID from the output. You will need the instance ID when you call instance management or Spark application management APIs. See [Spark application REST API](/docs/AnalyticsEngine?topic=AnalyticsEngine-spark-app-rest-api){: external}.
+    Make a note of the instance ID from the output. You will need the instance ID when you call instance management or Spark application management APIs. See [Spark application REST API](https://cloud.ibm.com/docs/AnalyticsEngine?topic=AnalyticsEngine-spark-app-rest-api){: external}.
     {: important}
 
 5. [Track instance readiness](#lh-instance-readiness).
@@ -209,7 +209,7 @@ To create a service instance by using the Resource controller REST API:
     ```
     {: codeblock}
 
-1. Get the IAM token. For instructions, see [steps](/docs/AnalyticsEngine?topic=AnalyticsEngine-retrieve-iam-token-serverless){: external}.
+1. Get the IAM token. For instructions, see [steps](https://cloud.ibm.com/docs/AnalyticsEngine?topic=AnalyticsEngine-retrieve-iam-token-serverless){: external}.
 1. Create an instance by using the Resource controller REST API:
     ```bash
     curl -X POST https://resource-controller.cloud.ibm.com/v2/resource_instances/
@@ -217,7 +217,7 @@ To create a service instance by using the Resource controller REST API:
     ```
     {: codeblock}
 
-    The provision.json file contains the provisioning parameters for the instance that you want to create. See [Architecture and concepts in serverless instances](/docs/AnalyticsEngine?topic=AnalyticsEngine-serverless-architecture-concepts){: external} for a description of the provisioning parameters in the payload.
+    The provision.json file contains the provisioning parameters for the instance that you want to create. See [Architecture and concepts in serverless instances](https://cloud.ibm.com/docs/AnalyticsEngine?topic=AnalyticsEngine-serverless-architecture-concepts){: external} for a description of the provisioning parameters in the payload.
 
 
     Following is a sample of the `provision.json` file.
@@ -288,4 +288,4 @@ To track instance readiness:
 ## Learn more
 {: #lh-learnmore}
 
-When provisioning serverless instances, follow the recommended [Best practices](/docs/AnalyticsEngine?topic=AnalyticsEngine-best-practices-serverless){: external}.
+When provisioning serverless instances, follow the recommended [Best practices](https://cloud.ibm.com/docs/AnalyticsEngine?topic=AnalyticsEngine-best-practices-serverless){: external}.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-11-06"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -33,8 +33,8 @@ Ensure you have the following instances ready:
 * {{site.data.keyword.iae_full_notm}} instance.
 
 Fetch the following information from IBM® watsonx.data:
-* HMS URL from {{site.data.keyword.lakehouse_short}}.For more information on getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials](watsonxdata?topic=watsonxdata-hms){: external}.
-* HMS Credentials from {{site.data.keyword.lakehouse_short}}. For more information on getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials](watsonxdata?topic=watsonxdata-hms){: external}.
+* HMS URL from {{site.data.keyword.lakehouse_short}}.For more information on getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
+* HMS Credentials from {{site.data.keyword.lakehouse_short}}. For more information on getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
 
 ## Configuring {{site.data.keyword.iae_short}} instance by using {{site.data.keyword.Bluemix_short}} console
 {: #lh-cons-config-ae}
@@ -43,7 +43,7 @@ To configure your {{site.data.keyword.iae_short}} instance from the {{site.data.
 
 
 1. Log in to your {{site.data.keyword.Bluemix_short}} account.
-1. Access the [{{site.data.keyword.Bluemix_short}} Resource list](https://test.cloud.ibm.com/resources).
+1. Access the [{{site.data.keyword.Bluemix_short}} Resource list](https://cloud.ibm.com/resources).
 1. Search your {{site.data.keyword.iae_short}} instance and click the instance to see the details.
 1. Click **Manage > Configuration** to view the configuration.
 1. In the **Default Spark configuration** section, click **Edit**.
@@ -151,9 +151,9 @@ Parameter value:
     {: codeblock}
 
 * INSTANCE_ID: The {{site.data.keyword.iae_short}} instance ID. For more information about how to retrieve an instance ID, see [Obtaining the service endpoints](https://cloud.ibm.com/docs/AnalyticsEngine?topic=AnalyticsEngine-retrieve-endpoints-serverless#endpoints-cli)
-* hms-thrift-endpoint-from-watsonx.data: Specify the credentials for {{site.data.keyword.lakehouse_short}}. For more information on getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials](watsonxdata?topic=watsonxdata-hms).
-* hms-user-from-watsonx.data: The {{site.data.keyword.lakehouse_short}} username. For more information on getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials](watsonxdata?topic=watsonxdata-hms){: external}.
-* hms-password-from-watsonx.data: The {{site.data.keyword.lakehouse_short}} password. For more information on getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials](watsonxdata?topic=watsonxdata-hms){: external}.
+* hms-thrift-endpoint-from-watsonx.data: Specify the credentials for {{site.data.keyword.lakehouse_short}}. For more information on getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials]({{site.data.keyword.ref-hms-link}}).
+* hms-user-from-watsonx.data: The {{site.data.keyword.lakehouse_short}} username. For more information on getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
+* hms-password-from-watsonx.data: The {{site.data.keyword.lakehouse_short}} password. For more information on getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
 
 To view logs of Spark application ran on {{site.data.keyword.iae_full_notm}} you have to enable logging. For more information, see [Configuring and viewing logs](https://cloud.ibm.com/docs/AnalyticsEngine?topic=AnalyticsEngine-viewing-logs){: external}.
 {: note}
