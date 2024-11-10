@@ -109,6 +109,11 @@ Running Presto (C++) queries:
 
    4. Copy and browse open the host URL of the Presto (C++) engine from the details page to open the **Cluster Overview** external web page.
 
+   5. Enter the username and password to login to the **Cluster Overview** page.
+
+      Username : The username is `ibmlhapikey` or `ibmlhapikey_<watsonx.datauser_id>`.
+      Password : The API key of the {{site.data.keyword.lakehouse_short}} user. For more information about retrieving the API key, see [Generating the API key]({{site.data.keyword.ref-con-presto-serv-link}}).
+
    5. Click on the **Query ID** you want to verify. This will open the **Query Details** page.
 
    6. Open the JSON file from the **Query Details** page to verify the parameter `wxdQueryOptimized` value to be `true` or `false`. The optimized queries has the parameter value set to `true`.
