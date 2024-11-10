@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-25"
+lastupdated: "2024-11-10"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -42,13 +42,10 @@ Following are some of the requirements or behavior of data ingestion:
 * `pathStyleAccess` property for object storage is not supported.
 * Parquet, CSV, JSON, ORC, and AVRO file formats are supported as source data files.
 * The maximum limit for the cumulative size of files must be within 500 MB for local ingestion.
-* Parquet files exceeding 2 MB cannot be previewed, but they will still be ingested successfully.
+* Parquet, JSON, AVRO, and ORC files exceeding 2 MB cannot be previewed, but they will still be ingested successfully.
 * JSON files with complex nested objects and arrays shall not be previewed in the UI.
 * Complex JSON files shall be ingested as-is, resulting in arrays as table entries. This is not recommended for optimal data visualization and analysis.
-* JSON files exceeding 2 MB cannot be previewed, but they will still be ingested successfully.
 * Keys within JSON files must be enclosed in quotation marks for proper parsing and interpretation.
-* AVRO files exceeding 2 MB cannot be previewed, but they will still be ingested successfully.
-* ORC files exceeding 2 MB cannot be previewed, but they will still be ingested successfully.
 
 ## Loading or ingesting data through CLI
 {: #load_ingest_datacli}

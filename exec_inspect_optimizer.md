@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-29"
+lastupdated: "2024-11-10"
 
 keywords: lakehouse, hms, {{site.data.keyword.lakehouse_short}}, hive, metastore
 
@@ -40,19 +40,19 @@ Running Presto (C++) queries:
 
 1. Option 1: Running Presto (C++) queries by using **Query Optimizer**.
 
-   a. Run the following command to enter into the directory ibm-lh-client/bin:
+   a. Run the following command to enter into the directory `ibm-lh-client/bin`:
       ```bash
       cd ibm-lh-client/bin
       ```
       {: codeblock}
 
-   b. Create an SQL file and export the file path to LH_SANDBOX_DIR. For example, with file name sql-files.
+   b. Create an SQL file and export the file path to `LH_SANDBOX_DIR`. For example, with file name `sql-files`.
       ```bash
       export LH_SANDBOX_DIR=<path to sql-files>
       ```
       {: codeblock}
 
-   c. Get the list of engine names and choose the one to be used. For example, engine name engine1.
+   c. Get the list of engine names and choose the one to be used. For example, engine name `engine1`.
       ```bash
       ./manage-engines --op=list
        export engine_name=engine1
@@ -65,11 +65,11 @@ Running Presto (C++) queries:
       ```
       {: codeblock}
 
-   You must use either fully qualified name (3 part name such as <catalog.schema.table>) or 2 part name with the USE statement to qualify the catalog and schema.
+   You must use either fully qualified name (3 part name such as `<catalog.schema.table>`) or 2 part name with the USE statement to qualify the catalog and schema.
 
-   Examples: 3 part name: select * from catalog.schema.table;
+   Examples: 3 part name: `select * from catalog.schema.table;`
 
-   2 part name: use "catalog".schema; followed by select * from schema.table;
+   2 part name: `use "catalog".schema; followed by select * from schema.table;`
 
 2. Option 2: Running Presto (C++) CLI queries without using **Query Optimizer**.
 
@@ -79,14 +79,14 @@ Running Presto (C++) queries:
       ```
       {: codeblock}
 
-   b. Create an SQL file and export the file path to LH_SANDBOX_DIR. For example, with file name sql-files.
+   b. Create an SQL file and export the file path to `LH_SANDBOX_DIR`. For example, with file name `sql-files`.
 
       ```bash
       export LH_SANDBOX_DIR=<path to sql-files>
       ```
       {: codeblock}
 
-   c. Get the list of engine names and choose the one to be used. For example with engine name engine1.
+   c. Get the list of engine names and choose the one to be used. For example with engine name `engine1`.
       ```bash
       ./manage-engines --op=list
       export engine_name=engine1
@@ -99,6 +99,16 @@ Running Presto (C++) queries:
       ```
       {: codeblock}
 
-3. Copy and browse the host url of Presto (C++) engine from the **Infrastructure manager** window of {{site.data.keyword.lakehouse_short}} web console to get details of the queries from the JSON file that are run using **Query Optimizer**.
+3. Follow the steps to get details of the queries and to verify if the queries executed are optimized:
 
-   The optimized queries in the JSON file has the parameter `"wxdQueryOptimized" : true`.
+   1. Log in to {{site.data.keyword.lakehouse_short}} console.
+
+   2. From the navigation menu, open **Infrastructure manager** page.
+
+   3. Click on the Presto (C++) engine to open the component details page.
+
+   4. Copy and browse open the host URL of the Presto (C++) engine from the details page to open the **Cluster Overview** external web page.
+
+   5. Click on the **Query ID** you want to verify. This will open the **Query Details** page.
+
+   6. Open the JSON file from the **Query Details** page to verify the parameter `wxdQueryOptimized` value to be `true` or `false`. The optimized queries has the parameter value set to `true`.
