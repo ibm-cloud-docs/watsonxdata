@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-06"
+lastupdated: "2024-11-11"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -32,7 +32,7 @@ When you connect to the Presto engine in watsonx.data, you can access the variou
 {: #looker_auth}
 
 Looker uses Lightweight Directory Access Protocol (LDAP) authentication mechanism to connect to Presto. It uses the following sign-in credentials:
-* Username: Username is `ibmlhapikey` or `ibmlhapikey_<watsonx.datauser_id>`.
+* Username: Username is `ibmlhapikey` or `ibmlhapikey_<watsonx.datauser_id>`. For example, `ibmlhapikey_joe@ibm.com`.
 * Password: The API key of the watosnx.data user.
 
 ## Connecting to Presto

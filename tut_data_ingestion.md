@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-29"
+lastupdated: "2024-11-11"
 
 keywords: ingestion, time travel, rollback,
 
@@ -54,6 +54,12 @@ Rollback
 {: #ingtn_scrio}
 
 Consider you are a Data Engineer for your company and you are tasked with managing Car records in the company database. Upload the existing data records in the storage. Add a new set of data to the existing table. After review, you see that the new set of data added is not appropriate and decide to rollback the table to a previous state.
+
+The following video provides a visual method to learn the concepts and tasks in this documentation.
+
+![Data ingestion, time travel, and table rollback in IBM watsonx.data](https://www.kaltura.com/p/1773841/sp/177384100/embedIframeJs/uiconf_id/27941801/partner_id/1773841?iframeembed=true&entry_id=1_qen8mlbx){: video output="iframe" data-script="none" id="mediacenterplayer" frameborder="0" width="560" height="315" allowfullscreen webkitallowfullscreen mozAllowFullScreen}
+
+
 
 
 ### Objective

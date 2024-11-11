@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-06"
+lastupdated: "2024-11-11"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -47,7 +47,7 @@ Tableau uses Lightweight Directory Access Protocol (LDAP) authentication mechani
     * Catalog : Enter the Iceberg catalog that is associated with the Presto engine in watsonx.data.
     * Schema (Optional) : Enter the name of the schema that is associated with your data.
     * Authentication : Select LDAP from the list.
-    * Username : The username is `ibmlhapikey` or `ibmlhapikey_<watsonx.datauser_id>`.
+    * Username : The username is `ibmlhapikey` or `ibmlhapikey_<watsonx.datauser_id>`. For example, `ibmlhapikey_joe@ibm.com`.
     * Password : The API key of the watosnx.data user. For more information about retrieving the API key, see [Generating the API key]({{site.data.keyword.ref-con-presto-serv-link}}).
 
 
