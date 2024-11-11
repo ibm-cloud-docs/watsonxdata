@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-14"
+lastupdated: "2024-11-11"
 
 keywords: watsonxdata, commands, command line interface, cli
 
@@ -26,10 +26,10 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Options and parameters supported in **ibm-lh** tool
+# Ingestion parameters supported in **ibm-lh** utility
 {: #cli_commands}
 
-Ingesting data files from S3 or local location into {{site.data.keyword.lakehouse_full}} is done by using the **ibm-lh** tool. The parameters that are supported in the **ibm-lh** tool are described in this topic.
+Ingesting data files from S3 or local location into {{site.data.keyword.lakehouse_full}} is done by using **ibm-lh** utility. The parameters that are supported in the **ibm-lh** utility are described in this topic.
 {: shortdesc}
 
 ## Before you begin:
@@ -47,7 +47,7 @@ The following ingestion modes are supported:
 * `SPARK_LEGACY`
 * `SPARK`
 
-SPARK is the default mode.
+`SPARK` is the default mode.
 {: note}
 
 Sample scripts and config file templates are available for CLI ingestion commands in the `/Ingestion-Examples/` folder in the `ibm-lh` tool container. To access the example scripts and config files, run the following command:
@@ -55,10 +55,10 @@ Sample scripts and config file templates are available for CLI ingestion command
 1. Run `./ibm-lh data-copy --interactive` to enter the container in interactive mode.
 1. Run `cd /Ingestion-Examples/` to access the example scripts and config files.
 
-## Options and parameters
+## Parameters and variables
 {: #optionsparams}
 
-Different options and variables that are supported in a **ibm-lh** tool that is invoked by `ibm-lh data-copy` command are listed as follows:
+The **ibm-lh** utility supports various parameters and variables that can be invoked by the `ibm-lh data-copy` command. The following tables lists the parameters and the corresponding details.
 
 |Parameter|Description|Declaration|Modes of ingestion|
 |----|----|----|----|
@@ -94,6 +94,8 @@ Different options and variables that are supported in a **ibm-lh** tool that is 
 |`user`|Username of the user connecting to the instance. The short command for this parameter is `-u`.|`--user <username>`|`SPARK`|
 |`url`|Base url of the location of {{site.data.keyword.lakehouse_short}} cluster. The short command for this parameter is `-w`.|`--url <url>`|`SPARK`|
 {: caption="Command line options and variables" caption-side="bottom"}
+
+The following parameters are listed in separate sections because they have more details that cannot be accommodated in the table.
 
 ## System config
 {: #sys_config}
