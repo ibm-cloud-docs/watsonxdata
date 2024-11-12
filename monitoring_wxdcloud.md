@@ -50,8 +50,11 @@ To set up {{site.data.keyword.mon_short}},
 To see your {{site.data.keyword.lakehouse_full}} customer metrics dashboards in {{site.data.keyword.mon_short}}:
 
 1. From the {{site.data.keyword.cloud_notm}} navigation menu, select **Observability**.
+
 2. Select **Monitoring**. Click **Open Dashboard**.
+
 3. Click **Dashboards** in the sidepane, open the **{{site.data.keyword.lakehouse_full}}** dashboard to view your {{site.data.keyword.lakehouse_short}} metrics.
+
 4. For more information, see [{{site.data.keyword.mon_short}} Getting started tutorial](https://cloud.ibm.com/docs/monitoring?topic=monitoring-getting-started).
 {: important}
 
