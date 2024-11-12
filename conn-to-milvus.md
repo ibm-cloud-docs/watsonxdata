@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-11"
+lastupdated: "2024-11-12"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -39,7 +39,6 @@ Make sure that the following items are installed or available:
 
 - Python and Pymilvus package. For more information, see [About PyMilvus](https://milvus.io/api-reference/pymilvus/v2.4.x/About.md).
 - Hostname and port for the Milvus instance. You can get Milvus `host` and `port` information from **Infrastructure manager** (click the Milvus service to open the **Details** page and note the `host` and `port` information from the GRPC host).
-- Authorized user credentials to access the Milvus instance.
 - Assign a role to the user or [service ID](https://cloud.ibm.com/docs/account?topic=account-serviceids&interface=ui) from **Infrastructure manager**. For information about user roles, see [Managing roles and privileges]({{site.data.keyword.ref-role_priv-link}}#milvus){: external}.
 
 ## Procedure
@@ -73,16 +72,18 @@ You can connect to a Milvus service by using API key or IAM token.
          Replace `<token>` with the IAM token. For information about getting a token, see [Getting IBM Access Management (IAM) token]({{site.data.keyword.ref-con-presto-serv-link}}#get-ibmiam-token).
          {: note}
 
-      - Using Uniform Resource Identifier (URI). This is an alternate method of connecting to Milvus without using the `host` and `port` parameters.
+      - Using Uniform Resource Identifier (URI)
 
          ```bash
          print(fmt.format("start connecting to Milvus"))
-         connections.connect( alias="default", uri="https://<host>:<grpc-port>", user = "ibmlhtoken", password = "token" )
+         connections.connect( alias="default", uri="https://<host>:<grpc-port>", user = "ibmlhtoken", password = "<token>" )
          has = utility.has_collection("hello_milvus")
          print(f"Does collection hello_milvus exist in Milvus: {has}")
          ```
          {: codeblock}
 
+        Replace `<token>` with the IAM token. For information about getting a token, see [Getting IBM Access Management (IAM) token]({{site.data.keyword.ref-con-presto-serv-link}}#get-ibmiam-token).
+         {: note}
 ## What to do next
 {: #postreq}
 
