@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-16"
+lastupdated: "2024-11-13"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -28,9 +28,9 @@ The **Lite** plan allows you to provision an {{site.data.keyword.lakehouse_full}
 
 Provisioning a Lite plan instance is use case driven. The watsonx.data instance is configured based on the selected use case:
 
-* **Generative AI** : AI developers or Data engineers can explore the Generative AI use cases using this option. The provisioned instance includes Presto, Milvus, and Spark.
-* **High Performance BI** : Data engineers can explore BI visualization functionalities using this option. The provisioned instance includes Presto (C++) and Spark.
-* **Data Engineering** : Data engineers can explore various workload driven use cases using this option. The provisioned instance includes Presto (Java) and Spark.
+* **Generative AI** : AI developers or Data engineers can explore the Generative AI use cases using this option. The provisioned instance includes Presto, Milvus, Spark, a read-only sample IBM COS storage that is associated to the Presto engine, and sample worksheet with GoSales data in it.
+* **High Performance BI** : Data engineers can explore BI visualization functionalities using this option. The provisioned instance includes Presto (C++), Spark, Query Optimizer, a read-only sample IBM COS storage that is associated to the Presto engine, and `tpcds` benchmarking worksheet.
+* **Data Engineering** : Data engineers can explore various workload driven use cases using this option. The provisioned instance includes Presto (Java), Spark, a read-only sample IBM COS storage that is associated to the Presto engine, and sample worksheet with `GoSales` data in it.
 
 
 After provisioning the Lite plan instance, you can monitor the resource unit usage from the **Billing and Usage** page available in the watsonx.data console. For more information, see [Billing and Usage](watsonxdata?topic=watsonxdata-manage_bill).
@@ -68,11 +68,11 @@ Perform the following steps to provision a Lite plan instance:
 
 1. Click the **Create** tab. Select IBM Cloud as the cloud platform to deploy {{site.data.keyword.lakehouse_short}}.
 
-   In the **Management method** field, **Fully managed** is the default option, which indicates that IBM manages all the network complexities.
-   {: note}
+    In the **Management method** field, **Fully managed** is the default option, which indicates that IBM manages all the network complexities.
+    {: note}
 
-   Click **About** tab and read through to understand about the resource units consumed by engine/service, and estimate your consumption of 2000 RUs in the {{site.data.keyword.lakehouse_short}} Lite plan instance.
-   {: note}
+    Click **About** tab and read through to understand about the resource units consumed by engine/service, and estimate your consumption of 2000 RUs in the {{site.data.keyword.lakehouse_short}} Lite plan instance.
+    {: note}
 
 1. In the **Select a pricing plan** field, select **Lite**.
 

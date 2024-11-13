@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-23"
+lastupdated: "2024-11-13"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -86,13 +86,16 @@ To begin with the {{site.data.keyword.lakehouse_short}} features, UI provides on
 {: #hp_03}
 {: step}
 
-Use the **Start working with data** option to query data.
+Use the **Start working with data** option to query data. To allow a seamless query experience, a read-only sample IBM COS storage is already available and is by default associated to the Presto engine.
 
 3. If you select the **Start working with data** option and click **Continue**, you can view the following tiles:
 
     * **Explore a sample worksheet** : {{site.data.keyword.lakehouse_short}} Lite plan instance provides sample worksheets (includes query) that help users to run Presto query easily. Select this tile and follow the on-screen instructions to run your first Presto query.
 
     * **Ingest data into watsonx.data** : Select this tile to perform data ingestion.
+
+    For **High performance BI** use cases, `tpcds` is available as the benchmarking worksheet for querying. For **Data engineering** and **GenAI** use cases, `Gosales` data is available as the sample worksheet.
+    {: note}
 
 
 4. If you select **Explore a sample worksheet**, the **Query workspace** page opens and the **Sample worksheets** section is highlighted.
