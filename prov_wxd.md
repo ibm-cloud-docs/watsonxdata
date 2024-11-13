@@ -21,7 +21,7 @@ subcollection: watsonxdata
 
 {{site.data.keyword.lakehouse_short}} can be deployed in one of the following ways:
 - Stand-alone software on Red Hat OpenShift. For more information, see [{{site.data.keyword.lakehouse_full}}](https://www.ibm.com/docs/en/watsonxdata/1.1.x).
-- on Cloud Pak for Data. For more information, see [{{site.data.keyword.lakehouse_full}} on Cloud Pak for Data](https://www.ibm.com/docs/en/cloud-paks/cp-data/5.0.x?topic=services-watsonxdata).
+- {{site.data.keyword.lakehouse_short}} on Cloud Pak for Data. For more information, see [{{site.data.keyword.lakehouse_full}} on Cloud Pak for Data](https://www.ibm.com/docs/en/cloud-paks/cp-data/5.0.x?topic=services-watsonxdata).
 - SaaS - on IBM Cloud and AWS. For more information, see [IBM watsonx.data as a Service on AWS](https://www.ibm.com/docs/en/watsonx/watsonxdata/aws).
 - Additionally the {{site.data.keyword.lakehouse_short}} Developer edition can be installed for POC purposes. For more information, see [{{site.data.keyword.lakehouse_full}}](https://www.ibm.com/docs/en/watsonxdata/1.1.x).
 
