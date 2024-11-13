@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-11"
+lastupdated: "2024-11-13"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -26,6 +26,7 @@ When you connect to the Presto engine in watsonx.data, you can access the variou
 * Tableau desktop: Download and install the latest desktop version of Tableau on your computer.
 * Subscription to watsonx.data on IBM Cloud.
 * Provision watsonx.data instance with Presto engine.
+* Download the Presto JDBC driver from [JDBC Driver](https://prestodb.io/docs/current/installation/jdbc.html). After you download the Presto JDBC driver, add it to the path `/Library/Tableau/Drivers` where Tableau is installed.
 
 ## Authentication
 {: #tableau_auth}
