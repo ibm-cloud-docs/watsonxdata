@@ -100,3 +100,5 @@ To add a storage, complete the following steps:
 * When the fields of data type `REAL` have 6 digits or more in the decimal part with the digits being predominately zero, the values when queried are rounded off. It is observed that the rounding off occurs differently based on the precision of the values. For example, a decimal number 1.654 when rounded to 3-digits after decimal point are the same. Another example, is 10.890009 and 10.89000. It is noticed that 10.89000 is rounded to 10.89, whereas 10.89009 is not rounded off. This is an inherent issue because of the representational limitations of binary floating point formats. This might have a significant impact when querying involves sorting.
 
 For more information on mixed-case feature flag behavior, supported SQL statements and supported data types matrices, see [Support content](https://www.ibm.com/support/pages/node/7157339){: external}.
+
+Related API:[Get bucket registrations](https://cloud.ibm.com/apidocs/watsonxdata#list-bucket-registrations) and [Register bucket](https://cloud.ibm.com/apidocs/watsonxdata#create-bucket-registration).

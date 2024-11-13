@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-06"
+lastupdated: "2024-11-13"
 
 keywords: lakehouse, bucket, watsonx.data
 
@@ -44,3 +44,5 @@ To delete a storage-catalog pair, complete the following steps:
 5. Click the overflow menu and then click **Delete**.
 
 6. In the **Confirm removal** window, click **Delete**.
+
+Related API:[Deregister bucket](https://cloud.ibm.com/apidocs/watsonxdata#delete-bucket-registration), [Activate bucket](https://cloud.ibm.com/apidocs/watsonxdata#create-activate-bucket) and [Deactivate bucket](https://cloud.ibm.com/apidocs/watsonxdata#delete-deactivate-bucket).
