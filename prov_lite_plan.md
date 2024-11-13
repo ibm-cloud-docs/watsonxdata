@@ -68,11 +68,13 @@ Perform the following steps to provision a Lite plan instance:
 
 1. Click the **Create** tab. Select IBM Cloud as the cloud platform to deploy {{site.data.keyword.lakehouse_short}}.
 
-In the **Management method** field, **Fully managed** is the default option, which indicates that IBM manages all the network complexities.
-{: note}
+    In the **Management method** field, **Fully managed** is the default option, which indicates that IBM manages all the network complexities.
+    {: note}
 
-Click **About** tab and read through to understand about the resource units consumed by engine/service, and estimate your consumption of 2000 RUs in the {{site.data.keyword.lakehouse_short}} Lite plan instance.
-{: note}
+
+    Click **About** tab and read through to understand about the resource units consumed by engine/service, and estimate your consumption of 2000 RUs in the {{site.data.keyword.lakehouse_short}} Lite plan instance.
+    {: note}
+
 
 1. In the **Select a pricing plan** field, select **Lite**.
 
@@ -82,8 +84,9 @@ Click **About** tab and read through to understand about the resource units cons
 
 1. Select the resource group.
 
-IBM Cloud trial accounts can have only one resource group.
-{: note}
+    IBM Cloud trial accounts can have only one resource group.
+    {: note}
+
 
 1. Optional: Enter the tags and access management tags.
 
