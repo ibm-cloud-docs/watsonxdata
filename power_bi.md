@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-13"
+lastupdated: "2024-11-14"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -27,7 +27,7 @@ When you connect to the Presto engine in {{site.data.keyword.lakehouse_short}}, 
 
 *	Power BI Desktop :  Download and install the latest desktop version of Power BI using the Advanced download link. Create a Power BI account by using your email-ID and log in.
 *	Based on the ODBC driver that you select, download and install one of the following:
-    * Simba ODBC driver for Presto: Download and install latest desktop version of Insight software Simba ODBC driver from the [Presto ODBC Driver](https://insightsoftware.com/drivers/presto-odbc-jdbc/). Based on your computer platform (Mac or Desktop), log in to the account.
+    * Simba ODBC driver for Presto: Download and install latest desktop version of Insight software Simba ODBC driver from the [Presto ODBC Driver](https://insightsoftware.com/drivers/presto-odbc-jdbc/). Based on your computer platform (Mac or Desktop), log in to the account. After you download, you will receive a license file in registered email . Copy the file and paste it under `~\Simba Presto ODBC Driver\lib folder`.
     * CData ODBC driver for Presto: Download and install latest desktop version of CData ODBC driver for Presto from the [Presto ODBC Driver](https://www.cdata.com/drivers/presto/odbc/?kw=&cpn=18157657805&utm_source=google&utm_medium=cpc&utm_campaign=Search_-_Connector_-_Other_Drivers_-_India_+_Secondary_Countries&utm_content=All_Drivers_-_DSA&utm_term=%7C&kw=&cpn=18157657805&gad_source=1&gclid=Cj0KCQiA88a5BhDPARIsAFj595gKFdWt_8AZPuQue7BTvrPf4paiIibaqIcp1IxzBDRp3_IcGTwRGoAaAhftEALw_wcB).
 *	Subscription of {{site.data.keyword.lakehouse_short}} on IBM Cloud.
 *	Provision {{site.data.keyword.lakehouse_short}} instance with Presto engine.
