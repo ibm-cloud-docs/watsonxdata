@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-10-29"
+lastupdated: "2024-11-14"
 
 keywords: watsonxdata, release notes
 
@@ -20,6 +20,22 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.lakehouse_full}} that are grouped by date.
 {: shortdesc}
+
+## 13 November 2024 - Version 2.0.4 Hotfix
+{: #lakehouse_13Novhf}
+{: release-note}
+
+Lite plan enhancements
+
+: This hotfix release includes the following Lite plan enhancements:
+
+
+   * Lite plan now includes a dedicated read-only sample IBM COS storage associated to the Presto engine to support querying sample and benchmarking data.
+
+   * You can now work with tpcds sample worksheets for high performance use cases and Gosales sample worksheet for Data engineering and GenAI use cases.
+
+   * Query Optimizer is now automatically enabled for High Performance BI use cases.
+
 
 ## 29 October 2024 - Version 2.0.4
 {: #lakehouse_29oct01}
