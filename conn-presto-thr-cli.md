@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-06"
+lastupdated: "2024-11-15"
 
 keywords: lakehouse, watsonx.data, presto, cli
 
@@ -84,11 +84,7 @@ It is recommended to use IAM token for stress workload.
 2. Replace `<your-api-key>` with your IBM API key.
 
    ```bash
-   curl -X POST \
-   'https://iam.cloud.ibm.com/identity/token' \
-   --header "Content-Type: application/x-www-form-urlencoded" \
-   --data-urlencode "grant_type=urn:ibm:params:oauth:grant-type:apikey" \
-   --data-urlencode "apikey=<your-api-key>"
+   curl -X POST 'https://iam.cloud.ibm.com/identity/token' -H 'Content-Type: application/x-www-form-urlencoded' -d 'grant_type=urn:ibm:params:oauth:grant-type:apikey&apikey=MY_APIKEY'
    ```
    {: codeblock}
 
