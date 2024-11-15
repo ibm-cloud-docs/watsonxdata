@@ -21,7 +21,7 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.lakehouse_full}} that are grouped by date.
 {: shortdesc}
 
-## 13 November 2024 - Hotfix version 2.0.4
+## 13 November 2024 - Version 2.0.4 Hotfix
 {: #lakehouse_13Novhf}
 {: release-note}
 
