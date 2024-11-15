@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-12"
+lastupdated: "2024-11-15"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -62,7 +62,7 @@ You can connect to a Milvus service by using API key or IAM token.
          Replace `<api-key>` with the IBM API key. For information about getting an API key, see [Getting IBM API Key]({{site.data.keyword.ref-con-presto-serv-link}}#get-ibmapi-key).
          {: note}
 
-      - Using IAM token
+     - Using IAM token
 
          ```bash
          connections.connect(host="<host>", port="<port>", secure=True, user="ibmlhtoken", password="<token>")
@@ -72,7 +72,7 @@ You can connect to a Milvus service by using API key or IAM token.
          Replace `<token>` with the IAM token. For information about getting a token, see [Getting IBM Access Management (IAM) token]({{site.data.keyword.ref-con-presto-serv-link}}#get-ibmiam-token).
          {: note}
 
-      - Using Uniform Resource Identifier (URI)
+     - Using Uniform Resource Identifier (URI)
 
          ```bash
          print(fmt.format("start connecting to Milvus"))
@@ -84,6 +84,7 @@ You can connect to a Milvus service by using API key or IAM token.
 
         Replace `<token>` with the IAM token. For information about getting a token, see [Getting IBM Access Management (IAM) token]({{site.data.keyword.ref-con-presto-serv-link}}#get-ibmiam-token).
          {: note}
+
 ## What to do next
 {: #postreq}
 
