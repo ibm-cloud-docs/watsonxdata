@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-10-29"
+lastupdated: "2024-11-06"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -29,8 +29,8 @@ The topic provides the procedure to run Spark applications from Amazon Web Servi
 * Get S3 bucket credentials.
 * Set up EMR cluster on AWS. For more information, see [Setting up an EMR Cluster](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-setting-up.html).
 * Fetch the following information from {{site.data.keyword.lakehouse_full}}:
-    * HMS URL from {{site.data.keyword.lakehouse_short}}. For more information about getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials](watsonxdata?topic=watsonxdata-hms){: external}.
-    * HMS Credentials from {{site.data.keyword.lakehouse_short}}. For more information about getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials](watsonxdata?topic=watsonxdata-hms){: external}.
+    * HMS URL from {{site.data.keyword.lakehouse_short}}. For more information about getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
+    * HMS Credentials from {{site.data.keyword.lakehouse_short}}. For more information about getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
 
 ## Overview
 {: #abt_emr_usecase}
@@ -45,7 +45,7 @@ The {{site.data.keyword.lakehouse_short}} query engines can run queries on data 
 ## About the sample use case
 {: #abt_emr_pyfile}
 
-The sample python file (amazon-lakehouse.py) demonstrates creating schema (**amazonschema**), tables, and ingesting data. It also supports table maintenance operations. For more information about the functionalities in the sample, see [About the sample use case](watsonxdata?topic=watsonxdata-run_samp_file#abt_samp_usecase){: external}
+The sample python file (amazon-lakehouse.py) demonstrates creating schema (**amazonschema**), tables, and ingesting data. It also supports table maintenance operations. For more information about the functionalities in the sample, see [About the sample use case]({{site.data.keyword.ref-run_samp_file-link}}){: external}
 
 ## Running the sample use case
 {: #abt_emrsamp_run}
@@ -236,8 +236,8 @@ Follow the steps to run the Spark sample python file.
 
 Parameter values:
 
-* <<change_endpoint>> : The Hive metastore URI endpoint to access the metastore. For more information on getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials](watsonxdata?topic=watsonxdata-hms){: external}.
-* <<change_pswd>> : The password to access the metastore. For more information on getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials](watsonxdata?topic=watsonxdata-hms){: external}.
+* <<change_endpoint>> : The Hive metastore URI endpoint to access the metastore. For more information on getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
+* <<change_pswd>> : The password to access the metastore. For more information on getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
 
 To run the Spark python file using EMR-6.15.0 (Spark 3.4) cluster, download the iceberg jars from the [location](https://repo1.maven.org/maven2/org/apache/iceberg/iceberg-spark-runtime-3.3_2.12/1.4.1/iceberg-spark-runtime-3.3_2.12-1.4.1.jar) and follow the same [procedure](#abt_emrsamp_run).
 {: important}

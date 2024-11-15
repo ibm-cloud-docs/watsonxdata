@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-11-13"
 
 keywords: lakehouse, bucket, tags, description, watsonx.data
 
@@ -49,3 +49,5 @@ To edit the display name, description and tags of a storage, use one of the foll
 3. In the **Description** field, enter the description of the storage or edit the existing description.
 4. In the **Tags** field, select the tags from the list or start typing to define a new tag.
 5. Click **Save**.
+
+Related API:[Update bucket](https://cloud.ibm.com/apidocs/watsonxdata#update-bucket-registration).

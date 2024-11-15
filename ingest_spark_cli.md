@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-14"
+lastupdated: "2024-11-06"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -35,7 +35,7 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
 ## Before you begin
 {: #byblegsprk}
 
-* Add and register IBM Analytics Engine (Spark). See [Provisioning a Spark engine](watsonxdata?topic=watsonxdata-spl_engine).
+* Add and register IBM Analytics Engine (Spark). See [Provisioning a Spark engine]({{site.data.keyword.ref-spl_engine-link}}).
 * Add storage for the target catalog. See [Adding a storage-catalog pair]({{site.data.keyword.ref-reg_bucket-link}}).
 * Create schema and table in the catalog for the data to be ingested. See [Creating schemas]({{site.data.keyword.ref-create_schema-link}}) and [Creating tables]({{site.data.keyword.ref-create_table-link}}).
 

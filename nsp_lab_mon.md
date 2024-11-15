@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-11-06"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -32,7 +32,7 @@ The Spark lab helps to debug the Spark application that you submit. To do that:
 ## Accessing Spark UI from Spark labs
 {: #lab_nsp-ui}
 
-The Spark user interface (UI) allows you to monitor various aspects of running a Spark application. For more information, see [Spark user interface](watsonxdata?topic=watsonxdata-wxd_spk_ui){: external}. Expose Spark UI to access it from Spark labs. To do that:
+The Spark user interface (UI) allows you to monitor various aspects of running a Spark application. For more information, see [Spark user interface]({{site.data.keyword.ref-wxd_spk_ui-link}}){: external}. Expose Spark UI to access it from Spark labs. To do that:
 
 1. Go to Visual Studio Code > **Terminal** and select the **Ports** tab.
 2. Click **Forward a Port**. Type `4040` and press **Enter**. You can now access Spark UI from Spark labs. Open a web browser and enter the URL in the format - `localhost:4040`. The Spark UI opens, which allows you to inspect Spark applications in the Spark labs. You can view the following details :

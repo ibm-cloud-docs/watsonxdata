@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-23"
+lastupdated: "2024-11-06"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -46,7 +46,7 @@ To enable **Query Optimizer**, make sure at least one Presto (C++) engine is pro
    **Query Optimizer** takes approximately 20 minutes to deploy and sync over metadata for all Hive and Iceberg catalogs and schemas. This time may vary based on the metadata size to be synced.
    {: note}
 
-   Verify that all expected tables have been synced. If tables are found missing during the automatic syncing process, you can manually sync the tables. See [Manually syncing Query Optimizer](watsonxdata?topic=watsonxdata-sync_optimizer_meta).
+   Verify that all expected tables have been synced. If tables are found missing during the automatic syncing process, you can manually sync the tables. See [Manually syncing Query Optimizer]({{site.data.keyword.ref-sync_optimizer_meta-link}}).
    {: note}
 
    You can click **Cancel activation** to cancel the deployment of **Query Optimizer Manager** during the deployment.

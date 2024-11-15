@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-19"
+lastupdated: "2024-11-06"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -46,13 +46,13 @@ Qlik uses Lightweight Directory Access Protocol (LDAP) authentication mechanism 
 5.	Search for Presto in the **Connect** to a new data source section.
 6.	In the **Create new connection (Presto)** window, provide the following details:
 
-    *	Server : Hostname of the Presto engine in watsonx.data that you want to connect to. For more information about retrieving the hostname, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection).
-    *	Port : For information about retrieving the port number, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection).
+    *	Server : Hostname of the Presto engine in watsonx.data that you want to connect to. For more information about retrieving the hostname, see [Getting connection information]({{site.data.keyword.ref-get_connection-link}}).
+    *	Port : For information about retrieving the port number, see [Getting connection information]({{site.data.keyword.ref-get_connection-link}}).
     *	Catalogue : Enter the Iceberg catalog that is associated with the Presto engine in watsonx.data.
     *	Schema (Optional) : Enter the name of the schema that is associated with your data.
     *	Authentication : Select LDAP from the list.
     *	Username : The username is `ibmlhapikey` or `ibmlhapikey_<watsonx.datauser_id>`.
-    *	Password : The API key of the watosnx.data user. For more information about retrieving the API key, see [Generating the API key](watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmapi-key).
+    *	Password : The API key of the watosnx.data user. For more information about retrieving the API key, see [Generating the API key]({{site.data.keyword.ref-con-presto-serv-link}}).
 
 7.	Click **Test connection** to verify that the connection is successful.
 8.	You can click **Create** when your test connection is successful. The Data Source page opens when connection is successful.

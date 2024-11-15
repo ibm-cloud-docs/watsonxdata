@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-24"
+lastupdated: "2024-11-06"
 
 keywords: lakehouse, watsonx.data, presto, cli
 
@@ -29,9 +29,9 @@ The data types that are supported by the `dbt-watsonx-presto` adapter are:
 - BOOLEAN
 - DATE
 
-For information about setting up your profile, see [Configuration (setting up your profile)](watsonxdata?topic=watsonxdata-dbt_watsonx_presto_conf).
+For information about setting up your profile, see [Configuration (setting up your profile)]({{site.data.keyword.ref-dbt_watsonx_presto_conf-link}}).
 
-For information about installing and using `dbt-watsonx-presto`, see [Installing and using dbt-watsonx-presto](watsonxdata?topic=watsonxdata-dbt_watsonx_presto_inst).
+For information about installing and using `dbt-watsonx-presto`, see [Installing and using dbt-watsonx-presto]({{site.data.keyword.ref-dbt_watsonx_presto_inst-link}}).
 
 ## Limitations
 {: #dbt_watsonx_presto_limit}

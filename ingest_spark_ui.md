@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-28"
+lastupdated: "2024-11-06"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -35,13 +35,13 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 ## Before you begin
 {: #spk_ing}
 
-* Add and register IBM Analytics Engine (Spark). See [Provisioning a Spark engine](watsonxdata?topic=watsonxdata-spl_engine).
-* For the target table, an active Iceberg catalog connected to a running Presto engine is required. See [Adding a storage-catalog pair](watsonxdata?topic=watsonxdata-reg_bucket).
-* Add remote storage for source data files. See [Adding a storage-catalog pair](watsonxdata?topic=watsonxdata-reg_bucket).
-* Add data sources for source data files. See [Adding a data source-catalog pair](watsonxdata?topic=watsonxdata-reg_database).
-* Optionally, you can create a schema in the catalog for the target table. See [Creating schemas](watsonxdata?topic=watsonxdata-create_schema).
-* Optionally, you can also create a target table in the schema. See [Creating tables](watsonxdata?topic=watsonxdata-create_table).
-* To enable your Spark application and ingestion to work with the watsonx.data catalog and storage, you must have `MetastoreAdmin`, and `DataAccess` roles in the service access and `Administrator` role in the platform access, see [Assigning access to account management services](https://cloud.ibm.com/docs/account?topic=account-account-services&interface=ui).
+* Add and register IBM Analytics Engine (Spark). See [Provisioning a Spark engine]({{site.data.keyword.ref-spl_engine-link}}).
+* For the target table, an active Iceberg catalog connected to a running Presto engine is required. See [Adding a storage-catalog pair]({{site.data.keyword.ref-reg_bucket-link}}).
+* Add remote storage for source data files. See [Adding a storage-catalog pair]({{site.data.keyword.ref-reg_bucket-link}}).
+* Add data sources for source data files. See [Adding a data source-catalog pair]({{site.data.keyword.ref-reg_database-link}}).
+* Optionally, you can create a schema in the catalog for the target table. See [Creating schemas]({{site.data.keyword.ref-create_schema-link}}).
+* Optionally, you can also create a target table in the schema. See [Creating tables]({{site.data.keyword.ref-create_table-link}}).
+* To enable your Spark application and ingestion to work with the watsonx.data catalog and storage, you must have `MetastoreAdmin`, and `DataAccess` roles in the service access and `Administrator` role in the platform access, see [Assigning access to account management services](https://cloud.ibm.com/docs/account?topic=account-account-services&interface=ui) and [Managing roles and privileges]({{site.data.keyword.ref-role_priv-link}}).
 
 ## Ingesting data from local system
 {: #spk_ingest_datalocal}
@@ -154,7 +154,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    i. Select a storage bucket from the **Select storage** drop-down.
 
-    You can also add a new storage bucket by clicking the **Add +** icon. For more information, see [Add Storage](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-reg_bucket). You can create a permanent storage connection accessible to all users based on permissions. In the infrastructure manager page by selecting **Create permanent connection**. You can also create a temporary storage connection accessible to you for the time period during the ingestion by selecting **Create temporary connection**. This temporary storage shall not be available in the infrastructure manager page or cannot be accessed by other users.
+    You can also add a new storage bucket by clicking the **Add +** icon. For more information, see [Add Storage]({{site.data.keyword.ref-reg_bucket-link}}). You can create a permanent storage connection accessible to all users based on permissions. In the infrastructure manager page by selecting **Create permanent connection**. You can also create a temporary storage connection accessible to you for the time period during the ingestion by selecting **Create temporary connection**. This temporary storage shall not be available in the infrastructure manager page or cannot be accessed by other users.
     {: note}
 
    ii. Select the required file type based on the source data. The available options are CSV, Parquet, JSON, ORC, and AVRO.
@@ -253,7 +253,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    i. Select a database from the **Select database** drop-down.
 
-    You can also add a new database by clicking the **Add +** icon. For more information, see [Add Database](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-reg_database). You can create a permanent database connection accessible to all users based on permissions in the infrastructure manager page by selecting **Create permanent connection**. You can also create a temporary database connection accessible to you for the time period during the ingestion by selecting **Create temporary connection**. This temporary database shall not be available in the infrastructure manager page or cannot be accessed by other users.
+    You can also add a new database by clicking the **Add +** icon. For more information, see [Add Database]({{site.data.keyword.ref-reg_database-link}}). You can create a permanent database connection accessible to all users based on permissions in the infrastructure manager page by selecting **Create permanent connection**. You can also create a temporary database connection accessible to you for the time period during the ingestion by selecting **Create temporary connection**. This temporary database shall not be available in the infrastructure manager page or cannot be accessed by other users.
     {: note}
 
    ii. Select a schema from the **Schemas** window.

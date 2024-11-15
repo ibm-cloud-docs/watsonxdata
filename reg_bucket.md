@@ -47,14 +47,14 @@ To add a storage, complete the following steps:
 5. You can associate a catalog to the storage. This catalog can be associated with an engine. A catalog defines the schemas and metadata for a storage or data source. Depending on the storage type, Apache Iceberg, Apache Hive, Apache Hudi, and Delta Lake catalogs are supported.
 6. The following storages are supported:
 
-   * [IBM Cloud Object Storage](watsonxdata?topic=watsonxdata-cos_storage)
-   * [Amazon S3](watsonxdata?topic=watsonxdata-amazons_storage)
-   * [IBM Storage Ceph](watsonxdata?topic=watsonxdata-ceph_storage)
-   * [MinIO](watsonxdata?topic=watsonxdata-minio_storage)
-   * [Hadoop Distributed File System](watsonxdata?topic=watsonxdata-hdfs_storage)
-   * [Google Cloud Storage](watsonxdata?topic=watsonxdata-gcs_storage)
-   * [Azure Data Lake Storage](watsonxdata?topic=watsonxdata-adls_genblob_storage)
-   * [Apache Ozone](watsonxdata?topic=watsonxdata-ozone_storage)
+   * [IBM Cloud Object Storage]({{site.data.keyword.ref-cos_storage-link}})
+   * [Amazon S3]({{site.data.keyword.ref-amazons_storage-link}})
+   * [IBM Storage Ceph]({{site.data.keyword.ref-ceph_storage-link}})
+   * [MinIO]({{site.data.keyword.ref-minio_storage-link}})
+   * [Hadoop Distributed File System]({{site.data.keyword.ref-hdfs_storage-link}})
+   * [Google Cloud Storage]({{site.data.keyword.ref-gcs_storage-link}})
+   * [Azure Data Lake Storage]({{site.data.keyword.ref-adls_genblob_storage-link}})
+   * [Apache Ozone]({{site.data.keyword.ref-ozone_storage-link}})
 
      You can modify the access key and secret key of a user-registered bucket for a storage. This feature is only available for user-registered buckets and is not applicable to default buckets, ADLS, or Google Cloud Storage. This feature can be used if the new credentials successfully pass the test connection.
      {: note}
@@ -63,7 +63,7 @@ To add a storage, complete the following steps:
    * The storage bucket name must be unique and must contain only the characters A–Z, a–z, 0–9, and hypen (-).
    * You must use a service credential with `Writer` role because the schema is written to the storage bucket. Make sure that you choose the endpoint that matches the type of access that the bucket allows. That is, if no public access is allowed (**Public access** is **No**) to the bucket, choose the **Direct** endpoint.
 
-## Features
+## Additional information
 {: #connector_features}
 
 * For **Iceberg** connector:
@@ -100,3 +100,5 @@ To add a storage, complete the following steps:
 * When the fields of data type `REAL` have 6 digits or more in the decimal part with the digits being predominately zero, the values when queried are rounded off. It is observed that the rounding off occurs differently based on the precision of the values. For example, a decimal number 1.654 when rounded to 3-digits after decimal point are the same. Another example, is 10.890009 and 10.89000. It is noticed that 10.89000 is rounded to 10.89, whereas 10.89009 is not rounded off. This is an inherent issue because of the representational limitations of binary floating point formats. This might have a significant impact when querying involves sorting.
 
 For more information on mixed-case feature flag behavior, supported SQL statements and supported data types matrices, see [Support content](https://www.ibm.com/support/pages/node/7157339){: external}.
+
+Related API:[Get bucket registrations](https://cloud.ibm.com/apidocs/watsonxdata#list-bucket-registrations) and [Register bucket](https://cloud.ibm.com/apidocs/watsonxdata#create-bucket-registration).

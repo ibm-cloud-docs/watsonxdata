@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-11-06"
 keywords: spark, interface
 subcollection: watsonxdata
 
@@ -25,7 +25,7 @@ The following list includes a few examples:
 * inspect into memory and disk consumption of the driver and executors
 
 
-Use the Spark history server to inspect the run of a completed Spark application. To access the Spark history server, see the [Access Spark history server](watsonxdata?topic=watsonxdata-wxd_spk_histry).
+Use the Spark history server to inspect the run of a completed Spark application. To access the Spark history server, see the [Access Spark history server]({{site.data.keyword.ref-wxd_spk_histry-link}}).
 {: note}
 
 ## Accessing the Spark UI

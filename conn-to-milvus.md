@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-30"
+lastupdated: "2024-11-15"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -39,66 +39,64 @@ Make sure that the following items are installed or available:
 
 - Python and Pymilvus package. For more information, see [About PyMilvus](https://milvus.io/api-reference/pymilvus/v2.4.x/About.md).
 - Hostname and port for the Milvus instance. You can get Milvus `host` and `port` information from **Infrastructure manager** (click the Milvus service to open the **Details** page and note the `host` and `port` information from the GRPC host).
-- Authorized user credentials to access the Milvus instance.
-- Assign a role to the user or [service ID](https://cloud.ibm.com/docs/account?topic=account-serviceids&interface=ui) from **Infrastructure manager**. For more information about user roles, see [Managing roles and privileges]({{site.data.keyword.ref-role_priv-link}}#milvus){: external}.
+- Assign a role to the user or [service ID](https://cloud.ibm.com/docs/account?topic=account-serviceids&interface=ui) from **Infrastructure manager**. For information about user roles, see [Managing roles and privileges]({{site.data.keyword.ref-role_priv-link}}#milvus){: external}.
 
-## By using API key
+## Procedure
 {: #conn-to-milvusapikey}
 
-- For REST API calls:
+You can connect to a Milvus service by using API key or IAM token.
 
-    ```bash
-    print(fmt.format("start connecting to Milvus"))
-    connections.connect(host="<host>", port="<port>", secure=True, user="apikey", password="<api-key>")
-    has = utility.has_collection("hello_milvus")
-    print(f"Does collection hello_milvus exist in Milvus: {has}")
-    ```
-    {: codeblock}
+1. Provision a Milvus service in {{site.data.keyword.lakehouse_short}}. For more information, see [Adding a Milvus service](watsonxdata?topic=watsonxdata-adding-milvus-service).
+1. Run one of the following commands by using Python SDK (PyMilvus) to connect with Milvus for gRPC route:
 
-- For GRPC calls:
+     - Using GRPC calls:
 
-    ```bash
-    print(fmt.format("start connecting to Milvus"))
-    connections.connect(host="<host>", port="<port>", secure=True, user="ibmlhapikey", password="<api-key>")
-    has = utility.has_collection("hello_milvus")
-    print(f"Does collection hello_milvus exist in Milvus: {has}")
-    ```
-    {: codeblock}
+         ```bash
+         print(fmt.format("start connecting to Milvus"))
+         connections.connect(host="<host>", port="<port>", secure=True, user="ibmlhapikey", password="<api-key>")
+         has = utility.has_collection("hello_milvus")
+         print(f"Does collection hello_milvus exist in Milvus: {has}")
+         ```
+         {: codeblock}
 
-## By using Token
-{: #conn-to-milvusatoken}
+         Replace `<api-key>` with the IBM API key. For information about getting an API key, see [Getting IBM API Key]({{site.data.keyword.ref-con-presto-serv-link}}#get-ibmapi-key).
+         {: note}
 
-```bash
-connections.connect(host="<host>", port="<port>", secure=True, user="ibmlhtoken", password="<token>")
-```
-{: codeblock}
+     - Using IAM token
 
-For more information about getting a token, see [Getting IBM Access Management (IAM) token]({{site.data.keyword.ref-con-presto-serv-link}}#get-ibmiam-token){: external}.
+         ```bash
+         connections.connect(host="<host>", port="<port>", secure=True, user="ibmlhtoken", password="<token>")
+         ```
+         {: codeblock}
 
-## By using URI
-{: #conn-to-milvusuri}
+         Replace `<token>` with the IAM token. For information about getting a token, see [Getting IBM Access Management (IAM) token]({{site.data.keyword.ref-con-presto-serv-link}}#get-ibmiam-token).
+         {: note}
 
-This is an alternate method of connecting to Milvus without using the `host` and `port` parameters.
-{: note}
+     - Using Uniform Resource Identifier (URI)
 
-```bash
-print(fmt.format("start connecting to Milvus"))
-connections.connect( alias="default", uri="https://<host>:<grpc-port>", user = "ibmlhtoken", password = "token" )
-has = utility.has_collection("hello_milvus")
-print(f"Does collection hello_milvus exist in Milvus: {has}")
-```
-For getting API keys, see [Getting the IBM API key]({{site.data.keyword.ref-con-presto-serv-link}}#get-api-iam-token){: external}.
+         ```bash
+         print(fmt.format("start connecting to Milvus"))
+         connections.connect( alias="default", uri="https://<host>:<grpc-port>", user = "ibmlhtoken", password = "<token>" )
+         has = utility.has_collection("hello_milvus")
+         print(f"Does collection hello_milvus exist in Milvus: {has}")
+         ```
+         {: codeblock}
+
+        Replace `<token>` with the IAM token. For information about getting a token, see [Getting IBM Access Management (IAM) token]({{site.data.keyword.ref-con-presto-serv-link}}#get-ibmiam-token).
+         {: note}
 
 ## What to do next
 {: #postreq}
 
 You can perform the following operations after establishing a connection with a Milvus service:
 
-- **Manage databases**: A Milvus cluster supports a maximum of 64 databases. For more information, see [Manage Databases](https://milvus.io/docs/manage_databases.md).
-- **Manage collections**: A Milvus cluster supports a maximum of 65,536 collections. For more information, see [Manage Collections](https://milvus.io/docs/manage-collections.md#Manage-Collections).
-- **Manage partitions**: A Milvus cluster supports a maximum of 4095 partitions. For more information, see [Manage Partitions](https://milvus.io/docs/manage-partitions.md#Manage-Partitions).
-- **Manage data**: For more information, see:
-      - [Insert, Upsert & Delete](https://milvus.io/docs/insert-update-delete.md)
-      - [Data Import](https://milvus.io/docs/prepare-source-data.md)
-- **Manage indexes**: For more information, see [Manage Indexes](https://milvus.io/docs/index-vector-fields.md?tab=floating).
-- **Search and Query**: For more information, see [Search, Query & Get](https://milvus.io/docs/single-vector-search.md).
+- **Manage data**
+
+    - You can insert, upsert, or delete data in the Milvus service. For more information, see [Insert, Upsert & Delete](https://milvus.io/docs/insert-update-delete.md).
+    - You can import data from Milvus. For more information, see [Prepare and import data](https://milvus.io/docs/prepare-source-data.md)
+
+- **Manage databases**: You can create databases in Milvus and allocate privileges to certain users to manage them. A Milvus cluster supports a maximum of 64 databases. For more information, see [Manage Databases](https://milvus.io/docs/manage_databases.md).
+- **Manage collections**: You can create and manage collections using the SDK of your choice. A Milvus cluster supports a maximum of 65,536 collections. For more information, see [Manage Collections](https://milvus.io/docs/manage-collections.md#Manage-Collections).
+- **Manage partitions**: You can create and manage partitions in a collection. A Milvus cluster supports a maximum of 4095 partitions. For more information, see [Manage Partitions](https://milvus.io/docs/manage-partitions.md#Manage-Partitions).
+- **Manage indexes**: You can creating and managing indexes on vector fields in a collection. For more information, see [Manage Indexes](https://milvus.io/docs/index-vector-fields.md?tab=floating).
+- **Search and Query**: For information searching and querying data in Milvus, see [Search, Query & Get](https://milvus.io/docs/single-vector-search.md).

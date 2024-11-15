@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-11-06"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -16,10 +16,10 @@ subcollection: watsonxdata
 
 The topic describes the procedure to run a Spark application that ingests data into an Apache Hudi catalog.
 
-1. Create a storage with Apache Hudi catalog to store data used in the Spark application. To create storage with Apache Hudi catalog, see [Adding a storage-catalog pair](watsonxdata?topic=watsonxdata-reg_bucket).
-2. Associate the storage with the external Spark engine. For more information, see [Associating a catalog with an engine](watsonxdata?topic=watsonxdata-asso-cat-eng).
+1. Create a storage with Apache Hudi catalog to store data used in the Spark application. To create storage with Apache Hudi catalog, see [Adding a storage-catalog pair]({{site.data.keyword.ref-reg_bucket-link}}).
+2. Associate the storage with the external Spark engine. For more information, see [Associating a catalog with an engine]({{site.data.keyword.ref-asso-cat-eng-link}}).
 3. Create Cloud Object Storage (COS) to store the Spark application. To create Cloud Object Storage and a bucket, see [Creating a storage bucket](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-secure-content-store#create-cos-bucket).
-4. Register the Cloud Object Storage in watsonx.data. For more information, see [Adding a storage-catalog pair](watsonxdata?topic=watsonxdata-reg_bucket).
+4. Register the Cloud Object Storage in watsonx.data. For more information, see [Adding a storage-catalog pair]({{site.data.keyword.ref-reg_bucket-link}}).
 5. Save the following Spark application (Python file) to your local machine. Here, `hudi_demo.py`.
 
     The Python Spark application demonstrates the following functionality:
@@ -100,15 +100,15 @@ The topic describes the procedure to run a Spark application that ingests data i
 
 Parameter values:
 * `<region>`: The region where you provision the Analytics engine instance.
-* `<iae-instance-guid>`: The Analytics engine instance GUID. To get that, see [Retrieving details of a serverless instance](https://test.cloud.ibm.com/docs/AnalyticsEngine?topic=AnalyticsEngine-retrieve-instance-details#retrieve-guid-cli).
-* `<token>`: The bearer token. For more information about generating the token, see [IAM token](https://test.cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
+* `<iae-instance-guid>`: The Analytics engine instance GUID. To get that, see [Retrieving details of a serverless instance](https://cloud.ibm.com/docs/AnalyticsEngine?topic=AnalyticsEngine-retrieve-instance-details#retrieve-guid-cli).
+* `<token>`: The bearer token. For more information about generating the token, see [IAM token](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
 * `<your_data_bucket_direct_endpoint>` : The direct endpoint for accessing the data bucket. Example, s3.us-south.cloud-object-storage.appdomain.cloud for a Cloud Object storage bucket in us-south region. For more information, see [Service credentials](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-service-credentials).
 * `<data_bucket_access_key>` : The access key for the Cloud Object storage (data storage). For more information, see [Create HMAC credentials using the CLI](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main#uhc-create-hmac-credentials-cli).
 * `<data_bucket_secret_key>` : The secret key for the Cloud Object storage (data storage). For more information, see [Create HMAC credentials using the CLI](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main#uhc-create-hmac-credentials-cli).
 
-* `<metastore URL>`: The URL of the catalog.  For more information, see [Getting the HMS endpoint](https://test.cloud.ibm.com/docs-draft/watsonxdata?topic=watsonxdata-hms#hms_url).
+* `<metastore URL>`: The URL of the catalog.  For more information, see [Getting the HMS endpoint]({{site.data.keyword.ref-hms-link}}).
 * `<wxd_api_key>`: To generate API key, log in into the watsonx.data console and navigate to Profile > Profile and Settings > API Keys and generate a new API key.
 
 
 8. After you submit the Spark application, you receive a confirmation message with the application ID and Spark version. Save it for reference.
-9. Log in to the watsonx.data cluster, access the Engine details page. In the Applications tab, use application ID to list the application and track the stages. For more information, see [View and manage applications](watsonxdata?topic=watsonxdata-mng_appltn).
+9. Log in to the watsonx.data cluster, access the Engine details page. In the Applications tab, use application ID to list the application and track the stages. For more information, see [View and manage applications]({{site.data.keyword.ref-mng_appltn-link}}).

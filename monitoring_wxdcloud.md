@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-06"
+lastupdated: "2024-11-12"
 
 keywords: monitoring, watsonx.data
 
@@ -20,6 +20,11 @@ Provide insight about your {{site.data.keyword.lakehouse_full}} instance. View m
 {: shortdesc}
 
 You can use the IBM Cloud Monitoring service to monitor your {{site.data.keyword.lakehouse_short}} instance. {{site.data.keyword.lakehouse_short}} forwards selected information about your instance to Monitoring so that you can monitor specific metrics such as cpu and memory utilization.
+
+## Before you begin
+{: #setup_bb}
+
+You must have view access to the **Sysdig** dashboard. For more information about providing the access, see [Getting started with IBM Cloud Monitoring](https://cloud.ibm.com/docs/monitoring?topic=monitoring-getting-started#getting-started).
 
 
 ## Set up your {{site.data.keyword.lakehouse_short}} service instance
@@ -45,25 +50,16 @@ To set up {{site.data.keyword.mon_short}},
 To see your {{site.data.keyword.lakehouse_full}} customer metrics dashboards in {{site.data.keyword.mon_short}}:
 
 1. From the {{site.data.keyword.cloud_notm}} navigation menu, select **Observability**.
+
 2. Select **Monitoring**. Click **Open Dashboard**.
+
 3. Click **Dashboards** in the sidepane, open the **{{site.data.keyword.lakehouse_full}}** dashboard to view your {{site.data.keyword.lakehouse_short}} metrics.
+
 4. For more information, see [{{site.data.keyword.mon_short}} Getting started tutorial](https://cloud.ibm.com/docs/monitoring?topic=monitoring-getting-started).
 {: important}
 
-## Requesting Access Permission for Non-Operation User
-{: #req_access_nopuser}
 
-1. Go to the [IBM Access Hub](https://ibm-support.saviyntcloud.com/ECMv6/request/applicationRequest).
 
-2. Search `HDM-Lakehouse-IBM-Cloud-Dev-IAM-2592207`.
-
-3. Click the tile that appears.
-
-4. In **Application Details** window, click **Modify**.
-
-5. In **Modify Access** window, search for the `icd:user:ops group`.
-
-6. Click **Add**. Now you can access the **Sysdig** dashboard.
 
 
 ## Metrics available by Service Plan

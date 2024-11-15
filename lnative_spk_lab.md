@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-10-15"
+lastupdated: "2024-11-06"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -57,18 +57,18 @@ As Spark labs are ephemeral in nature, you must back up the data stored periodic
 
 4. To configure **JSON Inputs**, click **JSON Inputs** and specify the following details:
 
-    * **API Key** : Provide the platform API key. To generate the API key, see [Generating the API key](watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmapi-key).
+    * **API Key** : Provide the platform API key. To generate the API key, see [Generating the API key]({{site.data.keyword.ref-con-presto-serv-link}}).
     * **Connection JSON** : Provide the connection details from the watsonx.data user interface. To do that:
         1. Log in to your watsonx.data page.
         2. Click **Infrastructure manager**.
         3. Click your Spark engine that is in running status. In the **Details** tab, from the **VS Code connection configuration** field, click the **View configurations** link. Copy the configuration and use this as the **Connection JSON** field value.
 
 5. To configure **Form Inputs**, click **Form Inputs** and specify the following details:
-    * **Host address of watsonx.data console** : Provide the host IP address of the watsonx.data install. To retrieve the host IP address, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection).
+    * **Host address of watsonx.data console** : Provide the host IP address of the watsonx.data install. To retrieve the host IP address, see [Getting connection information]({{site.data.keyword.ref-get_connection-link}}).
     * **Environment Type** : Select `SAAS`.
-    * **CRN** : The **Instance CRN** of your watsonx.data instance. To retrieve the CRN, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection).
-    * **Username** : Your email-id if you are using your API key or it should be in the format `<Service-id>-<GUID>`. For more information on generating service id and GUID, see [Creating service IDs](https://www.ibm.com/docs/en/watsonx/watsonxdata/aws?topic=2u-granting-access-through-service-ids-api-keys-from-saas-console#creating_service_IDs).
-    * **API Key** : Provide the platform API key. To generate the API key, see [Generating the API key](watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmapi-key).
+    * **CRN** : The **Instance CRN** of your watsonx.data instance. To retrieve the CRN, see [Getting connection information]({{site.data.keyword.ref-get_connection-link}}).
+    * **Username** : Your email-id if you are using your API key or it should be in the format `<Service-id>-<GUID>`. For more information on generating service id and GUID, see [Creating service IDs](https://www.ibm.com/docs/en/watsonx/watsonxdata/aws?topic=usca-granting-access-through-service-ids-api-keys-from-saas-console#creating_service_IDs).
+    * **API Key** : Provide the platform API key. To generate the API key, see [Generating the API key]({{site.data.keyword.ref-con-presto-serv-link}}).
 
 
 3. Create a Spark lab.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-23"
+lastupdated: "2024-11-13"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -86,7 +86,7 @@ To begin with the {{site.data.keyword.lakehouse_short}} features, UI provides on
 {: #hp_03}
 {: step}
 
-Use the **Start working with data** option to query data.
+Use the **Start working with data** option to query data. 
 
 3. If you select the **Start working with data** option and click **Continue**, you can view the following tiles:
 
@@ -94,6 +94,7 @@ Use the **Start working with data** option to query data.
 
     * **Ingest data into watsonx.data** : Select this tile to perform data ingestion.
 
+    
 
 4. If you select **Explore a sample worksheet**, the **Query workspace** page opens and the **Sample worksheets** section is highlighted.
 
