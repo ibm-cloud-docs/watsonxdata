@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-24"
+lastupdated: "2024-11-18"
 
 keywords: lakehouse, watsonx.data, presto, cli
 
@@ -88,7 +88,7 @@ This section covers the steps to install and use `dbt-watsonx-presto`.
    ```
    {: codeblock}
 
-   Column names that are specified here should match with the columns in the CSV files. This configuration only applies to character data types. Non-character data types are not supported.
+   Column names that are specified here should match with the columns in the CSV files.
 
    Do not use extra spaces in CSV files for seeding. If you include extra spaces, you must use same number of spaces while querying that in the models to avoid errors.
    {: important}
