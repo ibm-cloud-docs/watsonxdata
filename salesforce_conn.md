@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-13"
+lastupdated: "2024-11-21"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -45,6 +45,9 @@ Salesforce database is used to securely sync your data in systems that are part 
  | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your data source. |
  | Create | Click Create to create the data source. |
  {: caption="Register data source" caption-side="bottom"}
+
+Each new Salesforce connection is slow due to native data discovery. To optimize the performance, the Flight server pools these connections and reuses them for up to 10 minutes.
+{: note}
 
 ## Limitations for SQL statements
 {: #connector_limitations}
