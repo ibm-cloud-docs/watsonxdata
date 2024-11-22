@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-13"
+lastupdated: "2024-11-22"
 
 keywords: lakehouse, watsonx data, provision, endpoint, resource
 subcollection: watsonxdata
@@ -53,7 +53,7 @@ To provision a Lite plan instance, see [watsonx.data Lite plan](watsonxdata?topi
 - Ability to pause and resume Presto engine.
 - Ability to provision, unprovision, pause and resume Spark engine.
 - Ability to connect to an {{site.data.keyword.Bluemix_notm}}-provided Cloud Object Storage (COS) bucket and provide credentials to your own COS or S3 bucket.
-- Ability to delete Presto, Spark, Milvus, and connections to your own bucket.
+- Ability to delete Presto, Spark, Milvus, and connect to your own bucket.
 
 ### Limitations
 {: #limitations-lite}

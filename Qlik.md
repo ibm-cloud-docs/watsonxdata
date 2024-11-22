@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-06"
+lastupdated: "2024-11-22"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -32,7 +32,7 @@ When you connect to the Presto engine in watsonx.data, you can access the variou
 {: #qlik_auth}
 
 Qlik uses Lightweight Directory Access Protocol (LDAP) authentication mechanism to connect to Presto. You need the following sign-in credentials:
-* Username: Username is `ibmlhapikey` or `ibmlhapikey_<watsonx.datauser_id>`.
+* Username: Username is `ibmlhapikey_<watsonx.datauser_id>`.
 * Password: The API key of the watosnx.data user.
 
 ## Connecting to Presto
@@ -51,7 +51,7 @@ Qlik uses Lightweight Directory Access Protocol (LDAP) authentication mechanism 
     *	Catalogue : Enter the Iceberg catalog that is associated with the Presto engine in watsonx.data.
     *	Schema (Optional) : Enter the name of the schema that is associated with your data.
     *	Authentication : Select LDAP from the list.
-    *	Username : The username is `ibmlhapikey` or `ibmlhapikey_<watsonx.datauser_id>`.
+    *	Username : The username is `ibmlhapikey_<watsonx.datauser_id>`. For example, `ibmlhapikey_joe@ibm.com`.
     *	Password : The API key of the watosnx.data user. For more information about retrieving the API key, see [Generating the API key]({{site.data.keyword.ref-con-presto-serv-link}}).
 
 7.	Click **Test connection** to verify that the connection is successful.
