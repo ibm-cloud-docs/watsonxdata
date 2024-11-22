@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-28"
+lastupdated: "2024-11-22"
 
 keywords: watsonx.data, integration
 
@@ -36,3 +36,4 @@ You can extend the functionality of the {{site.data.keyword.lakehouse_full}} by 
 * [IBM Knowledge Catalog (IKC)](watsonxdata?topic=watsonxdata-ikc_integration).
 * [DataStage](watsonxdata?topic=watsonxdata-dc_integration).
 * [BI tools](watsonxdata?topic=watsonxdata-abt_bi).
+* [IBM Manta Data Lineage](watsonxdata?topic=watsonxdata-manta_overview)
