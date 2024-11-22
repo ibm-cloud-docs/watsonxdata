@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-09-13"
+lastupdated: "2024-11-22"
 keywords: spark, interface
 subcollection: watsonxdata
 
@@ -25,6 +25,18 @@ To get started with Databand, you must have an active Databand subscription. You
 
 - **Environment address**: The URL for your Databand environment (example: yourcompanyname.databand.ai).
 - **Access token**: A Databand access token that is needed to connect to the environment. You can generate and manage tokens through the Databand UI as required. For more details, visit: [Managing personal access tokens](https://www.ibm.com/docs/en/dobd?topic=tokens-managing-personal-access).
+
+## Procedure
+{: #steps}
+
+1. Log in to the watsonx.data console.
+1. From the navigation menu, go to **Configurations** > **IBM Data Observability by Databand**.
+1. Enter the environment address in the **URL** field and the access token in the **Access token** field.
+1. Click **Test connection** to validate the connection.
+1. Click **Save** to save the details. You can edit the details by clicking **Edit**.
+
+Databand takes effect for new Spark jobs that are started after enabling it. Previous and ongoing jobs are not recorded for analysis.
+{: note}
 
 ## What to do next
 {: #what_next}
