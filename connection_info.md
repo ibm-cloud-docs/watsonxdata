@@ -53,7 +53,7 @@ You can now find the connectivity information for {{site.data.keyword.lakehouse_
 ## Data Build Tool (DBT)
 {: #get_connection_dbt}
 
-From the **Data Build Tool (DBT)** tab you can view the following details:
+From the **Data Build Tool (DBT)** tab, you can view the following details:
 
 ### Spark engines
 {: #get_connection_dbt_spk}
@@ -74,6 +74,6 @@ Expand the associated query server to view the following details:
 * Catalog: You can change the catalog by clicking the pencil icon.
 * Instance CRN
 * Username
-* API key: Enter your platform API key here. For information about generating platform API key, see [Creating an API key in the console](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key).
+* API key: Enter your API key here. For information about generating API key, see [Creating an API key in the console](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key).
 
-You can copy the profile details by clicking **Copy profile snippet** or export the details as a yaml file by clicking **Export profile snippet**.
+You can copy the profile details by clicking **Copy profile snippet** or export the details as a `yaml` file by clicking **Export profile snippet**.
