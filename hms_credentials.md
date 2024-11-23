@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-11-23"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -11,7 +11,7 @@ subcollection: watsonxdata
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Retrieving Hive metastore(HMS) credentials
+# Retrieving Metadata Service (MDS) credentials
 {: #hms}
 
 {{site.data.keyword.lakehouse_full}} integrates with multiple entities like Spark, Db2, {{site.data.keyword.netezza_short}}, and the like. You require {{site.data.keyword.lakehouse_short}} HMS credentials to establish connection with the entities at the time of integration.
