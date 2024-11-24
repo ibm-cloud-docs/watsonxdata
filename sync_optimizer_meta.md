@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-23"
+lastupdated: "2024-11-24"
 
 keywords: lakehouse, hms, {{site.data.keyword.lakehouse_short}}, hive, metastore
 
@@ -29,6 +29,17 @@ subcollection: watsonxdata
 # Manually syncing Query Optimizer with {{site.data.keyword.lakehouse_short}} metastore
 {: #sync_optimizer_meta}
 
+## About this task
+{: #optimizer_abtsync}
+
+To provide optimized queries, **Query Optimizer** pulls data about table definitions and MDS and Iceberg statistics to synchronize with MDS in {{site.data.keyword.lakehouse_short}}. You can select the specific MDS and Iceberg table that must be available for **Query Optimizer**. It is recommended to generate MDS and Iceberg statistics and label columns for primary and foreign keys to get the best results.
+
+Activating **Query Optimizer** automatically synchronizes metadata for catalogs that are connected to Presto (C++) engines. However, you will need to run the following steps if:
+* Metadata for inaccessible or corrupted catalogs or schemas during deployment are missing.
+* Significant changes are made to a table.
+* New tables are introduced after the initial sync operation.
+* An intermittent issue is preventing tables from being synced during the automatic syncing process upon activation.
+
 ## Before you begin
 {: #optimizer_bybsync}
 
@@ -41,17 +52,6 @@ To sync tables from {{site.data.keyword.lakehouse_full}}, the following items ar
 1. `ANALYZE` MDS and Iceberg tables in Presto (C++) to generate MDS and Iceberg statistics.
 
 1. Only users with administrator privilege is allowed to run `ExecuteWxdQueryOptimizer` command as a security enhancement feature.
-
-## About this task
-{: #optimizer_abtsync}
-
-To provide optimized queries, **Query Optimizer** pulls data about table definitions and MDS and Iceberg statistics to synchronize with MDS in {{site.data.keyword.lakehouse_short}}. You can select the specific MDS and Iceberg table that must be available for **Query Optimizer**. It is recommended to generate MDS and Iceberg statistics and label columns for primary and foreign keys to get the best results.
-
-Activating **Query Optimizer** automatically synchronizes metadata for catalogs that are connected to Presto (C++) engines. However, you will need to run the following steps if:
-* Metadata for inaccessible or corrupted catalogs or schemas during deployment are missing.
-* Significant changes are made to a table.
-* New tables are introduced after the initial sync operation.
-* An intermittent issue is preventing tables from being synced during the automatic syncing process upon activation.
 
 ## Procedure
 {: #optimizer_prosync}
