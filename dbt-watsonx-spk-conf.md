@@ -55,6 +55,6 @@ The following list covers the parameter details:
 
 * **instance**: The instance CRN of your {{site.data.keyword.lakehouse_short}} instance. To retrieve the CRN, see [Getting connection information]({{site.data.keyword.ref-get_connection-link}}).
 
-* **user**: Your email-id if you are using your API key or it should be in the format `<Service-id>-<GUID>`. For more information on generating service id and GUID, see [Creating service IDs](https://www.ibm.com/docs/en/watsonx/watsonxdata/aws?topic=2u-granting-access-through-service-ids-api-keys-from-saas-console#creating_service_IDs).
+* **user**: Your email-id if you are using your API key or it should be in the format `<Service-id>-<GUID>`. For more information on generating service id and GUID, see [Creating service IDs](https://www.ibm.com/docs/en/watsonx/watsonxdata/aws?topic=usca-granting-access-through-service-ids-api-keys-from-saas-console#creating_service_IDs).
 
 * **apikey**: Your API key. To generate the API key, see [Managing user API keys](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#manage-user-keys).
