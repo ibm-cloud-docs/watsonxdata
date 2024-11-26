@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-25"
+lastupdated: "2024-11-26"
 
 keywords: lakehouse, watsonx.data, spark, cli
 
@@ -44,7 +44,7 @@ The following list covers the parameter details:
 
 * **schema**: The table schema name associated with the Spark engine's catalog.
 
-   If the specified schema does not exist in the chosen catalog, a new schema is created automatically. If you want to create a new schema in your storage, add `location_root` with the value `s3a://{your_bukect_name}/{your_schema_name}`.
+   If the specified schema does not exist in the chosen catalog, a new schema is created automatically.
    {: note}
 
 * **host**: Hostname of your {{site.data.keyword.lakehouse_short}} console. For more information, see [Getting connection information]({{site.data.keyword.ref-get_connection-link}}).
