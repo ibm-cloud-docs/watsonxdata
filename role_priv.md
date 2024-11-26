@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-13"
+lastupdated: "2024-11-26"
 
 keywords: lakehouse, watsonx data, privileges, roles, access
 
@@ -69,7 +69,7 @@ IAM formation non-admins (Operator, Editor, Viewer) have the default user access
 | Register and unregister own storage | ✓ | ✓ | ✓ |
 | Register and unregister own DB connection | ✓ | ✓ | ✓ |
 | Access the metastore | ✓ |   | ✓ |
-| Run Spark ingestion jobs|  |  | ✓ |
+| Run Spark ingestion jobs| ✓ |  | ✓ |
 {: caption="Resource-level permissions" caption-side="bottom"}
 
 ## Engine (Presto (Java) or Presto (C++))
