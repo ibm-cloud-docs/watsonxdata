@@ -79,6 +79,7 @@ toc:
               - cassandra_conn.md
               - clickhouse_conn.md
               - elasticsearch_conn.md
+              - saphana.md
               - dvm_conn.md
               - db2_conn.md
               - netezza_conn.md
@@ -89,7 +90,6 @@ toc:
               - postgresql_conn.md
               - prometheus_conn.md
               - redis_conn.md
-              - saphana.md
               - singlestore_conn.md
               - snowflake_conn.md
               - sqlserver_conn.md
