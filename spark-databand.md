@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-22"
+lastupdated: "2024-11-28"
 keywords: spark, interface
 subcollection: watsonxdata
 
@@ -42,4 +42,3 @@ Databand takes effect for new Spark jobs that are started after enabling it. Pre
 {: #what_next}
 
 - [Track Spark applications](watsonxdata?topic=watsonxdata-db_trk)
-- [Invoke Spark Applications](watsonxdata?topic=watsonxdata-db_inv)
