@@ -48,6 +48,38 @@ MySQL is an open source relational database management system.
  | Create | Click Create to create the data source. |
  {: caption="Register data source" caption-side="bottom"}
 
+## Bring Your Own JAR (BYOJ) Process
+ {: #mysql_byoj}
+
+The following is the procedure to add your own JAR to the MySQL data source:
+1. Log in to the IBM® watsonx.data instance.
+2. From the navigation menu, go to the Configurations page and click the Driver manager tile.
+3. Click Add driver.
+4. Upload the MySQL JAR and specify the driver version. Currently, only one JAR(ngdbc-2.17.12.jar) is supported for MySQL dadata source.
+5. Click Add. Once the driver is successfully added, it undergoes a series of validation. If the validation is successful, it is set to 'inactive' status otherwise it is set to 'failed' status.
+6. Click the vertical ellipsis icon to assign or delete the driver.
+7. To assign the driver to an engine:
+   * Click Assign.
+   * Select one or more engines to assign the driver. Once assigned, the driver is set to 'active' status.
+8. To unassign a driver from an engine, users must first introduce another driver.
+9. Click Save and restart engine.
+10. In the Infrastructure manager, hover over the MySQL data source and click the Manage associations icon.
+11. Select the engine to modify the catalog's association with it. All in-flight queries on the modified engines are stopped.
+12. Click Save and restart engine.
+
+You can link the MySQL data source to the engine only when a driver is associated to that engine. Only one MySQL driver can be associated to an engine at a time.
+{: note}
+
+## Upgrade impact on MySQL catalogs (version 2.1.0)
+{: #mysql_upgrade}
+
+**What to expect after the upgrade to watsonx.data version 2.1.0:**
+
+When you upgrade to watsonx.data version 2.1.0, existing MySQL catalogs are disassociated with the engine. This means, you must reassociate the MySQL catalog with the engine.
+
+**Steps to reassociate MySQL catalog:**
+
+To reassociate the MySQL catalog with the engine, upload the mysql-connector-j:8.2.0 JAR file to the driver manager by following the BYOJ process.
 
 ## Limitations for SQL statements
 {: #connector_limitations}

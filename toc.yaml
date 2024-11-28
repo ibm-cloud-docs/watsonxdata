@@ -74,6 +74,7 @@ toc:
               - redshift_conn.md
               - druid_conn.md
               - kafka_conn.md
+              - phoenix_conn.md
               - pinot_conn.md
               - bigquery_conn.md
               - cassandra_conn.md

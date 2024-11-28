@@ -51,11 +51,11 @@ Configure the following details for HANA data source:
 ## Bring Your Own JAR (BYOJ) Process
  {: #saphana_byoj}
 
-The following is the procedure to add your own JAR to the HANA database:
-1. Log in to the IBM® watsonx.data console.
+The following is the procedure to add your own JAR to the HANA data source:
+1. Log in to the IBM® watsonx.data instance.
 2. From the navigation menu, go to the Configurations page and click the Driver manager tile.
 3. Click Add driver.
-4. Upload the HANA JAR and specify the driver version. Currently, only one JAR(ngdbc-2.17.12.jar) is supported for HANA database.
+4. Upload the HANA JAR and specify the driver version. Currently, only one JAR(ngdbc-2.17.12.jar) is supported for HANA data source.
 5. Click Add. Once the driver is successfully added, it undergoes a series of validation. If the validation is successful, it is set to 'inactive' status otherwise it is set to 'failed' status.
 6. Click the vertical ellipsis icon to assign or delete the driver.
 7. To assign the driver to an engine:
@@ -63,11 +63,11 @@ The following is the procedure to add your own JAR to the HANA database:
    * Select one or more engines to assign the driver. Once assigned, the driver is set to 'active' status.
 8. To unassign a driver from an engine, users must first introduce another driver.
 9. Click Save and restart engine.
-10. In the Infrastructure manager, hover over the HANA database and click the Manage associations icon.
+10. In the Infrastructure manager, hover over the HANA data source and click the Manage associations icon.
 11. Select the engine to modify the catalog's association with it. All in-flight queries on the modified engines are stopped.
 12. Click Save and restart engine.
 
-You can link the HANA database to the engine only when a driver is associated to that engine. Only one HANA driver can be associated to an engine at a time.
+You can link the HANA data source to the engine only when a driver is associated to that engine. Only one HANA driver can be associated to an engine at a time.
 {: note}
 
 ## Vulnerabilities in JAR
