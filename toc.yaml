@@ -129,7 +129,6 @@ toc:
           - exp_objects.md
           - create_schema.md
           - create_table.md
-          - ddl_changes.md
       - topicgroup:
           label: Ingesting data
           topics:
