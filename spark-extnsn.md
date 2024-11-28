@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-11-28"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -38,6 +38,8 @@ Spark access control extension supports native Spark engine.
 
 2. Save the following Python application as iceberg.py.
 
+Iceberg is considered as an example. You can also use Hive and Hudi catalogs.
+{: note}
 
 ```bash
 
@@ -201,3 +203,4 @@ Limitations:
 * The user must have full access to create schema and table.
 * To create data policy, you must associate the catalog to Presto engine.
 * If you try to display schema that is not existing, the system throws nullpointer issue.
+* You can enable the Spark access control extension for Iceberg, Hive and Hudi catalogs.
