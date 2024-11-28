@@ -308,6 +308,7 @@ toc:
                 label: Orchestration using Apache Airflow
                 topics:
                   - airflow.md
+      - wxd_wxa_connection.md
   - navgroup:
       id: reference
       topics:
