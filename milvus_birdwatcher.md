@@ -53,7 +53,7 @@ Birdwatcher is available inside the management container in `etcd` pod. Complete
    ```
    {: codeblock}
 
-1. Login to the management sidecar of one of the `etcd` pods from the list.
+1. Log in to the management sidecar of one of the `etcd` pods from the list.
 
    ```bash
    kubectl exec –it <etcd-pod> –c mgmt – bash
