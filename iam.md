@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-11-29"
 
 keywords: lakehouse, watsonx data, iam, access, role
 
@@ -37,12 +37,12 @@ The following table describes the privileges that you can assign to platform man
 |--------------------------|----------------|--------|
 | Create Presto engine | Y | N |
 | Delete Presto engine | Y | N |
-| Restart the internal HMS | Y | N |
+| Restart the internal MDS | Y | N |
 | Scale the Presto engines| Y | N |
-| Scale the internal HMS | Y | N |
+| Scale the internal MDS | Y | N |
 | Unregister own or an external bucket | Y | N |
 | Unregister any database  | Y | N |
-| Activate cataloged buckets (restart HMS) | Y | N |
+| Activate cataloged buckets (restart MDS) | Y | N |
 | Register own buckets | Y | Y |
 | Unregister own buckets | Y | Y |
 | Register own databases | Y | Y |
@@ -76,4 +76,4 @@ Following are the service access roles:
 
 - MetadataAdmin: External users with read and write access to the metadata through Thrift APIs in {{site.data.keyword.lakehouse_short}}.
 - DataAccess: Only supports IKC-{{site.data.keyword.lakehouse_short}} service-to-service authorization to profile data in {{site.data.keyword.lakehouse_short}}.
-- MetastoreView: External users with read access to the metadata through HMS REST APIs in {{site.data.keyword.lakehouse_short}}.
+- MetastoreView: External users with read access to the metadata through MDS REST APIs in {{site.data.keyword.lakehouse_short}}.
