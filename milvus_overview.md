@@ -65,7 +65,7 @@ For more information about Milvus, see:
 - [Working with Milvus]({{site.data.keyword.ref-working_with_milvus-link}})
 - [Pause and resume Milvus service]({{site.data.keyword.ref-pause_resume_milvus-link}})
 - [Configuring IBM® watsonx.data Milvus in IBM watsonx.ai]({{site.data.keyword.ref-wxd_wxai_milvus_conn-link}})
-- [Birdwatcher debugging tool]({{site.data.keyword.ref-milvus_birdwatcher-link}})
+- [Birdwatcher debugging tool]({{site.data.keyword.ref-bd_dbgtool-link}})
 - [Connecting watsonx Assistant to watsonx.data Milvus for custom search]({{site.data.keyword.ref-wxd_wxa_connection-link}})
 
 You cannot upgrade from the private-preview version to the GA version of Milvus. You must delete the private preview and add the GA version.
