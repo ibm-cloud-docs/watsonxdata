@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-23"
+lastupdated: "2024-11-29"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -14,14 +14,14 @@ subcollection: watsonxdata
 # Retrieving Metadata Service (MDS) credentials
 {: #hms}
 
-{{site.data.keyword.lakehouse_full}} integrates with multiple entities like Spark, Db2, {{site.data.keyword.netezza_short}}, and the like. You require {{site.data.keyword.lakehouse_short}} HMS credentials to establish connection with the entities at the time of integration.
+{{site.data.keyword.lakehouse_full}} integrates with multiple entities like Spark, Db2, {{site.data.keyword.netezza_short}}, and the like. You require {{site.data.keyword.lakehouse_short}} MDS credentials to establish connection with the entities at the time of integration.
 {: shortdesc}
 
-You must generate the following HMS credentials.
+You must generate the following MDS credentials.
 
 
-* HMS endpoint (thrift url). Follow the [steps](#hms_url) to generate the thrift url.
-* HMS username is by default **ibmlhapikey**
+* MDS endpoint (thrift url). Follow the [steps](#hms_url) to generate the thrift url.
+* MDS username is by default **ibmlhapikey**
 * Certificate verification. Follow the [steps](#hms_cert) to verify the certificate.
 * API key. Follow the [steps](#hms_api) to generate the key.
 
@@ -29,7 +29,7 @@ You must generate the following HMS credentials.
 ## Prerequisites
 {: #hms-preq}
 
-{{site.data.keyword.lakehouse_full}} uses the 4.0.0-alpha-2 version of HMS and you must have the support thrift protocol jar to ensure compatibility.
+{{site.data.keyword.lakehouse_full}} uses the 4.0.0-alpha-2 version of MDS and you must have the support thrift protocol jar to ensure compatibility.
 
 
 ## Getting the HMS endpoint
@@ -39,7 +39,7 @@ You must generate the following HMS credentials.
 1. From the navigation menu, select **Infrastructure manager**.
 1. Select the **catalog**.
 1. Click **Details** to view the **catalog details** page.
-1. Copy the **Metastore host**. This is your HMS endpoint (thrift url).
+1. Copy the **Metastore host**. This is your MDS endpoint (thrift url).
 
 ## Loading certificates to Java truststore
 {: #hms_cert}
