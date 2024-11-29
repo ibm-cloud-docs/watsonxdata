@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-28"
+lastupdated: "2024-11-29"
 keywords: spark, interface
 subcollection: watsonxdata
 
@@ -18,14 +18,14 @@ You can track your Spark applications by using Databand through the methods that
 ## Databand listener
 {: #db_listen}
 
-This method automatically tracks dataset operations.
+This method automatically tracks dataset operations. You Spark script can benefit from automatic tracking of dataset operations.
 
 ## Databand decorators and logging API
 {: #db_api}
 
-This approach enables manual tracking, allowing Databand to provide insights into your code errors, metrics, and logging details. To use this method, you must import the `dbnd` module, which requires code modifications.
+To use this method, you must import the `dbnd` module, which requires code modifications.
 
-### End-to-End example of using Databand APIs
+### End-to-end example of using Databand APIs
 {: #db_api}
 
 The following example demonstrates the use of `dbnd` APIs.
