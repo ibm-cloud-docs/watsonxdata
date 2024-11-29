@@ -2,9 +2,9 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-24"
+lastupdated: "2024-11-29"
 
-keywords: lakehouse, hms, {{site.data.keyword.lakehouse_short}}, hive, metastore
+keywords: lakehouse, MDS, {{site.data.keyword.lakehouse_short}}, hive, metastore
 
 subcollection: watsonxdata
 
@@ -32,7 +32,7 @@ subcollection: watsonxdata
 ## About this task
 {: #optimizer_abtsync}
 
-To provide optimized queries, **Query Optimizer** pulls data about table definitions and MDS and Iceberg statistics to synchronize with MDS in {{site.data.keyword.lakehouse_short}}. You can select the specific MDS and Iceberg table that must be available for **Query Optimizer**. It is recommended to generate MDS and Iceberg statistics and label columns for primary and foreign keys to get the best results.
+To provide optimized queries, **Query Optimizer** pulls data about table definitions and Hive and Iceberg statistics to synchronize with MDS in {{site.data.keyword.lakehouse_short}}. You can select the specific MDS and Iceberg table that must be available for **Query Optimizer**. It is recommended to generate MDS and Iceberg statistics and label columns for primary and foreign keys to get the best results.
 
 Activating **Query Optimizer** automatically synchronizes metadata for catalogs that are connected to Presto (C++) engines. However, you will need to run the following steps if:
 * Metadata for inaccessible or corrupted catalogs or schemas during deployment are missing.
@@ -73,8 +73,8 @@ To sync tables from {{site.data.keyword.lakehouse_full}}, the following items ar
    {: codeblock}
 
    * Catalog name - as shown on the Infrastructure Manager page (case-sensitive).
-   * HMS thrift uri - As obtained from the Infrastructure Manager page (Click the catalog).
-   * HMS Credentials - Must be created on the {{site.data.keyword.lakehouse_short}}. See [Connecting to watsonx.data on IBM Cloud or Amazon Web Services](https://www.ibm.com/docs/en/db2woc?topic=integration-connecting-watsonxdata-cloud-amazon-web-services).
+   * MDS thrift uri - As obtained from the Infrastructure Manager page (Click the catalog).
+   * MDS Credentials - Must be created on the {{site.data.keyword.lakehouse_short}}. See [Connecting to watsonx.data on IBM Cloud or Amazon Web Services](https://www.ibm.com/docs/en/db2woc?topic=integration-connecting-watsonxdata-cloud-amazon-web-services).
 
    Registering the catalog with the **Query Optimizer** allows watsonx.data tables to be synced into the **Query Optimizer**, enabling query optimization. This needs to be run one time for each catalog.
    {: note}
