@@ -35,6 +35,7 @@ Birdwatcher is a command-line debugging tool for Milvus. Using Birdwatcher, you 
 `etcd` is a metadata engine that manages the storage and access of metadata. This topic explains how to connect and execute Birdwatcher with `etcd`.
 
 ## Procedure
+{: #bd_dbgtool_steps}
 
 Birdwatcher is available inside the management container in `etcd` pod. Complete the following steps to log into `etcd` management container and execute Birdwatcher.
 
