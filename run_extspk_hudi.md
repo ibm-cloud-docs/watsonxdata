@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-11-06"
+lastupdated: "2024-11-30"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -106,7 +106,7 @@ Parameter values:
 * `<data_bucket_access_key>` : The access key for the Cloud Object storage (data storage). For more information, see [Create HMAC credentials using the CLI](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main#uhc-create-hmac-credentials-cli).
 * `<data_bucket_secret_key>` : The secret key for the Cloud Object storage (data storage). For more information, see [Create HMAC credentials using the CLI](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-uhc-hmac-credentials-main#uhc-create-hmac-credentials-cli).
 
-* `<metastore URL>`: The URL of the catalog.  For more information, see [Getting the HMS endpoint]({{site.data.keyword.ref-hms-link}}).
+* `<metastore URL>`: The URL of the catalog.  For more information, see [Getting the MDS endpoint]({{site.data.keyword.ref-hms-link}}).
 * `<wxd_api_key>`: To generate API key, log in into the watsonx.data console and navigate to Profile > Profile and Settings > API Keys and generate a new API key.
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-29"
+lastupdated: "2024-11-30"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -32,7 +32,7 @@ You must generate the following MDS credentials.
 {{site.data.keyword.lakehouse_full}} uses the 4.0.0-alpha-2 version of MDS and you must have the support thrift protocol jar to ensure compatibility.
 
 
-## Getting the HMS endpoint
+## Getting the MDS endpoint
 {: #hms_url}
 
 1. Log in to {{site.data.keyword.lakehouse_short}} console.
