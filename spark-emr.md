@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-11-06"
+lastupdated: "2024-11-30"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -29,8 +29,8 @@ The topic provides the procedure to run Spark applications from Amazon Web Servi
 * Get S3 bucket credentials.
 * Set up EMR cluster on AWS. For more information, see [Setting up an EMR Cluster](https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-setting-up.html).
 * Fetch the following information from {{site.data.keyword.lakehouse_full}}:
-    * HMS URL from {{site.data.keyword.lakehouse_short}}. For more information about getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
-    * HMS Credentials from {{site.data.keyword.lakehouse_short}}. For more information about getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
+    * MDS URL from {{site.data.keyword.lakehouse_short}}. For more information about getting the MDS credentials, see [Getting Metadata Service (MDS) Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
+    * MDS Credentials from {{site.data.keyword.lakehouse_short}}. For more information about getting the MDS credentials, see [Getting Metadata Service (MDS) Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
 
 ## Overview
 {: #abt_emr_usecase}
@@ -191,7 +191,7 @@ Follow the steps to run the Spark sample python file.
     ```
     {: codeblock}
 
-1. Run the following commands to download the Hive metastore JAR file from the [location](https://github.com/IBM-Cloud/IBM-Analytics-Engine/tree/master/wxd-connectors/hms-connector) to your workstation:
+1. Run the following commands to download the Metadata Service JAR file from the [location](https://github.com/IBM-Cloud/IBM-Analytics-Engine/tree/master/wxd-connectors/hms-connector) to your workstation:
 
     The JAR file must be present in the `/home/hadoop` location on all nodes of the cluster. Make a note of the `spark.driver.extraClassPath` and `spark.executor.extraClassPath`.
     {: important}
@@ -206,7 +206,7 @@ Follow the steps to run the Spark sample python file.
     {: codeblock}
 
 
-3. Configure the HMS connection details in the AWS EMR cluster to connect to the {{site.data.keyword.lakehouse_short}} Hive Meta Store (HMS). A sample command to use spark-submit from an EMR-6.12.0 (Spark 3.4.1) based cluster is as follows:
+3. Configure the MDS connection details in the AWS EMR cluster to connect to the {{site.data.keyword.lakehouse_short}} Metadata Service (MDS). A sample command to use spark-submit from an EMR-6.12.0 (Spark 3.4.1) based cluster is as follows:
 
     Run the command from EMR on the EC2 cluster to submit the Sample spark job.
 
@@ -236,8 +236,8 @@ Follow the steps to run the Spark sample python file.
 
 Parameter values:
 
-* <<change_endpoint>> : The Hive metastore URI endpoint to access the metastore. For more information on getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
-* <<change_pswd>> : The password to access the metastore. For more information on getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
+* <<change_endpoint>> : The Metadata Service URI endpoint to access the metastore. For more information on getting the HMS credentials, see [Getting Metadata Service (MDS) Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
+* <<change_pswd>> : The password to access the metastore. For more information on getting the MDS credentials, see [Getting Metadata Service (MDS) Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
 
 To run the Spark python file using EMR-6.15.0 (Spark 3.4) cluster, download the iceberg jars from the [location](https://repo1.maven.org/maven2/org/apache/iceberg/iceberg-spark-runtime-3.3_2.12/1.4.1/iceberg-spark-runtime-3.3_2.12-1.4.1.jar) and follow the same [procedure](#abt_emrsamp_run).
 {: important}
