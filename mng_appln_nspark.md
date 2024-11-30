@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-09-09"
+lastupdated: "2024-11-30"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -42,3 +42,8 @@ You can stop only the applications that are in RUNNING state.
 
 1. In the **Applications** tab, select the application that you want to stop.
 1. Click the overflow menu and select **Stop**. The application status changes to `STOPPED`.
+
+## Related API
+{: #managespark_api}
+
+For information on related API, see [List all applications in a spark engine](https://cloud.ibm.com/apidocs/watsonxdata#list-spark-engine-applications), [Submit engine applications](https://cloud.ibm.com/apidocs/watsonxdata#create-spark-engine-application), [Stop spark applications](https://cloud.ibm.com/apidocs/watsonxdata#delete-spark-engine-applications), and [Get spark application](https://cloud.ibm.com/apidocs/watsonxdata#get-spark-engine-application-status).
