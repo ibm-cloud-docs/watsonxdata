@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-06"
+lastupdated: "2024-11-30"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -316,3 +316,8 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
    xvi. Click **Done**. The submitted ingestion job can be found in the **Ingestion history** tab of the **Data manager** page.
 
    xvii. Click the cancel icon to cancel the ingestion job.
+
+## Related API
+{: #ingestion_api}
+
+For information on related API, see [Get ingestion jobs](https://cloud.ibm.com/apidocs/watsonxdata#list-ingestion-jobs).

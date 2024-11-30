@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-09-18"
+lastupdated: "2024-11-30"
 
 keywords: lakehouse, database, tags, description, watsonx.data
 
@@ -45,3 +45,8 @@ You can write data to object store by using any engine and other external tools 
 * **Register new objects only**: Schemas, tables, and metadata that are created by external applications since the last sync operations are added to this catalog. Existing schemas and tables in this catalog are not modified.
 * **Update existing objects only**: Schemas, tables, and metadata already present in this catalog are updated or deleted to match the current state found in the associated bucket. Any other schemas, tables, and metadata in the associated bucket are ignored.
 * **Sync all objects**: Schemas, tables, and metadata already present in this catalog are updated to match the exact state of the associated bucket. All the new objects are added and all the existing objects are updated or removed.
+
+## Related API
+{: #iceberg_api}
+
+For information on related API, see [External Iceberg table registration](https://cloud.ibm.com/apidocs/watsonxdata-software#update-sync-catalog).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-16"
+lastupdated: "2024-11-30"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -83,3 +83,8 @@ The following data sources are supported:
 
 
 For more information on mixed-case feature flag behavior, supported SQL statements and supported data types matrices, see [Support content](https://www.ibm.com/support/pages/node/7157339){: external}.
+
+## Related API
+{: #datasource_api}
+
+For information on related API, see [Get databases](https://cloud.ibm.com/apidocs/watsonxdata#list-database-registrations), [Add/create database](https://cloud.ibm.com/apidocs/watsonxdata#create-database-registration), and [Get database](https://cloud.ibm.com/apidocs/watsonxdata#get-database).

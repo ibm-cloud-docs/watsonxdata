@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-27"
+lastupdated: "2024-11-30"
 
 keywords: watsonxdata, schema
 
@@ -78,3 +78,8 @@ Failed to create schema. Try the following measures to resolve the error:
  - Ensure the storage is registered with watsonx.data and then retry.
 ```
 {: screen}
+
+## Related API
+{: #schema_api}
+
+For information on related API, see [List all schemas](https://cloud.ibm.com/apidocs/watsonxdata-software#list-schemas),[Create schema](https://cloud.ibm.com/apidocs/watsonxdata-software#create-schema), [Delete schema](https://cloud.ibm.com/apidocs/watsonxdata-software#delete-schema), [Get all schemas for a given catalog](https://cloud.ibm.com/apidocs/watsonxdata#list-all-schemas), and [Get schema details](https://cloud.ibm.com/apidocs/watsonxdata#get-schema-details).

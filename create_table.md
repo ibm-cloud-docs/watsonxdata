@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-11-30"
 
 keywords: watsonxdata, data manager, create table
 
@@ -76,3 +76,8 @@ You can generate, configure, and run DDL from the **Data manager** page by using
 
    You can customize, add, rename or drop columns from an existing table. You can also rollback your tables.
    {: note}
+
+## Related API
+{: #table_api}
+
+For information on related API, see [List all tables](https://cloud.ibm.com/apidocs/watsonxdata-software#list-tables),[Get table details](https://cloud.ibm.com/apidocs/watsonxdata-software#get-table), [Delete table](https://cloud.ibm.com/apidocs/watsonxdata-software#delete-table), [Rename table](https://cloud.ibm.com/apidocs/watsonxdata-software#update-table), [Get all tables](https://cloud.ibm.com/apidocs/watsonxdata#list-all-tables), and [Get table details](https://cloud.ibm.com/apidocs/watsonxdata#get-table-details).

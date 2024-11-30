@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-08"
+lastupdated: "2024-11-30"
 
 keywords: lakehouse, semantic automation, {{site.data.keyword.lakehouse_short}}, data enrichment, register
 
@@ -105,3 +105,8 @@ Users with the following roles can perform semantic enrichment in {{site.data.ke
 1. Go to the table view and check if the review status is completed.
 1. Click the overflow menu next to the chosen schema and select **Publish**. The page displays the list of enriched tables within the schema.
 1. Verify the enriched data in the **Browse data** tab of the **Data Manager** by selecting the schema you enriched on successful completion of publishing.
+
+## Related API
+{: #salenrich_api}
+
+For information on related API, see [Trigger enrichment jobs on schemas and tables](https://cloud.ibm.com/apidocs/watsonxdata#create-sal-integration-enrichment).

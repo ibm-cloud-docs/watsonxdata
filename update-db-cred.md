@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-11-30"
 
 keywords: lakehouse, database, credentials, watsonx.data
 
@@ -44,3 +44,8 @@ To update the database credentials, use one of the following methods:
 2. Click the **Update credentials** icon.
 3. In the **Update credentials** window, enter your database username and your database password.
 4. Click **Update**.
+
+## Related API
+{: #updatedb_api}
+
+For information on related API, see [Update database](https://cloud.ibm.com/apidocs/watsonxdata#update-database).
