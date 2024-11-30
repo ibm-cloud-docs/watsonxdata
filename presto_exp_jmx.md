@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-11-30"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -257,9 +257,9 @@ This topic covers the Presto exposed JMX metrics with details.
 
 | Metric name  |  Metric type  | Metric description  |
 |--------------|---------------|---------------------|
-| watsonx_data_presto_glue_$2_time_$3_$4                                             | Gauge       | Time taken by Glue Hive Metastore operations.                  |
-| watsonx_data_presto_glue_$2_total_failures_total_count                             | Counter     | Total count of failures for Glue Hive Metastore operations.                                 |
-| watsonx_data_presto_glue_$2_total_failures_fifteen_minute_$3                       | Gauge (rate), Counter (count) | Rate or count of failures for Glue Hive Metastore operations in the last fifteen minutes.           |
+| watsonx_data_presto_glue_$2_time_$3_$4                                             | Gauge       | Time taken by Glue Metadata Service operations.                  |
+| watsonx_data_presto_glue_$2_total_failures_total_count                             | Counter     | Total count of failures for Glue Metadata Service operations.                                 |
+| watsonx_data_presto_glue_$2_total_failures_fifteen_minute_$3                       | Gauge (rate), Counter (count) | Rate or count of failures for Glue Metadata Service operations in the last fifteen minutes.           |
 {: caption="Glue stats metrics" caption-side="bottom"}
 
 ## S3 file system metrics
