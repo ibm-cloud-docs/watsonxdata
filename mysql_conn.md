@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-28"
+lastupdated: "2024-11-30"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -55,7 +55,7 @@ The following is the procedure to add your own JAR to the MySQL data source:
 1. Log in to the IBM® watsonx.data instance.
 2. From the navigation menu, go to the Configurations page and click the Driver manager tile.
 3. Click Add driver.
-4. Upload the MySQL JAR and specify the driver version. Currently, only one JAR(ngdbc-2.17.12.jar) is supported for MySQL dadata source.
+4. Upload the MySQL JAR and specify the driver version. Currently, only one JAR(mysql-connector-j-8.2.0.jar) is supported for MySQL dadata source.
 5. Click Add. Once the driver is successfully added, it undergoes a series of validation. If the validation is successful, it is set to 'inactive' status otherwise it is set to 'failed' status.
 6. Click the vertical ellipsis icon to assign or delete the driver.
 7. To assign the driver to an engine:

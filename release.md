@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-11-15"
+lastupdated: "2024-11-30"
 
 keywords: watsonxdata, release notes
 
@@ -20,6 +20,76 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.lakehouse_full}} that are grouped by date.
 {: shortdesc}
+
+## 11 December 2024 - Version 2.1.0
+{: #lakehouse_11Dec21}
+
+Data sources and storage enhancements
+
+: This release includes the following new data sources and storage enhancements:
+
+   * Now you can connect to Apache Phoenix data sources. For more information, see [Apache Phoenix](watsonxdata?topic=watsonxdata-phoenix_conn)
+
+   * If you work with MySQL data sources, now you can manage drivers in the Driver manager section of the Configurations page. Each of these drivers goes through a series of validation steps. You can no longer test MySQL connections. For more information, see [MySQL](watsonxdata?topic=watsonxdata-mysql_conn).
+
+   When you upgrade to version 2.1.0, any existing MySQL catalog is no longer linked to the engine. This means that you need to reestablish the connection between the MySQL catalog and the engine.
+   {: note}
+
+   * Test connection feature is now available for the following data sources supported by Arrow Flight service:
+
+      * Apache Derby
+      * Salesforce
+      * Greenplum
+      * MariaDB
+
+   * Now you can test connection for Azure Data Lake Storage (ADLS).
+
+Integration enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following new or enhanced integrations with other services:
+
+   * You can now enable or disable the Databand integration feature from the IBM Data Observability by Databand page in the {{site.data.keyword.lakehouse_short}} console. You can use Databand to track and analyze the Spark workloads. Databand provides detailed insights than the Spark UI and history server.
+
+   * You can now enable Databand connection from the Configurations page. For more information, see [Monitoring Spark application runs by using Databand](watsonxdata?topic=watsonxdata-spark-databand).
+
+   * You can now integrate IBM Manta Data Lineage with {{site.data.keyword.lakehouse_short}} to capture and publish jobs, runs, and dataset events from Spark through the Manta UI. For more information, see [IBM Manta Data Lineage](watsonxdata?topic=watsonxdata-manta_overview).
+
+   * You can now use all of the Presto data types with the dbt adapter for Presto. Specify the data type as column_types in the dbt_project.yml. For more information, see [Installing and using dbt-watsonx-presto](watsonxdata?topic=watsonxdata-dbt-watsonx-presto-inst).
+
+Engine and service enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
+
+   * You can now use the Azure Data Lake Storage (ADLS) and Google Cloud Storage with Presto (C++) engine. You can now use Azure Data Lake Storage (ADLS) and Google Cloud Storage (GCS) with Data Access Service (DAS) to store your data while submitting Spark applications. For more information, see [ADLS Gen1 Blob](watsonxdata?topic=watsonxdata-adls_genblob_storage) and [Google Cloud Storage](watsonxdata?topic=watsonxdata-gcs_storage).
+
+   * You can now enable the Spark Access Control extension to access and operate on the Hive and Hudi catalogs.
+
+   * You can now select a {{site.data.keyword.lakehouse_short}} Spark engine as a runtime environment in watsonx.ai notebooks. This runtime environment helps you to use Jupyter notebooks to submit workloads to {{site.data.keyword.lakehouse_short}} Spark clusters.
+
+   * Presto administrators can now configure JMX metrics through API. Currently, Only alphanumeric characters are allowed for the key in JMX property names. For more information, see [Update presto engine](https://cloud.ibm.com/apidocs/watsonxdata#update-presto-engine){: external}.
+
+Query history information by using LH-CLI utility
+
+: You can get the following Query history information by using LH-CLI utility:
+
+   * Get basic query information
+   * Get basic error information of failed queries
+   * Get query stats information
+   * Get query memory information
+   * Get query garbage collection information
+
+Introduction to Metadata Store (MDS)
+
+: With this release, {{site.data.keyword.lakehouse_short}} uses Metadata Store (MDS) instead of Hive Metastore (HMS) that is compatible with modern, open catalog APIs, Unity Catalog API, and Apache Iceberg REST Catalog API, enabling wider tool integration and increased flexibility. This new architecture delivers comparable performance while it continues to support Spark and Presto clients through the existing Thrift or HMS interface.
+
+It is recommended to use MDS in your test environments and then move to using it in production.
+{: note}
+
+Deprecated features
+
+: The following feature is deprecated in this release:
+
+   * The REST API feature to capture DDL changes in {{site.data.keyword.lakehouse_short}} through the event listener will be deprecated from {{site.data.keyword.lakehouse_short}} release version 2.1.
 
 ## 13 November 2024 - Version 2.0.4 Hotfix
 {: #lakehouse_13Novhf}
