@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-11-30"
 
 keywords: high availability, disaster revecory, watsonx.data
 
@@ -31,7 +31,7 @@ Multi-tenant components support multiple customers and are configured with multi
 
 Single-tenant components in this category are dedicated to a single customer. This category consists of the Presto engine and metastore. These components restart in a new zone during failure.
 
-**In Multi-Zone Regions (MZRs), Presto and HMS are distributed across different zones.**
+**In Multi-Zone Regions (MZRs), Presto and MDS are distributed across different zones.**
 
 When a single availability zone fails in an MZR, or a hardware failure occurs in any region, the workloads automatically fail and restart in other zones within that region. Every {{site.data.keyword.lakehouse_short}} instance comes with a default cross-regional Metadata bucket and an optional Trial bucket(10 GB). Both the buckets are enabled with IBM Cloud® Object Storage Versioning. The data is backed up by enabling replication to a separate IBM Cloud Object Storage Account. However, for any external bucket that the customer brings into {{site.data.keyword.lakehouse_short}} instance, the customer is responsible for those backups.
 
