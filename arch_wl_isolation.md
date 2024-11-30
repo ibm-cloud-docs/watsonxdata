@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-11-30"
 
 keywords: architecture, workload isolation
 
@@ -38,12 +38,12 @@ subcollection: watsonxdata
 
 It is a multi-tenant system that consists of two major building blocks:
 1. Control plane - One control-plane cluster is created per IBM Cloud region that runs multi-tenant components such as service web console UI and API.
-2. Data plane - One or more data-plane clusters are connected and managed by a control-plane running single-tenant customer-dedicated components within a customer-isolated instance such as a Presto engine and Hive metastore.
+2. Data plane - One or more data-plane clusters are connected and managed by a control-plane running single-tenant customer-dedicated components within a customer-isolated instance such as a Presto engine and Metadata Service (MDS).
 
 Important components of {{site.data.keyword.lakehouse_short}} are:
 1. Web console – Web console is the UI interface for watsonx.data from where customers, can perform various functional tasks. It is a multi-tenant component, which resides in the control plane.
 2. Presto - Presto is a distributed SQL query engine, with the capability to query vast data sets located in different data sources.
-3. Hive Metastore - Hive metastore (HMS) is a service that stores metadata that is related to presto and other services in a backend relational database. When a new table is created, information that is related to the schema such as column names, data types, are stored in the metastore’s backend database.
+3. Metadata Service - Metadata Service (MDS) is a service that stores metadata that is related to presto and other services in a backend relational database. When a new table is created, information that is related to the schema such as column names, data types, are stored in the metastore’s backend database.
 
 ## {{site.data.keyword.lakehouse_short}} workload isolation
 {: #compute_workload}
