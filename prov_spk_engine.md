@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-06"
+lastupdated: "2024-12-01"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -79,3 +79,8 @@ To add a Spark engine, complete the following steps.
 
 
 6. Click **Create**. The engine is provisioned and is displayed in the **Infrastructure Manager** page.
+
+## Related API
+{: #spark_api}
+
+For information on related API, see [Create Spark engine](https://cloud.ibm.com/apidocs/watsonxdata#create-spark-engine), [Pause engine](https://cloud.ibm.com/apidocs/watsonxdata#pause-spark-engine), [Resume engine](https://cloud.ibm.com/apidocs/watsonxdata#resume-spark-engine), [Scale Spark engine](https://cloud.ibm.com/apidocs/watsonxdata#scale-spark-engine), and [List Spark version](https://cloud.ibm.com/apidocs/watsonxdata#list-spark-versions).

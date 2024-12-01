@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-12-01"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -40,3 +40,8 @@ To delete an engine, use one of the following methods:
 
 1. Hover over the engine that you want to delete and click the **Delete** icon. A delete confirmation dialog appears.
 2. Click **Delete**.
+
+## Related API
+{: #del_engine_api}
+
+For information on related API, see [Delete engine](https://cloud.ibm.com/apidocs/watsonxdata#delete-other-engine), [Delete Presto (Java) engine](https://cloud.ibm.com/apidocs/watsonxdata#delete-engine), [Delete Presto (C++) engine](https://cloud.ibm.com/apidocs/watsonxdata#delete-prestissimo-engine) and [Delete Spark engine](https://cloud.ibm.com/apidocs/watsonxdata#delete-spark-engine).

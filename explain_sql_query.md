@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-12-01"
 
 keywords: watsonxdata, graphical representation, explain sql statement, sql editor, sql query
 
@@ -42,3 +42,8 @@ To view the execution plans for a query that is run in {{site.data.keyword.lakeh
 1. Click **Explain** on the screen to visualize the graphical representation of the query.
 
 On the **Explain** window, click a stage to view the details on the side window. The details of each stage that is displayed are the estimate values for rows, CPU, memory, and network.
+
+## Related API
+{: #visualexp_api}
+
+For information on related API, see [Explain Presto (C++) query](https://cloud.ibm.com/apidocs/watsonxdata#run-prestissimo-explain-statement), [Explain Presto (C++) analyze](https://cloud.ibm.com/apidocs/watsonxdata#run-prestissimo-explain-analyze-statement), [Explain Presto (Java) query](https://cloud.ibm.com/apidocs/watsonxdata#run-explain-statement), and [Explain Presto (Java) analyze](https://cloud.ibm.com/apidocs/watsonxdata#run-explain-analyze-statement).

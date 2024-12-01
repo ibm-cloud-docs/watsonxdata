@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-12-01"
 
 keywords: lakehouse, engine, catalog, watsonx.data
 
@@ -47,3 +47,8 @@ To associate a catalog or catalogs with an engine, use one of the following meth
 2. In **Manage associations** window, select the engine with which you want to associate the catalog or catalogs.
 
 3. Click **Save and restart engine**.
+
+## Related API
+{: #assocat_api}
+
+For information on related API, see [Associate catalogs to a Presto (C++) engine](https://cloud.ibm.com/apidocs/watsonxdata#create-prestissimo-engine-catalogs), [Associate catalogs to Presto (Java) engine](https://cloud.ibm.com/apidocs/watsonxdata#create-presto-engine-catalogs), [Get Spark engine catalogs](https://cloud.ibm.com/apidocs/watsonxdata#list-spark-engine-catalogs) and [Associate catalogs to Spark engine](https://cloud.ibm.com/apidocs/watsonxdata#create-spark-engine-catalogs).

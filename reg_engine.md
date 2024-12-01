@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-12-01"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -89,3 +89,8 @@ To register external engines, complete the following steps.
       {: caption="Registering other engines" caption-side="bottom"}
 
 6. Click **Create**.
+
+## Related API
+{: #engine_api}
+
+For information on related API, see [List other engines](https://cloud.ibm.com/apidocs/watsonxdata#list-other-engines) and [Create other engine](https://cloud.ibm.com/apidocs/watsonxdata#create-other-engine).

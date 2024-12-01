@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-12-01"
 
 keywords: lakehouse, engine, tags, description, watsonx.data
 
@@ -49,3 +49,8 @@ To edit the display name, description and tags of an engine, use one of the foll
 3. In the **Description** field, enter the description of the engine or edit the existing description.
 4. In the **Tags** field, select the tags from the list or start typing to define a new tag.
 5. Click **Save**.
+
+## Related API
+{: #editengine_api}
+
+For information on related API, see [Update Presto (C++) engine](https://cloud.ibm.com/apidocs/watsonxdata#update-prestissimo-engine) and [Update Presto (Java) engine](https://cloud.ibm.com/apidocs/watsonxdata#update-presto-engine).
