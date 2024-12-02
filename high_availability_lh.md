@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-30"
+lastupdated: "2024-12-02"
 
 keywords: high availability, disaster revecory, watsonx.data
 
@@ -24,12 +24,12 @@ subcollection: watsonxdata
 ## Active-Active
 {: #Act-Act}
 
-Multi-tenant components support multiple customers and are configured with multiple replicas across Availability Zones (AZs) to ensure availability. This category consists of most of the {{site.data.keyword.lakehouse_short}} components.
+Multi-tenant components support multiple customers and are configured with multiple replicas across Availability Zones (AZs) to ensure availability. This category consists of most of the {{site.data.keyword.lakehouse_short}} components. MDS is Active-Active in Enterprise plan.
 
 ## Active-Only
 {: #Act-Oly}
 
-Single-tenant components in this category are dedicated to a single customer. This category consists of the Presto engine and metastore. These components restart in a new zone during failure.
+Single-tenant components in this category are dedicated to a single customer. This category consists of the Presto engine and metastore. These components restart in a new zone during failure. MDS is Active-Only in Lite plan.
 
 **In Multi-Zone Regions (MZRs), Presto and MDS are distributed across different zones.**
 
