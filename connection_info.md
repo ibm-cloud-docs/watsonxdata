@@ -31,7 +31,10 @@ subcollection: watsonxdata
 
 You can now find the connectivity information for {{site.data.keyword.lakehouse_full}} in the **Connection information** tile in the **Configurations** page and in the **Instance details** page. You can copy JSON snippet and export JSON. This information is useful to create connections between IBM Cloud Pak for Data and {{site.data.keyword.lakehouse_short}}.
 
-1. The **Connection information** tile in the **Configurations** page provides the following information:
+## Connection information
+{: #get_connection_conninfo}
+
+The **Connection information** tile in the **Configurations** page provides the following information:
 
    * **Instance details**:
    * Host IP address
@@ -41,14 +44,103 @@ You can now find the connectivity information for {{site.data.keyword.lakehouse_
    * **Engine and service connection details**
    * Select the checkbox for **Generate JSON for IBM Cloud Pak for Data and watsonx** if you are connecting to {{site.data.keyword.lakehouse_full}} from IBM Cloud Pak for Data or from watsonx.ai.
    * You can select one engine for the JSON snippet.
-2. The **Instance details** page provides the following details. To open the Instance details, click the i icon on the home page.
 
-   * Region
-   * Plan type
-   * Cloud resource name (CRN)
-   * Instance ID
-   * Data Access Service (DAS) endpoint
-   * Common Policy Gateway (CPG) endpoint
+## BI tools
+{: #get_connection_vscode}
+
+From the **BI tools** tab, you can view the following details:
+
+### Tableu
+{: #get_connection_tableu}
+
+Expand the Tableu section to see the following details:
+
+* Server
+* Port
+* Catalog
+* Username
+* Password: Enter the API key for authentication.
+* SSL certificate
+
+You can also click the link to view BI connection documentation.
+
+### Power BI
+{: #get_connection_powerbi}
+
+Expand the Power BI section to see the following details:
+
+* Server
+* Port
+* Catalog
+* Username
+* Password: Enter the API key for authentication.
+* SSL certificate
+
+You can also click the link to view BI connection documentation.
+
+### Qlik
+{: #get_connection_qlik}
+
+Expand Qlik section to see the following details:
+
+* Hostname
+* Port
+* Catalog
+* Username
+* Password: Enter the API key for authentication.
+* SSL certificate
+
+You can also click the link to view BI connection documentation.
+
+### Domo
+{: #get_connection_domo}
+
+Expand the Domo section to see the following details:
+
+* Server
+* Port
+* Database
+* Username
+* Password: Enter the API key for authentication.
+* SSL certificate
+
+You can also click the link to view BI connection documentation.
+
+### Looker
+{: #get_connection_looker}
+
+Expand the Looker section to see the following details:
+
+* Server
+* Port
+* Database
+* Username
+* Password: Enter the API key for authentication.
+* SSL certificate
+
+You can also click the link to view BI connection documentation.
+
+## Visual Studio Code
+{: #get_connection_vscode}
+
+From the **Visual Studio Code** tab, you can view the following details:
+
+### VS Code details
+{: #get_connection_vscode_details}
+
+Expand your VS Code to see the following details:
+
+* Host IP address
+* API key: Enter the API key for authentication.
+* Username
+
+### View VS Code connection configuration
+{: #get_connection_vscode_conn}
+
+Expand the VS Code connection configuration to view the following details:
+
+* Connection information
+* Export JSON snippet
 
 ## Data Build Tool (DBT)
 {: #get_connection_dbt}
@@ -77,3 +169,15 @@ Expand the associated query server to view the following details:
 * API key: Enter your API key here. For information about generating API key, see [Creating an API key in the console](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key).
 
 You can copy the profile details by clicking **Copy profile snippet** or export the details as a `yaml` file by clicking **Export profile snippet**.
+
+## Instance details
+{: #get_connection_inst}
+
+The **Instance details** page provides the following details. To open the Instance details, click the i icon on the home page.
+
+   * Region
+   * Plan type
+   * Cloud resource name (CRN)
+   * Instance ID
+   * Data Access Service (DAS) endpoint
+   * Common Policy Gateway (CPG) endpoint
