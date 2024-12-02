@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-11-30"
+lastupdated: "2024-12-02"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -236,7 +236,7 @@ Follow the steps to run the Spark sample python file.
 
 Parameter values:
 
-* <<change_endpoint>> : The Metadata Service URI endpoint to access the metastore. For more information on getting the HMS credentials, see [Getting Metadata Service (MDS) Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
+* <<change_endpoint>> : The Metadata Service URI endpoint to access the metastore. For more information on getting the MDS credentials, see [Getting Metadata Service (MDS) Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
 * <<change_pswd>> : The password to access the metastore. For more information on getting the MDS credentials, see [Getting Metadata Service (MDS) Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
 
 To run the Spark python file using EMR-6.15.0 (Spark 3.4) cluster, download the iceberg jars from the [location](https://repo1.maven.org/maven2/org/apache/iceberg/iceberg-spark-runtime-3.3_2.12/1.4.1/iceberg-spark-runtime-3.3_2.12-1.4.1.jar) and follow the same [procedure](#abt_emrsamp_run).
