@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-30"
+lastupdated: "2024-12-02"
 
 keywords: monitoring, watsonx.data
 
@@ -83,7 +83,7 @@ To see your {{site.data.keyword.lakehouse_full}} customer metrics dashboards in 
 
 | Metadata | Description |
 |----------|-------------|
-| `Metric Name` | ibm_watsonx_data_hms_health|
+| `Metric Name` | ibm_watsonx_data_mds_health|
 | `Metric Type` | gauge |
 | `Value Type`  | none |
 | `Segment By` | Service Instance, Resource group |
