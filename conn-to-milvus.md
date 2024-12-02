@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-15"
+lastupdated: "2024-12-02"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -100,3 +100,8 @@ You can perform the following operations after establishing a connection with a 
 - **Manage partitions**: You can create and manage partitions in a collection. A Milvus cluster supports a maximum of 4095 partitions. For more information, see [Manage Partitions](https://milvus.io/docs/manage-partitions.md#Manage-Partitions).
 - **Manage indexes**: You can creating and managing indexes on vector fields in a collection. For more information, see [Manage Indexes](https://milvus.io/docs/index-vector-fields.md?tab=floating).
 - **Search and Query**: For information searching and querying data in Milvus, see [Search, Query & Get](https://milvus.io/docs/single-vector-search.md).
+
+## Related API
+{: #connmilvus_api}
+
+For information on related API, see [Get Milvus service](https://cloud.ibm.com/apidocs/watsonxdata#get-milvus-service), [Delete Milvus service](https://cloud.ibm.com/apidocs/watsonxdata#delete-milvus-service), [Update Milvus service](https://cloud.ibm.com/apidocs/watsonxdata#update-milvus-service), [Get Milvus service databases](https://cloud.ibm.com/apidocs/watsonxdata#list-milvus-service-databases), [Get Milvus database collections](https://cloud.ibm.com/apidocs/watsonxdata#list-milvus-database-collections), and [Scale a Milvus service](https://cloud.ibm.com/apidocs/watsonxdata#create-milvus-service-scale).
