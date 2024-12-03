@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-11-28"
+lastupdated: "2024-12-03"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -15,6 +15,9 @@ subcollection: watsonxdata
 {: #spark-extnsn}
 
 When you submit a Spark application that uses external storage buckets registered in {{site.data.keyword.lakehouse_short}}, Spark access control extension allows additional authorization thereby enhancing security. If you enable the extension in the spark configuration, only authorized users are allowed to access and operate {{site.data.keyword.lakehouse_short}} catalogs through Spark jobs.
+
+You can enable the Spark access control extension for Iceberg, Hive and Hudi catalogs.
+{: note}
 
 You can create data policies to grant or deny access for catalog, schema, and table even column to a user or user group. Besides data level authorization, storage privilege is also considered. For more information related to the access control checks on catalogs, buckets, schemas and tables, see [Managing roles and privileges](watsonxdata?topic=watsonxdata-role_priv){: external}.
 {: shortdesc}
@@ -40,6 +43,7 @@ Spark access control extension supports native Spark engine.
 
 Iceberg is considered as an example. You can also use Hive and Hudi catalogs.
 {: note}
+
 
 ```bash
 

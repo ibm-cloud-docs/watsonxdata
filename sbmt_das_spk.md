@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-09-19"
+lastupdated: "2024-12-03"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -159,3 +159,41 @@ Parameters:
 * `<cos_endpoint>`: The endpoint URL for your Cloud Object Storage.
 * `<s3-bucket-HMAC-access-key>`: HMAC access key for the S3 bucket.
 * `<s3-bucket-HMAC-secret-key>`: HMAC secret key for the S3 bucket.
+
+
+## Accessing ADLS and GCS storages
+{: #view_smbit_nsp-3}
+
+If your Spark application resides in ADLS (Gen1 or Gen2) or Google Cloud Storage, use one of the following commands to submit your application.
+
+
+### ADLS Gen1
+{: #view1}
+
+```bash
+spark.hadoop.fs.wasb.impl=org.apache.hadoop.fs.azure.IbmlhcasAzureFileSystem
+   spark.hadoop.fs.wasbs.impl=org.apache.hadoop.fs.azure.IbmlhcasAzureFileSystem$Secure
+   spark.hadoop.fs.azure.secure.mode=True
+   spark.hadoop.fs.azure.local.sas.key.mode=True
+   spark.hadoop.fs.azure.saskey.usecontainersaskeyforallaccess=False
+```
+{: codeblock}
+
+
+### ADLS Gen2
+{: #view2}
+
+```bash
+spark.hadoop.fs.azure.account.auth.type.<account_name>.dfs.core.windows.net=SAS
+spark.hadoop.fs.azure.sas.token.provider.type.<account_name>.dfs.core.windows.net=org.apache.hadoop.fs.azurebfs.sas.IbmlhcasSASTokenProvider
+```
+{: codeblock}
+
+### GCS
+{: #view3}
+
+```bash
+spark.hadoop.fs.azure.account.auth.type.<account_name>.dfs.core.windows.net=SAS
+spark.hadoop.fs.azure.sas.token.provider.type.<account_name>.dfs.core.windows.net=org.apache.hadoop.fs.azurebfs.sas.IbmlhcasSASTokenProvider
+```
+{: codeblock}
