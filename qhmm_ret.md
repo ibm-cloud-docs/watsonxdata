@@ -1,0 +1,85 @@
+---
+
+copyright:
+  years: 2022, 2024
+lastupdated: "2024-12-03"
+
+keywords: watsonxdata, qhmm
+
+subcollection: watsonxdata
+
+---
+
+{:javascript: #javascript .ph data-hd-programlang='javascript'}
+{:java: #java .ph data-hd-programlang='java'}
+{:ruby: #ruby .ph data-hd-programlang='ruby'}
+{:php: #php .ph data-hd-programlang='php'}
+{:python: #python .ph data-hd-programlang='python'}
+{:external: target="_blank" .external}
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
+{:pre: .pre}
+{:video: .video}
+
+# Configuring query monitoring
+{: #qhmm}
+
+Query History Monitoring and Management (QHMM) is a service that stores and manages diagnostic data, such as  heap dumps, thread dumps, query history and query event-related information of the Presto engine in the storage associated with a Hive catalog. You can retrieve the history files to analyze, debug or monitor the queries. You can also store the data in your own bucket.
+{: shortdesc}
+
+You can enable or disable the QHMM service for your {{site.data.keyword.lakehouse_short}} instance. If you enable the QHMM service, you must specify the storage to be used for storing the query data.
+You must create and associate a Hive catalog to store the QHMM data (register your own storage (BYOB)). To use BYOB, register your bucket in watsonx.data and configure it to use as QHMM storage.
+
+QHMM supports only Hive storage.
+{: note}
+
+
+
+
+# Retrieving QHMM logs by using ibm-lh utility
+{: #qhmm_ret}
+
+The **ibm-lh** utility allows you to retrieve the QHMM logs (provide insights into query executions, enabling users to monitor and analyze performance metrics) without running SQL queries. It can be used to easily retrieve the following query information with the help of  keywords.
+
+* Basic query information
+* Basic error information of failed queries
+* Query stats information
+* Query memory information
+* Query garbage collection information
+* Top time taken query
+* watsonx.data on IBM Software Hub
+
+## Procedure
+{: #qhmm1_ret}
+
+1. Install `ibm-lh` client package. For information, see Installing ibm-lh-client package.
+
+1. Establish connection to watsonx.data using `ibm-lh-client` package utilities.  See
+
+1. Use the `ibm-lh monitor qhmm` utility command to retrieve the QHMM logs. For more information about the syntax and the different keywords, see ibm-lh monitor qhmm.
+
+   The syntax is
+   ./ibm-lh monitor qhmm --type <type_name> --start-time <start_time> --end-time <end_time> --user <user_id> --query-id <query_id> --query-state <query_state>
+
+
+Parameters:
+* --type <type_name>: Specifies the type of query (e.g., query_failed_info, query_basic_info, query_stats_info, query_memory_info, query_gc_info).
+* --start-time <start_time>: Starting timestamp in YYYY-MM-DD HH:MM:SS (UTC).
+* --end-time <end_time>: Ending timestamp (optional).
+* --user <user_id>: User ID associated with the queries (optional).
+* --query-id <query_id>: Specific query ID (optional).
+* --query-state <query_state>: State of the query (e.g., COMPLETED, FAILED) (optional).
+* --limit <limit_value>: Number of rows to return (optional).
+* --order: Name of columns for sorting (optional).
+
+
+Sample query to retrieve basic information about all queries executed:
+
+./ibm-lh monitor qhmm --type query_basic_info --start-time "2023-10-01 00:00:00" --end-time "2023-10-08 23:59:59" --user "user123"
+
+This command fetches basic information for queries executed by user123 between October 1st and October 8th, 2023
