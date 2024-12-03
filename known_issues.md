@@ -52,12 +52,12 @@ You may face issues while uploading the certificate obtained by following the st
 2. Navigate to the directory where the certificate file is located.
 3. Run the following OpenSSL command:
 
-```bash
-openssl x509 -inform DER -in DigiCertGlobalRootCA.crt -out DigiCertGlobalRootCA.pem
-```
-{: codeblock}
+   ```bash
+   openssl x509 -inform DER -in DigiCertGlobalRootCA.crt -out DigiCertGlobalRootCA.pem
+   ```
+   {: codeblock}
 
-4. Use the .pem certificate generated in step 3 to retest the connection.
+4.  Use the .pem certificate generated in step 3 to retest the connection.
 
 ## Incorrect glossary format for semantic enrichment
 {: #known_issues26909}
