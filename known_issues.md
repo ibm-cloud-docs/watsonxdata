@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-04"
+lastupdated: "2024-12-03"
 
 keywords: lakehouse
 
@@ -34,6 +34,28 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+## Presto (C++) engine fails to support Service Principal authorization mode for Azure Data Lake Storage Gen2
+{: #known_issues16955}
+
+Presto (C++) engine fails to support Service Principal authorization mode for Azure Data Lake Storage Gen2.
+
+**Workaround:** Use ADLS Gen1 Access_Key method for ADLS Gen1 and ADLS Gen2 from the UI.
+
+## Test connection may fail for IBM Db2 data source
+{: #known_issues29895}
+
+You may face issues while uploading the certificate obtained by following the steps provided in the topic [IBM Db2](https://cloud.ibm.com/docs/Db2whc?topic=Db2whc-ssl_support) for SSL connection of IBM Db2 data source.
+
+**Workaround:** Convert the SSL certificate to .pem format by the following steps:
+
+1. Open a terminal or command prompt.
+2. Navigate to the directory where the certificate file is located.
+3. Run the following OpenSSL command:
+
+openssl x509 -inform DER -in DigiCertGlobalRootCA.crt -out DigiCertGlobalRootCA.pem
+{: codeblock}
+
+4. Use the .pem certificate generated in step 3 to retest the connection.
 
 ## Incorrect glossary format for semantic enrichment
 {: #known_issues26909}
