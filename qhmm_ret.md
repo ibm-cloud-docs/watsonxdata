@@ -26,21 +26,6 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Configuring query monitoring
-{: #qhmm}
-
-Query History Monitoring and Management (QHMM) is a service that stores and manages diagnostic data, such as  heap dumps, thread dumps, query history and query event-related information of the Presto engine in the storage associated with a Hive catalog. You can retrieve the history files to analyze, debug or monitor the queries. You can also store the data in your own bucket.
-{: shortdesc}
-
-You can enable or disable the QHMM service for your {{site.data.keyword.lakehouse_short}} instance. If you enable the QHMM service, you must specify the storage to be used for storing the query data.
-You must create and associate a Hive catalog to store the QHMM data (register your own storage (BYOB)). To use BYOB, register your bucket in watsonx.data and configure it to use as QHMM storage.
-
-QHMM supports only Hive storage.
-{: note}
-
-
-
-
 # Retrieving QHMM logs by using ibm-lh utility
 {: #qhmm_ret}
 
