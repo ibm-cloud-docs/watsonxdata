@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-12-03"
+lastupdated: "2024-12-04"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -19,7 +19,6 @@ This topic provides the procedure to submit a Spark application by using native 
 ## Prerequisites
 {: #nsppk_preq_1}
 
-* Metastore admin role : To enable your Spark application to work with the watsonx.data catalog and storage, you must have `Metastore admin` role. Without `Metastore admin` privilege, you cannot ingest data to storage by using Native Spark engine.
 
 * Create an object storage : To store the Spark application and related output, create a storage bucket. To create Cloud Object Storage and a bucket, see [Creating a storage bucket](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-secure-content-store#create-cos-bucket). Maintain separate storage for application and data. Register only data buckets with {{site.data.keyword.lakehouse_short}}.
 
@@ -27,6 +26,13 @@ This topic provides the procedure to submit a Spark application by using native 
 
     You can create different Cloud Object Storage buckets to store application code and the output. Register the data bucket, which stores the input data, and watsonx.data tables. You need not register the storage bucket, which maintains the application code with watsonx.data.
     {: note}
+
+## Storages supported
+{: #nsppk_preq_1_stg}
+
+* Azure Data Lake Storage (ADLS)
+* Amazon S3
+* Google Cloud Storage (GCS)
 
 
 ## Submitting a Spark application without accessing the watsonx.data catalog
@@ -76,7 +82,7 @@ Run the following curl command:
     "conf": {
     "spark.hadoop.wxd.apiKey":"Basic <encoded-api-key>"
     },
-    "application": "s3a://<application-bucket-name>/iceberg.py"
+    "application": "<storage>://<application-bucket-name>/iceberg.py"
     }
     }
 ```
@@ -86,6 +92,7 @@ Run the following curl command:
 
    Parameter values:
    * `<encoded-api-key>` : The value must be in the format `echo -n"ibmlhapikey_<user_id>:<user’s api key>" | base64`. Here, <user_id> is the IBM Cloud ID of the user whose api key is used to access the data bucket. The `<IAM_APIKEY>` here is the API key of the user accessing the Object store bucket. To generate an API key, login into the watsonx.data console and navigate to Profile > Profile and Settings > API Keys and generate a new API key.
+   * `<storage>` : The value depends on the storage type you choose. It must be `s3a` for Amazon S3, `abfss` for ADLS, and `gs` for GCS storage.
    * `<application_bucket_name>` : The name of the object storage containing your application code. You must pass the credentials of this storage if it is not registered with watsonx.data.
 
 
@@ -126,74 +133,5 @@ The following is the sample Python application to perform basic operations on da
     spark.stop()
     if __name__ == '__main__':
     main()
-```
-{: codeblock}
-
-
-## Accessing a non-catalog storage without using DAS
-{: #view_smbit_nsp-2}
-
-To access watsonx.data storage without using Data Access Service (DAS), or to access the data from a non-catalog storage, pass HMAC credentials (access and secret keys) of the data bucket.
-
-```bash
-curl --request POST --url
-https://<region>.lakehouse.cloud.ibm.com/lakehouse/api/v2/spark_engines/<spark_engine_id>/a
-pplications --header 'Authorization: Bearer <token>' --header 'Content-Type: application/json'
---header 'AuthInstanceID: <crn_instance>' --data '{
-"application_details": {
-"application": "s3a://<application-bucket-name>/cos-read.py",
-"conf": {
-"spark.hadoop.fs.s3a.bucket.<data-bucket-name>.endpoint": "<cos_endpoint>",
-"spark.hadoop.fs.s3a.bucket.<data-bucket-name>.access.key": "<s3 bucket HMAC access
-key>",
-"spark.hadoop.fs.s3a.bucket.<data-bucket-name>.secret.key": "<s3 bucket HMAC secret
-key>",
-"spark.app.name": "reader-app"
-}
-}
-}'
-```
-{: codeblock}
-
-Parameters:
-* `<cos_endpoint>`: The endpoint URL for your Cloud Object Storage.
-* `<s3-bucket-HMAC-access-key>`: HMAC access key for the S3 bucket.
-* `<s3-bucket-HMAC-secret-key>`: HMAC secret key for the S3 bucket.
-
-
-## Accessing ADLS and GCS storages
-{: #view_smbit_nsp-3}
-
-If your Spark application resides in ADLS (Gen1 or Gen2) or Google Cloud Storage, use one of the following commands to submit your application.
-
-
-### ADLS Gen1
-{: #view1}
-
-```bash
-spark.hadoop.fs.wasb.impl=org.apache.hadoop.fs.azure.IbmlhcasAzureFileSystem
-   spark.hadoop.fs.wasbs.impl=org.apache.hadoop.fs.azure.IbmlhcasAzureFileSystem$Secure
-   spark.hadoop.fs.azure.secure.mode=True
-   spark.hadoop.fs.azure.local.sas.key.mode=True
-   spark.hadoop.fs.azure.saskey.usecontainersaskeyforallaccess=False
-```
-{: codeblock}
-
-
-### ADLS Gen2
-{: #view2}
-
-```bash
-spark.hadoop.fs.azure.account.auth.type.<account_name>.dfs.core.windows.net=SAS
-spark.hadoop.fs.azure.sas.token.provider.type.<account_name>.dfs.core.windows.net=org.apache.hadoop.fs.azurebfs.sas.IbmlhcasSASTokenProvider
-```
-{: codeblock}
-
-### GCS
-{: #view3}
-
-```bash
-spark.hadoop.fs.azure.account.auth.type.<account_name>.dfs.core.windows.net=SAS
-spark.hadoop.fs.azure.sas.token.provider.type.<account_name>.dfs.core.windows.net=org.apache.hadoop.fs.azurebfs.sas.IbmlhcasSASTokenProvider
 ```
 {: codeblock}
