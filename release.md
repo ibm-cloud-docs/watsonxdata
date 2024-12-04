@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-11-30"
+lastupdated: "2024-12-04"
 
 keywords: watsonxdata, release notes
 
@@ -42,7 +42,7 @@ Data sources and storage enhancements
       * Greenplum
       * MariaDB
 
-   * Now you can test connection for Azure Data Lake Storage (ADLS).
+   * Now you can test connection for Azure Data Lake Storage (ADLS) and IBM Data Virtualization Manager for z/OS data source.
 
 Integration enhancements
 
