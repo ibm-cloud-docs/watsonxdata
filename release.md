@@ -56,6 +56,8 @@ Integration enhancements
 
    * You can now use all of the Presto data types with the dbt adapter for Presto. Specify the data type as column_types in the dbt_project.yml. For more information, see [Installing and using dbt-watsonx-presto](watsonxdata?topic=watsonxdata-dbt-watsonx-presto-inst).
 
+   * You can now use the Birdwatcher debugging tool to check the state of Milvus system. For more information, see [Birdwatcher debugging tool](watsonxdata?topic=watsonxdata-milvus_birdwatcher).
+
 Engine and service enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
