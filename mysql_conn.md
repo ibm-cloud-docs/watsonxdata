@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-30"
+lastupdated: "2024-12-04"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -69,6 +69,21 @@ The following is the procedure to add your own JAR to the MySQL data source:
 
 You can link the MySQL data source to the engine only when a driver is associated to that engine. Only one MySQL driver can be associated to an engine at a time.
 {: note}
+
+## Vulnerabilities in JAR
+{: #mysql_vul}
+
+As part of the BYOJ process, users can upload the required JAR files. If a vulnerability is identified in a JAR, a grace period is set for the removal and cleanup activities based on the severity of the security vulnerability as shown in the following table:
+
+| Severity of vulnerability | Grace period (in days) |
+ |--------------------------|----------------|
+ | Critical | 30|
+ | High     | 60 |
+ | Medium   | 120 |
+ | Low      | 180 |
+ {: caption="Vulnerability and grace period" caption-side="bottom"}
+
+The grace period is calculated from the date the vulnerability is reported, plus the specified grace period. Multiple warnings are displayed to the users about the grace period in the Driver manager page (for the admin) as well as in other places like in the ‘Catalogs’ section in the ‘Infrastructure manager’ page and in the ‘Catalogs associated’ section in the ‘Data manager page’. For example, if a customer uses the mysql-connector-j-8.2.0.jar and a critical vulnerability is identified on October 1st, a cleanup process begins immediately after October 31st. This process deletes the driver from the bucket and Presto pods, disassociates the catalog from the engine, disassociates the driver in the Driver Manager page, and deletes the entry.
 
 ## Upgrade impact on MySQL catalogs (version 2.1.0)
 {: #mysql_upgrade}
