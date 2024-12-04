@@ -66,7 +66,7 @@ Engine and service enhancements
 
    * You can now enable the Spark Access Control extension to access and operate on the Hive and Hudi catalogs.
 
-   * You can now select a {{site.data.keyword.lakehouse_short}} Spark engine as a runtime environment in watsonx.ai notebooks. This runtime environment helps you to use Jupyter notebooks to submit workloads to {{site.data.keyword.lakehouse_short}} Spark clusters.
+   * You can now select a {{site.data.keyword.lakehouse_short}} Spark engine as a runtime environment in watsonx.ai notebooks. This allows you to run Jupyter notebooks on your {{site.data.keyword.lakehouse_short}} native Spark engine.
 
    * Presto administrators can now configure JMX metrics through API. Currently, Only alphanumeric characters are allowed for the key in JMX property names. For more information, see [Update presto engine](https://cloud.ibm.com/apidocs/watsonxdata#update-presto-engine){: external}.
 
