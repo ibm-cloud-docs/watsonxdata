@@ -74,11 +74,20 @@ Query history information by using LH-CLI utility
 
 : You can get the following Query history information by using LH-CLI utility:
 
-   * Get basic query information
-   * Get basic error information of failed queries
-   * Get query stats information
-   * Get query memory information
-   * Get query garbage collection information
+
+   * Basic query information.
+   * Basic error information of failed queries.
+   * Query stats information.
+   * Query memory information.
+   * Query garbage collection information.
+   * Top time taken query.
+   * Memory usage details of queries.
+   * Information after joining the two tables.
+   * Information containing all the columns of a table.
+   * Information about the errors in the query.
+   * Count of all error codes.
+   * Count of all failure messages.
+   * Count of all failure types.
 
 Introduction to Metadata Store (MDS)
 
