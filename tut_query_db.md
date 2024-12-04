@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-06"
+lastupdated: "2024-12-04"
 
 keywords: provisioning, query, engine, infrastructure
 
@@ -108,7 +108,7 @@ To run the SQL query, do the following steps:
 
      a. Go to the **Data manager** page.
 
-     b. You can create table with your data in .csv, parquet, .json, .txt formats. To do that, see [Creating table](watsonxdata?topic=watsonxdata-create_schema){: external}.
+     b. You can create table with your data in .csv, parquet, .json, .txt formats. To do that, see [Creating table](watsonxdata?topic=watsonxdata-create_table){: external}.
 
     You can go to the **Query workspace** page. Select the newly created table from the **iceberg_data** catalog and run a select query statement to verify if the table has data in it.
 
