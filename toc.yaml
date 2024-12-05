@@ -27,6 +27,8 @@ toc:
           - mixed_case_overview.md
           - resource_grp_ov.md
           - integration.md
+          - manta_overview.md
+          - metadata_serv_ov.md
       - topicgroup:
           label: Provisioning watsonx.data
           topics:
@@ -304,6 +306,7 @@ toc:
             - Qlik.md
             - power_bi.md
             - cognos.md
+      - manta_integrate.md
       - topicgroup:
           label: Workload Orchestration
           topics:
@@ -361,7 +364,6 @@ toc:
             - ts_optimizer.md
             - ts_cs_issue.md
             - ts_ip_restrict_issue.md
-            - ts_hive.md
             - topicgroup:
                 label: Spark
                 topics:
