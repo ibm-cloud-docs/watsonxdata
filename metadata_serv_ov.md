@@ -29,7 +29,7 @@ subcollection: watsonxdata
 # Metadata Service (MDS)
 {: #mdsov}
 
-Metadata Service is a component of {{site.data.keyword.lakehouse_short}} that acts as the centralized metadata repository and plays a crucial role in managing and storing metadata for tables, databases, partitions, and other objects. MDS acts as the centre for metadata management that allows different frameworks in a distributed data ecosystem to access the underlying data by using shared schema definitions consistently.
+Metadata Service is a component of {{site.data.keyword.lakehouse_short}} that acts as the centralized metadata repository and plays a crucial role in managing and storing metadata for tables, databases, partitions, and other objects. MDS acts as the center for metadata management that allows different frameworks in a distributed data ecosystem to access the underlying data by using shared schema definitions consistently.
 {: shortdesc}
 
 MDS offers two interfaces for interaction:
