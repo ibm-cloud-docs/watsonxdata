@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-05"
+lastupdated: "2024-12-05"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -47,6 +47,48 @@ Apache Kafka is a distributed event streaming platform. Connect to an Apache Kaf
  | Create | Click Create to create the data source. |
  {: caption="Register data source" caption-side="bottom"}
 
+## Sample .json definition file
+{: #samplefile_limitations}
+
+The following is the sample .json definition file to be uploaded to the Kafka source configuration section for Kafka topics:
+
+   ```bash
+   {
+    "topicName": "customer_orders",
+    "tableName": "orders",
+    "fileContent": {
+        "tableName": "orders",
+        "columns": [
+            {
+                "name": "order_id",
+                "type": "INTEGER",
+                "primaryKey": true
+            }
+        ],
+        "partitionKey": "customer_id",
+        "retentionPeriod": "7 days"
+    },
+    "contents": {
+        "tableName": "orders",
+        "topicConfig": {
+            "partitions": 1,
+            "replicationFactor": 1,
+            "retentionMs": 604800000,
+            "cleanupPolicy": "delete"
+        },
+        "schema": {
+            "type": "struct",
+            "fields": [
+                {
+                    "name": "order_id",
+                    "type": "int64"
+                }
+            ]
+        }
+    }
+}
+   ```
+   {: codeblock}
 
 ## Limitations for SQL statements
 {: #connector_limitations}
