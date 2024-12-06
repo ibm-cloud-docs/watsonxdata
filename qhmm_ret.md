@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-03"
+lastupdated: "2024-12-06"
 
 keywords: watsonxdata, qhmm
 
@@ -42,11 +42,11 @@ The **ibm-lh** utility allows you to retrieve the QHMM logs (provide insights in
 ## Procedure
 {: #qhmm1_ret}
 
-1. Install `ibm-lh` client package. For information, see Installing ibm-lh-client package.
+1. Install `ibm-lh` client package. For information, see [Installing ibm-lh-client package](https://www.ibm.com/docs/SSNFH6_5.1.x/wxd-client/topics/install-lh-client.html).
 
-1. Establish connection to watsonx.data using `ibm-lh-client` package utilities.  See
+1. Establish connection to watsonx.data using `ibm-lh-client` package utilities. See [Establishing cconnection](https://www.ibm.com/docs/SSNFH6_5.1.x/wxd-client/topics/work-ibm-lh.html).
 
-1. Use the `ibm-lh monitor qhmm` utility command to retrieve the QHMM logs. For more information about the syntax and the different keywords, see ibm-lh monitor qhmm.
+1. Use the `ibm-lh monitor qhmm` utility command to retrieve the QHMM logs. For more information about the syntax and the different keywords, see [ibm-lh monitor qhmm](https://www.ibm.com/docs/SSNFH6_5.1.x/wxd-client/topics/ibm_lh_commands.html).
 
    The syntax is
    ./ibm-lh monitor qhmm --type <type_name> --start-time <start_time> --end-time <end_time> --user <user_id> --query-id <query_id> --query-state <query_state>
@@ -65,6 +65,6 @@ Parameters:
 
 Sample query to retrieve basic information about all queries executed:
 
-./ibm-lh monitor qhmm --type query_basic_info --start-time "2023-10-01 00:00:00" --end-time "2023-10-08 23:59:59" --user "user123"
+`./ibm-lh monitor qhmm --type query_basic_info --start-time "2023-10-01 00:00:00" --end-time "2023-10-08 23:59:59" --user "user123"`
 
-This command fetches basic information for queries executed by user123 between October 1st and October 8th, 2023
+This command fetches basic information for queries executed by user123 between October 1st and October 8th, 2023.

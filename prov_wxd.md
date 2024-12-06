@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-22"
+lastupdated: "2024-12-06"
 
 keywords: lakehouse, watsonx data, provision, endpoint, resource
 subcollection: watsonxdata
@@ -20,10 +20,10 @@ subcollection: watsonxdata
 {: shortdesc}
 
 {{site.data.keyword.lakehouse_short}} can be deployed in one of the following ways:
-- Stand-alone software on Red Hat OpenShift. For more information, see [{{site.data.keyword.lakehouse_full}}](https://www.ibm.com/docs/en/watsonxdata/1.1.x).
-- {{site.data.keyword.lakehouse_short}} on Cloud Pak for Data. For more information, see [{{site.data.keyword.lakehouse_full}} on Cloud Pak for Data](https://www.ibm.com/docs/en/cloud-paks/cp-data/5.0.x?topic=services-watsonxdata).
+- Stand-alone software on Red Hat OpenShift. For more information, see [{{site.data.keyword.lakehouse_full}}](https://www.ibm.com/docs/SSDZ38_2.1.x).
+- {{site.data.keyword.lakehouse_short}} on IBM Software Hub. For more information, see [{{site.data.keyword.lakehouse_full}} on IBM Software Hub](https://www.ibm.com/docs/SSNFH6_5.1.x).
 - SaaS - on IBM Cloud and AWS. For more information, see [IBM watsonx.data as a Service on AWS](https://www.ibm.com/docs/en/watsonx/watsonxdata/aws).
-- Additionally the {{site.data.keyword.lakehouse_short}} Developer edition can be installed for POC purposes. For more information, see [{{site.data.keyword.lakehouse_full}}](https://www.ibm.com/docs/en/watsonxdata/1.1.x).
+- Additionally the {{site.data.keyword.lakehouse_short}} Developer edition can be installed for POC purposes. For more information, see [{{site.data.keyword.lakehouse_full}}](https://www.ibm.com/docs/SSDZ38_2.1.x).
 
 
 On IBM Cloud, {{site.data.keyword.lakehouse_short}} is offered under two pricing plans, as follows:
