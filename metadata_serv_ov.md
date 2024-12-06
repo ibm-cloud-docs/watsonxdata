@@ -51,4 +51,4 @@ REST API interface includes selected APIs from Iceberg REST Catalog Open API Spe
 
 For information about using AWS EMR for Spark, see [Using AWS EMR for Spark use case](watsonxdata?topic=watsonxdata-spark-emr).
 
-For information about working with Apache Hudi catalogm, [see Working with Apache Hudi catalog](watsonxdata?topic=watsonxdata-hudi_ext_sp).
+For information about working with Apache Hudi catalog, [see Working with Apache Hudi catalog](watsonxdata?topic=watsonxdata-hudi_ext_sp).
