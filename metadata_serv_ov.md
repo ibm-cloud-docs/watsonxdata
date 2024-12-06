@@ -37,7 +37,7 @@ MDS offers two interfaces for interaction:
 ## Apache Thrift interface (HMS APIs)
 {: #mdsov_thrift}
 
-Engines such as Native Spark and Presto in WXD are implicitly connected to the MDS through the Apache Thrift interface, which implements the standard HMS functions. Other HMS Client applications such as the Iceberg Hive Catalog client can also be configured to connect to the HMS interface of MDS. These HMS APIs enable interaction with the MDS to:
+Engines such as Native Spark and Presto in {{site.data.keyword.lakehouse_short}} are implicitly connected to MDS through the Apache Thrift interface, which implements the standard HMS functions. Other HMS Client applications such as the Iceberg Hive Catalog client can also be configured to connect to the HMS interface of MDS. These HMS APIs enable interaction with the MDS to:
 
 - Retrieve table or database schemas.
 - Get partition information for optimized query execution.
@@ -47,7 +47,7 @@ Engines such as Native Spark and Presto in WXD are implicitly connected to the M
 ## REST API interface
 {: #mdsov_rest}
 
-REST API interface includes selected APIs from Iceberg REST Catalog Open API Spec and Open Source Unity Catalog API Spec. MDS also implements selected APIs from the Iceberg REST Catalog and Unity Catalog Open API spec. You can use these APIs from standard REST Clients to Spark and Presto for invoking the API. Use of REST Client has the benefit of directly interacting with the metastore without an engine. These REST interfaces offer interoperability benefits with other external systems as well.
+REST API interface includes selected APIs from Iceberg REST Catalog Open API Spec and Open Source Unity Catalog API Spec. MDS also implements selected APIs from the Iceberg REST Catalog and Unity Catalog Open API spec. You can leverage these APIs from standard REST Clients to Spark and Presto. Use of REST Client has the benefit of directly interacting with the metastore without an engine. These REST interfaces offer interoperability benefits with other external systems as well.
 
 For information about using AWS EMR for Spark, see [Using AWS EMR for Spark use case](watsonxdata?topic=watsonxdata-spark-emr).
 
