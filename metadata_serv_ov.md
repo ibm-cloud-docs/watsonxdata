@@ -39,14 +39,15 @@ MDS offers two interfaces for interaction:
 
 Engines such as Native Spark and Presto in WXD are implicitly connected to the MDS through the Apache Thrift interface, which implements the standard HMS functions. Other HMS Client applications such as the Iceberg Hive Catalog client can also be configured to connect to the HMS interface of MDS. These HMS APIs enable interaction with the MDS to:
 
+- Retrieve table or database schemas.
+- Get partition information for optimized query execution.
+- Add, alter, or drop databases, tables, and partitions.
+
+
 ## REST API interface
 {: #mdsov_rest}
 
 REST API interface includes selected APIs from Iceberg REST Catalog Open API Spec and Open Source Unity Catalog API Spec. MDS also implements selected APIs from the Iceberg REST Catalog and Unity Catalog Open API spec. You can use these APIs from standard REST Clients to Spark and Presto for invoking the API. Use of REST Client has the benefit of directly interacting with the metastore without an engine. These REST interfaces offer interoperability benefits with other external systems as well.
-
-- Retrieve table or database schemas.
-- Get partition information for optimized query execution.
-- Add, alter, or drop databases, tables, and partitions.
 
 For information about using AWS EMR for Spark, see [Using AWS EMR for Spark use case](watsonxdata?topic=watsonxdata-spark-emr).
 
