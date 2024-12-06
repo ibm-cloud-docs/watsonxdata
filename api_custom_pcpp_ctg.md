@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-12-06"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -19,6 +19,7 @@ You can customize the catalog properties through an API for Presto (C++).
 | Property name | Type | Validation added |
 | --- | --- | --- |
 | `hive.orc.use-column-names` | Boolean | True or False |
+| `hive.parquet.use-column-names` | String | Any string |
 | `max-partitions-per-writers` | Integer | Limit{1, 100000} |
 | `file-column-names-read-as-lower-case` | Boolean | True or False |
 {: caption="Catalog properties for Presto (C++)" caption-side="bottom"}
