@@ -341,6 +341,7 @@ toc:
                   - api_custom_prm_pjcw.md
                   - api_custom_jvm_pjcw.md
                   - api_custom_ctg_pjcw.md
+                  - api_custom_evlistn_pjcw.md
           - topicgroup:
                 label: Presto (C++) properties
                 topics:
