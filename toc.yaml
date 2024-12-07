@@ -349,6 +349,7 @@ toc:
                   - api_custom_pcpp_cood.md
                   - api_custom_pcpp_ctg.md
                   - api_custom_pcpp_vlx.md
+                  - api_custom_jvm_pcpp.md
           - resource_grp_pptys.md
       - link:
             label: watsonx.data APIs
