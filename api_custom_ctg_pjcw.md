@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-12-07"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -39,18 +39,21 @@ You can customize the catalog properties through an API for Presto (Java).
 | `<catalog-name>.orc.stripe-footer-cache-ttl-since-last-access` | String | Limit {1, 1e13}; supported values are numbers with or without units m, s, ms, h |
 | `<catalog-name>.orc.stripe-stream-cache-size` | Integer | Limit {1, 1000} |
 | `<catalog-name>.orc.stripe-stream-cache-ttl-since-last-access` | String | Limit {1, 1e13}; supported values are numbers with or without units m, s, ms, h |
-| `hive.orc.use-column-names` | True | True or False |
-| `<catalog-name>.parquet.metadata-cache-enabled` | True | True or False |
+| `hive.orc.use-column-names` | Boolean | True or False |
+| `<catalog-name>.parquet.metadata-cache-enabled` | Boolean | True or False |
 | `<catalog-name>.parquet.metadata-cache-size` | Integer | Limit {1, 1000} |
 | `<catalog-name>.parquet.metadata-cache-ttl-since-last-access` | String | Limit {1, 1e13}; supported values are numbers with or without units m, s, ms, h |
-| `hive.parquet.use-column-names` | True | True or False |
-| `hive.parquet-batch-read-optimization-enabled` | True | True or False |
+| `hive.parquet.use-column-names` | Boolean | True or False |
+| `hive.parquet-batch-read-optimization-enabled` | Boolean | True or False |
+| `hive.parquet.writer.version` | String | Any string |
 | `hive.node-selection-strategy` | String | Any string |
 | `hive.max-outstanding-splits` | Integer | Limit {1, 1000} |
 | `hive.max-initial-splits` | Integer | Limit {1, 1000} |
 | `hive.max-initial-split-size` | Integer | Limit {1, 1000} |
 | `hive.max-split-size` | Integer | Limit {1, 1000} |
 | `hive.split-loader-concurrency` | Integer | Limit {1, 1000} |
+| `hive.storage-format` | String | Any string |
+| `iceberg.file-format` | String | Any string |
 | `hive.pushdown-filter-enabled` | Boolean | True or False |
 | `hive.max-partitions-per-writers` | Integer | Limit {1, 1000} |
 | `hive.s3.max-error-retries` | Integer | Limit {1, 100} |
@@ -59,6 +62,7 @@ You can customize the catalog properties through an API for Presto (Java).
 | `hive.s3.max-connections` | Integer | Limit {1, 10000} |
 | `hive.s3.max-client-retries` | Integer | Limit {1, 100} |
 | `hive.collect-column-statistics-on-write` | Boolean | True or False |
+| `hive.metastore-refresh-interval` | String | Limit {1,1e13} |
 | `hive.non-managed-table-creates-enabled` | Boolean | True or False |
 | `hive.s3select-pushdown.enabled` | Boolean | True or False |
 | `hive.recursive-directories` | Boolean | True or False |

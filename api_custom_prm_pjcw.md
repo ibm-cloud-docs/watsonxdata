@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-10-21"
+lastupdated: "2024-12-07"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -74,6 +74,7 @@ You can customize the coordinator and worker configuration properties through an
 | `experimental.spiller-spill-path` | String | Any string |
 | `http-server.max-request-header-size` | String | Limit {1, 1e13}; supported values are numbers with or without units TB, MB, GB, B, KB |
 | `experimental.internal-communication.max-task-update-size` | String | Limit {1, 1e13}; supported values are numbers with or without units TB, MB, GB, B, KB |
+|`offset-clause-enabled`|Boolean|True or False |
 {: caption="Configuration properties for Presto (Java) - coordinator and worker nodes" caption-side="bottom"}
 
 To enable fragment cache, you must set up a cache-enabled environment. To set up, patch the following properties into `/opt/presto/etc/config.properties`.
