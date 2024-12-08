@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-30"
+lastupdated: "2024-12-08"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -55,11 +55,13 @@ The following data sources are supported:
 * [Amazon Redshift]({{site.data.keyword.ref-redshift_database-link}})
 * [Apache Druid]({{site.data.keyword.ref-druid_database-link}})
 * [Apache Kafka]({{site.data.keyword.ref-kafka_database-link}})
+* [Apache Phoenix]({{site.data.keyword.ref-phoenix_database-link}})
 * [Apache Pinot]({{site.data.keyword.ref-pinot_database-link}})
 * [BigQuery]({{site.data.keyword.ref-bigquery_database-link}})
 * [Cassandra]({{site.data.keyword.ref-cassandra_database-link}})
 * [ClickHouse]({{site.data.keyword.ref-clickhouse_database-link}})
 * [Elasticsearch]({{site.data.keyword.ref-elasticsearch_database-link}})
+* [HANA]({{site.data.keyword.ref-saphana_database-link}})
 * [IBM Data Virtualization Manager for z/OS]({{site.data.keyword.ref-dvm_database-link}})
 * [IBM Db2]({{site.data.keyword.ref-db2_database-link}})
 * [IBM NPSaaS]({{site.data.keyword.ref-netezza_database-link}})
