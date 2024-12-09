@@ -51,7 +51,14 @@ The **ibm-lh** utility allows you to retrieve the QHMM logs (provide insights in
    ```
    {: codeblock}
 
-1. Establish connection to {{site.data.keyword.lakehouse_short}} using `ibm-lh-client` package utilities. See [Establishing cconnection](https://www.ibm.com/docs/SSDZ38_2.1.x/wxd-client/topics/work-ibm-lh.html).
+1. Establish connection to {{site.data.keyword.lakehouse_short}} using `ibm-lh-client` package utilities.
+
+   ```bash
+   ./connect-lh --op=add --name=<your_saas_name> --host=<saas_host> --port=<port> --username=<your_username> --password=<your_password>
+   ```
+   {: codeblock}
+
+   For more information, see [Establishing cconnection](https://www.ibm.com/docs/SSDZ38_2.1.x/wxd-client/topics/work-ibm-lh.html).
 
 1. Configure Presto details by using the following command:
 
