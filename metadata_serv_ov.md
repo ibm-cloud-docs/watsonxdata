@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-06"
+lastupdated: "2024-12-09"
 
 keywords: lakehouse, metadata, service, mds, watsonx.data
 
@@ -49,6 +49,4 @@ Engines such as Native Spark and Presto in {{site.data.keyword.lakehouse_short}}
 
 REST API interface includes selected APIs from Iceberg REST Catalog Open API Spec and Open Source Unity Catalog API Spec. MDS also implements selected APIs from the Iceberg REST Catalog and Unity Catalog Open API spec. You can leverage these APIs from standard REST Clients to Spark and Presto. Use of REST Client has the benefit of directly interacting with the metastore without an engine. These REST interfaces offer interoperability benefits with other external systems as well.
 
-For information about using AWS EMR for Spark, see [Using AWS EMR for Spark use case](watsonxdata?topic=watsonxdata-spark-emr).
-
-For information about working with Apache Hudi catalog, [see Working with Apache Hudi catalog](watsonxdata?topic=watsonxdata-hudi_ext_sp).
+For information about Unity and Iceberg Catalog REST API, see [Unity Catalog REST API and Iceberg Catalog REST API](watsonxdata?topic=watsonxdata-unity_iceberg_api).

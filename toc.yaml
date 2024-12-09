@@ -322,6 +322,7 @@ toc:
       - connection_info.md
       - presto_exp_jmx.md
       - milvus_exp_mtrcs_list.md
+      - iceberg_unity_cat_api.md
       - link:
             label: Presto SQL statements
             href: https://www.ibm.com/docs/en/watsonx/watsonxdata/2.0.0?topic=presto-sql-statements
