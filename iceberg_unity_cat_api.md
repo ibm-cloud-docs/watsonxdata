@@ -63,6 +63,8 @@ The following are the APIs included:
 - GET /tables/{full_name}
 - DELETE /tables/{full_name}
 
+For more information, see [API references](https://editor-next.swagger.io/?url=https://raw.githubusercontent.com/unitycatalog/unitycatalog/refs/tags/v0.1.0/api/all.yaml).
+
 ### Behavior and limitations
 {: #unity_cat_api_limit}
 
@@ -148,6 +150,8 @@ The following are the APIs included:
 {: #iceberg_cat_api_4}
 
 - Config endpoint to configure catalog as prefix
+
+For more information, see [API references](https://editor-next.swagger.io/?url=https://raw.githubusercontent.com/apache/iceberg/refs/tags/apache-iceberg-1.6.1/open-api/rest-catalog-open-api.yaml).
 
 ## Behavior and Limitations
 {: #iceberg_cat_api_limit}
