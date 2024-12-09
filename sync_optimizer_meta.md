@@ -32,7 +32,7 @@ subcollection: watsonxdata
 ## About this task
 {: #optimizer_abtsync}
 
-To provide optimized queries, **Query Optimizer** pulls data about table definitions and Hive and Iceberg statistics to synchronize with MDS in {{site.data.keyword.lakehouse_short}}. You can select the specific Hive and Iceberg table that must be available for **Query Optimizer**. It is recommended to generate Hive and Iceberg statistics and label columns for primary and foreign keys to get the best results.
+To provide optimized queries, **Query Optimizer** pulls data about table definitions and Hive statistics to synchronize with MDS in {{site.data.keyword.lakehouse_short}}. You can select the specific Hive table that must be available for **Query Optimizer**. It is recommended to generate Hive statistics and label columns for primary and foreign keys to get the best results.
 
 Activating **Query Optimizer** automatically synchronizes metadata for catalogs that are connected to Presto (C++) engines. However, you will need to run the following steps if:
 
@@ -46,11 +46,11 @@ Activating **Query Optimizer** automatically synchronizes metadata for catalogs 
 
 To sync tables from {{site.data.keyword.lakehouse_full}}, the following items are required:
 
-1. Identify the list of Hive and Iceberg tables in {{site.data.keyword.lakehouse_short}} that you require for **Query Optimizer**.
+1. Identify the list of Hive tables in {{site.data.keyword.lakehouse_short}} that you require for **Query Optimizer**.
 
-1. Identify columns as primary and foreign keys in the Hive and Iceberg tables.
+1. Identify columns as primary and foreign keys in the Hive tables.
 
-1. `ANALYZE` Hive and Iceberg tables in Presto (C++) to generate Hive and Iceberg statistics.
+1. `ANALYZE` Hive tables in Presto (C++) to generate Hive statistics.
 
 1. Only users with administrator privilege is allowed to run `ExecuteWxdQueryOptimizer` command as a security enhancement feature.
 
