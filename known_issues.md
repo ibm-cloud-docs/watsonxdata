@@ -170,7 +170,7 @@ You might encounter a Server concurrency limit reached error when using the flig
 
 **Workaround:** Increase the number of flight pods or restructure to simplify the queries to reduce the number of sub queries.
 
-   Use the following command to scale the number of pods for the wdp-connect-flight deployment to 36 replicas:
+   For example: Use the following command to scale the number of pods for the wdp-connect-flight deployment to 36 replicas:
 
    ```bash
    oc scale deployment wdp-connect-flight --replicas=36
