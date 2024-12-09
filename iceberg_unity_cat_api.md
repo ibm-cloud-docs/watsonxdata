@@ -106,7 +106,7 @@ For creating tables, there are additional fields in the Unity spec that are not 
 ```
 {: codeblock}
 
-If extra values are passed in the properties of request object, they are not stored in any table due to adherence to the current HMS schema. You can include additional details in the properties field in future if needed.
+If extra values are passed in the properties of request object, they are not stored in any table due to adherence to the current HMS schema. You can include additional details in the `properties` field in future if needed.
 {: note}
 
 ## Iceberg Catalog REST API
@@ -148,3 +148,13 @@ The following are the APIs included:
 {: #iceberg_cat_api_4}
 
 - Config endpoint to configure catalog as prefix
+
+## Behavior and Limitations
+{: #iceberg_cat_api_limit}
+
+Due to the constraint of not modifying the schema, the following features are not supported:
+
+- Multi-level namespace creation
+- As Hive is the catalog for all databases or namespaces in the DBS table, creating namespace is not supported even if it exists in catalogs other than Iceberg.
+- If you list the schema, only the namespaces for the current catalog with the specified prefix is returned. However, if you - attempt to create a namespace that exists in another catalog, a `Namespace Already Exists` exception is returned.
+- When listing tables, only Iceberg tables are returned. If you attempt to create a table with a name that exists as a Hive or Delta table in the same database or namespace, the creation of an Iceberg table with the same name is not allowed.
