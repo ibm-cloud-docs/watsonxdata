@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-12-04"
+lastupdated: "2024-12-09"
 
 keywords: watsonxdata, release notes
 
@@ -48,9 +48,14 @@ Integration enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following new or enhanced integrations with other services:
 
-   * You can now enable or disable the Databand integration feature from the IBM Data Observability by Databand page in the {{site.data.keyword.lakehouse_short}} console. You can use Databand to track and analyze the Spark workloads. Databand provides detailed insights than the Spark UI and history server.
-
    * You can now enable Databand connection from the Configurations page. For more information, see [Monitoring Spark application runs by using Databand](watsonxdata?topic=watsonxdata-spark-databand).
+
+   * You can now retrieve the Presto connection information from the wxd instance > configurations > connection information page for the following integration:
+
+      * BI tools
+      * DataBuildTool (dbt)
+
+For more information, see [Data visualization in watsonx.data with BI tools](watsonxdata?topic=watsonxdata-bi_tools).
 
    * You can now integrate IBM Manta Data Lineage with {{site.data.keyword.lakehouse_short}} to capture and publish jobs, runs, and dataset events from Spark through the Manta UI. For more information, see [IBM Manta Data Lineage](watsonxdata?topic=watsonxdata-manta_overview).
 
@@ -62,11 +67,14 @@ Engine and service enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
 
-   * You can now use the Azure Data Lake Storage (ADLS) and Google Cloud Storage with Presto (C++) engine. You can now use Azure Data Lake Storage (ADLS) and Google Cloud Storage (GCS) with Data Access Service (DAS) to store your data while submitting Spark applications. For more information, see [ADLS Gen1 Blob](watsonxdata?topic=watsonxdata-adls_genblob_storage) and [Google Cloud Storage](watsonxdata?topic=watsonxdata-gcs_storage).
+   * You can now use the Azure Data Lake Storage (ADLS) and Google Cloud Storage with Presto (C++) engine. You can now use Azure Data Lake Storage (ADLS) and Google Cloud Storage to store your data while submitting Spark applications. For more information, see [ADLS Gen1 Blob](watsonxdata?topic=watsonxdata-adls_genblob_storage) and [Google Cloud Storage](watsonxdata?topic=watsonxdata-gcs_storage).
 
-   * You can now enable the Spark Access Control extension to access and operate on the Hive and Hudi catalogs.
+   * You can now use Google Cloud Storage (GCS) with Data Access Service (DAS) to store your data while submitting Spark applications. For more information, see [Submitting Spark application by using native Spark engine](watsonxdata?topic=watsonxdata-sbmt_das_spk).
 
-   * You can now select a {{site.data.keyword.lakehouse_short}} Spark engine as a runtime environment in watsonx.ai notebooks. This allows you to run Jupyter notebooks on your {{site.data.keyword.lakehouse_short}} native Spark engine.
+   * You can now enable the Spark Access Control extension to access and operate on the Hive and Hudi catalogs. For more information, see [Enhancing Spark application submission using Spark access control extension for external Spark](watsonxdata?topic=watsonxdata-spark-extnsn-extnl) and [Enhancing Spark application submission using Spark access control extension for native Spark](watsonxdata?topic=watsonxdata-spark-extnsn).
+
+   * You can now select a {{site.data.keyword.lakehouse_short}} Spark engine as a runtime environment in watsonx.ai notebooks. This allows you to run Jupyter notebooks on your {{site.data.keyword.lakehouse_short}} native Spark engine. For more information, see [Working with watsonx.ai Notebooks](watsonxdata?topic=watsonxdata-spark-notebook-wxai).
+
 
    * Presto administrators can now configure JMX metrics through API. Currently, Only alphanumeric characters are allowed for the key in JMX property names. For more information, see [Update presto engine](https://cloud.ibm.com/apidocs/watsonxdata#update-presto-engine){: external}.
 
@@ -89,6 +97,8 @@ Query history information by using LH-CLI utility
    * Count of all failure messages.
    * Count of all failure types.
 
+For more information, see [Retrieving QHMM logs by using ibm-lh utility](watsonxdata?topic=watsonxdata-qhmm_ret).
+
 Introduction to Metadata Store (MDS)
 
 : With this release, {{site.data.keyword.lakehouse_short}} uses Metadata Store (MDS) instead of Hive Metastore (HMS) that is compatible with modern, open catalog APIs, Unity Catalog API, and Apache Iceberg REST Catalog API, enabling wider tool integration and increased flexibility. This new architecture delivers comparable performance while it continues to support Spark and Presto clients through the existing Thrift or HMS interface.
@@ -96,11 +106,16 @@ Introduction to Metadata Store (MDS)
 It is recommended to use MDS in your test environments and then move to using it in production.
 {: note}
 
+Query Optimizer
+
+: Iceberg table support for Query Optimizer in watsonx.data that was previously available as GA in version 2.0.3, is temporarily moved as a Private Preview feature in 2.1.
+
 Deprecated features
 
 : The following feature is deprecated in this release:
 
    * The REST API feature to capture DDL changes in {{site.data.keyword.lakehouse_short}} through the event listener will be deprecated from {{site.data.keyword.lakehouse_short}} release version 2.1.
+
 
 ## 13 November 2024 - Version 2.0.4 Hotfix
 {: #lakehouse_13Novhf}
