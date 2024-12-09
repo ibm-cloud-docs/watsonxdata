@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-29"
+lastupdated: "2024-12-09"
 
 keywords: lakehouse, MDS, {{site.data.keyword.lakehouse_short}}, hive, metastore
 
@@ -69,7 +69,7 @@ To sync tables from {{site.data.keyword.lakehouse_full}}, the following items ar
 4. Run the following command to register {{site.data.keyword.lakehouse_short}} catalog with **Query Optimizer**:
 
    ```bash
-   ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.REGISTER_EXT_METASTORE('<CATALOG_NAME>','type=watsonx-data,uri=thrift://$LOCAL_MDS_URL,use.SSL=true,auth.mode=PLAIN,auth.plain.credentials=ibmlhapikey:<apikey>', ?, ?)';
+   ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.REGISTER_EXT_METASTORE('<CATALOG_NAME>','type=watsonx-data,uri=thrift://$LOCAL_MDS_URL,use.SSL=true,auth.mode=PLAIN,auth.plain.credentials=(MDS credentials):<apikey>', ?, ?)';
    ```
    {: codeblock}
 
@@ -119,30 +119,3 @@ To sync tables from {{site.data.keyword.lakehouse_full}}, the following items ar
    ExecuteWxdQueryOptimizer 'ALTER TABLE "catalog_name".schema_name.EmployeeDepartmentMapping ADD FOREIGN KEY (DepartmentID) REFERENCES "catalog_name".schema_name.Departments(DepartmentID) NOT ENFORCED';
    ```
    {: codeblock}
-
-7. Optional: Run the following command to get enhanced statistics for an Iceberg table that is synced:
-
-   ```bash
-   ExecuteWxdQueryOptimizer 'CALL EXT_METASTORE_STATS_SYNC(
-     '<CATALOG_NAME>',
-     '<SCHEMA_NAME>',
-     '<TABLE_NAME>',
-     '<PRESTO_HOST>',
-     '<PRESTO_USER>',
-     '<PRESTO_PWD>',
-     'true'
-   )';
-   ```
-   {: codeblock}
-
-   `<CATALOG_NAME>`: The name of catalog (case-sensitive).
-
-   `<SCHEMA_NAME>`: The name of schema in uppercase.
-
-   `<TABLE_NAME>`: The name of table in uppercase. It is recommended to gather statistics for each table individually.
-
-   `<PRESTO_HOST>`: The hostname of Presto engine of which the statistics is collected from. You can find the connection details of Presto engine by clicking on the engine in the Infrastructure manager page of watsonx.data.
-
-   `<PRESTO_USER>`: The Presto username that is used to run the statistics collection. Username can be `ibmlhapikey` or `ibmlhtoken`. It is recommended to use `ibmlhapikey`.
-
-   `<PRESTO_PWD>`: The Presto password that is used to run the statistics collection. Password can be a base64 API key or token corresponding to the username.
