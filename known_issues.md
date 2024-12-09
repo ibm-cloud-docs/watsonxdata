@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-03"
+lastupdated: "2024-12-09"
 
 keywords: lakehouse
 
@@ -168,7 +168,14 @@ When you attempt to query QHMM related tables using Presto (C++) engines, you mi
 
 You might encounter a Server concurrency limit reached error when using the flight server to run queries. This occurs when the server experiences high memory usage due to a large number of concurrent requests.
 
-**Workaround:** Simplify the query and try after few minutes.
+**Workaround:** Increase the number of flight pods or restructure to simplify the queries to reduce the number of sub queries.
+
+   Use the following command to scale the number of pods for the wdp-connect-flight deployment to 36 replicas:
+
+   ```bash
+   oc scale deployment wdp-connect-flight --replicas=36
+   ```
+   {: codeblock}
 
 ## Incorrect recognition of Gregorian dates in Presto with Hive Parquet tables
 {: #known_issues12050}
