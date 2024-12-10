@@ -27,7 +27,7 @@ subcollection: watsonxdata
 {:video: .video}
 
 # HANA
-{: #saphana_conn}
+{: #saphana_database}
 
 HANA is a column-oriented, in-memory relational database.
 {: shortdesc}
