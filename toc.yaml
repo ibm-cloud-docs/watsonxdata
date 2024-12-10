@@ -352,6 +352,8 @@ toc:
                   - api_custom_pcpp_vlx.md
                   - api_custom_jvm_pcpp.md
                   - api_custom_gbl_pcpp.md
+                  - api_custom_logconfwrkr_pcpp.md
+                  - api_custom_logconfcord_pcpp.md
           - resource_grp_pptys.md
       - link:
             label: watsonx.data APIs
