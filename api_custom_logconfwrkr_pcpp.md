@@ -12,7 +12,7 @@ subcollection: watsonxdata
 {{site.data.keyword.attribute-definition-list}}
 
 # LogConfig worker properties for Presto (C++)
-{: #api_custom_gbl_pcpp}
+{: #api_custom_wkr_pcpp}
 
 You can customize the LogConfig worker properties through an API for Presto (C++).
 

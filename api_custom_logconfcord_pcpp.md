@@ -12,7 +12,7 @@ subcollection: watsonxdata
 {{site.data.keyword.attribute-definition-list}}
 
 # LogConfig coordinator properties for Presto (C++)
-{: #api_custom_gbl_pcpp}
+{: #api_custom_cod_pcpp}
 
 You can customize the LogConfig coordinator properties through an API for Presto (C++).
 
