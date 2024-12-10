@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-12-10"
 
 keywords: lakehouse, mixed-case, watsonx.data
 
@@ -60,14 +60,51 @@ To configure the flag, you can either configure it by using the [Customization A
 You can use the following curl command to set the flag as true or false:
 
     ```bash
-      {
-        "engine_properties": {
-          "global": {
-            "enable-mixed-case-support": "true"
-         }
-       },
-       "engine_restart": "force"
-      }
+    {
+	"description": "updated description for presto engine",
+	"engine_display_name": "presto-01",
+	"engine_properties": {
+		"configuration": {
+			"coordinator": {
+			},
+			"worker": {}
+		},
+		"jvm": {
+			"coordinator": {},
+			"worker": {}
+		},
+		"catalog": {
+			"hive_data": {
+				"coordinator": {
+				},
+				"worker": {}
+			},
+			"iceberg_data": {
+				"coordinator": {},
+				"worker": {}
+			},
+			"wxd_system_data": {
+				"coordinator": {},
+				"worker": {}
+			}
+		},
+		"event_listener": {
+		},
+		"log_config": {
+			"coordinator": {
+			},
+			"worker": {}
+		},
+		"global": {
+			"enable-mixed-case-support": "true"
+		}
+	},
+	"engine_restart": "force",
+	"tags": [
+		"tag1",
+		"tag2"
+	]
+}
     ```
     {: codeblock}
 
