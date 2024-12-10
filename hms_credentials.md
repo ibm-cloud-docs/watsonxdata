@@ -14,37 +14,10 @@ subcollection: watsonxdata
 # Retrieving Metadata Service (MDS) endpoints and credentials
 {: #hms}
 
-{{site.data.keyword.lakehouse_full}} integrates with multiple entities like Spark, Db2, {{site.data.keyword.netezza_short}}, and the like. You require {{site.data.keyword.lakehouse_short}} MDS credentials to establish connection with the entities at the time of integration.
+{{site.data.keyword.lakehouse_full}} integrates with multiple entities like Spark, Db2, {{site.data.keyword.netezza_short}}, and the like. You require {{site.data.keyword.lakehouse_short}} MDS credentials and enpoint to establish connection with the entities at the time of integration.
 {: shortdesc}
 
-You must generate the following MDS credentials.
-
-
-* MDS endpoint (thrift url). Follow the [steps](#hms_url) to generate the thrift url.
-* MDS username is by default **ibmlhapikey**
-* Certificate verification. Follow the [steps](#hms_cert) to verify the certificate.
-* API key. Follow the [steps](#hms_api) to generate the key.
-
-
-## Prerequisites
-{: #hms-preq}
-
-{{site.data.keyword.lakehouse_full}} uses the 4.0.0-alpha-2 version of MDS and you must have the support thrift protocol jar to ensure compatibility.
-
-
-## Getting the MDS endpoint
-{: #hms_url}
-
-1. Log in to {{site.data.keyword.lakehouse_short}} console.
-1. From the navigation menu, select **Infrastructure manager**.
-1. Select the **catalog**.
-1. Click **Details** to view the **catalog details** page.
-1. Copy the endpoint:
-
-   1. **Metastore Thrift endpoint**: This is your Hive interface endpoint for thrift.
-   1. **Metastore REST endpoint**: Use this for Unity and Iceberg Catalog REST API.
-
-   You can retrive the endpoints using API. For more information, see [Get catalog API](https://cloud.ibm.com/apidocs/watsonxdata#get-catalog).
+MDS username is by default **ibmlhapikey**.
 
 ## Generating API key
 {: #hms_api}
@@ -60,3 +33,17 @@ You must generate the following MDS credentials.
 
    - [Creating an API key for users or user groups](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key)
    - [Creating an API key for a service ID](https://cloud.ibm.com/docs/account?topic=account-serviceidapikeys&interface=ui#create_service_key)
+
+## Getting the MDS endpoint
+{: #hms_url}
+
+1. Log in to {{site.data.keyword.lakehouse_short}} console.
+1. From the navigation menu, select **Infrastructure manager**.
+1. Select the **catalog**.
+1. Click **Details** to view the **catalog details** page.
+1. Copy the endpoint:
+
+   1. **Metastore Thrift endpoint**: This is your Hive interface endpoint for thrift.
+   1. **Metastore REST endpoint**: Use this for Unity and Iceberg Catalog REST API.
+
+   You can retrive the endpoints using API. For more information, see [Get catalog API](https://cloud.ibm.com/apidocs/watsonxdata#get-catalog).
