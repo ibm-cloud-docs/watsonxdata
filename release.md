@@ -30,7 +30,7 @@ Data sources and storage enhancements
 
    * Now you can connect to Apache Phoenix data sources. For more information, see [Apache Phoenix](watsonxdata?topic=watsonxdata-phoenix_conn)
 
-   * If you work with MySQL data sources, now you can manage drivers in the Driver manager section of the Configurations page. Each of these drivers goes through a series of validation steps. You can no longer test MySQL connections. For more information, see [MySQL](watsonxdata?topic=watsonxdata-mysql_conn).
+   * If you work with MySQL data sources, now you can manage drivers in the **Driver manager** section of the Configurations page. Each of these drivers goes through a series of validation steps. You can no longer test MySQL connections. For more information, see [MySQL](watsonxdata?topic=watsonxdata-mysql_conn).
 
    When you upgrade to version 2.1.0, any existing MySQL catalog is no longer linked to the engine. This means that you need to reestablish the connection between the MySQL catalog and the engine.
    {: note}
@@ -48,9 +48,9 @@ Integration enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following new or enhanced integrations with other services:
 
-   * You can now enable Databand connection from the Configurations page. For more information, see [Monitoring Spark application runs by using Databand](watsonxdata?topic=watsonxdata-spark-databand).
+   * You can now enable Databand connection from the **Configurations** page. For more information, see [Monitoring Spark application runs by using Databand](watsonxdata?topic=watsonxdata-spark-databand).
 
-   * You can now retrieve the Presto connection information from the wxd instance > configurations > connection information page for the following integration:
+   * You can now retrieve the Presto connection information from the wxd instance > Configurations > Connection information page for the following integration:
 
       * BI tools
       * DataBuildTool (dbt)
@@ -78,9 +78,9 @@ Engine and service enhancements
 
    * Presto administrators can now configure JMX metrics through API. Currently, Only alphanumeric characters are allowed for the key in JMX property names. For more information, see [Update presto engine](https://cloud.ibm.com/apidocs/watsonxdata#update-presto-engine){: external}.
 
-Query history information by using LH-CLI utility
+Query history information by using ibm-lh utility
 
-: You can get the following Query history information by using LH-CLI utility:
+: You can get the following Query history information by using ibm-lh utility:
 
 
    * Basic query information.
@@ -111,20 +111,20 @@ Ingestion enhancements
        * Azure Data Lake Storage (ADLS): Support for ingesting data directly from ADLS is now available.
        * Google Cloud Storage (GCS): Support for ingesting data directly from GCS is now available.
 
-   * **Transient storage**: Users can now select the external bucket to use as a staging area for local ingestions. If no storage is specified, watsonx.data can infer and select an appropriate bucket.
+   * **Transient storage**: Users can now select the external bucket to use as a staging area for local ingestions. If no storage is specified, {{site.data.keyword.lakehouse_short}} can infer and select an appropriate bucket.
 
    * **Spark log history**: Access to Spark log history for ingestion jobs is now available.
 
 Introduction to Metadata Service (MDS)
 
-: With this release, {{site.data.keyword.lakehouse_short}} uses Metadata Service (MDS) instead of Hive Metastore (HMS) that is compatible with modern, open catalog APIs, Unity Catalog API, and Apache Iceberg REST Catalog API, enabling wider tool integration and increased flexibility. This new architecture delivers comparable performance while it continues to support Spark and Presto clients through the existing Thrift or HMS interface. For more information, see [Metadata Service (MDS) overview](watsonxdata?topic=watsonxdata-metadata_serv_ov).
+: Starting from the 2.1 release, {{site.data.keyword.lakehouse_short}} uses Metadata Store (MDS) instead of Hive Metastore (HMS). MDS is compatible with modern, open catalog APIs, Unity Catalog API, and Apache Iceberg REST Catalog API, enabling wider tool integration and increased flexibility. This new architecture delivers comparable performance while it continues to support Spark and Presto clients through the existing Thrift or HMS interface. For more information, see [Metadata Service (MDS) overview](watsonxdata?topic=watsonxdata-metadata_serv_ov).
 
 It is recommended to use MDS in your test environments and then move to using it in production.
 {: note}
 
 Query Optimizer
 
-: Iceberg table support for Query Optimizer in watsonx.data that was previously available as GA in version 2.0.3, is temporarily moved as a Private Preview feature in 2.1.
+: Iceberg table support for Query Optimizer in {{site.data.keyword.lakehouse_short}} that was previously available as GA in version 2.0.3, is temporarily moved as a Private Preview feature in 2.1.
 
 Deprecated features
 
