@@ -154,7 +154,7 @@ You can generate, configure, and run DDL from the **Data manager** page by using
    |Executor memory|8 GB|
    {: caption="Large configuration."}
 
-1.Click **Preview** to view the final output table to be displayed in **Data manager**.
+1. Click **Preview** to view the final output table to be displayed in **Data manager**.
 
    If the selected target table is an existing table, the data is appended or overwritten with the new ingested data. Default action being append
    {: note}
