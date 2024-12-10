@@ -59,11 +59,11 @@ To configure the flag, you can either configure it by using the [Customization A
 
 You can use the following curl command to set the flag as true or false:
 
-     ```bash
-     {
-	    "description": "updated description for presto engine",
-"engine_display_name": "presto-01",
-	     "engine_properties": {
+   ```bash
+   {
+	"description": "updated description for presto engine",
+	"engine_display_name": "presto-01",
+	"engine_properties": {
 		"configuration": {
 			"coordinator": {
 			},
@@ -105,9 +105,8 @@ You can use the following curl command to set the flag as true or false:
 		"tag2"
 	]
 }
-     ```
-    {: codeblock}
-
+   ```
+   {: codeblock}
 
 The following are the two scenarios to illustrate mixed-case support behavior:
 
