@@ -41,59 +41,6 @@ If you try to restart the `wxdaddon` and `wxdengine` components with the cpd-cli
 
 **Workaround:** After the cpd-cli manage restart command runs successfully, wait for the `wxd`, `wxdengine`, and `wxdaddon` CRs to complete. This can take 10–15 minutes depending on your deployment size.
 
-## {{site.data.keyword.lakehouse_short}} installation might fail with reason `OOMKilled`.
-{: #known_issues19178}
-
-When you try to install {{site.data.keyword.lakehouse_short}}, the installation might fail with `WxdAddon` status InProgress and ibm-lakehouse-controller-manager pod keeps on restarting. The ibm-lakehouse-controller-manager pod status shows the following:
-
-   ```bash
-       State:          Waiting
-      Reason:       CrashLoopBackOff
-    Last State:     Terminated
-       Reason:       OOMKilled
-       Exit Code:    137
-   ```
-   {: codeblock}
-
-The reason `OOMKilled` means that your container memory limit is reached and the container is restarted.
-
-**Workaround:** Increase the pod memory limit for csv/ibm-lakehouse-operator by completing the following steps:
-
-1. Run the following command to obtain the name of the cluster service version (csv) in the operators project:
-   ```bash
-   export PROJECT_CPD_INST_OPERATORS=<cpd_operators_project>
-   export CLUSTER_SERVICE_VERSION_NAME=$(oc get csv -o name -n $PROJECT_CPD_INST_OPERATORS | grep ibm-lakehouse-operator)
-   ```
-   {: codeblock}
-
-2. Run the following command to confirm that the csv name is returned by step 1:
-   ```bash
-   echo $CLUSTER_SERVICE_VERSION_NAME
-   clusterserviceversion.operators.coreos.com/ibm-lakehouse-operator.v4.0.0
-   ```
-   {: codeblock}
-
-3. Run the following command to increase the operator memory limit from 1G to 2G by patching the csv:
-   ```bash
-   oc patch $CLUSTER_SERVICE_VERSION_NAME --type json -n $PROJECT_CPD_INST_OPERATORS -p '[
-         {
-           "op": "replace",
-           "path": "/spec/install/spec/deployments/0/spec/template/spec/containers/0/resources/limits/memory",
-           "value": "2G"
-         }
-   ]'
-   ```
-   {: codeblock}
-
-4. Run the following command to confirm the new memory limit:
-   ```bash
-   echo "Memory Limit: $(oc get $CLUSTER_SERVICE_VERSION_NAME -n $PROJECT_CPD_INST_OPERATORS --output jsonpath={.spec.install.spec.deployments[0].spec.template.spec.containers[0].resources.limits.memory})"
-   Memory Limit: 2Gopenssl x509 -inform DER -in DigiCertGlobalRootCA.crt -out DigiCertGlobalRootCA.pem
-   ```
-   {: codeblock}
-
-The pod becomes stable after increasing the limit and completes the pending install and upgrade tasks.
-
 ## Presto (C++) engine fails to support Service Principal authorization mode for Azure Data Lake Storage Gen2
 {: #known_issues16955}
 
