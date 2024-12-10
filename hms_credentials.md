@@ -11,7 +11,7 @@ subcollection: watsonxdata
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Retrieving Metadata Service (MDS) credentials
+# Retrieving Metadata Service (MDS) endpoints and credentials
 {: #hms}
 
 {{site.data.keyword.lakehouse_full}} integrates with multiple entities like Spark, Db2, {{site.data.keyword.netezza_short}}, and the like. You require {{site.data.keyword.lakehouse_short}} MDS credentials to establish connection with the entities at the time of integration.
@@ -43,25 +43,6 @@ You must generate the following MDS credentials.
 
    For Unity and Iceberg Catalog REST API, copy **Metastore REST endpoint**.
    {: note}
-
-## Loading certificates to Java truststore
-{: #hms_cert}
-
-To establish connection with {{site.data.keyword.lakehouse_short}}, you (the integrating entities) must mount the well-known certificate along with your implementation code. You can either use the trust certificate that you have or use the java certificate. Choose the well-known certificate based on your implementation code language. For example, if your code is in Java, get the corresponding well-known certificate.
-
-To load the well-known certificate to the truststore, update your implementation code to include the well-known certificate.
-
-1. To use your certificate, update the truststorepath variable. Specify the path of your certificate in the `truststorePath` field. In the below example, a jvm certificate is mounted. You can mount your own well known trust certificate.
-
-```bash
-String truststorePath =
-System.getProperty("java.home") + File.separator +"lib"+ File.separator + "security" + File.separator + "cacerts";
-
-MetastoreConf.setVar(clientConf, ConfVars.SSL_TRUSTSTORE_PATH, truststorePath);
-```
-{: codeblock}
-
-You can now successfully establish connection with {{site.data.keyword.lakehouse_short}}.
 
 ## Generating API key
 {: #hms_api}

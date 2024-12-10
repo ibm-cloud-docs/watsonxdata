@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-09"
+lastupdated: "2024-12-10"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -64,6 +64,73 @@ The following are the APIs included:
 - DELETE /tables/{full_name}
 
 For more information, see [API references](https://editor-next.swagger.io/?url=https://raw.githubusercontent.com/unitycatalog/unitycatalog/refs/tags/v0.1.0/api/all.yaml).
+
+### Sample Unity APIs for GET catalogs
+{: #unity_cat_api_example}
+
+```bash
+curl -k -X GET "https://80e7cce9-c14f-4aa8-8a3b-c52adc25efac.cdc406pd09pasng7elgg.lakehouse.dev.appdomain.cloud:32230/api/2.1/unity-catalog/catalogs" --header "Authorization: Bearer $token" --header 'Content-Type: application/json'
+
+{
+  "catalogs": [
+    {
+      "name": "ad_catalog",
+      "comment": "",
+      "properties": {
+        "catalogType": "delta",
+        "storageName": "func-test-bucket"
+      },
+      "created_at": 1733724384000,
+      "updated_at": 0,
+      "id": "3186f83a-8879-46c4-b48e-125741c34e88",
+      "owner": "anurag",
+      "created_by": "anurag",
+      "updated_by": null
+    },
+    {
+      "name": "testth",
+      "comment": "",
+      "properties": {
+        "catalogType": "iceberg",
+        "storageName": "mdshms"
+      },
+      "created_at": 1733724482000,
+      "updated_at": 0,
+      "id": "9ce30ab7-1321-4189-bb10-765093d1932c",
+      "owner": "antony",
+      "created_by": "antony",
+      "updated_by": null
+    }
+  ],
+  "next-page-token": null
+}
+```
+{: codeblock}
+
+### Sample Unity APIs for GET schemas for catalog
+{: #unity_cat_api_example_2}
+
+```bash
+curl -k -X GET "https://80e7cce9-c14f-4aa8-8a3b-c52adc25efac.cdc406pd09pasng7elgg.lakehouse.dev.appdomain.cloud:32230/api/2.1/unity-catalog/schemas?catalog_name=mrmadira_hive_catalog" --header "Authorization: Bearer $token" --header 'Content-Type: application/json'
+
+{
+  "schemas": [
+    {
+      "name": "dec92024",
+      "catalog_name": "mrmadira_hive_catalog",
+      "comment": null,
+      "properties": {
+        "locationUri": "s3a://testbucket/dec92024"
+      },
+      "full_name": "mrmadira_hive_catalog.dec92024",
+      "created_at": 0,
+      "updated_at": 0,
+      "schema_id": "135"
+    }
+  ]
+}
+```
+{: codeblock}
 
 ### Behavior and limitations
 {: #unity_cat_api_limit}
@@ -153,7 +220,52 @@ The following are the APIs included:
 
 For more information, see [API references](https://editor-next.swagger.io/?url=https://raw.githubusercontent.com/apache/iceberg/refs/tags/apache-iceberg-1.6.1/open-api/rest-catalog-open-api.yaml).
 
-## Behavior and Limitations
+### Sample Iceberg APIs
+{: #Sample_Iceberg_APIs}
+
+#### Get namespaces for a catalog
+{: #Sample_Iceberg_APIs_1}
+
+```bash
+curl -k --request GET   --url 'https://80e7cce9-c14f-4aa8-8a3b-c52adc25efac.cdc406pd09pasng7elgg.lakehouse.dev.appdomain.cloud:32230/mds/iceberg/v1/hemant_test/namespaces'   --header 'Accept: application/json'   --header "Authorization: Bearer $token"  --header 'Content-Type: application/json'  | jq
+
+{
+  "namespaces": [
+    [
+      "hemant_test"
+    ],
+    [
+      "order_schema_ad"
+    ],
+    [
+      "schema1150850f-ece4-4c27-8794-e05b984adff5"
+    ]
+  ],
+  "next-page-token": null
+}
+```
+{: codeblock}
+
+#### Get tables for a schema
+{: #Sample_Iceberg_APIs_2}
+
+```bash
+curl -k --request GET   --url 'https://80e7cce9-c14f-4aa8-8a3b-c52adc25efac.cdc406pd09pasng7elgg.lakehouse.dev.appdomain.cloud:32230/mds/iceberg/v1/hemant_test/namespaces/schema_cpd'   --header 'Accept: application/json'   --header "Authorization: Bearer $token"  --header 'Content-Type: application/json'  | jq
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100    74    0    74    0     0     52      0 --:--:--  0:00:01 --:--:--    52
+{
+  "namespace": [
+    "schema_cpd"
+  ],
+  "properties": {
+    "owner": "hemant"
+  }
+}
+```
+{: codeblock}
+
+### Behavior and Limitations
 {: #iceberg_cat_api_limit}
 
 Due to the constraint of not modifying the schema, the following features are not supported:
