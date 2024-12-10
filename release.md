@@ -99,6 +99,22 @@ Query history information by using LH-CLI utility
 
 For more information, see [Retrieving QHMM logs by using ibm-lh utility](watsonxdata?topic=watsonxdata-qhmm_ret).
 
+Ingestion enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following ingestion enhancements:
+
+   * **Target table preview**: Before submitting an ingestion job, users can now preview the target table schema and edit the column headers and data types. This allows for validation and ensures data is ingested into the correct table structure.
+
+   * **Java/Spark-based ingestion for table creation**: The Data Manager now includes an option to create tables using the Java/Spark-based ingestion flow navigating to Local ingestion, providing flexibility and control based on file size and other factors.
+
+   * **Enhanced source storage support**:
+       * Azure Data Lake Storage (ADLS): Support for ingesting data directly from ADLS is now available.
+       * Google Cloud Storage (GCS): Support for ingesting data directly from GCS is now available.
+
+   * **Transient storage**: Users can now select the external bucket to use as a staging area for local ingestions. If no storage is specified, watsonx.data can infer and select an appropriate bucket.
+
+   * **Spark log history**: Access to Spark log history for ingestion jobs is now available.
+
 Introduction to Metadata Service (MDS)
 
 : With this release, {{site.data.keyword.lakehouse_short}} uses Metadata Service (MDS) instead of Hive Metastore (HMS) that is compatible with modern, open catalog APIs, Unity Catalog API, and Apache Iceberg REST Catalog API, enabling wider tool integration and increased flexibility. This new architecture delivers comparable performance while it continues to support Spark and Presto clients through the existing Thrift or HMS interface. For more information, see [Metadata Service (MDS) overview](watsonxdata?topic=watsonxdata-metadata_serv_ov).
