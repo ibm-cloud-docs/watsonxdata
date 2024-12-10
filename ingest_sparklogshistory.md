@@ -53,4 +53,4 @@ For a **Failed** or **Finished** status, you must start the Spark history server
 
    **Failed** or **Finished**: If the job status is **Failed** or **Finished**, clicking **Spark application history** will navigate you to the Spark history UI. This interface provides a summary of the ingestion job execution, including its timeline, resource usage, and any error messages.
 
-   **Canceled**: If the job is **Cancelled**, **Spark application history** is disabled.
+   **Cancelled**: If the job is **Cancelled**, **Spark application history** is disabled.
