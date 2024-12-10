@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-02"
+lastupdated: "2024-12-10"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -58,23 +58,28 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
 5. If you selected **Local system**, complete the following steps:
 
-   i. Drag a file to the box or click to upload. Selected files are listed in the **Selected file(s)** section. Click **Next**.
+   i. Drag a file to the box or click to upload. Selected files are listed in the **Selected file(s)** section.
 
-    You can add multiple files of the same file type. The available file type options are CSV, Parquet, JSON, ORC, and AVRO. The maximum cumulative file size must be within 500 MB.
-    {: note}
+       You can add multiple files of the same file type. The available file type options are CSV, Parquet, JSON, ORC, and AVRO. The maximum cumulative file size must be within 500 MB.
+       {: note}
+
+    i. Select a transient storage bucket from the drop down to temporarily store uploaded files.
+
+       The files are automatically deleted from this storage upon ingestion completion or failure. This is available only when ingesting data from a Local system.
+       {: note}
+
+    i. Click **Next**.
 
    ii. In the **Ingest data: Local** page, you can see the details of the source files and upload more files if required.
 
-    You can remove individual files and can also remove all the files by using the **Unselect all** option.
-    {: note}
+       You can remove individual files and can also remove all the files by using the **Unselect all** option.
+       {: note}
 
    iii. Click the preview icon against the specific file that you want to preview. This action opens a new File preview window displaying the tables of the selected file.
 
-   iv. Click the Edit button to edit the column headers.
+   iv. Click the **Edit** button to edit the column headers.
 
-   v. Modify the column headers as required to make any transformation.
-
-   vi. You can use Cancel edit or Reset to revert the column headers to their original state, if you need to undo your changes.
+   v. Modify the column headers and column data types as required to make any transformation. Incorrect data type selection can result in ingestion error.
 
    vii. For CSV files, you can select the **Advanced attributes** to customize the file interpretation for the following:
 
@@ -88,6 +93,8 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
       **Escape Character:** Define the character used to escape special characters within the CSV file.
 
+   vi. You can use **Cancel edit** or **Reset** to revert the column headers to their original state, if you need to undo your changes.
+
    viii. Click **Save** to save the changes.
 
    viii. In the **Target table** section, select the target catalog from the **Select catalog** list. The selected catalog must be active to perform an ingestion job.
@@ -100,7 +107,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    x. Select the corresponding target table options based on the preceding selection.
 
-      1. Existing table: To ingest source data into an existing table. Search or select a target table that is listed in the **Select table or enter new table name** drop-down. You can select **Append** or **Replace** to ingest data to the existing table. The default action being append.
+      1. Existing table: To ingest source data into an existing table. Search or select a target table that is listed in the **Select table or enter new table name** drop-down.
 
       2. New table: Enter a new target table name in the **Select table or enter new table name** and explicitly click **+ Create new: `<new table name>`** to create a new table from the source data.
 
@@ -108,7 +115,22 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    xii. Select the IBM Analytics Engine (Spark) from the **Select engine** list. The registered Spark engines are listed here.
 
-   xiii. Select a pre-defined **Job size** from the options listed. The job size is set to the preferred option based on the file size automatically. The user can also select one of the following options.
+      Any files less than 2 MB file size shall automatically select Lite ingestion and all files more than 2 MB file size shall automatically select one of the listed Spark engines from the Select engine drop-down list to run the ingestion job.
+      {: note}
+
+      Lite ingestion is available only when ingesting data from a Local system.
+      {: note}
+
+   xiii. Select a pre-defined **Job size** from the options listed if the selected engine is a Spark engine. The job size is set to the preferred option based on the file size automatically. The user can also select one of the following options.
+
+      **Local:**
+
+      |Configuration|Value|
+      |----|----|
+      |Number of executors|1|
+      |Executor cores|2 vCPU|
+      |Executor memory|4 GB|
+      {: caption="Local configuration."}
 
       **Small:**
 
@@ -143,9 +165,20 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
       |Executor memory|8 GB|
       {: caption="Large configuration."}
 
-   xiv. Click **Done**. The submitted ingestion job can be found in the **Ingestion history** tab of the **Data manager** page.
+   x.Click **Preview** to view the final output table to be displayed in **Data manager**.
 
-   xv. Click the cancel icon to cancel the ingestion job.
+      If the selected target table is an existing table, the data is appended or overwritten with the new ingested data. Default action being append
+      {: note}
+
+   x. Click **Edit** to modify the column headers and column data types as required to make any transformation for the target table. You can also revert the changes if not required.
+
+   xiv. Click **Ingest**. The submitted ingestion job can be found in the **Ingestion history** tab of the **Data manager** page.
+
+      A notification message **Open job details** is triggered to navigate to the Ingestion job details.
+      {: note}
+
+      You can cancel an ingestion job by clicking the **cancel** icon against the ingestion job from the **Ingestion history** tab or by clicking the **Cancel job** in the ingestion job details page.
+      {: note}
 
 ## Ingesting data from remote storage
 {: #spk_ingest_dataremote}
@@ -169,11 +202,11 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    iv. Click the preview icon against the specific file that you want to preview. This action opens a new File preview window displaying the tables of the selected file.
 
-   v. Click the Edit button to edit the column headers.
+   v. Click the **Edit** button to edit the column headers.
 
-   vi. Modify the column headers as required to make any transformation.
+   vi. Modify the column headers and data types as required to make any transformation.
 
-   vii. You can use Cancel edit or Reset to revert the column headers to their original state, if you need to undo your changes.
+   vii. You can use **Cancel edit** or **Reset** to revert the column headers to their original state, if you need to undo your changes.
 
    viii For CSV files, you can select the Advanced attributes to customize the file interpretation for the following:
 
@@ -199,7 +232,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    xii. Select the corresponding Target table options based on the selection (mentioned earlier).
 
-      1. Existing table: To ingest source data into an existing table. Search or select a target table that is listed in the **Select table or enter new table name** drop-down. You can select **Append** or **Replace** to ingest data to the existing table. The default action being append.
+      1. Existing table: To ingest source data into an existing table. Search or select a target table that is listed in the **Select table or enter new table name** drop-down.
 
       2. New table: Enter a new target table name in the **Select table or enter new table name** and explicitly click **+ Create new: `<new table name>`** to create a new table from the source data.
 
@@ -242,9 +275,20 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
       |Executor memory|8 GB|
       {: caption="Large configuration."}
 
-   xvi. Click **Done**. The submitted ingestion job can be found in the **Ingestion history** tab of the **Data manager** page.
+   x.Click **Preview** to view the final output table to be displayed in **Data manager**.
 
-   xvii. Click the cancel icon to cancel the ingestion job.
+      If the selected target table is an existing table, the data is appended or overwritten with the new ingested data. Default action being append
+      {: note}
+
+   x. Click **Edit** to modify the column headers and column data types as required to make any transformation for the target table. You can also revert the changes if not required.
+
+   xiv. Click **Ingest**. The submitted ingestion job can be found in the **Ingestion history** tab of the **Data manager** page.
+
+      A notification message **Open job details** is triggered to navigate to the Ingestion job details.
+      {: note}
+
+      You can cancel an ingestion job by clicking the **cancel** icon against the ingestion job from the **Ingestion history** tab or by clicking the **Cancel job** in the ingestion job details page.
+      {: note}
 
 ## Ingesting data from databases
 {: #spk_ingest_dataremote}
@@ -270,7 +314,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    xii. Select the corresponding Target table options based on the selection (mentioned earlier).
 
-      1. Existing table: To ingest source data into an existing table. Search or select a target table that is listed in the **Select table or enter new table name** drop-down. You can select **Append** or **Replace** to ingest data to the existing table. The default action being append.
+      1. Existing table: To ingest source data into an existing table. Search or select a target table that is listed in the **Select table or enter new table name** drop-down.
 
       2. New table: Enter a new target table name in the **Select table or enter new table name** and explicitly click **+ Create new: `<new table name>`** to create a new table from the source data.
 
@@ -313,9 +357,20 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
       |Executor memory|8 GB|
       {: caption="Large configuration."}
 
-   xvi. Click **Done**. The submitted ingestion job can be found in the **Ingestion history** tab of the **Data manager** page.
+   x.Click **Preview** to view the final output table to be displayed in **Data manager**.
 
-   xvii. Click the cancel icon to cancel the ingestion job.
+      If the selected target table is an existing table, the data is appended or overwritten with the new ingested data. Default action being append
+      {: note}
+
+   x. Click **Edit** to modify the column headers and column data types as required to make any transformation for the target table. You can also revert the changes if not required.
+
+   xiv. Click **Ingest**. The submitted ingestion job can be found in the **Ingestion history** tab of the **Data manager** page.
+
+      A notification message **Open job details** is triggered to navigate to the Ingestion job details.
+      {: note}
+
+      You can cancel an ingestion job by clicking the **cancel** icon against the ingestion job from the **Ingestion history** tab or by clicking the **Cancel job** in the ingestion job details page.
+      {: note}
 
 ## Related API
 {: #ingestion_api}
