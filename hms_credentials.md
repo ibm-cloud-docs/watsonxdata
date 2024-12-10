@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-30"
+lastupdated: "2024-12-10"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -39,7 +39,10 @@ You must generate the following MDS credentials.
 1. From the navigation menu, select **Infrastructure manager**.
 1. Select the **catalog**.
 1. Click **Details** to view the **catalog details** page.
-1. Copy the **Metastore host**. This is your MDS endpoint (thrift url).
+1. Copy the **Metastore Thrift endpoint**. This is your MDS endpoint (thrift url).
+
+   For Unity and Iceberg Catalog REST API, copy **Metastore REST endpoint**.
+   {: note}
 
 ## Loading certificates to Java truststore
 {: #hms_cert}
