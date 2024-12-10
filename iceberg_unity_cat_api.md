@@ -274,3 +274,5 @@ Due to the constraint of not modifying the schema, the following features are no
 - As Hive is the catalog for all databases or namespaces in the DBS table, creating namespace is not supported even if it exists in catalogs other than Iceberg.
 - If you list the schema, only the namespaces for the current catalog with the specified prefix is returned. However, if you - attempt to create a namespace that exists in another catalog, a `Namespace Already Exists` exception is returned.
 - When listing tables, only Iceberg tables are returned. If you attempt to create a table with a name that exists as a Hive or Delta table in the same database or namespace, the creation of an Iceberg table with the same name is not allowed.
+- X-Iceberg-Access-Delegation is not supported.
+- Metrics endpoint added as dummy only.

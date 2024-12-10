@@ -39,23 +39,24 @@ You must generate the following MDS credentials.
 1. From the navigation menu, select **Infrastructure manager**.
 1. Select the **catalog**.
 1. Click **Details** to view the **catalog details** page.
-1. Copy the **Metastore Thrift endpoint**. This is your MDS endpoint (thrift url).
+1. Copy the endpoint:
 
-   For Unity and Iceberg Catalog REST API, copy **Metastore REST endpoint**.
-   {: note}
+   1. **Metastore Thrift endpoint**: This is your Hive interface endpoint for thrift.
+   1. **Metastore REST endpoint**: Use this for Unity and Iceberg Catalog REST API.
+
+   You can retrive the endpoints using API. For more information, see [Get catalog API](https://cloud.ibm.com/apidocs/watsonxdata#get-catalog).
 
 ## Generating API key
 {: #hms_api}
 
-1. In the IBM Cloud console, go to **Manage** and create **service ID**. For information about creating service ID, see [Creating a service ID](https://ondeck.console.cloud.ibm.com/docs/account?topic=account-serviceids&interface=ui#create_serviceid).
-1. In the **Access** tab, from **Access policies**, click **Assign access**. The **Assign access to Doc Service** page opens.
-1. Select **Access policy**. In the **Create policy** section, select the **UI** tab.
-1. Search and select **{{site.data.keyword.lakehouse_short}}** from the **Service** field.
-1. Click **Next**. The **Access policies** section is reflected with the role.
-1. Go to **Manage > Access (IAM)**, and select the **Service IDs**.
-1. Identify the row of the service ID for which you want to select an API key. Select the name of the service ID.
-1. Click **API keys**.
-1. Click **Create**.
-1. Specify a name and description to easily identify the API key.
-1. Click **Create**.
-1. Save your API key by copying or downloading it to secure location.
+1. As the {{site.data.keyword.lakehouse_short}} administrator, you can:
+
+   1. [Create service IDs](https://ondeck.console.cloud.ibm.com/docs/account?topic=account-serviceids&interface=ui#create_serviceid)
+   2. [Invite users and grant permissions](https://cloud.ibm.com/docs/account?topic=account-access-getstarted#group_access)
+
+   Permission required for {{site.data.keyword.lakehouse_short}} are `MetastoreAdmin` in **Service access** and appropriate roles in **Platform access**.
+   {: note}
+1. Generate an API key. for more information, see:
+
+   - [Creating an API key for users or user groups](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key)
+   - [Creating an API key for a service ID](https://cloud.ibm.com/docs/account?topic=account-serviceidapikeys&interface=ui#create_service_key)

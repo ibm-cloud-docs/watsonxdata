@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-09"
+lastupdated: "2024-12-10"
 
 keywords: lakehouse, metadata, service, mds, watsonx.data
 
@@ -31,6 +31,9 @@ subcollection: watsonxdata
 
 Metadata Service is a component of {{site.data.keyword.lakehouse_short}} that acts as the centralized metadata repository and plays a crucial role in managing and storing metadata for tables, databases, partitions, and other objects. MDS acts as the center for metadata management that allows different frameworks in a distributed data ecosystem to access the underlying data by using shared schema definitions consistently.
 {: shortdesc}
+
+For existing {{site.data.keyword.lakehouse_short}} instances: For external engine integrations like Db2, Netezza, and Analytics Engine, you must change the HMS thrift endpoint to MDS thrift endpoint.
+{: important}
 
 MDS offers two interfaces for interaction:
 
