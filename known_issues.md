@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-09"
+lastupdated: "2024-12-10"
 
 keywords: lakehouse
 
@@ -133,11 +133,6 @@ When using the **Sync All Objects** option in {{site.data.keyword.lakehouse_shor
 {: #known_issues28556}
 
 When a column name that contains spaces is applied with a data protection row filtering rule in {{site.data.keyword.lakehouse_short}}, non-owners of the asset may encounter errors when attempting to preview the table.
-
-## Performance issue with multiple groups of large user counts
-{: #known_issues15126}
-
-{{site.data.keyword.lakehouse_short}} might experience performance degradation when there are more than five groups with 100 users each. This limitation is attributed to performance constraints within the Zen-core API used for fetching group details.
 
 ## Inconsistent CSV and Parquet file ingestion behaviour
 {: #known_issues26920}
