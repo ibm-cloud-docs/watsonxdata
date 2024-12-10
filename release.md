@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-12-09"
+lastupdated: "2024-12-10"
 
 keywords: watsonxdata, release notes
 
@@ -101,7 +101,7 @@ For more information, see [Retrieving QHMM logs by using ibm-lh utility](watsonx
 
 Introduction to Metadata Store (MDS)
 
-: With this release, {{site.data.keyword.lakehouse_short}} uses Metadata Store (MDS) instead of Hive Metastore (HMS) that is compatible with modern, open catalog APIs, Unity Catalog API, and Apache Iceberg REST Catalog API, enabling wider tool integration and increased flexibility. This new architecture delivers comparable performance while it continues to support Spark and Presto clients through the existing Thrift or HMS interface.
+: With this release, {{site.data.keyword.lakehouse_short}} uses Metadata Store (MDS) instead of Hive Metastore (HMS) that is compatible with modern, open catalog APIs, Unity Catalog API, and Apache Iceberg REST Catalog API, enabling wider tool integration and increased flexibility. This new architecture delivers comparable performance while it continues to support Spark and Presto clients through the existing Thrift or HMS interface. For more information, see [Unity Catalog REST API and Iceberg Catalog REST API](watsonxdata?topic=watsonxdata-iceberg_unity_cat_api).
 
 It is recommended to use MDS in your test environments and then move to using it in production.
 {: note}
