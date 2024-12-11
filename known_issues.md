@@ -167,7 +167,7 @@ You might encounter a Server concurrency limit reached error when using the flig
    For example, if you need to scale the number of pods to 36, run the following command:
 
    ```bash
-   oc scale deployment wdp-connect-flight --replicas=<36>
+   oc scale deployment wdp-connect-flight --replicas=36
    ```
    {: screen}
 
