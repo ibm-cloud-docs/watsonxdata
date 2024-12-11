@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-10"
+lastupdated: "2024-12-11"
 
 keywords: lakehouse
 
@@ -65,21 +65,6 @@ You may face issues while uploading the certificate obtained by following the st
    {: codeblock}
 
 4. Use the .pem certificate generated in step 3 to retest the connection.
-
-## Incorrect glossary format for semantic enrichment
-{: #known_issues26909}
-
-A glossary upload to the semantic enrichment feature might appear to be successful, even when the uploaded glossary is in an incorrect format or does not adhere to the recommended file template format.
-
-## Sync all objects and metadata deletion
-{: #known_issues26640}
-
-When using the **Sync All Objects** option in {{site.data.keyword.lakehouse_short}}, there may be cases where data is not deleted from the metastore if the corresponding object has been deleted from the object storage.
-
-## Data protection rule for row filtering
-{: #known_issues28556}
-
-When a column name that contains spaces is applied with a data protection row filtering rule in {{site.data.keyword.lakehouse_short}}, non-owners of the asset may encounter errors when attempting to preview the table.
 
 ## Inconsistent CSV and Parquet file ingestion behaviour
 {: #known_issues26920}
@@ -170,14 +155,21 @@ When you attempt to query QHMM related tables using Presto (C++) engines, you mi
 
 You might encounter a Server concurrency limit reached error when using the flight server to run queries. This occurs when the server experiences high memory usage due to a large number of concurrent requests.
 
-**Workaround:** Increase the number of flight pods or restructure to simplify the queries to reduce the number of sub queries.
+**Workaround:** Increase the number of flight pods or restructure to simplify the queries to reduce the number of sub queries. Adjust the number of replicas based on your system load and available resources.
 
-   For example: Use the following command to scale the number of pods for the wdp-connect-flight deployment to 36 replicas:
+   Use the following command to scale the number of pods for the `wdp-connect-flight` deployment:
 
    ```bash
-   oc scale deployment wdp-connect-flight --replicas=36
+   oc scale deployment wdp-connect-flight --replicas=<number of replicas>
    ```
    {: codeblock}
+
+   For example, if you need to scale the number of pods to 36, run the following command:
+
+   ```bash
+   oc scale deployment wdp-connect-flight --replicas=<36>
+   ```
+   {: screen}
 
 ## Incorrect recognition of Gregorian dates in Presto with Hive Parquet tables
 {: #known_issues12050}
