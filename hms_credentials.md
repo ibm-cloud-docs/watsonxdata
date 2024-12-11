@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-10"
+lastupdated: "2024-12-11"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -39,11 +39,11 @@ MDS username is by default **ibmlhapikey**.
 
 1. Log in to {{site.data.keyword.lakehouse_short}} console.
 1. From the navigation menu, select **Infrastructure manager**.
-1. Select the **catalog**.
-1. Click **Details** to view the **catalog details** page.
+1. Select the catalog.
+1. Click **Details** to view the catalog details page.
 1. Copy the endpoint:
 
    1. **Metastore Thrift endpoint**: This is your Hive interface endpoint for thrift.
    1. **Metastore REST endpoint**: Use this for Unity and Iceberg Catalog REST API.
 
-   You can retrive the endpoints using API. For more information, see [Get catalog API](https://cloud.ibm.com/apidocs/watsonxdata#get-catalog).
+   You can retrieve the endpoints using API. For more information, see [Get catalog API](https://cloud.ibm.com/apidocs/watsonxdata#get-catalog).
