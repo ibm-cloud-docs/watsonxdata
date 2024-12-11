@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-06"
+lastupdated: "2024-12-11"
 
 keywords: watsonxdata, staging, config file, target iceberg table, parquet, csv, command line, cli
 
@@ -26,10 +26,10 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Config file ingestion in Presto ingestion mode
+# Ingesting data through config file - Presto ingestion mode
 {: #create_ingestconfig}
 
-You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehouse_full}} through the CLI. The configuration file and examples are listed in this topic.
+This topic provides step-by-step instructions to ingest data into {{site.data.keyword.lakehouse_full}} by using the config file in Presto ingestion mode.
 {: shortdesc}
 
 ## Before you begin:
@@ -57,7 +57,7 @@ export STAGING_S3_CREDS="AWS_ACCESS_KEY_ID=,AWS_SECRET_ACCESS_KEY=,ENDPOINT_URL=
 ## About this task
 {: #attask}
 
-To run the ingestion jobs, you can use the configuration file option. Advantage of using a configuration file is that, multiple ingestion jobs can be completed in a single starting of the ingestion tool.
+To ingest data into watsonx.data, you can use the configuration file option. The advantage of using a configuration file is that you can run multiple ingestion jobs in batches.
 
 Run the following command to do multiple ingestion jobs after you update the configuration file:
 
@@ -66,7 +66,7 @@ Run the following command to do multiple ingestion jobs after you update the con
    ```
    {: codeblock}
 
-The commands must be run within the **ibm-lh** container. For more details and instructions to install `ibm-lh-client` package and use the **ibm-lh** tool for ingestion, see [Installing ibm-lh-client](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.0.x?topic=package-installing-lh-client){: external} and [Setting up the ibm-lh command-line utility](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.0.x?topic=package-setting-up-lh-cli-utility){: external}.
+The commands must run within the **ibm-lh** container. For more details and instructions to install `ibm-lh-client` package and use the **ibm-lh** tool for ingestion, see [Installing ibm-lh-client](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.0.x?topic=package-installing-lh-client){: external} and [Setting up the ibm-lh command-line utility](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.0.x?topic=package-setting-up-lh-cli-utility){: external}.
 {: note}
 
 To access IBM Cloud Object Storage (COS) and MinIO object storage, specify the ENDPOINT_URL to pass the corresponding url to the tool. For more information about IBM COS, see [Endpoints and storage locations](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-endpoints){: external}.
