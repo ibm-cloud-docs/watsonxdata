@@ -115,7 +115,7 @@ Ingestion enhancements
 
 Introduction to Metadata Service (MDS)
 
-: Starting from the 2.1 release, {{site.data.keyword.lakehouse_short}} uses Metadata Store (MDS) instead of Hive Metastore (HMS). MDS is compatible with modern, open catalog APIs, Unity Catalog API, and Apache Iceberg REST Catalog API, enabling wider tool integration and increased flexibility. This new architecture delivers comparable performance while it continues to support Spark and Presto clients through the existing Thrift or HMS interface. For more information, see [Metadata Service (MDS) overview](watsonxdata?topic=watsonxdata-metadata_serv_ov).
+: Starting from the 2.1 release, {{site.data.keyword.lakehouse_short}} uses Metadata Service (MDS) instead of Hive Metastore (HMS). MDS is compatible with modern, open catalog APIs, Unity Catalog API, and Apache Iceberg REST Catalog API, enabling wider tool integration and increased flexibility. This new architecture delivers comparable performance while it continues to support Spark and Presto clients through the existing Thrift or HMS interface. For more information, see [Metadata Service (MDS) overview](watsonxdata?topic=watsonxdata-metadata_serv_ov).
 
 It is recommended to use MDS in your test environments and then move to using it in production.
 {: note}
