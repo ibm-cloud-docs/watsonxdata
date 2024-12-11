@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-12-10"
+lastupdated: "2024-12-11"
 
 keywords: watsonxdata, release notes
 
@@ -103,17 +103,15 @@ Ingestion enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following ingestion enhancements:
 
-   * **Target table preview**: Before submitting an ingestion job, users can now preview the target table schema and edit the column headers and data types. This allows for validation and ensures data is ingested into the correct table structure.
+   * **Target table preview**: Before submitting an ingestion job, users can now preview the target table schema and edit the column headers and data types. This allows for validation and ensures data is ingested into the correct table structure. For more information, see [Ingesting data by using Spark through the web console](watsonxdata?topic=watsonxdata-ingest_spark_ui).
 
-   * **Java/Spark-based ingestion for table creation**: The Data Manager now includes an option to create tables using the Java/Spark-based ingestion flow navigating to Local ingestion, providing flexibility and control based on file size and other factors.
+   * **Java/Spark-based ingestion for table creation**: The Data Manager now includes an option to create tables using the Java/Spark-based ingestion flow navigating to Local ingestion, providing flexibility and control based on file size and other factors. For more information, see [Creating table](watsonxdata?topic=watsonxdata-create_table) and [Ingesting data by using Spark through the web console](watsonxdata?topic=watsonxdata-ingest_spark_ui).
 
    * **Enhanced source storage support**:
        * Azure Data Lake Storage (ADLS): Support for ingesting data directly from ADLS is now available.
        * Google Cloud Storage (GCS): Support for ingesting data directly from GCS is now available.
 
-   * **Transient storage**: Users can now select the external bucket to use as a staging area for local ingestions. If no storage is specified, {{site.data.keyword.lakehouse_short}} can infer and select an appropriate bucket.
-
-   * **Spark log history**: Access to Spark log history for ingestion jobs is now available.
+   * **Transient storage**: Users can now select the external bucket to use as a staging area for local ingestions. If no storage is specified, {{site.data.keyword.lakehouse_short}} can infer and select an appropriate bucket. For more information, see [Ingesting data by using Spark through the web console](watsonxdata?topic=watsonxdata-ingest_spark_ui).
 
 Introduction to Metadata Service (MDS)
 
