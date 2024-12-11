@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-12-07"
+lastupdated: "2024-12-11"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -72,7 +72,8 @@ You can customize the coordinator and worker configuration properties through an
 | `experimental.query-max-spill-per-node` | String | Limit {1, 1e13}; supported values are numbers with or without units TB, MB, GB, B, KB |
 | `experimental.spiller-max-used-space-threshold` | Float | Float 64 |
 | `experimental.spiller-spill-path` | String | Any string |
-| `http-server.max-request-header-size` | String | Limit {1, 1e13}; supported values are numbers with or without units TB, MB, GB, B, KB |
+| `http-server.max-request-header-size` | String | Limit {1, 1e13}; supported values are numbers with or without units TB, MB, GB, B, kB |
+| `http-server.max-response-header-size` | String | Limit {1, 1e13}; supported values are numbers with or without units TB, MB, GB, B, kB |
 | `experimental.internal-communication.max-task-update-size` | String | Limit {1, 1e13}; supported values are numbers with or without units TB, MB, GB, B, KB |
 |`offset-clause-enabled`|Boolean|True or False |
 {: caption="Configuration properties for Presto (Java) - coordinator and worker nodes" caption-side="bottom"}
