@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-12-10"
+lastupdated: "2024-12-11"
 
 keywords: watsonx.data, presto,
 subcollection: watsonxdata
@@ -16,7 +16,7 @@ subcollection: watsonxdata
 
 You can customize the LogConfig worker properties through an API for Presto (C++).
 
-|Property Name | Type | Validations |
+|Property name | Type | Validation added |
 |-- | -- | --|
 |com.facebook.presto.governance | String | Any string |
 |com.facebook.presto.governance.util | String |Any string |
