@@ -34,12 +34,39 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
-## Delayed restart of `wxdaddon` and `wxdengine` components after cpd-cli manage restart command execution
-{: #known_issues26638}
+## WHERE/IN/DROP/RENAME clause in Hive tables with more than one partition does not work if partition type is of type VARCHAR.
+{: #known_issues20069}
 
-If you try to restart the `wxdaddon` and `wxdengine` components with the cpd-cli manage restart command, the system reports success status before the `wxd` CR is completed. The actual status can be in progress or failed.
+## Syncing data fails for schema and tables with same name
+{: #known_issues19201_1}
 
-**Workaround:** After the cpd-cli manage restart command runs successfully, wait for the `wxd`, `wxdengine`, and `wxdaddon` CRs to complete. This can take 10–15 minutes depending on your deployment size.
+For users still in older versions before 2.1 version: In HMS, if you use the Register Bucket (sync) API and the bucket contains a schema and table which already exists in {{site.data.keyword.lakehouse_short}}, then. sync fails for schema and tables with same name.
+
+## Error during SELECT after syncing
+{: #known_issues19201_2}
+
+For users still in older versions before 2.1 version: In HMS, if you use the Register Bucket (sync) API and the bucket contains a schema that already exists in {{site.data.keyword.lakehouse_short}}, sync can happen to an incorrect catalog and after syncing data SELECT cannot be run on the tables, due to credentials mismatch between the catalogs.
+
+## Activity tracker support in MDS
+{: #known_issues17887}
+
+The [Activity Tracker](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-at_events) feature is not supported with MDS.
+
+## Hive catalog does not support CSV format for create table int type column
+{: #known_issues18049}
+
+The Hive catalog does not support CSV format for create table int type column. The following error is displayed:
+
+   ```bash
+   presto> create table  hive_data.hive_schema.intcsv ( type int ) with ( format = 'CSV' ) ;
+   Query 20241017_021409_00059_fmcyt failed: Hive CSV storage format only supports VARCHAR (unbounded). Unsupported columns: type integer
+   ```
+   {: codeblock}
+
+**Workaround**: Use the following options for Hive catalog:
+
+* Create table in varchar.
+* Create view that cast the columns to their original data types.
 
 ## Presto (C++) engine fails to support Service Principal authorization mode for Azure Data Lake Storage Gen2
 {: #known_issues16955}

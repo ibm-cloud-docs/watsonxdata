@@ -179,6 +179,8 @@ ENCODING:<encoding>    #default None
 {: codeblock}
 
 The encoding values supported by Presto ingestion are directly dependent on encoding values supported by [Python](https://docs.python.org/3/library/codecs.html#standard-encodings) and the encoding values supported by Spark ingestion are directly dependent on encoding values supported by [Java](https://docs.oracle.com/javase/8/docs/technotes/guides/intl/encoding.doc.html).
+
+The encoding values except `HEADER` must be enclosed in single quotation marks.
 {: note}
 
 The following is an example of schema specification:
