@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-10"
+lastupdated: "2024-12-11"
 
 keywords: lakehouse, mixed-case, watsonx.data
 
@@ -62,47 +62,71 @@ You can use the following curl command to set the flag as true or false:
    ```bash
    {
 	"description": "updated description for presto engine",
-	"engine_display_name": "presto-01",
+	"engine_display_name": "<engine_display_name>",
 	"engine_properties": {
 		"configuration": {
 			"coordinator": {
 			},
-			"worker": {}
+			"worker": {
+			}
 		},
 		"jvm": {
-			"coordinator": {},
-			"worker": {}
+			"coordinator": {
+			},
+			"worker": {
+			}
 		},
 		"catalog": {
-			"hive_data": {
+			"<catalog_name>": {
 				"coordinator": {
 				},
-				"worker": {}
-			},
-			"iceberg_data": {
-				"coordinator": {},
-				"worker": {}
-			},
-			"wxd_system_data": {
-				"coordinator": {},
-				"worker": {}
+				"worker": {
+				}
 			}
 		},
 		"event_listener": {
 		},
+		"jmx_exporter_config": {
+		},
 		"log_config": {
 			"coordinator": {
 			},
-			"worker": {}
+			"worker": {
+			}
 		},
 		"global": {
-			"enable-mixed-case-support": "true"
 		}
 	},
 	"engine_restart": "force",
+	"remove_engine_properties": {
+		"configuration": {
+			"coordinator": [
+			],
+			"worker": [
+			]
+		},
+		"jvm": {
+			"coordinator": [
+			],
+			"worker": [
+			]
+		},
+		"log_config": {
+			"coordinator": [
+			],
+			"worker": [
+			]
+		},
+		"event_listener": [
+		],
+		"global": [
+		],
+		"jmx_exporter_config": [
+		],
+		"catalog": {
+		}
+	},
 	"tags": [
-		"tag1",
-		"tag2"
 	]
 }
    ```
