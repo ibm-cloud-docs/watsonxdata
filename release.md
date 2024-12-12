@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-12-11"
+lastupdated: "2024-12-12"
 
 keywords: watsonxdata, release notes
 
@@ -21,8 +21,8 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.lakehouse_full}} that are grouped by date.
 {: shortdesc}
 
-## 11 December 2024 - Version 2.1.0
-{: #lakehouse_11Dec21}
+## 12 December 2024 - Version 2.1.0
+{: #lakehouse_12Dec21}
 
 Data sources and storage enhancements
 
@@ -67,7 +67,7 @@ Engine and service enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
 
-   * You can now use the Azure Data Lake Storage (ADLS) and Google Cloud Storage with Presto (C++) engine. You can now use Azure Data Lake Storage (ADLS) and Google Cloud Storage to store your data while submitting Spark applications. For more information, see [ADLS Gen1 Blob](watsonxdata?topic=watsonxdata-adls_genblob_storage) and [Google Cloud Storage](watsonxdata?topic=watsonxdata-gcs_storage).
+   * You can now use the Azure Data Lake Storage (ADLS) and Google Cloud Storage with Presto (C++) engine. You can now use Azure Data Lake Storage (ADLS) and Google Cloud Storage to store your data while submitting Spark applications. For more information, see [Azure Data Lake Storage](watsonxdata?topic=watsonxdata-adls_genblob_storage) and [Google Cloud Storage](watsonxdata?topic=watsonxdata-gcs_storage).
 
    * You can now use Google Cloud Storage (GCS) with Data Access Service (DAS) to store your data while submitting Spark applications. For more information, see [Submitting Spark application by using native Spark engine](watsonxdata?topic=watsonxdata-sbmt_das_spk).
 
