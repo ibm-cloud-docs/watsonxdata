@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-12-06"
+lastupdated: "2024-12-12"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -66,7 +66,7 @@ The topic describes the procedure to run a Spark application that ingests data i
 
    * `<spark_engine_id>`: The Engine ID of the native Spark engine.
 
-   * `<token>`: The bearer token. For more information about generating the token, see [IAM token](https://test.cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
+   * `<token>`: The bearer token. For more information about generating the token, see [IAM token](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
 
    * `<user-authentication-string>`: The value must be base 64 encoded string of user ID and API key . For more information about the format, see the note.
 
@@ -136,7 +136,7 @@ The topic describes the procedure to run a Spark application that ingests data i
    * `<wxd_host_name>`: The hostname of your watsonx.data Cloud instance.
    * `<instance_id>`: The instance ID from the watsonx.data instance URL. For example, 1609968977179454.
    * `<spark_engine_id>`: The Engine ID of the native Spark engine.
-   * `<token>`: The bearer token. For more information about generating the token, see [IAM token](https://test.cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
+   * `<token>`: The bearer token. For more information about generating the token, see [IAM token](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
    * `<user-authentication-string>`: The value must be base 64 encoded string of user ID and API key . For more information about the format, see the note.
 
 
@@ -200,7 +200,7 @@ The topic describes the procedure to run a Spark application that ingests data i
     * `<wxd_host_name>`: The hostname of your watsonx.data Cloud instance.
     * `<instance_id>` : The instance ID from the watsonx.data cluster instance URL. For example, 1609968977179454.
     * `<spark_engine_id>` : The Engine ID of the native Spark engine.
-    * `<token>` : The bearer token. For more information about generating the token, see [IAM token](https://test.cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
+    * `<token>` : The bearer token. For more information about generating the token, see [IAM token](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
     * `<user-authentication-string>`: The value must be base 64 encoded string of user ID and API key . For more information about the format, see the following note.
 
    The value of `<user-authentication-string>` must be in the format `echo -n 'ibmlhapikey_<username>:<user_apikey>' | base64`.  Here, `<user_id>` is the IBM Cloud ID of the user whose apikey is used to access the data bucket. The `<IAM_APIKEY>` here is the API key of the user accessing the Object store bucket. To generate API key, log in into the watsonx.data console and navigate to Profile > Profile and Settings > API Keys and generate a new API key. If you generate a new API key, your old API key becomes invalid.
