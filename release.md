@@ -21,8 +21,12 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.lakehouse_full}} that are grouped by date.
 {: shortdesc}
 
-## 12 December 2024 - Version 2.1.0
+## 13 December 2024 - Version 2.1.0
 {: #lakehouse_12Dec21}
+
+{{site.data.keyword.lakehouse_short}} 2.1.0 version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.1.0 release is available in your region, contact IBM Support.
+If you are currently using {{site.data.keyword.lakehouse_short}} 2.0.0 version, you can refer to the documentation, {{site.data.keyword.lakehouse_short}} 2.0.0.
+{: important}
 
 Data sources and storage enhancements
 
