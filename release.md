@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-12-12"
+lastupdated: "2024-12-13"
 
 keywords: watsonxdata, release notes
 
@@ -119,10 +119,6 @@ Introduction to Metadata Service (MDS)
 
 It is recommended to use MDS in your test environments and then move to using it in production.
 {: note}
-
-Query Optimizer
-
-: Iceberg table support for Query Optimizer in {{site.data.keyword.lakehouse_short}} that was previously available as GA in version 2.0.3, is temporarily moved as a Private Preview feature in 2.1.
 
 Deprecated features
 
