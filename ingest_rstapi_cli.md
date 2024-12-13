@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-06"
+lastupdated: "2024-12-11"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -26,7 +26,7 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Spark REST API ingestion through **ibm-lh** tool
+# Ingesting data through command line - Spark REST API
 {: #ingest_rstapi_cli}
 
 You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehouse_full}} through the command line interface (CLI) using the IBM Analytics Engine (Spark) REST API. This CLI based ingestion uses REST endpoint to do the ingestion. This is the default mode of ingestion. The commands to run the ingestion job are listed in this topic.

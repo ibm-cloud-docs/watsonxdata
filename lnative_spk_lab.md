@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-11-06"
+lastupdated: "2024-12-03"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -60,12 +60,15 @@ As Spark labs are ephemeral in nature, you must back up the data stored periodic
     * **API Key** : Provide the platform API key. To generate the API key, see [Generating the API key]({{site.data.keyword.ref-con-presto-serv-link}}).
     * **Connection JSON** : Provide the connection details from the watsonx.data user interface. To do that:
         1. Log in to your watsonx.data page.
-        2. Click **Infrastructure manager**.
-        3. Click your Spark engine that is in running status. In the **Details** tab, from the **VS Code connection configuration** field, click the **View configurations** link. Copy the configuration and use this as the **Connection JSON** field value.
+
+        2. From the navigation menu, click **Connection Information**.
+
+        3. Click **VS Code**. Copy the configuration  from the **VS Code connection configuration** field and use this as the **Connection JSON** field value. For more information, see [Getting connection information]({{site.data.keyword.ref-get_connection-link}}).
+
 
 5. To configure **Form Inputs**, click **Form Inputs** and specify the following details:
     * **Host address of watsonx.data console** : Provide the host IP address of the watsonx.data install. To retrieve the host IP address, see [Getting connection information]({{site.data.keyword.ref-get_connection-link}}).
-    * **Environment Type** : Select `SAAS`.
+    * **Environment Type** : Select `SaaS`.
     * **CRN** : The **Instance CRN** of your watsonx.data instance. To retrieve the CRN, see [Getting connection information]({{site.data.keyword.ref-get_connection-link}}).
     * **Username** : Your email-id if you are using your API key or it should be in the format `<Service-id>-<GUID>`. For more information on generating service id and GUID, see [Creating service IDs](https://www.ibm.com/docs/en/watsonx/watsonxdata/aws?topic=usca-granting-access-through-service-ids-api-keys-from-saas-console#creating_service_IDs).
     * **API Key** : Provide the platform API key. To generate the API key, see [Generating the API key]({{site.data.keyword.ref-con-presto-serv-link}}).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-11"
+lastupdated: "2024-12-11"
 
 keywords: watsonxdata, commands, command line interface, cli
 
@@ -26,34 +26,26 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Ingestion parameters supported in **ibm-lh** utility
+# Ingestion options and parameters supported in **ibm-lh** utility
 {: #cli_commands}
 
-Ingesting data files from S3 or local location into {{site.data.keyword.lakehouse_full}} is done by using **ibm-lh** utility. The parameters that are supported in the **ibm-lh** utility are described in this topic.
+This topic lists all the options and parameters that can be used with the **ibm-lh** utility for ingestion. It does not provide instructions to perform ingestion.
 {: shortdesc}
 
-## Before you begin:
-{: #bybcomndlne}
+If you are looking for instructions to ingest data, see the following topics:
 
-Set the mandatory environment variable for `ENABLED_INGEST_MODE` before starting an ingestion job. Based on the ingestion mode, specify appropriate value for the variable. Following is an example for Spark.
-
-```bash
-export ENABLED_INGEST_MODE=SPARK
-```
-{: codeblock}
+* [Presto ingestion using ibm-lh utility through CLI](watsonxdata?topic=watsonxdata-ingest_presto_cli)
+* [Spark ingestion through ibm-lh tool command line](watsonxdata?topic=watsonxdata-ingest_spark_cli)
+* [Ingesting data through command line - Spark REST API](watsonxdata?topic=watsonxdata-ingest_rstapi_cli)
 
 The following ingestion modes are supported:
+
 * `PRESTO`
 * `SPARK_LEGACY`
 * `SPARK`
 
 `SPARK` is the default mode.
 {: note}
-
-Sample scripts and config file templates are available for CLI ingestion commands in the `/Ingestion-Examples/` folder in the `ibm-lh` tool container. To access the example scripts and config files, run the following command:
-
-1. Run `./ibm-lh data-copy --interactive` to enter the container in interactive mode.
-1. Run `cd /Ingestion-Examples/` to access the example scripts and config files.
 
 ## Parameters and variables
 {: #optionsparams}
@@ -186,7 +178,9 @@ ENCODING:<encoding>    #default None
 ```
 {: codeblock}
 
-The encodings supported by Presto and Spark ingestion are directly dependent on encodings supported by [Python](https://docs.python.org/3/library/codecs.html#standard-encodings). The encoding value must be enclosed in double quotation marks.
+The encoding values supported by Presto ingestion are directly dependent on encoding values supported by [Python](https://docs.python.org/3/library/codecs.html#standard-encodings) and the encoding values supported by Spark ingestion are directly dependent on encoding values supported by [Java](https://docs.oracle.com/javase/8/docs/technotes/guides/intl/encoding.doc.html).
+
+The encoding values except `HEADER` must be enclosed in single quotation marks.
 {: note}
 
 The following is an example of schema specification:

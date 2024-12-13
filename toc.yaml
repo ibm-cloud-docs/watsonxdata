@@ -27,6 +27,8 @@ toc:
           - mixed_case_overview.md
           - resource_grp_ov.md
           - integration.md
+          - manta_overview.md
+          - metadata_serv_ov.md
       - topicgroup:
           label: Provisioning watsonx.data
           topics:
@@ -74,11 +76,13 @@ toc:
               - redshift_conn.md
               - druid_conn.md
               - kafka_conn.md
+              - phoenix_conn.md
               - pinot_conn.md
               - bigquery_conn.md
               - cassandra_conn.md
               - clickhouse_conn.md
               - elasticsearch_conn.md
+              - saphana.md
               - dvm_conn.md
               - db2_conn.md
               - netezza_conn.md
@@ -89,7 +93,6 @@ toc:
               - postgresql_conn.md
               - prometheus_conn.md
               - redis_conn.md
-              - saphana.md
               - singlestore_conn.md
               - snowflake_conn.md
               - sqlserver_conn.md
@@ -128,7 +131,6 @@ toc:
           - exp_objects.md
           - create_schema.md
           - create_table.md
-          - ddl_changes.md
       - topicgroup:
           label: Ingesting data
           topics:
@@ -172,6 +174,7 @@ toc:
                       href: https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-ovrvw_qhmm
                 - qhmm.md
                 - qhmm_querying.md
+                - qhmm_ret.md
                 - qhmm_heap_thread.md
       - conn-presto-thr-cli.md
       # - presto_behavior.md
@@ -208,7 +211,6 @@ toc:
                   - spark-user-interface.md
                   - spark-databand.md
                   - spark-db-trk.md
-                  - spark-db-inv.md
             - topicgroup:
                 label: VS Code development environment - Spark labs
                 topics:
@@ -237,6 +239,8 @@ toc:
             - working_with_milvus.md
             - pause-resume-milvus.md
             - wxd_wxai_milvus_conn.md
+            - milvus_birdwatcher.md
+            - wxd_wxa_connection.md
       - topicgroup:
           label: Semantic automation for data enrichment
           topics:
@@ -302,6 +306,7 @@ toc:
             - Qlik.md
             - power_bi.md
             - cognos.md
+      - manta_integrate.md
       - topicgroup:
           label: Workload Orchestration
           topics:
@@ -317,6 +322,7 @@ toc:
       - connection_info.md
       - presto_exp_jmx.md
       - milvus_exp_mtrcs_list.md
+      - iceberg_unity_cat_api.md
       - link:
             label: Presto SQL statements
             href: https://www.ibm.com/docs/en/watsonx/watsonxdata/2.0.0?topic=presto-sql-statements
@@ -336,6 +342,7 @@ toc:
                   - api_custom_prm_pjcw.md
                   - api_custom_jvm_pjcw.md
                   - api_custom_ctg_pjcw.md
+                  - api_custom_evlistn_pjcw.md
           - topicgroup:
                 label: Presto (C++) properties
                 topics:
@@ -343,10 +350,20 @@ toc:
                   - api_custom_pcpp_cood.md
                   - api_custom_pcpp_ctg.md
                   - api_custom_pcpp_vlx.md
+                  - api_custom_jvm_pcpp.md
+                  - api_custom_gbl_pcpp.md
+                  - api_custom_logconfwrkr_pcpp.md
+                  - api_custom_logconfcord_pcpp.md
           - resource_grp_pptys.md
       - link:
             label: watsonx.data APIs
             href: https://cloud.ibm.com/apidocs/watsonxdata
+      - link:
+            label: MDS Unity Catalog API
+            href: https://cloud.ibm.com/apidocs/watsonxdata-mds-unity
+      - link:
+            label: MDS Iceberg REST Catalog API
+            href: https://cloud.ibm.com/apidocs/watsonxdata-ibm-mds-iceberg
   - navgroup:
       id: help
       topics:
@@ -359,7 +376,6 @@ toc:
             - ts_optimizer.md
             - ts_cs_issue.md
             - ts_ip_restrict_issue.md
-            - ts_hive.md
             - topicgroup:
                 label: Spark
                 topics:

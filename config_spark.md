@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-06"
+lastupdated: "2024-11-29"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -33,8 +33,8 @@ Ensure you have the following instances ready:
 * {{site.data.keyword.iae_full_notm}} instance.
 
 Fetch the following information from IBM® watsonx.data:
-* HMS URL from {{site.data.keyword.lakehouse_short}}.For more information on getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
-* HMS Credentials from {{site.data.keyword.lakehouse_short}}. For more information on getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
+* MDS URL from {{site.data.keyword.lakehouse_short}}.For more information on getting the MDS credentials, see [Getting Metadata Service (MDS) Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
+* MDS Credentials from {{site.data.keyword.lakehouse_short}}. For more information on getting the MDS credentials, see [Getting Metadata Service (MDS) Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
 
 ## Configuring {{site.data.keyword.iae_short}} instance by using {{site.data.keyword.Bluemix_short}} console
 {: #lh-cons-config-ae}
@@ -55,10 +55,10 @@ To configure your {{site.data.keyword.iae_short}} instance from the {{site.data.
     spark.sql.iceberg.vectorization.enabled = false
     spark.sql.catalog.lakehouse = org.apache.iceberg.spark.SparkCatalog
     spark.sql.catalog.lakehouse.type = hive
-    spark.sql.catalog.lakehouse.uri = <hms-thrift-endpoint-from-watsonx.data> for example (thrift://81823aaf-8a88-4bee-a0a1-6e76a42dc833.cfjag3sf0s5o87astjo0.databases.appdomain.cloud:32683)
+    spark.sql.catalog.lakehouse.uri = <mds-thrift-endpoint-from-watsonx.data> for example (thrift://81823aaf-8a88-4bee-a0a1-6e76a42dc833.cfjag3sf0s5o87astjo0.databases.appdomain.cloud:32683)
     spark.hive.metastore.client.auth.mode = PLAIN
-    spark.hive.metastore.client.plain.username = <hms-user-from-watsonx.data> (for example, ibmlhapikey)
-    spark.hive.metastore.client.plain.password = <hms-password-from-watsonx.data>
+    spark.hive.metastore.client.plain.username = <mds-user-from-watsonx.data> (for example, ibmlhapikey)
+    spark.hive.metastore.client.plain.password = <mds-password-from-watsonx.data>
     spark.hive.metastore.use.SSL = true
     spark.hive.metastore.truststore.type = JKS
     spark.hive.metastore.truststore.path = file:///opt/ibm/jdk/lib/security/cacerts
@@ -67,9 +67,9 @@ To configure your {{site.data.keyword.iae_short}} instance from the {{site.data.
     {: codeblock}
 
 Parameter value:
-* hms-thrift-endpoint-from-watsonx.Data: Specify the credentials for watsonx.data.
-* hms-user-from-watsonx.Data: The watsonx.data username.
-* hms-password-from-watsonx.Data: The watsonx.data password.
+* mds-thrift-endpoint-from-watsonx.Data: Specify the credentials for watsonx.data.
+* mds-user-from-watsonx.Data: The watsonx.data username.
+* mds-password-from-watsonx.Data: The watsonx.data password.
 
 ## Configuring {{site.data.keyword.iae_short}} instance by using {{site.data.keyword.iae_short}} API
 {: #lh-api-config-ae}
@@ -98,10 +98,10 @@ Parameter value:
     "spark.sql.iceberg.vectorization.enabled": "false",
     "spark.sql.catalog.lakehouse": "org.apache.iceberg.spark.SparkCatalog",
     "spark.sql.catalog.lakehouse.type": "hive",
-    "spark.sql.catalog.lakehouse.uri": "<hms-thrift-endpoint-from-watsonx.data> for example (thrift://81823aaf-8a88-4bee-a0a1-6e76a42dc833.cfjag3sf0s5o87astjo0.databases.appdomain.cloud:32683) ",
+    "spark.sql.catalog.lakehouse.uri": "<mds-thrift-endpoint-from-watsonx.data> for example (thrift://81823aaf-8a88-4bee-a0a1-6e76a42dc833.cfjag3sf0s5o87astjo0.databases.appdomain.cloud:32683) ",
     "spark.hive.metastore.client.auth.mode": "PLAIN",
-    "spark.hive.metastore.client.plain.username": "<hms-user-from-watsonx.data> (for example, ibmlhapikey)",
-    "spark.hive.metastore.client.plain.password": "<hms-password-from-watsonx.data>",
+    "spark.hive.metastore.client.plain.username": "<mds-user-from-watsonx.data> (for example, ibmlhapikey)",
+    "spark.hive.metastore.client.plain.password": "<mds-password-from-watsonx.data>",
     "spark.hive.metastore.use.SSL": "true",
     "spark.hive.metastore.truststore.type": "JKS",
     "spark.hive.metastore.truststore.path": "file:///opt/ibm/jdk/lib/security/cacerts",
@@ -112,9 +112,9 @@ Parameter value:
 
 * BASE_URL: The {{site.data.keyword.iae_short}} URL for the region where you provisioned the instance. For example, api.region.ae.ibmcloud.com.
 * INSTANCE_ID: The {{site.data.keyword.iae_short}} instance ID. For more information about how to retrieve an instance ID, see [Obtaining the service endpoints](https://cloud.ibm.com/docs/AnalyticsEngine?topic=AnalyticsEngine-retrieve-endpoints-serverless#endpoints-cli).
-* hms-thrift-endpoint-from-watsonx.data: Specify the credentials for {{site.data.keyword.lakehouse_short}}.
-* hms-user-from-watsonx.data: The {{site.data.keyword.lakehouse_short}} username.
-* hms-password-from-watsonx.data: The {{site.data.keyword.lakehouse_short}} password.
+* mds-thrift-endpoint-from-watsonx.data: Specify the credentials for {{site.data.keyword.lakehouse_short}}.
+* mds-user-from-watsonx.data: The {{site.data.keyword.lakehouse_short}} username.
+* mds-password-from-watsonx.data: The {{site.data.keyword.lakehouse_short}} password.
 
 ## Configuring {{site.data.keyword.iae_short}} instance by using {{site.data.keyword.iae_short}} CLI
 {: #lh-cli-config-ae}
@@ -138,10 +138,10 @@ Parameter value:
     "spark.sql.iceberg.vectorization.enabled": "false",
     "spark.sql.catalog.lakehouse": "org.apache.iceberg.spark.SparkCatalog",
     "spark.sql.catalog.lakehouse.type": "hive",
-    "spark.sql.catalog.lakehouse.uri": "<hms-thrift-endpoint-from-watsonx.data> for example (thrift://81823aaf-8a88-4bee-a0a1-6e76a42dc833.cfjag3sf0s5o87astjo0.databases.appdomain.cloud:32683) ",
+    "spark.sql.catalog.lakehouse.uri": "<mds-thrift-endpoint-from-watsonx.data> for example (thrift://81823aaf-8a88-4bee-a0a1-6e76a42dc833.cfjag3sf0s5o87astjo0.databases.appdomain.cloud:32683) ",
     "spark.hive.metastore.client.auth.mode": "PLAIN",
-    "spark.hive.metastore.client.plain.username": "<hms-user-from-watsonx.data> (for example, ibmlhapikey)",
-    "spark.hive.metastore.client.plain.password": "<hms-password-from-watsonx.data>",
+    "spark.hive.metastore.client.plain.username": "<mds-user-from-watsonx.data> (for example, ibmlhapikey)",
+    "spark.hive.metastore.client.plain.password": "<mds-password-from-watsonx.data>",
     "spark.hive.metastore.use.SSL": "true",
     "spark.hive.metastore.truststore.type": "JKS",
     "spark.hive.metastore.truststore.path": "file:///opt/ibm/jdk/lib/security/cacerts",
@@ -151,9 +151,9 @@ Parameter value:
     {: codeblock}
 
 * INSTANCE_ID: The {{site.data.keyword.iae_short}} instance ID. For more information about how to retrieve an instance ID, see [Obtaining the service endpoints](https://cloud.ibm.com/docs/AnalyticsEngine?topic=AnalyticsEngine-retrieve-endpoints-serverless#endpoints-cli)
-* hms-thrift-endpoint-from-watsonx.data: Specify the credentials for {{site.data.keyword.lakehouse_short}}. For more information on getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials]({{site.data.keyword.ref-hms-link}}).
-* hms-user-from-watsonx.data: The {{site.data.keyword.lakehouse_short}} username. For more information on getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
-* hms-password-from-watsonx.data: The {{site.data.keyword.lakehouse_short}} password. For more information on getting the HMS credentials, see [Getting (Hive metastore) HMS Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
+* mds-thrift-endpoint-from-watsonx.data: Specify the credentials for {{site.data.keyword.lakehouse_short}}. For more information on getting the MDS credentials, see [Getting Metadata Service (MDS) Credentials]({{site.data.keyword.ref-hms-link}}).
+* mds-user-from-watsonx.data: The {{site.data.keyword.lakehouse_short}} username. For more information on getting the MDS credentials, see [Getting Metadata Service (MDS) Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
+* mds-password-from-watsonx.data: The {{site.data.keyword.lakehouse_short}} password. For more information on getting the MDS credentials, see [Getting Metadata Service (MDS) Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
 
 To view logs of Spark application ran on {{site.data.keyword.iae_full_notm}} you have to enable logging. For more information, see [Configuring and viewing logs](https://cloud.ibm.com/docs/AnalyticsEngine?topic=AnalyticsEngine-viewing-logs){: external}.
 {: note}

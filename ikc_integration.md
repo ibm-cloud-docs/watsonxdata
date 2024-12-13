@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-28"
+lastupdated: "2024-11-23"
 
 keywords: watsonx.data, ikc, configuring, knowledgecatalog
 subcollection: watsonxdata
@@ -38,7 +38,7 @@ To enable IKC integration, ensure the following pre-requisites are met:
 - A working IBM Knowledge Catalog (IKC) environment.
 - IBM Knowledge Catalog and {{site.data.keyword.lakehouse_short}} are configured with [service-to-service authorization](watsonxdata?topic=watsonxdata-s2s_auth) in {{site.data.keyword.Bluemix_notm}}.
 
-Both {{site.data.keyword.lakehouse_short}} and IKC must be present in the {{site.data.keyword.Bluemix_notm}} environment.
+Both {{site.data.keyword.lakehouse_short}} and IKC must be present in the {{site.data.keyword.Bluemix_notm}} environment. IKC supports Presto (Java) connections only.
 {: note}
 
 

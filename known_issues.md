@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-04"
+lastupdated: "2024-12-13"
 
 keywords: lakehouse
 
@@ -34,26 +34,67 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+## ADLS and GCS are currently not supported as target locations for data ingestion within the platform.
+{: #known_issues20054}
 
-## Incorrect glossary format for semantic enrichment
-{: #known_issues26909}
+## WHERE/IN/DROP/RENAME clause in Hive tables with more than one partition does not work if partition type is of type VARCHAR.
+{: #known_issues20069}
 
-A glossary upload to the semantic enrichment feature might appear to be successful, even when the uploaded glossary is in an incorrect format or does not adhere to the recommended file template format.
+## Syncing data fails for schema and tables with same name
+{: #known_issues19201_1}
 
-## Sync all objects and metadata deletion
-{: #known_issues26640}
+For users still in older versions before 2.1 version: In HMS, if you use the Register Bucket (sync) API and the bucket contains a schema and table which already exists in {{site.data.keyword.lakehouse_short}}, then. sync fails for schema and tables with same name.
 
-When using the **Sync All Objects** option in {{site.data.keyword.lakehouse_short}}, there may be cases where data is not deleted from the metastore if the corresponding object has been deleted from the object storage.
+## Error during SELECT after syncing
+{: #known_issues19201_2}
 
-## Data protection rule for row filtering
-{: #known_issues28556}
+For users still in older versions before 2.1 version: In HMS, if you use the Register Bucket (sync) API and the bucket contains a schema that already exists in {{site.data.keyword.lakehouse_short}}, sync can happen to an incorrect catalog and after syncing data SELECT cannot be run on the tables, due to credentials mismatch between the catalogs.
 
-When a column name that contains spaces is applied with a data protection row filtering rule in {{site.data.keyword.lakehouse_short}}, non-owners of the asset may encounter errors when attempting to preview the table.
+## Activity tracker support in MDS
+{: #known_issues17887}
 
-## Performance issue with multiple groups of large user counts
-{: #known_issues15126}
+The [Activity Tracker](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-at_events) feature is not supported with MDS.
 
-{{site.data.keyword.lakehouse_short}} might experience performance degradation when there are more than five groups with 100 users each. This limitation is attributed to performance constraints within the Zen-core API used for fetching group details.
+## Hive catalog does not support CSV format for create table int type column
+{: #known_issues18049}
+
+The Hive catalog does not support CSV format for create table int type column. The following error is displayed:
+
+   ```bash
+   presto> create table  hive_data.hive_schema.intcsv ( type int ) with ( format = 'CSV' ) ;
+   Query 20241017_021409_00059_fmcyt failed: Hive CSV storage format only supports VARCHAR (unbounded). Unsupported columns: type integer
+   ```
+   {: codeblock}
+
+**Workaround**: Use the following options for Hive catalog:
+
+* Create table in varchar.
+* Create view that cast the columns to their original data types.
+
+## Presto (C++) engine fails to support Service Principal authorization mode for Azure Data Lake Storage Gen2
+{: #known_issues16955}
+
+Presto (C++) engine fails to support Service Principal authorization mode for Azure Data Lake Storage Gen2.
+
+**Workaround:** Use ADLS Gen1 Access_Key method for ADLS Gen1 and ADLS Gen2 from the UI.
+
+## Test connection may fail for IBM Db2 data source
+{: #known_issues29895}
+
+You may face issues while uploading the certificate obtained by following the steps provided in the topic [IBM Db2](https://cloud.ibm.com/docs/Db2whc?topic=Db2whc-ssl_support) for SSL connection of IBM Db2 data source.
+
+**Workaround:** Convert the SSL certificate to .pem format by the following steps:
+
+1. Open a terminal or command prompt.
+2. Navigate to the directory where the certificate file is located.
+3. Run the following OpenSSL command:
+
+   ```bash
+   openssl x509 -inform DER -in DigiCertGlobalRootCA.crt -out DigiCertGlobalRootCA.pem
+   ```
+   {: codeblock}
+
+4. Use the .pem certificate generated in step 3 to retest the connection.
 
 ## Inconsistent CSV and Parquet file ingestion behaviour
 {: #known_issues26920}
@@ -144,7 +185,21 @@ When you attempt to query QHMM related tables using Presto (C++) engines, you mi
 
 You might encounter a Server concurrency limit reached error when using the flight server to run queries. This occurs when the server experiences high memory usage due to a large number of concurrent requests.
 
-**Workaround:** Simplify the query and try after few minutes.
+**Workaround:** Increase the number of flight pods or restructure to simplify the queries to reduce the number of sub queries. Adjust the number of replicas based on your system load and available resources.
+
+   Use the following command to scale the number of pods for the `wdp-connect-flight` deployment:
+
+   ```bash
+   oc scale deployment wdp-connect-flight --replicas=<number of replicas>
+   ```
+   {: codeblock}
+
+   For example, if you need to scale the number of pods to 36, run the following command:
+
+   ```bash
+   oc scale deployment wdp-connect-flight --replicas=36
+   ```
+   {: screen}
 
 ## Incorrect recognition of Gregorian dates in Presto with Hive Parquet tables
 {: #known_issues12050}

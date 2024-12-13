@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-22"
+lastupdated: "2024-12-05"
 
 keywords: watsonxdata, sql queries, query workspace
 
@@ -70,3 +70,8 @@ To run the SQL queries, do the following steps:
 1. Select **Result set** or **Details** tab to view the results. You can export the result as a csv file using **Export to CSV** icon.
 1. Click **Saved queries** to view the saved queries.
 1. Click [**Explain**]({{site.data.keyword.ref-explain_sql_query-link}}) to view the logical or distributed plan of execution for a specified SQL query.
+
+## Related API
+{: #query_api}
+
+For information on related API, see [Execute a query](https://cloud.ibm.com/apidocs/watsonxdata-software#create-execute-query).

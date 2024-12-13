@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-27"
+lastupdated: "2024-12-11"
 
 keywords: watsonxdata, staging, config file, target iceberg table, parquet, csv, command line, cli
 
@@ -26,10 +26,10 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Command line ingestion in Presto (Java) ingestion mode
+# Ingesting data through command line - Presto ingestion mode
 {: #create_ingestioncli}
 
-You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehouse_full}} through the command line interface (CLI). This topic provides details of using the command line for ingestion in the Presto (Java) ingestion mode.
+This topic provides step-by-step instructions to ingest data into {{site.data.keyword.lakehouse_full}} by using the command line Presto ingestion mode.
 {: shortdesc}
 
 ## Before you begin
@@ -53,6 +53,8 @@ export SOURCE_S3_CREDS="AWS_ACCESS_KEY_ID=,AWS_SECRET_ACCESS_KEY=,ENDPOINT_URL=,
 export STAGING_S3_CREDS="AWS_ACCESS_KEY_ID=,AWS_SECRET_ACCESS_KEY=,ENDPOINT_URL=,AWS_REGION=,BUCKET_NAME="
 ```
 {: codeblock}
+
+To ingest data, you will need values for the parameters that are used. For example, access key, secret key, endpoint, hostname etc. See the [Ingestion options and parameters supported in ibm-lh utility](cli_commands) for details of the parameters and values applicable to your environment.
 
 ## About this task
 {: #attask}

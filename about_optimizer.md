@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-24"
+lastupdated: "2024-12-11"
 
 keywords: lakehouse, **Query Optimizer**, {{site.data.keyword.lakehouse_short}}
 
@@ -55,7 +55,7 @@ The query optimization feature of Db2 is leveraged in {{site.data.keyword.lakeho
 * Enhanced Query Performance: **Query Optimizer** effectively optimizes queries, leading to significant performance improvements.
 * Seamless Integration: **Query Optimizer** seamlessly integrates with existing {{site.data.keyword.lakehouse_short}} infrastructure, ensuring a smooth adoption process.
 * Flexible Optimization: **Query Optimizer** operates flexibly as users can enable and disable the feature either at global or session level.
-* **Query Optimizer** supports Hive and Iceberg tables.
+* **Query Optimizer** supports only Hive tables.
 
 ## Limitation of **Query Optimizer**
 {: #queryopti_limits}
@@ -71,4 +71,4 @@ The query optimization feature of Db2 is leveraged in {{site.data.keyword.lakeho
 * Decimal and float columns in the projection list might interchange and can cause mismatch in data type.
 * Certain queries (full outer join, anti join) do not return the correct result.
 * Special characters in the identifier do not work properly.
-* Interval is not supported. Use `date_add`.
+* **Query Optimizer** currently only supports `SELECT` statements.

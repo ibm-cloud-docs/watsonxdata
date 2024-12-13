@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-13"
+lastupdated: "2024-11-30"
 
 keywords: lakehouse, bucket, objects, watsonx.data
 
@@ -44,4 +44,7 @@ To explore the storage details and objects, use one of the following methods:
 2. Click **Details** tab to view the storage details.
 3. Click **Objects** tab to view the storage objects.
 
-Related API:[Get bucket](https://cloud.ibm.com/apidocs/watsonxdata#get-bucket-registration) and [List bucket objects](https://cloud.ibm.com/apidocs/watsonxdata#list-bucket-objects).
+## Related API
+{: #explorebck_api}
+
+For information on related API, see [Get bucket](https://cloud.ibm.com/apidocs/watsonxdata#get-bucket-registration), [List bucket objects](https://cloud.ibm.com/apidocs/watsonxdata#list-bucket-objects), and [Get bucket object properties](https://cloud.ibm.com/apidocs/watsonxdata#get-bucket-object-properties).

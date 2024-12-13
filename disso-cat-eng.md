@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-02"
+lastupdated: "2024-12-01"
 
 keywords: lakehouse, engine, catalog, watsonx.data
 
@@ -47,3 +47,8 @@ To dissociate a catalog or catalogs from an engine, use one of the following met
 2. In **Manage associations** window, clear the checkbox in the **Engine** column.
 
 3. Click **Save and restart engine**.
+
+## Related API
+{: #dissocat_api}
+
+For information on related API, see [Disassociate catalogs from a Presto (Java) engine](https://cloud.ibm.com/apidocs/watsonxdata#delete-presto-engine-catalogs), [Disassociate catalogs from a Presto (C++) engine](https://cloud.ibm.com/apidocs/watsonxdata#delete-prestissimo-engine-catalogs), [Disassociate catalogs from a Spark engine](https://cloud.ibm.com/apidocs/watsonxdata#delete-spark-engine-catalogs).

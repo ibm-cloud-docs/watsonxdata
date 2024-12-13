@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-12"
+lastupdated: "2024-12-02"
 
 keywords: monitoring, watsonx.data
 
@@ -66,7 +66,7 @@ To see your {{site.data.keyword.lakehouse_full}} customer metrics dashboards in 
 {: #metrics-by-plan}
 
 
-* [HMS health status](#ibm_watsonx_data_hms_health)
+* [MDS health status](#ibm_watsonx_data_hms_health)
 * [Number of total running queries](#ibm_watsonx_data_queries_running_total)
 * [Number of total running tasks](#ibm_watsonx_data_tasks_running_total)
 * [Number of total transactions](#ibm_watsonx_data_transactions_total)
@@ -77,18 +77,18 @@ To see your {{site.data.keyword.lakehouse_full}} customer metrics dashboards in 
 * [Total number of nodes](#ibm_watsonx_data_nodes_total)
 
 
-### HMS health status
+### MDS health status
 {: #ibm_watsonx_data_hms_health}
 
 
 | Metadata | Description |
 |----------|-------------|
-| `Metric Name` | ibm_watsonx_data_hms_health|
+| `Metric Name` | ibm_watsonx_data_mds_health|
 | `Metric Type` | gauge |
 | `Value Type`  | none |
 | `Segment By` | Service Instance, Resource group |
-| `Metric Description` | Checks the status of Postgres DB connection in HMS pod. |
-{: caption="Table 2: HMS Health Status metric metadata" caption-side="top"}
+| `Metric Description` | Checks the status of Postgres DB connection in MDS pod. |
+{: caption="Table 2: MDS Health Status metric metadata" caption-side="top"}
 
 
 ### Number of total running queries

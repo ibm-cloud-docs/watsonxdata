@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-06"
+lastupdated: "2024-11-18"
 
 keywords: lakehouse, watsonx.data, presto, cli
 
@@ -21,13 +21,6 @@ For more information about dbt, see:
 
 - [What is dbt?](https://docs.getdbt.com/docs/introduction)
 - [About dbt projects](https://docs.getdbt.com/docs/build/projects)
-
-The data types that are supported by the `dbt-watsonx-presto` adapter are:
-
-- INT
-- VARCHAR
-- BOOLEAN
-- DATE
 
 For information about setting up your profile, see [Configuration (setting up your profile)]({{site.data.keyword.ref-dbt_watsonx_presto_conf-link}}).
 

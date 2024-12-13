@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-12-01"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -40,3 +40,8 @@ An engine in {{site.data.keyword.lakehouse_short}} runs SQL queries on your data
     {: caption="Add engine details" caption-side="bottom"}
 
 1. Click **Create**.
+
+## Related API
+{: #pcpp_api}
+
+For information on related API, see [Get list of Presto (C++) engines](https://cloud.ibm.com/apidocs/watsonxdata#list-prestissimo-engines), [Create Presto (C++) engine](https://cloud.ibm.com/apidocs/watsonxdata#create-prestissimo-engine), [Get Presto (C++) engine](https://cloud.ibm.com/apidocs/watsonxdata#get-prestissimo-engine), [Pause a Presto (C++) engine](https://cloud.ibm.com/apidocs/watsonxdata#pause-prestissimo-engine), [Restart a Presto (C++) engine](https://cloud.ibm.com/apidocs/watsonxdata#restart-prestissimo-engine), [Resume a Presto (C++) engine](https://cloud.ibm.com/apidocs/watsonxdata#resume-prestissimo-engine), and [Scale a Presto (C++) engine](https://cloud.ibm.com/apidocs/watsonxdata#scale-prestissimo-engine).

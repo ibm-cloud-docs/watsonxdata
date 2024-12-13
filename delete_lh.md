@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-12-12"
 
 keywords: lakehouse, watsonx.data
 
@@ -32,7 +32,7 @@ subcollection: watsonxdata
 To delete an {{site.data.keyword.lakehouse_full}} instance, complete the following steps:
 {: shortdesc}
 
-1. Log in to the [IBM Cloud console](http://test.cloud.ibm.com/).
+1. Log in to the [IBM Cloud console](http://cloud.ibm.com/).
 1. Click **Resource list**. The list of resources appears.
 3. In **Resource list**, expand **Databases**.
 4. To delete an instance, click the overflow menu icon at the end of the row and click **Delete**. A delete confirmation dialog appears.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-12-07"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -35,6 +35,7 @@ You can customize the coordinator configuration properties through an API for Pr
 | `optimizer.handle-complex-equi-joins` | Boolean | True or False |
 | `optimizer.generate-domain-filters` | Boolean | True or False |
 | `optimizer.size-based-join-flipping-enabled` | Boolean | True or False |
+| `optimizer.default-join-selectivity-coefficient` | Float |  |
 | `join-max-broadcast-table-size` | String | Limit {1, 1e13}; supported values are numbers with or without units TB, MB, GB, B, KB |
 | `query.client.timeout` | String | Limit {1, 1e13}; supported values are numbers with or without units m, s, ms, h |
 | `query.execution-policy` | String | Any string |
@@ -53,4 +54,9 @@ You can customize the coordinator configuration properties through an API for Pr
 | `scale-writers` | Boolean | True or False |
 | `scheduler.http-client.max-requests-queued-per-destination` | Integer | Limit {1, 100000} |
 | `shutdown.grace-period` | String | Limit {1, 1e13}; supported values are numbers with or without units m, s, ms, h |
+| `native-execution-enabled` | Boolean | True or False |
+| `optimizer.optimize-hash-generation` | Boolean | True or False |
+| `regex-library` | String | Any string |
+| `use-alternative-function-signatures` | Boolean | True or False |
+| `experimental.table-writer-merge-operator-enabled` | Boolean | True or False |
 {: caption="Configuration properties for Presto (C++) - coordinator nodes" caption-side="bottom"}

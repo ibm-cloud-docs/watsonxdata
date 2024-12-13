@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2024-07-03"
+lastupdated: "2024-11-30"
 keywords: watsonx.data, history, Spark, server
 
 subcollection: watsonxdata
@@ -36,3 +36,8 @@ The Spark history server is a web UI where you can view the status of running an
     * To view the details of individual application, click the individual application ID link. The **Spark Jobs** page opens. This page displays details such as the different stages of execution, the storage used, the Spark environment and executor (memory and driver) details.
 
 5. You can stop the history server when you no longer need it to release unnecessary resources. To do that, go to **Spark history** tab and click **Stop history server**. Click **Stop** on the confirmation message.
+
+## Related API
+{: #sparkhistoryui_api}
+
+For information on related API, see [Get spark engine catalog](https://cloud.ibm.com/apidocs/watsonxdata#get-spark-engine-catalog), [Get spark history server](https://cloud.ibm.com/apidocs/watsonxdata#get-spark-engine-history-server), [Start spark history server](https://cloud.ibm.com/apidocs/watsonxdata#start-spark-engine-history-server), and [Stop spark history server](https://cloud.ibm.com/apidocs/watsonxdata#delete-spark-engine-history-server).

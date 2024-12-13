@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-06"
+lastupdated: "2024-12-11"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -35,8 +35,9 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
 ## Before you begin
 {: #byblegsprk}
 
+* You must have the **Administrator** role and privileges in the catalog to do ingestion through the web console.
 * Add and register IBM Analytics Engine (Spark). See [Provisioning a Spark engine]({{site.data.keyword.ref-spl_engine-link}}).
-* Add storage for the target catalog. See [Adding a storage-catalog pair]({{site.data.keyword.ref-reg_bucket-link}}).
+* Add storage for the target catalog. See [Adding a storage]({{site.data.keyword.ref-reg_bucket-link}}).
 * Create schema and table in the catalog for the data to be ingested. See [Creating schemas]({{site.data.keyword.ref-create_schema-link}}) and [Creating tables]({{site.data.keyword.ref-create_table-link}}).
 
 ## Procedure
@@ -54,8 +55,8 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
    ```bash
    export IBM_LH_BEARER_TOKEN=<token>
    export IBM_LH_SPARK_JOB_ENDPOINT=https://<cpd_url>/v4/analytics_engines/<instance_id>/spark_applications
-   export HMS_CLIENT_USER=lakehouse
-   export HMS_CLIENT_PASSWORD=<instance secret>
+   export MDS_CLIENT_USER=lakehouse
+   export MDS_CLIENT_PASSWORD=<instance secret>
    export SOURCE_S3_CREDS="AWS_ACCESS_KEY_ID=*******,AWS_SECRET_ACCESS_KEY=*******,ENDPOINT_URL=<endpoint_url>,AWS_REGION=<region>,BUCKET_NAME=<bucket_name>"
    export TARGET_S3_CREDS="AWS_ACCESS_KEY_ID=*******,AWS_SECRET_ACCESS_KEY=*******,ENDPOINT_URL=<endpoint_url>,AWS_REGION=<region>,BUCKET_NAME=<bucket_name>"
    export IBM_LH_SPARK_EXECUTOR_CORES=<value>
@@ -78,8 +79,8 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
    |-------|-----|
    |`IBM_LH_BEARER_TOKEN`|Authorization bearer token. For more information, see https://cloud.ibm.com/docs/account?topic=account-iamtoken_from_apikey. For `USE_EXTERNAL_SPARK=true`, the bearer token should be generated with external Spark engine API key.|
    |`IBM_LH_SPARK_JOB_ENDPOINT`|Spark applications v4 endpoint for CPD and v3 endpoint for SaaS. To retrieve SaaS Spark Endpoint: https://cloud.ibm.com/docs/AnalyticsEngine?topic=AnalyticsEngine-retrieve-endpoints-serverless|
-   |`HMS_CLIENT_USER`|User for Hive Metastore client. SaaS Spark implementation uses `ibmlhapikey`.|
-   |`HMS_CLIENT_PASSWORD`|Password for Hive Metastore client. For SaaS, you can use the API key named `ibmlhapikey` from the cloud account where {{site.data.keyword.lakehouse_short}} has been deployed.|
+   |`MDS_CLIENT_USER`|User for Metadata Service client. SaaS Spark implementation uses `ibmlhapikey`.|
+   |`MDS_CLIENT_PASSWORD`|Password for Metadata Service client. For SaaS, you can use the API key named `ibmlhapikey` from the cloud account where {{site.data.keyword.lakehouse_short}} has been deployed.|
    |`SOURCE_S3_CREDS`|S3 credentials for the source file storage in the format:`“AWS_ACCESS_KEY_ID=<access_key>,AWS_SECRET_ACCESS_KEY=<secret_key>,ENDPOINT_URL=<endpoint_url>,AWS_REGION=<region>,BUCKET_NAME=<bucket_name>”`|
    |`TARGET_S3_CREDS`|S3 credentials for the target table storage in the format: `“AWS_ACCESS_KEY_ID=<access_key>,AWS_SECRET_ACCESS_KEY=<secret_key>,ENDPOINT_URL=<endpoint_url>,AWS_REGION=<region>,BUCKET_NAME=<bucket_name>”`|
    |`IBM_LH_SPARK_EXECUTOR_CORES`|Optional spark engine configuration setting for executor cores.|
@@ -106,7 +107,7 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
       --trust-store-path <truststore path> \
       --log-directory /tmp/mylogs \
       --partition-by "<columnname1>, <columnname2> \
-      --target-catalog-uri 'thrift://<hms_thrift_uri>'
+      --target-catalog-uri 'thrift://<mds_thrift_uri>'
       ```
       {: codeblock}
 
@@ -121,7 +122,7 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
       |`--partition-by`|This parameter supports the functions for years, months, days, hours for timestamp in the `partition-by` list. If a target table already exist or the `create-if-not-exist` parameter is not mentioned the partition-by shall not make any effect on the data.|
       |`--trust-store-password`|Password of the truststore certificate inside the spark job pod. Current password for Spark in CPD and SaaS is `changeit`.|
       |`--trust-store-path`|Path of the truststore cert inside the spark job pod. Current path of Spark in CPD and SaaS is `file:///opt/ibm/jdk/lib/security/cacerts`.|
-      |`--target-catalog-uri`|HMS thrift endpoint.|
+      |`--target-catalog-uri`|MDS thrift endpoint.|
       |    |CPD endpoint example: `thrift://<metastore_host_value>`. `<metastore_host_value>` is taken from the details tab of the catalog in the Infrastructure page.|
       |    |SaaS endpoint example: `thrift://<metastore_host_value>`. `<metastore_host_value>` is taken from the details tab of the catalog in the Infrastructure page.|
       |`--create-if-not-exist`|Use this option if the target schema or table is not created. Do not use if the target schema or table is already created.|
@@ -144,7 +145,7 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
 
       [ingest-config1]
       source-files:s3://path/to/file/or/folder
-      target-catalog-uri:thrift://<hms_thrift_uri>
+      target-catalog-uri:thrift://<mds_thrift_uri>
       trust-store-path:<truststore path>
       trust-store-password:<truststore password>
       log-directory /tmp/mylogs
@@ -164,7 +165,7 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
       |`--partition-by`|This parameter supports the functions for years, months, days, hours for timestamp in the `partition-by` list. If a target table already exist or the `create-if-not-exist` parameter is not mentioned the partition-by shall not make any effect on the data.|
       |`trust-store-password`|Password of the truststore certificate inside the spark job pod. Current password for Spark in CPD and SaaS is `changeit`.|
       |`trust-store-path`|Path of the truststore cert inside the spark job pod. Current path of Spark in CPD and SaaS is `file:///opt/ibm/jdk/lib/security/cacerts`.|
-      |`target-catalog-uri`|HMS thrift endpoint.|
+      |`target-catalog-uri`|MDS thrift endpoint.|
       |    |CPD endpoint example: `thrift://<metastore_host_value>`. `<metastore_host_value>` is taken from the details tab of the catalog in the Infrastructure page.|
       |    |SaaS endpoint example: `thrift://<metastore_host_value>`. `<metastore_host_value>` is taken from the details tab of the catalog in the Infrastructure page.|
       |`create-if-not-exist`|Use this option if the target schema or table is not created. Do not use if the target schema or table is already created.|

@@ -2,9 +2,9 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-22"
+lastupdated: "2024-12-09"
 
-keywords: lakehouse, hms, {{site.data.keyword.lakehouse_short}}, hive, metastore
+keywords: lakehouse, MDS, {{site.data.keyword.lakehouse_short}}, hive, metastore
 
 subcollection: watsonxdata
 
@@ -29,29 +29,30 @@ subcollection: watsonxdata
 # Manually syncing Query Optimizer with {{site.data.keyword.lakehouse_short}} metastore
 {: #sync_optimizer_meta}
 
+## About this task
+{: #optimizer_abtsync}
+
+To provide optimized queries, **Query Optimizer** pulls data about table definitions and Hive statistics to synchronize with MDS in {{site.data.keyword.lakehouse_short}}. You can select the specific Hive table that must be available for **Query Optimizer**. It is recommended to generate Hive statistics and label columns for primary and foreign keys to get the best results.
+
+Activating **Query Optimizer** automatically synchronizes metadata for catalogs that are connected to Presto (C++) engines. However, you will need to run the following steps if:
+
+* Metadata for inaccessible or corrupted catalogs or schemas during deployment are missing.
+* Significant changes are made to a table.
+* New tables are introduced after the initial sync operation.
+* An intermittent issue is preventing tables from being synced during the automatic syncing process upon activation.
+
 ## Before you begin
 {: #optimizer_bybsync}
 
 To sync tables from {{site.data.keyword.lakehouse_full}}, the following items are required:
 
-1. Identify the list of Hive and Iceberg tables in {{site.data.keyword.lakehouse_short}} that you require for **Query Optimizer**.
+1. Identify the list of Hive tables in {{site.data.keyword.lakehouse_short}} that you require for **Query Optimizer**.
 
-1. Identify columns as primary and foreign keys in the Hive and Iceberg tables.
+1. Identify columns as primary and foreign keys in the Hive tables.
 
-1. `ANALYZE` Hive and Iceberg tables in Presto (C++) to generate Hive and Iceberg statistics.
+1. `ANALYZE` Hive tables in Presto (C++) to generate Hive statistics.
 
 1. Only users with administrator privilege is allowed to run `ExecuteWxdQueryOptimizer` command as a security enhancement feature.
-
-## About this task
-{: #optimizer_abtsync}
-
-To provide optimized queries, **Query Optimizer** pulls data about table definitions and Hive and Iceberg statistics to synchronize with Hive metastore in {{site.data.keyword.lakehouse_short}}. You can select the specific Hive and Iceberg table that must be available for **Query Optimizer**. It is recommended to generate Hive and Iceberg statistics and label columns for primary and foreign keys to get the best results.
-
-Activating **Query Optimizer** automatically synchronizes metadata for catalogs that are connected to Presto (C++) engines. However, you will need to run the following steps if:
-* Metadata for inaccessible or corrupted catalogs or schemas during deployment are missing.
-* Significant changes are made to a table.
-* New tables are introduced after the initial sync operation.
-* An intermittent issue is preventing tables from being synced during the automatic syncing process upon activation.
 
 ## Procedure
 {: #optimizer_prosync}
@@ -68,13 +69,13 @@ Activating **Query Optimizer** automatically synchronizes metadata for catalogs 
 4. Run the following command to register {{site.data.keyword.lakehouse_short}} catalog with **Query Optimizer**:
 
    ```bash
-   ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.REGISTER_EXT_METASTORE('<CATALOG_NAME>','type=watsonx-data,uri=thrift://$LOCAL_HMS_URL,use.SSL=true,auth.mode=PLAIN,auth.plain.credentials=ibmlhapikey:<apikey>', ?, ?)';
+   ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.REGISTER_EXT_METASTORE('<CATALOG_NAME>','type=watsonx-data,uri=thrift://$LOCAL_MDS_URL,use.SSL=true,auth.mode=PLAIN,auth.plain.credentials=(MDS credentials):<apikey>', ?, ?)';
    ```
    {: codeblock}
 
    * Catalog name - as shown on the Infrastructure Manager page (case-sensitive).
-   * HMS thrift uri - As obtained from the Infrastructure Manager page (Click the catalog).
-   * HMS Credentials - Must be created on the {{site.data.keyword.lakehouse_short}}. See [Connecting to watsonx.data on IBM Cloud or Amazon Web Services](https://www.ibm.com/docs/en/db2woc?topic=integration-connecting-watsonxdata-cloud-amazon-web-services).
+   * MDS thrift uri - As obtained from the Infrastructure Manager page (Click the catalog).
+   * MDS Credentials - Must be created on the {{site.data.keyword.lakehouse_short}}. See [Connecting to watsonx.data on IBM Cloud or Amazon Web Services](https://www.ibm.com/docs/en/db2woc?topic=integration-connecting-watsonxdata-cloud-amazon-web-services).
 
    Registering the catalog with the **Query Optimizer** allows watsonx.data tables to be synced into the **Query Optimizer**, enabling query optimization. This needs to be run one time for each catalog.
    {: note}
@@ -118,30 +119,3 @@ Activating **Query Optimizer** automatically synchronizes metadata for catalogs 
    ExecuteWxdQueryOptimizer 'ALTER TABLE "catalog_name".schema_name.EmployeeDepartmentMapping ADD FOREIGN KEY (DepartmentID) REFERENCES "catalog_name".schema_name.Departments(DepartmentID) NOT ENFORCED';
    ```
    {: codeblock}
-
-7. Optional: Run the following command to get enhanced statistics for an Iceberg table that is synced:
-
-   ```bash
-   ExecuteWxdQueryOptimizer 'CALL EXT_METASTORE_STATS_SYNC(
-     '<CATALOG_NAME>',
-     '<SCHEMA_NAME>',
-     '<TABLE_NAME>',
-     '<PRESTO_HOST>',
-     '<PRESTO_USER>',
-     '<PRESTO_PWD>',
-     'true'
-   )';
-   ```
-   {: codeblock}
-
-   `<CATALOG_NAME>`: The name of catalog (case-sensitive).
-
-   `<SCHEMA_NAME>`: The name of schema in uppercase.
-
-   `<TABLE_NAME>`: The name of table in uppercase. It is recommended to gather statistics for each table individually.
-
-   `<PRESTO_HOST>`: The hostname of Presto engine of which the statistics is collected from. You can find the connection details of Presto engine by clicking on the engine in the Infrastructure manager page of watsonx.data.
-
-   `<PRESTO_USER>`: The Presto username that is used to run the statistics collection. Username can be `ibmlhapikey` or `ibmlhtoken`. It is recommended to use `ibmlhapikey`.
-
-   `<PRESTO_PWD>`: The Presto password that is used to run the statistics collection. Password can be a base64 API key or token corresponding to the username.

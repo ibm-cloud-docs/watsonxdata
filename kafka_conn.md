@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-05"
+lastupdated: "2024-12-05"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -40,13 +40,55 @@ Apache Kafka is a distributed event streaming platform. Connect to an Apache Kaf
  | Display name    | Enter the data source name to be displayed on the screen. |
  | Hostname            | Enter the hostname. You can add multiple host information. To add, click the **Add** icon. A new row appears for adding hostname and port. Enter the details.  |
  | Port             | Enter the port number. |
- | SASL connection   | Use the toggle switch to enable or disable the Simple Authentication Security Layer (SASL) to include an authentication mechanism. If enabled, \n 1. Upload the SSL certificate: \n i. The Upload SSL certificate (.pem, .crt, .cert, or .cer) link is enabled. \n ii. Click the Upload SSL certificate (.pem, .crt, .cert, or .cer) link. \n iii. Browse the SSL certificate and upload. \n 2. Select one of the following SASL mechanisms: \n * PLAIN \n * SCRAM SHA-256 \n * SCRAM SHA-512  \n 3. Enter the Username and API key/Password.|
+ | SASL connection   | Use the toggle switch to enable or disable the Simple Authentication Security Layer (SASL) to include an authentication mechanism. If enabled, \n 1. Upload the SSL certificate: \n i. The Upload SSL certificate (.pem, .crt, .cert, or .cer) link is enabled. \n ii. Click the Upload SSL certificate (.pem, .crt, .cert, or .cer) link. \n iii. Browse the SSL certificate and upload. \n 2. Select one of the following SASL mechanisms: \n * PLAIN \n * SCRAM SHA-256 \n * SCRAM SHA-512 \n 3. Enter the Username and API key/Password.|
  | Test connection     | Click the Test connection link to test the data source connection. If the data source connection is successful, a success message appears.|
  | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your data source. |
  | Add topics    | You can add topics after you create the data source.  \n i. Go to the **Infrastructure manager**. \n ii. Click the **Apache Kafka** data source. \n iii. Click **Add topics** option. \n iv. Upload .json definition files. You can either drag the files or use the **Click to upload** option. Topic names are determined from the definition files. \n v. Use the **Edit** option to view and edit the topic files.|
  | Create | Click Create to create the data source. |
  {: caption="Register data source" caption-side="bottom"}
 
+## Sample .json definition file
+{: #samplefile_limitations}
+
+The following is the sample .json definition file to be uploaded to the Kafka source configuration section for Kafka topics:
+
+   ```bash
+   {
+    "topicName": "customer_orders",
+    "tableName": "orders",
+    "fileContent": {
+        "tableName": "orders",
+        "columns": [
+            {
+                "name": "order_id",
+                "type": "INTEGER",
+                "primaryKey": true
+            }
+        ],
+        "partitionKey": "customer_id",
+        "retentionPeriod": "7 days"
+    },
+    "contents": {
+        "tableName": "orders",
+        "topicConfig": {
+            "partitions": 1,
+            "replicationFactor": 1,
+            "retentionMs": 604800000,
+            "cleanupPolicy": "delete"
+        },
+        "schema": {
+            "type": "struct",
+            "fields": [
+                {
+                    "name": "order_id",
+                    "type": "int64"
+                }
+            ]
+        }
+    }
+}
+   ```
+   {: codeblock}
 
 ## Limitations for SQL statements
 {: #connector_limitations}

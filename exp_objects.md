@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-11-30"
 
 keywords: watsonxdata, data explorer, associated catalogs, iceberg tables, data sample, time travel information, ingestion hub
 
@@ -41,3 +41,8 @@ You can create Ingestion jobs from the Data manager page.
 Other tasks that can be performed in the **Data manager** page include adding, renaming, or dropping a column.
 
 You can browse the **Table schema** and up to 25 rows of **Data sample** for some tables. You can view the **Time travel** snapshots and use the **Rollback** feature to rollback or rollforward to any snapshots for Iceberg tables.
+
+## Related API
+{: #datamanager_api}
+
+For information on related API, see [List all registered catalogs](https://cloud.ibm.com/apidocs/watsonxdata-software#list-catalogs),[Get catalog properties by catalog_id](https://cloud.ibm.com/apidocs/watsonxdata-software#get-catalog), [List all columns of a table](https://cloud.ibm.com/apidocs/watsonxdata-software#list-columns), [Add column](https://cloud.ibm.com/apidocs/watsonxdata-software#create-columns), [Delete column](https://cloud.ibm.com/apidocs/watsonxdata-software#delete-column), [Alter column](https://cloud.ibm.com/apidocs/watsonxdata-software#update-column), [Get table snapshots](https://cloud.ibm.com/apidocs/watsonxdata-software#list-table-snapshots), and [Rollback table to snapshot](https://cloud.ibm.com/apidocs/watsonxdata-software#rollback-table).

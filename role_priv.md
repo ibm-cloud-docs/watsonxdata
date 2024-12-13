@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-13"
+lastupdated: "2024-11-30"
 
 keywords: lakehouse, watsonx data, privileges, roles, access
 
@@ -61,15 +61,15 @@ IAM formation non-admins (Operator, Editor, Viewer) have the default user access
 | Create Milvus services | ✓ |   |    |
 | Delete Milvus services | ✓ |   |    |
 | View Milvus services | ✓ |   |    |
-| Restart the internal HMS | ✓ |   |    |
+| Restart the internal MDS | ✓ |   |    |
 | Scale the Presto (Java) or Presto (C++) engines | ✓ |   |    |
 | Unregister any storage | ✓ |   |    |
 | Unregister any DB Connection | ✓ |   |    |
-| Activate cataloged storagees (restart HMS) | ✓ |   |    |
+| Activate cataloged storagees (restart MDS) | ✓ |   |    |
 | Register and unregister own storage | ✓ | ✓ | ✓ |
 | Register and unregister own DB connection | ✓ | ✓ | ✓ |
 | Access the metastore | ✓ |   | ✓ |
-| Run Spark ingestion jobs|  |  | ✓ |
+| Run Spark ingestion jobs| ✓ |  | ✓ |
 {: caption="Resource-level permissions" caption-side="bottom"}
 
 ## Engine (Presto (Java) or Presto (C++))

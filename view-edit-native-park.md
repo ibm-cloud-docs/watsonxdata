@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-12-05"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -87,7 +87,7 @@ Following are the details of the parameter values to be used in the curl command
 | `<map_of_spark_properties>` | Specify the Spark properties in the form of key-value pair (`"<property_name>": "<property_value>"`) separated by comma. |
 | `<property_name>` | The default configuration property name. For more information about different properties, see [Available Properties][def6]. |
 | `<property_value>` | The value that must be configured for the property. For more information about different properties, see [Available Properties][def6]. |
-| `<spark_version>` | The Spark runtime. The possible values are `3.3` and `3.4`. |
+| `<spark_version>` | The Spark runtime. The possible value is `3.4`. |
 {: caption="Parameter list" caption-side="bottom"}
 
 **Example**:
@@ -116,3 +116,8 @@ To add new properties to the `default_config` parameter or to update existing pr
 [def2]: https://cloud.ibm.com/apidocs/watsonxdata-software#create-spark-engine-application
 [def5]: https://cloud.ibm.com/apidocs/watsonxdata#authentication
 [def6]: https://spark.apache.org/docs/latest/configuration.html#available-properties
+
+## Related API
+{: #viewspark_api}
+
+For information on related API, see [List all spark engines](https://cloud.ibm.com/apidocs/watsonxdata#list-spark-engines), [Get spark engine](https://cloud.ibm.com/apidocs/watsonxdata#get-spark-engine), and [Update spark engine](https://cloud.ibm.com/apidocs/watsonxdata#update-spark-engine).

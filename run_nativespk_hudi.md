@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-10-28"
+lastupdated: "2024-12-12"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -53,9 +53,7 @@ The topic describes the procedure to run a Spark application that ingests data i
                 --header 'LhInstanceId: <instance_id>'
                     --data '{  "application_details": {
                         "conf": {
-                                "spark.hive.metastore.client.plain.username":"cpadmin",
-                                        "spark.hive.metastore.client.plain.password":"xxx",
-                                                "spark.hadoop.wxd.cas.apiKey":"ZenApikey xxx"    },
+                                                "spark.hadoop.wxd.apiKey":"Basic <user-authentication-string>"    },
                                                     "application": "s3a://shivangi-cas-iceberg-test/iceberg.py"  }}
    ```
    {: codeblock}
@@ -68,11 +66,7 @@ The topic describes the procedure to run a Spark application that ingests data i
 
    * `<spark_engine_id>`: The Engine ID of the native Spark engine.
 
-   * `<token>`: The bearer token. For more information about generating the token, see [IAM token](https://test.cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
-
-   * `<wxd_api_key>`: To generate API key, log in into the watsonx.data console and navigate to Profile > Profile and Settings > API Keys and generate a new API key.
-
-   * `<cas_endpoint>`: The DAS endpoint. To generate DAS endpoint, see [Data Access Service (DAS) endpoint](watsonxdata?topic=watsonxdata-cas_ep).
+   * `<token>`: The bearer token. For more information about generating the token, see [IAM token](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
 
    * `<user-authentication-string>`: The value must be base 64 encoded string of user ID and API key . For more information about the format, see the note.
 
@@ -123,23 +117,16 @@ The topic describes the procedure to run a Spark application that ingests data i
 
    ``` bash
 
-       curl --request POST
+   curl --request POST
        --url https://<wxd_host_name>/lakehouse/api/v2/spark_engines/<spark_engine_id>/applications
        --header 'Authorization: Bearer <token>'
        --header 'Content-Type: application/json'
        --header 'LhInstanceId: <instance_id>'
        --data '{ \n \n    "application_details": {
-               "conf": {        "spark.serializer" : "org.apache.spark.serializer.KryoSerializer",
-                       "spark.hadoop.fs.s3a.path.style.access" : "true",
-                       "spark.hive.metastore.client.plain.username":"ibmlhapikey",
-                       "spark.hive.metastore.client.plain.password":"<wxd_api_key>",
-                       "spark.driver.extraJavaOptions" : "-Dcom.sun.jndi.ldap.object.disableEndpointIdentification=true -Djdk.tls.trustNameService=true",
-                       "spark.executor.extraJavaOptions" : "-Dcom.sun.jndi.ldap.object.disableEndpointIdentification=true -Djdk.tls.trustNameService=true",
-                       "spark.kryo.registrator": "org.apache.spark.HoodieSparkKryoRegistrar",
-                       "spark.sql.catalog.spark_catalog.type": "hudi",
+               "conf": {
+                       "spark.sql.catalog.spark_catalog.type": "hive",
                        "spark.sql.catalog.spark_catalog": "org.apache.spark.sql.hudi.catalog.HoodieCatalog",
-                       "spark.hadoop.wxd.cas.endpoint":"<cas_endpoint>/cas/v1/signature",
-                       "spark.hadoop.wxd.cas.apiKey":"<user-authentication-string>"        },
+                       "spark.hadoop.wxd.apiKey":"Basic <user-authentication-string>"        },
                        "application": "s3a://hudi-connector-test/hudi_demo.py"    }}
    ```
    {: codeblock}
@@ -149,9 +136,7 @@ The topic describes the procedure to run a Spark application that ingests data i
    * `<wxd_host_name>`: The hostname of your watsonx.data Cloud instance.
    * `<instance_id>`: The instance ID from the watsonx.data instance URL. For example, 1609968977179454.
    * `<spark_engine_id>`: The Engine ID of the native Spark engine.
-   * `<token>`: The bearer token. For more information about generating the token, see [IAM token](https://test.cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
-   * `<wxd_api_key>`: To generate API key, log in into the watsonx.data console and navigate to Profile > Profile and Settings > API Keys and generate a new API key.
-   * `<cas_endpoint>`: The DAS endpoint. To generate DAS endpoint, see [Data Access Service (DAS) endpoint](watsonxdata?topic=watsonxdata-cas_ep).
+   * `<token>`: The bearer token. For more information about generating the token, see [IAM token](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
    * `<user-authentication-string>`: The value must be base 64 encoded string of user ID and API key . For more information about the format, see the note.
 
 
@@ -195,20 +180,17 @@ The topic describes the procedure to run a Spark application that ingests data i
    Curl command to submit Python application
 
     ``` bash
-    curl --request POST
-    --url https://<wxd_host_name>/lakehouse/api/v2/spark_engines/<spark_engine_id>/applications
-    --header 'Authorization: Bearer <token>'
-    --header 'Content-Type: application/json'
-    --header 'LhInstanceId: <instance_id>'
-    --data '{        "application_details": {
-            "conf": {
-            "spark.sql.catalog.spark_catalog" : "org.apache.spark.sql.delta.catalog.DeltaCatalog",
-            "spark.sql.catalog.spark_catalog.type" : "hive",
-            "spark.hive.metastore.client.plain.username" : "ibmlhapikey",
-            "spark.hive.metastore.client.plain.password" : "<wxd_api_key>",
-            "spark.hadoop.wxd.cas.endpoint":"<cas_endpoint>/cas/v1/signature",
-            "spark.hadoop.wxd.cas.apiKey":"base64 encoding(ibmlhapikey_<username>:<user_apikey>)"        },
-            "application": "s3a://delta-connector-test/delta_demo.py"        }    }
+   curl --request POST
+   --url https://<wxd_host_name>/lakehouse/api/v2/spark_engines/<spark_engine_id>/applications
+   --header 'Authorization: Bearer <token>'
+   --header 'Content-Type: application/json'
+   --header 'LhInstanceId: <instance_id>'
+   --data '{        "application_details": {
+           "conf": {
+           "spark.sql.catalog.spark_catalog" : "org.apache.spark.sql.delta.catalog.DeltaCatalog",
+           "spark.sql.catalog.spark_catalog.type" : "hive",
+           "spark.hadoop.wxd.apiKey":"<user-authentication-string>"        },
+           "application": "s3a://delta-connector-test/delta_demo.py"        }    }
    ```
    {: codeblock}
 
@@ -218,12 +200,10 @@ The topic describes the procedure to run a Spark application that ingests data i
     * `<wxd_host_name>`: The hostname of your watsonx.data Cloud instance.
     * `<instance_id>` : The instance ID from the watsonx.data cluster instance URL. For example, 1609968977179454.
     * `<spark_engine_id>` : The Engine ID of the native Spark engine.
-    * `<token>` : The bearer token. For more information about generating the token, see [IAM token](https://test.cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
-    * `<wxd_api_key>`: To generate API key, log in into the watsonx.data console and navigate to Profile > Profile and Settings > API Keys and generate a new API key.
-    * `<cas_endpoint>`: The DAS endpoint. To generate DAS endpoint, see [Data Access Service (DAS) endpoint](watsonxdata?topic=watsonxdata-cas_ep).
+    * `<token>` : The bearer token. For more information about generating the token, see [IAM token](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
     * `<user-authentication-string>`: The value must be base 64 encoded string of user ID and API key . For more information about the format, see the following note.
 
-   The value of `<user-authentication-string>` must be in the format `echo -n '<user>:<apikey>' | base64`.  Here, `<user_id>` is the IBM Cloud ID of the user whose apikey is used to access the data bucket. The `<IAM_APIKEY>` here is the API key of the user accessing the Object store bucket. To generate API key, log in into the watsonx.data console and navigate to Profile > Profile and Settings > API Keys and generate a new API key. If you generate a new API key, your old API key becomes invalid.
+   The value of `<user-authentication-string>` must be in the format `echo -n 'ibmlhapikey_<username>:<user_apikey>' | base64`.  Here, `<user_id>` is the IBM Cloud ID of the user whose apikey is used to access the data bucket. The `<IAM_APIKEY>` here is the API key of the user accessing the Object store bucket. To generate API key, log in into the watsonx.data console and navigate to Profile > Profile and Settings > API Keys and generate a new API key. If you generate a new API key, your old API key becomes invalid.
    {: important}
 
 8. After you submit the Spark application, you receive a confirmation message with the application ID and Spark version. Save it for reference.

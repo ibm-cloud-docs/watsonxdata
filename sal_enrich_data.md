@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-08"
+lastupdated: "2024-12-05"
 
 keywords: lakehouse, semantic automation, {{site.data.keyword.lakehouse_short}}, data enrichment, register
 
@@ -105,3 +105,8 @@ Users with the following roles can perform semantic enrichment in {{site.data.ke
 1. Go to the table view and check if the review status is completed.
 1. Click the overflow menu next to the chosen schema and select **Publish**. The page displays the list of enriched tables within the schema.
 1. Verify the enriched data in the **Browse data** tab of the **Data Manager** by selecting the schema you enriched on successful completion of publishing.
+
+## Related API
+{: #salenrich_api}
+
+For information on related API, see [Trigger enrichment jobs on schemas and tables](https://cloud.ibm.com/apidocs/watsonxdata#create-sal-integration-enrichment), [Get semantic enrichment assets associated with the schema](https://cloud.ibm.com/apidocs/watsonxdata#get-sal-integration-enrichment-assets), [Get semantic enrichment data asset associated with the table](https://cloud.ibm.com/apidocs/watsonxdata#get-sal-integration-enrichment-data-asset), [Get semantic enrichment job run logs associated with the job run](https://cloud.ibm.com/apidocs/watsonxdata#get-sal-integration-enrichment-job-run-logs), [Get semantic enrichment job runs associated with the schema](https://cloud.ibm.com/apidocs/watsonxdata#get-sal-integration-enrichment-job-runs), [Get semantic enrichment jobs associated with the schema](https://cloud.ibm.com/apidocs/watsonxdata#get-sal-integration-enrichment-jobs), [Get list of uploaded glossary terms](https://cloud.ibm.com/apidocs/watsonxdata#get-sal-integration-glossary-terms), [Get wkc catalog and project mapped to the schema](https://cloud.ibm.com/apidocs/watsonxdata#get-sal-integration-mappings), [Get metadata enrichment global settings](https://cloud.ibm.com/apidocs/watsonxdata#get-sal-integration-enrichment-global-settings), [Add metadata enrichment global settings](https://cloud.ibm.com/apidocs/watsonxdata#create-sal-integration-enrichment-global-settings), [Get metadata enrichment settings for a project](https://cloud.ibm.com/apidocs/watsonxdata#get-sal-integration-enrichment-settings), [Add metadata enrichment settings for a project](https://cloud.ibm.com/apidocs/watsonxdata#create-sal-integration-enrichment-settings), [Upload semantic enrichment business terms glossary](https://cloud.ibm.com/apidocs/watsonxdata#create-sal-integration-upload-glossary), and [Get status of upload glossary job](https://cloud.ibm.com/apidocs/watsonxdata#get-sal-integration-upload-glossary-status).

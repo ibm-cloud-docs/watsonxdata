@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2024-12-02"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -69,10 +69,10 @@ Follow the steps to run the Spark sample python file.
         "metadata_file": "s3a://new-bucket"
     },
     "lakehouse": {
-        "hms_url": "thrift://XX.XX.XX.XX:9083",
-        "hms_auth_type": "PLAIN",
-        "hms_username": "test",
-        "hms_password": "password",
+        "mds_url": "thrift://XX.XX.XX.XX:9083",
+        "mds_auth_type": "PLAIN",
+        "mds_username": "test",
+        "mds_password": "password",
         "lh_endpoint_url": "https://s3.us-south.cloud-object-storage.appdomain.cloud",
         "lh_access_key": "",
         "lh_secret_key": "",
@@ -120,10 +120,10 @@ Follow the steps to run the Spark sample python file.
 
     | Field | Description |
     |--------------------------|----------------|
-    | hms_URL| Specify the HMS URL.|
-    | hms_auth_type| Specify the HMS authentication type (default: “PLAIN”).|
-    | hms_username| Specify the HMS username.|
-    | hms_password| Specify the HMS Password.|
+    | mds_URL| Specify the MDS URL.|
+    | mds_auth_type| Specify the MDS authentication type (default: “PLAIN”).|
+    | mds_username| Specify the MDS username.|
+    | mds_password| Specify the MDS Password.|
     | lh_endpoint_url| Specify the Cloud Object Storage Endpoint URL.|
     | lh_access_key| Specify the Cloud Object Storage Access Key.|
     | lh_secret_key| Specify the Cloud Object Storage Secret.|

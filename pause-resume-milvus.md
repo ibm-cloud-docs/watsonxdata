@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-07-03"
+lastupdated: "2024-12-02"
 
 keywords: lakehouse, milvus, watsonx.data
 subcollection: watsonxdata
@@ -47,3 +47,8 @@ You can pause and resume a Milvus service from the **Infrastructure manager**.
 
 Milvus compute is not billed during the pause time.
 {: note}
+
+## Related API
+{: #pausemilvus_api}
+
+For information on related API, see [Pause Milvus service](https://cloud.ibm.com/apidocs/watsonxdata#create-milvus-service-pause) and [Resume Milvus service](https://cloud.ibm.com/apidocs/watsonxdata#create-milvus-service-resume).

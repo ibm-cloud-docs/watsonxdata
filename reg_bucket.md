@@ -101,4 +101,7 @@ To add a storage, complete the following steps:
 
 For more information on mixed-case feature flag behavior, supported SQL statements and supported data types matrices, see [Support content](https://www.ibm.com/support/pages/node/7157339){: external}.
 
-Related API:[Get bucket registrations](https://cloud.ibm.com/apidocs/watsonxdata#list-bucket-registrations) and [Register bucket](https://cloud.ibm.com/apidocs/watsonxdata#create-bucket-registration).
+## Related API
+{: #storage_api}
+
+For information on related API, see [Get bucket registrations](https://cloud.ibm.com/apidocs/watsonxdata#list-bucket-registrations) and [Register bucket](https://cloud.ibm.com/apidocs/watsonxdata#create-bucket-registration).

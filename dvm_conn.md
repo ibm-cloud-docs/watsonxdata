@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-13"
+lastupdated: "2024-12-05"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -41,9 +41,10 @@ IBM Data Virtualization Manager for z/OS provides virtual, integrated views of d
  | Port             | Enter the port number. |
  | Username           | Enter the username.  |
  | Password           | Enter the password.  |
- | Port is SSL enabled   | Use the toggle switch to enable or disable SSL connection. If enabled,  \n i. The Upload SSL certificate (.pem, .crt, .cert or .cer) link is enabled. \n ii. Click the Upload SSL certificate (.pem, .crt, .cert or .cer) link. \n iii. Browse the SSL certificate and upload.|
+ | Port is SSL enabled   | Use the toggle switch to enable or disable SSL connection. If enabled, \n i. The Upload SSL certificate (.pem, .crt, .cert or .cer) link is enabled. \n ii. Click the Upload SSL certificate (.pem, .crt, .cert or .cer) link. \n iii. Browse the SSL certificate and upload.|
  | Validate certificate           | Use the toggle switch to validate whether the SSL certificate that is returned by the host is trusted or not.  |
  | Hostname in SSL certificate           | Provide the hostname in SSL certificate. This step is optional.  |
+ | Test connection     | Click the Test connection link to test the data source connection. If the data source connection is successful, a success message appears. (Note: If you face issues with the test connection by using SSL, try testing again without certificate validation. Sometimes, certificate validation might fail to work.)|
  | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your data source. |
  | Create | Click Create to create the data source. |
  {: caption="Register data source" caption-side="bottom"}
