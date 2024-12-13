@@ -358,6 +358,12 @@ toc:
       - link:
             label: watsonx.data APIs
             href: https://cloud.ibm.com/apidocs/watsonxdata
+      - link:
+            label: MDS Unity Catalog API
+            href: https://cloud.ibm.com/apidocs/watsonxdata-mds-unity
+      - link:
+            label: MDS Iceberg REST Catalog API
+            href: https://cloud.ibm.com/apidocs/watsonxdata-ibm-mds-iceberg
   - navgroup:
       id: help
       topics:
