@@ -54,7 +54,7 @@ Integration enhancements
 
    * You can now enable Databand connection from the **Configurations** page. For more information, see [Monitoring Spark application runs by using Databand](watsonxdata?topic=watsonxdata-mntr_dband).
 
-   * You can now retrieve the Presto connection information from the wxd instance > Configurations > Connection information page for the following integration:
+   * You can now retrieve the Presto connection information from the {{site.data.keyword.lakehouse_short}} instance > **Configurations** > **Connection information** page for the following integration:
 
       * BI tools
       * DataBuildTool (dbt)
