@@ -18,10 +18,10 @@ subcollection: watsonxdata
 The Mezmo backed {{site.data.keyword.at_full_notm}} service is now deprecated in {{site.data.keyword.cloud_notm}} but will continue to be supported until the end of March, 2025, at which point all instances will be removed. It is suggested that you migrate to {{site.data.keyword.cloud_notm}} logs/{{site.data.keyword.at_full_notm}} event routing as soon as possible to avoid disruptions.
 {: note}
 
-As a security officer, auditor, or manager, you can use the {{site.data.keyword.at_full}} service to track how users and applications interact with the {{site.data.keyword.lakehouse_full}} service in {{site.data.keyword.cloud_notm}}.
+As a security officer, auditor, or manager, you can use the {{site.data.keyword.cloud_notm}} activity tracking facilities to track how users and applications interact with the {{site.data.keyword.lakehouse_full}} service in {{site.data.keyword.cloud_notm}}.
 {: shortdesc}
 
-## Managing and viewing activities with {{site.data.keyword.at_full}} event routing and {{site.data.keyword.cloud_notm}} logs
+## Managing and viewing activities with {{site.data.keyword.at_full}} Event Routing and {{site.data.keyword.cloud_notm}} Logs
 {: #at_mng_view_act}
 
 The {{site.data.keyword.at_full_notm}} event routing service routes activity events from all participating services (including {{site.data.keyword.lakehouse_full}}) that are provisioned in an account to its configured targets, such as an instance of {{site.data.keyword.cloud_notm}} logs. These activity events include any user or IBM initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use the target services to investigate abnormal activities and critical actions and to comply with regulatory audit requirements. Additionally, you can receive alerts about any activities in real time. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standards.
