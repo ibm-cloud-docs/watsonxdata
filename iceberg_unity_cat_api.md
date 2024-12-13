@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-10"
+lastupdated: "2024-12-13"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -178,6 +178,8 @@ For creating tables, there are additional fields in the Unity spec that are not 
 If extra values are passed in the properties of request object, they are not stored in any table due to adherence to the current HMS schema. You can include additional details in the `properties` field in future if needed.
 {: note}
 
+For more information, see [API documentation](https://cloud.ibm.com/apidocs/watsonxdata-mds-unity).
+
 ## Iceberg Catalog REST API
 {: #iceberg_cat_api}
 
@@ -276,3 +278,5 @@ Due to the constraint of not modifying the schema, the following features are no
 - When listing tables, only Iceberg tables are returned. If you attempt to create a table with a name that exists as a Hive or Delta table in the same database or namespace, the creation of an Iceberg table with the same name is not allowed.
 - X-Iceberg-Access-Delegation is not supported.
 - Metrics endpoint added as dummy only.
+
+For more information, see [API documentation](https://cloud.ibm.com/apidocs/watsonxdata-ibm-mds-iceberg).
