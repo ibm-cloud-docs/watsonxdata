@@ -27,8 +27,8 @@ As a security officer, auditor, or manager, you can use the {{site.data.keyword.
 The {{site.data.keyword.at_full_notm}} event routing service routes activity events from all participating services (including {{site.data.keyword.lakehouse_full}}) that are provisioned in an account to its configured targets, such as an instance of {{site.data.keyword.cloud_notm}} logs. These activity events include any user or IBM initiated activities that change the state of a service in {{site.data.keyword.cloud_notm}}. You can use the target services to investigate abnormal activities and critical actions and to comply with regulatory audit requirements. Additionally, you can receive alerts about any activities in real time. The events that are collected comply with the Cloud Auditing Data Federation (CADF) standards.
 
 For more information, see
-- [Monitoring activity tracking events in IBM Cloud Logs](https://cloud.ibm.com/docs/cloud-logs?topic=cloud-logs-cl-at-events&interface=ui)
-- [sending to IBM Cloud Logs](https://cloud.ibm.com/docs/cloud-logs?topic=cloud-logs-instance-provision&interface=ui).
+- [IBM Cloud Activity Tracker Event Routing](https://cloud.ibm.com/docs/atracker)
+- [Configuring an IBM Cloud Logs target](https://cloud.ibm.com/docs/atracker?topic=atracker-getting-started-target-cloud-logs&interface=ui).
 
 ## Managing and viewing activities with the deprecated {{site.data.keyword.at_full}} service
 {: #at_mng_view_act2}
