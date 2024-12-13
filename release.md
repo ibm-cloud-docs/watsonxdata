@@ -32,9 +32,9 @@ Data sources and storage enhancements
 
 : This release includes the following new data sources and storage enhancements:
 
-   * Now you can connect to Apache Phoenix data sources. For more information, see [Apache Phoenix](watsonxdata?topic=watsonxdata-phoenix_conn)
+   * Now you can connect to Apache Phoenix data sources. For more information, see [Apache Phoenix](watsonxdata?topic=watsonxdata-phoenix_database)
 
-   * If you work with MySQL data sources, now you can manage drivers in the **Driver manager** section of the Configurations page. Each of these drivers goes through a series of validation steps. You can no longer test MySQL connections. For more information, see [MySQL](watsonxdata?topic=watsonxdata-mysql_conn).
+   * If you work with MySQL data sources, now you can manage drivers in the **Driver manager** section of the Configurations page. Each of these drivers goes through a series of validation steps. You can no longer test MySQL connections. For more information, see [MySQL](watsonxdata?topic=watsonxdata-mysql_database).
 
    When you upgrade to version 2.1.0, any existing MySQL catalog is no longer linked to the engine. This means that you need to reestablish the connection between the MySQL catalog and the engine.
    {: note}
@@ -52,20 +52,20 @@ Integration enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following new or enhanced integrations with other services:
 
-   * You can now enable Databand connection from the **Configurations** page. For more information, see [Monitoring Spark application runs by using Databand](watsonxdata?topic=watsonxdata-spark-databand).
+   * You can now enable Databand connection from the **Configurations** page. For more information, see [Monitoring Spark application runs by using Databand](watsonxdata?topic=watsonxdata-mntr_dband).
 
    * You can now retrieve the Presto connection information from the wxd instance > Configurations > Connection information page for the following integration:
 
       * BI tools
       * DataBuildTool (dbt)
 
-For more information, see [Data visualization in watsonx.data with BI tools](watsonxdata?topic=watsonxdata-bi_tools).
+For more information, see [Data visualization in watsonx.data with BI tools](watsonxdata?topic=watsonxdata-abt_bi).
 
    * You can now integrate IBM Manta Data Lineage with {{site.data.keyword.lakehouse_short}} to capture and publish jobs, runs, and dataset events from Spark through the Manta UI. For more information, see [IBM Manta Data Lineage](watsonxdata?topic=watsonxdata-manta_overview).
 
-   * You can now use all of the Presto data types with the dbt adapter for Presto. Specify the data type as column_types in the dbt_project.yml. For more information, see [Installing and using dbt-watsonx-presto](watsonxdata?topic=watsonxdata-dbt-watsonx-presto-inst).
+   * You can now use all of the Presto data types with the dbt adapter for Presto. Specify the data type as column_types in the dbt_project.yml. For more information, see [Installing and using dbt-watsonx-presto](watsonxdata?topic=watsonxdata-dbt_watsonx_presto_inst).
 
-   * You can now use the Birdwatcher debugging tool to check the state of Milvus system. For more information, see [Birdwatcher debugging tool](watsonxdata?topic=watsonxdata-milvus_birdwatcher).
+   * You can now use the Birdwatcher debugging tool to check the state of Milvus system. For more information, see [Birdwatcher debugging tool](watsonxdata?topic=watsonxdata-bd_dbgtool).
 
 Engine and service enhancements
 
@@ -73,11 +73,11 @@ Engine and service enhancements
 
    * You can now use the Azure Data Lake Storage (ADLS) and Google Cloud Storage with Presto (C++) engine. You can now use Azure Data Lake Storage (ADLS) and Google Cloud Storage to store your data while submitting Spark applications. For more information, see [Azure Data Lake Storage](watsonxdata?topic=watsonxdata-adls_genblob_storage) and [Google Cloud Storage](watsonxdata?topic=watsonxdata-gcs_storage).
 
-   * You can now use Google Cloud Storage (GCS) with Data Access Service (DAS) to store your data while submitting Spark applications. For more information, see [Submitting Spark application by using native Spark engine](watsonxdata?topic=watsonxdata-sbmt_das_spk).
+   * You can now use Google Cloud Storage (GCS) with Data Access Service (DAS) to store your data while submitting Spark applications. For more information, see [Submitting Spark application by using native Spark engine](watsonxdata?topic=watsonxdata-smbit_nsp_1).
 
-   * You can now enable the Spark Access Control extension to access and operate on the Hive and Hudi catalogs. For more information, see [Enhancing Spark application submission using Spark access control extension for external Spark](watsonxdata?topic=watsonxdata-spark-extnsn-extnl) and [Enhancing Spark application submission using Spark access control extension for native Spark](watsonxdata?topic=watsonxdata-spark-extnsn).
+   * You can now enable the Spark Access Control extension to access and operate on the Hive and Hudi catalogs. For more information, see [Enhancing Spark application submission using Spark access control extension for external Spark](watsonxdata?topic=watsonxdata-spark-extnsn_ext) and [Enhancing Spark application submission using Spark access control extension for native Spark](watsonxdata?topic=watsonxdata-spark-extnsn).
 
-   * You can now select a {{site.data.keyword.lakehouse_short}} Spark engine as a runtime environment in watsonx.ai notebooks. This allows you to run Jupyter notebooks on your {{site.data.keyword.lakehouse_short}} native Spark engine. For more information, see [Working with watsonx.ai Notebooks](watsonxdata?topic=watsonxdata-spark-notebook-wxai).
+   * You can now select a {{site.data.keyword.lakehouse_short}} Spark engine as a runtime environment in watsonx.ai notebooks. This allows you to run Jupyter notebooks on your {{site.data.keyword.lakehouse_short}} native Spark engine. For more information, see [Working with watsonx.ai Notebooks](watsonxdata?topic=watsonxdata-run_nbwxai).
 
 
    * Presto administrators can now configure JMX metrics through API. Currently, Only alphanumeric characters are allowed for the key in JMX property names. For more information, see [Update presto engine](https://cloud.ibm.com/apidocs/watsonxdata#update-presto-engine){: external}.
@@ -119,7 +119,7 @@ Ingestion enhancements
 
 Introduction to Metadata Service (MDS)
 
-: Starting from the 2.1 release, {{site.data.keyword.lakehouse_short}} uses Metadata Service (MDS) instead of Hive Metastore (HMS). MDS is compatible with modern, open catalog APIs, Unity Catalog API, and Apache Iceberg REST Catalog API, enabling wider tool integration and increased flexibility. This new architecture delivers comparable performance while it continues to support Spark and Presto clients through the existing Thrift or HMS interface. For more information, see [Metadata Service (MDS) overview](watsonxdata?topic=watsonxdata-metadata_serv_ov).
+: Starting from the 2.1 release, {{site.data.keyword.lakehouse_short}} uses Metadata Service (MDS) instead of Hive Metastore (HMS). MDS is compatible with modern, open catalog APIs, Unity Catalog API, and Apache Iceberg REST Catalog API, enabling wider tool integration and increased flexibility. This new architecture delivers comparable performance while it continues to support Spark and Presto clients through the existing Thrift or HMS interface. For more information, see [Metadata Service (MDS) overview](watsonxdata?topic=watsonxdata-mdsov).
 
 It is recommended to use MDS in your test environments and then move to using it in production.
 {: note}
