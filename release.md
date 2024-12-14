@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-12-13"
+lastupdated: "2024-12-14"
 
 keywords: watsonxdata, release notes
 
@@ -59,7 +59,7 @@ Integration enhancements
       * BI tools
       * DataBuildTool (dbt)
 
-For more information, see [Data visualization in watsonx.data with BI tools](watsonxdata?topic=watsonxdata-abt_bi).
+   For more information, see [Connection information](watsonxdata?topic=watsonxdata-get_connection).
 
    * You can now integrate IBM Manta Data Lineage with {{site.data.keyword.lakehouse_short}} to capture and publish jobs, runs, and dataset events from Spark through the Manta UI. For more information, see [IBM Manta Data Lineage](watsonxdata?topic=watsonxdata-manta_overview).
 
