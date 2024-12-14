@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-23"
+lastupdated: "2024-12-14"
 
 keywords: watsonx.data, ikc, configuring, knowledgecatalog
 subcollection: watsonxdata
@@ -72,7 +72,7 @@ Both {{site.data.keyword.lakehouse_short}} and IKC must be present in the {{site
    |-------|-------------|
    | Name | Enter the name of the connection. |
    | Description | Enter a connection description. |
-   |Connect to IBM watsonx.data on Cloud Pak for Data| Do not select the checkbox. |
+   |Connect to IBM watsonx.data on IBM Software Hub| Do not select the checkbox. |
    | Hostname or IP address | Enter the {{site.data.keyword.lakehouse_short}} instance URL. For information about retrieving the Hostname, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection). |
    | Port | Enter the port number. For information about retrieving the Port, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection). |
    | Instance ID | Enter the instance ID. You can get the instance ID from the {{site.data.keyword.lakehouse_short}} instance home page (information icon). |
