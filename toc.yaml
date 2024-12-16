@@ -23,6 +23,7 @@ toc:
           - cas_proxy_ov.md
           - presto_overview.md
           - pcpp_ov.md
+          - spk_overview.md
           - api_custom_ov.md
           - mixed_case_overview.md
           - resource_grp_ov.md
