@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-30"
+lastupdated: "2024-12-17"
 
 keywords: lakehouse, watsonx data, privileges, roles, access
 
@@ -170,8 +170,8 @@ Formation admins (IAM) have the default admin access.
 | Resume Milvus service | ✓ |  |  |  |  |  |  |
 | Collection `CreateIndex` | ✓ | ✓ |  |  | ✓ | ✓ |  |
 | Collection `DropIndex` | ✓ | ✓ |  |  | ✓ | ✓ |  |
+| Collection `DescribeCollection` | ✓ | ✓ | ✓ |  | ✓ | ✓ |  |
 | Global `CreateCollection` | ✓ | ✓ |  |  | ✓ |  |  |
-| Global `DescribeCollection` | ✓ | ✓ | ✓ |  | ✓ | ✓ |  |
 | Global `ShowCollections` | ✓ | ✓ | ✓ |  | ✓ |  |  |
 | Global `CreateAlias` | ✓ | ✓ |  |  | ✓ |  |  |
 | Global `DropAlias` | ✓ | ✓ |  |  | ✓ |  |  |
