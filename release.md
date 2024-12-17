@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-12-16"
+lastupdated: "2024-12-17"
 
 keywords: watsonxdata, release notes
 
@@ -23,6 +23,8 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 ## 13 December 2024 - Version 2.1.0
 {: #lakehouse_12Dec21}
+{: release-note}
+
 
 {{site.data.keyword.lakehouse_short}} 2.1.0 version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.1.0 release is available in your region, contact IBM Support.
 If you are currently using {{site.data.keyword.lakehouse_short}} 2.0.0 version, you can refer to the documentation, [watsonx.data 2.0.0](https://ibm.ent.box.com/s/zgw7umzibl9akxgi7vm4yxs4vyp8io6g).
