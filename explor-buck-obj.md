@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-30"
+lastupdated: "2024-12-25"
 
 keywords: lakehouse, bucket, objects, watsonx.data
 
@@ -47,4 +47,7 @@ To explore the storage details and objects, use one of the following methods:
 ## Related API
 {: #explorebck_api}
 
-For information on related API, see [Get bucket](https://cloud.ibm.com/apidocs/watsonxdata#get-bucket-registration), [List bucket objects](https://cloud.ibm.com/apidocs/watsonxdata#list-bucket-objects), and [Get bucket object properties](https://cloud.ibm.com/apidocs/watsonxdata#get-bucket-object-properties).
+For information on related API, see
+* [Get bucket](https://cloud.ibm.com/apidocs/watsonxdata#get-bucket-registration)
+* [List bucket objects](https://cloud.ibm.com/apidocs/watsonxdata#list-bucket-objects)
+* [Get bucket object properties](https://cloud.ibm.com/apidocs/watsonxdata#get-bucket-object-properties)

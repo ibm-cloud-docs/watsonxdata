@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-30"
+lastupdated: "2024-12-25"
 
 keywords: lakehouse, bucket, tags, description, watsonx.data
 
@@ -53,4 +53,5 @@ To edit the display name, description and tags of a storage, use one of the foll
 ## Related API
 {: #editbck_api}
 
-For information on related API, see [Update bucket](https://cloud.ibm.com/apidocs/watsonxdata#update-bucket-registration).
+For information on related API, see
+* [Update bucket](https://cloud.ibm.com/apidocs/watsonxdata#update-bucket-registration)

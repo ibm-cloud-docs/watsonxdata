@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-01"
+lastupdated: "2024-12-25"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -76,4 +76,11 @@ To provision a Presto (Java) engine, complete the following steps.
 ## Related API
 {: #presto_api}
 
-For information on related API, see [Get list of Presto (Java) engines](https://cloud.ibm.com/apidocs/watsonxdata#list-presto-engines), [Create Presto (Java) engine](https://cloud.ibm.com/apidocs/watsonxdata#create-presto-engine), [Get Presto (Java) engine](https://cloud.ibm.com/apidocs/watsonxdata#get-presto-engine), [Pause a Presto (Java) engine](https://cloud.ibm.com/apidocs/watsonxdata#pause-presto-engine), [Restart a Presto (Java) engine](https://cloud.ibm.com/apidocs/watsonxdata#restart-presto-engine), [Resume a Presto (Java) engine](https://cloud.ibm.com/apidocs/watsonxdata#resume-presto-engine), and [Scale a Presto (Java) engine](https://cloud.ibm.com/apidocs/watsonxdata#scale-presto-engine).
+For information on related API, see
+* [Get list of Presto (Java) engines](https://cloud.ibm.com/apidocs/watsonxdata#list-presto-engines)
+* [Create Presto (Java) engine](https://cloud.ibm.com/apidocs/watsonxdata#create-presto-engine)
+* [Get Presto (Java) engine](https://cloud.ibm.com/apidocs/watsonxdata#get-presto-engine)
+* [Pause a Presto (Java) engine](https://cloud.ibm.com/apidocs/watsonxdata#pause-presto-engine)
+* [Restart a Presto (Java) engine](https://cloud.ibm.com/apidocs/watsonxdata#restart-presto-engine)
+* [Resume a Presto (Java) engine](https://cloud.ibm.com/apidocs/watsonxdata#resume-presto-engine)
+* [Scale a Presto (Java) engine](https://cloud.ibm.com/apidocs/watsonxdata#scale-presto-engine)

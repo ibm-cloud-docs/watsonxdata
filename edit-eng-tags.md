@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-01"
+lastupdated: "2024-12-25"
 
 keywords: lakehouse, engine, tags, description, watsonx.data
 
@@ -53,4 +53,6 @@ To edit the display name, description and tags of an engine, use one of the foll
 ## Related API
 {: #editengine_api}
 
-For information on related API, see [Update Presto (C++) engine](https://cloud.ibm.com/apidocs/watsonxdata#update-prestissimo-engine) and [Update Presto (Java) engine](https://cloud.ibm.com/apidocs/watsonxdata#update-presto-engine).
+For information on related API, see
+* [Update Presto (C++) engine](https://cloud.ibm.com/apidocs/watsonxdata#update-prestissimo-engine)
+* [Update Presto (Java) engine](https://cloud.ibm.com/apidocs/watsonxdata#update-presto-engine)

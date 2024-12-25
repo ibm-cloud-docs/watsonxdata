@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-30"
+lastupdated: "2024-12-25"
 
 keywords: lakehouse, database, tags, description, watsonx.data
 
@@ -49,4 +49,5 @@ You can write data to object store by using any engine and other external tools 
 ## Related API
 {: #iceberg_api}
 
-For information on related API, see [External Iceberg table registration](https://cloud.ibm.com/apidocs/watsonxdata-software#update-sync-catalog).
+For information on related API, see
+* [External Iceberg table registration](https://cloud.ibm.com/apidocs/watsonxdata-software#update-sync-catalog)

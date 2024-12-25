@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-30"
+lastupdated: "2024-12-25"
 
 keywords: lakehouse, bucket, watsonx.data
 
@@ -48,4 +48,7 @@ To delete a storage-catalog pair, complete the following steps:
 ## Related API
 {: #deletebck_api}
 
-For information on related API, see [Deregister bucket](https://cloud.ibm.com/apidocs/watsonxdata#delete-bucket-registration), [Activate bucket](https://cloud.ibm.com/apidocs/watsonxdata#create-activate-bucket), and [Deactivate bucket](https://cloud.ibm.com/apidocs/watsonxdata#delete-deactivate-bucket).
+For information on related API, see
+* [Deregister bucket](https://cloud.ibm.com/apidocs/watsonxdata#delete-bucket-registration)
+* [Activate bucket](https://cloud.ibm.com/apidocs/watsonxdata#create-activate-bucket)
+* [Deactivate bucket](https://cloud.ibm.com/apidocs/watsonxdata#delete-deactivate-bucket)

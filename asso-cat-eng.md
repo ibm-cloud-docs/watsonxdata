@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-01"
+lastupdated: "2024-12-25"
 
 keywords: lakehouse, engine, catalog, watsonx.data
 
@@ -51,4 +51,8 @@ To associate a catalog or catalogs with an engine, use one of the following meth
 ## Related API
 {: #assocat_api}
 
-For information on related API, see [Associate catalogs to a Presto (C++) engine](https://cloud.ibm.com/apidocs/watsonxdata#create-prestissimo-engine-catalogs), [Associate catalogs to Presto (Java) engine](https://cloud.ibm.com/apidocs/watsonxdata#create-presto-engine-catalogs), [Get Spark engine catalogs](https://cloud.ibm.com/apidocs/watsonxdata#list-spark-engine-catalogs) and [Associate catalogs to Spark engine](https://cloud.ibm.com/apidocs/watsonxdata#create-spark-engine-catalogs).
+For information on related API, see
+* [Associate catalogs to a Presto (C++) engine](https://cloud.ibm.com/apidocs/watsonxdata#create-prestissimo-engine-catalogs)
+* [Associate catalogs to Presto (Java) engine](https://cloud.ibm.com/apidocs/watsonxdata#create-presto-engine-catalogs)
+* [Get Spark engine catalogs](https://cloud.ibm.com/apidocs/watsonxdata#list-spark-engine-catalogs)
+* [Associate catalogs to Spark engine](https://cloud.ibm.com/apidocs/watsonxdata#create-spark-engine-catalogs)

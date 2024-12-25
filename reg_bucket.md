@@ -104,4 +104,6 @@ For more information on mixed-case feature flag behavior, supported SQL statemen
 ## Related API
 {: #storage_api}
 
-For information on related API, see [Get bucket registrations](https://cloud.ibm.com/apidocs/watsonxdata#list-bucket-registrations) and [Register bucket](https://cloud.ibm.com/apidocs/watsonxdata#create-bucket-registration).
+For information on related API, see
+* [Get bucket registrations](https://cloud.ibm.com/apidocs/watsonxdata#list-bucket-registrations)
+* [Register bucket](https://cloud.ibm.com/apidocs/watsonxdata#create-bucket-registration)

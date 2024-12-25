@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-30"
+lastupdated: "2024-12-25"
 
 keywords: lakehouse, semantic automation, {{site.data.keyword.lakehouse_short}}, data enrichment, register
 
@@ -70,4 +70,8 @@ To register and enable semantic layer in {{site.data.keyword.lakehouse_short}}, 
 ## Related API
 {: #salreg_api}
 
-For information on related API, see [Get SAL integrations](https://cloud.ibm.com/apidocs/watsonxdata#get-sal-integration),[Create SAL integration with wxd](https://cloud.ibm.com/apidocs/watsonxdata#create-sal-integration), [Delete SAL-wxd integration](https://cloud.ibm.com/apidocs/watsonxdata#delete-sal-integration), and [Update SAL-wxd integration](https://cloud.ibm.com/apidocs/watsonxdata#update-sal-integration).
+For information on related API, see
+* [Get SAL integrations](https://cloud.ibm.com/apidocs/watsonxdata#get-sal-integration)
+* [Create SAL integration with wxd](https://cloud.ibm.com/apidocs/watsonxdata#create-sal-integration)
+* [Delete SAL-wxd integration](https://cloud.ibm.com/apidocs/watsonxdata#delete-sal-integration)
+* [Update SAL-wxd integration](https://cloud.ibm.com/apidocs/watsonxdata#update-sal-integration)
