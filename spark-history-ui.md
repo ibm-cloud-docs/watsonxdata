@@ -44,4 +44,4 @@ For information on related API, see
 * [Get spark engine catalog](https://cloud.ibm.com/apidocs/watsonxdata#get-spark-engine-catalog)
 * [Get spark history server](https://cloud.ibm.com/apidocs/watsonxdata#get-spark-engine-history-server)
 * [Start spark history server](https://cloud.ibm.com/apidocs/watsonxdata#start-spark-engine-history-server)
-[Stop spark history server](https://cloud.ibm.com/apidocs/watsonxdata#delete-spark-engine-history-server)
+* [Stop spark history server](https://cloud.ibm.com/apidocs/watsonxdata#delete-spark-engine-history-server)
