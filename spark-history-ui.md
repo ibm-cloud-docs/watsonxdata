@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2024-11-30"
+lastupdated: "2024-12-28"
 keywords: watsonx.data, history, Spark, server
 
 subcollection: watsonxdata
@@ -40,4 +40,8 @@ The Spark history server is a web UI where you can view the status of running an
 ## Related API
 {: #sparkhistoryui_api}
 
-For information on related API, see [Get spark engine catalog](https://cloud.ibm.com/apidocs/watsonxdata#get-spark-engine-catalog), [Get spark history server](https://cloud.ibm.com/apidocs/watsonxdata#get-spark-engine-history-server), [Start spark history server](https://cloud.ibm.com/apidocs/watsonxdata#start-spark-engine-history-server), and [Stop spark history server](https://cloud.ibm.com/apidocs/watsonxdata#delete-spark-engine-history-server).
+For information on related API, see
+* [Get spark engine catalog](https://cloud.ibm.com/apidocs/watsonxdata#get-spark-engine-catalog)
+* [Get spark history server](https://cloud.ibm.com/apidocs/watsonxdata#get-spark-engine-history-server)
+* [Start spark history server](https://cloud.ibm.com/apidocs/watsonxdata#start-spark-engine-history-server)
+[Stop spark history server](https://cloud.ibm.com/apidocs/watsonxdata#delete-spark-engine-history-server)

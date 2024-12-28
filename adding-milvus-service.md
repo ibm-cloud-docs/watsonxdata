@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-02"
+lastupdated: "2024-12-28"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -70,4 +70,6 @@ Complete the following steps to add Milvus as a service in {{site.data.keyword.l
 ## Related API
 {: #addmilvus_api}
 
-For information on related API, see [Get list of milvus services](https://cloud.ibm.com/apidocs/watsonxdata#list-milvus-services) and [Create milvus service](https://cloud.ibm.com/apidocs/watsonxdata#create-milvus-service).
+For information on related API, see
+* [Get list of milvus services](https://cloud.ibm.com/apidocs/watsonxdata#list-milvus-services)
+* [Create milvus service](https://cloud.ibm.com/apidocs/watsonxdata#create-milvus-service)

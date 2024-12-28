@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-10"
+lastupdated: "2024-12-28"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -375,4 +375,10 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 ## Related API
 {: #ingestion_api}
 
-For information on related API, see [Get ingestion jobs](https://cloud.ibm.com/apidocs/watsonxdata#list-ingestion-jobs), [Create an ingestion job](https://cloud.ibm.com/apidocs/watsonxdata#create-ingestion-jobs), [Create an ingestion job for user local files](https://cloud.ibm.com/apidocs/watsonxdata#create-ingestion-jobs-local-files), [Get ingestion job](https://cloud.ibm.com/apidocs/watsonxdata#get-ingestion-job), [Delete an ingestion job](https://cloud.ibm.com/apidocs/watsonxdata#delete-ingestion-jobs), and [Generate a preview of source file(s)](https://cloud.ibm.com/apidocs/watsonxdata#create-preview-ingestion-file).
+For information on related API, see
+* [Get ingestion jobs](https://cloud.ibm.com/apidocs/watsonxdata#list-ingestion-jobs)
+* [Create an ingestion job](https://cloud.ibm.com/apidocs/watsonxdata#create-ingestion-jobs)
+* [Create an ingestion job for user local files](https://cloud.ibm.com/apidocs/watsonxdata#create-ingestion-jobs-local-files)
+* [Get ingestion job](https://cloud.ibm.com/apidocs/watsonxdata#get-ingestion-job)
+* [Delete an ingestion job](https://cloud.ibm.com/apidocs/watsonxdata#delete-ingestion-jobs)
+* [Generate a preview of source file(s)](https://cloud.ibm.com/apidocs/watsonxdata#create-preview-ingestion-file)

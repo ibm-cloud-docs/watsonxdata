@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-12-05"
+lastupdated: "2024-12-28"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -120,4 +120,7 @@ To add new properties to the `default_config` parameter or to update existing pr
 ## Related API
 {: #viewspark_api}
 
-For information on related API, see [List all spark engines](https://cloud.ibm.com/apidocs/watsonxdata#list-spark-engines), [Get spark engine](https://cloud.ibm.com/apidocs/watsonxdata#get-spark-engine), and [Update spark engine](https://cloud.ibm.com/apidocs/watsonxdata#update-spark-engine).
+For information on related API, see
+* [List all spark engines](https://cloud.ibm.com/apidocs/watsonxdata#list-spark-engines)
+* [Get spark engine](https://cloud.ibm.com/apidocs/watsonxdata#get-spark-engine)
+* [Update spark engine](https://cloud.ibm.com/apidocs/watsonxdata#update-spark-engine)
