@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-12-17"
+lastupdated: "2025-01-08"
 
 keywords: watsonxdata, release notes
 
@@ -20,6 +20,15 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.lakehouse_full}} that are grouped by date.
 {: shortdesc}
+
+## 10 January 2025 - Version 2.1 Hotfix
+{: #lakehouse_10janhf}
+{: release-note}
+
+Enterprise plan enhancement
+
+: If you use IBM Cloud CLI to provision an Enterprise plan instance in the Sydney region, you must use the plan name `lakehouse-enterprise-mcsp`. For more information, see [Provision an instance through CLI](watsonxdata?topic=watsonxdata-getting-started_1#create-by-cli).
+
 
 ## 13 December 2024 - Version 2.1.0
 {: #lakehouse_12Dec21}
