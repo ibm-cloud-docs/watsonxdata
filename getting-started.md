@@ -86,14 +86,14 @@ The access to provision IBM Cloud resources is governed by using [IAM access](ht
 3. Create a new formation.
 
     ```bash
-    ibmcloud resource service-instance-create <instance-name> lakehouse lakehouse-enterprise-<region> -g <resource-group> -p '{"datacenter": "<data-center>","cloud_type": "<cloud-type>"}'
+    ibmcloud resource service-instance-create <instance-name> lakehouse <plan-id> <region> -g <resource-group> -p '{"datacenter": "<data-center>","cloud_type": "<cloud-type>"}'
     ```
     {: codeblock}
 
     - `instance-name`: Name of the instance. For example, watsonx.data-abc.
     - `lakehouse`: {{site.data.keyword.lakehouse_short}} service
-    - `lakehouse-enterprise`: Plan ID
-    - `region`: The available regions are `eu-de`, `us-east`, `us-south`, `jp-tok`, and `eu-gb`, and `mcsp au-syd`.
+    - `plan-id` : The plan-id is `lakehouse-enterprise` for regions `eu-de`, `us-east`, `us-south`, `jp-tok`, and `eu-gb`. It must be `lakehouse-enterprise-mcsp` for `au-syd` region.
+    - `region`: The available regions are `eu-de`, `us-east`, `us-south`, `jp-tok`, `eu-gb`, and `au-syd`.
     - `resource-group`: Choose one of the available resource groups in your {{site.data.keyword.cloud_notm}} account. Most accounts have a `Default` group. For more information, see [Managing resource groups](https://cloud.ibm.com/docs/account?topic=account-rgs&interface=ui).
     - `datacenter`: Use one of the following. This parameter must match the region that you have selected.
        - `ibm:us-south:dal`
