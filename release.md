@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-01-08"
+lastupdated: "2025-01-09"
 
 keywords: watsonxdata, release notes
 
@@ -21,8 +21,8 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.lakehouse_full}} that are grouped by date.
 {: shortdesc}
 
-## 10 January 2025 - Version 2.1 Hotfix
-{: #lakehouse_10janhf}
+## 09 January 2025 - Version 2.1 Hotfix
+{: #lakehouse_09janhf}
 {: release-note}
 
 Enterprise plan enhancement
