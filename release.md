@@ -21,7 +21,7 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.lakehouse_full}} that are grouped by date.
 {: shortdesc}
 
-## 09 January 2025 - Version 2.1 Hotfix
+## 09 January 2025 - Version 2.1 Hotfix 1
 {: #lakehouse_09janhf}
 {: release-note}
 
