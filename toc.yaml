@@ -377,6 +377,7 @@ toc:
           topics:
             - ts_sal_gls_enrch.md
             - ts_optimizer.md
+            - ts_optimizer_iceberg_stats.md
             - ts_cs_issue.md
             - ts_ip_restrict_issue.md
             - topicgroup:
