@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-05"
+lastupdated: "2024-12-28"
 
 keywords: watsonxdata, sql queries, query workspace
 
@@ -74,4 +74,5 @@ To run the SQL queries, do the following steps:
 ## Related API
 {: #query_api}
 
-For information on related API, see [Execute a query](https://cloud.ibm.com/apidocs/watsonxdata-software#create-execute-query).
+For information on related API, see
+* [Execute a query](https://cloud.ibm.com/apidocs/watsonxdata-software#create-execute-query)

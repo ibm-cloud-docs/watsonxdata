@@ -51,4 +51,5 @@ Hadoop Distributed File System (HDFS) is a file system that manages large data s
 ## Related API
 {: #hdfs_api}
 
-For information on related API, see [Add/Create HDFS storage](https://cloud.ibm.com/apidocs/watsonxdata#create-hdfs-storage).
+For information on related API, see
+* [Add/Create HDFS storage](https://cloud.ibm.com/apidocs/watsonxdata#create-hdfs-storage)

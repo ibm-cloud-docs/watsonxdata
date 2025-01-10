@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2024-12-13"
+lastupdated: "2025-01-10"
 
 keywords: watsonxdata, release notes
 
@@ -21,8 +21,19 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.lakehouse_full}} that are grouped by date.
 {: shortdesc}
 
+## 10 January 2025 - Version 2.1 Hotfix 1
+{: #lakehouse_09janhf}
+{: release-note}
+
+Enterprise plan enhancement
+
+: If you use IBM Cloud CLI to provision an Enterprise plan instance in the Sydney region, you must use the plan name `lakehouse-enterprise-mcsp`. For more information, see [Provision an instance through CLI](watsonxdata?topic=watsonxdata-getting-started_1#create-by-cli).
+
+
 ## 13 December 2024 - Version 2.1.0
 {: #lakehouse_12Dec21}
+{: release-note}
+
 
 {{site.data.keyword.lakehouse_short}} 2.1.0 version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.1.0 release is available in your region, contact IBM Support.
 If you are currently using {{site.data.keyword.lakehouse_short}} 2.0.0 version, you can refer to the documentation, [watsonx.data 2.0.0](https://ibm.ent.box.com/s/zgw7umzibl9akxgi7vm4yxs4vyp8io6g).
@@ -59,7 +70,7 @@ Integration enhancements
       * BI tools
       * DataBuildTool (dbt)
 
-For more information, see [Data visualization in watsonx.data with BI tools](watsonxdata?topic=watsonxdata-abt_bi).
+   For more information, see [Connection information](watsonxdata?topic=watsonxdata-get_connection).
 
    * You can now integrate IBM Manta Data Lineage with {{site.data.keyword.lakehouse_short}} to capture and publish jobs, runs, and dataset events from Spark through the Manta UI. For more information, see [IBM Manta Data Lineage](watsonxdata?topic=watsonxdata-manta_overview).
 
@@ -71,7 +82,7 @@ Engine and service enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
 
-   * You can now use the Azure Data Lake Storage (ADLS) and Google Cloud Storage with Presto (C++) engine. You can now use Azure Data Lake Storage (ADLS) and Google Cloud Storage to store your data while submitting Spark applications. For more information, see [Azure Data Lake Storage](watsonxdata?topic=watsonxdata-adls_genblob_storage) and [Google Cloud Storage](watsonxdata?topic=watsonxdata-gcs_storage).
+   * You can now use the Azure Data Lake Storage Gen2 with AccessKey Authmode and Google Cloud Storage with Presto (C++) engine. You can now use Azure Data Lake Storage (ADLS) and Google Cloud Storage to store your data while submitting Spark applications. For more information, see [Azure Data Lake Storage](watsonxdata?topic=watsonxdata-adls_genblob_storage) and [Google Cloud Storage](watsonxdata?topic=watsonxdata-gcs_storage).
 
    * You can now use Google Cloud Storage (GCS) with Data Access Service (DAS) to store your data while submitting Spark applications. For more information, see [Submitting Spark application by using native Spark engine](watsonxdata?topic=watsonxdata-smbit_nsp_1).
 

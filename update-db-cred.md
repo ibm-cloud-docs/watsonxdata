@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-30"
+lastupdated: "2024-12-25"
 
 keywords: lakehouse, database, credentials, watsonx.data
 
@@ -48,4 +48,5 @@ To update the database credentials, use one of the following methods:
 ## Related API
 {: #updatedb_api}
 
-For information on related API, see [Update database](https://cloud.ibm.com/apidocs/watsonxdata#update-database).
+For information on related API, see
+* [Update database](https://cloud.ibm.com/apidocs/watsonxdata#update-database)

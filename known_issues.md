@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-13"
+lastupdated: "2024-12-16"
 
 keywords: lakehouse
 
@@ -70,13 +70,6 @@ The Hive catalog does not support CSV format for create table int type column. T
 
 * Create table in varchar.
 * Create view that cast the columns to their original data types.
-
-## Presto (C++) engine fails to support Service Principal authorization mode for Azure Data Lake Storage Gen2
-{: #known_issues16955}
-
-Presto (C++) engine fails to support Service Principal authorization mode for Azure Data Lake Storage Gen2.
-
-**Workaround:** Use ADLS Gen1 Access_Key method for ADLS Gen1 and ADLS Gen2 from the UI.
 
 ## Test connection may fail for IBM Db2 data source
 {: #known_issues29895}

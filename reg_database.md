@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-13"
+lastupdated: "2024-12-25"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -89,4 +89,7 @@ For more information on mixed-case feature flag behavior, supported SQL statemen
 ## Related API
 {: #datasource_api}
 
-For information on related API, see [Get databases](https://cloud.ibm.com/apidocs/watsonxdata#list-database-registrations), [Add/create database](https://cloud.ibm.com/apidocs/watsonxdata#create-database-registration), and [Get database](https://cloud.ibm.com/apidocs/watsonxdata#get-database).
+For information on related API, see
+* [Get databases](https://cloud.ibm.com/apidocs/watsonxdata#list-database-registrations)
+* [Add/create database](https://cloud.ibm.com/apidocs/watsonxdata#create-database-registration)
+* [Get database](https://cloud.ibm.com/apidocs/watsonxdata#get-database)

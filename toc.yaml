@@ -23,6 +23,7 @@ toc:
           - cas_proxy_ov.md
           - presto_overview.md
           - pcpp_ov.md
+          - spk_overview.md
           - api_custom_ov.md
           - mixed_case_overview.md
           - resource_grp_ov.md
@@ -159,6 +160,7 @@ toc:
           topics:
             - install_optimizer.md
             - sync_optimizer_meta.md
+            - optimizer_iceberg_stats.md
             - exec_inspect_optimizer.md
             - uninstall_optimizer.md
       - topicgroup:
@@ -375,6 +377,7 @@ toc:
           topics:
             - ts_sal_gls_enrch.md
             - ts_optimizer.md
+            - ts_optimizer_iceberg_stats.md
             - ts_cs_issue.md
             - ts_ip_restrict_issue.md
             - topicgroup:

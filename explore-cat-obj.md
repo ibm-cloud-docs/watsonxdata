@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-01"
+lastupdated: "2024-12-25"
 
 keywords: lakehouse, catalog, objects, watsonx.data
 
@@ -45,4 +45,8 @@ To explore the objects in a catalog, use one of the following methods:
 ## Related API
 {: #expcat_api}
 
-For information on related API, see [Get Presto (Java) engine catalogs](https://cloud.ibm.com/apidocs/watsonxdata#list-presto-engine-catalogs), [Get Presto (Java) engine catalog](https://cloud.ibm.com/apidocs/watsonxdata#get-presto-engine-catalog), [Get Presto (C++) engine catalogs](https://cloud.ibm.com/apidocs/watsonxdata#get-prestissimo-engine-catalog) and [Get Presto (C++) engine catalog](https://cloud.ibm.com/apidocs/watsonxdata#list-prestissimo-engine-catalogs).
+For information on related API, see
+* [Get Presto (Java) engine catalogs](https://cloud.ibm.com/apidocs/watsonxdata#list-presto-engine-catalogs)
+* [Get Presto (Java) engine catalog](https://cloud.ibm.com/apidocs/watsonxdata#get-presto-engine-catalog)
+* [Get Presto (C++) engine catalogs](https://cloud.ibm.com/apidocs/watsonxdata#get-prestissimo-engine-catalog)
+* [Get Presto (C++) engine catalog](https://cloud.ibm.com/apidocs/watsonxdata#list-prestissimo-engine-catalogs)

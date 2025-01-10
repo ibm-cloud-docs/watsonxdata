@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-01"
+lastupdated: "2024-12-28"
 
 keywords: watsonxdata, graphical representation, explain sql statement, sql editor, sql query
 
@@ -46,4 +46,8 @@ On the **Explain** window, click a stage to view the details on the side window.
 ## Related API
 {: #visualexp_api}
 
-For information on related API, see [Explain Presto (C++) query](https://cloud.ibm.com/apidocs/watsonxdata#run-prestissimo-explain-statement), [Explain Presto (C++) analyze](https://cloud.ibm.com/apidocs/watsonxdata#run-prestissimo-explain-analyze-statement), [Explain Presto (Java) query](https://cloud.ibm.com/apidocs/watsonxdata#run-explain-statement), and [Explain Presto (Java) analyze](https://cloud.ibm.com/apidocs/watsonxdata#run-explain-analyze-statement).
+For information on related API, see
+* [Explain Presto (C++) query](https://cloud.ibm.com/apidocs/watsonxdata#run-prestissimo-explain-statement)
+* [Explain Presto (C++) analyze](https://cloud.ibm.com/apidocs/watsonxdata#run-prestissimo-explain-analyze-statement)
+* [Explain Presto (Java) query](https://cloud.ibm.com/apidocs/watsonxdata#run-explain-statement)
+* [Explain Presto (Java) analyze](https://cloud.ibm.com/apidocs/watsonxdata#run-explain-analyze-statement)

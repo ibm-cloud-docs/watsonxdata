@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-02"
+lastupdated: "2024-12-28"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -104,4 +104,10 @@ You can perform the following operations after establishing a connection with a 
 ## Related API
 {: #connmilvus_api}
 
-For information on related API, see [Get Milvus service](https://cloud.ibm.com/apidocs/watsonxdata#get-milvus-service), [Delete Milvus service](https://cloud.ibm.com/apidocs/watsonxdata#delete-milvus-service), [Update Milvus service](https://cloud.ibm.com/apidocs/watsonxdata#update-milvus-service), [Get Milvus service databases](https://cloud.ibm.com/apidocs/watsonxdata#list-milvus-service-databases), [Get Milvus database collections](https://cloud.ibm.com/apidocs/watsonxdata#list-milvus-database-collections), and [Scale a Milvus service](https://cloud.ibm.com/apidocs/watsonxdata#create-milvus-service-scale).
+For information on related API, see
+* [Get Milvus service](https://cloud.ibm.com/apidocs/watsonxdata#get-milvus-service)
+* [Delete Milvus service](https://cloud.ibm.com/apidocs/watsonxdata#delete-milvus-service)
+* [Update Milvus service](https://cloud.ibm.com/apidocs/watsonxdata#update-milvus-service)
+* [Get Milvus service databases](https://cloud.ibm.com/apidocs/watsonxdata#list-milvus-service-databases)
+* [Get Milvus database collections](https://cloud.ibm.com/apidocs/watsonxdata#list-milvus-database-collections)
+* [Scale a Milvus service](https://cloud.ibm.com/apidocs/watsonxdata#create-milvus-service-scale)

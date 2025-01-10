@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-12-04"
+lastupdated: "2025-01-10"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -14,7 +14,7 @@ subcollection: watsonxdata
 # Submitting Spark application by using native Spark engine
 {: #smbit_nsp_1}
 
-This topic provides the procedure to submit a Spark application by using native Spark engine.
+This topic provides the procedure to submit a Spark application by using native Spark engine in {{site.data.keyword.lakehouse_short}} on IBM Cloud.
 
 ## Prerequisites
 {: #nsppk_preq_1}

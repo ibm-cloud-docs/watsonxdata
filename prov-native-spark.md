@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-11-06"
+lastupdated: "2024-12-25"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -28,7 +28,7 @@ subcollection: watsonxdata
 
 
 
-To provision a natice Spark engine, see [Provisioning a Spark engine]({{site.data.keyword.ref-spl_engine-link}}).
+To provision a native Spark engine, see [Provisioning a Spark engine]({{site.data.keyword.ref-spl_engine-link}}).
 
 
 

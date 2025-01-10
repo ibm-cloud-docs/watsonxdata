@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-16"
+lastupdated: "2025-01-08"
 
 keywords: lakehouse, watsonx data, provision, endpoint, resource
 subcollection: watsonxdata
@@ -25,7 +25,7 @@ This tutorial is a short introduction to using a {{site.data.keyword.lakehouse_s
 
 For more information about the developer edition of {{site.data.keyword.lakehouse_short}} and {{site.data.keyword.lakehouse_short}} on Red Hat OpenShift, see [{{site.data.keyword.lakehouse_full}}](https://www.ibm.com/docs/en/watsonxdata/1.1.x).
 
-For more information about using {{site.data.keyword.lakehouse_full}} on Cloud Pak for Data, see [{{site.data.keyword.lakehouse_full}} on Cloud Pak for Data](https://www.ibm.com/docs/en/cloud-paks/cp-data/4.8.x?topic=services-watsonxdata).
+For more information about using {{site.data.keyword.lakehouse_short}} on IBM Software Hub. For more information, see [{{site.data.keyword.lakehouse_full}} on IBM Software Hub](https://www.ibm.com/docs/SSNFH6_5.1.x)..
 
 ## Before you begin
 {: #prereqs}
@@ -86,13 +86,13 @@ The access to provision IBM Cloud resources is governed by using [IAM access](ht
 3. Create a new formation.
 
     ```bash
-    ibmcloud resource service-instance-create <instance-name> lakehouse lakehouse-enterprise <region> -g <resource-group> -p '{"datacenter": "<data-center>","cloud_type": "<cloud-type>"}'
+    ibmcloud resource service-instance-create <instance-name> lakehouse <plan-id> <region> -g <resource-group> -p '{"datacenter": "<data-center>","cloud_type": "<cloud-type>"}'
     ```
     {: codeblock}
 
     - `instance-name`: Name of the instance. For example, watsonx.data-abc.
     - `lakehouse`: {{site.data.keyword.lakehouse_short}} service
-    - `lakehouse-enterprise`: Plan ID
+    - `plan-id` : The plan-id is `lakehouse-enterprise` for regions `eu-de`, `us-east`, `us-south`, `jp-tok`, and `eu-gb`. It must be `lakehouse-enterprise-mcsp` for `au-syd` region.
     - `region`: The available regions are `eu-de`, `us-east`, `us-south`, `jp-tok`, `eu-gb`, and `au-syd`.
     - `resource-group`: Choose one of the available resource groups in your {{site.data.keyword.cloud_notm}} account. Most accounts have a `Default` group. For more information, see [Managing resource groups](https://cloud.ibm.com/docs/account?topic=account-rgs&interface=ui).
     - `datacenter`: Use one of the following. This parameter must match the region that you have selected.
@@ -109,10 +109,17 @@ The access to provision IBM Cloud resources is governed by using [IAM access](ht
          For availability and general information related to customer-owned account deployed instances, contact your IBM sales representative or [open a support ticket](https://cloud.ibm.com/unifiedsupport/cases/form).
          {: note}
 
-    Example:
+    Example 1 : Provision an enterprise plan in `us-south` region.
 
     ```bash
     ibmcloud resource service-instance-create watsonx.data-abc lakehouse lakehouse-enterprise us-south -g Default -p '{"datacenter": "ibm:us-south:dal","cloud_type": "ibm"}'
+    ```
+    {: codeblock}
+
+    Example 2 : Provision an enterprise plan in `Sydney` region.
+
+    ```bash
+    ibmcloud resource service-instance-create <instance-name> lakehouse lakehouse-enterprise-mcsp au-syd -g Default -p '{"datacenter": "ibm:au-syd:syd"}'
     ```
     {: codeblock}
 

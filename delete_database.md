@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-30"
+lastupdated: "2024-12-25"
 
 keywords: lakehouse, database, watsonx.data, catalog
 
@@ -43,4 +43,5 @@ To delete a database-catalog pair, complete the following steps:
 ## Related API
 {: #deletedb_api}
 
-For information on related API, see [Delete database](https://cloud.ibm.com/apidocs/watsonxdata#delete-database-catalog).
+For information on related API, see
+* [Delete database](https://cloud.ibm.com/apidocs/watsonxdata#delete-database-catalog)

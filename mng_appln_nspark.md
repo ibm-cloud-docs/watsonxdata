@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-11-30"
+lastupdated: "2024-12-28"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -46,4 +46,8 @@ You can stop only the applications that are in RUNNING state.
 ## Related API
 {: #managespark_api}
 
-For information on related API, see [List all applications in a spark engine](https://cloud.ibm.com/apidocs/watsonxdata#list-spark-engine-applications), [Submit engine applications](https://cloud.ibm.com/apidocs/watsonxdata#create-spark-engine-application), [Stop spark applications](https://cloud.ibm.com/apidocs/watsonxdata#delete-spark-engine-applications), and [Get spark application](https://cloud.ibm.com/apidocs/watsonxdata#get-spark-engine-application-status).
+For information on related API, see
+* [List all applications in a spark engine](https://cloud.ibm.com/apidocs/watsonxdata#list-spark-engine-applications)
+* [Submit engine applications](https://cloud.ibm.com/apidocs/watsonxdata#create-spark-engine-application)
+* [Stop spark applications](https://cloud.ibm.com/apidocs/watsonxdata#delete-spark-engine-applications)
+* [Get spark application](https://cloud.ibm.com/apidocs/watsonxdata#get-spark-engine-application-status)
