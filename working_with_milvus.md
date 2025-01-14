@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-27"
+lastupdated: "2025-01-14"
 
 keywords: lakehouse, milvus, watsonx.data
 subcollection: watsonxdata
@@ -62,6 +62,9 @@ Create an index before you conduct the Approximate Nearest Neighbor (ANN) search
 IBM officially supports the following indexes:
 
 Indexes that are not listed in this list might work, but are not validated by IBM.
+{: note}
+
+In Milvus, the `indexCoord.segment.minSegmentNumRowsToEnableIndex` property within the `milvus.yaml` configuration file is configured to allow a minimum number of rows required in a collection to trigger index creation. Currently, this value is set to 1024. Hence, if the collection contains less than 1024 rows, Milvus will not create any indexes.
 {: note}
 
 - HNSW
