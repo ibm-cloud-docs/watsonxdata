@@ -64,7 +64,7 @@ IBM officially supports the following indexes:
 Indexes that are not listed in this list might work, but are not validated by IBM.
 {: note}
 
-When the number of rows in a segment is less than 1024 and there is only 1 segment in the collection, Milvus will not create any indexes for that segment. Instead, it will default to using `brute-force` search for query operations. Once the row count in the segment exceeds this threshold, Milvus will automatically begin building the indexes.
+When the number of rows in a segment is less than 1024, Milvus will not create any indexes for that segment. Instead, it will default to using `brute-force` search for query operations. Once the row count in the segment exceeds this threshold, Milvus will automatically begin building the indexes.
 {: note}
 
 - HNSW
