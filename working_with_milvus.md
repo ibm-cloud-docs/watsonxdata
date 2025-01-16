@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-01-14"
+lastupdated: "2025-01-16"
 
 keywords: lakehouse, milvus, watsonx.data
 subcollection: watsonxdata
@@ -64,7 +64,7 @@ IBM officially supports the following indexes:
 Indexes that are not listed in this list might work, but are not validated by IBM.
 {: note}
 
-In Milvus, the `indexCoord.segment.minSegmentNumRowsToEnableIndex` property within the `milvus.yaml` configuration file is configured to allow a minimum number of rows required in a collection to trigger index creation. Currently, this value is set to 1024. Hence, if the collection contains less than 1024 rows, Milvus will not create any indexes.
+When the number of rows in a segment is less than 1024 and there is only 1 segment in the collection, Milvus will not create any indexes for that segment. Instead, it will default to using `brute-force` search for query operations. Once the row count in the segment exceeds this threshold, Milvus will automatically begin building the indexes.
 {: note}
 
 - HNSW
