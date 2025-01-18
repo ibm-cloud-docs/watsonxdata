@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-08-27"
+lastupdated: "2025-01-16"
 
 keywords: lakehouse, milvus, watsonx.data
 subcollection: watsonxdata
@@ -62,6 +62,9 @@ Create an index before you conduct the Approximate Nearest Neighbor (ANN) search
 IBM officially supports the following indexes:
 
 Indexes that are not listed in this list might work, but are not validated by IBM.
+{: note}
+
+When the number of rows in a segment is less than 1024, Milvus will not create any indexes for that segment. Instead, it will default to using `brute-force` search for query operations. Once the row count in the segment exceeds this threshold, Milvus will automatically begin building the indexes.
 {: note}
 
 - HNSW

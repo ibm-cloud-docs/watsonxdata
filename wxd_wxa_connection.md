@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-28"
+lastupdated: "2025-01-17"
 
 keywords: lakehouse, **Query Optimizer**, {{site.data.keyword.lakehouse_short}}
 
@@ -43,4 +43,10 @@ To connect watsonx Assistant to Milvus in {{site.data.keyword.lakehouse_short}},
    {: note}
 
 1. Set up your watsonx Assistant instance. For more information, see [Getting started with watsonx Assistant](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-getting-started).
-1. Set up a custom service in watsonx Assistant, For more information, see [Custom service integration setup](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-search-customsearch-add#setup-custom-service-server).
+1. Connect to Milvus service from watsonx Assistant by using one of the following options:
+   * Access Milvus service directly from watsonx Assistant. For more information, see [Milvus search integration setup](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-search-milvus-add#setup-milvus).
+   * Set up a custom service in watsonx Assistant. For more information, see [Custom service integration setup](https://cloud.ibm.com/docs/watson-assistant?topic=watson-assistant-search-customsearch-add#setup-custom-service-server). You can use the Custom 	 Service option for advanced capabilities, such as:
+
+      * Flexibility to use any Milvus that is supported.
+      * Multi-vector hybrid search.
+      * Reranking.
