@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-01-10"
+lastupdated: "2025-01-24"
 
 keywords: watsonxdata, release notes
 
@@ -20,6 +20,14 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.lakehouse_full}} that are grouped by date.
 {: shortdesc}
+
+## 27 January 2025 - Version 2.1 Hotfix 2
+{: #lakehouse_09janhf}
+{: release-note}
+
+Lite plan enhancement
+
+: watsonx.data Lite plan is now available in Sydney location. For more information to provision a Lite plan instance in Sydney region, see [Provisioning Lite plan](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1).
 
 ## 10 January 2025 - Version 2.1 Hotfix 1
 {: #lakehouse_09janhf}
