@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-01-24"
+lastupdated: "2025-01-27"
 
 keywords: watsonxdata, release notes
 
@@ -27,7 +27,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 Lite plan enhancement
 
-: {{site.data.keyword.lakehouse_full}} Lite plan is now available in the Sydney region. For more information to provision a Lite plan instance in Sydney region, see [Provisioning Lite plan](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1).
+: {{site.data.keyword.lakehouse_full}} Lite plan is now available in the Sydney region. For more information to provision a Lite plan instance in Sydney region, see [Provisioning Lite plan](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1#create-lite-cli).
 
 ## 10 January 2025 - Version 2.1 Hotfix 1
 {: #lakehouse_09janhf}
