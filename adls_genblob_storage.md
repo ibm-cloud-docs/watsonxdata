@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-28"
+lastupdated: "2025-01-30"
 
 keywords: lakehouse, storage, catalog, watsonx.data
 
@@ -59,9 +59,7 @@ If you select **Azure Data Lake Storage Gen1 Blob** from the **Type** drop-down,
  | Container name | Enter the container name. |
  | Storage account name | Enter the Storage account name. |
  | Endpoint | The Endpoint URL is auto-generated. |
- | Application id | Enter the Application id. |
- | Directory id | Enter the directory id.    |
- | Secret key | Enter the secret key.  |
+
  | Connection Status | Click the Test connection link to test the storage connection. If the connection is successful, a success message appears.|
  | Associate catalog | Add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within. |
  | Activate now| Select the checkbox to activate the storage immediately or activate it later. |
