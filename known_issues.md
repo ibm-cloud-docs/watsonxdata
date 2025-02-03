@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-01-27"
+lastupdated: "2025-02-03"
 
 keywords: lakehouse
 
@@ -35,9 +35,6 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
-
-## ADLS and GCS are currently not supported as target locations for data ingestion within the platform.
-{: #known_issues20054}
 
 ## WHERE/IN/DROP/RENAME clause in Hive tables with more than one partition does not work if partition type is of type VARCHAR.
 {: #known_issues20069}
