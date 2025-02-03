@@ -62,6 +62,8 @@ Expand the Tableu section to see the following details:
 * Password: Enter the API key for authentication.
 * SSL certificate
 
+
+
 You can also click the link to view BI connection documentation.
 
 ### Power BI
