@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-01-29"
+lastupdated: "2025-02-03"
 
 keywords: watsonxdata, release notes
 
@@ -83,8 +83,6 @@ Integration enhancements
    * You can now integrate IBM Manta Data Lineage with {{site.data.keyword.lakehouse_short}} to capture and publish jobs, runs, and dataset events from Spark through the Manta UI. For more information, see [IBM Manta Data Lineage](watsonxdata?topic=watsonxdata-manta_overview).
 
    * You can now use all of the Presto data types with the dbt adapter for Presto. Specify the data type as column_types in the dbt_project.yml. For more information, see [Installing and using dbt-watsonx-presto](watsonxdata?topic=watsonxdata-dbt_watsonx_presto_inst).
-
-   * You can now use the Birdwatcher debugging tool to check the state of Milvus system. For more information, see [Birdwatcher debugging tool](watsonxdata?topic=watsonxdata-bd_dbgtool).
 
 Engine and service enhancements
 

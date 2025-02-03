@@ -242,7 +242,6 @@ toc:
             - working_with_milvus.md
             - pause-resume-milvus.md
             - wxd_wxai_milvus_conn.md
-            - milvus_birdwatcher.md
             - wxd_wxa_connection.md
       - topicgroup:
           label: Semantic automation for data enrichment
