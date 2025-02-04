@@ -323,7 +323,6 @@ toc:
       - cluster_limits.md
       - connection_info.md
       - presto_exp_jmx.md
-      - milvus_exp_mtrcs_list.md
       - iceberg_unity_cat_api.md
       - link:
             label: Presto SQL statements
