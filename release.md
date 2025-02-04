@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-02-03"
+lastupdated: "2025-02-04"
 
 keywords: watsonxdata, release notes
 
@@ -21,8 +21,8 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.lakehouse_full}} that are grouped by date.
 {: shortdesc}
 
-## 29 January 2025 - Version 2.1 Hotfix 2
-{: #lakehouse_27janhf}
+## 04 February 2025 - Version 2.1 Hotfix 2
+{: #lakehouse_04febhf}
 {: release-note}
 
 Lite plan enhancement
