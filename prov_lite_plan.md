@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-22"
+lastupdated: "2025-01-27"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -123,13 +123,13 @@ Perform the following steps to provision a Lite plan instance by using CLI.
 3. Create a new formation.
 
     ```bash
-    ibmcloud resource service-instance-create <instance-name> lakehouse lakehouse-lite <region> -g <resource-group> -p '{"datacenter": "<data-center>","cloud_type": "<cloud-type>","use_case": "<use_case_template>"}'
+    ibmcloud resource service-instance-create <instance-name> lakehouse <plan-id> <region> -g <resource-group> -p '{"datacenter": "<data-center>","cloud_type": "<cloud-type>","use_case": "<use_case_template>"}'
     ```
     {: codeblock}
 
     - `instance-name`: Name of the instance. For example, watsonx.data-abc.
-    - `lakehouse`: {{site.data.keyword.lakehouse_short}} service
-    - `lakehouse-lite`: Plan ID
+    - `lakehouse`: {{site.data.keyword.lakehouse_short}} service.
+    - `plan-id` : The plan-id is `lakehouse-lite` for regions `eu-de`, `us-east`, `us-south`, `jp-tok`, and `eu-gb`. It must be `lakehouse-lite-mcsp` for `au-syd` region.
     - `region`: The available regions are `eu-de`, `us-south`, `jp-tok`, `eu-gb`, and `au-syd`.
     - `resource-group`: Choose one of the available resource groups in your {{site.data.keyword.cloud_notm}} account. Most accounts have a `Default` group. For more information, see [Managing resource groups](https://cloud.ibm.com/docs/account?topic=account-rgs&interface=ui).
     - `datacenter`: Use one of the following. This parameter must match the region that you have selected.
@@ -146,10 +146,17 @@ Perform the following steps to provision a Lite plan instance by using CLI.
          For availability and general information related to customer-owned account deployed instances, contact your IBM sales representative or [open a support ticket](https://cloud.ibm.com/unifiedsupport/cases/form).
          {: note}
 
-    Example:
+    Example 1 : Provision a Lite plan in `us-south` region.
 
     ```bash
     ibmcloud resource service-instance-create watsonx.data-abc lakehouse lakehouse-lite us-south -g Default -p '{"datacenter": "ibm:us-east:wdc", "use_case": "workloads"}'
+    ```
+    {: codeblock}
+
+    Example 2 : Provision a Lite plan in `Sydney` region.
+
+    ```bash
+    ibmcloud resource service-instance-create <instance-name> lakehouse lakehouse-lite-mcsp au-syd -g <resource-group> -p '{"datacenter": "ibm:au-syd:syd"}'
     ```
     {: codeblock}
 

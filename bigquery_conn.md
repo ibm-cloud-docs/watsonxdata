@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-13"
+lastupdated: "2025-01-28"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -39,7 +39,7 @@ BigQuery data source allows querying the data that is stored in BigQuery. This c
  | Display name    | Enter the data source name to be displayed on the screen. |
  | Project id            | Enter the Project id.  |
  | Authentication type             | Select the type of authentication: \n i. JSON key (Base64 encoded) : Enter the JSON key (Base64 encoded). \n ii. JSON key (JSON) : Enter the JSON key.|
- | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your data source. |
+ | Catalog name | Enter the name of the catalog. |
  | Create | Click Create to create the data source. |
  {: caption="Register data source" caption-side="bottom"}
 

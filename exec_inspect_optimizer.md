@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-10"
+lastupdated: "2025-01-26"
 
 keywords: lakehouse, hms, {{site.data.keyword.lakehouse_short}}, hive, metastore
 
@@ -67,7 +67,7 @@ Running Presto (C++) queries:
 
    You must use either fully qualified name (3 part name such as `<catalog.schema.table>`) or 2 part name with the USE statement to qualify the catalog and schema.
 
-   Examples: 3 part name: `select * from catalog.schema.table;`
+   Examples: 3 part name: `select * from "catalog".schema.table;`
 
    2 part name: `use "catalog".schema; followed by select * from schema.table;`
 

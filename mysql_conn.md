@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-04"
+lastupdated: "2025-02-04"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -44,7 +44,7 @@ MySQL is an open source relational database management system.
  | Password           | Enter the password.  |
  | Port is SSL enabled   | Use the toggle switch to enable or disable SSL connection. If enabled, \n i. The Upload SSL certificate (.pem, .crt, .cert or .cer) link is enabled. \n ii. Click the Upload SSL certificate (.pem, .crt, .cert or .cer) link. \n iii. Browse the SSL certificate and upload.|
  | Validate certificate           | Use the toggle switch to validate whether the SSL certificate that is returned by the host is trusted or not.  |
- | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your data source. |
+ | Catalog name | Enter the name of the catalog.|
  | Create | Click Create to create the data source. |
  {: caption="Register data source" caption-side="bottom"}
 

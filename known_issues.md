@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-16"
+lastupdated: "2025-02-04"
 
 keywords: lakehouse
 
@@ -34,8 +34,9 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
-## ADLS and GCS are currently not supported as target locations for data ingestion within the platform.
-{: #known_issues20054}
+
+
+
 
 ## WHERE/IN/DROP/RENAME clause in Hive tables with more than one partition does not work if partition type is of type VARCHAR.
 {: #known_issues20069}
@@ -120,7 +121,7 @@ Iceberg: Iceberg does support the time data type.
 
 The following special characters are not supported while creating schemas and tables:
 
-Schemas (Hive and Iceberg):  `{`, `[`, `(`, `)`, and `/`.
+Schemas (Hive and Iceberg): `{`, `[`, `(`, `)`, and `/`.
 
 Tables (Hive): `{`, `(`, `[`, `)`, and `/`. (Creation of tables within a schema name that starts with the special character `@` shall result in an error).
 

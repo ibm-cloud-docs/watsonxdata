@@ -62,6 +62,8 @@ Expand the Tableu section to see the following details:
 * Password: Enter the API key for authentication.
 * SSL certificate
 
+
+
 You can also click the link to view BI connection documentation.
 
 ### Power BI
@@ -147,6 +149,8 @@ Expand the VS Code connection configuration to view the following details:
 
 From the **Data Build Tool (DBT)** tab, you can view the following details:
 
+
+
 ### Spark engines
 {: #get_connection_dbt_spk}
 
@@ -169,6 +173,7 @@ Expand the associated query server to view the following details:
 * API key: Enter your API key here. For information about generating API key, see [Creating an API key in the console](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key).
 
 You can copy the profile details by clicking **Copy profile snippet** or export the details as a `yaml` file by clicking **Export profile snippet**.
+
 
 ## Instance details
 {: #get_connection_inst}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-01-10"
+lastupdated: "2025-02-04"
 
 keywords: watsonxdata, release notes
 
@@ -20,6 +20,14 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.lakehouse_full}} that are grouped by date.
 {: shortdesc}
+
+## 04 February 2025 - Version 2.1 Hotfix 2
+{: #lakehouse_04febhf}
+{: release-note}
+
+Lite plan enhancement
+
+: {{site.data.keyword.lakehouse_full}} Lite plan is now available in the Sydney region. For more information to provision a Lite plan instance in Sydney region, see [Provisioning Lite plan](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1#create-lite-cli).
 
 ## 10 January 2025 - Version 2.1 Hotfix 1
 {: #lakehouse_09janhf}
@@ -75,8 +83,6 @@ Integration enhancements
    * You can now integrate IBM Manta Data Lineage with {{site.data.keyword.lakehouse_short}} to capture and publish jobs, runs, and dataset events from Spark through the Manta UI. For more information, see [IBM Manta Data Lineage](watsonxdata?topic=watsonxdata-manta_overview).
 
    * You can now use all of the Presto data types with the dbt adapter for Presto. Specify the data type as column_types in the dbt_project.yml. For more information, see [Installing and using dbt-watsonx-presto](watsonxdata?topic=watsonxdata-dbt_watsonx_presto_inst).
-
-   * You can now use the Birdwatcher debugging tool to check the state of Milvus system. For more information, see [Birdwatcher debugging tool](watsonxdata?topic=watsonxdata-bd_dbgtool).
 
 Engine and service enhancements
 

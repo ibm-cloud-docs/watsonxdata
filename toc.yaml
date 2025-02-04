@@ -242,7 +242,6 @@ toc:
             - working_with_milvus.md
             - pause-resume-milvus.md
             - wxd_wxai_milvus_conn.md
-            - milvus_birdwatcher.md
             - wxd_wxa_connection.md
       - topicgroup:
           label: Semantic automation for data enrichment
@@ -324,7 +323,6 @@ toc:
       - cluster_limits.md
       - connection_info.md
       - presto_exp_jmx.md
-      - milvus_exp_mtrcs_list.md
       - iceberg_unity_cat_api.md
       - link:
             label: Presto SQL statements
