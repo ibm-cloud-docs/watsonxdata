@@ -42,9 +42,9 @@ Configure the following details for HANA data source:
  | Port             | Enter the port number. |
  | Username           | Enter the username.  |
  | Password           | Enter the password.  |
- | SSL connection   | Use the toggle switch to enable or disable SSL connection. If enabled, \n i. The Upload SSL certificate (.pem, .crt, .cert or .cer) link is enabled. \n ii. Click the Upload SSL certificate (.pem, .crt, .cert or .cer) link. \n iii. Browse the SSL certificate and upload.|
+ | Port is SSL enabled   | Use the toggle switch to enable or disable SSL connection. If enabled, \n i. The Upload SSL certificate (.pem, .crt, .cert or .cer) link is enabled. \n ii. Click the Upload SSL certificate (.pem, .crt, .cert or .cer) link. \n iii. Browse the SSL certificate and upload.|
  | Validate certificate     | Use the toggle switch to validate whether the SSL certificate that the host returns is trusted or not.|
- | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your database. |
+ | Catalog name | Enter the name of the catalog.|
  | Create | Click Create to create the database. |
  {: caption="Register data source" caption-side="bottom"}
 
