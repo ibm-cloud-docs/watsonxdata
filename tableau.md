@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-02-04"
+lastupdated: "2025-02-06"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -17,6 +17,7 @@ subcollection: watsonxdata
 This topic provides you with the procedure to connect Tableau to Presto.
 
 When you connect to the Presto engine in watsonx.data, you can access the various connected data sources and build compelling and interactive data visualizations.
+
 
 
 ## Pre-requisites
@@ -47,7 +48,7 @@ Tableau uses Lightweight Directory Access Protocol (LDAP) authentication mechani
 * Username: Username is `ibmlhapikey_<watsonx.datauser_id>`.
 * Password: The API key of the watosnx.data user.
 
-## Connecting to Presto
+## Connecting to Presto by configuring details manually
 {: #tableau_prs}
 
 
@@ -63,10 +64,10 @@ Tableau uses Lightweight Directory Access Protocol (LDAP) authentication mechani
     * Username : The username is `ibmlhapikey_<watsonx.datauser_id>`. For example, `ibmlhapikey_joe@ibm.com`.
     * Password : The API key of the watosnx.data user. For more information about retrieving the API key, see [Generating the API key]({{site.data.keyword.ref-con-presto-serv-link}}).
 
-
-
 4.	In the **Initial SQL** tab (Optional), specify the initial SQL query that you want to run when a connection is made to Presto.
 5.	Click **Sign In**. The **Data Source** page opens when connection is successful.
+
+
 
 ## Performing data analysis
 {: #tableau_analys}
