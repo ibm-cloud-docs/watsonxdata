@@ -58,7 +58,7 @@ To add a Spark engine, complete the following steps.
 
       | Field | Description |
       | --- | --- |
-      | Default Spark version | Select the Spark runtime version that must be considered for processing the applications. |
+      | Default Spark version | Select the Spark runtime version that must be considered for processing the applications. For supported Spark versions, see [Supported Spark version](watsonxdata?topic=watsonxdata-wxd-ae_limits#cpu-mem-spk_versn). |
       | Engine home bucket | Select the registered Cloud Object Storage bucket from the list to store the Spark events and logs that are generated while running spark applications. \n [Note]{: tag-purple} Make sure you do not select the IBM-managed bucket as Spark Engine home. If you select an IBM-managed bucket, you cannot access it to view the logs. \n For more information, see [Before you begin]({{site.data.keyword.ref-prov_nspark-link}}#prereq_nspark_prov).|
       |Reserve capacity| 1. Select the **Node Type**. \n 2. Enter the number of nodes in the **No of nodes** field.     |
       |Associated catalogs (optional)| Select the catalogs that must be associated with the engine.   |
