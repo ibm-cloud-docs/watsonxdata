@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-25"
+lastupdated: "2025-02-07"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -31,7 +31,7 @@ subcollection: watsonxdata
 {{site.data.keyword.lakehouse_full}} allows you to add Spark engines. You can either provision a native Spark engine or register an external Spark engine. Native Spark engine is a compute engine that resides within IBM® watsonx.data. External Spark engines are engines that exist in a different environment from where watsonx.data is available.
 {: shortdesc}
 
-Support for Spark 3.3 runtime is deprecated and the default version will be changed to Spark 3.4 runtime. To ensure a seamless experience and to leverage the latest features and improvements, switch to Spark 3.4.
+Support for Spark 3.3 runtime is deprecated and the default version will be changed to Spark 3.4 runtime. To ensure a seamless experience and to leverage the latest features and improvements, switch to Spark 3.4. For other supported Spark versions, see [Supported Spark version](watsonxdata?topic=watsonxdata-wxd-ae_limits#cpu-mem-spk_versn).
 {: important}
 
 To add a Spark engine, complete the following steps.

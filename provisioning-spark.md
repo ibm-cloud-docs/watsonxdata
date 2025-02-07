@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-11-06"
+lastupdated: "2025-02-07"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -43,7 +43,7 @@ To create an {{site.data.keyword.iae_full_notm}} instance:
 1. Choose the location that is closer to the region where you have provisioned {{site.data.keyword.lakehouse_short}} for deploying the service instance. Currently, **us-south** and **eu-de** are the only supported regions.
 1. Select a plan. Currently, **Standard Serverless for Apache Spark** is the only supported serverless plan.
 1. Configure the instance by entering a name of your choice, selecting a resource group and adding tags.
-1. Select latest runtime version available (for example 3.4).
+1. Select latest runtime version available (for example 3.4). For other supported Spark versions, see [Supported Spark version](watsonxdata?topic=watsonxdata-wxd-ae_limits#cpu-mem-spk_versn).
 1. Select the {{site.data.keyword.cloud_notm}} Object Storage instance from your account that you want to use as the {{site.data.keyword.iae_short}} **instance home** to store instance-related data.
 1. Click **Create** to provision the service instance in the background.
 
