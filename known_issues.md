@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-02-04"
+lastupdated: "2025-02-10"
 
 keywords: lakehouse
 
@@ -126,6 +126,8 @@ Schemas (Hive and Iceberg): `{`, `[`, `(`, `)`, and `/`.
 Tables (Hive): `{`, `(`, `[`, `)`, and `/`. (Creation of tables within a schema name that starts with the special character `@` shall result in an error).
 
 Tables (Iceberg): `$`, `@`, `{`, `[`, `)`, `(`, and `/`.
+
+
 
 ## `ALTER TABLE` operation fails in Spark job submission
 {: #known_issues13596}
@@ -485,11 +487,6 @@ collection.query(expr='', fields=['count(*)'])
 {: #known_issues1.0.0_6}
 
 Presto describes a view in a mapped database as a TABLE rather than a VIEW. This is apparent to JDBC program connecting to the Presto engine.
-
-## Issue: Using special characters in schema, table, or column names.
-{: #known_issues1.0.0_4}
-
-It is recommended to not use special characters such as question mark (?), hyphen (-), or asterisk (*) in table, column names and schema names. Though these special characters are supported and tables, columns and schemas can be created, using these special characters might cause issues when running the `INSERT` command.
 
 ## Issue: User is not removed from the catalog access control on revoking data access.
 {: #known_issues1.0.0_3}
