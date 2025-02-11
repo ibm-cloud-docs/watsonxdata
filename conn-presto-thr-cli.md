@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-15"
+lastupdated: "2025-02-11"
 
 keywords: lakehouse, watsonx.data, presto, cli
 
@@ -88,7 +88,7 @@ It is recommended to use IAM token for stress workload.
    ```
    {: codeblock}
 
-## Connecting to Presto engine using Presto CLI (Remote)
+## Connecting to Presto engine through Presto CLI (Remote) by using user name and password
 {: #conn-to-prestoeng}
 
 1. Download the Presto executable `jar` from [https://prestodb.io/docs/current/installation/cli.html](https://prestodb.io/docs/current/installation/cli.html)
@@ -132,6 +132,8 @@ It is recommended to use IAM token for stress workload.
    (5 rows)
    ```
    {: codeblock}
+
+
 
 ## Connecting to Presto engine using Java/JDBC
 {: #conn-to-prestjava}
