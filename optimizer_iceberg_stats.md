@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-01-06"
+lastupdated: "2025-02-11"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -60,8 +60,11 @@ This topic gives the details to gather enhanced statistics for Iceberg tables th
 
    `<TABLE_NAME>`: The name of table in uppercase. It is recommended to gather statistics for each table individually.
 
-   `<PRESTO_HOST>`: The hostname of Presto engine of which the statistics is collected from. You can find the connection details of Presto engine by clicking on the engine in the Infrastructure manager page of watsonx.data.
+   `<PRESTO_HOST>`: The hostname of Presto engine of which the statistics is collected from. You can find the connection details of Presto engine by clicking on the engine in the Infrastructure manager page of {{site.data.keyword.lakehouse_short}}.
 
    `<PRESTO_USER>`: The Presto username that is used to run the statistics collection. Username can be `ibmlhapikey` or `ibmlhtoken`. It is recommended to use `ibmlhapikey`.
 
    `<PRESTO_PWD>`: The Presto password that is used to run the statistics collection. Password can be a base64 API key or token corresponding to the username.
+
+   This sync command might experience timeouts. However, the underlying sync process usually completes successfully within a short period. Verify the sync operation in a few minutes by following the procedure in [Verifying table sync in watsonx.data](watsonxdata?topic=watsonxdata-sync_optimizer_verify).
+   {: note}
