@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-02-11"
+lastupdated: "2025-02-13"
 
 keywords: lakehouse, MDS, {{site.data.keyword.lakehouse_short}}, hive, metastore
 
@@ -71,13 +71,13 @@ To sync tables from {{site.data.keyword.lakehouse_short}}, the following items a
 4. Run the following command to register {{site.data.keyword.lakehouse_short}} catalog with **Query Optimizer**:
 
    ```bash
-   ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.REGISTER_EXT_METASTORE('<CATALOG_NAME>','type=watsonx-data,uri=thrift://$LOCAL_MDS_URL,use.SSL=true,auth.mode=PLAIN,auth.plain.credentials=(MDS credentials):<apikey>', ?, ?)';
+   ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.REGISTER_EXT_METASTORE('<CATALOG_NAME>','type=watsonx-data,uri=thrift://<Metastore_Thrift_endpoint>,use.SSL=true,auth.mode=PLAIN,auth.plain.credentials=<Username>:<apikey>', ?, ?)';
    ```
    {: codeblock}
 
-   * Catalog name - as shown on the Infrastructure Manager page (case-sensitive).
-   * MDS thrift uri - As obtained from the Infrastructure Manager page (Click the catalog).
-   * MDS Credentials - Must be created on the {{site.data.keyword.lakehouse_short}}. See [Connecting to watsonx.data on IBM Cloud or Amazon Web Services](https://www.ibm.com/docs/en/db2woc?topic=integration-connecting-watsonxdata-cloud-amazon-web-services).
+   * `<CATALOG_NAME>` - as shown on the Infrastructure Manager page (case-sensitive).
+   * `<Metastore_Thrift_endpoint>` - As obtained from the Infrastructure Manager page (Click the catalog).
+   * MDS Credentials (`<Username>`:`<apikey>`) - Must be created on the {{site.data.keyword.lakehouse_short}}. See [Connecting to watsonx.data on IBM Cloud or Amazon Web Services](https://www.ibm.com/docs/en/db2woc?topic=integration-connecting-watsonxdata-cloud-amazon-web-services).
 
    Registering the catalog with the **Query Optimizer** allows watsonx.data tables to be synced into the **Query Optimizer**, enabling query optimization. This needs to be run one time for each catalog.
    {: note}
