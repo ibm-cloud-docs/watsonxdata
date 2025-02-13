@@ -139,3 +139,4 @@ The owner can see the unmasked data. To verify whether masking is functioning co
 - Smallint
 - Timestamp
 - Tinyint
+- Decimal
