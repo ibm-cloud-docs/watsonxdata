@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-22"
+lastupdated: "2025-02-13"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -16,6 +16,8 @@ subcollection: watsonxdata
 
 Data Access Service (DAS) proxy in {{site.data.keyword.lakehouse_short}} provides a unified way to access object storage, govern external engines, and audit data access. All of these are accomplished without exposing credentials or requiring complex modifications to engines, which are not controlled by {{site.data.keyword.lakehouse_short}}.
 Currently, DAS signature and DAS proxy features are available in {{site.data.keyword.lakehouse_short}}.
+
+
 
 DAS signature is available only internally for Data Stage and IBM Spark. IBM Spark by default connects to the watsonx.data object storage through DAS signature.
 {: note}
