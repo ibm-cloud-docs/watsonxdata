@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-02-05"
+lastupdated: "2025-02-13"
 
 keywords: watsonxdata, release notes
 
@@ -81,6 +81,11 @@ Integration enhancements
 
       * BI tools
       * DataBuildTool (dbt)
+
+   * Starting with watsonx.data version 2.1, you can only integrate with one of the following policy engines:
+
+      * Apache Ranger
+      * IBM Knowledge Catalog (IKC)
 
    For more information, see [Connection information](watsonxdata?topic=watsonxdata-get_connection).
 
