@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2025-02-13"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -41,6 +41,9 @@ Ensure you have the following details:
 * Apache Ranger is provisioned.
 * The Presto (Java) JDBC URL and credentials in watsonx.data.
 * Administrator must add users and groups manually.
+* You can only integrate with one of the following policy engines starting with watsonx.data version 2.1.
+   * Apache Ranger
+   * IBM Knowledge Catalog
 
 
 ## Procedure
