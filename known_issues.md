@@ -299,13 +299,6 @@ DAS does not currently support default MinIO buckets or object storage that use 
 
 Currently, it is not possible to access buckets stored in the default MinIO object storages created during instance provisioning using an S3 proxy functionality.
 
-## Presto SQL operations with Spark 3.3 and Iceberg timestamp data
-{: #known_issues12328}
-
-When data containing `timestampz` is ingested using Spark, Presto queries on these tables fail with the following error Iceberg column type `timestamptz` is not supported.
-
-**Workaround:** To ensure interoperability between Spark and Presto for datasets containing `timestampz`, you must use Spark 3.4 applications with the `configuration spark.sql.timestampType` set to `TIMESTAMP_NTZ`.
-
 ## Using ID as a column name in Cassandra `CREATE TABLE`
 {: #known_issues12069}
 
