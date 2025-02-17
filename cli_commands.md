@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-11"
+lastupdated: "2025-02-17"
 
 keywords: watsonxdata, commands, command line interface, cli
 
@@ -54,7 +54,7 @@ The **ibm-lh** utility supports various parameters and variables that can be inv
 
 |Parameter|Description|Declaration|Modes of ingestion|
 |----|----|----|----|
-|`create-if-not-exist`|Create target table if it does not exist.|`--create-if-not-exist`|`PRESTO`, `SPARK_LEGACY`, and `SPARK`|
+|`create-if-not-exist`|Create target table if it does not exist.|`--create-if-not-exist`|`PRESTO` and `SPARK_LEGACY`|
 |`dbpassword`|Database password that is used to do ingestion. This is a mandatory parameter to run an ingestion job unless the default user is used.|`--dbpassword <DBPASSWORD>`|`PRESTO`|
 |`dbuser`|Database username that is used to do ingestion. This is a mandatory parameter to run an ingestion job unless the default user is used.|`--dbuser <DBUSER>`|`PRESTO`|
 |`debug`|Debug the logs of ingestion jobs. The short command for this parameter is `-d`.|`--debug`|`PRESTO`, `SPARK_LEGACY`, and `SPARK`|

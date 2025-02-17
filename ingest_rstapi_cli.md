@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-11"
+lastupdated: "2025-02-17"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -86,7 +86,6 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
    --engine-id spark214 \
    --log-directory /tmp/mylogs \
    --partition-by "<columnname1>, <columnname2> \
-   --create-if-not-exist
    ```
    {: codeblock}
 
@@ -94,7 +93,6 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
 
    |Parameter|Description|
    |------------|----------|
-   |`--create-if-not-exist`|Use this option if the target schema or table is not created. Do not use if the target schema or table is already created.|
    |`--engine-id`|Engine id of Spark engine when using REST API based `SPARK` ingestion.|
    |`--instance-id`|Identify unique instances. In SaaS environment, CRN is the instance id.|
    |`--log-directory`|This option is used to specify the location of log files.|
