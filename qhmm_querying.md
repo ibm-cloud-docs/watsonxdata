@@ -56,7 +56,7 @@ You can configure {{site.data.keyword.lakehouse_short}} to store the diagnostic 
 ## Deleting QHMM schemas and tables
 {: #del_qhmm}
 
-If you want to permanently delete the QHMM schemas and tables present in the QHMM associated catalog, you must first dissociate the catalog and use DELETE API to perform the delete operation. Administrators can do this by using the following CURL command :
+Administrators can permanently delete the QHMM schemas and tables present in the QHMM enabled catalog by using the following CURL command :
 
 
 ```bash
