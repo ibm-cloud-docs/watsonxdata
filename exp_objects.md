@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-25"
+lastupdated: "2025-02-17"
 
 keywords: watsonxdata, data explorer, associated catalogs, iceberg tables, data sample, time travel information, ingestion hub
 
@@ -29,7 +29,7 @@ subcollection: watsonxdata
 # About Data manager
 {: #exp_objects}
 
-The **Data manager** page in {{site.data.keyword.lakehouse_full}} is the entry point to browse the schemas and tables by engine. You can select an engine to view the associated catalogs, schemas, and tables.
+The **Data manager** page in {{site.data.keyword.lakehouse_full}} is the entry point to browse the schemas and tables by engine. You can select an engine by selecting the **Browse data** tab to view the associated catalogs, schemas, and tables.
 {: shortdesc}
 
 From the **Data manager** page, you can create schemas and tables by using the **Create** option. You can also select a catalog or schema, click the overflow menu, and use the corresponding **Create** option to create a schema or table. **Create table from file** option in the overflow menu of schema is also used to ingest a data file into {{site.data.keyword.lakehouse_short}}. Similarly, schemas and tables can be dropped from the catalogs.
@@ -37,10 +37,12 @@ From the **Data manager** page, you can create schemas and tables by using the *
 Wait for a few minutes to view the changes after a schema or table is dropped.
 {: note}
 
-You can create Ingestion jobs from the Data manager page.
+You can **Ingest data** from the **Data manager** page.
 Other tasks that can be performed in the **Data manager** page include adding, renaming, or dropping a column.
 
 You can browse the **Table schema** and up to 25 rows of **Data sample** for some tables. You can view the **Time travel** snapshots and use the **Rollback** feature to rollback or rollforward to any snapshots for Iceberg tables.
+
+{{site.data.keyword.lakehouse_short}} provides pre-defined **Sample and benchmarking data**, such as **tpch** and **tpcds**, to test the performance of a database system under controlled conditions. It also provides **System monitoring data** that uses **jmx** and **system** metrics to collect data about the system's health and performance during benchmark testing to understand how the system responds to the workload. **Sample and benchmarking data**, **tpch** and **tpcds** can only be queried using the Presto engines.
 
 ## Related API
 {: #datamanager_api}
