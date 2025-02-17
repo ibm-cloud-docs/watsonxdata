@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-25"
+lastupdated: "2025-02-17"
 
 keywords: watsonxdata, qhmm
 
@@ -52,3 +52,14 @@ You can configure {{site.data.keyword.lakehouse_short}} to store the diagnostic 
     table_stats_information_memory : Includes the memory related information. To view the memory related information, use the following query:
 
     SELECT*from`<catalog>.<schema>`.table_stats_information_memory;
+
+## Deleting QHMM schemas and tables
+{: #del_qhmm}
+
+If you want to permanently delete the QHMM schemas and tables present in the QHMM associated catalog, you must first dissociate the catalog and use DELETE API to perform the delete operation. Administrators can do this by using the following CURL command :
+
+
+```bash
+curl --location --request DELETE 'https://us-south.lakehouse.dev.cloud.ibm.com/lakehouse/api/v2/<instance_id>/configuration/qhmm?engine_id=<engine_id>&catalog_name=<catalog_name>&schema_id=<schema_id>'
+```
+{: codeblock}
