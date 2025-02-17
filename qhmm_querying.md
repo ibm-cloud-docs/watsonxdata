@@ -60,6 +60,14 @@ If you want to permanently delete the QHMM schemas and tables present in the QHM
 
 
 ```bash
-curl --location --request DELETE 'https://us-south.lakehouse.dev.cloud.ibm.com/lakehouse/api/v2/<instance_id>/configuration/qhmm?engine_id=<engine_id>&catalog_name=<catalog_name>&schema_id=<schema_id>'
+curl --location --request DELETE '<SAAS_instance_url>/lakehouse/api/v2/<instance_id>/configuration/qhmm?engine_id=<engine_id>&catalog_name=<catalog_name>&schema_id=<schema_id>'
 ```
 {: codeblock}
+
+Parameter values:
+
+* `<SAAS_instance_url>`  : The watsonx.data access URL.
+* `<instance_id>` : The unique ID for the insatnce.
+* `<engine_id>` : The unique ID of the engine for which the schema and table information needs to be removed.
+* `<catalog_name>` : The QHMM catalog for which the schema and table information needs to be removed.
+* `<schema_id>` : The unique ID of the schema for which the table information needs to be removed.
