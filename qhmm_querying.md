@@ -64,6 +64,9 @@ curl --location --request DELETE '<SAAS_instance_url>/lakehouse/api/v2/<instance
 ```
 {: codeblock}
 
+The QHMM enabled catalog must be associated to a Presto engine. If the engine is deleted or disassociated, then the catalog should be associated to next available Presto engine.
+{: important}
+
 Parameter values:
 
 * `<SAAS_instance_url>`  : The watsonx.data access URL.
