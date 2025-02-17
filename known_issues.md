@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-02-14"
+lastupdated: "2025-02-17"
 
 keywords: lakehouse
 
@@ -71,24 +71,6 @@ The Hive catalog does not support CSV format for create table int type column. T
 
 * Create table in varchar.
 * Create view that cast the columns to their original data types.
-
-## Test connection may fail for IBM Db2 data source
-{: #known_issues29895}
-
-You may face issues while uploading the certificate obtained by following the steps provided in the topic [IBM Db2](https://cloud.ibm.com/docs/Db2whc?topic=Db2whc-ssl_support) for SSL connection of IBM Db2 data source.
-
-**Workaround:** Convert the SSL certificate to .pem format by the following steps:
-
-1. Open a terminal or command prompt.
-2. Navigate to the directory where the certificate file is located.
-3. Run the following OpenSSL command:
-
-   ```bash
-   openssl x509 -inform DER -in DigiCertGlobalRootCA.crt -out DigiCertGlobalRootCA.pem
-   ```
-   {: codeblock}
-
-4. Use the .pem certificate generated in step 3 to retest the connection.
 
 ## Inconsistent CSV and Parquet file ingestion behaviour
 {: #known_issues26920}
