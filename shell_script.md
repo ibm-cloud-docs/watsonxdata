@@ -58,6 +58,8 @@ This script allows users to bundle diagnostic data files from their QHMM diagnos
 
 •	-d: ENGINE_ID (default: none) - The ID of the engine.
 
+•	--data-type - The data to be exported (support Dump, QueryEvent, and QueryHistory).
+
 •	-p: DOWNLOAD_DIR (default: /root/data) - The target folder for downloaded files.
 
 •	-x: START_DATE (default: last 24 hours) - The start date for filtering objects.
