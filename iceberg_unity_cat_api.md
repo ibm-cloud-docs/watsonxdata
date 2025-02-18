@@ -281,7 +281,7 @@ Due to the constraint of not modifying the schema, the following features are no
 
 For more information, see [API documentation](https://cloud.ibm.com/apidocs/watsonxdata-ibm-mds-iceberg).
 
-# Common limitation: Unsupported attributes in catalog and table creation
+## Common limitation: Unsupported attributes in catalog and table creation
 {: #known_issues20302}
 
 Due to the current schema limitation, the following attributes will not be saved when creating catalogs and tables:
