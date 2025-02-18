@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2025-01-31"
+lastupdated: "2025-02-18"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -232,3 +232,7 @@ Limitations:
 * To create data policy, you must associate the catalog to Presto engine.
 * If you try to display schema that is not existing, the system throws nullpointer issue.
 * You can enable the Spark access control extension for Iceberg, Hive and Hudi catalogs.
+* You must use Spark version 3.4 to run applications that have catalogs enabled with the Spark Auth extension.
+
+   The application submission fails if you use Spark 3.5 version.
+   {: note}
