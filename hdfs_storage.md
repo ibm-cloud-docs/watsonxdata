@@ -39,13 +39,13 @@ Hadoop Distributed File System (HDFS) is a file system that manages large data s
  | Display name | Enter the name to be displayed.|
  | Thrift URI | Enter the Thrift URI.|
  |Thrift Port | Enter the Thrift port. |
- | Kerberos authentication | Select the checkbox **Kerberos authentication** for secure connection.  \n a. Enter the following information: \n i. HDFS principal \n ii. Hive client principal \n iii. Hive server principal \n b. Upload the following files: \n i. Kerberos config file (.config) \n ii. HDFS keytab file (.keytab) \n iii. Hive keytab file (.keytab) |
+ | Kerberos authentication | Use the toggle switch to enable or disable **Kerberos authentication**. If enabled, enter the following information:  \n a. Enter the following information: \n i. HDFS principal \n ii. Hive client principal \n iii. Hive server principal \n b. Upload the following files: \n i. Core site file (.xml) \n ii. HDFS site (.xml) \n iii. Kerberos config file (.config) \n iiii. HDFS keytab file (.keytab) \n iiiii. Hive keytab file (.keytab) |
  | Upload core site file (.xml) | Upload core site file (.xml) |
  | Upload HDFS site file (.xml) | Upload HDFS site file (.xml) |
  | Associate catalog | Add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within. |
  | Catalog type | The supported catalog is Apache Hive.|
  | Catalog name | Enter the name of your catalog. |
- | Create | Click Create to create the storage. |
+ | Associate | Click Associate to create the storage. |
  {: caption="Register bucket" caption-side="bottom"}
 
 ## Related API
