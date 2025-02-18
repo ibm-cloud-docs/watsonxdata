@@ -44,7 +44,7 @@ If you select **Azure Data Lake Storage Gen1 Blob** from the **Type** drop-down,
  | Endpoint | The Endpoint URL is auto-generated. |
  | Access key | Enter your access key. |
  | Connection Status | Click the Test connection link to test the storage connection. If the connection is successful, a success message appears.|
- | Associate catalog | Add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within. |
+ | Associate catalog | Select the checkbox to add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within.|
  | Activate now| Select the checkbox to activate the storage immediately or activate it later. |
  | Catalog type | Select the catalog type from the list. The recommended catalog is Apache Iceberg. The other options for catalog are Apache Hive, Apache Hudi, and Delta Lake. |
  | Catalog name | Enter the name of your catalog. |
@@ -60,7 +60,7 @@ If you select **Azure Data Lake Storage Gen1 Blob** from the **Type** drop-down,
  | Storage account name | Enter the Storage account name. |
  | Endpoint | The Endpoint URL is auto-generated. |
  | Connection Status | Click the Test connection link to test the storage connection. If the connection is successful, a success message appears.|
- | Associate catalog | Add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within. |
+ | Associate catalog | Select the checkbox to add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within.|
  | Activate now| Select the checkbox to activate the storage immediately or activate it later. |
  | Catalog type | Select the catalog type from the list. The recommended catalog is Apache Iceberg. The other options for catalog are Apache Hive, Apache Hudi, and Delta Lake. |
  | Catalog name | Enter the name of your catalog. |
