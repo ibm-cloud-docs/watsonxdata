@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-13"
+lastupdated: "2025-02-18"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -280,3 +280,20 @@ Due to the constraint of not modifying the schema, the following features are no
 - Metrics endpoint added as dummy only.
 
 For more information, see [API documentation](https://cloud.ibm.com/apidocs/watsonxdata-ibm-mds-iceberg).
+
+# Common limitation: Unsupported attributes in catalog and table creation
+{: #known_issues20302}
+
+Due to the current schema limitation, the following attributes will not be saved when creating catalogs and tables:
+
+- For catalogs:
+   - comment
+- For tables (within the column array):
+   - type_precision
+   - type_scale
+   - type_interval_type
+   - position
+   - nullable
+   - partition_index
+- For tables (outside the column array):
+   - comment
