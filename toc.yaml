@@ -390,4 +390,5 @@ toc:
                 label: Milvus
                 topics:
                   - milvus_memory_ts.md
+                  - milvus_data_miss_ts.md
       - get-help.md
