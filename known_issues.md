@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-02-18"
+lastupdated: "2025-02-19"
 
 keywords: lakehouse
 
@@ -34,9 +34,55 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+## View Access control with `DEFINER` mode
+{: #known_issues18108}
 
+watsonx.data may experience issues with access control for views defined with `DEFINER` mode.
 
+When a view is defined with `DEFINER` mode, the view's access control relies on the privileges of the user who created the view. If the view owner's information is not available in the AMS cache, the access control check for the view will fail.
 
+**Workaround:** Redefine views with `SECURITY INVOKER` mode in their DDL statements.
+
+```bash
+CREATE VIEW view_name SECURITY INVOKER AS query;
+```
+{: codeblock}
+
+## Iceberg tables that are partitioned by a date column may not be readable.
+{: #known_issues34778}
+
+## EXISTS clause on Apache Phoenix tables generate Exeception while executing query error
+{: #known_issues18858}
+
+Queries involving the EXISTS clause on Apache Phoenix tables may fail unexpectedly, even when the referenced column is valid. This occurs due to limitations in Apache Phoenix's interpretation of the EXISTS clause, particularly in cases with ambiguous or misaligned query structures.
+
+**Workaround:** To address this limitation, apply one of the following strategies:
+
+   - Establish a clear relationship between the subquery and the main query. Introduce a filter condition within the subquery to create a meaningful relationship between the subquery and the main query. For example, where department_id_bigint IS NOT NULL in the subquery. For more information, refer the following example:
+
+      ```bash
+      SELECT DISTINCT t1.first_name_varchar, t2.performance_rating_real, t1.team_head_varchar
+      FROM phoenix.tm_lh_engine.employee t1, phoenix.tm_lh_engine.departments t2
+      WHERE EXISTS (
+         SELECT 1
+         FROM phoenix.tm_lh_engine.departments
+         WHERE department_id_bigint IS NOT NULL
+      )
+      ```
+      {: codeblock}
+
+   - Establish a clear relationship between the tables involved by explicitly joining the tables in the subquery. This ensures the subquery is contextually relevant and resolves the execution issue. For example, where t3.department_id_bigint = t2.department_id_bigint in the subquery. For more information, refer the following example:
+
+      ```bash
+      SELECT DISTINCT t1.first_name_varchar, t2.performance_rating_real, t1.team_head_varchar
+      FROM phoenix.tm_lh_engine.employee t1, phoenix.tm_lh_engine.departments t2
+      WHERE EXISTS (
+         SELECT 1
+         FROM phoenix.tm_lh_engine.departments t3
+         WHERE t3.department_id_bigint = t2.department_id_bigint
+      )
+      ```
+      {: codeblock}
 
 ## WHERE/IN/DROP/RENAME clause in Hive tables with more than one partition does not work if partition type is of type VARCHAR.
 {: #known_issues20069}
