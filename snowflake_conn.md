@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-13"
+lastupdated: "2025-02-19"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -42,9 +42,9 @@ Snowflake is a cloud-hosted relational database for building data warehouse.
  | Warehouse name           | Enter the Warehouse name.  |
  | Username           | Enter the username.  |
  | Password           | Enter the password.  |
- | Test connection    | Click the Test connection link to test the database connection. If the database connection is successful, a success message appears. |
- | Associate catalog  | Select the checkbox to associate the catalog. |
- | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your data source and serves as your query interface with the data stored within. |
+ | Connection status   | Click the Test connection link to test the database connection. If the database connection is successful, a success message appears. |
+ | Associate catalog  | Select the checkbox to associate a catalog to the data source. This catalog is automatically associated with your data source and serves as your query interface with the data stored within. |
+ | Catalog name | Enter the name of the catalog. |
  | Create | Click Create to create the data source. |
  {: caption="Register data source" caption-side="bottom"}
 

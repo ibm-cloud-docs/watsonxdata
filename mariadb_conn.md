@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-28"
+lastupdated: "2025-02-19"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -44,8 +44,9 @@ MariaDB is an open source, multi-threaded, relational database management system
  | Password           | Enter the password.  |
  | Port is SSL enabled   | Use the toggle switch to enable or disable SSL connection. |
  | Connection details: Arrow Flight           |  Enter the following details for Arrow Flight service connection: \n Service hostname: Enter the service hostname from the following options: \n * api.dataplatform.cloud.ibm.com \n * api.eu-gb.dataplatform.cloud.ibm.com \n * api.eu-de.dataplatform.cloud.ibm.com \n * api.jp-tok.dataplatform.cloud.ibm.com. \n Port: Enter the port number. \n API key: Enter the API key. For more information, see [API key](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmapi-key). \n Token URL: Enter the token URL as https://iam.cloud.ibm.com/identity/token. \n Port is SSL enabled: Use the toggle switch to enable or disable SSL connection. \n Validate server certificate: This option can be used when the host certificate is not signed by a known certificate authority. Toggle the switch to enable or disable the server certificate validation. If enabled, \n i. The Upload SSL certificate (.pem, .crt, .cert or .cer) link is enabled. \n ii. Click the Upload SSL certificate (.pem, .crt, .cert or .cer) link. \n iii. Browse the SSL certificate and upload.  |
- | Test connection     | Click the Test connection link to test the data source connection. If the data source connection is successful, a success message appears.|
- | Catalog name | Enter the name of the catalog. This catalog is automatically associated with your data source. |
+ | Connection status     | Click the Test connection link to test the data source connection. If the data source connection is successful, a success message appears.|
+ | Associate catalog | Select the checkbox to associate a catalog to the data source. This catalog is automatically associated with your data source and serves as your query interface with the data stored within.|
+ | Catalog name | Enter the name of the catalog. |
  | Create | Click Create to create the data source. |
  {: caption="Register data source" caption-side="bottom"}
 
