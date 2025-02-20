@@ -60,31 +60,6 @@ To manage access, complete the following steps:
 
    1. Click **Add**. The user is added and assigned the role.
 
-   1. To change the role that is assigned to a user, complete the following steps:
-
-      1. Under the **Infrastructure** tab, click the **Display name** of the component in the table.
-
-      The **Access control** tab for selected component opens.
-
-      1. Click the overflow menu for the selected user and then select **Change role**.
-
-      1. In the **Change role** window, select the role from the drop-down list.
-
-      1. Click **Save**.
-
-   1. To remove a user for a component, complete the following steps:
-
-      1. Under the **Infrastructure** tab, click the **Display name** of the component in the table.
-
-         The **Access control** tab for the selected component opens.
-
-      1. Click the overflow menu for the selected user and then select **Remove**.
-
-      1. In the **Confirm removal** window, click **Remove**.
-
-         The user remains in the **Access control** tab after removing from {{site.data.keyword.Bluemix_notm}} or Cloud Pak for Data. You must remove the user manually from the **Access control** tab. You might see the user in the **Access control** tab of the engine after confirming the removal. It takes up to 20 minutes for the access revoke to be effective for the user and disappear from the tab.
-         {: note}
-
 1. To provide access to infrastructure components in batches, complete the following steps:
 
    1. Click **Add access**. The Add access to infrastructure components page opens.
@@ -101,3 +76,28 @@ To manage access, complete the following steps:
       {: note}
 
       1. Click **Save**. The data is successfully saved.
+
+1. To change the role that is assigned to a user, complete the following steps:
+
+   1. Under the **Infrastructure** tab, click the **Display name** of the component in the table.
+
+      The **Access control** tab for selected component opens.
+
+   1. Click the overflow menu for the selected user and then select **Change role**.
+
+   1. In the **Change role** window, select the role from the drop-down list.
+
+   1. Click **Save**.
+
+1. To remove a user for a component, complete the following steps:
+
+   1. Under the **Infrastructure** tab, click the **Display name** of the component in the table.
+
+      The **Access control** tab for the selected component opens.
+
+   1. Click the overflow menu for the selected user and then select **Remove**.
+
+   1. In the **Confirm removal** window, click **Remove**.
+
+      The user remains in the **Access control** tab after removing from {{site.data.keyword.Bluemix_notm}} or Cloud Pak for Data. You must remove the user manually from the **Access control** tab. You might see the user in the **Access control** tab of the engine after confirming the removal. It takes up to 20 minutes for the access revoke to be effective for the user and disappear from the tab.
+      {: note}
