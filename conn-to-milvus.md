@@ -131,10 +131,10 @@ You can connect to a Milvus service by using API key or IAM token.
     For example, use the following command to list all the collections:
 
          ```bash
-         print(fmt.format("start connecting to Milvus"))
-         connections.connect( alias="default", uri="https://<host>:<grpc-port>", user = "ibmlhtoken", password = "<token>" )
-         has = utility.has_collection("hello_milvus")
-         print(f"Does collection hello_milvus exist in Milvus: {has}")
+          curl --request GET \
+        --url "https://<REST-host>:<REST-port>/v1/vector/collections" \
+        --header "Authorization: Basic $(echo -n '<user>:<password>' | base64)" \
+        --header "Content-Type: application/json"
          ```
          {: codeblock}
 
