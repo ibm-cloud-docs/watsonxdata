@@ -130,13 +130,13 @@ You can connect to a Milvus service by using API key or IAM token.
 
     For example, use the following command to list all the collections:
 
-         ```bash
-          curl --request GET \
-        --url "https://<REST-host>:<REST-port>/v1/vector/collections" \
-        --header "Authorization: Basic $(echo -n '<user>:<password>' | base64)" \
-        --header "Content-Type: application/json"
-         ```
-         {: codeblock}
+    ```bash
+    curl --request GET \
+    --url "https://<REST-host>:<REST-port>/v1/vector/collections" \
+    --header "Authorization: Basic $(echo -n '<user>:<password>' | base64)" \
+    --header "Content-Type: application/json"
+    ```
+    {: codeblock}
 
 
 ## What to do next
