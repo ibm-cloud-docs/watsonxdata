@@ -161,7 +161,7 @@ The storage associated is used as a data bucket by Milvus and as an engine home 
          | Catalog name | Enter the name of your catalog. (The following special characters are not allowed: ! @ # $ % ^ & * ( ) = + : { } < > ? ' \ ; `).|
          {: caption="Register bucket" caption-side="bottom"}
 
-        b. **Register my own** : You can use any existing IBM COS bucket from an existing instance or provision a new instance. To provision a new IBM COS instance, see [Create COS instance](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-cos_storage){: external}.
+        b. **Register my own** : You can use any existing IBM COS bucket from an existing instance or provision a new instance. To provision a new IBM COS instance, see [Create COS instance](watsonxdata?topic=watsonxdata-cos_storage).
 
     To explore how the {{site.data.keyword.lakehouse_short}} service interacts with the data you bring in, see [Adding your storage and querying data](watsonxdata?topic=watsonxdata-tutorial_prov_custbckt1).
 
