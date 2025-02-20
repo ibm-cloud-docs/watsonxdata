@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-02-17"
+lastupdated: "2025-02-20"
 
 keywords: watsonxdata, commands, command line interface, cli
 
@@ -70,7 +70,7 @@ The **ibm-lh** utility supports various parameters and variables that can be inv
 |`all-jobs`|This all-jobs parameter gives the history of all ingestion jobs. This parameter is used only with `ibm-lh get-status` command in the interactive mode of ingestion.|`ibm-lh get-status --all-jobs`|`SPARK`|
 |`line-delimiter`| CSV file line delimiter value. Default value is `\n.|`--line-delimiter <line_delimiter_value>`|`PRESTO`, `SPARK_LEGACY`, and `SPARK`|
 |`log-directory`|This option is used to specify the location of log files. See [Log directory](#log_direc).|`--ingest-config <ingest_config_file> --log-directory <directory_path>`|`PRESTO`, `SPARK_LEGACY`, and `SPARK`|
-|`partition-by`|Supports the functions for year, month, day, and hour for timestamp in the `partition-by` list. If a target table already exists or the `create-if-not-exist` parameter is not specified, partition-by does not effect the data.|`ibm-lh data-copy --partition-by "<columnname1>, <columnname2>"`|`SPARK_LEGACY` and `SPARK`|
+|`partition-by`|Supports the functions for year, month, day, and hour for timestamp in the `partition-by` list. If a target table already exists or the `create-if-not-exist` parameter is not specified, `partition-by` does not effect the data. `create-if-not-exist` parameter is no longer supported for `SPARK`.|`ibm-lh data-copy --partition-by "<columnname1>, <columnname2>"`|`SPARK_LEGACY` and `SPARK`|
 |`password`|Password of the user connecting to the instance. In SaaS, API key of the instance is used. The short command for this parameter is `-pw`.|`--password <apikey>`|`SPARK`|
 |`schema`|Schema file that includes CSV specifications, and more. For more details, see [Schema file specifications](#schema_spec).|`--schema </path/to/schemaconfig/file>`|`PRESTO`, `SPARK_LEGACY`, and `SPARK`|
 |`source-data-files`|Data files or folders for data migration. File name ending with `/` is considered a folder. Single or multiple files can be used. This is a mandatory parameter to run an ingestion job. Example: `<file1_path>,<file2_path>,<folder1_path>`. File names are case-sensitive. The short command for this parameter is `-s`.|`--source-data-files <SOURCE_DATA_FILE>`|`PRESTO`, `SPARK_LEGACY`, and `SPARK`|
