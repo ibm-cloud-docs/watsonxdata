@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-02-18"
+lastupdated: "2025-02-20"
 
 keywords: lakehouse, **Query Optimizer**, {{site.data.keyword.lakehouse_short}}
 
@@ -51,3 +51,6 @@ To connect watsonx Assistant to Milvus in {{site.data.keyword.lakehouse_short}},
       * Multi-vector hybrid search.
       * Reranking.
       * Hybrid search with GroupBy.
+
+        Milvus does not support aggregation in Hybrid GroupBy search.
+        {: note}
