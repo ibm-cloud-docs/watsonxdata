@@ -34,6 +34,13 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+## Re-enrichment fails after deleting assets from an already enriched schema
+{: #known_issues39603}
+
+When doing a re-enrichment after deleting assets from an already enriched schema encounter errors. This occurs because watson.data refreshes mappings when the schema list is updated. If the mapping is changed externally, there is no notification system to automatically refresh the mappings. They are only updated after manually refreshing the schema list.
+
+**Workaround:** Refresh the browser page.
+
 ##  Business terms remain after the semantic automation layer integration is deleted from IBM watsonx.data
 {: #known_issues39470}
 
