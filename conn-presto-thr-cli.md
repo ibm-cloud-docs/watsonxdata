@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-02-11"
+lastupdated: "2025-02-21"
 
 keywords: lakehouse, watsonx.data, presto, cli
 
@@ -118,6 +118,20 @@ It is recommended to use IAM token for stress workload.
 
    Enter your IBM API key or IBM IAM token at the prompt.
 
+   - If you are using JWT token, run the following command:
+
+       ```bash
+       ./presto --server <https://Prestoengine host details> --catalog iceberg_data --schema default --access-token <ACCESS_TOKEN>
+       ```
+       {: codeblock}
+
+   To generate `<ACCESS_TOKEN>`, use the following command:
+
+       ```bash
+       curl -k -X POST 'https://iam.test.cloud.ibm.com/identity/token' --header "Content-Type: application/x-www-form-urlencoded" --data-urlencode "grant_type=urn:ibmbee:params:oauth:grant-type:apikey" --data-urlencode "apikey=<iam_apikey>"
+       ```
+       {: codeblock}
+
 6. At the Presto prompt, type `show catalogs;`. The catalog list appears. Now you are connected to Presto engine in {{site.data.keyword.lakehouse_short}} through Presto CLI.
 
    ```bash
@@ -132,7 +146,6 @@ It is recommended to use IAM token for stress workload.
    (5 rows)
    ```
    {: codeblock}
-
 
 
 ## Connecting to Presto engine using Java/JDBC
