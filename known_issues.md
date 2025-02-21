@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-02-19"
+lastupdated: "2025-02-21"
 
 keywords: lakehouse
 
@@ -33,6 +33,13 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+
+##  Business terms remain after the semantic automation layer integration is deleted from IBM watsonx.data
+{: #known_issues39470}
+
+Business terms that were imported to IBM Knowledge Catalog for a semantic automation layer (SAL) integration in watsonx.data are not removed when the integration is deleted. This can result in duplicate business terms if a new SAL integration is subsequently enabled and the same or similar business terms are uploaded again.
+
+**Workaround:** To avoid duplicate business terms, the cluster administrator or the user who originally created the SAL registration must manually delete all business terms that were imported for the SAL integration.
 
 ## View Access control with `DEFINER` mode
 {: #known_issues18108}
