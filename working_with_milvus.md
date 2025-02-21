@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-02-18"
+lastupdated: "2025-02-21"
 
 keywords: lakehouse, milvus, watsonx.data
 subcollection: watsonxdata
@@ -137,3 +137,8 @@ Following are some best practices:
 
 During Milvus upgrade, there can be a slight delay in response for about 20 seconds. On-going searches and upsert queries might fail. You can retry the queries immediately.
 {: note}
+
+## Sample notebooks for Milvus
+{: #samplenotebook_milvus}
+
+With these sample notebooks you can try out the Milvus capabilities with step-by-step tutorials. To access the sample notebooks, see [Sample Milvus notebooks](https://github.com/IBM/watsonx-data/tree/main/Tutorials).
