@@ -88,7 +88,7 @@ It is recommended to use IAM token for stress workload.
    ```
    {: codeblock}
 
-## Connecting to Presto engine through Presto CLI (Remote) by using user name and password
+## Connecting to Presto engine through Presto CLI (Remote)
 {: #conn-to-prestoeng}
 
 1. Download the Presto executable `jar` from [https://prestodb.io/docs/current/installation/cli.html](https://prestodb.io/docs/current/installation/cli.html)
