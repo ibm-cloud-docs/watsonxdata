@@ -121,7 +121,13 @@ It is recommended to use IAM token for stress workload.
    - If you are using JWT token, run the following command:
 
        ```bash
-       ./presto --server <https://Prestoengine host details> --catalog iceberg_data --schema default --access-token <ACCESS_TOKEN>
+       curl --location 'https://us-south.lakehouse.dev.cloud.ibm.com/lakehouse/api/v2/auth/authenticate/' \
+       --header 'Content-Type: application/json' \
+       --data-raw '{
+        "username": "ibmlhtoken_archana.a6@ibm.com",
+        "password": "<ACCESS_TOKEN>",
+        "instance_name": ""
+      }'
        ```
        {: codeblock}
 
