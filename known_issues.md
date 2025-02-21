@@ -34,6 +34,9 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+## Database names containing hyphens or spaces cannot be queried by the Spark engine in a Python notebook, even when the appropriate Spark access control extension has been added.
+{: #known_issue38611}
+
 ## Re-enrichment fails after deleting assets from an already enriched schema
 {: #known_issues39603}
 
