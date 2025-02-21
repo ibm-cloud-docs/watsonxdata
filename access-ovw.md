@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-02-17"
+lastupdated: "2025-02-21"
 
 keywords: access, access control, access management
 
@@ -56,7 +56,6 @@ Level 1 authentication in watsonx.data on IBM Cloud is aligned with the IBM Clou
 
 You can create access groups, or give access to a trusted profile, user, or service ID access to any of the target and specific permissions as depicted in the following illustration:
 
-![Access management](images/access_permission.svg){: caption="Access management" caption-side="bottom"}
 
 
 In addition to the authentication, in IBM cloud, the IAM platform roles are assigned some privileges and permissions by default. The following table provides the details. These roles are to be assigned to users or user groups.
@@ -69,7 +68,7 @@ In addition to the authentication, in IBM cloud, the IAM platform roles are assi
 |IAM Platform Operator, Editor, Viewer	|lakehouse.dashboard.view|
 |Others	|Depends on the actions that are assigned by the administrator|
 |jdbc.url |	Provide the JDBC URL.|
-{: caption="Apache Ranger policy " caption-side="bottom"}
+{: caption="Platform Roles " caption-side="bottom"}
 
 
 The following table provides the service role details that are specific to watsonx.data  on IBM Cloud and AWS. Metastore Admin role is used for Db2, Netezza, and Spark. Metastore Admin has full access to HMS Thrift API. Metastore Viewer role has read access to HMS Rest API. The Data Access role is used only for IKC integration on data profiling.
