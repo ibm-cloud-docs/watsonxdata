@@ -54,7 +54,7 @@ Level 1 authentication in watsonx.data on IBM Cloud is aligned with the IBM Clou
 
 
 
-You can create access groups, or give access to a trusted profile, user, or service ID access to any of the target and specific permissions as depicted in the following illustration:
+You can create access groups, or give access to a trusted profile, user, or service ID access to any of the target and specific permissions.
 
 
 

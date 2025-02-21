@@ -259,6 +259,9 @@ toc:
       - topicgroup:
           label: Access control
           topics:
+            - link:
+                  label: Access management overview
+                  href: https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-access_mgt
             - manage_access.md
             - role_priv.md
             - data_policy.md
