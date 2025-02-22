@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-02-20"
+lastupdated: "2025-02-22"
 
 keywords: lakehouse, watsonx data, roles, access
 subcollection: watsonxdata
@@ -68,7 +68,7 @@ To manage access, complete the following steps:
 
       1. Select the components. You can select a maximum of twenty components at a time.
       1. Click **Next**.
-      1. Select the uses or user groups. You can select a maximum of 100 users at a time.
+      1. Select the uses or user groups. You can select a maximum of 100 users or user groups altogether at a time.
       1. Click **Next**.
       1. You can view a table with the list of users and the infrastructure components against each user.      Select a role against each component from the **Choose a role** list.
 
