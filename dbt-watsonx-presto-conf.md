@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2025-02-22"
 
 keywords: lakehouse, watsonx.data, presto, cli
 
@@ -16,6 +16,9 @@ subcollection: watsonxdata
 {: #dbt_watsonx_presto_conf}
 
 To connect dbt Core to your Presto engine, configure the `profiles.yml` file that is located in `.dbt` of your home directory.
+
+You can either copy or export the presto connection details to create the profiles.yml. To do that, see [Getting connection information]({{site.data.keyword.ref-get_connection-link}}).
+{: note}
 
 The following is an example configuration:
 
