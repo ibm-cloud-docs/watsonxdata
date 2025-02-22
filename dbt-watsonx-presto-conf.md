@@ -17,7 +17,7 @@ subcollection: watsonxdata
 
 To connect dbt Core to your Presto engine, configure the `profiles.yml` file that is located in `.dbt` of your home directory.
 
-You can either copy or export the presto connection details to create the profiles.yml. To do that, see [Getting connection information]({{site.data.keyword.ref-get_connection-link}}).
+You can either copy or export the Presto connection details to create the profiles.yml. To do that, see [Getting connection information]({{site.data.keyword.ref-get_connection-link}}).
 {: note}
 
 The following is an example configuration:
