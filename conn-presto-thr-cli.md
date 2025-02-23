@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-02-21"
+lastupdated: "2025-02-23"
 
 keywords: lakehouse, watsonx.data, presto, cli
 
@@ -124,7 +124,7 @@ It is recommended to use IAM token for stress workload.
        curl --location 'https://us-south.lakehouse.dev.cloud.ibm.com/lakehouse/api/v2/auth/authenticate/' \
        --header 'Content-Type: application/json' \
        --data-raw '{
-        "username": "ibmlhtoken_archana.a6@ibm.com",
+        "username": "<user_name>",
         "password": "<ACCESS_TOKEN>",
         "instance_name": ""
       }'
