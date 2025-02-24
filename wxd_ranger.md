@@ -64,8 +64,8 @@ Complete the following steps to create a service in the Ranger.
 1. Click the **Add New Service** (+) icon against the required service type and create a new service to define policies. For more information about the different resources, see [Service Manager](https://cwiki.apache.org/confluence/display/RANGER/Apache+Ranger+0.5+-+User+Guide#ApacheRanger0.5UserGuide-ServiceManager(AccessManager)).
 
 
-You can also select an existing service to define policies. To define Ranger policies for Presto, you must create a service under PRESTO section and to define Ranger policies for Spark, you must create a service under Hadoop SQL section.
-{: note}
+   You can also select an existing service to define policies. To define Ranger policies for Presto, you must create a service under PRESTO section and to define Ranger policies for Spark, you must create a service under Hadoop SQL section.
+   {: note}
 
 1. Create policy against the new (or existing) service. To do that, see [Policy Manager](https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=57901344#RangerUserGuide(workinprogress)-PolicyManager).
 
