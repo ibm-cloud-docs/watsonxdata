@@ -120,10 +120,10 @@ It is recommended to use IAM token for stress workload.
 
       Enter your IBM API key or IBM IAM token at the prompt.
 
-   * **JWT token** : To use this method of authentication, contact IBM support and enable the feature. To do that run the following command: If you are using JWT token, run the following command:
+   * **JWT token** : To use this method of authentication, contact IBM support and enable the feature.Once enabled , run the following command to connect to presto using JWT token:
 
        ```bash
-       ./presto --server <https://Prestoengine host details> --catalog iceberg_data --schema default --access-token <access token>
+       ./presto --server <https://Prestoengine host details> --catalog iceberg_data --schema default --access-token <ACCESS_TOKEN>
        ```
        {: codeblock}
 
