@@ -100,9 +100,6 @@ toc:
               - sqlserver_conn.md
               - teradata_conn.md
               - custom_database.md
-      - topicgroup:
-              label: Arrow Flight service
-              topics:
               - arrow_flight_service.md
               - derby_conn.md
               - greenplum_conn.md
