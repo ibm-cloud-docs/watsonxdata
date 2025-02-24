@@ -103,15 +103,15 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    xii. Choose one of the schema options:
 
-      1.  Existing schema: To ingest source data into an existing schema. Search or select a target schema that is listed in the **Select schema or enter new schema name** drop-down.
+      1.  Existing schema: To ingest source data into an existing schema. Search or select a target schema that is listed in the **Select schema** drop-down.
 
-      2. New schema: Enter a new schema name in the **Select schema or enter new schema name** field and explicitly click **+ Create new: `<new schema name>`** to create a new schema from the source data.
+      2. New schema: Enter a new schema name in the **Create a new schema** field by explicitly clicking **Create** option to create a new schema from the source data.
 
    xiii. Select the corresponding target table options based on the preceding selection.
 
-      1. Existing table: To ingest source data into an existing table. Search or select a target table that is listed in the **Select table or enter new table name** drop-down.
+      1. Existing table: To ingest source data into an existing table. Search or select a target table that is listed in the **Select table** drop-down.
 
-      2. New table: Enter a new target table name in the **Select table or enter new table name** and explicitly click **+ Create new: `<new table name>`** to create a new table from the source data.
+      2. New table: Enter a new target table name in the **Create a new table** field by explicitly clicking **Create** option to create a new table from the source data.
 
    xiv. If required, modify the auto-generated ingestion Job ID in the **Job Details**.
 
@@ -228,15 +228,15 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    xi. Choose one of the schema options:
 
-      1.  Existing schema: To ingest source data into an existing schema. Search or select a target schema that is listed in the **Select schema or enter new schema name** dropdown.
+      1.  Existing schema: To ingest source data into an existing schema. Search or select a target schema that is listed in the **Select schema** drop-down.
 
-      2. New schema: Enter a new schema name in the **Select schema or enter new schema name** field and explicitly click **+ Create new: `<new schema name>`** to create a new schema from the source data.
+      2. New schema: Enter a new schema name in the **Create a new schema** field by explicitly clicking **Create** option to create a new schema from the source data.
 
    xii. Select the corresponding Target table options based on the selection of schema.
 
-      1. Existing table: To ingest source data into an existing table. Search or select a target table that is listed in the **Select table or enter new table name** drop-down.
+      1. Existing table: To ingest source data into an existing table. Search or select a target table that is listed in the **Select table** drop-down.
 
-      2. New table: Enter a new target table name in the **Select table or enter new table name** and explicitly click **+ Create new: `<new table name>`** to create a new table from the source data.
+      2. New table: Enter a new target table name in the **Create a new table** field by explicitly clicking **Create** option to create a new table from the source data.
 
    xiii. If required, modify the auto-generated ingestion Job ID in the **Job Details**.
 
@@ -310,15 +310,15 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    v. Choose one of the schema options:
 
-      1.  Existing schema: To ingest source data into an existing schema. Search or select a target schema that is listed in the **Select schema or enter new schema name** dropdown.
+      1.  Existing schema: To ingest source data into an existing schema. Search or select a target schema that is listed in the **Select schema** drop-down.
 
-      2. New schema: Enter a new schema name in the **Select schema or enter new schema name** field and explicitly click **+ Create new: `<new schema name>`** to create a new schema from the source data.
+      2. New schema: Enter a new schema name in the **Create a new schema** field by explicitly clicking **Create** option to create a new schema from the source data.
 
    vi. Select the corresponding Target table options based on the selection (mentioned earlier).
 
-      1. Existing table: To ingest source data into an existing table. Search or select a target table that is listed in the **Select table or enter new table name** drop-down.
+      1. Existing table: To ingest source data into an existing table. Search or select a target table that is listed in the **Select table** drop-down.
 
-      2. New table: Enter a new target table name in the **Select table or enter new table name** and explicitly click **+ Create new: `<new table name>`** to create a new table from the source data.
+      2. New table: Enter a new target table name in the **Create a new table** field by explicitly clicking **Create** option to create a new table from the source data.
 
    vii. If required, modify the auto-generated ingestion Job ID in the **Job Details**.
 
@@ -373,6 +373,10 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
       You can cancel an ingestion job by clicking the **cancel** icon against the ingestion job from the **Ingestion history** tab or by clicking the **Cancel job** in the ingestion job details page.
       {: note}
+
+   xiii. Click the required **Job log** ID of an ingestion job in the **Ingestion history** tab to get the details and logs.
+
+   xiv. Click the **Target** link of an ingestion job in the **Ingestion history** tab to navigate to the ingested table in **Data manager** page.
 
 ## Related API
 {: #ingestion_api}
