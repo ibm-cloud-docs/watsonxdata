@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-02-23"
+lastupdated: "2025-02-24"
 
 keywords: lakehouse, watsonx.data, presto, cli
 
@@ -97,46 +97,56 @@ It is recommended to use IAM token for stress workload.
 
 3. To check whether Presto CLI is installed, run `./presto --version`. Presto cli version displays. For example, `Presto CLI 0.281-cfbc6eb`
 
-4. Run the following commands in the system where Presto CLI is installed.
+4. Run the following commands in the system where Presto CLI is installed. You can use one of the following methods to authenticate to Presto:
 
-   - If you are using API key, run the following command:
+   * **Using username and password** : To do that run the following command:
+
+      - If you are using API key, run the following command:
+
+          ```bash
+          ./presto --server <https://Prestoengine host details> --catalog iceberg_data --schema default --user ibmlhapikey_<your-username> --password
+          ```
+          {: codeblock}
+
+      - If you are using IBM IAM token, run the following command:
+
+          ```bash
+          ./presto --server <https://Prestoengine host details> --catalog iceberg_data --schema default --user ibmlhtoken_<your-username> --password
+          ```
+          {: codeblock}
+
+      `<your-username>` is optional if you have multiple connections with different users and want to differentiate them.
+      {: note}
+
+      Enter your IBM API key or IBM IAM token at the prompt.
+
+   * **JWT token** : To use this method of authentication, contact IBM support and enable the feature. To do that run the following command: If you are using JWT token, run the following command:
 
        ```bash
-       ./presto --server <https://Prestoengine host details> --catalog iceberg_data --schema default --user ibmlhapikey_<your-username> --password
+       ./presto --server <https://Prestoengine host details> --catalog iceberg_data --schema default --access-token <access token>
        ```
        {: codeblock}
 
-   - If you are using IBM IAM token, run the following command:
+      To generate `<ACCESS_TOKEN>`, use one of the following methods:
 
-       ```bash
-       ./presto --server <https://Prestoengine host details> --catalog iceberg_data --schema default --user ibmlhtoken_<your-username> --password
-       ```
-       {: codeblock}
+      * Getting IBM Access Management (IAM) token, see [(IAM) token](watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
 
-   `<your-username>` is optional if you have multiple connections with different users and want to differentiate them.
-   {: note}
+      * Get `<ACCESS_TOKEN>` by using the following command:
 
-   Enter your IBM API key or IBM IAM token at the prompt.
-
-   - If you are using JWT token, run the following command:
 
        ```bash
        curl --location 'https://us-south.lakehouse.dev.cloud.ibm.com/lakehouse/api/v2/auth/authenticate/' \
        --header 'Content-Type: application/json' \
        --data-raw '{
-        "username": "<user_name>",
-        "password": "<ACCESS_TOKEN>",
+        "username": "ibmlhtoken_<user-name>",
+        "password": "<IAM_TOKEN>",
+        "instance_id": "<instance_id>",
         "instance_name": ""
-      }'
+       }'
        ```
        {: codeblock}
 
-   To generate `<ACCESS_TOKEN>`, use the following command:
-
-       ```bash
-       curl -k -X POST 'https://iam.test.cloud.ibm.com/identity/token' --header "Content-Type: application/x-www-form-urlencoded" --data-urlencode "grant_type=urn:ibmbee:params:oauth:grant-type:apikey" --data-urlencode "apikey=<iam_apikey>"
-       ```
-       {: codeblock}
+       <IAM_TOKEN> : Specify the token generated from [(IAM) token](watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
 
 6. At the Presto prompt, type `show catalogs;`. The catalog list appears. Now you are connected to Presto engine in {{site.data.keyword.lakehouse_short}} through Presto CLI.
 
