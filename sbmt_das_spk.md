@@ -33,6 +33,7 @@ This topic provides the procedure to submit a Spark application by using native 
 * Azure Data Lake Storage (ADLS)
 * Amazon S3
 * Google Cloud Storage (GCS)
+* Cloud Object Storage (COS)
 
 
 ## Submitting a Spark application without accessing the watsonx.data catalog
