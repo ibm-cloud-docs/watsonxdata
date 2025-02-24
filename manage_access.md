@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-02-22"
+lastupdated: "2025-02-24"
 
 keywords: lakehouse, watsonx data, roles, access
 subcollection: watsonxdata
@@ -72,7 +72,7 @@ To manage access, complete the following steps:
       1. Click **Next**.
       1. You can view a table with the list of users and the infrastructure components against each user.      Select a role against each component from the **Choose a role** list.
 
-      You cannot change the existing role against a user (if it is seen already available in the table) from the page. To edit an existing role, see
+      You cannot change the existing role against a user (if it is seen already available in the table) from the page. To edit an existing role, see step 5.
       {: note}
 
       1. Click **Save**. The data is successfully saved.
