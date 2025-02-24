@@ -34,10 +34,8 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
-## Iceberg timestamptz error occurs after watsonx.data web console upgrade
+## The timestamptz datatype is not supported for an ORC table during the upgrade of watsonx.data web console
 {: #known_issue22118}
-
-After upgrading the watsonx.data web console and loading the ORC table, an error message appears: "Iceberg column timestamptz is not supported".
 
 ## Database names containing hyphens or spaces cannot be queried by the Spark engine in a Python notebook, even when the appropriate Spark access control extension has been added.
 {: #known_issue38611}
