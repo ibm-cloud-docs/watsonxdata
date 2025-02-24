@@ -201,6 +201,7 @@ toc:
                 label: Submitting Spark application by using native Spark engine
                 topics:
                   - sbmt_das_spk.md
+                  - sbmt_spk_cnsl.md
                   - spark-extnsn.md
                   - run_nativespk_hudi.md
                   - ae_auto-scaling-serverless-apps.md
