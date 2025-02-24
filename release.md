@@ -49,7 +49,7 @@ Integration enhancements
 
    * Now you can define IBM Knowledge Catalog governance policies for Presto (C++) engine when you integrate with {{site.data.keyword.lakehouse_short}}. For more information, see [Connecting to IBM Knowledge Catalog (IKC)](watsonxdata?topic=watsonxdata-ikc_integration).
 
-   - Connection Information page now includes:
+   - The **Connection Information** page now includes:
       * Presto configuration details for DBT integration. You can copy the Presto configuration details that are required for DBT integration from this page.
       * Option to export the TDS file, which includes the Presto engine configuration details that are required for Tableau integration.
 
@@ -59,13 +59,13 @@ Engine and service enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
 
-   - You can now create a Spark application from the Applications tab of the Spark engine details page. For more information, see (Topic link).
-   - You can now use Spark version,  3.5.4 to run the applications in watsonx.data. For more information, see [Supported Spark version](watsonxdata?topic=watsonxdata-wxd-ae_limits#cpu-mem-spk_versn).
+   - You can now create a Spark application from the **Applications** tab of the Spark engine details page. For more information, see (Topic link).
+   - You can now use Spark version,  3.5.4 to run the applications in watsonx.data. In {{site.data.keyword.lakehouse_full}}, Apache Spark 3.4.4 and Apache Spark 3.5.4 are the supported versions.
    - Milvus allows the following:
-      - With Milvus you can now do a hybrid GroupBy search based on multiple vector columns and also customize the group size when you run search queries. For more information, see [Connecting watsonx Assistant to watsonx.data Milvus for custom search](watsonxdata?topic=watsonxdata-wxd_wxa_connection).
+      - In Milvus you can now do a hybrid GroupBy search based on multiple vector columns and also customize the group size when you run search queries. For more information, see [Connecting watsonx Assistant to watsonx.data Milvus for custom search](watsonxdata?topic=watsonxdata-wxd_wxa_connection).
       - Milvus now supports custom size with a capacity of 3 billion vectors with a maximum of 1,024 dimensions.
       - Milvus now allows scaling up or down between predefined T-shirt sizes (small, medium, and large) or custom sizes. For more information, see [Adding Milvus service](watsonxdata?topic=watsonxdata-adding-milvus-service).
-   - {{site.data.keyword.lakehouse_short}} uses version 2.5.0 of Milvus. For more information, see [Milvus](watsonxdata?topic=watsonxdata-whatismilvus).
+   - Starting from {{site.data.keyword.lakehouse_short}} 2.1.1 version, Milvus 2.5.0 is supported. For more information, see [Milvus](watsonxdata?topic=watsonxdata-whatismilvus).
 
 
 Access management enhancements
@@ -74,7 +74,7 @@ Access management enhancements
 
    - The Access Management Service (AMS) in {{site.data.keyword.lakehouse_short}} can now use JSON Web Token (JWT) authentication for incoming requests from Presto, ensuring secure and efficient access control. For more information, see [Connecting to Presto engine through Presto CLI (Remote)](watsonxdata?topic=watsonxdata-con-presto-serv#conn-to-prestoeng).
    - You can now assign users and roles to infrastructure components in batches of Twenty. For more information, see [Managing user access](watsonxdata?topic=watsonxdata-manage_access).
-   - You can now use Apache Ranger HadoopSQL policies to govern data with Spark engines. You can define Ranger policies when the Spark engine accesses data from Hadoop clusters. Enabling Ranger policy ensures robust data security and governance. With the Ranger policy, you can do table authorization (L3), row-level filtering, and column masking for data. For more information, see [Enabling Apache Ranger policy for resources](watsonxdata?topic=watsonxdata-ranger_1).
+   - You can now use Apache Ranger HadoopSQL policies to govern data with Spark engines. You can define Ranger policies when the Spark engine accesses data from Hadoop clusters. Enabling Ranger policy ensures robust data security and governance. With the Ranger policy, you can configure table authorization (L3), row-level filtering, and column masking for data. For more information, see [Enabling Apache Ranger policy for resources](watsonxdata?topic=watsonxdata-ranger_1).
 
 
 CPDCTL CLI enhancements
@@ -88,7 +88,7 @@ Deprecated features
 
 : The following feature is deprecated in this release:
 
-   The Data Access Service (DAS) proxy feature is now deprecated and will be removed in a future release. You cannot use the Data Access Service (DAS) proxy feature to access object storage (S3, ADLS and ABS). Switch to DAS Signature flow to continue accessing storage. For more information, see [Data Access Service (DAS)](watsonxdata?topic=watsonxdata-cas_ep_ov).
+   The Data Access Service (DAS) proxy feature is now deprecated and will be removed in a future release. You cannot use the Data Access Service (DAS) proxy feature to access object storage (S3, ADLS and ABS). Switch to DAS Signature flow to continue accessing storage. For an overview of the DAS feature, see [Data Access Service (DAS)](watsonxdata?topic=watsonxdata-cas_ep_ov).
 
 
 
