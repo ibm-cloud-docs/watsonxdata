@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-02-13"
+  years: 2022, 2025
+lastupdated: "2025-02-24"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -46,41 +46,47 @@ Ensure you have the following details:
    * IBM Knowledge Catalog
 
 
-## Procedure
+## Creating policies for Presto and Spark in Ranger
 {: #ranger_3}
+
+IBM watsonx.data uses the policies defined under the following service types in Ranger to allow data security on catalogs(Iceberg, Hive and Hudi), buckets, schemas and tables.
+* Presto : Create resource policies in this Ranger service type to enforce security on catalogs(Iceberg, Hive and Hudi), buckets, schemas and tables used by Presto engine in watsonx.data.
+* and Hadoop SQL : Create resource policies in this Ranger service type to enforce security on catalogs(Iceberg, Hive and Hudi), buckets, schemas and tables used by Spark engine in watsonx.data.
+
 
 1. Complete the following steps to create a service in the Ranger.
 
     a. Log in to Apache Ranger by using the username and password.
+    b. The **Service Manager** page lists all the resources and available services under them. For more information about the different resources, see [Service Manager](https://cwiki.apache.org/confluence/display/RANGER/Apache+Ranger+0.5+-+User+Guide#ApacheRanger0.5UserGuide-ServiceManager(AccessManager)).
+    c. Click **Resource** tab and select one of the following resources depending on your use case.
+       * PRESTO : Create policies for Presto engine in watsonx.data.
+       * Hadoop SQL : Create policies for Spark engine in watsonx.data.
 
-    b. The home page lists all the services that are already configured under different resources. To create a new service, click the + icon next to the PRESTO resource.
-
-    c. Provide the following details:
-
-     | Field | Description |
-     |--------------------------|----------------|
-     |  Username |	admin|
-     |  Password	| UXXXXXXR|
-     |jdbc.url |	Provide the JDBC URL.|
-     {: caption="Apache Ranger policy " caption-side="bottom"}
+    d. Click the **Add New Service** (+) icon against the required service type and create a new service to define policies. For more information about the different resources, see [Service Manager](https://cwiki.apache.org/confluence/display/RANGER/Apache+Ranger+0.5+-+User+Guide#ApacheRanger0.5UserGuide-ServiceManager(AccessManager)).
 
 
-    d. The service is successfully added in the PRESTO resource list. Click the service name to verify that the default policies are added.
-
-    The testing might fail initially, you can re-test the connection after saving the details since the default policies will be automatically added after saving.
+    You can also select an existing service to define policies. To define Ranger policies for Presto, you must create a service under PRESTO section and to define Ranger policies for Spark, you must create a service under Hadoop SQL section.
     {: note}
 
-2. Complete the following steps to enable and configure Apache Ranger in watsonx.data.
+    e. Create policy against the new (or existing) service. To do that, see [Policy Manager](https://cwiki.apache.org/confluence/pages/viewpage.action?pageId=57901344#RangerUserGuide(workinprogress)-PolicyManager).
 
-    a. Log in to watsonx.data console.
+    The service is successfully added in the respective resource list. Click the service name to verify that the default policies are added.
 
-    b. From the navigation menu, select Access control.
 
-    c. Click the **Integrations** tab.
+## Associating Ranger policies for Presto and Spark in watsonx.data
+{: #ranger_10}
 
-    d. Click **Integrate service**. The Integrate service window opens.
+Complete the following steps to enable and configure Apache Ranger in watsonx.data.
 
-    e. In the **Integrate service** window, provide the following details:
+a. Log in to watsonx.data console.
+
+b. From the navigation menu, select **Access control**.
+
+c. Click the **Integrations** tab.
+
+d. Click **Integrate service**. The Integrate service window opens.
+
+e. In the **Integrate service** window, provide the following details:
 
      | Field | Description |
      |--------------------------|----------------|
@@ -90,29 +96,38 @@ Ensure you have the following details:
      |Password	|The admin credentials.|
      |List resources|	Click the link to load the resources that are available in the Apache Ranger server.|
      |Resources	|Select the resource for which the Apache Ranger policy must be enabled.|
+     |Policy Cache Time Configuration| The time taken to refresh the newly defined Ranger policies.|
      |Enable data policy within watsonx.data	|Select the checkbox to enable data policy along with Apache Ranger policy.|
      {: caption="Integrate service " caption-side="bottom"}
 
 
-    f. Click **Integrate**. The Apache Ranger policy is integrated and listed in the Access Control page.
+f. Click **Integrate**. The Apache Ranger policy is integrated and listed in the **Access Control** page.
 
-3. Complete the following steps to verify access control :
+## Verify the integration
+{: #ranger_11}
 
-    a. Log in to watsonx.data instance.
 
-    b. From the navigation menu, click **Query workspace**.
+Complete the following steps to verify access control :
 
-    c. Execute a simple query. The access denied error appears as currently no policies are defined in the Ranger for the user.
+a. Log in to watsonx.data instance.
 
-4. Complete the following steps to grant permissions to the user:
+b. From the navigation menu, click **Query workspace**.
 
-    a. Log in to **Apache Ranger**.
+c. Execute a simple query. The access denied error appears as currently no policies are defined in the Ranger for the user.
 
-    b. Grant the required permission to the test user.
+## Granting permission to users
+{: #ranger_12}
 
-    c. Scroll down to the bottom, click the **Save** button.
 
-    d. Log in to watsonx.data instance and execute a query again. The access is allowed for the user after adding policies in the Ranger.
+Complete the following steps to grant permissions to the user:
+
+a. Log in to **Apache Ranger**.
+
+b. Grant the required permission to the test user.
+
+c. Scroll down to the bottom, click the **Save** button.
+
+d. Log in to watsonx.data instance and execute a query again. The access is allowed for the user after adding policies in the Ranger.
 
 ## Limitations
 {: #ranger_4}
