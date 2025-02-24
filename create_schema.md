@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-25"
+lastupdated: "2025-02-24"
 
 keywords: watsonxdata, schema
 
@@ -31,6 +31,14 @@ subcollection: watsonxdata
 
 You can create schema from the **Data manager** page by using the web console.
 {: shortdesc}
+
+## Before you begin
+{: #create_schemabyb}
+
+You must have at minimum a `User` access with data policy for catalogs. See [Managing data policy rules](watsonxdata?topic=watsonxdata-data_policy).
+
+## Procedure
+{: #create_schemaprc}
 
 1. Log in to {{site.data.keyword.lakehouse_full}} console.
 1. From the navigation menu, select **Data manager**, click **Browse data**.

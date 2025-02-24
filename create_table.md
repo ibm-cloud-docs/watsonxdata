@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-25"
+lastupdated: "2025-02-24"
 
 keywords: watsonxdata, data manager, create table
 
@@ -31,6 +31,17 @@ subcollection: watsonxdata
 
 You can generate, configure, and run DDL from the **Data manager** page by using the web console.
 {: shortdesc}
+
+## Before you begin
+{: #create_tablebyb}
+
+* A schema must be created. See [Creating svchema](watsonxdata?topic=watsonxdata-create_schema).
+* Add and register IBM Analytics Engine (Spark). See [Provisioning a Spark engine]({{site.data.keyword.ref-spl_engine-link}}).
+* For the target table, an active Iceberg catalog connected to a running Presto engine is required. See [Adding a storage-catalog pair]({{site.data.keyword.ref-reg_bucket-link}}). The storage must have `Writer` access at minimum.
+* To ingest data, you must have at minimum a `User` access to Presto engine and Spark engine.
+
+## Procedure
+{: #create_tableprc}
 
 1. Log in to {{site.data.keyword.lakehouse_full}} console.
 1. From the navigation menu, select **Data manager**, click **Browse data**.
