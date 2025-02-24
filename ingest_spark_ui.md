@@ -182,6 +182,10 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
       You can cancel an ingestion job by clicking the **cancel** icon against the ingestion job from the **Ingestion history** tab or by clicking the **Cancel job** in the ingestion job details page.
       {: note}
 
+   xx. Click the required **Job log** ID of an ingestion job in the **Ingestion history** tab to get the details and logs.
+
+   xxi. Click the **Target** link of an ingestion job in the **Ingestion history** tab to navigate to the ingested table in **Data manager** page.
+
 ## Ingesting data from remote storage
 {: #spk_ingest_dataremote}
 
@@ -291,6 +295,10 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
       You can cancel an ingestion job by clicking the **cancel** icon against the ingestion job from the **Ingestion history** tab or by clicking the **Cancel job** in the ingestion job details page.
       {: note}
+
+   xix. Click the required **Job log** ID of an ingestion job in the **Ingestion history** tab to get the details and logs.
+
+   xx. Click the **Target** link of an ingestion job in the **Ingestion history** tab to navigate to the ingested table in **Data manager** page.
 
 ## Ingesting data from databases
 {: #spk_ingest_dataremote}
