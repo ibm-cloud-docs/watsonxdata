@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-02-21"
+lastupdated: "2025-02-24"
 
 keywords: lakehouse, milvus, watsonx.data
 subcollection: watsonxdata
@@ -82,6 +82,7 @@ In Milvus, you can conduct a vector similarity search after you prepare the para
 
 - For more information about single-vector and multi-vector search, see [Vector similarity search](https://milvus.io/docs/single-vector-search.md).
 - For more information about hybrid (multi-vector) search, see [Hybrid search](https://milvus.io/docs/multi-vector-search.md).
+- For more information about hybrid with GroupBy search, see the GroupBy Enhancements section in [Hybrid GroupBy search](https://milvus.io/docs/release_notes.md#v250).
 
 ## Conducting a query based on scalar filtering in Milvus
 {: #working_with_milvus-06}
