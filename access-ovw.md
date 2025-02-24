@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-02-21"
+lastupdated: "2025-02-24"
 
 keywords: access, access control, access management
 
@@ -36,12 +36,12 @@ Access management is a critical aspect of security that ensures only authorized 
 
 Access management in {{site.data.keyword.lakehouse_short}} includes three levels of access control:
 
-* User authentication (Level 1)
-* User access to resources (Level 2)
-* User access to data (Level 3)
+* [User authentication (Level 1)](#level1)
+* [User access to resources (Level 2)](#leve2)
+* [Advance User Access to resources (Level 3)](#leve3)
 
 
-## Level 1 authentication in {{site.data.keyword.lakehouse_short}} on IBM Cloud and AWS
+## User authentication (Level 1)
 {: #level1}
 
 User authentication is the first-level access required for users to authenticate into the {{site.data.keyword.lakehouse_short}}. It has two parts to it.
@@ -83,7 +83,7 @@ The following table provides the service role details that are specific to watso
 
 
 
-## Authentication options
+### Authentication options
 {: #levelauth}
 
 
@@ -103,7 +103,7 @@ Controlling access to the engines and other components is a critical requirement
 For more information on L2 access control in watsonx.data on IBM Cloud and AWS, see [Managing users](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-manage_access) and [Managing roles and privileges](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-role_priv).
 
 
-## Data access (Level 3)
+## Advance User Access to resources (Level 3)
 {: #leve3}
 
 At the data access level, you can define data access policies and grant or restrict access to schema, table, and columns in watsonx.data. You can define policies by using {{site.data.keyword.lakehouse_short}} Access Management System, or IBM Knowledge Catalog integration or Apache Ranger integration.
