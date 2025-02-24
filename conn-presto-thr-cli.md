@@ -146,7 +146,9 @@ It is recommended to use IAM token for stress workload.
        ```
        {: codeblock}
 
-       <IAM_TOKEN> : Specify the token generated from [(IAM) token](watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
+       `<IAM_TOKEN>` : Specify the token generated from [(IAM) token](watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
+       `<user-name>` : Specify the email id.
+       `<instance_id>` : Specify the instance CRN.
 
 6. At the Presto prompt, type `show catalogs;`. The catalog list appears. Now you are connected to Presto engine in {{site.data.keyword.lakehouse_short}} through Presto CLI.
 
