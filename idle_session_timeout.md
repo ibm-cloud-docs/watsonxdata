@@ -44,4 +44,4 @@ To set idle session timeout, complete the follwoing steps:
    1. Click **Edit**.
    1. Enter the title and the message.
    1. Click the toggle switch to enable the login message.
-   1. Click **Save**
+   1. Click **Save**.
