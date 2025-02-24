@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-01-27"
+lastupdated: "2025-02-24"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -45,6 +45,7 @@ IBM Data Virtualization Manager for z/OS provides virtual, integrated views of d
  | Validate certificate           | Use the toggle switch to validate whether the SSL certificate that is returned by the host is trusted or not.  |
  | Hostname in SSL certificate           | Provide the hostname in SSL certificate. This step is optional.  |
  | Connection status     | Click the Test connection link to test the data source connection. If the data source connection is successful, a success message appears. (Note: If you face issues with the test connection by using SSL, try testing again without certificate validation. Sometimes, certificate validation might fail to work.)|
+ | Associated catalog| Select the checkbox to associate a catalog to the data source. This catalog is automatically associated with your data source and serves as your query interface with the data stored within.|
  | Catalog name | Enter the name of the catalog.|
  | Create | Click Create to create the data source. |
  {: caption="Register data source" caption-side="bottom"}
