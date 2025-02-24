@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-02-06"
+lastupdated: "2025-02-24"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -17,6 +17,10 @@ subcollection: watsonxdata
 This topic provides you with the procedure to connect Tableau to Presto.
 
 When you connect to the Presto engine in watsonx.data, you can access the various connected data sources and build compelling and interactive data visualizations.
+
+You can use one of the following ways to connect to Presto:
+* [Connecting to Presto by configuring details manually](#tableau_prs)
+* Connecting to Presto by using TDS file
 
 
 
@@ -66,6 +70,23 @@ Tableau uses Lightweight Directory Access Protocol (LDAP) authentication mechani
 
 4.	In the **Initial SQL** tab (Optional), specify the initial SQL query that you want to run when a connection is made to Presto.
 5.	Click **Sign In**. The **Data Source** page opens when connection is successful.
+
+
+## Connecting to Presto by using TDS file
+{: #tableau_tds}
+
+In this method, you can select the catalog that you want to analyse in Tableau from the watsonx.data console and watsonx.data generates a Data source files (TDS). This file can be used to access watsonx.data catalog directly in Tableau without any Presto configurations.
+
+TDS files are shortcuts for quickly connecting to the original data that you use often. Data source files do not contain the actual data but rather the information necessary to connect to the actual data. For more information, see [Save Data Sources](https://help.tableau.com/current/pro/desktop/en-us/export_connection.htm).
+
+1. Log in to the watsonx.data instance.
+1. Go to **Configurations**.
+1. Click **Connection information** page.
+1. Expand **BI Tools** and select **Tableau**.
+1. From the **Connection Details** section, expand the **Presto** engine.
+1. Use the **Edit catalog** icon in the **Catalog** field to select the required catalog for data analysis.
+1. Click the **Export TDS** link to download the data source file. Click the downloaded file. The Tableau desktop opens and the Catalog page is displayed. You can select the schemas and tables for analysis.
+1. For more information about establishing a connection, see [Tableau documentation](https://help.tableau.com/current/pro/desktop/en-us/examples_presto.htm).
 
 
 

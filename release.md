@@ -90,7 +90,7 @@ Deprecated features
 
 : The following feature is deprecated in this release:
 
-   The Data Access Service (DAS) proxy feature is now deprecated and will be removed in a future release. You cannot use the Data Access Service (DAS) proxy feature to access object storage (S3, ADLS and ABS). Switch to DAS Signature flow to continue accessing storage. For an overview of the DAS feature, see [Data Access Service (DAS)](watsonxdata?topic=watsonxdata-cas_ep_ov).
+   The Data Access Service (DAS) proxy feature is now deprecated and will be removed in a future release. You cannot use the Data Access Service (DAS) proxy feature to access object storage (S3, ADLS and ABS). If you use DAS proxy flow and face any issues, contact IBM support. For an overview of the DAS feature, see [Data Access Service (DAS)](watsonxdata?topic=watsonxdata-cas_ep_ov).
 
 
 
