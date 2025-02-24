@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-02-23"
+lastupdated: "2025-02-24"
 
 keywords: watsonxdata, release notes
 
@@ -39,7 +39,7 @@ Data sources and storage enhancements
       * BigQuery
       * MySQL
       * Google Cloud Storage
-   * You can now register and load external pre-existing Hudi and Delta tables on an object storage using Iceberg REST Catalog API.
+   * You can now register and load external pre-existing Hudi and Delta tables on an object storage using {{site.data.keyword.lakehouse_short}} APIs.
 
 
 
