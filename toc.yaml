@@ -319,7 +319,7 @@ toc:
                 label: Orchestration using Apache Airflow
                 topics:
                   - airflow.md
-      - idle_session_timeout
+      - idle_session_timeout.md
   - navgroup:
       id: reference
       topics:
