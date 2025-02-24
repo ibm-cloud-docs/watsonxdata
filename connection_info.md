@@ -63,6 +63,12 @@ Expand the Tableu section to see the following details:
 * SSL certificate
 
 
+Data source files are shortcuts to quickly connecting to the original data that you use often. Data source files does not include the actual data but the information necessary to connect to the actual data. For more information, see [Save Data Sources](https://help.tableau.com/current/pro/desktop/en-us/export_connection.htm).
+{: note}
+
+* Copy TDS snippet
+* Export TDS
+
 
 You can also click the link to view BI connection documentation.
 
@@ -150,6 +156,18 @@ Expand the VS Code connection configuration to view the following details:
 From the **Data Build Tool (DBT)** tab, you can view the following details:
 
 
+### Presto engines
+{: #get_connection_dbt_pst}
+
+Expand your Presto engine to see the following details:
+
+* Hostname
+* Port
+* Catalog: You can change the catalog by clicking the pencil icon.
+* Username
+* Password: Enter your platform API key here. For information about generating API key, see [Creating an API key in the console](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key).
+
+You can copy the profile details by clicking **Copy profile snippet** or export the details as a `yaml` file by clicking **Export profile snippet**.
 
 ### Spark engines
 {: #get_connection_dbt_spk}
