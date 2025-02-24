@@ -79,10 +79,12 @@ Access management enhancements
 
 CPDCTL CLI enhancements
 
-: IBM CPDCTL CLI is now used to configure and manage different operations in {{site.data.keyword.lakehouse_short}}. Using the CPDCTL CLI, you can manage configuration settings and do operations using the following commands:
+: IBM `CPDCTL` CLI is now used to configure and manage different operations in watsonx.data. Using the `CPDCTL` CLI, you can manage configuration settings, run ingestion jobs, manage engines, data sources, and storages. The following two plugins are currently used to execute these operations:
 
-   * config - To configure {{site.data.keyword.lakehouse_short}} service environment and users.
-   * wx-data - To do all operations using {{site.data.keyword.lakehouse_short}} service.
+   * `config` - To configure {{site.data.keyword.lakehouse_short}} service environment and users.
+   * `wx-data` - To do all operations using {{site.data.keyword.lakehouse_short}} service.
+
+   For more information, see [IBM cpdctl](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=SSDZ38_2.1.x/wxd-client/topics/cpdctl-title.htm).
 
 Deprecated features
 
