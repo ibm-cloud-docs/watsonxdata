@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-02"
+lastupdated: "2025-02-24"
 
 keywords: monitoring, watsonx.data
 
@@ -211,7 +211,6 @@ The following attributes are available for segmenting all of the metrics that ar
 | `Location` | `ibm_location` | The location of the monitored resource - this can be a region, data center or global |
 | `Resource` | `ibm_resource` | The resource being measured by the service - typically an indentifying name or GUID |
 | `Resource Type` | `ibm_resource_type` | The type of the resource being measured by the service |
-| `Resource group` | `ibm_resource_group_name` | The resource group where the service instance was created |
 | `Scope` | `ibm_scope` | The scope is the account, organization, or space GUID associated with this metric |
 | `Service name` | `ibm_service_name` | Name of the service generating this metric |
 {: caption="Table 13: Global attributes" caption-side="top"}
