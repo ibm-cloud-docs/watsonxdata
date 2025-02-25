@@ -61,13 +61,11 @@ Expand the Tableu section to see the following details:
 * Username
 * Password: Enter the API key for authentication.
 * SSL certificate
-
+* Copy TDS snippet
+* Export TDS
 
 Data source files are shortcuts to quickly connecting to the original data that you use often. Data source files does not include the actual data but the information necessary to connect to the actual data. For more information, see [Save Data Sources](https://help.tableau.com/current/pro/desktop/en-us/export_connection.htm).
 {: note}
-
-* Copy TDS snippet
-* Export TDS
 
 
 You can also click the link to view BI connection documentation.
