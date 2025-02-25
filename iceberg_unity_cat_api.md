@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-02-21"
+lastupdated: "2025-02-25"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -219,14 +219,6 @@ The following are the APIs included:
 {: #iceberg_cat_api_4}
 
 - Config endpoint to configure catalog as prefix
-
-### Hudi and Delta table related
-{: #iceberg_cat_api_5_issue15910}
-
-- Register a table by using metadata_location
-- Load a table
-
-To register the table, you must provide the exact location of the metatdata folder. The schema is inferred based on the path in the location url.
 
 For more information, see [API references](https://editor-next.swagger.io/?url=https://raw.githubusercontent.com/apache/iceberg/refs/tags/apache-iceberg-1.6.1/open-api/rest-catalog-open-api.yaml).
 
