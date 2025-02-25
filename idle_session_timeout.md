@@ -41,7 +41,7 @@ To set idle session timeout, complete the follwoing steps:
 1. Click **Edit**.
 1. Set the desired timeout duration for idle session timout and click **Save**.
 
-   The minumum timout duration is 2 minutes, and the maximum timout duration is 120 minutes.
+   The default idle session timeout is set to 15 minutes. You can configure the timeout duration, with a minimum of 2 minutes and a maximum of 120 minutes.
    {: note}
 
 1. To set a **Login message**, complete the following steps:
