@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-02-24"
+lastupdated: "2025-02-25"
 
 keywords: lakehouse
 
@@ -70,6 +70,9 @@ CREATE VIEW view_name SECURITY INVOKER AS query;
 
 ## Iceberg tables that are partitioned by a date column may not be readable.
 {: #known_issues34778}
+
+This limitation is only applicable to Presto C++.
+{: note}
 
 ## EXISTS clause on Apache Phoenix tables generate Exeception while executing query error
 {: #known_issues18858}
