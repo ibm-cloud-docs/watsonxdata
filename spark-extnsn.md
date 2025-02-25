@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2025-02-24"
+lastupdated: "2025-02-25"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -21,7 +21,7 @@ You can enable the Spark access control extension for Iceberg, Hive and Hudi cat
 {: note}
 
 
-You can either use Ranger or Access Management System (AMS) data policies to grant or deny access for catalog (Iceberg, Hive and Hudi), schema, and table even column to a user or user group. Besides data level authorization, storage privilege is also considered.
+You can either use Ranger or Access Management System (AMS) data policies to grant or deny access for users, user groups, catalog (Iceberg, Hive and Hudi), schema, table, and column. Besides data level authorization, storage privilege is also considered.
 For more information related to the using AMS on catalogs(Iceberg, Hive and Hudi), buckets, schemas and tables, see see [Managing roles and privileges](watsonxdata?topic=watsonxdata-role_priv){: external}.
 For more information on how to create Ranger policies (defined under Hadoop SQL service) and to enable them on catalogs(Iceberg, Hive and Hudi), buckets, schemas and tables, see see [Managing Ranger policies](watsonxdata?topic=watsonxdata-ranger_1){: external}.
 
