@@ -57,9 +57,7 @@ Business terms that were imported to IBM Knowledge Catalog for a semantic automa
 ## View Access control with `DEFINER` mode
 {: #known_issues18108}
 
-watsonx.data may experience issues with access control for views defined with `DEFINER` mode.
-
-When a view is defined with `DEFINER` mode, the view's access control relies on the privileges of the user who created the view. If the view owner's information is not available in the AMS cache, the access control check for the view will fail.
+Vews defined in `DEFINER` mode cannot be accessed by another user even if access is granted. The `DEFINER` is the defacult modee.
 
 **Workaround:** Redefine views with `SECURITY INVOKER` mode in their DDL statements.
 
