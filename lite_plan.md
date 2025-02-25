@@ -156,7 +156,7 @@ The storage associated is used as a data bucket by Milvus and as an engine home 
          | Field | Description |
          |--------------------------|----------------|
          | Display name | Enter the name to be displayed. (The following special characters are not allowed: ! @ # $ % ^ & * ( ) = + : { } < > ? ' \ ; `).|
-         | Associate Catalog | Select the checkbox to add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within. |
+         | Associate catalog | Select the checkbox to add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within. |
          | Activate now| Activate the storage immediately or activate it later. |
          | Catalog name | Enter the name of your catalog. (The following special characters are not allowed: ! @ # $ % ^ & * ( ) = + : { } < > ? ' \ ; `).|
          {: caption="Register bucket" caption-side="bottom"}
