@@ -40,6 +40,10 @@ To set idle session timeout, complete the follwoing steps:
 1. From the navigation menu, select **Configurations** and click **User settings** tile. Or click **Profile** and click **Preference Settings**.
 1. Click **Edit**.
 1. Set the desired timeout duration for idle session timout and click **Save**.
+
+   The minumum timout duration is 2 minutes, and the maximum timout duration is 120 minutes.
+   {: note}
+
 1. To set a **Login message**, complete the following steps:
    1. Click **Edit**.
    1. Click the toggle switch to enable the login message.
