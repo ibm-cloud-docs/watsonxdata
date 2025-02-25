@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-10"
+lastupdated: "2025-02-25"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -36,7 +36,7 @@ You can connect to the data source through the Arrow Flight service that is depl
 {: #prereq_database}
 
 * The Arrow Flight connector supports only the IBM Arrow Flight service on an IBM Cloud.
-* The Arrow Flight service should be running for data sources to work with.
+* The Arrow Flight service should be running for data sources listed below to work with.
 
 ## Features and capabilities
 {: #features_database}
