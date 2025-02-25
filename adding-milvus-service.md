@@ -50,7 +50,7 @@ Complete the following steps to add Milvus as a service in {{site.data.keyword.l
     |  | **Small**: Recommended for **10 million vectors**, 64 index parameters, 1024 segment size, and 384 dimensions. |
     |  | **Medium**: Recommended for **50 million vectors**, 64 index parameters, 1024 segment size, and 384 dimensions. |
     |  | **Large**: Recommended for **100 million vectors**, 64 index parameters, 1024 segment size, and 384 dimensions. |
-    |  | **Custom**: Recommended for upto **3 billion vectors**, 64 index parameters, and 1024 segment. The actual number of vectors and dimensions supported depends on the index type and the maximum supported vCPU configuration. \n - IVF_SQ8: Up to 3 billion vectors. \n - IVF_FLAT: Up to 1.3 billion vectors. \n - HNSW: Up to 1 billion vectors. |
+    |  | **Custom**: Recommended for upto **3 billion vectors**, 64 index parameters, and 1024 segment. The actual number of vectors and dimensions supported depends on the index type and the maximum supported vCPU configuration. \n - IVF_SQ8 - Up to 3 billion vectors. \n - IVF_FLAT - Up to 1.3 billion vectors. \n - HNSW - Up to 1 billion vectors. |
     | Add storage bucket | Associate an external storage for the **Small**, **Medium**, or **Large** sizes. For **Starter** size, you can also select an IBM-managed storage. To associate an external storage, you must have the storage configured.|
     | Path | For external storages, specify the path where you want to store vectorized data files.|
     {: caption="Adding Milvus service" caption-side="bottom"}
