@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-02-20"
+lastupdated: "2025-02-25"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -151,7 +151,7 @@ The storage associated is used as a data bucket by Milvus and as an engine home 
 
         For Lite plan instance, there are two options:
 
-        a. **Discover COS instance** : Automatically selects an existing IBM COS instance and its attached bucket or creates a new COS instance and bucket. If you created multiple IBM COS instances and buckets, select the appropriate IBM COS instance and the bucket to attach to it. Then configure the following details:
+        a. **Discover COS instance** : Selects an existing IBM COS instance and an attached bucket on your IBM Cloud account. If no COS instance and bucket are found, a first time COS instance and bucket creation feature will be enabled allowing for automatic COS instance and bucket creation with a generated default naming scheme. This automation only works if no buckets are registered on the watsonx.data instance. If multiple IBM COS instances and buckets are detected, select the IBM COS instance that contains the desired bucket to register with watsonx.data, and then configure the following details:
 
          | Field | Description |
          |--------------------------|----------------|
