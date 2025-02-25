@@ -57,7 +57,7 @@ Business terms that were imported to IBM Knowledge Catalog for a semantic automa
 ## View Access control with `DEFINER` mode
 {: #known_issues18108}
 
-Vews defined in `DEFINER` mode cannot be accessed by another user even if access is granted. The `DEFINER` is the defacult mode.
+Vews defined in `DEFINER` mode cannot be accessed by another user even if access is granted. The `DEFINER` is the default mode.
 
 **Workaround:** Redefine views with `SECURITY INVOKER` mode in their DDL statements.
 
