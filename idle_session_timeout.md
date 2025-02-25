@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-02-24"
+lastupdated: "2025-02-25"
 
 keywords: lakehouse, watsonx.data, query optimizer, uninstall
 
@@ -37,11 +37,11 @@ This topic outlines the steps to set a timeout that automatically terminates a u
 To set idle session timeout, complete the follwoing steps:
 
 1. Log in to {{site.data.keyword.lakehouse_short}} console.
-1. From the navigation menu, select **Configurations** and click **User settings** tile.
+1. From the navigation menu, select **Configurations** and click **User settings** tile. Or click **Profile** and click **Preference Settings**.
 1. Click **Edit**.
 1. Set the desired timeout duration for idle session timout and click **Save**.
 1. To set a **Login message**, complete the following steps:
    1. Click **Edit**.
-   1. Enter the title and the message.
    1. Click the toggle switch to enable the login message.
+   1. Enter the title and the message.
    1. Click **Save**.
