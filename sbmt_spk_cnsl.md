@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-02-24"
+lastupdated: "2025-02-25"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -33,7 +33,10 @@ Your Spark application must be available in an accessible storage.
 1. Log in to the {{site.data.keyword.lakehouse_short}} instance. Go to the **Infrastructure manager** page.
 2. Click the name of Spark engine (either from list or topology view). Engine information window opens.
 3. In the **Applications** tab, click the **Create application** button. The Submit Spark application page opens.
-   a. Select the **Inputs** tab. Configure the following details:
+
+   In this page, you can select one of the following tabs based on the method by which you need to submit the Spark application.
+
+   * Select the **Inputs** tab to submit the application if it resides in an accessible location. Configure the following details:
 
       | Field | Description |
       | --- | --- |
@@ -45,14 +48,11 @@ Your Spark application must be available in an accessible storage.
       | Spark configuration properties | Specify the Spark properties in the form of key-value pair ("<property_name>": "<property_value>") separated by comma. For more information about the different properties, see [Properties](https://spark.apache.org/docs/latest/configuration.html#available-properties). |
       | Spark environment properties | Specify the Spark environment properties as key=value pairs. For more information about the different properties, see [Environment properties](https://spark.apache.org/docs/latest/configuration.html#runtime-environment). |
       | Hardware configuration | Specify the number of CPU cores (Driver and Executor) and memory that is required for the workload. |
-      | Volume | Specify the details of IBM Storage Hub volume that should be mounted for your Spark application. Click Add volume link to add details of each volume. |
-      | Mount Path | The Spark application nodes where the volume is mounted. The files in the volume, which is referenced in your application script must have path relative to the Mount path. |
-      | Source sub path | To mount only a specific directory in the volume, specify the path here. |
-      | Dependencies | You can specify the path to the dependent files. |
+      | Dependencies | Specify the path to files and names of packages required by your application script or jar. |
       | Import from payload | Click this link to automatically import and furnish all fields under the Inputs tab if you have already specified the payload in the **Payload** tab. |
       {: caption="Configuration details " caption-side="bottom"}
 
-4. Select the **Payload** tab.
+   * Select the **Payload** tab to submit the application if you wish to manually write the payload.
 
       In the **Application payload** field, specify the application payload JSON that can be accepted by the Spark engine application creation REST API endpoint. You can either manually write the payload here or click the **Import from inputs** link to automatically build the JSON from the details provided in the **Inputs** tab.
 
