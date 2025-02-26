@@ -34,7 +34,7 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
-## Presto CLI password size limitation and connection issue
+## Presto CLI password size limitation
 {: #known_issue15759}
 
 Presto CLI supports a maximum password size of 1 KB (1024 bytes). If the password exceeds this size, the system cannot accept it in the password field; instead, it must be exported.
