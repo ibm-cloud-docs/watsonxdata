@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2025-02-25"
+lastupdated: "2025-02-26"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -181,7 +181,6 @@ curl --request POST   --url https://<region>/lakehouse/api/v2/spark_engines/<spa
       "spark.hadoop.fs.cos.<COS_SERVICE_NAME>.endpoint": "<COS_ENDPOINT>",
       "spark.hadoop.fs.cos.<COS_SERVICE_NAME>.secret.key": "<COS_SECRET_KEY>",
       "spark.hadoop.fs.cos.<COS_SERVICE_NAME>.access.key": "<COS_ACCESS_KEY>"
-      "spark.sql.extensions":"org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions,authz.IBMSparkACExtension",
         "spark.hadoop.wxd.apikey":"Basic xxx",
         "spark.sql.extensions":"<required-storage-support-extension>,authz.IBMSparkACExtension"
 

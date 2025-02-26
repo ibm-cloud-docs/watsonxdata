@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-02-24"
+lastupdated: "2025-02-26"
 
 keywords: watsonxdata, release notes
 
@@ -82,9 +82,7 @@ CPDCTL CLI enhancements
 : IBM `CPDCTL` CLI is now used to configure and manage different operations in watsonx.data. Using the `CPDCTL` CLI, you can manage configuration settings, run ingestion jobs, manage engines, data sources, and storages. The following two plugins are currently used to execute these operations:
 
    * `config` - To configure {{site.data.keyword.lakehouse_short}} service environment and users.
-   * `wx-data` - To do all operations using {{site.data.keyword.lakehouse_short}} service.
-
-   For more information, see [IBM cpdctl](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=SSDZ38_2.1.x/wxd-client/topics/cpdctl-title.htm).
+   * `wx-data` - To perform other operations such as, ingesting, managing engines, etc in {{site.data.keyword.lakehouse_short}}. For more information, see [IBM cpdctl](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=SSDZ38_2.1.x/wxd-client/topics/cpdctl-title.htm).
 
 Deprecated features
 
