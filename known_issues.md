@@ -37,7 +37,7 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 ## Presto CLI password size limitation and connection issue
 {: #known_issue15759}
 
-Presto CLI supports a maximum password size of 1 KB (1024 bytes). If the password exceeds this size, Presto CLI cannot establish a connection.
+Presto CLI supports a maximum password size of 1 KB (1024 bytes). If the password exceeds this size, it cannot enter in the password field.
 
 ## The timestamptz datatype is not supported for an ORC table during the upgrade of {{site.data.keyword.lakehouse_short}} web console
 {: #known_issue22118}
