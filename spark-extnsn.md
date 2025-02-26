@@ -193,7 +193,7 @@ curl --request POST   --url https://<region>/lakehouse/api/v2/spark_engines/<spa
 {: codeblock}
 
 Parameter values:
-* `<token>` : To get the access token for your service instance. For more information about generating the token, see [Generating a bearer token](watsonxdata?topic=account-userapikey&interface=ui#userapikey).
+* `<token>` : To get the access token for your service instance. For more information about generating the token, see [Generating a token](watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
 * `<instance_id>` : The instance ID from the watsonx.data cluster instance URL. Example, crn:v1:staging:public:lakehouse:us-south:a/7bb9e380dc0c4bc284592b97d5095d3c:5b602d6a-847a-469d-bece-0a29124588c0::.
 * `<wxd-data-bucket-endpoint>`: The host name of the endpoint for accessing the data bucket mentioned above. Example, s3.us-south.cloud-object-storage.appdomain.cloud for a Cloud Object storage bucket in us-south region.
 * `<COS_SERVICE_NAME>`: Provide a Cloud object Storage service name.
