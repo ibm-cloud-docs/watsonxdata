@@ -29,7 +29,7 @@ subcollection: watsonxdata
 # Registering external data into {{site.data.keyword.lakehouse_short}}
 {: #sync_log}
 
-If you have pre-existing data (such as Iceberg, Delta, or Hudi tables) in an object store bucket, you can register it into {{site.data.keyword.lakehouse_full}} and use it for running queries with the Presto or Spark engines. To enable this feature, you must attach the appropriate catalog to the storage.
+If you have pre-existing data (such as Iceberg, Delta, or Hudi tables) in an object store bucket, you can register it into {{site.data.keyword.lakehouse_full}} and use it for running queries with the Presto engines. To enable this feature, you must attach the appropriate catalog to the storage.
 
 You can register tables in all three formats. For Iceberg tables, you can register pre-existing data at the bucket level. For Delta and Hudi tables, registration is currently supported only at the table level.
 
