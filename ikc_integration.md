@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-02-13"
+lastupdated: "2025-02-26"
 
 keywords: watsonx.data, ikc, configuring, knowledgecatalog
 subcollection: watsonxdata
@@ -41,7 +41,9 @@ To enable IKC integration, ensure the following pre-requisites are met:
    * Apache Ranger
    * IBM Knowledge Catalog
 
-Both {{site.data.keyword.lakehouse_short}} and IKC must be present in the {{site.data.keyword.Bluemix_notm}} environment. You can define IKC governance policies for Presto (C++), and Presto (Java) engines.
+
+
+Both {{site.data.keyword.lakehouse_short}} and IKC must be present in the {{site.data.keyword.Bluemix_notm}} environment. You can define IKC governance policies for Presto (Java) engine.
 {: note}
 
 
