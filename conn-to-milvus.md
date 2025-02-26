@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-02-20"
+lastupdated: "2025-02-26"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -48,7 +48,7 @@ You can connect to a Milvus service by using API key or IAM token.
 
 1. Provision a Milvus service in {{site.data.keyword.lakehouse_short}}. For more information, see [Adding a Milvus service](watsonxdata?topic=watsonxdata-adding-milvus-service).
 1. Run one of the following commands by using Python SDK (PyMilvus) to connect with Milvus for gRPC route:
-
+    
      - Use one of the following commands to connect to Milvus using GRPC calls:
 
          ```bash

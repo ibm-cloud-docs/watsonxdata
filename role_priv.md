@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-02-25"
+lastupdated: "2025-02-26"
 
 keywords: lakehouse, watsonx data, privileges, roles, access
 
@@ -157,8 +157,6 @@ Default user access is granted to:
 
 Formation admins (IAM) have the default admin access.
 
-While the default admins can perform some administration and maintenance jobs such as, delete, pause, and resume, they cannot grant or revoke access to the Milvus service. The user who created the Milvus service is considered the primary admin. Only a primary admin or users who are granted admin access by the primary admin can grant or revoke access to the Milvus service. Also, remove the check mark against **Grant access to assigned Milvus service and Revoke access from assigned Milvus service**.
-{: #important_note}
 
 ### Resource-level permissions
 {: #rl_premission5}
