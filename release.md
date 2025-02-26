@@ -41,12 +41,13 @@ Data sources and storage enhancements
       * Google Cloud Storage
    * You can now register and load external pre-existing Hudi and Delta tables on an object storage using {{site.data.keyword.lakehouse_short}} APIs.
 
+Ingestion enhancement
 
+: After an ingestion job is completed, you can now access the ingested data directly from the **Ingestion History** page which streamlines your workflow and saves time.
 
 Integration enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following enhanced integrations with other services:
-
 
 
    - The **Connection Information** page now includes:
