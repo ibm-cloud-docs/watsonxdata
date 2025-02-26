@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-02-25"
+lastupdated: "2025-02-26"
 
 keywords: lakehouse
 
@@ -34,7 +34,12 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
-## The timestamptz datatype is not supported for an ORC table during the upgrade of watsonx.data web console
+## Presto CLI password size limitation and connection issue
+{: #known_issue15759}
+
+Presto CLI supports a maximum password size of 1 KB (1024 bytes). If the password exceeds this size, Presto CLI cannot establish a connection.
+
+## The timestamptz datatype is not supported for an ORC table during the upgrade of {{site.data.keyword.lakehouse_short}} web console
 {: #known_issue22118}
 
 ## Database names containing hyphens or spaces cannot be queried by the Spark engine in a Python notebook, even when the appropriate Spark access control extension has been added.
@@ -47,24 +52,12 @@ When doing a re-enrichment after deleting assets from an already enriched schema
 
 **Workaround:** Refresh the browser page.
 
-##  Business terms remain after the semantic automation layer integration is deleted from IBM watsonx.data
+##  Business terms remain after the semantic automation layer integration is deleted from IBM {{site.data.keyword.lakehouse_short}}
 {: #known_issues39470}
 
-Business terms that were imported to IBM Knowledge Catalog for a semantic automation layer (SAL) integration in watsonx.data are not removed when the integration is deleted. This can result in duplicate business terms if a new SAL integration is subsequently enabled and the same or similar business terms are uploaded again.
+Business terms that were imported to IBM Knowledge Catalog for a semantic automation layer (SAL) integration in {{site.data.keyword.lakehouse_short}} are not removed when the integration is deleted. This can result in duplicate business terms if a new SAL integration is subsequently enabled and the same or similar business terms are uploaded again.
 
 **Workaround:** To avoid duplicate business terms, the cluster administrator or the user who originally created the SAL registration must manually delete all business terms that were imported for the SAL integration.
-
-## View Access control with `DEFINER` mode
-{: #known_issues18108}
-
-Vews defined in `DEFINER` mode cannot be accessed by another user even if access is granted. The `DEFINER` is the default mode.
-
-**Workaround:** Redefine views with `SECURITY INVOKER` mode in their DDL statements.
-
-```bash
-CREATE VIEW view_name SECURITY INVOKER AS query;
-```
-{: codeblock}
 
 ## Iceberg tables that are partitioned by a date column may not be readable.
 {: #known_issues34778}
@@ -176,7 +169,7 @@ Hive: The Hive catalog does not natively support the time data type.
 
 Iceberg: Iceberg does support the time data type.
 
-**Workaround:** To enable correct handling of time data in Iceberg tables, the `hive.parquet-batch-read-optimization-enabled property` must be set to `false`.
+**Workaround:** To enable correct handling of time data in Iceberg tables, the `hive.parquet-batch-read-optimization-enabled` property must be set to `false`.
 
 ## Files with different schemas result in null values
 {: #known_issues15665}
