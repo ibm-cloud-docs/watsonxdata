@@ -23,7 +23,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 
 
-## 25 February 2025 - Version 2.1.1
+## 26 February 2025 - Version 2.1.1
 {: #lakehouse_27feb211}
 {: release-note}
 
