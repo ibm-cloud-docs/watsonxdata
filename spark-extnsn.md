@@ -196,7 +196,7 @@ Parameter values:
 * `<token>` : To get the access token for your service instance. For more information about generating the token, see [Generating a bearer token](watsonxdata?topic=account-userapikey&interface=ui#userapikey).
 * `<instance_id>` : The instance ID from the watsonx.data cluster instance URL. Example, crn:v1:staging:public:lakehouse:us-south:a/7bb9e380dc0c4bc284592b97d5095d3c:5b602d6a-847a-469d-bece-0a29124588c0::.
 * `<wxd-data-bucket-endpoint>`: The host name of the endpoint for accessing the data bucket mentioned above. Example, s3.us-south.cloud-object-storage.appdomain.cloud for a Cloud Object storage bucket in us-south region.
-* `<COS_SERVICE_NAME>`: Provide a name to map the COS service.
+* `<COS_SERVICE_NAME>`: Provide a Cloud object Storage service name.
 * `<COS_ENDPOINT>` : Provide the public endpoint. For more information, see [Endpoint](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-endpoints).
 * `<access_key>` : Provide the access_key_id. For more information, see [Credentials](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-service-credentials&interface=cli).
 * `<secret_key>` : Provide the secret_access_key. For more information, see [Credentials](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-service-credentials&interface=cli).
