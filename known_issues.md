@@ -101,16 +101,6 @@ Queries involving the EXISTS clause on Apache Phoenix tables may fail unexpected
 ## WHERE/IN/DROP/RENAME clause in Hive tables with more than one partition does not work if partition type is of type VARCHAR.
 {: #known_issues20069}
 
-## Syncing data fails for schema and tables with same name
-{: #known_issues19201_1}
-
-For users still in older versions before 2.1 version: In HMS, if you use the Register Bucket (sync) API and the bucket contains a schema and table which already exists in {{site.data.keyword.lakehouse_short}}, then. sync fails for schema and tables with same name.
-
-## Error during SELECT after syncing
-{: #known_issues19201_2}
-
-For users still in older versions before 2.1 version: In HMS, if you use the Register Bucket (sync) API and the bucket contains a schema that already exists in {{site.data.keyword.lakehouse_short}}, sync can happen to an incorrect catalog and after syncing data SELECT cannot be run on the tables, due to credentials mismatch between the catalogs.
-
 ## Activity tracker support in MDS
 {: #known_issues17887}
 
