@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-02-25"
+lastupdated: "2025-02-26"
 
 keywords: lakehouse, database, tags, description, watsonx.data
 
@@ -29,8 +29,14 @@ subcollection: watsonxdata
 # Registering external data into {{site.data.keyword.lakehouse_short}}
 {: #sync_log}
 
-You can register and sync external data into {{site.data.keyword.lakehouse_full}} storage catalog. Syncing external data is only avilable for Apache Iceberg. There may be different data objects on the external object store (bucket) than on the {{site.data.keyword.lakehouse_short}} storage catalog. You can sync the object store (bucket) metadata of the storage with that of watsonx.data storage without moving the data manually. Syncing the metadata allows you to fetch the up-to-date data from the external buckets and select the respective watsonx.data catalog with the remote bucket. The respective catalog is to be attached to the storage for this feature.
-{: shortdesc}
+If you have pre-existing data (such as Iceberg, Delta, or Hudi tables) in an object store bucket, you can register it into {{site.data.keyword.lakehouse_full}} and use it for running queries with the Presto or Spark engines. To enable this feature, you must attach the appropriate catalog to the storage.
+
+You can register tables in all three formats. For Iceberg tables, you can register pre-existing data at the bucket level. For Delta and Hudi tables, registration is currently supported only at the table level.
+
+If external changes occur on Iceberg tables through other systems, you may need to sync the data on the {{site.data.keyword.lakehouse_short}} side. To facilitate this, you can use sync feature.
+
+For Hudi and Delta tables, explicit sync is unnecessary because the metadata pointer refers to the metadata folder, not an individual metadata file. (For example, Iceberg requires referencing the latest metadata.json file.)
+
 
 ## Registering and syncing external Iceberg data
 {: #extrnl_ice}
@@ -53,7 +59,7 @@ To register and sync external Iceberg data into watsonx.data, complete the follo
 For information on related API, see
 * [External Iceberg table registration](https://cloud.ibm.com/apidocs/watsonxdata-software#update-sync-catalog)
 
-## Regustering Hudi and Delta Lake data
+## Regustering external Hudi and Delta Lake data
 {: #extrnl_hudi_delta}
 
 To register external Hudi and Delta Lake data into watsonx.data, complete the following steps:
@@ -70,5 +76,5 @@ To register external Hudi and Delta Lake data into watsonx.data, complete the fo
 5. Enter the catalog name.
 6. Click **Create** to create the storage.
 7. You can register and load table using [Register table]() and [load table metadata]() APIs.
-   To register the tables, you must provide the exact location of the metatdata folder. The schema is inferred based on the path in the location url. Iceberg, Hive, Hui, and Delta Lake are the table formats supported.
+   To register the tables, you must provide the exact location of the metatdata folder. The schema is inferred based on the path in the location url.
    {: #note}
