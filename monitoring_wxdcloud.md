@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-02-24"
+lastupdated: "2025-02-26"
 
 keywords: monitoring, watsonx.data
 
@@ -86,7 +86,7 @@ To see your {{site.data.keyword.lakehouse_full}} customer metrics dashboards in 
 | `Metric Name` | ibm_watsonx_data_mds_health|
 | `Metric Type` | gauge |
 | `Value Type`  | none |
-| `Segment By` | Service Instance, Resource group |
+| `Segment By` | Service Instance|
 | `Metric Description` | Checks the status of Postgres DB connection in MDS pod. |
 {: caption="Table 2: MDS Health Status metric metadata" caption-side="top"}
 
@@ -100,7 +100,7 @@ To see your {{site.data.keyword.lakehouse_full}} customer metrics dashboards in 
 | `Metric Name` | ibm_watsonx_data_queries_running_total|
 | `Metric Type` | gauge |
 | `Value Type`  | none |
-| `Segment By` | Service Instance, Resource group |
+| `Segment By` | Service Instance|
 | `Metric Description` | Runs Query to get the total queries that are in Running state in Presto Server. |
 {: caption="Table 6: Number Of Total Running Queries metric metadata" caption-side="top"}
 
@@ -113,7 +113,7 @@ To see your {{site.data.keyword.lakehouse_full}} customer metrics dashboards in 
 | `Metric Name` | ibm_watsonx_data_tasks_running_total|
 | `Metric Type` | gauge |
 | `Value Type`  | none |
-| `Segment By` | Service Instance, Resource group |
+| `Segment By` | Service Instance|
 | `Metric Description` | Shows the data that is collected by name-value pair collection for tasks in Presto server and populates the tables in the database. |
 {: caption="Table 7: Number Of Total Running Tasks metric metadata" caption-side="top"}
 
@@ -125,7 +125,7 @@ To see your {{site.data.keyword.lakehouse_full}} customer metrics dashboards in 
 | `Metric Name` | ibm_watsonx_data_transactions_total|
 | `Metric Type` | gauge |
 | `Value Type`  | none |
-| `Segment By` | Service Instance, Resource group |
+| `Segment By` | Service Instance|
 | `Metric Description` | Shows the data that is collected by name-value pair collection for transactions in Presto server and populates the tables in the database. |
 {: caption="Table 8: Number Of Total Transactions metric metadata" caption-side="top"}
 
@@ -139,7 +139,7 @@ To see your {{site.data.keyword.lakehouse_full}} customer metrics dashboards in 
 | `Metric Name` | ibm_watsonx_data_catalogs|
 | `Metric Type` | gauge |
 | `Value Type`  | none |
-| `Segment By` | Service Instance, Resource group |
+| `Segment By` | Service Instance|
 {: caption="Table 3: List Of Currently Available Catalogs metric metadata" caption-side="top"}
 
 
@@ -152,7 +152,7 @@ To see your {{site.data.keyword.lakehouse_full}} customer metrics dashboards in 
 | `Metric Name` | ibm_watsonx_data_presto_health|
 | `Metric Type` | gauge |
 | `Value Type`  | none |
-| `Segment By` | Service Instance, Resource group |
+| `Segment By` | Service Instance |
 | `Metric Description` | Tracks the heartbeat status by checking if the Presto server is running or not running. |
 {: caption="Table 9: Presto Health Status metric metadata" caption-side="top"}
 
@@ -165,7 +165,7 @@ To see your {{site.data.keyword.lakehouse_full}} customer metrics dashboards in 
 | `Metric Name` | ibm_watsonx_data_active_nodes_total|
 | `Metric Type` | gauge |
 | `Value Type`  | none |
-| `Segment By` | Service Instance, Resource group |
+| `Segment By` | Service Instance |
 | `Metric Description` | The total number of active nodes in the Presto Co-ordinator Pod. |
 {: caption="Table 10: Total Number Of Active Nodes metric metadata" caption-side="top"}
 
@@ -178,7 +178,7 @@ To see your {{site.data.keyword.lakehouse_full}} customer metrics dashboards in 
 | `Metric Name` | ibm_watsonx_data_inactive_nodes_total|
 | `Metric Type` | gauge |
 | `Value Type`  | none |
-| `Segment By` | Service Instance, Resource group |
+| `Segment By` | Service Instance|
 | `Metric Description` | The total number of inactive nodes in the Presto Co-ordinator Pod. |
 {: caption="Table 11: Total Number Of Inactive Nodes metric metadata" caption-side="top"}
 
@@ -191,7 +191,7 @@ To see your {{site.data.keyword.lakehouse_full}} customer metrics dashboards in 
 | `Metric Name` | ibm_watsonx_data_nodes_total|
 | `Metric Type` | gauge |
 | `Value Type`  | none |
-| `Segment By` | Service Instance, Resource group |
+| `Segment By` | Service Instance|
 | `Metric Description` | The total number of nodes in the Presto Co-ordinator Pod. |
 {: caption="Table 12: Total Number Of Nodes metric metadata" caption-side="top"}
 
