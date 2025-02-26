@@ -49,7 +49,9 @@ You can connect to a Milvus service by using API key or IAM token.
 1. Provision a Milvus service in {{site.data.keyword.lakehouse_short}}. For more information, see [Adding a Milvus service](watsonxdata?topic=watsonxdata-adding-milvus-service).
 1. Run one of the following commands by using Python SDK (PyMilvus) to connect with Milvus for gRPC route:
 
-   
+   While Milvus currently provides two connection mechanisms in the PyMilvus (Python SDK) to connect with Milvus: `connections.connect` and `MilvusClient`. Using `MilvusClient` may cause deleted entities to reappear in a collection. To prevent this issue, it is recommended to use the `connections.connect` mechanism and call `collection.flush` before each operation. This applies only for 2.1 and it is rectified in 2.1.1.
+   {: important}
+
      - Use one of the following commands to connect to Milvus using GRPC calls:
 
          ```bash

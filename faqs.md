@@ -39,7 +39,7 @@ This is a collection of frequently asked questions (FAQs) about the {{site.data.
 
 **What is IBM® {{site.data.keyword.lakehouse_short}}?**
 
-IBM® {{site.data.keyword.lakehouse_short}} is an open, hybrid, and governed fit-for-purpose data store optimized to scale all data, analytics, and AI workloads to get greater value from your analytics ecosystem.  It is a data management solution for collecting, storing, querying, and analyzing all your enterprise data (structured, semi-structured, and unstructured) with a single unified data platform. It provides a flexible and reliable platform that is optimized to work on open data formats.
+IBM® {{site.data.keyword.lakehouse_short}} is an open, hybrid, and governed fit-for-purpose data store optimized to scale all data, analytics, and AI workloads to get greater value from your analytics ecosystem. IBM {{site.data.keyword.lakehouse_short}} is the hybrid, open data lakehouse to power AI and analytics with all your data, anywhere. It is a data management solution for collecting, storing, querying, and analyzing all your enterprise data (structured, semi-structured, and unstructured) with a single unified data platform. It provides a flexible and reliable platform that is optimized to work on open data formats.
 
 
 **What can I do with IBM® {{site.data.keyword.lakehouse_short}}?**
