@@ -47,7 +47,7 @@ Integration enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following enhanced integrations with other services:
 
-   * Now you can define IBM Knowledge Catalog governance policies for Presto (C++) engine when you integrate with {{site.data.keyword.lakehouse_short}}. For more information, see [Connecting to IBM Knowledge Catalog (IKC)](watsonxdata?topic=watsonxdata-ikc_integration).
+
 
    - The **Connection Information** page now includes:
       * Presto configuration details for DBT integration. You can copy the Presto configuration details that are required for DBT integration from this page.
