@@ -194,15 +194,13 @@ curl --request POST   --url https://<region>/lakehouse/api/v2/spark_engines/<spa
 
 Parameter values:
 * `<token>` : To get the access token for your service instance. For more information about generating the token, see [Generating a bearer token](watsonxdata?topic=account-userapikey&interface=ui#userapikey).
-* `<instance_crn>` : The instance ID from the watsonx.data cluster instance URL. Example, crn:v1:staging:public:lakehouse:us-south:a/7bb9e380dc0c4bc284592b97d5095d3c:5b602d6a-847a-469d-bece-0a29124588c0::.
+* `<instance_id>` : The instance ID from the watsonx.data cluster instance URL. Example, crn:v1:staging:public:lakehouse:us-south:a/7bb9e380dc0c4bc284592b97d5095d3c:5b602d6a-847a-469d-bece-0a29124588c0::.
 * `<wxd-data-bucket-endpoint>`: The host name of the endpoint for accessing the data bucket mentioned above. Example, s3.us-south.cloud-object-storage.appdomain.cloud for a Cloud Object storage bucket in us-south region.
-* `<wxd-bucket-catalog-name>`: The name of the catalog associated with the data bucket.
-* `<wxd-catalog-metastore-host>`: The metastore associated with the registered bucket.
-* `<cos_bucket_endpoint>` : Provide the Metastore host value. For more information, see [storage details](watsonxdata?topic=watsonxdata-run_samp_file#insert_samp_usecase).
-* `<access_key>` : Provide the access_key_id. For more information, see [storage details](watsonxdata?topic=watsonxdata-run_samp_file#insert_samp_usecase).
-* `<secret_key>` : Provide the secret_access_key. For more information, see [storage details](watsonxdata?topic=watsonxdata-run_samp_file#insert_samp_usecase).
+* `<COS_SERVICE_NAME>`: Provide a name to map the COS service.
+* `<COS_ENDPOINT>` : Provide the public endpoint. For more information, see [Endpoint](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-endpoints).
+* `<access_key>` : Provide the access_key_id. For more information, see [Credentials](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-service-credentials&interface=cli).
+* `<secret_key>` : Provide the secret_access_key. For more information, see [Credentials](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-service-credentials&interface=cli).
 * `<BUCKET_NAME>`: The storage bucket where the application file resides.
-* `<COS_SERVICE_NAME>`: The Cloud object Storage service name.
 * `<python_file_name>` : The Spark application file name.
 
 Limitations:
