@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-02-26"
+lastupdated: "2025-02-27"
 
 keywords: lakehouse
 
@@ -97,9 +97,6 @@ Queries involving the EXISTS clause on Apache Phoenix tables may fail unexpected
       )
       ```
       {: codeblock}
-
-## WHERE/IN/DROP/RENAME clause in Hive tables with more than one partition does not work if partition type is of type VARCHAR.
-{: #known_issues20069}
 
 ## Activity tracker support in MDS
 {: #known_issues17887}
