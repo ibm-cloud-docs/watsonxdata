@@ -31,9 +31,9 @@ If you are currently using {{site.data.keyword.lakehouse_short}} 2.1.0 version, 
 {: important}
 
 
-Subscription plan enhancement
+New region availability
 
-: {{site.data.keyword.lakehouse_full}} Lite and Enterprise plans are now available in the Toronto region.
+: {{site.data.keyword.lakehouse_short}} is now available in Toronto region for Lite and Enterprise plans. To provision, see [Provisioning watsonx.data Lite plan](watsonxdata?topic=watsonxdata-tutorial_prov_lite_1) and [Provisioning watsonx.data Enterprise plan](watsonxdata?topic=watsonxdata-getting-started_1).
 
 
 Data sources and storage enhancements
@@ -98,6 +98,7 @@ Deprecated features
    * The Data Access Service (DAS) proxy feature is now deprecated and will be removed in a future release. You cannot use the Data Access Service (DAS) proxy feature to access object storage (S3, ADLS and ABS). If you use DAS proxy flow and face any issues, contact IBM support. For an overview of the DAS feature, see [Data Access Service (DAS)](watsonxdata?topic=watsonxdata-cas_ep_ov).
 
    * IBM Client package is now deprecated and shall be removed in a future release. The utilities and commands in Client package is replaced with IBM CPDCTL CLI. For more information about how to use IBM CPDCTL CLI, see [IBM cpdctl](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=SSDZ38_2.1.x/wxd-client/topics/cpdctl-title.htm).
+
 
 
 
