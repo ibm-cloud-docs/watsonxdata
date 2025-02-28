@@ -62,7 +62,7 @@ Engine and service enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
 
-   - You can now create a Spark application from the **Applications** tab of the Spark engine details page. For more information, see (Topic link).
+   - You can now create a Spark application from the **Applications** tab of the Spark engine details page. For more information, see [Submitting Spark application from Console](watsonxdata?topic=watsonxdata-smbit_cnsl_1).
    - You can now use Spark version,  3.5.4 to run the applications in watsonx.data. In {{site.data.keyword.lakehouse_full}}, Apache Spark 3.4.4 and Apache Spark 3.5.4 are the supported versions.
    - Milvus allows the following:
       - In Milvus you can now do a hybrid GroupBy search based on multiple vector columns and also customize the group size when you run search queries. For more information, see [Connecting watsonx Assistant to watsonx.data Milvus for custom search](watsonxdata?topic=watsonxdata-wxd_wxa_connection).
@@ -76,7 +76,7 @@ Access management enhancements
 
    - The Access Management Service (AMS) in {{site.data.keyword.lakehouse_short}} can now use JSON Web Token (JWT) authentication for incoming requests from Presto, ensuring secure and efficient access control. For more information, see [Connecting to Presto engine through Presto CLI (Remote)](watsonxdata?topic=watsonxdata-con-presto-serv#conn-to-prestoeng).
    - You can now assign users and roles to infrastructure components in batches of Twenty. For more information, see [Managing user access](watsonxdata?topic=watsonxdata-manage_access).
-   - You can now use Apache Ranger HadoopSQL policies to govern data with Spark engines. You can define Ranger policies when the Spark engine accesses data from Hadoop clusters. Enabling Ranger policy ensures robust data security and governance. With the Ranger policy, you can configure table authorization (L3), row-level filtering, and column masking for data. For more information, see [Enabling Apache Ranger policy for resources](watsonxdata?topic=watsonxdata-ranger_1).
+   - You can now use Apache Ranger Hadoop SQL policies to govern data with Spark engines. You can define Ranger policies when the Spark engine accesses data from Hadoop clusters. Enabling Ranger policy ensures robust data security and governance. With the Ranger policy, you can configure table authorization (L3), row-level filtering, and column masking for data. For more information, see [Enabling Apache Ranger policy for resources](watsonxdata?topic=watsonxdata-ranger_1).
 
 CPDCTL CLI enhancements
 
