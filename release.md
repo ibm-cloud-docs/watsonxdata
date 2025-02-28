@@ -30,6 +30,12 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 If you are currently using {{site.data.keyword.lakehouse_short}} 2.1.0 version, you can refer to the documentation, [watsonx.data 2.1.0](https://ibm.ent.box.com/s/zgw7umzibl9akxgi7vm4yxs4vyp8io6g).
 {: important}
 
+
+Subscription plan enhancement
+
+: IBM® watsonx.data Lite and Enterprise plan is now available in the Toronto region.
+
+
 Data sources and storage enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} includes the following storage enhancements:
