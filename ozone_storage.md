@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2022, 2024
+  years: 2022, 2025
 lastupdated: "2024-09-18"
 
 keywords: lakehouse, bucket, catalog, watsonx.data

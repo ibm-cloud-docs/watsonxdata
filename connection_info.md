@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2022, 2024
+  years: 2022, 2025
 lastupdated: "2024-08-01"
 
 keywords: connection, watsonx.data
