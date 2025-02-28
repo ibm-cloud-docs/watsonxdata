@@ -33,7 +33,7 @@ If you are currently using {{site.data.keyword.lakehouse_short}} 2.1.0 version, 
 
 Subscription plan enhancement
 
-: IBM® watsonx.data Lite and Enterprise plan is now available in the Toronto region.
+: IBM® watsonx.data Lite and Enterprise plans are now available in the Toronto region.
 
 
 Data sources and storage enhancements
