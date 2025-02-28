@@ -31,9 +31,9 @@ If you are currently using {{site.data.keyword.lakehouse_short}} 2.1.0 version, 
 {: important}
 
 
-Subscription plan enhancement
+New region availability
 
-: {{site.data.keyword.lakehouse_full}} Lite and Enterprise plans are now available in the Toronto region.
+: {{site.data.keyword.lakehouse_short}} is now available in Toronto region for Lite and Enterprise plans.
 
 
 Data sources and storage enhancements
