@@ -22,11 +22,13 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: shortdesc}
 
 
-
 ## 28 February 2025 - Version 2.1.1
 {: #lakehouse_28feb211}
 {: release-note}
 
+{{site.data.keyword.lakehouse_short}} 2.1.1 version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.1.1 release is available in your region, contact IBM Support.
+If you are currently using {{site.data.keyword.lakehouse_short}} 2.1.0 version, you can refer to the documentation, [watsonx.data 2.1.0](https://ibm.ent.box.com/s/zgw7umzibl9akxgi7vm4yxs4vyp8io6g).
+{: important}
 
 Data sources and storage enhancements
 
@@ -68,7 +70,6 @@ Engine and service enhancements
       - Milvus now allows scaling up or down between predefined T-shirt sizes (small, medium, and large) or custom sizes. For more information, see [Adding Milvus service](watsonxdata?topic=watsonxdata-adding-milvus-service).
    - Starting from {{site.data.keyword.lakehouse_short}} 2.1.1 version, Milvus 2.5.0 is supported. For more information, see [Milvus](watsonxdata?topic=watsonxdata-whatismilvus).
 
-
 Access management enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following access management enhancements:
@@ -76,7 +77,6 @@ Access management enhancements
    - The Access Management Service (AMS) in {{site.data.keyword.lakehouse_short}} can now use JSON Web Token (JWT) authentication for incoming requests from Presto, ensuring secure and efficient access control. For more information, see [Connecting to Presto engine through Presto CLI (Remote)](watsonxdata?topic=watsonxdata-con-presto-serv#conn-to-prestoeng).
    - You can now assign users and roles to infrastructure components in batches of Twenty. For more information, see [Managing user access](watsonxdata?topic=watsonxdata-manage_access).
    - You can now use Apache Ranger HadoopSQL policies to govern data with Spark engines. You can define Ranger policies when the Spark engine accesses data from Hadoop clusters. Enabling Ranger policy ensures robust data security and governance. With the Ranger policy, you can configure table authorization (L3), row-level filtering, and column masking for data. For more information, see [Enabling Apache Ranger policy for resources](watsonxdata?topic=watsonxdata-ranger_1).
-
 
 CPDCTL CLI enhancements
 
@@ -95,7 +95,7 @@ Deprecated features
 
 
 
-## 04 February 2025 - Version 2.1 Hotfix 2
+## 04 February 2025 - Version 2.1.0 Hotfix 2
 {: #lakehouse_04febhf}
 {: release-note}
 
@@ -103,7 +103,7 @@ Lite plan enhancement
 
 : {{site.data.keyword.lakehouse_full}} Lite plan is now available in the Sydney region. For more information to provision a Lite plan instance in Sydney region, see [Provisioning Lite plan](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1#create-lite-cli).
 
-## 10 January 2025 - Version 2.1 Hotfix 1
+## 10 January 2025 - Version 2.1.0 Hotfix 1
 {: #lakehouse_09janhf}
 {: release-note}
 
@@ -118,7 +118,7 @@ Enterprise plan enhancement
 
 
 {{site.data.keyword.lakehouse_short}} 2.1.0 version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.1.0 release is available in your region, contact IBM Support.
-If you are currently using {{site.data.keyword.lakehouse_short}} 2.0.0 version, you can refer to the documentation, [watsonx.data 2.0.0](https://ibm.ent.box.com/s/zgw7umzibl9akxgi7vm4yxs4vyp8io6g).
+If you are currently using {{site.data.keyword.lakehouse_short}} 2.0.4 version, you can refer to the documentation, [watsonx.data 2.0.0](https://ibm.ent.box.com/s/zgw7umzibl9akxgi7vm4yxs4vyp8io6g).
 {: important}
 
 Data sources and storage enhancements
