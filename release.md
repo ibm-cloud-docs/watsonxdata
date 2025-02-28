@@ -33,7 +33,7 @@ If you are currently using {{site.data.keyword.lakehouse_short}} 2.1.0 version, 
 
 New region availability
 
-: {{site.data.keyword.lakehouse_short}} is now available in Toronto region for Lite and Enterprise plans.
+: {{site.data.keyword.lakehouse_short}} is now available in Toronto region for Lite and Enterprise plans. To provision, see [Provisioning watsonx.data Lite plan](watsonxdata?topic=watsonxdata-tutorial_prov_lite_1) and [Provisioning watsonx.data Enterprise plan](watsonxdata?topic=watsonxdata-getting-started_1).
 
 
 Data sources and storage enhancements
