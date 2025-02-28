@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-02-26"
+  years: 2022, 2025
+lastupdated: "2025-02-28"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -53,10 +53,10 @@ You can use {{site.data.keyword.lakehouse_short}} to store any type of data (str
 ## Deployment options
 {: #dplymnt}
 
-{{site.data.keyword.lakehouse_short}}  is available with the following deployment options:
+{{site.data.keyword.lakehouse_short}} is available with the following deployment options:
 
 - Software – The on-prem version of {{site.data.keyword.lakehouse_short}} can be deployed on IBM Software Hub. For more details, see [IBM {{site.data.keyword.lakehouse_short}} on IBM Software Hub](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=software).
 - SaaS – The SaaS version of {{site.data.keyword.lakehouse_short}} can be deployed on IBM Cloud or AWS cloud. For more details, see:
-   - [IBM Cloud](https://test.cloud.ibm.com/docs/watsonxdata)
+   - [IBM Cloud](https://cloud.ibm.com/docs/watsonxdata)
    - [AWS](https://www.ibm.com/docs/en/watsonx/watsonxdata/aws)
 - Developer – The Developer version is an entry-level {{site.data.keyword.lakehouse_short}} for the students, developers and partner community. For more details, see [Setting up {{site.data.keyword.lakehouse_short}} developer edition](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=developer-edition)
