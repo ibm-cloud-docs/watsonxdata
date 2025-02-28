@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-02-26"
+lastupdated: "2025-02-28"
 
 keywords: watsonxdata, release notes
 
@@ -23,8 +23,8 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 
 
-## 26 February 2025 - Version 2.1.1
-{: #lakehouse_27feb211}
+## 28 February 2025 - Version 2.1.1
+{: #lakehouse_28feb211}
 {: release-note}
 
 

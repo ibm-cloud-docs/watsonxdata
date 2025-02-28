@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-02-17"
+  years: 2022, 2025
+lastupdated: "2025-02-28"
 
 keywords: watsonxdata, qhmm
 
@@ -71,7 +71,10 @@ This script allows users to bundle diagnostic data files from their QHMM diagnos
 
 Example command:
 
-` ./qhmm_usr_export.sh -e <ENDPOINT> -r <REGION> -b <BUCKET_NAME> -a <ACCESS_KEY> -s <SECRET_KEY> -i <WXD_INSTANCE_ID> -t <ENGINE_TYPE> -d <ENGINE_ID> -p <DOWNLOAD_DIR> -x <START_DATE> -y <END_DATE>`
+```bash
+./qhmm_usr_export.sh -e <ENDPOINT> -r <REGION> -b <BUCKET_NAME> -a <ACCESS_KEY> -s <SECRET_KEY> -i <WXD_INSTANCE_ID> -t <ENGINE_TYPE> -d <ENGINE_ID> -p <DOWNLOAD_DIR> -x <START_DATE> -y <END_DATE>
+```
+{: codeblock}
 
 ## qhmm_import_sre.sh
 {: #script02}
@@ -99,7 +102,10 @@ This script is intended for the support team to retrieve diagnostic data from an
 
 Example command:
 
-` ./qhmm_import_sre.sh -e <ENDPOINT> -r <REGION> -b <BUCKET_NAME> -a <ACCESS_KEY> -s <SECRET_KEY> -i <WXD_INSTANCE_ID> -t <ENGINE_TYPE> -d <ENGINE_ID> -p <COMPRESSED_FILE>`
+```bash
+./qhmm_import_sre.sh -e <ENDPOINT> -r <REGION> -b <BUCKET_NAME> -a <ACCESS_KEY> -s <SECRET_KEY> -i <WXD_INSTANCE_ID> -t <ENGINE_TYPE> -d <ENGINE_ID> -p <COMPRESSED_FILE>
+```
+{: codeblock}
 
 
 ## Managing diagnostic data by manual method

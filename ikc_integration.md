@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-02-26"
+  years: 2022, 2025
+lastupdated: "2025-02-28"
 
 keywords: watsonx.data, ikc, configuring, knowledgecatalog
 subcollection: watsonxdata
@@ -73,6 +73,7 @@ Both {{site.data.keyword.lakehouse_short}} and IKC must be present in the {{site
 1. Go to **Add to catalog** > **Connection**.
 1. On the **New connection** page, search and select {{site.data.keyword.lakehouse_full}}.
 1. Enter the following details:
+
    | Field | Description |
    |-------|-------------|
    | Name | Enter the name of the connection. |
@@ -107,6 +108,7 @@ Both {{site.data.keyword.lakehouse_short}} and IKC must be present in the {{site
 1. Select the catalog to open the catalog details page.
 1. Go to the **Integrations** tab and click **Integrate service**.
 1. Enter the following details:
+
    | Field | Description |
    |-------|-------------|
    | Service | Select **IBM Knowledge Catalog**. |

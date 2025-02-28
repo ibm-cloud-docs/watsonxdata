@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2022, 2024
+  years: 2022, 2025
 lastupdated: "2025-02-28"
 
 keywords: lakehouse, database, tags, description, watsonx.data
@@ -75,5 +75,6 @@ To register external Hudi and Delta Lake data into watsonx.data, complete the fo
 5. Enter the catalog name.
 6. Click **Create** to create the storage.
 7. You can register and load table using [Register table](https://cloud.ibm.com/apidocs/watsonxdata-software#register-table) and [load table metadata](https://cloud.ibm.com/apidocs/watsonxdata-software#load-table) APIs.
+
    To register the tables, you must provide the exact location of the metatdata folder. The schema is inferred based on the path in the location url.
    {: #note}

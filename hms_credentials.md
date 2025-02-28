@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-12-11"
+  years: 2022, 2025
+lastupdated: "2025-02-28"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -29,6 +29,7 @@ MDS username is by default **ibmlhapikey**.
 
    Permission required for {{site.data.keyword.lakehouse_short}} are `MetastoreAdmin` in **Service access** and appropriate roles in **Platform access**.
    {: note}
+
 1. Generate an API key. for more information, see:
 
    - [Creating an API key for users or user groups](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key)
