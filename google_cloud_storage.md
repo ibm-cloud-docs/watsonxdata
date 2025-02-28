@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2022, 2024
+  years: 2022, 2025
 lastupdated: "2024-08-01"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
@@ -40,11 +40,12 @@ Google Cloud Storage is a service for storing objects in Google Cloud. An object
  | Bucket name | Enter the bucket name.|
  | Endpoint | The default endpoint is selected.|
  | Upload JSON key file (.json) | Upload the JSON key file. |
+ | Connection Status| Click the Test connection link to test the bucket connection. If the bucket connection is successful, a success message appears.|
  | Associate Catalog | Select the checkbox to add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within. |
  | Activate now| Activate the storage immediately or activate it later. |
  | Catalog type | Select the catalog type from the list. The supported catalogs are Apache Iceberg and Apache Hive. |
  | Catalog name | Enter the name of your catalog.|
- | Create | Click Create to create the storage. |
+ | Associate | Click Associate to create the storage. |
  {: caption="Register bucket" caption-side="bottom"}
 
  For Google Cloud Storage, multiple buckets of different service accounts cannot be configured.

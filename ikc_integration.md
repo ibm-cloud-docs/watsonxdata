@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-12-14"
+  years: 2022, 2025
+lastupdated: "2025-02-28"
 
 keywords: watsonx.data, ikc, configuring, knowledgecatalog
 subcollection: watsonxdata
@@ -37,8 +37,13 @@ To enable IKC integration, ensure the following pre-requisites are met:
 - A working {{site.data.keyword.lakehouse_short}} environment.
 - A working IBM Knowledge Catalog (IKC) environment.
 - IBM Knowledge Catalog and {{site.data.keyword.lakehouse_short}} are configured with [service-to-service authorization](watsonxdata?topic=watsonxdata-s2s_auth) in {{site.data.keyword.Bluemix_notm}}.
+* You can only integrate with one of the following policy engines starting with watsonx.data version 2.1.
+   * Apache Ranger
+   * IBM Knowledge Catalog
 
-Both {{site.data.keyword.lakehouse_short}} and IKC must be present in the {{site.data.keyword.Bluemix_notm}} environment. IKC supports Presto (Java) connections only.
+
+
+Both {{site.data.keyword.lakehouse_short}} and IKC must be present in the {{site.data.keyword.Bluemix_notm}} environment. You can define IKC governance policies for Presto (Java) engine.
 {: note}
 
 
@@ -68,6 +73,7 @@ Both {{site.data.keyword.lakehouse_short}} and IKC must be present in the {{site
 1. Go to **Add to catalog** > **Connection**.
 1. On the **New connection** page, search and select {{site.data.keyword.lakehouse_full}}.
 1. Enter the following details:
+
    | Field | Description |
    |-------|-------------|
    | Name | Enter the name of the connection. |
@@ -102,6 +108,7 @@ Both {{site.data.keyword.lakehouse_short}} and IKC must be present in the {{site
 1. Select the catalog to open the catalog details page.
 1. Go to the **Integrations** tab and click **Integrate service**.
 1. Enter the following details:
+
    | Field | Description |
    |-------|-------------|
    | Service | Select **IBM Knowledge Catalog**. |
@@ -136,3 +143,4 @@ The owner can see the unmasked data. To verify whether masking is functioning co
 - Smallint
 - Timestamp
 - Tinyint
+- Decimal

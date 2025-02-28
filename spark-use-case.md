@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-08-23"
+lastupdated: "2025-02-17"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -253,6 +253,9 @@ Follow the steps to run the Spark sample Python file.
 
 This sample is tested on the Cloud Object Storage buckets in the **us-south** region. Change the region in the Cloud Object Storage endpoint configuration as per the region where your Cloud Object Storage buckets reside. It is recommended to provision the COS buckets in the region where {{site.data.keyword.iae_short}} instance is provisioned.
 {: note}
+
+If the submitted Spark application continue to be in running status for more than three days, it will be terminated automatically.
+{: important}
 
 ## Working with the watsonx.data catalog and storage
 {: #view_smbit_nsp1}

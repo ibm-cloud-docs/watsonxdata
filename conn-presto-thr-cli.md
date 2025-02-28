@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-15"
+lastupdated: "2025-02-24"
 
 keywords: lakehouse, watsonx.data, presto, cli
 
@@ -88,7 +88,7 @@ It is recommended to use IAM token for stress workload.
    ```
    {: codeblock}
 
-## Connecting to Presto engine using Presto CLI (Remote)
+## Connecting to Presto engine through Presto CLI (Remote)
 {: #conn-to-prestoeng}
 
 1. Download the Presto executable `jar` from [https://prestodb.io/docs/current/installation/cli.html](https://prestodb.io/docs/current/installation/cli.html)
@@ -97,26 +97,60 @@ It is recommended to use IAM token for stress workload.
 
 3. To check whether Presto CLI is installed, run `./presto --version`. Presto cli version displays. For example, `Presto CLI 0.281-cfbc6eb`
 
-4. Run the following commands in the system where Presto CLI is installed.
+4. Run the following commands in the system where Presto CLI is installed. You can use one of the following methods to authenticate to Presto:
 
-   - If you are using API key, run the following command:
+   * **Using username and password** : To do that run the following command:
+
+      - If you are using API key, run the following command:
+
+          ```bash
+          ./presto --server <https://Prestoengine host details> --catalog iceberg_data --schema default --user ibmlhapikey_<your-username> --password
+          ```
+          {: codeblock}
+
+      - If you are using IBM IAM token, run the following command:
+
+          ```bash
+          ./presto --server <https://Prestoengine host details> --catalog iceberg_data --schema default --user ibmlhtoken_<your-username> --password
+          ```
+          {: codeblock}
+
+      `<your-username>` is optional if you have multiple connections with different users and want to differentiate them.
+      {: note}
+
+      Enter your IBM API key or IBM IAM token at the prompt.
+
+   * **JWT token** : To use this method of authentication, contact IBM support and enable the feature.Once enabled , run the following command to connect to presto using JWT token:
 
        ```bash
-       ./presto --server <https://Prestoengine host details> --catalog iceberg_data --schema default --user ibmlhapikey_<your-username> --password
+       ./presto --server <https://Prestoengine host details> --catalog iceberg_data --schema default --access-token <ACCESS_TOKEN>
        ```
        {: codeblock}
 
-   - If you are using IBM IAM token, run the following command:
+      To generate `<ACCESS_TOKEN>`, use one of the following methods:
+
+      * Getting IBM Access Management (IAM) token, see [(IAM) token](watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
+
+      * Get `<ACCESS_TOKEN>` by using the following command:
+
 
        ```bash
-       ./presto --server <https://Prestoengine host details> --catalog iceberg_data --schema default --user ibmlhtoken_<your-username> --password
+       curl --location 'https://us-south.lakehouse.dev.cloud.ibm.com/lakehouse/api/v2/auth/authenticate/' \
+       --header 'Content-Type: application/json' \
+       --data-raw '{
+        "username": "ibmlhtoken_<user-name>",
+        "password": "<IAM_TOKEN>",
+        "instance_id": "<instance_id>",
+        "instance_name": ""
+       }'
        ```
        {: codeblock}
 
-   `<your-username>` is optional if you have multiple connections with different users and want to differentiate them.
-   {: note}
+       `<IAM_TOKEN>` : Specify the token generated from [(IAM) token](watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
 
-   Enter your IBM API key or IBM IAM token at the prompt.
+       `<user-name>` : Specify the email id.
+
+       `<instance_id>` : Specify the instance CRN.
 
 6. At the Presto prompt, type `show catalogs;`. The catalog list appears. Now you are connected to Presto engine in {{site.data.keyword.lakehouse_short}} through Presto CLI.
 
@@ -132,6 +166,7 @@ It is recommended to use IAM token for stress workload.
    (5 rows)
    ```
    {: codeblock}
+
 
 ## Connecting to Presto engine using Java/JDBC
 {: #conn-to-prestjava}

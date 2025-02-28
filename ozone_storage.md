@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2022, 2024
+  years: 2022, 2025
 lastupdated: "2024-09-18"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
@@ -46,7 +46,7 @@ If you select **Apache Ozone** from the **Storage** section, configure the follo
  | Activate now| Select the checkbox to activate the storage immediately or activate it later. |
  | Catalog type | Apache Iceberg is the available catalog type.|
  | Catalog name | Enter the name of your catalog.|
- | Create | Click Create to create the storage. |
+ | Associate | Click Associate to create the storage. |
  {: caption="Register bucket" caption-side="bottom"}
 
 ## Limitations:

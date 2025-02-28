@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-10"
+  years: 2022, 2025
+lastupdated: "2025-02-28"
 
 keywords: lakehouse, access, data, policy, watsonx data
 
@@ -45,6 +45,7 @@ To maintain data security, you can create access policies for the following at t
 1. From the navigation menu, select **Access control**.
 1. Select **Policies** from the **Access control** page, click **Add policy**. The **Create access control policy** page opens.
 1. In the **Details** page, enter the following details and click **Next**:
+
    | Field | Description |
    | --- | --- |
    | Policy name | Enter a name. |

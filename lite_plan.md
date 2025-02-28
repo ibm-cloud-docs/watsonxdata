@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-11-22"
+lastupdated: "2025-02-25"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -151,10 +151,17 @@ The storage associated is used as a data bucket by Milvus and as an engine home 
 
         For Lite plan instance, there are two options:
 
-        a. **Discover COS instance** : Select the existing IBM COS instance and the bucket to be attached to it.
+        a. **Discover COS instance** : Selects an existing IBM COS instance and an attached bucket on your IBM Cloud account. If no COS instance and bucket are found, a first time COS instance and bucket creation feature will be enabled allowing for automatic COS instance and bucket creation with a generated default naming scheme. This automation only works if no buckets are registered on the watsonx.data instance. If multiple IBM COS instances and buckets are detected, select the IBM COS instance that contains the desired bucket to register with watsonx.data, and then configure the following details:
 
-        b. **Register my own** : You can use any existing IBM COS bucket from an existing instance or provision a new instance. To provision a new IBM COS instance, see [Create COS instance](https://cloud.ibm.com/objectstorage/create){: external}.
+         | Field | Description |
+         |--------------------------|----------------|
+         | Display name | Enter the name to be displayed. (The following special characters are not allowed: ! @ # $ % ^ & * ( ) = + : { } < > ? ' \ ; `).|
+         | Associate catalog | Select the checkbox to add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within. |
+         | Activate now| Activate the storage immediately or activate it later. |
+         | Catalog name | Enter the name of your catalog. (The following special characters are not allowed: ! @ # $ % ^ & * ( ) = + : { } < > ? ' \ ; `).|
+         {: caption="Register bucket" caption-side="bottom"}
 
+        b. **Register my own** : You can use any existing IBM COS bucket from an existing instance or provision a new instance. To provision a new IBM COS instance, see [Create COS instance](watsonxdata?topic=watsonxdata-cos_storage).
 
     To explore how the {{site.data.keyword.lakehouse_short}} service interacts with the data you bring in, see [Adding your storage and querying data](watsonxdata?topic=watsonxdata-tutorial_prov_custbckt1).
 

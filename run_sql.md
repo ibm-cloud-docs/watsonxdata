@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-28"
+lastupdated: "2025-02-17"
 
 keywords: watsonxdata, sql queries, query workspace
 
@@ -39,6 +39,8 @@ The **Query workspace** has the following components:
 - **Filter for tables**: To search the tables and columns.
 
 - **Worksheet**: To write SQL queries.
+
+- {{site.data.keyword.lakehouse_short}} provides pre-defined **Sample and benchmarking data**, such as **tpch** and **tpcds**, to test the performance of a database system under controlled conditions. It also provides **System monitoring data** that uses **jmx** and **system** metrics to collect data about the system's health and performance during benchmark testing to understand how the system responds to the workload. **Sample and benchmarking data**, **tpch** and **tpcds** can only be queried using the Presto engines.
 
 - **Saved worksheets**: To view the saved queries.
 

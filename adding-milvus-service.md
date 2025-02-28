@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-12-28"
+lastupdated: "2025-02-25"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -50,9 +50,17 @@ Complete the following steps to add Milvus as a service in {{site.data.keyword.l
     |  | **Small**: Recommended for **10 million vectors**, 64 index parameters, 1024 segment size, and 384 dimensions. |
     |  | **Medium**: Recommended for **50 million vectors**, 64 index parameters, 1024 segment size, and 384 dimensions. |
     |  | **Large**: Recommended for **100 million vectors**, 64 index parameters, 1024 segment size, and 384 dimensions. |
+    |  | **Custom**: Recommended for upto **3 billion vectors**, 64 index parameters, and 1024 segment. The actual number of vectors and dimensions supported depends on the index type and the maximum supported vCPU configuration. \n - IVF_SQ8 - Up to 3 billion vectors. \n - IVF_FLAT - Up to 1.3 billion vectors. \n - HNSW - Up to 1 billion vectors. |
     | Add storage bucket | Associate an external storage for the **Small**, **Medium**, or **Large** sizes. For **Starter** size, you can also select an IBM-managed storage. To associate an external storage, you must have the storage configured.|
     | Path | For external storages, specify the path where you want to store vectorized data files.|
     {: caption="Adding Milvus service" caption-side="bottom"}
+
+    Milvus now allows scaling up between predefined T-shirt sizes (small, medium, large) or custom sizes.
+    Scaling down Milvus may impact performance when reducing from a higher capacity. If collections no longer fit into memory after scaling down, service might be impacted. In case of a service impact, the only solution is to either drop the collection or scale back up. Even if the service do not crash, the collections that were previously loaded but now exceed available memory may encounter issues.
+    {: important}
+
+    Scaling operation introduces a 5 to 10 minutes service delay. Ongoing operations may be disrupted during scaling transitions.
+    {: note}
 
     For more information about adding external storages, see [Adding a storage-catalog pair]({{site.data.keyword.ref-reg_bucket-link}}){: external}.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-02-04"
+lastupdated: "2025-02-28"
 
 keywords: watsonxdata, release notes
 
@@ -21,7 +21,81 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.lakehouse_full}} that are grouped by date.
 {: shortdesc}
 
-## 04 February 2025 - Version 2.1 Hotfix 2
+
+## 28 February 2025 - Version 2.1.1
+{: #lakehouse_28feb211}
+{: release-note}
+
+{{site.data.keyword.lakehouse_short}} 2.1.1 version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.1.1 release is available in your region, contact IBM Support.
+If you are currently using {{site.data.keyword.lakehouse_short}} 2.1.0 version, you can refer to the documentation, [watsonx.data 2.1.0](https://ibm.ent.box.com/s/zgw7umzibl9akxgi7vm4yxs4vyp8io6g).
+{: important}
+
+Data sources and storage enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} includes the following storage enhancements:
+
+   * Now, you can test connections for the following data sources and storage:
+      * IBM Db2 for i
+      * Apache Phoenix
+      * IBM Data Virtualization Manager
+      * BigQuery
+      * MySQL
+      * Google Cloud Storage
+   * You can now register and load external pre-existing Hudi and Delta tables on an object storage using {{site.data.keyword.lakehouse_short}} APIs.
+
+Ingestion enhancement
+
+: After an ingestion job is completed, you can now access the ingested data directly from the **Ingestion History** page which streamlines your workflow and saves time.
+
+Integration enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following enhanced integrations with other services:
+
+
+   - The **Connection Information** page now includes:
+      * Presto configuration details for DBT integration. You can copy the Presto configuration details that are required for DBT integration from this page.
+      * Option to export the TDS file, which includes the Presto engine configuration details that are required for Tableau integration.
+
+   For more information, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection).
+
+Engine and service enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
+
+   - You can now create a Spark application from the **Applications** tab of the Spark engine details page. For more information, see (Topic link).
+   - You can now use Spark version,  3.5.4 to run the applications in watsonx.data. In {{site.data.keyword.lakehouse_full}}, Apache Spark 3.4.4 and Apache Spark 3.5.4 are the supported versions.
+   - Milvus allows the following:
+      - In Milvus you can now do a hybrid GroupBy search based on multiple vector columns and also customize the group size when you run search queries. For more information, see [Connecting watsonx Assistant to watsonx.data Milvus for custom search](watsonxdata?topic=watsonxdata-wxd_wxa_connection).
+      - Milvus now supports custom size with a capacity of 3 billion vectors with a maximum of 1,024 dimensions.
+      - Milvus now allows scaling up or down between predefined T-shirt sizes (small, medium, and large) or custom sizes. For more information, see [Adding Milvus service](watsonxdata?topic=watsonxdata-adding-milvus-service).
+   - Starting from {{site.data.keyword.lakehouse_short}} 2.1.1 version, Milvus 2.5.0 is supported. For more information, see [Milvus](watsonxdata?topic=watsonxdata-whatismilvus).
+
+Access management enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following access management enhancements:
+
+   - The Access Management Service (AMS) in {{site.data.keyword.lakehouse_short}} can now use JSON Web Token (JWT) authentication for incoming requests from Presto, ensuring secure and efficient access control. For more information, see [Connecting to Presto engine through Presto CLI (Remote)](watsonxdata?topic=watsonxdata-con-presto-serv#conn-to-prestoeng).
+   - You can now assign users and roles to infrastructure components in batches of Twenty. For more information, see [Managing user access](watsonxdata?topic=watsonxdata-manage_access).
+   - You can now use Apache Ranger HadoopSQL policies to govern data with Spark engines. You can define Ranger policies when the Spark engine accesses data from Hadoop clusters. Enabling Ranger policy ensures robust data security and governance. With the Ranger policy, you can configure table authorization (L3), row-level filtering, and column masking for data. For more information, see [Enabling Apache Ranger policy for resources](watsonxdata?topic=watsonxdata-ranger_1).
+
+CPDCTL CLI enhancements
+
+: IBM `CPDCTL` CLI is now used to configure and manage different operations in watsonx.data. Using the `CPDCTL` CLI, you can manage configuration settings, run ingestion jobs, manage engines, data sources, and storages. The following two plugins are currently used to execute these operations:
+
+   * `config` - To configure {{site.data.keyword.lakehouse_short}} service environment and users.
+   * `wx-data` - To perform other operations such as, ingesting, managing engines, etc in {{site.data.keyword.lakehouse_short}}. For more information, see [IBM cpdctl](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=SSDZ38_2.1.x/wxd-client/topics/cpdctl-title.htm).
+
+Deprecated features
+
+: The following features are deprecated in this release:
+
+   * The Data Access Service (DAS) proxy feature is now deprecated and will be removed in a future release. You cannot use the Data Access Service (DAS) proxy feature to access object storage (S3, ADLS and ABS). If you use DAS proxy flow and face any issues, contact IBM support. For an overview of the DAS feature, see [Data Access Service (DAS)](watsonxdata?topic=watsonxdata-cas_ep_ov).
+
+   * IBM Client package is now deprecated and shall be removed in a future release. The utilities and commands in Client package is replaced with IBM CPDCTL CLI. For more information about how to use IBM CPDCTL CLI, see [IBM cpdctl](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=SSDZ38_2.1.x/wxd-client/topics/cpdctl-title.htm).
+
+
+
+## 04 February 2025 - Version 2.1.0 Hotfix 2
 {: #lakehouse_04febhf}
 {: release-note}
 
@@ -29,7 +103,7 @@ Lite plan enhancement
 
 : {{site.data.keyword.lakehouse_full}} Lite plan is now available in the Sydney region. For more information to provision a Lite plan instance in Sydney region, see [Provisioning Lite plan](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1#create-lite-cli).
 
-## 10 January 2025 - Version 2.1 Hotfix 1
+## 10 January 2025 - Version 2.1.0 Hotfix 1
 {: #lakehouse_09janhf}
 {: release-note}
 
@@ -44,7 +118,7 @@ Enterprise plan enhancement
 
 
 {{site.data.keyword.lakehouse_short}} 2.1.0 version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.1.0 release is available in your region, contact IBM Support.
-If you are currently using {{site.data.keyword.lakehouse_short}} 2.0.0 version, you can refer to the documentation, [watsonx.data 2.0.0](https://ibm.ent.box.com/s/zgw7umzibl9akxgi7vm4yxs4vyp8io6g).
+If you are currently using {{site.data.keyword.lakehouse_short}} 2.0.4 version, you can refer to the documentation, [watsonx.data 2.0.0](https://ibm.ent.box.com/s/zgw7umzibl9akxgi7vm4yxs4vyp8io6g).
 {: important}
 
 Data sources and storage enhancements
@@ -77,6 +151,11 @@ Integration enhancements
 
       * BI tools
       * DataBuildTool (dbt)
+
+   * Starting with watsonx.data version 2.1, you can only integrate with one of the following policy engines:
+
+      * Apache Ranger
+      * IBM Knowledge Catalog (IKC)
 
    For more information, see [Connection information](watsonxdata?topic=watsonxdata-get_connection).
 

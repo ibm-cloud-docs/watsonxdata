@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-01-16"
+lastupdated: "2025-02-24"
 
 keywords: lakehouse, milvus, watsonx.data
 subcollection: watsonxdata
@@ -50,7 +50,7 @@ It is recommended to insert your data in batches due to the following reasons:
 
 - The maximum number of rows that can be inserted at a time depends on the total size of the data you are trying to ingest. The exact number decreases with the increase in the dimensions of the vector and the presence of non-vector fields in the row.
 
-Use the bulk insert API for inserting the data sets larger than 500,000 vectors. The bulk insert API performs better than the batch insert API when ingesting larger data sets. If you are using batch insert API, manually flush the collection after every 500,000 rows. For more information, see [Bulk Insert API](https://milvus.io/api-reference/pymilvus/v2.4.x/ORM/utility/do_bulk_insert.md).
+Use the bulk insert API for inserting the data sets larger than 500,000 vectors. The bulk insert API performs better than the batch insert API when ingesting larger data sets. Using .npy files is the recommended way to ingest large data sets. If you are using batch insert API, manually flush the collection after every 500,000 rows. For more information, see [Bulk Insert API](https://milvus.io/api-reference/pymilvus/v2.4.x/ORM/utility/do_bulk_insert.md).
 {: note}
 
 
@@ -82,6 +82,7 @@ In Milvus, you can conduct a vector similarity search after you prepare the para
 
 - For more information about single-vector and multi-vector search, see [Vector similarity search](https://milvus.io/docs/single-vector-search.md).
 - For more information about hybrid (multi-vector) search, see [Hybrid search](https://milvus.io/docs/multi-vector-search.md).
+- For more information about hybrid with GroupBy search, see the GroupBy Enhancements section in [Hybrid GroupBy search](https://milvus.io/docs/release_notes.md#v250).
 
 ## Conducting a query based on scalar filtering in Milvus
 {: #working_with_milvus-06}
@@ -137,3 +138,8 @@ Following are some best practices:
 
 During Milvus upgrade, there can be a slight delay in response for about 20 seconds. On-going searches and upsert queries might fail. You can retry the queries immediately.
 {: note}
+
+## Sample notebooks for Milvus
+{: #samplenotebook_milvus}
+
+With these sample notebooks you can try out the Milvus capabilities with step-by-step tutorials. To access the sample notebooks, see [Sample Milvus notebooks](https://github.com/IBM/watsonx-data/tree/main/Tutorials).

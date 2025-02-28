@@ -24,6 +24,7 @@ toc:
           - presto_overview.md
           - pcpp_ov.md
           - spk_overview.md
+          - access-ovw.md
           - api_custom_ov.md
           - mixed_case_overview.md
           - resource_grp_ov.md
@@ -99,9 +100,6 @@ toc:
               - sqlserver_conn.md
               - teradata_conn.md
               - custom_database.md
-      - topicgroup:
-              label: Arrow Flight service
-              topics:
               - arrow_flight_service.md
               - derby_conn.md
               - greenplum_conn.md
@@ -159,6 +157,7 @@ toc:
           label: Query Optimizer
           topics:
             - install_optimizer.md
+            - sync_optimizer_verify.md
             - sync_optimizer_meta.md
             - optimizer_iceberg_stats.md
             - exec_inspect_optimizer.md
@@ -176,8 +175,8 @@ toc:
                       href: https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-ovrvw_qhmm
                 - qhmm.md
                 - qhmm_querying.md
-                - qhmm_ret.md
-                - qhmm_heap_thread.md
+                - qhmm_ret.md  
+                - shell_script.md
       - conn-presto-thr-cli.md
       # - presto_behavior.md
       - delete_lh.md
@@ -202,6 +201,7 @@ toc:
                 label: Submitting Spark application by using native Spark engine
                 topics:
                   - sbmt_das_spk.md
+                  - sbmt_spk_cnsl.md
                   - spark-extnsn.md
                   - run_nativespk_hudi.md
                   - ae_auto-scaling-serverless-apps.md
@@ -257,6 +257,9 @@ toc:
       - topicgroup:
           label: Access control
           topics:
+            - link:
+                  label: Access management overview
+                  href: https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-access_mgt
             - manage_access.md
             - role_priv.md
             - data_policy.md
@@ -316,6 +319,7 @@ toc:
                 label: Orchestration using Apache Airflow
                 topics:
                   - airflow.md
+      - idle_session_timeout.md
   - navgroup:
       id: reference
       topics:
@@ -388,4 +392,5 @@ toc:
                 label: Milvus
                 topics:
                   - milvus_memory_ts.md
+                  - milvus_data_miss_ts.md
       - get-help.md

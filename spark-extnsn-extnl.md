@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2025-01-31"
+lastupdated: "2025-02-26"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -20,8 +20,11 @@ When you submit a Spark application that uses external storage buckets registere
 You can enable the Spark access control extension for Iceberg, Hive and Hudi catalogs.
 {: note}
 
-You can create data policies to grant or deny access for catalog, schema, and table even column to a user or user group. Besides data level authorization, storage privilege is also considered. For more information related to the access control checks on catalogs, buckets, schemas and tables, see [Managing roles and privileges](watsonxdata?topic=watsonxdata-role_priv){: external}.
 
+
+You can either use Ranger or Access Management System (AMS) data policies to grant or deny access for users, user groups, catalog (Iceberg, Hive and Hudi), schema, table, and column. Besides data level authorization, storage privilege is also considered.
+For more information related to the using AMS on catalogs(Iceberg, Hive and Hudi), buckets, schemas and tables, see see [Managing roles and privileges](watsonxdata?topic=watsonxdata-role_priv){: external}.
+For more information on how to create Ranger policies (defined under Hadoop SQL service) and to enable them on catalogs(Iceberg, Hive and Hudi), buckets, schemas and tables, see see [Managing Ranger policies](watsonxdata?topic=watsonxdata-ranger_1){: external}.
 
 
 ## Prerequisites
@@ -179,7 +182,6 @@ curl --request POST   --url https://<region>/lakehouse/api/v2/spark_engines/<spa
       "spark.hadoop.fs.cos.<COS_SERVICE_NAME>.secret.key": "<COS_SECRET_KEY>",
       "spark.hadoop.fs.cos.<COS_SERVICE_NAME>.access.key": "<COS_ACCESS_KEY>"
       "spark.sql.catalogImplementation": "hive",
-      "spark.sql.extensions":"org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions",
       "spark.sql.iceberg.vectorization.enabled":"false",
         "spark.sql.catalog.<wxd-bucket-catalog-name>":"org.apache.iceberg.spark.SparkCatalog",
       "spark.sql.catalog.<wxd-bucket-catalog-name>.type":"hive",
@@ -210,8 +212,12 @@ curl --request POST   --url https://<region>/lakehouse/api/v2/spark_engines/<spa
 {: codeblock}
 
 Parameter values:
-* `<token>` : To get the access token for your service instance. For more information about generating the token, see [Generating a bearer token](watsonxdata?topic=account-userapikey&interface=ui#userapikey).
-* `<instance_crn>` : The instance ID from the watsonx.data cluster instance URL. Example, crn:v1:staging:public:lakehouse:us-south:a/7bb9e380dc0c4bc284592b97d5095d3c:5b602d6a-847a-469d-bece-0a29124588c0::.
+
+* `<region>` : Region where the instance is provisioned. Example, `us-south` region.
+* `<spark_engine_id>` : The unique identifier of the Spark instance. For information on how to retrieve the ID, see [Managing the Spark engine details](watsonxdata?topic=watsonxdata-view-end#view-dtls).
+* `<token>` : To get the access token for your service instance. For more information about generating the token, see [Generating a token](watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
+* `<instance_id>` : The instance ID from the watsonx.data cluster instance URL. Example, crn:v1:staging:public:lakehouse:us-south:a/7bb9e380dc0c4bc284592b97d5095d3c:5b602d6a-847a-469d-bece-0a29124588c0::.
+* `<wxd-data-bucket-name>` : The name of the data bucket associated against the spark engine from the Infrastructure manager.
 * `<wxd-data-bucket-endpoint>`: The host name of the endpoint for accessing the data bucket mentioned above. Example, s3.us-south.cloud-object-storage.appdomain.cloud for a Cloud Object storage bucket in us-south region.
 * `<wxd-bucket-catalog-name>`: The name of the catalog associated with the data bucket.
 * `<wxd-catalog-metastore-host>`: The metastore associated with the registered bucket.

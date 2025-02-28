@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-02-04"
+lastupdated: "2025-02-27"
 
 keywords: lakehouse
 
@@ -34,22 +34,69 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+## Presto CLI password size limitation
+{: #known_issue15759}
 
+Presto CLI supports a maximum password size of 1 KB (1024 bytes). If the password exceeds this size, the system cannot accept it in the password field; instead, it must be exported.
 
+## The timestamptz datatype is not supported for an ORC table during the upgrade of {{site.data.keyword.lakehouse_short}} web console
+{: #known_issue22118}
 
+## Database names containing hyphens or spaces cannot be queried by the Spark engine in a Python notebook, even when the appropriate Spark access control extension has been added.
+{: #known_issue38611}
 
-## WHERE/IN/DROP/RENAME clause in Hive tables with more than one partition does not work if partition type is of type VARCHAR.
-{: #known_issues20069}
+## Re-enrichment fails after deleting assets from an already enriched schema
+{: #known_issues39603}
 
-## Syncing data fails for schema and tables with same name
-{: #known_issues19201_1}
+When doing a re-enrichment after deleting assets from an already enriched schema encounter errors. This occurs because watson.data refreshes mappings when the schema list is updated. If the mapping is changed externally, there is no notification system to automatically refresh the mappings. They are only updated after manually refreshing the schema list.
 
-For users still in older versions before 2.1 version: In HMS, if you use the Register Bucket (sync) API and the bucket contains a schema and table which already exists in {{site.data.keyword.lakehouse_short}}, then. sync fails for schema and tables with same name.
+**Workaround:** Refresh the browser page.
 
-## Error during SELECT after syncing
-{: #known_issues19201_2}
+##  Business terms remain after the semantic automation layer integration is deleted from IBM {{site.data.keyword.lakehouse_short}}
+{: #known_issues39470}
 
-For users still in older versions before 2.1 version: In HMS, if you use the Register Bucket (sync) API and the bucket contains a schema that already exists in {{site.data.keyword.lakehouse_short}}, sync can happen to an incorrect catalog and after syncing data SELECT cannot be run on the tables, due to credentials mismatch between the catalogs.
+Business terms that were imported to IBM Knowledge Catalog for a semantic automation layer (SAL) integration in {{site.data.keyword.lakehouse_short}} are not removed when the integration is deleted. This can result in duplicate business terms if a new SAL integration is subsequently enabled and the same or similar business terms are uploaded again.
+
+**Workaround:** To avoid duplicate business terms, the cluster administrator or the user who originally created the SAL registration must manually delete all business terms that were imported for the SAL integration.
+
+## Iceberg tables that are partitioned by a date column may not be readable.
+{: #known_issues34778}
+
+This limitation is only applicable to Presto C++.
+{: note}
+
+## EXISTS clause on Apache Phoenix tables generate Exeception while executing query error
+{: #known_issues18858}
+
+Queries involving the EXISTS clause on Apache Phoenix tables may fail unexpectedly, even when the referenced column is valid. This occurs due to limitations in Apache Phoenix's interpretation of the EXISTS clause, particularly in cases with ambiguous or misaligned query structures.
+
+**Workaround:** To address this limitation, apply one of the following strategies:
+
+   - Establish a clear relationship between the subquery and the main query. Introduce a filter condition within the subquery to create a meaningful relationship between the subquery and the main query. For example, where department_id_bigint IS NOT NULL in the subquery. For more information, refer the following example:
+
+      ```bash
+      SELECT DISTINCT t1.first_name_varchar, t2.performance_rating_real, t1.team_head_varchar
+      FROM phoenix.tm_lh_engine.employee t1, phoenix.tm_lh_engine.departments t2
+      WHERE EXISTS (
+         SELECT 1
+         FROM phoenix.tm_lh_engine.departments
+         WHERE department_id_bigint IS NOT NULL
+      )
+      ```
+      {: codeblock}
+
+   - Establish a clear relationship between the tables involved by explicitly joining the tables in the subquery. This ensures the subquery is contextually relevant and resolves the execution issue. For example, where t3.department_id_bigint = t2.department_id_bigint in the subquery. For more information, refer the following example:
+
+      ```bash
+      SELECT DISTINCT t1.first_name_varchar, t2.performance_rating_real, t1.team_head_varchar
+      FROM phoenix.tm_lh_engine.employee t1, phoenix.tm_lh_engine.departments t2
+      WHERE EXISTS (
+         SELECT 1
+         FROM phoenix.tm_lh_engine.departments t3
+         WHERE t3.department_id_bigint = t2.department_id_bigint
+      )
+      ```
+      {: codeblock}
 
 ## Activity tracker support in MDS
 {: #known_issues17887}
@@ -109,7 +156,7 @@ Hive: The Hive catalog does not natively support the time data type.
 
 Iceberg: Iceberg does support the time data type.
 
-**Workaround:** To enable correct handling of time data in Iceberg tables, the `hive.parquet-batch-read-optimization-enabled property` must be set to `false`.
+**Workaround:** To enable correct handling of time data in Iceberg tables, the `hive.parquet-batch-read-optimization-enabled` property must be set to `false`.
 
 ## Files with different schemas result in null values
 {: #known_issues15665}
@@ -121,11 +168,18 @@ Iceberg: Iceberg does support the time data type.
 
 The following special characters are not supported while creating schemas and tables:
 
-Schemas (Hive and Iceberg): `{`, `[`, `(`, `)`, and `/`.
+Schemas (Hive and Iceberg): `$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `)`, and `/`.
 
-Tables (Hive): `{`, `(`, `[`, `)`, and `/`. (Creation of tables within a schema name that starts with the special character `@` shall result in an error).
+Tables (Hive): `$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `)`, and `/`. (Creation of tables within a schema name that starts with the special character `@` shall result in an error).
 
-Tables (Iceberg): `$`, `@`, `{`, `[`, `)`, `(`, and `/`.
+Tables (Iceberg):`$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `)`, `/`, and `@`.
+
+It is recommended to not use special characters such as question mark (?), hyphen (-), asterisk (*) or delimiter characters like \r, \n, and \t in table, column, and schema names. Though these special characters are supported and tables, columns, and schemas can be created, using them might cause issues when running the INSERT command or applying access policies for the same.
+
+To ensure a seamless experience, please follow the list below:
+- Schema names can contain letters, numbers or one of `!`, `#`, `&`, `]`, `}`, `<`, `>`, `=`, `%`, and `@`.
+- Table names can contain letters, numbers or one of `!`, `#`, `&`, `]`, `}`, `<`, `>`, `=`, and `;`.
+- Columns can contain letters, numbers one of `!`, `#`, `&`, `[`, `]`, `<` `>`, `_`, `:`, and `@`.
 
 ## `ALTER TABLE` operation fails in Spark job submission
 {: #known_issues13596}
@@ -291,13 +345,6 @@ DAS does not currently support default MinIO buckets or object storage that use 
 {: #known_issues12143_15986}
 
 Currently, it is not possible to access buckets stored in the default MinIO object storages created during instance provisioning using an S3 proxy functionality.
-
-## Presto SQL operations with Spark 3.3 and Iceberg timestamp data
-{: #known_issues12328}
-
-When data containing `timestampz` is ingested using Spark, Presto queries on these tables fail with the following error Iceberg column type `timestamptz` is not supported.
-
-**Workaround:** To ensure interoperability between Spark and Presto for datasets containing `timestampz`, you must use Spark 3.4 applications with the `configuration spark.sql.timestampType` set to `TIMESTAMP_NTZ`.
 
 ## Using ID as a column name in Cassandra `CREATE TABLE`
 {: #known_issues12069}
@@ -485,11 +532,6 @@ collection.query(expr='', fields=['count(*)'])
 {: #known_issues1.0.0_6}
 
 Presto describes a view in a mapped database as a TABLE rather than a VIEW. This is apparent to JDBC program connecting to the Presto engine.
-
-## Issue: Using special characters in schema, table, or column names.
-{: #known_issues1.0.0_4}
-
-It is recommended to not use special characters such as question mark (?), hyphen (-), or asterisk (*) in table, column names and schema names. Though these special characters are supported and tables, columns and schemas can be created, using these special characters might cause issues when running the `INSERT` command.
 
 ## Issue: User is not removed from the catalog access control on revoking data access.
 {: #known_issues1.0.0_3}

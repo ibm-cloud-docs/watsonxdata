@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2022
-lastupdated: "2024-09-10"
+  years: 2022, 2025
+lastupdated: "2025-02-24"
 
 subcollection: AnalyticsEngine
 
@@ -50,3 +50,16 @@ The following table shows the supported vCPU to memory size combinations.
 | ------------|-------------|
 | 1 vCPU x 1 GB | 10 vCPU x 48 GB |
 {: caption="Supported vCPU to memory size combinations" caption-side="top"}
+
+
+## Supported Spark version
+{: #cpu-mem-spk_versn}
+
+
+{{site.data.keyword.lakehouse_full}} supports the following Spark runtime versions to run Spark workloads.
+
+| Name | Status |
+| ------------|-------------|
+| Apache Spark 3.4.4 | Supported |
+| Apache Spark 3.5.4 | Supported |
+{: caption="Supported Spark versions" caption-side="top"}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2024
-lastupdated: "2024-12-28"
+lastupdated: "2025-02-07"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -87,7 +87,7 @@ Following are the details of the parameter values to be used in the curl command
 | `<map_of_spark_properties>` | Specify the Spark properties in the form of key-value pair (`"<property_name>": "<property_value>"`) separated by comma. |
 | `<property_name>` | The default configuration property name. For more information about different properties, see [Available Properties][def6]. |
 | `<property_value>` | The value that must be configured for the property. For more information about different properties, see [Available Properties][def6]. |
-| `<spark_version>` | The Spark runtime. The possible value is `3.4`. |
+| `<spark_version>` | The Spark runtime. To know about supported Spark versions, see [Supported Spark version](watsonxdata?topic=watsonxdata-wxd-ae_limits#cpu-mem-spk_versn). |
 {: caption="Parameter list" caption-side="bottom"}
 
 **Example**:

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2024-10-10"
+lastupdated: "2025-02-24"
 
 keywords: lakehouse, watsonx data, roles, access
 subcollection: watsonxdata
@@ -43,20 +43,39 @@ To manage access, complete the following steps:
 1. From the navigation menu, select **Access control**.
    Under the **Infrastructure** tab, the different components (Engine, Catalog, Storage, and Database) are displayed in the table.
 
-1. Click the overflow icon in the components row and then click **Manage access**. Alternatively, you can click the **Display name** of the component.
-   The selected component page opens.
+1. To provide access to individual infrastructure component, complete the following steps:
 
-1. Under the **Access control** tab, click **Add access**.
+   1. Click the overflow icon in the components row and then click **Manage access**. Alternatively, you can click the **Display name** of the component.
+      The selected component page opens.
 
-1. In the **Grant access to users and user groups** window, provide the following details.
+   1. Under the **Access control** tab, click **Add access**.
 
-   | Field | Description |
-   |--------------------------|----------------|
-   | Name | You can select one or more users or user groups.|
-   | Role | Select the role from the drop-down list. You can assign roles based on the component type. For more information, see [Roles and privileges.]({{site.data.keyword.ref-role_priv-link}})|
-   {: caption="Add user" caption-side="bottom"}
+   1. In the **Grant access to users and user groups** window, provide the following details.
 
-1. Click **Add**. The user is added and assigned the role.
+      | Field | Description |
+      |--------------------------|----------------|
+      | Name | You can select one or more users or user groups.|
+      | Role | Select the role from the drop-down list. You can assign roles based on the component type. For more information, see [Roles and privileges.]({{site.data.keyword.ref-role_priv-link}})|
+      {: caption="Add user" caption-side="bottom"}
+
+   1. Click **Add**. The user is added and assigned the role.
+
+1. To provide access to infrastructure components in batches, complete the following steps:
+
+   1. Click **Add access**. The Add access to infrastructure components page opens.
+
+   1. In the **Add access to infrastructure components** page, do the following :
+
+      1. Select the components. You can select a maximum of twenty components at a time.
+      1. Click **Next**.
+      1. Select the uses or user groups. You can select a maximum of 100 users or user groups altogether at a time.
+      1. Click **Next**.
+      1. You can view a table with the list of users and the infrastructure components against each user.      Select a role against each component from the **Choose a role** list.
+
+      You cannot change the existing role against a user (if it is seen already available in the table) from the page. To edit an existing role, see step 5.
+      {: note}
+
+      1. Click **Save**. The data is successfully saved.
 
 1. To change the role that is assigned to a user, complete the following steps:
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2024
-lastupdated: "2025-01-30"
+lastupdated: "2025-02-26"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -49,7 +49,7 @@ You can connect to a Milvus service by using API key or IAM token.
 1. Provision a Milvus service in {{site.data.keyword.lakehouse_short}}. For more information, see [Adding a Milvus service](watsonxdata?topic=watsonxdata-adding-milvus-service).
 1. Run one of the following commands by using Python SDK (PyMilvus) to connect with Milvus for gRPC route:
 
-     - Using GRPC calls:
+     - Use one of the following commands to connect to Milvus using GRPC calls:
 
          ```bash
          print(fmt.format("start connecting to Milvus"))
@@ -59,20 +59,48 @@ You can connect to a Milvus service by using API key or IAM token.
          ```
          {: codeblock}
 
+        or
+
+         ```bash
+        from pymilvus import MilvusClient, DataType
+
+        client = MilvusClient(
+            host=<host>,
+            port=<port>,
+            secure=True,
+            user="ibmlhapikey",
+            password="<api-key>"
+        )
+         ```
+         {: codeblock}
+
          Replace `<api-key>` with the IBM API key. For information about getting an API key, see [Getting IBM API Key]({{site.data.keyword.ref-con-presto-serv-link}}#get-ibmapi-key).
          {: note}
 
-     - Using IAM token
+     - Use one of the following commands to connect to Milvus using IAM token:
 
          ```bash
          connections.connect(host="<host>", port="<port>", secure=True, user="ibmlhtoken", password="<token>")
          ```
          {: codeblock}
 
+         or
+
+        ```bash
+        from pymilvus import MilvusClient, DataType
+
+        milvus_uri = "https://<ibmlhtoken>:<token>@<host>:<port>"
+        client = MilvusClient(
+            uri=milvus_uri,
+            secure=True
+        )
+         ```
+         {: codeblock}
+
          Replace `<token>` with the IAM token. For information about getting a token, see [Getting IBM Access Management (IAM) token]({{site.data.keyword.ref-con-presto-serv-link}}#get-ibmiam-token).
          {: note}
 
-     - Using Uniform Resource Identifier (URI)
+     - Use one of the following commands to connect to Milvus using Uniform Resource Identifier (URI):
 
          ```bash
          print(fmt.format("start connecting to Milvus"))
@@ -82,9 +110,33 @@ You can connect to a Milvus service by using API key or IAM token.
          ```
          {: codeblock}
 
+         or
+
+         ```bash
+        from pymilvus import MilvusClient, DataType
+
+        milvus_uri = "https://<ibmlhapikey>:<api-key>@<host>:<port>"
+        client = MilvusClient(
+            uri=milvus_uri,
+            secure=True
+        )
+         ```
+         {: codeblock}
+
         Replace `<token>` with the IAM token. For information about getting a token, see [Getting IBM Access Management (IAM) token]({{site.data.keyword.ref-con-presto-serv-link}}#get-ibmiam-token).
          {: note}
 
+1. To make REST API calls using Milvus REST route, see [RESTful API reference](https://milvus.io/api-reference/restful/v2.5.x/About.md).
+
+    For example, use the following command to list all the collections:
+
+    ```bash
+    curl --request GET \
+        --url "https://<REST-host>:<REST-port>/v1/vector/collections" \
+        --header "Authorization: Basic $(echo -n '<user>:<password>' | base64)" \
+        --header "Content-Type: application/json"
+    ```
+    {: codeblock}
 
 
 ## What to do next

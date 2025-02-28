@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2022, 2024
+  years: 2022, 2025
 lastupdated: "2024-08-01"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
@@ -46,5 +46,5 @@ MinIO is a high-performance, S3 compatible object store. It is built for large s
  | Activate now| Activate the storage immediately or activate it later. |
  | Catalog type | Select the catalog type from the list. The recommended catalog is Apache Iceberg. The other options for catalog are Apache Hive, Apache Hudi and Delta Lake.|
  | Catalog name | Enter the name of your catalog.|
- | Create | Click Create to create the storage. |
+ | Associate | Click Associate to create the storage. |
  {: caption="Register bucket" caption-side="bottom"}
