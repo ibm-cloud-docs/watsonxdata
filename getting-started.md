@@ -101,7 +101,7 @@ The access to provision IBM Cloud resources is governed by using [IAM access](ht
        - `ibm:eu-de:fra`
        - `ibm:eu-gb:lon`
        - `ibm:au-syd:syd`
-       - `ibm:ca-tor`
+       - `ibm:ca-tor:tor`
        - `ibm:jp-tok:tok`
     - `cloud_type`:
        - `ibm`: For fully managed account instances (default).

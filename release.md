@@ -101,6 +101,7 @@ Deprecated features
 
 
 
+
 ## 04 February 2025 - Version 2.1.0 Hotfix 2
 {: #lakehouse_04febhf}
 {: release-note}
