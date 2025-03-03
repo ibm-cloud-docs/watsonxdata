@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-03"
 
 keywords: watsonxdata, release notes
 
@@ -47,11 +47,11 @@ Data sources and storage enhancements
       * BigQuery
       * MySQL
       * Google Cloud Storage
-   * You can now register and load external pre-existing Hudi and Delta tables on an object storage using {{site.data.keyword.lakehouse_short}} APIs.
+   * You can now register and load external pre-existing Hudi and Delta tables on an object storage by using [Register table](https://cloud.ibm.com/apidocs/watsonxdata-software#register-table) and [load table metadata](https://cloud.ibm.com/apidocs/watsonxdata-software#load-table) APIs.
 
 Ingestion enhancement
 
-: After an ingestion job is completed, you can now access the ingested data directly from the **Ingestion History** page which streamlines your workflow and saves time.
+: After an ingestion job is completed, you can now access the ingested data directly from the **Ingestion History** page, which streamlines your workflow and saves time.
 
 Integration enhancements
 
@@ -69,7 +69,7 @@ Engine and service enhancements
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
 
    - You can now create a Spark application from the **Applications** tab of the Spark engine details page. For more information, see [Submitting Spark application from Console](watsonxdata?topic=watsonxdata-smbit_cnsl_1).
-   - You can now use Spark version,  3.5.4 to run the applications in watsonx.data. In {{site.data.keyword.lakehouse_full}}, Apache Spark 3.4.4 and Apache Spark 3.5.4 are the supported versions.
+   - You can now use Spark version, 3.5.4 to run the applications in watsonx.data. In {{site.data.keyword.lakehouse_full}}, Apache Spark 3.4.4 and Apache Spark 3.5.4 are the supported versions.
    - Milvus allows the following:
       - In Milvus you can now do a hybrid GroupBy search based on multiple vector columns and also customize the group size when you run search queries. For more information, see [Connecting watsonx Assistant to watsonx.data Milvus for custom search](watsonxdata?topic=watsonxdata-wxd_wxa_connection).
       - Milvus now supports custom size with a capacity of 3 billion vectors with a maximum of 1,024 dimensions.
