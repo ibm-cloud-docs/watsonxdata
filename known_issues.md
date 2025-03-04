@@ -34,7 +34,7 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
-## Spark job failure due to expired ADLS signature during Write/Delete/Update
+## Spark job failure due to expired ADLS signature during Write/Delete/Update operation
 {: #known_issue20172}
 
 The Spark job fails with the following error when it performs Write/Delete/Update operation in a ADLS Gen1 storage. This occurs because the ADLS signature expires in the middle of the process.
