@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-02-27"
+  years: 2022, 2025
+lastupdated: "2025-03-04"
 
 keywords: lakehouse
 
@@ -33,6 +33,14 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+
+## Spark job failure due to expired ADLS signature during Write/Delete/Update
+{: #known_issue20172}
+
+The Spark job fails with the following error when it performs Write/Delete/Update operation in a ADLS Gen1 storage. This occurs because the ADLS signature expires in the middle of the process.
+`java.io.IOException: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature`
+
+**Workaround:** Set the ADLS signature expire time to a large value. Configure the property, `spark.hadoop.spark.hadoop.wxd.cas.sas.expiry.period` to control the ADLS signature expire time. Update the default value from 300s to 43200s.
 
 ## Presto CLI password size limitation
 {: #known_issue15759}
