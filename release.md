@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-03-03"
+lastupdated: "2025-03-05"
 
 keywords: watsonxdata, release notes
 
@@ -45,7 +45,6 @@ Data sources and storage enhancements
       * Apache Phoenix
       * IBM Data Virtualization Manager
       * BigQuery
-      * MySQL
       * Google Cloud Storage
    * You can now register and load external pre-existing Hudi and Delta tables on an object storage by using [Register table](https://cloud.ibm.com/apidocs/watsonxdata-software#register-table) and [load table metadata](https://cloud.ibm.com/apidocs/watsonxdata-software#load-table) APIs.
 
