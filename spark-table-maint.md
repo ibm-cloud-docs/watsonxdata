@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-05"
+lastupdated: "2025-03-06"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -45,7 +45,8 @@ For more table operations, see [Spark Procedures](https://iceberg.apache.org/doc
 ## Spark sample python file
 {: #pth_file}
 
-    ```bash
+```bash
+
 from pyspark.sql import SparkSession
 
 def init_spark():
@@ -167,8 +168,8 @@ if __name__ == '__main__':
     main()
 
 
-    ```
-    {: codeblock}
+```
+{: codeblock}
 
 
 
