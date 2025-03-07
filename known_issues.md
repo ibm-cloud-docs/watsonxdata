@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-06"
+lastupdated: "2025-03-07"
 
 keywords: lakehouse
 
@@ -33,6 +33,12 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+
+
+## Unable to copy or download json snippet for engines and services in the `Configurations` Page
+{: #known_issue23176}
+
+Unable to copy or download the json snippet for all engines and services from the `General section` present in the `Connection Information` tile on the `Configurations` page.
 
 ## Spark job failure due to expired ADLS signature during Write/Delete/Update operation
 {: #known_issue20172}
