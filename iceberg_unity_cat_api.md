@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-02-25"
+  years: 2022, 2025
+lastupdated: "2025-03-10"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -62,8 +62,6 @@ The following are the APIs included:
 - GET /tables
 - GET /tables/{full_name}
 - DELETE /tables/{full_name}
-
-For more information, see [API references](https://editor-next.swagger.io/?url=https://raw.githubusercontent.com/unitycatalog/unitycatalog/refs/tags/v0.1.0/api/all.yaml).
 
 ### Sample Unity APIs for GET catalogs
 {: #unity_cat_api_example}
@@ -219,8 +217,6 @@ The following are the APIs included:
 {: #iceberg_cat_api_4}
 
 - Config endpoint to configure catalog as prefix
-
-For more information, see [API references](https://editor-next.swagger.io/?url=https://raw.githubusercontent.com/apache/iceberg/refs/tags/apache-iceberg-1.6.1/open-api/rest-catalog-open-api.yaml).
 
 ### Sample Iceberg APIs
 {: #Sample_Iceberg_APIs}
