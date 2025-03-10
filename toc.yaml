@@ -203,6 +203,7 @@ toc:
                 topics:
                   - sbmt_das_spk.md
                   - sbmt_spk_cnsl.md
+                  - spark-table-maint.md
                   - spark-extnsn.md
                   - run_nativespk_hudi.md
                   - ae_auto-scaling-serverless-apps.md
@@ -233,7 +234,6 @@ toc:
                   - spark-extnsn-extnl.md
                   - run_extspk_delta.md
                   - run_extspk_hudi.md
-                  - spark-table-maint.md
                   - spark-emr.md
                   - spark-notebook.md
       - topicgroup:
