@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-03-05"
+lastupdated: "2025-03-12"
 
 keywords: watsonxdata, release notes
 
@@ -25,11 +25,6 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 ## 28 February 2025 - Version 2.1.1
 {: #lakehouse_28feb211}
 {: release-note}
-
-{{site.data.keyword.lakehouse_short}} 2.1.1 version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.1.1 release is available in your region, contact IBM Support.
-If you are currently using {{site.data.keyword.lakehouse_short}} 2.1.0 version, you can refer to the documentation, [watsonx.data 2.1.0](https://ibm.ent.box.com/s/zgw7umzibl9akxgi7vm4yxs4vyp8io6g).
-{: important}
-
 
 New region availability
 
@@ -98,9 +93,6 @@ Deprecated features
 
    * IBM Client package is now deprecated and shall be removed in a future release. The utilities and commands in Client package is replaced with IBM CPDCTL CLI. For more information about how to use IBM CPDCTL CLI, see [IBM cpdctl](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=SSDZ38_2.1.x/wxd-client/topics/cpdctl-title.htm).
 
-
-
-
 ## 04 February 2025 - Version 2.1.0 Hotfix 2
 {: #lakehouse_04febhf}
 {: release-note}
@@ -117,15 +109,9 @@ Enterprise plan enhancement
 
 : If you use IBM Cloud CLI to provision an Enterprise plan instance in the Sydney region, you must use the plan name `lakehouse-enterprise-mcsp`. For more information, see [Provision an instance through CLI](watsonxdata?topic=watsonxdata-getting-started_1#create-by-cli).
 
-
 ## 13 December 2024 - Version 2.1.0
 {: #lakehouse_12Dec21}
 {: release-note}
-
-
-{{site.data.keyword.lakehouse_short}} 2.1.0 version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.1.0 release is available in your region, contact IBM Support.
-If you are currently using {{site.data.keyword.lakehouse_short}} 2.0.4 version, you can refer to the documentation, [watsonx.data 2.0.0](https://ibm.ent.box.com/s/zgw7umzibl9akxgi7vm4yxs4vyp8io6g).
-{: important}
 
 Data sources and storage enhancements
 
@@ -231,7 +217,6 @@ Deprecated features
 : The following feature is deprecated in this release:
 
    * The REST API feature to capture DDL changes in {{site.data.keyword.lakehouse_short}} through the event listener will be deprecated from {{site.data.keyword.lakehouse_short}} release version 2.1.
-
 
 ## 13 November 2024 - Version 2.0.4 Hotfix
 {: #lakehouse_13Novhf}
