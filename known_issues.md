@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-07"
+lastupdated: "2025-03-12"
 
 keywords: lakehouse
 
@@ -34,6 +34,12 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+## Certificate update required for data ingestion
+{: #known_issue40771}
+
+If you encounter issues with Data Source connections in Ingestion discovery, review the certificate details, as the current error message is unclear. A missing/expired certificate is likely causing the issue.
+
+**Workaround:** You must maintain an updated security certificates in order to do ingestion.
 
 ## Unable to copy or download json snippet for engines and services in the `Configurations` Page
 {: #known_issue23176}
