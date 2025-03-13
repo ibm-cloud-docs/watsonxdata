@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-12"
+lastupdated: "2025-03-13"
 
 keywords: lakehouse
 
@@ -33,6 +33,11 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+
+## Hive external column names with uppercase full-width letters cannot be recognized when file-column-names-read-as-lower-case is set to true
+{: #known_issue40767}
+
+When the presto worker catalog property file-column-names-read-as-lower-case is set to true, it converts field names in ASCII uppercase letters to ASCII lowercase. As a result, data under column names with uppercase full-width characters will not be recognized and will appear as "null".
 
 ## Certificate update required for data ingestion
 {: #known_issue40771}
