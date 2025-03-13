@@ -33,6 +33,15 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+## The default `information_schema` view of a catalog lists schemas and tables from other catalogs
+{: #known_issue21054}
+
+If a user has more than one catalog, the default `information_schema` view will display the schemas and tables from other catalogs as well, regardless of the catalogs associated with the engine.
+
+**Workaround:** Run the query following query with catalog names from the current session:
+   ```bash
+   select * from information_schema.tables where table_catalog=<catalog-name>
+   ```
 
 ## Hive external column names with uppercase full-width letters cannot be recognized when file-column-names-read-as-lower-case is set to true
 {: #known_issue40767}
