@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-06"
+lastupdated: "2025-03-14"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -42,134 +42,6 @@ For more table operations, see [Spark Procedures](https://iceberg.apache.org/doc
 * Provision {{site.data.keyword.iae_full_notm}} instance
 * Install `ibm-lh` tool. For more information on how to install `ibm-lh` tool, see [Installing ibm-lh-client](https://www.ibm.com/docs/en/watsonxdata/1.0.x?topic=package-installing-lh-client){: external}.
 
-## Spark sample python file
-{: #pth_file}
-
-```bash
-
-from pyspark.sql import SparkSession
-
-def init_spark():
-
-    spark = SparkSession.builder \
-        .appName("Table Maintenance") \
-        .config('spark.sql.extensions', 'org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions') \
-        .enableHiveSupport() \
-        .getOrCreate()
-
-    return spark
-
-def main():
-
-    try:
-        spark = init_spark()
-
-        # For all commands related to Iceberg Table Maintenance and their details, visit the link given below:
-        # https://iceberg.apache.org/docs/1.8.0/spark-procedures/
-
-
-        # SNAPSHOT MANAGEMENT --------------------------------------------------------------------------------------------------------------
-
-
-        # Command to get details of all Snapshots in a table
-        # You can run the below command to get the details regarding all the snapshots available in a selected table
-        # Command Format
-        # SELECT committed_at, snapshot_id, parent_id, operation FROM catalog_name.schema_name."table_name$snapshots" ORDER BY committed_at;
-        # Command Example
-        # SELECT committed_at, snapshot_id, parent_id, operation FROM iceberg_data.iceberg_schema."iceberg_table$snapshots" ORDER BY committed_at;
-
-
-        # Rollback to Snapshot
-        # Command Format
-        # spark.sql("CALL catalog_name.system.rollback_to_snapshot('schema_name.table_name', Snapshot_ID)").show()
-        # Command Example
-        # spark.sql("CALL iceberg_data.system.rollback_to_snapshot('iceberg_schema.iceberg_table', 6825707396795621602)").show()
-
-
-        # Rollback to TimeStamp
-        # Command Format
-        # spark.sql("CALL catalog_name.system.rollback_to_timestamp('schema_name.table_name', TIMESTAMP '2021-06-30T00:00:00.000Z')").show()
-        # Command Example
-        # spark.sql("CALL iceberg_data.system.rollback_to_timestamp('iceberg_schema.iceberg_table', TIMESTAMP '2025-02-28T11:49:51.892Z')").show()
-
-
-        # Set Current Snapshot
-        # Command Format
-        # spark.sql("CALL catalog_name.system.set_current_snapshot('schema_name.table_name', Snapshot_ID)").show()
-        # Command Example
-        # spark.sql("CALL iceberg_data.system.set_current_snapshot('iceberg_schema.iceberg_table', 8505515598581933984)").show()
-
-
-        # Cherry Pick Snapshot
-        # Command Format
-        # spark.sql("CALL catalog_name.system.cherrypick_snapshot('schema_name.table_name', Snapshot_ID)").show()
-        # Command Example
-        # spark.sql("CALL iceberg_data.system.cherrypick_snapshot('iceberg_schema.iceberg_table', 7141967805447891098)").show()
-
-
-        # METADATA MANAGEMENT --------------------------------------------------------------------------------------------------------------
-
-
-        # Expire Snapshot
-        # Command Format
-        # spark.sql("CALL catalog_name.system.expire_snapshots(table => 'schema_name.table_name', snapshot_ids => ARRAY( ID1, ID2, ... ))").show()
-        # Command Example
-        # spark.sql("CALL iceberg_data.system.expire_snapshots(table => 'iceberg_schema.iceberg_table', snapshot_ids => ARRAY(2463746222678678017))").show()
-
-
-        # Remove Orphan Files ( Only lists the Orphan Files as it is a dry run )
-        # Command Format
-        # spark.sql("CALL catalog_name.system.remove_orphan_files(table => 'schema_name.table_name', dry_run => true)").show()
-        # Command Example
-        # spark.sql("CALL iceberg_data.system.remove_orphan_files(table => 'iceberg_schema.iceberg_table', dry_run => true)").show()
-
-
-        # Remove Orphan Files ( in the mentioned folder )
-        # Command Format
-        # spark.sql("CALL catalog_name.system.remove_orphan_files(table => 'schema_name.table_name', location => 'tablelocation/data')").show()
-        # Command Example
-        # spark.sql("CALL iceberg_data.system.remove_orphan_files(table => 'iceberg_schema.iceberg_table', location => 's3a://iceberg_bucket/iceberg_schema/iceberg_table/data')").show()
-
-
-        # Rewrite Data Files ( Default Config )
-        # Command Format
-        # spark.sql("CALL catalog_name.system.rewrite_data_files('schema_name.table_name')").show()
-        # Command Example
-        # spark.sql("CALL iceberg_data.system.rewrite_data_files('iceberg_schema.iceberg_table')").show()
-
-
-        # Rewrite Data Files ( Sorting by id and name )
-        # Command Format
-        # spark.sql("CALL catalog_name.system.rewrite_data_files(table => 'schema_name.table_name', strategy => 'sort', sort_order => 'id DESC NULLS LAST,name ASC NULLS FIRST')").show()
-        # Command Example
-        # spark.sql("CALL iceberg_data.system.rewrite_data_files(table => 'iceberg_schema.iceberg_table', strategy => 'sort', sort_order => 'id DESC NULLS LAST,name ASC NULLS FIRST')").show()
-
-
-        # Rewrite Manifests
-        # Command Format
-        # spark.sql("CALL catalog_name.system.rewrite_manifests('schema_name.table_name')").show()
-        # Command Example
-        # spark.sql("CALL iceberg_data.system.rewrite_manifests('iceberg_schema.iceberg_table')").show()
-
-
-        # MIGRATION --------------------------------------------------------------------------------------------------------------
-
-
-        # Register Table
-        # Command Format
-        # spark.sql("CALL catalog_name.system.register_table( table => 'schema_name.new_table_name', metadata_file => 'path/to/metadata/file.json')").show()
-        # Command Example
-        # spark.sql("CALL iceberg_data.system.register_table( table => 'iceberg_schema.iceberg_table_new', metadata_file => 's3a://iceberg_bucket/iceberg_schema/iceberg_table/metadata/00000-ebea9-bb80-4a36-497ed503.metadata.json')").show()
-
-    finally:
-        spark.stop()
-
-if __name__ == '__main__':
-    main()
-
-
-```
-{: codeblock}
 
 
 
