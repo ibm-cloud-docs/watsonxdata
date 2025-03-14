@@ -31,7 +31,6 @@ toc:
           - integration.md
           - manta_overview.md
           - metadata_serv_ov.md
-          - metadata_custmizing_max_pool.md
       - topicgroup:
           label: Provisioning watsonx.data
           topics:
