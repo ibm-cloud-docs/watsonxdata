@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-03-12"
+lastupdated: "2025-03-14"
 
 keywords: watsonxdata, release notes
 
@@ -36,7 +36,7 @@ Data sources and storage enhancements
 : This release of {{site.data.keyword.lakehouse_short}} includes the following storage enhancements:
 
    * Now, you can test connections for the following data sources and storage:
-      * IBM Db2 for i
+
       * Apache Phoenix
       * IBM Data Virtualization Manager
       * BigQuery
