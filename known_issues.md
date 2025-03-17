@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-02-27"
+  years: 2022, 2025
+lastupdated: "2025-03-13"
 
 keywords: lakehouse
 
@@ -33,6 +33,36 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+
+## The default `information_schema` view of a catalog lists schemas and tables from other catalogs
+{: #known_issue21054}
+
+If a user has more than one catalog, the default `information_schema` view will display the schemas and tables from other catalogs as well, regardless of the catalogs associated with the engine.
+
+## Hive external column names with uppercase full-width letters cannot be recognized when file-column-names-read-as-lower-case is set to true
+{: #known_issue40767}
+
+When the presto worker catalog property file-column-names-read-as-lower-case is set to true, it converts field names in ASCII uppercase letters to ASCII lowercase. As a result, data under column names with uppercase full-width characters will not be recognized and will appear as "null".
+
+## Certificate update required for data ingestion
+{: #known_issue40771}
+
+If you encounter issues with Data Source connections in Ingestion discovery, review the certificate details, as the current error message is unclear. A missing/expired certificate is likely causing the issue.
+
+**Workaround:** You must maintain an updated security certificates in order to do ingestion.
+
+## Unable to copy or download json snippet for engines and services in the `Configurations` Page
+{: #known_issue23176}
+
+Unable to copy or download the json snippet for all engines and services from the `General section` present in the `Connection Information` tile on the `Configurations` page.
+
+## Spark job failure due to expired ADLS signature during Write/Delete/Update operation
+{: #known_issue20172}
+
+The Spark job fails with the following error when it performs Write/Delete/Update operation in a ADLS Gen1 storage. This occurs because the ADLS signature expires in the middle of the process.
+`java.io.IOException: Server failed to authenticate the request. Make sure the value of Authorization header is formed correctly including the signature`
+
+**Workaround:** Set the ADLS signature expire time to a large value. Configure the property, `spark.hadoop.spark.hadoop.wxd.cas.sas.expiry.period` to control the ADLS signature expire time. Update the default value from 300s to 43200s.
 
 ## Presto CLI password size limitation
 {: #known_issue15759}
@@ -118,24 +148,6 @@ The Hive catalog does not support CSV format for create table int type column. T
 
 * Create table in varchar.
 * Create view that cast the columns to their original data types.
-
-## Test connection may fail for IBM Db2 data source
-{: #known_issues29895}
-
-You may face issues while uploading the certificate obtained by following the steps provided in the topic [IBM Db2](https://cloud.ibm.com/docs/Db2whc?topic=Db2whc-ssl_support) for SSL connection of IBM Db2 data source.
-
-**Workaround:** Convert the SSL certificate to .pem format by the following steps:
-
-1. Open a terminal or command prompt.
-2. Navigate to the directory where the certificate file is located.
-3. Run the following OpenSSL command:
-
-   ```bash
-   openssl x509 -inform DER -in DigiCertGlobalRootCA.crt -out DigiCertGlobalRootCA.pem
-   ```
-   {: codeblock}
-
-4. Use the .pem certificate generated in step 3 to retest the connection.
 
 ## Inconsistent CSV and Parquet file ingestion behaviour
 {: #known_issues26920}

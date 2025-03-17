@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-14"
 
 keywords: watsonxdata, release notes
 
@@ -26,11 +26,6 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: #lakehouse_28feb211}
 {: release-note}
 
-{{site.data.keyword.lakehouse_short}} 2.1.1 version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.1.1 release is available in your region, contact IBM Support.
-If you are currently using {{site.data.keyword.lakehouse_short}} 2.1.0 version, you can refer to the documentation, [watsonx.data 2.1.0](https://ibm.ent.box.com/s/zgw7umzibl9akxgi7vm4yxs4vyp8io6g).
-{: important}
-
-
 New region availability
 
 : {{site.data.keyword.lakehouse_short}} is now available in Toronto region for Lite and Enterprise plans. To provision, see [Provisioning watsonx.data Lite plan](watsonxdata?topic=watsonxdata-tutorial_prov_lite_1) and [Provisioning watsonx.data Enterprise plan](watsonxdata?topic=watsonxdata-getting-started_1).
@@ -41,17 +36,16 @@ Data sources and storage enhancements
 : This release of {{site.data.keyword.lakehouse_short}} includes the following storage enhancements:
 
    * Now, you can test connections for the following data sources and storage:
-      * IBM Db2 for i
+
       * Apache Phoenix
       * IBM Data Virtualization Manager
       * BigQuery
-      * MySQL
       * Google Cloud Storage
-   * You can now register and load external pre-existing Hudi and Delta tables on an object storage using {{site.data.keyword.lakehouse_short}} APIs.
+   * You can now register and load external pre-existing Hudi and Delta tables on an object storage by using [Register table](https://cloud.ibm.com/apidocs/watsonxdata-software#register-table) and [load table metadata](https://cloud.ibm.com/apidocs/watsonxdata-software#load-table) APIs.
 
 Ingestion enhancement
 
-: After an ingestion job is completed, you can now access the ingested data directly from the **Ingestion History** page which streamlines your workflow and saves time.
+: After an ingestion job is completed, you can now access the ingested data directly from the **Ingestion History** page, which streamlines your workflow and saves time.
 
 Integration enhancements
 
@@ -69,7 +63,7 @@ Engine and service enhancements
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
 
    - You can now create a Spark application from the **Applications** tab of the Spark engine details page. For more information, see [Submitting Spark application from Console](watsonxdata?topic=watsonxdata-smbit_cnsl_1).
-   - You can now use Spark version,  3.5.4 to run the applications in watsonx.data. In {{site.data.keyword.lakehouse_full}}, Apache Spark 3.4.4 and Apache Spark 3.5.4 are the supported versions.
+   - You can now use Spark version, 3.5.4 to run the applications in watsonx.data. In {{site.data.keyword.lakehouse_full}}, Apache Spark 3.4.4 and Apache Spark 3.5.4 are the supported versions.
    - Milvus allows the following:
       - In Milvus you can now do a hybrid GroupBy search based on multiple vector columns and also customize the group size when you run search queries. For more information, see [Connecting watsonx Assistant to watsonx.data Milvus for custom search](watsonxdata?topic=watsonxdata-wxd_wxa_connection).
       - Milvus now supports custom size with a capacity of 3 billion vectors with a maximum of 1,024 dimensions.
@@ -99,9 +93,6 @@ Deprecated features
 
    * IBM Client package is now deprecated and shall be removed in a future release. The utilities and commands in Client package is replaced with IBM CPDCTL CLI. For more information about how to use IBM CPDCTL CLI, see [IBM cpdctl](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=SSDZ38_2.1.x/wxd-client/topics/cpdctl-title.htm).
 
-
-
-
 ## 04 February 2025 - Version 2.1.0 Hotfix 2
 {: #lakehouse_04febhf}
 {: release-note}
@@ -118,15 +109,9 @@ Enterprise plan enhancement
 
 : If you use IBM Cloud CLI to provision an Enterprise plan instance in the Sydney region, you must use the plan name `lakehouse-enterprise-mcsp`. For more information, see [Provision an instance through CLI](watsonxdata?topic=watsonxdata-getting-started_1#create-by-cli).
 
-
 ## 13 December 2024 - Version 2.1.0
 {: #lakehouse_12Dec21}
 {: release-note}
-
-
-{{site.data.keyword.lakehouse_short}} 2.1.0 version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.1.0 release is available in your region, contact IBM Support.
-If you are currently using {{site.data.keyword.lakehouse_short}} 2.0.4 version, you can refer to the documentation, [watsonx.data 2.0.0](https://ibm.ent.box.com/s/zgw7umzibl9akxgi7vm4yxs4vyp8io6g).
-{: important}
 
 Data sources and storage enhancements
 
@@ -232,7 +217,6 @@ Deprecated features
 : The following feature is deprecated in this release:
 
    * The REST API feature to capture DDL changes in {{site.data.keyword.lakehouse_short}} through the event listener will be deprecated from {{site.data.keyword.lakehouse_short}} release version 2.1.
-
 
 ## 13 November 2024 - Version 2.0.4 Hotfix
 {: #lakehouse_13Novhf}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-12-02"
+  years: 2017, 2025
+lastupdated: "2025-03-14"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -41,6 +41,9 @@ For more table operations, see [Spark Procedures](https://iceberg.apache.org/doc
 * Provision {{site.data.keyword.lakehouse_full}} instance
 * Provision {{site.data.keyword.iae_full_notm}} instance
 * Install `ibm-lh` tool. For more information on how to install `ibm-lh` tool, see [Installing ibm-lh-client](https://www.ibm.com/docs/en/watsonxdata/1.0.x?topic=package-installing-lh-client){: external}.
+
+
+
 
 ## Procedure
 {: #table-abt_samp_run}
