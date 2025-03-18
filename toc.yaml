@@ -87,6 +87,7 @@ toc:
               - saphana.md
               - dvm_conn.md
               - db2_conn.md
+              - db2ibmi_conn.md
               - netezza_conn.md
               - informix_conn.md
               - mongodb_conn.md
