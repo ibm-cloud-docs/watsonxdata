@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-02-24"
+  years: 2022, 2025
+lastupdated: "2025-03-18"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -62,20 +62,20 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    i. Drag a file to the box or click to upload. Selected files are listed in the **Selected file(s)** section.
 
-       You can add multiple files of the same file type. The available file type options are CSV, Parquet, JSON, ORC, and AVRO. The maximum cumulative file size must be within 500 MB.
-       {: note}
+      You can add multiple files of the same file type. The available file type options are CSV, Parquet, JSON, ORC, and AVRO. The maximum cumulative file size must be within 500 MB.
+      {: note}
 
    ii. Select a transient storage bucket from the drop down to temporarily store uploaded files.
 
-       The files are automatically deleted from this storage upon ingestion completion or failure. This is available only when ingesting data from a Local system.
-       {: note}
+      The files are automatically deleted from this storage upon ingestion completion or failure. This is available only when ingesting data from a Local system.
+      {: note}
 
    iii. Click **Next**.
 
    iv. In the **Ingest data: Local** page, you can see the details of the source files and upload more files if required.
 
-       You can remove individual files and can also remove all the files by using the **Unselect all** option.
-       {: note}
+      You can remove individual files and can also remove all the files by using the **Unselect all** option.
+      {: note}
 
    v. Click the preview icon against the specific file that you want to preview. This action opens a new File preview window displaying the tables of the selected file.
 
