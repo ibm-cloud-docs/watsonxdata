@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-02-17"
+  years: 2022, 2025
+lastupdated: "2025-03-18"
 
 keywords: watsonxdata, sql queries, query workspace
 
@@ -69,6 +69,10 @@ To run the SQL queries, do the following steps:
 1. Click the **Save** icon to save the query. A **Save query** confirmation dialog appears.
 1. Click **Save**.
 1. Click the **Run** button to run the query. Using **Run to cursor** or **Run from cursor**, you can run queries from or until your cursor position.
+
+   You can stop or cancel a query while running multiple queries, and you can also remove a query. These options are available for each respective query in the **Worksheet results** view.
+   {: note}
+
 1. Select **Result set** or **Details** tab to view the results. You can export the result as a csv file using **Export to CSV** icon.
 1. Click **Saved queries** to view the saved queries.
 1. Click [**Explain**]({{site.data.keyword.ref-explain_sql_query-link}}) to view the logical or distributed plan of execution for a specified SQL query.
