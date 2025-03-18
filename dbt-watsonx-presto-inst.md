@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-11-18"
+  years: 2022, 2025
+lastupdated: "2025-03-18"
 
 keywords: lakehouse, watsonx.data, presto, cli
 
@@ -41,7 +41,7 @@ This section covers the steps to install and use `dbt-watsonx-presto`.
    ```
    {: codeblock}
 
-   1. Select a Presto number and enter it. Example: for `[1] presto`, enter `1`.
+   1. Select a Presto number and enter it. Example: for `[1] watsonx_presto`, enter `1`.
    1. If you already have a project with the same name, you must confirm whether to overwrite `profiles.yml`. Enter **Y** to confirm or **N** to discard.
 
 1. Set up the `profiles.yml` file. For more information, see [Configuration (setting up your profile)](watsonxdata?topic=watsonxdata-dbt_watsonx_presto_conf).
