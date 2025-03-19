@@ -26,7 +26,7 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Managing diagnostic data from user interface
+# Managing access to virtual private endpoints
 {: #access_vpe}
 
 You can configure {{site.data.keyword.lakehouse_short}} to manage access to your virtual private endpoints.
@@ -38,7 +38,7 @@ You can configure {{site.data.keyword.lakehouse_short}} to manage access to your
 
 1. Log in to the {{site.data.keyword.lakehouse_short}} console.
 1. From the navigation menu, select **Configurations**.
-1. Click the **Virtual private endpoints** tile. The ***Virtual private endpoints** page opens.
+1. Click the **Virtual private endpoints** tile. The **Virtual private endpoints** page opens.
 1. Enable the **Private endpoints** option.
 1. Click **Add access**.
 1. In the **Add access to virtual private endpoints** window, provide the following details:
