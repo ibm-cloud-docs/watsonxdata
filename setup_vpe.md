@@ -43,5 +43,5 @@ You can configure network endpoints in {{site.data.keyword.lakehouse_short}} to 
     * Public endpoints - Enabled by default
     * Private endpoints - Disabled by default
 
-   Public endpoints can be disabled after enabling Private endpoints and refreshing the engines and services. Private endpoints cannot be disabled, once enabled.
+   Public endpoints can be disabled after you enable the Private endpoints and refresh the engines and services. Private endpoints cannot be disabled after it is enabled.
    {: note}
