@@ -17,22 +17,6 @@ subcollection: watsonxdata
 You can perform Iceberg table maintenance operations by submitting a Spark application with the help of IBM Cloud Pak for Data Command Line Interface (IBM `cpdctl`). The sparkjob utility available in the IBM `cpdctl` allows you to submit, list and get the details of a Spark application.
 {: shortdesc}
 
-* Snapshot management
-
-    - rollback_to_snapshot - Roll back a table to a specific snapshot ID.
-    - rollback_to_timestamp - Roll back the table to a snapshot at a specific day and time.
-    - set_current_snapshot - Sets the current snapshot ID for a table.
-    - cherrypick_snapshot - Cherry-picks changes from a snapshot into the current table state.
-* Metadata management
-    - expire_snapshots - Remove older snapshots and their files that are no longer needed.
-    - remove_orphan_files - Used to remove files that are not referenced in any metadata files of an Iceberg table.
-    - rewrite_data_files - Combines small files into larger files to reduce metadata overhead and runtime file open cost.
-    - rewrite_manifests - Rewrite manifests for a table to optimize scan planning.
-* Table Migration
-    - register_table - Creates a catalog entry for a metadata.json file that exists but does not have a corresponding catalog identifier.
-
-For more table operations, see [Spark Procedures](https://iceberg.apache.org/docs/latest/spark-procedures/).
-
 
 ## Prerequisites
 {: #table-spk_preq}
@@ -69,9 +53,9 @@ You can submit a Spark application that involves the following table maintenance
 ### Procedure
 {: #table-spk_sbmpro}
 
-1. Save the sample [Python file](#pth_file) to a Cloud Object Storage location and associate the storage with the native Spark engine. You must save the following details of the storage, which is required at the time of submitting the application.
+1. Save the sample [Python file](#pth_file) to a Cloud Object Storage location. You must save the following details of the storage, which is required at the time of submitting the application.
 
-   The Python file includes commands for the different table maintenance operations. You can uncomment the required section based on your use case scenario. For the use case that involves catalog and schema, customize the catalog_name, schema_name and table_name.
+   The Python file includes commands for the different table maintenance operations. You can uncomment the required section based on your use case scenario. For the use case that involves catalog and schema, customize the catalog_name, schema_name and table_name in the Python file.
    {: note}
 
 
@@ -81,7 +65,8 @@ You can submit a Spark application that involves the following table maintenance
    * <BUCKET_ACCESS_KEY> : Access key of the Cloud Object Storage storage.
    * <BUCKET_SECRET_KEY> : Secret Key of the Cloud Object Storage storage.
    * <SPARK_APP_NAME> : Name of the Spark application.
-   * <API_KEY> : Generate the IBM Cloud API key (See [Generating the API key]({{site.data.keyword.ref-con-presto-serv-link}})) and use Base64 encoded version of `(ibmlhapikey_<Your_EMAIL_ID>:<SaaS_API_Key>)`.
+   * <API_KEY> : Generate the <SaaS_API_Key> (See [Generating the API key]({{site.data.keyword.ref-con-presto-serv-link}})).
+      Specify in the format :`Basic base64(ibmlhapikey_<Your_EMAIL_ID>:<SaaS_API_Key>)`. Use the command `echo -n "ibmlhapikey_<Your_EMAIL_ID>:<SaaS_API_Key>" | base64` to generate the Base 64 encoded version of the API_key.
 
 3. Use the `Create` command in the sparkjob resource available in IBM `cpdctl` to submit the Spark application. See the [How to use wx-data command --help (-h)] section to understand how to run the `./cpdctl wx-data sparkjob create` command.
 
