@@ -38,7 +38,7 @@ You can configure network endpoints in {{site.data.keyword.lakehouse_short}} to 
 
 1. Log in to the {{site.data.keyword.lakehouse_short}} console.
 1. From the navigation menu, select **Configurations**.
-1. Click the **Virtual private endpoints** tile. The ***Virtual private endpoints** page opens.
+1. Click the **Virtual private endpoints** tile. The **Virtual private endpoints** page opens.
 1. Configure the following network endpoints:
     * Public endpoints - Enabled by default
     * Private endpoints - Disabled by default
