@@ -176,7 +176,7 @@ toc:
                       href: https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-ovrvw_qhmm
                 - qhmm.md
                 - qhmm_querying.md
-                - qhmm_ret.md  
+                - qhmm_ret.md
                 - shell_script.md
       - conn-presto-thr-cli.md
       # - presto_behavior.md
