@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-03-19"
 
 keywords: lakehouse
 
@@ -33,6 +33,13 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+
+## Issue with uppercase Turkish character İ in Oracle database using WE8ISO8859P9 character set (ORA-00911 Error)
+{: #known_issue23728}
+
+In an Oracle database using the WE8ISO8859P9 character set, the uppercase Turkish character İ is not supported in the mixed-case feature flag OFF (default) mode, leading to ORA-00911: invalid character errors.
+
+**Workaround:** Set the mixed-case feature flag to ON.
 
 ## The default `information_schema` view of a catalog lists schemas and tables from other catalogs
 {: #known_issue21054}
