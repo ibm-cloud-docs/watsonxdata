@@ -348,18 +348,6 @@ When you query an external table with `CHAR` data type columns, the query fails 
 
 When using the AWS Glue Data Catalog to manage a bucket or storage location containing both Iceberg and Hive tables, attempting to access Iceberg tables from the Hive catalog gives, `Not a Hive table` error and attempting to access Hive tables from the Iceberg catalog gives, `Not an Iceberg table` error.
 
-## Spark application submission fails when DAS (Data Access Service) is enabled for default MinIO buckets
-{: #known_issues12143_15986_1}
-
-DAS does not currently support default MinIO buckets or object storage that use HTTP endpoints.
-
-**Workaround:** You can disable DAS or make sure that your default MinIO buckets or object storage are configured with HTTPS endpoints.
-
-## Default MinIO bucket access through S3 proxy is unavailable
-{: #known_issues12143_15986}
-
-Currently, it is not possible to access buckets stored in the default MinIO object storages created during instance provisioning using an S3 proxy functionality.
-
 ## Using ID as a column name in Cassandra `CREATE TABLE`
 {: #known_issues12069}
 
