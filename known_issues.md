@@ -34,6 +34,27 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+## Catalog information is not appearing in the Tableau Desktop
+{: #known_issue23615}
+
+The catalog information does not appear in the Tableau Desktop when retrieving connection details from the {{site.data.keyword.lakehouse_short}} `Connection Information` page.
+
+**Workaround:** Manually add the catalog name in the exported file.
+
+## `Connection Information` page shows a truncated username
+{: #known_issue23612}
+
+The `Connection Information` page shows a truncated username, excluding the prefix `ibmlhapikey_` for `PowerBI` and `Looker`.
+
+**Workaround:** Add the `ibmlhapikey_` prefix to the username when manually copying the value to enable connections with BI tools.
+
+## Unable to export config files from the Firefox web browser
+{: #known_issue23617}
+
+The `Export config files` functionality on the `Connection Information` page does not work in the Firefox web browser for `PowerBI`.
+
+**Workaround:** Use the Google Chrome web browser.
+
 ## Issue with uppercase Turkish character İ in Oracle database using WE8ISO8859P9 character set (ORA-00911 Error)
 {: #known_issue23728}
 
