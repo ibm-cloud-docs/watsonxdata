@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-18"
+lastupdated: "2025-03-19"
 
 keywords: lakehouse, watsonx.data, presto, cli
 
@@ -51,7 +51,7 @@ The following table covers the parameter details:
 | `password` | Required if method is `BasicAuth` | Password or API key for authentication. | None or alphanumeric (abc123) |
 | `http_headers` | Optional | HTTP headers to send alongside requests to Presto, specified as a yaml dictionary of (header, value) pairs. | X-Presto-Routing-Group: my-cluster |
 | `http_scheme` | Optional (default is `http` or `https` for method: `BasicAuth`) | HTTP scheme to use (`http` or `https`). | `https` or `http` |
-| `catalog` | Required | Catalog or database name for building models. | Analytics |
+| `catalog` | Required | Catalog name for building models. | Analytics |
 | `schema` | Required | Schema for building models. | dbt_drew |
 | `host` | Required | Hostname for connecting to Presto. You can get the hostname by clicking View connect details in the engine details page.  | 127.0.0.1 |
 | `port` | Required | Port for connecting to Presto. You can get the port by clicking View connect details in the engine details page.  | 8080 |
