@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-08-28"
+  years: 2022, 2025
+lastupdated: "2025-03-19"
 
 keywords: Data, federation,
 
@@ -127,7 +127,7 @@ Now, the sales data is split between Db2 and Iceberg catalogs. You can run query
 
 2. From the **Query Workspace**, run the following query to understand which purchasing method is associated with the largest orders.
 
-   You can use the following sample query to determine which purchasing method is associated with the largest orders. The query accesses five tables, one of which is in watsonx.data object storage (green), and other four are in Db2 (purple).
+   You can use the following sample query to determine which purchasing method is associated with the largest orders. The query accesses five tables, one of which is in watsonx.data object storage (iceberg_data), and other four are in Db2 (db2catalog).
 
    Example query:
 
