@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-01-10"
+  years: 2022, 2025
+lastupdated: "2025-03-19"
 
 keywords: watsonxdata, troubleshoot, optimizer
 
@@ -58,7 +58,7 @@ The rewrite procedure fails with the following error message:
 1. Use `ExecuteWxdQueryOptimizer` to execute the following SQL statement, which updates the card column in the sysstat.tables view with the actual cardinality obtained in step 1.
 
    ```bash
-   CALL ExecuteWxdQueryOptimizer('db2 "update sysstat.tables set card=<value from count(*) in Presto> where TABSCHEMA=''<table-catalog>.<table-schema>'' AND TABNAME=''<table-name>''"'
+   CALL ExecuteWxdQueryOptimizer('update sysstat.tables set card=<value from count(*) in Presto> where TABSCHEMA='<table-catalog>.<table-schema>' AND TABNAME='<table-name>'');
    );
    ```
    {: codeblock}
