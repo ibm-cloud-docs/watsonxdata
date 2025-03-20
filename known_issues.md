@@ -34,6 +34,11 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+## Issue with server/host, port information, and user data in exported file
+{: #known_issue23730}
+
+The server/host and port information are missing from the reg file and are not populated in the driver for the Power BI downloaded file. Additionally, the user information in the exported value does not match the value in the CData reg file. Also, the exported username of Cdata template does not include `ibmlhapikey_` prefix
+
 ## Connection with BI tools shows no values for hostname and port 
 {: #known_issue23731}
 
