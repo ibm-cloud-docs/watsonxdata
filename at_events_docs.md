@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-12-13"
+  years: 2022, 2025
+lastupdated: "2025-03-20"
 
 keywords: lakehouse, watsonx data, events, audit, activity
 
@@ -305,7 +305,7 @@ The following table lists the events generated at watsonx.data (platform) level:
 
 
 ## Events for Drivers
-{: #at_actions_data_policy}
+{: #at_actions_data_policy1}
 
 | Action                            | Description |
 |-----------------------------------|-------------|

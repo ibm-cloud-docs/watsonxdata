@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-03-14"
+lastupdated: "2025-03-20"
 
 keywords: watsonxdata, release notes
 
@@ -20,6 +20,20 @@ content-type: release-note
 
 Use these release notes to learn about the latest updates to {{site.data.keyword.lakehouse_full}} that are grouped by date.
 {: shortdesc}
+
+## 02 April 2025 - Version 2.1.2
+{: #lakehouse_2apr212}
+{: release-note}
+
+Integration enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following enhanced integrations with other services:
+
+   * Now, you can define IBM Knowledge Catalog governance policies for Presto (C++) engine when you integrate with {{site.data.keyword.lakehouse_short}}. For more information, see [Connecting to IBM Knowledge Catalog (IKC)](watsonxdata?topic=watsonxdata-ikc_integration).
+
+Ingestion enhancement
+
+: Ingestion jobs using an external Spark engine now provide logs within watsonx.data. This enhancement allows users to effectively identify and troubleshoot job execution directly within the watsonx.data on cloud platform (SaaS instance).
 
 
 ## 28 February 2025 - Version 2.1.1
