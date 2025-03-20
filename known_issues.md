@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-19"
+lastupdated: "2025-03-20"
 
 keywords: lakehouse
 
@@ -33,6 +33,13 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+
+## Connection with BI tools shows no values for hostname and port 
+{: #known_issue23731}
+
+The connection with BI tools shows no values for hostname and port  when downloading `PowerBI` config files.
+
+**Workaround:** Add the hostname and port value when downloading config files for PowerBI
 
 ## Catalog information is not appearing in the Tableau Desktop
 {: #known_issue23615}
