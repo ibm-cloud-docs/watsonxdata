@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-10"
+lastupdated: "2025-03-21"
 
 keywords: lakehouse, watsonx data, privileges, roles, access
 
@@ -148,6 +148,31 @@ Default user access is granted to:
 | View (UI and API) | ✓ | ✓ | ✓ |     |
 | Run workloads against the engine | ✓ | ✓ | ✓ |     |
 {: caption="Resource-level permissions" caption-side="bottom"}
+
+
+## Engine (Db2 and Netezza)
+{: #db2_net}
+
+### Default admin access
+{: #default_dbn}
+
+Default user access is granted to:
+
+- Formation admins (IAM)
+- Instance admins (CPD)
+- Install admins (Dev)
+
+### Resource-level permissions
+{: #rl_premis_db2net}
+
+| Action | Admin | Manager | User | Users without an explicit role |
+|-------|------|------|---------|---------|
+|Create and delete engine | ✓ |   |    |     |
+| Grant and revoke access | ✓ |   |    |     |
+| Pause and resume  | ✓ | ✓ |    |     |
+| Update engine details | ✓ | ✓ |    |     |
+{: caption="Resource-level permissions" caption-side="bottom"}
+
 
 ## Service (Milvus)
 {: #milvus}
