@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-03-20"
+lastupdated: "2025-03-21"
 
 keywords: watsonxdata, release notes
 
@@ -24,6 +24,11 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 ## 02 April 2025 - Version 2.1.2
 {: #lakehouse_2apr212}
 {: release-note}
+
+
+Connectivity enhancements
+
+: You can now securely and privately connect to a {{site.data.keyword.lakehouse_short}} instance by using virtual private endpoints. For more information, see
 
 Integration enhancements
 
