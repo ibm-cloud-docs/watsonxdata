@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-02-18"
+  years: 2022, 2025
+lastupdated: "2025-03-21"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -65,7 +65,6 @@ For more information about Milvus, see:
 - [Working with Milvus]({{site.data.keyword.ref-working_with_milvus-link}})
 - [Pause and resume Milvus service]({{site.data.keyword.ref-pause_resume_milvus-link}})
 - [Configuring IBM® watsonx.data Milvus in IBM watsonx.ai](watsonxdata?topic=watsonxdata-wxd_wxai_milvus_conn)
-- [Birdwatcher debugging tool](watsonxdata?topic=watsonxdata-bd_dbgtool)
 - [Connecting watsonx Assistant to watsonx.data Milvus for custom search](watsonxdata?topic=watsonxdata-wxd_wxa_connection)
 
 You cannot upgrade from the private-preview version to the GA version of Milvus. You must delete the private preview and add the GA version.
