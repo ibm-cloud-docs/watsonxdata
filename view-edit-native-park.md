@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2025-02-07"
+  years: 2017, 2025
+lastupdated: "2025-03-21"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -38,6 +38,9 @@ You can view the Native Spark engine details in list and topology views.
    | Spark engine endpoint | The Native Spark endpoint. |
    | Default Spark Configuration | The Spark configuration properties that are applied to any application that is submitted to the Spark engine. |
    {: caption="Viewing Native Spark engine details" caption-side="bottom"}
+
+You can also use private endpoints, see [VPE Gateway Configuration](watsonxdata?topic=watsonxdata-setup_vpe) to configure Virtual private endpoints Gateway in the your Virtual private endpoints.
+
 
 ## Editing Spark details from the console UI
 {: #edit_nspark_ui}
