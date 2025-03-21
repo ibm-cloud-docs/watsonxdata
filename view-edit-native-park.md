@@ -39,7 +39,7 @@ You can view the Native Spark engine details in list and topology views.
    | Default Spark Configuration | The Spark configuration properties that are applied to any application that is submitted to the Spark engine. |
    {: caption="Viewing Native Spark engine details" caption-side="bottom"}
 
-You can also use private endpoints, see [VPE Gateway Configuration](watsonxdata?topic=watsonxdata-setup_vpe) to configure Virtual private endpoints Gateway in the your Virtual private endpoints.
+You can also use private endpoints, see [VPE Gateway Configuration](watsonxdata?topic=watsonxdata-setup_vpe) to configure Virtual Private Endpoint Gateway in the your Virtual Private Cloud (VPC).
 {: note}
 
 
