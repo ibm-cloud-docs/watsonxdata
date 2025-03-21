@@ -25,6 +25,16 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: #lakehouse_2apr212}
 {: release-note}
 
+Data sources and storage enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} includes the following storage enhancements:
+
+   * Now you can connect to IBM Db2 for i data source. For more information, see [IBM Db2 for i](watsonxdata?topic=watsonxdata-bd2fori_database).
+
+Connectivity enhancements
+
+: You can now securely and privately connect to a {{site.data.keyword.lakehouse_short}} instance by using virtual private endpoints. For more information, see
+
 Integration enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following enhanced integrations with other services:
@@ -44,6 +54,13 @@ Connectivity enhancements
 Ingestion enhancement
 
 : Ingestion jobs using an external Spark engine now provide logs within {{site.data.keyword.lakehouse_short}}. This enhancement allows users to effectively identify and troubleshoot job execution directly within the {{site.data.keyword.lakehouse_short}} on cloud platform (SaaS instance).
+
+Engine and service enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
+
+   * You can now use the Azure Data Lake Storage Gen2 with AccessKey Authmode with Spark engine to store your data while submitting Spark applications. For more information, see [Azure Data Lake Storage](watsonxdata?topic=watsonxdata-adls_genblob_storage).
+   * You can stop or cancel a query while running multiple queries, and you can also remove a query. see [Running SQL queries](watsonxdata?topic=watsonxdata-run_sql).
 
 
 Access management enhancements
