@@ -25,17 +25,18 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: #lakehouse_2apr212}
 {: release-note}
 
-
-Connectivity enhancements
-
-: You can now securely and privately connect to a {{site.data.keyword.lakehouse_short}} instance by using virtual private endpoints. For more information, see
-
 Integration enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following enhanced integrations with other services:
 
    * Now, you can define IBM Knowledge Catalog governance policies for Presto (C++) engine when you integrate with {{site.data.keyword.lakehouse_short}}. For more information, see [Connecting to IBM Knowledge Catalog (IKC)](watsonxdata?topic=watsonxdata-ikc_integration).
    * You can now export configuration files for target Presto engine, based on their ODBC driver selection (Simba or CData), to more easily establish connections with {{site.data.keyword.lakehouse_short}}. This enhancement saves you from having to manually configure Presto engine details manually by using PowerBI.
+
+
+Connectivity enhancements
+
+: You can now securely and privately connect to a {{site.data.keyword.lakehouse_short}} instance by using virtual private endpoints. For more information, see [Setting up virtual private endpoints](/docs/watsonxdata?topic=watsonxdata-setup_vpe).
+
 
 Ingestion enhancement
 
