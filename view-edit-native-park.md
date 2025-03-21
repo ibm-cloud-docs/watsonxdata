@@ -40,6 +40,7 @@ You can view the Native Spark engine details in list and topology views.
    {: caption="Viewing Native Spark engine details" caption-side="bottom"}
 
 You can also use private endpoints, see [VPE Gateway Configuration](watsonxdata?topic=watsonxdata-setup_vpe) to configure Virtual private endpoints Gateway in the your Virtual private endpoints.
+{: note}
 
 
 ## Editing Spark details from the console UI
