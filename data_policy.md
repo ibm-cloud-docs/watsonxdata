@@ -59,14 +59,17 @@ To maintain data security, you can create access policies for the following at t
    - **Eligible catalogs**
 
      1. Select a catalog. This lists all the schemas available in the catalog.
-     1. Choose one, more than one, or all schemas. You can also proceed without choosing a schema, to allow user to create their own schema.
+     1. Choose one, more than one, or all schemas.
+
+     You can also proceed without choosing a schema, to allow user to create their own schema.
+     {: note}
 
         - You can select the checkbox against a particular schema or use **ALL** checkbox to include all schemas under the catalog.
         - Select the **All** checkbox for schemas to include both current and future schemas with all tables and columns.
         - Select the **All** checkbox for tables to include both current and future tables and columns.
         - Select the **All** checkbox for columns to include both current and future columns.
 
-        If you choose a single schema, you can select one, more than one, or all tables. If you choose more than one schema, you cannot select any tables. The policy applies to all tables within the schemas.
+        If you choose a single schema, you can select one, more than one, or all tables or choose no table and allow user to create tables within the schema. If you choose more than one schema, you cannot select any tables. The policy applies to all tables within the schemas.
         {: note}
 
      1. Choose one, more than one, or all tables.
