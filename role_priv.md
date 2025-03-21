@@ -171,6 +171,7 @@ Default user access is granted to:
 | Grant and revoke access | ✓ |   |    |     |
 | Pause and resume  | ✓ | ✓ |    |     |
 | Update engine details | ✓ | ✓ |    |     |
+|View an engine |  ✓ | ✓ | ✓ | |
 {: caption="Resource-level permissions" caption-side="bottom"}
 
 
