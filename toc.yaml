@@ -286,7 +286,6 @@ toc:
           label: Configuring network endpoints
           topics:
             - setup_vpe.md
-            - access_vpe.md
       - topicgroup:
           label: Integrating with Data Build Tool(dbt)
           topics:
