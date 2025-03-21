@@ -35,7 +35,10 @@ Integration enhancements
 
 Connectivity enhancements
 
-: You can now securely and privately connect to a {{site.data.keyword.lakehouse_short}} instance by using virtual private endpoints. For more information, see [Setting up virtual private endpoints](/docs/watsonxdata?topic=watsonxdata-setup_vpe).
+: You can now securely and privately connect to a {{site.data.keyword.lakehouse_short}} instance by using virtual private endpoints. For more information, see the following topics:
+   * [Setting up virtual private endpoints](/docs/watsonxdata?topic=setup_vpe)
+   * [Setting up virtual private endpoints](/docs/watsonxdata?topic=watsonxdata-setup_vpe)
+   * [Setting up virtual private endpoints](watsonxdata?topic=watsonxdata-setup_vpe)
 
 
 Ingestion enhancement
