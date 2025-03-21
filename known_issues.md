@@ -60,7 +60,7 @@ The connection with BI tools shows no values for hostname and port  when downlo
 
 The catalog information does not appear in the Tableau Desktop when retrieving connection details from the {{site.data.keyword.lakehouse_short}} `Connection Information` page.
 
-**Workaround:** Manually add the catalog name in the exported file.
+**Workaround:** Manually enter the selected catalog name from the UI into the exported file.
 
 ## `Connection Information` page shows a truncated username
 {: #known_issue23612}
