@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-20"
+lastupdated: "2025-03-21"
 
 keywords: lakehouse
 
@@ -33,6 +33,13 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+
+## Select query fails with schema evolution
+{: #known_issue19897}
+
+When you add an INTEGER column before a VARCHAR column, it causes subsequent select queries to fail with schema evolution.
+
+**Workaround:** Set `set session <catalog-name>.parquet_use_column_names=true;` either in session or `hive.parquet.use-column-names` in catalog properties.
 
 ## Issue with server/host, port information, and user data in exported file
 {: #known_issue23730}
