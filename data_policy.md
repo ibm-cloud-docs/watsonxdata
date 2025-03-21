@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-21"
 
 keywords: lakehouse, access, data, policy, watsonx data
 
@@ -58,9 +58,10 @@ To maintain data security, you can create access policies for the following at t
    You can select one of the following categories:
    - **Eligible catalogs**
 
-     1. Select a catalog.
+     1. Select a catalog. This lists all the schemas available in the catalog.
      1. Choose one, more than one, or all schemas.
 
+        - You can select the checkbox against a particular schema or use **ALL** checkbox to include all schemas under the catalog.
         - Select the **All** checkbox for schemas to include both current and future schemas with all tables and columns.
         - Select the **All** checkbox for tables to include both current and future tables and columns.
         - Select the **All** checkbox for columns to include both current and future columns.

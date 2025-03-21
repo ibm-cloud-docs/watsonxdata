@@ -389,6 +389,7 @@ toc:
             - ts_optimizer_iceberg_stats.md
             - ts_cs_issue.md
             - ts_ip_restrict_issue.md
+            - ranger_crash_trble.md
             - topicgroup:
                 label: Spark
                 topics:
