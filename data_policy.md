@@ -69,12 +69,15 @@ To maintain data security, you can create access policies for the following at t
         - Select the **All** checkbox for tables to include both current and future tables and columns.
         - Select the **All** checkbox for columns to include both current and future columns.
 
-        If you choose a single schema, you can select one, more than one, or all tables or choose no table and allow user to create tables within the schema. If you choose more than one schema, you cannot select any tables. The policy applies to all tables within the schemas.
+        If you choose a single schema, you can select one, more than one, or all tables. If you choose more than one schema, you cannot select any tables. The policy applies to all tables within the schemas.
         {: note}
 
      1. Choose one, more than one, or all tables.
 
-        If you choose a single table, you can select one, more than one, or all columns. If you choose more than one table, you cannot select any columns. The policy applies to all columns of the tables.
+     You can also proceed without choosing a table, to allow user to create their own table.
+     {: note}
+
+        If you choose a single table, you can select one, more than one, or all columns or choose no table and allow user to create tables within the schema. If you choose more than one table, you cannot select any columns. The policy applies to all columns of the tables.
         {: note}
 
    - **Storage**
