@@ -48,7 +48,7 @@ Private endpoints are not supported for Lite plans. Private endpoints are suppor
 1. To enable private endpoints for your deployment, click **Private endpoints** and refresh the engines and services.
 
    You cannot disable the private endpoints after it is enabled.
-   {: note}
+   {: restriction}
 
 1. Optional: To disable the public endpoints, click **Public endpoints**.
 
