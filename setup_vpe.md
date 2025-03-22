@@ -63,4 +63,4 @@ The **Virtual Private Endpoint** is displayed in the **Private endpoints** table
 ## What to do next
 {: #setup_vpe_next}
 
-You can create a Virtual private endpoint gateway to connect to a {{site.data.keyword.lakehouse_short}} instance. For more information see [Creating VPE gateways](/docs/vpc?topic=vpc-ordering-endpoint-gateway).
+You can create a **Virtual private endpoint gateway** to connect to a {{site.data.keyword.lakehouse_short}} instance. For more information see [Creating VPE gateways](/docs/vpc?topic=vpc-ordering-endpoint-gateway).
