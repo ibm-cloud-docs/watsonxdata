@@ -32,6 +32,10 @@ subcollection: watsonxdata
 You can configure network endpoints in {{site.data.keyword.lakehouse_short}} to view and manage access to your deployment.
 {: shortdesc}
 
+Private endpoints are not supported for Lite plans.
+Private endpoints are supported only in `ca-tor` and `au-syd` regions.
+{: important}
+
 ## Procedure
 {: #setup_vpe_proc}
 
@@ -43,11 +47,11 @@ You can configure network endpoints in {{site.data.keyword.lakehouse_short}} to 
     * Private endpoints - Disabled by default
 1. To enable private endpoints for your deployment, click **Private endpoints** and refresh the engines and services.
    You cannot disable the private endpoints after it is enabled.
-   {: note}
+   {: restriction}
 
-1. To disable the public endpoints, click **Public endpoints**.
+1. Optional: To disable the public endpoints, click **Public endpoints**.
    You can disable the public endpoints only after you enable the private endpoints and refresh the engines and services.
-   {: note}
+   {: restriction}
 
 ## Result
 {: #setup_vpe_res}
