@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-03-19"
+lastupdated: "2025-03-22"
 
 keywords: watsonxdata, vpe
 
@@ -38,10 +38,23 @@ You can configure network endpoints in {{site.data.keyword.lakehouse_short}} to 
 
 1. Log in to the {{site.data.keyword.lakehouse_short}} console.
 1. From the navigation menu, select **Configurations**.
-1. Click the **Virtual private endpoints** tile. The **Virtual private endpoints** page opens.
-1. Configure the following network endpoints:
+1. Click the **Virtual private endpoints** tile. The **Virtual private endpoints** page opens. You can configure the following network endpoints:
     * Public endpoints - Enabled by default
     * Private endpoints - Disabled by default
-
-   Public endpoints can be disabled after you enable the Private endpoints and refresh the engines and services. Private endpoints cannot be disabled after it is enabled.
+1. To enable private endpoints for your deployment, click **Private endpoints** and refresh the engines and services.
+   You cannot disable the private endpoints after it is enabled.
    {: note}
+
+1. To disable the public endpoints, click **Public endpoints**.
+   You can disable the public endpoints only after you enable the private endpoints and refresh the engines and services.
+   {: note}
+
+## Result
+{: #setup_vpe_res}
+
+The **Virtual Private Endpoint** is displayed in the **Private endpoints** table when you successfully enable the private endpoints for your deployment.
+
+## What to do next
+{: #setup_vpe_next}
+
+You can create a Virtual private endpoint gateway to connect to a {{site.data.keyword.lakehouse_short}} instance. For more information see [Creating VPE gateways](/docs/vpc?topic=vpc-ordering-endpoint-gateway).
