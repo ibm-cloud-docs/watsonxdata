@@ -21,6 +21,7 @@ subcollection: watsonxdata
 {:screen: .screen}
 {:tip: .tip}
 {:important: .important}
+{:restriction: .restriction}
 {:note: .note}
 {:deprecated: .deprecated}
 {:pre: .pre}
@@ -32,8 +33,7 @@ subcollection: watsonxdata
 You can configure network endpoints in {{site.data.keyword.lakehouse_short}} to view and manage access to your deployment.
 {: shortdesc}
 
-Private endpoints are not supported for Lite plans.
-Private endpoints are supported only in `ca-tor` and `au-syd` regions.
+Private endpoints are not supported for Lite plans. Private endpoints are supported only in `ca-tor` and `au-syd` regions.
 {: important}
 
 ## Procedure

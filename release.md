@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-03-21"
+lastupdated: "2025-03-22"
 
 keywords: watsonxdata, release notes
 
@@ -33,7 +33,7 @@ Data sources and storage enhancements
 
 Connectivity enhancements
 
-: You can now securely and privately connect to a {{site.data.keyword.lakehouse_short}} instance by using virtual private endpoints. For more information, see
+: You can now securely and privately connect to a {{site.data.keyword.lakehouse_short}} instance by using virtual private endpoints. For more information, see [Setting up virtual private endpoints](/docs/watsonxdata?topic=watsonxdata-setup_vpe).
 
 Integration enhancements
 
@@ -41,12 +41,6 @@ Integration enhancements
 
    * Now, you can define IBM Knowledge Catalog governance policies for Presto (C++) engine when you integrate with {{site.data.keyword.lakehouse_short}}. For more information, see [Connecting to IBM Knowledge Catalog (IKC)](watsonxdata?topic=watsonxdata-ikc_integration).
    * You can now export configuration files for target Presto engine, based on their ODBC driver selection (Simba or CData), to more easily establish connections with {{site.data.keyword.lakehouse_short}}. This enhancement saves you from having to manually configure Presto engine details manually by using PowerBI.
-
-
-Connectivity enhancements
-
-: You can now securely and privately connect to a {{site.data.keyword.lakehouse_short}} instance by using virtual private endpoints. For more information, see [Setting up virtual private endpoints](/docs/watsonxdata?topic=watsonxdata-setup_vpe).
-
 
 Ingestion enhancement
 
