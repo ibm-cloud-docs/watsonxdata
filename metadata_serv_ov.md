@@ -35,6 +35,9 @@ Metadata Service is a component of {{site.data.keyword.lakehouse_short}} that ac
 For existing {{site.data.keyword.lakehouse_short}} instances: For external engine integrations like Db2, Netezza, and Analytics Engine, you must change the HMS thrift endpoint to MDS thrift endpoint.
 {: important}
 
+To configure the pool size for the maximum number of connections in a connection pool in MDS, contact the SRE or the support team.
+{: note}
+
 MDS offers two interfaces for interaction:
 
 ## Apache Thrift interface (HMS APIs)
