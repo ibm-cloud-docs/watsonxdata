@@ -29,7 +29,7 @@ Data sources and storage enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} includes the following storage enhancements:
 
-   * Now you can connect to IBM Db2 for i data source. For more information, see [IBM Db2 for i](watsonxdata?topic=watsonxdata-bd2fori_database).
+   * Now you can connect to IBM Db2 for i data source. For more information, see [IBM Db2 for i](/docs/watsonxdata?topic=watsonxdata-bd2fori_database).
 
 Connectivity enhancements
 
@@ -149,7 +149,7 @@ Deprecated features
 
 Lite plan enhancement
 
-: {{site.data.keyword.lakehouse_full}} Lite plan is now available in the Sydney region. For more information to provision a Lite plan instance in Sydney region, see [Provisioning Lite plan](https://cloud.ibm.com/docs//docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1#create-lite-cli).
+: {{site.data.keyword.lakehouse_full}} Lite plan is now available in the Sydney region. For more information to provision a Lite plan instance in Sydney region, see [Provisioning Lite plan](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1#create-lite-cli).
 
 ## 10 January 2025 - Version 2.1.0 Hotfix 1
 {: #lakehouse_09janhf}
@@ -800,7 +800,7 @@ The Apache Kafka data source stores data as byte messages that producers and con
 * Lite plan
 * Enterprise plan
 
-For more information about the different license plans, see [IBM® watsonx.data pricing plans](/docs//docs/watsonxdata?topic=watsonxdata-getting-started).
+For more information about the different license plans, see [IBM® watsonx.data pricing plans](/docs/watsonxdata?topic=watsonxdata-getting-started).
 
 
 **Presto (Java) engine version upgrade**
