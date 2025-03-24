@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-07-03"
+  years: 2017, 2025
+lastupdated: "2025-03-24"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -31,11 +31,11 @@ Presto (C++) aims to enhance performance for data lakes without requiring a JVM 
 
 For more information about Presto (C++), see [Presto C++ features](https://prestodb.io/docs/current/presto_cpp/features.html).
 
-For more information about provisioning a Presto (C++) engine, see [Provisioning a Presto (C++) engine](watsonxdata?topic=watsonxdata-pcpp_prov).
+For more information about provisioning a Presto (C++) engine, see [Provisioning a Presto (C++) engine](/docs/watsonxdata?topic=watsonxdata-pcpp_prov).
 
 For more information about customizing properties, see:
 
-* [Configuration properties for Presto (C++) - worker nodes](watsonxdata?topic=watsonxdata-api_custom_wkr_pcpp)
-* [Configuration properties for Presto (C++) - coordinator nodes](watsonxdata?topic=watsonxdata-aapi_custom_pcpp_cood)
-* [Catalog properties for Presto (C++)](watsonxdata?topic=watsonxdata-api_custom_pcpp_ctg)
-* [Velox properties for Presto (C++)](watsonxdata?topic=watsonxdata-api_custom_pcpp_vlx)
+* [Configuration properties for Presto (C++) - worker nodes](/docs/watsonxdata?topic=watsonxdata-api_custom_wkr_pcpp)
+* [Configuration properties for Presto (C++) - coordinator nodes](/docs/watsonxdata?topic=watsonxdata-aapi_custom_pcpp_cood)
+* [Catalog properties for Presto (C++)](/docs/watsonxdata?topic=watsonxdata-api_custom_pcpp_ctg)
+* [Velox properties for Presto (C++)](/docs/watsonxdata?topic=watsonxdata-api_custom_pcpp_vlx)

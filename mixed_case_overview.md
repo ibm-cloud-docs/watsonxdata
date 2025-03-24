@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-12-11"
+  years: 2022, 2025
+lastupdated: "2025-03-24"
 
 keywords: lakehouse, mixed-case, watsonx.data
 
@@ -153,4 +153,4 @@ A. Create multiple tables in the mixed-case feature flag OFF cluster.
 B. Change the setting for mixed-case feature flag from OFF to ON.
 * The user can access all the tables.
 
-For more information on mixed-case behavior, see [Mixed-case behavior based on connectors](watsonxdata?topic=watsonxdata-mixed_case_behavior){: external}.
+For more information on mixed-case behavior, see [Mixed-case behavior based on connectors](/docs/watsonxdata?topic=watsonxdata-mixed_case_behavior){: external}.

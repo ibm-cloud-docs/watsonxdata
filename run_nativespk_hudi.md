@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-12-12"
+  years: 2017, 2025
+lastupdated: "2025-03-24"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -16,10 +16,10 @@ subcollection: watsonxdata
 
 The topic describes the procedure to run a Spark application that ingests data into different table formats like Apache Hudi, Apache Iceberg or Delta Lake catalog.
 
-1. Create a storage with the required catalog (catalog can be Apache Hudi, Apache Iceberg or Delta Lake) to store data used in the Spark application. To create storage, see [Adding a storage-catalog pair](watsonxdata?topic=watsonxdata-reg_bucket).
-2. Associate the storage with the Native Spark engine. For more information, see [Associating a catalog with an engine](watsonxdata?topic=watsonxdata-asso-cat-eng).
+1. Create a storage with the required catalog (catalog can be Apache Hudi, Apache Iceberg or Delta Lake) to store data used in the Spark application. To create storage, see [Adding a storage-catalog pair](/docs/watsonxdata?topic=watsonxdata-reg_bucket).
+2. Associate the storage with the Native Spark engine. For more information, see [Associating a catalog with an engine](/docs/watsonxdata?topic=watsonxdata-asso-cat-eng).
 3. Create Cloud Object Storage (COS) to store the Spark application. To create Cloud Object Storage and a bucket, see [Creating a storage bucket](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-secure-content-store#create-cos-bucket).
-4. Register the Cloud Object Storage in watsonx.data. For more information, see [Adding a storage-catalog pair](watsonxdata?topic=watsonxdata-reg_bucket).
+4. Register the Cloud Object Storage in watsonx.data. For more information, see [Adding a storage-catalog pair](/docs/watsonxdata?topic=watsonxdata-reg_bucket).
 5. Based on the catalog you select, save the following Spark application (Python file) to your local machine. Here, `iceberg_demo.py`, `hudi_demo.py`, or `delta_demo.py` and upload the Spark application to the COS, see [Uploading data](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-secure-content-store#upload-data).
 7. To submit the Spark application with data residing in Cloud Object Storage, specify the parameter values and run the curl command from the following table.
 
@@ -38,9 +38,9 @@ The topic describes the procedure to run a Spark application that ingests data i
 
     Performing table maintenance activities in watsonx.data.
 
-    You must insert the data into the COS bucket. For more information, see [Inserting sample data into the COS bucket](watsonxdata?topic==watsonxdata-run_samp_file#insert_samp_usecase).
+    You must insert the data into the COS bucket. For more information, see [Inserting sample data into the COS bucket](/docs/watsonxdata?topic==watsonxdata-run_samp_file#insert_samp_usecase).
 
-    Python application : [Iceberg Python file](watsonxdata?topic=watsonxdata-run_samp_file#python_file)
+    Python application : [Iceberg Python file](/docs/watsonxdata?topic=watsonxdata-run_samp_file#python_file)
 
 
 
@@ -207,4 +207,4 @@ The topic describes the procedure to run a Spark application that ingests data i
    {: important}
 
 8. After you submit the Spark application, you receive a confirmation message with the application ID and Spark version. Save it for reference.
-9. Log in to the watsonx.data cluster, access the Engine details page. In the Applications tab, use application ID to list the application and track the stages. For more information, see [View and manage applications](watsonxdata?topic=watsonxdata-mng_appltn).
+9. Log in to the watsonx.data cluster, access the Engine details page. In the Applications tab, use application ID to list the application and track the stages. For more information, see [View and manage applications](/docs/watsonxdata?topic=watsonxdata-mng_appltn).

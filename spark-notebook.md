@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-04"
+lastupdated: "2025-03-24"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -74,7 +74,7 @@ To run the Spark sample notebook, follow the steps:
 7. Specify the following details:
     * Name: Type the name of the notebook.
 
-    * Select the **Spark runtime**. It must be Spark 3.4 with Python 3.10 or 3.11. For other supported Spark versions, see [Supported Spark version](watsonxdata?topic=watsonxdata-wxd-ae_limits#cpu-mem-spk_versn).
+    * Select the **Spark runtime**. It must be Spark 3.4 with Python 3.10 or 3.11. For other supported Spark versions, see [Supported Spark version](/docs/watsonxdata?topic=watsonxdata-wxd-ae_limits#cpu-mem-spk_versn).
 
 8. Upload and run [IBM published Spark notebook](https://dataplatform.cloud.ibm.com/exchange/public/entry/view/995a90fc-ef89-4fe1-9a1f-092d8be0d839?context=wx). Follow the steps:
 

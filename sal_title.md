@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-07-03"
+  years: 2022, 2025
+lastupdated: "2025-03-24"
 
 keywords: lakehouse, semantic automation, {{site.data.keyword.lakehouse_short}}, data enrichment
 
@@ -35,4 +35,4 @@ Traditional or simple data might lack clear meaning or context. Semantic automat
 
 **Semantic layer integration** is available for Lite plan users only as a 30 days trial version. Enterprise plan users has all the functionalities of semantic automation for data enrichment.
 
-For more information see, [Registering and activating semantic layer](watsonxdata?topic=watsonxdata-sal_register).
+For more information see, [Registering and activating semantic layer](/docs/watsonxdata?topic=watsonxdata-sal_register).

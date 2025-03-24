@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-24"
 
 keywords: lakehouse, watsonx data, provision, endpoint, resource
 subcollection: watsonxdata
@@ -146,7 +146,7 @@ The access to provision IBM Cloud resources is governed by using [IAM access](ht
 ## Next steps
 {: #gs_ns}
 
-To quickly get started with the {{site.data.keyword.lakehouse_short}} web console by configuring the infrastructure components, see [Quick start {{site.data.keyword.lakehouse_short}} console](watsonxdata?topic=watsonxdata-quick_start).
+To quickly get started with the {{site.data.keyword.lakehouse_short}} web console by configuring the infrastructure components, see [Quick start {{site.data.keyword.lakehouse_short}} console](/docs/watsonxdata?topic=watsonxdata-quick_start).
 
 After you complete quick start, Resource unit consumption is accounted and billing is started.
 If no Resource Units are consumed within seven (7) days after an instance creation, the unused instance is deleted, after which a new instance can be re-created. For more information, see [Provisioning an instance](#create-by-ui).

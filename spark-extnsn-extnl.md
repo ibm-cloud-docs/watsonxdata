@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2025-02-26"
+  years: 2017, 2025
+lastupdated: "2025-03-24"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -23,16 +23,16 @@ You can enable the Spark access control extension for Iceberg, Hive and Hudi cat
 
 
 You can either use Ranger or Access Management System (AMS) data policies to grant or deny access for users, user groups, catalog (Iceberg, Hive and Hudi), schema, table, and column. Besides data level authorization, storage privilege is also considered.
-For more information related to the using AMS on catalogs(Iceberg, Hive and Hudi), buckets, schemas and tables, see see [Managing roles and privileges](watsonxdata?topic=watsonxdata-role_priv){: external}.
-For more information on how to create Ranger policies (defined under Hadoop SQL service) and to enable them on catalogs(Iceberg, Hive and Hudi), buckets, schemas and tables, see see [Managing Ranger policies](watsonxdata?topic=watsonxdata-ranger_1){: external}.
+For more information related to the using AMS on catalogs(Iceberg, Hive and Hudi), buckets, schemas and tables, see see [Managing roles and privileges](/docs/watsonxdata?topic=watsonxdata-role_priv){: external}.
+For more information on how to create Ranger policies (defined under Hadoop SQL service) and to enable them on catalogs(Iceberg, Hive and Hudi), buckets, schemas and tables, see see [Managing Ranger policies](/docs/watsonxdata?topic=watsonxdata-ranger_1){: external}.
 
 
 ## Prerequisites
 {: #spk_etnsn_preq-1}
 
-* Create Cloud Object Storage to store data used in the Spark application. To create Cloud Object Storage and a bucket, see [Creating a storage bucket](watsonxdata?topic=cloud-object-storage-secure-content-store#create-cos-bucket). You can provision two buckets, data-bucket to store {{site.data.keyword.lakehouse_short}} tables and application bucket to maintain Spark application code.
-* Register Cloud Object Storage bucket in {{site.data.keyword.lakehouse_short}}. For more information, see [Adding bucket catalog pair](watsonxdata?topic=watsonxdata-reg_bucket).
-* Upload the Spark application to the storage, see [Uploading data](watsonxdata?topic=cloud-object-storage-secure-content-store#upload-data).
+* Create Cloud Object Storage to store data used in the Spark application. To create Cloud Object Storage and a bucket, see [Creating a storage bucket](/docs/watsonxdata?topic=cloud-object-storage-secure-content-store#create-cos-bucket). You can provision two buckets, data-bucket to store {{site.data.keyword.lakehouse_short}} tables and application bucket to maintain Spark application code.
+* Register Cloud Object Storage bucket in {{site.data.keyword.lakehouse_short}}. For more information, see [Adding bucket catalog pair](/docs/watsonxdata?topic=watsonxdata-reg_bucket).
+* Upload the Spark application to the storage, see [Uploading data](/docs/watsonxdata?topic=cloud-object-storage-secure-content-store#upload-data).
 * You must have IAM administrator role or MetastoreAdmin role, for creating schema or table inside {{site.data.keyword.lakehouse_short}}.
 
 
@@ -214,18 +214,18 @@ curl --request POST   --url https://<region>/lakehouse/api/v2/spark_engines/<spa
 Parameter values:
 
 * `<region>` : Region where the instance is provisioned. Example, `us-south` region.
-* `<spark_engine_id>` : The unique identifier of the Spark instance. For information on how to retrieve the ID, see [Managing the Spark engine details](watsonxdata?topic=watsonxdata-view-end#view-dtls).
-* `<token>` : To get the access token for your service instance. For more information about generating the token, see [Generating a token](watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
+* `<spark_engine_id>` : The unique identifier of the Spark instance. For information on how to retrieve the ID, see [Managing the Spark engine details](/docs/watsonxdata?topic=watsonxdata-view-end#view-dtls).
+* `<token>` : To get the access token for your service instance. For more information about generating the token, see [Generating a token](/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
 * `<instance_id>` : The instance ID from the watsonx.data cluster instance URL. Example, crn:v1:staging:public:lakehouse:us-south:a/7bb9e380dc0c4bc284592b97d5095d3c:5b602d6a-847a-469d-bece-0a29124588c0::.
 * `<wxd-data-bucket-name>` : The name of the data bucket associated against the spark engine from the Infrastructure manager.
 * `<wxd-data-bucket-endpoint>`: The host name of the endpoint for accessing the data bucket mentioned above. Example, s3.us-south.cloud-object-storage.appdomain.cloud for a Cloud Object storage bucket in us-south region.
 * `<wxd-bucket-catalog-name>`: The name of the catalog associated with the data bucket.
 * `<wxd-catalog-metastore-host>`: The metastore associated with the registered bucket.
-* `<cos_bucket_endpoint>` : Provide the Metastore host value. For more information, see [storage details](watsonxdata?topic=watsonxdata-run_samp_file#insert_samp_usecase).
-* `<access_key>` : Provide the access_key_id. For more information, see [storage details](watsonxdata?topic=watsonxdata-run_samp_file#insert_samp_usecase).
-* `<secret_key>` : Provide the secret_access_key. For more information, see [storage details](watsonxdata?topic=watsonxdata-run_samp_file#insert_samp_usecase).
+* `<cos_bucket_endpoint>` : Provide the Metastore host value. For more information, see [storage details](/docs/watsonxdata?topic=watsonxdata-run_samp_file#insert_samp_usecase).
+* `<access_key>` : Provide the access_key_id. For more information, see [storage details](/docs/watsonxdata?topic=watsonxdata-run_samp_file#insert_samp_usecase).
+* `<secret_key>` : Provide the secret_access_key. For more information, see [storage details](/docs/watsonxdata?topic=watsonxdata-run_samp_file#insert_samp_usecase).
 * `<truststore_path>`  : Provide the COS path where the trustore certificate is uploaded. For example `cos://di-bucket.di-test/1902xx-truststore.jks`. For more information about generating the trustore, see [Importing self-signed certificates](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.0.x?topic=administering-importing-hms-self-signed-certificates-java-truststore).
-* `<cas_endpoint>` : The Data Access Service (DAS) endpoint. To get the DAS endpoint, see [Getting DAS endpoint](watsonxdata?topic=watsonxdata-cas_ep_ov).
+* `<cas_endpoint>` : The Data Access Service (DAS) endpoint. To get the DAS endpoint, see [Getting DAS endpoint](/docs/watsonxdata?topic=watsonxdata-cas_ep_ov).
 * `<username>` : The username for your watsonx.data instance. Here, ibmlhapikey.
 * `<apikey>` : The base64 encoded `ibmlhapikey_<user_id>:<IAM_APIKEY>. Here, <user_id> is the IBM Cloud id of the user whose apikey is used to access the data bucket. To generate API key, log in into the watsonx.data console and navigate to Profile > Profile and Settings > API Keys and generate a new API key.
 * `<OBJECT_NAME>`: The IBM Cloud Object Storage name.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-08-02"
+  years: 2022, 2025
+lastupdated: "2025-03-24"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -39,7 +39,7 @@ Ensure you have the following details:
 
 * IBM watsonx.data instance.
 * Apache Ranger is provisioned.
-* Enable the Apache Ranger policy in watsonx.data. For more information, see [Enabling Apache Ranger policy for resources](watsonxdata?topic=watsonxdata-ranger_1){: external}. .
+* Enable the Apache Ranger policy in watsonx.data. For more information, see [Enabling Apache Ranger policy for resources](/docs/watsonxdata?topic=watsonxdata-ranger_1){: external}. .
 
 
 ## Procedure

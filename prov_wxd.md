@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-12-06"
+  years: 2022, 2025
+lastupdated: "2025-03-24"
 
 keywords: lakehouse, watsonx data, provision, endpoint, resource
 subcollection: watsonxdata
@@ -28,9 +28,9 @@ subcollection: watsonxdata
 
 On IBM Cloud, {{site.data.keyword.lakehouse_short}} is offered under two pricing plans, as follows:
 
-* [Lite plan](#lite-plan-1) : For information, see [watsonx.data Lite plan](watsonxdata?topic=watsonxdata-tutorial_prov_lite_1).
+* [Lite plan](#lite-plan-1) : For information, see [watsonx.data Lite plan](/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1).
 
-* [Enterprise plan](#enterprise-plan) : For information, see [watsonx.data enterprise plan](watsonxdata?topic=watsonxdata-getting-started_1).
+* [Enterprise plan](#enterprise-plan) : For information, see [watsonx.data enterprise plan](/docs/watsonxdata?topic=watsonxdata-getting-started_1).
 
 Each region has a finite number of {{site.data.keyword.lakehouse_short}} instances that are provisioned based on the current compute capacity. Regions might reach their capacity limits temporarily. While IBM adds additional capacity, you can either wait or redirect your request to another region. If the resource capacity is exceeded, you get the following message.
 
@@ -44,7 +44,7 @@ The new instance cannot be created because of resource capacity restrictions. Pl
 
 The Lite plan is provided for you to try the basic features of {{site.data.keyword.lakehouse_short}} and is available to all {{site.data.keyword.Bluemix_notm}} account types like trial, pay-as-you-go, and subscription. It supports the basic features only. It is not available on AWS and is limited to one {{site.data.keyword.lakehouse_short}} instance per {{site.data.keyword.Bluemix_notm}} account (cross-regional).
 
-To provision a Lite plan instance, see [watsonx.data Lite plan](watsonxdata?topic=watsonxdata-tutorial_prov_lite_1).
+To provision a Lite plan instance, see [watsonx.data Lite plan](/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1).
 
 ### Key supported features
 {: #supported-features-lite}

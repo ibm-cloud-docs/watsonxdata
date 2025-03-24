@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-02-13"
+  years: 2022, 2025
+lastupdated: "2025-03-24"
 
 keywords: lakehouse, MDS, {{site.data.keyword.lakehouse_short}}, hive, metastore
 
@@ -46,7 +46,7 @@ Activating **Query Optimizer** automatically synchronizes metadata for catalogs 
 
 To sync tables from {{site.data.keyword.lakehouse_short}}, the following items are required:
 
-1. Verify that all expected tables are synced by following the procedure in [Verifying table sync in watsonx.data](watsonxdata?topic=watsonxdata-sync_optimizer_verify).
+1. Verify that all expected tables are synced by following the procedure in [Verifying table sync in watsonx.data](/docs/watsonxdata?topic=watsonxdata-sync_optimizer_verify).
 
 1. Identify the list of Hive and Iceberg tables in {{site.data.keyword.lakehouse_short}} that you require for **Query Optimizer**.
 
@@ -97,7 +97,7 @@ To sync tables from {{site.data.keyword.lakehouse_short}}, the following items a
    When synchrnization is completed, the output displays the list of synced tables. The total count of synced tables must be double the number of tables within the catalog or schema. This is because, each table are synced two times. Once from the external metastore to the local metastore, and then from the local metastore to the Db2 catalog.
    {: note}
 
-   This sync command might experience timeouts. However, the underlying sync process usually completes successfully within a short period. Verify the sync operation in a few minutes by following the procedure in [Verifying table sync in watsonx.data](watsonxdata?topic=watsonxdata-sync_optimizer_verify).
+   This sync command might experience timeouts. However, the underlying sync process usually completes successfully within a short period. Verify the sync operation in a few minutes by following the procedure in [Verifying table sync in watsonx.data](/docs/watsonxdata?topic=watsonxdata-sync_optimizer_verify).
    {: note}
 
 6. Identify the list of catalogs and schemas in watsonx.data that you require for **Query Optimizer**.

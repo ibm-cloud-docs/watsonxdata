@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-02-25"
+  years: 2022, 2025
+lastupdated: "2025-03-24"
 
 keywords: lakehouse, database, watsonx.data
 
@@ -29,7 +29,7 @@ subcollection: watsonxdata
 # Greenplum
 {: #greenplum_database}
 
-Greenplum is a massively parallel processing (MPP) SQL database. It provides access to data in powerful server clusters within a single SQL interface. You can connect to this data source through the Arrow Flight service. See [Arrow Flight service overview](watsonxdata?topic=watsonxdata-arrow_database).
+Greenplum is a massively parallel processing (MPP) SQL database. It provides access to data in powerful server clusters within a single SQL interface. You can connect to this data source through the Arrow Flight service. See [Arrow Flight service overview](/docs/watsonxdata?topic=watsonxdata-arrow_database).
 {: shortdesc}
 
  Configure the following details for Greenplum data source:

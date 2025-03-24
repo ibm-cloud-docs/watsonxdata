@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-07-03"
+  years: 2022, 2025
+lastupdated: "2025-03-24"
 
 keywords: watsonx.data, update
 
@@ -43,4 +43,4 @@ If a Presto coordinator node restarts on update, applications must re-establish 
 Before updates begin and after the new version becomes available, the latest version can be tested. A new Presto engine can be provisioned from the infrastructure manager within your {{site.data.keyword.lakehouse_short}} instance, which uses the latest version thereby ensuring that all applications work seamlessly with the new version.
 
 Applications can then be migrated to the new engine at your convenience, allowing better control of the update.
-For more information, see [Creating an engine](watsonxdata?topic=watsonxdata-prov_engine){: external}.
+For more information, see [Creating an engine](/docs/watsonxdata?topic=watsonxdata-prov_engine){: external}.

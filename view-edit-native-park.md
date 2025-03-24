@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-21"
+lastupdated: "2025-03-24"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -39,7 +39,7 @@ You can view the Native Spark engine details in list and topology views.
    | Default Spark Configuration | The Spark configuration properties that are applied to any application that is submitted to the Spark engine. |
    {: caption="Viewing Native Spark engine details" caption-side="bottom"}
 
-You can also use private endpoints, see [VPE Gateway Configuration](watsonxdata?topic=watsonxdata-setup_vpe) to configure Virtual Private Endpoint Gateway in the your Virtual Private Cloud (VPC).
+You can also use private endpoints, see [VPE Gateway Configuration](/docs/watsonxdata?topic=watsonxdata-setup_vpe) to configure Virtual Private Endpoint Gateway in the your Virtual Private Cloud (VPC).
 {: note}
 
 
@@ -91,7 +91,7 @@ Following are the details of the parameter values to be used in the curl command
 | `<map_of_spark_properties>` | Specify the Spark properties in the form of key-value pair (`"<property_name>": "<property_value>"`) separated by comma. |
 | `<property_name>` | The default configuration property name. For more information about different properties, see [Available Properties][def6]. |
 | `<property_value>` | The value that must be configured for the property. For more information about different properties, see [Available Properties][def6]. |
-| `<spark_version>` | The Spark runtime. To know about supported Spark versions, see [Supported Spark version](watsonxdata?topic=watsonxdata-wxd-ae_limits#cpu-mem-spk_versn). |
+| `<spark_version>` | The Spark runtime. To know about supported Spark versions, see [Supported Spark version](/docs/watsonxdata?topic=watsonxdata-wxd-ae_limits#cpu-mem-spk_versn). |
 {: caption="Parameter list" caption-side="bottom"}
 
 **Example**:

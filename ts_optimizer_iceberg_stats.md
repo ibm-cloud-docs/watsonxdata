@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-19"
+lastupdated: "2025-03-24"
 
 keywords: watsonxdata, troubleshoot, optimizer
 
@@ -63,4 +63,4 @@ The rewrite procedure fails with the following error message:
    ```
    {: codeblock}
 
-1. Run the procedure described in [Enhancing statistics for synced Iceberg tables](watsonxdata?topic=watsonxdata-optimizer_iceberg_stats) to successfully collect the enhanced statistics.
+1. Run the procedure described in [Enhancing statistics for synced Iceberg tables](/docs/watsonxdata?topic=watsonxdata-optimizer_iceberg_stats) to successfully collect the enhanced statistics.

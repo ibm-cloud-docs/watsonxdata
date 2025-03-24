@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-02-25"
+  years: 2022, 2025
+lastupdated: "2025-03-24"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -27,13 +27,13 @@ completion-time: 0.16h
 {: toc-completion-time="0.16h"}
 
 
-The **Lite** plan allows you to provision an {{site.data.keyword.lakehouse_full}} instance that is free to use, with limits on capacity (2000 Resource Units), and features for a time frame of 30 days. You can use the account to create Lite plan instance based on three different use cases (Generative AI, High Performance BI and Data Engineering), explore and familiarize yourself with {{site.data.keyword.lakehouse_short}}. For more information about the features and limitations of Lite plan, see [Lite plan](watsonxdata?topic=watsonxdata-pricing-plans-1#limitations-lite){: external}.
+The **Lite** plan allows you to provision an {{site.data.keyword.lakehouse_full}} instance that is free to use, with limits on capacity (2000 Resource Units), and features for a time frame of 30 days. You can use the account to create Lite plan instance based on three different use cases (Generative AI, High Performance BI and Data Engineering), explore and familiarize yourself with {{site.data.keyword.lakehouse_short}}. For more information about the features and limitations of Lite plan, see [Lite plan](/docs/watsonxdata?topic=watsonxdata-pricing-plans-1#limitations-lite){: external}.
 {: shortdesc}
 
 When the allocated Resource Units or time runs out, all Lite instances become inactive and you can no longer access it.
 {: important}
 
-To access all the features and functionalities without resource or time limit, you must have an [Enterprise {{site.data.keyword.lakehouse_short}} instance](watsonxdata?topic=watsonxdata-getting-started_1){: external} in a paid IBM Cloud account.
+To access all the features and functionalities without resource or time limit, you must have an [Enterprise {{site.data.keyword.lakehouse_short}} instance](/docs/watsonxdata?topic=watsonxdata-getting-started_1){: external} in a paid IBM Cloud account.
 
 In this tutorial, you learn how to provision {{site.data.keyword.lakehouse_short}} instance (lite plan) and explore its features.
 
@@ -50,7 +50,7 @@ IBM Cloud trial accounts can have only one resource group. To create an IBM Clou
 {: #hp_view_1}
 {: step}
 
-To provision a Lite plan instance, see [Provisioning {{site.data.keyword.lakehouse_short}} Lite plan](watsonxdata?topic=watsonxdata-tutorial_prov_lite_1).
+To provision a Lite plan instance, see [Provisioning {{site.data.keyword.lakehouse_short}} Lite plan](/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1).
 
 
 
@@ -58,10 +58,10 @@ To provision a Lite plan instance, see [Provisioning {{site.data.keyword.lakehou
 {: #hp_start}
 {: step}
 
-The Lite plan usage consumption starts after you provision the instance. The resource units (RU) are consumed even when the {{site.data.keyword.lakehouse_short}} instance is not being used. To monitor usage, see [Viewing usage](#hp_monitor_usg_lite). However, RU consumption reduces if you pause or delete the engine. Therefore, pause the engines and services when not in use, to maximize the IBM Cloud Lite plan availability. To pause an engine, see [Pausing an engine](watsonxdata?topic=watsonxdata-pause_engine) and to delete an engine, see [Deleting an engine](watsonxdata?topic=watsonxdata-delete_engine).
+The Lite plan usage consumption starts after you provision the instance. The resource units (RU) are consumed even when the {{site.data.keyword.lakehouse_short}} instance is not being used. To monitor usage, see [Viewing usage](#hp_monitor_usg_lite). However, RU consumption reduces if you pause or delete the engine. Therefore, pause the engines and services when not in use, to maximize the IBM Cloud Lite plan availability. To pause an engine, see [Pausing an engine](/docs/watsonxdata?topic=watsonxdata-pause_engine) and to delete an engine, see [Deleting an engine](/docs/watsonxdata?topic=watsonxdata-delete_engine).
 {: attention}
 
-1. After you provision a Lite plan instance, you are directly presented with the **Welcome to {{site.data.keyword.lakehouse_short}}** window and the UI includes components (engines, services, and storages) based on the use case selected. You can also relaunch the console page. To do that see, [Open the web console](watsonxdata?topic=watsonxdata-tutorial_prov_lite_1#open_console-2).
+1. After you provision a Lite plan instance, you are directly presented with the **Welcome to {{site.data.keyword.lakehouse_short}}** window and the UI includes components (engines, services, and storages) based on the use case selected. You can also relaunch the console page. To do that see, [Open the web console](/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1#open_console-2).
 
 
 ## Selecting the guided workflow
@@ -103,7 +103,7 @@ Use the **Start working with data** option to query data. To allow a seamless qu
 
 5. Select the worksheet and click **Run on `<engine>`**. The query is executed successfully and you can view the query result in the **Results** section..
 
-    You can also explore more **Query workspace** related functionalities. See, [Running SQL queries](watsonxdata?topic=watsonxdata-run_sql).
+    You can also explore more **Query workspace** related functionalities. See, [Running SQL queries](/docs/watsonxdata?topic=watsonxdata-run_sql).
 
 ## Selecting storage and performing data ingestion
 {: #hp_04}
@@ -161,17 +161,17 @@ The storage associated is used as a data bucket by Milvus and as an engine home 
          | Catalog name | Enter the name of your catalog. (The following special characters are not allowed: ! @ # $ % ^ & * ( ) = + : { } < > ? ' \ ; `).|
          {: caption="Register bucket" caption-side="bottom"}
 
-        b. **Register my own** : You can use any existing IBM COS bucket from an existing instance or provision a new instance. To provision a new IBM COS instance, see [Create COS instance](watsonxdata?topic=watsonxdata-cos_storage).
+        b. **Register my own** : You can use any existing IBM COS bucket from an existing instance or provision a new instance. To provision a new IBM COS instance, see [Create COS instance](/docs/watsonxdata?topic=watsonxdata-cos_storage).
 
-    To explore how the {{site.data.keyword.lakehouse_short}} service interacts with the data you bring in, see [Adding your storage and querying data](watsonxdata?topic=watsonxdata-tutorial_prov_custbckt1).
+    To explore how the {{site.data.keyword.lakehouse_short}} service interacts with the data you bring in, see [Adding your storage and querying data](/docs/watsonxdata?topic=watsonxdata-tutorial_prov_custbckt1).
 
 9. Go to the **Infrastructure manager** and verify that the storage is associated with the engine and the Spark engine is in running status, without which you cannot perform ingestion.
 
-10. After you verify, go to the the **Data manager** page and click **Ingest data**. You can perform data ingestion. For more information, see [About data ingestion](watsonxdata?topic=watsonxdata-load_ingest_data).
+10. After you verify, go to the the **Data manager** page and click **Ingest data**. You can perform data ingestion. For more information, see [About data ingestion](/docs/watsonxdata?topic=watsonxdata-load_ingest_data).
 
 You cannot scale the existing engine or service or add a new engine (or service). To add a new engine or service, you must delete the existing engine or service.
 
-You can add only one Presto (Java) engine, Spark engine (single node, small size - 8 vCPU, 32GB node) and Milvus service (Milvus with size specification, Starter - 1 Million vectors, Index Parameters - 64, Segment size (1024)). To understand the restrictions, see [Lite plan features and restrictions](watsonxdata?topic=watsonxdata-pricing-plans-1).
+You can add only one Presto (Java) engine, Spark engine (single node, small size - 8 vCPU, 32GB node) and Milvus service (Milvus with size specification, Starter - 1 Million vectors, Index Parameters - 64, Segment size (1024)). To understand the restrictions, see [Lite plan features and restrictions](/docs/watsonxdata?topic=watsonxdata-pricing-plans-1).
 {: important}
 
 
@@ -180,8 +180,8 @@ You can add only one Presto (Java) engine, Spark engine (single node, small size
 {: #qhm_func}
 {: step}
 
-The feature is disabled by default for Lite plan instance. To enable the feature, see [Enabling QHMM](watsonxdata?topic=watsonxdata-tutorial_prov_custbckt1)
-and explore more, see [QHMM](watsonxdata?topic=watsonxdata-ovrvw_qhmm).
+The feature is disabled by default for Lite plan instance. To enable the feature, see [Enabling QHMM](/docs/watsonxdata?topic=watsonxdata-tutorial_prov_custbckt1)
+and explore more, see [QHMM](/docs/watsonxdata?topic=watsonxdata-ovrvw_qhmm).
 
 
 ## Viewing usage
@@ -214,8 +214,8 @@ When the allocated Resource Units or time expires, the instance becomes inactive
 
 If you choose to continue using watsonx.data by creating an Enterprise {{site.data.keyword.lakehouse_short}} instance, you can use the same storage that has data from your Lite plan. 
 
-3. Either before or after your lite plan has concluded, create an enterprise plan instance. For more information, see [Enterprise plan](watsonxdata?topic=watsonxdata-getting-started_1).
+3. Either before or after your lite plan has concluded, create an enterprise plan instance. For more information, see [Enterprise plan](/docs/watsonxdata?topic=watsonxdata-getting-started_1).
 
-4. Go to the **Quick start watsonx.data console** > **Configure bucket** page, specify the COS bucket details that you own (which stores data from the Lite plan). For more information, see [Quick start {{site.data.keyword.lakehouse_short}} console](watsonxdata?topic=watsonxdata-quick_start).
+4. Go to the **Quick start watsonx.data console** > **Configure bucket** page, specify the COS bucket details that you own (which stores data from the Lite plan). For more information, see [Quick start {{site.data.keyword.lakehouse_short}} console](/docs/watsonxdata?topic=watsonxdata-quick_start).
 
 When the setup is complete, the watsonx.data home page (enterprise plan) opens. From the navigation menu, select **Data manager** to view the COS storage bucket with data from the Lite plan.

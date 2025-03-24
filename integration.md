@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-11-22"
+  years: 2022, 2025
+lastupdated: "2025-03-24"
 
 keywords: watsonx.data, integration
 
@@ -32,8 +32,8 @@ subcollection: watsonxdata
 You can extend the functionality of the {{site.data.keyword.lakehouse_full}} by integrating with other SQL query engines and databases to share data and run your analytics and AI workloads on all of your data across any environment.
 
 
-* [Data Build Tool (dbt) integration](watsonxdata?topic=watsonxdata-abt_dbt).
-* [IBM Knowledge Catalog (IKC)](watsonxdata?topic=watsonxdata-ikc_integration).
-* [DataStage](watsonxdata?topic=watsonxdata-dc_integration).
-* [BI tools](watsonxdata?topic=watsonxdata-abt_bi).
-* [IBM Manta Data Lineage](watsonxdata?topic=watsonxdata-manta_overview)
+* [Data Build Tool (dbt) integration](/docs/watsonxdata?topic=watsonxdata-abt_dbt).
+* [IBM Knowledge Catalog (IKC)](/docs/watsonxdata?topic=watsonxdata-ikc_integration).
+* [DataStage](/docs/watsonxdata?topic=watsonxdata-dc_integration).
+* [BI tools](/docs/watsonxdata?topic=watsonxdata-abt_bi).
+* [IBM Manta Data Lineage](/docs/watsonxdata?topic=watsonxdata-manta_overview)

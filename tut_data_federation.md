@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-19"
+lastupdated: "2025-03-24"
 
 keywords: Data, federation,
 
@@ -80,7 +80,7 @@ This tutorial requires:
 Register the Db2 data source (that has `GOSALESDW` data in it) with {{site.data.keyword.lakehouse_short}} instance.
 {: shortdesc}
 
-To register your Db2 data source, see [IBM Db2](watsonxdata?topic=watsonxdata-reg_database#db2){: external}. Use the following details when you register the Db2 data source.
+To register your Db2 data source, see [IBM Db2](/docs/watsonxdata?topic=watsonxdata-reg_database#db2){: external}. Use the following details when you register the Db2 data source.
 
 * Database name : Enter the database name as `BLUDB`.
 * Hostname : Enter the hostname as `db2w-sucqakq.us-south.db2w.cloud.ibm.com`
@@ -93,7 +93,7 @@ To register your Db2 data source, see [IBM Db2](watsonxdata?topic=watsonxdata-re
 {: #db2ibmbckt_stp2}
 {: step}
 
-After you register the Db2 database, you must associate the catalog with the Presto (Java) engine. For more information, see [Associating a catalog with an engine](watsonxdata?topic=watsonxdata-asso-cat-eng){: external}.
+After you register the Db2 database, you must associate the catalog with the Presto (Java) engine. For more information, see [Associating a catalog with an engine](/docs/watsonxdata?topic=watsonxdata-asso-cat-eng){: external}.
 
 
 ## Copying data from Db2 database to Iceberg
@@ -103,7 +103,7 @@ After you register the Db2 database, you must associate the catalog with the Pre
 After you associate the catalog with the engine, copy data (a single table) from Db2 to Iceberg. To do that, complete the following steps:
 {: shortdesc}
 
-1. From the navigation menu, select **Data manager**. Create a schema inside `Iceberg_data` catalog. For more information on how to create a schema, see [Creating schema](watsonxdata?topic=watsonxdata-create_schema){: external}.
+1. From the navigation menu, select **Data manager**. Create a schema inside `Iceberg_data` catalog. For more information on how to create a schema, see [Creating schema](/docs/watsonxdata?topic=watsonxdata-create_schema){: external}.
 1. From the navigation menu, select **Query Workspace**.
 1. Write a query to copy the data from`GOSALESDW` table present in the Db2 database and create a new table (here `SLS_SALES_FACT`) inside `Iceberg` catalog.
 

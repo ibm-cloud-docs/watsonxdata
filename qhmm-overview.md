@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-25"
+  years: 2022, 2025
+lastupdated: "2025-03-24"
 
 keywords: watsonxdata, qhmm
 
@@ -52,13 +52,13 @@ QHMM allows to retrieve the following diagnostic data:
 You can enable the QHMM functionality in one of the following ways:
 
 * From [Qucik start wizard](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-quick_start#qs_montr).
-* From [watsonx.data console UI]((watsonxdata?topic=watsonxdata-qhmm)).
+* From [watsonx.data console UI](/docs/watsonxdata?topic=watsonxdata-qhmm).
 
 ## Related topics
 {: #data_qhmm_rel}
 
-* Configuring QHMM, see [Configuring Query monitoring](watsonxdata?topic=watsonxdata-qhmm)
+* Configuring QHMM, see [Configuring Query monitoring](/docs/watsonxdata?topic=watsonxdata-qhmm)
 
-* Managing diagnostic data from user interface, see [Configuring Query monitoring](watsonxdata?topic=watsonxdata-ret_qhmm)
+* Managing diagnostic data from user interface, see [Configuring Query monitoring](/docs/watsonxdata?topic=watsonxdata-ret_qhmm)
 
-* Managing diagnostic data by manual method, see [Configuring Query monitoring](watsonxdata?topic=watsonxdata-mon_mng)
+* Managing diagnostic data by manual method, see [Configuring Query monitoring](/docs/watsonxdata?topic=watsonxdata-mon_mng)
