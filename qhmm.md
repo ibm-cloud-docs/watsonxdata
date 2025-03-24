@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-29"
+  years: 2022, 2025
+lastupdated: "2025-03-24"
 
 keywords: watsonxdata, qhmm
 
@@ -58,10 +58,11 @@ You can retrieve the history files to analyze, debug, or monitor the queries. Fr
 3. Click **Query monitoring**. The **Query monitoring** page opens.
 4. If you enabled QHMM feature at the time of provisioning watsonx.data quick start, you can view the QHMM configuration details. The following details are available:
     * Status of QHMM - Enabled or disabled.
+    * Engine for accessing and querying the QHMM data.
     * Bucket that is configured to store QHMM data.
     * The subpath in the bucket where QHMM data is available.
 
-   To edit the configuration details, click **Edit** and make the required changes.You can enable or disable query monitoring, update sub-path and change the bucket.
+   To edit the configuration details, click **Edit** and make the required changes.You can enable or disable QHMM, change the bucket, storage subpath, and change the engine that is associated to the QHMM catalog.
    {: note}
 
 5. Click **Save** after making the changes.
