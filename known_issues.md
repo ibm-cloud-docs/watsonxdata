@@ -34,6 +34,12 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+
+## Metastore admins and metastore viewers are unable to view the schema and table details
+{: #known_issue21467}
+
+A user with the metastore admin and metastore viewer privileges in the Query workspace and Data manager, cannot view the schema and table details unless a view policy is defined for schemas and tables.
+
 ## Select query fails with schema evolution
 {: #known_issue19897}
 
