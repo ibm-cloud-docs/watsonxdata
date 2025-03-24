@@ -76,6 +76,37 @@ Example command:
 ```
 {: codeblock}
 
+## qhmm_import_sre.sh
+{: #script02}
+
+This script is intended for the support team to retrieve diagnostic data from an Enhanced Customer Data Repository (ECuRep), and upload it to a support team bucket for further analysis. Similar to the first script, it can be configured using command-line arguments or run with default values.
+
+•	-e: ENDPOINT (default: none) - The storage endpoint.
+
+•	-r: REGION (default: none) - The storage region.
+
+•	-b: BUCKET_NAME (default: none) - The name of the bucket.
+
+•	-a: ACCESS_KEY (default: none) - The access key for the storage.
+
+•	-s: SECRET_KEY (default: none) - The secret key for the storage.
+
+•	-i: WXD_INSTANCE_ID (default: none) - The instance ID of WXD.
+
+•	-t: ENGINE_TYPE (default: none) - The type of the engine (e.g., Presto).
+
+•	-d: ENGINE_ID (default: none) - The ID of the engine.
+
+•	-p: COMPRESSED_FILE (default: /root/data/bundle.zip) - The source folder for the compressed file.
+
+
+Example command:
+
+```bash
+./qhmm_import_sre.sh -e <ENDPOINT> -r <REGION> -b <BUCKET_NAME> -a <ACCESS_KEY> -s <SECRET_KEY> -i <WXD_INSTANCE_ID> -t <ENGINE_TYPE> -d <ENGINE_ID> -p <COMPRESSED_FILE>
+```
+{: codeblock}
+
 ## bucket_data_migration.sh
 {: #script03}
 
@@ -148,38 +179,6 @@ Example command:
     --max-size <max-size>
 ```
 {: codeblock}
-
-## qhmm_import_sre.sh
-{: #script02}
-
-This script is intended for the support team to retrieve diagnostic data from an Enhanced Customer Data Repository (ECuRep), and upload it to a support team bucket for further analysis. Similar to the first script, it can be configured using command-line arguments or run with default values.
-
-•	-e: ENDPOINT (default: none) - The storage endpoint.
-
-•	-r: REGION (default: none) - The storage region.
-
-•	-b: BUCKET_NAME (default: none) - The name of the bucket.
-
-•	-a: ACCESS_KEY (default: none) - The access key for the storage.
-
-•	-s: SECRET_KEY (default: none) - The secret key for the storage.
-
-•	-i: WXD_INSTANCE_ID (default: none) - The instance ID of WXD.
-
-•	-t: ENGINE_TYPE (default: none) - The type of the engine (e.g., Presto).
-
-•	-d: ENGINE_ID (default: none) - The ID of the engine.
-
-•	-p: COMPRESSED_FILE (default: /root/data/bundle.zip) - The source folder for the compressed file.
-
-
-Example command:
-
-```bash
-./qhmm_import_sre.sh -e <ENDPOINT> -r <REGION> -b <BUCKET_NAME> -a <ACCESS_KEY> -s <SECRET_KEY> -i <WXD_INSTANCE_ID> -t <ENGINE_TYPE> -d <ENGINE_ID> -p <COMPRESSED_FILE>
-```
-{: codeblock}
-
 
 ## Managing diagnostic data by manual method
 {: #mnl_mthod}
