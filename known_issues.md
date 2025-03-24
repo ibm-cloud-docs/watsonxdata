@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-21"
+lastupdated: "2025-03-24"
 
 keywords: lakehouse
 
@@ -118,13 +118,6 @@ Presto CLI supports a maximum password size of 1 KB (1024 bytes). If the passwor
 
 ## Database names containing hyphens or spaces cannot be queried by the Spark engine in a Python notebook, even when the appropriate Spark access control extension has been added.
 {: #known_issue38611}
-
-## Re-enrichment fails after deleting assets from an already enriched schema
-{: #known_issues39603}
-
-When doing a re-enrichment after deleting assets from an already enriched schema encounter errors. This occurs because watson.data refreshes mappings when the schema list is updated. If the mapping is changed externally, there is no notification system to automatically refresh the mappings. They are only updated after manually refreshing the schema list.
-
-**Workaround:** Refresh the browser page.
 
 ##  Business terms remain after the semantic automation layer integration is deleted from IBM {{site.data.keyword.lakehouse_short}}
 {: #known_issues39470}
