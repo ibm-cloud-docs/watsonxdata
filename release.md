@@ -40,11 +40,11 @@ Integration enhancements
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following enhanced integrations with other services:
 
    * Now, you can define IBM Knowledge Catalog governance policies for Presto (C++) engine when you integrate with {{site.data.keyword.lakehouse_short}}. For more information, see [Connecting to IBM Knowledge Catalog (IKC)](/docs/watsonxdata?topic=watsonxdata-ikc_integration).
-   * You can now export configuration files for target Presto engine, based on their ODBC driver selection (Simba or CData), to more easily establish connections with {{site.data.keyword.lakehouse_short}}. This enhancement saves you from having to manually configure Presto engine details manually by using PowerBI.
+   * You can now export configuration files for target Presto engine, based on their ODBC driver selection (Simba or CData), to more easily establish connections with {{site.data.keyword.lakehouse_short}}. This enhancement saves you from having to manually configure Presto engine details manually by using PowerBI. For more information, see [Connecting to Presto by using the Config files](/docs/watsonxdata?topic=watsonxdata-bi_intro#confug_file).
 
 Ingestion enhancement
 
-: Ingestion jobs using an external Spark engine now provide logs within {{site.data.keyword.lakehouse_short}}. This enhancement allows users to effectively identify and troubleshoot job execution directly within the {{site.data.keyword.lakehouse_short}} on cloud platform (SaaS instance).
+: Ingestion jobs using an external Spark engine now provide logs within {{site.data.keyword.lakehouse_short}}. This enhancement allows users to effectively identify and troubleshoot job execution directly within the {{site.data.keyword.lakehouse_short}} on cloud platform (SaaS instance). For more information, see [Ingesting data by using Spark through the web console](/docs/watsonxdata?topic=watsonxdata-ingest_spark_ui).
 
 Engine and service enhancements
 
@@ -58,8 +58,8 @@ Access management enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following access management enhancements:
 
-   * Administrators can now configure access for Db2 and Netezza. They can assign roles for {{site.data.keyword.lakehouse_short}} users to view, edit, and administer the Netezza and Db2 engines.
-   * Administrators can now grant or revoke specific permissions to users or roles with regards to creating and viewing their own schemas.
+   * Administrators can now configure access for Db2 and Netezza. They can assign roles for {{site.data.keyword.lakehouse_short}} users to view, edit, and administer the Netezza and Db2 engines. For more information, see Engine [Db2 and Netezza](/docs/watsonxdata?topic=watsonxdata-role_priv#db2_net).
+   * Administrators can now grant or revoke specific permissions to users or roles with regards to creating and viewing their own schemas. For more information, see Engine [Managing data policy rules](/docs/watsonxdata?topic=watsonxdata-data_policy).
    * DAS proxy flow, which was previously deprecated, has now been removed and is no longer available in {{site.data.keyword.lakehouse_short}}.
 
 
@@ -71,6 +71,8 @@ CPDCTL CLI enhancements
    * You can use the `wx-data engine create` and `wx-data engine delete` commands to provision and delete all available engines in {{site.data.keyword.lakehouse_short}}.
    * You can use the `sparkjob` command to help you submit, list, and get the details of a Spark application.
    * `INSTANCE_ID` used in setting the instance environment is replaced with `WX_DATA_INSTANCE_ID`.
+
+   For more information, see [IBM cpdctl](https://www.ibm.com/docs/SSDZ38_2.1.x/wxd-client/topics/cpdctl-title.html).
 
 ## 28 February 2025 - Version 2.1.1
 {: #lakehouse_28feb211}
