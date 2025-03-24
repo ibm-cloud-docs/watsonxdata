@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-11-14"
+  years: 2022, 2025
+lastupdated: "2025-03-24"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -49,7 +49,7 @@ This topic provides you with the procedure to connect IBM Cognos Analytics to Pr
 
    1. Provide the following details:
 
-      * JDBC URL: Presto JDBC URL. For more information about retrieving the hostname and port, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection). Example of the URL : `jdbc:presto://xxxxx-xxxx-xxx-xxx-xxxxx.xxxxx.xx.x.appdomain.cloud:xxxx?SSL=true`.
+      * JDBC URL: Presto JDBC URL. For more information about retrieving the hostname and port, see [Getting connection information](/docs/watsonxdata?topic=watsonxdata-get_connection). Example of the URL : `jdbc:presto://xxxxx-xxxx-xxx-xxx-xxxxx.xxxxx.xx.x.appdomain.cloud:xxxx?SSL=true`.
       * Driver class name (optional)
       * Connection properties (optional)
       * Authentication > Method: Select **Use signon**.
@@ -59,7 +59,7 @@ This topic provides you with the procedure to connect IBM Cognos Analytics to Pr
       * Username : Username is `ibmlhapikey_<watsonx.datauser_id>` or `ibmlhapikey_ServiceId-<service_id>`. For example, `ibmlhapikey_joe@ibm.com` or `ibmlhapikey_ServiceId-xxxxxxx-9-9e71-xxxx-yxay-cxaraa68`.To get the `<service_id>`, see [Creating a service ID by using the console](https://ondeck.console.cloud.ibm.com/docs/account?topic=account-serviceids&interface=ui#create_serviceid).
 
 
-      *	Password : The API key of the {{site.data.keyword.lakehouse_short}} user. For more information about retrieving the API key, see [Generating the API key](watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmapi-key).
+      *	Password : The API key of the {{site.data.keyword.lakehouse_short}} user. For more information about retrieving the API key, see [Generating the API key](/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmapi-key).
 
    1. Click **Done**.
    7. Click **Test connection** to verify that the connection is successful.

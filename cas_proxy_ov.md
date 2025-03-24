@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-20"
+lastupdated: "2025-03-24"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -31,6 +31,6 @@ DAS proxy is a technology preview function, official support will come soon. You
 {: note}
 
 The following topics provide more information about DAS proxy support for different storage types and file action capabilities:
-- [Using DAS proxy to access S3 and S3 compatible storages](watsonxdata?topic=watsonxdata-cas_proxy).
-- [S3 REST API permissions](watsonxdata?topic=watsonxdata-role_priv#s3restapi).
-- [Using DAS to access ADLS and ABS compatible storages](watsonxdata?topic=watsonxdata-cas_proxy_adls).
+- [Using DAS proxy to access S3 and S3 compatible storages](/docs/watsonxdata?topic=watsonxdata-cas_proxy).
+- [S3 REST API permissions](/docs/watsonxdata?topic=watsonxdata-role_priv#s3restapi).
+- [Using DAS to access ADLS and ABS compatible storages](/docs/watsonxdata?topic=watsonxdata-cas_proxy_adls).

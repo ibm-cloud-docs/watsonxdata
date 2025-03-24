@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-09-13"
+  years: 2022, 2025
+lastupdated: "2025-03-24"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -57,4 +57,4 @@ To reference a library set when submitting a Spark application:
     }
     ```
 
-1. Track the status of the application by invoking the application status REST API. See [View and manage applications](watsonxdata?topic=watsonxdata-mng_appltn).
+1. Track the status of the application by invoking the application status REST API. See [View and manage applications](/docs/watsonxdata?topic=watsonxdata-mng_appltn).

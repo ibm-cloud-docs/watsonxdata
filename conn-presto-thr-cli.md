@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-20"
+lastupdated: "2025-03-24"
 
 keywords: lakehouse, watsonx.data, presto, cli
 
@@ -132,7 +132,7 @@ It is recommended to use IAM token for stress workload.
 
       To generate `<ACCESS_TOKEN>`, use one of the following methods:
 
-      * Getting IBM Access Management (IAM) token, see [(IAM) token](watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
+      * Getting IBM Access Management (IAM) token, see [(IAM) token](/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
 
       * Get `<ACCESS_TOKEN>` by using the following command:
 
@@ -149,7 +149,7 @@ It is recommended to use IAM token for stress workload.
        ```
        {: codeblock}
 
-       `<IAM_TOKEN>` : Specify the token generated from [(IAM) token](watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
+       `<IAM_TOKEN>` : Specify the token generated from [(IAM) token](/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
 
        `<user-name>` : Specify the email id.
 

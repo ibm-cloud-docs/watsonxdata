@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-02-25"
+  years: 2022, 2025
+lastupdated: "2025-03-24"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -53,7 +53,7 @@ You can connect to the data source through the Arrow Flight service that is depl
 3. To define and connect a data source, click **Add component**.
 4. In the **Add component** window, select a data source from the **Data source** section.
 5. The following data sources are supported for Arrow Flight service:
-* [Apache Derby](watsonxdata?topic=watsonxdata-derby_database){: external}
-* [Greenplum](watsonxdata?topic=watsonxdata-greenplum_database){: external}
-* [MariaDB](watsonxdata?topic=watsonxdata-mariadb_database){: external}
-* [Salesforce](watsonxdata?topic=watsonxdata-salesforce_database){: external}
+* [Apache Derby](/docs/watsonxdata?topic=watsonxdata-derby_database){: external}
+* [Greenplum](/docs/watsonxdata?topic=watsonxdata-greenplum_database){: external}
+* [MariaDB](/docs/watsonxdata?topic=watsonxdata-mariadb_database){: external}
+* [Salesforce](/docs/watsonxdata?topic=watsonxdata-salesforce_database){: external}

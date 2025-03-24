@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-11-14"
+  years: 2022, 2025
+lastupdated: "2025-03-24"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -23,4 +23,4 @@ IBM watsonx.data can integrate with various business intelligence (BI) visualiza
 - [Domo]({{site.data.keyword.ref-domo-link}})
 - [Qlik]({{site.data.keyword.ref-qlik-link}})
 - [PowerBI]({{site.data.keyword.ref-bi_intro-link}})
-- [Cognos](watsonxdata?topic=watsonxdata-cognos)
+- [Cognos](/docs/watsonxdata?topic=watsonxdata-cognos)
