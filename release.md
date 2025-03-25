@@ -51,7 +51,7 @@ Engine and service enhancements
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
 
    * You can now use the Azure Data Lake Storage Gen2 with AccessKey Authmode with Spark engine to store your data while submitting Spark applications. For more information, see [Azure Data Lake Storage](watsonxdata?topic=watsonxdata-adls_genblob_storage).
-   * You can stop or cancel a query while running multiple queries, and you can also remove a query. see [Running SQL queries](watsonxdata?topic=watsonxdata-run_sql).
+   * You can now cancel a query while running single or multiple queries. Additionally, you can remove a query either after canceling it or once its execution is completed. see [Running SQL queries](watsonxdata?topic=watsonxdata-run_sql).
 
 
 Access management enhancements
