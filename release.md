@@ -58,8 +58,8 @@ Access management enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following access management enhancements:
 
-   * Administrators can now configure access for Db2 and Netezza. They can assign roles for {{site.data.keyword.lakehouse_short}} users to view, edit, and administer the Netezza and Db2 engines. For more information, see Engine [Db2 and Netezza](/docs/watsonxdata?topic=watsonxdata-role_priv#db2_net).
-   * Administrators can now grant or revoke specific permissions to users or roles with regards to creating and viewing their own schemas. For more information, see Engine [Managing data policy rules](/docs/watsonxdata?topic=watsonxdata-data_policy).
+   * Administrators can now configure access for Db2 and Netezza. They can assign roles for {{site.data.keyword.lakehouse_short}} users to view, edit, and administer the Netezza and Db2 engines. For more information, see [Engine (Db2 and Netezza)](/docs/watsonxdata?topic=watsonxdata-role_priv#db2_net).
+   * Administrators can now grant or revoke specific permissions to users or roles with regards to creating and viewing their own schemas. For more information, see [Managing data policy rules](/docs/watsonxdata?topic=watsonxdata-data_policy).
    * DAS proxy flow, which was previously deprecated, has now been removed and is no longer available in {{site.data.keyword.lakehouse_short}}.
 
 Query History Monitoring and Management (QHMM) enhancement

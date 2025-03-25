@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2025-03-25"
 
 keywords: watsonxdata, qhmm
 
@@ -57,8 +57,6 @@ You can enable the QHMM functionality in one of the following ways:
 ## Related topics
 {: #data_qhmm_rel}
 
-* Configuring QHMM, see [Configuring Query monitoring](/docs/watsonxdata?topic=watsonxdata-qhmm)
+* Configuring QHMM, see [Configuring Query monitoring](/docs/watsonxdata?topic=watsonxdata-qhmm).
 
-* Managing diagnostic data from user interface, see [Configuring Query monitoring](/docs/watsonxdata?topic=watsonxdata-ret_qhmm)
-
-* Managing diagnostic data by manual method, see [Configuring Query monitoring](/docs/watsonxdata?topic=watsonxdata-mon_mng)
+* Managing diagnostic data from user interface, see [Configuring Query monitoring](/docs/watsonxdata?topic=watsonxdata-ret_qhmm).

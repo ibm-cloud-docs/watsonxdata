@@ -152,7 +152,6 @@ toc:
           label: Querying data
           topics:
             - run_sql.md
-            - run_sql_updated.md
             - explain_sql_query.md
       - topicgroup:
           label: Query Optimizer
@@ -224,7 +223,6 @@ toc:
       - topicgroup:
           label: Working with external Spark engine
           topics:
-            - Intro_extspark.md
             - provisioning-spark.md
             - config_spark.md
             - topicgroup:
@@ -336,10 +334,10 @@ toc:
       - iceberg_unity_cat_api.md
       - link:
             label: Presto SQL statements
-            href: https://www.ibm.com/docs/en/watsonx/watsonxdata/2.0.0?topic=presto-sql-statements
+            href: https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=presto-sql-statements
       - link:
             label: Presto data types
-            href: https://www.ibm.com/docs/en/watsonx/watsonxdata/2.0.0?topic=presto-data-types
+            href: https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=presto-data-types
       - mixed_case_behavior.md
       - response.md
       - high_availability_lh.md
