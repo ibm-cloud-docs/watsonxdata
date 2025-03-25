@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-21"
+lastupdated: "2025-03-25"
 
 keywords: lakehouse, watsonx data, privileges, roles, access
 
@@ -126,7 +126,7 @@ Default user access is granted to:
 
 - Formation admins (IAM)
 - Instance admins (CPD)
-- Install admins (Dev)
+
 
 ### Resource-level permissions
 {: #rl_premission4}
@@ -160,7 +160,7 @@ Default user access is granted to:
 
 - Formation admins (IAM)
 - Instance admins (CPD)
-- Install admins (Dev)
+
 
 ### Resource-level permissions
 {: #rl_premis_db2net}
