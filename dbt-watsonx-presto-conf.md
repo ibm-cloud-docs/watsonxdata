@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2025-03-25"
 
 keywords: lakehouse, watsonx.data, presto, cli
 
@@ -47,7 +47,7 @@ The following table covers the parameter details:
 | Option | Required/Optional | Description | Example |
 | ------ | ----------------- | ----------- | ------- |
 | `type`| Required| Specifies the type of connection to be used. Set the connection type to watsonx_presto to indicate that you are using the dbt watsonx Presto adapter for {{site.data.keyword.lakehouse_short}} Presto.| `watsonx_presto` |
-| `method` | Required (default methos is `BasicAuth`) | Authentication method for Presto. | `BasicAuth` |
+| `method` | Required (default method is `BasicAuth`) | Authentication method for Presto. | `BasicAuth` |
 | `user` | Required | Username for authentication. | drew |
 | `password` | Required if method is `BasicAuth` | Password or API key for authentication. | None or alphanumeric (abc123) |
 | `http_headers` | Optional | HTTP headers to send alongside requests to Presto, specified as a yaml dictionary of (header, value) pairs. | X-Presto-Routing-Group: my-cluster |
