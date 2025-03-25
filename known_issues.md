@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2025-03-25"
 
 keywords: lakehouse
 
@@ -34,6 +34,10 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+## Links to documentation are duplicated in DB assistant response
+{: #known_issue24084}
+
+When the DB assistant answers certain questions, it provides numerous links, but only a few are unique and lead to distinct pages.
 
 ## Metastore admins and metastore viewers are unable to view the schema and table details
 {: #known_issue21467}
