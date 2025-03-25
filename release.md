@@ -44,7 +44,7 @@ Integration enhancements
 
 Ingestion enhancement
 
-: Ingestion jobs using an external Spark engine now provide logs within {{site.data.keyword.lakehouse_short}}. This enhancement allows users to effectively identify and troubleshoot job execution directly within the {{site.data.keyword.lakehouse_short}} on cloud platform (SaaS instance). For more information, see [Ingesting data by using Spark through the web console](/docs/watsonxdata?topic=watsonxdata-ingest_spark_ui).
+: Ingestion jobs using an external Spark engine now provide logs within {{site.data.keyword.lakehouse_short}}. This enhancement allows users to effectively identify and troubleshoot job execution directly within the {{site.data.keyword.lakehouse_short}} on cloud platform (SaaS instance). The details of the ingestion procedure is available in [Ingesting data by using Spark through the web console](/docs/watsonxdata?topic=watsonxdata-ingest_spark_ui).
 
 Engine and service enhancements
 
@@ -60,7 +60,7 @@ Access management enhancements
 
    * Administrators can now configure access for Db2 and Netezza. They can assign roles for {{site.data.keyword.lakehouse_short}} users to view, edit, and administer the Netezza and Db2 engines. For more information, see [Engine (Db2 and Netezza)](/docs/watsonxdata?topic=watsonxdata-role_priv#db2_net).
    * Administrators can now grant or revoke specific permissions to users or roles with regards to creating and viewing their own schemas. For more information, see [Managing data policy rules](/docs/watsonxdata?topic=watsonxdata-data_policy).
-   * DAS proxy flow, which was previously deprecated, has now been removed and is no longer available in {{site.data.keyword.lakehouse_short}}.
+   * DAS proxy flow, which was previously deprecated, is now removed and is no longer available in {{site.data.keyword.lakehouse_short}}.
 
 Query History Monitoring and Management (QHMM) enhancement
 
@@ -73,9 +73,9 @@ CPDCTL CLI enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancements to IBM Cloud Pak for Data Command Line Interface (IBM cpdctl):
 
-   * Starting in version 2.1.2, the `wx-data` command is available by default, which enables you do operations such as, ingesting, managing engines, etc in {{site.data.keyword.lakehouse_short}}.
+   * Starting in version 2.1.2, the `wx-data` command is available by default, which enables you to do operations such as, ingesting, managing engines, and so on, in {{site.data.keyword.lakehouse_short}}.
    * You can use the `wx-data engine create` and `wx-data engine delete` commands to provision and delete all available engines in {{site.data.keyword.lakehouse_short}}.
-   * You can use the `sparkjob` command to help you submit, list, and get the details of a Spark application.
+   * You can use the `sparkjob` command to submit, list, and get the details of a Spark application.
    * `INSTANCE_ID` used in setting the instance environment is replaced with `WX_DATA_INSTANCE_ID`.
 
    For more information, see [IBM cpdctl](https://www.ibm.com/docs/SSDZ38_2.1.x/wxd-client/topics/cpdctl-title.html).
