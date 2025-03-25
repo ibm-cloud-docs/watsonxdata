@@ -34,10 +34,10 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
-## Links to documentation are duplicated in DB assistant response
+## Links to documentation are duplicated in `DB assistant` response
 {: #known_issue24084}
 
-When the DB assistant answers certain questions, it provides numerous links, but only a few are unique and lead to distinct pages.
+When the `DB assistant` answers certain questions, it provides numerous links, but only a few are unique and lead to distinct pages.
 
 ## Metastore admins and metastore viewers are unable to view the schema and table details
 {: #known_issue21467}
