@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-18"
+lastupdated: "2025-03-25"
 
 keywords: watsonxdata, sql queries, query workspace
 
@@ -70,7 +70,7 @@ To run the SQL queries, do the following steps:
 1. Click **Save**.
 1. Click the **Run** button to run the query. Using **Run to cursor** or **Run from cursor**, you can run queries from or until your cursor position.
 
-   You can stop or cancel a query while running multiple queries, and you can also remove a query. These options are available for each respective query in the **Worksheet results** view.
+   You can cancel a query while running single or multiple queries. Additionally, you can remove a query either after canceling it or once its execution is completed. These options are available for each respective query in the **Worksheet results** view.
    {: note}
 
 1. Select **Result set** or **Details** tab to view the results. You can export the result as a csv file using **Export to CSV** icon.
