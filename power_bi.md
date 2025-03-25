@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-20"
+lastupdated: "2025-03-25"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -125,7 +125,5 @@ In this method, you can select the catalog that you want to analyze in Power BI 
 6. Use the **Edit catalog** icon in the **Catalog** field to select the required catalog for data analysis.
 7. Click the **Export config files** list. Select to download the config zip file (**Simba config.zip** or **CData config.zip**) based on the driver used. Click the downloaded file. It includes two files, `.reg` file and `.pbids` file.
 8. Run the `.reg` file to configure the database connection on Windows. Now run the `.pbids` file to connect to the specified data source. The **PowerBI** desktop opens. Provide the username and password to log in.
-9. For **CData**, add the path of **SSL Server Cert** and click **OK**.
-10. For **Simba**, select the **Allow self-signed Certificate** check box and provide the **SSL certificate**, and save the changes.
 11. The SSL cert info is available from {{site.data.keyword.lakehouse_short}} **Connection Information** > **IBM Products** > **Instance details** > **SSL Certificate**. For more information about retrieving the SSL certificate, see [Getting connection information]({{site.data.keyword.ref-get_connection-link}}).
 12. The Catalog page is displayed. You can select the schemas and tables for analysis.
