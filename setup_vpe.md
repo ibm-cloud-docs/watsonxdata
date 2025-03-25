@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-03-22"
+lastupdated: "2025-03-25"
 
 keywords: watsonxdata, vpe
 
@@ -64,3 +64,6 @@ The **Virtual Private Endpoint** is displayed in the **Private endpoints** table
 {: #setup_vpe_next}
 
 You can create a **Virtual private endpoint gateway** to connect to a {{site.data.keyword.lakehouse_short}} instance. For more information see [Creating VPE gateways](/docs/vpc?topic=vpc-ordering-endpoint-gateway).
+
+Ports associated with the services and engines deployed after you create the VPE gateway are not accessible through the VPE gateway automatically. You need to re-create the VPE gateway to access the new service ports.
+{: note}
