@@ -33,7 +33,6 @@ Data sources and storage enhancements
 
 Connectivity enhancements
 
-
 : This release of {{site.data.keyword.lakehouse_short}} includes the following Connectivity enhancement:
 
    You can now securely and privately connect to a {{site.data.keyword.lakehouse_short}} instance by using virtual private endpoints. For information about configuring network endpoints in watsonx.data, see [Setting up virtual private endpoints](/docs/watsonxdata?topic=watsonxdata-setup_vpe).
@@ -46,7 +45,6 @@ Integration enhancements
    * You can now export configuration files for target Presto engine, based on their ODBC driver selection (Simba or CData), to more easily establish connections with {{site.data.keyword.lakehouse_short}}. This enhancement saves you from having to manually configure Presto engine details manually by using PowerBI. For more information about connecting to Presto by using the Config files, see [Connecting to Presto by using the Config files](/docs/watsonxdata?topic=watsonxdata-bi_intro#confug_file).
 
 Ingestion enhancement
-
 
 : This release of {{site.data.keyword.lakehouse_short}} includes the following Ingestion enhancement:
 
