@@ -53,7 +53,7 @@ When you drop and/or add table columns, queries might fail. For example, see the
    ```
    {: codeblock}
 
-**Workaround:**  For PARQUET, run the following command in session:
+**Workaround:**  For `PARQUET`, run the following command in session:
    ```bash
       set session <catalog-name>.parquet_use_column_names=true;
    ```
@@ -62,7 +62,7 @@ When you drop and/or add table columns, queries might fail. For example, see the
 Replace `<catalog-name>` with the actual catalog being used.
 {: note}
 
-Or set `hive.parquet.use-column-names` in catalog properties. For `orc`, set `hive.orc.use-column-names` in catalog properties.
+Or set `hive.parquet.use-column-names=true` in catalog properties. For `ORC`, set `hive.orc.use-column-names=true` in catalog properties.
 
 ## Issue with server/host, port information, and user data in exported file
 {: #known_issue23730}
