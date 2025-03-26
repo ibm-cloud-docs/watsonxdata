@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2025-03-26"
 
 keywords: lakehouse, watsonx.data, presto, cli
 
@@ -120,9 +120,9 @@ It is recommended to use IAM token for stress workload.
 
       Enter your IBM API key or IBM IAM token at the prompt.
 
-   * **JWT token** : To use this method of authentication, contact IBM support and enable the feature. Once enabled , run the following command to connect to presto using JWT token:
+   * **JWT token** : The JWT method of authentication is available by default from 2.1.2 onwards. Run the following command to connect to presto using JWT token:
 
-   The JWT method of authentication is available by default from 2.1.2 onwards.
+   If you use a {{site.data.keyword.lakehouse_short}} version prior to 2.1.2, contact IBM support and enable the feature to use this method of authentication.
    {: note}
 
        ```bash
