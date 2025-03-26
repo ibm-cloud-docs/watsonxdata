@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-25"
+lastupdated: "2025-03-26"
 
 keywords: lakehouse, watsonx data, privileges, roles, access
 
@@ -169,7 +169,6 @@ Default user access is granted to:
 |-------|------|------|---------|---------|
 |Create and delete engine | ✓ |   |    |     |
 | Grant and revoke access | ✓ |   |    |     |
-| Pause and resume  | ✓ | ✓ |    |     |
 | Update engine details | ✓ | ✓ |    |     |
 |View an engine |  ✓ | ✓ | ✓ | |
 {: caption="Resource-level permissions" caption-side="bottom"}
