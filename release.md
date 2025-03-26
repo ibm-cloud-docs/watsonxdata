@@ -77,7 +77,7 @@ Query History Monitoring and Management (QHMM) enhancement
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following QHMM enhancements:
 
-   * You can now choose the engine that is associated to a QHMM catalog when you configure query monitoring in watsonx.data. For information about configuring QHMM, see [Configuring query monitoring](/docs/watsonxdata?topic=watsonxdata-qhmm).
+   * You can now select the Presto engine that is associated to a QHMM catalog when you configure query monitoring in watsonx.data. For information about configuring QHMM, see [Configuring query monitoring](/docs/watsonxdata?topic=watsonxdata-qhmm).
    * You can now use the migration script to transfer QHMM data from the source bucket to the destination bucket in watsonx.data. For more information about using the migration script, see [QHMM Shell Script usage](/docs/watsonxdata?topic=watsonxdata-qhmm_shell).
 
 CPDCTL CLI enhancements
