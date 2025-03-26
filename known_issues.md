@@ -44,16 +44,17 @@ A user with the metastore admin and metastore viewer privileges in the Query wor
 
 When you drop and/or add table columns, queries might fail. For example, see the sequence of statements below, after which the queries on the table fail.
 
-`create table ice.s3.tessch.12 (age int, name varachar(25), place varachar(25)`
-`create table ice.s3.tessch.t9 (name varachar(25), age int)`
-`insert into ice.s3.tessch.t9 values ('mike', 30)`
-`insert into ice.s3.tessch.t12 values (35, 'ken', 'paris')`
-`select * from ice.s3.tessch.t12`
-`select * from ice.s3.tessch.t9`
-`alter table ice.s3.tessch.t8 add column place varachar(25)`
-`alter table ice.s3.tessch.t12 drop column age`
+n/ `create table ice.s3.tessch.12 (age int, name varchar(25), place varchar(25)`
+n/ `insert into ice.s3.tessch.t12 values (35, 'ken', 'paris')`
+n/ `alter table ice.s3.tessch.t12 drop column age`
+n/ `select * from ice.s3.tessch.t12`
+n/ `alter table ice.s3.tessch.t8 add column place varchar(25)`
 
-**Workaround:** For `paraquet`, set `set session <catalog-name>.parquet_use_column_names=true;` either in session or `hive.parquet.use-column-names` in catalog properties. For `orc`, set `hive.orc.use-column-names` in catalog properties.
+**Workaround:**  For PARQUET, run the following command in session:
+   ```bash
+      set session <catalog-name>.parquet_use_column_names=true;
+   ```
+Or set `hive.parquet.use-column-names` in catalog properties. For `orc`, set `hive.orc.use-column-names` in catalog properties.
 
 ## Issue with server/host, port information, and user data in exported file
 {: #known_issue23730}
