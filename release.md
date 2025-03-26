@@ -62,7 +62,7 @@ Query enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following query enhancement:
 
-   You can now cancel a query while running single or multiple queries. Additionally, you can remove a query either after canceling it or once its execution is completed. For more information, see [Running SQL queries](watsonxdata?topic=watsonxdata-run_sql).
+   You now have the option to cancel one or multiple running queries. Additionally, you can remove queries from the worksheet after they are canceled or successfully completed, making it easier to keep your workspace organized. For more information, see [Running SQL queries](watsonxdata?topic=watsonxdata-run_sql).
 
 
 Access management enhancements

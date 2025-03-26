@@ -70,7 +70,7 @@ To run the SQL queries, do the following steps:
 1. Click **Save**.
 1. Click the **Run** button to run the query. Using **Run to cursor** or **Run from cursor**, you can run queries from or until your cursor position.
 
-   You now have the option to cancel one or multiple running queries. Additionally, you can remove queries from the worksheet after they are canceled or successfully completed, making it easier to keep your workspace organized.
+   You can cancel one or multiple running queries. Additionally, you can remove queries from the worksheet after they are canceled or successfully completed. These options are avilable for each respective query in the `Worksheet results` view.
    {: note}
 
 1. Select **Result set** or **Details** tab to view the results. You can export the result as a csv file using **Export to CSV** icon.
