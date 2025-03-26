@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-03-25"
+lastupdated: "2025-03-26"
 
 keywords: watsonxdata, release notes
 
@@ -27,47 +27,58 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 
 Data sources and storage enhancements
 
-: This release of {{site.data.keyword.lakehouse_short}} includes the following storage enhancements:
+: This release of {{site.data.keyword.lakehouse_short}} includes the following storage enhancement:
 
-   * Now you can connect to IBM Db2 for i data source. For more information, see [IBM Db2 for i](/docs/watsonxdata?topic=watsonxdata-bd2fori_database).
+   Now you can connect to IBM Db2 for i data source. For information about IBM Db2 for i, see [IBM Db2 for i](/docs/watsonxdata?topic=watsonxdata-bd2fori_database).
 
 Connectivity enhancements
 
-: You can now securely and privately connect to a {{site.data.keyword.lakehouse_short}} instance by using virtual private endpoints. For more information, see [Setting up virtual private endpoints](/docs/watsonxdata?topic=watsonxdata-setup_vpe).
+
+: This release of {{site.data.keyword.lakehouse_short}} includes the following Connectivity enhancement:
+
+   You can now securely and privately connect to a {{site.data.keyword.lakehouse_short}} instance by using virtual private endpoints. For information about configuring network endpoints in watsonx.data, see [Setting up virtual private endpoints](/docs/watsonxdata?topic=watsonxdata-setup_vpe).
 
 Integration enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following enhanced integrations with other services:
 
-   * Now, you can define IBM Knowledge Catalog governance policies for Presto (C++) engine when you integrate with {{site.data.keyword.lakehouse_short}}. For more information, see [Connecting to IBM Knowledge Catalog (IKC)](/docs/watsonxdata?topic=watsonxdata-ikc_integration).
-   * You can now export configuration files for target Presto engine, based on their ODBC driver selection (Simba or CData), to more easily establish connections with {{site.data.keyword.lakehouse_short}}. This enhancement saves you from having to manually configure Presto engine details manually by using PowerBI. For more information, see [Connecting to Presto by using the Config files](/docs/watsonxdata?topic=watsonxdata-bi_intro#confug_file).
+   * Now, you can define IBM Knowledge Catalog governance policies for Presto (C++) engine when you integrate with {{site.data.keyword.lakehouse_short}}. For information about connecting to IBM Knowledge Catalog (IKC), see [Connecting to IBM Knowledge Catalog (IKC)](/docs/watsonxdata?topic=watsonxdata-ikc_integration).
+   * You can now export configuration files for target Presto engine, based on their ODBC driver selection (Simba or CData), to more easily establish connections with {{site.data.keyword.lakehouse_short}}. This enhancement saves you from having to manually configure Presto engine details manually by using PowerBI. For more information about connecting to Presto by using the Config files, see [Connecting to Presto by using the Config files](/docs/watsonxdata?topic=watsonxdata-bi_intro#confug_file).
 
 Ingestion enhancement
 
-: Ingestion jobs using an external Spark engine now provide logs within {{site.data.keyword.lakehouse_short}}. This enhancement allows users to effectively identify and troubleshoot job execution directly within the {{site.data.keyword.lakehouse_short}} on cloud platform (SaaS instance). The details of the ingestion procedure is available in [Ingesting data by using Spark through the web console](/docs/watsonxdata?topic=watsonxdata-ingest_spark_ui).
+
+: This release of {{site.data.keyword.lakehouse_short}} includes the following Ingestion enhancement:
+
+Ingestion jobs using an external Spark engine now provide logs within {{site.data.keyword.lakehouse_short}}. This enhancement allows users to effectively identify and troubleshoot job execution directly within the {{site.data.keyword.lakehouse_short}} on cloud platform (SaaS instance). The details of the ingestion procedure is available in [Ingesting data by using Spark through the web console](/docs/watsonxdata?topic=watsonxdata-ingest_spark_ui).
 
 Engine and service enhancements
 
-: This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancement:
 
-   * You can now use the Azure Data Lake Storage Gen2 with AccessKey Authmode with Spark engine to store your data while submitting Spark applications. For more information, see [Azure Data Lake Storage](watsonxdata?topic=watsonxdata-adls_genblob_storage).
-   * You can now cancel a query while running single or multiple queries. Additionally, you can remove a query either after canceling it or once its execution is completed. see [Running SQL queries](watsonxdata?topic=watsonxdata-run_sql).
+   You can now use the Azure Data Lake Storage Gen2 with AccessKey Authmode with Spark engine to store your data while submitting Spark applications. For information about Azure Data Lake Storage Gen2, see [Azure Data Lake Storage](watsonxdata?topic=watsonxdata-adls_genblob_storage).
+
+Query enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following query enhancement:
+
+   You can now cancel a query while running single or multiple queries. Additionally, you can remove a query either after canceling it or once its execution is completed. For more information, see [Running SQL queries](watsonxdata?topic=watsonxdata-run_sql).
 
 
 Access management enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following access management enhancements:
 
-   * Administrators can now configure access for Db2 and Netezza. They can assign roles for {{site.data.keyword.lakehouse_short}} users to view, edit, and administer the Netezza and Db2 engines. For more information, see [Engine (Db2 and Netezza)](/docs/watsonxdata?topic=watsonxdata-role_priv#db2_net).
-   * Administrators can now grant or revoke specific permissions to users or roles with regards to creating and viewing their own schemas. For more information, see [Managing data policy rules](/docs/watsonxdata?topic=watsonxdata-data_policy).
+   * Administrators can now configure access for IBM Db2 and IBM Netezza. They can assign roles for {{site.data.keyword.lakehouse_short}} users to view, edit, and administer the IBM Netezza and IBM Db2 engines. For information about the resource-level permissions, see [(Db2 and Netezza)](/docs/watsonxdata?topic=watsonxdata-role_priv#db2_net).
+   * Administrators can now grant or revoke specific permissions to users or roles when creating and viewing their own schemas. For information about data policy rules, see [Managing data policy rules](/docs/watsonxdata?topic=watsonxdata-data_policy).
    * DAS proxy flow, which was previously deprecated, is now removed and is no longer available in {{site.data.keyword.lakehouse_short}}.
 
 Query History Monitoring and Management (QHMM) enhancement
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following QHMM enhancements:
 
-   * You can now choose the engine that is associated to a QHMM catalog when you configure query monitoring in watsonx.data. For more information, see [Configuring query monitoring](/docs/watsonxdata?topic=watsonxdata-qhmm).
-   * You can now use the migration script to transfer QHMM data from the source bucket to the destination bucket in watsonx.data. For more information, see [QHMM Shell Script usage](/docs/watsonxdata?topic=watsonxdata-qhmm_shell).
+   * You can now choose the engine that is associated to a QHMM catalog when you configure query monitoring in watsonx.data. For information about configuring QHMM, see [Configuring query monitoring](/docs/watsonxdata?topic=watsonxdata-qhmm).
+   * You can now use the migration script to transfer QHMM data from the source bucket to the destination bucket in watsonx.data. For more information about using the migration script, see [QHMM Shell Script usage](/docs/watsonxdata?topic=watsonxdata-qhmm_shell).
 
 CPDCTL CLI enhancements
 
