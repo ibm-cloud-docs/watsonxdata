@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2025-03-26"
 
 keywords: watsonxdata, qhmm
 
@@ -62,7 +62,7 @@ You can retrieve the history files to analyze, debug, or monitor the queries. Fr
     * Bucket that is configured to store QHMM data.
     * The subpath in the bucket where QHMM data is available.
 
-   To edit the configuration details, click **Edit** and make the required changes.You can enable or disable QHMM, change the bucket, storage subpath, and change the engine that is associated to the QHMM catalog.
+   To edit the configuration details, click **Edit** and make the required changes. You can enable or disable QHMM, change the engine that is associated to the QHMM catalog, change the bucket, and update the storage subpath.
    {: note}
 
 5. Click **Save** after making the changes.
@@ -78,11 +78,13 @@ If the QHMM feature is not enabled at the time of provisioning watsonx.data quic
 
 3. Select the **Enable** check box. You can select the check box only if you have created a Hive catalog in watsonx.data.
 
-4. Select the Hive catalog from the **Storage**.
+4. Select the engine from **Engine**.
 
-5. You can also update the sub-path.
+5. Select the Hive catalog from **Storage**.
 
-6. Click **Save** after making the changes.
+6. You can also update the sub-path.
+
+7. Click **Save** after making the changes.
 
 
 ### Enabling data pruning feature
