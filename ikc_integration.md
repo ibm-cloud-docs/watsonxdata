@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2025-03-26"
 
 keywords: watsonx.data, ikc, configuring, knowledgecatalog
 subcollection: watsonxdata
@@ -121,7 +121,7 @@ Both {{site.data.keyword.lakehouse_short}} and IKC must be present in the {{site
 {: #verify_mask}
 {: step}
 
-1. Login to IBM Knowledge Catalog.
+1. Log in to IBM Knowledge Catalog.
 1. From the left pane, go to **Governance** > **Rules**.
 1. From the **Rules** page, verify that the rules corresponding to your data class of the column is defined. You can define a new rule by using **Add rule** button.
 
