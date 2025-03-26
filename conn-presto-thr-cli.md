@@ -122,7 +122,7 @@ It is recommended to use IAM token for stress workload.
 
    * **JWT token** : The JWT method of authentication is available by default from 2.1.2 onwards. Run the following command to connect to presto using JWT token:
 
-   If you use a {{site.data.keyword.lakehouse_short}} version prior to 2.1.2, contact IBM support and enable the feature to use this method of authentication.
+   To use this method of authentication for the previous versions of {{site.data.keyword.lakehouse_short}} (prior to 2.1.2 release), contact IBM support and enable the feature.
    {: note}
 
        ```bash
