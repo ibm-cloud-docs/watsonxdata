@@ -54,6 +54,9 @@ n/ `alter table ice.s3.tessch.t8 add column place varchar(25)`
    ```bash
       set session <catalog-name>.parquet_use_column_names=true;
    ```
+Replace `<catalog-name>` with the actual catalog being used.
+{: note}
+
 Or set `hive.parquet.use-column-names` in catalog properties. For `orc`, set `hive.orc.use-column-names` in catalog properties.
 
 ## Issue with server/host, port information, and user data in exported file
