@@ -29,20 +29,20 @@ Data sources and storage enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} includes the following storage enhancement:
 
-   Now you can connect to IBM Db2 for i data source. For information about IBM Db2 for i, see [IBM Db2 for i](/docs/watsonxdata?topic=watsonxdata-bd2fori_database).
+   Now you can connect to **IBM Db2 for i** data source. For information about **IBM Db2 for i**, see [IBM Db2 for i](/docs/watsonxdata?topic=watsonxdata-bd2fori_database).
 
 Connectivity enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} includes the following Connectivity enhancement:
 
-   You can now securely and privately connect to a {{site.data.keyword.lakehouse_short}} instance by using virtual private endpoints. For information about configuring network endpoints in watsonx.data, see [Setting up virtual private endpoints](/docs/watsonxdata?topic=watsonxdata-setup_vpe).
+   You can now securely and privately connect to a {{site.data.keyword.lakehouse_short}} instance by using virtual private endpoints. For information about configuring network endpoints in {{site.data.keyword.lakehouse_short}}, see [Setting up virtual private endpoints](/docs/watsonxdata?topic=watsonxdata-setup_vpe).
 
 Integration enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following enhanced integrations with other services:
 
    * Now, you can define IBM Knowledge Catalog governance policies for Presto (C++) engine when you integrate with {{site.data.keyword.lakehouse_short}}. For information about connecting to IBM Knowledge Catalog (IKC), see [Connecting to IBM Knowledge Catalog (IKC)](/docs/watsonxdata?topic=watsonxdata-ikc_integration).
-   * You can now export configuration files for target Presto engine, based on their ODBC driver selection (Simba or CData), to more easily establish connections with {{site.data.keyword.lakehouse_short}}. This enhancement saves you from having to manually configure Presto engine details manually by using PowerBI. For more information about connecting to Presto by using the Config files, see [Connecting to Presto by using the Config files](/docs/watsonxdata?topic=watsonxdata-bi_intro#confug_file).
+   * You can now export configuration files for target Presto engine, based on their ODBC driver selection (Simba or CData), to more easily establish connections with {{site.data.keyword.lakehouse_short}}. This enhancement saves you from manually configuring Presto engine details by using PowerBI. For more information about connecting to Presto by using the Config files, see [Connecting to Presto by using the Config files](/docs/watsonxdata?topic=watsonxdata-bi_intro#confug_file).
 
 Ingestion enhancement
 
@@ -56,9 +56,9 @@ Engine and service enhancements
 
    You can now use the Azure Data Lake Storage Gen2 with AccessKey Authmode with Spark engine to store your data while submitting Spark applications. For information about Azure Data Lake Storage Gen2, see [Azure Data Lake Storage](watsonxdata?topic=watsonxdata-adls_genblob_storage).
 
-Query enhancements
+Query workspace enhancements
 
-: This release of {{site.data.keyword.lakehouse_short}} introduces the following query enhancement:
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following query workspace enhancement:
 
    You now have the option to cancel one or multiple running queries. Additionally, you can remove queries from the worksheet after they are canceled or successfully completed, making it easier to keep your workspace organized. For more information, see [Running SQL queries](watsonxdata?topic=watsonxdata-run_sql).
 
@@ -75,8 +75,8 @@ Query History Monitoring and Management (QHMM) enhancement
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following QHMM enhancements:
 
-   * You can now select the Presto engine that is associated to a QHMM catalog when you configure query monitoring in watsonx.data. For information about configuring QHMM, see [Configuring query monitoring](/docs/watsonxdata?topic=watsonxdata-qhmm).
-   * You can now use the migration script to transfer QHMM data from the source bucket to the destination bucket in watsonx.data. For more information about using the migration script, see [QHMM Shell Script usage](/docs/watsonxdata?topic=watsonxdata-qhmm_shell).
+   * You can now select the Presto engine that is associated to a QHMM catalog when you configure query monitoring in {{site.data.keyword.lakehouse_short}}. For information about configuring QHMM, see [Configuring query monitoring](/docs/watsonxdata?topic=watsonxdata-qhmm).
+   * You can now use the migration script to transfer QHMM data from the source bucket to the destination bucket in {{site.data.keyword.lakehouse_short}}. For more information about using the migration script, see [QHMM Shell Script usage](/docs/watsonxdata?topic=watsonxdata-qhmm_shell).
 
 CPDCTL CLI enhancements
 
@@ -130,7 +130,7 @@ Engine and service enhancements
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
 
    - You can now create a Spark application from the **Applications** tab of the Spark engine details page. For more information, see [Submitting Spark application from Console](/docs/watsonxdata?topic=watsonxdata-smbit_cnsl_1).
-   - You can now use Spark version, 3.5.4 to run the applications in watsonx.data. In {{site.data.keyword.lakehouse_full}}, Apache Spark 3.4.4 and Apache Spark 3.5.4 are the supported versions.
+   - You can now use Spark version, 3.5.4 to run the applications in {{site.data.keyword.lakehouse_short}}. In {{site.data.keyword.lakehouse_short}}, Apache Spark 3.4.4 and Apache Spark 3.5.4 are the supported versions.
    - Milvus allows the following:
       - In Milvus you can now do a hybrid GroupBy search based on multiple vector columns and also customize the group size when you run search queries. For more information, see [Connecting watsonx Assistant to watsonx.data Milvus for custom search](/docs/watsonxdata?topic=watsonxdata-wxd_wxa_connection).
       - Milvus now supports custom size with a capacity of 3 billion vectors with a maximum of 1,024 dimensions.
@@ -147,7 +147,7 @@ Access management enhancements
 
 CPDCTL CLI enhancements
 
-: IBM `CPDCTL` CLI is now used to configure and manage different operations in watsonx.data. Using the `CPDCTL` CLI, you can manage configuration settings, run ingestion jobs, manage engines, data sources, and storages. The following two plugins are currently used to execute these operations:
+: IBM `CPDCTL` CLI is now used to configure and manage different operations in {{site.data.keyword.lakehouse_short}}. Using the `CPDCTL` CLI, you can manage configuration settings, run ingestion jobs, manage engines, data sources, and storages. The following two plugins are currently used to execute these operations:
 
    * `config` - To configure {{site.data.keyword.lakehouse_short}} service environment and users.
    * `wx-data` - To perform other operations such as, ingesting, managing engines, etc in {{site.data.keyword.lakehouse_short}}. For more information, see [IBM cpdctl](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=SSDZ38_2.1.x/wxd-client/topics/cpdctl-title.htm).
@@ -211,7 +211,7 @@ Integration enhancements
       * BI tools
       * DataBuildTool (dbt)
 
-   * Starting with watsonx.data version 2.1, you can only integrate with one of the following policy engines:
+   * Starting with {{site.data.keyword.lakehouse_short}} version 2.1, you can only integrate with one of the following policy engines:
 
       * Apache Ranger
       * IBM Knowledge Catalog (IKC)
