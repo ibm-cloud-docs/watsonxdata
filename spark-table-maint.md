@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2025-03-26"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -22,8 +22,8 @@ You can perform Iceberg table maintenance operations by submitting a Spark appli
 {: #table-spk_preq}
 
 * Provision {{site.data.keyword.lakehouse_full}} instance and add a native Spark engine.
-* Download and install IBM cpdctl. For information, see [Installing IBM cpdctl].
-* Configure the watsonx.data environment in IBM cpdctl. For information, see Configure IBM cpdctl.
+* Download and install IBM cpdctl. For information, see [Installing IBM cpdctl](https://www.ibm.com/docs/SSDZ38_2.1.x/wxd-client/topics/cpdctl-title.html).
+* Configure the watsonx.data environment in IBM cpdctl. For information, see [Configure IBM cpdctl](https://www.ibm.com/docs/SSDZ38_2.1.x/wxd-client/topics/cpdctl-title.html).
 
 
 ## Submitting a Spark application
@@ -70,8 +70,8 @@ You can submit a Spark application that involves the following table maintenance
 
 3. Use the `Create` command in the sparkjob resource available in IBM `cpdctl` to submit the Spark application. See the [How to use wx-data command --help (-h)] section to understand how to run the `./cpdctl wx-data sparkjob create` command.
 
-You can list the Spark applications submitted against a Spark engine by using the list command in the sparkjob resource and also get the status of a Spark application by using the get command in the sparkjob resource.
-{: note}
+4. You can list the Spark applications submitted against a Spark engine by using the list command in the sparkjob resource and also get the status of a Spark application by using the get command in the sparkjob resource.
+
 
 ## Spark sample python file
 {: #pth_file}
@@ -205,3 +205,6 @@ if __name__ == '__main__':
 
 ```
 {: codeblock}
+
+You must manually save the above Python file to a Cloud Object Storage location.
+{: note}

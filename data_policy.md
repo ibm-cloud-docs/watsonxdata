@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-21"
+lastupdated: "2025-03-26"
 
 keywords: lakehouse, access, data, policy, watsonx data
 
@@ -77,7 +77,7 @@ To maintain data security, you can create access policies for the following at t
      You can also proceed without choosing a table, to allow user to create their own table.
      {: note}
 
-        If you choose a single table, you can select one, more than one, or all columns or choose no table and allow user to create tables within the schema. If you choose more than one table, you cannot select any columns. The policy applies to all columns of the tables.
+        If you choose a single table, you can select one, more than one, or all columns. If you choose more than one table, you cannot select any columns. The policy applies to all columns of the tables.
         {: note}
 
    - **Storage**
