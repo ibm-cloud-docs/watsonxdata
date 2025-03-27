@@ -55,16 +55,16 @@ The **Connection information** tile in the **Configurations** page provides the 
 ## For IBM products:
 {: #get_connection_conninfo}
 
-   * **Instance details**:
+* **Instance details**:
    * Host IP address
    * Port
    * Instance CRN
    * SSL certificate
    * **Engine and service connection details**
-   * Select the checkbox of the IBM product and use the `Copy JSON snippet` and `Export JSON` links to copy or export JSON snippets.
+     * Select the checkbox of the IBM product and use the `Copy JSON snippet` and `Export JSON` links to copy or export JSON snippets.
 
-     You can select one engine for the JSON snippet.
-     {: note}
+       You can select one engine for the JSON snippet.
+       {: note}
 
 ## BI tools:
 {: #get_connection_vscode}
