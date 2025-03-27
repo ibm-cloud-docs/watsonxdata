@@ -62,6 +62,7 @@ The **Connection information** tile in the **Configurations** page provides the 
    * SSL certificate
    * **Engine and service connection details**
    * Select the checkbox of the IBM product and use the `Copy JSON snippet` and `Export JSON` links to copy or export JSON snippets.
+
      You can select one engine for the JSON snippet.
      {: note}
 
