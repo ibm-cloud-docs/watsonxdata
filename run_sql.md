@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-27"
+lastupdated: "2025-03-28"
 
 keywords: watsonxdata, sql queries, query workspace
 
@@ -77,7 +77,7 @@ To run the SQL queries, do the following steps:
 1. Click **Saved queries** to view the saved queries.
 1. Click [**Explain**]({{site.data.keyword.ref-explain_sql_query-link}}) to view the logical or distributed plan of execution for a specified SQL query.
 
-When a private network is configured for your {{site.data.keyword.lakehouse_short}} instance, the private endpoint of an engine is used to run queries from the **Query workspace** page. But the response to the query is returned back to your browser through the internet.
+When private networks are configured for your {{site.data.keyword.lakehouse_short}} instance, the private endpoint of an engine is used to run queries from the **Query workspace** page. But the response to the query is returned back to your browser through the internet.
 {: note}
 
 ## Related API
