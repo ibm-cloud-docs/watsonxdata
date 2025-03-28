@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2022
-lastupdated: "2025-03-24"
+lastupdated: "2025-03-28"
 
 subcollection: AnalyticsEngine
 
@@ -15,7 +15,7 @@ subcollection: AnalyticsEngine
 
 The following tables provide the default instance limits for engines and services. These default values are set to avoid excessive billing. However, you can contact IBM support to increase these limits.
 
-The values listed here are global defaults for the Enterprise plan. Individual regions can have different default values. Also, you can request adjustments for your specific instances as required. For the Lite plan limitations, see [Lite plan limitations](/docs/watsonxdata?topic=watsonxdata-pricing-plans-1#limitations-lite).
+The values listed here are global defaults for the Enterprise plan. Individual regions can have different default values. Also, you can request adjustments for your specific instances as required. For the Lite plan limitations, see [Lite plan limitations](/docs/watsonxdata?topic=watsonxdata-getting-started#limitations-lite).
 {: note}
 
 ## Spark
