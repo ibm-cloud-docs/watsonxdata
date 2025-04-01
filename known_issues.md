@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-26"
+lastupdated: "2025-04-01"
 
 keywords: lakehouse
 
@@ -33,6 +33,11 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 
 
+
+## Modifying credentials of the Spark engine home bucket can disrupt data and operations
+{: #known_issue24323_22256}
+
+Updating the access credentials for a storage bucket that has been designated as the Spark engine's home bucket during the provisioning process can lead to data access problems and operational failures.
 
 ## Metastore admins and metastore viewers are unable to view the schema and table details
 {: #known_issue21467}

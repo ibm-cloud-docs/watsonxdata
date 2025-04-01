@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-12-28"
+  years: 2022, 2025
+lastupdated: "2025-04-01"
 
 keywords: lakehouse, milvus, watsonx.data
 subcollection: watsonxdata
@@ -46,6 +46,9 @@ You can pause and resume a Milvus service from the **Infrastructure manager**.
       Alternatively, from the list view, go to the overflow menu of the Milvus service and select **Resume**.
 
 Milvus compute is not billed during the pause time.
+{: note}
+
+Bucket credential updates for a Milvus engine's home bucket require a manual engine pause and resume to take effect.
 {: note}
 
 ## Related API
