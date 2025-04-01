@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2025-04-01"
 
 keywords: Data, federation,
 
@@ -80,7 +80,7 @@ This tutorial requires:
 Register the Db2 data source (that has `GOSALESDW` data in it) with {{site.data.keyword.lakehouse_short}} instance.
 {: shortdesc}
 
-To register your Db2 data source, see [IBM Db2](/docs/watsonxdata?topic=watsonxdata-reg_database#db2){: external}. Use the following details when you register the Db2 data source.
+To register your Db2 data source, see [IBM Db2](/docs/watsonxdata?topic=watsonxdata-reg_database){: external}. Use the following details when you register the Db2 data source.
 
 * Database name : Enter the database name as `BLUDB`.
 * Hostname : Enter the hostname as `db2w-sucqakq.us-south.db2w.cloud.ibm.com`

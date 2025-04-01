@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2025-04-01"
 
 keywords: watsonxdata, commands, command line interface, cli
 
@@ -37,8 +37,8 @@ You can ingest data from an S3 or local location into {{site.data.keyword.lakeho
 
 This topic provides details about the parameters supported in **ibm-lh** utility for ingestion using Presto engine. For detailed instructions to ingest, see:
 
-* [Ingesting data through command line - Presto ingestion mode](/docs/watsonxdata?topic=watsonxdata-ingest_datafiles_cli)
-* [Ingesting data through config file - Presto ingestion mode](/docs/watsonxdata?topic=watsonxdata-ingest_datafiles_config)
+* [Ingesting data through command line - Presto ingestion mode](/docs/watsonxdata?topic=watsonxdata-create_ingestioncli)
+* [Ingesting data through config file - Presto ingestion mode](/docs/watsonxdata?topic=watsonxdata-create_ingestconfig)
 
 Different options and variables that are supported in a command line and configuration file are listed as follows:
 

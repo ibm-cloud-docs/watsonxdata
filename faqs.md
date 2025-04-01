@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2025-04-01"
 
 keywords: watsonxdata, faq
 
@@ -256,7 +256,7 @@ For commands supported in the command-line interface during ingestion, see [Load
 1. Lite plan: It provides a free usage limit of 2000 Resource Units (monitored on the Billing and usage page of IBM Cloud) within a time frame of 30 days. The cap value is displayed on the IBM Cloud catalog provisioning page and is reflected on your billing page within your {{site.data.keyword.lakehouse_short}} instance upon provisioning.
 2. Enterprise plan: You pay by hour for each infrastructure resource that you add. Start with support services then build the engines and services that you want. This has an hourly rate that is computed in Resource Units that maps to your payment method whether ‘Pay as You Go’ or ‘Subscription’.
 
-For more information, see [Pricing plans](/docs/watsonxdata?topic=watsonxdata-pricing-plans-1).
+For more information, see [Subscription plans](/docs/watsonxdata?topic=watsonxdata-getting-started).
 
 ## Lite plan
 {: #lite}
@@ -264,7 +264,7 @@ For more information, see [Pricing plans](/docs/watsonxdata?topic=watsonxdata-pr
 
 **Is the lite plan credit card free?**
 
-Yes, if you use an IBM cloud trial account the lite plan is credit card free. You have a set amount of free usage limit of 2000 Resource Units within a time frame of 30 days, whichever ends first to try the product. For more information, see [Pricing plans](/docs/watsonxdata?topic=watsonxdata-pricing-plans-1).
+Yes, if you use an IBM cloud trial account the lite plan is credit card free. You have a set amount of free usage limit of 2000 Resource Units within a time frame of 30 days, whichever ends first to try the product. For more information, see [Subscription plans](/docs/watsonxdata?topic=watsonxdata-getting-started).
 
 **What's included in the lite plan?**
 
