@@ -31,6 +31,11 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
+## Virtual private network configuration limitation
+{: #issue23101}
+
+Private endpoints are not supported for external engines such as IBM Db2 Warehouse, IBM Netezza, and IBM Analytics Engine (Spark).
+
 
 
 
