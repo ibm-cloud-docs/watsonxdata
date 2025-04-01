@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2025-04-01"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -29,13 +29,13 @@ subcollection: watsonxdata
 # Ingesting data by using Spark through the web console
 {: #ingest_spark_ui}
 
-You can ingest data into {{site.data.keyword.lakehouse_full}} through the web console. Ingestion through web console is supported only by using {{site.data.keyword.iae_full_notm}} (Spark).
+You can ingest data into {{site.data.keyword.lakehouse_full}} through the web console. Ingestion through web console is supported only by using Spark engine.
 {: shortdesc}
 
 ## Before you begin
 {: #spk_ing}
 
-* Add and register IBM Analytics Engine (Spark). See [Provisioning a Spark engine]({{site.data.keyword.ref-spl_engine-link}}).
+* Add and register Spark. See [Provisioning a Spark engine]({{site.data.keyword.ref-spl_engine-link}}).
 * For the target table, an active Iceberg catalog connected to a running Presto engine is required. See [Adding a storage-catalog pair]({{site.data.keyword.ref-reg_bucket-link}}). The storage must have `Writer` access at minimum.
 * To ingest data, you must have at minimum a `User` access to Presto engine and Spark engine.
 * To ingest data, you must have at minimum a `User` access with data plicy for catalogs. See [Managing data policy rules](/docs/watsonxdata?topic=watsonxdata-data_policy).
