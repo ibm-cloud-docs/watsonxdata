@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2025-04-02"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -38,7 +38,7 @@ The topic describes the procedure to run a Spark application that ingests data i
 
     Performing table maintenance activities in watsonx.data.
 
-    You must insert the data into the COS bucket. For more information, see [Inserting sample data into the COS bucket](/docs/watsonxdata?topic==watsonxdata-run_samp_file#insert_samp_usecase).
+    You must insert the data into the COS bucket. For more information, see [Inserting sample data into the COS bucket](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-upload).
 
     Python application : [Iceberg Python file](/docs/watsonxdata?topic=watsonxdata-run_samp_file#python_file)
 

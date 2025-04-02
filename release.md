@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-03-26"
+lastupdated: "2025-04-02"
 
 keywords: watsonxdata, release notes
 
@@ -54,7 +54,7 @@ Engine and service enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancement:
 
-   You can now use the Azure Data Lake Storage Gen2 with AccessKey Authmode with Spark engine to store your data while submitting Spark applications. For information about Azure Data Lake Storage Gen2, see [Azure Data Lake Storage](watsonxdata?topic=watsonxdata-adls_genblob_storage).
+   You can now use the Azure Data Lake Storage Gen2 with AccessKey Authmode with Spark engine to store your data while submitting Spark applications. For information about Azure Data Lake Storage Gen2, see [Azure Data Lake Storage](/docs/watsonxdata?topic=watsonxdata-adls_genblob_storage).
 
 Query workspace enhancements
 
@@ -150,7 +150,7 @@ CPDCTL CLI enhancements
 : IBM `CPDCTL` CLI is now used to configure and manage different operations in {{site.data.keyword.lakehouse_short}}. Using the `CPDCTL` CLI, you can manage configuration settings, run ingestion jobs, manage engines, data sources, and storages. The following two plugins are currently used to execute these operations:
 
    * `config` - To configure {{site.data.keyword.lakehouse_short}} service environment and users.
-   * `wx-data` - To perform other operations such as, ingesting, managing engines, etc in {{site.data.keyword.lakehouse_short}}. For more information, see [IBM cpdctl](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=SSDZ38_2.1.x/wxd-client/topics/cpdctl-title.htm).
+   * `wx-data` - To perform other operations such as, ingesting, managing engines, etc in {{site.data.keyword.lakehouse_short}}. For more information, see [IBM cpdctl](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=cloud-pak-data-command-line-interface-cpdctl).
 
 Deprecated features
 
@@ -158,7 +158,7 @@ Deprecated features
 
    * The Data Access Service (DAS) proxy feature is now deprecated and will be removed in a future release. You cannot use the Data Access Service (DAS) proxy feature to access object storage (S3, ADLS and ABS). If you use DAS proxy flow and face any issues, contact IBM support. For an overview of the DAS feature, see [Data Access Service (DAS)](/docs/watsonxdata?topic=watsonxdata-cas_ep_ov).
 
-   * IBM Client package is now deprecated and shall be removed in a future release. The utilities and commands in Client package is replaced with IBM CPDCTL CLI. For more information about how to use IBM CPDCTL CLI, see [IBM cpdctl](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=SSDZ38_2.1.x/wxd-client/topics/cpdctl-title.htm).
+   * IBM Client package is now deprecated and shall be removed in a future release. The utilities and commands in Client package is replaced with IBM CPDCTL CLI. For more information about how to use IBM CPDCTL CLI, see [IBM cpdctl](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=cloud-pak-data-command-line-interface-cpdctl).
 
 ## 04 February 2025 - Version 2.1.0 Hotfix 2
 {: #lakehouse_04febhf}
@@ -541,7 +541,7 @@ DAS proxy to access ADLS and ABS buckets and LDAP enhancements are Tech preview 
      * Azure Data Lake Storage Gen2
      * Azure Data Lake Storage Gen1 Blob
 
-For more information, see [Azure Data Lake Storage Gen2](/docs/watsonxdata?topic=watsonxdata-reg_bucket#gen) and [Azure Data Lake Storage Gen1 Blob](/docs/watsonxdata?topic=watsonxdata-reg_bucket#genblob){: external}.
+For more information, see [Azure Data Lake Storage Gen2](/docs/watsonxdata?topic=watsonxdata-reg_bucket#gen) and [Azure Data Lake Storage Gen1 Blob](/docs/watsonxdata?topic=watsonxdata-reg_bucket){: external}.
 
 * You can modify the access key and secret key of a user-registered bucket for a storage. This feature is not applicable to default buckets, ADLS, or Google Cloud Storage. This feature can only be used if the new credentials successfully pass the test connection.
 
@@ -767,7 +767,7 @@ You can now add a small-sized Spark engine (single node) in the {{site.data.keyw
 
 * **Accessing Spark UI from Spark labs**
 
-You can now access the Spark user interface (UI) from Spark labs to monitor various aspects of running a Spark application. For more information, see [Accessing Spark UI from Spark labs](/docs/watsonxdata?topic=watsonxdata-smbit_nsp#lab_nsp-ui).
+You can now access the Spark user interface (UI) from Spark labs to monitor various aspects of running a Spark application. For more information, see [Accessing Spark UI from Spark labs](/docs/watsonxdata?topic=watsonxdata-lab_mon_nsp#lab_nsp-ui).
 
 **New region to provision for IBM Cloud instance**
 {: #MAY_03_2024}
@@ -839,7 +839,7 @@ In addition to registering external Spark engines, you can now provision native 
 **Ingest data using native Spark Engines**
 {: #APR_09_2024}
 
-You can now submit ingestion jobs using native Spark Engines. For more information, see [Working with Apache Hudi catalog](/docs/watsonxdata?topic=watsonxdata-hudi_nsp) and [Working with Delta Lake catalog](/docs/watsonxdata?topic=watsonxdata-delta_nsp).
+You can now submit ingestion jobs using native Spark Engines. For more information, see [Working with different table formats](/docs/watsonxdata?topic=watsonxdata-hudi_nsp).
 
 ## 27 Mar 2024 - Version 1.1.3
 {: #lakehouse_Mar272024}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-12-14"
+  years: 2017, 2025
+lastupdated: "2025-04-02"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -31,7 +31,7 @@ Subscription to watsonx.ai on IBM Cloud.
 
 To run the Jupyter Notebook on your watsonx.data spark engine, do the following:
 
-1. Create watsonx.ai project. To create a watsonx.ai project, see [Creating a project]( https://dataplatform.cloud.ibm.com/docs/content/wsj/getting-started/projects.html?context=wx&audience=wdp).
+1. Create watsonx.ai project. To create a watsonx.ai project, see [Creating a project](https://dataplatform.cloud.ibm.com/docs/content/wsj/getting-started/projects.html?context=wx&audience=wdp).
 
 2. Create a Spark engine environment. To run a Jupyter Notebook, you must create a runtime environment template.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2025-04-02"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -30,9 +30,9 @@ For more information on how to create Ranger policies (defined under Hadoop SQL 
 ## Prerequisites
 {: #spk_etnsn_preq-1}
 
-* Create Cloud Object Storage to store data used in the Spark application. To create Cloud Object Storage and a bucket, see [Creating a storage bucket](/docs/watsonxdata?topic=cloud-object-storage-secure-content-store#create-cos-bucket). You can provision two buckets, data-bucket to store {{site.data.keyword.lakehouse_short}} tables and application bucket to maintain Spark application code.
+* Create Cloud Object Storage to store data used in the Spark application. To create Cloud Object Storage and a bucket, see [Creating a storage bucket](/docs/watsonxdata?topic=watsonxdata-cos_storage). You can provision two buckets, data-bucket to store {{site.data.keyword.lakehouse_short}} tables and application bucket to maintain Spark application code.
 * Register Cloud Object Storage bucket in {{site.data.keyword.lakehouse_short}}. For more information, see [Adding bucket catalog pair](/docs/watsonxdata?topic=watsonxdata-reg_bucket).
-* Upload the Spark application to the storage, see [Uploading data](/docs/watsonxdata?topic=cloud-object-storage-secure-content-store#upload-data).
+* Upload the Spark application to the storage, see [Uploading data](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-upload).
 * You must have IAM administrator role or MetastoreAdmin role, for creating schema or table inside {{site.data.keyword.lakehouse_short}}.
 
 

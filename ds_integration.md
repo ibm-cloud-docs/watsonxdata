@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-09-30"
+  years: 2022, 2025
+lastupdated: "2025-04-02"
 
 keywords: watsonx.data, ikc, configuring, knowledgecatalog
 subcollection: watsonxdata
@@ -31,4 +31,4 @@ Following are the requirements to integrate {{site.data.keyword.lakehouse_short}
 
 For more information about connecting to a data source in DataStage, see [Connecting to a data source in DataStage](https://www.ibm.com/docs/en/cloud-paks/cp-data/5.0.x?topic=connectors-connecting-data-source-in-datastage).
 
-For more information about creating a connection asset in watsonx.data, see [IBM watsonx.data connection](https://www.ibm.com/docs/en/cloud-paks/cp-data/5.0.x?topic=connectors-watsonxdata-connection).
+For more information about creating a connection asset in watsonx.data, see [IBM watsonx.data connection](https://www.ibm.com/docs/en/cloud-paks/cp-data/5.1.x?topic=connectors-watsonxdata-presto-connection).

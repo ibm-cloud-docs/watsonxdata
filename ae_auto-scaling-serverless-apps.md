@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2025-04-02"
 
 keywords: watsonx.data, spark, scaling
 subcollection: watsonxdata
@@ -23,7 +23,7 @@ To assist you in this situation, you can submit a Spark application with auto-sc
 
 The steps to submit an application with autoscaling enabled is the same as the steps to submit an application without autoscaling. The only difference is that you need to add the configuration setting `ae.spark.autoscale.enable=true` to the application payload.
 
-1. [Submit a Spark application](/docs/watsonxdata?topic=watsonxdata-smbit_nsp).
+1. [Submit a Spark application](/docs/watsonxdata?topic=watsonxdata-smbit_nsp_1).
 1. Use the following sample JSON payload as an example to enable basic autoscaling:
     ```json
     {
