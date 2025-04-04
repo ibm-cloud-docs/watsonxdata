@@ -34,6 +34,9 @@ You can find the connectivity information for {{site.data.keyword.lakehouse_full
 The **Connection information** tile in the **Configurations** page provides the following information as per connection type selection:
 
 
+## For IBM products:
+{: #get_connection_conninfo}
+
 * **Instance details**:
    * Host IP address
    * Port
