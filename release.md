@@ -25,6 +25,10 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: #lakehouse_2apr212}
 {: release-note}
 
+{{site.data.keyword.lakehouse_short}} 2.1.2 version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.1.2 release is available in your region, contact IBM Support.
+If you are currently using {{site.data.keyword.lakehouse_short}} 2.1.1 version, you can refer to the documentation, [watsonx.data 2.1.1](https://ibm.ent.box.com/s/zgw7umzibl9akxgi7vm4yxs4vyp8io6g).
+{: important}
+
 Data sources and storage enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} includes the following storage enhancement:
