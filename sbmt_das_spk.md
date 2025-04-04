@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2025-02-24"
+  years: 2017, 2025
+lastupdated: "2025-03-24"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -22,7 +22,7 @@ This topic provides the procedure to submit a Spark application by using native 
 
 * Create an object storage : To store the Spark application and related output, create a storage bucket. To create Cloud Object Storage and a bucket, see [Creating a storage bucket](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-secure-content-store#create-cos-bucket). Maintain separate storage for application and data. Register only data buckets with {{site.data.keyword.lakehouse_short}}.
 
-* Register the Cloud Object Storage : Register Cloud Object Storage bucket in {{site.data.keyword.lakehouse_short}}. To register Cloud Object Storage bucket, see [Adding bucket catalog pair](watsonxdata?topic=watsonxdata-reg_bucket).
+* Register the Cloud Object Storage : Register Cloud Object Storage bucket in {{site.data.keyword.lakehouse_short}}. To register Cloud Object Storage bucket, see [Adding bucket catalog pair](/docs/watsonxdata?topic=watsonxdata-reg_bucket).
 
     You can create different Cloud Object Storage buckets to store application code and the output. Register the data bucket, which stores the input data, and watsonx.data tables. You need not register the storage bucket, which maintains the application code with watsonx.data.
     {: note}

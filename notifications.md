@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-07-03"
+  years: 2022, 2025
+lastupdated: "2025-03-24"
 
 keywords: lakehouse, watsonx data, notifications, status
 
@@ -45,4 +45,4 @@ You can find details about major incidents that affect the {{site.data.keyword.B
 ## Subscribing to {{site.data.keyword.lakehouse_short}} event notifications
 {: #service_notify}
 
-You can get notified about critial events that occur in {{site.data.keyword.lakehouse_short}} service by subscribing to instance specific event notifications. For more information, see [Event notifications](watsonxdata?topic=watsonxdata-event-notifications-events).
+You can get notified about critial events that occur in {{site.data.keyword.lakehouse_short}} service by subscribing to instance specific event notifications. For more information, see [Event notifications](/docs/watsonxdata?topic=watsonxdata-event-notifications-events).

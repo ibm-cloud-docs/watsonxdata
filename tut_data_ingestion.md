@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-11-11"
+  years: 2022, 2025
+lastupdated: "2025-03-24"
 
 keywords: ingestion, time travel, rollback,
 
@@ -38,7 +38,7 @@ Data ingestion
    * Ingesting data by using `IBM-lh` command-line tool.
    * Ingesting data by using Spark engine.
 
-   For more information, see [Data ingestion](watsonxdata?topic=watsonxdata-load_ingest_data).
+   For more information, see [Data ingestion](/docs/watsonxdata?topic=watsonxdata-load_ingest_data).
 
 Time travel
 : The Time travel capability in Apache Iceberg tables allows you to fetch and inspect the table history. It uses table snapshots to support the time travel functions. A table snapshot represents the state of a table at a particular point in time. Iceberg generates the table snapshot record when the table is created or modified (insert, update, delete). You can use this snapshot record to query to see the table details then.
@@ -94,7 +94,7 @@ The section guides you through the procedure to create a table that is named `ca
 
 2. From the navigation menu, select **Data manager**.
 
-3. Click **Ingest Data** and select **Local System**. For more information on how to ingest data, see [Ingesting data from local system](watsonxdata?topic=watsonxdata-ingest_spark_ui#spk_ingest_datalocal).
+3. Click **Ingest Data** and select **Local System**. For more information on how to ingest data, see [Ingesting data from local system](/docs/watsonxdata?topic=watsonxdata-ingest_spark_ui#spk_ingest_datalocal).
 
 11. Click **Browse data** tab. Refresh the Iceberg catalog to view the new schema and table with data. You can view the Table columns, Time travel, Data sample, and DDL tabs.
 

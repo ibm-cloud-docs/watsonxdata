@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-13"
+lastupdated: "2025-04-01"
 
 keywords: lakehouse
 
@@ -31,8 +31,90 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
+## Virtual private network configuration limitation
+{: #issue24487}
+
+Private endpoints are not supported for external engines such as IBM Db2 Warehouse, IBM Netezza, and IBM Analytics Engine (Spark).
 
 
+
+
+## Modifying credentials of the Spark engine home bucket can disrupt data and operations
+{: #known_issue24323_22256}
+
+Updating the access credentials for a storage bucket that has been designated as the Spark engine's home bucket during the provisioning process can lead to data access problems and operational failures.
+
+## Metastore admins and metastore viewers are unable to view the schema and table details
+{: #known_issue21467}
+
+A user with the metastore admin and metastore viewer privileges in the Query workspace and Data manager, cannot view the schema and table details unless a view policy is defined for schemas and tables.
+
+## Schema evolution scenarios fail in Presto (C++)
+{: #known_issue19897}
+
+When you drop and/or add table columns, queries might fail. For example, see the sequence of statements below, after which the queries on the table fail.
+
+   ```bash
+      create table ice.s3.tessch.12 (age int, name varchar(25), place varchar(25)
+      insert into ice.s3.tessch.t12 values (35, 'ken', 'paris')
+      alter table ice.s3.tessch.t12 drop column age
+      select * from ice.s3.tessch.t12
+      alter table ice.s3.tessch.t8 add column place varchar(25)
+   ```
+   {: codeblock}
+
+**Workaround:**  For `PARQUET`, run the following command in session:
+   ```bash
+      set session <catalog-name>.parquet_use_column_names=true;
+   ```
+   {: codeblock}
+
+Replace `<catalog-name>` with the actual catalog being used.
+{: note}
+
+Or set `hive.parquet.use-column-names=true` in catalog properties. For `ORC`, set `hive.orc.use-column-names=true` in catalog properties.
+
+## Issue with server/host, port information, and user data in exported file
+{: #known_issue23730}
+
+The server/host and port information are missing from the reg file and are not populated in the driver for the Power BI downloaded file. Additionally, the user information in the exported value does not match the value in the CData reg file. Also, the exported username of Cdata template does not include `ibmlhapikey_` prefix
+
+**Workaround:** Add the `ibmlhapikey_` prefix to the username in the CData reg file.
+
+## Connection with BI tools shows no values for hostname and port 
+{: #known_issue23731}
+
+The connection with BI tools shows no values for hostname and port  when downloading `Tableau` config files.
+
+**Workaround:** Add the hostname and port value when downloading config files for PowerBI
+
+## Catalog information is not appearing in the Tableau Desktop
+{: #known_issue23615}
+
+The catalog information does not appear in the Tableau Desktop when retrieving connection details from the {{site.data.keyword.lakehouse_short}} `Connection Information` page.
+
+**Workaround:** You must manually enter the selected catalog name from the UI into the exported file.
+
+## `Connection Information` page shows a truncated username
+{: #known_issue23612}
+
+The `Connection Information` page shows a truncated username, excluding the prefix `ibmlhapikey_` for `PowerBI` and `Looker`.
+
+**Workaround:** Add the `ibmlhapikey_` prefix to the username when manually copying the value to enable connections with BI tools.
+
+## Unable to export config files from the Firefox web browser
+{: #known_issue23617}
+
+The `Export config files` functionality on the `Connection Information` page does not work in the Firefox web browser for `PowerBI`.
+
+**Workaround:** Use the Google Chrome web browser.
+
+## Issue with uppercase Turkish character İ in Oracle database using WE8ISO8859P9 character set (ORA-00911 Error)
+{: #known_issue23728}
+
+In an Oracle database using the WE8ISO8859P9 character set, the uppercase Turkish character İ is not supported in the mixed-case feature flag OFF (default) mode, leading to ORA-00911: invalid character errors.
+
+**Workaround:** Set the mixed-case feature flag to ON.
 
 ## The default `information_schema` view of a catalog lists schemas and tables from other catalogs
 {: #known_issue21054}
@@ -50,11 +132,6 @@ When the presto worker catalog property file-column-names-read-as-lower-case is 
 If you encounter issues with Data Source connections in Ingestion discovery, review the certificate details, as the current error message is unclear. A missing/expired certificate is likely causing the issue.
 
 **Workaround:** You must maintain an updated security certificates in order to do ingestion.
-
-## Unable to copy or download json snippet for engines and services in the `Configurations` Page
-{: #known_issue23176}
-
-Unable to copy or download the json snippet for all engines and services from the `General section` present in the `Connection Information` tile on the `Configurations` page.
 
 ## Spark job failure due to expired ADLS signature during Write/Delete/Update operation
 {: #known_issue20172}
@@ -74,13 +151,6 @@ Presto CLI supports a maximum password size of 1 KB (1024 bytes). If the passwor
 
 ## Database names containing hyphens or spaces cannot be queried by the Spark engine in a Python notebook, even when the appropriate Spark access control extension has been added.
 {: #known_issue38611}
-
-## Re-enrichment fails after deleting assets from an already enriched schema
-{: #known_issues39603}
-
-When doing a re-enrichment after deleting assets from an already enriched schema encounter errors. This occurs because watson.data refreshes mappings when the schema list is updated. If the mapping is changed externally, there is no notification system to automatically refresh the mappings. They are only updated after manually refreshing the schema list.
-
-**Workaround:** Refresh the browser page.
 
 ##  Business terms remain after the semantic automation layer integration is deleted from IBM {{site.data.keyword.lakehouse_short}}
 {: #known_issues39470}
@@ -345,18 +415,6 @@ When you query an external table with `CHAR` data type columns, the query fails 
 {: #known_issues11296}
 
 When using the AWS Glue Data Catalog to manage a bucket or storage location containing both Iceberg and Hive tables, attempting to access Iceberg tables from the Hive catalog gives, `Not a Hive table` error and attempting to access Hive tables from the Iceberg catalog gives, `Not an Iceberg table` error.
-
-## Spark application submission fails when DAS (Data Access Service) is enabled for default MinIO buckets
-{: #known_issues12143_15986_1}
-
-DAS does not currently support default MinIO buckets or object storage that use HTTP endpoints.
-
-**Workaround:** You can disable DAS or make sure that your default MinIO buckets or object storage are configured with HTTPS endpoints.
-
-## Default MinIO bucket access through S3 proxy is unavailable
-{: #known_issues12143_15986}
-
-Currently, it is not possible to access buckets stored in the default MinIO object storages created during instance provisioning using an S3 proxy functionality.
 
 ## Using ID as a column name in Cassandra `CREATE TABLE`
 {: #known_issues12069}

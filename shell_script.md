@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-24"
 
 keywords: watsonxdata, qhmm
 
@@ -107,6 +107,78 @@ Example command:
 ```
 {: codeblock}
 
+## bucket_data_migration.sh
+{: #script03}
+
+This script allows users to transfer QHMM data from the source bucket to the destination bucket. The migration script can be configured by using the following command-line arguments or run with default values:
+
+•	-se: --source-endpoint - Endpoint URL of the source S3-compatible storage (default: http://localhost:9000)
+
+•	-se: --source-endpoint - Endpoint URL of the source S3-compatible storage (default: http://localhost:9000)
+
+• -sr: --source-region - Region of the source S3-compatible storage (default: us-east-1)
+
+• -sb: --source-bucket - Name of the source bucket (required)
+
+• -sa: --source-access-key - Access key for source storage (required)
+
+• -ss: --source-secret-key - Secret key for source storage (required)
+
+• -sbp: --source-base-path - Base path in the source bucket (default: qhmm)
+
+• -de: --dest-endpoint - Endpoint URL of the destination S3-compatible storage (default: http://localhost:9000)
+
+• -dr: --dest-region - Region of the destination S3-compatible storage (default: us-east-1)
+
+• -db: --dest-bucket - Name of the destination bucket (required)
+
+• -da: --dest-access-key - Access key for destination storage (required)
+
+• -ds: --dest-secret-key - Secret key for destination storage (required)
+
+• -dbp: --dest-base-path - Base path in the destination bucket (default: qhmm)
+
+• -bp: --base-path - Base path in the bucket (default: qhmm)
+
+• -i: --instance-id - Instance ID (required)
+
+• -t: --engine-type - Engine type (required)
+
+• -d: --engine-id - Engine ID (required)
+
+• -x: --start-date - Start date for filtering objects (DD-MM-YYYY, optional)
+
+• -y: --end-date - End date for filtering objects (DD-MM-YYYY, optional)
+
+• --data-type - Data to be exported (supported types: Dump, QueryEvent, QueryHistory, optional)
+
+• --max-size - Maximum download size in MB (default: 500MB)
+
+• --help - Display this help and exit
+
+Example command:
+
+```bash
+./bucket_data_migration.sh \
+    --source-endpoint <source-endpoint> \
+    --source-bucket <source-bucket> \
+    --source-access-key <source-access-key> \
+    --source-secret-key <source-secret-key> \
+    --source-base-path <source-base-path> \
+    --dest-endpoint <dest-endpoint> \
+    --dest-bucket <dest-bucket> \
+    --dest-access-key <dest-access-key> \
+    --dest-secret-key <dest-secret-key> \
+    --dest-base-path <dest-base-path> \
+    --instance-id <instance-id> \
+    --engine-type <engine-type> \
+    --engine-id <engine-id> \
+    --start-date <start-date> \
+    --end-date <end-date> \
+    --data-type <data-type> \
+    --max-size <max-size>
+```
+{: codeblock}
 
 ## Managing diagnostic data by manual method
 {: #mnl_mthod}

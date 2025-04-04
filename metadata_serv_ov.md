@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-12-10"
+  years: 2022, 2025
+lastupdated: "2025-03-24"
 
 keywords: lakehouse, metadata, service, mds, watsonx.data
 
@@ -35,6 +35,9 @@ Metadata Service is a component of {{site.data.keyword.lakehouse_short}} that ac
 For existing {{site.data.keyword.lakehouse_short}} instances: For external engine integrations like Db2, Netezza, and Analytics Engine, you must change the HMS thrift endpoint to MDS thrift endpoint.
 {: important}
 
+To configure the pool size for the maximum number of connections in a connection pool in MDS, contact the SRE or the support team.
+{: note}
+
 MDS offers two interfaces for interaction:
 
 ## Apache Thrift interface (HMS APIs)
@@ -52,4 +55,4 @@ Engines such as Native Spark and Presto in {{site.data.keyword.lakehouse_short}}
 
 REST API interface includes selected APIs from Iceberg REST Catalog Open API Spec and Open Source Unity Catalog API Spec. MDS also implements selected APIs from the Iceberg REST Catalog and Unity Catalog Open API spec. You can leverage these APIs from standard REST Clients to Spark and Presto. Use of REST Client has the benefit of directly interacting with the metastore without an engine. These REST interfaces offer interoperability benefits with other external systems as well.
 
-For information about Unity and Iceberg Catalog REST API, see [Unity Catalog REST API and Iceberg Catalog REST API](watsonxdata?topic=watsonxdata-unity_iceberg_api).
+For information about Unity and Iceberg Catalog REST API, see [Unity Catalog REST API and Iceberg Catalog REST API](/docs/watsonxdata?topic=watsonxdata-unity_iceberg_api).

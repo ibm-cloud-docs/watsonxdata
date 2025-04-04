@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-12-03"
+lastupdated: "2025-03-20"
 keywords: spark, interface
 subcollection: watsonxdata
 
@@ -21,7 +21,7 @@ You can track your Spark applications by using Databand through the methods that
 This method automatically tracks dataset operations. Your Spark script can benefit from automatic tracking of dataset operations.
 
 ## Databand decorators and logging API
-{: #db_api}
+{: #db_api1}
 
 To use this method, you must import the `dbnd` module, which requires code modifications.
 

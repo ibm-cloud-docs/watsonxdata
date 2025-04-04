@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-08-22"
+  years: 2017, 2025
+lastupdated: "2025-03-20"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -15,6 +15,9 @@ subcollection: watsonxdata
 {: #cas_proxy_adls}
 
 External applications and query engines can access the Azure Data Lake Storage (ADLS) and Azure Blob Storage (ABS) compatible storages that are managed by {{site.data.keyword.lakehouse_short}} through DAS proxy.
+
+The Data Access Service (DAS) proxy feature is completely removed in 2.1.2 and is no longer available in {{site.data.keyword.lakehouse_short}}. You cannot use the Data Access Service (DAS) proxy feature to access object storage (S3, ADLS and ABS).
+{: important}
 
 DAS proxy support for ADLS and ABS works only with AccountKey to pass {{site.data.keyword.lakehouse_short}} credential. Using SASToken to pass {{site.data.keyword.lakehouse_short}} credential is not supported.
 {: important}

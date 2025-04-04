@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-02-25"
+lastupdated: "2025-03-19"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -41,7 +41,7 @@ Your Spark application must be available in an accessible storage.
       | Field | Description |
       | --- | --- |
       | Application type | You have the following option: \n - Python: If your Spark application is written in Python language, select this option.\n  - Java or Scala: If your Spark application is written in Java or Scala language, select this option. |
-      | Application path | Specify the path to your application. This is a mandatory field. \n Example: s3a://<application-bucket-name>/iceberg.py |
+      | Application path | Specify the path to your application. This is a mandatory field. \n Example: `s3a://<application-bucket-name>/iceberg.py` |
       | Application name | Specify a name for the application. |
       | Arguments | Use the Add argument button to specify all arguments required by the application. |
       | Spark version | Enter the Spark version for running your application. Spark 3.4 and 3.5 are the versions available. |

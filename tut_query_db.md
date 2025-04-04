@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-12-04"
+  years: 2022, 2025
+lastupdated: "2025-03-24"
 
 keywords: provisioning, query, engine, infrastructure
 
@@ -55,7 +55,7 @@ In this tutorial, you learn to execute some test queries to understand the capab
 This tutorial requires:
 
 * Subscribe to {{site.data.keyword.lakehouse_short}} on IBM Cloud.
-* Provision your {{site.data.keyword.lakehouse_short}} instance. For more information, see [Provision an instance](watsonxdata?topic=watsonxdata-getting-started){: external}.
+* Provision your {{site.data.keyword.lakehouse_short}} instance. For more information, see [Provision an instance](/docs/watsonxdata?topic=watsonxdata-getting-started){: external}.
 
 
 ## Running test queries
@@ -81,7 +81,7 @@ To run the SQL query, do the following steps:
 
 1. From the navigation menu, select **Data manager**. The **Data manager** page opens.
 2. Select the **iceberg_data** catalog. The catalog is available by default.
-3. Click **Create**. Select **Create schema** to create a schema under the **iceberg_data** catalog. For more information, see [Creating schema](watsonxdata?topic=watsonxdata-create_schema){: external}.
+3. Click **Create**. Select **Create schema** to create a schema under the **iceberg_data** catalog. For more information, see [Creating schema](/docs/watsonxdata?topic=watsonxdata-create_schema){: external}.
 4. Give your schema a name, for example `new_schema`.
 4. To store data, you must create tables inside the schema. Use one of the following options to create a table:
 
@@ -108,7 +108,7 @@ To run the SQL query, do the following steps:
 
      a. Go to the **Data manager** page.
 
-     b. You can create table with your data in .csv, parquet, .json, .txt formats. To do that, see [Creating table](watsonxdata?topic=watsonxdata-create_table){: external}.
+     b. You can create table with your data in .csv, parquet, .json, .txt formats. To do that, see [Creating table](/docs/watsonxdata?topic=watsonxdata-create_table){: external}.
 
     You can go to the **Query workspace** page. Select the newly created table from the **iceberg_data** catalog and run a select query statement to verify if the table has data in it.
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-02-24"
+  years: 2022, 2025
+lastupdated: "2025-03-24"
 
 keywords: watsonxdata, schema
 
@@ -35,7 +35,7 @@ You can create schema from the **Data manager** page by using the web console.
 ## Before you begin
 {: #create_schemabyb}
 
-You must have at minimum a `User` access with data policy for catalogs. See [Managing data policy rules](watsonxdata?topic=watsonxdata-data_policy).
+You must have at minimum a `User` access with data policy for catalogs. See [Managing data policy rules](/docs/watsonxdata?topic=watsonxdata-data_policy).
 
 ## Procedure
 {: #create_schemaprc}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-02-25"
+  years: 2022, 2025
+lastupdated: "2025-04-01"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -72,6 +72,9 @@ Complete the following steps to add Milvus as a service in {{site.data.keyword.l
 
     You must provide the endpoint for storages used by Milvus with the region for region-specific storages like S3 and without trailing slashes. For example: `https://s3.<REGION>.amazonaws.com`.
     {: important}
+
+    Bucket credential updates for a Milvus engine's home bucket require a manual engine pause and resume to take effect.
+     {: note}
 
 5. Click **Create**.
 

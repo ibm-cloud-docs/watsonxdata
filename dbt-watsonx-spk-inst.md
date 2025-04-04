@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-11-22"
+  years: 2022, 2025
+lastupdated: "2025-03-24"
 
 keywords: lakehouse, watsonx.data, spark, cli
 
@@ -60,7 +60,7 @@ To configure the profile file in dbt tool, you must save the query server connec
 1. Copy the connection details.
 1. Paste the connection details in the `profiles.yml` file that is located in .dbt of your home directory.
 
-Alternatively, you can retrieve the connection details from the Connection information page. From the navigation menu, go to **Configurations** > **Connection information** > **Data Build Tool (DBT)**. For more information, see [Data Build Tool (DBT)](watsonxdata?topic=watsonxdata-get_connection#get_connection_dbt).
+Alternatively, you can retrieve the connection details from the Connection information page. From the navigation menu, go to **Configurations** > **Connection information** > **Data Build Tool (DBT)**. For more information, see [Data Build Tool (DBT)](/docs/watsonxdata?topic=watsonxdata-get_connection#get_connection_dbt).
 {: note}
 
 ### Set up profiles.yaml for dbt tool

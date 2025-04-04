@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-02-20"
+  years: 2022, 2025
+lastupdated: "2025-03-24"
 
 keywords: watsonxdata, commands, command line interface, cli
 
@@ -34,9 +34,9 @@ This topic lists all the options and parameters that can be used with the **ibm-
 
 If you are looking for instructions to ingest data, see the following topics:
 
-* [Presto ingestion using ibm-lh utility through CLI](watsonxdata?topic=watsonxdata-ingest_presto_cli)
-* [Spark ingestion through ibm-lh tool command line](watsonxdata?topic=watsonxdata-ingest_spark_cli)
-* [Ingesting data through command line - Spark REST API](watsonxdata?topic=watsonxdata-ingest_rstapi_cli)
+* [Presto ingestion using ibm-lh utility through CLI](/docs/watsonxdata?topic=watsonxdata-ingest_presto_cli)
+* [Spark ingestion through ibm-lh tool command line](/docs/watsonxdata?topic=watsonxdata-ingest_spark_cli)
+* [Ingesting data through command line - Spark REST API](/docs/watsonxdata?topic=watsonxdata-ingest_rstapi_cli)
 
 The following ingestion modes are supported:
 

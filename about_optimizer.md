@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-01-06"
+  years: 2022, 2025
+lastupdated: "2025-03-24"
 
 keywords: lakehouse, **Query Optimizer**, {{site.data.keyword.lakehouse_short}}
 
@@ -38,7 +38,7 @@ Within {{site.data.keyword.lakehouse_short}}, **Query Optimizer** operates as a 
 
 **Query Optimizer** emerges as a valuable addition to the {{site.data.keyword.lakehouse_short}}, empowering users to optimize their queries and achieve enhanced performance from their engines.
 
-You can see [Activating Query Optimizer Manager](watsonxdata?topic=watsonxdata-install_optimizer) section for more information.
+You can see [Activating Query Optimizer Manager](/docs/watsonxdata?topic=watsonxdata-install_optimizer) section for more information.
 
 ## Advantages of **Query Optimizer**
 {: #queryopti_advantage}
@@ -64,8 +64,8 @@ The query optimization feature of Db2 is leveraged in {{site.data.keyword.lakeho
 * When metastores are synced, all schemas and tables are in the uppercase. For example, `"catalog".SCHEMA.TABLE`.
 * Three-part name queries need quotation marks around the catalog name in lowercase (`"catalog".SCHEMA.TABLE`). Query returns an error otherwise.
 * For optimal performance, you must define constraints like NOT NULL, Primary key, and Foreign key in `Query Optimizer engine` after the tables are synced.
-* Upon enabling the **Query Optimizer**, metadata for all catalogs currently connected to any Presto engine will be automatically synchronized with the optimizer engine. However, subsequent additions of catalogs or schemas after enabling the optimizer will require manual metadata synchronization by the user. Refer to [Syncing Query Optimizer](watsonxdata?topic=watsonxdata-sync_optimizer_meta) for detailed instructions.
-* If a catalog or schema was inaccessible or corrupted during **Query Optimizer** deployment, its metadata will be absent in the optimizer engine. To ensure all objects are present as expected, users should utilize the commands outlined on [Syncing Query Optimizer](watsonxdata?topic=watsonxdata-sync_optimizer_meta) to manually validate and potentially synchronize missing metadata.
+* Upon enabling the **Query Optimizer**, metadata for all catalogs currently connected to any Presto engine will be automatically synchronized with the optimizer engine. However, subsequent additions of catalogs or schemas after enabling the optimizer will require manual metadata synchronization by the user. Refer to [Syncing Query Optimizer](/docs/watsonxdata?topic=watsonxdata-sync_optimizer_meta) for detailed instructions.
+* If a catalog or schema was inaccessible or corrupted during **Query Optimizer** deployment, its metadata will be absent in the optimizer engine. To ensure all objects are present as expected, users should utilize the commands outlined on [Syncing Query Optimizer](/docs/watsonxdata?topic=watsonxdata-sync_optimizer_meta) to manually validate and potentially synchronize missing metadata.
 * **Query Optimizer** functionality is dependent on the presence of at least one active Presto C++ engine within your Watsonx.data instance. Attempting to remove the last remaining Presto C++ engine while **Query Optimizer** is enabled will trigger a deactivation of the **Query Optimizer** itself. A confirmation prompt will be presented within the user interface to prevent accidental deactivation.
 * **Query Optimizer** do not support views.
 * Decimal and float columns in the projection list might interchange and can cause mismatch in data type.

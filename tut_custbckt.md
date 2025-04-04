@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-10"
+  years: 2022, 2025
+lastupdated: "2025-03-24"
 
 keywords:  query, engine, infrastructure
 
@@ -63,7 +63,7 @@ This tutorial requires:
 In this section of the tutorial, you learn how to register the storage bucket that you bring and add data to it.
 
 1. To add a storage bucket that you own, see [Adding a storage-catalog pair](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-reg_bucket).
-1. You can use the **Create table** option from the **Data manager** page to load local or external sources of data files to create tables. You can also ingest large files by using the CLI. See more [Creating an ingestion job by using the configuration file](watsonxdata?topic=watsonxdata-create_ingestconfig){: external}.
+1. You can use the **Create table** option from the **Data manager** page to load local or external sources of data files to create tables. You can also ingest large files by using the CLI. See more [Creating an ingestion job by using the configuration file](/docs/watsonxdata?topic=watsonxdata-create_ingestconfig){: external}.
 
 
 ## Querying data
@@ -94,4 +94,4 @@ To run SQL query, do the following steps:
 5. Click **Run on** to run the query.
 6. Select the **Result set** or **Details** tab to view the results. If required, you can save the query.
 7. Click **Saved queries** to view the saved queries.
-8. Click [**Explain**](watsonxdata?topic=watsonxdata-explain_sql_query){: external} to view the logical or distributed plan of execution for a specified SQL query.
+8. Click [**Explain**](/docs/watsonxdata?topic=watsonxdata-explain_sql_query){: external} to view the logical or distributed plan of execution for a specified SQL query.

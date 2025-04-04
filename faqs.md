@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-06"
+lastupdated: "2025-04-01"
 
 keywords: watsonxdata, faq
 
@@ -82,7 +82,7 @@ A Presto installation includes three server types: coordinator, worker, and reso
 
 **What SQL statements are supported in IBM {{site.data.keyword.lakehouse_short}}?**
 
-For information on supported SQL statements, see [Supported SQL statements](watsonxdata?topic=watsonxdata-supported_sql_statements).
+For information on supported SQL statements, see [Supported SQL statements](/docs/watsonxdata?topic=watsonxdata-supported_sql_statements).
 
 
 ## Metastore
@@ -102,27 +102,27 @@ Hive Metastore (HMS) is a service that stores metadata that is related to Presto
 
 **How can I provision an IBM® {{site.data.keyword.lakehouse_short}} service instance?**
 
-To provision an instance, see [Getting started with watsonx.data](watsonxdata?topic=watsonxdata-getting-started).
+To provision an instance, see [Getting started with watsonx.data](/docs/watsonxdata?topic=watsonxdata-getting-started).
 
 **How can I delete my IBM® {{site.data.keyword.lakehouse_short}} instance?**
 
-To delete an instance, see [Deleting watsonx.data instance](watsonxdata?topic=watsonxdata-delete_lh).
+To delete an instance, see [Deleting watsonx.data instance](/docs/watsonxdata?topic=watsonxdata-delete_lh).
 
 **How can I access the IBM® {{site.data.keyword.lakehouse_short}} web console?**
 
-To access the IBM® {{site.data.keyword.lakehouse_short}} web console, login to your IBM Cloud account and follow the steps as mentioned here [Open the web console](watsonxdata?topic=watsonxdata-getting-started) in [Getting started with watsonx.data](watsonxdata?topic=watsonxdata-getting-started).
+To access the IBM® {{site.data.keyword.lakehouse_short}} web console, login to your IBM Cloud account and follow the steps as mentioned here [Open the web console](/docs/watsonxdata?topic=watsonxdata-getting-started) in [Getting started with watsonx.data](/docs/watsonxdata?topic=watsonxdata-getting-started).
 
 **How can I provision an engine?**
 
-From the IBM® {{site.data.keyword.lakehouse_short}} web console, go to Infrastructure manager to provision an engine. For more information, see [Provisioning an Engine](watsonxdata?topic=watsonxdata-prov_engine).
+From the IBM® {{site.data.keyword.lakehouse_short}} web console, go to Infrastructure manager to provision an engine. For more information, see [Provisioning an Engine](/docs/watsonxdata?topic=watsonxdata-prov_engine).
 
 **How can I configure catalog or metastore?**
 
-To configure a catalog with an engine, see [Associating a catalog with an engine](watsonxdata?topic=watsonxdata-asso-cat-eng).
+To configure a catalog with an engine, see [Associating a catalog with an engine](/docs/watsonxdata?topic=watsonxdata-asso-cat-eng).
 
 **How can I configure a storage?**
 
-From the IBM® {{site.data.keyword.lakehouse_short}} web console, go to Infrastructure manager to configure a storage. For more information, see [Adding a storage-catalog pair](watsonxdata?topic=watsonxdata-reg_bucket).
+From the IBM® {{site.data.keyword.lakehouse_short}} web console, go to Infrastructure manager to configure a storage. For more information, see [Adding a storage-catalog pair](/docs/watsonxdata?topic=watsonxdata-reg_bucket).
 
 ## Access
 {: #access}
@@ -131,23 +131,23 @@ From the IBM® {{site.data.keyword.lakehouse_short}} web console, go to Infrastr
 
 **How can I manage IAM access for IBM® {{site.data.keyword.lakehouse_short}}?**
 
-{{site.data.keyword.Bluemix}} Identity and Access Management (IAM) controls access to IBM® {{site.data.keyword.lakehouse_short}} service instances for users in your account. Every user that accesses the IBM® {{site.data.keyword.lakehouse_short}} service in your account must be assigned an access policy with an IAM role. For more information, see [Managing IAM access for watsonx.data](watsonxdata?topic=watsonxdata-iam).
+{{site.data.keyword.Bluemix}} Identity and Access Management (IAM) controls access to IBM® {{site.data.keyword.lakehouse_short}} service instances for users in your account. Every user that accesses the IBM® {{site.data.keyword.lakehouse_short}} service in your account must be assigned an access policy with an IAM role. For more information, see [Managing IAM access for watsonx.data](/docs/watsonxdata?topic=watsonxdata-iam).
 
 **How can I add and remove the users?**
 
-To add or remove users in a component, see [Managing user access](watsonxdata?topic=watsonxdata-manage_access).
+To add or remove users in a component, see [Managing user access](/docs/watsonxdata?topic=watsonxdata-manage_access).
 
 **How is the access control for users provided?**
 
-To provide access control for users to restrict unauthorized access, see [Managing data policy rules](watsonxdata?topic=watsonxdata-data_policy).
+To provide access control for users to restrict unauthorized access, see [Managing data policy rules](/docs/watsonxdata?topic=watsonxdata-data_policy).
 
 **What is the process to assign access to a user?**
 
-To assign access to a user, see [Managing roles and privileges](watsonxdata?topic=watsonxdata-role_priv).
+To assign access to a user, see [Managing roles and privileges](/docs/watsonxdata?topic=watsonxdata-role_priv).
 
 **What is the process to assign access to a group?**
 
-To assign access to a group, see [Managing roles and privileges](watsonxdata?topic=watsonxdata-role_priv).
+To assign access to a group, see [Managing roles and privileges](/docs/watsonxdata?topic=watsonxdata-role_priv).
 
 ## Presto Engine
 {: #presto_engine}
@@ -156,21 +156,21 @@ To assign access to a group, see [Managing roles and privileges](watsonxdata?top
 
 **How can I create an engine?**
 
-To create an engine, see [Provisioning an Engine](watsonxdata?topic=watsonxdata-prov_engine).
+To create an engine, see [Provisioning an Engine](/docs/watsonxdata?topic=watsonxdata-prov_engine).
 
 **How can I pause and resume an engine?**
 
-To pause an engine, see [Pause an Engine](watsonxdata?topic=watsonxdata-pause_engine).
+To pause an engine, see [Pause an Engine](/docs/watsonxdata?topic=watsonxdata-pause_engine).
 
-To resume a paused engine, see [Resume an Engine](watsonxdata?topic=watsonxdata-resume_engine).
+To resume a paused engine, see [Resume an Engine](/docs/watsonxdata?topic=watsonxdata-resume_engine).
 
 **How can I delete an engine?**
 
-To delete an engine, see [Deleting an engine](watsonxdata?topic=watsonxdata-delete_engine).
+To delete an engine, see [Deleting an engine](/docs/watsonxdata?topic=watsonxdata-delete_engine).
 
 **How can I run SQL queries?**
 
-You can use the Query workspace interface in IBM® {{site.data.keyword.lakehouse_short}} to run SQL queries and scripts against your data. For more information, see [Running SQL queries](watsonxdata?topic=watsonxdata-run_sql).
+You can use the Query workspace interface in IBM® {{site.data.keyword.lakehouse_short}} to run SQL queries and scripts against your data. For more information, see [Running SQL queries](/docs/watsonxdata?topic=watsonxdata-run_sql).
 
 
 ## Databases and Connectors
@@ -180,11 +180,11 @@ You can use the Query workspace interface in IBM® {{site.data.keyword.lakehous
 
 **How can I add a database?**
 
-To add a database, see [Adding a database-catalog pair](watsonxdata?topic=watsonxdata-reg_database).
+To add a database, see [Adding a database-catalog pair](/docs/watsonxdata?topic=watsonxdata-reg_database).
 
 **How can I remove a database?**
 
-To remove a database, see [Deleting a database-catalog pair](watsonxdata?topic=watsonxdata-delete_database).
+To remove a database, see [Deleting a database-catalog pair](/docs/watsonxdata?topic=watsonxdata-delete_database).
 
 **What data sources does IBM® {{site.data.keyword.lakehouse_short}} currently support?**
 
@@ -208,21 +208,21 @@ IBM® {{site.data.keyword.lakehouse_short}} currently supports the following dat
 **How can I load the data into the IBM® {{site.data.keyword.lakehouse_short}}?**
 
 There are 3 ways to load the data into the IBM® {{site.data.keyword.lakehouse_short}}.
-1. Web console: You can use the Ingestion jobs tab from the Data manager page to securely and easily load data into the IBM® {{site.data.keyword.lakehouse_short}} console. For more information, see [Ingesting data by using Spark](watsonxdata?topic=watsonxdata-ingest_spark_ui).
-2. Command-Line Interface: You can load data into IBM® {{site.data.keyword.lakehouse_short}} through CLI. For more information, see [Loading or ingesting data through CLI](watsonxdata?topic=watsonxdata-load_ingest_data#load_ingest_datacli).
-3. Creating tables: You can load or ingest local data files to create tables by using the Create table option. For more information, see [Creating tables](watsonxdata?topic=watsonxdata-create_table).
+1. Web console: You can use the Ingestion jobs tab from the Data manager page to securely and easily load data into the IBM® {{site.data.keyword.lakehouse_short}} console. For more information, see [Ingesting data by using Spark](/docs/watsonxdata?topic=watsonxdata-ingest_spark_ui).
+2. Command-Line Interface: You can load data into IBM® {{site.data.keyword.lakehouse_short}} through CLI. For more information, see [Loading or ingesting data through CLI](/docs/watsonxdata?topic=watsonxdata-load_ingest_data#load_ingest_datacli).
+3. Creating tables: You can load or ingest local data files to create tables by using the Create table option. For more information, see [Creating tables](/docs/watsonxdata?topic=watsonxdata-create_table).
 
 **How can I create tables?**
 
-You can create table through the Data manager page by using the web console. For more information, see [Creating tables](watsonxdata?topic=watsonxdata-create_table).
+You can create table through the Data manager page by using the web console. For more information, see [Creating tables](/docs/watsonxdata?topic=watsonxdata-create_table).
 
 **How can I create schema?**
 
-You can create schema through the Data manager page by using the web console. For more information, see [Creating schema](watsonxdata?topic=watsonxdata-create_schema).
+You can create schema through the Data manager page by using the web console. For more information, see [Creating schema](/docs/watsonxdata?topic=watsonxdata-create_schema).
 
 **How can I query the loaded data?**
 
-You can use the Query workspace interface in IBM® {{site.data.keyword.lakehouse_short}} to run SQL queries and scripts against your data. For more information, see [Running SQL queries](watsonxdata?topic=watsonxdata-run_sql).
+You can use the Query workspace interface in IBM® {{site.data.keyword.lakehouse_short}} to run SQL queries and scripts against your data. For more information, see [Running SQL queries](/docs/watsonxdata?topic=watsonxdata-run_sql).
 
 ## Ingestion
 {: #ingestion}
@@ -239,11 +239,11 @@ Only Parquet and CSV data files can be ingested.
 
 **Can a folder of multiple files be ingested together?**
 
-Yes a folder of multiple data files be ingested. A S3 folder must be created with data files in it for ingesting. The source folder must contain either all parquet files or all CSV files. For detailed information on S3 folder creation, see [Preparing for ingesting data](watsonxdata?topic=watsonxdata-prepare_ingest_data).
+Yes a folder of multiple data files be ingested. A S3 folder must be created with data files in it for ingesting. The source folder must contain either all parquet files or all CSV files. For detailed information on S3 folder creation, see [Preparing for ingesting data](/docs/watsonxdata?topic=watsonxdata-prepare_ingest_data).
 
 **What commands are supported in the command-line interface during ingestion?**
 
-For commands supported in the command-line interface during ingestion, see [Loading or ingesting data through CLI](watsonxdata?topic=watsonxdata-load_ingest_data#load_ingest_datacli).
+For commands supported in the command-line interface during ingestion, see [Loading or ingesting data through CLI](/docs/watsonxdata?topic=watsonxdata-load_ingest_data#load_ingest_datacli).
 
 
 ## Pricing plans
@@ -256,7 +256,7 @@ For commands supported in the command-line interface during ingestion, see [Load
 1. Lite plan: It provides a free usage limit of 2000 Resource Units (monitored on the Billing and usage page of IBM Cloud) within a time frame of 30 days. The cap value is displayed on the IBM Cloud catalog provisioning page and is reflected on your billing page within your {{site.data.keyword.lakehouse_short}} instance upon provisioning.
 2. Enterprise plan: You pay by hour for each infrastructure resource that you add. Start with support services then build the engines and services that you want. This has an hourly rate that is computed in Resource Units that maps to your payment method whether ‘Pay as You Go’ or ‘Subscription’.
 
-For more information, see [Pricing plans](watsonxdata?topic=watsonxdata-pricing-plans-1).
+For more information, see [Subscription plans](/docs/watsonxdata?topic=watsonxdata-getting-started).
 
 ## Lite plan
 {: #lite}
@@ -264,7 +264,7 @@ For more information, see [Pricing plans](watsonxdata?topic=watsonxdata-pricing-
 
 **Is the lite plan credit card free?**
 
-Yes, if you use an IBM cloud trial account the lite plan is credit card free. You have a set amount of free usage limit of 2000 Resource Units within a time frame of 30 days, whichever ends first to try the product. For more information, see [Pricing plans](watsonxdata?topic=watsonxdata-pricing-plans-1).
+Yes, if you use an IBM cloud trial account the lite plan is credit card free. You have a set amount of free usage limit of 2000 Resource Units within a time frame of 30 days, whichever ends first to try the product. For more information, see [Subscription plans](/docs/watsonxdata?topic=watsonxdata-getting-started).
 
 **What's included in the lite plan?**
 
@@ -296,7 +296,7 @@ You can delete the lite plan instance from the resource group or IBM cloud resou
 
 Either before or after your lite plan has concluded, you can create a paid account whether 'Subscription' or 'Pay as you go' IBM Cloud. Now, you can create your new {{site.data.keyword.lakehouse_short}} instance. The enterprise plan is available on IBM Cloud and AWS environments.
 You may create an enterprise plan instance once you have created a paid IBM cloud account (either 'Subscription' or 'Pay as you go') and then you can use a Cloud Object Store bucket that you own to store data.
-For more information, see [How to create instance for {{site.data.keyword.lakehouse_short}} enterprise plan](watsonxdata?topic=watsonxdata-getting-started) and see [How to use a Cloud Object Store bucket that you own to store data](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-quick_start).
+For more information, see [How to create instance for {{site.data.keyword.lakehouse_short}} enterprise plan](/docs/watsonxdata?topic=watsonxdata-getting-started) and see [How to use a Cloud Object Store bucket that you own to store data](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-quick_start).
 
 **How do I save data from a lite plan to an enterprise plan?**
 

@@ -29,28 +29,28 @@ subcollection: watsonxdata
 # Getting connection information
 {: #get_connection}
 
-You can now find the connectivity information for {{site.data.keyword.lakehouse_full}} in the **Connection information** tile in the **Configurations** page and in the **Instance details** page. You can copy JSON snippet and export JSON.
+You can find the connectivity information for {{site.data.keyword.lakehouse_full}} from two locations: **Connection information** tile in the **Configurations** page and **Instance details** page.
 
-## Connection information
-{: #get_connection_conninfo}
+The **Connection information** tile in the **Configurations** page provides the following information as per connection type selection:
 
-The **Connection information** tile in the **Configurations** page provides the following information:
 
-   * **Instance details**:
+* **Instance details**:
    * Host IP address
    * Port
    * Instance CRN
    * SSL certificate
    * **Engine and service connection details**
-   * Select the checkbox for **Generate JSON**
-   * You can select one engine for the JSON snippet.
+     * Select the checkbox of the IBM product and use the `Copy JSON snippet` and `Export JSON` links to copy or export JSON snippets.
 
-## BI tools
+       You can select one engine for the JSON snippet.
+       {: note}
+
+## BI tools:
 {: #get_connection_vscode}
 
 From the **BI tools** tab, you can view the following details:
 
-### Tableu
+### Tableu:
 {: #get_connection_tableu}
 
 Expand the Tableu section to see the following details:
@@ -70,7 +70,7 @@ Data source files are shortcuts to quickly connecting to the original data that 
 
 You can also click the link to view BI connection documentation.
 
-### Power BI
+### PowerBI:
 {: #get_connection_powerbi}
 
 Expand the Power BI section to see the following details:
@@ -81,10 +81,10 @@ Expand the Power BI section to see the following details:
 * Username
 * Password: Enter the API key for authentication.
 * SSL certificate
+* You can also click the link to view BI connection documentation.
+* Use the `Simba config.zip` and `CData config.zip` links from the Export config files drop-down list to export config files.
 
-You can also click the link to view BI connection documentation.
-
-### Qlik
+### Qlik:
 {: #get_connection_qlik}
 
 Expand Qlik section to see the following details:
@@ -95,10 +95,9 @@ Expand Qlik section to see the following details:
 * Username
 * Password: Enter the API key for authentication.
 * SSL certificate
+* You can also click the link to view BI connection documentation.
 
-You can also click the link to view BI connection documentation.
-
-### Domo
+### Domo:
 {: #get_connection_domo}
 
 Expand the Domo section to see the following details:
@@ -109,10 +108,9 @@ Expand the Domo section to see the following details:
 * Username
 * Password: Enter the API key for authentication.
 * SSL certificate
+* You can also click the link to view BI connection documentation.
 
-You can also click the link to view BI connection documentation.
-
-### Looker
+### Looker:
 {: #get_connection_looker}
 
 Expand the Looker section to see the following details:
@@ -123,10 +121,9 @@ Expand the Looker section to see the following details:
 * Username
 * Password: Enter the API key for authentication.
 * SSL certificate
+* You can also click the link to view BI connection documentation.
 
-You can also click the link to view BI connection documentation.
-
-## Visual Studio Code
+## Visual Studio Code:
 {: #get_connection_vscode}
 
 From the **Visual Studio Code** tab, you can view the following details:
@@ -148,7 +145,7 @@ Expand the VS Code connection configuration to view the following details:
 * Connection information
 * Export JSON snippet
 
-## Data Build Tool (DBT)
+## Data Build Tool (DBT):
 {: #get_connection_dbt}
 
 From the **Data Build Tool (DBT)** tab, you can view the following details:

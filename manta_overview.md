@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-12-05"
+  years: 2022, 2025
+lastupdated: "2025-03-24"
 
 keywords: watsonx.data, integration
 
@@ -47,4 +47,4 @@ To integrate Manta Data Lineage with {{site.data.keyword.lakehouse_short}}, IBM 
 - **Metadata management**: Integrates business, technical, and operational metadata to provide a holistic view of your data.
 - **Support for various environments**: Offers compatibility with multiple operating systems, and supports hybrid and multi-cloud environments.
 
-For more information, see [Integrating with IBM Manta Data Lineage](watsonxdata?topic=watsonxdata-manta_integrate).
+For more information, see [Integrating with IBM Manta Data Lineage](/docs/watsonxdata?topic=watsonxdata-manta_integrate).

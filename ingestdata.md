@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-11-10"
+  years: 2022, 2025
+lastupdated: "2025-03-25"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -50,7 +50,7 @@ Following are some of the requirements or behavior of data ingestion:
 ## Loading or ingesting data through CLI
 {: #load_ingest_datacli}
 
-An ingestion job in {{site.data.keyword.lakehouse_short}} can be run with the **ibm-lh** tool. The tool must be pulled from the `ibm-lh-client` and installed in the local system to run the ingestion job through the CLI. For more details and instructions to install `ibm-lh-client` package and use the **ibm-lh** tool for ingestion, see [Installing ibm-lh-client](https://www.ibm.com/docs/en/watsonxdata/1.1.x?topic=package-installing-lh-client){: external} and [Setting up the ibm-lh command-line utility](https://www.ibm.com/docs/en/watsonxdata/1.1.x?topic=utilities-setting-up-lh-cli-utility){: external}.
+An ingestion job in {{site.data.keyword.lakehouse_short}} can be run with the **ibm-lh** tool. The tool must be pulled from the `ibm-lh-client` and installed in the local system to run the ingestion job through the CLI. For more details and instructions to install `ibm-lh-client` package and use the **ibm-lh** tool for ingestion, see [Installing ibm-lh-client](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=package-installing-lh-client){: external} and [Setting up the ibm-lh command-line utility](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=wlcp-establishing-connection-watsonxdata-using-lh-client-package-utilities){: external}.
 
 The **ibm-lh** tool supports the following features:
 

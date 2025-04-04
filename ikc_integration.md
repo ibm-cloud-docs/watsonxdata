@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-26"
 
 keywords: watsonx.data, ikc, configuring, knowledgecatalog
 subcollection: watsonxdata
@@ -36,14 +36,13 @@ To enable IKC integration, ensure the following pre-requisites are met:
 
 - A working {{site.data.keyword.lakehouse_short}} environment.
 - A working IBM Knowledge Catalog (IKC) environment.
-- IBM Knowledge Catalog and {{site.data.keyword.lakehouse_short}} are configured with [service-to-service authorization](watsonxdata?topic=watsonxdata-s2s_auth) in {{site.data.keyword.Bluemix_notm}}.
+- IBM Knowledge Catalog and {{site.data.keyword.lakehouse_short}} are configured with [service-to-service authorization](/docs/watsonxdata?topic=watsonxdata-s2s_auth) in {{site.data.keyword.Bluemix_notm}}.
 * You can only integrate with one of the following policy engines starting with watsonx.data version 2.1.
    * Apache Ranger
    * IBM Knowledge Catalog
 
 
-
-Both {{site.data.keyword.lakehouse_short}} and IKC must be present in the {{site.data.keyword.Bluemix_notm}} environment. You can define IKC governance policies for Presto (Java) engine.
+Both {{site.data.keyword.lakehouse_short}} and IKC must be present in the {{site.data.keyword.Bluemix_notm}} environment. You can define IKC governance policies for Presto (C++), and Presto (Java) engines.
 {: note}
 
 
@@ -79,8 +78,8 @@ Both {{site.data.keyword.lakehouse_short}} and IKC must be present in the {{site
    | Name | Enter the name of the connection. |
    | Description | Enter a connection description. |
    |Connect to IBM watsonx.data on IBM Software Hub| Do not select the checkbox. |
-   | Hostname or IP address | Enter the {{site.data.keyword.lakehouse_short}} instance URL. For information about retrieving the Hostname, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection). |
-   | Port | Enter the port number. For information about retrieving the Port, see [Getting connection information](watsonxdata?topic=watsonxdata-get_connection). |
+   | Hostname or IP address | Enter the {{site.data.keyword.lakehouse_short}} instance URL. For information about retrieving the Hostname, see [Getting connection information](/docs/watsonxdata?topic=watsonxdata-get_connection). |
+   | Port | Enter the port number. For information about retrieving the Port, see [Getting connection information](/docs/watsonxdata?topic=watsonxdata-get_connection). |
    | Instance ID | Enter the instance ID. You can get the instance ID from the {{site.data.keyword.lakehouse_short}} instance home page (information icon). |
    | Instance name | Enter the {{site.data.keyword.lakehouse_short}} instance name. |
    | CRN | Enter the Cloud Resource Name. You can get the CRN from the {{site.data.keyword.lakehouse_short}} instance home page (information icon). |
@@ -122,7 +121,7 @@ Both {{site.data.keyword.lakehouse_short}} and IKC must be present in the {{site
 {: #verify_mask}
 {: step}
 
-1. Login to IBM Knowledge Catalog.
+1. Log in to IBM Knowledge Catalog.
 1. From the left pane, go to **Governance** > **Rules**.
 1. From the **Rules** page, verify that the rules corresponding to your data class of the column is defined. You can define a new rule by using **Add rule** button.
 

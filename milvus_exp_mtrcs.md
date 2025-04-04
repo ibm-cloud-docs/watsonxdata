@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-28"
+  years: 2022, 2025
+lastupdated: "2025-03-26"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -36,5 +36,3 @@ To view the metrics, you must create an IBM Cloud Monitoring instance and enable
 1. Log in to your {{site.data.keyword.cloud_notm}} account and access the {{site.data.keyword.cloud_notm}} console.
 1. In the left pane, go to **Observability** > **Monitoring** > **Instances**. You can see a list of entries for different regions.
 1. Choose the region where your Milvus service is located and click **Open dashboard** to open the Sysdig dashboard. On the Sysdig dashboard, you can either browse through or search for *milvus* to view a list of the Milvus specific metrics.
-
-For information about the metrics that are exposed by Milvus, see [Metrics exposed by Milvus](watsonxdata?topic=watsonxdata-milvus_exp_metrics_list).

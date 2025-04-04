@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-02-28"
+lastupdated: "2025-03-24"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -22,7 +22,7 @@ subcollection: watsonxdata
 {: #tutorial_prov_lite_1}
 
 
-The **Lite** plan allows you to provision an {{site.data.keyword.lakehouse_full}} instance that is free to use, with capacity limit of 2000 Resource Units, and time frame limit of 30 days. You can use the account to explore and familiarize yourself with {{site.data.keyword.lakehouse_short}}. For more information about the features and limitations of Lite plan, see [Lite plan](watsonxdata?topic=watsonxdata-getting-started#lite-plan-1){: external}.
+The **Lite** plan allows you to provision an {{site.data.keyword.lakehouse_full}} instance that is free to use, with capacity limit of 2000 Resource Units, and time frame limit of 30 days. You can use the account to explore and familiarize yourself with {{site.data.keyword.lakehouse_short}}. For more information about the features and limitations of Lite plan, see [Lite plan](/docs/watsonxdata?topic=watsonxdata-getting-started#lite-plan-1){: external}.
 {: shortdesc}
 
 
@@ -33,7 +33,7 @@ Provisioning a Lite plan instance is use case driven. The watsonx.data instance 
 * **Data Engineering** : Data engineers can explore various workload driven use cases using this option. The provisioned instance includes Presto (Java), Spark, a read-only sample IBM COS storage that is associated to the Presto engine, and sample worksheet with `GoSales` data in it.
 
 
-After provisioning the Lite plan instance, you can monitor the resource unit usage from the **Billing and Usage** page available in the watsonx.data console. For more information, see [Billing and Usage](watsonxdata?topic=watsonxdata-manage_bill).
+After provisioning the Lite plan instance, you can monitor the resource unit usage from the **Billing and Usage** page available in the watsonx.data console. For more information, see [Billing and Usage](/docs/watsonxdata?topic=watsonxdata-manage_bill).
 
 Only one active Lite plan instance is allowed for IBM Cloud trial or paid account users. However, if the existing Lite plan instance is deleted before consuming the 2000 RUs, a new instance can be created and the remaining RUs can be consumed. Paid account users can create multiple Lite plan instances in different [resource groups](https://cloud.ibm.com/docs/account?topic=account-rgs&interface=ui). If the account has multiple Lite instances active at the same time, the resource unit consumption for the account will be the sum of resource units consumed by each individual instance.
 
@@ -171,4 +171,4 @@ Perform the following steps to provision a Lite plan instance by using CLI.
 ## Reference
 {: #gs_ns_2}
 
-To explore the features of {{site.data.keyword.lakehouse_short}} web console, see [Lite plan](watsonxdata?topic=watsonxdata-tutorial_hp_intro).
+To explore the features of {{site.data.keyword.lakehouse_short}} web console, see [Lite plan](/docs/watsonxdata?topic=watsonxdata-tutorial_hp_intro).

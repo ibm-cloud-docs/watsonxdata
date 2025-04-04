@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-28"
+  years: 2022, 2025
+lastupdated: "2025-03-24"
 
 keywords: lakehouse, watsonx.data, presto
 
@@ -54,7 +54,7 @@ From the left pane, click **Dashboards**. You can see two dashboards:
 - **Presto** (general dashboard): You can find scheduler, CPU, query, and cache related metrics panels here.
 - **Presto Memory Panel**: You can find heap, non-heap, and GC related metrics panels here.
 
-For information about the Presto exposed JMX metrics details, see [Presto exposed JMX metrics](watsonxdata?topic=watsonxdata-presto_expd_jmx).
+For information about the Presto exposed JMX metrics details, see [Presto exposed JMX metrics](/docs/watsonxdata?topic=watsonxdata-presto_expd_jmx).
 
 For cloud platforms other than {{site.data.keyword.cloud_notm}}, import and use the following dashboard on Grafana to get the pre-built panels for Presto.
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2025-02-24"
+  years: 2017, 2025
+lastupdated: "2025-03-24"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -18,7 +18,7 @@ Data Access Service (DAS) proxy in {{site.data.keyword.lakehouse_short}} provide
 Currently, DAS signature and DAS proxy features are available in {{site.data.keyword.lakehouse_short}}.
 
 
-The Data Access Service (DAS) proxy feature is now deprecated and will be removed in future release. You cannot use the Data Access Service (DAS) proxy feature to access object storage (S3, ADLS and ABS).
+The Data Access Service (DAS) proxy feature is completely removed in 2.1.2 and is no longer available in {{site.data.keyword.lakehouse_short}}. You cannot use the Data Access Service (DAS) proxy feature to access object storage (S3, ADLS and ABS).
 {: important}
 
 
@@ -31,6 +31,6 @@ DAS proxy is a technology preview function, official support will come soon. You
 {: note}
 
 The following topics provide more information about DAS proxy support for different storage types and file action capabilities:
-- [Using DAS proxy to access S3 and S3 compatible storages](watsonxdata?topic=watsonxdata-cas_proxy).
-- [S3 REST API permissions](watsonxdata?topic=watsonxdata-role_priv#s3restapi).
-- [Using DAS to access ADLS and ABS compatible storages](watsonxdata?topic=watsonxdata-cas_proxy_adls).
+- [Using DAS proxy to access S3 and S3 compatible storages](/docs/watsonxdata?topic=watsonxdata-cas_proxy).
+- [S3 REST API permissions](/docs/watsonxdata?topic=watsonxdata-role_priv#s3restapi).
+- [Using DAS to access ADLS and ABS compatible storages](/docs/watsonxdata?topic=watsonxdata-cas_proxy_adls).

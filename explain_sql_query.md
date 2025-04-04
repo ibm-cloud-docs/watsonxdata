@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-12-28"
+  years: 2022, 2025
+lastupdated: "2025-03-21"
 
 keywords: watsonxdata, graphical representation, explain sql statement, sql editor, sql query
 
@@ -34,9 +34,9 @@ The visual explain feature in {{site.data.keyword.lakehouse_full}} shows the exe
 
 With this visual explain feature, you can run the query and show the output in a distributed environment. You can output the results in different formats. When queries are run, they scan through the database. The queries retrieve table metadata to fetch the correct output.
 
-With this visual explain feature, you can visualize the query in a graphical representation. When a query is run in the SQL editor and selects the **Explain** option, {{site.data.keyword.lakehouse_short}} uses an EXPLAIN SQL statement on the query to create a corresponding graph. This graph can be used to analyze, fix, and improve the efficiency of your queries by saving time and cost.
+With this visual explain feature, you can visualize the query in a graphical representation. When a query is run in the **Query workspace** and selects the **Explain** option, {{site.data.keyword.lakehouse_short}} uses an EXPLAIN SQL statement on the query to create a corresponding graph. This graph can be used to analyze, fix, and improve the efficiency of your queries by saving time and cost.
 
-To view the execution plans for a query that is run in {{site.data.keyword.lakehouse_short}} SQL editor, follow the steps:
+To view the execution plans for a query that is run in {{site.data.keyword.lakehouse_short}} **Query workspace**, follow the steps:
 
 1. In the **Query workspace** page, enter the query and click **Run on starter** to get the results.
 1. Click **Explain** on the screen to visualize the graphical representation of the query.

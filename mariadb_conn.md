@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-02-25"
+  years: 2022, 2025
+lastupdated: "2025-03-24"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -29,7 +29,7 @@ subcollection: watsonxdata
 # MariaDB
 {: #mariadb_database}
 
-MariaDB is an open source, multi-threaded, relational database management system (RDBMS). It can be used for data warehousing, e-commerce, enterprise-level features, and logging applications. You can connect to this data source through the Arrow Flight service. See [Arrow Flight service overview](watsonxdata?topic=watsonxdata-arrow_database).
+MariaDB is an open source, multi-threaded, relational database management system (RDBMS). It can be used for data warehousing, e-commerce, enterprise-level features, and logging applications. You can connect to this data source through the Arrow Flight service. See [Arrow Flight service overview](/docs/watsonxdata?topic=watsonxdata-arrow_database).
 {: shortdesc}
 
  Configure the following details for MariaDB data source:

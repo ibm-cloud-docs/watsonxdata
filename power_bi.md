@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-11-14"
+  years: 2022, 2025
+lastupdated: "2025-03-25"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -107,3 +107,23 @@ You can select one of the following ODBC drivers to connect to Presto from Power
     Username : Username is `ibmlhapikey` or `ibmlhapikey_<watsonx.datauser_id>` and password is the API key of the {{site.data.keyword.lakehouse_short}} user. For more information about retrieving the API key, see [Generating the API key]({{site.data.keyword.ref-con-presto-serv-link}}).
 9.	The **Navigator** page opens with the list of schemas in the Presto engine.
 10.	Select a required table to view the preview of the table and click **Load** or **Transform Data** based on your requirement. You can build visuals by using the data.
+
+
+## Connecting to Presto by using the Config files
+{: #confug_file}
+
+In this method, you can select the catalog that you want to analyze in Power BI from the {{site.data.keyword.lakehouse_short}} console, and {{site.data.keyword.lakehouse_short}} generates a `Config` file for the selected driver (`Simba` or `CData`). This file can be used to access {{site.data.keyword.lakehouse_short}} catalog directly in **Power BI** without any Presto configurations.
+
+`Config` files are shortcuts for quickly connecting to the original data that you use often. Data source files do not contain the actual data but rather the information necessary to connect to the actual data.
+
+
+1. Log in to the {{site.data.keyword.lakehouse_short}} instance.
+2. Go to **Configurations**.
+3. Click on the **Connection information** page.
+4. Expand **BI Tools** and select **PowerBI**.
+5. From the **Connection Details** section, expand the **Presto** engine.
+6. Use the **Edit catalog** icon in the **Catalog** field to select the required catalog for data analysis.
+7. Click the **Export config files** list. Select to download the config zip file (**Simba config.zip** or **CData config.zip**) based on the driver used. Click the downloaded file. It includes two files, `.reg` file and `.pbids` file.
+8. Run the `.reg` file to configure the database connection on Windows. Now run the `.pbids` file to connect to the specified data source. The **PowerBI** desktop opens. Provide the username and password to log in.
+11. The SSL cert info is available from {{site.data.keyword.lakehouse_short}} **Connection Information** > **IBM Products** > **Instance details** > **SSL Certificate**. For more information about retrieving the SSL certificate, see [Getting connection information]({{site.data.keyword.ref-get_connection-link}}).
+12. The Catalog page is displayed. You can select the schemas and tables for analysis.

@@ -87,6 +87,7 @@ toc:
               - saphana.md
               - dvm_conn.md
               - db2_conn.md
+              - db2ibmi_conn.md
               - netezza_conn.md
               - informix_conn.md
               - mongodb_conn.md
@@ -151,7 +152,6 @@ toc:
           label: Querying data
           topics:
             - run_sql.md
-            - run_sql_updated.md
             - explain_sql_query.md
       - topicgroup:
           label: Query Optimizer
@@ -175,7 +175,7 @@ toc:
                       href: https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-ovrvw_qhmm
                 - qhmm.md
                 - qhmm_querying.md
-                - qhmm_ret.md  
+                - qhmm_ret.md
                 - shell_script.md
       - conn-presto-thr-cli.md
       # - presto_behavior.md
@@ -223,7 +223,6 @@ toc:
       - topicgroup:
           label: Working with external Spark engine
           topics:
-            - Intro_extspark.md
             - provisioning-spark.md
             - config_spark.md
             - topicgroup:
@@ -282,6 +281,10 @@ toc:
             - jmx_metrics.md
             - milvus_exp_mtrcs.md
       - topicgroup:
+          label: Configuring network endpoints
+          topics:
+            - setup_vpe.md
+      - topicgroup:
           label: Integrating with Data Build Tool(dbt)
           topics:
             - about_dbt.md
@@ -331,10 +334,10 @@ toc:
       - iceberg_unity_cat_api.md
       - link:
             label: Presto SQL statements
-            href: https://www.ibm.com/docs/en/watsonx/watsonxdata/2.0.0?topic=presto-sql-statements
+            href: https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=presto-sql-statements
       - link:
             label: Presto data types
-            href: https://www.ibm.com/docs/en/watsonx/watsonxdata/2.0.0?topic=presto-data-types
+            href: https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=presto-data-types
       - mixed_case_behavior.md
       - response.md
       - high_availability_lh.md
@@ -383,6 +386,7 @@ toc:
             - ts_optimizer_iceberg_stats.md
             - ts_cs_issue.md
             - ts_ip_restrict_issue.md
+            - ranger_crash_trble.md
             - topicgroup:
                 label: Spark
                 topics:

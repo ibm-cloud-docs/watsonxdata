@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2025-02-26"
+  years: 2017, 2025
+lastupdated: "2025-04-02"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -11,7 +11,7 @@ subcollection: watsonxdata
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Enhancing Spark application submission using Spark access control extension
+# Enhancing Spark application submission using Spark access cofntrol extension
 {: #spark-extnsn}
 
 When you submit a Spark application that uses external storage buckets registered in {{site.data.keyword.lakehouse_short}}, Spark access control extension allows additional authorization thereby enhancing security. If you enable the extension in the spark configuration, only authorized users are allowed to access and operate {{site.data.keyword.lakehouse_short}} catalogs through Spark jobs.
@@ -22,16 +22,16 @@ You can enable the Spark access control extension for Iceberg, Hive and Hudi cat
 
 
 You can either use Ranger or Access Management System (AMS) data policies to grant or deny access for users, user groups, catalog (Iceberg, Hive and Hudi), schema, table, and column. Besides data level authorization, storage privilege is also considered.
-For more information related to the using AMS on catalogs(Iceberg, Hive and Hudi), buckets, schemas and tables, see see [Managing roles and privileges](watsonxdata?topic=watsonxdata-role_priv){: external}.
-For more information on how to create Ranger policies (defined under Hadoop SQL service) and to enable them on catalogs(Iceberg, Hive and Hudi), buckets, schemas and tables, see see [Managing Ranger policies](watsonxdata?topic=watsonxdata-ranger_1){: external}.
+For more information related to the using AMS on catalogs(Iceberg, Hive and Hudi), buckets, schemas and tables, see see [Managing roles and privileges](/docs/watsonxdata?topic=watsonxdata-role_priv){: external}.
+For more information on how to create Ranger policies (defined under Hadoop SQL service) and to enable them on catalogs(Iceberg, Hive and Hudi), buckets, schemas and tables, see see [Managing Ranger policies](/docs/watsonxdata?topic=watsonxdata-ranger_1){: external}.
 
 
 ## Prerequisites
 {: #spk_etnsn_preq}
 
-* Create Cloud Object Storage to store data used in the Spark application. To create Cloud Object Storage and a bucket, see [Creating a storage bucket](watsonxdata?topic=cloud-object-storage-secure-content-store#create-cos-bucket). You can provision two buckets, data-bucket to store {{site.data.keyword.lakehouse_short}} tables and application bucket to maintain Spark application code.
-* Register Cloud Object Storage bucket in {{site.data.keyword.lakehouse_short}}. For more information, see [Adding bucket catalog pair](watsonxdata?topic=watsonxdata-reg_bucket).
-* Upload the Spark application to the storage, see [Uploading data](watsonxdata?topic=cloud-object-storage-secure-content-store#upload-data).
+* Create Cloud Object Storage to store data used in the Spark application. To create Cloud Object Storage and a bucket, see [Creating a storage bucket](/docs/watsonxdata?topic=watsonxdata-cos_storage). You can provision two buckets, data-bucket to store {{site.data.keyword.lakehouse_short}} tables and application bucket to maintain Spark application code.
+* Register Cloud Object Storage bucket in {{site.data.keyword.lakehouse_short}}. For more information, see [Adding bucket catalog pair](/docs/watsonxdata?topic=watsonxdata-reg_bucket).
+* Upload the Spark application to the storage, see [Uploading data](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-upload).
 * You must have IAM administrator role or MetastoreAdmin role, for creating schema or table inside {{site.data.keyword.lakehouse_short}}.
 
 
@@ -193,7 +193,7 @@ curl --request POST   --url https://<region>/lakehouse/api/v2/spark_engines/<spa
 {: codeblock}
 
 Parameter values:
-* `<token>` : To get the access token for your service instance. For more information about generating the token, see [Generating a token](watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
+* `<token>` : To get the access token for your service instance. For more information about generating the token, see [Generating a token](/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
 * `<instance_id>` : The instance ID from the watsonx.data cluster instance URL. Example, crn:v1:staging:public:lakehouse:us-south:a/7bb9e380dc0c4bc284592b97d5095d3c:5b602d6a-847a-469d-bece-0a29124588c0::.
 * `<wxd-data-bucket-endpoint>`: The host name of the endpoint for accessing the data bucket mentioned above. Example, s3.us-south.cloud-object-storage.appdomain.cloud for a Cloud Object storage bucket in us-south region.
 * `<COS_SERVICE_NAME>`: Provide a Cloud object Storage service name.

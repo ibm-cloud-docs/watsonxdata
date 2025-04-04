@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-08-02"
+  years: 2022, 2025
+lastupdated: "2025-04-02"
 
 keywords: lakehouse, watsonx.data, presto
 
@@ -47,7 +47,7 @@ A Presto (Java) installation includes three server types - Coordinator, Worker, 
 
 - Resource manager - The resource manager is a server type in Presto (Java), which aggregates data from all coordinator and workers and creates a global view of the Presto (Java) cluster.
 
-For more information on supported connectors, see [Adding a database-catalog pair](watsonxdata?topic=watsonxdata-reg_database).
+For more information on supported connectors, see [Adding a database-catalog pair](/docs/watsonxdata?topic=watsonxdata-reg_database).
 
 ## Presto (Java) SQL Language
 {: #lh-presto_lang}
@@ -84,4 +84,4 @@ For the list of reserved keywords, see [Reserved keywords](https://prestodb.io/d
 ### SQL Syntax
 {: #lh-presto_syntax}
 
-For more information about SQL syntax used in Presto (Java), see [SQL statements](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.0.0?topic=presto-sql-statements){: external}.
+For more information about SQL syntax used in Presto (Java), see [SQL statements](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=presto-sql-statements){: external}.

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-09-19"
+  years: 2017, 2025
+lastupdated: "2025-03-24"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -174,18 +174,18 @@ You can find the curl example for API customization in [Update presto engine](ht
 
 For the list of properties that can be customized through an API for Presto (Java), see:
 
-- [Configuration properties for Presto (Java) - coordinator and worker nodes](watsonxdata?topic=watsonxdata-api_custom_prm_pjcw)
-- [JVM properties for Presto (Java) - Coordinator and worker nodes](watsonxdata?topic=watsonxdata-api_custom_jvm_pjcw)
-- [Catalog properties for Presto (Java)](watsonxdata?topic=watsonxdata-api_custom_ctg_pjcw)
+- [Configuration properties for Presto (Java) - coordinator and worker nodes](/docs/watsonxdata?topic=watsonxdata-api_custom_prm_pjcw)
+- [JVM properties for Presto (Java) - Coordinator and worker nodes](/docs/watsonxdata?topic=watsonxdata-api_custom_jvm_pjcw)
+- [Catalog properties for Presto (Java)](/docs/watsonxdata?topic=watsonxdata-api_custom_ctg_pjcw)
 
 For the list of properties that can be customized through an API for Presto (C++), see:
 
-- [Configuration properties for Presto (C++) - worker nodes](watsonxdata?topic=watsonxdata-api_custom_wkr_pcpp)
-- [Configuration properties for Presto (C++) - coordinator nodes](watsonxdata?topic=watsonxdata-aapi_custom_pcpp_cood)
-- [Catalog properties for Presto (C++)](watsonxdata?topic=watsonxdata-api_custom_pcpp_ctg)
-- [Velox properties for Presto (C++)](watsonxdata?topic=watsonxdata-api_custom_pcpp_vlx)
+- [Configuration properties for Presto (C++) - worker nodes](/docs/watsonxdata?topic=watsonxdata-api_custom_wkr_pcpp)
+- [Configuration properties for Presto (C++) - coordinator nodes](/docs/watsonxdata?topic=watsonxdata-aapi_custom_pcpp_cood)
+- [Catalog properties for Presto (C++)](/docs/watsonxdata?topic=watsonxdata-api_custom_pcpp_ctg)
+- [Velox properties for Presto (C++)](/docs/watsonxdata?topic=watsonxdata-api_custom_pcpp_vlx)
 
-For properties that must be customized under the guidance of the watsonx.data support team, see [Properties to be customized under support guidance](watsonxdata?topic=watsonxdata-api_custom_wkr_pcpp#api_custom_sprt_pcpp).
+For properties that must be customized under the guidance of the watsonx.data support team, see [Properties to be customized under support guidance](/docs/watsonxdata?topic=watsonxdata-api_custom_wkr_pcpp#api_custom_sprt_pcpp).
 
 You can get System Access Control (SAC) plug-in logs with `DEBUG` information. To enable `DEBUG` logs of SAC plug-in in Presto, trigger the customization API and add `"com.ibm.openlakehouse.prestodb": "DEBUG"` under `logConfig`.
 

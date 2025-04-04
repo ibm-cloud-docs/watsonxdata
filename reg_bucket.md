@@ -56,7 +56,7 @@ To add a storage, complete the following steps:
    * [Azure Data Lake Storage]({{site.data.keyword.ref-adls_genblob_storage-link}})
    * [Apache Ozone]({{site.data.keyword.ref-ozone_storage-link}})
 
-     You can modify the access key and secret key of a user-registered bucket for a storage. This feature is only available for user-registered buckets and is not applicable to default buckets, ADLS, or Google Cloud Storage. This feature can be used if the new credentials successfully pass the test connection.
+     You can modify the endpoint, access key and secret key of a user-registered bucket for a storage. This feature is only available for user-registered buckets and is not applicable to default buckets, ADLS, or Google Cloud Storage. This feature can be used if the new credentials successfully pass the test connection. You must disassociate the storage from the engine to modify the details.
      {: note}
 
    **Important information**{: #important_info}

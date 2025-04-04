@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-08-30"
+  years: 2022, 2025
+lastupdated: "2025-04-01"
 
 keywords: watsonxdata, qhmm
 
@@ -35,7 +35,7 @@ When you create an instance you can:
     For a list of the default Spark configurations and environment variables, see [Spark configurations](https://spark.apache.org/docs/latest/configuration.html).
 - Customize the instance with libraries required by your Spark applications after instance creation. You can create a library set that packages all libraries to be made available to all Spark applications that run in the instance, and then refer to this defined library set at the time the Spark application is submitted.
 
-    To create a library set, see [Creating a library set](watsonxdata?topic=watsonxdata-create-lib-set).
+    To create a library set, see [Creating a library set](/docs/watsonxdata?topic=watsonxdata-create-lib-set1).
 
 **Note**:
 

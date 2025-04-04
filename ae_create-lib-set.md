@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-09-09"
+  years: 2022, 2025
+lastupdated: "2025-03-24"
 
 keywords: watsonxdata, qhmm
 
@@ -20,7 +20,7 @@ A library set is a collection of libraries that you can create and reference in 
 Currently, you can only install Python packages through `conda` or `pip install`.
 Spark engine bundles a Spark application called `customize_instance_app.py` that you run to create a library set with your custom packages and can be consumed by your Spark applications.
 
-**Prerequites**: To create a library set, you must have the permissions to submit a Spark application. See [Managing roles and privileges](watsonxdata?topic=watsonxdata-role_priv).
+**Prerequites**: To create a library set, you must have the permissions to submit a Spark application. See [Managing roles and privileges](/docs/watsonxdata?topic=watsonxdata-role_priv).
 
 To create a library set:
 

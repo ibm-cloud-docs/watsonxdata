@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-02-24"
+  years: 2022, 2025
+lastupdated: "2025-03-25"
 
 keywords: lakehouse, watsonx.data, presto, cli
 
@@ -26,13 +26,13 @@ The following is an example configuration:
 my_project:
   outputs:
     saas:
-      type: presto
+      type: watsonx_presto
       method: BasicAuth
       user: username
       password: api_key
       host: <host>
       port: <port>
-      database: analytics
+      catalog: analytics
       schema: dbt_drew
       threads: 8
       ssl_verify: true
@@ -46,12 +46,13 @@ The following table covers the parameter details:
 
 | Option | Required/Optional | Description | Example |
 | ------ | ----------------- | ----------- | ------- |
-| `method` | Required (default value is none) | Authentication method for Presto. | None or `BasicAuth` |
+| `type`| Required| Specifies the type of connection to be used. Set the connection type to watsonx_presto to indicate that you are using the dbt watsonx Presto adapter for {{site.data.keyword.lakehouse_short}} Presto.| `watsonx_presto` |
+| `method` | Required (default method is `BasicAuth`) | Authentication method for Presto. | `BasicAuth` |
 | `user` | Required | Username for authentication. | drew |
 | `password` | Required if method is `BasicAuth` | Password or API key for authentication. | None or alphanumeric (abc123) |
 | `http_headers` | Optional | HTTP headers to send alongside requests to Presto, specified as a yaml dictionary of (header, value) pairs. | X-Presto-Routing-Group: my-cluster |
 | `http_scheme` | Optional (default is `http` or `https` for method: `BasicAuth`) | HTTP scheme to use (`http` or `https`). | `https` or `http` |
-| `database` | Required | Catalog name for building models. | Analytics |
+| `catalog` | Required | Catalog name for building models. | Analytics |
 | `schema` | Required | Schema for building models. | dbt_drew |
 | `host` | Required | Hostname for connecting to Presto. You can get the hostname by clicking View connect details in the engine details page.  | 127.0.0.1 |
 | `port` | Required | Port for connecting to Presto. You can get the port by clicking View connect details in the engine details page.  | 8080 |

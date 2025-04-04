@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-09-24"
+  years: 2022, 2025
+lastupdated: "2025-03-24"
 
 keywords: lakehouse, milvus, watsonx.data
 subcollection: watsonxdata
@@ -40,7 +40,7 @@ For more information about Prompt Lab, see [Prompt Lab](https://dataplatform.clo
 
 To integrate the Milvus vector database in {{site.data.keyword.lakehouse_short}} through the Milvus connector in platform connections, you must:
 
-- **Create a Milvus Service in {{site.data.keyword.lakehouse_short}}**: Set up Milvus in the {{site.data.keyword.lakehouse_short}} environment. For more information, see [Adding a Milvus service](watsonxdata?topic=watsonxdata-adding-milvus-service).
+- **Create a Milvus Service in {{site.data.keyword.lakehouse_short}}**: Set up Milvus in the {{site.data.keyword.lakehouse_short}} environment. For more information, see [Adding a Milvus service](/docs/watsonxdata?topic=watsonxdata-adding-milvus-service).
 - **Create the Milvus Connection in platform connection**: Establish a connection to the Milvus service through the platform connection settings in watsonx.ai. For more information, [Milvus connection](https://dataplatform.cloud.ibm.com/docs/content/wsj/manage-data/conn-milvus.html?context=wx&audience=wdp).
 
 To have a Milvus index as the grounding data in Prompt Lab, select or create a Milvus index from the Milvus connection. For more information, see [Creating a vector index](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-prompt-data-index-create.html?context=wx&audience=wdp).
@@ -52,5 +52,5 @@ If you want to run an IBM watsonx.ai notebook to complete the integration with M
 
 For more information, see:
 
-- [Connecting to Milvus service](watsonxdata?topic=watsonxdata-conn-to-milvus)
+- [Connecting to Milvus service](/docs/watsonxdata?topic=watsonxdata-conn-to-milvus)
 - [Creating and managing notebooks](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/creating-notebooks.html?context=wx&audience=wdp)
