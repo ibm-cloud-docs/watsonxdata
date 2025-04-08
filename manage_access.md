@@ -91,8 +91,6 @@ To manage access, complete the following steps:
 
 1. To remove a user for a component, complete the following steps:
 
-   Catalog admin can remove themselves from accessing the catalog.
-   {: note}
 
    1. Under the **Infrastructure** tab, click the **Display name** of the component in the table.
 
