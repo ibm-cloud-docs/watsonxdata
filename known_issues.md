@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-01"
+lastupdated: "2025-04-08"
 
 keywords: lakehouse
 
@@ -38,6 +38,11 @@ Private endpoints are not supported for external engines such as IBM Db2 Warehou
 
 
 
+
+## GET `/engines` API generates internal service error
+{: #known_issue23411}
+
+Presto connector fails to connect to {{site.data.keyword.lakehouse_short}} instance due to a 520 Cloudflare error. This issue occurs intermittently when simultaneously defining large number of polices in {{site.data.keyword.lakehouse_short}}.
 
 ## Modifying credentials of the Spark engine home bucket can disrupt data and operations
 {: #known_issue24323_22256}
