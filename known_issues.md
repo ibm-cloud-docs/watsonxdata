@@ -42,7 +42,7 @@ Private endpoints are not supported for external engines such as IBM Db2 Warehou
 ## HDFS bucket addition is not supported via CPDCTL
 {: #known_issue24053}
 
-Adding HDFS buckets is currently not supported by the cpdctl wx-data plugin in {{site.data.keyword.lakehouse_short}}
+Adding HDFS buckets is currently not supported by the cpdctl wx-data plugin.
 
 ## IBM {{site.data.keyword.lakehouse_short}} Presto connector in Software Hub 5.1.1 and later cannot connect to IBM {{site.data.keyword.lakehouse_short}} Cloud instance
 {: #known_issue23411}
