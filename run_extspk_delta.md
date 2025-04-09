@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-11-30"
+  years: 2017, 2025
+lastupdated: "2025-04-09"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -23,9 +23,9 @@ The topic describes the procedure to run a Spark application that ingests data i
 5. Save the following Spark application (Python file) to your local machine. Here, `delta_demo.py`.
 
     The Python Spark application demonstrates the following functionality:
-    * It creates a database inside the Delta Lake catalog (that you created to store data). Here, `iae`.
-    * It creates a table inside the `iae` database, namely `employee`.
-    * It inserts data into the `employee` and does SELECT query operation.
+    * It creates a database inside the Delta Lake catalog (that you created to store data). Here, `<database_name>`.
+    * It creates a table inside the `<database_name>` database, namely `<table_name>`.
+    * It inserts data into the `<table_name>` and does SELECT query operation.
     * It drops the table and schema after use.
 
     ```bash
@@ -41,12 +41,12 @@ The topic describes the procedure to run a Spark application that ingests data i
     def main():
         spark = init_spark()
         spark.sql("show databases").show()
-        spark.sql("create database if not exists spark_catalog.iae LOCATION 's3a://delta-connector-test/'").show()
-        spark.sql("create table if not exists spark_catalog.iae.employee (id bigint, name string, location string) USING DELTA").show()
-        spark.sql("insert into spark_catalog.iae.employee VALUES (1, 'Sam','Kochi'), (2, 'Tom','Bangalore'), (3, 'Bob','Chennai'), (4, 'Alex','Bangalore')").show()
-        spark.sql("select * from spark_catalog.iae.employee").show()
-        spark.sql("drop table spark_catalog.iae.employee").show()
-        spark.sql("drop schema spark_catalog.iae CASCADE").show()
+        spark.sql("create database if not exists spark_catalog.<database_name> LOCATION 's3a://<data_storage_name>/'").show()
+        spark.sql("create table if not exists spark_catalog.<database_name>.<table_name> (id bigint, name string, location string) USING DELTA").show()
+        spark.sql("insert into spark_catalog.<database_name>.<table_name> VALUES (1, 'Sam','Kochi'), (2, 'Tom','Bangalore'), (3, 'Bob','Chennai'), (4, 'Alex','Bangalore')").show()
+        spark.sql("select * from spark_catalog.<database_name>.<table_name>").show()
+        spark.sql("drop table spark_catalog.<database_name>.<table_name>").show()
+        spark.sql("drop schema spark_catalog.<database_name> CASCADE").show()
         spark.stop()
 
     if __name__ == '__main__':
@@ -88,7 +88,7 @@ The topic describes the procedure to run a Spark application that ingests data i
                 "spark.hadoop.fs.s3a.path.style.access" : "true"
         },
 
-        "application": "s3a://delta-connector-test/delta_demo.py"
+        "application": "s3a://<data_storage_name>/delta_demo.py"
         }
     ```
     {: codeblock}
