@@ -43,7 +43,7 @@ The topic describes the procedure to run a Spark application that ingests data i
             try:
                 spark = init_spark()
                 spark.sql("show databases").show()
-                spark.sql("create database if not exists spark_catalog.<database_name> LOCATION 's3a://hudi-connector-test/'").show()
+                spark.sql("create database if not exists spark_catalog.<database_name> LOCATION 's3a://<data_storage_name>/'").show()
                 spark.sql("create table if not exists spark_catalog.<database_name>.<table_name> (id bigint, name string, location string) USING HUDI OPTIONS ('primaryKey' 'id', hoodie.write.markers.type= 'direct', hoodie.embed.timeline.server= 'false')").show()
                 spark.sql("insert into <database_name>.<table_name> VALUES (1, 'Sam','Kochi'), (2, 'Tom','Bangalore'), (3, 'Bob','Chennai'), (4, 'Alex','Bangalore')").show()
                 spark.sql("select * from spark_catalog.<database_name>.<table_name>").show()
