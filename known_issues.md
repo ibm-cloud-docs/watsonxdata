@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-08"
+lastupdated: "2025-04-09"
 
 keywords: lakehouse
 
@@ -38,6 +38,11 @@ Private endpoints are not supported for external engines such as IBM Db2 Warehou
 
 
 
+
+## HDFS bucket addition is not supported via CPDCTL
+{: #known_issue24053}
+
+Adding HDFS buckets is currently not supported by the cpdctl wx-data plugin in {{site.data.keyword.lakehouse_short}}
 
 ## IBM {{site.data.keyword.lakehouse_short}} Presto connector in Software Hub 5.1.1 and later cannot connect to IBM {{site.data.keyword.lakehouse_short}} Cloud instance
 {: #known_issue23411}
