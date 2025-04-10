@@ -21,7 +21,7 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.lakehouse_full}} that are grouped by date.
 {: shortdesc}
 
-## 09 April 2025 - Version 2.1.2.1
+## 10 April 2025 - Version 2.1.2 Hotfix 1
 {: #lakehouse_9apr2121}
 {: release-note}
 
@@ -34,7 +34,7 @@ While Tiny Milvus offers the basic Milvus experience, the primary difference lie
 * Tiny Milvus is ideal for small-scale projects, quick trials, and environments with limited resources. It offers multitenancy support on shared nodes, but not suited for production workloads.
 * In Tiny Milvus, when a bucket is assigned to the Milvus service, it cannot be reassigned.
 
-For more information about using Tiny Milvus, see [Setting up a watsonx.data Milvus vector store](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-prompt-data-index-milvus.html?context=wx).
+For more information about using Tiny Milvus, see [Setting up a watsonx.data Milvus vector store](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-prompt-data-index-milvus.html?context=wx){: external}.
 
 ## 04 April 2025 - Version 2.1.2
 {: #lakehouse_2apr212}
