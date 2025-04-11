@@ -33,6 +33,9 @@ Tiny Milvus supports up to 10K vectors, making it suitable for quick trials and 
 
 For more information about using Tiny Milvus, see [Setting up a watsonx.data Milvus vector store](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-prompt-data-index-milvus.html?context=wx){: external}.
 
+
+
+
 ## 04 April 2025 - Version 2.1.2
 {: #lakehouse_2apr212}
 {: release-note}
