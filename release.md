@@ -25,9 +25,9 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: #lakehouse_9apr2121}
 {: release-note}
 
-Introduced Tiny Milvus, a lightweight, single-node deployment of the Milvus vector database, which is tailored for experimentation and early-stage development. It enables users to explore AI use cases efficiently with minimal resource requirements to help ensure effective data management and analysis.
+Introduced Tiny Milvus, a lightweight, single-node deployment of the Milvus vector database, which is tailored for experimentation and early-stage development.
 
-Tiny Milvus provides the core Milvus experience and is designed specifically for use within the watsonx.ai platform. It serves as an entry point for vector-based AI exploration, distinct from other Milvus configurations available within {{site.data.keyword.lakehouse_short}}, which support broader scalability and enterprise-grade features.
+Tiny Milvus provides the core Milvus experience and is designed specifically for use within the watsonx.ai platform. It serves as an entry point for vector-based AI exploration with minimal resource requirements to help ensure effective data management and analysis. It is distinct from other Milvus configurations available within {{site.data.keyword.lakehouse_short}}, which support broader scalability and enterprise-grade features.
 
 Tiny Milvus supports up to 10K vectors, making it suitable for quick trials and early experimentation without heavy infrastructure. It is not intended for production workloads.
 
