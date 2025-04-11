@@ -25,13 +25,17 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: #lakehouse_9apr2121}
 {: release-note}
 
-Introduced Tiny Milvus, a lightweight, single-node deployment of the Milvus vector database, which is tailored for experimentation and early-stage development.
+Engine and service enhancements
 
-Tiny Milvus provides the core Milvus experience and is designed specifically for use within the watsonx.ai platform. It serves as an entry point for vector-based AI exploration with minimal resource requirements to help ensure effective data management and analysis. It is distinct from other Milvus configurations available within {{site.data.keyword.lakehouse_short}}, which support broader scalability and enterprise-grade features.
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following service enhancement:
 
-Tiny Milvus supports up to 10K vectors, making it suitable for quick trials and early experimentation without heavy infrastructure. It is not intended for production workloads.
+   Introduced Tiny Milvus, a lightweight, single-node deployment of the Milvus vector database, which is tailored for experimentation and early-stage development.
 
-For more information about using Tiny Milvus, see [Setting up a watsonx.data Milvus vector store](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-prompt-data-index-milvus.html?context=wx){: external}.
+   Tiny Milvus provides the core Milvus experience and is designed specifically for use within the watsonx.ai platform. It serves as an entry point for vector-based AI exploration with minimal resource requirements to help ensure effective data management and analysis. It is distinct from other Milvus configurations available within {{site.data.keyword.lakehouse_short}}, which support broader scalability and enterprise-grade features.
+
+   Tiny Milvus supports up to 10K vectors, making it suitable for quick trials and early experimentation without heavy infrastructure. It is not intended for production workloads.
+
+   For more information about using Tiny Milvus, see [Setting up a watsonx.data Milvus vector store](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-prompt-data-index-milvus.html?context=wx){: external}.
 
 
 
