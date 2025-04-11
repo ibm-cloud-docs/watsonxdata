@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-04-10"
+lastupdated: "2025-04-11"
 
 keywords: watsonxdata, release notes
 
@@ -25,14 +25,11 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: #lakehouse_9apr2121}
 {: release-note}
 
-Introduced Tiny Milvus, a lightweight, single-node deployment of the Milvus vector database that is suitable for experimentation and early-stage development. With Tiny Milvus, you can explore AI use cases effectively with minimal resource requirements, ensuring efficient data management and analysis. Tiny Milvus supports up to 10K vectors for managing data and is optimized to use up to 4 GB of RAM with a maximum of 2 CPU cores.
+Introduced Tiny Milvus, a lightweight, single-node deployment of the Milvus vector database, which is tailored for experimentation and early-stage development. It enables users to explore AI use cases efficiently with minimal resource requirements to help ensure effective data management and analysis.
 
-While Tiny Milvus offers the basic Milvus experience, the primary difference lies in the target platform and intended use:
+Tiny Milvus provides the core Milvus experience and is designed specifically for use within the watsonx.ai platform. It serves as an entry point for vector-based AI exploration, distinct from other Milvus configurations available within {{site.data.keyword.lakehouse_short}}, which support broader scalability and enterprise-grade features.
 
-* Tiny Milvus is part of the watsonx.ai platform, designed to help users explore vector-based AI use cases. Other Milvus T-shirt sizes are offered within {{site.data.keyword.lakehouse_short}}, supporting higher scalability, advanced features, and enterprise-grade workloads.
-* Tiny Milvus supports only limited storage (300Mi etcd with NFS) and lacks features like upscaling, backup, and restore.
-* Tiny Milvus is ideal for small-scale projects, quick trials, and environments with limited resources. It offers multitenancy support on shared nodes, but not suited for production workloads.
-* In Tiny Milvus, when a bucket is assigned to the Milvus service, it cannot be reassigned.
+Tiny Milvus supports up to 10K vectors, making it suitable for quick trials and early experimentation without heavy infrastructure. It is not intended for production workloads.
 
 For more information about using Tiny Milvus, see [Setting up a watsonx.data Milvus vector store](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-prompt-data-index-milvus.html?context=wx){: external}.
 
