@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-12-25"
+  years: 2022, 2025
+lastupdated: "2025-04-11"
 
 keywords: lakehouse, database, watsonx.data, catalog
 
@@ -26,15 +26,15 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Deleting a database-catalog pair
+# Deleting a data source-catalog pair
 {: #delete_database}
 
-To delete a database-catalog pair, complete the following steps:
+To delete a data source-catalog pair, complete the following steps:
 {: shortdesc}
 
-1. Dissociate the catalog that is associated with the database from the engine. For instructions, see [Dissociating a catalog from an engine]({{site.data.keyword.dissociate-catalog-link}}).
+1. Dissociate the catalog that is associated with the data source from the engine. For instructions, see [Dissociating a catalog from an engine]({{site.data.keyword.dissociate-catalog-link}}).
 
-2. In **Infrastructure manager**, go to the **Databases** tab.
+2. In **Infrastructure manager**, go to the **data source** tab.
 
 3. Click the overflow menu and then click **Remove**.
 
@@ -44,4 +44,4 @@ To delete a database-catalog pair, complete the following steps:
 {: #deletedb_api}
 
 For information on related API, see
-* [Delete database](https://cloud.ibm.com/apidocs/watsonxdata#delete-database-catalog)
+* [Delete data source](https://cloud.ibm.com/apidocs/watsonxdata#delete-database-catalog)

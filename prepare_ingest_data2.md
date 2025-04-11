@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-26"
+  years: 2022, 2025
+lastupdated: "2025-04-11"
 
 keywords: watsonxdata, ingesting, object storage bucket, data files, table format. SQL query
 
@@ -57,19 +57,19 @@ The objectives of this tutorial are listed as follows:
 
 1. Uploading data into an object storage bucket and attaching to Presto
 
-   In this section of the tutorial, you are going to manage data in an object storage bucket and attach the bucket to HMS and associate with Presto (Java) engine.
+   In this section of the tutorial, you are going to manage data in an object storage bucket and attach the bucket to MDS and associate with Presto (Java) engine.
 
    1. Access any one of the object storage access tools like S3 Browser, AWS S3 console, direct S3 APIs, and various CLI/UI object storage tools.
 
    2. Load data files to your object storage bucket by using the tool.
 
-   3. Register and attach the object storage bucket to HMS and associate with Presto (Java) engine by using {{site.data.keyword.lakehouse_short}} UI.
+   3. Register and attach the object storage bucket to MDS and associate with Presto (Java) engine by using {{site.data.keyword.lakehouse_short}} UI.
 
-   4. Alternatively, you can also register and attach an object storage bucket with pre-existing data to HMS.
+   4. Alternatively, you can also register and attach an object storage bucket with pre-existing data to MDS.
 
 2. Load data files into Presto
 
-   After you attach the object storage bucket to HMS, you need to load data files into Presto (Java) by creating schema and external tables through the Hive connector.
+   After you attach the object storage bucket to MDS, you need to load data files into Presto (Java) by creating schema and external tables through the Hive connector.
 
    1. Run the following command to create schema for the data you want to access.
 
