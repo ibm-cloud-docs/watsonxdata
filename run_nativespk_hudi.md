@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-04-02"
+lastupdated: "2025-04-09"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -76,11 +76,11 @@ The topic describes the procedure to run a Spark application that ingests data i
 
    The Python Spark application demonstrates the following functionality:
 
-   * It creates a database inside the Apache Hudi catalog (that you created to store data). Here, hudi_db.
+   * It creates a database inside the Apache Hudi catalog (that you created to store data). Here, `<database_name>`.
 
-   * It creates a table inside the hudi_db database, namely hudi_table.
+   * It creates a table inside the `<database_name>` database, namely `<table_name>`.
 
-   * It inserts data into the hudi_table and does SELECT query operation.
+   * It inserts data into the `<table_name>` and does SELECT query operation.
 
    * It drops the table and schema after use.
 
@@ -98,12 +98,12 @@ The topic describes the procedure to run a Spark application that ingests data i
            try:
            spark = init_spark()
            spark.sql("show databases").show()
-           spark.sql("create database if not exists spark_catalog.hudi_db LOCATION 's3a://hudi-connector-test/'").show()
-           spark.sql("create table if not exists spark_catalog.hudi_db.hudi_table (id bigint, name string, location string) USING HUDI OPTIONS ('primaryKey' 'id', hoodie.write.markers.type= 'direct', hoodie.embed.timeline.server= 'false')").show()
-           spark.sql("insert into hudi_db.hudi_table VALUES (1, 'Sam','Kochi'), (2, 'Tom','Bangalore'), (3, 'Bob','Chennai'), (4, 'Alex','Bangalore')").show()
-           spark.sql("select * from spark_catalog.hudi_db.hudi_table").show()
-           spark.sql("drop table spark_catalog.hudi_db.hudi_table").show()
-           spark.sql("drop schema spark_catalog.hudi_db CASCADE").show()
+           spark.sql("create database if not exists spark_catalog.<database_name> LOCATION 's3a://<data_storage_name>/'").show()
+           spark.sql("create table if not exists spark_catalog.<database_name>.<table_name> (id bigint, name string, location string) USING HUDI OPTIONS ('primaryKey' 'id', hoodie.write.markers.type= 'direct', hoodie.embed.timeline.server= 'false')").show()
+           spark.sql("insert into <database_name>.<table_name> VALUES (1, 'Sam','Kochi'), (2, 'Tom','Bangalore'), (3, 'Bob','Chennai'), (4, 'Alex','Bangalore')").show()
+           spark.sql("select * from spark_catalog.<database_name>.<table_name>").show()
+           spark.sql("drop table spark_catalog.<database_name>.<table_name>").show()
+           spark.sql("drop schema spark_catalog.<database_name> CASCADE").show()
            inally:
            spark.stop()
            if __name__ == '__main__':
@@ -112,6 +112,10 @@ The topic describes the procedure to run a Spark application that ingests data i
    ```
    {: codeblock}
 
+   Parameter values:
+   * `<database_name>`: Specify the name of the database that you want to create.
+   * `<table_name>`: Specify the name of the table that you want to create.
+   * `<data_storage_name>`: Specify the name of the Apache Hudi storage that you created.
 
    Curl command to submit Python application
 
@@ -127,7 +131,7 @@ The topic describes the procedure to run a Spark application that ingests data i
                        "spark.sql.catalog.spark_catalog.type": "hive",
                        "spark.sql.catalog.spark_catalog": "org.apache.spark.sql.hudi.catalog.HoodieCatalog",
                        "spark.hadoop.wxd.apiKey":"Basic <user-authentication-string>"        },
-                       "application": "s3a://hudi-connector-test/hudi_demo.py"    }}
+                       "application": "s3a://<data_storage_name>/hudi_demo.py"    }}
    ```
    {: codeblock}
 
@@ -144,11 +148,11 @@ The topic describes the procedure to run a Spark application that ingests data i
 
    The Python Spark application demonstrates the following functionality:
 
-   * It creates a database inside the Delta Lake catalog (that you created to store data). Here, `iae`.
+   * It creates a database inside the Delta Lake catalog (that you created to store data). Here, `<database_name>`.
 
-   * It creates a table inside the `iae` database, namely `employee`.
+   * It creates a table inside the `<database_name>` database, namely `<table_name>`.
 
-   * It inserts data into the `employee` and does SELECT query operation.
+   * It inserts data into the `<table_name>` and does SELECT query operation.
 
    * It drops the table and schema after use.
 
@@ -164,18 +168,24 @@ The topic describes the procedure to run a Spark application that ingests data i
             def main():
                 spark = init_spark()
                 spark.sql("show databases").show()
-                        spark.sql("create database if not exists spark_catalog.iae LOCATION 's3a://delta-connector-test/'").show()
-                        spark.sql("create table if not exists spark_catalog.iae.employee (id bigint, name string, location string) USING DELTA").show()
-                        spark.sql("insert into spark_catalog.iae.employee VALUES (1, 'Sam','Kochi'), (2, 'Tom','Bangalore'), (3, 'Bob','Chennai'), (4, 'Alex','Bangalore')").show()
-                        spark.sql("select * from spark_catalog.iae.employee").show()
-                        spark.sql("drop table spark_catalog.iae.employee").show()
-                        spark.sql("drop schema spark_catalog.iae CASCADE").show()
+                        spark.sql("create database if not exists spark_catalog.<database_name> LOCATION 's3a://<data_storage_name>/'").show()
+                        spark.sql("create table if not exists spark_catalog.<database_name>.<table_name> (id bigint, name string, location string) USING DELTA").show()
+                        spark.sql("insert into spark_catalog.<database_name>.<table_name> VALUES (1, 'Sam','Kochi'), (2, 'Tom','Bangalore'), (3, 'Bob','Chennai'), (4, 'Alex','Bangalore')").show()
+                        spark.sql("select * from spark_catalog.<database_name>.<table_name>").show()
+                        spark.sql("drop table spark_catalog.<database_name>.<table_name>").show()
+                        spark.sql("drop schema spark_catalog.<database_name> CASCADE").show()
                         spark.stop()
                         if __name__ == '__main__':
                         main()
 
    ```
    {: codeblock}
+
+   Parameter values:
+   * `<database_name>`: Specify the name of the database that you want to create.
+   * `<table_name>`: Specify the name of the table that you want to create.
+   * `<data_storage_name>`: Specify the name of the Apache Hudi storage that you created.
+
 
    Curl command to submit Python application
 
@@ -190,7 +200,7 @@ The topic describes the procedure to run a Spark application that ingests data i
            "spark.sql.catalog.spark_catalog" : "org.apache.spark.sql.delta.catalog.DeltaCatalog",
            "spark.sql.catalog.spark_catalog.type" : "hive",
            "spark.hadoop.wxd.apiKey":"<user-authentication-string>"        },
-           "application": "s3a://delta-connector-test/delta_demo.py"        }    }
+           "application": "s3a://<database_name>/delta_demo.py"        }    }
    ```
    {: codeblock}
 

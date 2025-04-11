@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-01"
+lastupdated: "2025-04-09"
 
 keywords: lakehouse
 
@@ -38,6 +38,16 @@ Private endpoints are not supported for external engines such as IBM Db2 Warehou
 
 
 
+
+## HDFS bucket addition is not supported via CPDCTL
+{: #known_issue24053}
+
+Adding HDFS buckets is currently not supported by the cpdctl wx-data plugin.
+
+## IBM {{site.data.keyword.lakehouse_short}} Presto connector in Software Hub 5.1.1 and later cannot connect to IBM {{site.data.keyword.lakehouse_short}} Cloud instance
+{: #known_issue23411}
+
+IBM {{site.data.keyword.lakehouse_short}} Presto connector fails to connect to IBM {{site.data.keyword.lakehouse_short}} instance due to a 520 Cloudflare error. This issue occurs when multiple simultaneous calls are made to the GET `/engines` API, especially when the {{site.data.keyword.lakehouse_short}} instance has a large number of policies.
 
 ## Modifying credentials of the Spark engine home bucket can disrupt data and operations
 {: #known_issue24323_22256}

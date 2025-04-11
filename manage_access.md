@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-25"
+lastupdated: "2025-04-08"
 
 keywords: lakehouse, watsonx data, roles, access
 subcollection: watsonxdata
@@ -90,6 +90,7 @@ To manage access, complete the following steps:
    1. Click **Save**.
 
 1. To remove a user for a component, complete the following steps:
+
 
    1. Under the **Infrastructure** tab, click the **Display name** of the component in the table.
 
