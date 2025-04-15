@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-01"
+lastupdated: "2025-04-15"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -62,7 +62,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    i. Drag a file to the box or click to upload. Selected files are listed in the **Selected file(s)** section.
 
-      You can add multiple files of the same file type. The available file type options are CSV, Parquet, JSON, ORC, and AVRO. The maximum cumulative file size must be within 500 MB.
+      You can add multiple files of the same file type. The available file type options are CSV, Parquet, JSON, ORC, and AVRO. The maximum cumulative file size must be within 2 GB.
       {: note}
 
    ii. Select a transient storage bucket from the drop down to temporarily store uploaded files.
@@ -115,7 +115,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    xiv. If required, modify the auto-generated ingestion Job ID in the **Job Details**.
 
-   xv. Select the IBM Analytics Engine (Spark) from the **Select engine** list. The registered Spark engines are listed here.
+   xv. Select the Spark engine from the **Select engine** list. The registered Spark engines are listed here.
 
       Any files less than 2 MB file size shall automatically select Lite ingestion and all files more than 2 MB file size shall automatically select one of the listed Spark engines from the Select engine drop-down list to run the ingestion job.
       {: note}
@@ -244,7 +244,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    xiii. If required, modify the auto-generated ingestion Job ID in the **Job Details**.
 
-   xiv. Select the IBM Analytics Engine (Spark) from the **Select engine** list. The registered Spark engines are listed here.
+   xiv. Select the Spark engine from the **Select engine** list. The registered Spark engines are listed here.
 
    xv. Select a pre-defined **Job size** from the options listed. The job size is set to the preferred option based on the file size automatically. The user can also select one of the following options.
 
@@ -330,7 +330,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    vii. If required, modify the auto-generated ingestion Job ID in the **Job Details**.
 
-   viii. Select the IBM Analytics Engine (Spark) from the **Select engine** list. The registered Spark engines are listed here.
+   viii. Select the Spark engine from the **Select engine** list. The registered Spark engines are listed here.
 
    ix. Select a pre-defined **Job size** from the options listed. The job size is set to the preferred option based on the file size automatically. The user can also select one of the following options.
 
