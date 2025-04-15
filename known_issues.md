@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-09"
+lastupdated: "2025-04-15"
 
 keywords: lakehouse
 
@@ -207,11 +207,6 @@ Queries involving the EXISTS clause on Apache Phoenix tables may fail unexpected
       )
       ```
       {: codeblock}
-
-## Activity tracker support in MDS
-{: #known_issues17887}
-
-The [Activity Tracker](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-at_events) feature is not supported with MDS.
 
 ## Hive catalog does not support CSV format for create table int type column
 {: #known_issues18049}
