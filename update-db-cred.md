@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-11"
+lastupdated: "2025-04-15"
 
 keywords: lakehouse, database, credentials, watsonx.data
 
@@ -50,7 +50,7 @@ To update the data source or storage credentials, use one of the following metho
 
 Presto: **Update credentials** is disabled for storage buckets and data sources when associated with Presto. To update the credentials, you will need to disassociate the storage buckets and data sources, update the credentials and then associate it.
 
-Spark: Though the **Update credentials** is enabled, updating the access credentials for a storage bucket and data sources that has been designated as the Spark engine's home bucket during the provisioning process can lead to data access problems and operational failures.
+Spark: Though the **Update credentials** is enabled, updating the access credentials for a storage bucket that has been designated as the Spark engine's home bucket during the provisioning process can lead to data access problems and operational failures.
 
 Milvus: For external home bucket and data sources, **Update credentials** is enabled, but a manual pause and resume of the Milvus engine is required for the changes to take effect.
 

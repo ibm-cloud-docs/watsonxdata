@@ -33,6 +33,24 @@ You can find the connectivity information for {{site.data.keyword.lakehouse_full
 
 The **Connection information** tile in the **Configurations** page provides the following information as per connection type selection:
 
+## General:
+{: #get_connection_general}
+
+* **Instance details**:
+   * Host IP address
+   * Port
+   * Instance CRN
+   * SSL certificate
+   * **Engine and service connection details**
+      * **Presto engine details:** Expand your Presto engine to see the following details:
+         * Hostname
+         * Port
+         * SSL certificate
+   * **Spark engine details:** Expand your Spark engine to see the following details:
+         * Spark engine endpoint
+         * Application endpoint
+         * Port
+* Use the `Copy JSON snippet` and `Export JSON` links to copy or export JSON snippets for all engines and services.
 
 ## For IBM products:
 {: #get_connection_conninfo}
