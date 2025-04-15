@@ -13,21 +13,28 @@ subcollection: watsonxdata
 
 # Resolving bulk insert issues in Milvus
 {: #milvus_bulkinsert_ts}
-{: troubleshoot}
+
+## What’s happening
+{: #milvus_bulkinsert_ts_1}
 
 Inserting large data sets by using the bulk insert API in Milvus might fail.
-{: tsSymptoms}
 
+## Why it’s happening
+{: #milvus_bulkinsert_ts_2}
 
 Bulk insert operations are time-consuming because it involves transferring large volumes of data into a storage system. Failures can occur due to the following common issues, leading to incomplete or failed inserts:
 * Network connectivity problems
 * Request throttling
 * Storage bucket issues
-{: tsCauses}
+
+## How to fix it
+{: #milvus_bulkinsert_ts_3}
 
 **Verify task status**: When you initiate a bulk insert operation, the asynchronous API returns a task ID. Use the task ID to query the status of the insert operation.
 **Handle failures**: If the bulk insert operation fails, check the failure reason. If the failure is due to network-related issues, retry the bulk insert. For other failures, analyse the error message and take appropriate action.
+
 Example
+
    ```bash
    from pymilvus import connections, utility
 
@@ -76,4 +83,3 @@ while True:
 
    ```
    {: screen}
-{: tsResolve}
