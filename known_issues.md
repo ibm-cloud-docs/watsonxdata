@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-15"
+lastupdated: "2025-04-17"
 
 keywords: lakehouse
 
@@ -90,13 +90,6 @@ Or set `hive.parquet.use-column-names=true` in catalog properties. For `ORC`, se
 The server/host and port information are missing from the reg file and are not populated in the driver for the Power BI downloaded file. Additionally, the user information in the exported value does not match the value in the CData reg file. Also, the exported username of Cdata template does not include `ibmlhapikey_` prefix
 
 **Workaround:** Add the `ibmlhapikey_` prefix to the username in the CData reg file.
-
-## Connection with BI tools shows no values for hostname and port 
-{: #known_issue23731}
-
-The connection with BI tools shows no values for hostname and port  when downloading `Tableau` config files.
-
-**Workaround:** Add the hostname and port value when downloading config files for PowerBI
 
 ## Catalog information is not appearing in the Tableau Desktop
 {: #known_issue23615}
