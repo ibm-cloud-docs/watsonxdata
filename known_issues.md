@@ -84,13 +84,6 @@ Replace `<catalog-name>` with the actual catalog being used.
 
 Or set `hive.parquet.use-column-names=true` in catalog properties. For `ORC`, set `hive.orc.use-column-names=true` in catalog properties.
 
-## Issue with server/host, port information, and user data in exported file
-{: #known_issue23730}
-
-The server/host and port information are missing from the reg file and are not populated in the driver for the Power BI downloaded file. Additionally, the user information in the exported value does not match the value in the CData reg file. Also, the exported username of Cdata template does not include `ibmlhapikey_` prefix
-
-**Workaround:** Add the `ibmlhapikey_` prefix to the username in the CData reg file.
-
 ## Catalog information is not appearing in the Tableau Desktop
 {: #known_issue23615}
 
