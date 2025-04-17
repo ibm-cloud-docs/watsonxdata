@@ -98,13 +98,6 @@ The `Connection Information` page shows a truncated username, excluding the pref
 
 **Workaround:** Add the `ibmlhapikey_` prefix to the username when manually copying the value to enable connections with BI tools.
 
-## Unable to export config files from the Firefox web browser
-{: #known_issue23617}
-
-The `Export config files` functionality on the `Connection Information` page does not work in the Firefox web browser for `PowerBI`.
-
-**Workaround:** Use the Google Chrome web browser.
-
 ## Issue with uppercase Turkish character İ in Oracle database using WE8ISO8859P9 character set (ORA-00911 Error)
 {: #known_issue23728}
 
