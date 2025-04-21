@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-12-03"
+  years: 2017, 2025
+lastupdated: "2025-04-21"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -67,23 +67,24 @@ As Spark labs are ephemeral in nature, you must back up the data stored periodic
 
 
 5. To configure **Form Inputs**, click **Form Inputs** and specify the following details:
-    * **Host address of watsonx.data console** : Provide the host IP address of the watsonx.data install. To retrieve the host IP address, see [Getting connection information]({{site.data.keyword.ref-get_connection-link}}).
+    * **Host address of watsonx.data console** : Provide the **Host IP address** of the watsonx.data install. To retrieve the **Host IP address**, see [Getting connection information]({{site.data.keyword.ref-get_connection-link}}).
     * **Environment Type** : Select `SaaS`.
     * **CRN** : The **Instance CRN** of your watsonx.data instance. To retrieve the CRN, see [Getting connection information]({{site.data.keyword.ref-get_connection-link}}).
     * **Username** : Your email-id if you are using your API key or it should be in the format `<Service-id>-<GUID>`. For more information on generating service id and GUID, see [Creating service IDs](https://www.ibm.com/docs/en/watsonx/watsonxdata/aws?topic=usca-granting-access-through-service-ids-api-keys-from-saas-console#creating_service_IDs).
     * **API Key** : Provide the platform API key. To generate the API key, see [Generating the API key]({{site.data.keyword.ref-con-presto-serv-link}}).
 
+4. Click **Test & Save**. `Retrieved Spark Clusters` message is displayed. The available Spark engines are displayed in the **WATSONX.DATA:ENGINES** section.
 
 3. Create a Spark lab.
 
-    a. To create a new Spark lab, click the + icon. The **Create Spark Lab** window opens. Specify a unique name for the Spark lab and select the **Spark Version**. The default Spark version is 3.4. You can modify the other optional fields if required.
+    a. To create a new Spark lab, from the **WATSONX.DATA:ENGINES** section, select the required Spark cluster and click the **+** icon (Add cluster) against it. The **Create Spark Lab** window opens. Specify a unique name for the Spark lab and select the **Spark Version**. The default Spark version is 3.5. You can modify the other optional fields if required.
 
     The `spark.hadoop.wxd.apikey` parameter is configured in the **Spark configurations** field by default while creating Spark lab.
     {: note}
 
-    b. Click **Create**. Click **Refresh** to see the Spark lab in the left window. This is the dedicated Spark cluster for application development.
+    b. Click **Refresh** to see the Spark lab in the left window. This is the dedicated Spark cluster for application development.
 
-    c. Open the Spark lab to access the file system, terminal, and work with it.
+    c. Click to open the Spark lab to access the file system, terminal, and work with it.
 
     c. In the **Explorer** window, you can view the file system, where you can upload the files, and view logs.
 
@@ -101,6 +102,10 @@ Develop a Spark application in the Spark lab. You can work with a Spark applicat
 ### Create your own Python file
 {: #dev_lab_01}
 
+1. In the **Explorer** window, click **New File**. You get a **New File** prompt for entering the Python file name.
+1. Type the Python file name and press Enter.The file path is displayed. Click **OK**. A new page opens. you can start working.
+1. You can also drag the Python application file to the **Explorer** window. The file opens in the right pane of Visual Studio Code application.
+
 1. Create, upload or drag the Python application file to the **Explorer** window. The file opens in the right pane of Visual Studio Code application.
 
 2. Run the following command in the terminal. This initiates a Python session and you can see the acknowledgment message in the terminal.
@@ -116,10 +121,24 @@ Develop a Spark application in the Spark lab. You can work with a Spark applicat
 
 1. Browse for the `Jupyter` extension from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) and install the extension.
 
-2. You can either create a new Jupyter Notebook file with the extension `.ipynb` or drag and drop the existing notebook to the **Explorer** window.
 
-3. From the **Explorer** window, double-click to open the Jupyter Notebook.
+1. In the **Explorer** window, click **New File**. You get a **New File** prompt with the following file types:
+   * **Text File** : Select to create a text file.
+   * **Python File** : Select to create a Python application.
+   * **Jupyter Notebook** : Select to create a Jupyter Notebook file.
 
-4. From the Jupyter Notebook, click the **Change Kernel** link to select the **Python Environment**.
+You can also create a new Jupyter Notebook file by typing the name of the file with the extension `.ipynb` or drag and drop the existing notebook to the **Explorer** window.
+{: note}
+
+1. Select **Jupyter Notebook**. A new `.ipynb` file opens. You can start working on the Jupyter Notebook file and save it later.
+
+1. From the Jupyter Notebook file, click the **Select Kernel** link.
+
+1. Select **Python Environment**.
+
+5. Select the file path that contains `conda/envs/python/bin/python`.
 
 5. The Jupyter Notebook is now ready to use. You can write your code and execute it cell by cell.
+
+When you save the file, the file path is automatically displayed in the **Save As** prompt. You can modify the path or Click **OK** to save.
+{: note}
