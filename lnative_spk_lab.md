@@ -84,9 +84,9 @@ As Spark labs are ephemeral in nature, you must back up the data stored periodic
 
     b. Click **Refresh** to see the Spark lab in the left window. This is the dedicated Spark cluster for application development.
 
-    c. Click to open the Spark lab to access the file system, terminal, and work with it.
+    c. Click to open the Spark lab window to access the file system, terminal, and work with it.
 
-    c. In the **Explorer** window, you can view the file system, where you can upload the files, and view logs.
+    c. In the **Explorer** menu, you can view the file system, where you can upload the files, and view logs.
 
     To delete an already running Spark lab, hover the mouse over the name of the Spark lab in the watsonx.data left navigation pane and click on **Delete** icon.
     {: note}
@@ -102,19 +102,19 @@ Develop a Spark application in the Spark lab. You can work with a Spark applicat
 ### Create your own Python file
 {: #dev_lab_01}
 
-1. . In the **Explorer** window, click **New File**. You get a **New File** prompt with the following file types:
+1. From Visual Studio Code, click the Spark lab. A new window opens.
+
+1. In the new Spark lab window, click **New File**. You get a **New File** prompt with the following file types:
    * **Text File** : Select to create a text file.
    * **Python File** : Select to create a Python application.
    * **Jupyter Notebook** : Select to create a Jupyter Notebook file.
 
 1. Select **Python File**. A new `.py` file opens. You can start working on the Python file and save it later.
 
-   You can also drag the Python application file to the **Explorer** window. The file opens in the right pane of Visual Studio Code application.
+   You can also drag the Python application file to the **Explorer** page. The file opens in the right pane of Visual Studio Code application.
    {: note}
 
-1. Create, upload or drag the Python application file to the **Explorer** window. The file opens in the right pane of Visual Studio Code application.
-
-2. Run the following command in the terminal to run your Python application. This initiates a Python session and you can see the acknowledgment message in the terminal.
+2. Run the following command in the terminal to execute your Python application. This initiates a Python session and you can see the acknowledgment message in the terminal.
 
     ```bash
     python <filename>
@@ -124,18 +124,20 @@ Develop a Spark application in the Spark lab. You can work with a Spark applicat
 ### Create Jupyter Notebooks
 {: #dev_lab_02}
 
+1. From Visual Studio Code, click the Spark lab. A new window opens.
 
-1. In the **Explorer** window, from the **Extensions** menu, browse for the `Jupyter` extension (You can also find it from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)) and install the extension.
+1. Install the `Jupyter` extension in the new Spark lab window to work with Jupyter Notebooks.
+   From the **Extensions** menu in the new Spark lab window, browse for the `Jupyter` (You can also find it from the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter)) and install the extension.
 
-   Make sure that you install the extension from the **Explorer** window and not from the Visual Studio Code window where you installed the Spark lab.
+   Make sure that you install the `Jupyter` extension from the new Spark lab window.
    {: note}
 
-1. In the **Explorer** window, click **New File**. You get a **New File** prompt with the following file types:
+1. In the **Explorer** page, click **New File**. You get a **New File** prompt with the following file types:
    * **Text File** : Select to create a text file.
    * **Python File** : Select to create a Python application.
    * **Jupyter Notebook** : Select to create a Jupyter Notebook file.
 
-   You can also create a new Jupyter Notebook file by typing the name of the file with the extension `.ipynb` or drag and drop the existing notebook to the **Explorer** window.
+   You can also create a new Jupyter Notebook file by typing the name of the file with the extension `.ipynb` or drag and drop the existing notebook to the **Explorer** page.
    {: note}
 
 1. Select **Jupyter Notebook**. A new `.ipynb` file opens. You can start working on the Jupyter Notebook file and save it later.
