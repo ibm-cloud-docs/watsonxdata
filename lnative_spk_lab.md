@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-04-21"
+lastupdated: "2025-04-22"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -22,9 +22,9 @@ It is available as a Visual Studio Code extension and you can install it in your
 ## Before you begin
 {: #lab_nsp-preq}
 
-
+1. Subscription of {{site.data.keyword.lakehouse_short}} on Cloud. Ensure that you create a Spark engine and is in running status.
 1. Install a desktop version of Visual Studio Code.
-1. Install watsonx.data extension from [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.watsonx-data). Ensure that the Spark engine is started and is in running status.
+1. Install watsonx.data extension from [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=IBM.watsonx-data).
 1. Install the Visual Studio Code extension, **Remote - SSH** from [Visual Studio Code marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh).
 
 
