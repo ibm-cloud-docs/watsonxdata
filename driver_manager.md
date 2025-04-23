@@ -31,6 +31,11 @@ subcollection: watsonxdata
 
 This functionality grants non-admin users access to view the **Driver Manager** page within the **Configurations** section of {{site.data.keyword.lakehouse_full}}. Previously, only administrator users could see the details of active drivers. This new functionality improves transparency and accessibility by allowing non-admin users to monitor driver status without requiring administrator intervention. Non-admin users will have read-only access to the **Driver Manager** page and will not be able to perform any editing or deletion of driver configurations, ensuring the integrity and security of the system.
 
+**Driver Manager** allow users to add external drivers (.jar file) for the following connectors in {{site.data.keyword.lakehouse_short}}:
+   * HANA (ngdbc 2.17.12)
+   * MySQL (mysql-connector/j 8.2.0)
+
+
 ## Procedure
 {: #driver_manager_prcdr}
 
@@ -38,9 +43,9 @@ To view the details of active drivers, do the following:
 
 1. Log in to the {{site.data.keyword.lakehouse_short}} console.
 2. From the navigation menu, select **Configurations** and click **Driver manager**.
-3. Click **Add driver** to upload files and click **Add**.
+3. Click **Add driver** and upload files (.jar file). Then click **Add**.
 
    This action can only be performed by a admin user. The non-admin users will have only the read-only access.
    {: #note}
 
-4. Pending....
+4. When the driver validation is completed, click the overflow menu against the driver to assign it to an engine.
