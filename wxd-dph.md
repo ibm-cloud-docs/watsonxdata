@@ -29,7 +29,7 @@ Data consumers are the users who subscribe to these Data products created by the
 
 **Features of integration**
 
-   * **Data accessibility** : When watsonx.data integrates with Data Product Hub, the metadata information from watsonx.data is packaged as a Data product by using presto connector for easy sharing among users. This integration broadens the accessibility of data source in watsonx.data. The data is packaged in a secure manner as it does not involve actual movement of data.
+   * **Accessing datasource** : When watsonx.data integrates with Data Product Hub, the metadata information from watsonx.data is packaged as a Data product by using presto connector for easy sharing among users. This integration broadens the accessibility of data source in watsonx.data. The data is packaged in a secure manner as it does not involve actual movement of data.
 
       To access data from watsonx.data, do the following:
 
