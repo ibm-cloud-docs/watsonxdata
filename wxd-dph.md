@@ -19,7 +19,7 @@ With the integration of IBM Data Product Hub and watsonx.data, Data engineers ca
 
 **Data assets and Data products**
 
-Data assets can be SQL query, SQL table, ML models or BI dashboards.
+Data assets can be SQL queries, SQL tables, ML models or BI dashboards.
 Data product is a collection of assets packaged together for a specific business use case.
 
 **Data producers and Data consumers**
