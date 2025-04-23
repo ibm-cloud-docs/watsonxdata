@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-20"
+lastupdated: "2025-04-23"
 
 keywords: lakehouse, watsonx data, events, audit, activity
 
@@ -242,6 +242,44 @@ The following table lists the events generated at watsonx.data (platform) level:
 | `lakehouse.authtoken.create`      | Generated when a user logs in. |
 | `lakehouse.authtoken.delete`      | Generated when a user logs out. |
 {: caption="Lists of events for authentication" caption-side="bottom"}
+
+## MDS Thrift server events
+{: #at_actions_mdsthrift}
+
+| Action                            | Description |
+|-----------------------------------|-------------|
+| `mds-thrift.create_catalog`      | Event generated when you create a catalog by using thrift server.|
+| `mds-thrift.create_database`     | Event generated when you create a database by using thrift server.|
+| `mds-thrift.create_table`        | Event generated when you create a table by using thrift server.|
+| `mds-thrift.alter_table`         | Event generated when you modify a table by using thrift server.|
+| `mds-thrift.alter_database`      | Event generated when you modify a database by using thrift server.|
+| `mds-thrift.add_partition`       | Event generated when you add a partition by using thrift server.|
+| `mds-thrift.alter_partition`     | Event generated when you modify a partition by using thrift server.|
+| `mds-thrift.rename_partition`    | Event generated when you rename a partition by using thrift server.|
+| `mds-thrift.drop_partition`      | Event generated when you drop a partition by using thrift server.|
+| `mds-thrift.drop_table`          | Event generated when you drop a table by using thrift server.|
+| `mds-thrift.drop_database`       | Event generated when you drop a database by using thrift server.|
+{: caption="Lists of MDS Thrift server events" caption-side="bottom"}
+
+
+## MDS Rest server events
+{: #at_actions_mdsrest}
+
+| Action                            | Description |
+|-----------------------------------|-------------|
+| `mds-rest.create_catalog`      | Event generated when you create a catalog by using rest server.|
+| `mds-rest.create_database`     | Event generated when you create a database by using rest server.|
+| `mds-rest.create_table`        | Event generated when you create a table by using rest server.|
+| `mds-rest.alter_table`         | Event generated when you modify a table by using rest server.|
+| `mds-rest.alter_database`      | Event generated when you modify a database by using rest server.|
+| `mds-rest.add_partition`       | Event generated when you add a partition by using rest server.|
+| `mds-rest.alter_partition`     | Event generated when you modify a partition by using rest server.|
+| `mds-rest.rename_partition`    | Event generated when you rename a partition by using rest server.|
+| `mds-rest.drop_partition`      | Event generated when you drop a partition by using rest server.|
+| `mds-rest.drop_table`          | Event generated when you drop a table by using rest server.|
+| `mds-rest.drop_database`       | Event generated when you drop a database by using rest server.|
+{: caption="Lists of MDS Rest server events" caption-side="bottom"}
+
 
 ## Engine user events
 {: #at_actions_engine_users}
