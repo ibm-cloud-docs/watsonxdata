@@ -15,21 +15,21 @@ subcollection: watsonxdata
 {: #dph_intro}
 
 IBM Data Product Hub as a Service is a self-service solution designed to streamline sharing of data products among data producers and data consumers. This light-weight platform that packages data assets such as SQL queries, and tables into Data products, which servers a specific business use case.
-Data consumers can be both technical users and business users.
+With the integration of IBM Data Product Hub and watsonx.data, Data engineers can seamlessly access data available in watsonx.data in the form of Data products.
 
 **Data assets and Data products**
 
 Data assets can be SQL query, SQL table, ML models or BI dashboards.
-Data product is a collection of assets packaged under a platform for a specific business use case.
+Data product is a collection of assets packaged together for a specific business use case.
 
 **Data producers and Data consumers**
 
 Data producers are responsible for packaging the data assets into Data products, defining data contract and, making the product accessible to consumers.
-Data consumers are the users who subscribe to these Data products created by the Data producers.
+Data consumers are the users who subscribe to these Data products created by the Data producers. Data consumers can be both technical users and business users.
 
 **Features of integration**
 
-   * **Accessing datasource** : When watsonx.data integrates with Data Product Hub, the metadata information from watsonx.data is packaged as a Data product by using presto connector for easy sharing among users. This integration broadens the accessibility of data source in watsonx.data. The data is packaged in a secure manner as it does not involve actual movement of data.
+   * **Accessing datasource** : When watsonx.data integrates with Data Product Hub, the metadata information from watsonx.data is packaged as a Data product by using Presto connector for easy sharing among users. This integration broadens the accessibility of data source in watsonx.data. The data is packaged in a secure manner as it does not involve actual movement of data.
 
       To access data from watsonx.data, do the following:
 
