@@ -29,6 +29,6 @@ Data product is a collection of assets packaged under a platform for a specific 
 
 **Data delivery methods**
 
-   * **Flight service delivery method** : The technical consumers can use Jupyter Notebooks to write a script to access the data sources in watsonx.data.
+   * **Flight service delivery method** : The Flight service provides read access to various data sources iin watsonx.data. This delivery method is only used by the technical data consumer example, Data scientist. The technical consumers can use Jupyter Notebooks to write a script to access the data sources in watsonx.data.
 
-   * **Data extract delivery method** : The business consumers use data refinery service to extract data from wxd and deliver in the required format.
+   * **Data extract delivery method** : The business consumers use data refinery service to create a CSV data extract file and download it.
