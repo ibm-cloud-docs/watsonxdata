@@ -307,6 +307,10 @@ toc:
             - s2s_auth.md
       - ds_integration.md
       - topicgroup:
+          label: Integrating with Data Product Hub
+          topics:
+            - wxd-dph.md
+      - topicgroup:
           label: Integrating with BI visualization tools
           topics:
             - bi_tools.md
