@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-04-11"
+lastupdated: "2025-04-23"
 
 keywords: watsonxdata, release notes
 
@@ -174,6 +174,9 @@ CPDCTL CLI enhancements
 
    * `config` - To configure {{site.data.keyword.lakehouse_short}} service environment and users.
    * `wx-data` - To perform other operations such as, ingesting, managing engines, etc in {{site.data.keyword.lakehouse_short}}. For more information, see [IBM cpdctl](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=cloud-pak-data-command-line-interface-cpdctl).
+
+      {{site.data.keyword.lakehouse_short}} developer edition is now enabled in IBM CPDCTL version v1.6.104 and later.
+      {: note}
 
 Deprecated features
 
