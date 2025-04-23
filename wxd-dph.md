@@ -45,6 +45,6 @@ Data consumers are the users who subscribe to these Data products created by the
 
 **Data delivery methods**
 
-   * **Flight service delivery method** : The Flight service provides read access to various data sources iin watsonx.data. This delivery method is only used by the technical data consumer example, Data scientist. The technical consumers can use Jupyter Notebooks to write a script to access the data sources in watsonx.data.
+   * **Flight service delivery method** : The Flight service provides read access to various data sources iin watsonx.data. This delivery method is only used by the technical data consumer example, Data scientist. The technical consumers can use Jupyter Notebooks to write a script to access the data sources in watsonx.data. For information about Flight services, see [Flight Service](https://dataplatform.cloud.ibm.com/docs/content/wsj/data-products/prd_delivery_methods_overview.html?context=dph&locale=en#flight).
 
-   * **Data extract delivery method** : The business consumers use data refinery service to create a CSV data extract file and download it.
+   * **Data extract delivery method** : The business consumers use data refinery service to create a CSV data extract file and download it. For information about data extract delivery method, see [Data Extract delivery method](https://dataplatform.cloud.ibm.com/docs/content/wsj/data-products/prd_delivery_methods_overview.html?context=dph&locale=en#extract).
