@@ -31,7 +31,7 @@ Data consumers are the users who subscribe to these Data products created by the
 
    * **Data accessibility** : When watsonx.data integrates with Data Product Hub, the metadata information from watsonx.data is packaged as a Data product by using presto connector for easy sharing among users. This integration broadens the accessibility of data source in watsonx.data. The data is packaged in a secure manner as it does not involve actual movement of data.
 
-   Data producers must do the following:
+      To access data from watsonx.data, do the following:
 
       1. Data producers must create a connection asset for accessing the data in IBM watsonx.data. To create connection, see [Presto connection](https://dataplatform.cloud.ibm.com/docs/content/wsj/manage-data/conn-watsonxd.html?context=dph&locale=en&audience=wdp).
 
