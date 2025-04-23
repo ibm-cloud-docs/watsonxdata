@@ -22,7 +22,7 @@ Data consumers can be both technical users and business users.
 Data assets can be SQL query, SQL table, ML models or BI dashboards.
 Data product is a collection of assets packaged under a platform for a specific business use case.
 
-**Benefits of integration**
+**Features of integration**
 
    * **Data accessibility** : When watsonx.data integrates with Data Product Hub, the metadata information from watsonx.data is packaged as a Data product by using presto connector for easy sharing among users. This integration broadens the accessibility of data source in watsonx.data. The data is packaged in a secure manner as it does not involve actual movement of data.
    * **Parameterized querying** : You can package the metadata information of SQL queries in watsonx.data and deliver the results in the formats such as CSV or Parquet.
