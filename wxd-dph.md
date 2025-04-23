@@ -15,6 +15,7 @@ subcollection: watsonxdata
 {: #dph_intro}
 
 IBM Data Product Hub (DPH) as a Service is a self-service solution designed to streamline sharing of data products between data producers and data consumers. This light-weight platform packages data assets such as SQL queries, and tables into data products, which serves a specific business use case.
+
 Integration of DPH and watsonx.data enables seamless data access between the two services for data engineers.
 
 **Data assets and data products**
