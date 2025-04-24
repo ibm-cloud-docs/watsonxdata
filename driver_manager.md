@@ -29,11 +29,9 @@ subcollection: watsonxdata
 # Driver manager
 {: #driver_manager}
 
-This functionality grants non-admin users access to view the **Driver Manager** page within the **Configurations** section of {{site.data.keyword.lakehouse_full}}. Previously, only administrator users could see the details of active drivers. This new functionality improves transparency and accessibility by allowing non-admin users to monitor driver status without requiring administrator intervention. Non-admin users will have read-only access to the **Driver Manager** page and will not be able to perform any editing or deletion of driver configurations, ensuring the integrity and security of the system.
+The **Driver Manager** within the **Configurations** section of {{site.data.keyword.lakehouse_full}} provides the functionality to add external JDBC drivers (in .jar file format) required for connecting to HANA (using ngdbc 2.17.12) and MySQL (using mysql-connector/j 8.2.0) within {{site.data.keyword.lakehouse_short}}.
 
-**Driver Manager** allow users to add external drivers (.jar file) for the following connectors in {{site.data.keyword.lakehouse_short}}:
-   * HANA (ngdbc 2.17.12)
-   * MySQL (mysql-connector/j 8.2.0)
+The **Driver Manager** now enables both administrator and non-administrator users to view driver details for monitoring purposes, while maintaining appropriate access controls restricted to administrator users only.
 
 
 ## Procedure
