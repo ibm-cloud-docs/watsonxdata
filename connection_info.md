@@ -214,6 +214,8 @@ You can copy the profile details by clicking **Copy profile snippet** or export 
 
 The **Instance details** page provides the following details. To open the Instance details, click the i icon on the home page.
 
+   * Version
+   * Console build
    * Region
    * Plan type
    * Cloud resource name (CRN)
