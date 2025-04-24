@@ -47,10 +47,11 @@ To register and sync external Iceberg data into watsonx.data, complete the follo
 2. Select the storage from the **Storage** section.
 3. Enter the storage details.
 3. Select the **Associated catalog** checkbox.
-4. Select **Catalog type** as **Apache Iceberg**.
-5. Enter the catalog name.
-6. Click **Associate** to create the storage.
-7. To pull the changed data in a storage bucket in {{site.data.keyword.lakehouse_short}}, go to the **Infrastructure manager** page, hover over the Apache Iceberg catalog and click Sync metadata. You can see three options to select the Mode and the corresponding possibility for metadata loss. The following are the three sync options:
+4. Select the **Activate now** checkbox
+5. Select **Catalog type** as **Apache Iceberg**.
+6. Enter the catalog name.
+7. Click **Associate** to create the storage.
+8. To pull the changed data in a storage bucket in {{site.data.keyword.lakehouse_short}}, go to the **Infrastructure manager** page, hover over the Apache Iceberg catalog and click Sync metadata. You can see three options to select the Mode and the corresponding possibility for metadata loss. The following are the three sync options:
 
 * **Register new objects only**: Schemas, tables, and metadata that are created by external applications since the last sync operations are added to this catalog. Existing schemas and tables in this catalog are not modified.
 * **Update existing objects only**: Schemas, tables, and metadata already present in this catalog are updated or deleted to match the current state found in the associated bucket. Any other schemas, tables, and metadata in the associated bucket are ignored.
@@ -67,14 +68,15 @@ To register external Hudi and Delta Lake data into watsonx.data, complete the fo
 2. Select the storage from the **Storage** section.
 3. Enter the storage details.
 3. Select the **Associated catalog** checkbox.
-4. Based on the type of table format, select one of the following **Catalog type**.
+4. Select the **Activate now** checkbox
+5. Based on the type of table format, select one of the following **Catalog type**.
 
    - **Apache Hudi**
    - **Delta Lake**
 
-5. Enter the catalog name.
-6. Click **Associate** to create the storage.
-7. You can register and load table using [Register table](https://cloud.ibm.com/apidocs/watsonxdata-software#register-table) and [load table metadata](https://cloud.ibm.com/apidocs/watsonxdata-software#load-table) APIs.
+6. Enter the catalog name.
+7. Click **Associate** to create the storage.
+8. You can register and load table using [Register table](https://cloud.ibm.com/apidocs/watsonxdata-software#register-table) and [load table metadata](https://cloud.ibm.com/apidocs/watsonxdata-software#load-table) APIs.
 
    To register the tables, you must provide the exact location of the metatdata folder. The schema is inferred based on the path in the location url.
    {: #note}
