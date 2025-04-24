@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-23"
+lastupdated: "2025-04-24"
 
 keywords: lakehouse
 
@@ -30,6 +30,12 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+## Unable to edit storage policies and associated data objects
+{: #known_issue25730}
+
+After a policy is created for a storage, you cannot edit the policy and the associated data objects.
+**Workaround:** Perform a hard refresh after creating the policy before attempting any edits.
 
 ## Parquet file preview during ingestion from S3 buckets
 {: #known_issue44839}
