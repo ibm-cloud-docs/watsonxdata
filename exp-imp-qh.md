@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-10-06"
+  years: 2022, 2025
+lastupdated: "2025-04-24"
 
 keywords: lakehouse, exporting, importing, query history, watsonx.data
 
@@ -82,7 +82,7 @@ ce8de101f7cf.cdc406pd09pasng7elgg.databases.appdomain.cloud:30929 \
     ```bash
     ./presto --server https://8dac613f-ba5b-4c3c-8c96-\
     ce8de101f7cf.cdc406pd09pasng7elgg.databases.appdomain.cloud:30929 \
-    --execute "create schema iceberg_data.query_history with \
+    --execute "create schema hive_data.query_history with \
     (location='s3a://8dac613f-ba5b-4c3c-8c96-ce8de101f7cf-customer/query_history')" \
     --user ibmlhapikey --password
     ```
@@ -98,11 +98,13 @@ ce8de101f7cf.cdc406pd09pasng7elgg.databases.appdomain.cloud:30929 \
     ```
     {: codeblock}
 
+    `where 1=0` condition will have no rows selected resulting in an empty table.
+
     - **Example**
 
     ```bash
     ./presto --server https://8dac613f-ba5b-4c3c-8c96-ce8de101f7cf.cdc406pd09pasng7elgg.databases.appdomain.cloud:30929
-    --execute "create table iceberg_data.query_history.queries as select * from system.runtime.queries where 1=0"
+    --execute "create table hive_data.query_history.queries as select * from system.runtime.queries where 1=0"
     --user ibmlhapikey --password
     ```
     {: codeblock}
@@ -122,8 +124,8 @@ ce8de101f7cf.cdc406pd09pasng7elgg.databases.appdomain.cloud:30929 \
     ```bash
     ./presto --server \
     https://8dac613f-ba5b-4c3c-8c96-ce8de101f7cf.cdc406pd09pasng7elgg.databases.appdomain.cloud:3092 \
-    –-execute "insert into iceberg_data.query_history.queries select * from system. runtime.queries \
-    where query_id not in (select query_id from iceberg_data.query_history.queries)"
+    –-execute "insert into hive_data.query_history.queries select * from system. runtime.queries \
+    where query_id not in (select query_id from hive_data.query_history.queries)"
     --user ibmlhapikey --password
     ```
     {: codeblock}
@@ -140,7 +142,7 @@ ce8de101f7cf.cdc406pd09pasng7elgg.databases.appdomain.cloud:30929 \
     ```bash
     ./presto --server \
     https://23b06b14-342b-4ed2-841d-7f02ca9ae788.cdc406pd09pasng7elgg.databases.appdomain.cloud:31530 \
-    --execute " select * from iceberg_data.query_history.queries union \
+    --execute " select * from hive_data.query_history.queries union \
     select * from system.runtime.queries order by created " \
     --output-format=CSV_HEADER --user ibmlhapikey --password
     ```
