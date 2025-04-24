@@ -35,6 +35,7 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 {: #known_issue25730}
 
 After a policy is created for a storage, you cannot edit the policy and the associated data objects.
+
 **Workaround:** Perform a hard refresh after creating the policy before attempting any edits.
 
 ## Parquet file preview during ingestion from S3 buckets
