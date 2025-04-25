@@ -31,6 +31,11 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
+## Query history page displays an error when a catalog or schema is not specified in a query
+{: #known_issue22065}
+
+Running a query in the Query workspace with a catalog or schema selected from the drop-down executes successfully. However, the query details fetched from query history page might show the following error message: "Catalog or Schema must be specified when session catalog or schema is not set".
+
 ## Unable to edit storage policies and associated data objects
 {: #known_issue25730}
 
