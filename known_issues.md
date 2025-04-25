@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-24"
+lastupdated: "2025-04-25"
 
 keywords: lakehouse
 
@@ -154,12 +154,6 @@ Presto CLI supports a maximum password size of 1 KB (1024 bytes). If the passwor
 Business terms that were imported to IBM Knowledge Catalog for a semantic automation layer (SAL) integration in {{site.data.keyword.lakehouse_short}} are not removed when the integration is deleted. This can result in duplicate business terms if a new SAL integration is subsequently enabled and the same or similar business terms are uploaded again.
 
 **Workaround:** To avoid duplicate business terms, the cluster administrator or the user who originally created the SAL registration must manually delete all business terms that were imported for the SAL integration.
-
-## Iceberg tables that are partitioned by a date column may not be readable.
-{: #known_issues34778}
-
-This limitation is only applicable to Presto C++.
-{: note}
 
 ## EXISTS clause on Apache Phoenix tables generate Exeception while executing query error
 {: #known_issues18858}
