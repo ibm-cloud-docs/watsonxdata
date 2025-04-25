@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-24"
+lastupdated: "2025-04-25"
 
 keywords: lakehouse, exporting, importing, query history, watsonx.data
 
@@ -98,7 +98,7 @@ ce8de101f7cf.cdc406pd09pasng7elgg.databases.appdomain.cloud:30929 \
     ```
     {: codeblock}
 
-    `where 1=0` condition will have no rows selected resulting in an empty table.
+    `where 1=0` condition make sure that no rows are selected from a table, resulting in an empty result set.
 
     - **Example**
 
