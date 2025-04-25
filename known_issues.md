@@ -31,24 +31,7 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
-## Query history page displays an error when a catalog or schema is not specified in a query
-{: #known_issue22065}
 
-Running a query in the Query workspace with a catalog or schema selected from the drop-down executes successfully. However, the query details fetched from query history page might show the following error message: "Catalog or Schema must be specified when session catalog or schema is not set".
-
-## Unable to edit storage policies and associated data objects
-{: #known_issue25730}
-
-After a policy is created for a storage, you cannot edit the policy and the associated data objects.
-
-**Workaround:** Perform a hard refresh after creating the policy before attempting any edits.
-
-## Parquet file preview during ingestion from S3 buckets
-{: #known_issue44839}
-
-When ingesting Parquet files from a remote AWS S3 bucket, you may experience the limitation of data preview and editing capabilities within {{site.data.keyword.lakehouse_short}}.
-
-**Workaround:** To preview Parquet data from a remote S3 bucket during ingestion, select individual Parquet files rather than choosing the entire directory or table. This will allow the preview functionality to work as intended.
 
 ## Virtual private network configuration limitation
 {: #issue24487}
