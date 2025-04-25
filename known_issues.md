@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-15"
+lastupdated: "2025-04-25"
 
 keywords: lakehouse
 
@@ -30,6 +30,8 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+
 
 ## Virtual private network configuration limitation
 {: #issue24487}
@@ -84,40 +86,12 @@ Replace `<catalog-name>` with the actual catalog being used.
 
 Or set `hive.parquet.use-column-names=true` in catalog properties. For `ORC`, set `hive.orc.use-column-names=true` in catalog properties.
 
-## Issue with server/host, port information, and user data in exported file
-{: #known_issue23730}
-
-The server/host and port information are missing from the reg file and are not populated in the driver for the Power BI downloaded file. Additionally, the user information in the exported value does not match the value in the CData reg file. Also, the exported username of Cdata template does not include `ibmlhapikey_` prefix
-
-**Workaround:** Add the `ibmlhapikey_` prefix to the username in the CData reg file.
-
-## Connection with BI tools shows no values for hostname and port 
-{: #known_issue23731}
-
-The connection with BI tools shows no values for hostname and port  when downloading `Tableau` config files.
-
-**Workaround:** Add the hostname and port value when downloading config files for PowerBI
-
-## Catalog information is not appearing in the Tableau Desktop
-{: #known_issue23615}
-
-The catalog information does not appear in the Tableau Desktop when retrieving connection details from the {{site.data.keyword.lakehouse_short}} `Connection Information` page.
-
-**Workaround:** You must manually enter the selected catalog name from the UI into the exported file.
-
 ## `Connection Information` page shows a truncated username
 {: #known_issue23612}
 
 The `Connection Information` page shows a truncated username, excluding the prefix `ibmlhapikey_` for `PowerBI` and `Looker`.
 
 **Workaround:** Add the `ibmlhapikey_` prefix to the username when manually copying the value to enable connections with BI tools.
-
-## Unable to export config files from the Firefox web browser
-{: #known_issue23617}
-
-The `Export config files` functionality on the `Connection Information` page does not work in the Firefox web browser for `PowerBI`.
-
-**Workaround:** Use the Google Chrome web browser.
 
 ## Issue with uppercase Turkish character İ in Oracle database using WE8ISO8859P9 character set (ORA-00911 Error)
 {: #known_issue23728}
@@ -168,12 +142,6 @@ Presto CLI supports a maximum password size of 1 KB (1024 bytes). If the passwor
 Business terms that were imported to IBM Knowledge Catalog for a semantic automation layer (SAL) integration in {{site.data.keyword.lakehouse_short}} are not removed when the integration is deleted. This can result in duplicate business terms if a new SAL integration is subsequently enabled and the same or similar business terms are uploaded again.
 
 **Workaround:** To avoid duplicate business terms, the cluster administrator or the user who originally created the SAL registration must manually delete all business terms that were imported for the SAL integration.
-
-## Iceberg tables that are partitioned by a date column may not be readable.
-{: #known_issues34778}
-
-This limitation is only applicable to Presto C++.
-{: note}
 
 ## EXISTS clause on Apache Phoenix tables generate Exeception while executing query error
 {: #known_issues18858}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-04-11"
+lastupdated: "2025-04-25"
 
 keywords: watsonxdata, release notes
 
@@ -66,6 +66,7 @@ Integration enhancements
 
    * Now, you can define IBM Knowledge Catalog governance policies for Presto (C++) engine when you integrate with {{site.data.keyword.lakehouse_short}}. For information about connecting to IBM Knowledge Catalog (IKC), see [Connecting to IBM Knowledge Catalog (IKC)](/docs/watsonxdata?topic=watsonxdata-ikc_integration).
    * You can now export configuration files for target Presto engine, based on their ODBC driver selection (Simba or CData), to more easily establish connections with {{site.data.keyword.lakehouse_short}}. This enhancement saves you from manually configuring Presto engine details by using PowerBI. For more information about connecting to Presto by using the Config files, see [Connecting to Presto by using the Config files](/docs/watsonxdata?topic=watsonxdata-bi_intro#confug_file).
+   * Integrating with Data Product Hub: You can integrate {{site.data.keyword.lakehouse_short}} with DPH to package SQL tables and queries into data products tailored for specific use cases. For details, see [Integrating with Data Product Hub](/docs/watsonxdata?topic=watsonxdata-dph_intro).
 
 Ingestion enhancement
 
@@ -174,6 +175,9 @@ CPDCTL CLI enhancements
 
    * `config` - To configure {{site.data.keyword.lakehouse_short}} service environment and users.
    * `wx-data` - To perform other operations such as, ingesting, managing engines, etc in {{site.data.keyword.lakehouse_short}}. For more information, see [IBM cpdctl](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=cloud-pak-data-command-line-interface-cpdctl).
+
+      {{site.data.keyword.lakehouse_short}} developer edition is now enabled in IBM CPDCTL version v1.6.104 and later.
+      {: note}
 
 Deprecated features
 

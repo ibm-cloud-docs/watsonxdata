@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-20"
+lastupdated: "2025-04-25"
 
 keywords: lakehouse, watsonx data, events, audit, activity
 
@@ -242,6 +242,8 @@ The following table lists the events generated at watsonx.data (platform) level:
 | `lakehouse.authtoken.create`      | Generated when a user logs in. |
 | `lakehouse.authtoken.delete`      | Generated when a user logs out. |
 {: caption="Lists of events for authentication" caption-side="bottom"}
+
+
 
 ## Engine user events
 {: #at_actions_engine_users}
