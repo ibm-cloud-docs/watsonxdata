@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-11"
+lastupdated: "2025-04-28"
 
 keywords: watsonxdata, ingesting, object storage bucket, data files, table format. SQL query
 
@@ -95,7 +95,7 @@ The objectives of this tutorial are listed as follows:
    For example:
 
    ```bash
-   CREATE TABLE IF NOT EXISTS hive.gosales.branch ("BRANCH_CODE" int, "ADDRESS1" varchar, "ADDRESS1_MB" varchar, "ADDRESS2" varchar, "ADDRESS2_MB" varchar, "CITY" varchar, "CITY_MB" varchar, "PROV_STATE" varchar, "PROV_STATE_MB" varchar, "POSTAL_ZONE" varchar, "COUNTRY_CODE" int, "ORGANIZATION_CODE" varchar, "WAREHOUSE_BRANCH_CODE" int) WITH ( format = 'CSV', external_location = 's3a://lhbeta/gosales/branch' );
+   CREATE TABLE IF NOT EXISTS hive.gosales.branch ("BRANCH_CODE" integer, "ADDRESS1" varchar, "ADDRESS1_MB" varchar, "ADDRESS2" varchar, "ADDRESS2_MB" varchar, "CITY" varchar, "CITY_MB" varchar, "PROV_STATE" varchar, "PROV_STATE_MB" varchar, "POSTAL_ZONE" varchar, "COUNTRY_CODE" integer, "ORGANIZATION_CODE" varchar, "WAREHOUSE_BRANCH_CODE" integer) WITH ( format = 'CSV', external_location = 's3a://lhbeta/gosales/branch' );
    ```
    {: screen}
 
