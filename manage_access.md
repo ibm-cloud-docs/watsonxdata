@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-08"
+lastupdated: "2025-04-28"
 
 keywords: lakehouse, watsonx data, roles, access
 subcollection: watsonxdata
@@ -102,3 +102,5 @@ To manage access, complete the following steps:
 
       The user remains in the **Access control** tab after removing from {{site.data.keyword.Bluemix_notm}} or Cloud Pak for Data. You must remove the user manually from the **Access control** tab. You might see the user in the **Access control** tab of the engine after confirming the removal. It takes up to 20 minutes for the access revoke to be effective for the user and disappear from the tab.
       {: note}
+
+   
