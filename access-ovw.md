@@ -144,6 +144,7 @@ You can see the connection information of {{site.data.keyword.lakehouse_short}} 
 
 
 **Username** – Username can either be `ibmlhapikey` or `ibmlhtoken`.
+
 **Password** – Password can either be `IBM Cloud API key` or `IBM IAM access token`. For more information see, [Getting IBM API key](/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmapi-key) and [Getting IBM Access Management (IAM) token](/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
 
 
