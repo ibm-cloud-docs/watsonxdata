@@ -23,6 +23,7 @@ subcollection: watsonxdata
 {:important: .important}
 {:note: .note}
 {:attention: .attention}
+{:remember: .remember}
 {:deprecated: .deprecated}
 {:pre: .pre}
 {:video: .video}
@@ -47,14 +48,14 @@ This topic provides a few usage scenario guidance for the `cpdctl wx-data` comma
        --name presto \
        --instance-id 1234567890
    ```
-   {: codeblock}
+   {: screen}
 
 **Windows:** Windows command prompt and PowerShell do not support the backslash (\) for line continuation in the same way. Users must provide the entire command on a single line.
 
    ```bash
    cpdctl wx-data engine attach --id presto785 --catalog-names icebergCatalog --name presto --instance-id 1234567890
    ```
-   {: codeblock}
+   {: screen}
 
 ## Scenario 2: JSON key value pairs in command options
 {: #cpdctl_commands_specialcase2}
@@ -73,14 +74,14 @@ You can input JSON formatted options for cpdctl wx-data commands in one of the 2
           "catalog_type": "hive-hadoop2"
         }'
       ```
-      {: codeblock}
+      {: screen}
 
    * The OPTIONS in the cpdctl CLI --help output gives the single-line alternatives for the JSON key value pairs.
 
       ```bash
       --associated-catalog-name "hivecos" --associated-catalog-tags ["tag_1", "tag_2"] --associated-catalog-type "hive-hadoop2"
       ```
-      {: codeblock}
+      {: screen}
 
 ## Scenario 3: JSON key value pairs usage formats in different operating systems
 {: #cpdctl_commands_specialcase3}
@@ -94,7 +95,7 @@ You can input JSON formatted options for cpdctl wx-data commands in one of the 2
        "catalog_type": "hive-hadoop2"
      }'
    ```
-   {: codeblock}
+   {: screen}
 
 **Windows:** When using JSON formatted key value pairs in Windows, the formatting must be adjusted to accommodate the command prompt and PowerShell's handling of quotation marks.
 
@@ -103,11 +104,11 @@ You can input JSON formatted options for cpdctl wx-data commands in one of the 2
       ```bash
       --associated-catalog "{\"catalog_name\": \"hivecos\", \"catalog_tags\": [\"tag_1\", \"tag_2\"], \"catalog_type\": \"hive-hadoop2\"}"
       ```
-      {: codeblock}
+      {: screen}
 
    * Windows PowerShell: All internal double quotes (") must be escaped with a backslash (\").
 
       ```bash
       --associated-catalog '{\"catalog_name\": \"hivecos\", \"catalog_tags\": [\"tag_1\", \"tag_2\"], \"catalog_type\": \"hive-hadoop2\"}'
       ```
-      {: codeblock}
+      {: screen}
