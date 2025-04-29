@@ -72,6 +72,8 @@ For Windows PowerShell:
    ```
    {: codeblock}
 
+   Users can use the `user` and `profile` commands in  to  set the user profile without having to individually do the  and  actions separately.
+   {: tip}
 
 ## user
 {: #cpdctl_commands_configuser}
@@ -88,10 +90,10 @@ The `user` command further supports the following commands:
 
 | Options | Description |
 | ---- | --- |
-|./cpdctl config user set [commands]|Set the credentials for a user in cpdctl configuration to connect to {{site.data.keyword.lakehouse_short}} instance.|
-|./cpdctl config user list|List the credentials stored in cpdctl configuration that is used to connect to {{site.data.keyword.lakehouse_short}} instance.|
-|./cpdctl config user get <username>|Get the credentials of a user stored in cpdctl configuration that is used to connect to {{site.data.keyword.lakehouse_short}} instance.|
-|./cpdctl config user unset <username>|Remove the currently set username from the cpdctl configuration of {{site.data.keyword.lakehouse_short}} instance.|
+|`./cpdctl config user set [commands]`|Set the credentials for a user in cpdctl configuration to connect to {{site.data.keyword.lakehouse_short}} instance.|
+|`./cpdctl config user list`|List the credentials stored in cpdctl configuration that is used to connect to {{site.data.keyword.lakehouse_short}} instance.|
+|`./cpdctl config user get <username>`|Get the credentials of a user stored in cpdctl configuration that is used to connect to {{site.data.keyword.lakehouse_short}} instance.|
+|`./cpdctl config user unset <username>`|Remove the currently set username from the cpdctl configuration of {{site.data.keyword.lakehouse_short}} instance.|
 {: caption="Supported commands by `user`" caption-side="bottom"}
 
 `./cpdctl config user set [commands]` further supports the following commands as options to be used for setting the credentials:
@@ -106,23 +108,8 @@ The `user` command further supports the following commands:
    ```
    {: codeblock}
 
-Example setting up a user:
+Example setting up a user in a cloud instance:
 
-Software and development edition:
-   ```bash
-   ./cpdctl config user set <user> --username <onprem_username> --password <onprem_password>
-   ```
-   {: codeblock}
-
-   ```bash
-   ./cpdctl config user set user1 --username cpadmin --password xyz
-   ```
-   {: codeblock}
-
-For {{site.data.keyword.lakehouse_short}} software, it is recommended to use --username and --password which are used to login to the console.
-
-
-SaaS:
    ```bash
    ./cpdctl config user set <user> --username <saas_username> --apikey <APIKEY>
    ```
@@ -151,12 +138,12 @@ The profile command supports the following commands:
 
 |Options|Description|
 | ---- | ---- |
-|./cpdctl config profile set [commands]|Set {{site.data.keyword.lakehouse_short}} environment profile in cpdctl configuration.|
-|./cpdctl config profile list|List all {{site.data.keyword.lakehouse_short}} environment profiles set in cpdctl configuration.|
-|./cpdctl config profile get <profilename>|Get details of the {{site.data.keyword.lakehouse_short}} environment profile from cpdctl configuration.|
-|./cpdctl config profile unset <profilename>|Remove {{site.data.keyword.lakehouse_short}} environment profile from cpdctl configuration.|
-|./cpdctl config profile current|Get details of the current {{site.data.keyword.lakehouse_short}} environment profile used from cpdctl configuration.|
-|./cpdctl config profile use <profilename>|Use a particular {{site.data.keyword.lakehouse_short}} environment profile from cpdctl configuration.|
+|`./cpdctl config profile set [commands]`|Set {{site.data.keyword.lakehouse_short}} environment profile in cpdctl configuration.|
+|`./cpdctl config profile list`|List all {{site.data.keyword.lakehouse_short}} environment profiles set in cpdctl configuration.|
+|`./cpdctl config profile get <profilename>`|Get details of the {{site.data.keyword.lakehouse_short}} environment profile from cpdctl configuration.|
+|`./cpdctl config profile unset <profilename>`|Remove {{site.data.keyword.lakehouse_short}} environment profile from cpdctl configuration.|
+|`./cpdctl config profile current`|Get details of the current {{site.data.keyword.lakehouse_short}} environment profile used from cpdctl configuration.|
+|`./cpdctl config profile use <profilename>`|Use a particular {{site.data.keyword.lakehouse_short}} environment profile from cpdctl configuration.|
 {: caption="Supported commands by `profile`" caption-side="bottom"}
 
 ./cpdctl config profile set [commands] further supports the following commands as options to be used for setting the credentials:
@@ -183,21 +170,7 @@ The profile command supports the following commands:
    ```
    {: codeblock}
 
-Example setting up a profile using teh `user` configuration set earlier:
-
-Software instance:
-
-   ```bash
-   cpdctl config profile set <profile_name> --user <user> --url <profile_url>
-   ```
-   {: codeblock}
-
-   ```bash
-   ./cpdctl config profile set onprem --user user1 --url http://cpd-cpd-instance.apps.docteam-wxd-cluster.cp.fyre.ibm.com/
-   ```
-   {: codeblock}
-
-Cloud instance:
+Example setting up a profile using teh `user` configuration set earlier in a cloud instance:
 
    ```bash
    ./cpdctl config profile set <profile_name> --user <user> --url <profile_url> --region <region_name>
@@ -209,38 +182,10 @@ Cloud instance:
    ```
    {: codeblock}
 
-Software development edition instance:
-
-   ```bash
-   cpdctl config profile set <profile_name> --user <user> --url <profile_url>
-   ```
-   {: codeblock}
-
-   ```bash
-   ./cpdctl config profile set dev --user user3 --url https://&lt;clustername>.fyre.ibm.com:9443
-   ```
-   {: codeblock}
-
 ## Using the commands user and profile together
 {: #cpdctl_commands_configboth}
 
 You can combine the 2 commands user and profile together to configure instance profile in cpdctl configuration. A sample illustration of how to use the combination is provided below:
-
-**Setting up an software instance profile:**
-
-Syntax:
-   ```bash
-   cpdctl config profile set <profile_name> --username <onprem_username> --password <onprem_password> --url <onprem_url>
-   ```
-   {: codeblock}
-
-Example:
-   ```bash
-   ./cpdctl config profile set onprem --username cpadmin --password xyz --url http://cpd-cpd-instance.apps.docteam-wxd-cluster.cp.fyre.ibm.com/
-   ```
-   {: codeblock}
-
-For {{site.data.keyword.lakehouse_short}} software, it is recommended to use `--username` and `--password` which are used to login to the console.
 
 **Setting up a cloud instance profile:**
 
@@ -258,26 +203,10 @@ Example:
 
 For {{site.data.keyword.lakehouse_short}} on IBM Cloud, it is recommended to use --username and --apikey which are used to login to the console. For more information see, Get API key.
 
-**Setting up a software development edition instance profile:**
-
-Syntax:
-   ```bash
-   cpdctl config profile set <profile_name> --username <dev_username> --password <dev_password> --url <dev_url>
-   ```
-   {: codeblock}
-
-Example:
-   ```bash
-   ./cpdctl config profile set dev --username cpadmin --password xyz --url https://&lt;clustername>.fyre.ibm.com:9443
-   ```
-   {: codeblock}
-
-For {{site.data.keyword.lakehouse_short}} software development edition, it is recommended to use `--username` and `--password` which are used to login to the console.
-
 ## Setting the instance ID as environment variable
 {: #cpdctl_commands_configinstid}
 
-You must set an instance ID to access the corresponding environment to run the cpdctl commands. To set the instance ID, you can use the WX_DATA_INSTANCE_ID environment variable. This allows you to avoid specifying the instance ID with each command.
+You must set an instance ID to access the corresponding environment to run the cpdctl commands. To set the instance ID, you can use the `WX_DATA_INSTANCE_ID` environment variable. This allows you to avoid specifying the instance ID with each command.
 
    You must use `INSTANCE_ID` in {{site.data.keyword.lakehouse_short}} 2.1.1 version.
    {: note}

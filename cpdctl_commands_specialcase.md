@@ -22,6 +22,7 @@ subcollection: watsonxdata
 {:tip: .tip}
 {:important: .important}
 {:note: .note}
+{:attention: .attention}
 {:deprecated: .deprecated}
 {:pre: .pre}
 {:video: .video}
