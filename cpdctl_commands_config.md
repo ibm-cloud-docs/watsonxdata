@@ -117,13 +117,16 @@ Example setting up a user in a cloud instance:
    ```
    {: codeblock}
 
-For {{site.data.keyword.lakehouse_short}} on IBM Cloud, it is recommended to use --username and --apikey which are used to login to the console. For more information see, Get API key.
+For {{site.data.keyword.lakehouse_short}} on IBM Cloud, it is recommended to use `--username` and `--apikey` which are used to login to the console. For more information see, [Get API key](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmapi-key).
 
 
 ## profile
 {: #cpdctl_commands_configprof}
 
-The profile command manage profiles in {{site.data.keyword.lakehouse_short}}.
+The `profile` command manage profiles in {{site.data.keyword.lakehouse_short}}.
+
+   Single sign-on (SSO) login is enabled in cpdctl configuration.
+   {: note}
 
 Syntax:
    ```bash
@@ -131,7 +134,7 @@ Syntax:
    ```
    {: codeblock}
 
-The profile command supports the following commands:
+The `profile` command supports the following commands:
 
 |Options|Description|
 | ---- | ---- |
@@ -143,7 +146,7 @@ The profile command supports the following commands:
 |`./cpdctl config profile use <profilename>`|Use a particular {{site.data.keyword.lakehouse_short}} environment profile from cpdctl configuration.|
 {: caption="Supported commands by `profile`" caption-side="bottom"}
 
-./cpdctl config profile set [commands] further supports the following commands as options to be used for setting the credentials:
+`./cpdctl config profile set [commands]` further supports the following commands as options to be used for setting the credentials:
    ```bash
    --apikey (string) : Create a user having this API key and associate it with the profile. Used for SaaS and Onprem. Recommended to use for SaaS instance.
 
@@ -198,15 +201,12 @@ Example:
    ```
    {: codeblock}
 
-For {{site.data.keyword.lakehouse_short}} on IBM Cloud, it is recommended to use --username and --apikey which are used to login to the console. For more information see, Get API key.
+For {{site.data.keyword.lakehouse_short}} on IBM Cloud, it is recommended to use `--username` and `--apikey` which are used to login to the console. For more information see, [Get API key](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmapi-key).
 
 ## Setting the instance ID as environment variable
 {: #cpdctl_commands_configinstid}
 
 You must set an instance ID to access the corresponding environment to run the cpdctl commands. To set the instance ID, you can use the `WX_DATA_INSTANCE_ID` environment variable. This allows you to avoid specifying the instance ID with each command.
-
-   You must use `INSTANCE_ID` in {{site.data.keyword.lakehouse_short}} 2.1.1 version.
-   {: note}
 
 To set the variable, run the following command in macOS and Linux:
    ```bash
