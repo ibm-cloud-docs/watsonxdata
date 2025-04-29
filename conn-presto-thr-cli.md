@@ -178,7 +178,7 @@ If you enabled `External Identity Interactions Limited` feature, and using API k
 ## Connecting to Presto engine using Java/JDBC
 {: #conn-to-prestjava}
 
-1. Download and install the [latest JDBC drivers](https://prestodb.io/docs/current/installation/jdbc.html) on the client machine.
+1. Download and install the [latest JDBC drivers](https://prestodb.io/docs/current/clients/java.html) on the client machine.
 
 2. Add the downloaded `jar` file to the class path of your Java application.
 
