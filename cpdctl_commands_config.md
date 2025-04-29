@@ -41,11 +41,11 @@ The config command manages the configuration of profile and users for {{site.dat
    {: codeblock}
 
 The config command supports the following commands:
-   * user
-   * profile
+   * [user](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_config#cpdctl_commands_configuser)
+   * [profile](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_config#cpdctl_commands_configprof)
 
-   You can set users and profiles by running these commands separately. It is recommended to use the combined commands to set the profile and users through a single command. For more information, see [Using the commands user and profile together](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_config#cpdctl_commands_configboth).
-   {: note}
+   You can set [user](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_config#cpdctl_commands_configuser) and [profile](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_config#cpdctl_commands_configprof) by running these commands separately. It is recommended to use the combined commands to set the profile and users through a single command. For more information, see [Using the commands user and profile together](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_config#cpdctl_commands_configboth).
+   {: tip}
 
 ## Configuring encryption key for IBM cpdctl
 {: #cpdctl_commands_configencrypt}
@@ -71,9 +71,6 @@ For Windows PowerShell:
    $env:CPDCTL_ENCRYPTION_KEY_PATH = "/path/cpdctl.key"
    ```
    {: codeblock}
-
-   Users can use the `user` and `profile` commands in  to  set the user profile without having to individually do the  and  actions separately.
-   {: tip}
 
 ## user
 {: #cpdctl_commands_configuser}
