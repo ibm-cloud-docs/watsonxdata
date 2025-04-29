@@ -126,6 +126,15 @@ toc:
       - delete_bucket.md
       - sync_logs.md
       - topicgroup:
+          label: IBM Cloud Pak for Data Command Line Interface (IBM cpdctl)
+          topics:
+          - cpdctl-title.md
+          - cpdctl-install.md
+          - cpdctl-commands_title.md
+          - cpdctl-commands_config.md
+          - cpdctl-commands_wxdata.md
+          - cpdctl-commands_specialcase.md
+      - topicgroup:
           label: Exploring data
           topics:
           - exp_objects.md
