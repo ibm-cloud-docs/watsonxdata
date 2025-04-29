@@ -44,7 +44,7 @@ The config command supports the following commands:
    * user
    * profile
 
-   You can set users and profiles by running these commands separately. It is recommended to use the combined commands to set the profile and users through a single command. For more information, see [Using the commands user and profile together](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_configboth).
+   You can set users and profiles by running these commands separately. It is recommended to use the combined commands to set the profile and users through a single command. For more information, see [Using the commands user and profile together](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_config#cpdctl_commands_configboth).
    {: note}
 
 ## Configuring encryption key for IBM cpdctl
@@ -72,6 +72,7 @@ For Windows PowerShell:
    ```
    {: codeblock}
 
+
 ## user
 {: #cpdctl_commands_configuser}
 
@@ -85,13 +86,13 @@ Syntax:
 
 The `user` command further supports the following commands:
 
-   | Options | Description |
-   | ---- | --- |
-   |./cpdctl config user set [commands]|Set the credentials for a user in cpdctl configuration to connect to {{site.data.keyword.lakehouse_short}} instance.|
-   |./cpdctl config user list|List the credentials stored in cpdctl configuration that is used to connect to {{site.data.keyword.lakehouse_short}} instance.|
-   |./cpdctl config user get <username>|Get the credentials of a user stored in cpdctl configuration that is used to connect to {{site.data.keyword.lakehouse_short}} instance.|
-   |./cpdctl config user unset <username>|Remove the currently set username from the cpdctl configuration of {{site.data.keyword.lakehouse_short}} instance.|
-   {: caption="Supported commands by `user`" caption-side="bottom"}
+| Options | Description |
+| ---- | --- |
+|./cpdctl config user set [commands]|Set the credentials for a user in cpdctl configuration to connect to {{site.data.keyword.lakehouse_short}} instance.|
+|./cpdctl config user list|List the credentials stored in cpdctl configuration that is used to connect to {{site.data.keyword.lakehouse_short}} instance.|
+|./cpdctl config user get <username>|Get the credentials of a user stored in cpdctl configuration that is used to connect to {{site.data.keyword.lakehouse_short}} instance.|
+|./cpdctl config user unset <username>|Remove the currently set username from the cpdctl configuration of {{site.data.keyword.lakehouse_short}} instance.|
+{: caption="Supported commands by `user`" caption-side="bottom"}
 
 `./cpdctl config user set [commands]` further supports the following commands as options to be used for setting the credentials:
    ```bash
@@ -107,7 +108,7 @@ The `user` command further supports the following commands:
 
 Example setting up a user:
 
-Onprem:
+Software and development edition:
    ```bash
    ./cpdctl config user set <user> --username <onprem_username> --password <onprem_password>
    ```
@@ -148,15 +149,15 @@ Syntax:
 
 The profile command supports the following commands:
 
-   |Options|Description|
-   | ---- | ---- |
-   |./cpdctl config profile set [commands]|Set {{site.data.keyword.lakehouse_short}} environment profile in cpdctl configuration.|
-   |./cpdctl config profile list|List all {{site.data.keyword.lakehouse_short}} environment profiles set in cpdctl configuration.|
-   |./cpdctl config profile get <profilename>|Get details of the {{site.data.keyword.lakehouse_short}} environment profile from cpdctl configuration.|
-   |./cpdctl config profile unset <profilename>|Remove {{site.data.keyword.lakehouse_short}} environment profile from cpdctl configuration.|
-   |./cpdctl config profile current|Get details of the current {{site.data.keyword.lakehouse_short}} environment profile used from cpdctl configuration.|
-   |./cpdctl config profile use <profilename>|Use a particular {{site.data.keyword.lakehouse_short}} environment profile from cpdctl configuration.|
-   {: caption="Supported commands by `profile`" caption-side="bottom"}
+|Options|Description|
+| ---- | ---- |
+|./cpdctl config profile set [commands]|Set {{site.data.keyword.lakehouse_short}} environment profile in cpdctl configuration.|
+|./cpdctl config profile list|List all {{site.data.keyword.lakehouse_short}} environment profiles set in cpdctl configuration.|
+|./cpdctl config profile get <profilename>|Get details of the {{site.data.keyword.lakehouse_short}} environment profile from cpdctl configuration.|
+|./cpdctl config profile unset <profilename>|Remove {{site.data.keyword.lakehouse_short}} environment profile from cpdctl configuration.|
+|./cpdctl config profile current|Get details of the current {{site.data.keyword.lakehouse_short}} environment profile used from cpdctl configuration.|
+|./cpdctl config profile use <profilename>|Use a particular {{site.data.keyword.lakehouse_short}} environment profile from cpdctl configuration.|
+{: caption="Supported commands by `profile`" caption-side="bottom"}
 
 ./cpdctl config profile set [commands] further supports the following commands as options to be used for setting the credentials:
    ```bash
@@ -182,7 +183,7 @@ The profile command supports the following commands:
    ```
    {: codeblock}
 
-Example setting up a profile:
+Example setting up a profile using teh `user` configuration set earlier:
 
 Software instance:
 
@@ -196,7 +197,7 @@ Software instance:
    ```
    {: codeblock}
 
-Cloud instace:
+Cloud instance:
 
    ```bash
    ./cpdctl config profile set <profile_name> --user <user> --url <profile_url> --region <region_name>
@@ -208,7 +209,7 @@ Cloud instace:
    ```
    {: codeblock}
 
-Software dev edition instance:
+Software development edition instance:
 
    ```bash
    cpdctl config profile set <profile_name> --user <user> --url <profile_url>
