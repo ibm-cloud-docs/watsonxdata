@@ -85,13 +85,13 @@ Syntax:
 
 The `user` command further supports the following commands:
 
-| Options | Description |
-| ---- | --- |
-|./cpdctl config user set [commands]|Set the credentials for a user in cpdctl configuration to connect to {{site.data.keyword.lakehouse_short}} instance.|
-|./cpdctl config user list|List the credentials stored in cpdctl configuration that is used to connect to {{site.data.keyword.lakehouse_short}} instance.|
-|./cpdctl config user get <username>|Get the credentials of a user stored in cpdctl configuration that is used to connect to {{site.data.keyword.lakehouse_short}} instance.|
-|./cpdctl config user unset <username>|Remove the currently set username from the cpdctl configuration of {{site.data.keyword.lakehouse_short}} instance.|
-{: caption="Supported commands by `user`" caption-side="bottom"}
+   | Options | Description |
+   | ---- | --- |
+   |./cpdctl config user set [commands]|Set the credentials for a user in cpdctl configuration to connect to {{site.data.keyword.lakehouse_short}} instance.|
+   |./cpdctl config user list|List the credentials stored in cpdctl configuration that is used to connect to {{site.data.keyword.lakehouse_short}} instance.|
+   |./cpdctl config user get <username>|Get the credentials of a user stored in cpdctl configuration that is used to connect to {{site.data.keyword.lakehouse_short}} instance.|
+   |./cpdctl config user unset <username>|Remove the currently set username from the cpdctl configuration of {{site.data.keyword.lakehouse_short}} instance.|
+   {: caption="Supported commands by `user`" caption-side="bottom"}
 
 `./cpdctl config user set [commands]` further supports the following commands as options to be used for setting the credentials:
    ```bash
@@ -148,14 +148,15 @@ Syntax:
 
 The profile command supports the following commands:
 
-|Options|Description|
-| ---- | ---- |
-|./cpdctl config profile set [commands]|Set {{site.data.keyword.lakehouse_short}} environment profile in cpdctl configuration.|
-|./cpdctl config profile list|List all {{site.data.keyword.lakehouse_short}} environment profiles set in cpdctl configuration.|
-|./cpdctl config profile get <profilename>|Get details of the {{site.data.keyword.lakehouse_short}} environment profile from cpdctl configuration.|
-|./cpdctl config profile unset <profilename>|Remove {{site.data.keyword.lakehouse_short}} environment profile from cpdctl configuration.|
-|./cpdctl config profile current|Get details of the current {{site.data.keyword.lakehouse_short}} environment profile used from cpdctl configuration.|
-|./cpdctl config profile use <profilename>|Use a particular {{site.data.keyword.lakehouse_short}} environment profile from cpdctl configuration.|
+   |Options|Description|
+   | ---- | ---- |
+   |./cpdctl config profile set [commands]|Set {{site.data.keyword.lakehouse_short}} environment profile in cpdctl configuration.|
+   |./cpdctl config profile list|List all {{site.data.keyword.lakehouse_short}} environment profiles set in cpdctl configuration.|
+   |./cpdctl config profile get <profilename>|Get details of the {{site.data.keyword.lakehouse_short}} environment profile from cpdctl configuration.|
+   |./cpdctl config profile unset <profilename>|Remove {{site.data.keyword.lakehouse_short}} environment profile from cpdctl configuration.|
+   |./cpdctl config profile current|Get details of the current {{site.data.keyword.lakehouse_short}} environment profile used from cpdctl configuration.|
+   |./cpdctl config profile use <profilename>|Use a particular {{site.data.keyword.lakehouse_short}} environment profile from cpdctl configuration.|
+   {: caption="Supported commands by `profile`" caption-side="bottom"}
 
 ./cpdctl config profile set [commands] further supports the following commands as options to be used for setting the credentials:
    ```bash
