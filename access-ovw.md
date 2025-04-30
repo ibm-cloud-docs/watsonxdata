@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-29"
+lastupdated: "2025-04-30"
 
 keywords: access, access control, access management
 
@@ -146,7 +146,3 @@ You can see the connection information of {{site.data.keyword.lakehouse_short}} 
 **Username** – Username can either be `ibmlhapikey` or `ibmlhtoken`.
 
 **Password** – Password can either be `IBM Cloud API key` or `IBM IAM access token`. For more information see, [Getting IBM API key](/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmapi-key) and [Getting IBM Access Management (IAM) token](/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
-
-
-If you enabled `External Identity Interactions Limited` feature, and using API keys to communicate with {{site.data.keyword.lakehouse_short}}, you must create the API key from the account where the {{site.data.keyword.lakehouse_short}} is provisonined.
-{: note}
