@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-25"
+lastupdated: "2025-05-02"
 
 keywords: lakehouse
 
@@ -235,6 +235,8 @@ To ensure a seamless experience, please follow the list below:
 - Schema names can contain letters, numbers or one of `!`, `#`, `&`, `]`, `}`, `<`, `>`, `=`, `%`, and `@`.
 - Table names can contain letters, numbers or one of `!`, `#`, `&`, `]`, `}`, `<`, `>`, `=`, and `;`.
 - Columns can contain letters, numbers one of `!`, `#`, `&`, `[`, `]`, `<` `>`, `_`, `:`, and `@`.
+
+
 
 ## `ALTER TABLE` operation fails in Spark job submission
 {: #known_issues13596}
