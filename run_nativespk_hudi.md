@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-04-09"
+lastupdated: "2025-05-06"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -47,14 +47,16 @@ The topic describes the procedure to run a Spark application that ingests data i
    Curl command to submit Python application :
 
    ```bash
-   curl --request POST     --url https://<wxd_host_name>/lakehouse/api/v2/spark_engines/<spark_engine_id>/applications
-        --header 'Authorization: Bearer <token>'
-            --header 'Content-Type: application/json'
-                --header 'LhInstanceId: <instance_id>'
-                    --data '{  "application_details": {
-                        "conf": {
-                                                "spark.hadoop.wxd.apiKey":"Basic <user-authentication-string>"    },
-                                                    "application": "s3a://shivangi-cas-iceberg-test/iceberg.py"  }}
+   curl --request POST \
+   --url https://<wxd_host_name>/lakehouse/api/v2/spark_engines/<spark_engine_id>/applications \
+   --header 'Authorization: Bearer <token>' \
+   --header 'Content-Type: application/json' \
+   --header 'LhInstanceId: <instance_id>' \
+   --data '{  "application_details": {
+              "conf": {
+                     "spark.hadoop.wxd.apiKey":"Basic <user-authentication-string>"    },
+                      "application": "s3a://shivangi-cas-iceberg-test/iceberg.py"  }
+           }'
    ```
    {: codeblock}
 
