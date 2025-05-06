@@ -55,7 +55,7 @@ The topic describes the procedure to run a Spark application that ingests data i
    --data '{  "application_details": {
               "conf": {
                      "spark.hadoop.wxd.apiKey":"Basic <user-authentication-string>"    },
-                      "application": "s3a://shivangi-cas-iceberg-test/iceberg.py"  }
+                      "application": "s3a://<application-bucket-name>/iceberg.py"  }
            }'
    ```
    {: codeblock}
