@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-04-29"
+lastupdated: "2025-05-08"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -58,20 +58,22 @@ This customization method does not require you to add the parameters inside the 
             }
         },
         "catalog": {
-            "catalog_name": {
-                "coordinator": {
-                    "property_1": "property_value",
-                    "property_2": "property_value"
-                },
-                "worker": {
-                    "property_1": "property_value",
-                    "property_2": "property_value"
-                }
-            }
+                "property_1": "property_value",
+                "property_2": "property_value"
         },
         "event_listener": {
             "property_1": "property_value",
             "property_2": "property_value"
+        },
+        "log_config": {
+            "coordinator": {
+                "property_1": "property_value",
+                "property_2": "property_value"
+            },
+            "worker": {
+                "property_1": "property_value",
+                "property_2": "property_value"
+            }
         },
         "global": {
             "enable-mixed-case-support": "true"
@@ -159,12 +161,12 @@ This customization method does not require you to add the parameters inside the 
                 "coordinator": {
                     "property_1": "property_value",
                     "property_2": "property_value"
-                }
             },
             "worker": {
                 "property_1": "property_value",
                 "property_2": "property_value"
             }
+          }
         },
         "velox": {
             "property_1": "property_value",
