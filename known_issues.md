@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-05-02"
+lastupdated: "2025-05-09"
 
 keywords: lakehouse
 
@@ -30,6 +30,7 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
 
 
 
