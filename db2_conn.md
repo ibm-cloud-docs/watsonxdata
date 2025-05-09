@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-02-18"
+  years: 2022, 2025
+lastupdated: "2025-05-09"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -83,10 +83,11 @@ IBM Db2 is a data source that contains relational data.
 
 * `ALTER TABLE DROP COLUMN` operation is not supported for column-organized tables.
 * `DROP TABLE` statement is supported only when enabled in the catalog.
-* `CREATE VIEW` can be used for a table only if that table is in the same catalog and the same schema.
+* `CREATE VIEW` can be used for a table only if that table is in the same catalog.
 * `DROP SCHEMA` can do `RESTRICT` by default.
-* `CREATE VIEW` with `JOINS` is not supported. (Applicable till version 2.0.3).
 * For data source-based catalogs the `CREATE SCHEMA`, `CREATE TABLE`, `DROP SCHEMA`, `DROP TABLE`, `DELETE`, `DROP VIEW`, `ALTER TABLE`, and `ALTER SCHEMA` statements are not available in the **Data Manager** UI.
+* In the `CREATE VIEW` statement, column names must be enclosed in double quotes, and their case must match exactly as they are stored in the database, including uppercase, lowercase, or mixed case.
+* The `ALTER VIEW RENAME` operation is not supported.
 
 ## Limitations for data types
 {: #connector_limitations2}
