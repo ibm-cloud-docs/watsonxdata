@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-15"
+lastupdated: "2025-04-30"
 
 keywords: lakehouse, watsonx.data, presto, cli
 
@@ -59,6 +59,8 @@ It is recommended to use IAM token for stress workload.
 
 #### Getting IBM API Key
 {: #get-ibmapi-key}
+
+
 
 1. Log in to the [IBM Cloud console](http://cloud.ibm.com/).
 
@@ -174,7 +176,7 @@ It is recommended to use IAM token for stress workload.
 ## Connecting to Presto engine using Java/JDBC
 {: #conn-to-prestjava}
 
-1. Download and install the [latest JDBC drivers](https://prestodb.io/docs/current/installation/jdbc.html) on the client machine.
+1. Download and install the [latest JDBC drivers](https://prestodb.io/docs/current/clients/java.html) on the client machine.
 
 2. Add the downloaded `jar` file to the class path of your Java application.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-02-24"
+lastupdated: "2025-04-30"
 
 keywords: access, access control, access management
 
@@ -96,11 +96,11 @@ Users can also use presto-cli or connect to Presto via JDBC with IBM Cloud – I
 ## User access to resources (Level 2)
 {: #leve2}
 
-With the second-level access control, you can assign roles for watsonx.data users to view, edit, and administer the resources, which include engines, catalogs, storage, and databases.
+With the second-level access control, you can assign roles for {{site.data.keyword.lakehouse_short}} users to view, edit, and administer the resources, which include engines, catalogs, storage, and databases.
 
 Controlling access to the engines and other components is a critical requirement for many enterprises. To ensure that the resource usage is under control, IBM® watsonx.data provides the ability to manage access controls on these resources. A user with admin privileges on the resources can grant access to other users.
 
-For more information on L2 access control in watsonx.data on IBM Cloud and AWS, see [Managing users](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-manage_access) and [Managing roles and privileges](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-role_priv).
+For more information on L2 access control in {{site.data.keyword.lakehouse_short}} on IBM Cloud and AWS, see [Managing users](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-manage_access) and [Managing roles and privileges](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-role_priv).
 
 
 ## Advance User Access to resources (Level 3)
@@ -111,7 +111,7 @@ At the data access level, you can define data access policies and grant or restr
 
 
 **{{site.data.keyword.lakehouse_short}} Access management system**
-For more information about data access policies in watsonx.data on IBM Cloud, see [Managing data policy rules](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-data_policy).
+For more information about data access policies in {{site.data.keyword.lakehouse_short}} on IBM Cloud, see [Managing data policy rules](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-data_policy).
 
 **IBM Knowledge Catalog integration for data governance and access control**
 Integrating watsonx.data with IBM Knowledge Catalog provides self-service access to data assets for knowledge workers who need to use those data assets to gain insights.
@@ -128,7 +128,7 @@ For more information, see [Enabling Apache Ranger policy for resources](https://
 ## Data Access Service (DAS)
 {: #das_ams}
 
-Data Access Service (DAS) proxy in watsonx.data provides a unified way to access object storage, govern external engines, and audit data access. All of these are accomplished without exposing credentials or requiring complex modifications to engines, which are not controlled by watsonx.data.
+Data Access Service (DAS) proxy in {{site.data.keyword.lakehouse_short}} provides a unified way to access object storage, govern external engines, and audit data access. All of these are accomplished without exposing credentials or requiring complex modifications to engines, which are not controlled by {{site.data.keyword.lakehouse_short}}.
 
 For more information, see [Data Access Service overview](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-cas_ep_ov).
 
@@ -136,4 +136,13 @@ For more information, see [Data Access Service overview](https://cloud.ibm.com/d
 ## Getting connection information
 {: #conn_in}
 
-You can see the connection information of watsonx.data from the Connect information tile of the Configurations page and from the Instance details page. For more information about watsonx.data connections, see [Getting connection information](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-get_connection).
+You can see the connection information of {{site.data.keyword.lakehouse_short}} from the Connect information tile of the Configurations page and from the Instance details page. For more information about {{site.data.keyword.lakehouse_short}} connections, see [Getting connection information](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-get_connection).
+
+
+## Default username and password in {{site.data.keyword.lakehouse_short}} on IBM Cloud
+{: #conn_user_nme}
+
+
+**Username** – Username can either be `ibmlhapikey` or `ibmlhtoken`.
+
+**Password** – Password can either be `IBM Cloud API key` or `IBM IAM access token`. For more information see, [Getting IBM API key](/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmapi-key) and [Getting IBM Access Management (IAM) token](/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
