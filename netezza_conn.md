@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-02-18"
+  years: 2022, 2025
+lastupdated: "2025-05-09"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -56,11 +56,11 @@ subcollection: watsonxdata
 ## Limitations for SQL statements
 {: #connector_limitations}
 
-* `ALTER TABLE` and `CREATE VIEW` statements are partially supported.
 * `DROP TABLE` statement is supported only when enabled in the catalog.
-* `CREATE VIEW` can be used for a table only if that table is in the same catalog and the same schema.
+* `CREATE VIEW` can be used for a table only if that table is in the same catalog.
 * `DROP TABLE` statement is supported only when enabled in the catalog.
 * For data source-based catalogs the `CREATE SCHEMA`, `CREATE TABLE`, `DROP SCHEMA`, `DROP TABLE`, `DELETE`, `DROP VIEW`, `ALTER TABLE`, and `ALTER SCHEMA` statements are not available in the **Data Manager** UI.
+* In the `CREATE VIEW` statement, column names must be enclosed in double quotes, and their case must match precisely as they are stored in the database, including uppercase, lowercase, or mixed case.
 
 ## Limitations for data types
 {: #connector_limitations2}
