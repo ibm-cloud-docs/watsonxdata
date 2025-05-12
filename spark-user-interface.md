@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2024-11-06"
+lastupdated: "2025-05-12"
 keywords: spark, interface
 subcollection: watsonxdata
 
@@ -40,3 +40,6 @@ Use the Spark history server to inspect the run of a completed Spark application
 
     * The **Event Time line** displays a graphical view of the timeline and the events.
     * Different stages of execution, the storage used, the Spark environment and executor (memory and driver) details.
+
+Log links under the Stages and Executors tabs of the Spark history server UI will not work as logs are not preserved with the Spark events. To review the task and executor logs, enable platform logging. For details, see [Configuring and viewing logs](/docs/watsonxdata?topic=watsonxdata-log_nsp).
+{: note}
