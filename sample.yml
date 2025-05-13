@@ -1,0 +1,513 @@
+- title: "9. Preparing Data"
+  href: preparing-data/preparing-data-main.html
+  audience: wdp
+  nav:
+    - title: "Adding Data to a Project"
+      href: preparing-data/adding-data-to-project.html
+      audience: wdp
+      nav:
+        - title: "Adding Very Large Files to a Project"
+          href: preparing-data/adding-very-large-files.html
+          audience: wdp
+        - title: "Adding Connections to Projects"
+          href: preparing-data/adding-connections-to-projects.html
+          audience: wdp
+        - title: "Adding Integrated Service Connectors"
+          href: preparing-data/adding-integrated-service-connectors.html
+          audience: wdp
+        - title: "Connecting to Data Behind a Firewall"
+          href: preparing-data/connecting-data-behind-firewall.html
+          audience: wdp
+        - title: "Adding Data from a Connection"
+          href: preparing-data/adding-data-from-connection.html
+          audience: wdp
+        - title: "Adding a Connected Folder Asset from a Connection"
+          href: preparing-data/adding-connected-folder-asset.html
+          audience: wdp
+    - title: "Connectors"
+      href: preparing-data/connectors.html
+      audience: wdp
+      nav:
+          - title: "Amazon S3"
+            href: preparing-data/amazon-s3-connector.html
+            audience: wdp
+            nav:
+                - title: "Setting up temporary credentials or a Role ARN for Amazon S3"
+                  href: preparing-data/amazon-s3-credentials.html
+                  audience: wdp
+          - title: "Box"
+            href: preparing-data/box-connector.html
+            audience: wdp
+          - title: "Filenet"
+            href: preparing-data/filenet-connector.html
+            audience: wdp
+          - title: "Sharepoint"
+            href: preparing-data/sharepoint-connector.html
+            audience: wdp
+    - title: "Adding Platform Connections"
+      href: preparing-data/adding-platform-connections.html
+      audience: wdp
+    - title: "Data protection with data source definitions"
+      href: preparing-data/data-protection-data-source-definitions.html
+      audience: wdp
+      nav:
+        - title: "Protection solutions for data source definitions"
+          href: preparing-data/protection-solutions-data-source-definitions.html
+          audience: wdp
+        - title: "Connectors that support data source definitions"
+          href: preparing-data/connectors-support-data-source-definitions.html
+          audience: wdp
+        - title: "Connectors with hard-coded data source identity properties"
+          href: preparing-data/connectors-hardcoded-identity-properties.html
+          audience: wdp
+        - title: "Roles and asset privacy settings for data source definitions"
+          href: preparing-data/roles-asset-privacy-settings.html
+          audience: wdp
+        - title: "Creating a data source definition"
+          href: preparing-data/creating-data-source-definition.html
+          audience: wdp
+          nav:
+            - title: "Creating a data source definition from the Data source definition list"
+              href: preparing-data/create-definition-from-list.html
+              audience: wdp
+            - title: "Adding endpoints to a new or existing data source definition"
+              href: preparing-data/add-endpoints-to-definition.html
+              audience: wdp
+            - title: "Managing data source definitions"
+              href: preparing-data/managing-data-source-definitions.html
+              audience: wdp
+    - title: "Structured Ingestion"
+      href: preparing-data/structured-ingestion.html
+      audience: wdp
+    - title: "Unstructured Ingestion"
+      href: preparing-data/unstructured-ingestion.html
+      audience: wdp
+      nav:
+        - title: "Preparing unstructured data for RAG"
+          href: preparing-data/unstructured-rag.html
+          audience: wdp
+    - title: "Analyze and Process Data with Spark"
+      href: preparing-data/analyze-process-data-spark.html
+      audience: wdp
+    - title: "Transforming Data"
+      href: preparing-data/transforming-data.html
+      audience: wdp
+    - title: "Curating Data"
+      href: preparing-data/curating-data.html
+      audience: wdp
+      nav:
+        - title: "Curating unstructured data"
+          href: preparing-data/curating-unstructured-data.html
+          audience: wdp
+    - title: "Importing Metadata"
+      href: preparing-data/importing-metadata.html
+      audience: wdp
+    - title: "Designing Metadata Imports"
+      href: preparing-data/designing-metadata-imports.html
+      audience: wdp
+      nav:
+        - title: "Configuring metadata import for data integration assets"
+          href: preparing-data/configure-metadata-import-integration.html
+          audience: wdp
+    - title: "Creating metadata imports"
+      href: preparing-data/creating-metadata-imports.html
+      audience: wdp
+    - title: "Managing existing metadata imports"
+      href: preparing-data/managing-metadata-imports.html
+      audience: wdp
+    - title: "Metadata Import Jobs"
+      href: preparing-data/metadata-import-jobs.html
+      audience: wdp
+    - title: "Enriching Data Assets"
+      href: preparing-data/enriching-data-assets.html
+      audience: wdp
+      nav:
+        - title: "Designing Metadata Enrichments"
+          href: preparing-data/designing-metadata-enrichments.html
+          audienc: wdp
+          nav:
+              - title: "Term assignment"
+                href: preparing-data/term-assignment.html
+                audience: wdp
+              - title: "Random sampling concepts"
+                href: preparing-data/random-sampling-concepts.html
+                audience: wdp
+        - title: "Creating an Enrichment Asset"
+          href: preparing-data/creating-enrichment-asset.html
+          audience: wdp
+        - title: "Managing Enrichments"
+          href: preparing-data/managing-enrichments.html
+          audience: wdp
+        - title: "Creating Enrichment Jobs"
+          href: preparing-data/creating-enrichment-jobs.html
+          audience: wdp
+        - title: "Managing Enrichment Jobs"
+          href: preparing-data/managing-enrichment-jobs.html
+          audience: wdp
+          nav:
+            - title: "Managing scheduling of enrichment jobs"
+              href: preparing-data/managing-scheduling-enrichment-jobs.html
+              audience: wdp
+            - title: "Monitoring job runs"
+              href: preparing-data/monitoring-job-runs.html
+              audience: wdp
+        - title: "Reviewing Enrichment Results"
+          href: preparing-data/reviewing-enrichment-results.html
+          audience: wdp
+          nav:
+            - title: "Profile details"
+              href: preparing-data/profile-details.html
+              audience: wdp
+            - title: "Frequency distributions"
+              href: preparing-data/frequency-distributions.html
+              audience: wdp
+        - title: "Reviewing results in a spreadsheet program"
+          href: preparing-data/reviewing-results-spreadsheet.html
+          audience: wdp
+        - title: "Making bulk changes to metadata enrichment results"
+          href: preparing-data/bulk-changes-enrichment-results.html
+          audience: wdp
+        - title: "Identifying primary keys"
+          href: preparing-data/identifying-primary-keys.html
+          audience: wdp
+        - title: "Identifying relationships"
+          href: preparing-data/identifying-relationships.html
+          audience: wdp
+        - title: "Advanced data profiling"
+          href: preparing-data/advanced-data-profiling.html
+          audience: wdp
+        - title: "Entity Mapping"
+          href: preparing-data/entity-mapping.html
+          audience: wdp
+        - title: "Supported Connectors"
+          href: preparing-data/supported-connectors.html
+          audience: wdp
+          nav:
+            - title: "Supported Connectors for Curation of Structured Data"
+              href: preparing-data/supported-connectors-structured.html
+              audience: wdp
+            - title: "Supported Connectors for Curation of Unstructured Data"
+              href: preparing-data/supported-connectors-unstructured.html
+              audience: wdp
+    - title: "Retrieving data"
+      href: preparing-data/retrieving-data.html
+      audience: wdp
+
+- title: "10. Querying data"
+  href: querying-data/querying-data-main.html
+  audience: wdp
+  nav:
+    - title: "10.1 Querying data through the query workbench"
+      href: querying-data/query-workbench.html
+      audience: wdp
+
+- title: "11. Work with Generative AI"
+  href: generative-ai/generative-ai-main.html
+  audience: wdp
+  nav:
+    - title: "12.1. Prompt a Foundation Model with Prompt Lab"
+      href: generative-ai/prompt-foundation-model-prompt-lab.html
+      audience: wdp
+    - title: "12.2. Prompt a Foundation Model by Using RAG"
+      href: generative-ai/prompt-foundation-model-rag.html
+      audience: wdp
+    - title: "12.3. Tune a Foundation Model"
+      href: generative-ai/tune-foundation-model.html
+      audience: wdp
+
+- title: "11. Data lineage"
+  href: data-lineage/data-lineage-main.html
+  audience: wdp
+  nav:
+    - title: "11.1.  Preparing data for data lineage"
+      href: data-lineage/preparing-data-for-lineage.html
+      audience: wdp
+    - title: "11.2. Viewing data lineage"
+      href: data-lineage/viewing-data-lineage.html
+      audience: wdp
+    - title: "11.3. Managing data lineage graph"
+      href: data-lineage/managing-lineage-graph.html
+      audience: wdp
+    - title: "11.4. Configuring alias assignments"
+      href: data-lineage/configuring-alias-assignments.html
+      audience: wdp
+
+- title: "13. Data governance"
+  href: data-governance/data-governance-main.html
+  audience: wdp
+  nav:
+    - title: "13.1. Categories"
+      href: data-governance/categories.html
+      audience: wdp
+      nav:
+        - title: "13.1.1. Predefined categories"
+          href: data-governance/predefined-categories.html
+          audience: wdp
+        - title: "13.1.2. Designing categories"
+          href: data-governance/designing-categories.html
+          audience: wdp
+        - title: "13.1.3. Managing categories"
+          href: data-governance/managing-categories.html
+          audience: wdp
+        - title: "13.1.4. Managing category collaborators"
+          href: data-governance/managing-category-collaborators.html
+          audience: wdp
+        - title: "13.1.5. Category collaborator roles"
+          href: data-governance/category-collaborator-roles.html
+          audience: wdp
+        - title: "13.1.6. Creating custom category collaborator roles"
+          href: data-governance/custom-category-roles.html
+          audience: wdp
+        - title: "13.1.7. Importing and exporting categories"
+          href: data-governance/import-export-categories.html
+          audience: wdp
+    - title: "13.2. Business Terms"
+      href: data-governance/business-terms.html
+      audience: wdp
+      nav:
+        - title: "13.2.1. Designing business terms"
+          href: data-governance/designing-business-terms.html
+          audience: wdp
+        - title: "13.2.2. Predefined business terms"
+          href: data-governance/predefined-business-terms.html
+          audience: wdp
+        - title: "13.2.3. Managing business terms"
+          href: data-governance/managing-business-terms.html
+          audience: wdp
+        - title: "13.2.4. Authoring business terms"
+          href: data-governance/authoring-business-terms.html
+          audience: wdp
+        - title: "13.2.5. Generating business terms"
+          href: data-governance/generating-business-terms.html
+          audience: wdp
+    - title: "13.3. Classifications"
+      href: data-governance/classifications.html
+      audience: wdp
+      nav:
+        - title: "13.3.1. Designing classifications"
+          href: data-governance/designing-classifications.html
+          audience: wdp
+        - title: "13.3.2. Predefined classifications"
+          href: data-governance/predefined-classifications.html
+          audience: wdp
+    - title: "13.4. Data Classes"
+      href: data-governance/data-classes.html
+      audience: wdp
+      nav:
+        - title: "13.4.1. Designing data classes"
+          href: data-governance/designing-data-classes.html
+          audience: wdp
+        - title: "13.4.2. Adding matching methods to data classes"
+          href: data-governance/adding-matching-methods.html
+          audience: wdp
+        - title: "13.4.3. Predefined data assets"
+          href: data-governance/predefined-data-assets.html
+          audience: wdp
+          nav:
+            - title: "13.4.3.1. Predefined data classes details"
+              href: data-governance/predefined-data-classes-details.html
+              audience: wdp
+    - title: "13.5. Reference Data"
+      href: data-governance/reference-data.html
+      audience: wdp
+      nav:
+         - title: "13.5.1. Designing reference data sets"
+           href: data-governance/designing-reference-data-sets.html
+           audience: wdp
+         - title: "13.5.2. Creating reference data sets with composite keys"
+           href: data-governance/composite-keys.html
+           audience: wdp
+         - title: "13.5.3. Importing files for reference data sets"
+           href: data-governance/importing-reference-data.html
+           audience: wdp
+         - title: "13.5.4. Relationships between reference data sets"
+           href: data-governance/reference-data-relationships.html
+           audience: wdp
+         - title: "13.5.5. Predefined reference data sets"
+           href: data-governance/predefined-reference-data.html
+           audience: wdp
+    - title: "13.6. Policies"
+      href: data-governance/policies.html
+      audience: wdp
+      nav:
+        - title: "13.6.1. Designing policies"
+          href: data-governance/designing-policies.html
+          audience: wdp
+    - title: "13.7. Rules"
+      href: data-governance/rules.html
+      audience: wdp
+      nav:
+         - title: "13.7.1. Governance rules"
+           href: data-governance/governance-rules.html
+           audience: wdp
+           nav:
+              - title: "13.7.1.1. Designing governance rules"
+                href: data-governance/designing-governance-rules.html
+                audience: wdp
+         - title: "13.7.2. Data protection rules"
+           href: data-governance/data-protection-rules.html
+           audience: wdp
+           nav:
+               - title: "13.7.2.1. Designing data protection rules"
+                 href: data-governance/designing-data-protection-rules.html
+                 audience: wdp
+                 nav:
+                    - title: "Filtering rows"
+                      href: data-governance/filtering-rows.html
+                      audience: wdp
+                    - title: "Mask data"
+                      href: data-governance/masking-data.html
+                      audience: wdp
+                      nav:
+                             - title: "Advance masking options"
+                               href: data-governance/advance-masking-options.html
+                               audience: wdp
+                               nav:
+                                    - title: "Redacting data method"
+                                      href: data-governance/redacting-data-method.html"
+                                      audience: wdp
+                                    - title: "Obfuscating data method"
+                                      href: data-governance/obfuscating-data-method.html"
+                                      audience: wdp
+                                      nav:
+                                           - title: "Preserve format method"
+                                             href: data-governance/preserve-format-method.html"
+                                             audience: wdp
+                                           - title: "Identifier masking method"
+                                             href: data-governance/identifier-masking-method.html"
+                                             audience: wdp
+               - title: "13.7.2.2. Data protection rules enforcement"
+                 href: data-governance/data-protection-rules-enforcement.html
+                 audience: wdp
+               - title: "13.7.2.3. Managing data protection rules"
+                 href: data-governance/managing-data-protection-rules.html
+                 audience: wdp
+         - title: "13.7.3. Data quality SLA rules"
+           href: data-governance/data-quality-sla-rules.html
+           audience: wdp
+           nav:
+                - title: "13.7.3.1. Designing data quality SLA rules"
+                  href: data-governance/designing-data-quality-sla-rules.html
+                  audience: wdp
+                - title: "13.7.3.2. Managing data quality SAL rules"
+                  href: data-governance/managing-data-quality-sla-rules.html
+                  audience: wdp
+
+- title: "14. Managing watsonx.data"
+  href: managing-wxd/managing-wxd-main.html
+  audience: wdp
+  nav:
+    - title: "14.1. Monitoring Account Resource Usage"
+      href: managing-wxd/monitoring-account-resource-usage.html
+      audience: wdp
+    - title: "14.2. Managing Account Settings"
+      href: managing-wxd/managing-account-settings.html
+      audience: wdp
+    - title: "14.3. Managing All Projects in an Account"
+      href: managing-wxd/managing-all-projects.html
+      audience: wdp
+    - title: "14.4. Upgrading Services on the Platform"
+      href: managing-wxd/upgrading-services.html
+      audience: wdp
+    - title: "14.5. Managing Cloud Object Storage Resources"
+      href: managing-wxd/managing-cos-resources.html
+      audience: wdp
+    - title: "14.6. Bring Your Own License"
+      href: managing-wxd/byol.html
+      audience: wdp
+    - title: "14.7. Removing Users"
+      href: managing-wxd/removing-users.html
+      audience: wdp
+    - title: "14.8. Stop Using Services or the Platform"
+      href: managing-wxd/stop-using-services.html
+      audience: wdp
+    - title: "14.9. Activity Tracker Event Routing"
+      href: managing-wxd/activity-tracker-routing.html
+      audience: wdp
+
+- title: "15. Security Administration"
+  href: security/security-admin-main.html
+  audience: wdp
+  nav:
+    - title: "15.1. Network Security"
+      href: security/network-security.html
+      audience: wdp
+    - title: "15.2. Enterprise Security"
+      href: security/enterprise-security.html
+      audience: wdp
+    - title: "15.3. Account Security"
+      href: security/account-security.html
+      audience: wdp
+    - title: "15.4. Data Security"
+      href: security/data-security.html
+      audience: wdp
+    - title: "15.5. Collaborator Security"
+      href: security/collaborator-security.html
+      audience: wdp
+    - title: "15.6. Keeping Your Data Secure and Compliant"
+      href: security/secure-and-compliant.html
+      audience: wdp
+    - title: "15.7. Securing Connections to Services with Private Service Endpoints"
+      href: security/private-service-endpoints.html
+      audience: wdp
+    - title: "15.8. Configuring Firewall Access"
+      href: security/firewall-access.html
+      audience: wdp
+      nav:
+        - title: "15.8.1. Firewall Access for Platform"
+          href: security/firewall-access-platform.html
+          audience: wdp
+        - title: "15.8.2. Firewall Access for Cloud Object Storage"
+          href: security/firewall-access-cos.html
+          audience: wdp
+        - title: "15.8.3. Firewall Access for RedShift"
+          href: security/firewall-access-redshift.html
+          audience: wdp
+        - title: "15.8.4. Firewall Access for Spark"
+          href: security/firewall-access-spark.html
+          audience: wdp
+        - title: "15.8.5. Firewall Access for watsonx.ai Studio"
+          href: security/firewall-access-studio.html
+          audience: wdp
+        - title: "15.8.6. Firewall Access for watsonx.ai Runtime"
+          href: security/firewall-access-runtime.html
+          audience: wdp
+        - title: "15.8.7. Firewall Access for watsonx.data Intelligence"
+          href: security/firewall-access-intelligence.html
+          audience: wdp
+        - title: "15.8.8. Firewall Access for watsonx.data Integration"
+          href: security/firewall-access-integration.html
+          audience: wdp
+        - title: "15.8.9. Firewall Access for watsonx.data"
+          href: security/firewall-access-wxd.html
+          audience: wdp
+
+- title: "16. Troubleshooting"
+  href: troubleshooting/troubleshooting-main.html
+  audience: wdp
+
+- title: "17. FAQs"
+  href: faqs/faqs-main.html
+  audience: wdp
+
+- title: "18. Known issues and limitations"
+  href: known-issues/known-issues-main.html
+  audience: wdp
+
+- title: "19. Getting help"
+  href: getting-help/getting-help-main.html
+  audience: wdp
+
+- title: "20. Reference"
+  href: reference/reference-main.html
+  audience: wdp
+  nav:
+        - title: "20.1 Notices"
+          href: reference/notices.html
+          audience: wdp
+        - title: "20.2 Accessibility"
+          href: reference/accessibility.html
+          audience: wdp
+        - title: "20.3 Glossary"
+          href: reference/glossary.html
+          audience: wdp
