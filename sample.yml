@@ -193,162 +193,162 @@
       href: preparing-data/retrieving-data.html
       audience: wdp
 
-- title: "10. Querying data"
+- title: "Querying data"
   href: querying-data/querying-data-main.html
   audience: wdp
   nav:
-    - title: "10.1 Querying data through the query workbench"
+    - title: "Querying data through the query workbench"
       href: querying-data/query-workbench.html
       audience: wdp
 
-- title: "11. Work with Generative AI"
+- title: "Work with Generative AI"
   href: generative-ai/generative-ai-main.html
   audience: wdp
   nav:
-    - title: "12.1. Prompt a Foundation Model with Prompt Lab"
+    - title: "Prompt a Foundation Model with Prompt Lab"
       href: generative-ai/prompt-foundation-model-prompt-lab.html
       audience: wdp
-    - title: "12.2. Prompt a Foundation Model by Using RAG"
+    - title: "Prompt a Foundation Model by Using RAG"
       href: generative-ai/prompt-foundation-model-rag.html
       audience: wdp
-    - title: "12.3. Tune a Foundation Model"
+    - title: "Tune a Foundation Model"
       href: generative-ai/tune-foundation-model.html
       audience: wdp
 
-- title: "11. Data lineage"
+- title: "Data lineage"
   href: data-lineage/data-lineage-main.html
   audience: wdp
   nav:
-    - title: "11.1.  Preparing data for data lineage"
+    - title: "Preparing data for data lineage"
       href: data-lineage/preparing-data-for-lineage.html
       audience: wdp
-    - title: "11.2. Viewing data lineage"
+    - title: "Viewing data lineage"
       href: data-lineage/viewing-data-lineage.html
       audience: wdp
-    - title: "11.3. Managing data lineage graph"
+    - title: "Managing data lineage graph"
       href: data-lineage/managing-lineage-graph.html
       audience: wdp
-    - title: "11.4. Configuring alias assignments"
+    - title: "Configuring alias assignments"
       href: data-lineage/configuring-alias-assignments.html
       audience: wdp
 
-- title: "13. Data governance"
+- title: "Data governance"
   href: data-governance/data-governance-main.html
   audience: wdp
   nav:
-    - title: "13.1. Categories"
+    - title: "Categories"
       href: data-governance/categories.html
       audience: wdp
       nav:
-        - title: "13.1.1. Predefined categories"
+        - title: "Predefined categories"
           href: data-governance/predefined-categories.html
           audience: wdp
-        - title: "13.1.2. Designing categories"
+        - title: "Designing categories"
           href: data-governance/designing-categories.html
           audience: wdp
-        - title: "13.1.3. Managing categories"
+        - title: "Managing categories"
           href: data-governance/managing-categories.html
           audience: wdp
-        - title: "13.1.4. Managing category collaborators"
+        - title: "Managing category collaborators"
           href: data-governance/managing-category-collaborators.html
           audience: wdp
-        - title: "13.1.5. Category collaborator roles"
+        - title: "Category collaborator roles"
           href: data-governance/category-collaborator-roles.html
           audience: wdp
-        - title: "13.1.6. Creating custom category collaborator roles"
+        - title: "Creating custom category collaborator roles"
           href: data-governance/custom-category-roles.html
           audience: wdp
-        - title: "13.1.7. Importing and exporting categories"
+        - title: "Importing and exporting categories"
           href: data-governance/import-export-categories.html
           audience: wdp
-    - title: "13.2. Business Terms"
+    - title: "Business Terms"
       href: data-governance/business-terms.html
       audience: wdp
       nav:
-        - title: "13.2.1. Designing business terms"
+        - title: "Designing business terms"
           href: data-governance/designing-business-terms.html
           audience: wdp
-        - title: "13.2.2. Predefined business terms"
+        - title: "Predefined business terms"
           href: data-governance/predefined-business-terms.html
           audience: wdp
-        - title: "13.2.3. Managing business terms"
+        - title: "Managing business terms"
           href: data-governance/managing-business-terms.html
           audience: wdp
-        - title: "13.2.4. Authoring business terms"
+        - title: "Authoring business terms"
           href: data-governance/authoring-business-terms.html
           audience: wdp
-        - title: "13.2.5. Generating business terms"
+        - title: "Generating business terms"
           href: data-governance/generating-business-terms.html
           audience: wdp
-    - title: "13.3. Classifications"
+    - title: "Classifications"
       href: data-governance/classifications.html
       audience: wdp
       nav:
-        - title: "13.3.1. Designing classifications"
+        - title: "Designing classifications"
           href: data-governance/designing-classifications.html
           audience: wdp
-        - title: "13.3.2. Predefined classifications"
+        - title: "Predefined classifications"
           href: data-governance/predefined-classifications.html
           audience: wdp
-    - title: "13.4. Data Classes"
+    - title: "Data Classes"
       href: data-governance/data-classes.html
       audience: wdp
       nav:
-        - title: "13.4.1. Designing data classes"
+        - title: "Designing data classes"
           href: data-governance/designing-data-classes.html
           audience: wdp
-        - title: "13.4.2. Adding matching methods to data classes"
+        - title: "Adding matching methods to data classes"
           href: data-governance/adding-matching-methods.html
           audience: wdp
-        - title: "13.4.3. Predefined data assets"
+        - title: "Predefined data assets"
           href: data-governance/predefined-data-assets.html
           audience: wdp
           nav:
-            - title: "13.4.3.1. Predefined data classes details"
+            - title: "Predefined data classes details"
               href: data-governance/predefined-data-classes-details.html
               audience: wdp
-    - title: "13.5. Reference Data"
+    - title: "Reference Data"
       href: data-governance/reference-data.html
       audience: wdp
       nav:
-         - title: "13.5.1. Designing reference data sets"
+         - title: "Designing reference data sets"
            href: data-governance/designing-reference-data-sets.html
            audience: wdp
-         - title: "13.5.2. Creating reference data sets with composite keys"
+         - title: "Creating reference data sets with composite keys"
            href: data-governance/composite-keys.html
            audience: wdp
-         - title: "13.5.3. Importing files for reference data sets"
+         - title: "Importing files for reference data sets"
            href: data-governance/importing-reference-data.html
            audience: wdp
-         - title: "13.5.4. Relationships between reference data sets"
+         - title: "Relationships between reference data sets"
            href: data-governance/reference-data-relationships.html
            audience: wdp
-         - title: "13.5.5. Predefined reference data sets"
+         - title: "Predefined reference data sets"
            href: data-governance/predefined-reference-data.html
            audience: wdp
-    - title: "13.6. Policies"
+    - title: "Policies"
       href: data-governance/policies.html
       audience: wdp
       nav:
-        - title: "13.6.1. Designing policies"
+        - title: "Designing policies"
           href: data-governance/designing-policies.html
           audience: wdp
-    - title: "13.7. Rules"
+    - title: "Rules"
       href: data-governance/rules.html
       audience: wdp
       nav:
-         - title: "13.7.1. Governance rules"
+         - title: "Governance rules"
            href: data-governance/governance-rules.html
            audience: wdp
            nav:
-              - title: "13.7.1.1. Designing governance rules"
+              - title: "Designing governance rules"
                 href: data-governance/designing-governance-rules.html
                 audience: wdp
-         - title: "13.7.2. Data protection rules"
+         - title: "Data protection rules"
            href: data-governance/data-protection-rules.html
            audience: wdp
            nav:
-               - title: "13.7.2.1. Designing data protection rules"
+               - title: "Designing data protection rules"
                  href: data-governance/designing-data-protection-rules.html
                  audience: wdp
                  nav:
@@ -376,138 +376,138 @@
                                            - title: "Identifier masking method"
                                              href: data-governance/identifier-masking-method.html"
                                              audience: wdp
-               - title: "13.7.2.2. Data protection rules enforcement"
+               - title: "Data protection rules enforcement"
                  href: data-governance/data-protection-rules-enforcement.html
                  audience: wdp
-               - title: "13.7.2.3. Managing data protection rules"
+               - title: "Managing data protection rules"
                  href: data-governance/managing-data-protection-rules.html
                  audience: wdp
-         - title: "13.7.3. Data quality SLA rules"
+         - title: "Data quality SLA rules"
            href: data-governance/data-quality-sla-rules.html
            audience: wdp
            nav:
-                - title: "13.7.3.1. Designing data quality SLA rules"
+                - title: "Designing data quality SLA rules"
                   href: data-governance/designing-data-quality-sla-rules.html
                   audience: wdp
-                - title: "13.7.3.2. Managing data quality SAL rules"
+                - title: "Managing data quality SAL rules"
                   href: data-governance/managing-data-quality-sla-rules.html
                   audience: wdp
 
-- title: "14. Managing watsonx.data"
+- title: "Managing watsonx.data"
   href: managing-wxd/managing-wxd-main.html
   audience: wdp
   nav:
-    - title: "14.1. Monitoring Account Resource Usage"
+    - title: "Monitoring Account Resource Usage"
       href: managing-wxd/monitoring-account-resource-usage.html
       audience: wdp
-    - title: "14.2. Managing Account Settings"
+    - title: "Managing Account Settings"
       href: managing-wxd/managing-account-settings.html
       audience: wdp
-    - title: "14.3. Managing All Projects in an Account"
+    - title: "Managing All Projects in an Account"
       href: managing-wxd/managing-all-projects.html
       audience: wdp
-    - title: "14.4. Upgrading Services on the Platform"
+    - title: "Upgrading Services on the Platform"
       href: managing-wxd/upgrading-services.html
       audience: wdp
-    - title: "14.5. Managing Cloud Object Storage Resources"
+    - title: "Managing Cloud Object Storage Resources"
       href: managing-wxd/managing-cos-resources.html
       audience: wdp
-    - title: "14.6. Bring Your Own License"
+    - title: "Bring Your Own License"
       href: managing-wxd/byol.html
       audience: wdp
-    - title: "14.7. Removing Users"
+    - title: "Removing Users"
       href: managing-wxd/removing-users.html
       audience: wdp
-    - title: "14.8. Stop Using Services or the Platform"
+    - title: "Stop Using Services or the Platform"
       href: managing-wxd/stop-using-services.html
       audience: wdp
-    - title: "14.9. Activity Tracker Event Routing"
+    - title: "Activity Tracker Event Routing"
       href: managing-wxd/activity-tracker-routing.html
       audience: wdp
 
-- title: "15. Security Administration"
+- title: "Security Administration"
   href: security/security-admin-main.html
   audience: wdp
   nav:
-    - title: "15.1. Network Security"
+    - title: "Network Security"
       href: security/network-security.html
       audience: wdp
-    - title: "15.2. Enterprise Security"
+    - title: "Enterprise Security"
       href: security/enterprise-security.html
       audience: wdp
-    - title: "15.3. Account Security"
+    - title: "Account Security"
       href: security/account-security.html
       audience: wdp
-    - title: "15.4. Data Security"
+    - title: "Data Security"
       href: security/data-security.html
       audience: wdp
-    - title: "15.5. Collaborator Security"
+    - title: "Collaborator Security"
       href: security/collaborator-security.html
       audience: wdp
-    - title: "15.6. Keeping Your Data Secure and Compliant"
+    - title: "Keeping Your Data Secure and Compliant"
       href: security/secure-and-compliant.html
       audience: wdp
-    - title: "15.7. Securing Connections to Services with Private Service Endpoints"
+    - title: "Securing Connections to Services with Private Service Endpoints"
       href: security/private-service-endpoints.html
       audience: wdp
-    - title: "15.8. Configuring Firewall Access"
+    - title: "Configuring Firewall Access"
       href: security/firewall-access.html
       audience: wdp
       nav:
-        - title: "15.8.1. Firewall Access for Platform"
+        - title: "Firewall Access for Platform"
           href: security/firewall-access-platform.html
           audience: wdp
-        - title: "15.8.2. Firewall Access for Cloud Object Storage"
+        - title: "Firewall Access for Cloud Object Storage"
           href: security/firewall-access-cos.html
           audience: wdp
-        - title: "15.8.3. Firewall Access for RedShift"
+        - title: "Firewall Access for RedShift"
           href: security/firewall-access-redshift.html
           audience: wdp
-        - title: "15.8.4. Firewall Access for Spark"
+        - title: "Firewall Access for Spark"
           href: security/firewall-access-spark.html
           audience: wdp
-        - title: "15.8.5. Firewall Access for watsonx.ai Studio"
+        - title: "Firewall Access for watsonx.ai Studio"
           href: security/firewall-access-studio.html
           audience: wdp
-        - title: "15.8.6. Firewall Access for watsonx.ai Runtime"
+        - title: "Firewall Access for watsonx.ai Runtime"
           href: security/firewall-access-runtime.html
           audience: wdp
-        - title: "15.8.7. Firewall Access for watsonx.data Intelligence"
+        - title: "Firewall Access for watsonx.data Intelligence"
           href: security/firewall-access-intelligence.html
           audience: wdp
-        - title: "15.8.8. Firewall Access for watsonx.data Integration"
+        - title: "Firewall Access for watsonx.data Integration"
           href: security/firewall-access-integration.html
           audience: wdp
-        - title: "15.8.9. Firewall Access for watsonx.data"
+        - title: "Firewall Access for watsonx.data"
           href: security/firewall-access-wxd.html
           audience: wdp
 
-- title: "16. Troubleshooting"
+- title: "Troubleshooting"
   href: troubleshooting/troubleshooting-main.html
   audience: wdp
 
-- title: "17. FAQs"
+- title: "FAQs"
   href: faqs/faqs-main.html
   audience: wdp
 
-- title: "18. Known issues and limitations"
+- title: "Known issues and limitations"
   href: known-issues/known-issues-main.html
   audience: wdp
 
-- title: "19. Getting help"
+- title: "Getting help"
   href: getting-help/getting-help-main.html
   audience: wdp
 
-- title: "20. Reference"
+- title: "Reference"
   href: reference/reference-main.html
   audience: wdp
   nav:
-        - title: "20.1 Notices"
+        - title: "Notices"
           href: reference/notices.html
           audience: wdp
-        - title: "20.2 Accessibility"
+        - title: "Accessibility"
           href: reference/accessibility.html
           audience: wdp
-        - title: "20.3 Glossary"
+        - title: "Glossary"
           href: reference/glossary.html
           audience: wdp
