@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2025-05-12"
+lastupdated: "2025-05-14"
 keywords: watsonx.data, history, Spark, server
 
 subcollection: watsonxdata
@@ -35,7 +35,7 @@ The Spark history server is a web UI where you can view the status of running an
     * Click **Download** link from the **Event Log** field to download the events log information for each application.
     * To view the details of individual application, click the individual application ID link. The **Spark Jobs** page opens. This page displays details such as the different stages of execution, the storage used, the Spark environment and executor (memory and driver) details.
 
-    Log links under the Stages and Executors tabs of the Spark history server UI will not work as logs are not preserved with the Spark events. To review the task and executor logs, enable platform logging. For details, see [Configuring and viewing logs](/docs/watsonxdata?topic=watsonxdata-log_nsp).
+    Log links under the Stages and Executors tabs of the Spark history server UI will not work as logs are not preserved with the Spark events. To review the task and executor logs, enable platform logging. For details, see [Viewing logs](/docs/watsonxdata?topic=watsonxdata-log_nsp).
     {: note}
 
 5. You can stop the history server when you no longer need it to release unnecessary resources. To do that, go to **Spark history** tab and click **Stop history server**. Click **Stop** on the confirmation message.
