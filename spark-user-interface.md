@@ -10,6 +10,7 @@ subcollection: watsonxdata
 
 {{site.data.keyword.attribute-definition-list}}
 
+[spark]{: tag-blue}
 
 # Spark user interface
 {: #wxd_spk_ui}
