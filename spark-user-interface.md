@@ -12,9 +12,6 @@ subcollection: watsonxdata
 
 [Spark]{: tag-spark}
 
-[Gluten accelerated Spark]{: tag-GlutenacceleratedSpark}
-
-[Data store]{: tag-datastore}
 
 # Spark user interface
 {: #wxd_spk_ui}
