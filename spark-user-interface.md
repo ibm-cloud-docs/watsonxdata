@@ -2,13 +2,19 @@
 
 copyright:
   years: 2024
-lastupdated: "2025-05-14"
+lastupdated: "2025-05-15"
 keywords: spark, interface
 subcollection: watsonxdata
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
+[Spark]{: tag-spark}
+
+[Gluten accelerated Spark]{: tag-GlutenacceleratedSpark}
+
+[Data store]{: tag-datastore}
 
 # Spark user interface
 {: #wxd_spk_ui}
