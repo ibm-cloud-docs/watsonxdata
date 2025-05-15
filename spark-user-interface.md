@@ -10,7 +10,9 @@ subcollection: watsonxdata
 
 {{site.data.keyword.attribute-definition-list}}
 
-[spark]{: tag-blue}
+[Spark]{: tag-blue}
+
+[Glutenaccesleratedspark]{: tag-green}
 
 # Spark user interface
 {: #wxd_spk_ui}
