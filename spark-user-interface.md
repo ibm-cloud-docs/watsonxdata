@@ -10,8 +10,6 @@ subcollection: watsonxdata
 
 {{site.data.keyword.attribute-definition-list}}
 
-[Spark]{: tag-spark}
-
 
 # Spark user interface
 {: #wxd_spk_ui}
