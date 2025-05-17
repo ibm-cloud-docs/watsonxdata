@@ -74,60 +74,60 @@ toc:
               - explore-cat-obj.md
               - disso-cat-eng.md
               - conf_rcrs_grp.md
-      - topicgroup:
-              label: Data sources
-              topics:
-              - reg_database.md
-              - redshift_conn.md
-              - druid_conn.md
-              - kafka_conn.md
-              - phoenix_conn.md
-              - pinot_conn.md
-              - bigquery_conn.md
-              - cassandra_conn.md
-              - clickhouse_conn.md
-              - elasticsearch_conn.md
-              - saphana.md
-              - dvm_conn.md
-              - db2_conn.md
-              - db2ibmi_conn.md
-              - netezza_conn.md
-              - informix_conn.md
-              - mongodb_conn.md
-              - mysql_conn.md
-              - oracle_conn.md
-              - postgresql_conn.md
-              - prometheus_conn.md
-              - redis_conn.md
-              - singlestore_conn.md
-              - snowflake_conn.md
-              - sqlserver_conn.md
-              - teradata_conn.md
-              - custom_database.md
-              - arrow_flight_service.md
-              - derby_conn.md
-              - greenplum_conn.md
-              - mariadb_conn.md
-              - salesforce_conn.md
-              - update-db-cred.md
-              - edit-db-tags.md
-              - delete_database.md
-      - topicgroup:
-              label: Storages
-              topics:
-              - reg_bucket.md
-              - cos_storage.md
-              - amazons_storage.md
-              - ceph_storage.md
-              - minio_storage.md
-              - hdfs_storage.md
-              - google_cloud_storage.md
-              - adls_genblob_storage.md
-              - ozone_storage.md
-              - explor-buck-obj.md
-              - edit-buck-tags.md
-              - delete_bucket.md
-              - sync_logs.md
+          - topicgroup:
+                  label: Data sources
+                  topics:
+                  - reg_database.md
+                  - redshift_conn.md
+                  - druid_conn.md
+                  - kafka_conn.md
+                  - phoenix_conn.md
+                  - pinot_conn.md
+                  - bigquery_conn.md
+                  - cassandra_conn.md
+                  - clickhouse_conn.md
+                  - elasticsearch_conn.md
+                  - saphana.md
+                  - dvm_conn.md
+                  - db2_conn.md
+                  - db2ibmi_conn.md
+                  - netezza_conn.md
+                  - informix_conn.md
+                  - mongodb_conn.md
+                  - mysql_conn.md
+                  - oracle_conn.md
+                  - postgresql_conn.md
+                  - prometheus_conn.md
+                  - redis_conn.md
+                  - singlestore_conn.md
+                  - snowflake_conn.md
+                  - sqlserver_conn.md
+                  - teradata_conn.md
+                  - custom_database.md
+                  - arrow_flight_service.md
+                  - derby_conn.md
+                  - greenplum_conn.md
+                  - mariadb_conn.md
+                  - salesforce_conn.md
+                  - update-db-cred.md
+                  - edit-db-tags.md
+                  - delete_database.md
+          - topicgroup:
+                  label: Storages
+                  topics:
+                  - reg_bucket.md
+                  - cos_storage.md
+                  - amazons_storage.md
+                  - ceph_storage.md
+                  - minio_storage.md
+                  - hdfs_storage.md
+                  - google_cloud_storage.md
+                  - adls_genblob_storage.md
+                  - ozone_storage.md
+                  - explor-buck-obj.md
+                  - edit-buck-tags.md
+                  - delete_bucket.md
+                  - sync_logs.md
       - topicgroup:
           label: IBM Cloud Pak for Data Command Line Interface (IBM cpdctl)
           topics:
