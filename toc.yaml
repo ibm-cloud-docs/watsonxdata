@@ -16,28 +16,28 @@ toc:
           label: Overview
           topics:
           - wxd_ov.md
+          - presto_overview.md
+          - pcpp_ov.md
+          - spk_overview.md
+          - metadata_serv_ov.md
+          - access-ovw.md
           - milvus_overview.md
           - about_optimizer.md
           - sal_title.md
           - qhmm-overview.md
           - cas_proxy_ov.md
-          - presto_overview.md
-          - pcpp_ov.md
-          - spk_overview.md
-          - access-ovw.md
           - api_custom_ov.md
           - mixed_case_overview.md
           - resource_grp_ov.md
           - integration.md
           - manta_overview.md
-          - metadata_serv_ov.md
+      - release.md
       - topicgroup:
           label: Provisioning watsonx.data
           topics:
           - prov_wxd.md
           - prov_lite_plan.md
           - getting-started.md
-      - release.md
   - navgroup:
       id: tutorial
       topics:
@@ -57,20 +57,23 @@ toc:
       - topicgroup:
           label: Configuring watsonx.data components
           topics:
-          - prov_engine.md
-          - pcpp_prov.md
-          - prov_spk_engine.md
-          - reg_engine.md
-          - edit-eng-tags.md
-          - scale-engine.md
-          - pause_engine.md
-          - resume-engine.md
-          - del_engine.md
-          - view-spk-dtls.md
-          - asso-cat-eng.md
-          - explore-cat-obj.md
-          - disso-cat-eng.md
-          - conf_rcrs_grp.md
+          - topicgroup:
+              label: Engines
+              topics:
+              - prov_engine.md
+              - pcpp_prov.md
+              - prov_spk_engine.md
+              - reg_engine.md
+              - edit-eng-tags.md
+              - scale-engine.md
+              - pause_engine.md
+              - resume-engine.md
+              - del_engine.md
+              - view-spk-dtls.md
+              - asso-cat-eng.md
+              - explore-cat-obj.md
+              - disso-cat-eng.md
+              - conf_rcrs_grp.md
       - topicgroup:
               label: Data sources
               topics:
@@ -106,9 +109,9 @@ toc:
               - greenplum_conn.md
               - mariadb_conn.md
               - salesforce_conn.md
-      - update-db-cred.md
-      - edit-db-tags.md
-      - delete_database.md
+              - update-db-cred.md
+              - edit-db-tags.md
+              - delete_database.md
       - topicgroup:
               label: Storages
               topics:
@@ -121,10 +124,10 @@ toc:
               - google_cloud_storage.md
               - adls_genblob_storage.md
               - ozone_storage.md
-      - explor-buck-obj.md
-      - edit-buck-tags.md
-      - delete_bucket.md
-      - sync_logs.md
+              - explor-buck-obj.md
+              - edit-buck-tags.md
+              - delete_bucket.md
+              - sync_logs.md
       - topicgroup:
           label: IBM Cloud Pak for Data Command Line Interface (IBM cpdctl)
           topics:

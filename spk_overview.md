@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-12-16"
+  years: 2022, 2025
+lastupdated: "2025-05-17"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -26,7 +26,7 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# About Spark engine
+# Spark engine
 {: #spk_ovrviw}
 
 The {{site.data.keyword.lakehouse_short}} platform includes a built-in native Spark engine that allows you to perform big data analytics seamlessly. Additionally, {{site.data.keyword.lakehouse_short}} supports external Spark engines, enabling you to leverage Spark clusters outside of the {{site.data.keyword.lakehouse_short}} environment. You can use {{site.data.keyword.lakehouse_short}} Spark engine to achieve the following use cases:
@@ -34,6 +34,8 @@ The {{site.data.keyword.lakehouse_short}} platform includes a built-in native Sp
 1. Ingesting large volumes of data into {{site.data.keyword.lakehouse_short}} tables. You can also cleanse and transform data before ingestion.
 2. Table maintenance operation to enhance {{site.data.keyword.lakehouse_short}} performance of the table
 3. Complex analytics workload which are difficult to represent as queries.
+
+For more information about provisioning the engine, see [Provisioning a Spark engine](/docs/watsonxdata?topic=watsonxdata-spl_engine).
 
 {{site.data.keyword.lakehouse_full}} allows you to integratrate with the following types of Spark:
 
