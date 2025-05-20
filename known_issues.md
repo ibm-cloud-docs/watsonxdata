@@ -258,7 +258,12 @@ To ensure a seamless experience, please follow the list below:
 - Table names can contain letters, numbers or one of `!`, `#`, `&`, `]`, `}`, `<`, `>`, `=`, and `;`.
 - Columns can contain letters, numbers one of `!`, `#`, `&`, `[`, `]`, `<` `>`, `_`, `:`, and `@`.
 
+## Unsupported special characters in storage location creation
+{: #known_issue25059}
 
+The following special characters are not supported while creating storage location:
+
+`$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `}`, `@`, `"`, and `'`.
 
 ## `ALTER TABLE` operation fails in Spark job submission
 {: #known_issues13596}
