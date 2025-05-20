@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-05-09"
+lastupdated: "2025-05-20"
 
 keywords: lakehouse
 
@@ -31,8 +31,29 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
+## Absence of column NDV stats in Iceberg tables leads to suboptimal query plans
+{: #known_issue26023}
 
+In the current implementation, for Iceberg tables within Presto (Java) and Presto (C++), the column NDV (Number of Distinct Values) statistics are not used when available in MDS. NDVs are important to generating optimal query plans. Without them, there can be significant performance degradation.
 
+**Workaround:** For non-partitioned tables, use `SET SESSION <iceberg_catalog>.hive_statistics_merge_strategy='USE_NULLS_FRACTION_AND_NDV';`.
+
+This workaround does not apply to partitioned tables.
+{: note}
+
+## `Ingest data` button inoperative in empty table's data sample tab
+{: #known_issue44321}
+
+The `Ingest data` button located within the `Data sample` tab of an empty table that is accessible via the Data manager page is currently not functioning as expected. Clicking this button does not initiate the data ingestion process.
+
+**Workaround:** To ingest data into an empty table, please use the Ingest data button available on the main Data manager home page.
+
+## Parquet file preview during ingestion from S3 buckets
+{: #known_issue44839}
+
+When ingesting Parquet files from a remote AWS S3 bucket, you may experience the limitation of data preview and editing capabilities within {{site.data.keyword.lakehouse_short}}.
+
+**Workaround:** To preview Parquet data from a remote S3 bucket during ingestion, select individual Parquet files rather than choosing the entire directory or table. This will allow the preview functionality to work as intended.
 
 ## Virtual private network configuration limitation
 {: #issue24487}
