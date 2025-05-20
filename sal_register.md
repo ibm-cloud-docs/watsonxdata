@@ -29,7 +29,7 @@ subcollection: watsonxdata
 # Registering and activating semantic layer
 {: #sal_register}
 
-To activate semantic enrichment in {{site.data.keyword.lakehouse_full}}, you must have a registered IBM Knowledge Catalog in your IBM Cloud account. Currently, this is available on in the `us-south` region.
+To activate semantic enrichment in {{site.data.keyword.lakehouse_full}}, you must have a registered IBM Knowledge Catalog in your IBM Cloud account. Currently, this is available only in the `us-south` region.
 
 ## Before you begin
 {: #sal_registerbyb}
