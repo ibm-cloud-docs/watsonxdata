@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-29"
+lastupdated: "2025-05-21"
 
 keywords: lakehouse, cpdctl, watsonx.data, supporting commands, wx-data
 
@@ -47,6 +47,7 @@ The wx-data command supports the following commands:
 - `bucket`
 - `database`
 - `sparkjob`
+- `service`
 
 ## How to Use `wx-data` Command --help (-h)
 {: #cpdctl_commands_wxdatahwto}
