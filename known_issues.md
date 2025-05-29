@@ -48,13 +48,6 @@ In the current implementation, for Iceberg tables within Presto (Java) and Prest
 This workaround does not apply to partitioned tables.
 {: note}
 
-## `Ingest data` button inoperative in empty table's data sample tab
-{: #known_issue44321}
-
-The `Ingest data` button located within the `Data sample` tab of an empty table that is accessible via the Data manager page is currently not functioning as expected. Clicking this button does not initiate the data ingestion process.
-
-**Workaround:** To ingest data into an empty table, please use the Ingest data button available on the main Data manager home page.
-
 ## Virtual private network configuration limitation
 {: #issue24487}
 
