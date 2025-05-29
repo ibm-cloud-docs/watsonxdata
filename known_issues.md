@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-05-21"
+lastupdated: "2025-05-29"
 
 keywords: lakehouse
 
@@ -30,6 +30,13 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+## Reset button does not reset the threshold settings to default settings
+{: #known_issue46159}
+
+Clicking the `Reset` button does not reset the thresholds to their default or global settings, instead reverts the changes made since the last save which is similar to the action of `Cancel` button.
+
+**Workaround:** To achieve the desired reset to default settings, manually revert each threshold setting to its required value, then save the changes.
 
 ## Absence of column NDV stats in Iceberg tables leads to suboptimal query plans
 {: #known_issue26023}
