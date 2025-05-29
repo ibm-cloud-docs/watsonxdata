@@ -55,13 +55,6 @@ The `Ingest data` button located within the `Data sample` tab of an empty table 
 
 **Workaround:** To ingest data into an empty table, please use the Ingest data button available on the main Data manager home page.
 
-## Parquet file preview during ingestion from S3 buckets
-{: #known_issue44839}
-
-When ingesting Parquet files from a remote AWS S3 bucket, you may experience the limitation of data preview and editing capabilities within {{site.data.keyword.lakehouse_short}}.
-
-**Workaround:** To preview Parquet data from a remote S3 bucket during ingestion, select individual Parquet files rather than choosing the entire directory or table. This will allow the preview functionality to work as intended.
-
 ## Virtual private network configuration limitation
 {: #issue24487}
 
