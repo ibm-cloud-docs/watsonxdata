@@ -125,13 +125,6 @@ If a user has more than one catalog, the default `information_schema` view will 
 
 When the presto worker catalog property file-column-names-read-as-lower-case is set to true, it converts field names in ASCII uppercase letters to ASCII lowercase. As a result, data under column names with uppercase full-width characters will not be recognized and will appear as "null".
 
-## Certificate update required for data ingestion
-{: #known_issue40771}
-
-If you encounter issues with Data Source connections in Ingestion discovery, review the certificate details, as the current error message is unclear. A missing/expired certificate is likely causing the issue.
-
-**Workaround:** You must maintain an updated security certificates in order to do ingestion.
-
 ## Spark job failure due to expired ADLS signature during Write/Delete/Update operation
 {: #known_issue20172}
 
