@@ -233,16 +233,18 @@ Iceberg: Iceberg does support the time data type.
 
 {{site.data.keyword.lakehouse_short}} now supports ingesting supported file types with varying schemas. However, when columns within these files have distinct schemas, the values in those columns is set to null.
 
-## Unsupported special characters in schema and table creation
+## Unsupported special characters in schema, table,and storage location creation
 {: #known_issues12662}
 
-The following special characters are not supported while creating schemas and tables:
+The following special characters are not supported while creating schemas, tables, and storage location:
 
 Schemas (Hive and Iceberg): `$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `)`, and `/`.
 
-Tables (Hive): `$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `)`, and `/`. (Creation of tables within a schema name that starts with the special character `@` shall result in an error).
+Tables (Hive): `$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `)`, `/`, `}`, `"`, and `'`(Creation of tables within a schema name that starts with the special character `@` shall result in an error).
 
-Tables (Iceberg):`$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `)`, `/`, and `@`.
+Tables (Iceberg):`$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `)`, `/`, `@`, `}`, `"`, and `'`.
+
+Storage location: `$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `}`, `@`, `"`, and `'`.
 
 It is recommended to not use special characters such as question mark (?), hyphen (-), asterisk (*) or delimiter characters like \r, \n, and \t in table, column, and schema names. Though these special characters are supported and tables, columns, and schemas can be created, using them might cause issues when running the INSERT command or applying access policies for the same.
 
@@ -250,8 +252,6 @@ To ensure a seamless experience, please follow the list below:
 - Schema names can contain letters, numbers or one of `!`, `#`, `&`, `]`, `}`, `<`, `>`, `=`, `%`, and `@`.
 - Table names can contain letters, numbers or one of `!`, `#`, `&`, `]`, `}`, `<`, `>`, `=`, and `;`.
 - Columns can contain letters, numbers one of `!`, `#`, `&`, `[`, `]`, `<` `>`, `_`, `:`, and `@`.
-
-
 
 ## `ALTER TABLE` operation fails in Spark job submission
 {: #known_issues13596}
