@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-05-29"
+lastupdated: "2025-06-02"
 
 keywords: lakehouse
 
@@ -30,6 +30,13 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+## Users might encounter a "test connection failure error due to invalid credentials" error
+{: #known_issue27802}
+
+Users might encounter a "test connection failure error due to invalid credentials" error for some data sources even when the data source credentials are correct. This issue can occur despite valid credentials, preventing successful connection tests for data sources.
+
+**Workaround:** If you encounter with this failure error, you must contact IBM support.
 
 ## Reset button does not reset the threshold settings to default settings
 {: #known_issue46159}
