@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-02"
+lastupdated: "2025-06-03"
 
 keywords: lakehouse
 
@@ -30,6 +30,11 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+## QHMM bucket associates to the engine only when the engine is in the running state
+{: #known_issue28526}
+
+If you associate a QHMM catalog with the engine during the provisioning state, the system will return an error stating that the catalog does not exist on the serviceability side. However, the system automatically associates the QHMM catalog when the engine is in the running state.
 
 ## Users might encounter a "test connection failure error due to invalid credentials" error
 {: #known_issue27802}
