@@ -31,6 +31,13 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
+## Materialized table creation in the Query workspace Succeeds but fails in the Spark notebook using the same permissions
+{: #known_issue46656}
+
+When attempting to create a materialized table using a SQL query in the Query workspace, the operation is successful. The user has read access to the bucket and appropriate access policies (insert, update, select, delete) for the default Iceberg catalog. However, when the same SQL statement is executed within a Spark notebook using the watsonx.data Spark template generates the following error `the action is not allowed`.
+
+**Workaround:** Define the L3 policy for the iceberg-bucket storage in the `Create access control policy` page.
+
 ## QHMM bucket associates to the engine only when the engine is in the running state
 {: #known_issue28526}
 
