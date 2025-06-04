@@ -25,7 +25,7 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Submitting Spark jobs for MoR to CoW conversion
+# Spark table maintenance by using IBM cpdctl
 {: #nsp_cpdctl}
 
 You can perform Iceberg table maintenance operations by submitting a Spark application with the help of IBM Cloud Pak for Data Command Line Interface (IBM cpdctl). The tablemaint utility available in the IBM cpdctl allows you to submit, list, and get the details of a Spark application.
