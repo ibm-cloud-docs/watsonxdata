@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-12-28"
+  years: 2017, 2025
+lastupdated: "2025-06-04"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -42,6 +42,38 @@ You can stop only the applications that are in RUNNING state.
 
 1. In the **Applications** tab, select the application that you want to stop.
 1. Click the overflow menu and select **Stop**. The application status changes to `STOPPED`.
+
+
+
+## Configure filter parameters to list Spark applications by using API
+{: #mng_appl2}
+
+You can use API, which allows to limit the number of Spark Applications listed. Also, you can filter applications by using additional filter options Application Name, Start Time Interval, and End Time Interval.
+
+
+You can configure the following parameters and use the CURL command to add the filter parameters:
+
+```bash
+https://{cpd-host}.cp.fyre.ibm.com/v4/analytics_engines/{engine_id}/spark_applications\n
+/{application_id}?state=accepted,running,finished,failed&limit={limit_value}&start_time_interval={start_lower timestamp limit},{start_upper timestamp limit}&end_time_interval={end_lower timestamp limit},{end_upper timestamp limit}
+```
+{: codeblock}
+
+
+Parameter values:
+
+* {cpd-host}: The hostname of your IBM Software Hub.
+
+* {engine_id} : The Engine ID of the native Spark engine.
+
+* {application_id} : The application for which the details are viewed.
+
+* {limit_value} : The instance ID from the watsonx.data cluster instance URL. For example, 1609968577169454.
+
+* start_time_interval : Time interval to use for filtering applications by their start time. Specify {start_lower timestamp limit} and {start_upper timestamp limit} For example, 2025-04-08T00:00:00Z,2025-04-10T23:59:59Z.
+
+* end_time_interval : Time interval to use for filtering applications by their end time. Interval is specified in the format. Specify {end_lower timestamp limit} and {end_upper timestamp limit} For example, 2024-04-08T00:00:00Z,2024-04-08T23:59:59Z.
+
 
 ## Related API
 {: #managespark_api}

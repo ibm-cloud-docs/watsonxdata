@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-04-25"
+lastupdated: "2025-06-04"
 
 keywords: watsonxdata, release notes
 
@@ -21,6 +21,8 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.lakehouse_full}} that are grouped by date.
 {: shortdesc}
 
+
+
 ## 10 April 2025 - Version 2.1.2 Hotfix 1
 {: #lakehouse_9apr2121}
 {: release-note}
@@ -36,7 +38,6 @@ Engine and service enhancements
    Tiny Milvus supports up to 10K vectors, making it suitable for quick trials and early experimentation without heavy infrastructure. It is not intended for production workloads.
 
    For more information about using Tiny Milvus, see [Setting up a watsonx.data Milvus vector store](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-prompt-data-index-milvus.html?context=wx){: external}.
-
 
 
 
