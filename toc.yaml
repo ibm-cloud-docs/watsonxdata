@@ -214,6 +214,8 @@ toc:
                 topics:
                   - sbmt_das_spk.md
                   - sbmt_spk_cnsl.md
+                  - sbmt_spk_mor_cow.md
+                  - nsp_cpdctl.md
                   - spark-table-maint.md
                   - spark-extnsn.md
                   - run_nativespk_hudi.md
