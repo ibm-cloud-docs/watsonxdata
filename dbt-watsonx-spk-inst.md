@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2025-06-05"
 
 keywords: lakehouse, watsonx.data, spark, cli
 
@@ -32,36 +32,17 @@ This section covers the steps to install and use `dbt-watsonx-spark`.
 ### Create a Spark query server
 {: #dbt_watsonx_spark_inst_1}
 
-For the Spark engine to integrate with dbt tool and work as a query engine, you must create a Spark query server.
+For the Spark engine to integrate with dbt tool and work as a query engine, you must create a Spark query server. See [Create a Spark query server]().
 
-1. Log in to the watsonx.data instance.
-1. Navigate to **Infrastructure manager**. Click the Spark engine.
-1. Click **Query servers** tab.
-1. Click **Create query servers**. The **Create query servers** page opens.
-1. Provide the following details:
-    * Name: Enter a name for the query server that you create.
-    * Driver and Executor cores and memory.
-    * Username: The watsonx.data login username.
-    * API key: Your API key. To generate an API key, see [Managing user API keys](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#manage-user-keys).
 
-1. Click **Create**. The query server is created and will be in ACCEPTED status. You can start using the server when the status becomes ACTIVE.
-
-You can view the query server details like, the name, ID, status, server start time and stop time, and the connection URL.
-{: note}
 
 ### Retrieve the query server connection details
 {: #dbt_watsonx_spark_inst_2}
 
-To configure the profile file in dbt tool, you must save the query server connection details.
 
-1. From the **Query servers** tab, select the query server that is in ACTIVE state.
-1. Click the overflow menu against the query server that you select.
-1. Click **View connection details**. The **Connection details** page opens with the profile configuration.
-1. Copy the connection details.
-1. Paste the connection details in the `profiles.yml` file that is located in .dbt of your home directory.
+To configure the profile file in dbt tool, you must save the query server connection details. See [Retrieve the query server connection details]().
 
-Alternatively, you can retrieve the connection details from the Connection information page. From the navigation menu, go to **Configurations** > **Connection information** > **Data Build Tool (DBT)**. For more information, see [Data Build Tool (DBT)](/docs/watsonxdata?topic=watsonxdata-get_connection#get_connection_dbt).
-{: note}
+
 
 ### Set up profiles.yaml for dbt tool
 {: #dbt_watsonx_spark_inst_3}
