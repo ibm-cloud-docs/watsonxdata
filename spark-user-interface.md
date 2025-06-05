@@ -2,13 +2,17 @@
 
 copyright:
   years: 2024
-lastupdated: "2025-05-15"
+lastupdated: "2025-06-05"
 keywords: spark, interface
 subcollection: watsonxdata
 
 ---
 
 {{site.data.keyword.attribute-definition-list}}
+
+
+
+**Applies to** : [Spark engine]{: tag-blue}  [Gluten accelerated Spark engine]{: tag-green}
 
 
 
