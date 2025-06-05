@@ -231,7 +231,7 @@ toc:
             - topicgroup:
                 label: Working with Spark query server
                 topics:
-                  - spk_qry_server..md
+                  - spk_qry_server.md
                   - connect_spk_qry_server.md
             - topicgroup:
                 label: VS Code development environment - Spark labs
