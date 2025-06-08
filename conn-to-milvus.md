@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2025-06-08"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -126,9 +126,7 @@ You can connect to a Milvus service by using API key or IAM token.
         Replace `<token>` with the IAM token. For information about getting a token, see [Getting IBM Access Management (IAM) token]({{site.data.keyword.ref-con-presto-serv-link}}#get-ibmiam-token).
          {: note}
 
-1. To make REST API calls using Milvus REST route, see [RESTful API reference](https://milvus.io/api-reference/restful/v2.5.x/About.md).
-
-    For example, use the following command to list all the collections:
+1. To connect to Milvus using the REST route and make an API call, run the following command:
 
     ```bash
     curl --request GET \
@@ -138,6 +136,29 @@ You can connect to a Milvus service by using API key or IAM token.
     ```
     {: codeblock}
 
+For more information, see [RESTful API reference](https://milvus.io/api-reference/restful/v2.5.x/About.md).
+
+1. To connect to Milvus using the proxy route and make an API call, run the following command:
+
+    ```bash
+    curl --request GET \
+        --url "https://<PROXY-host>:<PROXY-port>/v2/vectordb/collections/list" \
+        --header "Authorization: Basic $(echo -n '<user>:<password>' | base64)" \
+        --header "Content-Type: application/json" \
+        --cacert "<path_of_SSL_cert>"
+    ```
+    {: codeblock}
+
+For example:
+
+    ```bash
+    curl --request GET \
+        --url "https://ibm-lh-lakehouse-milvus475.milvus.apps.keyword.cp.fyre.ibm.com:443/v2/vectordb/collections/list" \
+        --header "Authorization: Basic $(echo -n 'admin:v4B##..##PBY' | base64)"" \
+        --header "Content-Type: application/json" \
+        --cacert /root/ssl.cert
+    ```
+    {: codeblock}
 
 ## What to do next
 {: #postreq}
