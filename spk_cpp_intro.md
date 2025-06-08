@@ -27,7 +27,7 @@ subcollection: watsonxdata
 {:video: .video}
 
 # Introduction to Gluten accelerated Spark engine
-{: #prov_cpp_gtn}
+{: #prov_cpp_gtn_intr}
 
 Gluten accelerated Spark engine is an optimized, high-performance engine in {{site.data.keyword.lakehouse_short}}. The Spark engine uses Gluten for offloading SQL execution to Velox, which is an open source execution engine(implemented in C++) thereby accelerating the computation of SparkSQL to reduce the cost for running the workloads.
 
@@ -35,7 +35,7 @@ Gluten serves as a native engine plugin designed to accelerate Spark SQL and Dat
 
 
 ## Features of Gluten accelerated Spark engine
-{: #featu_cpp}
+{: #featu_cpp_intr}
 
 * Supports file formats Apache Parquet and Apache Avro.
 
@@ -50,7 +50,7 @@ Gluten serves as a native engine plugin designed to accelerate Spark SQL and Dat
 * Replaces sort-merge joins with hash-joins by default.
 
 ## Limitations
-{: #featu_cpp-limt}
+{: #featu_cpp-limt_intr}
 
 * Using Amazon S3 object stores support DAS for application submission, but other object stores like ADLS and GCS requires explicit credentials to be passed.
 
@@ -89,6 +89,7 @@ Gluten serves as a native engine plugin designed to accelerate Spark SQL and Dat
 
 
 ## Best Practices for Gluten
+{: #featu_cpp-limt_int}
 
 
 * Gluten requires Large OffHeap memory as integrates with native backend i.e., Velox using Apache Arrow's OffHeap columnar format, which is essential for large-scale data processing without exceeding JVM heap limits.
