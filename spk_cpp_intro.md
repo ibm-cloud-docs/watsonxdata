@@ -84,7 +84,7 @@ Gluten serves as a native engine plugin designed to accelerate Spark SQL and Dat
 
    * The header option should be true. And now we only support DatasourceV1, i.e., user should set spark.sql.sources.useV1SourceList=csv. User defined read option is not supported, which will make CSV read fall back to vanilla Spark in most case. CSV read will also fall back to vanilla Spark and log warning when user specifies schema is different with file schema.
 
-   * For more detailed info on Gluten limitations, please refer to: https://github.com/apache/incubator-gluten/blob/main/docs/velox-backend-limitations.md
+   * For more detailed info on Gluten limitations, see [Limitation](https://github.com/apache/incubator-gluten/blob/main/docs/velox-backend-limitations.md).
 
 
 
@@ -98,7 +98,7 @@ Gluten serves as a native engine plugin designed to accelerate Spark SQL and Dat
 
 * User’s could adjust the percentage of memory set for offHeap, using the configuration, `ae.spark.offHeap.factor`, which accepts values (0-1) exclusive, eg: 0.75.
 
-* It is recommended for users to set this to lower value i.e., < 0.5 if their workload has lot of fallbacks to Java based spark. (see: <hyperlinks to fallbacks in intro page>) so that OOM does not happen while falling back to Java based spark execution.
+* It is recommended for users to set this to lower value i.e., < 0.5 if their workload has lot of fallbacks to Java based spark. (see [Limitation](#featu_cpp-limt)) so that OOM does not happen while falling back to Java based spark execution.
 
 * It is recommended to set this to higher value. i.e., 0.75 and above if their workloads executes natively on Gluten without fallback.
 
