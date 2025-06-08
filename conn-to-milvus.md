@@ -160,6 +160,9 @@ For example:
     ```
     {: codeblock}
 
+As of watsonx.data version 2.2, it is recommended to use the API version v2/. The API version v1/ might be deprecated and removed in a future release.
+{: note}
+
 ## What to do next
 {: #postreq}
 
