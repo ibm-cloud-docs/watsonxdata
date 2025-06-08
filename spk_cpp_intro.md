@@ -86,6 +86,8 @@ Gluten serves as a native engine plugin designed to accelerate Spark SQL and Dat
 
    * For more detailed info on Gluten limitations, see [Limitation](https://github.com/apache/incubator-gluten/blob/main/docs/velox-backend-limitations.md).
 
+* Gluten is not supported for FIPS enabled environment.
+
 
 
 ## Best Practices for Gluten
