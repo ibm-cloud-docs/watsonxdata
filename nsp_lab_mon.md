@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-11-06"
+  years: 2017, 2025
+lastupdated: "2025-06-08"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -14,6 +14,8 @@ subcollection: watsonxdata
 # Monitoring and debugging Spark applications from Spark labs
 {: #lab_mon_nsp}
 
+
+**Applies to** : [Spark engine]{: tag-blue}  [Gluten accelerated Spark engine]{: tag-green}
 
 
 ## Debugging the Spark application from Spark labs

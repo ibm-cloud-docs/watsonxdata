@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-06-04"
+lastupdated: "2025-06-08"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -13,6 +13,10 @@ subcollection: watsonxdata
 
 # View and manage applications
 {: #mng_appltn}
+
+
+**Applies to** : [Spark engine]{: tag-blue}  [Gluten accelerated Spark engine]{: tag-green}
+
 
 You can monitor the status of the applications that are submitted in the {{site.data.keyword.lakehouse_full}} instance.
 Log in to the {{site.data.keyword.lakehouse_short}} cluster. Go to the Infrastructure manager page.

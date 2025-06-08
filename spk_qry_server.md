@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-05"
+lastupdated: "2025-06-08"
 
 keywords: query, server, spark
 
@@ -15,11 +15,12 @@ subcollection: watsonxdata
 # Managing Spark query server
 {: #spk_qry_srver}
 
+**Applies to** : [Spark engine]{: tag-blue}
+
 
 Spark query server is a server that allows you to establish connection with tools such as Data Build Tool (dbt) integration and DBBeaver. You can start a Spark query server to integrate with  Data Build Tool (dbt) integration and DBBeaver to query and analyze your data.
 {: .shortdesc}
 
-**Applies to** : [Spark engine]{: tag-blue}  [Gluten accelerated Spark engine]{: tag-green}
 
 ## Before you begin
 {: #spk_qry_srver_bfb}

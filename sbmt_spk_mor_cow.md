@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-04"
+lastupdated: "2025-06-08"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -27,6 +27,9 @@ subcollection: watsonxdata
 
 # Submitting Spark jobs for MoR to CoW conversion
 {: #sbmt_spk_mor_cow}
+
+**Applies to** : [Spark engine]{: tag-blue}  [Gluten accelerated Spark engine]{: tag-green}
+
 
 This topic provides the steps required to locate and view Spark logs associated with submitted ingestion jobs within {{site.data.keyword.lakehouse_full}}. By accessing these logs, you can gain valuable insights into the execution details, potential error messages related to the ingestion process, and troubleshooting ingestion jobs.
 {: shortdesc}

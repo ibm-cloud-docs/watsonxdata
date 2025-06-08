@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-05"
+lastupdated: "2025-06-08"
 
 keywords: Spark, query, server,JDBC, Driver
 
@@ -14,6 +14,8 @@ subcollection: watsonxdata
 
 # Connecting to Spark query server by using Spark JDBC Driver
 {: #dbt_watsonx_connt}
+
+**Applies to** : [Spark engine]{: tag-blue}
 
 
 You can connect to the Spark query server in the following ways and execute queries to analyze your data.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2025-06-08"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -13,6 +13,8 @@ subcollection: watsonxdata
 
 # View and edit Native Spark engine details
 {: #view_edit}
+
+**Applies to** : [Spark engine]{: tag-blue}  [Gluten accelerated Spark engine]{: tag-green}
 
 You can use the {{site.data.keyword.lakehouse_full}} UI or API to view and edit the Native Spark details.
 

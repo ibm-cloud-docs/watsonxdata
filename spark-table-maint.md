@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-26"
+lastupdated: "2025-06-08"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -13,6 +13,10 @@ subcollection: watsonxdata
 
 # Spark table maintenance by using IBM `cpdctl`
 {: #table-run_samp_file}
+
+
+**Applies to** : [Spark engine]{: tag-blue}
+
 
 You can perform Iceberg table maintenance operations by submitting a Spark application with the help of IBM Cloud Pak for Data Command Line Interface (IBM `cpdctl`). The sparkjob utility available in the IBM `cpdctl` allows you to submit, list and get the details of a Spark application.
 {: shortdesc}

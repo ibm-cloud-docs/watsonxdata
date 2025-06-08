@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2025-06-08"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -13,6 +13,8 @@ subcollection: watsonxdata
 
 # Running Spark notebook from Watson Studio on Cloud Pak for Data
 {: #run_nb}
+
+**Applies to** : [Spark engine]{: tag-blue}  [Gluten accelerated Spark engine]{: tag-green}
 
 The topic provides the procedure to run a sample Spark application by using Watson Studio notebooks. The notebook resides in a Watson Studio project that is available IBM Cloud Pak for Data (CPD) cluster.
 {: shortdesc}
