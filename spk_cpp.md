@@ -26,7 +26,7 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Working with Gluten accelerated Spark engine
+# Provisioning Gluten accelerated Spark engine
 {: #prov_cpp}
 
 Gluten accelerated Spark engine is an optimized, high-performance engine in {{site.data.keyword.lakehouse_short}}. The Spark engine uses Gluten for offloading SQL execution to Velox, which is an open source execution engine(implemented in C++) thereby accelerating the computation of SparkSQL to reduce the cost for running the workloads.
@@ -143,5 +143,3 @@ To add a Gluten accelerated Spark engine, complete the following steps.
    * `<engine-home-bucket>` : The storage that enables you to monitor and debug the Spark application.
    * `<gluten_engine_name>`: Specify a name for the Gluten accelerated Spark engine.
    * `<catalog_name>`: Specify a name for the catalog you use. Gluten accelerated Spark supports Iceberg, Hudi, Delta, and Hive catalogs.
-
-
