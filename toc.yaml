@@ -50,21 +50,6 @@ toc:
           label: Data federation use case
           topics:
             - tut_data_federation.md
-      - topicgroup:
-          label: Milvus use case
-          topics:
-            - link:
-                  label: Build RAG with Llama Stack and watsonx.data Milvus
-                  href: https://community.ibm.com/community/user/blogs/divya13/2025/05/08/build-rag-with-llama-stack-and-watsonxdata-milvus
-            - link:
-                  label: Build RAG with LangChain and watsonx.data Milvus
-                  href: https://community.ibm.com/community/user/blogs/divya13/2025/04/22/build-rag-with-watsonxdata-milvus-and-langchain
-            - link:
-                  label: Build RAG with Haystack and watsonx.data Milvus
-                  href: https://community.ibm.com/community/user/blogs/divya13/2025/05/05/build-rag-with-watsonxdata-milvus-and-haystack
-            - link:
-                  label: Build RAG with LlamaIndex and Milvus using watsonx.ai Models
-                  href: https://community.ibm.com/community/user/blogs/divya13/2025/05/07/build-rag-with-llamaindex-and-milvus
   - navgroup:
       id: howto
       topics:
@@ -211,7 +196,9 @@ toc:
           label: Working with native Spark engine
           topics:
             - Intro_nativespark.md
+            - spk_cpp_intro
             - prov-native-spark.md
+            - spk_cpp.md
             - topicgroup:
                 label: Managing native Spark engine details
                 topics:
@@ -399,6 +386,9 @@ toc:
                   - api_custom_logconfwrkr_pcpp.md
                   - api_custom_logconfcord_pcpp.md
           - resource_grp_pptys.md
+      - link:
+            label: watsonx.data APIs
+            href: https://cloud.ibm.com/apidocs/watsonxdata
       - link:
             label: MDS Unity Catalog API
             href: https://cloud.ibm.com/apidocs/watsonxdata-mds-unity
