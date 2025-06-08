@@ -196,7 +196,7 @@ toc:
           label: Working with native Spark engine
           topics:
             - Intro_nativespark.md
-            - spk_cpp_intro
+            - spk_cpp_intro.md
             - prov-native-spark.md
             - spk_cpp.md
             - topicgroup:
