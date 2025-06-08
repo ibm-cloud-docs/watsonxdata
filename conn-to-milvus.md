@@ -47,7 +47,7 @@ Make sure that the following items are installed or available:
 You can connect to a Milvus service by using API key or IAM token.
 
 1. Provision a Milvus service in {{site.data.keyword.lakehouse_short}}. For more information, see [Adding a Milvus service](/docs/watsonxdata?topic=watsonxdata-adding-milvus-service).
-1. Run one of the following commands by using Python SDK (PyMilvus) to connect with Milvus for gRPC route:
+2. Run one of the following commands by using Python SDK (PyMilvus) to connect with Milvus for gRPC route:
 
      - Use one of the following commands to connect to Milvus using GRPC calls:
 
@@ -126,30 +126,30 @@ You can connect to a Milvus service by using API key or IAM token.
         Replace `<token>` with the IAM token. For information about getting a token, see [Getting IBM Access Management (IAM) token]({{site.data.keyword.ref-con-presto-serv-link}}#get-ibmiam-token).
          {: note}
 
-1. To connect to Milvus using the REST route and make an API call, run the following command:
+3. To connect to Milvus using the REST route and make an API call, run the following command:
 
     ```bash
     curl --request GET \
-        --url "https://<REST-host>:<REST-port>/v1/vector/collections" \
-        --header "Authorization: Basic $(echo -n '<user>:<password>' | base64)" \
-        --header "Content-Type: application/json"
+         --url "https://<REST-host>:<REST-port>/v1/vector/collections" \
+         --header "Authorization: Basic $(echo -n '<user>:<password>' | base64)" \
+         --header "Content-Type: application/json"
     ```
     {: codeblock}
 
-For more information, see [RESTful API reference](https://milvus.io/api-reference/restful/v2.5.x/About.md).
+    For more information, see [RESTful API reference](https://milvus.io/api-reference/restful/v2.5.x/About.md).
 
-1. To connect to Milvus using the proxy route and make an API call, run the following command:
+4. To connect to Milvus using the proxy route and make an API call, run the following command:
 
     ```bash
     curl --request GET \
-        --url "https://<PROXY-host>:<PROXY-port>/v2/vectordb/collections/list" \
-        --header "Authorization: Basic $(echo -n '<user>:<password>' | base64)" \
-        --header "Content-Type: application/json" \
-        --cacert "<path_of_SSL_cert>"
+         --url "https://<PROXY-host>:<PROXY-port>/v2/vectordb/collections/list" \
+         --header "Authorization: Basic $(echo -n '<user>:<password>' | base64)" \
+         --header "Content-Type: application/json" \
+         --cacert "<path_of_SSL_cert>"
     ```
     {: codeblock}
 
-For example:
+    For example:
 
     ```bash
     curl --request GET \
