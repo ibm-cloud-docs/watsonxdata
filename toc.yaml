@@ -65,9 +65,6 @@ toc:
             - link:
                   label: Build RAG with LlamaIndex and Milvus using watsonx.ai Models
                   href: https://community.ibm.com/community/user/blogs/divya13/2025/05/07/build-rag-with-llamaindex-and-milvus
-            - link:
-                  label: Build RAG with Llama Stack and watsonx.data Milvus
-                  href: https://community.ibm.com/community/user/blogs/divya13/2025/05/08/build-rag-with-llama-stack-and-watsonxdata-milvus
   - navgroup:
       id: howto
       topics:
