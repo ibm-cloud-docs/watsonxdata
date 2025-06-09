@@ -31,6 +31,14 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
+## Error generates after extended use of {{site.data.keyword.lakehouse_short}} Assistant
+{: #known_issue24179}
+
+After using watsonx.data Assistant for an extended period, it generates the following error.
+`There is an error with the message you just sent, but feel free to ask me something else.`
+
+**Workaround:** Reload the browser.
+
 ## Unable to re-register SAL after removing the existing registration
 {: #known_issue28222}
 
