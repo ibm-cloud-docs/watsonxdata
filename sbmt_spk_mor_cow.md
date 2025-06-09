@@ -58,16 +58,8 @@ If you have a Merge-on-Read (MoR) table, you can specify the necessary parameter
             "--cow-table","<cow-table-name>"
         ],
         "conf": {
-            "ae.spark.autoscale.enable":"false",
-            "num-executors" : "1",
-            "spark.executor.cores": "4",
-            "spark.executor.memory": "16G",
-            "spark.driver.cores": "4",
-            "spark.driver.memory": "16G",
-            "ae.spark.driver.log.level":"INFO",
-            "ae.spark.executor.log.level":"INFO",
-            "spark.hadoop.wxd.apikey" : "xx"
-        }
+            "spark.hadoop.wxd.apikey" : "Basic <encoded-api-key>"
+        },
     }
 }
 ```
@@ -78,6 +70,7 @@ Parameter values:
 - `<database-name>` : The database where the MoR table is available.
 - `<mor-table-name>` : The name of the MoR table.
 - `<cow-table-name>` : The name of the CoW table that is synchronized with the MoR table.
+- `<encoded-api-key>` : The value must be in the format echo -n"ibmlhapikey_<user_id>:<user’s api key>" | base64. Here, <user_id> is the IBM Cloud ID of the user whose api key is used to access the data bucket. The <IAM_APIKEY> here is the API key of the user accessing the Object store bucket. To generate an API key, login into the watsonx.data console and navigate to Profile > Profile and Settings > API Keys and generate a new API key.
 
 ### Change Data Capture (CDC) approach
 {: #sbmt_spk_mor_cowrcdc}
@@ -97,15 +90,7 @@ If you have a Merge-on-Read (MoR) table, you can specify the necessary parameter
             "--primary-key","<primary-key>"
         ],
         "conf": {
-            "ae.spark.autoscale.enable":"false",
-            "num-executors" : "1",
-            "spark.executor.cores": "4",
-            "spark.executor.memory": "16G",
-            "spark.driver.cores": "4",
-            "spark.driver.memory": "16G",
-            "ae.spark.driver.log.level":"INFO",
-            "ae.spark.executor.log.level":"INFO",
-            "spark.hadoop.wxd.apikey" : "xx"
+            "spark.hadoop.wxd.apikey" : "Basic <encoded-api-key>",
         }
     }
 }
@@ -118,3 +103,22 @@ Parameter values:
 - `<mor-table-name>` : The name of the MoR table.
 - `<cow-table-name>` : The name of the CoW table that is synchronized with the MoR table.
 - `<primary-key>` : The primary key that is used for creating CoW table.
+- `<encoded-api-key>` : The value must be in the format echo -n"ibmlhapikey_<user_id>:<user’s api key>" | base64. Here, <user_id> is the IBM Cloud ID of the user whose api key is used to access the data bucket. The <IAM_APIKEY> here is the API key of the user accessing the Object store bucket. To generate an API key, login into the watsonx.data console and navigate to Profile > Profile and Settings > API Keys and generate a new API key.
+
+
+### Default Hardware configuration
+{: #spk_hrwr}
+
+
+To manually specify the number of CPU cores (Driver and Executor) and memory that is required for the workload , below configs can be modified and passed in the payload:
+
+```bash
+"num-executors" : "1",
+"spark.executor.cores": "1",
+"spark.executor.memory": "4G",
+"spark.driver.cores": "1",
+"spark.driver.memory": "4G",
+```
+{: codeblock}
+
+For details on enabling autoscaling, see [Enabling application autoscaling](/docs/watsonxdata?topic=watsonxdata-appl-auto-scaling).
