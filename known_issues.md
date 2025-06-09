@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-03"
+lastupdated: "2025-06-09"
 
 keywords: lakehouse
 
@@ -30,6 +30,31 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+## Unable to re-register SAL after removing the existing registration
+{: #known_issue28222}
+
+Non-trial user is unable to re-register SAL after removing the existing registration.
+
+**Workaround:** Complete the following steps:
+
+1. Add access for the user in the IAM access cloud account.
+2. Use the following SAL API to delete the integration.
+
+   `curl -X 'DELETE' \
+   'https://api.dataplatform.cloud.ibm.com/semantic_automation/v1/wxd_integrations/<wxd-instance-id>' \
+   -H 'accept: */*' \
+   -H 'Authorization: Bearer <iam_bearer_token>'`
+
+3. Use the following API to check status of the integration and make sure the integration is deleted.
+
+   `curl -X 'GET' \
+   'https://api.dataplatform.cloud.ibm.com/semantic_automation/v1/wxd_integrations/<wxd-instance-id>' \
+   -H 'accept: */*' \
+   -H 'Authorization: Bearer <iam_bearer_token>'`
+
+4. Re-register SAL.
+
 
 ## Materialized table creation in the Query workspace Succeeds but fails in the Spark notebook using the same permissions
 {: #known_issue46656}
