@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-06-08"
+lastupdated: "2025-06-09"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -59,10 +59,13 @@ You can submit a Spark application that involves the following table maintenance
 
 1. Save the sample [Python file](#pth_file) to a Cloud Object Storage location. You must save the following details of the storage, which is required at the time of submitting the application.
 
+You can also provide the path to the file if it is saved in your computer. If the, specify the local path in the `path_local` field.
+
    The Python file includes commands for the different table maintenance operations. You can uncomment the required section based on your use case scenario. For the use case that involves catalog and schema, customize the catalog_name, schema_name and table_name in the Python file.
    {: note}
 
 
+   * <Path> : The path of the storage where the Spark application is saved.
    * <Bucket_Name> : The name of the Cloud Object Storage storage where the Spark application resides.
    * <Spark_File_Name> : The name of the Python file.
    * <BUCKET_ENDPOINT> : Public endpoint of the Cloud Object Storage storage containing Spark file.
@@ -70,7 +73,6 @@ You can submit a Spark application that involves the following table maintenance
    * <BUCKET_SECRET_KEY> : Secret Key of the Cloud Object Storage storage.
    * <SPARK_APP_NAME> : Name of the Spark application.
    * <API_KEY> : Generate the <SaaS_API_Key> (See [Generating the API key]({{site.data.keyword.ref-con-presto-serv-link}})).
-      Specify in the format :`Basic base64(ibmlhapikey_<Your_EMAIL_ID>:<SaaS_API_Key>)`. Use the command `echo -n "ibmlhapikey_<Your_EMAIL_ID>:<SaaS_API_Key>" | base64` to generate the Base 64 encoded version of the API_key.
 
 3. Use the `Create` command in the sparkjob resource available in IBM `cpdctl` to submit the Spark application. See the [How to use wx-data command --help (-h)] section to understand how to run the `./cpdctl wx-data sparkjob create` command.
 
