@@ -31,6 +31,9 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
+## Access control does not work for Gluten type of engines.
+{: #known_issue28900}
+
 ## Error generates after extended use of {{site.data.keyword.lakehouse_short}} Assistant
 {: #known_issue24179}
 
@@ -190,7 +193,7 @@ The Spark job fails with the following error when it performs Write/Delete/Updat
 
 Presto CLI supports a maximum password size of 1 KB (1024 bytes). If the password exceeds this size, the system cannot accept it in the password field; instead, it must be exported.
 
-## The timestamptz datatype is not supported for an ORC table during the upgrade of {{site.data.keyword.lakehouse_short}} web console
+## The timestamptz datatype is not supported for an ORC table during the upgrade of {{site.data.keyword.lakehouse_short}} web console.
 {: #known_issue22118}
 
 ## Database names containing hyphens or spaces cannot be queried by the Spark engine in a Python notebook, even when the appropriate Spark access control extension has been added.
