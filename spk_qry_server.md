@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-08"
+lastupdated: "2025-06-10"
 
 keywords: query, server, spark
 
@@ -18,9 +18,10 @@ subcollection: watsonxdata
 **Applies to** : [Spark engine]{: tag-blue}
 
 
-Spark query server is a server that allows you to establish connection with tools such as Data Build Tool (dbt) integration and DBBeaver. You can start a Spark query server to integrate with  Data Build Tool (dbt) integration and DBBeaver to query and analyze your data.
+Spark query server allows you to start Spark Hive based thrift server that provides the interface to collect, store, query and analyse all your lakehouse data from Spark engine.
 {: .shortdesc}
 
+Spark query server functionality can be leveraged in various ways, see [Integration](#int-spk).
 
 ## Before you begin
 {: #spk_qry_srver_bfb}
@@ -41,7 +42,7 @@ For the Spark engine to integrate with dbt tool and work as a query engine, you 
     * Name: Enter a name for the query server that you create.
     * Driver and Executor cores and memory.
     * Username: The watsonx.data login username.
-    * API key: Your API key. To generate an API key, see [Managing user API keys](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#manage-user-keys).
+    * API key: Your API key. To generate an API key, see [Generating the API key](https://test.cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-con-presto-serv).
 
 1. Click **Create**. The query server is created and will be in ACCEPTED status. You can start using the server when the status becomes ACTIVE.
 
@@ -51,25 +52,31 @@ You can view the query server details like, the name, ID, status, server start t
 ## Retrieve the query server connection details
 {: #ret_con_dtls}
 
-To configure the profile file in dbt tool, you must save the query server connection details. See [Retrieve the query server connection details]().
+To configure the profile file in dbt tool, you must save the query server connection details.
 
 1. From the **Query servers** tab, select the query server that is in ACTIVE state.
 1. Click the overflow menu against the query server that you select.
 1. Click **View connection details**. The Connection details page opens with the profile configuration.
 1. Copy the connection details.
-1. Paste the connection details in the `profiles.yml` file that is located in .dbt of your home directory.
 
-   Alternatively, you can retrieve the connection details from the Connection information page. From the navigation menu, go to ConfigurationsConnection informationData Build Tool (DBT). For more information, see Data Build Tool.
+   Alternatively, you can retrieve the connection details from the Connection information page. From the navigation menu, go to ConfigurationsConnection informationData Build Tool (DBT).
    {: note}
 
-## Viewing the Spark query server
+
 
 ## Stopping the Spark query server
+{: #stp-spk}
 
-## Integrations supported by the spark query server
+1. From the Query servers tab, you can view the lat of query servers.
+1. Click the overflow menu against the query server that you select.
+1. Click **Stop**.
 
 
-* Using **Data Build Tool (dbt)** : To work with dbt, see db integration.
-* Integration using DBeaver (JDBC clients) : See Connecting to Spark query server by using Spark JDBC Driver.
-* Using Java (JDBC Client): See Connecting to Spark query server by using Spark JDBC Driver.
-* Using Python (PyHive JDBC Client): See Connecting to Spark query server by using Spark JDBC Driver.
+## Integrations supported
+{: #int-spk}
+
+
+* Using **Data Build Tool (dbt)** : To work with dbt, see [dbt integration](/docs/watsonxdata?topic=watsonxdata-dbt_watsonx_spark_inst).
+* Integration using DBeaver (JDBC clients) : See [Connecting to Spark query server by using Spark JDBC Driver](/docs/watsonxdata?topic=watsonxdata-dbt_watsonx_connt).
+* Using Java (JDBC Client): See [Connecting to Spark query server by using Spark JDBC Driver](/docs/watsonxdata?topic=watsonxdata-dbt_watsonx_connt).
+* Using Python (PyHive JDBC Client): See [Connecting to Spark query server by using Spark JDBC Driver](/docs/watsonxdata?topic=watsonxdata-dbt_watsonx_connt).

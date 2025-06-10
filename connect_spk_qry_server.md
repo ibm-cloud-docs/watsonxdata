@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-08"
+lastupdated: "2025-06-10"
 
 keywords: Spark, query, server,JDBC, Driver
 
@@ -55,7 +55,7 @@ To connect to the Spark query server using a JDBC client, such as DBeaver, set u
 1. Select **Database Navigator**, click on **New Connection** and complete the following steps:
    1. Select the newly created driver.
    1. Click **Connect by** and select **URL**.
-   1. Provide the JDBC URL using the following format : `jdbc:hive2://<HOST>/default;lhInstanceId=<INSTANCE>;httpPath=<URI>`.
+   1. Provide the JDBC URL using the following format : `jdbc:hive2://<HOST>:443/default;instance=<INSTANCE>;httpPath=<URI>`.
    1. Select **Authentication**, provide **Username** as your username and your IAM API key as the password.
    1. **Save** and connect to the connection by double-clicking.
 
@@ -65,7 +65,7 @@ To connect to the Spark query server using a JDBC client, such as DBeaver, set u
 
 Ensure your Java CLASSPATH includes the downloaded JDBC driver. For example:
 
-`java -cp queryserver-jdbc-4.1.0-SNAPSHOT-standalone.jar MyExampleJDBC.java`
+`java -cp queryserver-jdbc-4.1.0-SNAPSHOT-standalone.jar App.java`
 
 You can specify the following parameters and use the following Java code to connect to the Spark query server.
 
@@ -73,18 +73,25 @@ You can specify the following parameters and use the following Java code to conn
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.Statement;
 
-public class MyExampleJDBC {
+public class App {
     public static void main(String[] args) throws Exception {
-        // SaaS ONLY
-        String host = "HOST-WITHOUT-PROTOCOL";
-        String instance = "INSTANCE";
-        String uri = "URI OF QUERY SERVER";
-        String user = "YOUR-EMAIL";
-        String apikey = "IAM-API-KEY";
+        // Set the below configurations from Connection Details of QueryS Server
+        // Exclude having https/http/www, just domain
+        String host = "example.com";
+        String Instance = "CRN/OR/INSTANCE-ID";
+        String uri = "/lakehouse/api/v2/spark_engines/.../query_servers/.../connect/cliservice";
+        String user = "EMAIL-ID/OR/USER-ID";
+        String apikey = "API-KEY";
 
-        String jdbcUrl = String.format("jdbc:hive2://%s/default;lhInstanceId=%s;httpPath=%s;", host, instance, uri);
+        String jdbcUrl = String.format("jdbc:hive2://%s/default;instance=%s;httpPath=%s;", host, Instance, uri);
+
+        // Required if your domain requires SSL certificates
+        // This is not required for SaaS, hence comment the below line for SaaS
+        // Else, we need provide trust-store path which has the SSL certificates for the host
+        jdbcUrl += "sslTrustStore=tech_trust.jks;trustStorePassword=Test@123";
 
         try {
             // Load the Hive JDBC driver
@@ -94,11 +101,19 @@ public class MyExampleJDBC {
             Connection con = DriverManager.getConnection(jdbcUrl, user, apikey);
             Statement stmt = con.createStatement();
 
-            System.out.println("Connected");
+            System.out.println("Connected to watsonx.data Spark Query Server");
 
             // Sample query
             String sql = "show databases";
+
             ResultSet rs = stmt.executeQuery(sql);
+            ResultSetMetaData rsmd = rs.getMetaData();
+            int columnCount = rsmd.getColumnCount();
+
+            // The column count starts from 1
+            for (int i = 1; i <= columnCount; i++ ) {
+                System.out.println(rsmd.getColumnName(i));
+            }
 
             // Print result
             while (rs.next()) {
@@ -114,7 +129,6 @@ public class MyExampleJDBC {
             e.printStackTrace();
         }
     }
-}
 ```
 {: .codeblock}
 
@@ -122,3 +136,101 @@ public class MyExampleJDBC {
 {: #dbt_dbvr_Pyth}
 
 To connect to the Spark query server using a Python program, do the following:
+
+
+1. Ensure you have Python version 3.12 or below.
+
+1. Install pyHive using pip install PyHive[hive_pure_sasl]==0.7.0".
+
+1. Save the follow in a file like `connect.py`.
+
+
+```bash
+
+import ssl
+import thrift
+import base64
+from pyhive import hive
+
+import requests
+import thrift.transport
+import thrift.transport.THttpClient
+
+import logging
+import contextlib
+from http.client import HTTPConnection
+
+
+# Change the following inputs
+class Credentials:
+    host = "https://example.ibm.com"
+    uri = "/lakehouse/api/v2/spark_engines/.../query_servers/.../connect/cliservice"
+    instance_id = "CRN/OR/INSTANCE-ID"
+    username = "EMAIL-ID/OR/USER-ID"
+    apikey = "API-KEY"
+
+
+creds = Credentials()
+
+
+def disable_ssl(ctx):
+    ctx.check_hostname = False
+    ctx.verify_mode = ssl.CERT_NONE
+
+    ssl.SSLContext.verify_mode = property(lambda self: ssl.CERT_NONE, lambda self, newval: None)
+
+
+def get_access_token(apikey):
+    try:
+        headers = {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Accept': 'application/json',
+        }
+
+        data = {
+            'grant_type': 'urn:ibm:params:oauth:grant-type:apikey',
+            'apikey': apikey,
+        }
+
+        response = requests.post('https://iam.cloud.ibm.com/identity/token', headers=headers, data=data)
+        return response.json()['access_token']
+    except Exception as inst:
+        print('Error in getting access token')
+        print(inst)
+        exit
+
+ctx = ssl.create_default_context()
+
+## If you require to disable SSL, uncomment the below line
+# disable_ssl(ctx)
+
+transport = thrift.transport.THttpClient.THttpClient(
+    uri_or_host="{host}:{port}{uri}".format(
+        host=creds.host, uri= creds.uri, port=443,
+    ),
+    ssl_context=ctx,
+)
+
+headers = {
+    "AuthInstanceId": creds.instance_id
+}
+
+if creds.instance_id.isdigit():
+    # Software installation
+    headers["Authorization"] =  "ZenApiKey " + base64.b64encode(f"{creds.username}:{creds.apikey}".encode('utf-8')).decode('utf-8')
+else:
+    # Cloud installation
+    headers["Authorization"] = "Bearer {}".format(get_access_token(creds.apikey))
+
+transport.setCustomHeaders(headers)
+
+cursor = hive.connect(thrift_transport=transport).cursor()
+print("Connected to Spark Query Server")
+
+cursor.execute('show databases')
+print(cursor.fetchall())
+
+cursor.close()
+
+```
+{: .codeblock}
