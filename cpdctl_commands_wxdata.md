@@ -47,7 +47,7 @@ The wx-data command supports the following commands:
 - `bucket`
 - `database`
 - `sparkjob`
-- ``
+- `tablemaint`
 - `service`
 
 ## How to Use `wx-data` Command --help (-h)
