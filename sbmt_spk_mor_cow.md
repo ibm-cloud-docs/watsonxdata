@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-09"
+lastupdated: "2025-06-10"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -30,9 +30,9 @@ subcollection: watsonxdata
 
 **Applies to** : [Spark engine]{: tag-blue}  [Gluten accelerated Spark engine]{: tag-green}
 
-
-This topic provides the steps required to locate and view Spark logs associated with submitted ingestion jobs within {{site.data.keyword.lakehouse_full}}. By accessing these logs, you can gain valuable insights into the execution details, potential error messages related to the ingestion process, and troubleshooting ingestion jobs.
+This topic describes how to a run Spark job that helps to sync up Iceberg table data from Merge-on-Read (MoR) format to Copy-on-Write (CoW) format. Read operations are more efficient with Iceberg Copy-On-Write tables.
 {: shortdesc}
+
 
 You can use one of the following methods for the conversion:
 - [Register COW Table](https://ibmdocs.dcs.ibm.com/docs/en/SSDZ38_2.2.x_test?topic=engine-submitting-spark-jobs-mor-cow-conversion#mor_cow__RT) : This approach creates a named reference for the MoR table by using Iceberg [Register_table](https://www.ibm.com/links?url=https%3A%2F%2Ficeberg.apache.org%2Fdocs%2F1.6.0%2Fspark-procedures%2F%3Fh%3Dregister%23register_table) API, which points to a compacted consistent version of the MoR table and serves as the CoW table. This method is recommended and is more cost-effective.
