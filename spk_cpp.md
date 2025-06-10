@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-08"
+lastupdated: "2025-06-10"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -108,8 +108,6 @@ To add a Gluten accelerated Spark engine, complete the following steps.
 
            "default_version": "3.4",
 
-           "engine_sub_type": "cpp",
-
            "scale_config": {
 
                "node_type": "small",
@@ -130,9 +128,12 @@ To add a Gluten accelerated Spark engine, complete the following steps.
 
        ],
 
-       "origin": "native"
+       "origin": "native",
+       "type": "gluten"
 
    }
+
+      }
    ```
    {: codeblock}
 
