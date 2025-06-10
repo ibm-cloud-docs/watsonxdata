@@ -42,7 +42,7 @@ MinIO is a high-performance, S3 compatible object store. It is built for large s
  | Access key | Enter your access key. |
  | Secret key | Enter your secret key. |
  | Connection Status | Click the Test connection link to test the storage connection. If the connection is successful, a success message appears.|
- | Designate this bucket as the ACL store | Select the checkbox to designate this bucket as the ACL store. <br>This feature applies to {{site.data.keyword.lakehouse_short}} Premium. For more information on how to use this feature, see [Governance through Access Controlled Lists (ACL)](https://ibmdocs-test.dcs.ibm.com/docs/en/SSAO5N_test?topic=rules-governance-through-access-controlled-lists).{: note} </br>|
+ | Designate this bucket as the ACL store | Select the checkbox to designate this bucket as the ACL store.|
  | Associate Catalog | Select the checkbox to add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within. |
  | Associate catalog | Select the checkbox to add a catalog for your storage. This catalog is automatically associated with your storage and serves as your query interface with the data stored within. |
  | Activate now| Activate the storage immediately or activate it later. |
