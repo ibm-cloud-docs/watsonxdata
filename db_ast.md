@@ -30,7 +30,7 @@ subcollection: watsonxdata
 {: #db_ast}
 
 
-{{site.data.keyword.lakehouse_full}} Assistant, a gen AI-powered chat interface built with IBM watsonx™. It allows you to seamlessly retrieve information about IBM watsonx.data product information.
+{{site.data.keyword.lakehouse_full}} Assistant, a gen AI-powered chat interface built with IBM watsonx™. It seamlessly provides information about IBM watsonx.data using the product knowledge.
 
 You can chat with the {{site.data.keyword.lakehouse_short}} Assistant to ask questions about {{site.data.keyword.lakehouse_full}}. Assistant answers your queries about {{site.data.keyword.lakehouse_short}} based on its knowledge on IBM product documentation. It helps to explore and learn about the product in an easier and faster way.
 
@@ -47,7 +47,7 @@ To start using {{site.data.keyword.lakehouse_short}} Assistant, the administrato
 1. Log in to the watsonx.data instance.
 1. Go to **Configurations**.
 1. Click **Watsonx Data Assistant**.
-1. Clcik **Edit**. The **Edit Watsonx.data Assistant** page opens.
+1. Click **Edit**. The **Edit Watsonx.data Assistant** page opens.
 1. Select **Enable Watsonx Data Assistant** checkbox.
 1. Click **Save**.
 
@@ -67,8 +67,8 @@ To get started with the database assistant:
 1. Review the generated response.
 
 1. Provide feedback for the response and help improve the assistant. You have the following feedback options:
-   * Good response : You can select this option if you are happy with the response.
-   * Bad response : You can select this option if you are unhappy with the response. The chat prompts you for additional feedback.
+   * Good response : You can select this option if you are satisfied with the response.
+   * Bad response : You can select this option if the response has to be improved. The chat prompts you for additional feedback.
 
 
 
