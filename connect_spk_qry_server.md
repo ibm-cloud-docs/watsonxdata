@@ -145,92 +145,95 @@ To connect to the Spark query server using a Python program, do the following:
 1. Save the follow in a file like `connect.py`.
 
 
-```bash
+   ```bash
 
-import ssl
-import thrift
-import base64
-from pyhive import hive
+   import ssl
+   import thrift
+   import base64
+   from pyhive import hive
 
-import requests
-import thrift.transport
-import thrift.transport.THttpClient
+   import requests
+   import thrift.transport
+   import thrift.transport.THttpClient
 
-import logging
-import contextlib
-from http.client import HTTPConnection
-
-
-# Change the following inputs
-class Credentials:
-    host = "https://example.ibm.com"
-    uri = "/lakehouse/api/v2/spark_engines/.../query_servers/.../connect/cliservice"
-    instance_id = "CRN/OR/INSTANCE-ID"
-    username = "EMAIL-ID/OR/USER-ID"
-    apikey = "API-KEY"
+   import logging
+   import contextlib
+   from http.client import HTTPConnection
 
 
-creds = Credentials()
+   # Change the following inputs
+   class Credentials:
+       host = "https://example.ibm.com"
+       uri = "/lakehouse/api/v2/spark_engines/.../query_servers/.../connect/cliservice"
+       instance_id = "CRN/OR/INSTANCE-ID"
+       username = "EMAIL-ID/OR/USER-ID"
+       apikey = "API-KEY"
 
 
-def disable_ssl(ctx):
-    ctx.check_hostname = False
-    ctx.verify_mode = ssl.CERT_NONE
-
-    ssl.SSLContext.verify_mode = property(lambda self: ssl.CERT_NONE, lambda self, newval: None)
+   creds = Credentials()
 
 
-def get_access_token(apikey):
-    try:
-        headers = {
-            'Content-Type': 'application/x-www-form-urlencoded',
-            'Accept': 'application/json',
-        }
+   def disable_ssl(ctx):
+       ctx.check_hostname = False
+       ctx.verify_mode = ssl.CERT_NONE
 
-        data = {
-            'grant_type': 'urn:ibm:params:oauth:grant-type:apikey',
-            'apikey': apikey,
-        }
+       ssl.SSLContext.verify_mode = property(lambda self: ssl.CERT_NONE, lambda self, newval: None)
 
-        response = requests.post('https://iam.cloud.ibm.com/identity/token', headers=headers, data=data)
-        return response.json()['access_token']
-    except Exception as inst:
-        print('Error in getting access token')
-        print(inst)
-        exit
 
-ctx = ssl.create_default_context()
+   def get_access_token(apikey):
+       try:
+           headers = {
+               'Content-Type': 'application/x-www-form-urlencoded',
+               'Accept': 'application/json',
+           }
 
-## If you require to disable SSL, uncomment the below line
-# disable_ssl(ctx)
+           data = {
+               'grant_type': 'urn:ibm:params:oauth:grant-type:apikey',
+               'apikey': apikey,
+           }
 
-transport = thrift.transport.THttpClient.THttpClient(
-    uri_or_host="{host}:{port}{uri}".format(
-        host=creds.host, uri= creds.uri, port=443,
-    ),
-    ssl_context=ctx,
-)
+           response = requests.post('https://iam.cloud.ibm.com/identity/token', headers=headers, data=data)
+           return response.json()['access_token']
+       except Exception as inst:
+           print('Error in getting access token')
+           print(inst)
+           exit
 
-headers = {
-    "AuthInstanceId": creds.instance_id
-}
+   ctx = ssl.create_default_context()
 
-if creds.instance_id.isdigit():
-    # Software installation
-    headers["Authorization"] =  "ZenApiKey " + base64.b64encode(f"{creds.username}:{creds.apikey}".encode('utf-8')).decode('utf-8')
-else:
-    # Cloud installation
-    headers["Authorization"] = "Bearer {}".format(get_access_token(creds.apikey))
+   ## If you require to disable SSL, uncomment the below line
+   # disable_ssl(ctx)
 
-transport.setCustomHeaders(headers)
+   transport = thrift.transport.THttpClient.THttpClient(
+       uri_or_host="{host}:{port}{uri}".format(
+           host=creds.host, uri= creds.uri, port=443,
+       ),
+       ssl_context=ctx,
+   )
 
-cursor = hive.connect(thrift_transport=transport).cursor()
-print("Connected to Spark Query Server")
+   headers = {
+       "AuthInstanceId": creds.instance_id
+   }
 
-cursor.execute('show databases')
-print(cursor.fetchall())
+   if creds.instance_id.isdigit():
+       # Software installation
+       headers["Authorization"] =  "ZenApiKey " + base64.b64encode(f"{creds.username}:{creds.apikey}".encode('utf-8')).decode('utf-8')
+   else:
+       # Cloud installation
+       headers["Authorization"] = "Bearer {}".format(get_access_token(creds.apikey))
 
-cursor.close()
+   transport.setCustomHeaders(headers)
 
-```
-{: .codeblock}
+   cursor = hive.connect(thrift_transport=transport).cursor()
+   print("Connected to Spark Query Server")
+
+   cursor.execute('show databases')
+   print(cursor.fetchall())
+
+   cursor.close()
+
+   ```
+   {: .codeblock}
+
+
+4. Run using `python connect.py`.
