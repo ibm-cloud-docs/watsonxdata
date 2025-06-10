@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-06-09"
+lastupdated: "2025-06-10"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -11,14 +11,14 @@ subcollection: watsonxdata
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Spark table maintenance by using IBM `cpdctl`
+# Submitting Spark application by using `IBM cpdctl`
 {: #table-run_samp_file}
 
 
 **Applies to** : [Spark engine]{: tag-blue}
 
 
-You can perform Iceberg table maintenance operations by submitting a Spark application with the help of IBM Cloud Pak for Data Command Line Interface (IBM `cpdctl`). The sparkjob utility available in the IBM `cpdctl` allows you to submit, list and get the details of a Spark application.
+You can perform Iceberg table maintenance operations by submitting a Spark application with the help of IBM Cloud Pak for Data Command Line Interface (IBM `cpdctl`). The `sparkjob` utility available in the IBM `cpdctl` allows you to submit, list and get the details of a Spark application.
 {: shortdesc}
 
 
@@ -66,7 +66,7 @@ You can also provide the path to the file if it is saved in your computer. If th
 
 
    * <Path> : The path of the storage where the Spark application is saved.
-   * <Bucket_Name> : The name of the Cloud Object Storage storage where the Spark application resides.
+   * <Bucket_Name> : The name of the Cloud Object Storage storage where the Spark application resides. This storage must be available in the instance.
    * <Spark_File_Name> : The name of the Python file.
    * <BUCKET_ENDPOINT> : Public endpoint of the Cloud Object Storage storage containing Spark file.
    * <BUCKET_ACCESS_KEY> : Access key of the Cloud Object Storage storage.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-09"
+lastupdated: "2025-06-10"
 
 keywords: lakehouse, cpdctl, watsonx.data, supporting commands, wx-data
 
@@ -216,22 +216,30 @@ The tablemaint command is used for executing different Iceberg table maintenance
 This is now applicable only for Amazon S3 storage.
 {: important}
 
-Syntax
-./cpdctl wx-data tablemaint [options]
+Syntax:
+   ```bash
+   ./cpdctl wx-data tablemaint [options]
+   ```
+   {: codeblock}
+
 
 The tablemaint command supports the following commands:
 
-Options
-Description
-./cpdctl wx-data tablemaint rollback_to_snapshot	Roll back, or restore the table to a specific snapshot ID.
-./cpdctl wx-data tablemaint rollback_to_timestamp	Roll back a table to the snapshot at a specific timestamp.
-./cpdctl wx-data tablemaint set_current_snapshot	Sets the current snapshot ID for a table.
-./cpdctl wx-data tablemaint cherrypick_snapshot	Cherry-picks changes from a snapshot into the current table state. Cherry-picking creates a new snapshot from an existing snapshot without altering or removing the original.
-./cpdctl wx-data tablemaint expire_snapshot	Remove older snapshots and their files which are no longer needed.
-./cpdctl wx-data tablemaint remove_orphan	Remove files that are not referenced in any metadata files of an Iceberg table and can thus be considered "orphaned".
-./cpdctl wx-data tablemaint rewrite_data	Rewrites the data files.
-./cpdctl wx-data tablemaint rewrite_manifests	Rewrite manifests for a table to optimize scan planning.
-./cpdctl wx-data tablemaint register_table	Creates a table.
+| Options | Description |
+|---------|-------------|
+|`./cpdctl wx-data tablemaint rollback_to_snapshot`|Roll back, or restore the table to a specific snapshot ID.|
+|`./cpdctl wx-data tablemaint rollback_to_timestamp`	|Roll back a table to the snapshot at a specific timestamp.|
+|`./cpdctl wx-data tablemaint set_current_snapshot`	|Sets the current snapshot ID for a table.|
+|`./cpdctl wx-data tablemaint cherrypick_snapshot`	|Cherry-picks changes from a snapshot into the current table state. Cherry-picking creates a new snapshot from an existing snapshot without altering or removing the original.|
+|`./cpdctl wx-data tablemaint expire_snapshot` |Remove older snapshots and their files which are no longer needed.|
+|`./cpdctl wx-data tablemaint remove_orphan` |Remove files that are not referenced in any metadata files of an Iceberg table and can thus be considered "orphaned".|
+|`./cpdctl wx-data tablemaint rewrite_data`	|Rewrites the data files.|
+|`./cpdctl wx-data tablemaint rewrite_manifests`	|Rewrite manifests for a table to optimize scan planning.|
+|`./cpdctl wx-data tablemaint register_table`	|Creates a table.|
+
+
 The following flags are listed when you run each table maintenance command:
-Force : If the value is set to TRUE, the SQL query that you are going to run will be printed.
-Debug : If the value is set to TRUE, a copy of the Spark application file is stored to our computer.
+
+   * Force : If the value is set to TRUE, the SQL query that you are going to run will be printed.
+
+   * Debug : If the value is set to TRUE, a copy of the Spark application file is stored to our computer.

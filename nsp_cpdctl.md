@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-08"
+lastupdated: "2025-06-10"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -32,7 +32,7 @@ subcollection: watsonxdata
 **Applies to** : [Spark engine]{: tag-blue}
 
 
-You can perform Iceberg table maintenance operations by submitting a Spark application with the help of IBM Cloud Pak for Data Command Line Interface (IBM cpdctl). The tablemaint utility available in the IBM cpdctl allows you to submit, list, and get the details of a Spark application.
+You can perform Iceberg table maintenance operations by submitting a Spark application with the help of IBM Cloud Pak for Data Command Line Interface (IBM cpdctl). The `tablemaint` utility available in the IBM cpdctl allows you to submit, list, and get the details of a Spark application.
 {: shortdesc}
 
 ## Before you begin
