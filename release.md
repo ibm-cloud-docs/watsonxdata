@@ -68,7 +68,7 @@ Integration enhancements
       * Using Java (JDBC Client) code
       * Using Python (PyHive JDBC Client)
 
-   For more information, see [Connecting to Spark query server by using Spark JDBC Driver](/docs/watsonxdata?topic=watsonxdata-dbt_watsonx_connt)
+      For more information, see [Connecting to Spark query server by using Spark JDBC Driver](/docs/watsonxdata?topic=watsonxdata-dbt_watsonx_connt)
 
 Billing enhancements
 : This release of watsonx.data introduces the following enhancements to the billing feature:
