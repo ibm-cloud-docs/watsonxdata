@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-10"
+lastupdated: "2025-06-11"
 
 keywords: lakehouse, cpdctl, watsonx.data, supporting commands, wx-data
 
@@ -123,6 +123,8 @@ The `ingestion` command further supports the following commands:
 | `./cpdctl wx-data ingestion list` | Lists the ingestion jobs executed in {{site.data.keyword.lakehouse_short}} instance. |
 | `./cpdctl wx-data ingestion create` | Create an ingestion job in {{site.data.keyword.lakehouse_short}} instance. |
 | `./cpdctl wx-data ingestion get` | Get the details of an ingestion job executed in {{site.data.keyword.lakehouse_short}} instance. |
+ {: caption="Supported commands by ingestion" caption-side="bottom"}
+
 
 ## engine
 {: #cpdctl_commands_wxdataeng}
@@ -144,6 +146,7 @@ The `engine` command further supports the following commands:
 | `./cpdctl wx-data engine delete` | Delete an engine from {{site.data.keyword.lakehouse_short}} instance. |
 | `./cpdctl wx-data engine attach` | Associate catalogs to a Presto engine in {{site.data.keyword.lakehouse_short}} instance. |
 | `./cpdctl wx-data engine detach` | Disassociate the catalogs associated with a Presto engine in {{site.data.keyword.lakehouse_short}} instance. |
+ {: caption="Supported commands by engine" caption-side="bottom"}
 
 ## bucket
 {: #cpdctl_commands_wxdatabuck}
@@ -166,6 +169,7 @@ The `bucket` command further supports the following commands:
 | `./cpdctl wx-data bucket delete` | Delete a storage from {{site.data.keyword.lakehouse_short}} instance. |
 | `./cpdctl wx-data bucket activate` | Activate a storage bucket in {{site.data.keyword.lakehouse_short}} on IBM Cloud instance only. |
 | `./cpdctl wx-data bucket deactivate` | Deactivate a storage bucket in {{site.data.keyword.lakehouse_short}} on IBM Cloud instance only. |
+ {: caption="Supported commands by bucket" caption-side="bottom"}
 
 ## database
 {: #cpdctl_commands_wxdatadatabs}
@@ -186,6 +190,7 @@ The `database` command further supports the following commands:
 | `./cpdctl wx-data database create` | Create or add a data source in {{site.data.keyword.lakehouse_short}} instance. |
 | `./cpdctl wx-data database get` | Get the details of a registered data source in {{site.data.keyword.lakehouse_short}} instance. |
 | `./cpdctl wx-data database delete` | Delete a data source from {{site.data.keyword.lakehouse_short}} instance. |
+ {: caption="Supported commands by database" caption-side="bottom"}
 
 ## sparkjob
 {: #cpdctl_commands_wxdatasprkjb}
@@ -205,6 +210,7 @@ The `sparkjob` command further supports the following commands:
 | `./cpdctl wx-data sparkjob list` | List all applications available in a Spark engine. |
 | `./cpdctl wx-data sparkjob create` | Submit a Spark application. |
 | `./cpdctl wx-data sparkjob get` | Get the status of a Spark application. |
+ {: caption="Supported commands by sparkjob" caption-side="bottom"}
 
 For more information about how to perform Spark table maintenance by using IBM cpdctl in {{site.data.keyword.lakehouse_short}} on IBM Software Hub, see [Spark table maintenance](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=engine-spark-table-maintenance-by-using-cpdctl) and for watsonx.data on IBM Cloud, see [Spark table maintenance](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-table-run_samp_file).
 
@@ -236,6 +242,7 @@ The tablemaint command supports the following commands:
 |`./cpdctl wx-data tablemaint rewrite_data`	|Rewrites the data files.|
 |`./cpdctl wx-data tablemaint rewrite_manifests`	|Rewrite manifests for a table to optimize scan planning.|
 |`./cpdctl wx-data tablemaint register_table`	|Creates a table.|
+ {: caption="Supported commands by tablemaint" caption-side="bottom"}
 
 
 The following flags are listed when you run each table maintenance command:
@@ -243,3 +250,23 @@ The following flags are listed when you run each table maintenance command:
    * Force : If the value is set to TRUE, the SQL query that you are going to run will be printed.
 
    * Debug : If the value is set to TRUE, a copy of the Spark application file is stored to our computer.
+
+## service
+{: #cpdctl_commands_wxdatasvce}
+
+The `service` command is used for executing different serviceability related operations in {{site.data.keyword.lakehouse_short}}.
+
+Syntax:
+   ```bash
+   ./cpdctl wx-data service [options]
+   ```
+   {: codeblock}
+
+The `service` command further supports the following commands:
+
+| Command | Description |
+|---------|-------------|
+| `./cpdctl wx-data service list-tables` | Lists all table names of hive or iceberg connectors in {{site.data.keyword.lakehouse_short}} instance.|
+| `./cpdctl wx-data service get-qhmm-config` | Get the qhmm enabled bucket name in {{site.data.keyword.lakehouse_short}} instance. |
+| `./cpdctl wx-data service monitor` | To run stats and qhmm related queries in {{site.data.keyword.lakehouse_short}} instance. |
+ {: caption="Supported commands by service" caption-side="bottom"}

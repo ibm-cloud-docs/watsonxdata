@@ -42,7 +42,8 @@ toc:
       id: tutorial
       topics:
       - lite_plan.md
-      - quick_start.md
+      # - quick_start.md
+      - quick_start_2.1.3.md
       - tut_query_db.md
       - tut_custbckt.md
       - tut_data_ingestion.md

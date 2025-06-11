@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-05-20"
+lastupdated: "2025-06-11"
 
 keywords: lakehouse, semantic automation, {{site.data.keyword.lakehouse_short}}, data enrichment, register
 
@@ -36,7 +36,7 @@ To activate semantic enrichment in {{site.data.keyword.lakehouse_full}}, you mus
 
 To register and enable semantic layer in {{site.data.keyword.lakehouse_short}}, make sure that the following are available.
 - [API key](https://cloud.ibm.com/iam/apikeys) of the cluster.
-- IBM Knowledge Catalog instance within your IBM Cloud account.
+- {{site.data.keyword.lakehouse_short}} intelligence instance access within your IBM Cloud account.
 -
 
 ## Procedure

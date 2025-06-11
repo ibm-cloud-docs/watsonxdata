@@ -26,6 +26,8 @@ For watsonx.data as a Service on IBM Cloud with gen AI experience what's new, se
 For watsonx.data on-prem what's new, see [Release notes for {{ site.data.keyword.wxdata }}](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.2.x?topic=watsonxdata-whats-new-in).
 For watsonx.data on-prem Premium what's new, see [Release notes for on-prem Premium](https://www.ibm.com/docs/watsonx/watsonxdata-premium/2.2.x?topic==overview-whats-new-in-watsonxdata).
 
+
+
 ## 11 June 2025 - Version 2.2
 {: #lakehouse_11june212}
 {: release-note}
@@ -69,7 +71,7 @@ Integration enhancements
       * Using Java (JDBC Client) code
       * Using Python (PyHive JDBC Client)
 
-      For more information, see [Connecting to Spark query server by using Spark JDBC Driver](/docs/watsonxdata?topic=watsonxdata-dbt_watsonx_connt)
+      For more information, see [Connecting to Spark query server by using Spark JDBC Driver](/docs/watsonxdata?topic=watsonxdata-dbt_watsonx_connt).
 
 Billing enhancements
 : This release of watsonx.data introduces the following enhancements to the billing feature:

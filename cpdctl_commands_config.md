@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-29"
+lastupdated: "2025-06-11"
 
 keywords: lakehouse, cpdctl, watsonx.data, supporting commands, config
 
@@ -91,7 +91,7 @@ The `user` command further supports the following commands:
 |`./cpdctl config user list`|List the credentials stored in cpdctl configuration that is used to connect to {{site.data.keyword.lakehouse_short}} instance.|
 |`./cpdctl config user get <username>`|Get the credentials of a user stored in cpdctl configuration that is used to connect to {{site.data.keyword.lakehouse_short}} instance.|
 |`./cpdctl config user unset <username>`|Remove the currently set username from the cpdctl configuration of {{site.data.keyword.lakehouse_short}} instance.|
-{: caption="Supported commands by `user`" caption-side="bottom"}
+ {: caption="Supported commands by user" caption-side="bottom"}
 
 `./cpdctl config user set [commands]` further supports the following commands as options to be used for setting the credentials:
    ```bash
@@ -144,7 +144,7 @@ The `profile` command supports the following commands:
 |`./cpdctl config profile unset <profilename>`|Remove {{site.data.keyword.lakehouse_short}} environment profile from cpdctl configuration.|
 |`./cpdctl config profile current`|Get details of the current {{site.data.keyword.lakehouse_short}} environment profile used from cpdctl configuration.|
 |`./cpdctl config profile use <profilename>`|Use a particular {{site.data.keyword.lakehouse_short}} environment profile from cpdctl configuration.|
-{: caption="Supported commands by `profile`" caption-side="bottom"}
+{: caption="Supported commands by profile" caption-side="bottom"}
 
 `./cpdctl config profile set [commands]` further supports the following commands as options to be used for setting the credentials:
    ```bash

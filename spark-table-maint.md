@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-06-10"
+lastupdated: "2025-06-11"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -59,7 +59,7 @@ You can submit a Spark application that involves the following table maintenance
 
 1. Save the sample [Python file](#pth_file) to a Cloud Object Storage location. You must save the following details of the storage, which is required at the time of submitting the application.
 
-You can also provide the path to the file if it is saved in your computer. If the, specify the local path in the `path_local` field.
+You can also provide the path to the file if it is saved in your computer. If the, specify the local path in the `local-path` field.
 
    The Python file includes commands for the different table maintenance operations. You can uncomment the required section based on your use case scenario. For the use case that involves catalog and schema, customize the catalog_name, schema_name and table_name in the Python file.
    {: note}
