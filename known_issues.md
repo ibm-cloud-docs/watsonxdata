@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-05-02"
+lastupdated: "2025-06-09"
 
 keywords: lakehouse
 
@@ -31,7 +31,77 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
+## Access control does not work for Gluten type of engines.
+{: #known_issue28900}
 
+## Error generates after extended use of {{site.data.keyword.lakehouse_short}} Assistant
+{: #known_issue24179}
+
+After using watsonx.data Assistant for an extended period, it generates the following error.
+`There is an error with the message you just sent, but feel free to ask me something else.`
+
+**Workaround:** Reload the browser.
+
+## Unable to re-register SAL after removing the existing registration
+{: #known_issue28222}
+
+Non-trial user is unable to re-register SAL after removing the existing registration.
+
+**Workaround:** Complete the following steps:
+
+1. Add access for the user in the IAM access cloud account.
+2. Use the following SAL API to delete the integration.
+
+   `curl -X 'DELETE' \
+   'https://api.dataplatform.cloud.ibm.com/semantic_automation/v1/wxd_integrations/<wxd-instance-id>' \
+   -H 'accept: */*' \
+   -H 'Authorization: Bearer <iam_bearer_token>'`
+
+3. Use the following API to check status of the integration and make sure the integration is deleted.
+
+   `curl -X 'GET' \
+   'https://api.dataplatform.cloud.ibm.com/semantic_automation/v1/wxd_integrations/<wxd-instance-id>' \
+   -H 'accept: */*' \
+   -H 'Authorization: Bearer <iam_bearer_token>'`
+
+4. Re-register SAL.
+
+
+## Materialized table creation in the Query workspace Succeeds but fails in the Spark notebook using the same permissions
+{: #known_issue46656}
+
+When attempting to create a materialized table using a SQL query in the Query workspace, the operation is successful. The user has read access to the bucket and appropriate access policies (insert, update, select, delete) for the default Iceberg catalog. However, when the same SQL statement is executed within a Spark notebook using the watsonx.data Spark template generates the following error `the action is not allowed`.
+
+**Workaround:** Define the L3 policy for the iceberg-bucket storage in the `Create access control policy` page.
+
+## QHMM bucket associates to the engine only when the engine is in the running state
+{: #known_issue28526}
+
+If you associate a QHMM catalog with the engine during the provisioning state, the system will return an error stating that the catalog does not exist on the serviceability side. However, the system automatically associates the QHMM catalog when the engine is in the running state.
+
+## Users might encounter a "test connection failure error due to invalid credentials" error
+{: #known_issue27802}
+
+Users might encounter a "test connection failure error due to invalid credentials" error for some data sources even when the data source credentials are correct. This issue can occur despite valid credentials, preventing successful connection tests for data sources.
+
+**Workaround:** If you encounter with this failure error, you must contact IBM support.
+
+## Reset button does not reset the threshold settings to default settings
+{: #known_issue46159}
+
+Clicking the `Reset` button does not reset the thresholds to their default or global settings, instead reverts the changes made since the last save which is similar to the action of `Cancel` button.
+
+**Workaround:** To achieve the desired reset to default settings, manually revert each threshold setting to its required value, then save the changes.
+
+## Absence of column NDV stats in Iceberg tables leads to suboptimal query plans
+{: #known_issue26023}
+
+In the current implementation, for Iceberg tables within Presto (Java) and Presto (C++), the column NDV (Number of Distinct Values) statistics are not used when available in MDS. NDVs are important to generating optimal query plans. Without them, there can be significant performance degradation.
+
+**Workaround:** For non-partitioned tables, use `SET SESSION <iceberg_catalog>.hive_statistics_merge_strategy='USE_NULLS_FRACTION_AND_NDV';`.
+
+This workaround does not apply to partitioned tables.
+{: note}
 
 ## Virtual private network configuration limitation
 {: #issue24487}
@@ -110,13 +180,6 @@ If a user has more than one catalog, the default `information_schema` view will 
 
 When the presto worker catalog property file-column-names-read-as-lower-case is set to true, it converts field names in ASCII uppercase letters to ASCII lowercase. As a result, data under column names with uppercase full-width characters will not be recognized and will appear as "null".
 
-## Certificate update required for data ingestion
-{: #known_issue40771}
-
-If you encounter issues with Data Source connections in Ingestion discovery, review the certificate details, as the current error message is unclear. A missing/expired certificate is likely causing the issue.
-
-**Workaround:** You must maintain an updated security certificates in order to do ingestion.
-
 ## Spark job failure due to expired ADLS signature during Write/Delete/Update operation
 {: #known_issue20172}
 
@@ -130,7 +193,7 @@ The Spark job fails with the following error when it performs Write/Delete/Updat
 
 Presto CLI supports a maximum password size of 1 KB (1024 bytes). If the password exceeds this size, the system cannot accept it in the password field; instead, it must be exported.
 
-## The timestamptz datatype is not supported for an ORC table during the upgrade of {{site.data.keyword.lakehouse_short}} web console
+## The timestamptz datatype is not supported for an ORC table during the upgrade of {{site.data.keyword.lakehouse_short}} web console.
 {: #known_issue22118}
 
 ## Database names containing hyphens or spaces cannot be queried by the Spark engine in a Python notebook, even when the appropriate Spark access control extension has been added.
@@ -218,16 +281,18 @@ Iceberg: Iceberg does support the time data type.
 
 {{site.data.keyword.lakehouse_short}} now supports ingesting supported file types with varying schemas. However, when columns within these files have distinct schemas, the values in those columns is set to null.
 
-## Unsupported special characters in schema and table creation
+## Unsupported special characters in schema, table,and storage location creation
 {: #known_issues12662}
 
-The following special characters are not supported while creating schemas and tables:
+The following special characters are not supported while creating schemas, tables, and storage location:
 
 Schemas (Hive and Iceberg): `$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `)`, and `/`.
 
-Tables (Hive): `$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `)`, and `/`. (Creation of tables within a schema name that starts with the special character `@` shall result in an error).
+Tables (Hive): `$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `)`, `/`, `}`, `"`, and `'`(Creation of tables within a schema name that starts with the special character `@` shall result in an error).
 
-Tables (Iceberg):`$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `)`, `/`, and `@`.
+Tables (Iceberg):`$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `)`, `/`, `@`, `}`, `"`, and `'`.
+
+Storage location: `$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `}`, `@`, `"`, and `'`.
 
 It is recommended to not use special characters such as question mark (?), hyphen (-), asterisk (*) or delimiter characters like \r, \n, and \t in table, column, and schema names. Though these special characters are supported and tables, columns, and schemas can be created, using them might cause issues when running the INSERT command or applying access policies for the same.
 
@@ -235,8 +300,6 @@ To ensure a seamless experience, please follow the list below:
 - Schema names can contain letters, numbers or one of `!`, `#`, `&`, `]`, `}`, `<`, `>`, `=`, `%`, and `@`.
 - Table names can contain letters, numbers or one of `!`, `#`, `&`, `]`, `}`, `<`, `>`, `=`, and `;`.
 - Columns can contain letters, numbers one of `!`, `#`, `&`, `[`, `]`, `<` `>`, `_`, `:`, and `@`.
-
-
 
 ## `ALTER TABLE` operation fails in Spark job submission
 {: #known_issues13596}

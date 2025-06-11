@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-11-06"
+  years: 2017, 2025
+lastupdated: "2025-06-08"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -13,6 +13,8 @@ subcollection: watsonxdata
 
 # Managing native Spark engine
 {: #manage_nsp}
+
+**Applies to** : [Spark engine]{: tag-blue}  [Gluten accelerated Spark engine]{: tag-green}
 
 Native Spark engine allows you to do the following functionalities:
 

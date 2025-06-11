@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-26"
+lastupdated: "2025-06-11"
 
 keywords: lakehouse, access, data, policy, watsonx data
 
@@ -115,3 +115,35 @@ To maintain data security, you can create access policies for the following at t
    - Click **Back** to go to the previous page.
    - Click **Cancel** to cancel the process.
    - Click **Create** to save the policy.
+
+
+
+9. To export the data policies, complete the following steps:
+
+   You can export  the details to a JSON file.
+   {: note}
+
+   a. In the **Access control** page, under the **Policies** tab, select the required (or all) policies and click the **Export** link.
+
+   b. The **Export Users** page opens. Specify the file name and click **Export**. The file gets downloaded to your machine.
+
+9. To import the resource policies, complete the following steps:
+
+   You can import JSON files only.
+   {: note}
+
+   a. In the **Access control** page, under the **Policies** tab, click **Import** link. The **Import page** opens.
+
+   b. In the **Upload File** section, select the file with policies that you want to upload.
+
+   c. Click **Next**. The **Validate** section appears.
+
+      For Milvus, you must map the Milvus ID of imported policies to the corresponding Milvus ID of the instance where the policies are uploaded. To do that:
+
+      a. In the **Validate** page, the **Mapping Milivus policies** section list the policies that you uploaded.
+
+      b. From the **New instance** list, choose the corresponding Milivus instance that needs to be mapped and click **Validate**.
+
+   d. The file that you uploaded is validated and if any invalid data items are found, it gets displayed in the Invalid data items table with the error description.
+
+   e. Click **Next**. The **Summary** section opens. Verify and click **Add imported users**.

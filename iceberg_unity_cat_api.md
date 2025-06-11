@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-10"
+lastupdated: "2025-05-26"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -274,6 +274,7 @@ Due to the constraint of not modifying the schema, the following features are no
 - When listing tables, only Iceberg tables are returned. If you attempt to create a table with a name that exists as a Hive or Delta table in the same database or namespace, the creation of an Iceberg table with the same name is not allowed.
 - X-Iceberg-Access-Delegation is not supported.
 - Metrics endpoint added as dummy only.
+- Presto cannot query views created using the Iceberg REST catalog API due to encoding incompatibility. This same incompatibility affects views created from Spark, which Presto also cannot query. However, Spark can query views created through the REST catalog API without any issues.
 
 For more information, see [API documentation](https://cloud.ibm.com/apidocs/watsonxdata-ibm-mds-iceberg).
 

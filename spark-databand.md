@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2025-03-24"
+  years: 2024, 2025
+lastupdated: "2025-06-08"
 keywords: spark, interface
 subcollection: watsonxdata
 
@@ -12,6 +12,9 @@ subcollection: watsonxdata
 
 # Monitoring Spark application runs by using Databand
 {: #mntr_dband}
+
+**Applies to** : [Spark engine]{: tag-blue}
+
 
 Databand integration with Spark enhances monitoring capabilities by providing insights that extend beyond Spark UI and Spark History.
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-11-06"
+  years: 2017, 2025
+lastupdated: "2025-06-08"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -11,12 +11,12 @@ subcollection: watsonxdata
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Introduction to Native Spark engine
+# Introduction to Spark engine
 {: #intro_nativespark}
 
 Native Spark engine is a compute engine in {{site.data.keyword.lakehouse_full}}. You can use Native Spark engine to submit applications that involve complex analytical operations.
 
-In {{site.data.keyword.lakehouse_short}}, Native Spark engine is used to achieve the following use cases:
+In {{site.data.keyword.lakehouse_short}}, native Spark engine is used to achieve the following use cases:
 
 - Ingest large volumes of data into {{site.data.keyword.lakehouse_short}} tables.
 - Handle complex analytical workload.

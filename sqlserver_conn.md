@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-25"
+lastupdated: "2025-06-11"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -40,8 +40,7 @@ Microsoft SQL Server is a relational database management system.
  | Database name     | Enter the name of your database.|
  | Hostname            | Enter the hostname.  |
  | Port             | Enter the port number. |
- | Username| Enter the username. |
- | Password| Enter the password. |
+ | Authentication type| Choose and enter the Authentication type details: \n * Default - Enter the data source username and data source password. \n * NTLM - Enter the data source username, data source password, and optionally, domain name. \n * Azure AD Service Principal - Enter your Application/client ID as the username and secret of a service principal identity as the password. \n * Azure AD Password - Enter Microsoft Entra username and password.|
  | Port is SSL enabled   | Use the toggle switch to enable or disable SSL connection. If enabled, \n i. The Upload SSL certificate (.pem, .crt, .cert or .cer) link is enabled. \n ii. Click the Upload SSL certificate (.pem, .crt, .cert or .cer) link. \n iii. Browse the SSL certificate and upload.|
  | Validate certificate | Use the toggle switch to validate that the SSL certificate that is returned by the host is trusted or not. |
  | Connection status     | Click the Test connection link to test the data source connection. If the data source connection is successful, a success message appears.|

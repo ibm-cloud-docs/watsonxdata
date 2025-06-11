@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-23"
+lastupdated: "2025-06-11"
 
 keywords: watsonx.data, dph, integration
 subcollection: watsonxdata
@@ -51,3 +51,19 @@ Data consumers are the users who subscribe to these Data products. Data consumer
    * **Flight service** : The Flight service provides read access to various data sources in watsonx.data. This delivery method is only used by the technical data consumer. For example, data scientist. Technical consumers can use Jupyter Notebooks to write a script to access the data sources in watsonx.data. For information about Flight services, see [Flight Service](https://dataplatform.cloud.ibm.com/docs/content/wsj/data-products/prd_delivery_methods_overview.html?context=dph&locale=en#flight).
 
    * **Data extract** : The business consumers use data refinery service to create a CSV data extract file and download it. For information about data extract delivery method, see [Data Extract delivery method](https://dataplatform.cloud.ibm.com/docs/content/wsj/data-products/prd_delivery_methods_overview.html?context=dph&locale=en#extract).
+
+   * **Deliver as a Table in watsonx.data** : The **deliver as a table in watsonx.data** delivery method allows consumers to access their data product as a table in watsonx.data. This method enables users with the appropriate permissions to create new tables or append to existing ones. For more information about deliver as a table in watsonx.data, see [Deliver as a table in watsonx.data delivery method](https://dataplatform.cloud.ibm.com/docs/content/wsj/data-products/prd_delivery_methods_overview.html?context=dph&locale=en#wxd_ingest) in the Data Product Hub documentation.
+
+      **Pre-requisites**
+      To use the **deliver as a table in watsonx.data** delivery method, you must have the following accesses in watsonx.data:
+
+      1. The user must have access to a Spark engine connected to the target catalog.
+      2. The user must have access to a Presto engine (this is only required to make the connection).
+      3. The user must have access to a target Iceberg catalog with role to the full catalog or an access policy that gives some permission to use the catalog.
+      4. The user must have Write access to storage used for the target catalog.
+      5. The user must have access to Cloud Object Storage: Add as a component in the watsonx.data instance. See [IBM Cloud Object Storage](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started). The data extract will land here before being ingested to watsonx.data.
+
+      For managing access in watsonx.data, see [Managing data policy](https://cloud.ibm.com/docs/watsonx-data?topic=watsonx-data-managing-data-policy).
+
+
+   * **Access in watsonx.data** : The access in watsonx.data delivery method allows consumers to access their data product in watsonx.data. For more information about access in watsonx.data, see [Data Product Hub documentation](https://dataplatform.cloud.ibm.com/docs/content/wsj/data-products/prd_delivery_methods_overview.html?context=dph&locale=en).

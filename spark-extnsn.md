@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-04-30"
+lastupdated: "2025-06-11"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -13,6 +13,10 @@ subcollection: watsonxdata
 
 # Enhancing Spark application submission using Spark access control extension
 {: #spark-extnsn}
+
+
+**Applies to** : [Spark engine]{: tag-blue}
+
 
 When you submit a Spark application that uses external storage buckets registered in {{site.data.keyword.lakehouse_short}}, Spark access control extension allows additional authorization thereby enhancing security. If you enable the extension in the spark configuration, only authorized users are allowed to access and operate {{site.data.keyword.lakehouse_short}} catalogs through Spark jobs.
 {: shortdesc}
@@ -181,7 +185,7 @@ curl --request POST   --url https://<region>/lakehouse/api/v2/spark_engines/<spa
       "spark.hadoop.fs.cos.<COS_SERVICE_NAME>.endpoint": "<COS_ENDPOINT>",
       "spark.hadoop.fs.cos.<COS_SERVICE_NAME>.secret.key": "<COS_SECRET_KEY>",
       "spark.hadoop.fs.cos.<COS_SERVICE_NAME>.access.key": "<COS_ACCESS_KEY>"
-        "spark.hadoop.wxd.apikey":"Basic xxx",
+        "spark.hadoop.wxd.apiKey":"Basic xxx",
         "spark.sql.extensions":"<required-storage-support-extension>,authz.IBMSparkACExtension"
 
     },

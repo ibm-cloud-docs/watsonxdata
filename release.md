@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-04-25"
+lastupdated: "2025-06-11"
 
 keywords: watsonxdata, release notes
 
@@ -21,6 +21,107 @@ content-type: release-note
 Use these release notes to learn about the latest updates to {{site.data.keyword.lakehouse_full}} that are grouped by date.
 {: shortdesc}
 
+
+For watsonx.data as a Service on IBM Cloud with gen AI experience what's new, see [Release notes for watsonx.data as a Service on IBM Cloud with gen AI experience](https://dataplatform.cloud.ibm.com/docs/content/wsj/getting-started/welcome-main.html?context=wxd).
+For watsonx.data on-prem what's new, see [Release notes for {{ site.data.keyword.wxdata }}](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.2.x?topic=watsonxdata-whats-new-in).
+For watsonx.data on-prem Premium what's new, see [Release notes for on-prem Premium](https://www.ibm.com/docs/watsonx/watsonxdata-premium/2.2.x?topic==overview-whats-new-in-watsonxdata).
+
+
+
+## 11 June 2025 - Version 2.2
+{: #lakehouse_11june212}
+{: release-note}
+
+watsonx.data 2.2.0 version is released in stages and is not available in all regions. To know if the 2.2.0 release is available in your region, contact IBM Support.
+{: note}
+
+
+
+Engine and service enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancement:
+
+   * Introduced new API versions for connecting to a Milvus service by using a proxy host route. For more information, see [Connecting to Milvus service](/docs/watsonxdata?topic=watsonxdata-conn-to-milvus).
+   * For the Presto (C++) engines, the Hive and Iceberg catalogs are now enabled with region configuration. For more information, see [Provisioning a Presto (C++) engine](/docs/watsonxdata?topic=watsonxdata-pcpp_prov).
+   * New Gluten accelerated Spark engine: You can now provision Gluten accelerated Spark engine and use it to run complex analytical workloads by leveraging high scalability of Spark SQL framework and high performance of native libraries. For information about working with the new Gluten accelerated Spark engine, see [Working with Gluten accelerated Spark engine](/docs/watsonxdata?topic=watsonxdata-prov_cpp).
+   * Run faster workspace queries by using a Spark job to transform Iceberg table data : To speed up the reading of Iceberg tables, you can now use a Spark job to transform Iceberg table data from Merge-on-Read (MOR) format to Copy-on-Write (COW) format. For more information, see [Submitting Spark jobs for MoR to CoW conversion](/docs/watsonxdata?topic=watsonxdata-sbmt_spk_mor_cow).
+
+CPDCTL CLI enhancements
+: This release of watsonx.data introduces the following enhancements to IBM Cloud Pak for Data Command Line Interface (IBM cpdctl):
+
+   * You can use the tablemaint command to execute different Iceberg table maintenance operations in watsonx.data.
+
+   * You can use the CPDCTL API functionality to configure the limit of applications that can be listed and the filter criteria that you can use to filter the applications.
+
+   * You can use the wx-data service command to perform various serviceability related operations, such as listing tables, retrieving the list of QHMM enabled buckets, and monitoring QHMM related statistics and queries.
+
+   For more information, see [IBM cpdctl](/docs/watsonxdata?topic=watsonxdata-cpdctl_title).
+
+
+Integration enhancements
+: This release of watsonx.data introduces the following enhanced integration with other services:
+   * New delivery method: Deliver as a table in watsonx.data
+
+   Data products using supported data sources can now be delivered to your instance of watsonx.data tables by using the deliver as a table in watsonx.data method. This method allows users with the appropriate permissions to create new tables or append to existing ones. For more information, see [Integrating with Data Product Hub](/docs/watsonxdata?topic=watsonxdata-dph_intro).
+
+   * New delivery method: Access in watsonx.data
+
+   You can now subscribe to a data product created from the watsonx.data instance by using the access in watsonx.data delivery method. This method lets consumers directly access watsonx.data resources through Data Product Hub. After delivery, consumers will see details on how to access the watsonx.data instance and the specific resources they have access to. For more information, see [Integrating with Data Product Hub](/docs/watsonxdata?topic=watsonxdata-dph_intro).
+
+   * You can now connect to the Spark query server in the following ways and execute queries to analyze your data.
+
+      * Using DBeaver (JDBC clients)
+      * Using Java (JDBC Client) code
+      * Using Python (PyHive JDBC Client)
+
+      For more information, see [Connecting to Spark query server by using Spark JDBC Driver](/docs/watsonxdata?topic=watsonxdata-dbt_watsonx_connt).
+
+Billing enhancements
+: This release of watsonx.data introduces the following enhancements to the billing feature:
+
+   * Billing granularity: Users will now be able to view their billing statements in an itemized format, offering greater granularity and transparency
+   * Billing accuracy: User billing usage will now be tracked at a per-minute level, replacing the previous high-watermark method
+
+Query History Monitoring and Management (QHMM) enhancement
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following QHMM enhancement:
+
+   The Query monitoring page is removed from the Quick start wizard setup and is consolidated with the Configure a bucket page. You can now enable, disable, configure the QHMM storage details directly from the updated Configure a bucket page available in the Quick start wizard. For information about the updated Quick start wizard setup, see [Quick start](/docs/watsonxdata?topic=watsonxdata-quick_start_213).
+
+Data sources and storage enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} includes the following storage enhancement:
+
+   You can now use the SQL Server with New Technology LAN Manager (NTLM) authentication and Microsoft Entra authentication. NTLM is a windows based challenge - response authentication method. For more information, see [SQL Server](/docs/watsonxdata?topic=watsonxdata-sqlserver_database).
+
+
+Access management enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following access management enhancements:
+
+   * You can use the export functionality to download the existing resource policies and import them into another required environment. This ensures consistency and helps smooth migration. For information about how to use the import export functionality, see [Managing user access](/docs/watsonxdata?topic=watsonxdata-manage_access).
+   * A catalog administrator or a user who belongs to a group with an admin role can now remove their access to the catalog. For more infromation about how to remove a user for a component, see [Managing user access](/docs/watsonxdata?topic=watsonxdata-manage_access).
+   * Non-admin users has read-only access and can now view the Driver Manager page within the Configurations section. This allows them to see the list of active drivers and their details without needing to consult an administrator. For more information, see [Driver manager](/docs/watsonxdata?topic=watsonxdata-driver_manager).
+
+Auditing and tracking enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following auditing and tracking enhancement:
+
+   The list of trackable events now includes detailed activities related to the MDS Thrift server and the MDS Rest server providing insights into how applications and users are interacting with these critical components. For information, see [MDS Thrift server events](/docs/watsonxdata?topic=watsonxdata-at_events#at_actions_mdsthrift) and [MDS Rest server events](/docs/watsonxdata?topic=watsonxdata-at_events#at_actions_mdsrest).
+
+
+Deprecated features
+
+: The following features are deprecated in this release:
+
+   * The Milvus APIs that use the REST host (APIs with the /api/v1 prefix) are deprecated as of {{site.data.keyword.lakehouse_short}} v2.2.
+
+   * Azure Data Lake Storage (ADLS) Gen1 is now deprecated and will be removed in an upcoming release. You must transition to ADLS Gen2 because ADLS Gen1 is not available.
+
+   * The user authentication method of using ibmlhapikey and ibmlhtoken as the username is now deprecated and shall be removed in a future   release. You can use ibmlhapikey_username and ibmlhtoken_username instead. For more infromation, see [Access management and governance in watsonx.data](/docs/watsonxdata?topic=watsonxdata-access_mgt).
+
+
+
 ## 10 April 2025 - Version 2.1.2 Hotfix 1
 {: #lakehouse_9apr2121}
 {: release-note}
@@ -36,7 +137,6 @@ Engine and service enhancements
    Tiny Milvus supports up to 10K vectors, making it suitable for quick trials and early experimentation without heavy infrastructure. It is not intended for production workloads.
 
    For more information about using Tiny Milvus, see [Setting up a watsonx.data Milvus vector store](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/fm-prompt-data-index-milvus.html?context=wx){: external}.
-
 
 
 

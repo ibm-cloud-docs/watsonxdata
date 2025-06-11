@@ -16,33 +16,34 @@ toc:
           label: Overview
           topics:
           - wxd_ov.md
+          - presto_overview.md
+          - pcpp_ov.md
+          - spk_overview.md
+          - metadata_serv_ov.md
+          - access-ovw.md
           - milvus_overview.md
           - about_optimizer.md
           - sal_title.md
           - qhmm-overview.md
           - cas_proxy_ov.md
-          - presto_overview.md
-          - pcpp_ov.md
-          - spk_overview.md
-          - access-ovw.md
           - api_custom_ov.md
           - mixed_case_overview.md
           - resource_grp_ov.md
           - integration.md
           - manta_overview.md
-          - metadata_serv_ov.md
+      - release.md
       - topicgroup:
           label: Provisioning watsonx.data
           topics:
           - prov_wxd.md
           - prov_lite_plan.md
           - getting-started.md
-      - release.md
   - navgroup:
       id: tutorial
       topics:
       - lite_plan.md
-      - quick_start.md
+      # - quick_start.md
+      - quick_start_2.1.3.md
       - tut_query_db.md
       - tut_custbckt.md
       - tut_data_ingestion.md
@@ -50,6 +51,21 @@ toc:
           label: Data federation use case
           topics:
             - tut_data_federation.md
+      - topicgroup:
+          label: Milvus use case
+          topics:
+            - link:
+                  label: Build RAG with Llama Stack and watsonx.data Milvus
+                  href: https://community.ibm.com/community/user/blogs/divya13/2025/05/08/build-rag-with-llama-stack-and-watsonxdata-milvus
+            - link:
+                  label: Build RAG with LangChain and watsonx.data Milvus
+                  href: https://community.ibm.com/community/user/blogs/divya13/2025/04/22/build-rag-with-watsonxdata-milvus-and-langchain
+            - link:
+                  label: Build RAG with Haystack and watsonx.data Milvus
+                  href: https://community.ibm.com/community/user/blogs/divya13/2025/05/05/build-rag-with-watsonxdata-milvus-and-haystack
+            - link:
+                  label: Build RAG with LlamaIndex and Milvus using watsonx.ai Models
+                  href: https://community.ibm.com/community/user/blogs/divya13/2025/05/07/build-rag-with-llamaindex-and-milvus
   - navgroup:
       id: howto
       topics:
@@ -57,74 +73,77 @@ toc:
       - topicgroup:
           label: Configuring watsonx.data components
           topics:
-          - prov_engine.md
-          - pcpp_prov.md
-          - prov_spk_engine.md
-          - reg_engine.md
-          - edit-eng-tags.md
-          - scale-engine.md
-          - pause_engine.md
-          - resume-engine.md
-          - del_engine.md
-          - view-spk-dtls.md
-          - asso-cat-eng.md
-          - explore-cat-obj.md
-          - disso-cat-eng.md
-          - conf_rcrs_grp.md
-      - topicgroup:
-              label: Data sources
+          - topicgroup:
+              label: Engines
               topics:
-              - reg_database.md
-              - redshift_conn.md
-              - druid_conn.md
-              - kafka_conn.md
-              - phoenix_conn.md
-              - pinot_conn.md
-              - bigquery_conn.md
-              - cassandra_conn.md
-              - clickhouse_conn.md
-              - elasticsearch_conn.md
-              - saphana.md
-              - dvm_conn.md
-              - db2_conn.md
-              - db2ibmi_conn.md
-              - netezza_conn.md
-              - informix_conn.md
-              - mongodb_conn.md
-              - mysql_conn.md
-              - oracle_conn.md
-              - postgresql_conn.md
-              - prometheus_conn.md
-              - redis_conn.md
-              - singlestore_conn.md
-              - snowflake_conn.md
-              - sqlserver_conn.md
-              - teradata_conn.md
-              - custom_database.md
-              - arrow_flight_service.md
-              - derby_conn.md
-              - greenplum_conn.md
-              - mariadb_conn.md
-              - salesforce_conn.md
-      - update-db-cred.md
-      - edit-db-tags.md
-      - delete_database.md
-      - topicgroup:
-              label: Storages
-              topics:
-              - reg_bucket.md
-              - cos_storage.md
-              - amazons_storage.md
-              - ceph_storage.md
-              - minio_storage.md
-              - hdfs_storage.md
-              - google_cloud_storage.md
-              - adls_genblob_storage.md
-              - ozone_storage.md
-      - explor-buck-obj.md
-      - edit-buck-tags.md
-      - delete_bucket.md
-      - sync_logs.md
+              - prov_engine.md
+              - pcpp_prov.md
+              - prov_spk_engine.md
+              - reg_engine.md
+              - edit-eng-tags.md
+              - scale-engine.md
+              - pause_engine.md
+              - resume-engine.md
+              - del_engine.md
+              - view-spk-dtls.md
+              - asso-cat-eng.md
+              - explore-cat-obj.md
+              - disso-cat-eng.md
+              - conf_rcrs_grp.md
+          - topicgroup:
+                  label: Data sources
+                  topics:
+                  - reg_database.md
+                  - redshift_conn.md
+                  - druid_conn.md
+                  - kafka_conn.md
+                  - phoenix_conn.md
+                  - pinot_conn.md
+                  - bigquery_conn.md
+                  - cassandra_conn.md
+                  - clickhouse_conn.md
+                  - elasticsearch_conn.md
+                  - saphana.md
+                  - dvm_conn.md
+                  - db2_conn.md
+                  - db2ibmi_conn.md
+                  - netezza_conn.md
+                  - informix_conn.md
+                  - mongodb_conn.md
+                  - mysql_conn.md
+                  - oracle_conn.md
+                  - postgresql_conn.md
+                  - prometheus_conn.md
+                  - redis_conn.md
+                  - singlestore_conn.md
+                  - snowflake_conn.md
+                  - sqlserver_conn.md
+                  - teradata_conn.md
+                  - custom_database.md
+                  - arrow_flight_service.md
+                  - derby_conn.md
+                  - greenplum_conn.md
+                  - mariadb_conn.md
+                  - salesforce_conn.md
+                  - update-db-cred.md
+                  - edit-db-tags.md
+                  - delete_database.md
+          - topicgroup:
+                  label: Storages
+                  topics:
+                  - reg_bucket.md
+                  - cos_storage.md
+                  - amazons_storage.md
+                  - ceph_storage.md
+                  - minio_storage.md
+                  - hdfs_storage.md
+                  - google_cloud_storage.md
+                  - adls_genblob_storage.md
+                  - ozone_storage.md
+                  - explor-buck-obj.md
+                  - edit-buck-tags.md
+                  - delete_bucket.md
+                  - sync_logs.md
       - topicgroup:
           label: IBM Cloud Pak for Data Command Line Interface (IBM cpdctl)
           topics:
@@ -193,7 +212,9 @@ toc:
           label: Working with native Spark engine
           topics:
             - Intro_nativespark.md
+            - spk_cpp_intro.md
             - prov-native-spark.md
+            - spk_cpp.md
             - topicgroup:
                 label: Managing native Spark engine details
                 topics:
@@ -211,6 +232,8 @@ toc:
                 topics:
                   - sbmt_das_spk.md
                   - sbmt_spk_cnsl.md
+                  - sbmt_spk_mor_cow.md
+                  - nsp_cpdctl.md
                   - spark-table-maint.md
                   - spark-extnsn.md
                   - run_nativespk_hudi.md
@@ -223,6 +246,11 @@ toc:
                   - spark-user-interface.md
                   - spark-databand.md
                   - spark-db-trk.md
+            - topicgroup:
+                label: Working with Spark query server
+                topics:
+                  - spk_qry_server.md
+                  - connect_spk_qry_server.md
             - topicgroup:
                 label: VS Code development environment - Spark labs
                 topics:

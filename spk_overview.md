@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-12-16"
+  years: 2022, 2025
+lastupdated: "2025-06-08"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -26,7 +26,7 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# About Spark engine
+# Spark engine
 {: #spk_ovrviw}
 
 The {{site.data.keyword.lakehouse_short}} platform includes a built-in native Spark engine that allows you to perform big data analytics seamlessly. Additionally, {{site.data.keyword.lakehouse_short}} supports external Spark engines, enabling you to leverage Spark clusters outside of the {{site.data.keyword.lakehouse_short}} environment. You can use {{site.data.keyword.lakehouse_short}} Spark engine to achieve the following use cases:
@@ -35,10 +35,17 @@ The {{site.data.keyword.lakehouse_short}} platform includes a built-in native Sp
 2. Table maintenance operation to enhance {{site.data.keyword.lakehouse_short}} performance of the table
 3. Complex analytics workload which are difficult to represent as queries.
 
+For more information about provisioning the engine, see [Provisioning a Spark engine](/docs/watsonxdata?topic=watsonxdata-spl_engine).
+
 {{site.data.keyword.lakehouse_full}} allows you to integratrate with the following types of Spark:
 
 **Native Spark engine**
 Native Spark engine is a compute engine that is available within {{site.data.keyword.lakehouse_short}} instance. With native Spark engine, you can fully manage Spark Engine configuration, manage access to Spark Engines and run applications by using watsonx.data UI and REST API endpoints.
+
+For more information, see Working with native Spark engine section.
+
+**Gluten accelerated Spark engine**
+Performance optimized data processing engine capable of processing Spark applications. It uses Gluten, which relies on Velox (C++) generic database acceleration library that optimize the queries. This is an effective solution to speed up and simplify your process if you work with very huge data set. For more information, see Gluten accelerated Spark engine.
 
 For more information, see Working with native Spark engine section.
 

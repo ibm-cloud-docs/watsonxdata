@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-02-24"
+  years: 2022, 2025
+lastupdated: "2025-06-11"
 
 keywords: lakehouse, storage, catalog, watsonx.data
 
@@ -33,6 +33,10 @@ Azure Data Lake Storage (ADLS) is a scalable data storage and analytics service 
 {: shortdesc}
 
 Select **Azure Data Lake Storage** from the **Storage** section of **Add component** window.
+
+
+Azure Data Lake Storage (ADLS) Gen1 is deprecated and will be removed in an upcoming release. You must transition to ADLS Gen2 as ADLS Gen1 will no longer be available.
+{: important}
 
 If you select **Azure Data Lake Storage Gen1 Blob** from the **Type** drop-down, configure the following details:
 

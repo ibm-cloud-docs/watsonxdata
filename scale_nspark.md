@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-07-03"
+  years: 2022, 2025
+lastupdated: "2025-06-08"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -13,6 +13,10 @@ subcollection: watsonxdata
 
 # Scaling native Spark engine
 {: #scl_nsp}
+
+
+**Applies to** : [Spark engine]{: tag-blue}  [Gluten accelerated Spark engine]{: tag-green}
+
 
 You can increase or decrease the compute capacity of the native Spark engine by scaling. Scale up your native Spark engine, if the Spark workloads require additional compute capacity and scale down if you need to release surplus compute capacity.
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2024
-lastupdated: "2025-03-20"
+  years: 2024, 2025
+lastupdated: "2025-06-08"
 keywords: spark, interface
 subcollection: watsonxdata
 
@@ -12,6 +12,10 @@ subcollection: watsonxdata
 
 # Track Spark applications
 {: #db_trk}
+
+
+**Applies to** : [Spark engine]{: tag-blue}
+
 
 You can track your Spark applications by using Databand through the methods that are mentioned in this section.
 

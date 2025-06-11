@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-02"
+lastupdated: "2025-06-08"
 
 keywords: watsonx.data, spark, scaling
 subcollection: watsonxdata
@@ -13,6 +13,10 @@ subcollection: watsonxdata
 
 # Enabling application autoscaling
 {: #appl-auto-scaling}
+
+
+**Applies to** : [Spark engine]{: tag-blue}  [Gluten accelerated Spark engine]{: tag-green}
+
 
 It is not always possible to estimate the resource requirements (number of Spark executors) of a Spark application upfront, because these requirements might vary based on the size of the input data set.
 

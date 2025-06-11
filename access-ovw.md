@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-30"
+lastupdated: "2025-06-11"
 
 keywords: access, access control, access management
 
@@ -125,6 +125,13 @@ For more information, see [Enabling Apache Ranger policy for resources](https://
 
 
 
+## Common Policy Gateway (CPG)
+{: #cpg_ams}
+
+CPG is standalone service capable of making or delegating governance decisions (including built-in and external policies) on a request basis. It is a unified service that allows all applications to leverage a single service to approve or delegate authentication, perform access control, and handle governance approval to an external system. It is a key differentiating capability that allows {{site.data.keyword.lakehouse_short}} to integrate with other policy engines to provide greater flexibility and ease of integration.
+
+
+
 ## Data Access Service (DAS)
 {: #das_ams}
 
@@ -146,3 +153,7 @@ You can see the connection information of {{site.data.keyword.lakehouse_short}} 
 **Username** – Username can either be `ibmlhapikey` or `ibmlhtoken`.
 
 **Password** – Password can either be `IBM Cloud API key` or `IBM IAM access token`. For more information see, [Getting IBM API key](/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmapi-key) and [Getting IBM Access Management (IAM) token](/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmiam-token).
+
+
+To use API keys to communicate with {{site.data.keyword.lakehouse_short}}, you must create the API key from the account where the {{site.data.keyword.lakehouse_short}} is provisonined.
+{: note}

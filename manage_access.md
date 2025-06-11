@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-28"
+lastupdated: "2025-06-11"
 
 keywords: lakehouse, watsonx data, roles, access
 subcollection: watsonxdata
@@ -91,6 +91,8 @@ To manage access, complete the following steps:
 
 1. To remove a user for a component, complete the following steps:
 
+   A catalog admin or a user who belongs to a group with an admin role can remove their own access to the catalog.
+   {: note}
 
    1. Under the **Infrastructure** tab, click the **Display name** of the component in the table.
 
@@ -103,4 +105,26 @@ To manage access, complete the following steps:
       The user remains in the **Access control** tab after removing from {{site.data.keyword.Bluemix_notm}} or Cloud Pak for Data. You must remove the user manually from the **Access control** tab. You might see the user in the **Access control** tab of the engine after confirming the removal. It takes up to 20 minutes for the access revoke to be effective for the user and disappear from the tab.
       {: note}
 
-   
+
+
+9. To export the resource policies, complete the following steps:
+
+   You can export  the details to a JSON file.
+   {: note}
+
+   1. Under the **Infrastructure** tab, select a component and click the Display name of the component in the table.
+   1. The **Access control** tab for the selected component opens with the list of existing resource policies.
+   1. To export the policies, select the required (or all) policies and click the **Export** link.
+   1. The **Export Users** page opens. Specify the file name and click Export. The file gets downloaded to your machine.
+
+9. To import the resource policies, complete the following steps:
+
+   You can import JSON files only.
+   {: note}
+
+   a. Under the **Infrastructure** tab, select a component and click the Display name of the component in the table.
+   b. The **Access control** tab for the selected component opens.
+   c. To import policies, click the **Import** link. The **Import** page opens.
+   d. In the **Upload File** section, select the file with policies that you want to upload.
+   e. Click **Next**. The Validate section appears. The file that you uploaded is validated and if any invalid data items are found, it gets displayed in the Invalid data items table with the error description.
+   f. Click **Next**. The **Summary** section opens. Verify and click **Add imported users**.

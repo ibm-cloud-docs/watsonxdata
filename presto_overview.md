@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-02"
+lastupdated: "2025-05-17"
 
 keywords: lakehouse, watsonx.data, presto
 
@@ -35,6 +35,8 @@ Presto (Java) is a distributed SQL query engine, with the capability to query va
 Presto (Java) provides the ANSI SQL interface, which can be used for all data analytics and {{site.data.keyword.lakehouse_full}} use cases. With this feature, you do not need to manage multiple query languages and interfaces to different databases and storage. Presto (Java) is designed for storage abstraction, which allows connections to any data source through its connectors.
 
 {{site.data.keyword.lakehouse_short}} uses version **0.286** of Presto (Java).
+
+For more information about provisioning the engine, see [Provisioning a Presto (Java) engine](/docs/watsonxdata?topic=watsonxdata-prov_engine).
 
 ## Presto (Java) server types
 {: #lh-presto_servertypes}

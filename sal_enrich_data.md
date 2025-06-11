@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-12-25"
+  years: 2022, 2025
+lastupdated: "2025-06-11"
 
 keywords: lakehouse, semantic automation, {{site.data.keyword.lakehouse_short}}, data enrichment, register
 
@@ -104,6 +104,10 @@ Users with the following roles can perform semantic enrichment in {{site.data.ke
 1. Review the enriched columns and click the overflow menu next to a column or **More** option and select **Mark as reviewed**.
 1. Go to the table view and check if the review status is completed.
 1. Click the overflow menu next to the chosen schema and select **Publish**. The page displays the list of enriched tables within the schema.
+
+   When you publish metadata enrichments for tables in {{site.data.keyword.lakehouse_short}}, things like new display names, descriptions, and tags become visible and searchable for other users in the data manager.
+   {: note}
+
 1. Verify the enriched data in the **Browse data** tab of the **Data Manager** by selecting the schema you enriched on successful completion of publishing.
 
 ## Related API
