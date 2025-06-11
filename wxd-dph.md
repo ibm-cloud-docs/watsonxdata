@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-10"
+lastupdated: "2025-06-11"
 
 keywords: watsonx.data, dph, integration
 subcollection: watsonxdata
@@ -52,7 +52,7 @@ Data consumers are the users who subscribe to these Data products. Data consumer
 
    * **Data extract** : The business consumers use data refinery service to create a CSV data extract file and download it. For information about data extract delivery method, see [Data Extract delivery method](https://dataplatform.cloud.ibm.com/docs/content/wsj/data-products/prd_delivery_methods_overview.html?context=dph&locale=en#extract).
 
-   * **Deliver as a Table in watsonx.data** : The **deliver as a table in watsonx.data** delivery method allows consumers to access their data product as a table in watsonx.data. This method enables users with the appropriate permissions to create new tables or append to existing ones. For more information, see [Deliver as a table in watsonx.data delivery method](https://dataplatform.cloud.ibm.com/docs/content/wsj/data-products/prd_delivery_methods_overview.html?context=dph&locale=en#wxd_ingest) in the Data Product Hub documentation.
+   * **Deliver as a Table in watsonx.data** : The **deliver as a table in watsonx.data** delivery method allows consumers to access their data product as a table in watsonx.data. This method enables users with the appropriate permissions to create new tables or append to existing ones. For more information about deliver as a table in watsonx.data, see [Deliver as a table in watsonx.data delivery method](https://dataplatform.cloud.ibm.com/docs/content/wsj/data-products/prd_delivery_methods_overview.html?context=dph&locale=en#wxd_ingest) in the Data Product Hub documentation.
 
       **Pre-requisites**
       To use the **deliver as a table in watsonx.data** delivery method, you must have the following accesses in watsonx.data:
@@ -66,4 +66,4 @@ Data consumers are the users who subscribe to these Data products. Data consumer
       For managing access in watsonx.data, see [Managing data policy](https://cloud.ibm.com/docs/watsonx-data?topic=watsonx-data-managing-data-policy).
 
 
-   * **Access in watsonx.data** : The access in watsonx.data delivery method allows consumers to access their data product in watsonx.data. For more information, see access in watsonx.data delivery method in the [Data Product Hub documentation](https://dataplatform.cloud.ibm.com/docs/content/wsj/data-products/prd_delivery_methods_overview.html?context=dph&locale=en).
+   * **Access in watsonx.data** : The access in watsonx.data delivery method allows consumers to access their data product in watsonx.data. For more information about access in watsonx.data, see [Data Product Hub documentation](https://dataplatform.cloud.ibm.com/docs/content/wsj/data-products/prd_delivery_methods_overview.html?context=dph&locale=en).
