@@ -32,6 +32,9 @@ For watsonx.data on-prem Premium what's new, see [Release notes for on-prem Prem
 {: #lakehouse_11june212}
 {: release-note}
 
+watsonx.data 2.2.0 version is released in stages and is not available in all regions. To know if the 2.2.0 release is available in your region, contact IBM Support.
+{: note}
+
 
 
 Engine and service enhancements
