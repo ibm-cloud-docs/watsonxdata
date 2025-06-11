@@ -27,9 +27,6 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: release-note}
 
 
-Gen AI-powered chat interface in {{site.data.keyword.lakehouse_short}}
-
-: You can now chat with a gen AI-powered chat interface, watsonx.data Assistant to ask questions about {{site.data.keyword.lakehouse_full}}. The assistant answers your queries about {{site.data.keyword.lakehouse_short}} based on its knowledge on IBM product documentation. It helps to explore and learn about the product in an easier and faster way. To enable the feature and start using it, see see [watsonx.data Assistant - genAI powered chat interface](/docs/watsonxdata?topic=watsonxdata-db_ast).
 
 Engine and service enhancements
 

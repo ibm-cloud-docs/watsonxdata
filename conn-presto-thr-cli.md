@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-30"
+lastupdated: "2025-06-11"
 
 keywords: lakehouse, watsonx.data, presto, cli
 
@@ -60,6 +60,9 @@ It is recommended to use IAM token for stress workload.
 #### Getting IBM API Key
 {: #get-ibmapi-key}
 
+
+If you enabled `External Identity Interactions Limited` feature, and using API keys to communicate with {{site.data.keyword.lakehouse_short}}, you must create the API key from the account where the {{site.data.keyword.lakehouse_short}} is provisonined.
+{: note}
 
 
 1. Log in to the [IBM Cloud console](http://cloud.ibm.com/).

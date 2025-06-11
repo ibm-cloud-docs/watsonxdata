@@ -38,7 +38,6 @@ toc:
           - prov_wxd.md
           - prov_lite_plan.md
           - getting-started.md
-      - db_ast.md
   - navgroup:
       id: tutorial
       topics:

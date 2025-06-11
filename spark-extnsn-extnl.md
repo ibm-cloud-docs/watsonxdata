@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-04-02"
+lastupdated: "2025-06-11"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -198,7 +198,7 @@ curl --request POST   --url https://<region>/lakehouse/api/v2/spark_engines/<spa
         "spark.hadoop.fs.s3a.bucket.<wxd-data-bucket-name>.s3.signing-algorithm":"WatsonxAWSV4Signer",
         "spark.hadoop.wxd.cas.endpoint":"<cas_endpoint>/cas/v1/signature",
         "spark.hadoop.wxd.instanceId":"<instance_crn>",
-        "spark.hadoop.wxd.apikey":"Basic xxx",
+        "spark.hadoop.wxd.apiKey":"Basic xxx",
         "spark.wxd.api.endpoint":"<wxd-endpoint>",
         "spark.driver.extraClassPath":"opt/ibm/connectors/wxd/spark-authz/cpg-client-1.0-jar-with-dependencies.jar:/opt/ibm/connectors/wxd/spark-authz/ibmsparkacextension_2.12-1.0.jar",
         "spark.sql.extensions":"<required-storage-support-extension>,authz.IBMSparkACExtension"
