@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-28"
+lastupdated: "2025-06-11"
 
 keywords: lakehouse, watsonx data, roles, access
 subcollection: watsonxdata
@@ -91,6 +91,8 @@ To manage access, complete the following steps:
 
 1. To remove a user for a component, complete the following steps:
 
+   A catalog admin or a user who belongs to a group with an admin role can remove their own access to the catalog.
+   {: note}
 
    1. Under the **Infrastructure** tab, click the **Display name** of the component in the table.
 
