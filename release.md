@@ -86,7 +86,7 @@ Data sources and storage enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} includes the following storage enhancement:
 
-   You can now use the SQL Server with New Technology LAN Manager (NTLM) authentication and SQL Server with Microsoft Entra authentication NTLM is a windows based challenge - response authentication method, and the Microsoft Entra authentication is provided my microsoft. For more information, see [SQL Server](/docs/watsonxdata?topic=watsonxdata-sqlserver_database).
+   You can now use the SQL Server with New Technology LAN Manager (NTLM) authentication and Microsoft Entra authentication. NTLM is a windows based challenge - response authentication method. For more information, see [SQL Server](/docs/watsonxdata?topic=watsonxdata-sqlserver_database).
 
 
 Access management enhancements
