@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-11"
+lastupdated: "2025-06-17"
 
 keywords: access, access control, access management
 
@@ -128,7 +128,7 @@ For more information, see [Enabling Apache Ranger policy for resources](https://
 ## Common Policy Gateway (CPG)
 {: #cpg_ams}
 
-CPG is standalone service capable of making or delegating governance decisions (including built-in and external policies) on a request basis. It is a unified service that allows all applications to leverage a single service to approve or delegate authentication, perform access control, and handle governance approval to an external system. It is a key differentiating capability that allows {{site.data.keyword.lakehouse_short}} to integrate with other policy engines to provide greater flexibility and ease of integration.
+CPG is standalone service capable of making or delegating governance decisions (including built-in and external policies) on a per request basis. It is a unified service that allow all applications to leverage a single service to either approve or delegate access control, and governance approval to an external system. it is a key differentiating capability which allows {{site.data.keyword.lakehouse_short}} to integrate with any policy engine to provide greater flexibility and ease of integrating with client ecosystem.
 
 
 
