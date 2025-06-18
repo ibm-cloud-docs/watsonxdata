@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-10"
+lastupdated: "2025-06-12"
 
 keywords: Spark, query, server,JDBC, Driver
 
@@ -29,7 +29,7 @@ You can connect to the Spark query server in the following ways and execute quer
 
 1. Install watsonx.data.
 1. Provision native Spark engine in watsonx.data.
-1. JDBC Driver: `queryserver-jdbc-4.1.0-SNAPSHOT-standalone.jar`.
+1. JDBC Driver: `queryserver-jdbc-4.1.0-SNAPSHOT-standalone.jar`. Contact IBM Support team to get the file.
 1. Run the Spark Query Server in Spark engine. To create a new Query Server, see Create a Spark query server.
 1. Connection properties - Click the three-dot menu for Query Server, click **Connection Details** and copy the following connection details:
    * Host

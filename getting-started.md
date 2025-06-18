@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2025-06-18"
 
 keywords: lakehouse, watsonx data, provision, endpoint, resource
 subcollection: watsonxdata
@@ -30,7 +30,7 @@ For more information about using {{site.data.keyword.lakehouse_short}} on IBM So
 ## Before you begin
 {: #prereqs}
 
-You need to have an [{{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external}.
+You need to have a paid [{{site.data.keyword.cloud_notm}} account](https://cloud.ibm.com/registration){: external}.
 
 The access to provision IBM Cloud resources is governed by using [IAM access](https://cloud.ibm.com/docs/account?topic=account-userroles&interface=ui) and [account management services](https://cloud.ibm.com/docs/account?topic=account-account-services&interface=ui). You must have **Administrator** privileges to provision a {{site.data.keyword.lakehouse_short}} instance.
 {: note}
@@ -51,7 +51,9 @@ The access to provision IBM Cloud resources is governed by using [IAM access](ht
 
 3. Select the cloud platform (IBM Cloud or Amazon Web Services) you want to deploy {{site.data.keyword.lakehouse_short}}.
 
-4. In the **Management method** field, **Fully managed** is the default option, which indicates that IBM manages all the network complexities.
+4. Select the pricing plan as **Enterprise** from the **Select a pricing plan** options.
+
+
 
 5. Select a location from the list of available locations for {{site.data.keyword.lakehouse_short}} service.
 
