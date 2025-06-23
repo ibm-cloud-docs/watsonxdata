@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-10"
+lastupdated: "2025-06-23"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
 
@@ -43,7 +43,7 @@ If you select **Amazon S3** from the **Storage** section, configure the followin
  | Access key | Enter your access key. |
  | Secret key | Enter your secret key. |
  | Connection Status | Click the Test connection link to test the storage connection. If the connection is successful, a success message appears.|
- | Designate this bucket as the ACL store | Select the checkbox to designate this bucket as the ACL store.|
+ | Designate this bucket as the ACL store | Select the checkbox to designate this bucket as the ACL store. \n This feature applies to {{site.data.keyword.lakehouse_short}}, for more information see [Governance through Access Controlled Lists (AC)](https://dataplatform.cloud.ibm.com/docs/content/wsj/wx-data/gov_acl.html?context=wxd&audience=wdp). If you select the checkbox, the Associate catalog option is automatically selected, and you must specify a catalog to be used for ACLs.|
  | Associate Catalog | Select the checkbox to add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within. |
  | Activate now| Activate the storage immediately or activate it later. |
  | Catalog type | Select the catalog type from the list. The recommended catalog is Apache Iceberg. The other options for catalog are Apache Hive, Apache Hudi, and Delta Lake.|
