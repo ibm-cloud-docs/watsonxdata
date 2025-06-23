@@ -44,8 +44,7 @@ To add data source-catalog pair, complete the following steps.
 1. Log in to the {{site.data.keyword.lakehouse_short}} instance.
 2. From the navigation menu, select **Infrastructure manager**.
 3. To add a data source, click **Add component**.
-4. In the **Add component** window, select a data source from the **Data source** section.
-5. Based on the data source type selected, configure the data source details.
+4. In the **Add component** window, select a data source from the **Data source** section and provide the details to establish the connection.
 
     Two data sources with the same name cannot be added.
    {: note}
