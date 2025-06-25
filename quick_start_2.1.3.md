@@ -60,7 +60,7 @@ In the **Configure storage** section, complete the following steps:
 In the **Query monitoring** section, complete the following steps:
 
 
-1. Use the toggle switch to enable (or disable) the query monitoring feature. You can enable the feature only if the catalog is Apache Hive. 
+1. Use the toggle switch to enable (or disable) the query monitoring feature. You can enable the feature only if the catalog is Apache Hive. You can enable the feature only if the catalog is Apache Hive. 
 
    Query monitoring supports only Apache Hive catalog.
    {: attention}
