@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-06-12"
+lastupdated: "2025-06-25"
 
 keywords: watsonxdata, release notes
 
@@ -33,9 +33,6 @@ For watsonx.data on-prem Premium what's new, see [Release notes for on-prem Prem
 ## 11 June 2025 - Version 2.2
 {: #lakehouse_11june212}
 {: release-note}
-
-watsonx.data 2.2.0 version is released in stages and is not available in all regions. To know if the 2.2.0 release is available in your region, contact IBM Support.
-{: note}
 
 
 
