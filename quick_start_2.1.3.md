@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-25"
+lastupdated: "2025-06-26"
 
 keywords: lakehouse, watsonx data, quick start, engine, catalog, bucket
 subcollection: watsonxdata
@@ -60,15 +60,12 @@ In the **Configure storage** section, complete the following steps:
 In the **Query monitoring** section, complete the following steps:
 
 
-1. Use the toggle switch to enable (or disable) the query monitoring feature. You can enable the feature only if the catalog is Apache Hive. You can enable the feature only if the catalog is Apache Hive. 
-
-   Query monitoring supports only Apache Hive catalog.
-   {: attention}
+1. Use the toggle switch to enable (or disable) the query monitoring feature, and the associated catalog that appears with the query monitoring bucket will be of type Hive.
 
 2. If you enable the QHMM feature, you need to configure the storage details for storing QHMM data. Select one of the following options and provide details.
 
    - **Discover COS instance** : Selects an existing IBM COS instance and an attached bucket on your IBM Cloud account. If multiple IBM COS instances and buckets are detected, select the IBM COS instance that contains the desired bucket to register with {{site.data.keyword.lakehouse_short}}.
-   - **Register my own** : You can use any existing IBM COS bucket from an existing instance or provision a new instance. To provision a new IBM COS instance, provide the following details: 
+   - **Register my own** : You can register an existing bucket as a QHMM bucket. Only the following bucket types can be registered as a QHMM bucket: Amazon S3, IBM Storage Ceph, or IBM Cloud Object Storage. To register an existing bucket as QHMM bucket, provide the following details:
 
      | Field | Description |
      |--------------------------|----------------|
