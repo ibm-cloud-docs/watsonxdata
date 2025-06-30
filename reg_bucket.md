@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2024-08-01"
+lastupdated: "2025-06-23"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
 
@@ -43,10 +43,9 @@ To add a storage, complete the following steps:
 1. Log in to the {{site.data.keyword.lakehouse_short}} console.
 2. From the navigation menu, select **Infrastructure manager**.
 3. To define and connect a storage, click **Add component**.
-4. In the **Add component** window, select a storage from the **Storage** section and provide the details to connect to existing externally managed storage.
-5. You can associate a catalog to the storage. This catalog can be associated with an engine. A catalog defines the schemas and metadata for a storage or data source. Depending on the storage type, Apache Iceberg, Apache Hive, Apache Hudi, and Delta Lake catalogs are supported.
-6. The following storages are supported:
+4. In the **Add component** window, select a storage from the **Storage** section and provide the details to establish the connection.
 
+{{site.data.keyword.lakehouse_short}} supports the following data storage options:
    * [IBM Cloud Object Storage]({{site.data.keyword.ref-cos_storage-link}})
    * [Amazon S3]({{site.data.keyword.ref-amazons_storage-link}})
    * [IBM Storage Ceph]({{site.data.keyword.ref-ceph_storage-link}})
@@ -63,7 +62,7 @@ To add a storage, complete the following steps:
    * The storage bucket name must be unique and must contain only the characters A–Z, a–z, 0–9, and hypen (-).
    * You must use a service credential with `Writer` role because the schema is written to the storage bucket. Make sure that you choose the endpoint that matches the type of access that the bucket allows. That is, if no public access is allowed (**Public access** is **No**) to the bucket, choose the **Direct** endpoint.
 
-## Additional information
+## Additional information about connector
 {: #connector_features}
 
 * For **Iceberg** connector:

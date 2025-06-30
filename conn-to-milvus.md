@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-09"
+lastupdated: "2025-06-27"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -130,7 +130,7 @@ You can connect to a Milvus service by using API key or IAM token.
 
     ```bash
     curl --request GET \
-         --url "https://<REST-host>:<REST-port>/v1/vector/collections" \
+         --url "https://<REST-host>:<REST-port>/api/v1/vector/collections" \
          --header "Authorization: Basic $(echo -n '<user>:<password>' | base64)" \
          --header "Content-Type: application/json"
     ```

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-06-12"
+lastupdated: "2025-06-26"
 
 keywords: watsonxdata, release notes
 
@@ -22,7 +22,7 @@ Use these release notes to learn about the latest updates to {{site.data.keyword
 {: shortdesc}
 
 
-For watsonx.data as a Service on IBM Cloud with gen AI experience what's new, see [Release notes for watsonx.data as a Service on IBM Cloud with gen AI experience](https://dataplatform.cloud.ibm.com/docs/content/wsj/getting-started/welcome-main.html?context=wxd).
+For watsonx.data as a Service on IBM Cloud with gen AI experience what's new, see [Release notes for watsonx.data as a Service on IBM Cloud with gen AI experience](https://dataplatform.cloud.ibm.com/docs/content/wsj/wx-data/whats_new-wdp.html?context=wxd&audience=wdp).
 
 For watsonx.data on-prem what's new, see [Release notes for watsonx.data](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.2.x?topic=overview-whats-new-in-watsonxdata).
 
@@ -33,9 +33,6 @@ For watsonx.data on-prem Premium what's new, see [Release notes for on-prem Prem
 ## 11 June 2025 - Version 2.2
 {: #lakehouse_11june212}
 {: release-note}
-
-watsonx.data 2.2.0 version is released in stages and is not available in all regions. To know if the 2.2.0 release is available in your region, contact IBM Support.
-{: note}
 
 
 
