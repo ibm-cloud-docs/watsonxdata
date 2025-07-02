@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-09"
+lastupdated: "2025-07-02"
 
 keywords: lakehouse
 
@@ -155,13 +155,6 @@ Replace `<catalog-name>` with the actual catalog being used.
 {: note}
 
 Or set `hive.parquet.use-column-names=true` in catalog properties. For `ORC`, set `hive.orc.use-column-names=true` in catalog properties.
-
-## `Connection Information` page shows a truncated username
-{: #known_issue23612}
-
-The `Connection Information` page shows a truncated username, excluding the prefix `ibmlhapikey_` for `PowerBI` and `Looker`.
-
-**Workaround:** Add the `ibmlhapikey_` prefix to the username when manually copying the value to enable connections with BI tools.
 
 ## Issue with uppercase Turkish character İ in Oracle database using WE8ISO8859P9 character set (ORA-00911 Error)
 {: #known_issue23728}
