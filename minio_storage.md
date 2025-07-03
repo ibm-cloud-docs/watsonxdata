@@ -48,3 +48,6 @@ MinIO is a high-performance, S3 compatible object store. It is built for large s
  | Catalog name | Enter the name of your catalog.|
  | Associate | Click Associate to create the storage. |
  {: caption="Register bucket" caption-side="bottom"}
+
+If MinIO is already inactive in old instances, the system will display the `Activate` button. Once you activate MinIO, the system will automatically remove the `Activate` button.
+{: #note}

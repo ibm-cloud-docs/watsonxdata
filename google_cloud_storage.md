@@ -49,3 +49,6 @@ Google Cloud Storage is a service for storing objects in Google Cloud. An object
 
  For Google Cloud Storage, multiple buckets of different service accounts cannot be configured.
 {: note}
+
+If Google Cloud Storage is already inactive in old instances, the system will display the `Activate` button. Once you activate Google Cloud Storage, the system will automatically remove the `Activate` button.
+{: #note}

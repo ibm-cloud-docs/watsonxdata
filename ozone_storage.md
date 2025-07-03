@@ -48,6 +48,9 @@ If you select **Apache Ozone** from the **Storage** section, configure the follo
  | Associate | Click Associate to create the storage. |
  {: caption="Register bucket" caption-side="bottom"}
 
+If Apache Ozone Storage is already inactive in old instances, the system will display the `Activate` button. Once you activate Apache Ozone Storage, the system will automatically remove the `Activate` button.
+{: #note}
+
 ## Limitations:
 {: #ozone_01storage}
 

@@ -49,3 +49,6 @@ If you select **IBM Cloud Object Storage** from the **Storage** section, configu
  | Catalog name | Enter the name of your catalog. (The following special characters are not allowed: ! @ # $ % ^ & * ( ) = + : { } < > ? ' \ ; `).|
  | Associate | Click Associate to create the storage. |
  {: caption="Register bucket" caption-side="bottom"}
+
+If IBM Cloud Object Storgae is already inactive in old instances, the system will display the `Activate` button. Once you activate IBM Cloud Object Storgae, the system will automatically remove the `Activate` button.
+{: #note}

@@ -48,3 +48,6 @@ If you select **IBM Storage Ceph** from the **Storage** section, configure the f
  | Catalog name | Enter the name of your catalog.|
  | Associate | Click Associate to create the storage. |
  {: caption="Register bucket" caption-side="bottom"}
+
+If IBM Storage Ceph is already inactive in old instances, the system will display the `Activate` button. Once you activate IBM Storage Ceph, the system will automatically remove the `Activate` button.
+{: #note}
