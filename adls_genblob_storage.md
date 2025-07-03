@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-11"
+lastupdated: "2025-07-03"
 
 keywords: lakehouse, storage, catalog, watsonx.data
 
@@ -49,7 +49,6 @@ If you select **Azure Data Lake Storage Gen1 Blob** from the **Type** drop-down,
  | Access key | Enter your access key. |
  | Connection Status | Click the Test connection link to test the storage connection. If the connection is successful, a success message appears.|
  | Associate catalog | Select the checkbox to add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within.|
- | Activate now| Select the checkbox to activate the storage immediately or activate it later. |
  | Catalog type | Select the catalog type from the list. The recommended catalog is Apache Iceberg. The other options for catalog are Apache Hive, Apache Hudi, and Delta Lake. |
  | Catalog name | Enter the name of your catalog. |
  | Associate | Click Associate to create the storage. |
@@ -66,7 +65,6 @@ If you select **Azure Data Lake Storage Gen1 Blob** from the **Type** drop-down,
  | Authentication Mode     | Based on your requirement, select one of the following mode of authentication :\n i. Account Key: If you select Account Key, enter the access key in the Access Key field. \n ii. Service Principal: If you select Service Principal, enter the Application id, Directory id, and Secret key.|
  | Connection Status | Click the Test connection link to test the storage connection. If the connection is successful, a success message appears.|
  | Associate catalog | Select the checkbox to add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within.|
- | Activate now| Select the checkbox to activate the storage immediately or activate it later. |
  | Catalog type | Select the catalog type from the list. The recommended catalog is Apache Iceberg. The other options for catalog are Apache Hive, Apache Hudi, and Delta Lake. |
  | Catalog name | Enter the name of your catalog. |
  | Associate | Click Associate to create the storage. |
