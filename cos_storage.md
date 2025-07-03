@@ -51,4 +51,4 @@ If you select **IBM Cloud Object Storage** from the **Storage** section, configu
  {: caption="Register bucket" caption-side="bottom"}
 
 If IBM Cloud Object Storgae is already inactive in old instances, the system will display the `Activate` button. Once you activate IBM Cloud Object Storgae, the system will automatically remove the `Activate` button.
-{: #note}
+{: note}

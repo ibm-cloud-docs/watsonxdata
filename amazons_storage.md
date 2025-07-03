@@ -51,4 +51,4 @@ If you select **Amazon S3** from the **Storage** section, configure the followin
  {: caption="Register bucket" caption-side="bottom"}
 
 If Amazon S3 is already inactive in old instances, the system will display the `Activate` button. Once you activate Amazon S3, the system will automatically remove the `Activate` button.
-{: #note}
+{: note}

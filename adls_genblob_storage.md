@@ -71,4 +71,4 @@ If you select **Azure Data Lake Storage Gen1 Blob** from the **Type** drop-down,
  {: caption="Register storage" caption-side="bottom"}
 
 If ADLS is already inactive in old instances, the system will display the `Activate` button. Once you activate ADLS, the system will automatically remove the `Activate` button.
-{: #note}
+{: note}
