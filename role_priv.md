@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-26"
+lastupdated: "2025-07-03"
 
 keywords: lakehouse, watsonx data, privileges, roles, access
 
@@ -65,7 +65,7 @@ IAM formation non-admins (Operator, Editor, Viewer) have the default user access
 | Scale the Presto (Java) or Presto (C++) engines | ✓ |   |    |
 | Unregister any storage | ✓ |   |    |
 | Unregister any DB Connection | ✓ |   |    |
-| Activate cataloged storagees (restart MDS) | ✓ |   |    |
+| Activate cataloged storages (restart MDS) | ✓ |   |    |
 | Register and unregister own storage | ✓ | ✓ | ✓ |
 | Register and unregister own DB connection | ✓ | ✓ | ✓ |
 | Access the metastore | ✓ |   | ✓ |
@@ -259,9 +259,6 @@ Formation admins (IAM) have the default admin access.
 | Browse (storage browser in UI) | ✓ | ✓ | ✓ |     |
 | View (UI and API) | ✓ | ✓ | ✓ | ✓ |
 {: caption="Resource-level permissions" caption-side="bottom"}
-
-If you want to unregister or delete a storage, you must first deactivate the storage.
-{: note}
 
 #### S3 REST API permissions (specific to IBM Spark and S3 proxy)
 {: #s3restapi}
