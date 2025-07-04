@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-02"
+lastupdated: "2025-07-04"
 
 keywords: lakehouse
 
@@ -30,6 +30,11 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+## Unable to delete data from columns with special characters in their names
+{: #known_issue22135}
+
+Unable to delete data from columns with special characters in their names, as special characters are not supported in column names within the WHERE clause.
 
 ## Access control does not work for Gluten type of engines.
 {: #known_issue28900}
