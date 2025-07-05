@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-06-26"
+lastupdated: "2025-07-05"
 
 keywords: watsonxdata, release notes
 
@@ -44,13 +44,12 @@ Engine and service enhancements
    * For the Presto (C++) engines, the Hive and Iceberg catalogs are now enabled with region configuration. For more information, see [Provisioning a Presto (C++) engine](/docs/watsonxdata?topic=watsonxdata-pcpp_prov).
    * New Gluten accelerated Spark engine: You can now provision Gluten accelerated Spark engine and use it to run complex analytical workloads by leveraging high scalability of Spark SQL framework and high performance of native libraries. For information about working with the new Gluten accelerated Spark engine, see [Working with Gluten accelerated Spark engine](/docs/watsonxdata?topic=watsonxdata-prov_cpp).
    * Run faster workspace queries by using a Spark job to transform Iceberg table data : To speed up the reading of Iceberg tables, you can now use a Spark job to transform Iceberg table data from Merge-on-Read (MOR) format to Copy-on-Write (COW) format. For more information, see [Submitting Spark jobs for MoR to CoW conversion](/docs/watsonxdata?topic=watsonxdata-sbmt_spk_mor_cow).
+   * You can use the Spark API functionality to configure the limit of applications that can be listed and the filter criteria that you can use to filter the Spark applications.
 
 CPDCTL CLI enhancements
 : This release of watsonx.data introduces the following enhancements to IBM Cloud Pak for Data Command Line Interface (IBM cpdctl):
 
    * You can use the tablemaint command to execute different Iceberg table maintenance operations in watsonx.data.
-
-   * You can use the CPDCTL API functionality to configure the limit of applications that can be listed and the filter criteria that you can use to filter the applications.
 
    * You can use the wx-data service command to perform various serviceability related operations, such as listing tables, retrieving the list of QHMM enabled buckets, and monitoring QHMM related statistics and queries.
 
