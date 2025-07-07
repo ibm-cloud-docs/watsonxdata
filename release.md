@@ -33,7 +33,7 @@ For watsonx.data on-prem Premium what's new, see [Release notes for on-prem Prem
 {: #lakehouse_07july2025}
 {: release-note}
 
-Version 2.2 hotfix of watsonx.data was released on 07 July, 2025. This release of watsonx.data includes security updates and fixes.
+Version 2.2 hotfix of watsonx.data was released on 07 July, 2025. This release includes security updates and fixes.
 
 ## 11 June 2025 - Version 2.2
 {: #lakehouse_11june212}
