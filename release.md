@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-07-05"
+lastupdated: "2025-07-07"
 
 keywords: watsonxdata, release notes
 
@@ -29,6 +29,11 @@ For watsonx.data on-prem what's new, see [Release notes for watsonx.data](https:
 For watsonx.data on-prem Premium what's new, see [Release notes for on-prem Premium](https://www.ibm.com/docs/en/watsonx/watsonxdata-premium/2.2.x?topic=overview-whats-new-in-watsonxdata).
 
 
+## 07 July 2025 - Version 2.2 Hotfix 1
+{: #lakehouse_07july2025}
+{: release-note}
+
+Version 2.2 hotfix of watsonx.data was released on 07 July, 2025. This release of watsonx.data includes security updates and fixes.
 
 ## 11 June 2025 - Version 2.2
 {: #lakehouse_11june212}
