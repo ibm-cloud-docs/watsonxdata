@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-07-07"
+lastupdated: "2025-07-08"
 
 keywords: watsonxdata, release notes
 
@@ -96,6 +96,16 @@ Data sources and storage enhancements
 : This release of {{site.data.keyword.lakehouse_short}} includes the following storage enhancement:
 
    You can now use the SQL Server with New Technology LAN Manager (NTLM) authentication and Microsoft Entra authentication. NTLM is a windows based challenge - response authentication method. For more information, see [SQL Server](/docs/watsonxdata?topic=watsonxdata-sqlserver_database).
+
+   You can now create the following storage in an active state by default:
+
+   * IBM Cloud Object Storage
+   * Amazon S3
+   * IBM Storage Ceph
+   * MinIO
+   * Google Cloud Storage
+   * Azure Data Lake Storage
+   * Apache Ozone
 
 
 Access management enhancements
