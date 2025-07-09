@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-11"
+lastupdated: "2025-07-01"
 
 keywords: lakehouse, access, data, policy, watsonx data
 
@@ -37,6 +37,9 @@ To maintain data security, you can create access policies for the following at t
 1. Data objects, such as schemas, tables, and columns.
 2. Users or user groups.
 3. Actions.
+
+For Milvus service, when you create a data policy for a user or user group that does not have access to a component, a user access role is automatically created for that component.
+{: note}
 
 ## Create Access control policies
 {: #crea_acc}

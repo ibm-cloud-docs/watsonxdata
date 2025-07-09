@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-06-11"
+lastupdated: "2025-07-07"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -163,7 +163,7 @@ def main():
         spark.stop()
 
 if __name__ == '__main__':
-main()
+    main()
 
 ```
 {: codeblock}

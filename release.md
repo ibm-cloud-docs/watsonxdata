@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-06-26"
+lastupdated: "2025-07-08"
 
 keywords: watsonxdata, release notes
 
@@ -29,6 +29,11 @@ For watsonx.data on-prem what's new, see [Release notes for watsonx.data](https:
 For watsonx.data on-prem Premium what's new, see [Release notes for on-prem Premium](https://www.ibm.com/docs/en/watsonx/watsonxdata-premium/2.2.x?topic=overview-whats-new-in-watsonxdata).
 
 
+## 07 July 2025 - Version 2.2 Hotfix 1
+{: #lakehouse_07july2025}
+{: release-note}
+
+Version 2.2 hotfix of watsonx.data was released on 07 July, 2025. This release includes security updates and fixes.
 
 ## 11 June 2025 - Version 2.2
 {: #lakehouse_11june212}
@@ -44,13 +49,12 @@ Engine and service enhancements
    * For the Presto (C++) engines, the Hive and Iceberg catalogs are now enabled with region configuration. For more information, see [Provisioning a Presto (C++) engine](/docs/watsonxdata?topic=watsonxdata-pcpp_prov).
    * New Gluten accelerated Spark engine: You can now provision Gluten accelerated Spark engine and use it to run complex analytical workloads by leveraging high scalability of Spark SQL framework and high performance of native libraries. For information about working with the new Gluten accelerated Spark engine, see [Working with Gluten accelerated Spark engine](/docs/watsonxdata?topic=watsonxdata-prov_cpp).
    * Run faster workspace queries by using a Spark job to transform Iceberg table data : To speed up the reading of Iceberg tables, you can now use a Spark job to transform Iceberg table data from Merge-on-Read (MOR) format to Copy-on-Write (COW) format. For more information, see [Submitting Spark jobs for MoR to CoW conversion](/docs/watsonxdata?topic=watsonxdata-sbmt_spk_mor_cow).
+   * You can use the Spark API functionality to configure the limit of applications that can be listed and the filter criteria that you can use to filter the Spark applications.
 
 CPDCTL CLI enhancements
 : This release of watsonx.data introduces the following enhancements to IBM Cloud Pak for Data Command Line Interface (IBM cpdctl):
 
    * You can use the tablemaint command to execute different Iceberg table maintenance operations in watsonx.data.
-
-   * You can use the CPDCTL API functionality to configure the limit of applications that can be listed and the filter criteria that you can use to filter the applications.
 
    * You can use the wx-data service command to perform various serviceability related operations, such as listing tables, retrieving the list of QHMM enabled buckets, and monitoring QHMM related statistics and queries.
 
@@ -92,6 +96,16 @@ Data sources and storage enhancements
 : This release of {{site.data.keyword.lakehouse_short}} includes the following storage enhancement:
 
    You can now use the SQL Server with New Technology LAN Manager (NTLM) authentication and Microsoft Entra authentication. NTLM is a windows based challenge - response authentication method. For more information, see [SQL Server](/docs/watsonxdata?topic=watsonxdata-sqlserver_database).
+
+   You can now create the following storage in an active state by default:
+
+   * IBM Cloud Object Storage
+   * Amazon S3
+   * IBM Storage Ceph
+   * MinIO
+   * Google Cloud Storage
+   * Azure Data Lake Storage
+   * Apache Ozone
 
 
 Access management enhancements

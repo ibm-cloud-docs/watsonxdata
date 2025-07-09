@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-01"
+lastupdated: "2025-07-07"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -55,7 +55,7 @@ Complete the following steps to add Milvus as a service in {{site.data.keyword.l
     | Path | For external storages, specify the path where you want to store vectorized data files.|
     {: caption="Adding Milvus service" caption-side="bottom"}
 
-    Milvus now allows scaling up between predefined T-shirt sizes (small, medium, large) or custom sizes.
+    Milvus now allows scaling up between predefined T-shirt sizes (starter, small, medium, and large) or custom sizes.
     Scaling down Milvus may impact performance when reducing from a higher capacity. If collections no longer fit into memory after scaling down, service might be impacted. In case of a service impact, the only solution is to either drop the collection or scale back up. Even if the service do not crash, the collections that were previously loaded but now exceed available memory may encounter issues.
     {: important}
 

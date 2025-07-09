@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-27"
+lastupdated: "2025-07-03"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -144,11 +144,14 @@ You can connect to a Milvus service by using API key or IAM token.
 4. To connect to Milvus using the proxy route and make an API call, run the following command:
 
     ```bash
-    curl --request GET \
-         --url "https://<PROXY-host>:<PROXY-port>/v2/vectordb/collections/list" \
-         --header "Authorization: Basic $(echo -n '<user>:<password>' | base64)" \
-         --header "Content-Type: application/json" \
-         --cacert "<path_of_SSL_cert>"
+    curl --request POST \
+    --url "https://<proxy-host>:<port>/v2/vectordb/collections/list" \
+    --header "Authorization: Basic $(echo -n 'user:password' | base64)" \
+    --header "Content-Type: application/json" \
+    --cacert <cert-path> \
+    -d '{
+        "dbName": "default"
+    }'
     ```
     {: codeblock}
 
@@ -156,10 +159,10 @@ You can connect to a Milvus service by using API key or IAM token.
 
     ```bash
     curl --request POST \
-        --url "https://e633a638-420b-499c-9291-288e425a2d25.cdc406pd09pasng7elgg.lakehouse.dev.appdomain.cloud:32699/v2/vectordb/collections/list" \
-        --header 'accept: application/json' \
-        --header "Authorization: Basic $(echo -n 'ibmlhapikey:<value of api key>' | base64)" \
-        --header 'Content-Type: application/json'
+    --url "https://e633a638-420b-499c-9291-288e425a2d25.cdc406pd09pasng7elgg.lakehouse.dev.appdomain.cloud:32699/v2/vectordb/collections/list" \
+    --header 'accept: application/json' \
+    --header "Authorization: Basic $(echo -n 'ibmlhapikey:<value of api key>' | base64)" \
+    --header 'Content-Type: application/json'
     ```
     {: codeblock}
 

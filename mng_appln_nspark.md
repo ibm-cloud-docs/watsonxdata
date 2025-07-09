@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-06-08"
+lastupdated: "2025-07-03"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -58,21 +58,22 @@ You can use API, which allows to limit the number of Spark Applications listed. 
 You can configure the following parameters and use the CURL command to add the filter parameters:
 
 ```bash
-https://{cpd-host}.cp.fyre.ibm.com/v4/analytics_engines/{engine_id}/spark_applications\n
-/{application_id}?state=accepted,running,finished,failed&limit={limit_value}&start_time_interval={start_lower timestamp limit},{start_upper timestamp limit}&end_time_interval={end_lower timestamp limit},{end_upper timestamp limit}
+curl -k -X GET
+https://<region>/lakehouse/api/v2/spark_engines/<spark_engine_id>/spark_applications\n
+/<application_id>?state=accepted,running,finished,failed&limit=<limit_value>&start_time_interval={start_lower timestamp limit},{start_upper timestamp limit}&end_time_interval={end_lower timestamp limit},{end_upper timestamp limit}
 ```
 {: codeblock}
 
 
 Parameter values:
 
-* {cpd-host}: The hostname of your IBM Software Hub.
+* `<region>`: The region where the Spark instance is provisioned.
 
-* {engine_id} : The Engine ID of the native Spark engine.
+* `<spark_engine_id>` : The engine ID of the Spark engine.
 
-* {application_id} : The application for which the details are viewed.
+* `<application_id>` : The application for which the details are viewed.
 
-* {limit_value} : The instance ID from the watsonx.data cluster instance URL. For example, 1609968577169454.
+* `<limit_value>` : The instance ID from the watsonx.data cluster instance URL. For example, 1609968577169454.
 
 * start_time_interval : Time interval to use for filtering applications by their start time. Specify {start_lower timestamp limit} and {start_upper timestamp limit} For example, 2025-04-08T00:00:00Z,2025-04-10T23:59:59Z.
 

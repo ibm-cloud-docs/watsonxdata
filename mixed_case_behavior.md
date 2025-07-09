@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-08-24"
+  years: 2022, 2025
+lastupdated: "2025-07-01"
 
 keywords: lakehouse, mixed-case behavior, watsonx.data
 
@@ -49,11 +49,12 @@ The following section lists the behaviors of connectors if mixed-case feature fl
    * **Hive**:
 
      * The alias name is case-sensitive for `WITH` clause.
+     * When using column names in the `INSERT` query, use only lowercase.
 
    * **Iceberg**:
 
      * The alias name is case-sensitive for `WITH` clause.
-     * Column names in the `ALTER table RENAME` and `ALTER table DROP` are case-sensitive and accept only lowercase.
+     * When using column names in the `INSERT` query, use only lowercase.
 
    * **MongoDB**:
 
