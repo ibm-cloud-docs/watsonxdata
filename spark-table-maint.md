@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-07-05"
+lastupdated: "2025-07-10"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -18,7 +18,7 @@ subcollection: watsonxdata
 **Applies to** : [Spark engine]{: tag-blue}
 
 
-You can perform Iceberg table maintenance operations by submitting a Spark application with the help of IBM Cloud Pak for Data Command Line Interface (IBM `cpdctl`). The `sparkjob` utility available in the IBM `cpdctl` allows you to submit, list and get the details of a Spark application.
+You can submit a Spark application with the help of IBM Cloud Pak for Data Command Line Interface (IBM `cpdctl`). The `sparkjob` utility available in the IBM `cpdctl` allows you to submit, list and get the details of a Spark application.
 {: shortdesc}
 
 
@@ -33,7 +33,7 @@ You can perform Iceberg table maintenance operations by submitting a Spark appli
 ## Submitting a Spark application
 {: #table-spk_sbmtapp}
 
-You can submit a Spark application that involves the following table maintenance activities by using IBM `cpdctl`.
+In this section, a Spark application that involves the following Iceberg table maintenance activities are submitted by using IBM `cpdctl`.
 
 * Snapshot management
 
@@ -53,6 +53,7 @@ You can submit a Spark application that involves the following table maintenance
 
    * register_table - Creates a catalog entry for a metadata.json file that exists but does not have a corresponding catalog identifier.
 
+To automatically perform the table maintenance operation, see [Table maintenance operations](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata#cpdctl_commands_tabmaint).
 
 ### Procedure
 {: #table-spk_sbmpro}
@@ -61,7 +62,7 @@ You can submit a Spark application that involves the following table maintenance
 
    You can also provide the path to the file if it is saved in your computer. Specify the local path in the `local-path` field.
 
-   The Python file includes commands for the different table maintenance operations. You can uncomment the required section based on your use case scenario. For the use case that involves catalog and schema, customize the catalog_name, schema_name and table_name in the Python file.
+   The Python file includes commands for the different table maintenance operations. You can uncomment the required section based on your use case scenario. For the use case that involves catalog and schema, customize the catalog_name, schema_name and table_name in the Python file. Also, to customize and use a different query format, see [Spark Procedures](https://iceberg.apache.org/docs/1.8.0/spark-procedures/).
    {: note}
 
 
