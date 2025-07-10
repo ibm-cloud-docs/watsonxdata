@@ -33,7 +33,7 @@ You can submit a Spark application with the help of IBM Cloud Pak for Data Comma
 ## Submitting a Spark application
 {: #table-spk_sbmtapp}
 
-In this section, a Spark application that involves the following Iceberg table maintenance activities are submitted by using IBM `cpdctl`.
+You can submit a Spark application that involves the following Iceberg table maintenance activities by using IBM `cpdctl`.
 
 * Snapshot management
 
@@ -62,11 +62,16 @@ To automatically perform the table maintenance operation, see [Table maintenance
 
    You can also provide the path to the file if it is saved in your computer. Specify the local path in the `local-path` field.
 
-   The Python file includes commands for the different table maintenance operations. You can uncomment the required section based on your use case scenario. For the use case that involves catalog and schema, customize the catalog_name, schema_name and table_name in the Python file. Also, to customize and use a different query format, see [Spark Procedures](https://iceberg.apache.org/docs/1.8.0/spark-procedures/).
+   The Python file includes commands for the different table maintenance operations. You can uncomment the required section based on your use case scenario. For the use case that involves catalog and schema, customize the catalog_name, schema_name and table_name in the Python file. Also, to customize and use a different query format for table maintenance operations, see [Iceberg procedures](https://iceberg.apache.org/docs/1.8.0/spark-procedures/).
    {: note}
 
 
    * `<Path>` : The path of the storage where the Spark application is saved.
+
+   You must manually save the Python file to a Cloud Object Storage location before using the `<Path>` variable.
+   {: note}
+
+
    * `<Bucket_Name>` : The name of the Cloud Object Storage storage where the Spark application resides. This storage must be available in the instance and should be associated with the Spark engine.
    * `<Spark_File_Name>` : The name of the Python file.
    * `<BUCKET_ENDPOINT>` : Public endpoint of the Cloud Object Storage storage containing Spark file.
@@ -212,6 +217,3 @@ if __name__ == '__main__':
 
 ```
 {: codeblock}
-
-You must manually save the above Python file to a Cloud Object Storage location.
-{: note}
