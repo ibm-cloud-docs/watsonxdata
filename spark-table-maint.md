@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-07-10"
+lastupdated: "2025-07-11"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -18,7 +18,7 @@ subcollection: watsonxdata
 **Applies to** : [Spark engine]{: tag-blue}
 
 
-You can submit a Spark application with the help of IBM Cloud Pak for Data Command Line Interface (IBM `cpdctl`). The `sparkjob` utility available in the IBM `cpdctl` allows you to submit, list and get the details of a Spark application.
+You can use IBM Cloud Pak for Data Command Line Interface (IBM `cpdctl`) to submit a Spark application in {{site.data.keyword.lakehouse_short}}. The `sparkjob` utility available in the IBM `cpdctl` allows you to submit, list and get the details of a Spark application.
 {: shortdesc}
 
 
@@ -30,33 +30,17 @@ You can submit a Spark application with the help of IBM Cloud Pak for Data Comma
 * Configure the watsonx.data environment in IBM cpdctl. For information, see [Configure IBM cpdctl](https://www.ibm.com/docs/SSDZ38_2.1.x/wxd-client/topics/cpdctl-title.html).
 
 
-## Submitting a Spark application
+## Procedure
 {: #table-spk_sbmtapp}
 
-You can submit a Spark application that involves the following Iceberg table maintenance activities by using IBM `cpdctl`.
-
-* Snapshot management
-
-   * rollback_to_snapshot - Roll back a table to a specific snapshot ID.
-   * rollback_to_timestamp - Roll back the table to a snapshot at a specific day and time.
-   * set_current_snapshot - Sets the current snapshot ID for a table.
-   * cherrypick_snapshot - Cherry-picks changes from a snapshot into the current table state.
-
-* Metadata management
-
-   * expire_snapshots - Remove older snapshots and their files that are no longer needed.
-   * remove_orphan_files - Used to remove files that are not referenced in any metadata files of an Iceberg table.
-   * rewrite_data_files - Combines small files into larger files to reduce metadata overhead and runtime file open cost.
-   * rewrite_manifests - Rewrite manifests for a table to optimize scan planning.
-
-* Table Migration
-
-   * register_table - Creates a catalog entry for a metadata.json file that exists but does not have a corresponding catalog identifier.
+This section details the procedure to submit a Spark application, which is in the form of a Python file.
+You can create your own Spark application or use the [sample file](#pth_file) available in this topic as reference. The [sample file](#pth_file) is used to perform [Iceberg table maintenance operations](https://iceberg.apache.org/docs/1.8.0/spark-procedures/).
 
 To automatically perform the table maintenance operation, see [Table maintenance operations](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata#cpdctl_commands_tabmaint).
+{: note}
 
-### Procedure
-{: #table-spk_sbmpro}
+
+
 
 1. Save the sample [Python file](#pth_file) to a Cloud Object Storage location. You must save the following details of the storage, which is required at the time of submitting the application.
 
