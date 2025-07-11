@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-10"
+lastupdated: "2025-07-11"
 
 keywords: Spark, query, server,JDBC, Driver
 
@@ -140,7 +140,7 @@ To connect to the Spark query server using a Python program, do the following:
 
 1. Ensure you have Python version 3.12 or below.
 
-1. Install pyHive using pip install PyHive[hive_pure_sasl]==0.7.0.
+1. Install pyHive using `pip install thrift "PyHive[hive_pure_sasl]==0.7.0"`.
 
 1. Save the follow in a file like `connect.py`.
 
