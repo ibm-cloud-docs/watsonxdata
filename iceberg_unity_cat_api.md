@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-05-26"
+lastupdated: "2025-07-11"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -174,6 +174,9 @@ For creating tables, there are additional fields in the Unity spec that are not 
 {: codeblock}
 
 If extra values are passed in the properties of request object, they are not stored in any table due to adherence to the current HMS schema. You can include additional details in the `properties` field in future if needed.
+{: note}
+
+As the open source Unity Catalog specification does not support the `BIGINT` data type, columns defined as `BIGINT` when creating tables via Presto will behave the same as `LONG` when accessed from the Unity API.
 {: note}
 
 For more information, see [API documentation](https://cloud.ibm.com/apidocs/watsonxdata-mds-unity).
