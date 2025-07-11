@@ -33,8 +33,8 @@ You can use IBM Cloud Pak for Data Command Line Interface (IBM `cpdctl`) to subm
 ## Procedure
 {: #table-spk_sbmtapp}
 
-This section details the procedure to submit a Spark application, which is in the form of a Python file.
-You can create your own Spark application or use the [sample file](#pth_file) available in this topic as reference. The [sample file](#pth_file) is used to perform [Iceberg table maintenance operations](https://iceberg.apache.org/docs/1.8.0/spark-procedures/).
+This section details the procedure to submit a Spark application.
+You can create your own Spark application or use the [sample file](#pth_file) available in this topic as reference. The [sample file](#pth_file) is used to perform [Iceberg table maintenance operations](https://iceberg.apache.org/docs/1.8.0/spark-procedures/) using `sparkjob`.
 
 To automatically perform the table maintenance operation, see [Table maintenance operations](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata#cpdctl_commands_tabmaint).
 {: note}
