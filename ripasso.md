@@ -33,7 +33,4 @@ This topic provides you with the procedure to connect watsonx BI to Presto, maki
 5. From the **IBM watsonx BI** welcome page, do the following setup:
 
 
-
-
-
 For more information about integration from watsonx BI, see [Connecting to watsonx.data from watsonx BI](https://cloud.ibm.com/docs/allowlist/watsonx-bi?topic=watsonx-bi-wxd).
