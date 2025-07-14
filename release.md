@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-07-08"
+lastupdated: "2025-07-14"
 
 keywords: watsonxdata, release notes
 
@@ -34,6 +34,10 @@ For watsonx.data on-prem Premium what's new, see [Release notes for on-prem Prem
 {: release-note}
 
 Version 2.2 hotfix of watsonx.data was released on 07 July, 2025. This release includes security updates and fixes.
+
+Deprecated features
+
+: The IBM Client package is deprecated and shall be removed from 2.2.2 release. The utilities and commands in the Client package is replaced with IBM CPDCTL CLI. Users are encouraged to migrate and explore CPDCTL. For more information about how to use IBM CPDCTL CLI, see [IBM cpdctl](/docs/watsonxdata?topic=watsonxdata-cpdctl_title).
 
 ## 11 June 2025 - Version 2.2
 {: #lakehouse_11june212}
