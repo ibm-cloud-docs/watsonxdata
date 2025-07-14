@@ -11,7 +11,7 @@ subcollection: watsonxdata
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Connecting watsonx BI to Presto in watsonx.data
+# Integrating with watsonx BI
 {: #wxbi_intro}
 
 This topic provides you with the procedure to connect watsonx BI to Presto, making it easier for data scientists and data analysts to interact with the data in various connected data sources and derive insights from the data stored in {{site.data.keyword.lakehouse_short}}. IBM watsonx BI allows you to query and understand the data in a user friendly manner.
