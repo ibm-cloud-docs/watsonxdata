@@ -29,7 +29,7 @@ This topic provides you with the procedure to connect watsonx BI to Presto, maki
 1. Log in to {{site.data.keyword.lakehouse_short}} Lite plan instance.
 2. Go to **Configurations**.
 3. Click on the **watsonx BI** tile.
-4. If you already have the subscription of **IBM watsonx BI**, click **Launch watsonx BI** to launch the welcome page of **IBM watsonx BI**. Else, you will be redirected to the **IBM Cloud Catalog** page. Provision **IBM watsonx BI** instance and try again.
+4. If you already have the subscription of **IBM watsonx BI**, click **Launch watsonx BI** to launch the welcome page of **IBM watsonx BI**. Else, you will be redirected to the **IBM Cloud Catalog** page. [Provision **IBM watsonx BI** instance](https://cloud.ibm.com/docs/allowlist/watsonx-bi?topic=watsonx-bi-getting-started) and try again.
 5. From the **IBM watsonx BI** welcome page, do the following setup:
 
 
