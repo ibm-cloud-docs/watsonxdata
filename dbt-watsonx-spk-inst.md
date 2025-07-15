@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-05"
+lastupdated: "2025-07-15"
 
 keywords: lakehouse, watsonx.data, spark, cli
 
@@ -32,7 +32,7 @@ This section covers the steps to install and use `dbt-watsonx-spark`.
 ### Create a Spark query server
 {: #dbt_watsonx_spark_inst_1}
 
-For the Spark engine to integrate with dbt tool and work as a query engine, you must create a Spark query server. See [Create a Spark query server]().
+For the Spark engine to integrate with dbt tool and work as a query engine, you must create a Spark query server. See [Create a Spark query server](/docs/watsonxdata?topic=watsonxdata-spk_qry_srver#crt_spk_qry_srver).
 
 
 
@@ -40,7 +40,7 @@ For the Spark engine to integrate with dbt tool and work as a query engine, you 
 {: #dbt_watsonx_spark_inst_2}
 
 
-To configure the profile file in dbt tool, you must save the query server connection details. See [Retrieve the query server connection details]().
+To configure the profile file in dbt tool, you must save the query server connection details. See [Retrieve the query server connection details](/docs/watsonxdata?topic=watsonxdata-spk_qry_srver#ret_con_dtls).
 
 
 
