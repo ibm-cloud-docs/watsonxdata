@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-07-14"
+lastupdated: "2025-07-15"
 
 keywords: watsonxdata, release notes
 
@@ -27,15 +27,6 @@ For watsonx.data as a Service on IBM Cloud with gen AI experience what's new, se
 For watsonx.data on-prem what's new, see [Release notes for watsonx.data](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.2.x?topic=overview-whats-new-in-watsonxdata).
 
 For watsonx.data on-prem Premium what's new, see [Release notes for on-prem Premium](https://www.ibm.com/docs/en/watsonx/watsonxdata-premium/2.2.x?topic=overview-whats-new-in-watsonxdata).
-
-
-## 22 July 2025 - Version 2.2 New Feature 1
-{: #lakehouse_22july2025}
-{: release-note}
-
-Deprecated features
-
-: The IBM Client package is deprecated and shall be removed from 2.2.2 release. The utilities and commands in the Client package is replaced with IBM CPDCTL CLI. Users are encouraged to migrate and explore CPDCTL. For more information about how to use IBM CPDCTL CLI, see [IBM cpdctl](/docs/watsonxdata?topic=watsonxdata-cpdctl_title).
 
 
 

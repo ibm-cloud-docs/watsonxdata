@@ -354,8 +354,7 @@ toc:
             - Qlik.md
             - power_bi.md
             - cognos.md
-      - manta_integrate.md
-      - ripasso.md
+      - manta_integrate.md 
       - topicgroup:
           label: Workload Orchestration
           topics:
