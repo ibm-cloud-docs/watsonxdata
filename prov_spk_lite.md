@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-15"
+lastupdated: "2025-07-16"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -77,7 +77,7 @@ To add a Spark engine, complete the following steps.
 ## T-shirt sizes for Serverless Spark
 {: #tshirt_spk_engine}
 
-For Lite plan, the default instance resource quota is  8 vCPU and 32 GB cpu memory. TThe {{site.data.keyword.lakehouse_short}} serverless Spark allows only the following pre-defined Spark driver and executor vCPU and memory combinations (T-shirt sizes) while submitting applications.
+For Lite plan, the default instance resource quota is  8 vCPU and 32 GB cpu memory. The {{site.data.keyword.lakehouse_short}} serverless Spark allows only the following pre-defined Spark driver and executor vCPU and memory combinations (T-shirt sizes) while submitting applications.
 
 The following table shows the supported vCPU to memory size combinations.
 
