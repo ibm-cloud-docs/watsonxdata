@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-12-05"
+  years: 2022, 2025
+lastupdated: "2025-07-16"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -16,6 +16,9 @@ subcollection: watsonxdata
 
 Integrating Manta with {{site.data.keyword.lakehouse_short}} allows you to capture and publish jobs, runs, and dataset events from Spark and Presto through the Manta UI, providing full visibility into data flows and transformations.
 {: shortdesc}
+
+Manta Data lineage is not supported with the Lite Presto (Java) engine in Lite plan instances.
+{: note}
 
 ## Before you begin
 {: #manta_integrate_prereq}
