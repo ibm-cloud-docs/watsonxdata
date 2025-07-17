@@ -38,7 +38,7 @@ A new version of {{site.data.keyword.lakehouse_full}} was released on 11 July, 2
 
 New region availability
 
-:{{site.data.keyword.lakehouse_full}} on AWS is now available in the Mumbai region.
+: {{site.data.keyword.lakehouse_full}} on AWS is now available in the Mumbai region.
 
 
 ## 07 July 2025 - Version 2.2 Hotfix 1
