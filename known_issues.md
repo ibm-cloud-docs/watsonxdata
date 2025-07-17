@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-04"
+lastupdated: "2025-07-17"
 
 keywords: lakehouse
 
@@ -30,6 +30,11 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+## Driver and resource group details missing in Tiny Presto API response
+{: #known_issue30105}
+
+The GET presto_engines API currently returns null for driver and resource_groups when querying Tiny Presto engines, as the new architecture omits driver details from `get_presto_engine` calls; however, existing users can still access driver information through the `/driver_registration` endpoint.
 
 ## Unable to delete data from columns with special characters in their names
 {: #known_issue22135}
