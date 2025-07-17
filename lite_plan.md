@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-28"
+lastupdated: "2025-07-17"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -62,7 +62,6 @@ The Lite plan usage consumption starts after you provision the instance. The res
 {: attention}
 
 1. After you provision a Lite plan instance, you are directly presented with the **Welcome to {{site.data.keyword.lakehouse_short}}** window and the UI includes components (engines, services, and storages) based on the use case selected.
-
 
 ## Selecting the guided workflow
 {: #hp_02}

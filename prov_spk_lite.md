@@ -28,10 +28,8 @@ subcollection: watsonxdata
 # Provisioning a serverless Spark engine for Lite plan
 {: #serv_spl_engine}
 
-The Lite plan instance is limited to a maximum of one Presto engine, one Spark engine (small size, single node) or Milvus service with starter size (1.25 RUs per hour) or all three. You must delete the existing one to add a new one from **Infrastructure manager > Add components**.
 
-
-{{site.data.keyword.lakehouse_full}} allows you to add a serverless Spark engines. You can either provision a native serverless Spark engine or register an external Spark engine. Native serverless Spark engine is a compute engine that resides within IBM® watsonx.data. External Spark engines are engines that exist in a different environment from where watsonx.data is available.
+You can add serverless Spark engine for {{site.data.keyword.lakehouse_full}} Lite plan instance. You can either provision a native serverless Spark engine or register an external Spark engine. Native serverless Spark engine is a compute engine that resides within IBM® watsonx.data. External Spark engines are engines that exist in a different environment from where watsonx.data is available.
 {: shortdesc}
 
 To add a Spark engine, complete the following steps.
