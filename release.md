@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-07-15"
+lastupdated: "2025-07-17"
 
 keywords: watsonxdata, release notes
 
@@ -34,7 +34,11 @@ For watsonx.data on-prem Premium what's new, see [Release notes for on-prem Prem
 {: #lakehouse_11july2025}
 {: release-note}
 
-{{site.data.keyword.lakehouse_full}} on AWS is now available in the Mumbai region.
+A new version of {{site.data.keyword.lakehouse_full}} was released on 11 July, 2025 with the following change:
+
+New region availability
+
+:{{site.data.keyword.lakehouse_full}} on AWS is now available in the Mumbai region.
 
 
 ## 07 July 2025 - Version 2.2 Hotfix 1
