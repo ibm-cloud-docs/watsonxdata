@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-16"
+lastupdated: "2025-07-17"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -25,8 +25,11 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Provisioning a serverless Spark engine
+# Provisioning a serverless Spark engine for Lite plan
 {: #serv_spl_engine}
+
+The Lite plan instance is limited to a maximum of one Presto engine, one Spark engine (small size, single node) or Milvus service with starter size (1.25 RUs per hour) or all three. You must delete the existing one to add a new one from **Infrastructure manager > Add components**.
+
 
 {{site.data.keyword.lakehouse_full}} allows you to add a serverless Spark engines. You can either provision a native serverless Spark engine or register an external Spark engine. Native serverless Spark engine is a compute engine that resides within IBM® watsonx.data. External Spark engines are engines that exist in a different environment from where watsonx.data is available.
 {: shortdesc}
@@ -74,6 +77,7 @@ To add a Spark engine, complete the following steps.
 
 6. Click **Create**. The engine is provisioned and is displayed in the **Infrastructure Manager** page.
 
+
 ## T-shirt sizes for Serverless Spark
 {: #tshirt_spk_engine}
 
@@ -88,3 +92,7 @@ The following table shows the supported vCPU to memory size combinations.
 | 3 vCPU x 6 GB | 3 vCPU x 12 GB | 3 vCPU x 24 GB |
 | 4 vCPU x 8 GB | 4 vCPU x 16 GB | NA  |
 {: caption="Supported vCPU to memory size combinations" caption-side="top"}
+
+
+You can view the CPU and memory usage in percentage from the Spark details page. For viewing the details, go to **Infrastructure Manager** > click on the Spark engine > click **Details** tab.
+{: important}

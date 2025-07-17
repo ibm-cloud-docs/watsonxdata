@@ -102,7 +102,10 @@ Perform the following steps to provision a Lite plan instance:
 
 1. Click **Create**. The **Preparing watsonx.data** page opens that displays the progress. The {{site.data.keyword.lakehouse_short}} Console opens after provisioning is complete.
 
-To add another Spark engine, you must delete the existing one and create a new one from the **Infrastructure manager > Add components**. For information about provisioning a Spark engine, see [Provisioning a serverless Spark engine](/docs/watsonxdata?topic=watsonxdata-serv_spl_engine).
+The Lite plan is limited to a maximum of one Presto engine, one Spark engine (small size, single node) or Milvus service with starter size (1.25 RUs per hour) or all three. You must delete the existing one to add a new one from **Infrastructure manager > Add components**.
+
+To add another Spark engine, see [Provisioning a serverless Spark engine](/docs/watsonxdata?topic=watsonxdata-serv_spl_engine).
+{: note}
 
 
 
