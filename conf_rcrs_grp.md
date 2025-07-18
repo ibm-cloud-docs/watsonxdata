@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-11-06"
+  years: 2022, 2025
+lastupdated: "2025-07-18"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -30,6 +30,9 @@ subcollection: watsonxdata
 
 You can configure one or more Presto resource groups in {{site.data.keyword.lakehouse_short}}.
 {: shortdesc}
+
+Presto (Java) engines in watsonx.data Lite plan instances do not support resource groups.
+{: note}
 
 To configure resource groups:
 
