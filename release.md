@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-07-17"
+lastupdated: "2025-07-18"
 
 keywords: watsonxdata, release notes
 
@@ -26,7 +26,7 @@ For watsonx.data as a Service on IBM Cloud with gen AI experience what's new, se
 
 For watsonx.data on-prem what's new, see [Release notes for watsonx.data](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.2.x?topic=overview-whats-new-in-watsonxdata).
 
-For watsonx.data on-prem Premium what's new, see [Release notes for on-prem Premium](https://www.ibm.com/docs/en/watsonx/watsonxdata-premium/2.2.x?topic=overview-whats-new-in-watsonxdata).
+For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-prem Premium](https://www.ibm.com/docs/en/watsonx/watsonxdata-premium/2.2.x?topic=overview-whats-new-in-watsonxdata).
 
 
 
@@ -49,7 +49,14 @@ Version 2.2 hotfix of watsonx.data was released on 07 July, 2025. This release i
 
 Deprecated features
 
-: The IBM Client package is deprecated and shall be removed from 2.2.2 release. The utilities and commands in the Client package is replaced with IBM CPDCTL CLI. Users are encouraged to migrate and explore CPDCTL. For more information about how to use IBM CPDCTL CLI, see [IBM cpdctl](/docs/watsonxdata?topic=watsonxdata-cpdctl_title).
+: The IBM Client package is deprecated and shall be removed from the 2.2.2 release. The utilities and commands in the Client package are replaced with IBM CPDCTL CLI. Users are encouraged to migrate and explore CPDCTL. For more information about how to use IBM CPDCTL CLI, see [IBM cpdctl](/docs/watsonxdata?topic=watsonxdata-cpdctl_title).
+
+Use the following available tools for equivalent functionalities of the Client package:
+
+* `python-run` / `dev-sandbox` – Use the standard Python environment to develop and run Spark scripts.
+* `presto-run` / Presto CLI – Use the official [Presto CLI](https://prestodb.io/docs/current/installation) to run SQL queries against watsonx.data.
+* `cert-mgmt` – Use the [`JVM` keytool](https://www.ibm.com/docs/en/sdk-java-technology/8?topic=guide-keytool) to manage `HTTPS` certificates.
+
 
 ## 11 June 2025 - Version 2.2
 {: #lakehouse_11june212}
@@ -122,7 +129,6 @@ Data sources and storage enhancements
    * Google Cloud Storage
    * Azure Data Lake Storage
    * Apache Ozone
-
 
 Access management enhancements
 
