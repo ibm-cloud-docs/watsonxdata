@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-08"
+lastupdated: "2025-07-21"
 
 keywords: lakehouse, watsonx.data, Gluten
 
@@ -50,7 +50,7 @@ Gluten serves as a native engine plugin designed to accelerate Spark SQL and Dat
 * Replaces sort-merge joins with hash-joins by default.
 
 ## Limitations
-{: #featu_cpp-limt_intr}
+{: #featu_cpp-limt}
 
 * Using Amazon S3 object stores support DAS for application submission, but other object stores like ADLS and GCS requires explicit credentials to be passed.
 
