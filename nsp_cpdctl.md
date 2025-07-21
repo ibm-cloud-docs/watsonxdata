@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-10"
+lastupdated: "2025-07-21"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -37,8 +37,8 @@ You can perform Iceberg table maintenance operations by submitting a Spark appli
 {: #nsp_cpdctlbyb}
 
 - {{site.data.keyword.lakehouse_short}} instance with Native Spark engine provisioned.
-- Download and install IBM cpdctl. For information, see [Installing IBM cpdctl](https://ibmdocs-test.dcs.ibm.com/docs/en/SSDZ38_2.2.x_test?topic=cpdclic-downloading-installing-cloud-pak-data-command-line-interface-cpdctl).
-- Configure the {{site.data.keyword.lakehouse_short}} environment in IBM cpdctl. For information, see [Configure IBM cpdctl](https://ibmdocs-test.dcs.ibm.com/docs/en/SSDZ38_2.2.x_test?topic=cpdctl-config-commands-usage).
+- Download and install IBM cpdctl. For information, see [Installing IBM cpdctl](/docs/watsonxdata?topic=watsonxdata-cpdctl_title).
+- Configure the {{site.data.keyword.lakehouse_short}} environment in IBM cpdctl. For information, see [Configure IBM cpdctl](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_config).
 
 ## Table maintenance
 {: #nsp_cpdctltm}
@@ -63,4 +63,4 @@ You can use the resources available in the tablemaint utility to perform the fol
 
    * register_table - Creates a catalog entry for a metadata.json file that exists but does not have a corresponding catalog identifier.
 
-For information, see the [How to use wx-data command --help (-h)](https://ibmdocs-test.dcs.ibm.com/docs/en/SSDZ38_2.2.x_test?topic=cpdctl-wx-data-commands-usage#cpdctl-commands_wx-data__section_npb_sr3_42c) section.
+For information, see the [How to use wx-data command --help (-h)](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata) section.

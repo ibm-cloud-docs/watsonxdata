@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-17"
+lastupdated: "2025-07-21"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -215,6 +215,6 @@ If you choose to continue using watsonx.data by creating an Enterprise {{site.da
 
 3. Either before or after your lite plan has concluded, create an enterprise plan instance. For more information, see [Enterprise plan](/docs/watsonxdata?topic=watsonxdata-getting-started_1).
 
-4. Go to the **Quick start watsonx.data console** > **Configure bucket** page, specify the COS bucket details that you own (which stores data from the Lite plan). For more information, see [Quick start {{site.data.keyword.lakehouse_short}} console](/docs/watsonxdata?topic=watsonxdata-quick_start).
+4. Go to the **Quick start watsonx.data console** > **Configure bucket** page, specify the COS bucket details that you own (which stores data from the Lite plan). For more information, see [Quick start {{site.data.keyword.lakehouse_short}} console](/docs/watsonxdata?topic=watsonxdata-quick_start_213).
 
 When the setup is complete, the watsonx.data home page (enterprise plan) opens. From the navigation menu, select **Data manager** to view the COS storage bucket with data from the Lite plan.

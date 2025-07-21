@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2025-07-21"
 
 keywords: lakehouse, web console, watsonx.data
 
@@ -30,7 +30,7 @@ subcollection: watsonxdata
 # Getting started with the web console
 {: #getstarted-console}
 
-If you are logging in to watsonx.data instance for the first time, you will be presented with a quick start wizard. For details about the wizard, see the [Quick start watsonx.data console](/docs/watsonxdata?topic=watsonxdata-quick_start){: external}.
+If you are logging in to watsonx.data instance for the first time, you will be presented with a quick start wizard. For details about the wizard, see the [Quick start watsonx.data console](/docs/watsonxdata?topic=watsonxdata-quick_start_213){: external}.
 {: note}
 
 To start {{site.data.keyword.lakehouse_full}} web console, complete the following steps:

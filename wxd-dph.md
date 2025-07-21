@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-11"
+lastupdated: "2025-07-21"
 
 keywords: watsonx.data, dph, integration
 subcollection: watsonxdata
@@ -61,9 +61,9 @@ Data consumers are the users who subscribe to these Data products. Data consumer
       2. The user must have access to a Presto engine (this is only required to make the connection).
       3. The user must have access to a target Iceberg catalog with role to the full catalog or an access policy that gives some permission to use the catalog.
       4. The user must have Write access to storage used for the target catalog.
-      5. The user must have access to Cloud Object Storage: Add as a component in the watsonx.data instance. See [IBM Cloud Object Storage](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started). The data extract will land here before being ingested to watsonx.data.
+      5. The user must have access to Cloud Object Storage: Add as a component in the watsonx.data instance. See [IBM Cloud Object Storage](https://cloud.ibm.com/docs/cloud-object-storage?topic=cloud-object-storage-getting-started-cloud-object-storage). The data extract will land here before being ingested to watsonx.data.
 
-      For managing access in watsonx.data, see [Managing data policy](https://cloud.ibm.com/docs/watsonx-data?topic=watsonx-data-managing-data-policy).
+      For managing access in watsonx.data, see [Managing data policy](/docs/watsonxdata?topic=watsonxdata-data_policy).
 
 
    * **Access in watsonx.data** : The access in watsonx.data delivery method allows consumers to access their data product in watsonx.data. For more information about access in watsonx.data, see [Data Product Hub documentation](https://dataplatform.cloud.ibm.com/docs/content/wsj/data-products/prd_delivery_methods_overview.html?context=dph&locale=en).
