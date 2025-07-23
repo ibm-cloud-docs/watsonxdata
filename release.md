@@ -29,6 +29,35 @@ For watsonx.data on-prem what's new, see [Release notes for watsonx.data](https:
 For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-prem Premium](https://www.ibm.com/docs/en/watsonx/watsonxdata-premium/2.2.x?topic=overview-whats-new-in-watsonxdata).
 
 
+## 22 July 2025 - Version 2.2 New Feature 1
+{: #lakehouse_22july2025}
+{: release-note}
+
+Support for BLOB and CLOB data types
+: The BLOB and CLOB data types support in {{site.data.keyword.lakehouse_short}} is now updated to align with the SQL standard, which Presto follows as a federated query engine.
+
+   Read support:
+   BLOBs and CLOBs can be read from JDBC-based federated systems. When read, they are mapped as follows:
+   * BLOB to VARBINARY
+   * CLOB to VARCHAR
+
+   Write support:
+   Writing BLOB and CLOB data is also supported and are treated as follows:
+   * VARBINARY for binary data
+   * VARCHAR for character data
+
+   Create table support:
+   You cannot use BLOB or CLOB as column types when creating new tables. Only VARBINARY and VARCHAR are supported for such use cases.
+
+Engine and service enhancements
+: A new Lite size configuration is introduced for the Presto (Java) engine, offering a single-node deployment setup for experimentation and early-stage development purposes. The Lite Presto (Java) engine is available only in {{site.data.keyword.lakehouse_short}} Lite plan instances. For more information, see Provisioning a [Presto (Java) engine](/docs/watsonxdata?topic=watsonxdata-prov_engine).
+
+Integration enhancement
+: You can now integrate {{site.data.keyword.lakehouse_short}} with IBM watsonx BI to directly access data available in different data sources, making it easier for data scientists and data analysts to use the data. For information about how to integrate with watsonx BI, see [Integrating with watsonx BI](/docs/watsonxdata?topic=watsonxdata-wxbi_intro).
+
+Lite plan enhancement
+: Serverless Spark engine for Lite plan: The Spark engine in the watsonx.data Lite plan instance operates in a serverless model. You can now run Spark jobs on a server less platform, eliminating the need for dedicated nodes for each Spark engine. The serverless Spark allows a maximum resource quota limit of 8 vCPU×32 GB, where the users can access a shared pool of nodes. The Spark runtimes are scheduled on any available nodes in the data plane rather than a dedicated node. For information about how to provision a Lite plan instance and to create a Spark engine in it, see [Provisioning a serverless Spark engine](/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1).
+
 
 ## 11 July 2025
 {: #lakehouse_11july2025}
