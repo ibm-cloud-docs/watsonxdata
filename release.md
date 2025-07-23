@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-07-18"
+lastupdated: "2025-07-23"
 
 keywords: watsonxdata, release notes
 
@@ -30,7 +30,7 @@ For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-p
 
 
 
-## 11 July 2025 - Version 2.2
+## 11 July 2025
 {: #lakehouse_11july2025}
 {: release-note}
 
