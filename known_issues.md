@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-17"
+lastupdated: "2025-07-28"
 
 keywords: lakehouse
 
@@ -30,6 +30,11 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+## SQL views cannot be queried across engines(Spark/Presto)
+{: #known_issue20697}
+
+SQL views created by an engine with Hive iceberg catalog are recognised by other engines, but cannot be queried across engines, as one engine cannot understand the SQL dialect of another engine.
 
 ## Driver and resource group details missing in Tiny Presto API response
 {: #known_issue30105}
