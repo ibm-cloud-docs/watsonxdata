@@ -56,7 +56,7 @@ To manage user settings, complete the following steps:
    * `Maximum query execution time` = 1 hour
    * `Query Client Timeout` = 15 minutes
 
-      This feature supports only Presto (Java) and Presto (C++). Enabling it will restart both engines.
+      This feature works only with Presto (Java) and Presto (C++) engines that are currently running. When you enable it, the system restarts both engines. The Lite Presto does not support this feature.
       {: note}
 
 1. To set a **Login message**, complete the following steps:
