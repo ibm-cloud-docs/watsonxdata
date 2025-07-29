@@ -85,15 +85,15 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    viii. For .csv and .txt files, you can select the **Advanced attributes** to customize the file interpretation for the following:
 
-      **Header in first row:** Select this option if the CSV file has a header row containing column names.
+      **Header in first row:** Select this option if the file has a header row containing column names.
 
-      **Column Delimiter:** Specify the character that is used to separate columns in the CSV file.
+      **Column Delimiter:** Specify the character that is used to separate columns in the file.
 
-      **File Encoding:** Choose the character encoding used in the CSV file.
+      **File Encoding:** Choose the character encoding used in the file.
 
-      **Row Delimiter:** Specify the character that is used to separate rows in the CSV file.
+      **Row Delimiter:** Specify the character that is used to separate rows in the file.
 
-      **Escape Character:** Define the character used to escape special characters within the CSV file.
+      **Escape Character:** Define the character used to escape special characters within the file.
 
    ix. You can use **Cancel edit** or **Reset** to revert the column headers to their original state, if you need to undo your changes.
 
@@ -216,15 +216,15 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    viii For .csv and .txt files, you can select the Advanced attributes to customize the file interpretation for the following:
 
-      **Header in first row:** Select this option if the CSV file has a header row containing column names.
+      **Header in first row:** Select this option if the file has a header row containing column names.
 
-      **Column Delimiter:** Specify the character that is used to separate columns in the CSV file.
+      **Column Delimiter:** Specify the character that is used to separate columns in the file.
 
-      **File Encoding:** Choose the character encoding used in the CSV file.
+      **File Encoding:** Choose the character encoding used in the file.
 
-      **Row Delimiter:** Specify the character that is used to separate rows in the CSV file.
+      **Row Delimiter:** Specify the character that is used to separate rows in the file.
 
-      **Escape Character:** Define the character used to escape special characters within the CSV file.
+      **Escape Character:** Define the character used to escape special characters within the file.
 
    ix. Click **Save** to save the changes.
 
