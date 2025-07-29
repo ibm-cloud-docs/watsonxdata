@@ -31,7 +31,7 @@ subcollection: watsonxdata
 
 This topic outlines the steps to configure a `Session timeout`, set a `Query timeout`, and define a `Login message` in {{site.data.keyword.lakehouse_short}}.
 
-**Session timeout:** Ends a user session automatically after a specified period of inactivity, helping to maintain security and conserve system resources.
+**Session timeout:** Ends a user session automatically after a specified period of inactivity.
 
 **Query Timeout:** Terminates all queries in a user session once they exceed the maximum execution time set by the user. If a `client timeout` is also configured, the system stops query execution when a network disruption or server-side change occurs.
 
