@@ -30,7 +30,7 @@ toc:
           - mixed_case_overview.md
           - resource_grp_ov.md
           - integration.md
-          - manta_overview.md
+          - manta_overview.md 
       - release.md
       - topicgroup:
           label: Provisioning watsonx.data
