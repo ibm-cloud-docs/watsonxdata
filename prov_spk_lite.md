@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-17"
+lastupdated: "2025-07-29"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -29,7 +29,7 @@ subcollection: watsonxdata
 {: #serv_spl_engine}
 
 
-You can add serverless Spark engine for {{site.data.keyword.lakehouse_full}} Lite plan instance. You can either provision a native serverless Spark engine or register an external Spark engine. Native serverless Spark engine is a compute engine that resides within IBM® watsonx.data. External Spark engines are engines that exist in a different environment from where watsonx.data is available.
+You can add serverless Spark engine for {{site.data.keyword.lakehouse_full}} Lite plan instance. Native serverless Spark engine is a compute engine that resides within IBM® watsonx.data.
 {: shortdesc}
 
 To add a Spark engine, complete the following steps.
@@ -42,17 +42,14 @@ To add a Spark engine, complete the following steps.
 
 5. In the **Add component** page, from the **Engines** section, select **IBM Spark**.
 
-6. In the **Add component - IBM Spark** page, choose the engine type from the **Type** list. You can select Spark. Configure the following details:
+6. In the **Add component - IBM Spark** page, configure the following details:
 
       a. In the **Add component - IBM Spark** window, enter the **Display name** for your Spark engine.
 
-      b. Choose the **Registration mode**. Based on your requirement, you can select one of the following options:
-
-      - **Create a native Spark engine** : To provision a native Spark engine.
-      - **Register an external Spark engine** : To register an external Spark engine.
+      b. The **Registration mode** is by default **Create a native Spark engine**.
 
 
-      c. If you choose **Create a native Spark engine**, configure the following details:
+      c. Configure the following details:
 
       | Field | Description |
       | --- | --- |
@@ -61,16 +58,6 @@ To add a Spark engine, complete the following steps.
       |Instance resource quota| Displays the memory limit of the Spark engine. For Lite plan, it will be 8 vCPU and 32 GB. You cannot modify the value.   |
       |Associated catalogs (optional)| Select the catalogs that must be associated with the engine.   |
       {: caption="Provisioning Spark engine" caption-side="bottom"}
-
-      d. If you choose **Register an external Spark engine**, configure the following details:
-
-
-      | Field      | Description    |
-      |--------------------------------|--------------------------------------------------------------------------------------------|
-      | Display name   | Enter your compute engine name.  |
-      | Instance API endpoint | Enter the IBM Analytics engine instance endpoint. For more information, see [Retrieving service endpoints](https://cloud.ibm.com/docs/AnalyticsEngine?topic=AnalyticsEngine-retrieve-endpoints-serverless)  |
-      | API key   | Enter the API key. |
-      {: caption="Registering IBM Analytics Engine (Spark)" caption-side="bottom"}
 
 
 6. Click **Create**. The engine is provisioned and is displayed in the **Infrastructure Manager** page.
