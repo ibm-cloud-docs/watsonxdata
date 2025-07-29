@@ -64,6 +64,11 @@ Lite plan enhancement
 
    * A new Lite size configuration is introduced for the Presto (Java) engine, offering a single-node deployment setup for experimentation and early-stage development purposes. The Lite Presto (Java) engine is available only in {{site.data.keyword.lakehouse_short}} Lite plan instances. For more information, see [Provisioning a Presto (Java) engine](/docs/watsonxdata?topic=watsonxdata-prov_engine).
 
+Ingestion enhancement
+
+: This release of {{site.data.keyword.lakehouse_short}} includes the following Ingestion enhancement:
+
+The .txt file format is now accepted for data ingestion. This enhancement expands the flexibility allowing users to seamlessly upload plain text files alongside existing supported formats.
 
 ## 11 July 2025
 {: #lakehouse_11july2025}

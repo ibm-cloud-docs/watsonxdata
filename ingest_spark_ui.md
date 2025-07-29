@@ -83,7 +83,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    vii. Modify the column headers and column data types as required to make any transformation. Incorrect data type selection can result in ingestion error.
 
-   viii. For CSV files, you can select the **Advanced attributes** to customize the file interpretation for the following:
+   viii. For .csv and .txt files, you can select the **Advanced attributes** to customize the file interpretation for the following:
 
       **Header in first row:** Select this option if the CSV file has a header row containing column names.
 
@@ -214,7 +214,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    vii. You can use **Cancel edit** or **Reset** to revert the column headers to their original state, if you need to undo your changes.
 
-   viii For CSV files, you can select the Advanced attributes to customize the file interpretation for the following:
+   viii For .csv and .txt files, you can select the Advanced attributes to customize the file interpretation for the following:
 
       **Header in first row:** Select this option if the CSV file has a header row containing column names.
 
