@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-15"
+lastupdated: "2025-07-29"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -62,7 +62,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    i. Drag a file to the box or click to upload. Selected files are listed in the **Selected file(s)** section.
 
-      You can add multiple files of the same file type. The available file type options are CSV, Parquet, JSON, ORC, and AVRO. The maximum cumulative file size must be within 2 GB.
+      You can add multiple files of the same file type. The available file type options are .txt, .csv, Parquet, JSON, ORC, and Avro. The maximum cumulative file size must be within 2 GB.
       {: note}
 
    ii. Select a transient storage bucket from the drop down to temporarily store uploaded files.
@@ -196,7 +196,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
       You can also add a new storage bucket by clicking the **Add +** icon. For more information, see [Add Storage]({{site.data.keyword.ref-reg_bucket-link}}). You can create a permanent storage connection accessible to all users based on permissions. In the infrastructure manager page by selecting **Create permanent connection**. You can also create a temporary storage connection accessible to you for the time period during the ingestion by selecting **Create temporary connection**. This temporary storage shall not be available in the infrastructure manager page or cannot be accessed by other users.
       {: note}
 
-   ii. Select the required file type based on the source data. The available options are CSV, Parquet, JSON, ORC, and AVRO.
+   ii. Select the required file type based on the source data. The available options are .txt, .csv, Parquet, JSON, ORC, and Avro.
 
    iii. Select the files to be ingested from the **All files** tab. Selected files are listed in the **Files selected** tab. You can see the details of the selected files in the **File details** section.
 
