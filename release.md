@@ -68,6 +68,9 @@ Ingestion enhancement
 
    The .txt file format is now accepted for data ingestion. This enhancement expands the flexibility allowing users to seamlessly upload plain text files alongside existing supported formats.
 
+Service enhancements
+: You can now configure **Query timeout** using two settings: **Maximum query execution time** and **Query client timeout**. For more information see [Managing user settings in {{site.data.keyword.lakehouse_short}}: Session timeout, Query timeout, and Login message settings](/docs/watsonxdata?topic=idle_session_timeout)
+
 ## 11 July 2025
 {: #lakehouse_11july2025}
 {: release-note}
