@@ -29,7 +29,7 @@ For watsonx.data on-prem what's new, see [Release notes for watsonx.data](https:
 For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-prem Premium](https://www.ibm.com/docs/en/watsonx/watsonxdata-premium/2.2.x?topic=overview-whats-new-in-watsonxdata).
 
 
-## 22 July 2025 - Version 2.2 New Feature 1
+## 30 July 2025 - Version 2.2 New Feature 1
 {: #lakehouse_22july2025}
 {: release-note}
 
