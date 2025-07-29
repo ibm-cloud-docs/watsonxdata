@@ -66,7 +66,7 @@ Ingestion enhancement
 
 : This release of {{site.data.keyword.lakehouse_short}} includes the following Ingestion enhancement:
 
-The .txt file format is now accepted for data ingestion. This enhancement expands the flexibility allowing users to seamlessly upload plain text files alongside existing supported formats.
+   The .txt file format is now accepted for data ingestion. This enhancement expands the flexibility allowing users to seamlessly upload plain text files alongside existing supported formats.
 
 ## 11 July 2025
 {: #lakehouse_11july2025}
