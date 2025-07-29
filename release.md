@@ -29,8 +29,8 @@ For watsonx.data on-prem what's new, see [Release notes for watsonx.data](https:
 For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-prem Premium](https://www.ibm.com/docs/en/watsonx/watsonxdata-premium/2.2.x?topic=overview-whats-new-in-watsonxdata).
 
 
-## 22 July 2025 - Version 2.2 New Feature 1
-{: #lakehouse_22july2025}
+## 30 July 2025 - Version 2.2 New Feature 1
+{: #lakehouse_30july2025}
 {: release-note}
 
 Support for BLOB and CLOB data types
@@ -50,13 +50,19 @@ Support for BLOB and CLOB data types
    You cannot use BLOB or CLOB as column types when creating new tables. Only VARBINARY and VARCHAR are supported for such use cases.
 
 Engine and service enhancements
-: A new Lite size configuration is introduced for the Presto (Java) engine, offering a single-node deployment setup for experimentation and early-stage development purposes. The Lite Presto (Java) engine is available only in {{site.data.keyword.lakehouse_short}} Lite plan instances. For more information, see Provisioning a [Presto (Java) engine](/docs/watsonxdata?topic=watsonxdata-prov_engine).
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancement:
+
+   * The Presto (Java) and Presto (C++) engines are now upgraded to Version 0.294.
 
 Connecting to watsonx BI
 : You can now connect {{site.data.keyword.lakehouse_short}} with IBM watsonx BI to directly access data available in different data sources, making it easier for data scientists and data analysts to use the data. For information about connecting to watsonx BI, see [Integrating with watsonx BI](/docs/watsonxdata?topic=watsonxdata-wxbi_intro).
 
 Lite plan enhancement
-: Serverless Spark engine for Lite plan: The Spark engine in the watsonx.data Lite plan instance operates in a serverless model. You can now run Spark jobs on a server less platform, eliminating the need for dedicated nodes for each Spark engine. The serverless Spark allows a maximum resource quota limit of 8 vCPU×32 GB, where the users can access a shared pool of nodes. The Spark runtimes are scheduled on any available nodes in the data plane rather than a dedicated node. For information about how to provision a Lite plan instance and to create a Spark engine in it, see [Provisioning a serverless Spark engine](/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1).
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following Lite plan enhancements:
+
+   * Serverless Spark engine for Lite plan: The Spark engine in the watsonx.data Lite plan instance operates in a serverless model. You can now run Spark jobs on a server less platform, eliminating the need for dedicated nodes for each Spark engine. The serverless Spark allows a maximum resource quota limit of 8 vCPU×32 GB, where the users can access a shared pool of nodes. The Spark runtimes are scheduled on any available nodes in the data plane rather than a dedicated node. For information about how to provision a Lite plan instance and to create a Spark engine in it, see [Provisioning a serverless Spark engine](/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1).
+
+   * A new Lite size configuration is introduced for the Presto (Java) engine, offering a single-node deployment setup for experimentation and early-stage development purposes. The Lite Presto (Java) engine is available only in {{site.data.keyword.lakehouse_short}} Lite plan instances. For more information, see [Provisioning a Presto (Java) engine](/docs/watsonxdata?topic=watsonxdata-prov_engine).
 
 
 ## 11 July 2025
@@ -275,7 +281,7 @@ CPDCTL CLI enhancements
    * You can use the `sparkjob` command to submit, list, and get the details of a Spark application.
    * `INSTANCE_ID` used in setting the instance environment is replaced with `WX_DATA_INSTANCE_ID`.
 
-   For more information about how to use IBM CPDCTL CLI, see [IBM cpdctl](/docs/watsonxdata?topic=watsonxdata-cpdctl_title).
+   For more information, see [IBM cpdctl](https://www.ibm.com/docs/SSDZ38_2.1.x/wxd-client/topics/cpdctl-title.html).
 
 ## 28 February 2025 - Version 2.1.1
 {: #lakehouse_28feb211}
@@ -338,7 +344,7 @@ CPDCTL CLI enhancements
 : IBM `CPDCTL` CLI is now used to configure and manage different operations in {{site.data.keyword.lakehouse_short}}. Using the `CPDCTL` CLI, you can manage configuration settings, run ingestion jobs, manage engines, data sources, and storages. The following two plugins are currently used to execute these operations:
 
    * `config` - To configure {{site.data.keyword.lakehouse_short}} service environment and users.
-   * `wx-data` - To perform other operations such as, ingesting, managing engines, etc in {{site.data.keyword.lakehouse_short}}. For more information about how to use IBM CPDCTL CLI, see [IBM cpdctl](/docs/watsonxdata?topic=watsonxdata-cpdctl_title).
+   * `wx-data` - To perform other operations such as, ingesting, managing engines, etc in {{site.data.keyword.lakehouse_short}}. For more information, see [IBM cpdctl](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=cloud-pak-data-command-line-interface-cpdctl).
 
       {{site.data.keyword.lakehouse_short}} developer edition is now enabled in IBM CPDCTL version v1.6.104 and later.
       {: note}
@@ -349,7 +355,7 @@ Deprecated features
 
    * The Data Access Service (DAS) proxy feature is now deprecated and will be removed in a future release. You cannot use the Data Access Service (DAS) proxy feature to access object storage (S3, ADLS and ABS). If you use DAS proxy flow and face any issues, contact IBM support. For an overview of the DAS feature, see [Data Access Service (DAS)](/docs/watsonxdata?topic=watsonxdata-cas_ep_ov).
 
-   * IBM Client package is now deprecated and shall be removed in a future release. The utilities and commands in Client package is replaced with IBM CPDCTL CLI. For more information about how to use IBM CPDCTL CLI, see [IBM cpdctl](/docs/watsonxdata?topic=watsonxdata-cpdctl_title).
+   * IBM Client package is now deprecated and shall be removed in a future release. The utilities and commands in Client package is replaced with IBM CPDCTL CLI. For more information about how to use IBM CPDCTL CLI, see [IBM cpdctl](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=cloud-pak-data-command-line-interface-cpdctl).
 
 ## 04 February 2025 - Version 2.1.0 Hotfix 2
 {: #lakehouse_04febhf}
