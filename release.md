@@ -50,7 +50,10 @@ Support for BLOB and CLOB data types
    You cannot use BLOB or CLOB as column types when creating new tables. Only VARBINARY and VARCHAR are supported for such use cases.
 
 Engine and service enhancements
-: A new Lite size configuration is introduced for the Presto (Java) engine, offering a single-node deployment setup for experimentation and early-stage development purposes. The Lite Presto (Java) engine is available only in {{site.data.keyword.lakehouse_short}} Lite plan instances. For more information, see Provisioning a [Presto (Java) engine](/docs/watsonxdata?topic=watsonxdata-prov_engine).
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancement:
+
+   * A new Lite size configuration is introduced for the Presto (Java) engine, offering a single-node deployment setup for experimentation and early-stage development purposes. The Lite Presto (Java) engine is available only in {{site.data.keyword.lakehouse_short}} Lite plan instances. For more information, see Provisioning a [Presto (Java) engine](/docs/watsonxdata?topic=watsonxdata-prov_engine).
+   * The Presto (Java) and Presto (C++) engines are now upgraded to Version 0.294.
 
 Connecting to watsonx BI
 : You can now connect {{site.data.keyword.lakehouse_short}} with IBM watsonx BI to directly access data available in different data sources, making it easier for data scientists and data analysts to use the data. For information about connecting to watsonx BI, see [Integrating with watsonx BI](/docs/watsonxdata?topic=watsonxdata-wxbi_intro).
