@@ -99,6 +99,9 @@ Running Presto (C++) queries:
       ```
       {: codeblock}
 
+      If the session parameter `is_query_rewriter_plugin_enabled` is set to `false`, you will not be able to execute the `ExecuteWxdQueryOptimizer` commands.
+      {: note}
+
 3. Follow the steps to get details of the queries and to verify if the queries executed are optimized:
 
    1. Log in to {{site.data.keyword.lakehouse_short}} console.

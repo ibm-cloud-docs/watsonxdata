@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2025-07-30"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -37,6 +37,7 @@ This topic provides details to verify that all expected tables have been success
 1. Install and activate **Query Optimizer** in {{site.data.keyword.lakehouse_short}}. See [Activating Query Optimizer Manager](/docs/watsonxdata?topic=watsonxdata-install_optimizer).
 1. Names of catalogs and schemas for the tables being synced must be known.
 1. The expected number of tables within each schema must be known.
+1. If the session parameter `is_query_rewriter_plugin_enabled` is set to `false`, you will not be able to execute the `ExecuteWxdQueryOptimizer` commands.
 
 ## Procedure
 {: #sync_optimizer_verifyprcdre}

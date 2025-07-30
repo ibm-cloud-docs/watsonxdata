@@ -40,6 +40,7 @@ Activating **Query Optimizer** automatically synchronizes metadata for catalogs 
 * Significant changes are made to a table.
 * New tables are introduced after the initial sync operation.
 * An intermittent issue is preventing tables from being synced during the automatic syncing process upon activation.
+* If the session parameter `is_query_rewriter_plugin_enabled` is set to `false`, you will not be able to execute the `ExecuteWxdQueryOptimizer` commands.
 
 ## Before you begin
 {: #optimizer_bybsync}
