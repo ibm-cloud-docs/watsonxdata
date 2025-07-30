@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-05-08"
+lastupdated: "2025-07-30"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -15,6 +15,9 @@ subcollection: watsonxdata
 {: #api_custom_ov}
 
 API customization in {{site.data.keyword.lakehouse_short}} provides a way for instance administrators to customize JVM, CONFIG, catalog, and Velox (Presto (C++)) properties for Presto (Java) and Presto (C++) engines through an API.
+
+Presto (Java) engines in watsonx.data Lite plan instances only allow customization to tags, description, and engine display name.
+{: note}
 
 This customization method does not require you to add the parameters inside the pod, restart the pod (if there is CPD deployment), or reach out to support personnel (if there is SaaS deployment) for customization. It also does not require any special access and privileges to the backend system. API customization is a unified way to customize allowed properties in {{site.data.keyword.lakehouse_short}}, regardless of the deployment. API customization is supported through the PATCH API. API endpoints and sample requests for Presto (Java) and Presto (C++) engines are as follows:
 
