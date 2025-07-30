@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2025-07-30"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -66,5 +66,5 @@ This topic gives the details to gather enhanced statistics for Iceberg tables th
 
    `<PRESTO_PWD>`: The Presto password that is used to run the statistics collection. Password can be a base64 API key or token corresponding to the username.
 
-   This sync command might experience timeouts. However, the underlying sync process usually completes successfully within a short period. Verify the sync operation in a few minutes by following the procedure in [Verifying table sync in watsonx.data](/docs/watsonxdata?topic=watsonxdata-sync_optimizer_verify).
+   Verify the sync operation in a few minutes by following the procedure in [Verifying table sync in watsonx.data](/docs/watsonxdata?topic=watsonxdata-sync_optimizer_verify).
    {: note}

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-01-26"
+  years: 2022, 2025
+lastupdated: "2025-07-30"
 
 keywords: lakehouse, hms, {{site.data.keyword.lakehouse_short}}, hive, metastore
 
@@ -61,7 +61,7 @@ Running Presto (C++) queries:
 
    d. Run the following command to run Presto (C++) queries using **Query Optimizer**.
       ```bash
-      ./presto-run --engine=$engine_name --session enable_wxd_query_optimizer=true -f $LH_SANDBOX_DIR/sql-files.sql
+      ./presto-run --engine=$engine_name --session is_query_rewriter_plugin_enabled=true -f $LH_SANDBOX_DIR/sql-files.sql
       ```
       {: codeblock}
 
@@ -93,9 +93,9 @@ Running Presto (C++) queries:
       ```
       {: codeblock}
 
-   d. Run the following command to run Presto (C++) queries using **Query Optimizer**.
+   d. Run the following command to run Presto (C++) queries without using **Query Optimizer**.
       ```bash
-      ./presto-run --engine=$engine_name --session enable_wxd_query_optimizer=false -f $LH_SANDBOX_DIR/sql-files.sql
+      ./presto-run --engine=$engine_name --session is_query_rewriter_plugin_enabled=false -f $LH_SANDBOX_DIR/sql-files.sql
       ```
       {: codeblock}
 
