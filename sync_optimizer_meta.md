@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-30"
+lastupdated: "2025-07-31"
 
 keywords: lakehouse, MDS, {{site.data.keyword.lakehouse_short}}, hive, metastore
 
@@ -40,7 +40,6 @@ Activating **Query Optimizer** automatically synchronizes metadata for catalogs 
 * Significant changes are made to a table.
 * New tables are introduced after the initial sync operation.
 * An intermittent issue is preventing tables from being synced during the automatic syncing process upon activation.
-* If the session parameter `is_query_rewriter_plugin_enabled` is set to `false`, you will not be able to execute the `ExecuteWxdQueryOptimizer` commands.
 
 ## Before you begin
 {: #optimizer_bybsync}
@@ -56,6 +55,8 @@ To sync tables from {{site.data.keyword.lakehouse_short}}, the following items a
 1. `ANALYZE` Hive and Iceberg tables in Presto (C++) to generate Hive and Iceberg statistics.
 
 1. Only users with administrator privilege is allowed to run `ExecuteWxdQueryOptimizer` command as a security enhancement feature.
+
+1. If the session parameter `is_query_rewriter_plugin_enabled` is set to `false`, you will not be able to execute the `ExecuteWxdQueryOptimizer` commands.
 
 ## Procedure
 {: #optimizer_prosync}
