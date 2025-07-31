@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-30"
+lastupdated: "2025-07-31"
 
 keywords: lakehouse, hms, {{site.data.keyword.lakehouse_short}}, hive, metastore
 
@@ -119,4 +119,4 @@ Running Presto (C++) queries:
 
    5. Click on the **Query ID** you want to verify. This will open the **Query Details** page.
 
-   6. Open the JSON file from the **Query Details** page to verify the parameter `wxdQueryOptimized` value to be `true` or `false`. The optimized queries has the parameter value set to `true`.
+   6. Open the JSON file from the **Query Details** page to verify the parameter `is_query_rewriter_plugin_succeeded` value to be `true` or `false`. The optimized queries has the parameter value set to `true`.
