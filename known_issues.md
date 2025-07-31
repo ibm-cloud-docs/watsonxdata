@@ -34,7 +34,7 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 ## Limitations of BLOB and CLOB Support in Presto
 {: #known_issue30109}
 
-Presto can read from and write to connectors that include tables with BLOB and CLOB columns. However, it does not support creating new tables with BLOB or CLOB as column data types.
+Presto can read from and write to connectors that include tables with `BLOB` and `CLOB` columns. However, it does not support using `BLOB` or `CLOB` as column data types in `CREATE TABLE` statements.
 
 ## SQL views cannot be queried across engines(Spark/Presto)
 {: #known_issue20697}
