@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-28"
+lastupdated: "2025-07-31"
 
 keywords: lakehouse
 
@@ -30,6 +30,11 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+## Limitations of BLOB and CLOB Support in Presto
+{: #known_issue30109}
+
+Presto can read from and write to connectors that include tables with BLOB and CLOB columns. However, it does not support creating new tables with BLOB or CLOB as column data types.
 
 ## SQL views cannot be queried across engines(Spark/Presto)
 {: #known_issue20697}
