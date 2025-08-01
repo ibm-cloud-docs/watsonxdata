@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-30"
+lastupdated: "2025-08-01"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -49,7 +49,7 @@ This topic provides details to verify that all expected tables have been success
 1. Run the following command to retrieve a list of potential schema names:
 
    ```bash
-   ExecuteWxdQueryOptimizer 'select distinct tabschema from syscat.tables where UPPER(tabschema) like '%SAMPLE_DATA%' ';
+   ExecuteWxdQueryOptimizer 'select distinct tabschema from syscat.tables where UPPER(tabschema) like '%SAMPLE_DATA%'';
    ```
    {: codeblock}
 
@@ -60,14 +60,14 @@ This topic provides details to verify that all expected tables have been success
    a. Run this command to count the number of tables within the specified schema:
 
       ```bash
-      ExecuteWxdQueryOptimizer select count(1) from syscat.tables where tabschema = 'catalog.schema';
+      ExecuteWxdQueryOptimizer 'select count(1) from syscat.tables where tabschema = 'catalog.schema'';
       ```
       {: codeblock}
 
       For example:
 
       ```bash
-      ExecuteWxdQueryOptimizer select count(1) from syscat.tables where tabschema = 'sample_data.TPCDS_10GB';
+      ExecuteWxdQueryOptimizer 'select count(1) from syscat.tables where tabschema = 'sample_data.TPCDS_10GB'';
       ```
       {: codeblock}
 
@@ -83,14 +83,14 @@ This topic provides details to verify that all expected tables have been success
 1. Run the following query to check table statistics (such as cardinality):
 
    ```bash
-   ExecuteWxdQueryOptimizer 'select tabname, card from syscat.tables where tabschema = 'catalog.schema' ';
+   ExecuteWxdQueryOptimizer 'select tabname, card from syscat.tables where tabschema = 'catalog.schema'';
    ```
    {: codeblock}
 
    For example:
 
       ```bash
-      ExecuteWxdQueryOptimizer 'select tabname, card from syscat.tables where tabschema = 'sample_data.TPCDS_10GB';
+      ExecuteWxdQueryOptimizer 'select tabname, card from syscat.tables where tabschema = 'sample_data.TPCDS_10GB'';
       ```
       {: codeblock}
 
