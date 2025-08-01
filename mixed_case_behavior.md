@@ -51,7 +51,7 @@ The following catalogs support the `case-sensitive-name-matching` property:
 - SQL Server
 - IBM Db2
 - IBM Data Virtualization Manager
-- IBM Db2 for i
+- IBM Db2fori
 - IBM Informix
 - IBM Netezza
 - Apache Phoenix
