@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-01"
+lastupdated: "2025-08-01"
 
 keywords: lakehouse, mixed-case behavior, watsonx.data
 
@@ -32,91 +32,39 @@ subcollection: watsonxdata
 From IBM® watsonx.data version 2.0.0, a new feature is available to switch between both case-sensitive and case-insensitive behavior in Presto (Java) by using a mixed-case feature flag. The mixed-case feature flag is set to OFF in Presto (Java) by default. The flag can be set to ON or OFF as required during deployment of the Presto (Java) engine. It is advised not to toggle between ON and OFF configurations after the deployment, as it may result in inconsistent system behavior. This feature is not applicable for Presto (C++) engine.
 {: shortdesc}
 
+For more information on mixed-case feature flag behavior, supported SQL statements and supported data types matrices, see [Support content](https://www.ibm.com/support/pages/node/7157339){: external}.
+{: important}
+
 ## Mixed-case feature flag: ON
 {: #flagon_features}
 
-The following section lists the behaviors of connectors if mixed-case feature flag is set to ON:
+You can enable mixed-case identifiers (schema, table, and column names) per catalog using a global API configuration in Presto (Java). When you set the global property `enable-mixed-case-support=true`, the system automatically enables a catalog-level property `case-sensitive-name-matching=true` for all eligible catalogs.
 
-   * **General behavior for all connectors**:
+The following catalogs support the `case-sensitive-name-matching` property:
 
-     * Column names in the `SELECT` query are case-insensitive.
+- HANA
+- MySQL
+- Oracle
+- PostgreSQL
+- Amazon Redshift
+- SingleStore
+- SQL Server
+- IBM Db2
+- IBM Data Virtualization Manager
+- IBM Db2 for i
+- IBM Informix
+- IBM Netezza
+- Apache Phoenix
+- Snowflake
+- Teradata
+- Greenplum
+- Apache Derby
+- MariaDB
 
-     * While referencing the data within the `WITH` clause, it is essential to use the exact alias name (case-sensitive) assigned during its definition. Using an incorrect alias triggers the following error message: "Schema must be specified when session schema is not set."
-
-
-     * For tables that are specified using `WITH` and `USE` catalog.schema clauses, the alias name is case-sensitive. Using an incorrect alias triggers the following error message: "Table does not exist."
-
-   * **Hive**:
-
-     * The alias name is case-sensitive for `WITH` clause.
-     * When using column names in the `INSERT` query, use only lowercase.
-
-   * **Iceberg**:
-
-     * The alias name is case-sensitive for `WITH` clause.
-     * When using column names in the `INSERT` query, use only lowercase.
-
-   * **MongoDB**:
-
-     * Column names for `DELETE` statement are case-insensitive.
-
-   * **Teradata**:
-
-     * Tables with duplicate names cannot be created, regardless of the case.
-
-   * **IBM **{{site.data.keyword.netezza_short}}****:
-
-     * Tables with the same name and case cannot exist in multiple schemas that have the same name but different cases.
-
-   * **Delta Lake**:
-
-     * Schema name in `SELECT` statement is case-sensitive.
-
-   * **Amazon Redshift**:
-
-      * In the Amazon Redshift server, all the identifiers are case-sensitive if the configuration is set as:
-
-      ```bash
-         enable_case_sensitive_identifier=true
-      ```
-      {: codeblock}
-
-
-      * In the Amazon Redshift server, only lowercase identifiers are fetched if the configuration is set as:
-
-      ```bash
-         enable_case_sensitive_identifier=false
-      ```
-      {: codeblock}
-
-   * **SQL Server**:
-
-     * Enable case-sensitive collation in the SQL Server to create duplicate tables in mixed-case.
-
-   * **Apache Pinot**:
-
-     * Schema name is case insensitive irrespective of the case sensitivity of Presto (Java) engine behavior.
+Presto defaults the `case-sensitive-name-matching` configuration to `false` for all eligible catalogs.
+{: note}
 
 ## Mixed-case feature flag: OFF
 {: #flagoff_features}
 
-The following section lists the behaviors of connectors if mixed-case feature flag is set to OFF:
-
-   * **MariaDB**:
-
-     * Table and schema names should be in lowercase.
-
-   * **Greenplum**:
-
-     * Table and schema names should be in lowercase.
-
-   * **IBM {{site.data.keyword.netezza_short}}**:
-
-     * Schema name for `USE` statement is case-sensitive if you use it before `CREATE VIEW` statement.
-
-   * **Db2**:
-
-     * Schema name for `USE` statement is case-sensitive if you use it before `CREATE VIEW` statement.
-
-For more information on mixed-case feature flag behavior, supported SQL statements and supported data types matrices, see [Support content](https://www.ibm.com/support/pages/node/7157339){: external}.
-{: important}
+When `case-sensitive-name-matching=false` (the default setting), Presto (Java) converts identifiers to lowercase. This is the default behavior in Presto.
