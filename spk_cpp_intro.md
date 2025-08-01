@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-21"
+lastupdated: "2025-08-01"
 
 keywords: lakehouse, watsonx.data, Gluten
 
@@ -59,7 +59,6 @@ Gluten serves as a native engine plugin designed to accelerate Spark SQL and Dat
 
 * Smaller queries are not accelerated.
 * Catalog association is only supported for s3 object stores.
-* Gluten supports only Spark 3.4.
 
 
 * Fallbacks to JVM
