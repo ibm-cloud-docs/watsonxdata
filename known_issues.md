@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-31"
+lastupdated: "2025-08-01"
 
 keywords: lakehouse
 
@@ -50,9 +50,6 @@ The GET presto_engines API currently returns null for driver and resource_groups
 {: #known_issue22135}
 
 Unable to delete data from columns with special characters in their names, as special characters are not supported in column names within the WHERE clause.
-
-## Access control does not work for Gluten type of engines.
-{: #known_issue28900}
 
 ## Error generates after extended use of {{site.data.keyword.lakehouse_short}} Assistant
 {: #known_issue24179}
