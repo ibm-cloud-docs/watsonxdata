@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-01"
+lastupdated: "2025-08-04"
 
 keywords: lakehouse
 
@@ -30,6 +30,8 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+
 
 ## Limitations of BLOB and CLOB support in Presto
 {: #known_issue30109}
