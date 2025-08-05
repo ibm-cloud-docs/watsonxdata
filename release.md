@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-07-30"
+lastupdated: "2025-08-05"
 
 keywords: watsonxdata, release notes
 
@@ -29,9 +29,12 @@ For watsonx.data on-prem what's new, see [Release notes for watsonx.data](https:
 For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-prem Premium](https://www.ibm.com/docs/en/watsonx/watsonxdata-premium/2.2.x?topic=overview-whats-new-in-watsonxdata).
 
 
-## 31 July 2025 - Version 2.2 New Feature 1
-{: #lakehouse_30july2025}
+## 05 August 2025 - Version 2.2.0 New Feature 1 (NF1)
+{: #lakehouse_05aug2025}
 {: release-note}
+
+{{site.data.keyword.lakehouse_short}} 2.2.0 NF1 version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.2.0 NF1 release is available in your region, contact IBM Support.
+{: important}
 
 Support for BLOB and CLOB data types
 : The BLOB and CLOB data types support in {{site.data.keyword.lakehouse_short}} is now updated to align with the SQL standard, which Presto follows as a federated query engine.
@@ -82,7 +85,7 @@ New region availability
 : {{site.data.keyword.lakehouse_full}} on AWS is now available in the Mumbai region.
 
 
-## 07 July 2025 - Version 2.2 Hotfix 1
+## 07 July 2025 - Version 2.2.0 Hotfix 1
 {: #lakehouse_07july2025}
 {: release-note}
 
@@ -99,11 +102,9 @@ Use the following available tools for equivalent functionalities of the Client p
 * `cert-mgmt` – Use the [`JVM` keytool](https://www.ibm.com/docs/en/sdk-java-technology/8?topic=guide-keytool) to manage `HTTPS` certificates.
 
 
-## 11 June 2025 - Version 2.2
+## 11 June 2025 - Version 2.2.0
 {: #lakehouse_11june212}
 {: release-note}
-
-
 
 Engine and service enhancements
 
@@ -219,10 +220,6 @@ Engine and service enhancements
 ## 04 April 2025 - Version 2.1.2
 {: #lakehouse_2apr212}
 {: release-note}
-
-{{site.data.keyword.lakehouse_short}} 2.1.2 version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.1.2 release is available in your region, contact IBM Support.
-If you are currently using {{site.data.keyword.lakehouse_short}} 2.1.1 version, you can refer to the documentation, [watsonx.data 2.1.1](https://ibm.ent.box.com/s/zgw7umzibl9akxgi7vm4yxs4vyp8io6g).
-{: important}
 
 Data sources and storage enhancements
 
