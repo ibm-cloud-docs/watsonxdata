@@ -62,5 +62,4 @@ The following table shows the supported vCPU to memory size combinations.
 | ------------|-------------|
 | Apache Spark 3.4.4 | Supported |
 | Apache Spark 3.5.4 | Supported |
-| Apache Spark 4.0 | Supported |
 {: caption="Supported Spark versions" caption-side="top"}
