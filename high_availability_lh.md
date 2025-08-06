@@ -1,0 +1,138 @@
+---
+
+copyright:
+  years: 2022, 2025
+lastupdated: "2025-08-06"
+
+keywords: high availability, disaster revecory, watsonx.data
+
+subcollection: watsonxdata
+
+---
+
+
+
+{{site.data.keyword.attribute-definition-list}}
+
+
+# High availability and disaster recovery
+{: #hadr_wxd}
+
+High Availability (HA) and Disaster Recovery (DR) in {{site.data.keyword.lakehouse_full}} on IBM Cloud are designed to help ensure resilience, minimal downtime, and data protection.
+{: shortdesc}
+
+
+
+## High Availability (HA)
+{: #high-avail}
+
+{{site.data.keyword.lakehouse_full}} uses Multi-Zone Regions (MZRs) on both IBM Cloud and AWS to provide high availability. The various components of {{site.data.keyword.lakehouse_short}} are deployed in Active-Active and Active-Only setup to help ensure high availability and resilience.
+
+## Active-Active
+{: #Act-Act}
+
+In an Active-Active setup, multiple instances of a component are running simultaneously across different Availability Zones (AZs). These instances are load balanced and can handle requests in parallel.
+
+**Key characteristics**:
+
+* Redundancy - If one instance or AZ fails, others continue to serve traffic without interruption.
+* Load distribution - Traffic is distributed across all active instances, improving performance and reducing latency.
+* Automatic failover - No manual intervention is needed; the system reroutes traffic automatically.
+
+**Benefits**:
+
+* High fault tolerance.
+* Seamless user experience during zone failures.
+* Better resource usage.
+
+In {{site.data.keyword.lakehouse_short}} most of the components are deployed in Active-Active setup with replicas in multiple zones to help ensure continuous availability. For example, Metadata Services (MDS) in the Enterprise plan.
+
+
+
+## Active-Only
+{: #Act-Oly}
+
+In an Active-Only setup, a component runs in only one Availability Zone at a time. If that zone fails, the component must be restarted or redeployed in another zone.
+
+**Key characteristics**:
+
+* Single active instance per component.
+* Automatic restart in a new zone upon failure.
+* Slight delay during failover due to restart time.
+
+**Benefits**:
+
+* Simpler architecture.
+* Reduced resource consumption.
+* Resilience with a brief downtime during failover.
+
+In {{site.data.keyword.lakehouse_short}}, single-tenant components are deployed in Active-Only setup. These single-tenant components, which include Presto engine and metastore components, are strategically distributed across three AZs for capacity and failover. These components restart in a new zone during failure. For example, Metadata Services (MDS) in the Lite plan.
+
+
+
+**In Multi-Zone Regions (MZRs), Presto and MDS are distributed across different zones.**
+
+When a single availability zone fails in an MZR, or a hardware failure occurs in any region, the workloads automatically fail and restart in other zones within that region. Every {{site.data.keyword.lakehouse_short}} instance comes with a default cross-regional Metadata bucket and an optional Trial bucket(10 GB). Both the buckets are enabled with IBM Cloud® Object Storage Versioning. The data is backed up by enabling replication to a separate IBM Cloud Object Storage Account. However, for any external bucket that the customer brings into {{site.data.keyword.lakehouse_short}} instance, the customer is responsible for those backups.
+
+In a regional disaster, you receive an email that includes all the steps that you need to follow. See responsibilities for {{site.data.keyword.lakehouse_short}}.
+Single-tenant components operate on an 'Active Only' model, ensuring immediate restart on new nodes that provide the same service if there is a failure.
+
+Single-tenant components are strategically distributed across 3 AZs to enhance reliability. When an AZ fails, sufficient capacity to initiate the required services on the available AZs is ensured. This minimizes any impact that is caused by an AZ outage.
+
+
+## Responsibilities
+{: #resplty}
+
+| Task  |IBM Responsibilities |Your Responsibilities|
+|---|---|---|
+| Backups |{{site.data.keyword.lakehouse_short}} is responsible for automatic daily backups, of all {{site.data.keyword.lakehouse_short}} provided resources. |**The Client is responsible for:** **1)** Create a new instance of IBM {{site.data.keyword.lakehouse_short}} to restore the backups and validate that the IBM backups that are restored properly. **2)** Restore backups of external components that they brought into {{site.data.keyword.lakehouse_short}}.
+|  Restore |{{site.data.keyword.lakehouse_short}} handles the restoration of backups for provided resources.   |**The Client is responsible for:** **1)** Create a new instance of {{site.data.keyword.lakehouse_short}} to restore the backups and validate that the IBM backups that are restored properly. **2)** Restore backups of external components that they brought into {{site.data.keyword.lakehouse_short}}.|
+{: caption="Responsibilities" caption-side="bottom"}
+
+## Application-level high availability
+{: #appl-ha}
+
+Applications that communicate over networks and cloud services are subject to transient connection failures. Design your applications to retry connections when a temporary loss in connectivity to your deployment or to IBM Cloud, causes errors. As {{site.data.keyword.lakehouse_short}} is a managed service, regular updates and maintenance occur as part of normal operations. Such maintenance occasionally causes a temporary service interruption.
+
+Your applications must be designed to handle temporary interruptions to the service, implement error handling for failed commands, and implement retry logic to recover from a temporary interruption.
+
+**The following are some of the error codes that might be expected during the temporary service interruptions:**
+
+If a Presto coordinator node restarts, be it for maintenance purposes or due to a system failure, applications are required to reestablish their connection with the Presto engine.
+
+Several minutes of unavailability or connection interruptions are not expected. Open a support ticket with details if you have time periods longer than a minute with no connectivity so that the interruptions are investigated.
+
+## Disaster Recovery Strategy
+{: #diastr_rec_str}
+
+{{site.data.keyword.lakehouse_full}} provides mechanisms to protect your data and restore service functions. Business continuity plans are in place to achieve targeted recovery point objective (RPO) and recovery time objective (RTO) for the service. The following table outlines the targets for {{site.data.keyword.lakehouse_short}}.
+
+| Disaster recovery objective   | Target Value |
+|-------------------------------|:------------:|
+| RPO                           |  <= 24 hours |
+| RTO                           |  < 24 hours  |
+{: caption="Disaster Recovery Strategy" caption-side="bottom"}
+
+The backup interval is reduced for the service Milvus in SaaS to improve the restore RPO from 24 hours to 2 hours.
+{: note}
+
+## Locations
+{: #locations}
+
+### AWS Regions
+{: #aws_regns}
+
+1. Oregon (us-west-2)
+2. N. Virginia (us-east-1)
+3. Frankfurt (eu-central-1)
+4. Tokyo (jp-tok)
+
+### IBM Regions
+{: #ibm_regns}
+
+1. Dallas (us-south)
+2. Washington (us-east)
+3. Frankfurt (eu-de)
+4. London (eu-gb)
+5. Tokyo (jp-tok)
+6. Sydney (au-syd)
