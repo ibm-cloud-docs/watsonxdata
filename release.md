@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-07-08"
+lastupdated: "2025-08-05"
 
 keywords: watsonxdata, release notes
 
@@ -26,20 +26,85 @@ For watsonx.data as a Service on IBM Cloud with gen AI experience what's new, se
 
 For watsonx.data on-prem what's new, see [Release notes for watsonx.data](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.2.x?topic=overview-whats-new-in-watsonxdata).
 
-For watsonx.data on-prem Premium what's new, see [Release notes for on-prem Premium](https://www.ibm.com/docs/en/watsonx/watsonxdata-premium/2.2.x?topic=overview-whats-new-in-watsonxdata).
+For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-prem Premium](https://www.ibm.com/docs/en/watsonx/watsonxdata-premium/2.2.x?topic=overview-whats-new-in-watsonxdata).
 
 
-## 07 July 2025 - Version 2.2 Hotfix 1
+## 05 August 2025 - Version 2.2.0 New Feature 1 (NF1)
+{: #lakehouse_05aug2025}
+{: release-note}
+
+{{site.data.keyword.lakehouse_short}} 2.2.0 NF1 version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.2.0 NF1 release is available in your region, contact IBM Support.
+{: important}
+
+Support for BLOB and CLOB data types
+: The BLOB and CLOB data types support in {{site.data.keyword.lakehouse_short}} is now updated to align with the SQL standard, which Presto follows as a federated query engine.
+
+   Read support:
+   BLOBs and CLOBs can be read from JDBC-based federated systems. When read, they are mapped as follows:
+   * BLOB to VARBINARY
+   * CLOB to VARCHAR
+
+   Write support:
+   Writing BLOB and CLOB data is also supported and are treated as follows:
+   * VARBINARY for binary data
+   * VARCHAR for character data
+
+   Create table support:
+   You cannot use BLOB or CLOB as column types when creating new tables. Only VARBINARY and VARCHAR are supported for such use cases.
+
+Engine version upgrade
+: The Presto (Java) and Presto (C++) engines are now upgraded to version 0.294.
+
+Connecting to watsonx BI
+: You can now connect {{site.data.keyword.lakehouse_short}} with IBM watsonx BI to directly access data available in different data sources, making it easier for data scientists and data analysts to use the data. For information about connecting to watsonx BI, see [Integrating with watsonx BI](/docs/watsonxdata?topic=watsonxdata-wxbi_intro).
+
+Lite plan enhancement
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following Lite plan enhancements:
+
+   * Serverless Spark engine for Lite plan: The Spark engine in the watsonx.data Lite plan instance operates in a serverless model. You can now run Spark jobs on a server less platform, eliminating the need for dedicated nodes for each Spark engine. The serverless Spark allows a maximum resource quota limit of 8 vCPU×32 GB, where the users can access a shared pool of nodes. The Spark runtimes are scheduled on any available nodes in the data plane rather than a dedicated node. For information about how to provision a Lite plan instance and to create a Spark engine in it, see [Provisioning a serverless Spark engine for Lite plan](/docs/watsonxdata?topic=watsonxdata-serv_spl_engine).
+
+   * A new Lite size configuration is introduced for the Presto (Java) engine, offering a single-node deployment setup for experimentation and early-stage development purposes. The Lite Presto (Java) engine is available only in {{site.data.keyword.lakehouse_short}} Lite plan instances. For more information, see [Provisioning a Presto (Java) engine](/docs/watsonxdata?topic=watsonxdata-prov_engine).
+
+Ingestion enhancement
+
+: This release of {{site.data.keyword.lakehouse_short}} includes the following Ingestion enhancement:
+
+   The .txt file format is now accepted for data ingestion. This enhancement expands the flexibility allowing users to seamlessly upload plain text files alongside existing supported formats.
+
+Service enhancements
+: You can now configure **Query timeout** using two settings: **Maximum query execution time** and **Query client timeout**. For more information see [Managing user settings in {{site.data.keyword.lakehouse_short}}: Session timeout, Query timeout, and Login message settings](/docs/watsonxdata?topic=idle_session_timeout)
+
+## 11 July 2025
+{: #lakehouse_11july2025}
+{: release-note}
+
+A new version of {{site.data.keyword.lakehouse_full}} was released on 11 July, 2025 with the following change:
+
+New region availability
+
+: {{site.data.keyword.lakehouse_full}} on AWS is now available in the Mumbai region.
+
+
+## 07 July 2025 - Version 2.2.0 Hotfix 1
 {: #lakehouse_07july2025}
 {: release-note}
 
 Version 2.2 hotfix of watsonx.data was released on 07 July, 2025. This release includes security updates and fixes.
 
-## 11 June 2025 - Version 2.2
+Deprecated features
+
+: The IBM Client package is deprecated and shall be removed from the 2.2.2 release. The utilities and commands in the Client package are replaced with IBM CPDCTL CLI. Users are encouraged to migrate and explore CPDCTL. For more information about how to use IBM CPDCTL CLI, see [IBM cpdctl](/docs/watsonxdata?topic=watsonxdata-cpdctl_title).
+
+Use the following available tools for equivalent functionalities of the Client package:
+
+* `python-run` / `dev-sandbox` – Use the standard Python environment to develop and run Spark scripts.
+* `presto-run` / Presto CLI – Use the official [Presto CLI](https://prestodb.io/docs/current/installation) to run SQL queries against watsonx.data.
+* `cert-mgmt` – Use the [`JVM` keytool](https://www.ibm.com/docs/en/sdk-java-technology/8?topic=guide-keytool) to manage `HTTPS` certificates.
+
+
+## 11 June 2025 - Version 2.2.0
 {: #lakehouse_11june212}
 {: release-note}
-
-
 
 Engine and service enhancements
 
@@ -107,7 +172,6 @@ Data sources and storage enhancements
    * Azure Data Lake Storage
    * Apache Ozone
 
-
 Access management enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following access management enhancements:
@@ -156,10 +220,6 @@ Engine and service enhancements
 ## 04 April 2025 - Version 2.1.2
 {: #lakehouse_2apr212}
 {: release-note}
-
-{{site.data.keyword.lakehouse_short}} 2.1.2 version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.1.2 release is available in your region, contact IBM Support.
-If you are currently using {{site.data.keyword.lakehouse_short}} 2.1.1 version, you can refer to the documentation, [watsonx.data 2.1.1](https://ibm.ent.box.com/s/zgw7umzibl9akxgi7vm4yxs4vyp8io6g).
-{: important}
 
 Data sources and storage enhancements
 

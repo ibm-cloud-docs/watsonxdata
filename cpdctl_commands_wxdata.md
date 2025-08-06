@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-26"
+lastupdated: "2025-07-10"
 
 keywords: lakehouse, cpdctl, watsonx.data, supporting commands, wx-data
 
@@ -212,7 +212,7 @@ The `sparkjob` command further supports the following commands:
 | `./cpdctl wx-data sparkjob get` | Get the status of a Spark application. |
  {: caption="Supported commands by sparkjob" caption-side="bottom"}
 
-For more information about how to perform Spark table maintenance by using IBM cpdctl in {{site.data.keyword.lakehouse_short}} on IBM Software Hub, see [Spark table maintenance](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=engine-spark-table-maintenance-by-using-cpdctl) and for watsonx.data on IBM Cloud, see [Spark table maintenance](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-table-run_samp_file).
+For more information about how to Submit Spark application by using IBM cpdctl in {{site.data.keyword.lakehouse_short}} on IBM Cloud, see [Submitting Spark application by using IBM cpdctl](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-table-run_samp_file).
 
 ## tablemaint
 {: #cpdctl_commands_tabmaint}
@@ -250,6 +250,9 @@ The following flags are listed when you run each table maintenance command:
    * Force : If the value is set to TRUE, the SQL query that you are going to run will be printed.
 
    * Debug : If the value is set to TRUE, a copy of the Spark application file is stored to our computer.
+
+For more information about perform Iceberg table maintenance operations by using IBM cpdctl in {{site.data.keyword.lakehouse_short}} on IBM Cloud, see [Spark table maintenance](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-nsp_cpdctl).
+
 
 ## service
 {: #cpdctl_commands_wxdatasvce}

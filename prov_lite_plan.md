@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2025-07-29"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -32,8 +32,8 @@ Provisioning a Lite plan instance is use case driven. The watsonx.data instance 
 * **High Performance BI** : Data engineers can explore BI visualization functionalities using this option. The provisioned instance includes Presto (C++), Spark, Query Optimizer, a read-only sample IBM COS storage that is associated to the Presto engine, and `tpcds` is available as the sample worksheet for benchmarking.
 * **Data Engineering** : Data engineers can explore various workload driven use cases using this option. The provisioned instance includes Presto (Java), Spark, a read-only sample IBM COS storage that is associated to the Presto engine, and sample worksheet with `GoSales` data in it.
 
-
 After provisioning the Lite plan instance, you can monitor the resource unit usage from the **Billing and Usage** page available in the watsonx.data console. For more information, see [Billing and Usage](/docs/watsonxdata?topic=watsonxdata-manage_bill).
+
 
 Only one active Lite plan instance is allowed for IBM Cloud trial or paid account users. However, if the existing Lite plan instance is deleted before consuming the 2000 RUs, a new instance can be created and the remaining RUs can be consumed. Paid account users can create multiple Lite plan instances in different [resource groups](https://cloud.ibm.com/docs/account?topic=account-rgs&interface=ui). If the account has multiple Lite instances active at the same time, the resource unit consumption for the account will be the sum of resource units consumed by each individual instance.
 
@@ -101,6 +101,12 @@ Perform the following steps to provision a Lite plan instance:
 
 
 1. Click **Create**. The **Preparing watsonx.data** page opens that displays the progress. The {{site.data.keyword.lakehouse_short}} Console opens after provisioning is complete.
+
+
+The Lite plan is limited to a maximum of one Presto engine, one Spark engine (small size, single node) or Milvus service with starter size (1.25 RUs per hour) or all three. You must delete the existing one to add a new one from **Infrastructure manager > Add components**.
+
+You can have only one active Spark engine in the {{site.data.keyword.lakehouse_short}} instance. To set up a new Spark engine, you must first remove the existing one and then provision a new one. For information about how to provision a serverless Spark engine, see [Provisioning a serverless Spark engine](/docs/watsonxdata?topic=watsonxdata-serv_spl_engine).
+{: note}
 
 
 

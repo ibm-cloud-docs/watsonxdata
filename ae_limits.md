@@ -2,9 +2,9 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-02-24"
+lastupdated: "2025-07-21"
 
-subcollection: AnalyticsEngine
+subcollection: watsonxdata
 
 ---
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2025-07-31"
 
 keywords: lakehouse, MDS, {{site.data.keyword.lakehouse_short}}, hive, metastore
 
@@ -56,6 +56,8 @@ To sync tables from {{site.data.keyword.lakehouse_short}}, the following items a
 
 1. Only users with administrator privilege is allowed to run `ExecuteWxdQueryOptimizer` command as a security enhancement feature.
 
+1. If the session parameter `is_query_rewriter_plugin_enabled` is set to `false`, you will not be able to execute the `ExecuteWxdQueryOptimizer` commands.
+
 ## Procedure
 {: #optimizer_prosync}
 
@@ -97,7 +99,7 @@ To sync tables from {{site.data.keyword.lakehouse_short}}, the following items a
    When synchrnization is completed, the output displays the list of synced tables. The total count of synced tables must be double the number of tables within the catalog or schema. This is because, each table are synced two times. Once from the external metastore to the local metastore, and then from the local metastore to the Db2 catalog.
    {: note}
 
-   This sync command might experience timeouts. However, the underlying sync process usually completes successfully within a short period. Verify the sync operation in a few minutes by following the procedure in [Verifying table sync in watsonx.data](/docs/watsonxdata?topic=watsonxdata-sync_optimizer_verify).
+   Verify the sync operation in a few minutes by following the procedure in [Verifying table sync in watsonx.data](/docs/watsonxdata?topic=watsonxdata-sync_optimizer_verify).
    {: note}
 
 6. Identify the list of catalogs and schemas in watsonx.data that you require for **Query Optimizer**.

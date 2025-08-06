@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-12"
+lastupdated: "2025-07-24"
 
 keywords: Spark, query, server,JDBC, Driver
 
@@ -29,8 +29,8 @@ You can connect to the Spark query server in the following ways and execute quer
 
 1. Install watsonx.data.
 1. Provision native Spark engine in watsonx.data.
-1. JDBC Driver: `queryserver-jdbc-4.1.0-SNAPSHOT-standalone.jar`. Contact IBM Support team to get the file.
-1. Run the Spark Query Server in Spark engine. To create a new Query Server, see Create a Spark query server.
+1. Download the JDBC client: `queryserver-jdbc-SNAPSHOT-standalone.jar` from the [Download](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.2.x?topic=wsqs-connecting-spark-query-server-by-using-spark-jdbc-driver#concept_kkt_pzb_5cc__title__2) link.
+1. Run the Spark Query Server in Spark engine. To create a new Query Server, see [Create a Spark query server](/docs/watsonxdata?topic=watsonxdata-spk_qry_srver#crt_spk_qry_srver).
 1. Connection properties - Click the three-dot menu for Query Server, click **Connection Details** and copy the following connection details:
    * Host
    * URI
@@ -65,7 +65,7 @@ To connect to the Spark query server using a JDBC client, such as DBeaver, set u
 
 Ensure your Java CLASSPATH includes the downloaded JDBC driver. For example:
 
-`java -cp queryserver-jdbc-4.1.0-SNAPSHOT-standalone.jar App.java`
+`java -cp queryserver-jdbc-SNAPSHOT-standalone.jar App.java`
 
 You can specify the following parameters and use the following Java code to connect to the Spark query server.
 
@@ -140,7 +140,7 @@ To connect to the Spark query server using a Python program, do the following:
 
 1. Ensure you have Python version 3.12 or below.
 
-1. Install pyHive using pip install PyHive[hive_pure_sasl]==0.7.0".
+1. Install pyHive using `pip install thrift "PyHive[hive_pure_sasl]==0.7.0"`.
 
 1. Save the follow in a file like `connect.py`.
 

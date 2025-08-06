@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-07-05"
+lastupdated: "2025-07-11"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -18,7 +18,7 @@ subcollection: watsonxdata
 **Applies to** : [Spark engine]{: tag-blue}
 
 
-You can perform Iceberg table maintenance operations by submitting a Spark application with the help of IBM Cloud Pak for Data Command Line Interface (IBM `cpdctl`). The `sparkjob` utility available in the IBM `cpdctl` allows you to submit, list and get the details of a Spark application.
+You can use IBM Cloud Pak for Data Command Line Interface (IBM `cpdctl`) to submit a Spark application in {{site.data.keyword.lakehouse_short}}. The `sparkjob` utility available in the IBM `cpdctl` allows you to submit, list and get the details of a Spark application.
 {: shortdesc}
 
 
@@ -30,42 +30,32 @@ You can perform Iceberg table maintenance operations by submitting a Spark appli
 * Configure the watsonx.data environment in IBM cpdctl. For information, see [Configure IBM cpdctl](https://www.ibm.com/docs/SSDZ38_2.1.x/wxd-client/topics/cpdctl-title.html).
 
 
-## Submitting a Spark application
+## Procedure
 {: #table-spk_sbmtapp}
 
-You can submit a Spark application that involves the following table maintenance activities by using IBM `cpdctl`.
+This section details the procedure to submit a Spark application.
+You can create your own Spark application or use the [sample file](#pth_file) available in this topic as reference. The [sample file](#pth_file) is used to perform [Iceberg table maintenance operations](https://iceberg.apache.org/docs/1.8.0/spark-procedures/) using `sparkjob`.
 
-* Snapshot management
-
-   * rollback_to_snapshot - Roll back a table to a specific snapshot ID.
-   * rollback_to_timestamp - Roll back the table to a snapshot at a specific day and time.
-   * set_current_snapshot - Sets the current snapshot ID for a table.
-   * cherrypick_snapshot - Cherry-picks changes from a snapshot into the current table state.
-
-* Metadata management
-
-   * expire_snapshots - Remove older snapshots and their files that are no longer needed.
-   * remove_orphan_files - Used to remove files that are not referenced in any metadata files of an Iceberg table.
-   * rewrite_data_files - Combines small files into larger files to reduce metadata overhead and runtime file open cost.
-   * rewrite_manifests - Rewrite manifests for a table to optimize scan planning.
-
-* Table Migration
-
-   * register_table - Creates a catalog entry for a metadata.json file that exists but does not have a corresponding catalog identifier.
+To automatically perform the table maintenance operation, see [Table maintenance operations](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata#cpdctl_commands_tabmaint).
+{: note}
 
 
-### Procedure
-{: #table-spk_sbmpro}
+
 
 1. Save the sample [Python file](#pth_file) to a Cloud Object Storage location. You must save the following details of the storage, which is required at the time of submitting the application.
 
    You can also provide the path to the file if it is saved in your computer. Specify the local path in the `local-path` field.
 
-   The Python file includes commands for the different table maintenance operations. You can uncomment the required section based on your use case scenario. For the use case that involves catalog and schema, customize the catalog_name, schema_name and table_name in the Python file.
+   The Python file includes commands for the different table maintenance operations. You can uncomment the required section based on your use case scenario. For the use case that involves catalog and schema, customize the catalog_name, schema_name and table_name in the Python file. Also, to customize and use a different query format for table maintenance operations, see [Iceberg procedures](https://iceberg.apache.org/docs/1.8.0/spark-procedures/).
    {: note}
 
 
    * `<Path>` : The path of the storage where the Spark application is saved.
+
+   You must manually save the Python file to a Cloud Object Storage location before using the `<Path>` variable.
+   {: note}
+
+
    * `<Bucket_Name>` : The name of the Cloud Object Storage storage where the Spark application resides. This storage must be available in the instance and should be associated with the Spark engine.
    * `<Spark_File_Name>` : The name of the Python file.
    * `<BUCKET_ENDPOINT>` : Public endpoint of the Cloud Object Storage storage containing Spark file.
@@ -211,6 +201,3 @@ if __name__ == '__main__':
 
 ```
 {: codeblock}
-
-You must manually save the above Python file to a Cloud Object Storage location.
-{: note}

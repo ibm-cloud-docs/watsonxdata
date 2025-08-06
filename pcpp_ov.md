@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-07-02"
+lastupdated: "2025-07-29"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -18,7 +18,7 @@ Presto (C++) is a version of Presto workers that are implemented in C++ instead 
 
 Presto (C++) aims to enhance performance for data lakes without requiring a JVM on worker nodes. It supports several connectors, including Hive and Iceberg, and focuses on improved integration with data warehousing systems.
 
-{{site.data.keyword.lakehouse_full}} uses version **0.288** of Presto (C++).
+{{site.data.keyword.lakehouse_full}} uses version **0.294** of Presto (C++).
 
 For more information about provisioning the engine, see [Provisioning a Presto (C++) engine](/docs/watsonxdata?topic=watsonxdata-pcpp_prov).
 

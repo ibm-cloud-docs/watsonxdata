@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-25"
+lastupdated: "2025-07-29"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -40,9 +40,9 @@ Following are some of the requirements or behavior of data ingestion:
 * The target table must be an iceberg format table.
 * IBM Storage Ceph, IBM Cloud Object Storage (COS), AWS S3, and MinIO object storage are supported.
 * `pathStyleAccess` property for object storage is not supported.
-* Parquet, CSV, JSON, ORC, and AVRO file formats are supported as source data files.
+* .txt, .csv, Parquet, JSON, ORC, and Avro. file formats are supported as source data files.
 * The maximum limit for the cumulative size of files must be within 500 MB for local ingestion.
-* Parquet, JSON, AVRO, and ORC files exceeding 2 MB cannot be previewed, but they will still be ingested successfully.
+* Parquet, JSON, ORC, and Avro. files exceeding 2 MB cannot be previewed, but they will still be ingested successfully.
 * JSON files with complex nested objects and arrays shall not be previewed in the UI.
 * Complex JSON files shall be ingested as-is, resulting in arrays as table entries. This is not recommended for optimal data visualization and analysis.
 * Keys within JSON files must be enclosed in quotation marks for proper parsing and interpretation.
@@ -52,7 +52,10 @@ Following are some of the requirements or behavior of data ingestion:
 
 An ingestion job in {{site.data.keyword.lakehouse_short}} can be run with the **ibm-lh** tool. The tool must be pulled from the `ibm-lh-client` and installed in the local system to run the ingestion job through the CLI. For more details and instructions to install `ibm-lh-client` package and use the **ibm-lh** tool for ingestion, see [Installing ibm-lh-client](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=package-installing-lh-client){: external} and [Setting up the ibm-lh command-line utility](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=wlcp-establishing-connection-watsonxdata-using-lh-client-package-utilities){: external}.
 
-The **ibm-lh** tool supports the following features:
+`ibm-lh-client` in IBM Client package is now deprecated and shall be removed in a future release. The **ibm-lh** tool is replaced with `./cpdctl wx-data ingestion` supported in the IBM CPDCTL CLI. For more information about how to use IBM CPDCTL CLI, see [IBM cpdctl](/docs/watsonxdata?topic=watsonxdata-cpdctl_title).
+
+
+The **ibm-lh** tool and `./cpdctl wx-data ingestion`command supports the following features:
 
 - Auto-discovery of schema based on the source file or target table.
 - Advanced table configuration options for the CSV files:

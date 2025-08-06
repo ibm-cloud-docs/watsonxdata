@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-02-11"
+  years: 2022, 2025
+lastupdated: "2025-07-29"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -56,7 +56,8 @@ To provision a Presto (Java) engine, complete the following steps.
    | Type | Select the **Presto (Java) (version)** engine from the list. |
    | Display name   | Enter your compute engine name.  |
    | Configuration mode | **Standard:** Select **Standard** for predefined engine sizes:  |
-   |    |  **Starter**: Includes 1 coordinator node and 1 worker node, both starter.  |
+   |    |  **Lite**: Includes 1 coordinator node. **Note**: The Presto (Java) Lite mode is available only in {{site.data.keyword.lakehouse_short}} Lite plan. |
+   |    |  **Starter**: Includes 1 coordinator node and 1 worker node, both starter. **Note**: The Starter mode is not available for a Presto (Java) engine in {{site.data.keyword.lakehouse_short}} Lite plan.   |
    |    |  **Small**: Includes 1 coordinator node and 3 worker nodes, all cache-optimized.  |
    |    |  **Medium**: Includes 1 coordinator node and 6 worker nodes, all cache-optimized.  |
    |    |  **Large**: Includes 1 coordinator node and 12 worker nodes, all cache-optimized.  |

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-12-02"
+  years: 2022, 2025
+lastupdated: "2025-08-06"
 
 keywords: high availability, disaster revecory, watsonx.data
 
@@ -18,18 +18,57 @@ subcollection: watsonxdata
 # High availability and disaster recovery
 {: #hadr_wxd}
 
-{{site.data.keyword.lakehouse_full}} service instances are deployed in IBM Cloud multi-zone region (MZR) and AWS MZR . The availability of {{site.data.keyword.lakehouse_short}} components is Active-Active and Active-Only.
+High Availability (HA) and Disaster Recovery (DR) in {{site.data.keyword.lakehouse_full}} on IBM Cloud are designed to help ensure resilience, minimal downtime, and data protection.
 {: shortdesc}
+
+
+
+## High Availability (HA)
+{: #high-avail}
+
+{{site.data.keyword.lakehouse_full}} uses Multi-Zone Regions (MZRs) on both IBM Cloud and AWS to provide high availability. The various components of {{site.data.keyword.lakehouse_short}} are deployed in Active-Active and Active-Only setup to help ensure high availability and resilience.
 
 ## Active-Active
 {: #Act-Act}
 
-Multi-tenant components support multiple customers and are configured with multiple replicas across Availability Zones (AZs) to ensure availability. This category consists of most of the {{site.data.keyword.lakehouse_short}} components. MDS is Active-Active in Enterprise plan.
+In an Active-Active setup, multiple instances of a component are running simultaneously across different Availability Zones (AZs). These instances are load balanced and can handle requests in parallel.
+
+**Key characteristics**:
+
+* Redundancy - If one instance or AZ fails, others continue to serve traffic without interruption.
+* Load distribution - Traffic is distributed across all active instances, improving performance and reducing latency.
+* Automatic failover - No manual intervention is needed; the system reroutes traffic automatically.
+
+**Benefits**:
+
+* High fault tolerance.
+* Seamless user experience during zone failures.
+* Better resource usage.
+
+In {{site.data.keyword.lakehouse_short}} most of the components are deployed in Active-Active setup with replicas in multiple zones to help ensure continuous availability. For example, Metadata Services (MDS) in the Enterprise plan.
+
+
 
 ## Active-Only
 {: #Act-Oly}
 
-Single-tenant components in this category are dedicated to a single customer. This category consists of the Presto engine and metastore. These components restart in a new zone during failure. MDS is Active-Only in Lite plan.
+In an Active-Only setup, a component runs in only one Availability Zone at a time. If that zone fails, the component must be restarted or redeployed in another zone.
+
+**Key characteristics**:
+
+* Single active instance per component.
+* Automatic restart in a new zone upon failure.
+* Slight delay during failover due to restart time.
+
+**Benefits**:
+
+* Simpler architecture.
+* Reduced resource consumption.
+* Resilience with a brief downtime during failover.
+
+In {{site.data.keyword.lakehouse_short}}, single-tenant components are deployed in Active-Only setup. These single-tenant components, which include Presto engine and metastore components, are strategically distributed across three AZs for capacity and failover. These components restart in a new zone during failure. For example, Metadata Services (MDS) in the Lite plan.
+
+
 
 **In Multi-Zone Regions (MZRs), Presto and MDS are distributed across different zones.**
 

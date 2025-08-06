@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-04"
+lastupdated: "2025-08-06"
 
 keywords: lakehouse
 
@@ -31,13 +31,32 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
+
+
+## Limitations of BLOB and CLOB support in Presto
+{: #known_issue30109}
+
+Presto can read from and write to connectors that include tables with `BLOB` and `CLOB` columns. However, it does not support using `BLOB` or `CLOB` as column data types in `CREATE TABLE` statements.
+
+## Delay in enforcement of access control policies in Milvus
+{: #known_issue32252}
+
+There is a delay between the creation of access control policies and their enforcement within Milvus. This delay occurs due to the time required for policy synchronization.
+
+## SQL views cannot be queried across engines(Spark and Presto)
+{: #known_issue20697}
+
+SQL views created by an engine with Hive iceberg catalog are recognised by other engines, but cannot be queried across engines, as one engine cannot understand the SQL dialect of another engine.
+
+## Driver and resource group details missing in Tiny Presto API response
+{: #known_issue30105}
+
+The GET presto_engines API currently returns null for driver and resource_groups when querying Tiny Presto engines, as the new architecture omits driver details from `get_presto_engine` calls; however, existing users can still access driver information through the `/driver_registration` endpoint.
+
 ## Unable to delete data from columns with special characters in their names
 {: #known_issue22135}
 
 Unable to delete data from columns with special characters in their names, as special characters are not supported in column names within the WHERE clause.
-
-## Access control does not work for Gluten type of engines.
-{: #known_issue28900}
 
 ## Error generates after extended use of {{site.data.keyword.lakehouse_short}} Assistant
 {: #known_issue24179}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2025-08-01"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -37,6 +37,7 @@ This topic provides details to verify that all expected tables have been success
 1. Install and activate **Query Optimizer** in {{site.data.keyword.lakehouse_short}}. See [Activating Query Optimizer Manager](/docs/watsonxdata?topic=watsonxdata-install_optimizer).
 1. Names of catalogs and schemas for the tables being synced must be known.
 1. The expected number of tables within each schema must be known.
+1. If the session parameter `is_query_rewriter_plugin_enabled` is set to `false`, you will not be able to execute the `ExecuteWxdQueryOptimizer` commands.
 
 ## Procedure
 {: #sync_optimizer_verifyprcdre}
@@ -48,7 +49,7 @@ This topic provides details to verify that all expected tables have been success
 1. Run the following command to retrieve a list of potential schema names:
 
    ```bash
-   ExecuteWxdQueryOptimizer 'select distinct tabschema from syscat.tables where UPPER(tabschema) like '%SAMPLE_DATA%' ';
+   ExecuteWxdQueryOptimizer 'select distinct tabschema from syscat.tables where UPPER(tabschema) like '%SAMPLE_DATA%'';
    ```
    {: codeblock}
 
@@ -59,14 +60,14 @@ This topic provides details to verify that all expected tables have been success
    a. Run this command to count the number of tables within the specified schema:
 
       ```bash
-      ExecuteWxdQueryOptimizer select count(1) from syscat.tables where tabschema = 'catalog.schema';
+      ExecuteWxdQueryOptimizer 'select count(1) from syscat.tables where tabschema = 'catalog.schema'';
       ```
       {: codeblock}
 
       For example:
 
       ```bash
-      ExecuteWxdQueryOptimizer select count(1) from syscat.tables where tabschema = 'sample_data.TPCDS_10GB';
+      ExecuteWxdQueryOptimizer 'select count(1) from syscat.tables where tabschema = 'sample_data.TPCDS_10GB'';
       ```
       {: codeblock}
 
@@ -82,14 +83,14 @@ This topic provides details to verify that all expected tables have been success
 1. Run the following query to check table statistics (such as cardinality):
 
    ```bash
-   ExecuteWxdQueryOptimizer 'select tabname, card from syscat.tables where tabschema = 'catalog.schema' ';
+   ExecuteWxdQueryOptimizer 'select tabname, card from syscat.tables where tabschema = 'catalog.schema'';
    ```
    {: codeblock}
 
    For example:
 
       ```bash
-      ExecuteWxdQueryOptimizer 'select tabname, card from syscat.tables where tabschema = 'sample_data.TPCDS_10GB';
+      ExecuteWxdQueryOptimizer 'select tabname, card from syscat.tables where tabschema = 'sample_data.TPCDS_10GB'';
       ```
       {: codeblock}
 

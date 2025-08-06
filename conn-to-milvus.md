@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-03"
+lastupdated: "2025-07-11"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -148,7 +148,6 @@ You can connect to a Milvus service by using API key or IAM token.
     --url "https://<proxy-host>:<port>/v2/vectordb/collections/list" \
     --header "Authorization: Basic $(echo -n 'user:password' | base64)" \
     --header "Content-Type: application/json" \
-    --cacert <cert-path> \
     -d '{
         "dbName": "default"
     }'
@@ -163,8 +162,11 @@ You can connect to a Milvus service by using API key or IAM token.
     --header 'accept: application/json' \
     --header "Authorization: Basic $(echo -n 'ibmlhapikey:<value of api key>' | base64)" \
     --header 'Content-Type: application/json'
+    -d '{
+        "dbName": "default"
+    }'
     ```
-    {: codeblock}
+    {: screen}
 
 As of watsonx.data version 2.2, it is recommended to use the API version v2/. The API version v1/ might be deprecated and removed in a future release.
 {: note}

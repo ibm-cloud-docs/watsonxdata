@@ -30,13 +30,14 @@ toc:
           - mixed_case_overview.md
           - resource_grp_ov.md
           - integration.md
-          - manta_overview.md
+          - manta_overview.md 
       - release.md
       - topicgroup:
           label: Provisioning watsonx.data
           topics:
           - prov_wxd.md
           - prov_lite_plan.md
+          - prov_spk_lite.md
           - getting-started.md
   - navgroup:
       id: tutorial
@@ -355,6 +356,7 @@ toc:
             - power_bi.md
             - cognos.md
       - manta_integrate.md
+      - ripasso.md
       - topicgroup:
           label: Workload Orchestration
           topics:
