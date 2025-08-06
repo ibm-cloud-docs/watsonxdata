@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-04"
+lastupdated: "2025-08-06"
 
 keywords: lakehouse
 
@@ -38,7 +38,12 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 Presto can read from and write to connectors that include tables with `BLOB` and `CLOB` columns. However, it does not support using `BLOB` or `CLOB` as column data types in `CREATE TABLE` statements.
 
-## SQL views cannot be queried across engines(Spark/Presto)
+## Delay in enforcement of access control policies in Milvus
+{: #known_issue32252}
+
+There is a delay between the creation of access control policies and their enforcement within Milvus. This delay occurs due to the time required for policy synchronization.
+
+## SQL views cannot be queried across engines(Spark and Presto)
 {: #known_issue20697}
 
 SQL views created by an engine with Hive iceberg catalog are recognised by other engines, but cannot be queried across engines, as one engine cannot understand the SQL dialect of another engine.
