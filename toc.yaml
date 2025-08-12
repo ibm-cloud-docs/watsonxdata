@@ -30,7 +30,7 @@ toc:
           - mixed_case_overview.md
           - resource_grp_ov.md
           - integration.md
-          - manta_overview.md 
+          - manta_overview.md
       - release.md
       - topicgroup:
           label: Provisioning watsonx.data
@@ -405,6 +405,14 @@ toc:
                   - api_custom_logconfwrkr_pcpp.md
                   - api_custom_logconfcord_pcpp.md
           - resource_grp_pptys.md
+      - topicgroup:
+          label: Public preview
+          topics:
+            - release_public_preview.md
+            - mv_optimizer.md
+            - jdbc.md
+            - db_ast.md
+            - sal_search.md
       - link:
             label: watsonx.data APIs
             href: https://cloud.ibm.com/apidocs/watsonxdata
