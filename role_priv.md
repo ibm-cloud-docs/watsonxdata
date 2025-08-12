@@ -198,7 +198,10 @@ While the default admins can perform some administration and maintenance jobs su
 | Resume Milvus service | ✓ |  |  |  |  |  |  |
 | Collection `CreateIndex` | ✓ | ✓ |  |  | ✓ | ✓ |  |
 | Collection `DropIndex` | ✓ | ✓ |  |  | ✓ | ✓ |  |
-| Collection `DescribeCollection` | ✓ | ✓ | ✓ |  | ✓ | ✓ |  |
+| Global `DescribeDatabase` | ✓ | ✓ | ✓ |  | ✓ |  |  |
+| Global `AlterDatabase` | ✓ | ✓ |  |  | ✓ |  |  |
+| Global `UpdateResourceGroups` | ✓ |  |  |  |  |  |  |
+| Global `DescribeCollection` | ✓ | ✓ | ✓ |  | ✓ | ✓ |  |
 | Global `CreateCollection` | ✓ | ✓ |  |  | ✓ |  |  |
 | Global `ShowCollections` | ✓ | ✓ | ✓ |  | ✓ |  |  |
 | Global `CreateAlias` | ✓ | ✓ |  |  | ✓ |  |  |
