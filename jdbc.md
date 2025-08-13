@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-12"
+lastupdated: "2025-08-13"
 
 keywords: lakehouse, watsonx.data, presto, cli
 
@@ -53,6 +53,36 @@ Presto validates 'join operation(PlanNode)' specifications to perform 'join push
 * Database Compatibility: The underlying database must support the specific join operation and data types involved. For more information, see Data types and operators that support join pushdown feature.
 * Table Grouping: Tables from the same connector and meeting the required criteria can be grouped for pushdown.
 * Configuration: Join pushdown is typically enabled through a global configuration flag. The flag for global setting is tech preview specific and the default value is enable-join-query-pushdown=false. You can set the global flag as enable-join-query-pushdown=true in custom-config.properties through the backend and restart the Presto server. After enabling the flag, you can pushdown equi-join and non-equi-join queries.
+* Configuration: Join pushdown is controlled using a combination of session-level properties. To enable join pushdown, set the following session flags:
+
+Enables pushdown to eligible data sources but will only work for equi-joins (joins with equality conditions)
+
+   ```bash
+SET SESSION optimizer_inner_join_pushdown_enabled = true;
+   ```
+   {: codeblock}
+
+Enables pushdown for non-equi joins (joins with inequality or range-based conditions) to eligible data sources. Needs to be set to true along with the above flag.
+
+   ```bash
+SET SESSION optimizer_inequality_join_pushdown_enabled = true;
+   ```
+   {: codeblock}
+
+Enables partial predicate pushdown at the catalog level. This allows pushing down applicable filter conditions to the data source along with join clauses.
+
+   ```bash
+SET SESSION <catalogName>.partial_predicate_push_down = true;
+   ```
+   {: codeblock}
+
+For example,
+   ```bash
+SET SESSION postgresql.partial_predicate_push_down = true;
+   ```
+   {: screen}
+
+While this is not mandatory, it is recommended, as certain queries rely on this flag for pushdown to be effective.
 
 For example, when we use some aggregate, math operation or data type conversion along with join query, it is converted to Presto functions and applied to 'join' operation. For any 'join' query that creates intermediate Presto function, that query cannot be handled by the connector and hence push down is not performed.
 
