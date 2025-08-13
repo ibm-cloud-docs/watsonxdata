@@ -41,7 +41,7 @@ Users encounter an error when querying role-related `information_schema` table f
 ## Use valid table names to ensure query reliability
 {: #known_issue21807}
 
-Avoid using leading or trailing spaces in table names when creating tables in Query workspace. Although the table may be created successfully, these spaces can cause issues when querying or interacting with the table later. To ensure smooth and reliable operation, always use clean table names without extra spaces.
+Avoid using leading or trailing spaces in table names when creating tables or columns in Query workspace. Although the table may be created successfully, these spaces can cause issues when querying or interacting with the table later. To ensure smooth and reliable operation, always use clean table names without extra spaces.
 
 ## Limitations of BLOB and CLOB support in Presto
 {: #known_issue30109}
