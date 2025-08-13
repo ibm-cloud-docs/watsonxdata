@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-06"
+lastupdated: "2025-08-13"
 
 keywords: lakehouse
 
@@ -31,7 +31,17 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
+## Limitation of querying role-related `information_schema` table for `tpcds` or `tpch` connectors
+{: #known_issue33420}
 
+Users encounter an error when querying role-related `information_schema` table for `tpcds` or `tpch` connectors. This behavior is intentional and expected for these connectors in Presto, as `tpcds` and `tpch` are benchmarking connectors that do not support role-based security features.
+
+**Workaround:** To prevent errors, avoid querying role-related information_schema tables (such as applicable_roles, enabled_roles, and roles) for `tpcds` or `tpch` connectors.
+
+## Use valid table names to ensure query reliability
+{: #known_issue21807}
+
+Avoid using leading or trailing spaces in table names when creating tables in Query workspace. Although the table may be created successfully, these spaces can cause issues when querying or interacting with the table later. To ensure smooth and reliable operation, always use clean table names without extra spaces.
 
 ## Limitations of BLOB and CLOB support in Presto
 {: #known_issue30109}
