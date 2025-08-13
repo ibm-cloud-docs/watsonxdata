@@ -55,36 +55,36 @@ Presto validates 'join operation(PlanNode)' specifications to perform 'join push
 * Configuration: Join pushdown is typically enabled through a global configuration flag. The flag for global setting is tech preview specific and the default value is enable-join-query-pushdown=false. You can set the global flag as enable-join-query-pushdown=true in custom-config.properties through the backend and restart the Presto server. After enabling the flag, you can pushdown equi-join and non-equi-join queries.
 * Configuration: Join pushdown is controlled using a combination of session-level properties. To enable join pushdown, set the following session flags:
 
-Enables pushdown to eligible data sources but will only work for equi-joins (joins with equality conditions)
+   Enables pushdown to eligible data sources but will only work for equi-joins (joins with equality conditions)
 
    ```bash
 SET SESSION optimizer_inner_join_pushdown_enabled = true;
    ```
    {: codeblock}
 
-Enables pushdown for non-equi joins (joins with inequality or range-based conditions) to eligible data sources. Needs to be set to true along with the above flag.
+   Enables pushdown for non-equi joins (joins with inequality or range-based conditions) to eligible data sources. Needs to be set to true along with the above flag.
 
    ```bash
 SET SESSION optimizer_inequality_join_pushdown_enabled = true;
    ```
    {: codeblock}
 
-Enables partial predicate pushdown at the catalog level. This allows pushing down applicable filter conditions to the data source along with join clauses.
+   Enables partial predicate pushdown at the catalog level. This allows pushing down applicable filter conditions to the data source along with join clauses.
 
    ```bash
 SET SESSION <catalogName>.partial_predicate_push_down = true;
    ```
    {: codeblock}
 
-For example,
+   For example,
    ```bash
 SET SESSION postgresql.partial_predicate_push_down = true;
    ```
    {: screen}
 
-While this is not mandatory, it is recommended, as certain queries rely on this flag for pushdown to be effective.
+   While this is not mandatory, it is recommended, as certain queries rely on this flag for pushdown to be effective.
 
-For example, when we use some aggregate, math operation or data type conversion along with join query, it is converted to Presto functions and applied to 'join' operation. For any 'join' query that creates intermediate Presto function, that query cannot be handled by the connector and hence push down is not performed.
+For example, when you use some aggregate, math operation or data type conversion along with join query, it is converted to Presto functions and applied to 'join' operation. For any 'join' query that creates intermediate Presto function, that query cannot be handled by the connector and hence push down is not performed.
 
 | Example           | Query        |
  |------------------|--------------------|
@@ -158,7 +158,7 @@ JDBC join pushdown makes queries run faster, sometimes up to 10 times faster. Ho
 
 The following are the key considerations to enable JDBC join pushdown:
 
-* If and only if we have a limited number of records as the join operation results from huge tables:
+* If you have only a limited number of records as the join operation results from huge tables:
    * The join should return a relatively small subset of records from large tables.
    * Ideal join conditions typically return less than 10% of the total records.
 
