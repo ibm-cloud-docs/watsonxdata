@@ -281,6 +281,7 @@ toc:
             - pause-resume-milvus.md
             - wxd_wxai_milvus_conn.md
             - wxd_wxa_connection.md
+            - milvus_backup.md
       - topicgroup:
           label: Semantic automation for data enrichment
           topics:
