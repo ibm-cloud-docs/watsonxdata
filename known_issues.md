@@ -31,6 +31,11 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
+## Compatibility issue: Spark fails to read iceberg tables written by presto with Parquet V2
+{: #known_issue30535}
+
+Spark fails to read data inserted into iceberg tables by Presto when users explicitly configure Presto to use the Parquet V2 writer.
+
 ## Limitation of querying role-related `information_schema` table for `tpcds` or `tpch` connectors
 {: #known_issue33420}
 
