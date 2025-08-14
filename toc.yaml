@@ -449,3 +449,69 @@ toc:
                   - milvus_memory_ts.md
                   - milvus_data_miss_ts.md
       - get-help.md
+      - topicgroup:
+          label: Working with watsonx.data Spark
+          topics:
+            - Intro_nativespark.md
+            - spk_cpp_intro.md
+            - topicgroup:
+                label: Provisioning and managing watsonx.data Spark
+                topics:
+                  - prov-native-spark.md
+                  - spk_cpp.md
+                  - mng-nspark-eng.md
+                  - view-edit-native-park.md
+                  - scale_nspark.md
+                  - mng_appln_nspark.md
+                  - ae_customizing-instance.md
+                  - ae_create-lib-set.md
+                  - ae_cust-with-script.md
+                  - ae_use-lib-set.md
+                  - ae_combining-lib-sets.md
+            - topicgroup:
+                label: Submitting Spark application by using native Spark engine
+                topics:
+                  - sbmt_das_spk.md
+                  - sbmt_spk_cnsl.md
+                  - sbmt_spk_mor_cow.md
+                  - spark-table-maint.md
+                  - spark-extnsn.md
+                  - ae_auto-scaling-serverless-apps.md
+            - topicgroup:
+                label: Monitoring and debugging Spark application
+                topics:
+                  - logs_native_spk.md
+                  - spark-history-ui.md
+                  - spark-user-interface.md
+                  - spark-databand.md
+                  - spark-db-trk.md
+            - spark-notebook-wxai.md
+            - topicgroup:
+                label: Working with Spark query server
+                topics:
+                  - spk_qry_server.md
+                  - connect_spk_qry_server.md
+            - topicgroup:
+                label: VS Code development environment - Spark labs
+                topics:
+                  - lnative_spk_lab.md
+                  - nsp_lab_mon.md
+            - topicgroup:
+                label: Data management
+                topics:
+                  - nsp_cpdctl.md
+                  - run_nativespk_hudi.md
+      - topicgroup:
+          label: Working with external Spark engine
+          topics:
+            - provisioning-spark.md
+            - config_spark.md
+            - topicgroup:
+                label: Submitting Spark application by using external Spark engine
+                topics:
+                  - spark-use-case.md
+                  - spark-extnsn-extnl.md
+                  - run_extspk_delta.md
+                  - run_extspk_hudi.md
+                  - spark-emr.md
+                  - spark-notebook.md

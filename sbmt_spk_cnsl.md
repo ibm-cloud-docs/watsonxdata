@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-08"
+lastupdated: "2025-08-14"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -59,5 +59,7 @@ Your Spark application must be available in an accessible storage.
    * Select the **Payload** tab to submit the application if you wish to manually write the payload.
 
       In the **Application payload** field, specify the application payload JSON that can be accepted by the Spark engine application creation REST API endpoint. You can either manually write the payload here or click the **Import from inputs** link to automatically build the JSON from the details provided in the **Inputs** tab.
+
+      If your application access data from a catalog that is associated with the Spark engine, you can use the payload specified in [Submitting a Spark application by accessing the watsonx.data catalog](/docs/watsonxdata?topic=watsonxdata-smbit_nsp_1).
 
 4. Click **Submit application**. The application is successfully submitted and gets listed under the **Applications** tab.
