@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-06-08"
+lastupdated: "2025-08-18"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -34,6 +34,8 @@ It is available as a Visual Studio Code extension and you can install it in your
 
 As Spark labs are ephemeral in nature, you must back up the data stored periodically to prevent potential data loss during upgrades or a Spark master crash.
 {: important}
+
+
 
 ## Procedure
 {: #lab_nsp-preq-1}
