@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-08-05"
+lastupdated: "2025-08-19"
 
 keywords: watsonxdata, release notes
 
@@ -27,6 +27,47 @@ For watsonx.data as a Service on IBM Cloud with gen AI experience what's new, se
 For watsonx.data on-prem what's new, see [Release notes for watsonx.data](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.2.x?topic=overview-whats-new-in-watsonxdata).
 
 For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-prem Premium](https://www.ibm.com/docs/en/watsonx/watsonxdata-premium/2.2.x?topic=overview-whats-new-in-watsonxdata).
+
+
+## 27 August 2025 - Version 2.2.1
+{: #lakehouse_27aug2025}
+{: release-note}
+
+Engine and service enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancement:
+
+   * You can now provision watsonx.data Spark engine with the default Spark runtime set to Spark 4.0, which enables you to run Spark applications on Spark 4.0.
+   * The Milvus service in watsonx.data is now upgraded to version 2.5.12.
+   * You can now use the open-source Milvus backup tool to back up and restore data from Milvus within watsonx.data.
+   * Introduced version V3 of the watsonx.data API. Support for version V2 will continue until watsonx.data version 2.3.
+   * The Gluten accelerated Spark engine in watsonx.data is now able to run applications using Spark version 3.5.
+
+Access management enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following access management enhancements:
+   * Introduced the following new privileges to enhance privilege management for a Milvus service in watsonx.data.
+      * DescribeDatabase – Provides detailed information about the specified database.
+
+      * AlterDatabase - Modifies the properties of an existing database.
+
+   For more information about managing user access in Milvus, see Predefined roles and permissions in watsonx.data.
+
+   * Introduced an external Thrift endpoint that enables both IBM and third-party products or services to seamlessly consume the metadata service by using Thrift over HTTP protocol.
+
+Public preview enhancements
+
+: Public preview features now accessible from **Configurations** UI
+   You can now easily access and manage watsonx.data public preview features directly from the Configurations UI. All features in the public preview stage are now visible from the Configurations UI. Features in public preview are highlighted with a Preview tag, making it easy to identify them.
+   You can enable or disable the features to explore the functionality. Each public preview feature includes a link to its detailed documentation, allowing you to learn more about it.
+
+Deprecated features
+: The following features are deprecated in this release:
+
+   * watsonx.data API version V2 is now deprecated in watsonx.data developer edition. You must transition to watsonx.data API version V3 because watsonx.data API version V2 is not available.
+
+   * The option to register external Spark engines in watsonx.data is deprecated in this release and will be removed in version 2.3. watsonx.data already includes built-in Spark engines that you can provision and use directly, including the Gluten-accelerated Spark engine and the native watsonx.data Spark engine.
+
 
 
 ## 05 August 2025 - Version 2.2.0 New Feature 1 (NF1)
