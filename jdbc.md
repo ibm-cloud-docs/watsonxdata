@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-13"
+lastupdated: "2025-08-19"
 
 keywords: lakehouse, watsonx.data, presto, cli
 
@@ -52,7 +52,6 @@ Presto validates 'join operation(PlanNode)' specifications to perform 'join push
 * Join Type and Conditions: The join should typically be an inner join with at least one common column between the tables. The join conditions should involve compatible data types and operators.
 * Database Compatibility: The underlying database must support the specific join operation and data types involved. For more information, see Data types and operators that support join pushdown feature.
 * Table Grouping: Tables from the same connector and meeting the required criteria can be grouped for pushdown.
-* Configuration: Join pushdown is typically enabled through a global configuration flag. The flag for global setting is tech preview specific and the default value is enable-join-query-pushdown=false. You can set the global flag as enable-join-query-pushdown=true in custom-config.properties through the backend and restart the Presto server. After enabling the flag, you can pushdown equi-join and non-equi-join queries.
 * Configuration: Join pushdown is controlled using a combination of session-level properties.
 
 To enable join pushdown, set the following session flags:
@@ -82,7 +81,7 @@ For example,
    ```bash
 SET SESSION postgresql.partial_predicate_push_down = true;
    ```
-   {: screen}
+   {: codeblock}
 
 While this is not mandatory, it is recommended, as certain queries rely on this flag for pushdown to be effective.
 
