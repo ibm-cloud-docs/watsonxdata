@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-13"
+lastupdated: "2025-08-20"
 
 keywords: lakehouse
 
@@ -30,6 +30,15 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+## Job remains stuck during execution
+{: #known_issue33503}
+
+Jobs may remain stuck during execution due to unknown conditions. When this occurs, users can check the logs to view the job status in the optimizer or Db2. If the job status is **NOTRECEIVED**, **NOTRUN**, or **UNKNOWN**, users must manually force delete the job and submit the next one in the queue.
+
+- **NOTRECEIVED**: The system did not receive a call with a given task ID.
+- **NOTRUN**: An error prevented the scheduler from invoking the task’s procedure.
+- **UNKNOWN**: The task began execution, but the scheduler failed to record the outcome due to an unexpected condition.
 
 ## Compatibility issue: Spark fails to read iceberg tables written by presto with Parquet V2
 {: #known_issue30535}
