@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-02-19"
+  years: 2022, 2025
+lastupdated: "2025-08-20"
 
 keywords: lakehouse, database, watsonx.data
 
@@ -32,7 +32,15 @@ subcollection: watsonxdata
 IBM Cloud Databases for PostgreSQL is an open source object-relational database that is highly customizable. It’s a feature-rich enterprise database with JSON support.
 {: shortdesc}
 
- Configure the following details for PostgreSQL data source:
+You can configure PostgreSQL using one of the following methods:
+- `Create new connection` – If you select the `Create new connection` tab, refer to the [Create new connection - configuration details](/docs/watsonxdata?topic=watsonxdata-postgresql_database#postgresql_database1) table to provide configuration details.
+
+- `Import from catalog` – You can import connection details from an existing catalog in the IBM Cloud Pak for Data (CPD) platform. If you select the `Import from catalog` tab, refer to the [Import from catalog - configuration details](/docs/watsonxdata?topic=watsonxdata-postgresql_database#postgresql_database2) table to provide configuration details.
+
+- `Import from project` – You can import connection details from an existing project in the CPD platform. If you select `Import from project`, refer to the [Import from project - configuration details](/docs/watsonxdata?topic=watsonxdata-postgresql_database#postgresql_database3) table to provide configuration details.
+
+## Crete new connection - configuration details
+{: #postgresql_database1}
 
  | Field           | Description        |
  |------------------|--------------------|
@@ -48,10 +56,39 @@ IBM Cloud Databases for PostgreSQL is an open source object-relational database 
  | Associate catalog | Select the checkbox to associate a catalog to the data source. This catalog is automatically associated with your data source and serves as your query interface with the data stored within.|
  | Catalog name | Enter the name of the catalog. |
  | Create | Click Create to create the database. |
- {: caption="Register data source" caption-side="bottom"}
+ {: caption="Crete new connection - configuration details" caption-side="bottom"}
 
 Enable the toggle switch for Validate certificate option to create the PostgreSQL database. If disabled, the Test connection feature does not work and the database cannot be added to the engine.
 {: note}
+
+## Import from catalog - configuration details
+{: #postgresql_database2}
+
+ | Field | Description |
+| --- | --- |
+| Select catalog | Use the dropdown to select a catalog. |
+| Select data source | Use the dropdown to select a data source from the selected catalog. |
+| Connection status | Click the Test connection link to test the database connection. If the database connection is successful, a success message appears. |
+| Display name | Enter the database name to be displayed on the screen. |
+| Associate catalog | Select the checkbox to associate a catalog to the data source. This catalog is automatically associated with your data source and serves as your query interface with the data stored within. |
+| Catalog name | Enter the name of the catalog. |
+| Create | Click Create to create the database. |
+{: caption="Import from catalog - configuration details" caption-side="bottom"}
+
+
+## Import from project - configuration details
+{: #postgresql_database3}
+
+| Field | Description |
+| --- | --- |
+| Select project | Use the dropdown to select a project. |
+| Select data source | Use the dropdown to select a data source from the selected project |
+| Connection status | Click the Test connection link to test the database connection. If the database connection is successful, a success message appears. |
+| Display name | Enter the database name to be displayed on the screen. |
+| Associate catalog | Select the checkbox to associate a catalog to the data source. This catalog is automatically associated with your data source and serves as your query interface with the data stored within. |
+| Catalog name | Enter the name of the catalog. |
+| Create | Click Create to create the database. |
+{: caption="Import from project - configuration details" caption-side="bottom"}
 
 ## Limitations for SQL statements
 {: #connector_limitations}
