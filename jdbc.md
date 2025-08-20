@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-19"
+lastupdated: "2025-08-20"
 
 keywords: lakehouse, watsonx.data, presto, cli
 
@@ -267,3 +267,11 @@ The following are the limitations of join pushdown feature:
 * Dependency on Filter Pushdown: Join pushdown relies on existing filter pushdown capabilities of the underlying database. Any limitations or inefficiencies in filter pushdown impact join pushdown performance.
 * Database Compatibility: Join pushdown is limited to queries that the underlying database can understand. Complex queries involving filters, projections, conditions, or special keywords may not be pushed down.
 * Self-Join Limitations: The current implementation of self-joins is not optimal and has dependencies on the table handle cache. By default, the table handle cache is turned off in Presto and if it is enabled, then self-join pushdown fails.
+
+## Viewing JDBC Pushdown feature in UI
+{: #db_bfb_enab}
+
+1. Log in to the {{site.data.keyword.lakehouse_short}} instance.
+1. Go to **Configurations**.
+1. Click the **JDBC pushdown** tile. The **JDBC pushdown** details page opens.
+1. Click the **Documentation** link to know more about the JDBC pushdown feature in {{site.data.keyword.lakehouse_short}}.
