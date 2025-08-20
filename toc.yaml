@@ -384,6 +384,7 @@ toc:
       - mixed_case_behavior.md
       - response.md
       - high_availability_lh.md
+      - dr_scenarios.md
       - update-process.md
       - topicgroup:
           label: Customization through API
