@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-05-09"
+lastupdated: "2025-08-20"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -32,7 +32,15 @@ subcollection: watsonxdata
 IBM Db2 is a data source that contains relational data.
 {: shortdesc}
 
- Configure the following details for IBM Db2 data source:
+You can configure IBM Db2 using one of the following methods:
+- `Create new connection` – If you select the `Create new connection` tab, refer to the [Create new connection - configuration details](/docs/watsonxdata?topic=watsonxdata-db2_database#db2_database1) table to provide configuration details.
+
+- `Import from catalog` – You can import connection details from an existing catalog in the IBM Cloud Pak for Data (CPD) platform. If you select the `Import from catalog` tab, refer to the [Import from catalog - configuration details](/docs/watsonxdata?topic=watsonxdata-db2_database#db2_database2) table to provide configuration details.
+
+- `Import from project` – You can import connection details from an existing project in the CPD platform. If you select `Import from project`, refer to the [Import from project - configuration details](/docs/watsonxdata?topic=watsonxdata-db2_database#db2_database3) table to provide configuration details.
+
+## Crete new connection - configuration details
+{: #db2_database1}
 
  | Field           | Description        |
  |------------------|--------------------|
@@ -46,7 +54,36 @@ IBM Db2 is a data source that contains relational data.
  | Associate catalog | Select the checkbox to associate a catalog to the data source. This catalog is automatically associated with your data source and serves as your query interface with the data stored within.|
  | Catalog name | Enter the name of the catalog.|
  | Create | Click Create to create the data source. |
- {: caption="Register data source" caption-side="bottom"}
+ {: caption="Crete new connection - configuration details" caption-side="bottom"}
+
+## Import from catalog - configuration details
+{: #db2_database2}
+
+ | Field | Description |
+| --- | --- |
+| Select catalog | Use the dropdown to select a catalog. |
+| Select data source | Use the dropdown to select a data source from the selected catalog. |
+| Connection status | Click the Test connection link to test the database connection. If the database connection is successful, a success message appears. |
+| Display name | Enter the database name to be displayed on the screen. |
+| Associate catalog | Select the checkbox to associate a catalog to the data source. This catalog is automatically associated with your data source and serves as your query interface with the data stored within. |
+| Catalog name | Enter the name of the catalog. |
+| Create | Click Create to create the database. |
+{: caption="Import from catalog - configuration details" caption-side="bottom"}
+
+
+## Import from project - configuration details
+{: #db2_database3}
+
+| Field | Description |
+| --- | --- |
+| Select project | Use the dropdown to select a project. |
+| Select data source | Use the dropdown to select a data source from the selected project |
+| Connection status | Click the Test connection link to test the database connection. If the database connection is successful, a success message appears. |
+| Display name | Enter the database name to be displayed on the screen. |
+| Associate catalog | Select the checkbox to associate a catalog to the data source. This catalog is automatically associated with your data source and serves as your query interface with the data stored within. |
+| Catalog name | Enter the name of the catalog. |
+| Create | Click Create to create the database. |
+{: caption="Import from project - configuration details" caption-side="bottom"}
 
  Select IBM Db2 from the data source section to add IBM Watson Query.
  You can now query the nicknames that are created in IBM Db2 and the virtualized tables from Watson Query instances.
