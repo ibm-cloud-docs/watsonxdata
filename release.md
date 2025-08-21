@@ -41,7 +41,7 @@ Engine and service enhancements
    * The Milvus service in watsonx.data is now upgraded to version 2.5.12.
    * You can now use the open-source Milvus backup tool to back up and restore data from Milvus within watsonx.data.
    * Introduced version V3 of the watsonx.data API. Support for version V2 will continue until watsonx.data version 2.3.
-   * The Gluten accelerated Spark engine in watsonx.data is now able to run applications using Spark version 3.5.
+   * The Gluten accelerated Spark engine in watsonx.data is now able to run applications using Spark version 3.5. To know details about supported Spark versions, see [Supported Spark version](/docs/watsonxdata?topic=ae_limits.md#cpu-mem-spk_versn)
 
 Access management enhancements
 
@@ -55,11 +55,16 @@ Access management enhancements
 
    * Introduced an external Thrift endpoint that enables both IBM and third-party products or services to seamlessly consume the metadata service by using Thrift over HTTP protocol.
 
+Semantic automation for data enrichment
+
+: {{site.data.keyword.lakehouse_full}} now supports semantic search capabilities that allow users to query data using natural language, making data exploration more intuitive and efficient. To know about semantic search capabilities, see [Performing semantic searches in {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=sal_search)
+
 Public preview enhancements
 
 : Public preview features now accessible from **Configurations** UI
    You can now easily access and manage watsonx.data public preview features directly from the Configurations UI. All features in the public preview stage are now visible from the Configurations UI. Features in public preview are highlighted with a Preview tag, making it easy to identify them.
    You can enable or disable the features to explore the functionality. Each public preview feature includes a link to its detailed documentation, allowing you to learn more about it.
+   To know more about public preview features, see [What's new in watsonx.data (Public preview)](/docs/watsonxdata?topic=release_public_preview).
 
 Deprecated features
 : The following features are deprecated in this release:
