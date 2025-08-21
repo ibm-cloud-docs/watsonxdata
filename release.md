@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-08-19"
+lastupdated: "2025-08-21"
 
 keywords: watsonxdata, release notes
 
@@ -64,9 +64,11 @@ Public preview enhancements
 Deprecated features
 : The following features are deprecated in this release:
 
-   * watsonx.data API version V2 is now deprecated in watsonx.data developer edition. You must transition to watsonx.data API version V3 because watsonx.data API version V2 is not available.
+   * **watsonx.data API version v2 is now deprecated**
 
-   * The option to register external Spark engines in watsonx.data is deprecated in this release and will be removed in version 2.3. watsonx.data already includes built-in Spark engines that you can provision and use directly, including the Gluten-accelerated Spark engine and the native watsonx.data Spark engine.
+   It is completely removed from the watsonx.data developer edition starting with version 2.3.It will be completely removed from watsonx.data software edition in version 2.3. You must migrate to the latest supported API version (v3) to ensure continued compatibility and access to new features.
+
+   * The option to register external Spark engines in watsonx.data is deprecated in this release and will be removed in version 2.3. watsonx.data already includes built-in Spark engines that you can provision and use directly, including the Gluten-accelerated Spark engine and the native watsonx.data Spark engine
 
 
 
