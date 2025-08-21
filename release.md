@@ -37,11 +37,11 @@ Engine and service enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancement:
 
+   * Introduced version v3 of the watsonx.data API. Support for version v2 will continue until watsonx.data version 2.3.
    * You can now provision watsonx.data Spark engine with the default Spark runtime set to Spark 4.0, which enables you to run Spark applications on Spark 4.0.
    * The Milvus service in watsonx.data is now upgraded to version 2.5.12.
    * You can now use the open-source Milvus backup tool to back up and restore data from Milvus within watsonx.data.
-   * Introduced version V3 of the watsonx.data API. Support for version V2 will continue until watsonx.data version 2.3.
-   * The Gluten accelerated Spark engine in watsonx.data is now able to run applications using Spark version 3.5. To know details about supported Spark versions, see [Supported Spark version](/docs/watsonxdata?topic=ae_limits.md#cpu-mem-spk_versn)
+   * The Gluten accelerated Spark engine in watsonx.data is now able to run applications using Spark version 3.5. To know details about supported Spark versions, see [Supported Spark version](/docs/watsonxdata?topic=ae_limits.md#cpu-mem-spk_versn).
 
 Access management enhancements
 
@@ -57,7 +57,7 @@ Access management enhancements
 
 Semantic automation for data enrichment
 
-: {{site.data.keyword.lakehouse_full}} now supports semantic search capabilities that allow users to query data using natural language, making data exploration more intuitive and efficient. To know about semantic search capabilities, see [Performing semantic searches in {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=sal_search)
+: {{site.data.keyword.lakehouse_full}} now supports semantic search capabilities that allow users to query data using natural language, making data exploration more intuitive and efficient. To know about semantic search capabilities, see [Performing semantic searches in {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=sal_search).
 
 Public preview enhancements
 
