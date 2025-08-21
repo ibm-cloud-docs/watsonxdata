@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-06-08"
+lastupdated: "2025-08-21"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -13,6 +13,10 @@ subcollection: watsonxdata
 
 # Running Spark notebook from Watson Studio on Cloud Pak for Data
 {: #run_nb}
+
+
+The option to register external Spark engines in watsonx.data is deprecated in this release and will be removed in version 2.3. watsonx.data already includes built-in Spark engines that you can provision and use directly, including the Gluten-accelerated Spark engine and the native watsonx.data Spark engine.
+{: important}
 
 **Applies to** : [Spark engine]{: tag-blue}  [Gluten accelerated Spark engine]{: tag-green}
 

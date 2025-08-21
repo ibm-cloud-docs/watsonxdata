@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-07-07"
+lastupdated: "2025-08-21"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -16,6 +16,9 @@ subcollection: watsonxdata
 
 When you submit a Spark application that uses external storage buckets registered in {{site.data.keyword.lakehouse_short}}, Spark access control extension allows additional authorization thereby enhancing security. If you enable the extension in the spark configuration, only authorized users are allowed to access and operate {{site.data.keyword.lakehouse_short}} catalogs through Spark jobs.
 {: shortdesc}
+
+The option to register external Spark engines in watsonx.data is deprecated in this release and will be removed in version 2.3. watsonx.data already includes built-in Spark engines that you can provision and use directly, including the Gluten-accelerated Spark engine and the native watsonx.data Spark engine.
+{: important}
 
 You can enable the Spark access control extension for Iceberg, Hive and Hudi catalogs.
 {: note}
