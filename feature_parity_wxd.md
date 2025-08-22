@@ -26,7 +26,7 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Cloud availability of IBM® {{site.data.keyword.lakehouse_full}} and AstraDB
+# Cloud availability of IBM® {{site.data.keyword.lakehouse_short}} and AstraDB
 {: #feature_parity_wxd}
 
 {{site.data.keyword.lakehouse_full}} can be deployed as a managed software as a service (SaaS) or installed on premises. As new features are added on each deployment's release cycle, it is important that you understand which features are available in a deployment, so you can make informed decisions based on your business’s requirements.
