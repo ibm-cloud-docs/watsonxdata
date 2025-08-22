@@ -31,6 +31,8 @@ toc:
           - resource_grp_ov.md
           - integration.md
           - manta_overview.md
+          - feature_parity_wxd.md
+          - wxd_plfrm_dplmnt_cmpar.md
       - release.md
       - topicgroup:
           label: Provisioning watsonx.data
