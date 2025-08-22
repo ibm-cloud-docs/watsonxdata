@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-07-11"
+lastupdated: "2025-08-22"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -30,6 +30,7 @@ You can use IBM Cloud Pak for Data Command Line Interface (IBM `cpdctl`) to subm
 * Configure the watsonx.data environment in IBM cpdctl. For information, see [Configure IBM cpdctl](https://www.ibm.com/docs/SSDZ38_2.1.x/wxd-client/topics/cpdctl-title.html).
 
 
+
 ## Procedure
 {: #table-spk_sbmtapp}
 
@@ -49,6 +50,8 @@ To automatically perform the table maintenance operation, see [Table maintenance
    The Python file includes commands for the different table maintenance operations. You can uncomment the required section based on your use case scenario. For the use case that involves catalog and schema, customize the catalog_name, schema_name and table_name in the Python file. Also, to customize and use a different query format for table maintenance operations, see [Iceberg procedures](https://iceberg.apache.org/docs/1.8.0/spark-procedures/).
    {: note}
 
+   You can use Amazon S3A, ADLS and GCS storage for Spark job submission.
+   {: note}
 
    * `<Path>` : The path of the storage where the Spark application is saved.
 
