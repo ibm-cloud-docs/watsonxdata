@@ -38,7 +38,7 @@ Stay up to date with the latest features through [Release notes for {{site.data.
 
 Cloud availability is based on the features that you can handle through {{site.data.keyword.lakehouse_short}}'s user interface. Each deployment receives a classification of support coverage based on how the deployment supports the features' capabilities.
 
-For more information on how each deployment is classified based on its support for specific features and capabilities, refer to [Platform comparison: AstraDB versus IBM® {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=wxd_plfrm_dplmnt_cmpar#wxd_plfrm_dplmnt2).
+For more information on how each deployment is classified based on its support for specific features and capabilities, refer to [Platform comparison: AstraDB versus IBM® {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=watsonxdata-wxd_plfrm_dplmnt_cmpar#wxd_plfrm_dplmnt2).
 
 ### AWS availability
 {: #aws_avlty}

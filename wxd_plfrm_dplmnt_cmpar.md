@@ -31,8 +31,8 @@ subcollection: watsonxdata
 
 This topic provides the following two tables that outline key features and capabilities of different data deployment models and platforms.
 
-- **[SaaS versus On-Prem deployment comparison](/docs/watsonxdata?topic=wxd_plfrm_dplmnt_cmpar#wxd_plfrm_dplmnt1)** table focuses on the distinctions between cloud-based (SaaS) and on-premise deployments, covering aspects such as scalability, security, integration, and operational management.
-- **[Platform comparison: AstraDB versus IBM® {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=wxd_plfrm_dplmnt_cmpar#wxd_plfrm_dplmnt2)** table provides a comparison of selected data platforms, highlighting their architectural approaches, data handling capabilities, query engines, and support for AI and vector-based operations.
+- **[SaaS versus On-Prem deployment comparison](/docs/watsonxdata?topic=watsonxdata-wxd_plfrm_dplmnt_cmpar#wxd_plfrm_dplmnt1)** table focuses on the distinctions between cloud-based (SaaS) and on-premise deployments, covering aspects such as scalability, security, integration, and operational management.
+- **[Platform comparison: AstraDB versus IBM® {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=watsonxdata-wxd_plfrm_dplmnt_cmpar#wxd_plfrm_dplmnt2)** table provides a comparison of selected data platforms, highlighting their architectural approaches, data handling capabilities, query engines, and support for AI and vector-based operations.
 
 ## SaaS versus On-Prem deployment comparison
 {: #wxd_plfrm_dplmnt1}
