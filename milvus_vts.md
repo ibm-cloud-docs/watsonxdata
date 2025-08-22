@@ -32,6 +32,6 @@ subcollection: watsonxdata
 The Vector Transport Service (VTS) is an open-source tool, designed specifically for the transformation and transportation of vectors and unstructured data.
 {: shortdesc}
 
-By integrating VTS with Milvus, it can be used to migrate or manage vector data across systems. VTS supports both real-time streaming and offline batch import modes, making it versatile for a wide range of use cases.
+VTS supports both real-time streaming and offline batch import modes, making it versatile for a wide range of use cases. By integrating VTS with Milvus, it can be used to migrate or manage vector data across systems.
 
 For more information about using VTS in  {{site.data.keyword.lakehouse_short}}, see [Vector Transport Service](https://community.ibm.com/community/user/blogs/gifi-siby/2025/07/14/vts-vector-transport-service){: external}.
