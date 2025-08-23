@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-08-21"
+lastupdated: "2025-08-23"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -13,6 +13,8 @@ subcollection: watsonxdata
 
 # Provisioning {{site.data.keyword.iae_short}}
 {: #lh-provisioning-serverless}
+
+**Applies to** : [Spark engine]{: tag-blue}
 
 The option to register external Spark engines in watsonx.data is deprecated in this release and will be removed in version 2.3. watsonx.data already includes built-in Spark engines that you can provision and use directly, including the Gluten-accelerated Spark engine and the native watsonx.data Spark engine.
 {: important}

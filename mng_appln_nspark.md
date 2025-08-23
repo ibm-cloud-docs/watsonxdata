@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-07-03"
+lastupdated: "2025-08-23"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -59,8 +59,7 @@ You can configure the following parameters and use the CURL command to add the f
 
 ```bash
 curl -k -X GET
-https://<region>/lakehouse/api/v2/spark_engines/<spark_engine_id>/spark_applications\n
-/<application_id>?state=accepted,running,finished,failed&limit=<limit_value>&start_time_interval={start_lower timestamp limit},{start_upper timestamp limit}&end_time_interval={end_lower timestamp limit},{end_upper timestamp limit}
+https://<region>/lakehouse/api/v2/spark_engines/<spark_engine_id>/applications?state=accepted,running,finished,failed&limit=<limit_value>&start_time_interval={start_lower timestamp limit},{start_upper timestamp limit}&end_time_interval={end_lower timestamp limit},{end_upper timestamp limit}
 ```
 {: codeblock}
 
