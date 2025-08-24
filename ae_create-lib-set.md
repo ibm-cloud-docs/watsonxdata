@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-23"
+lastupdated: "2025-08-24"
 
 keywords: watsonxdata, qhmm
 
@@ -12,7 +12,7 @@ subcollection: watsonxdata
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Creating a library set for Python package install
+# Creating a library set for your instance
 {: #create-lib-set1}
 
 A library set is a collection of libraries that you can create and reference in Spark applications that consume the libraries. The library set is stored in the instance home storage associated with the instance at the time the instance is created.
