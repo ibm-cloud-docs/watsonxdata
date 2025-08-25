@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-24"
+lastupdated: "2025-08-25"
 
 keywords: lakehouse, cpdctl, watsonx.data, supporting commands, config
 
@@ -191,6 +191,7 @@ You can combine the 2 commands user and profile together to configure instance p
 
 Syntax:
    ```bash
+   cpdctl config profile set <profile_name> --username <saas_username> --apikey <APIKEY> --url <saas_url> --region <region_name> \
    --env "WATSONX_DATA_INSTANCE_ID=<crn>" \
    --env "WATSONX_DATA_URL=<WXD-base-url>"
    ```

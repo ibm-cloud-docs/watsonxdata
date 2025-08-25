@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-23"
+lastupdated: "2025-08-25"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -88,6 +88,7 @@ To add a Gluten accelerated Spark engine, complete the following steps.
 
 
 #### V2 API
+{: #prov_v2_2}
 
 
    ```bash
@@ -137,7 +138,7 @@ To add a Gluten accelerated Spark engine, complete the following steps.
    * `<catalog_name>`: Specify a name for the catalog you use. Gluten accelerated Spark supports Iceberg, Hudi, Delta, and Hive catalogs.
 
 #### V3 API
-
+{: #prov_v3}
 
    ```bash
 
@@ -145,5 +146,3 @@ To add a Gluten accelerated Spark engine, complete the following steps.
 
    ```
    {: codeblock}
-
-

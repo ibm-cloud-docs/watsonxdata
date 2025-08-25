@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-20"
+lastupdated: "2025-08-25"
 
 keywords: lakehouse
 
@@ -30,6 +30,11 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+## Query execution fails temporarily after updating expired storage or database credentials
+{: #known_issue2875}
+
+After updating expired credentials for a storage or database resource associated with a Presto engine, query execution in the Query Workspace fails for approximately 30 to 40 seconds. After this delay, queries execute successfully without further issues.
 
 ## Job remains stuck during execution
 {: #known_issue33503}

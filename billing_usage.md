@@ -42,7 +42,7 @@ The following charge matrices apply to {{site.data.keyword.lakehouse_short}}:
 
 
 ## Metering and billing granularity in {{site.data.keyword.lakehouse_short}}
-
+{: #manage_bill1}
 
 Billing is based on the the total run rate, which is the sum of the individual run rates of all the infrastructure components currently running in your instance. The resource unit consumption begins as soon as you create a watsonx.data instance, when the support services are available and continue until you delete the instance.
 

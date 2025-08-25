@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-24"
+lastupdated: "2025-08-25"
 
 keywords: lakehouse, cpdctl, watsonx.data, supporting commands, wx-data
 
@@ -275,7 +275,7 @@ The `service` command further supports the following commands:
  {: caption="Supported commands by service" caption-side="bottom"}
 
 
- ## component
+## component
 {: #cpdctl_commands_wxdatacmpnt}
 
 The `component` command is used for executing different serviceability related operations in {{site.data.keyword.lakehouse_short}}.
