@@ -48,6 +48,7 @@ Billing is based on the the total run rate, which is the sum of the individual r
 You can view the estimate of the expected per-hour run rate consumption of **Resource Units** from the **About** tab in the [**{{site.data.keyword.lakehouse_short}}** **{{site.data.keyword.Bluemix_short}} catalog**](https://cloud.ibm.com/watsonxdata) page.
 
 Important: **watsonx.data is metered on a per-second basis to ensure precise and granular tracking of usage.**
+
 This fine-grained metering allows for greater transparency and control, capturing every second the instance is active, regardless of whether any engine is enabled. While billing is aggregated and performed hourly, the underlying usage data is collected per second and sent to IBM Cloud. This continuous per-second metering ensures that charges reflect actual usage time. To avoid incurring unnecessary costs, it is important to delete unused instances promptly.
 
 For example:
