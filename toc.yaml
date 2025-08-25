@@ -193,6 +193,7 @@ toc:
             - sync_optimizer_meta.md
             - optimizer_iceberg_stats.md
             - exec_inspect_optimizer.md
+            - analyze_optimizer.md
             - uninstall_optimizer.md
       - topicgroup:
           label: Query history
