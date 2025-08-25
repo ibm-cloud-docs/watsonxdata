@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-08-22"
+lastupdated: "2025-08-25"
 
 keywords: watsonxdata, release notes
 
@@ -55,6 +55,18 @@ Access management enhancements
 
    * Introduced an external Thrift endpoint that enables both IBM and third-party products or services to seamlessly consume the metadata service by using Thrift over HTTP protocol.
 
+
+Data sources and storage enhancements
+
+: You can now import catalogs and projects from the data platform for the following data sources:
+   - IBM Db2
+   - IBM Netezza
+   - MySQL
+   - Oracle
+   - PostgreSQL
+   - Snowflake
+   - SQL Server
+
 Semantic automation for data enrichment
 
 : {{site.data.keyword.lakehouse_full}} now supports semantic search capabilities that allow users to query data using natural language, making data exploration more intuitive and efficient. To know about semantic search capabilities, see [Performing semantic searches in {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=sal_search).
@@ -71,7 +83,7 @@ Deprecated features
 
    * **watsonx.data API version v2 is now deprecated**
 
-   It is completely removed from the watsonx.data developer edition starting with version 2.3.It will be completely removed from watsonx.data software edition in version 2.3. You must migrate to the latest supported API version (v3) to ensure continued compatibility and access to new features.
+   It is completely removed from the watsonx.data developer edition starting with version 2.2.1. It will be completely removed from watsonx.data software edition in version 2.3. You must migrate to the latest supported API version (v3) to ensure continued compatibility and access to new features.
 
    * The option to register external Spark engines in watsonx.data is deprecated in this release and will be removed in version 2.3. watsonx.data already includes built-in Spark engines that you can provision and use directly, including the Gluten-accelerated Spark engine and the native watsonx.data Spark engine
 
