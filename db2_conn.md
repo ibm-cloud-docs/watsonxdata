@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-20"
+lastupdated: "2025-08-25"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -35,11 +35,11 @@ IBM Db2 is a data source that contains relational data.
 You can configure IBM Db2 using one of the following methods:
 - `Create new connection` – If you select the `Create new connection` tab, refer to the [Create new connection - configuration details](/docs/watsonxdata?topic=watsonxdata-db2_database#db2_database1) table to provide configuration details.
 
-- `Import from catalog` – You can import connection details from an existing catalog in the IBM Cloud Pak for Data (CPD) platform. If you select the `Import from catalog` tab, refer to the [Import from catalog - configuration details](/docs/watsonxdata?topic=watsonxdata-db2_database#db2_database2) table to provide configuration details.
+- `Import from catalog` – You can import connection details from an existing catalog in the data platform. If you select the `Import from catalog` tab, refer to the [Import from catalog - configuration details](/docs/watsonxdata?topic=watsonxdata-db2_database#db2_database2) table to provide configuration details.
 
-- `Import from project` – You can import connection details from an existing project in the CPD platform. If you select `Import from project`, refer to the [Import from project - configuration details](/docs/watsonxdata?topic=watsonxdata-db2_database#db2_database3) table to provide configuration details.
+- `Import from project` – You can import connection details from an existing project in the data platform. If you select `Import from project`, refer to the [Import from project - configuration details](/docs/watsonxdata?topic=watsonxdata-db2_database#db2_database3) table to provide configuration details.
 
-## Crete new connection - configuration details
+## Create new connection - configuration details
 {: #db2_database1}
 
  | Field           | Description        |

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-20"
+lastupdated: "2025-08-25"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -35,11 +35,11 @@ Microsoft SQL Server is a relational database management system.
 You can configure SQL Server  using one of the following methods:
 - `Create new connection` – If you select the `Create new connection` tab, refer to the [Create new connection - configuration details](/docs/watsonxdata?topic=watsonxdata-sqlserver_database#sqlserver_database1) table to provide configuration details.
 
-- `Import from catalog` – You can import connection details from an existing catalog in the IBM Cloud Pak for Data (CPD) platform. If you select the `Import from catalog` tab, refer to the [Import from catalog - configuration details](/docs/watsonxdata?topic=watsonxdata-sqlserver_database#sqlserver_database2) table to provide configuration details.
+- `Import from catalog` – You can import connection details from an existing catalog in the data platform. If you select the `Import from catalog` tab, refer to the [Import from catalog - configuration details](/docs/watsonxdata?topic=watsonxdata-sqlserver_database#sqlserver_database2) table to provide configuration details.
 
-- `Import from project` – You can import connection details from an existing project in the CPD platform. If you select `Import from project`, refer to the [Import from project - configuration details](/docs/watsonxdata?topic=watsonxdata-sqlserver_database#sqlserver_database3) table to provide configuration details.
+- `Import from project` – You can import connection details from an existing project in the data platform. If you select `Import from project`, refer to the [Import from project - configuration details](/docs/watsonxdata?topic=watsonxdata-sqlserver_database#sqlserver_database3) table to provide configuration details.
 
-## Crete new connection - configuration details
+## Create new connection - configuration details
 {: #sqlserver_database1}
 
  | Field           | Description        |
