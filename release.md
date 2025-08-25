@@ -56,6 +56,19 @@ Access management enhancements
    * Introduced an external Thrift endpoint that enables both IBM and third-party products or services to seamlessly consume the metadata service by using Thrift over HTTP protocol.
 
 
+CPDCTL CLI Enhancements
+
+: The IBM Cloud Pak for Data Command Line Interface (IBM cpdctl) has been enhanced with several new features and improvements to support {{site.data.keyword.lakehouse_short}} and secure integrations:
+
+* Starting with version 2.2.1, you can configure and access HashiCorp Vault directly through cpdctl, enabling secure secrets management and streamlined automation workflows.
+
+* A new option under the service command wx-data service generate-engine-dump allows you to generate dumps for Presto worker and coordinator nodes in {{site.data.keyword.lakehouse_short}}. See https://ibmdocs-test.dcs.ibm.com/docs/en/SSDZ38_2.2.x_test?topic=cpdctl-wx-data-commands-usage#cpdctl-commands_wx-data__service__title__1
+
+* Use the new component command to retrieve configuration details and status of various components in {{site.data.keyword.lakehouse_short}}. See https://ibmdocs-test.dcs.ibm.com/docs/en/SSDZ38_2.2.x_test?topic=cpdctl-wx-data-commands-usage#cpdctl-commands_wx-data__component__title__1
+
+* Starting from CPDCTL version 1.8.5, users no longer need to set the instance ID as an environment variable. This method is deprecated and will be removed in a future release. Instead, set the instance ID directly using the profile command. See https://ibmdocs-test.dcs.ibm.com/docs/en/SSDZ38_2.2.x_test?topic=cpdctl-config-commands-usage#cpdctl-commands_config__title__6.
+
+
 Data sources and storage enhancements
 
 : You can now import catalogs and projects from the data platform for the following data sources:
