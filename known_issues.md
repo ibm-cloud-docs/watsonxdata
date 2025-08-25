@@ -31,6 +31,11 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
+## Missing restart warning when updating Presto (C++) credentials
+{: #known_issue30083}
+
+The system fails to display a warning message that Presto (C++) will restart when users update its credentials.
+
 ## Unsupported special characters in schema and table creation through Ingestion UI
 {: #known_issue21631}
 
