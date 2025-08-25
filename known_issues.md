@@ -31,6 +31,13 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
+## Unsupported special characters in schema and table creation through Ingestion UI
+{: #known_issue21631}
+
+The following special characters are not supported when creating schemas and tables through the Ingestion UI:
+`%` and `+`
+These restrictions are enforced due to limitations in underlying storage engines such as Hive, Delta, and Hudi. While the Data Manager page may allow a broader set of special characters (for example, `!`, `@`, `#`, `&`, `_`, `-`, `=`, `+`, `]`, `}`, `<`, and `>`), the ingestion flow enforces stricter validation to ensure compatibility across services.
+
 ## Query execution fails temporarily after updating expired storage or database credentials
 {: #known_issue2875}
 
