@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-24"
+lastupdated: "2025-08-25"
 
 keywords: lakehouse, watsonx data, roles, access
 subcollection: watsonxdata
@@ -48,8 +48,9 @@ Billing is based on the the total run rate, which is the sum of the individual r
 
 You can view the estimate of the expected per-hour run rate consumption of **Resource Units** from the **About** tab in the [**{{site.data.keyword.lakehouse_short}}** **{{site.data.keyword.Bluemix_short}} catalog**](https://cloud.ibm.com/watsonxdata) page.
 
-{{site.data.keyword.lakehouse_short}} follows per-second metering with hourly billing.
+{{site.data.keyword.lakehouse_short}} is metered per second, while billing is performed hourly.
 {{site.data.keyword.lakehouse_short}} usage is metered on a per-second basis to capture granular data usage. The per-second tracking helps offering greater granularity and transparency. Metering continues as long as the instance is running, regardless of whether any engine is enabled. To avoid unnecessary charges, ensure that unused instances are deleted.
+The per‑second usage data is sent to IBM Cloud, and the bill is generated on an hourly basis.
 
 For example:
 
@@ -64,8 +65,8 @@ Support services enabled
 The following table displays the metering calculation when you run the instance for 14 minutes 30 seconds.
 The usage time which, is monitored in seconds will be internally converted to hours. Here, 0.2416 hours.
 
-| Component |  Runtime calculation(in seconds (s)) \n Metering | Runtime calculation (in hours (h)) \n Billing |Unit Price (1RUs/h = $1USD) | Total Price (1 RU = $1.00 USD)|
-| --- | --- | -- | ---| ---|---|
+| Component |  Runtime calculation(in seconds (s)) \n Metering | Runtime calculation (in hours (h)) \n Billing | Unit Price (1RUs/h = $1USD) | Total Price (1 RU = $1.00 USD)|
+| --- | --- | -- | ---| ---|
 | Presto C++ Starter with 1 coordinator |  (14 * 60) s + 30 s = 870 s| (870/3600) h |1.5 RU| 0.2416 h * 1.5 RU = 0.3652 RU =$0.3652 USD|
 | Presto C++ Starter with 1 worker node| (14 * 60) s + 30 s = 870 s| (870/3600) h | 1.5 RU | 0.2416 h * 1.5 RU = 0.3652 RU =$0.3652 USD|
 | Supporting services | (14 * 60) s + 30 s = 870 s | (870/3600) h |  3 RU| 0.2416 h * 3 RU = 0.725 RU = $0.725 USD|
@@ -85,7 +86,7 @@ Support services enabled
 The following table displays the metering calculation when you run the instance  for a total of 35 minutes and 30 seconds but Presto C++ runs for only the first 14 minutes and 30 seconds.
 
 | Component |  Runtime calculation(in seconds (s)) \n Metering | Runtime calculation (in hours (h)) \n Billing |Unit Price (1RUs/h = $1USD) | Total Price (1 RU = $1.00 USD)|
-| --- | --- | -- | ---| ---|---|
+| --- | --- | -- | ---| ---|
 | Presto C++ Starter with 1 coordinator |  (14 * 60) s + 30 s = 870 s| (870/3600) h |1.5 RU| 0.2416 h * 1.5 RU = 0.3652 RU =$0.3652 USD|
 | Presto C++ Starter with 1 worker node| (14 * 60) s + 30 s = 870 s| (870/3600) h | 1.5 RU | 0.2416 h * 1.5 RU = 0.3652 RU =$0.3652 USD|
 | Milvus T-shirt size| (14 * 60) s + 30 s = 870 s| (870/3600) h | 1.25 RU | 0.2416 h * 1.25 RU = 0.302 RU =$0.302 USD|
