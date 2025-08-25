@@ -40,7 +40,6 @@ The following charge matrices apply to {{site.data.keyword.lakehouse_short}}:
 * Support services: Consists of supporting services such as metadata storage and access control.
 
 
-
 ## Metering and billing granularity in {{site.data.keyword.lakehouse_short}}
 {: #manage_bill1}
 
@@ -48,27 +47,24 @@ Billing is based on the the total run rate, which is the sum of the individual r
 
 You can view the estimate of the expected per-hour run rate consumption of **Resource Units** from the **About** tab in the [**{{site.data.keyword.lakehouse_short}}** **{{site.data.keyword.Bluemix_short}} catalog**](https://cloud.ibm.com/watsonxdata) page.
 
-{{site.data.keyword.lakehouse_short}} is metered per second, while billing is performed hourly.
-{{site.data.keyword.lakehouse_short}} usage is metered on a per-second basis to capture granular data usage. The per-second tracking helps offering greater granularity and transparency. Metering continues as long as the instance is running, regardless of whether any engine is enabled. To avoid unnecessary charges, ensure that unused instances are deleted.
-The per‑second usage data is sent to IBM Cloud, and the bill is generated on an hourly basis.
+Important: **watsonx.data is metered on a per-second basis to ensure precise and granular tracking of usage.**
+This fine-grained metering allows for greater transparency and control, capturing every second the instance is active, regardless of whether any engine is enabled. While billing is aggregated and performed hourly, the underlying usage data is collected per second and sent to IBM Cloud. This continuous per-second metering ensures that charges reflect actual usage time. To avoid incurring unnecessary costs, it is important to delete unused instances promptly.
 
 For example:
 
 **Scenario 1: Presto C++ starter instance usage**
 
-You create a {{site.data.keyword.lakehouse_short}} instance configured with Presto C++ Starter, which includes:
+You create a {{site.data.keyword.lakehouse_short}} instance configured with Presto C++ starter, which includes:
 
-1 coordinator node
-1 worker node
-Support services enabled
+1 co-ordinator node, 1 worker node, and support services enabled.
 
 The following table displays the metering calculation when you run the instance for 14 minutes 30 seconds.
 The usage time which, is monitored in seconds will be internally converted to hours. Here, 0.2416 hours.
 
 | Component |  Runtime calculation(in seconds (s)) \n Metering | Runtime calculation (in hours (h)) \n Billing | Unit Price (1RUs/h = $1USD) | Total Price (1 RU = $1.00 USD)|
 | --- | --- | -- | ---| ---|
-| Presto C++ Starter with 1 coordinator |  (14 * 60) s + 30 s = 870 s| (870/3600) h |1.5 RU| 0.2416 h * 1.5 RU = 0.3652 RU =$0.3652 USD|
-| Presto C++ Starter with 1 worker node| (14 * 60) s + 30 s = 870 s| (870/3600) h | 1.5 RU | 0.2416 h * 1.5 RU = 0.3652 RU =$0.3652 USD|
+| Presto C++ starter with 1 coordinator |  (14 * 60) s + 30 s = 870 s| (870/3600) h |1.5 RU| 0.2416 h * 1.5 RU = 0.3652 RU =$0.3652 USD|
+| Presto C++ starter with 1 worker node| (14 * 60) s + 30 s = 870 s| (870/3600) h | 1.5 RU | 0.2416 h * 1.5 RU = 0.3652 RU =$0.3652 USD|
 | Supporting services | (14 * 60) s + 30 s = 870 s | (870/3600) h |  3 RU| 0.2416 h * 3 RU = 0.725 RU = $0.725 USD|
 |Total | 1740 s| 0.4833 h |6RUs|1.4496 RU = $1.4496 USD|
 {: caption="Presto C++ starter instance usage calculation" caption-side="bottom"}
@@ -79,17 +75,15 @@ The usage time which, is monitored in seconds will be internally converted to ho
 
 You create a {{site.data.keyword.lakehouse_short}} instance with the following configuration:
 
-Presto C++ Starter: Includes 1 coordinator and 1 worker node (both starter size)
-Milvus: T-shirt size
-Support services enabled
+Presto C++ starter: Includes, 1 co-ordinator and 1 worker node (both starter size), Milvus t-shirt size, and support services enabled.
 
 The following table displays the metering calculation when you run the instance  for a total of 35 minutes and 30 seconds but Presto C++ runs for only the first 14 minutes and 30 seconds.
 
-| Component |  Runtime calculation(in seconds (s)) \n Metering | Runtime calculation (in hours (h)) \n Billing |Unit Price (1RUs/h = $1USD) | Total Price (1 RU = $1.00 USD)|
+| Component |  Runtime calculation(in seconds (s)) \n Metering | Runtime calculation (in hours (h)) \n Billing |Unit Price (1RUs/h = $1.00 USD) | Total Price (1 RU = $1.00 USD)|
 | --- | --- | -- | ---| ---|
-| Presto C++ Starter with 1 coordinator |  (14 * 60) s + 30 s = 870 s| (870/3600) h |1.5 RU| 0.2416 h * 1.5 RU = 0.3652 RU =$0.3652 USD|
-| Presto C++ Starter with 1 worker node| (14 * 60) s + 30 s = 870 s| (870/3600) h | 1.5 RU | 0.2416 h * 1.5 RU = 0.3652 RU =$0.3652 USD|
-| Milvus T-shirt size| (14 * 60) s + 30 s = 870 s| (870/3600) h | 1.25 RU | 0.2416 h * 1.25 RU = 0.302 RU =$0.302 USD|
+| Presto C++ starter with 1 coordinator |  (14 * 60) s + 30 s = 870 s| (870/3600) h |1.5 RU| 0.2416 h * 1.5 RU = 0.3652 RU =$0.3652 USD|
+| Presto C++ starter with 1 worker node| (14 * 60) s + 30 s = 870 s| (870/3600) h | 1.5 RU | 0.2416 h * 1.5 RU = 0.3652 RU =$0.3652 USD|
+| Milvus t-shirt size| (14 * 60) s + 30 s = 870 s| (870/3600) h | 1.25 RU | 0.2416 h * 1.25 RU = 0.302 RU =$0.302 USD|
 | Supporting services | (35 * 60) s + 30 s = 2130 s | (2130/3600) h |  3 RU| 0.592 h * 3 RU = 1.775 RU = $1.775 USD|
 |Total | 4740 s| 1.3166 h |7.25RUs|2.807 RU = $2.807 USD|
 {: caption="Presto C++ starter instance usage calculation" caption-side="bottom"}
