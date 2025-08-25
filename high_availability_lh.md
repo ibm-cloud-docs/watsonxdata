@@ -108,6 +108,7 @@ Single-tenant components are strategically distributed across 3 AZs to enhance r
 {: #restore}
 
 **IBM responsibilities**
+
 Restoration of provided resources:
 IBM handles the actual restoration process for the resources it backs up. This includes loading the backup into the new instance and ensuring system-level consistency.
 
