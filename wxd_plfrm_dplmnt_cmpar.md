@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-22"
+lastupdated: "2025-08-26"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -61,7 +61,7 @@ This topic provides the following two tables that outline key features and capab
 | IBM Knowledge Catalog (IKC) | Native integration for governance on SQL views/tables across Presto/Spark. | Same governance integration applies to on‑prem deployments using IKC . |
 | Apache Ranger | Policy support for Presto (C++) and Spark through Ranger plugin. | Also supported on‑prem when Ranger is available in the environment. |
 | Databand | Supported for Spark monitoring beyond Spark UI. | Available for on‑prem Spark pipelines too. |
-| Birdwatcher | Debugging tool for Milvus service included. | Likely same support for on‑prem since Milvus deployment is similar (documentation not explicit) - Need confirmation. |
+| Birdwatcher | Debugging tool for Milvus service included. | Available for On‑Prem. |
 | DataStage and Data Virtualization | Integration with IBM DataStage and Data Virtualization on Cloud Pak for Data (CPD). | Fully available in on‑prem installation through Cloud Pak integration. |
 | BI Tool Integration | Supports Superset, Tableau, Power BI, Cognos, and so forth through public JDBC/ODBC endpoints. | Same tools supported; depends on local network setup and firewall rules. |
 | Manta Lineage Integration | Supported; Built-in integration with visualization in Manta UI. | Supported; Requires manual configuration for Manta integration. |

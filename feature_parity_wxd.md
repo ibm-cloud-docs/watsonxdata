@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-22"
+lastupdated: "2025-08-26"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -33,31 +33,51 @@ subcollection: watsonxdata
 
 Stay up to date with the latest features through [Release notes for {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=release).
 
+This topic covers details for IBM-managed watsonx.data and AstraDB instances in IBM Cloud, Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP).
+
 ## Cloud availability
 {: #cloudavilbilty}
 
-Cloud availability is based on the features that you can handle through {{site.data.keyword.lakehouse_short}}'s user interface. Each deployment receives a classification of support coverage based on how the deployment supports the features' capabilities.
+The cloud availability is based on the features that you can handle through {{site.data.keyword.lakehouse_short}}'s user interface.
 
 For more information on how each deployment is classified based on its support for specific features and capabilities, refer to [Platform comparison: AstraDB versus IBM® {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=watsonxdata-wxd_plfrm_dplmnt_cmpar#wxd_plfrm_dplmnt2).
+
+### IBM Cloud availability
+{: #ibm_cloud}
+
+| Region | Sub-region | Name | AstraDB serverless | watsonx.data | watsonx.data premium |
+| --- | --- | --- | --- | --- | --- |
+| NA | Dallas | us-south | ❌ | ✅ | ❌ |
+| NA | Washington | us-east | ❌ | ✅ | ❌ |
+| NA | Toronto | ca-tor | ❌ | ✅ | ✅ |
+| NA | Montreal | ca-mon | ❌ | ❌ | ❌ |
+| EMEA | Frankfurt | eu-de | ❌ | ✅ | ❌ |
+| EMEA | London | eu-gb | ❌ | ✅ | ❌ |
+| EMEA | Madrid | eu-es | ❌ | ❌ | ❌ |
+| APAC | Tokyo, Japan | jp-tok | ❌ | ✅ | ❌ |
+| APAC | Osaka, Japan | jp-osa | ❌ | ❌ | ❌ |
+| APAC | Sydney | au-syd | ❌ | ✅ | ❌ |
+| SA | Sao Paulo | br-sao | ❌ | ❌ | ❌ |
+{: caption="IBM Cloud availability" caption-side="bottom"}
 
 ### AWS availability
 {: #aws_avlty}
 
 | Region | Sub-region | Name | AstraDB serverless | watsonx.data | watsonx.data premium |
 |---|---|---|---|---|---|
-| NA | N. Virgina | us-east-1 | ✅ | ❌ | ❌ |
-| NA | Oregon | us-west-2 | ✅ | ❌ | ❌ |
-| NA | Ohio | us-east-2 | ✅ | ❌ | ❌ |
-| NA | Montréal, Québec | ca-central-1 | ✅ | ❌ | ❌ |
-| EMEA | Frankfurt | eu-central-1 | ✅ | ❌ | ❌ |
+| NA | N. Virgina | us-east-1 | ✅ | ✅ | ❌ |
+| NA | Oregon | us-west-2 | ✅ | ✅ | ❌ |
+| NA | Ohio | us-east-2 | ✅ | ✅ | ❌ |
+| NA | Montréal, Québec | ca-central-1 | ✅ | ✅ | ❌ |
+| EMEA | Frankfurt | eu-central-1 | ✅ | ✅ | ❌ |
 | EMEA | Ireland | eu-west-1 | ✅ | ❌ | ❌ |
 | EMEA | London | eu-west-2 | ✅ | ❌ |❌|
 | EMEA | UAE | me-central-1 | ❌ | ❌ |❌|
-| APAC | Singapore | ap-southeast-1 | ✅ |❌|❌|
+| APAC | Singapore | ap-southeast-1 | ✅ |✅|❌|
 | APAC | Mumbai, India | ap-south-1 | ✅ | ✅ |❌|
-| APAC | Tokyo, Japan | ap-northeast-1 | ✅ |❌|❌|
-| APAC | Osaka, Japan | ap-northeast-2 | ✅ | ❌ |❌|
-| APAC | Sydney | ap-southeast-2 | ✅ | ❌ |❌|
+| APAC | Tokyo, Japan | ap-northeast-1 | ✅ |✅|❌|
+| APAC | Osaka, Japan | ap-northeast-2 | ✅ | ✅ |❌|
+| APAC | Sydney | ap-southeast-2 | ✅ | ✅ |❌|
 | APAC | Hong Kong | ap-east-1 | ❌ | ❌ |❌|
 | SA | Sao Paulo | sa-east-1 | ❌ | ❌ |❌|
 {: caption="AWS availability" caption-side="bottom"}
