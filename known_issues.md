@@ -43,10 +43,10 @@ These restrictions are enforced due to limitations in underlying storage engines
 
 After updating expired credentials for a storage or database resource associated with a Presto engine, query execution in the Query Workspace fails for approximately 30 to 40 seconds. After this delay, queries execute successfully without further issues.
 
-## Job remains stuck during execution
+## Stats sync job remains stuck during execution
 {: #known_issue33503}
 
-Jobs may remain stuck during execution due to unknown conditions. When this occurs, users can check the logs to view the job status in the optimizer or Db2. If the job status is **NOTRECEIVED**, **NOTRUN**, or **UNKNOWN**, users must manually force delete the job and submit the next one in the queue.
+Stats sync jobs may remain stuck during execution due to unknown conditions. When this occurs, users can check the logs to view the job status in the optimizer or Db2. If the job status is **NOTRECEIVED**, **NOTRUN**, or **UNKNOWN**, users must manually force delete the job and submit the next one in the queue.
 
 - **NOTRECEIVED**: The system did not receive a call with a given task ID.
 - **NOTRUN**: An error prevented the scheduler from invoking the task’s procedure.
