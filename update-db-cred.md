@@ -53,8 +53,8 @@ For IBM managed buckets, there is no option to update credentials.
 
 * Presto:
    * **Update Credentials** is enabled for all external storage buckets and data sources, regardless of their association status with the engine.
-   * If the storage bucket or data source is associated with a Presto (C++), saving the credentials triggers an automatic engine restart.
-   * Presto (Java) do not restart automatically upon credential updates.
+   * When you update the credentials for a data source or storage linked to the Presto (C++) engine, the system applies the changes dynamically and automatically restarts the engine.
+   * When you update the credentials for a data source or storage associated to the Presto (Java) engine, the changes are applied dynamically without a restart.
 
 * Spark: **Update Credentials** is enabled for the storage buckets that has been designated as the Spark engine's home bucket during the provisioning process and all other external storage buckets and data sources, regardless of their association status with the engine. Spark synchronizes with the latest updated credentials of associated storages within 5-6 minutes.
 
