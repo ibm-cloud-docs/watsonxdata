@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-22"
+lastupdated: "2025-08-26"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -29,7 +29,7 @@ subcollection: watsonxdata
 # Using the Vector Transport Service
 {: #milvus_vts}
 
-The Vector Transport Service (VTS) is an open-source tool, designed specifically for the transformation and transportation of vectors and unstructured data.
+The Vector Transport Service (VTS) is an open-source tool designed for the efficient transformation and transportation of vector data.
 {: shortdesc}
 
 VTS supports both real-time streaming and offline batch import modes, making it versatile for a wide range of use cases. By integrating VTS with Milvus, it can be used to migrate or manage vector data across systems.
