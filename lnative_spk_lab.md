@@ -35,8 +35,8 @@ It is available as a Visual Studio Code extension and you can install it in your
    As Spark labs are ephemeral in nature, you must back up the data stored periodically to prevent potential data loss during upgrades or a Spark master crash.
    {: important}
 
-1. For users working with heavy applications and notebooks in Visual Studio Code, it is recommended to allocate at least 8 GB of memory, instead of the default 4 GB core. This ensures smoother performance and better handling of resource-intensive tasks.
-   This is important when using SparkLabs for some the memory-intensive applications, for example using Notebooks. In such scenarios, if a network disconnect occurs, sessions may be lost or require reloading, which demands additional memory overhead.
+1. For users working with heavy applications and notebooks in Visual Studio Code, it is recommended to allocate at least 8 GB of memory, instead of the default 4 GB memory. This ensures smoother performance and better handling of resource-intensive tasks.
+   This is important when using SparkLabs for some the memory-intensive applications, for example using Notebooks. In such scenarios, if a network disconnect occurs, sessions require reloading, which demands additional memory overhead.
    To avoid such risks, you must proactively allocate extra memory space.
 
 ## Procedure
