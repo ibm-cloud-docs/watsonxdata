@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-25"
+lastupdated: "2025-08-26"
 
 keywords: lakehouse, bucket, objects, watsonx.data
 
@@ -32,7 +32,7 @@ subcollection: watsonxdata
 Once the Query Optimizer is successfully activated for the Presto (C++) engine, it enables advanced query performance enhancements and optimization capabilities across multiple catalogs.
 {: shortdesc}
 
-The Query optimizer manager page displays the Presto (C++) engines and their associated catalogs. You can run query analysis on catalogs associated to the engine. It also enables you to track and manage catalog analysis to enhance query performance.
+The Query optimizer manager allows collecting, storing, and synchronizing table and column statistics for specified tables. These statistics provide essential insights into the data, including row counts, the number of distinct values, minimum and maximum values for each column, and overall data distribution.
 
 ## Viewing Presto (C++) engines
 {: #qry-view}
@@ -47,7 +47,13 @@ You can do query analysis on catalogs (and tables) associated with the Presto (C
 
 1. From the navigation menu, select **Configurations** and click the **Query Optimizer Manager** tile. The **Query optimizer manager** page opens.
 1. Click **Catalogs** tab.
-1. The **Statistics** tab provides a view of associated catalogs, the percentage of storage data analyzed, and the timestamp of the most recent analysis.
+1. The **Statistics** tab provides a view of associated catalogs, percentage of tables analyzed relative to the total number of tables within each catalog and the timestamp of the most recent analysis. You can filter the records based on the analysis.
+   To do that, click the **Filter** icon. Select the following options and apply the filter condition:
+
+   * No analysis : Select this checkbox to filter catalogs that haven't been analyzed yet.
+
+   * Time since last analysis: Select this checkbox and provide the period (in days or months) to get the list of records processed during the specified period.
+
 1. Click the **Collect statistics** button. The **Collect statistics** page opens with the schemas and tables associated with the Presto (C++) engines. Select the tables and click **Create jobs** to create statistics for tables.
 1. You can also use the overflow menu next to each catalog on the **Query Optimizer Manager** page to initiate the creation of statistical data for the tables within the selected catalog.
 
@@ -57,6 +63,24 @@ You can do query analysis on catalogs (and tables) associated with the Presto (C
 
 1. From the navigation menu, select **Configurations** and click the **Query Optimizer Manager** tile. The **Query optimizer manager** page opens.
 1. Click **Catalogs** tab.
-2. The **Statistics Jobs** tab provides the list statistical jobs that you created.
+2. The **Statistics Jobs** tab provides the list of statistical jobs that you created.
 
-The table and the associated schema information will be categorized based on the job status Active , Queued and Completed. You can view the logs using the overflow menu.
+   **Active** : Jobs initiated from the Collect Statistics page that is currently in a Running state is listed here. At any given time, only one job record will appear in the Active state. From the overflow menu, you can :
+
+      * View log : Select this to view the job log for the active record.
+
+      * Add to queue : Select this if you want to move the record to queue.
+
+      * Delete : Select this to delete the record.
+
+      The log information can include the following job status:
+
+      NOTRECEIVED: The system did not receive a call with a given task ID.
+
+      NOTRUN: An error prevented the scheduler from invoking the task’s procedure.
+
+      UNKNOWN: The task began execution, but the scheduler failed to record the outcome due to an unexpected condition.
+
+   **Queued** : If multiple jobs are initiated from the Collect Statistics page, only one will remain in the Active state at a time. All other jobs will be placed in a queue and listed here. From the overflow menu, you can select Remove from queue to remove the record from Queued state to Active state.
+
+   **Completed** : The jobs that have completed execution gets listed here. From the options available in the overflow menu, you can view the log, add the records to queue, or delete the records.
