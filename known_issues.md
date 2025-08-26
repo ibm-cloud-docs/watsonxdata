@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-25"
+lastupdated: "2025-08-26"
 
 keywords: lakehouse
 
@@ -69,10 +69,10 @@ Users encounter an error when querying role-related `information_schema` table f
 
 **Workaround:** To prevent errors, avoid querying role-related information_schema tables (such as applicable_roles, enabled_roles, and roles) for `tpcds` or `tpch` connectors.
 
-## Use valid table names to ensure query reliability
+## Use valid schema, table, and column names to ensure query reliability
 {: #known_issue21807}
 
-Avoid using leading or trailing spaces in table names when creating tables or columns in Query workspace. Although the table may be created successfully, these spaces can cause issues when querying or interacting with the table later. To ensure smooth and reliable operation, always use clean table names without extra spaces.
+Avoid using leading or trailing spaces in schema, table, or column names when creating tables in the Query workspace. While the creation may succeed, these extra spaces can lead to issues during querying or interaction. To ensure smooth and reliable operation, always use clean names without extra spaces.
 
 ## Limitations of BLOB and CLOB support in Presto
 {: #known_issue30109}
