@@ -60,7 +60,7 @@ For example:
 
 You create a {{site.data.keyword.lakehouse_short}} instance configured with Presto C++ starter, which includes:
 
-1 co-ordinator node, 1 worker node, and support services enabled.
+Presto C++ starter, and support services enabled.
 
 The following table displays the metering calculation when you run the instance for 14 minutes 30 seconds.
 The usage time which, is monitored in seconds will be internally converted to hours. Here, 0.2416 hours.
@@ -70,7 +70,7 @@ The usage time which, is monitored in seconds will be internally converted to ho
 | Presto C++ starter with 1 coordinator |  (14 * 60) s + 30 s = 870 s| (870/3600) h |1.5 RU| 0.2416 h * 1.5 RU = 0.3652 RU =$0.3652 USD|
 | Presto C++ starter with 1 worker node| (14 * 60) s + 30 s = 870 s| (870/3600) h | 1.5 RU | 0.2416 h * 1.5 RU = 0.3652 RU =$0.3652 USD|
 | Supporting services | (14 * 60) s + 30 s = 870 s | (870/3600) h |  3 RU| 0.2416 h * 3 RU = 0.725 RU = $0.725 USD|
-|Total | 1740 s| 0.4833 h |6RUs|1.4496 RU = $1.4496 USD|
+|Total | 1740 s| 0.4833 h |6RUs|1.4496 RU = $1.4496 USD = $1.45 USD|
 {: caption="Presto C++ starter instance usage calculation" caption-side="bottom"}
 
 
@@ -79,7 +79,7 @@ The usage time which, is monitored in seconds will be internally converted to ho
 
 You create a {{site.data.keyword.lakehouse_short}} instance with the following configuration:
 
-Presto C++ starter: Includes, 1 co-ordinator and 1 worker node (both starter size), Milvus t-shirt size, and support services enabled.
+Presto C++ starter, Milvus starter size and support services enabled.
 
 The following table displays the metering calculation when you run the instance  for a total of 35 minutes and 30 seconds but Presto C++ runs for only the first 14 minutes and 30 seconds.
 
@@ -89,7 +89,7 @@ The following table displays the metering calculation when you run the instance 
 | Presto C++ starter with 1 worker node| (14 * 60) s + 30 s = 870 s| (870/3600) h | 1.5 RU | 0.2416 h * 1.5 RU = 0.3652 RU =$0.3652 USD|
 | Milvus t-shirt size| (14 * 60) s + 30 s = 870 s| (870/3600) h | 1.25 RU | 0.2416 h * 1.25 RU = 0.302 RU =$0.302 USD|
 | Supporting services | (35 * 60) s + 30 s = 2130 s | (2130/3600) h |  3 RU| 0.592 h * 3 RU = 1.775 RU = $1.775 USD|
-|Total | 4740 s| 1.3166 h |7.25RUs|2.807 RU = $2.807 USD|
+|Total | 4740 s| 1.3166 h |7.25RUs|2.807 RU = $2.807 USD = $2.81 USD|
 {: caption="Presto C++ starter instance usage calculation" caption-side="bottom"}
 
 
