@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-25"
+lastupdated: "2025-08-26"
 
 keywords: lakehouse, watsonx data, roles, access
 subcollection: watsonxdata
@@ -37,7 +37,7 @@ The following charge matrices apply to {{site.data.keyword.lakehouse_short}}:
 
 * Compute cluster: Consists of coordinator and worker nodes that run the query engine. Each node consumes a set of resource units per hour (as defined by the {{site.data.keyword.Bluemix_short}}) until the node is paused or deleted.
 
-* Support services: Consists of supporting services such as metadata storage and access control.
+* Support services: Consists of supporting services such as metadata storage and access control. Metering for support services starts when an instance is created and remains active continuously until the instance is deleted.
 
 
 ## Metering and billing granularity in {{site.data.keyword.lakehouse_short}}
