@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-29"
+lastupdated: "2025-08-26"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -29,16 +29,6 @@ subcollection: watsonxdata
 {: #prov_engine}
 
 An engine in {{site.data.keyword.lakehouse_short}} runs SQL queries on your data source and fetches the queried data. Presto (Java) is one of the engines supported in watsonx.data.
-
-The versions of Presto (Java) supported depends on the {{site.data.keyword.lakehouse_short}} versions. The following is the list of supported versions:
-
-   - {{site.data.keyword.lakehouse_short}} v1.0.0, v1.0.1 and v1.0.2: [Presto (Java) version 0.279][def]
-
-   - {{site.data.keyword.lakehouse_short}} v1.0.3, v1.1.1 and v1.1.3: [Presto (Java) version 0.282][def1]
-
-   - {{site.data.keyword.lakehouse_short}} v1.1.4, v1.1.5: [Presto (Java) version 0.285.1][def2]
-
-   - {{site.data.keyword.lakehouse_short}} v2.0.0: [Presto (Java) version 0.286][def3]
 
 To provision a Presto (Java) engine, complete the following steps.
 {: shortdesc}
