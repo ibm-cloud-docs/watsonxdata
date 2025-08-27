@@ -65,7 +65,14 @@ Stats sync jobs may remain stuck during execution due to unknown conditions. Whe
 ## Compatibility issue: Spark fails to read iceberg tables written by presto with Parquet V2
 {: #known_issue30535}
 
-Spark fails to read data inserted into iceberg tables by Presto when users explicitly configure Presto to use the Parquet V2 writer.
+Spark fails to read data inserted into iceberg tables by Presto when Presto is explicitly configured to use the Parquet V2 writer. This issue occurs because Spark does not support vectorized reads for certain Parquet V2 encodings, such as `DELTA_BINARY_PACKED`. A typical error message is `UnsupportedOperationException: Cannot support vectorized reads for column [CustomerID] optional int32 CustomerID = 1 with encoding DELTA_BINARY_PACKED. Disable vectorized reads to read this table/file at org.apache.iceberg.arrow.vectorized.parquet.VectorizedPageIterator.initDataReader(VectorizedPageIterator.java:98)`.
+
+**Workaround:** If you encounter this error while reading a table especially one created using earlier versions of watsonx.data, set the following Spark configuration.
+
+   ```bash
+      config("spark.sql.iceberg.vectorization.enabled", "false")
+   ```
+   {: codeblock}
 
 ## Limitation of querying role-related `information_schema` table for `tpcds` or `tpch` connectors
 {: #known_issue33420}
