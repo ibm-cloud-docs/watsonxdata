@@ -64,7 +64,7 @@ CPDCTL CLI Enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancements to IBM Cloud Pak for Data Command Line Interface (IBM cpdctl):
 
-* Starting with version 2.2.1, you can configure and access HashiCorp Vault directly through cpdctl, enabling secure secrets management and streamlined automation workflows.
+* Starting with version 2.2.1, you can use HashiCorp Vault through cpdctl for secure secrets management and streamlined automation workflows.
 
 * A new option under the service command wx-data service generate-engine-dump allows you to generate dumps for Presto worker and coordinator nodes in {{site.data.keyword.lakehouse_short}}. To know details about service command is used serviceability related operations in {{site.data.keyword.lakehouse_short}}, see [service](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata#cpdctl_commands_wxdatasvce).
 
