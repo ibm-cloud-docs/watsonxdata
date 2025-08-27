@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-26"
+lastupdated: "2025-08-27"
 
 keywords: lakehouse, bucket, objects, watsonx.data
 
@@ -27,7 +27,7 @@ subcollection: watsonxdata
 {:video: .video}
 
 # Monitoring query performance from Optimizer dashboard
-{: #qry-obj}
+{: #analyze_optimizer}
 
 Once the Query Optimizer is successfully activated for the Presto (C++) engine, it enables advanced query performance enhancements and optimization capabilities across multiple catalogs.
 {: shortdesc}

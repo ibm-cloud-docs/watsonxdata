@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-30"
+lastupdated: "2025-08-27"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -35,6 +35,10 @@ This topic gives the details to gather enhanced statistics for Iceberg tables th
 {: #optimizer_iceberg_statsbyb}
 
 1. Make sure that the manual synchronization procedure between the **Query Optimizer** and the {{site.data.keyword.lakehouse_short}} metastore is completed successfully if needed. See [Manually syncing Query Optimizer with Watsonx.data metastore](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-sync_optimizer_meta).
+
+   The instructions in this topic can now be executed using the enhanced feature [Managing statistical updates from the Optimizer dashboard](/docs/watsonxdata?topic=watsonxdata-analyze_optimizer), which enables advanced query performance enhancements and optimization capabilities across multiple
+   catalogs.
+   {: note}
 
 ## Procedure
 {: #optimizer_iceberg_statsprcdre}
