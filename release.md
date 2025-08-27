@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-08-26"
+lastupdated: "2025-08-27"
 
 keywords: watsonxdata, release notes
 
@@ -38,12 +38,19 @@ Engine and service enhancements
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancement:
 
    * Introduced version v3 of the {{site.data.keyword.lakehouse_short}} API. You can continue to use version v2 until {{site.data.keyword.lakehouse_short}} version 2.3.
-   * You can now provision {{site.data.keyword.lakehouse_short}} Spark engine with the default Spark runtime set to Spark 4.0, which enables you to run Spark applications on Spark 4.0.
+   * You can now provision {{site.data.keyword.lakehouse_short}} Spark engine with the Spark runtime set to Spark 4.0, which enables you to run Spark applications on Spark 4.0. To know details supported Spark versions, see [Supported Spark version](/docs/watsonxdata?topic=watsonxdata-ae_limits#cpu-mem-spk_versn).
    * The Milvus service in {{site.data.keyword.lakehouse_short}} is now upgraded to version 2.5.12.
+<<<<<<< Updated upstream
    * You can now use the open-source Milvus backup tool to back up and restore data from Milvus within watsonx.data. To know more details, see [Using the Milvus backup tool](/docs/watsonxdata?topic=milvus_backup).
    * The Gluten accelerated Spark engine in {{site.data.keyword.lakehouse_short}} is now able to run applications using Spark version 3.5. To know details about supported Spark versions, see [Supported Spark version](/docs/watsonxdata?topic=watsonxdata-ae_limits#cpu-mem-spk_versn).
    * You can now use the Vector Transport Service (VTS) with Milvus in watsonx.data to migrate or manage vector data across systems. To know more details, see [Using the Vector Transport Service](/docs/watsonxdata?topic=milvus_vts).
    * You can now monitor query performance improvements through the optimizer dashboard. The optimizer is actively managing query plans for the associated catalogs and improving performance for Presto (C++) engines. To know more details, see [Monitoring query performance from Optimizer dashboard](/docs/watsonxdata?topic=analyze_optimizer).
+=======
+   * You can now use the open-source Milvus backup tool to back up and restore data from Milvus within watsonx.data.
+   * The Gluten accelerated Spark engine in {{site.data.keyword.lakehouse_short}} is now able to run applications using Spark version 3.5. To know details about supported Spark versions, see [Supported Spark version](/docs/watsonxdata?topic==watsonxdata-wxd-ae_limits#cpu-mem-spk_versn).
+   * You can now use the Vector Transport Service (VTS) with Milvus in watsonx.data to migrate or manage vector data across systems. To know more details, see [Using the Vector Transport Service](/docs/watsonxdata?topic=watsonxdata-milvus_vts).
+   * You can now monitor query performance improvements through the optimizer dashboard. The optimizer is actively managing query plans for the associated catalogs and improving performance for Presto (C++) engines. To know more details, see [Monitoring query performance from Optimizer dashboard](/docs/watsonxdata?topic=watsonxdata-analyze_optimizer).
+>>>>>>> Stashed changes
 
 Access management enhancements
 
@@ -59,7 +66,7 @@ Access management enhancements
 
 CPDCTL CLI Enhancements
 
-: The IBM Cloud Pak for Data Command Line Interface (IBM cpdctl) has been enhanced with several new features and improvements to support {{site.data.keyword.lakehouse_short}} and secure integrations:
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancements to IBM Cloud Pak for Data Command Line Interface (IBM cpdctl):
 
 * Starting with version 2.2.1, you can configure and access HashiCorp Vault directly through cpdctl, enabling secure secrets management and streamlined automation workflows.
 
@@ -83,11 +90,11 @@ Data sources and storage enhancements
 
 Semantic automation for data enrichment
 
-: {{site.data.keyword.lakehouse_short}} now supports semantic search capabilities that allow users to query data using natural language, making data exploration more intuitive and efficient. To know about semantic search capabilities, see [Performing semantic searches in {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=sal_search).
+: {{site.data.keyword.lakehouse_short}} now supports semantic search capabilities that allow users to query data using natural language, making data exploration more intuitive and efficient. To know about semantic search capabilities, see [Performing semantic searches in {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=watsonxdata-sal_search).
 
 Public preview enhancements
 
-: Public preview features now accessible from **Configurations** UI
+: Public preview features now accessible from **Configurations** UI.
    You can now easily access and manage {{site.data.keyword.lakehouse_short}} public preview features directly from the Configurations UI. All features in the public preview stage are now visible from the Configurations UI. Features in public preview are highlighted with a Preview tag, making it easy to identify them.
    You can enable or disable the features to explore the functionality. Each public preview feature includes a link to its detailed documentation, allowing you to learn more about it.
    To know more about public preview features, see [What's new in w{{site.data.keyword.lakehouse_short}} (Public preview)](/docs/watsonxdata?topic=release_public_preview).
