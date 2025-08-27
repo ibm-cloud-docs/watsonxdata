@@ -37,7 +37,7 @@ Engine and service enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancement:
 
-   * Introduced version v3 of the {{site.data.keyword.lakehouse_short}} API. You can continue to use version v2 until {{site.data.keyword.lakehouse_short}} version 2.3. To know more details about {{site.data.keyword.lakehouse_short}} API, see [API documentation](https://cloud.ibm.com/apidocs/watsonxdata#intro).
+   * Introduced version v3 of the {{site.data.keyword.lakehouse_short}} API. You can continue to use version v2 until {{site.data.keyword.lakehouse_short}} version 2.3. See [API documentation (v3)](https://cloud.ibm.com/apidocs/watsonxdata-v3).
    * You can now provision {{site.data.keyword.lakehouse_short}} Spark engine with the Spark runtime set to Spark 4.0, which enables you to run Spark applications on Spark 4.0. To know details supported Spark versions, see [Supported Spark version](/docs/watsonxdata?topic=watsonxdata-ae_limits#cpu-mem-spk_versn).
    * The Milvus service in {{site.data.keyword.lakehouse_short}} is now upgraded to version 2.5.12.
    * You can now use the open-source Milvus backup tool to back up and restore data from Milvus within watsonx.data.
