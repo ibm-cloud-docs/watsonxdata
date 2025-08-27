@@ -52,7 +52,7 @@ The following table shows the supported vCPU to memory size combinations.
 {: caption="Supported vCPU to memory size combinations" caption-side="top"}
 
 
-## Supported Spark version for {{site.data.keyword.lakehouse_short}}
+## Supported Spark version for {{site.data.keyword.lakehouse_short}} Spark engine
 {: #cpu-mem-spk_versn}
 
 
