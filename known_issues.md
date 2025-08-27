@@ -156,13 +156,6 @@ Users might encounter a "test connection failure error due to invalid credential
 
 **Workaround:** If you encounter with this failure error, you must contact IBM support.
 
-## Reset button does not reset the threshold settings to default settings
-{: #known_issue46159}
-
-Clicking the `Reset` button does not reset the thresholds to their default or global settings, instead reverts the changes made since the last save which is similar to the action of `Cancel` button.
-
-**Workaround:** To achieve the desired reset to default settings, manually revert each threshold setting to its required value, then save the changes.
-
 ## Absence of column NDV stats in Iceberg tables leads to suboptimal query plans
 {: #known_issue26023}
 
