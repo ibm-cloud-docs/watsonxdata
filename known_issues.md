@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-26"
+lastupdated: "2025-08-27"
 
 keywords: lakehouse
 
@@ -30,6 +30,16 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+## Test connection for arrow connectors fails in FIPS-enabled clusters
+{: #known_issue33906}
+
+Test connection for arrow connectors may fail when deployed in FIPS-enabled clusters due to cryptographic restrictions. This affects connectors such as Greenplum, MariaDB, and Salesforce, which rely on underlying libraries incompatible with FIPS mode during connection validation.
+
+## Apache Kafka test connection fails in FIPS-enabled clusters without SCRAM-SHA-512
+{: #known_issue33906_1}
+
+For Apache Kafka, test connection may fail unless the SASL_MECHANISM is explicitly set to "SCRAM-SHA-512". This mechanism is compatible with FIPS requirements and should be used to ensure successful connection testing in FIPS-enabled environments.
 
 ## Unsupported special characters in schema and table creation through Ingestion UI
 {: #known_issue21631}
