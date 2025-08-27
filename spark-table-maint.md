@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-08-26"
+lastupdated: "2025-08-27"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -52,6 +52,7 @@ To automatically perform the table maintenance operation, see [Table maintenance
 
    You can use Amazon S3A, ADLS and GCS storage for Spark job submission.
    {: note}
+
 
    * `<Path>` : The path of the storage where the Spark application is saved.
 
