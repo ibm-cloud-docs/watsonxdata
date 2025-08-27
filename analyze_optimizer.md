@@ -32,7 +32,7 @@ subcollection: watsonxdata
 Once the Query Optimizer is successfully activated for the Presto (C++) engine, it enables advanced query performance enhancements and optimization capabilities across multiple catalogs.
 {: shortdesc}
 
-The Query optimizer manager allows collecting, storing, and synchronizing table and column statistics for specified tables. These statistics provide essential insights into the data, including row counts, the number of distinct values, minimum and maximum values for each column, and overall data distribution.
+The Query optimizer manager allows collecting, storing, and synchronizing table and column statistics for specified tables. These statistics provide essential insights into the data, including row counts, the number of distinct values, minimum and maximum values for each column, and overall data distribution. Only Hive and Iceberg catalogs are supported for the collection of statistics.
 
 ## Viewing Presto (C++) engines
 {: #qry-view}
