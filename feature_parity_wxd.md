@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-26"
+lastupdated: "2025-08-27"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -65,18 +65,18 @@ For more information on how each deployment is classified based on its support f
 
 | Region | Sub-region | Name | AstraDB serverless | watsonx.data | watsonx.data premium |
 |---|---|---|---|---|---|
-| NA | N. Virgina | us-east-1 | ✅ | ✅ | ❌ |
-| NA | Oregon | us-west-2 | ✅ | ✅ | ❌ |
-| NA | Ohio | us-east-2 | ✅ | ✅ | ❌ |
-| NA | Montréal, Québec | ca-central-1 | ✅ | ✅ | ❌ |
-| EMEA | Frankfurt | eu-central-1 | ✅ | ✅ | ❌ |
+| NA | N. Virgina | us-east-1 | ✅ | ❌ | ❌ |
+| NA | Oregon | us-west-2 | ✅ | ❌ | ❌ |
+| NA | Ohio | us-east-2 | ✅ | ❌ | ❌ |
+| NA | Montréal, Québec | ca-central-1 | ✅ | ❌ | ❌ |
+| EMEA | Frankfurt | eu-central-1 | ✅ | ❌ | ❌ |
 | EMEA | Ireland | eu-west-1 | ✅ | ❌ | ❌ |
 | EMEA | London | eu-west-2 | ✅ | ❌ |❌|
 | EMEA | UAE | me-central-1 | ❌ | ❌ |❌|
-| APAC | Singapore | ap-southeast-1 | ✅ |✅|❌|
+| APAC | Singapore | ap-southeast-1 | ✅ |❌|❌|
 | APAC | Mumbai, India | ap-south-1 | ✅ | ✅ |❌|
-| APAC | Tokyo, Japan | ap-northeast-1 | ✅ |✅|❌|
-| APAC | Osaka, Japan | ap-northeast-2 | ✅ | ✅ |❌|
+| APAC | Tokyo, Japan | ap-northeast-1 | ✅ |❌|❌|
+| APAC | Osaka, Japan | ap-northeast-2 | ✅ | ❌ |❌|
 | APAC | Sydney | ap-southeast-2 | ✅ | ✅ |❌|
 | APAC | Hong Kong | ap-east-1 | ❌ | ❌ |❌|
 | SA | Sao Paulo | sa-east-1 | ❌ | ❌ |❌|
