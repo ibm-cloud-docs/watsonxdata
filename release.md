@@ -40,17 +40,10 @@ Engine and service enhancements
    * Introduced version v3 of the {{site.data.keyword.lakehouse_short}} API. You can continue to use version v2 until {{site.data.keyword.lakehouse_short}} version 2.3.
    * You can now provision {{site.data.keyword.lakehouse_short}} Spark engine with the Spark runtime set to Spark 4.0, which enables you to run Spark applications on Spark 4.0. To know details supported Spark versions, see [Supported Spark version](/docs/watsonxdata?topic=watsonxdata-ae_limits#cpu-mem-spk_versn).
    * The Milvus service in {{site.data.keyword.lakehouse_short}} is now upgraded to version 2.5.12.
-<<<<<<< Updated upstream
-   * You can now use the open-source Milvus backup tool to back up and restore data from Milvus within watsonx.data. To know more details, see [Using the Milvus backup tool](/docs/watsonxdata?topic=milvus_backup).
-   * The Gluten accelerated Spark engine in {{site.data.keyword.lakehouse_short}} is now able to run applications using Spark version 3.5. To know details about supported Spark versions, see [Supported Spark version](/docs/watsonxdata?topic=watsonxdata-ae_limits#cpu-mem-spk_versn).
-   * You can now use the Vector Transport Service (VTS) with Milvus in watsonx.data to migrate or manage vector data across systems. To know more details, see [Using the Vector Transport Service](/docs/watsonxdata?topic=milvus_vts).
-   * You can now monitor query performance improvements through the optimizer dashboard. The optimizer is actively managing query plans for the associated catalogs and improving performance for Presto (C++) engines. To know more details, see [Monitoring query performance from Optimizer dashboard](/docs/watsonxdata?topic=analyze_optimizer).
-=======
    * You can now use the open-source Milvus backup tool to back up and restore data from Milvus within watsonx.data.
    * The Gluten accelerated Spark engine in {{site.data.keyword.lakehouse_short}} is now able to run applications using Spark version 3.5. To know details about supported Spark versions, see [Supported Spark version](/docs/watsonxdata?topic==watsonxdata-wxd-ae_limits#cpu-mem-spk_versn).
    * You can now use the Vector Transport Service (VTS) with Milvus in watsonx.data to migrate or manage vector data across systems. To know more details, see [Using the Vector Transport Service](/docs/watsonxdata?topic=watsonxdata-milvus_vts).
    * You can now monitor query performance improvements through the optimizer dashboard. The optimizer is actively managing query plans for the associated catalogs and improving performance for Presto (C++) engines. To know more details, see [Monitoring query performance from Optimizer dashboard](/docs/watsonxdata?topic=watsonxdata-analyze_optimizer).
->>>>>>> Stashed changes
 
 Access management enhancements
 
