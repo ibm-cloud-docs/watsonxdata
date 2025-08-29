@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-26"
+lastupdated: "2025-08-29"
 
 keywords: lakehouse, watsonx data, roles, access
 subcollection: watsonxdata
@@ -37,7 +37,7 @@ The following charge matrices apply to {{site.data.keyword.lakehouse_short}}:
 
 * Compute cluster: Consists of coordinator and worker nodes that run the query engine. Each node consumes a set of resource units per hour (as defined by the {{site.data.keyword.Bluemix_short}}) until the node is paused or deleted.
 
-* Support services: Consists of supporting services such as metadata storage and access control. Metering for support services starts when an instance is created and remains active continuously until the instance is deleted.
+* Support services: Consists of supporting services such as metadata storage and access control. Metering for support services starts on opening the instance and initiating the Quick Start step, and remains active continuously until the instance is deleted.
 
 
 ## Metering and billing granularity in {{site.data.keyword.lakehouse_short}}
@@ -74,7 +74,7 @@ The usage time which, is monitored in seconds will be internally converted to ho
 {: caption="Presto C++ starter instance usage calculation" caption-side="bottom"}
 
 
-**Scenario 2: Instance with Presto C++ starter and Milvus t shirt**
+**Scenario 2: Instance with Presto C++ starter and Milvus starter**
 
 
 You create a {{site.data.keyword.lakehouse_short}} instance with the following configuration:
@@ -87,7 +87,7 @@ The following table displays the metering calculation when you run the instance 
 | --- | --- | -- | ---| ---|
 | Presto C++ starter with 1 coordinator |  (14 * 60) s + 30 s = 870 s| (870/3600) h |1.5 RU| 0.2416 h * 1.5 RU = 0.3652 RU =$0.3652 USD|
 | Presto C++ starter with 1 worker node| (14 * 60) s + 30 s = 870 s| (870/3600) h | 1.5 RU | 0.2416 h * 1.5 RU = 0.3652 RU =$0.3652 USD|
-| Milvus t-shirt size| (14 * 60) s + 30 s = 870 s| (870/3600) h | 1.25 RU | 0.2416 h * 1.25 RU = 0.302 RU =$0.302 USD|
+| Milvus starter| (14 * 60) s + 30 s = 870 s| (870/3600) h | 1.25 RU | 0.2416 h * 1.25 RU = 0.302 RU =$0.302 USD|
 | Supporting services | (35 * 60) s + 30 s = 2130 s | (2130/3600) h |  3 RU| 0.592 h * 3 RU = 1.775 RU = $1.775 USD|
 |Total | 4740 s| 1.3166 h |7.25RUs|2.807 RU = $2.807 USD = $2.81 USD|
 {: caption="Presto C++ starter instance usage calculation" caption-side="bottom"}
