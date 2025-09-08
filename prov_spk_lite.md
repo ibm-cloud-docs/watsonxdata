@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-29"
+lastupdated: "2025-09-08"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -53,7 +53,7 @@ To add a Spark engine, complete the following steps.
 
       | Field | Description |
       | --- | --- |
-      | Default Spark version | Select the Spark runtime version that must be considered for processing the applications. For supported Spark versions, see [Supported Spark version](/docs/watsonxdata?topic=watsonxdata-wxd-ae_limits#cpu-mem-spk_versn). |
+      | Default Spark version | Select the Spark runtime version that must be considered for processing the applications. For supported Spark versions, see [Supported Spark version](/docs/watsonxdata?topic=watsonxdata-wxd-ae_limits#cpu-mem-spk_versn).\n Lite version of {{site.data.keyword.lakehouse_short}} does not support Spark version 4.0. |
       | Engine home bucket | Select the registered Cloud Object Storage bucket from the list to store the Spark events and logs that are generated while running spark applications. \n [Note]{: tag-purple} Make sure you do not select the IBM-managed bucket as Spark Engine home. If you select an IBM-managed bucket, you cannot access it to view the logs. \n For more information, see [Before you begin]({{site.data.keyword.ref-prov_nspark-link}}#prereq_nspark_prov).|
       |Instance resource quota| Displays the memory limit of the Spark engine. For Lite plan, it will be 8 vCPU and 32 GB. You cannot modify the value.   |
       |Associated catalogs (optional)| Select the catalogs that must be associated with the engine.   |
