@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-09-08"
+lastupdated: "2025-09-09"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -31,6 +31,9 @@ subcollection: watsonxdata
 
 You can add serverless Spark engine for {{site.data.keyword.lakehouse_full}} Lite plan instance. Native serverless Spark engine is a compute engine that resides within IBM® watsonx.data.
 {: shortdesc}
+
+You cannot register an External Spark engine for {{site.data.keyword.lakehouse_short}} Lite plan.
+{: note}
 
 To add a Spark engine, complete the following steps.
 
