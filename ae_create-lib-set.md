@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-24"
+lastupdated: "2025-09-10"
 
 keywords: watsonxdata, qhmm
 
@@ -65,7 +65,7 @@ To create a library set:
 1. Pass the JSON file as `"arguments"` in the following REST API call. Make sure that you escape the quotes as required, while passing to the REST API call.
     ```sh
     curl --request POST
-        --url https://<region>.lakehouse.cloud.ibm.com/lakehouse/api/v2/spark_engines/<spark_engine_id>/applications
+        --url https://<region>.lakehouse.cloud.ibm.com/lakehouse/api/<api_version>/spark_engines/<spark_engine_id>/applications
         --header 'Authorization: Bearer <token>'
         --header 'Content-Type: application/json'
         --header 'AuthInstanceID: <crn_instance>'
@@ -81,12 +81,13 @@ To create a library set:
     * `<spark_engine_id>` : The Engine ID of the native Spark engine.
     * `<crn_instance>` : The CRN of the watsonx.data instance.
     * `<token>` : The bearer token. For more information about generating the token, see [Generating a bearer token](https://cloud.ibm.com/apidocs/watsonxdata#authentication).
+    * `<api_version>` :When using the v2 API, set the <api_version> parameter to `v2`; for the v3 API, set it to `v3`.
 
    ** Example payload**:
 
 
     ```bash
-        --url https://<region>.lakehouse.cloud.ibm.com/lakehouse/api/v2/spark_engines/<spark_engine_id>/applications
+        --url https://<region>.lakehouse.cloud.ibm.com/lakehouse/api/<api_version>/spark_engines/<spark_engine_id>/applications
         --header 'Authorization: Bearer <token>'
         --header 'Content-Type: application/json'
         --header 'AuthInstanceID: <crn_instance>'
@@ -189,7 +190,7 @@ Perform these steps to create a library set using script based customization:
 
     ```sh
     curl --request POST
-        --url https://<region>.lakehouse.cloud.ibm.com/lakehouse/api/v2/spark_engines/<spark_engine_id>/applications
+        --url https://<region>.lakehouse.cloud.ibm.com/lakehouse/api/<api_version>/spark_engines/<spark_engine_id>/applications
         --header 'Authorization: Bearer <token>'
         --header 'Content-Type: application/json'
         --header 'AuthInstanceID: <crn_instance>'
@@ -203,3 +204,4 @@ Perform these steps to create a library set using script based customization:
     * `<spark_engine_id>` : The Engine ID of the native Spark engine.
     * `<crn_instance>` : The CRN of the watsonx.data instance.
     * `<token>` : The bearer token. For more information about generating the token, see [Generating a bearer token](https://cloud.ibm.com/apidocs/watsonxdata#authentication).
+    * `<api_version>` :When using the v2 API, set the <api_version> parameter to `v2`; for the v3 API, set it to `v3`.

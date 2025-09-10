@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-10-15"
+  years: 2017, 2025
+lastupdated: "2025-09-10"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -100,6 +100,7 @@ Apache airflow supports the following use cases :
     The following is an example of a workflow, which execute tasks to ingest data to Presto in watsonx.data, and query data from watsonx.data.
     Save the file with the following content, as `wxd_pipeline.py`.
 
+    When using the v2 API, set the <api_version> parameter to `v2`; for the v3 API, set it to `v3`.
 
 
     ``` bash
@@ -177,7 +178,7 @@ Apache airflow supports the following use cases :
     def _ingest_via_spark_engine():
         try:
             print('ingest__via_spark_engine')
-            url = f"{default_args['wxd_endpoint']}/lakehouse/api/v2/spark_engines/{default_args['spark_engine_id']}/applications"
+            url = f"{default_args['wxd_endpoint']}/lakehouse/api/<api_version>/spark_engines/{default_args['spark_engine_id']}/applications"
 
             headers = {'Content-type': 'application/json', 'Authorization': f'Bearer {get_access_token()}', 'AuthInstanceId': default_args['wxd_instance_id']}
             auth_str = base64.b64encode(f'ibmlhapikey_{default_args["wxd_username"]}:{default_args["wxd_api_key"]}'.encode('ascii')).decode("ascii")
@@ -213,7 +214,7 @@ Apache airflow supports the following use cases :
             print(application_id)
 
             while True:
-                url = f"{default_args['wxd_endpoint']}/lakehouse/api/v2/spark_engines/{default_args['spark_engine_id']}/applications/{application_id}"
+                url = f"{default_args['wxd_endpoint']}/lakehouse/api/<api_version>/spark_engines/{default_args['spark_engine_id']}/applications/{application_id}"
                 headers = {'Content-type': 'application/json', 'Authorization': f'Bearer {get_access_token()}', 'AuthInstanceId': default_args['wxd_instance_id']}
 
                 response = requests.get(url, headers=headers, verify=False)

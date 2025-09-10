@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-08-21"
+lastupdated: "2025-09-10"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -177,7 +177,7 @@ if __name__ == '__main__':
 
 ```bash
 
-curl --request POST   --url https://<region>/lakehouse/api/v2/spark_engines/<spark_engine_id>/applications    --header 'Authorization: Bearer <token>'   --header 'Content-Type: application/json'   --header 'Lhinstanceid: <instance_id>'   --data '{
+curl --request POST   --url https://<region>/lakehouse/api/<api_version>/spark_engines/<spark_engine_id>/applications    --header 'Authorization: Bearer <token>'   --header 'Content-Type: application/json'   --header 'Lhinstanceid: <instance_id>'   --data '{
   "application_details": {
   "conf": {
       "spark.hadoop.fs.s3a.bucket.<wxd-data-bucket-name>.endpoint": "<wxd-data-bucket-endpoint>",
@@ -235,6 +235,8 @@ Parameter values:
 * `<BUCKET_NAME>`: The storage bucket where the application file resides.
 * `<COS_SERVICE_NAME>`: The Cloud object Storage service name.
 * `<python file name>` : The Spark application file name.
+* `<api_version>` :When using the v2 API, set the <api_version> parameter to `v2`; for the v3 API, set it to `v3`.
+
 
 Limitations:
 * The user must have full access to create schema and table.

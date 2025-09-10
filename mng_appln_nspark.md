@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-08-23"
+lastupdated: "2025-09-10"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -59,7 +59,7 @@ You can configure the following parameters and use the CURL command to add the f
 
 ```bash
 curl -k -X GET
-https://<region>/lakehouse/api/v2/spark_engines/<spark_engine_id>/applications?state=accepted,running,finished,failed&limit=<limit_value>&start_time_interval={start_lower timestamp limit},{start_upper timestamp limit}&end_time_interval={end_lower timestamp limit},{end_upper timestamp limit}
+https://<region>/lakehouse/api/<api_version>/spark_engines/<spark_engine_id>/applications?state=accepted,running,finished,failed&limit=<limit_value>&start_time_interval={start_lower timestamp limit},{start_upper timestamp limit}&end_time_interval={end_lower timestamp limit},{end_upper timestamp limit}
 ```
 {: codeblock}
 
@@ -77,6 +77,9 @@ Parameter values:
 * start_time_interval : Time interval to use for filtering applications by their start time. Specify {start_lower timestamp limit} and {start_upper timestamp limit} For example, 2025-04-08T00:00:00Z,2025-04-10T23:59:59Z.
 
 * end_time_interval : Time interval to use for filtering applications by their end time. Interval is specified in the format. Specify {end_lower timestamp limit} and {end_upper timestamp limit} For example, 2024-04-08T00:00:00Z,2024-04-08T23:59:59Z.
+
+* `<api_version>` :When using the v2 API, set the <api_version> parameter to `v2`; for the v3 API, set it to `v3`.
+
 
 
 ## Related API

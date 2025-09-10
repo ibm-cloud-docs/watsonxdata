@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-11"
+lastupdated: "2025-09-10"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -51,6 +51,8 @@ You can submit a Spark application by running a CURL command. Complete the follo
 
 Run the following curl command to submit the word count application.
 
+**Sample V2 API**
+
 ```bash
    curl --request POST --url https://<region>.lakehouse.cloud.ibm.com/lakehouse/api/v2/spark_engines/<spark_engine_id>/applications --header 'Authorization: Bearer <token>' --header 'Content-Type: application/json' --header 'AuthInstanceID: <crn_instance>' --data '{
        "application_details": {
@@ -63,6 +65,19 @@ Run the following curl command to submit the word count application.
 ```
 {: codeblock}
 
+**Sample V3 API**
+
+```bash
+   curl --request POST --url https://<region>.lakehouse.cloud.ibm.com/lakehouse/api/v3/spark_engines/<spark_engine_id>/applications --header 'Authorization: Bearer <token>' --header 'Content-Type: application/json' --header 'AuthInstanceID: <crn_instance>' --data '{
+       "application_details": {
+           "application": "/opt/ibm/spark/examples/src/main/python/wordcount.py",
+           "arguments": [
+               "/opt/ibm/spark/examples/src/main/resources/people.txt"
+           ]
+       }
+   }'
+```
+{: codeblock}
 
 Parameters:
 
@@ -78,6 +93,7 @@ To access data from a catalog that is associated with the Spark engine and perfo
 
 Run the following curl command:
 
+**Sample V2 API**
 
 ```bash
 curl --request POST --url https://<region>.lakehouse.cloud.ibm.com/lakehouse/api/v2/spark_engines/<spark_engine_id>/applications --header 'Authorization: Bearer <token>' --header 'Content-Type: application/json' --header 'AuthInstanceID: <crn_instance>' --data '{
@@ -91,7 +107,19 @@ curl --request POST --url https://<region>.lakehouse.cloud.ibm.com/lakehouse/api
 ```
 {: codeblock}
 
+**Sample V3 API**
 
+```bash
+curl --request POST --url https://<region>.lakehouse.cloud.ibm.com/lakehouse/api/v3/spark_engines/<spark_engine_id>/applications --header 'Authorization: Bearer <token>' --header 'Content-Type: application/json' --header 'AuthInstanceID: <crn_instance>' --data '{
+    "application_details": {
+        "conf": {
+            "spark.hadoop.wxd.apiKey": "Basic <encoded-api-key>"
+        },
+        "application": "<storage>://<application-bucket-name>/iceberg.py"
+    }
+}'
+```
+{: codeblock}
 
    Parameter values:
    * `<encoded-api-key>` : The value must be in the format `echo -n"ibmlhapikey_<user_id>:<user’s api key>" | base64`. Here, <user_id> is the IBM Cloud ID of the user whose api key is used to access the data bucket. The `<IAM_APIKEY>` here is the API key of the user accessing the Object store bucket. To generate an API key, login into the watsonx.data console and navigate to Profile > Profile and Settings > API Keys and generate a new API key.
@@ -138,3 +166,12 @@ if __name__ == '__main__':
     main()
 ```
 {: codeblock}
+
+
+
+## Related APIs
+{: #hudi_nsppi}
+
+For information on related API, see
+
+* [Create spark engine application](https://cloud.ibm.com/apidocs/watsonxdata-v3#create-spark-engine-application)

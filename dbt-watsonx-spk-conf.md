@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-02-22"
+  years: 2022, 2025
+lastupdated: "2025-09-10"
 
 keywords: lakehouse, watsonx.data, spark, cli
 
@@ -22,6 +22,8 @@ You can either copy or export the Spark connection details to create the profile
 
 The following is an example configuration:
 
+**Sample V2 API**
+
 ```bash
 profile_name:
   target: "dev"
@@ -32,6 +34,27 @@ profile_name:
       schema: "<wxd-schema>"
       host: "https://us-south.lakehouse.cloud.ibm.com"
       uri: "/lakehouse/api/v2/spark_engines/spark216/query_servers/02bda638-1399-4914-8ae7-ab4223764d26/connect/cliservice"
+      catalog: "<wxd-catalog>"
+      auth:
+        instance: "<watsonx.data_instance_crn>"
+        user: "<username>"
+        apikey: "<apikey>"
+
+```
+{: codeblock}
+
+**Sample V3 API**
+
+```bash
+profile_name:
+  target: "dev"
+  outputs:
+    dev:
+      type: "watsonx_spark"
+      method: "http"
+      schema: "<wxd-schema>"
+      host: "https://us-south.lakehouse.cloud.ibm.com"
+      uri: "/lakehouse/api/v3/spark_engines/spark216/query_servers/02bda638-1399-4914-8ae7-ab4223764d26/connect/cliservice"
       catalog: "<wxd-catalog>"
       auth:
         instance: "<watsonx.data_instance_crn>"

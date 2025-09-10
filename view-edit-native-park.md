@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-06-08"
+lastupdated: "2025-09-10"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -67,9 +67,28 @@ You can edit the Spark details in list and topology views.
 
 Use the following curl to update the Spark engine details like tags, description, default configuration, and Spark version.
 
+**Sample V2 API**
+
 ```bash
    curl --request PATCH \
      --url https://<region>.lakehouse.cloud.ibm.com/lakehouse/api/v2/spark_engines/<spark_engine_id> \
+     --header 'Authorization: Bearer <token>' \
+     --header 'Content-Type: application/merge-patch+json' \
+     --header 'AuthInstanceID: <crn_instance>' \
+     --data '{
+     "engine_details": {
+       "default_config": <map_of_spark_properties>,
+       "default_version": "<spark_version>"
+     }
+   }'
+```
+{: codeblock}
+
+**Sample V3 API**
+
+```bash
+   curl --request PATCH \
+     --url https://<region>.lakehouse.cloud.ibm.com/lakehouse/api/v3/spark_engines/<spark_engine_id> \
      --header 'Authorization: Bearer <token>' \
      --header 'Content-Type: application/merge-patch+json' \
      --header 'AuthInstanceID: <crn_instance>' \
@@ -97,9 +116,32 @@ Following are the details of the parameter values to be used in the curl command
 {: caption="Parameter list" caption-side="bottom"}
 
 **Example**:
+
+**Sample V2 API**
+
 ```bash
    curl --request PATCH \
      --url https://<region>.lakehouse.cloud.ibm.com/lakehouse/api/v2/spark_engines/<spark_engine_id> \
+     --header 'Authorization: Bearer <token>' \
+     --header 'Content-Type: application/merge-patch+json' \
+     --header 'AuthInstanceID: <crn_instance>' \
+     --data '{
+     "engine_details": {
+       "default_config": {
+         "spark.driver.cores": "1",
+         "spark.driver.memory": "4g"
+       },
+       "default_version": "3.4"
+     }
+   }'
+```
+{: codeblock}
+
+**Sample V3 API**
+
+```bash
+   curl --request PATCH \
+     --url https://<region>.lakehouse.cloud.ibm.com/lakehouse/api/v3/spark_engines/<spark_engine_id> \
      --header 'Authorization: Bearer <token>' \
      --header 'Content-Type: application/merge-patch+json' \
      --header 'AuthInstanceID: <crn_instance>' \
@@ -127,6 +169,15 @@ To add new properties to the `default_config` parameter or to update existing pr
 {: #viewspark_api}
 
 For information on related API, see
+
+**V2 APIs**
+
 * [List all spark engines](https://cloud.ibm.com/apidocs/watsonxdata#list-spark-engines)
 * [Get spark engine](https://cloud.ibm.com/apidocs/watsonxdata#get-spark-engine)
 * [Update spark engine](https://cloud.ibm.com/apidocs/watsonxdata#update-spark-engine)
+
+**V3 APIs**
+
+* [List all spark engines](https://cloud.ibm.com/apidocs/watsonxdata-v3#list-spark-engines)
+* [Get spark engine](https://cloud.ibm.com/apidocs/watsonxdata-v3#get-spark-engine)
+* [Update spark engine](https://cloud.ibm.com/apidocs/watsonxdata-v3#update-spark-engine)

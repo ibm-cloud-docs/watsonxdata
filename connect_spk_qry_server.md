@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-24"
+lastupdated: "2025-09-10"
 
 keywords: Spark, query, server,JDBC, Driver
 
@@ -67,7 +67,7 @@ Ensure your Java CLASSPATH includes the downloaded JDBC driver. For example:
 
 `java -cp queryserver-jdbc-SNAPSHOT-standalone.jar App.java`
 
-You can specify the following parameters and use the following Java code to connect to the Spark query server.
+You can specify the parameter values and use the following Java code to connect to the Spark query server. When using the v2 API, set the <api_version> parameter to `v2`; for the v3 API, set it to `v3`.
 
 ```bash
 import java.sql.Connection;
@@ -82,7 +82,7 @@ public class App {
         // Exclude having https/http/www, just domain
         String host = "example.com";
         String Instance = "CRN/OR/INSTANCE-ID";
-        String uri = "/lakehouse/api/v2/spark_engines/.../query_servers/.../connect/cliservice";
+        String uri = "/lakehouse/api/<api_version>/spark_engines/.../query_servers/.../connect/cliservice";
         String user = "EMAIL-ID/OR/USER-ID";
         String apikey = "API-KEY";
 
@@ -161,10 +161,10 @@ To connect to the Spark query server using a Python program, do the following:
    from http.client import HTTPConnection
 
 
-   # Change the following inputs
+   # Change the following inputs. When using the v2 API, set the <api_version> parameter to `v2`; for the v3 API, set it to `v3`.
    class Credentials:
        host = "https://example.ibm.com"
-       uri = "/lakehouse/api/v2/spark_engines/.../query_servers/.../connect/cliservice"
+       uri = "/lakehouse/api/<api_version>/spark_engines/.../query_servers/.../connect/cliservice"
        instance_id = "CRN/OR/INSTANCE-ID"
        username = "EMAIL-ID/OR/USER-ID"
        apikey = "API-KEY"

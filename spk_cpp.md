@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-25"
+lastupdated: "2025-09-10"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -136,3 +136,15 @@ To add a Gluten accelerated Spark engine, complete the following steps.
    * `<engine-home-bucket>` : The storage that enables you to monitor and debug the Spark application.
    * `<gluten_engine_name>`: Specify a name for the Gluten accelerated Spark engine.
    * `<catalog_name>`: Specify a name for the catalog you use. Gluten accelerated Spark supports Iceberg, Hudi, Delta, and Hive catalogs.
+
+
+
+#### V3 API
+{: #prov_v3}
+
+   ```bash
+
+   curl -X POST -H "content-type: application/json" -H "accept: application/json" -H "AuthInstanceId: {instance_id}" -d '{ "description": "spark engine description", "configuration": { "api_key": "apikey", "connection_string": "1.2.3.4", "instance_id": "spark-id", "managed_by": "fully/self" }, "display_name": "sampleEngine", "origin": "discover/external", "tags": [ "tag1", "tag2" ], "type": "spark" }' "https://{region}.lakehouse.cloud.ibm.com/lakehouse/api/v3/spark_engines"
+
+   ```
+   {: codeblock}
