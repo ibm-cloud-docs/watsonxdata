@@ -102,7 +102,7 @@ Deprecated features
 
    {{site.data.keyword.lakehouse_short}} API version v2 is completely removed from the {{site.data.keyword.lakehouse_short}} developer edition starting with version 2.2.1. It will be completely removed from {{site.data.keyword.lakehouse_short}} software edition in version 2.3. You must migrate to the latest supported API version (v3) to ensure continued compatibility and access to new features.
 
-   * The option to register external Spark engines in {{site.data.keyword.lakehouse_short}} is deprecated in this release and will be removed in version 2.3. {{site.data.keyword.lakehouse_short}} already includes built-in Spark engines that you can provision and use directly, including the Gluten-accelerated Spark engine ([Provisioning Gluten accelerated Spark engine](/docs/watsonxdata?topic=watsonxdata-spk_cpp)) and the native {{site.data.keyword.lakehouse_short}} Spark engine ([Provisioning Gluten accelerated Spark engine](/docs/watsonxdata?topic=watsonxdata-prov-native-spark)).
+   * The option to register external Spark engines in {{site.data.keyword.lakehouse_short}} is deprecated in this release and will be removed in version 2.3. {{site.data.keyword.lakehouse_short}} already includes built-in Spark engines that you can provision and use directly, including the Gluten-accelerated Spark engine ([Provisioning Gluten accelerated Spark engine](/docs/watsonxdata?topic=watsonxdata-prov_cpp)) and the native {{site.data.keyword.lakehouse_short}} Spark engine ([Provisioning a Spark engine](/docs/watsonxdata?topic=watsonxdata-spl_engine)).
 
 
 ## 05 August 2025 - Version 2.2.0 New Feature 1 (NF1)
