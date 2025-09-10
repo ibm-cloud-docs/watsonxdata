@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-27"
+lastupdated: "2025-09-10"
 
 keywords: lakehouse
 
@@ -30,6 +30,13 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+## Manta applications fail to run on Spark 4.0
+{: #known_issue43343}
+
+Manta applications (Iceberg, Hudi, Hive, Delta) fail to execute when submitted on Spark 4.0.
+
+**Workaround:** Run Manta applications using other available Spark versions.
 
 ## Test connection for arrow connectors fails in FIPS-enabled clusters
 {: #known_issue33906}
