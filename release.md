@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-08-27"
+lastupdated: "2025-09-10"
 
 keywords: watsonxdata, release notes
 
@@ -38,7 +38,7 @@ Engine and service enhancements
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancement:
 
    * Introduced version v3 of the {{site.data.keyword.lakehouse_short}} API. You can continue to use version v2 until {{site.data.keyword.lakehouse_short}} version 2.3. See [API documentation (v3)](https://cloud.ibm.com/apidocs/watsonxdata-v3).
-   * You can now provision {{site.data.keyword.lakehouse_short}} Spark engine with the Spark runtime set to Spark 4.0, which enables you to run Spark applications on Spark 4.0. To know details supported Spark versions, see [Supported Spark version](/docs/watsonxdata?topic=watsonxdata-ae_limits#cpu-mem-spk_versn).
+   * You can now provision {{site.data.keyword.lakehouse_short}} Spark engine with the Spark runtime set to Spark 4.0, which enables you to run Spark applications on Spark 4.0. To know details supported Spark versions, see [Supported Spark version](/docs/watsonxdata?topic=watsonxdata-wxd-ae_limits#cpu-mem-spk_versn).
    * The Milvus service in {{site.data.keyword.lakehouse_short}} is now upgraded to version 2.5.12.
    * You can now use the open-source Milvus backup tool to back up and restore data from Milvus within watsonx.data.
    * The Gluten accelerated Spark engine in {{site.data.keyword.lakehouse_short}} is now able to run applications using Spark version 3.5. To know details about supported Spark versions, see [Supported Spark version](/docs/watsonxdata?topic=watsonxdata-wxd-ae_limits#cpu-mem-spk_versn).
@@ -93,7 +93,7 @@ Public preview enhancements
 : Public preview features now accessible from **Configurations** UI.
    You can now easily access and manage {{site.data.keyword.lakehouse_short}} public preview features directly from the Configurations UI. All features in the public preview stage are now visible from the Configurations UI. Features in public preview are highlighted with a Preview tag, making it easy to identify them.
    You can enable or disable the features to explore the functionality. Each public preview feature includes a link to its detailed documentation, allowing you to learn more about it.
-   To know more about public preview features, see [What's new in w{{site.data.keyword.lakehouse_short}} (Public preview)](/docs/watsonxdata?topic=watsonxdata-release_public_preview).
+   To know more about public preview features, see [What's new in {{site.data.keyword.lakehouse_short}} (Public preview)](/docs/watsonxdata?topic=watsonxdata-release_pp).
 
 Deprecated features
 : The following features are deprecated in this release:
