@@ -31,6 +31,18 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
+## Preview dashboard displays null values with Presto(C++) engine due to hive catalog column name mismatch
+{: #known_issue54806}
+
+The Presto (C++) engine causes the preview dashboard to display all null values for certain tables due to a mismatch between the column names in the Parquet files and the Hive catalog configuration.
+
+**Workaround:** Apply the following session property:
+
+   ```bash
+      set session [catalog_name].file_column_names_read_as_lower_case=true;
+   ```
+   {: codeblock}
+
 ## Manta applications fail to run on Spark 4.0
 {: #known_issue43343}
 
