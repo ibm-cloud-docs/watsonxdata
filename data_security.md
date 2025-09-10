@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-09-01"
+lastupdated: "2025-09-10"
 
 keywords: security, data and keys, encrypted
 
@@ -35,8 +35,6 @@ Know, how your data is encrypted in {{site.data.keyword.lakehouse_full}} to ensu
 
 The {{site.data.keyword.lakehouse_short}} service has security that is built into all levels of its architecture.
 
-In {{site.data.keyword.lakehouse_short}} on IBM Cloud (IKS and ROKS) and AWS, egress is not blocked other than for known bots.
-{: note}
 
 1. Web Console UI, API, Presto, Milvus, and Metadata Service data in motion is encrypted by using SSL/TLS 1.3.
 2. Web Console UI, API, Presto, and Metadata Service authentication and authorization is via IBM Cloud IAM.
