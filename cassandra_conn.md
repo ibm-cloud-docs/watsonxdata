@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-02-19"
+  years: 2022, 2025
+lastupdated: "2025-09-10"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -26,13 +26,13 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Cassandra
+# Apache Cassandra
 {: #cassandra_database}
 
-Cassandra is an open source NoSQL distributed data source that handles a huge amount of data across commodity servers.
+Apache Cassandra is an open source NoSQL distributed data source that handles a huge amount of data across commodity servers.
 {: shortdesc}
 
- Configure the following details for Cassandra data source:
+ Configure the following details for Apache Cassandra data source:
 
  | Field           | Description        |
  |------------------|--------------------|
