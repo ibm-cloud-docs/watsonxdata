@@ -38,7 +38,7 @@ Engine and service enhancements
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancement:
 
    * Introduced version v3 of the {{site.data.keyword.lakehouse_short}} API. You can continue to use version v2 until {{site.data.keyword.lakehouse_short}} version 2.3. See [API documentation (v3)](https://cloud.ibm.com/apidocs/watsonxdata-v3).
-   * You can now provision {{site.data.keyword.lakehouse_short}} Spark engine with the Spark runtime set to Spark 4.0, which enables you to run Spark applications on Spark 4.0. To know details supported Spark versions, see [Supported Spark version](/docs/watsonxdata?topic=watsonxdata-wxd-ae_limits#cpu-mem-spk_versn).
+   * You can now provision {{site.data.keyword.lakehouse_short}} Spark engine with the Spark runtime set to Spark 4.0, which enables you to run Spark applications on Spark 4.0. For details about supported Spark versions, see [Supported Spark version](/docs/watsonxdata?topic=watsonxdata-wxd-ae_limits#cpu-mem-spk_versn).
    * The Milvus service in {{site.data.keyword.lakehouse_short}} is now upgraded to version 2.5.12.
    * You can now use the open-source Milvus backup tool to back up and restore data from Milvus within watsonx.data.
    * The Gluten accelerated Spark engine in {{site.data.keyword.lakehouse_short}} is now able to run applications using Spark version 3.5. To know details about supported Spark versions, see [Supported Spark version](/docs/watsonxdata?topic=watsonxdata-wxd-ae_limits#cpu-mem-spk_versn).
@@ -60,15 +60,15 @@ Access management enhancements
    To know more details about managing user access in Milvus, see [Predefined roles and permissions in watsonx.data](/docs/watsonxdata?topic=watsonxdata-role_priv#milvus).
 
 
-CPDCTL CLI Enhancements
+CPDCTL CLI enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancements to IBM Cloud Pak for Data Command Line Interface (IBM cpdctl):
 
 * Starting with version 2.2.1, you can use HashiCorp Vault through cpdctl for secure secrets management and streamlined automation workflows.
 
-* A new option under the service command wx-data service generate-engine-dump allows you to generate dumps for Presto worker and coordinator nodes in {{site.data.keyword.lakehouse_short}}. To know details about service command is used serviceability related operations in {{site.data.keyword.lakehouse_short}}, see [service](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata#cpdctl_commands_wxdatasvce).
+* A new option under the service command wx-data service generate-engine-dump allows you to generate dumps for Presto worker and coordinator nodes in {{site.data.keyword.lakehouse_short}}. For details about the service command for serviceability related operations in {{site.data.keyword.lakehouse_short}}, see [service](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata#cpdctl_commands_wxdatasvce).
 
-* Use the new component command to retrieve configuration details and status of various components in {{site.data.keyword.lakehouse_short}}. To know more details about component command is used for getting the configurations of various components in {{site.data.keyword.lakehouse_short}}, see [wx-data commands and usage](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata).
+* Use the new component command to retrieve configuration details and status of various components in {{site.data.keyword.lakehouse_short}}. For details about the component command to get the configuration details for various components in {{site.data.keyword.lakehouse_short}}, see [wx-data commands and usage](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata).
 
 * Starting from CPDCTL version 1.8.5, users no longer need to set the instance ID as an environment variable. This method is deprecated and will be removed in a future release. Instead, set the instance ID directly using the profile command. To know details about setting the instance ID as environment variable, see [config commands and usage](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_config).
 
@@ -90,10 +90,8 @@ Semantic automation for data enrichment
 
 Public preview enhancements
 
-: Public preview features now accessible from **Configurations** UI.
-   You can now easily access and manage {{site.data.keyword.lakehouse_short}} public preview features directly from the Configurations UI. All features in the public preview stage are now visible from the Configurations UI. Features in public preview are highlighted with a Preview tag, making it easy to identify them.
-   You can enable or disable the features to explore the functionality. Each public preview feature includes a link to its detailed documentation, allowing you to learn more about it.
-   To know more about public preview features, see [What's new in {{site.data.keyword.lakehouse_short}} (Public preview)](/docs/watsonxdata?topic=watsonxdata-release_pp).
+: Public preview features are now accessible from **Configurations** UI.
+   You can now easily access and manage {{site.data.keyword.lakehouse_short}} public preview features from the Configurations UI. Features in public preview are highlighted with a Preview tag, making it easy to identify them. You can enable or disable the features to explore the functionality. Each public preview feature includes a link to its detailed documentation, allowing you to learn more about it. To know more about public preview features, see [What's new in {{site.data.keyword.lakehouse_short}} (Public preview)](/docs/watsonxdata?topic=watsonxdata-release_pp).
 
 Deprecated features
 : The following features are deprecated in this release:
