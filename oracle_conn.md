@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-02-19"
+  years: 2022, 2025
+lastupdated: "2025-08-25"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -32,7 +32,15 @@ subcollection: watsonxdata
 Oracle allows querying and creating tables in an external Oracle database.
 {: shortdesc}
 
- Configure the following details for Oracle data source:
+You can configure Oracle using one of the following methods:
+- `Create new connection` – If you select the `Create new connection` tab, refer to the [Create new connection - configuration details](/docs/watsonxdata?topic=watsonxdata-oracle_database#oracle_database1) table to provide configuration details.
+
+- `Import from catalog` – You can import connection details from an existing catalog in the data platform. If you select the `Import from catalog` tab, refer to the [Import from catalog - configuration details](/docs/watsonxdata?topic=watsonxdata-oracle_database#oracle_database2) table to provide configuration details.
+
+- `Import from project` – You can import connection details from an existing project in the data platform. If you select `Import from project`, refer to the [Import from project - configuration details](/docs/watsonxdata?topic=watsonxdata-oracle_database#oracle_database3) table to provide configuration details.
+
+## Create new connection - configuration details
+{: #oracle_database1}
 
  | Field           | Description        |
  |------------------|--------------------|
@@ -48,7 +56,36 @@ Oracle allows querying and creating tables in an external Oracle database.
  | Associate catalog | Select the checkbox to associate a catalog to the data source. This catalog is automatically associated with your data source and serves as your query interface with the data stored within.|
  | Catalog name | Enter the name of the catalog.|
  | Create | Click Create to create the data source. |
- {: caption="Register data source" caption-side="bottom"}
+{: caption="Crete new connection - configuration details" caption-side="bottom"}
+
+## Import from catalog - configuration details
+{: #oracle_database2}
+
+ | Field | Description |
+| --- | --- |
+| Select catalog | Use the dropdown to select a catalog. |
+| Select data source | Use the dropdown to select a data source from the selected catalog. |
+| Connection status | Click the Test connection link to test the database connection. If the database connection is successful, a success message appears. |
+| Display name | Enter the database name to be displayed on the screen. |
+| Associate catalog | Select the checkbox to associate a catalog to the data source. This catalog is automatically associated with your data source and serves as your query interface with the data stored within. |
+| Catalog name | Enter the name of the catalog. |
+| Create | Click Create to create the database. |
+{: caption="Import from catalog - configuration details" caption-side="bottom"}
+
+
+## Import from project - configuration details
+{: #oracle_database3}
+
+| Field | Description |
+| --- | --- |
+| Select project | Use the dropdown to select a project. |
+| Select data source | Use the dropdown to select a data source from the selected project |
+| Connection status | Click the Test connection link to test the database connection. If the database connection is successful, a success message appears. |
+| Display name | Enter the database name to be displayed on the screen. |
+| Associate catalog | Select the checkbox to associate a catalog to the data source. This catalog is automatically associated with your data source and serves as your query interface with the data stored within. |
+| Catalog name | Enter the name of the catalog. |
+| Create | Click Create to create the database. |
+{: caption="Import from project - configuration details" caption-side="bottom"}
 
 ## Limitations for SQL statements
 {: #connector_limitations}

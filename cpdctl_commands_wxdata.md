@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-10"
+lastupdated: "2025-08-25"
 
 keywords: lakehouse, cpdctl, watsonx.data, supporting commands, wx-data
 
@@ -49,6 +49,7 @@ The wx-data command supports the following commands:
 - `sparkjob`
 - `tablemaint`
 - `service`
+- `component`
 
 ## How to Use `wx-data` Command --help (-h)
 {: #cpdctl_commands_wxdatahwto}
@@ -164,11 +165,11 @@ The `bucket` command further supports the following commands:
 | Command | Description |
 |---------|-------------|
 | `./cpdctl wx-data bucket list` | Lists all the storages available in {{site.data.keyword.lakehouse_short}} instance. |
-| `./cpdctl wx-data bucket create` | Register a storage in {{site.data.keyword.lakehouse_short}} instance. |
+| `./cpdctl wx-data bucket create` | Register a storage in {{site.data.keyword.lakehouse_short}} instance. Use of secrets from an external vault (HashiCorp) is enabled with `create` option.|
 | `./cpdctl wx-data bucket get` | Get the details of a registered storage in {{site.data.keyword.lakehouse_short}} instance. |
 | `./cpdctl wx-data bucket delete` | Delete a storage from {{site.data.keyword.lakehouse_short}} instance. |
 | `./cpdctl wx-data bucket activate` | Activate a storage bucket in {{site.data.keyword.lakehouse_short}} on IBM Cloud instance only. |
-| `./cpdctl wx-data bucket deactivate` | Deactivate a storage bucket in {{site.data.keyword.lakehouse_short}} on IBM Cloud instance only. |
+| `./cpdctl wx-data bucket deactivate` | Deactivate a storage bucket in {{site.data.keyword.lakehouse_short}} on IBM Cloud instance only. This option is not supported from {{site.data.keyword.lakehouse_short}} 2.2.1 version. |
  {: caption="Supported commands by bucket" caption-side="bottom"}
 
 ## database
@@ -187,7 +188,7 @@ The `database` command further supports the following commands:
 | Command | Description |
 |---------|-------------|
 | `./cpdctl wx-data database list` | Lists all the data sources available in {{site.data.keyword.lakehouse_short}} instance. |
-| `./cpdctl wx-data database create` | Create or add a data source in {{site.data.keyword.lakehouse_short}} instance. |
+| `./cpdctl wx-data database create` | Create or add a data source in {{site.data.keyword.lakehouse_short}} instance. Use of secrets from an external vault (HashiCorp) is enabled with `create` option.|
 | `./cpdctl wx-data database get` | Get the details of a registered data source in {{site.data.keyword.lakehouse_short}} instance. |
 | `./cpdctl wx-data database delete` | Delete a data source from {{site.data.keyword.lakehouse_short}} instance. |
  {: caption="Supported commands by database" caption-side="bottom"}
@@ -228,7 +229,6 @@ Syntax:
    ```
    {: codeblock}
 
-
 The tablemaint command supports the following commands:
 
 | Options | Description |
@@ -243,7 +243,6 @@ The tablemaint command supports the following commands:
 |`./cpdctl wx-data tablemaint rewrite-manifests`	|Rewrite manifests for a table to optimize scan planning.|
 |`./cpdctl wx-data tablemaint register-table`	|Creates a table.|
  {: caption="Supported commands by tablemaint" caption-side="bottom"}
-
 
 The following flags are listed when you run each table maintenance command:
 
@@ -272,4 +271,28 @@ The `service` command further supports the following commands:
 | `./cpdctl wx-data service list-tables` | Lists all table names of hive or iceberg connectors in {{site.data.keyword.lakehouse_short}} instance.|
 | `./cpdctl wx-data service get-qhmm-config` | Get the qhmm enabled bucket name in {{site.data.keyword.lakehouse_short}} instance. |
 | `./cpdctl wx-data service monitor` | To run stats and qhmm related queries in {{site.data.keyword.lakehouse_short}} instance. |
+| `./cpdctl wx-data service generate-engine-dump` | Generate heap or thread dump specific to Presto worker or coordinator {{site.data.keyword.lakehouse_short}} instance. |
  {: caption="Supported commands by service" caption-side="bottom"}
+
+
+## component
+{: #cpdctl_commands_wxdatacmpnt}
+
+The `component` command is used for executing different serviceability related operations in {{site.data.keyword.lakehouse_short}}.
+
+Syntax:
+   ```bash
+   ./cpdctl wx-data component [options]
+   ```
+   {: codeblock}
+
+The `component` command further supports the following commands:
+
+| Command | Description |
+|---------|-------------|
+| `./cpdctl wx-data component get-mds-status` | Get configuration for Metadata Service (MDS) in {{site.data.keyword.lakehouse_short}} instance.|
+| `./cpdctl wx-data component get-ces-status` | Get CES status in {{site.data.keyword.lakehouse_short}} instance. |
+| `./cpdctl wx-data component get-cas-cpg-endpoint` | Get CPG and CAS endpoints in {{site.data.keyword.lakehouse_short}} instance. |
+| `./cpdctl wx-data component get-hms-status` | List all HMS meta stores in {{site.data.keyword.lakehouse_short}} instance. |
+| `./cpdctl wx-data component get-console-status` | Check console status of watsonx.data instance {{site.data.keyword.lakehouse_short}} instance. |
+ {: caption="Supported commands by component" caption-side="bottom"}

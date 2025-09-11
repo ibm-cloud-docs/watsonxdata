@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-10"
+lastupdated: "2025-09-10"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -32,21 +32,10 @@ subcollection: watsonxdata
 Gluten accelerated Spark engine is an optimized, high-performance engine in {{site.data.keyword.lakehouse_short}}. The Spark engine uses Gluten for offloading SQL execution to Velox, which is an open source execution engine(implemented in C++) thereby accelerating the computation of SparkSQL to reduce the cost for running the workloads.
 
 
-
-## Features of Gluten accelerated Spark engine
-{: #featu_cpp}
-
-* Supports file formats Apache Parquet and Apache Avro.
-
-* Improved table scan performance.
-
-* Accelerates larger SQL queries with joins and aggregation.
-
-* Supports Delta, Hudi, Iceberg and Hive catalogs.
-
-
 ## Provisioning Gluten accelerated Spark engine
 {: #prov_cpp_1}
+
+**Applies to** :  [Gluten accelerated Spark engine]{: tag-green}
 
 IBM watsonx.data allows you to provision a Gluten accelerated Spark engine to run complex large-scale workloads. Gluten delivers exceptional performance when run on large hardware.
 
@@ -60,7 +49,6 @@ You can use the following methods to provision Gluten Accelerated Spark engine:
 
 
 - You must have a subscription of {{site.data.keyword.lakehouse_short}} on Cloud.
-- To use Gluten accelerated Spark engine, you must contact the IBM Support team and enable this feature in your {{site.data.keyword.lakehouse_short}} instance.
 - `<engine-home-bucket>` : You must create a storage in {{site.data.keyword.lakehouse_short}}, that will be associated with your Gluten Accelerated Spark engine to store the logs.
 
 
@@ -97,6 +85,10 @@ To add a Gluten accelerated Spark engine, complete the following steps.
 {: #prov_cpp_2}
 
 1. Use the following CURL command to create a Gluten Accelerated Spark engine.
+
+
+#### V2 API
+{: #prov_v2_2}
 
 
    ```bash
@@ -144,3 +136,15 @@ To add a Gluten accelerated Spark engine, complete the following steps.
    * `<engine-home-bucket>` : The storage that enables you to monitor and debug the Spark application.
    * `<gluten_engine_name>`: Specify a name for the Gluten accelerated Spark engine.
    * `<catalog_name>`: Specify a name for the catalog you use. Gluten accelerated Spark supports Iceberg, Hudi, Delta, and Hive catalogs.
+
+
+
+#### V3 API
+{: #prov_v3}
+
+   ```bash
+
+   curl -X POST -H "content-type: application/json" -H "accept: application/json" -H "AuthInstanceId: {instance_id}" -d '{ "description": "spark engine description", "configuration": { "api_key": "apikey", "connection_string": "1.2.3.4", "instance_id": "spark-id", "managed_by": "fully/self" }, "display_name": "sampleEngine", "origin": "discover/external", "tags": [ "tag1", "tag2" ], "type": "spark" }' "https://{region}.lakehouse.cloud.ibm.com/lakehouse/api/v3/spark_engines"
+
+   ```
+   {: codeblock}

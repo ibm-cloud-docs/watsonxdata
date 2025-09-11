@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-07-30"
+lastupdated: "2025-08-22"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -34,6 +34,9 @@ This customization method does not require you to add the parameters inside the 
 
 ### Request body
 {: #api_pjava_rb}
+
+The API Customization patch must have the following as required fields `configuration`, `jvm`, `catalog`, `event_listener`, `jmx_exporter_config`, `log_config`, `global` and other fields as optional.
+{: note}
 
 ```json
 {
@@ -137,6 +140,9 @@ This customization method does not require you to add the parameters inside the 
 
 ### Request body
 {: #api_pcpp_rb}
+
+The API Customization patch must have the following as required fields `configuration`, `jvm`, `catalog`, `velox`, `log_config`, `global` and other fields as optional.
+{: note}
 
 ```json
 {

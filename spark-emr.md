@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-12-02"
+  years: 2022, 2025
+lastupdated: "2025-08-21"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -13,6 +13,10 @@ subcollection: watsonxdata
 
 # Using AWS EMR for Spark use case
 {: #spark-emr}
+
+
+The option to register external Spark engines in watsonx.data is deprecated in this release and will be removed in version 2.3. watsonx.data already includes built-in Spark engines that you can provision and use directly, including the Gluten-accelerated Spark engine and the native watsonx.data Spark engine.
+{: important}
 
 The topic provides the procedure to run Spark applications from Amazon Web Services Elastic MapReduce (AWS EMR) to achieve the {{site.data.keyword.lakehouse_full}} Spark use cases:
 * data ingestion

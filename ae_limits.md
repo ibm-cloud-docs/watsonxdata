@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-21"
+lastupdated: "2025-08-27"
 
 subcollection: watsonxdata
 
@@ -52,14 +52,45 @@ The following table shows the supported vCPU to memory size combinations.
 {: caption="Supported vCPU to memory size combinations" caption-side="top"}
 
 
-## Supported Spark version
+## Supported Spark version for {{site.data.keyword.lakehouse_short}} Spark engine
 {: #cpu-mem-spk_versn}
 
 
-{{site.data.keyword.lakehouse_full}} supports the following Spark runtime versions to run Spark workloads.
+{{site.data.keyword.lakehouse_full}} supports the following Spark runtime versions to run Spark workloads by using {{site.data.keyword.lakehouse_short}}.
+
+| Name | Status |
+| ------------|-------------|
+| Apache Spark 3.4.4 | Supported |
+| Apache Spark 3.5.4 | Supported |
+| Apache Spark 4.0 | Supported |
+{: caption="Supported Spark versions" caption-side="top"}
+
+
+## Supported Spark version for Gluten accelerated Spark engine
+{: #cpu-mem-spk_versn}
+
+
+{{site.data.keyword.lakehouse_full}} supports the following Spark runtime versions to run Spark workloads by using Gluten accelerated Spark engine.
 
 | Name | Status |
 | ------------|-------------|
 | Apache Spark 3.4.4 | Supported |
 | Apache Spark 3.5.4 | Supported |
 {: caption="Supported Spark versions" caption-side="top"}
+
+### Default Hardware configuration
+{: #spk_hrwr}
+
+
+To manually specify the number of CPU cores (Driver and Executor) and memory that is required for the workload , below configs can be modified and passed in the payload:
+
+```bash
+"num-executors" : "1",
+"spark.executor.cores": "1",
+"spark.executor.memory": "4G",
+"spark.driver.cores": "1",
+"spark.driver.memory": "4G",
+```
+{: codeblock}
+
+For details on enabling autoscaling, see [Enabling application autoscaling](/docs/watsonxdata?topic=watsonxdata-appl-auto-scaling).

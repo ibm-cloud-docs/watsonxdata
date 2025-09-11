@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-02-17"
+  years: 2022, 2025
+lastupdated: "2025-08-26"
 
 keywords: watsonxdata, qhmm
 
@@ -60,7 +60,7 @@ Administrators can permanently delete the QHMM schemas and tables present in the
 
 
 ```bash
-curl --location --request DELETE '<SAAS_instance_url>/lakehouse/api/v2/<instance_id>/configuration/qhmm?engine_id=<engine_id>&catalog_name=<catalog_name>&schema_id=<schema_id>'
+curl --location --request DELETE '<SAAS_instance_url>/lakehouse/api/v3/<instance_id>/configuration/qhmm?engine_id=<engine_id>&catalog_name=<catalog_name>&schema_id=<schema_id>'
 ```
 {: codeblock}
 

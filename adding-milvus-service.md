@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-07"
+lastupdated: "2025-08-26"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -46,6 +46,7 @@ Complete the following steps to add Milvus as a service in {{site.data.keyword.l
     | -------- | -------- |
     | Display name | Enter the Milvus service name to be displayed on the screen.|
     | Size | Select the suitable size.|
+    |  | **Lite**: Recommended for **10K vectors**, 64 index parameters, 1024 segment size, and 384 dimensions. **Note**: The **Lite** or **Tiny** Milvus component is available only in {{site.data.keyword.lakehouse_short}} Lite plan. |
     |  | **Starter**: Recommended for **1 million vectors**, 64 index parameters, 1024 segment size, and 384 dimensions. |
     |  | **Small**: Recommended for **10 million vectors**, 64 index parameters, 1024 segment size, and 384 dimensions. |
     |  | **Medium**: Recommended for **50 million vectors**, 64 index parameters, 1024 segment size, and 384 dimensions. |

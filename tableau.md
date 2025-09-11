@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-02-24"
+  years: 2022, 2025
+lastupdated: "2025-09-09"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -42,6 +42,12 @@ You can use one of the following ways to connect to Presto:
     d. Select the **Platform** that you use. The list of drivers are available.
 
     c. Select the required JDBC driver. Follow the instructions in the section to download and install the driver (You need to download the .jar file and add it to the folder in your computer  `~/Library/Tableau/Drivers`).
+
+    d. If you face any issues installing the Presto ODBC driver, you can use third party drivers to continue to connection
+
+      i. Download [CData driver](https://www.cdata.com/drivers/presto/odbc/).
+
+      ii. Configure and create user level DSN in ODBC driver manager. See [how to use the CData ODBC Drivers](https://www.cdata.com/kb/articles/odbc-linux-mac.rst).
 
 
 

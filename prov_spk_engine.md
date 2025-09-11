@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-10"
+lastupdated: "2025-08-23"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -28,8 +28,15 @@ subcollection: watsonxdata
 # Provisioning a Spark engine
 {: #spl_engine}
 
-{{site.data.keyword.lakehouse_full}} allows you to add Spark engines. You can either provision a native Spark engine or register an external Spark engine. Native Spark engine is a compute engine that resides within IBM® watsonx.data. External Spark engines are engines that exist in a different environment from where watsonx.data is available.
+The option to register external Spark engines in watsonx.data is deprecated in this release and will be removed in version 2.3. watsonx.data already includes built-in Spark engines that you can provision and use directly, including the Gluten-accelerated Spark engine and the native watsonx.data Spark engine.
+{: important}
+
+{{site.data.keyword.lakehouse_full}} allows you to add Spark engines. You can provision a native Spark engine and register an external Spark engine (deprecated).
 {: shortdesc}
+
+Native Spark engine is a compute engine that resides within IBM® watsonx.data.
+External Spark engines (deprecated) are engines that exist in a different environment from where watsonx.data is available.
+
 
 Support for Spark 3.3 runtime is deprecated and the default version will be changed to Spark 3.4 runtime. To ensure a seamless experience and to leverage the latest features and improvements, switch to Spark 3.4. For other supported Spark versions, see [Supported Spark version](/docs/watsonxdata?topic=watsonxdata-wxd-ae_limits#cpu-mem-spk_versn).
 {: important}

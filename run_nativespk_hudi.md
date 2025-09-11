@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-06-08"
+lastupdated: "2025-09-11"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -49,9 +49,27 @@ The topic describes the procedure to run a Spark application that ingests data i
 
    Curl command to submit Python application :
 
+   **Sample V2 API**
+
    ```bash
    curl --request POST \
    --url https://<wxd_host_name>/lakehouse/api/v2/spark_engines/<spark_engine_id>/applications \
+   --header 'Authorization: Bearer <token>' \
+   --header 'Content-Type: application/json' \
+   --header 'LhInstanceId: <instance_id>' \
+   --data '{  "application_details": {
+              "conf": {
+                     "spark.hadoop.wxd.apiKey":"Basic <user-authentication-string>"    },
+                      "application": "s3a://<application-bucket-name>/iceberg.py"  }
+           }'
+   ```
+   {: codeblock}
+
+   **Sample V3 API**
+
+   ```bash
+   curl --request POST \
+   --url https://<wxd_host_name>/lakehouse/api/v3/spark_engines/<spark_engine_id>/applications \
    --header 'Authorization: Bearer <token>' \
    --header 'Content-Type: application/json' \
    --header 'LhInstanceId: <instance_id>' \
@@ -124,10 +142,31 @@ The topic describes the procedure to run a Spark application that ingests data i
 
    Curl command to submit Python application
 
+
+   **Sample V2 API**
+
    ``` bash
 
    curl --request POST
        --url https://<wxd_host_name>/lakehouse/api/v2/spark_engines/<spark_engine_id>/applications
+       --header 'Authorization: Bearer <token>'
+       --header 'Content-Type: application/json'
+       --header 'LhInstanceId: <instance_id>'
+       --data '{ \n \n    "application_details": {
+               "conf": {
+                       "spark.sql.catalog.spark_catalog.type": "hive",
+                       "spark.sql.catalog.spark_catalog": "org.apache.spark.sql.hudi.catalog.HoodieCatalog",
+                       "spark.hadoop.wxd.apiKey":"Basic <user-authentication-string>"        },
+                       "application": "s3a://<data_storage_name>/hudi_demo.py"    }}
+   ```
+   {: codeblock}
+
+   **Sample V3 API**
+
+   ``` bash
+
+   curl --request POST
+       --url https://<wxd_host_name>/lakehouse/api/v3/spark_engines/<spark_engine_id>/applications
        --header 'Authorization: Bearer <token>'
        --header 'Content-Type: application/json'
        --header 'LhInstanceId: <instance_id>'
@@ -194,9 +233,28 @@ The topic describes the procedure to run a Spark application that ingests data i
 
    Curl command to submit Python application
 
+   **Sample V2 API**
+
     ``` bash
    curl --request POST
    --url https://<wxd_host_name>/lakehouse/api/v2/spark_engines/<spark_engine_id>/applications
+   --header 'Authorization: Bearer <token>'
+   --header 'Content-Type: application/json'
+   --header 'LhInstanceId: <instance_id>'
+   --data '{        "application_details": {
+           "conf": {
+           "spark.sql.catalog.spark_catalog" : "org.apache.spark.sql.delta.catalog.DeltaCatalog",
+           "spark.sql.catalog.spark_catalog.type" : "hive",
+           "spark.hadoop.wxd.apiKey":"<user-authentication-string>"        },
+           "application": "s3a://<database_name>/delta_demo.py"        }    }
+   ```
+   {: codeblock}
+
+   **Sample V3 API**
+
+    ``` bash
+   curl --request POST
+   --url https://<wxd_host_name>/lakehouse/api/v3/spark_engines/<spark_engine_id>/applications
    --header 'Authorization: Bearer <token>'
    --header 'Content-Type: application/json'
    --header 'LhInstanceId: <instance_id>'
@@ -223,3 +281,11 @@ The topic describes the procedure to run a Spark application that ingests data i
 
 8. After you submit the Spark application, you receive a confirmation message with the application ID and Spark version. Save it for reference.
 9. Log in to the watsonx.data cluster, access the Engine details page. In the Applications tab, use application ID to list the application and track the stages. For more information, see [View and manage applications](/docs/watsonxdata?topic=watsonxdata-mng_appltn).
+
+
+## Related APIs
+{: #hudi_nsp_api}
+
+For information on related API, see
+
+* [Create spark engine application](https://cloud.ibm.com/apidocs/watsonxdata-v3#create-spark-engine-application)

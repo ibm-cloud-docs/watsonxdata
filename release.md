@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-08-05"
+lastupdated: "2025-09-11"
 
 keywords: watsonxdata, release notes
 
@@ -29,12 +29,86 @@ For watsonx.data on-prem what's new, see [Release notes for watsonx.data](https:
 For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-prem Premium](https://www.ibm.com/docs/en/watsonx/watsonxdata-premium/2.2.x?topic=overview-whats-new-in-watsonxdata).
 
 
+## 11 September 2025 - Version 2.2.1
+{: #lakehouse_11sept2025}
+{: release-note}
+
+{{site.data.keyword.lakehouse_short}} 2.2.1 version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.2.1 release is available in your region, contact IBM Support.
+{: important}
+
+Engine and service enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancement:
+
+   * Introduced version v3 of the {{site.data.keyword.lakehouse_short}} API. You can continue to use version v2 until {{site.data.keyword.lakehouse_short}} version 2.3. See [API documentation (v3)](https://cloud.ibm.com/apidocs/watsonxdata-v3).
+   * You can now provision {{site.data.keyword.lakehouse_short}} Spark engine with the Spark runtime set to Spark 4.0, which enables you to run Spark applications on Spark 4.0. For details about supported Spark versions, see [Supported Spark version](/docs/watsonxdata?topic=watsonxdata-wxd-ae_limits#cpu-mem-spk_versn).
+   * The Milvus service in {{site.data.keyword.lakehouse_short}} is now upgraded to version 2.5.12.
+   * You can now use the open-source Milvus backup tool to back up and restore data from Milvus within watsonx.data.
+   * The Gluten accelerated Spark engine in {{site.data.keyword.lakehouse_short}} is now able to run applications using Spark version 3.5. For details about supported Spark versions, see [Supported Spark version](/docs/watsonxdata?topic=watsonxdata-wxd-ae_limits#cpu-mem-spk_versn).
+   * You can now use the Vector Transport Service (VTS) with Milvus in watsonx.data to migrate or manage vector data across systems. To know more details, see [Using the Vector Transport Service](/docs/watsonxdata?topic=watsonxdata-milvus_vts).
+
+Query Optimizer enhancement
+
+: You can now monitor query performance improvements through the optimizer dashboard. The optimizer is actively managing query plans for the associated catalogs and improving performance for Presto (C++) engines. To know more details, see [Monitoring query performance from Optimizer dashboard](/docs/watsonxdata?topic=watsonxdata-analyze_optimizer).
+
+Access management enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following access management enhancements:
+   * Privilege management for a Milvus service in {{site.data.keyword.lakehouse_short}} now includes the following global privileges:
+
+      * DescribeDatabase – Provides detailed information about the specified database.
+
+      * AlterDatabase - Modifies the properties of an existing database.
+
+   To know more details about managing user access in Milvus, see [Predefined roles and permissions in watsonx.data](/docs/watsonxdata?topic=watsonxdata-role_priv#milvus).
+
+
+CPDCTL CLI enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancements to IBM Cloud Pak for Data Command Line Interface (IBM cpdctl):
+
+* Starting with version 2.2.1, you can use HashiCorp Vault through cpdctl for secure secrets management and streamlined automation workflows.
+
+* A new option under the service command wx-data service generate-engine-dump allows you to generate dumps for Presto worker and coordinator nodes in {{site.data.keyword.lakehouse_short}}. For details about the service command for serviceability related operations in {{site.data.keyword.lakehouse_short}}, see [service](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata#cpdctl_commands_wxdatasvce).
+
+* Use the new component command to retrieve configuration details and status of various components in {{site.data.keyword.lakehouse_short}}. For details about the component command to get the configuration details for various components in {{site.data.keyword.lakehouse_short}}, see [wx-data commands and usage](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata).
+
+* Starting from CPDCTL version 1.8.5, users no longer need to set the instance ID as an environment variable. This method is deprecated and will be removed in a future release. Instead, set the instance ID directly using the profile command. To know details about setting the instance ID as environment variable, see [config commands and usage](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_config).
+
+
+Data sources and storage enhancements
+
+: You can now import catalogs and projects from the data platform for the following data sources:
+   - IBM Db2
+   - IBM Netezza
+   - MySQL
+   - Oracle
+   - PostgreSQL
+   - Snowflake
+   - SQL Server
+
+Semantic automation for data enrichment
+
+: {{site.data.keyword.lakehouse_short}} now supports semantic search capabilities that allow users to query data using natural language, making data exploration more intuitive and efficient. To know about semantic search capabilities, see [Performing semantic searches in {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=watsonxdata-sal_search).
+
+Public preview enhancements
+
+: Public preview features are now accessible from **Configurations** UI.
+   You can now easily access and manage {{site.data.keyword.lakehouse_short}} public preview features from the Configurations UI. Features in public preview are highlighted with a Preview tag, making it easy to identify them. You can enable or disable the features to explore the functionality. Each public preview feature includes a link to its detailed documentation, allowing you to learn more about it. To know more about public preview features, see [What's new in {{site.data.keyword.lakehouse_short}} (Public preview)](/docs/watsonxdata?topic=watsonxdata-release_pp).
+
+Deprecated features
+: The following features are deprecated in this release:
+
+   * **{{site.data.keyword.lakehouse_short}} API version v2 is now deprecated**
+
+   {{site.data.keyword.lakehouse_short}} API version v2 is completely removed from the {{site.data.keyword.lakehouse_short}} developer edition starting with version 2.2.1. It will be completely removed from {{site.data.keyword.lakehouse_short}} software edition in version 2.3. You must migrate to the latest supported API version (v3) to ensure continued compatibility and access to new features.
+
+   * The option to register external Spark engines in {{site.data.keyword.lakehouse_short}} is deprecated in this release and will be removed in version 2.3. {{site.data.keyword.lakehouse_short}} already includes built-in Spark engines that you can provision and use directly, including the Gluten-accelerated Spark engine ([Provisioning Gluten accelerated Spark engine](/docs/watsonxdata?topic=watsonxdata-prov_cpp)) and the native {{site.data.keyword.lakehouse_short}} Spark engine ([Provisioning a Spark engine](/docs/watsonxdata?topic=watsonxdata-spl_engine)).
+
+
 ## 05 August 2025 - Version 2.2.0 New Feature 1 (NF1)
 {: #lakehouse_05aug2025}
 {: release-note}
-
-{{site.data.keyword.lakehouse_short}} 2.2.0 NF1 version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.2.0 NF1 release is available in your region, contact IBM Support.
-{: important}
 
 Support for BLOB and CLOB data types
 : The BLOB and CLOB data types support in {{site.data.keyword.lakehouse_short}} is now updated to align with the SQL standard, which Presto follows as a federated query engine.

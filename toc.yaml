@@ -30,7 +30,9 @@ toc:
           - mixed_case_overview.md
           - resource_grp_ov.md
           - integration.md
-          - manta_overview.md 
+          - manta_overview.md
+          - feature_parity_wxd.md
+          - wxd_plfrm_dplmnt_cmpar.md
       - release.md
       - topicgroup:
           label: Provisioning watsonx.data
@@ -39,6 +41,8 @@ toc:
           - prov_lite_plan.md
           - prov_spk_lite.md
           - getting-started.md
+          - wxd_reg_avail.md
+      - wxd_api_chg_log.md
   - navgroup:
       id: tutorial
       topics:
@@ -80,6 +84,7 @@ toc:
               - prov_engine.md
               - pcpp_prov.md
               - prov_spk_engine.md
+              - spk_cpp.md
               - reg_engine.md
               - edit-eng-tags.md
               - scale-engine.md
@@ -190,6 +195,7 @@ toc:
             - sync_optimizer_meta.md
             - optimizer_iceberg_stats.md
             - exec_inspect_optimizer.md
+            - analyze_optimizer.md
             - uninstall_optimizer.md
       - topicgroup:
           label: Query history
@@ -212,7 +218,7 @@ toc:
       - topicgroup:
           label: Working with native Spark engine
           topics:
-            - Intro_nativespark.md
+            - intro_nativespark.md
             - spk_cpp_intro.md
             - prov-native-spark.md
             - spk_cpp.md
@@ -225,9 +231,9 @@ toc:
                   - mng_appln_nspark.md
                   - ae_customizing-instance.md
                   - ae_create-lib-set.md
-                  - ae_cust-with-script.md
-                  - ae_use-lib-set.md
                   - ae_combining-lib-sets.md
+                  # - ae_cust-with-script.md
+                  - ae_use-lib-set.md
             - topicgroup:
                 label: Submitting Spark application by using native Spark engine
                 topics:
@@ -281,11 +287,14 @@ toc:
             - pause-resume-milvus.md
             - wxd_wxai_milvus_conn.md
             - wxd_wxa_connection.md
+            - milvus_backup.md
+            - milvus_vts.md
       - topicgroup:
           label: Semantic automation for data enrichment
           topics:
             - sal_register.md
             - sal_enrich_data.md
+            - sal_search.md
       - topicgroup:
           label: Enhancing security
           topics:
@@ -382,6 +391,7 @@ toc:
       - mixed_case_behavior.md
       - response.md
       - high_availability_lh.md
+      - dr_scenarios.md
       - update-process.md
       - topicgroup:
           label: Customization through API
@@ -405,6 +415,13 @@ toc:
                   - api_custom_logconfwrkr_pcpp.md
                   - api_custom_logconfcord_pcpp.md
           - resource_grp_pptys.md
+      - topicgroup:
+          label: Public preview
+          topics:
+            - release_public_preview.md
+            - mv_optimizer.md
+            - jdbc.md
+            - db_ast.md
       - link:
             label: watsonx.data APIs
             href: https://cloud.ibm.com/apidocs/watsonxdata

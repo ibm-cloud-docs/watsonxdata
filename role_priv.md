@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-03"
+lastupdated: "2025-08-12"
 
 keywords: lakehouse, watsonx data, privileges, roles, access
 
@@ -116,7 +116,7 @@ Formation admins (IAM) have the default admin access.
 | Run workloads against the engine | ✓ | ✓ | ✓ |     |
 {: caption="Resource-level permissions" caption-side="bottom"}
 
-## Engine (Native Spark)
+## Engine (Native Spark and Gluten accelerated Spark)
 {: #native_spark}
 
 ### Default admin access
@@ -198,7 +198,10 @@ While the default admins can perform some administration and maintenance jobs su
 | Resume Milvus service | ✓ |  |  |  |  |  |  |
 | Collection `CreateIndex` | ✓ | ✓ |  |  | ✓ | ✓ |  |
 | Collection `DropIndex` | ✓ | ✓ |  |  | ✓ | ✓ |  |
-| Collection `DescribeCollection` | ✓ | ✓ | ✓ |  | ✓ | ✓ |  |
+| Global `DescribeDatabase` | ✓ | ✓ | ✓ |  | ✓ |  |  |
+| Global `AlterDatabase` | ✓ | ✓ |  |  | ✓ |  |  |
+| Global `UpdateResourceGroups` | ✓ |  |  |  |  |  |  |
+| Global `DescribeCollection` | ✓ | ✓ | ✓ |  | ✓ | ✓ |  |
 | Global `CreateCollection` | ✓ | ✓ |  |  | ✓ |  |  |
 | Global `ShowCollections` | ✓ | ✓ | ✓ |  | ✓ |  |  |
 | Global `CreateAlias` | ✓ | ✓ |  |  | ✓ |  |  |

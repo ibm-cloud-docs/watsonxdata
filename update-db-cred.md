@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-11"
+lastupdated: "2025-08-26"
 
 keywords: lakehouse, database, credentials, watsonx.data
 
@@ -51,11 +51,14 @@ To update the data source or storage credentials, use one of the following metho
 For IBM managed buckets, there is no option to update credentials.
 {: note}
 
-Presto: **Update Credentials** is enabled for all external storage buckets and data sources, regardless of their association status with the engine.
+* Presto:
+   * **Update Credentials** is enabled for all external storage buckets and data sources, regardless of their association status with the engine.
+   * When you update the credentials for a data source or storage linked to the Presto (C++) engine, the system applies the changes dynamically and automatically restarts the engine.
+   * When you update the credentials for a data source or storage associated to the Presto (Java) engine, the changes are applied dynamically without a restart.
 
-Spark: **Update Credentials** is enabled for the storage buckets that has been designated as the Spark engine's home bucket during the provisioning process and all other external storage buckets and data sources, regardless of their association status with the engine. Spark synchronizes with the latest updated credentials of associated storages within 5-6 minutes.
+* Spark: **Update Credentials** is enabled for the storage buckets that has been designated as the Spark engine's home bucket during the provisioning process and all other external storage buckets and data sources, regardless of their association status with the engine. Spark synchronizes with the latest updated credentials of associated storages within 5-6 minutes.
 
-Milvus: **Update Credentials** is enabled for the home storage bucket associated with the Milvus service, and is followed by an automatic engine restart after the credentials are saved.
+* Milvus: **Update Credentials** is enabled for the home storage bucket associated with the Milvus service, and is followed by an automatic engine restart after the credentials are saved.
 
 ## Related API
 {: #updatedb_api}

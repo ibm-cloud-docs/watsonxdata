@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-25"
+lastupdated: "2025-08-14"
 
 keywords: lakehouse, watsonx.data, presto, cli
 
@@ -28,7 +28,7 @@ my_project:
     saas:
       type: watsonx_presto
       method: BasicAuth
-      user: username
+      user: ibmlhapikey_admin
       password: api_key
       host: <host>
       port: <port>
@@ -48,8 +48,8 @@ The following table covers the parameter details:
 | ------ | ----------------- | ----------- | ------- |
 | `type`| Required| Specifies the type of connection to be used. Set the connection type to watsonx_presto to indicate that you are using the dbt watsonx Presto adapter for {{site.data.keyword.lakehouse_short}} Presto.| `watsonx_presto` |
 | `method` | Required (default method is `BasicAuth`) | Authentication method for Presto. | `BasicAuth` |
-| `user` | Required | Username for authentication. | drew |
-| `password` | Required if method is `BasicAuth` | Password or API key for authentication. | None or alphanumeric (abc123) |
+| `user` | Required | Username for authentication. To authenticate successfully, you must prefix your username with `ibmlhapikey_`. | `ibmlhapikey_admin` |
+| `password` | Required if method is `BasicAuth` | API key for authentication. For information about generating API key, see [Creating an API key in the console](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key). | Alphanumeric (abc123) |
 | `http_headers` | Optional | HTTP headers to send alongside requests to Presto, specified as a yaml dictionary of (header, value) pairs. | X-Presto-Routing-Group: my-cluster |
 | `http_scheme` | Optional (default is `http` or `https` for method: `BasicAuth`) | HTTP scheme to use (`http` or `https`). | `https` or `http` |
 | `catalog` | Required | Catalog name for building models. | Analytics |

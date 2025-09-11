@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-11-22"
+  years: 2022, 2025
+lastupdated: "2025-08-26"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -69,7 +69,7 @@ Looker uses Lightweight Directory Access Protocol (LDAP) authentication mechanis
 
     * Can connect
     * Can cancel queries
-    * (optional) Can check database presto version (0.286)
+    * (optional) Can check database presto version
 
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-06"
+lastupdated: "2025-09-11"
 
 keywords: lakehouse
 
@@ -31,7 +31,96 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
+## MOR to COW table conversion fails in Spark 4.0
+{: #known_issue43962}
 
+MOR to COW table conversion spark application is not supported in Spark 4.0.
+
+**Workaround:** Use Spark versions 3.4 or 3.5 to perform MOR to COW table conversion.
+
+## Adhoc storage ingestion fails due to missing bucket name
+{: #known_issue55277}
+
+This issue is specific to Snowflake.
+{: note}
+
+The ingestion job created using Adhoc Storage fails due to a missing or empty bucket_name in the request payload. The job enters a running state but eventually fails.
+
+**Workaround:** You can register the data source instead of using adhoc storage. Alternatively, persisting the connection allows ingestion to proceed.
+
+## Preview dashboard displays null values with Presto(C++) engine due to hive catalog column name mismatch
+{: #known_issue54806}
+
+The Presto (C++) engine causes the preview dashboard to display all null values for certain tables due to a mismatch between the column names in the Parquet files and the Hive catalog configuration.
+
+**Workaround:** Apply the following session property:
+
+   ```bash
+      set session [catalog_name].file_column_names_read_as_lower_case=true;
+   ```
+   {: codeblock}
+
+## Manta applications fail to run on Spark 4.0
+{: #known_issue43343}
+
+Manta applications (Iceberg, Hudi, Hive, Delta) fail to execute when submitted on Spark 4.0.
+
+**Workaround:** Run Manta applications using other available Spark versions.
+
+## Test connection for arrow connectors fails in FIPS-enabled clusters
+{: #known_issue33906}
+
+Test connection for arrow connectors may fail when deployed in FIPS-enabled clusters due to cryptographic restrictions. This affects connectors such as Greenplum, MariaDB, and Salesforce, which rely on underlying datasources or libraries incompatible with FIPS mode during connection validation.
+
+## Apache Kafka test connection fails in FIPS-enabled clusters
+{: #known_issue33906_1}
+
+For Apache Kafka, test connection may fail unless the SASL_MECHANISM is explicitly set to "SCRAM-SHA-512". This mechanism is compatible with FIPS requirements and should be used to ensure successful connection testing in FIPS-enabled environments.
+
+## Unsupported special characters in schema and table creation through Ingestion UI
+{: #known_issue21631}
+
+The following special characters are not supported when creating schemas and tables through the Ingestion UI:
+`%` and `+`
+These restrictions are enforced due to limitations in underlying storage engines such as Hive, Delta, and Hudi. While the Data Manager page may allow a broader set of special characters (for example, `!`, `@`, `#`, `&`, `_`, `-`, `=`, `+`, `]`, `}`, `<`, and `>`), the ingestion flow enforces stricter validation to ensure compatibility across services.
+
+## Query execution fails temporarily after updating expired storage or database credentials
+{: #known_issue2875}
+
+After updating expired credentials for a storage or database resource associated with a Presto engine, query execution in the Query Workspace fails for approximately 30 to 40 seconds. After this delay, queries execute successfully without further issues.
+
+## Stats sync job remains stuck during execution
+{: #known_issue33503}
+
+Stats sync jobs may remain stuck during execution due to unknown conditions. When this occurs, users can check the logs to view the job status in the optimizer or Db2. If the job status is **NOTRECEIVED**, **NOTRUN**, or **UNKNOWN**, users must manually force delete the job and submit the next one in the queue.
+
+- **NOTRECEIVED**: The system did not receive a call with a given task ID.
+- **NOTRUN**: An error prevented the scheduler from invoking the task’s procedure.
+- **UNKNOWN**: The task began execution, but the scheduler failed to record the outcome due to an unexpected condition.
+
+## Compatibility issue: Spark fails to read iceberg tables written by presto with Parquet V2
+{: #known_issue30535}
+
+Spark fails to read data inserted into iceberg tables by Presto when Presto is explicitly configured to use the Parquet V2 writer. This issue occurs because Spark does not support vectorized reads for certain Parquet V2 encodings, such as `DELTA_BINARY_PACKED`. A typical error message is `UnsupportedOperationException: Cannot support vectorized reads for column [CustomerID] optional int32 CustomerID = 1 with encoding DELTA_BINARY_PACKED. Disable vectorized reads to read this table/file at org.apache.iceberg.arrow.vectorized.parquet.VectorizedPageIterator.initDataReader(VectorizedPageIterator.java:98)`.
+
+**Workaround:** If you encounter this error while reading a table especially one created using earlier versions of watsonx.data, set the following Spark configuration.
+
+   ```bash
+      config("spark.sql.iceberg.vectorization.enabled", "false")
+   ```
+   {: codeblock}
+
+## Limitation of querying role-related `information_schema` table for `tpcds` or `tpch` connectors
+{: #known_issue33420}
+
+Users encounter an error when querying role-related `information_schema` table for `tpcds` or `tpch` connectors. This behavior is intentional and expected for these connectors in Presto, as `tpcds` and `tpch` are benchmarking connectors that do not support role-based security features.
+
+**Workaround:** To prevent errors, avoid querying role-related information_schema tables (such as applicable_roles, enabled_roles, and roles) for `tpcds` or `tpch` connectors.
+
+## Use valid schema, table, and column names to ensure query reliability
+{: #known_issue21807}
+
+Avoid using leading or trailing spaces in schema, table, or column names when creating tables in the Query workspace. While the creation may succeed, these extra spaces can lead to issues during querying or interaction. To ensure smooth and reliable operation, always use clean names without extra spaces.
 
 ## Limitations of BLOB and CLOB support in Presto
 {: #known_issue30109}
@@ -109,13 +198,6 @@ If you associate a QHMM catalog with the engine during the provisioning state, t
 Users might encounter a "test connection failure error due to invalid credentials" error for some data sources even when the data source credentials are correct. This issue can occur despite valid credentials, preventing successful connection tests for data sources.
 
 **Workaround:** If you encounter with this failure error, you must contact IBM support.
-
-## Reset button does not reset the threshold settings to default settings
-{: #known_issue46159}
-
-Clicking the `Reset` button does not reset the thresholds to their default or global settings, instead reverts the changes made since the last save which is similar to the action of `Cancel` button.
-
-**Workaround:** To achieve the desired reset to default settings, manually revert each threshold setting to its required value, then save the changes.
 
 ## Absence of column NDV stats in Iceberg tables leads to suboptimal query plans
 {: #known_issue26023}

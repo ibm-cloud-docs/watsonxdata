@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-11"
+lastupdated: "2025-08-25"
 
 keywords: lakehouse, cpdctl, watsonx.data, supporting commands, config
 
@@ -191,13 +191,17 @@ You can combine the 2 commands user and profile together to configure instance p
 
 Syntax:
    ```bash
-   cpdctl config profile set <profile_name> --username <saas_username> --apikey <APIKEY> --url <saas_url> --region <region_name>
+   cpdctl config profile set <profile_name> --username <saas_username> --apikey <APIKEY> --url <saas_url> --region <region_name> \
+   --env "WATSONX_DATA_INSTANCE_ID=<crn>" \
+   --env "WATSONX_DATA_URL=<WXD-base-url>"
    ```
    {: codeblock}
 
 Example:
    ```bash
-   ./cpdctl config profile set saas --username user@ibm.com --apikey APIKEY --url https://cloud.ibm.com --region us-south
+   ./cpdctl config profile set saas --username user@ibm.com --apikey APIKEY --url https://cloud.ibm.com/ --region us-south \
+   --env "WATSONX_DATA_INSTANCE_ID=crn:v1:staging:public:lakehouse:us-south:a/781f752068d44638a3b2a13de58d3cfe:2c590eda-8d51-4269-86ce-a6dfb84c8267::" \
+   --env "WATSONX_DATA_URL=https://us-south.lakehouse.dev.cloud.ibm.com/"
    ```
    {: codeblock}
 
@@ -205,6 +209,9 @@ For {{site.data.keyword.lakehouse_short}} on IBM Cloud, it is recommended to use
 
 ## Setting the instance ID as environment variable
 {: #cpdctl_commands_configinstid}
+
+Starting from cpdctl version 1.8.5, users no longer need to set the `instance ID` as environment variable. This method is deprecated and will be completely removed in a future release. Instead, you must set the `instance ID` directly using the <codeph>profile</codeph> command, as described in [Using the commands user and profile together](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_config#cpdctl_commands_configinstid)
+{: important}
 
 You must set an instance ID to access the corresponding environment to run the cpdctl commands. To set the instance ID, you can use the `WX_DATA_INSTANCE_ID` environment variable. This allows you to avoid specifying the instance ID with each command.
 

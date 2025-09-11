@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-12-09"
+  years: 2022, 2025
+lastupdated: "2025-08-26"
 
 keywords: watsonxdata, qhmm
 
@@ -42,7 +42,7 @@ The **ibm-lh** utility allows you to retrieve the QHMM logs (provide insights in
 ## Procedure
 {: #qhmm1_ret}
 
-1. Install `ibm-lh` client package. For information, see [Installing ibm-lh-client package](https://www.ibm.com/docs/SSDZ38_2.1.x/wxd-client/topics/install-lh-client.html).
+1. Install `ibm-lh` client package. For information, see [Installing ibm-lh-client package](https://www.ibm.com/docs/SSDZ38_2.2.x/wxd-client/topics/install-lh-client.html).
 
 1. Use the `cert-mgmt` utility to add or remove SSL certificates in the ibm-lh-client truststore to establish connection with the Presto engine.
 
@@ -58,7 +58,7 @@ The **ibm-lh** utility allows you to retrieve the QHMM logs (provide insights in
    ```
    {: codeblock}
 
-   For more information, see [Establishing cconnection](https://www.ibm.com/docs/SSDZ38_2.1.x/wxd-client/topics/work-ibm-lh.html).
+   For more information, see [Establishing cconnection](https://www.ibm.com/docs/SSDZ38_2.2.x/wxd-client/topics/work-ibm-lh.html).
 
 1. Configure Presto details by using the following command:
 
@@ -75,7 +75,7 @@ The **ibm-lh** utility allows you to retrieve the QHMM logs (provide insights in
    {: codeblock}
 
 
-1. Use the `ibm-lh monitor qhmm` utility command to retrieve the QHMM logs. For more information about the syntax and the different keywords, see [ibm-lh monitor qhmm](https://www.ibm.com/docs/SSDZ38_2.1.x/wxd-client/topics/ibm_lh_commands.html).
+1. Use the `ibm-lh monitor qhmm` utility command to retrieve the QHMM logs. For more information about the syntax and the different keywords, see [ibm-lh monitor qhmm](https://www.ibm.com/docs/SSDZ38_2.2.x/wxd-client/topics/ibm_lh_commands.html).
 
    The syntax is
    ./ibm-lh monitor qhmm --type <type_name> --start-time <start_time> --end-time <end_time> --user <user_id> --query-id <query_id> --query-state <query_state>

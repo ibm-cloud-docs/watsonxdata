@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-11"
+lastupdated: "2025-08-19"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -168,8 +168,11 @@ You can connect to a Milvus service by using API key or IAM token.
     ```
     {: screen}
 
-As of watsonx.data version 2.2, it is recommended to use the API version v2/. The API version v1/ might be deprecated and removed in a future release.
+As of {{site.data.keyword.lakehouse_short}} version 2.2, it is recommended to use the API version v2/. The API version v1/ might be deprecated and removed in a future release.
 {: note}
+
+Under Milvus version v2/ APIs, the User and Roles category of APIs are not supported for the Milvus service in watsonx.data. For more information, see [Milvus APIs](https://milvus.io/api-reference/restful/v2.5.x/v2/Role%20(v2)/Create.md).
+{: important}
 
 ## What to do next
 {: #postreq}
@@ -178,14 +181,14 @@ You can perform the following operations after establishing a connection with a 
 
 - **Manage data**
 
-    - You can insert, upsert, or delete data in the Milvus service. For more information, see [Insert, Upsert & Delete](https://milvus.io/docs/insert-update-delete.md).
+    - You can insert, upsert, or delete data in the Milvus service. For more information, see [Insert, Upsert, and Delete](https://milvus.io/docs/insert-update-delete.md).
     - You can import data from Milvus. For more information, see [Prepare and import data](https://milvus.io/docs/prepare-source-data.md)
 
 - **Manage databases**: You can create databases in Milvus and allocate privileges to certain users to manage them. A Milvus cluster supports a maximum of 64 databases. For more information, see [Manage Databases](https://milvus.io/docs/manage_databases.md).
 - **Manage collections**: You can create and manage collections using the SDK of your choice. A Milvus cluster supports a maximum of 65,536 collections. For more information, see [Manage Collections](https://milvus.io/docs/manage-collections.md#Manage-Collections).
 - **Manage partitions**: You can create and manage partitions in a collection. A Milvus cluster supports a maximum of 4095 partitions. For more information, see [Manage Partitions](https://milvus.io/docs/manage-partitions.md#Manage-Partitions).
 - **Manage indexes**: You can creating and managing indexes on vector fields in a collection. For more information, see [Manage Indexes](https://milvus.io/docs/index-vector-fields.md?tab=floating).
-- **Search and Query**: For information searching and querying data in Milvus, see [Search, Query & Get](https://milvus.io/docs/single-vector-search.md).
+- **Search and Query**: For information searching and querying data in Milvus, see [Search, Query and Get](https://milvus.io/docs/single-vector-search.md).
 
 ## Related API
 {: #connmilvus_api}

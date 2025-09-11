@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-12-25"
+  years: 2017, 2025
+lastupdated: "2025-08-26"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -26,7 +26,7 @@ An engine in {{site.data.keyword.lakehouse_short}} runs SQL queries on your data
 
     | Field | Description |
     | --- | --- |
-    | Type | Select the **Presto (C++) <*version*> engine from the list. |
+    | Type | Select the **Presto (C++)** engine from the list. |
     | Display name   | Enter your compute engine name.  |
     | Configuration mode | **Standard**: Select **Standard** for predefined engine sizes: |
     |   |**Starter**: Includes 1 coordinator node and 1 worker node, both starter.   |

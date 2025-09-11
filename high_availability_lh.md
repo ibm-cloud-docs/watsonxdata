@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-06"
+lastupdated: "2025-08-25"
 
 keywords: high availability, disaster revecory, watsonx.data
 
@@ -80,14 +80,45 @@ Single-tenant components operate on an 'Active Only' model, ensuring immediate r
 Single-tenant components are strategically distributed across 3 AZs to enhance reliability. When an AZ fails, sufficient capacity to initiate the required services on the available AZs is ensured. This minimizes any impact that is caused by an AZ outage.
 
 
+
 ## Responsibilities
 {: #resplty}
 
-| Task  |IBM Responsibilities |Your Responsibilities|
-|---|---|---|
-| Backups |{{site.data.keyword.lakehouse_short}} is responsible for automatic daily backups, of all {{site.data.keyword.lakehouse_short}} provided resources. |**The Client is responsible for:** **1)** Create a new instance of IBM {{site.data.keyword.lakehouse_short}} to restore the backups and validate that the IBM backups that are restored properly. **2)** Restore backups of external components that they brought into {{site.data.keyword.lakehouse_short}}.
-|  Restore |{{site.data.keyword.lakehouse_short}} handles the restoration of backups for provided resources.   |**The Client is responsible for:** **1)** Create a new instance of {{site.data.keyword.lakehouse_short}} to restore the backups and validate that the IBM backups that are restored properly. **2)** Restore backups of external components that they brought into {{site.data.keyword.lakehouse_short}}.|
-{: caption="Responsibilities" caption-side="bottom"}
+### Backup
+{: #backup}
+
+**IBM responsibilities**
+* Automatic daily backups: {{site.data.keyword.lakehouse_short}} automatically performs daily backups of all resources that are provided and managed by IBM. This includes:
+   * System metadata
+   * Configuration settings
+   * Internal data managed by watsonx.data
+* Backup storage and security: These backups are stored securely within IBM’s infrastructure, ensuring data durability and compliance with enterprise-grade standards.
+
+**Client responsibilities**
+1. Provision a new instance for restore:
+   * If a restore is needed, the client must create a new watsonx.data instance to receive the restored data.
+   * This ensures that the original environment remains untouched and the restored data can be validated safely.
+2. Validate IBM backups:
+   After restoration, the client must verify the integrity and completeness of the restored data. This includes checking metadata, configurations, and system behavior.
+3. Restore external components:
+   * Any external data sources or components integrated into {{site.data.keyword.lakehouse_short}} (for example, custom connectors, third-party tools, user-managed datasets) are not backed up by IBM.
+   * The client is responsible for backing up and restoring these components separately.
+
+### Restore
+{: #restore}
+
+**IBM responsibilities**
+
+Restoration of provided resources:
+IBM handles the actual restoration process for the resources it backs up. This includes loading the backup into the new instance and ensuring system-level consistency.
+
+**Client responsibilities**
+1. Create a new instance for restore:
+   The client must initiate a new {{site.data.keyword.lakehouse_short}} instance to receive the restored data.
+2. Validate restored data:
+   The client must perform post-restore validation to ensure the restored data is accurate and usable.
+3. Restore external components:
+   The client must manually restore any external integrations or data sources that were part of the original setup.
 
 ## Application-level high availability
 {: #appl-ha}

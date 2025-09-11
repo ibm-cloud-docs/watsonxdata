@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-07-11"
+lastupdated: "2025-08-27"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -12,7 +12,7 @@ subcollection: watsonxdata
 {{site.data.keyword.attribute-definition-list}}
 
 # Submitting Spark application by using `IBM cpdctl`
-{: #table-run_samp_file}
+{: #spark-table-maint}
 
 
 **Applies to** : [Spark engine]{: tag-blue}
@@ -28,6 +28,7 @@ You can use IBM Cloud Pak for Data Command Line Interface (IBM `cpdctl`) to subm
 * Provision {{site.data.keyword.lakehouse_full}} instance and add a native Spark engine.
 * Download and install IBM cpdctl. For information, see [Installing IBM cpdctl](https://www.ibm.com/docs/SSDZ38_2.1.x/wxd-client/topics/cpdctl-title.html).
 * Configure the watsonx.data environment in IBM cpdctl. For information, see [Configure IBM cpdctl](https://www.ibm.com/docs/SSDZ38_2.1.x/wxd-client/topics/cpdctl-title.html).
+
 
 
 ## Procedure
@@ -47,6 +48,9 @@ To automatically perform the table maintenance operation, see [Table maintenance
    You can also provide the path to the file if it is saved in your computer. Specify the local path in the `local-path` field.
 
    The Python file includes commands for the different table maintenance operations. You can uncomment the required section based on your use case scenario. For the use case that involves catalog and schema, customize the catalog_name, schema_name and table_name in the Python file. Also, to customize and use a different query format for table maintenance operations, see [Iceberg procedures](https://iceberg.apache.org/docs/1.8.0/spark-procedures/).
+   {: note}
+
+   You can use Amazon S3A, ADLS and GCS storage for Spark job submission.
    {: note}
 
 
