@@ -89,7 +89,7 @@ Data sources and storage enhancements
 
 Semantic automation for data enrichment
 
-: {{site.data.keyword.lakehouse_short}} now supports semantic search capabilities that allow users to query data using natural language, making data exploration more intuitive and efficient. To know about semantic search capabilities, see [Performing semantic searches in {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=watsonxdata-sal_search).
+: {{site.data.keyword.lakehouse_short}} now supports semantic search capabilities that allow users to query data using natural language, making data exploration more intuitive and efficient. For details about semantic search capabilities, see [Performing semantic searches in {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=watsonxdata-sal_search).
 
 Public preview enhancements
 
