@@ -29,8 +29,8 @@ For watsonx.data on-prem what's new, see [Release notes for watsonx.data](https:
 For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-prem Premium](https://www.ibm.com/docs/en/watsonx/watsonxdata-premium/2.2.x?topic=overview-whats-new-in-watsonxdata).
 
 
-## 27 August 2025 - Version 2.2.1
-{: #lakehouse_27aug2025}
+## 11 September 2025 - Version 2.2.1
+{: #lakehouse_11sept2025}
 {: release-note}
 
 {{site.data.keyword.lakehouse_short}} 2.2.1 version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.2.1 release is available in your region, contact IBM Support.
