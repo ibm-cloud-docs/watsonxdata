@@ -31,6 +31,13 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
+## MOR to COW table conversion fails in Spark 4.0
+{: #known_issue43962}
+
+MOR to COW table conversion spark application is not supported in Spark 4.0 for watsonx.data 2.2.1 version.
+
+**Workaround:** Use Spark versions 3.4 or 3.5 to perform MOR to COW table conversion.
+
 ## Adhoc storage ingestion fails due to missing bucket name
 {: #known_issue55277}
 
