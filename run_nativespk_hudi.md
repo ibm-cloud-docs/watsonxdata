@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-09-10"
+lastupdated: "2025-09-11"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -233,9 +233,28 @@ The topic describes the procedure to run a Spark application that ingests data i
 
    Curl command to submit Python application
 
+   **Sample V2 API**
+
     ``` bash
    curl --request POST
    --url https://<wxd_host_name>/lakehouse/api/v2/spark_engines/<spark_engine_id>/applications
+   --header 'Authorization: Bearer <token>'
+   --header 'Content-Type: application/json'
+   --header 'LhInstanceId: <instance_id>'
+   --data '{        "application_details": {
+           "conf": {
+           "spark.sql.catalog.spark_catalog" : "org.apache.spark.sql.delta.catalog.DeltaCatalog",
+           "spark.sql.catalog.spark_catalog.type" : "hive",
+           "spark.hadoop.wxd.apiKey":"<user-authentication-string>"        },
+           "application": "s3a://<database_name>/delta_demo.py"        }    }
+   ```
+   {: codeblock}
+
+   **Sample V3 API**
+
+    ``` bash
+   curl --request POST
+   --url https://<wxd_host_name>/lakehouse/api/v3/spark_engines/<spark_engine_id>/applications
    --header 'Authorization: Bearer <token>'
    --header 'Content-Type: application/json'
    --header 'LhInstanceId: <instance_id>'

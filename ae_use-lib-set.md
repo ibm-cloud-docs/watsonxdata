@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-23"
+lastupdated: "2025-09-11"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -23,8 +23,36 @@ To reference a library set when submitting a Spark application:
 
 1. Get the IAM token. See [Generating a bearer token](https://cloud.ibm.com/apidocs/watsonxdata#authentication).
 1. Issue the following cURL command:
+
+   **Sample V2 API**
+
     ```sh
     curl -X POST https://<region>.lakehouse.cloud.ibm.com/lakehouse/api/v2/spark_engines/<spark_engine_id>/applications --header "Authorization: Bearer <IAM token>" -H "content-type: application/json"  -d @submit-spark-app.json
+    ```
+    {: codeblock}
+
+    Example for submit-spark-app.json:
+    ```json
+    {
+      "application_details": {
+      "application": "cos://<bucket-name>.<cos-name>/my_spark_application.py",
+      "arguments": ["arg1", "arg2"],
+      "conf": {
+        "spark.hadoop.fs.cos.<cos-name>.endpoint":"https://s3.us-south.cloud-object-storage.appdomain.cloud",
+        "spark.hadoop.fs.cos.<cos-name>.access.key":"<access_key>",
+        "spark.hadoop.fs.cos.<cos-name>.secret.key":"<secret_key>",
+        "ae.spark.librarysets":"my_library_set"
+        }
+    }
+    }
+    ```
+    {: codeblock}
+
+
+   **Sample V3 API**
+
+    ```sh
+    curl -X POST https://<region>.lakehouse.cloud.ibm.com/lakehouse/api/v3/spark_engines/<spark_engine_id>/applications --header "Authorization: Bearer <IAM token>" -H "content-type: application/json"  -d @submit-spark-app.json
     ```
     {: codeblock}
 

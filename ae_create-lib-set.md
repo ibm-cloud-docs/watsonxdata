@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-09-10"
+lastupdated: "2025-09-11"
 
 keywords: watsonxdata, qhmm
 
@@ -83,11 +83,12 @@ To create a library set:
     * `<token>` : The bearer token. For more information about generating the token, see [Generating a bearer token](https://cloud.ibm.com/apidocs/watsonxdata#authentication).
     * `<api_version>` :When using the v2 API, set the <api_version> parameter to `v2`; for the v3 API, set it to `v3`.
 
-   ** Example payload**:
+   **Example payload**:
 
 
     ```bash
-        --url https://<region>.lakehouse.cloud.ibm.com/lakehouse/api/<api_version>/spark_engines/<spark_engine_id>/applications
+
+    --url https://<region>.lakehouse.cloud.ibm.com/lakehouse/api/<api_version>/spark_engines/<spark_engine_id>/applications
         --header 'Authorization: Bearer <token>'
         --header 'Content-Type: application/json'
         --header 'AuthInstanceID: <crn_instance>'
@@ -108,12 +109,13 @@ To create a library set:
       }
     }"]
        }
-  }'
+
     ```
     {: codeblock}
 
 
-    If the application is accepted, you will receive a response like the following:
+   If the application is accepted, you will receive a response like the following:
+
     ```json
     {
       "id": "87e63712-a823-4aa1-9f6e-7291d4e5a113",
@@ -121,7 +123,8 @@ To create a library set:
     }
     ```
 
-    When the state turns to FINISHED, the library set creation is complete.
+   When the state turns to FINISHED, the library set creation is complete.
+
 1. Track the status of the application by invoking the application status REST API.
 
 
