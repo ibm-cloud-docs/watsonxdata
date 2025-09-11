@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-09-10"
+lastupdated: "2025-09-11"
 
 keywords: lakehouse
 
@@ -30,6 +30,16 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+## Adhoc storage ingestion fails due to missing bucket name
+{: #known_issue55277}
+
+This issue is specific to Snowflake.
+{: note}
+
+The ingestion job created using Adhoc Storage fails due to a missing or empty bucket_name in the request payload. The job enters a running state but eventually fails.
+
+**Workaround:** You can register the data source instead of using adhoc storage. Alternatively, persisting the connection allows ingestion to proceed.
 
 ## Preview dashboard displays null values with Presto(C++) engine due to hive catalog column name mismatch
 {: #known_issue54806}
