@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-09-10"
+lastupdated: "2025-09-11"
 
 keywords: watsonxdata, release notes
 
@@ -41,7 +41,7 @@ Engine and service enhancements
    * You can now provision {{site.data.keyword.lakehouse_short}} Spark engine with the Spark runtime set to Spark 4.0, which enables you to run Spark applications on Spark 4.0. For details about supported Spark versions, see [Supported Spark version](/docs/watsonxdata?topic=watsonxdata-wxd-ae_limits#cpu-mem-spk_versn).
    * The Milvus service in {{site.data.keyword.lakehouse_short}} is now upgraded to version 2.5.12.
    * You can now use the open-source Milvus backup tool to back up and restore data from Milvus within watsonx.data.
-   * The Gluten accelerated Spark engine in {{site.data.keyword.lakehouse_short}} is now able to run applications using Spark version 3.5. To know details about supported Spark versions, see [Supported Spark version](/docs/watsonxdata?topic=watsonxdata-wxd-ae_limits#cpu-mem-spk_versn).
+   * The Gluten accelerated Spark engine in {{site.data.keyword.lakehouse_short}} is now able to run applications using Spark version 3.5. For details about supported Spark versions, see [Supported Spark version](/docs/watsonxdata?topic=watsonxdata-wxd-ae_limits#cpu-mem-spk_versn).
    * You can now use the Vector Transport Service (VTS) with Milvus in watsonx.data to migrate or manage vector data across systems. To know more details, see [Using the Vector Transport Service](/docs/watsonxdata?topic=watsonxdata-milvus_vts).
 
 Query Optimizer enhancement
