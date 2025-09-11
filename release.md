@@ -33,6 +33,9 @@ For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-p
 {: #lakehouse_27aug2025}
 {: release-note}
 
+{{site.data.keyword.lakehouse_short}} 2.2.1 version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.2.1 release is available in your region, contact IBM Support.
+{: important}
+
 Engine and service enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancement:
@@ -106,9 +109,6 @@ Deprecated features
 ## 05 August 2025 - Version 2.2.0 New Feature 1 (NF1)
 {: #lakehouse_05aug2025}
 {: release-note}
-
-{{site.data.keyword.lakehouse_short}} 2.2.0 NF1 version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.2.0 NF1 release is available in your region, contact IBM Support.
-{: important}
 
 Support for BLOB and CLOB data types
 : The BLOB and CLOB data types support in {{site.data.keyword.lakehouse_short}} is now updated to align with the SQL standard, which Presto follows as a federated query engine.
