@@ -34,7 +34,7 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 ## MOR to COW table conversion fails in Spark 4.0
 {: #known_issue43962}
 
-MOR to COW table conversion spark application is not supported in Spark 4.0 for watsonx.data 2.2.1 version.
+MOR to COW table conversion spark application is not supported in Spark 4.0.
 
 **Workaround:** Use Spark versions 3.4 or 3.5 to perform MOR to COW table conversion.
 
