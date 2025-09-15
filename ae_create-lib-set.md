@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-09-11"
+lastupdated: "2025-09-15"
 
 keywords: watsonxdata, qhmm
 
@@ -88,6 +88,7 @@ To create a library set:
 
     ```bash
 
+    curl --request POST
     --url https://<region>.lakehouse.cloud.ibm.com/lakehouse/api/<api_version>/spark_engines/<spark_engine_id>/applications
         --header 'Authorization: Bearer <token>'
         --header 'Content-Type: application/json'
@@ -147,8 +148,14 @@ Perform these steps to create a library set using script based customization:
     The `"arguments"` section in the Spark application submission payload must contain a `"library_set"` section with details, like `"action"` and `"name"` as shown in the following sample payload.
 
     Example of the payload:
-    ```json
-    {
+
+    ```bash
+    curl --request POST
+    --url https://<region>.lakehouse.cloud.ibm.com/lakehouse/api/<api_version>/spark_engines/<spark_engine_id>/applications
+      --header 'Authorization: Bearer <token>'
+      --header 'Content-Type: application/json'
+      --header 'AuthInstanceID: <crn_instance>'
+      -d '{
       "application_details": {
       "application": "/opt/ibm/customization-scripts/customize_instance_app.py",
         "arguments": ["{\"library_set\":{\"action\":\"add\",\"name\":\"customize_integration_custom_lib\",\"script\":{\"source\":\"py_files\",\"params\":[\"https://s3.direct.<CHANGEME_REGION>.cloud-object-storage.appdomain.cloud\",\"<CHANGEME_BUCKET_NAME>\",\"libcalc.so\",\"<CHANGEME_ACCESS_KEY>\",\"<CHANGEME_SECRET_KEY>\"]}}}"],

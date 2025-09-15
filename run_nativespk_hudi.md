@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-09-11"
+lastupdated: "2025-09-15"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -112,10 +112,7 @@ The topic describes the procedure to run a Spark application that ingests data i
 
    ```bash
    from pyspark.sql import SparkSession
-           def init_spark():            spark = SparkSession.builder
-           .appName("CreateHudiTableInCOS")
-           .enableHiveSupport()
-           .getOrCreate()
+           def init_spark():            spark = SparkSession.builder.appName("CreateHudiTableInCOS").enableHiveSupport().getOrCreate()
            return spark
            def main():
            try:
@@ -152,7 +149,7 @@ The topic describes the procedure to run a Spark application that ingests data i
        --header 'Authorization: Bearer <token>'
        --header 'Content-Type: application/json'
        --header 'LhInstanceId: <instance_id>'
-       --data '{ \n \n    "application_details": {
+       --data '{     "application_details": {
                "conf": {
                        "spark.sql.catalog.spark_catalog.type": "hive",
                        "spark.sql.catalog.spark_catalog": "org.apache.spark.sql.hudi.catalog.HoodieCatalog",
@@ -170,7 +167,7 @@ The topic describes the procedure to run a Spark application that ingests data i
        --header 'Authorization: Bearer <token>'
        --header 'Content-Type: application/json'
        --header 'LhInstanceId: <instance_id>'
-       --data '{ \n \n    "application_details": {
+       --data '{     "application_details": {
                "conf": {
                        "spark.sql.catalog.spark_catalog.type": "hive",
                        "spark.sql.catalog.spark_catalog": "org.apache.spark.sql.hudi.catalog.HoodieCatalog",
@@ -206,8 +203,7 @@ The topic describes the procedure to run a Spark application that ingests data i
    from pyspark.sql import SparkSession
    import os
        def init_spark():
-            spark = SparkSession.builder.appName("lh-hms-cloud")
-            .enableHiveSupport().getOrCreate()
+            spark = SparkSession.builder.appName("lh-hms-cloud").enableHiveSupport().getOrCreate()
             return spark
             def main():
                 spark = init_spark()
