@@ -294,6 +294,7 @@ toc:
           topics:
             - sal_register.md
             - sal_enrich_data.md
+            - sal_modify_enrichmentrun.md
             - sal_search.md
       - topicgroup:
           label: Enhancing security
