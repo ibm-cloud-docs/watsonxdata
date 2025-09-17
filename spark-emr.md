@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-21"
+lastupdated: "2025-09-17"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -35,6 +35,9 @@ The topic provides the procedure to run Spark applications from Amazon Web Servi
 * Fetch the following information from {{site.data.keyword.lakehouse_full}}:
     * MDS URL from {{site.data.keyword.lakehouse_short}}. For more information about getting the MDS credentials, see [Getting Metadata Service (MDS) Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
     * MDS Credentials from {{site.data.keyword.lakehouse_short}}. For more information about getting the MDS credentials, see [Getting Metadata Service (MDS) Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
+
+   Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats will be phased out in a future release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_username` and `ibmlhtoken_username`.
+   {: important}
 
 ## Overview
 {: #abt_emr_usecase}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-09-10"
+lastupdated: "2025-09-17"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -213,6 +213,9 @@ curl --request POST   --url https://<region>/lakehouse/api/<api_version>/spark_e
 
 ```
 {: codeblock}
+
+   Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats will be phased out in a future release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_username` and `ibmlhtoken_username`.
+   {: important}
 
 Parameter values:
 

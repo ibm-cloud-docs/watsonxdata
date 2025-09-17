@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-01-26"
+  years: 2022, 2025
+lastupdated: "2025-09-17"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -44,6 +44,9 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
 {: #procdre}
 
 1. Set the mandatory environment variable `ENABLED_INGEST_MODE` to `SPARK_LEGACY` before starting an ingestion job by running the following command:
+
+   Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats will be phased out in a future release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_username` and `ibmlhtoken_username`.
+   {: important}
 
    ```bash
    export ENABLED_INGEST_MODE=SPARK_LEGACY

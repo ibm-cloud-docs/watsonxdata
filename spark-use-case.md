@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-08-21"
+lastupdated: "2025-09-17"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -48,6 +48,7 @@ The sample file demonstrates the following functionalities:
 * Performing table maintenance activities in {{site.data.keyword.lakehouse_short}}
 
     Table maintenance helps in keeping the {{site.data.keyword.lakehouse_short}} table performant. Iceberg provides table maintenance procedures out of the box that allows performing powerful table optimizations in a declarative fashion. The following sample demonstrates how to do some table maintenance operations by using Spark. For more information about the Iceberg Spark table maintenance operations, see [Table Operations](https://iceberg.apache.org/docs/latest/spark-procedures/).
+
 
 ## Inserting sample data into the COS bucket
 {: #insert_samp_usecase}
@@ -271,3 +272,6 @@ spark.hive.metastore.client.plain.password=<api-key-of-the-user-which-has-metast
 spark.hadoop.wxd.apiKey=Basic base64(ibmlhapikey_ibmcloudid:apikey)
 ```
 {: codeblock}
+
+   Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats will be phased out in a future release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_username` and `ibmlhtoken_username`.
+   {: important}
