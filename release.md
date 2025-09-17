@@ -67,13 +67,18 @@ CPDCTL CLI enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancements to IBM Cloud Pak for Data Command Line Interface (IBM cpdctl):
 
-* Starting with version 2.2.1, you can use HashiCorp Vault through cpdctl for secure secrets management and streamlined automation workflows.
+* Starting from CPDCTL version 1.8.5, compatibility is limited to watsonx.data version 2.2.1 and above. This change is due to the deprecation of v2 API support as part of the major upgrade to v3 APIs. For users on older CPDCTL versions, refer to the CPDCTL release archive.
 
-* A new option under the service command wx-data service generate-engine-dump allows you to generate dumps for Presto worker and coordinator nodes in {{site.data.keyword.lakehouse_short}}. For details about the service command for serviceability related operations in {{site.data.keyword.lakehouse_short}}, see [service](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata#cpdctl_commands_wxdatasvce).
+   Some commands might have changed due to updates in the API specification. Use the [`--help` option](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata#cpdctl_commands_wxdatahwto) to review and adapt to the latest command syntax.
+   {: note}
 
-* Use the new component command to retrieve configuration details and status of various components in {{site.data.keyword.lakehouse_short}}. For details about the component command to get the configuration details for various components in {{site.data.keyword.lakehouse_short}}, see [wx-data commands and usage](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata).
+* Starting with {{site.data.keyword.lakehouse_short}} version 2.2.1, you can use HashiCorp Vault through cpdctl for secure secrets management and streamlined automation workflows.
 
-* Starting from CPDCTL version 1.8.5, users no longer need to set the instance ID as an environment variable. This method is deprecated and will be removed in a future release. Instead, set the instance ID directly using the profile command. For details about setting the instance ID as environment variable, see [config commands and usage](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_config).
+* A new option under the `service` command `wx-data service generate-engine-dump` allows you to generate dumps for Presto worker and coordinator nodes in {{site.data.keyword.lakehouse_short}}. For details about the `service` command for serviceability related operations in {{site.data.keyword.lakehouse_short}}, see [service](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata#cpdctl_commands_wxdatasvce).
+
+* Use the new `component` command to retrieve configuration details and status of various components in {{site.data.keyword.lakehouse_short}}. For details about the `component` command to get the configuration details for various components in {{site.data.keyword.lakehouse_short}}, see [wx-data commands and usage](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata).
+
+* Starting from CPDCTL version 1.8.5, users no longer need to set the `instance ID` as an environment variable. This method is deprecated and will be removed in a future release. Instead, set the `instance ID` directly using the `profile` command. For details about setting the `instance ID` as environment variable, see [config commands and usage](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_config).
 
 
 Data sources and storage enhancements
