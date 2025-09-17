@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-02-17"
+  years: 2022, 2025
+lastupdated: "2025-09-17"
 
 keywords: watsonxdata, data explorer, associated catalogs, iceberg tables, data sample, time travel information, ingestion hub
 
@@ -40,7 +40,7 @@ Wait for a few minutes to view the changes after a schema or table is dropped.
 You can **Ingest data** from the **Data manager** page.
 Other tasks that can be performed in the **Data manager** page include adding, renaming, or dropping a column.
 
-You can browse the **Table schema** and up to 25 rows of **Data sample** for some tables. You can view the **Time travel** snapshots and use the **Rollback** feature to rollback or rollforward to any snapshots for Iceberg tables.
+You can browse the **Table schema** and up to 25 rows of **Data sample** for some tables. You can view the **Time travel** snapshots and use the **Rollback to snapshot** feature to rollback or rollforward to any snapshots for Iceberg tables.
 
 {{site.data.keyword.lakehouse_short}} provides pre-defined **Sample and benchmarking data**, such as **tpch** and **tpcds**, to test the performance of a database system under controlled conditions. It also provides **System monitoring data** that uses **jmx** and **system** metrics to collect data about the system's health and performance during benchmark testing to understand how the system responds to the workload. **Sample and benchmarking data**, **tpch** and **tpcds** can only be queried using the Presto engines.
 
