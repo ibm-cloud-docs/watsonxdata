@@ -45,11 +45,11 @@ Engine and service enhancements
    * The Milvus service in {{site.data.keyword.lakehouse_short}} is now upgraded to version 2.5.12.
    * You can now use the open-source Milvus backup tool to back up and restore data from Milvus within watsonx.data.
    * The Gluten accelerated Spark engine in {{site.data.keyword.lakehouse_short}} is now able to run applications using Spark version 3.5. For details about supported Spark versions, see [Supported Spark version](/docs/watsonxdata?topic=watsonxdata-wxd-ae_limits#cpu-mem-spk_versn).
-   * You can now use the Vector Transport Service (VTS) with Milvus in watsonx.data to migrate or manage vector data across systems. To know more details, see [Using the Vector Transport Service](/docs/watsonxdata?topic=watsonxdata-milvus_vts).
+   * You can now use the Vector Transport Service (VTS) with Milvus in watsonx.data to migrate or manage vector data across systems. For more details, see [Using the Vector Transport Service](/docs/watsonxdata?topic=watsonxdata-milvus_vts).
 
 Query Optimizer enhancement
 
-: You can now monitor query performance improvements through the optimizer dashboard. The optimizer is actively managing query plans for the associated catalogs and improving performance for Presto (C++) engines. To know more details, see [Monitoring query performance from Optimizer dashboard](/docs/watsonxdata?topic=watsonxdata-analyze_optimizer).
+: You can now monitor query performance improvements through the optimizer dashboard. The optimizer is actively managing query plans for the associated catalogs and improving performance for Presto (C++) engines. For more details, see [Monitoring query performance from Optimizer dashboard](/docs/watsonxdata?topic=watsonxdata-analyze_optimizer).
 
 Access management enhancements
 
@@ -60,7 +60,7 @@ Access management enhancements
 
       * AlterDatabase - Modifies the properties of an existing database.
 
-   To know more details about managing user access in Milvus, see [Predefined roles and permissions in watsonx.data](/docs/watsonxdata?topic=watsonxdata-role_priv#milvus).
+   For more details about managing user access in Milvus, see [Predefined roles and permissions in watsonx.data](/docs/watsonxdata?topic=watsonxdata-role_priv#milvus).
 
 
 CPDCTL CLI enhancements
@@ -73,7 +73,7 @@ CPDCTL CLI enhancements
 
 * Use the new component command to retrieve configuration details and status of various components in {{site.data.keyword.lakehouse_short}}. For details about the component command to get the configuration details for various components in {{site.data.keyword.lakehouse_short}}, see [wx-data commands and usage](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata).
 
-* Starting from CPDCTL version 1.8.5, users no longer need to set the instance ID as an environment variable. This method is deprecated and will be removed in a future release. Instead, set the instance ID directly using the profile command. To know details about setting the instance ID as environment variable, see [config commands and usage](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_config).
+* Starting from CPDCTL version 1.8.5, users no longer need to set the instance ID as an environment variable. This method is deprecated and will be removed in a future release. Instead, set the instance ID directly using the profile command. For details about setting the instance ID as environment variable, see [config commands and usage](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_config).
 
 
 Data sources and storage enhancements
@@ -94,7 +94,7 @@ Semantic automation for data enrichment
 Public preview enhancements
 
 : Public preview features are now accessible from **Configurations** UI.
-   You can now easily access and manage {{site.data.keyword.lakehouse_short}} public preview features from the Configurations UI. Features in public preview are highlighted with a Preview tag, making it easy to identify them. You can enable or disable the features to explore the functionality. Each public preview feature includes a link to its detailed documentation, allowing you to learn more about it. To know more about public preview features, see [What's new in {{site.data.keyword.lakehouse_short}} (Public preview)](/docs/watsonxdata?topic=watsonxdata-release_pp).
+   You can now easily access and manage {{site.data.keyword.lakehouse_short}} public preview features from the Configurations UI. Features in public preview are highlighted with a Preview tag, making it easy to identify them. You can enable or disable the features to explore the functionality. Each public preview feature includes a link to its detailed documentation, allowing you to learn more about it. For more details about public preview features, see [What's new in {{site.data.keyword.lakehouse_short}} (Public preview)](/docs/watsonxdata?topic=watsonxdata-release_pp).
 
 Deprecated features
 : The following features are deprecated in this release:
