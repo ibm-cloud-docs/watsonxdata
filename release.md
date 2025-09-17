@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-09-11"
+lastupdated: "2025-09-17"
 
 keywords: watsonxdata, release notes
 
@@ -146,7 +146,7 @@ Ingestion enhancement
    The .txt file format is now accepted for data ingestion. This enhancement expands the flexibility allowing users to seamlessly upload plain text files alongside existing supported formats.
 
 Service enhancements
-: You can now configure **Query timeout** using two settings: **Maximum query execution time** and **Query client timeout**. For more information see [Managing user settings in {{site.data.keyword.lakehouse_short}}: Session timeout, Query timeout, and Login message settings](/docs/watsonxdata?topic=idle_session_timeout)
+: You can now configure **Query timeout** using two settings: **Maximum query execution time** and **Query client timeout**. For more information see [Managing user settings in {{site.data.keyword.lakehouse_short}}: Session timeout, Query timeout, and Login message settings](/docs/watsonxdata?topic=watsonxdata-idle_session_timeout)
 
 ## 11 July 2025
 {: #lakehouse_11july2025}
@@ -601,7 +601,7 @@ Data sources enhancements
       * Prometheus
 
 
-   * New data source **SAP HANA** is now available. You can use **Driver manager** under the **Configurations** page to manage drivers for SAP HANA data source. Each of these drivers undergoes a series of validations. For more information on SAP HANA data source and BYOJ process, see [SAP HANA](/docs/watsonxdata?topic=watsonxdata-saphana_conn).
+   * New data source **SAP HANA** is now available. You can use **Driver manager** under the **Configurations** page to manage drivers for SAP HANA data source. Each of these drivers undergoes a series of validations.
 
 Lite plan
 
@@ -815,7 +815,7 @@ DAS proxy to access ADLS and ABS buckets and LDAP enhancements are Tech preview 
      * Azure Data Lake Storage Gen2
      * Azure Data Lake Storage Gen1 Blob
 
-For more information, see [Azure Data Lake Storage Gen2](/docs/watsonxdata?topic=watsonxdata-reg_bucket#gen) and [Azure Data Lake Storage Gen1 Blob](/docs/watsonxdata?topic=watsonxdata-reg_bucket){: external}.
+For more information, see [Azure Data Lake Storage Gen2](/docs/watsonxdata?topic=watsonxdata-adls_genblob_storage) and [Azure Data Lake Storage Gen1 Blob](/docs/watsonxdata?topic=watsonxdata-adls_genblob_storage).
 
 * You can modify the access key and secret key of a user-registered bucket for a storage. This feature is not applicable to default buckets, ADLS, or Google Cloud Storage. This feature can only be used if the new credentials successfully pass the test connection.
 
@@ -1142,7 +1142,7 @@ New data types: BLOB and CLOB are available for MySQL, PostgreSQL, Snowflake, SQ
 
 You can now delete data from tables in Iceberg data sources by using the DELETE FROM feature.
 
-You can specify the table property delete mode for new tables by using either copy-on-write mode or merge-on-read mode (default). For more information, see [SQL statements](/docs/watsonxdata?topic=watsonxdata-supported_sql_statements).
+You can specify the table property delete mode for new tables by using either copy-on-write mode or merge-on-read mode (default).
 
 
 
@@ -1224,7 +1224,7 @@ You can now run the following time-travel queries by using branches and tags in 
 
 
 **Access Cloud Object Storage without credentials**
-You can now access your Cloud Object Storage bucket without credentials, by using the Data Access Service (DAS) endpoint. For more information about getting DAS endpoint, see [Getting DAS endpoint](/docs/watsonxdata?topic=watsonxdata-cas_ep).
+You can now access your Cloud Object Storage bucket without credentials, by using the Data Access Service (DAS) endpoint.
 
 
 
@@ -1366,7 +1366,6 @@ You can use the Rollback feature to rollback or rollforward to any snapshots for
 {: #wn_04}
 
 You can now capture and track the DDL changes in {{site.data.keyword.lakehouse_short}} by using an event listener.
-For more information, see [Capturing DDL changes](/docs/watsonxdata?topic=watsonxdata-dll_changes).
 
 **Ingest data by using Spark**
 {: #wn_05}
