@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-21"
+lastupdated: "2025-09-17"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -75,6 +75,9 @@ Parameter value:
 * mds-user-from-watsonx.Data: The watsonx.data username.
 * mds-password-from-watsonx.Data: The watsonx.data password.
 
+   Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats will be phased out in a future release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_username` and `ibmlhtoken_username`.
+   {: important}
+
 ## Configuring {{site.data.keyword.iae_short}} instance by using {{site.data.keyword.iae_short}} API
 {: #lh-api-config-ae}
 
@@ -120,6 +123,9 @@ Parameter value:
 * mds-user-from-watsonx.data: The {{site.data.keyword.lakehouse_short}} username.
 * mds-password-from-watsonx.data: The {{site.data.keyword.lakehouse_short}} password.
 
+   Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats will be phased out in a future release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_username` and `ibmlhtoken_username`.
+   {: important}
+
 ## Configuring {{site.data.keyword.iae_short}} instance by using {{site.data.keyword.iae_short}} CLI
 {: #lh-cli-config-ae}
 
@@ -158,6 +164,9 @@ Parameter value:
 * mds-thrift-endpoint-from-watsonx.data: Specify the credentials for {{site.data.keyword.lakehouse_short}}. For more information on getting the MDS credentials, see [Getting Metadata Service (MDS) Credentials]({{site.data.keyword.ref-hms-link}}).
 * mds-user-from-watsonx.data: The {{site.data.keyword.lakehouse_short}} username. For more information on getting the MDS credentials, see [Getting Metadata Service (MDS) Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
 * mds-password-from-watsonx.data: The {{site.data.keyword.lakehouse_short}} password. For more information on getting the MDS credentials, see [Getting Metadata Service (MDS) Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
+
+   Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats will be phased out in a future release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_username` and `ibmlhtoken_username`.
+   {: important}
 
 To view logs of Spark application ran on {{site.data.keyword.iae_full_notm}} you have to enable logging. For more information, see [Configuring and viewing logs](https://cloud.ibm.com/docs/AnalyticsEngine?topic=AnalyticsEngine-viewing-logs){: external}.
 {: note}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-08-21"
+lastupdated: "2025-09-17"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -31,6 +31,9 @@ The topic describes the procedure to run a Spark application that ingests data i
     * It creates a table inside the `<database_name>` database, namely `<table_name>`.
     * It inserts data into the `<table_name>` and does SELECT query operation.
     * It drops the table and schema after use.
+
+   Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats will be phased out in a future release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_username` and `ibmlhtoken_username`.
+   {: important}
 
     ```bash
     from pyspark.sql import SparkSession

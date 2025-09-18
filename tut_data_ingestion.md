@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2025-09-17"
 
 keywords: ingestion, time travel, rollback,
 
@@ -188,7 +188,7 @@ To rollback the table data to an earlier snapshot, do the following:
 
 2. Select the table `cars`. From the **cars** section, select the **Time travel** tab. You can view the snapshot records (with SnapshotID).
 
-5. Click the overflow menu at the end of the row for the second snapshot (the second snapshot includes 408 records) and click **Rollback**. A **Confirm rollback** window opens. Click **Rollback**.
+5. Click the overflow menu at the end of the row for the second snapshot (the second snapshot includes 408 records) and click **Rollback to snapshot**. A **Confirm rollback to snapshot** window opens. Click **Rollback to snapshot**.
    The data rollback is successful. Now, the table must have 408 records.
 
 2. To verify the rollback, run the following query to check whether the rows corresponding to the third transaction is removed.

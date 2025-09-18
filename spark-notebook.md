@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-08-21"
+lastupdated: "2025-09-17"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -47,6 +47,9 @@ Watson Studio provides sample note books that allow to run small pieces of code 
     * <wxd_hms_username> : This is by default `ibmlhapikey`.
 
     * <wxd_hms_password> : Hive Metastore (HMS) password. Get the password from the watsonx.data administrator.
+
+   Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats will be phased out in a future release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_username` and `ibmlhtoken_username`.
+   {: important}
 
 * Source bucket details: If you bring your own Jupiter notebook, you must require the following details of your source bucket where data resides.
 

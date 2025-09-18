@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-09-11"
+lastupdated: "2025-09-17"
 
 keywords: watsonxdata, release notes
 
@@ -45,11 +45,11 @@ Engine and service enhancements
    * The Milvus service in {{site.data.keyword.lakehouse_short}} is now upgraded to version 2.5.12.
    * You can now use the open-source Milvus backup tool to back up and restore data from Milvus within watsonx.data.
    * The Gluten accelerated Spark engine in {{site.data.keyword.lakehouse_short}} is now able to run applications using Spark version 3.5. For details about supported Spark versions, see [Supported Spark version](/docs/watsonxdata?topic=watsonxdata-wxd-ae_limits#cpu-mem-spk_versn).
-   * You can now use the Vector Transport Service (VTS) with Milvus in watsonx.data to migrate or manage vector data across systems. To know more details, see [Using the Vector Transport Service](/docs/watsonxdata?topic=watsonxdata-milvus_vts).
+   * You can now use the Vector Transport Service (VTS) with Milvus in watsonx.data to migrate or manage vector data across systems. For more details, see [Using the Vector Transport Service](/docs/watsonxdata?topic=watsonxdata-milvus_vts).
 
 Query Optimizer enhancement
 
-: You can now monitor query performance improvements through the optimizer dashboard. The optimizer is actively managing query plans for the associated catalogs and improving performance for Presto (C++) engines. To know more details, see [Monitoring query performance from Optimizer dashboard](/docs/watsonxdata?topic=watsonxdata-analyze_optimizer).
+: You can now monitor query performance improvements through the optimizer dashboard. The optimizer is actively managing query plans for the associated catalogs and improving performance for Presto (C++) engines. For more details, see [Monitoring query performance from Optimizer dashboard](/docs/watsonxdata?topic=watsonxdata-analyze_optimizer).
 
 Access management enhancements
 
@@ -60,20 +60,25 @@ Access management enhancements
 
       * AlterDatabase - Modifies the properties of an existing database.
 
-   To know more details about managing user access in Milvus, see [Predefined roles and permissions in watsonx.data](/docs/watsonxdata?topic=watsonxdata-role_priv#milvus).
+   For more details about managing user access in Milvus, see [Predefined roles and permissions in watsonx.data](/docs/watsonxdata?topic=watsonxdata-role_priv#milvus).
 
 
 CPDCTL CLI enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancements to IBM Cloud Pak for Data Command Line Interface (IBM cpdctl):
 
-* Starting with version 2.2.1, you can use HashiCorp Vault through cpdctl for secure secrets management and streamlined automation workflows.
+* Starting from CPDCTL version 1.8.5, compatibility is limited to watsonx.data version 2.2.1 and above. This change is due to the deprecation of v2 API support as part of the major upgrade to v3 APIs. For users on older CPDCTL versions, refer to the CPDCTL release archive.
 
-* A new option under the service command wx-data service generate-engine-dump allows you to generate dumps for Presto worker and coordinator nodes in {{site.data.keyword.lakehouse_short}}. For details about the service command for serviceability related operations in {{site.data.keyword.lakehouse_short}}, see [service](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata#cpdctl_commands_wxdatasvce).
+   Some commands might have changed due to updates in the API specification. Use the [`--help` option](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata#cpdctl_commands_wxdatahwto) to review and adapt to the latest command syntax.
+   {: note}
 
-* Use the new component command to retrieve configuration details and status of various components in {{site.data.keyword.lakehouse_short}}. For details about the component command to get the configuration details for various components in {{site.data.keyword.lakehouse_short}}, see [wx-data commands and usage](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata).
+* Starting with {{site.data.keyword.lakehouse_short}} version 2.2.1, you can use HashiCorp Vault through cpdctl for secure secrets management and streamlined automation workflows.
 
-* Starting from CPDCTL version 1.8.5, users no longer need to set the instance ID as an environment variable. This method is deprecated and will be removed in a future release. Instead, set the instance ID directly using the profile command. To know details about setting the instance ID as environment variable, see [config commands and usage](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_config).
+* A new option under the `service` command `wx-data service generate-engine-dump` allows you to generate dumps for Presto worker and coordinator nodes in {{site.data.keyword.lakehouse_short}}. For details about the `service` command for serviceability related operations in {{site.data.keyword.lakehouse_short}}, see [service](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata#cpdctl_commands_wxdatasvce).
+
+* Use the new `component` command to retrieve configuration details and status of various components in {{site.data.keyword.lakehouse_short}}. For details about the `component` command to get the configuration details for various components in {{site.data.keyword.lakehouse_short}}, see [wx-data commands and usage](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata).
+
+* Starting from CPDCTL version 1.8.5, users no longer need to set the `instance ID` as an environment variable. This method is deprecated and will be removed in a future release. Instead, set the `instance ID` directly using the `profile` command. For details about setting the `instance ID` as environment variable, see [config commands and usage](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_config).
 
 
 Data sources and storage enhancements
@@ -94,7 +99,7 @@ Semantic automation for data enrichment
 Public preview enhancements
 
 : Public preview features are now accessible from **Configurations** UI.
-   You can now easily access and manage {{site.data.keyword.lakehouse_short}} public preview features from the Configurations UI. Features in public preview are highlighted with a Preview tag, making it easy to identify them. You can enable or disable the features to explore the functionality. Each public preview feature includes a link to its detailed documentation, allowing you to learn more about it. To know more about public preview features, see [What's new in {{site.data.keyword.lakehouse_short}} (Public preview)](/docs/watsonxdata?topic=watsonxdata-release_pp).
+   You can now easily access and manage {{site.data.keyword.lakehouse_short}} public preview features from the Configurations UI. Features in public preview are highlighted with a Preview tag, making it easy to identify them. You can enable or disable the features to explore the functionality. Each public preview feature includes a link to its detailed documentation, allowing you to learn more about it. For more details about public preview features, see [What's new in {{site.data.keyword.lakehouse_short}} (Public preview)](/docs/watsonxdata?topic=watsonxdata-release_pp).
 
 Deprecated features
 : The following features are deprecated in this release:
@@ -146,7 +151,7 @@ Ingestion enhancement
    The .txt file format is now accepted for data ingestion. This enhancement expands the flexibility allowing users to seamlessly upload plain text files alongside existing supported formats.
 
 Service enhancements
-: You can now configure **Query timeout** using two settings: **Maximum query execution time** and **Query client timeout**. For more information see [Managing user settings in {{site.data.keyword.lakehouse_short}}: Session timeout, Query timeout, and Login message settings](/docs/watsonxdata?topic=idle_session_timeout)
+: You can now configure **Query timeout** using two settings: **Maximum query execution time** and **Query client timeout**. For more information see [Managing user settings in {{site.data.keyword.lakehouse_short}}: Session timeout, Query timeout, and Login message settings](/docs/watsonxdata?topic=watsonxdata-idle_session_timeout)
 
 ## 11 July 2025
 {: #lakehouse_11july2025}
@@ -601,7 +606,7 @@ Data sources enhancements
       * Prometheus
 
 
-   * New data source **SAP HANA** is now available. You can use **Driver manager** under the **Configurations** page to manage drivers for SAP HANA data source. Each of these drivers undergoes a series of validations. For more information on SAP HANA data source and BYOJ process, see [SAP HANA](/docs/watsonxdata?topic=watsonxdata-saphana_conn).
+   * New data source **SAP HANA** is now available. You can use **Driver manager** under the **Configurations** page to manage drivers for SAP HANA data source. Each of these drivers undergoes a series of validations.
 
 Lite plan
 
@@ -815,7 +820,7 @@ DAS proxy to access ADLS and ABS buckets and LDAP enhancements are Tech preview 
      * Azure Data Lake Storage Gen2
      * Azure Data Lake Storage Gen1 Blob
 
-For more information, see [Azure Data Lake Storage Gen2](/docs/watsonxdata?topic=watsonxdata-reg_bucket#gen) and [Azure Data Lake Storage Gen1 Blob](/docs/watsonxdata?topic=watsonxdata-reg_bucket){: external}.
+For more information, see [Azure Data Lake Storage Gen2](/docs/watsonxdata?topic=watsonxdata-adls_genblob_storage) and [Azure Data Lake Storage Gen1 Blob](/docs/watsonxdata?topic=watsonxdata-adls_genblob_storage).
 
 * You can modify the access key and secret key of a user-registered bucket for a storage. This feature is not applicable to default buckets, ADLS, or Google Cloud Storage. This feature can only be used if the new credentials successfully pass the test connection.
 
@@ -1142,7 +1147,7 @@ New data types: BLOB and CLOB are available for MySQL, PostgreSQL, Snowflake, SQ
 
 You can now delete data from tables in Iceberg data sources by using the DELETE FROM feature.
 
-You can specify the table property delete mode for new tables by using either copy-on-write mode or merge-on-read mode (default). For more information, see [SQL statements](/docs/watsonxdata?topic=watsonxdata-supported_sql_statements).
+You can specify the table property delete mode for new tables by using either copy-on-write mode or merge-on-read mode (default).
 
 
 
@@ -1224,7 +1229,7 @@ You can now run the following time-travel queries by using branches and tags in 
 
 
 **Access Cloud Object Storage without credentials**
-You can now access your Cloud Object Storage bucket without credentials, by using the Data Access Service (DAS) endpoint. For more information about getting DAS endpoint, see [Getting DAS endpoint](/docs/watsonxdata?topic=watsonxdata-cas_ep).
+You can now access your Cloud Object Storage bucket without credentials, by using the Data Access Service (DAS) endpoint.
 
 
 
@@ -1366,7 +1371,6 @@ You can use the Rollback feature to rollback or rollforward to any snapshots for
 {: #wn_04}
 
 You can now capture and track the DDL changes in {{site.data.keyword.lakehouse_short}} by using an event listener.
-For more information, see [Capturing DDL changes](/docs/watsonxdata?topic=watsonxdata-dll_changes).
 
 **Ingest data by using Spark**
 {: #wn_05}
