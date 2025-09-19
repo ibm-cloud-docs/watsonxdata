@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-09-15"
+lastupdated: "2025-09-19"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -112,10 +112,11 @@ The topic describes the procedure to run a Spark application that ingests data i
 
    ```bash
    from pyspark.sql import SparkSession
-           def init_spark():            spark = SparkSession.builder.appName("CreateHudiTableInCOS").enableHiveSupport().getOrCreate()
-           return spark
-           def main():
-           try:
+   def init_spark():
+       spark = SparkSession.builder.appName("CreateHudiTableInCOS").enableHiveSupport().getOrCreate()
+       return spark
+   def main():
+       try:
            spark = init_spark()
            spark.sql("show databases").show()
            spark.sql("create database if not exists spark_catalog.<database_name> LOCATION 's3a://<data_storage_name>/'").show()
@@ -124,10 +125,10 @@ The topic describes the procedure to run a Spark application that ingests data i
            spark.sql("select * from spark_catalog.<database_name>.<table_name>").show()
            spark.sql("drop table spark_catalog.<database_name>.<table_name>").show()
            spark.sql("drop schema spark_catalog.<database_name> CASCADE").show()
-           inally:
+       finally:
            spark.stop()
-           if __name__ == '__main__':
-           main()
+   if __name__ == '__main__':
+       main()
 
    ```
    {: codeblock}
@@ -205,7 +206,7 @@ The topic describes the procedure to run a Spark application that ingests data i
        def init_spark():
             spark = SparkSession.builder.appName("lh-hms-cloud").enableHiveSupport().getOrCreate()
             return spark
-            def main():
+       def main():
                 spark = init_spark()
                 spark.sql("show databases").show()
                         spark.sql("create database if not exists spark_catalog.<database_name> LOCATION 's3a://<data_storage_name>/'").show()
@@ -215,8 +216,8 @@ The topic describes the procedure to run a Spark application that ingests data i
                         spark.sql("drop table spark_catalog.<database_name>.<table_name>").show()
                         spark.sql("drop schema spark_catalog.<database_name> CASCADE").show()
                         spark.stop()
-                        if __name__ == '__main__':
-                        main()
+       if __name__ == '__main__':
+           main()
 
    ```
    {: codeblock}
