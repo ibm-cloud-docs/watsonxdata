@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-17"
+lastupdated: "2025-09-19"
 
 keywords: access, access control, access management
 
@@ -149,6 +149,8 @@ You can see the connection information of {{site.data.keyword.lakehouse_short}} 
 ## Default username and password in {{site.data.keyword.lakehouse_short}} on IBM Cloud
 {: #conn_user_nme}
 
+   Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats will be phased out in a future release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_username` and `ibmlhtoken_username`.
+   {: important}
 
 **Username** – Username can either be `ibmlhapikey` or `ibmlhtoken`.
 
