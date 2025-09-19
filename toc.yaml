@@ -424,8 +424,11 @@ toc:
             - jdbc.md
             - db_ast.md
       - link:
-            label: watsonx.data APIs
+            label: watsonx.data v2 APIs
             href: https://cloud.ibm.com/apidocs/watsonxdata
+      - link:
+            label: watsonx.data v3 APIs
+            href: https://cloud.ibm.com/apidocs/watsonxdata-v3
       - link:
             label: MDS Unity Catalog API
             href: https://cloud.ibm.com/apidocs/watsonxdata-mds-unity
