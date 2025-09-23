@@ -36,7 +36,7 @@ Data sources and storage enhancements
 
 : This release of watsonx.data includes the following data sources and storage enhancement:
 
-   * You can now register Amazon S3 storage buckets in {{site.data.keyword.lakehouse_short}} by using Role ARN-based authentication, enabling secure, temporary access through AWS IAM roles. This authentication method eliminates the need for static credentials and enhances access control. For more details, see [Adding Amazon S3 component](/docs/watsonxdata?topic=watsonxdata-amazons_storage).
+   * You can now register Amazon S3 storage buckets in {{site.data.keyword.lakehouse_short}} by using Role ARN-based authentication, enabling secure, temporary access through AWS IAM roles. This approach removes the need to share static access-key and secret-key credentials with third-party tools, enhancing security and access control. For more details, see [Adding Amazon S3 storages](/docs/watsonxdata?topic=watsonxdata-amazons_storage).
 
 ## 11 September 2025 - Version 2.2.1
 {: #lakehouse_11sept2025}
