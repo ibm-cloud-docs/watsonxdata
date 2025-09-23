@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-09-11"
+lastupdated: "2025-09-23"
 
 keywords: lakehouse
 
@@ -30,6 +30,16 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+## Policy update delay
+{: #known_issue39182}
+
+CPG and AMS policy updates may take a bit longer to reflect across the system. This delay is due to new caching method, and is expected behavior.
+
+## External Spark engine fails to connect to Amazon S3 storage
+{: #known_issue47908}
+
+When using an external Spark engine to access data stored in an amazon_s3 bucket configured with IAM role-based authentication, the engine fails to connect or retrieve data.
 
 ## MOR to COW table conversion fails in Spark 4.0
 {: #known_issue43962}
