@@ -159,6 +159,7 @@ toc:
           - cpdctl_commands_config.md
           - cpdctl_commands_wxdata.md
           - cpdctl_commands_specialcase.md
+          - cpdctl_commands_ingestion-specialcase.md
       - topicgroup:
           label: Exploring data
           topics:
