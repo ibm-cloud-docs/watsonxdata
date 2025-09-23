@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-09-22"
+lastupdated: "2025-09-23"
 
 keywords: watsonxdata, release notes
 
@@ -28,13 +28,15 @@ For watsonx.data on-prem what's new, see [Release notes for watsonx.data](https:
 
 For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-prem Premium](https://www.ibm.com/docs/en/watsonx/watsonxdata-premium/2.2.x?topic=overview-whats-new-in-watsonxdata).
 
-## 23 September 2025 - Version 2.2.1 NFI
+## 23 September 2025 - Version 2.2.1 New Functionalities Introduced (NFI)
 {: #lakehouse_23sept2025}
 {: release-note}
 
 Data sources and storage enhancements
 
-: You can now register Amazon S3 storage buckets in {{site.data.keyword.lakehouse_short}} by using Role ARN-based authentication, enabling secure, temporary access through AWS IAM roles. This authentication method eliminates the need for static credentials and enhances access control. For more details, see [Adding Amazon S3 component](/docs/watsonxdata?topic=watsonxdata-amazons_storage).
+: This release of watsonx.data includes the following data sources and storage enhancement:
+
+   You can now register Amazon S3 storage buckets in {{site.data.keyword.lakehouse_short}} by using Role ARN-based authentication, enabling secure, temporary access through AWS IAM roles. This authentication method eliminates the need for static credentials and enhances access control. For more details, see [Adding Amazon S3 component](/docs/watsonxdata?topic=watsonxdata-amazons_storage).
 
 ## 11 September 2025 - Version 2.2.1
 {: #lakehouse_11sept2025}
