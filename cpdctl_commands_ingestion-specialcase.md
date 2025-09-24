@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-09-23"
+lastupdated: "2025-09-24"
 
 keywords: lakehouse, database, tags, description, watsonx.data
 
@@ -99,7 +99,7 @@ S3 and ADLS storage credentials can be given using `--storage-details` argument 
 
 1. Ingestion using S3 storage
 
-Example using `--storage-details`:
+   Example using `--storage-details`:
 
    ```bash
    cpdctl wx-data ingestion create --source-data-files s3://bucketcos/titanic-parquet.txt
@@ -109,7 +109,7 @@ Example using `--storage-details`:
    ```
    {: screen}
 
-Example using individual storage arguments:
+   Example using individual storage arguments:
 
    ```bash
    cpdctl wx-data ingestion create
@@ -127,7 +127,7 @@ Example using individual storage arguments:
 
 1. Ingestion using ADLS gen1 storage
 
-Example:
+   Example:
 
    ```bash
    cpdctl wx-data ingestion create  \
@@ -140,7 +140,7 @@ Example:
 
 1. Ingestion using ADLS gen2 storage
 
-Example:
+   Example:
 
    ```bash
    cpdctl wx-data ingestion create  \
@@ -154,9 +154,9 @@ Example:
 
 1. Ingestion using database source
 
-Users can ingest data from databases either by using registered database IDs or by providing connection details directly.
+   Users can ingest data from databases either by using registered database IDs or by providing connection details directly.
 
-Example with direct connection details:
+   Example with direct connection details:
 
    ```bash
    cpdctl wx-data ingestion create  \
