@@ -44,7 +44,7 @@ The following are some examples of basic ingestion commands:
 1. Ingestion with registered storage with Spark engine
 
    ```bash
-   ./cpdctl wx-data ingestion create  \
+   cpdctl wx-data ingestion create  \
    --source-data-files s3://bucketcos/titanic-parquet.txt \
    --engine-id spark690 \
    --target-table iceberg_data.schema1.cli_table5
@@ -54,7 +54,7 @@ The following are some examples of basic ingestion commands:
 1. Lite ingestion with registered storage
 
    ```bash
-   ./cpdctl wx-data ingestion create  \
+   cpdctl wx-data ingestion create  \
    --source-data-files s3://bucketcos/jsonFile.json \
    --engine-id lite-ingestion \
    --target-table iceberg_data.schema1.cli_table2
@@ -64,7 +64,7 @@ The following are some examples of basic ingestion commands:
 1. Ingestion with registered database with Spark engine
 
    ```bash
-   ./cpdctl wx-data ingestion create  \
+   cpdctl wx-data ingestion create  \
    --database-id postgresql241 \
    --database-schema Tm_Lh_Engine \
    --database-table admission \
@@ -187,7 +187,16 @@ S3 and ADLS storage credentials can be given using `--storage-details` argument 
 Example:
 
    ```bash
-   cpdctl wx-data ingestion create --instance-id 1735472262311515 --iceberg-catalog sample_iceberg_catalog    --iceberg-schema sample_iceberg_schema --iceberg-snapshot-id 7823318841638214979 --iceberg-table sample_iceberg_table    --iceberg-warehouse sample_iceberg_warehouse --target-table sample_catalog.sample_schema.sample_table --engine-id    spark266 --storage-name iceberg-data
+   cpdctl wx-data ingestion create \
+   --instance-id 1735472262311515 \
+   --iceberg-catalog sample_iceberg_catalog \
+   --iceberg-schema sample_iceberg_schema \
+   --iceberg-snapshot-id 7823318841638214979 \
+   --iceberg-table sample_iceberg_table  \
+   --iceberg-warehouse sample_iceberg_warehouse \
+   --target-table sample_catalog.sample_schema.sample_table \
+   --engine-id spark266 \
+   --storage-name iceberg-data
    ```
    {: screen}
 
