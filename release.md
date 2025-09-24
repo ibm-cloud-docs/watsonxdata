@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-09-23"
+lastupdated: "2025-09-24"
 
 keywords: watsonxdata, release notes
 
@@ -32,11 +32,9 @@ For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-p
 {: #lakehouse_23sept2025}
 {: release-note}
 
-Data sources and storage enhancements
+Metadata Service enhancement
 
-: This release of watsonx.data includes the following data sources and storage enhancement:
-
-   * You can now register Amazon S3 storage buckets in {{site.data.keyword.lakehouse_short}} by using Role ARN (Amazon Resource Name)-based authentication, which enables secure, temporary access through AWS IAM roles. This authentication method eliminates the need for static credentials and enhances access control. For more details, see [Adding Amazon S3 storages](/docs/watsonxdata?topic=watsonxdata-amazons_storage).
+: The Metadata Service (MDS) in watsonx.data now supports issuing AWS S3 vended credentials through the Iceberg and Unity REST APIs. By requesting temporary AWS S3 credentials, external metadata consumers can now securely access the S3 data without the need to manage long-lived access keys. For more details, see [Adding Amazon S3 storages](/docs/watsonxdata?topic=watsonxdata-amazons_storage).
 
 ## 11 September 2025 - Version 2.2.1
 {: #lakehouse_11sept2025}
