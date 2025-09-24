@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-09-17"
+lastupdated: "2025-09-24"
 
 keywords: watsonxdata, release notes
 
@@ -28,6 +28,13 @@ For watsonx.data on-prem what's new, see [Release notes for watsonx.data](https:
 
 For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-prem Premium](https://www.ibm.com/docs/en/watsonx/watsonxdata-premium/2.2.x?topic=overview-whats-new-in-watsonxdata).
 
+## 23 September 2025 - Version 2.2.1 New Functionalities Introduced (NFI)
+{: #lakehouse_23sept2025}
+{: release-note}
+
+Metadata Service enhancement
+
+: The Metadata Service (MDS) in watsonx.data now supports issuing AWS S3 vended credentials through the Iceberg and Unity REST APIs. By requesting temporary AWS S3 credentials, external metadata consumers can now securely access the S3 data without the need to manage long-lived access keys. For more details, see [Adding Amazon S3 storages](/docs/watsonxdata?topic=watsonxdata-amazons_storage).
 
 ## 11 September 2025 - Version 2.2.1
 {: #lakehouse_11sept2025}

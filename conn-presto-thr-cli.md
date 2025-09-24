@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-11"
+lastupdated: "2025-09-21"
 
 keywords: lakehouse, watsonx.data, presto, cli
 
@@ -186,6 +186,9 @@ If you enabled `External Identity Interactions Limited` feature, and using API k
 3. Get the API key.
 
    Use `ibmlhapikey` as the username and API key as password. For more information, see [Getting IBM API Key](#get-ibmapi-key).
+
+   Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats will be phased out in a future release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_username` and `ibmlhtoken_username`.
+   {: important}
 
 4. Get the hostname and port. For more information, see [Getting the Presto engine hostname and port details](#get-host-port).
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-29"
+lastupdated: "2025-09-23"
 
 keywords: lakehouse, database, tags, description, watsonx.data
 
@@ -28,7 +28,7 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Additional Information about `cpdctl wx-data` Command Usage and Examples
+# Additional information about `cpdctl wx-data` command usage and examples
 {: #cpdctl_commands_specialcase}
 
 This topic provides a few usage scenario guidance for the `cpdctl wx-data` command-line interface (CLI), covering various commands and their practical examples. While `cpdctl` offers a way to manage IBM® watsonx.data resources, some examples require platform-specific adjustments for successful execution. This topic highlights key scenarios where users, particularly those on Windows, need to modify the provided examples to align with their operating system. Additionally, it clarifies how JSON formatted key-value pairs are utilized within these commands and outlines the required formatting for Windows users.
