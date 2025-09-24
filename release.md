@@ -32,6 +32,9 @@ For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-p
 {: #lakehouse_23sept2025}
 {: release-note}
 
+{{site.data.keyword.lakehouse_short}} 2.2.1 NFI version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.2.1 NFI release is available in your region, contact IBM Support.
+{: important}
+
 Metadata Service enhancement
 
 : The Metadata Service (MDS) in watsonx.data now supports issuing AWS S3 vended credentials through the Iceberg and Unity REST APIs. By requesting temporary AWS S3 credentials, external metadata consumers can now securely access the S3 data without the need to manage long-lived access keys. For more details, see [Adding Amazon S3 storages](/docs/watsonxdata?topic=watsonxdata-amazons_storage).
@@ -39,9 +42,6 @@ Metadata Service enhancement
 ## 11 September 2025 - Version 2.2.1
 {: #lakehouse_11sept2025}
 {: release-note}
-
-{{site.data.keyword.lakehouse_short}} 2.2.1 version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.2.1 release is available in your region, contact IBM Support.
-{: important}
 
 Engine and service enhancements
 
