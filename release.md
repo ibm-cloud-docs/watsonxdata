@@ -42,7 +42,7 @@ Metadata Service enhancement
 The vended credentials support feature in {{site.data.keyword.lakehouse_short}} is available only for adding storages such as Amazon S3, Google Cloud Storage (GCS), and Azure Data Lake Storage. To enable vended credentials support for Amazon S3 storage, metadata consumers must specify the Role ARN (Amazon Resource Name) field when registering the S3 component in {{site.data.keyword.lakehouse_short}}. For more details, see [Adding Amazon S3 storages](/docs/watsonxdata?topic=watsonxdata-amazons_storage).
 {: important}
 
-For details on the new functionalities introduced (NFI) in version 2.2.1 of watsonx.data as a Service on IBM Cloud with the generative AI experience, see [IBM watsonx.data as a Service version 2.2.1 New Functionalities Introduced (NFI)](https://dataplatform.cloud.ibm.com/docs/content/wsj/wx-data/whats_new-wdp.html?context=wxd&audience=wdp#week-2025-9-23).
+Release notes for 2.2.1 NFI version of watsonx.data as a Service on IBM Cloud with the generative AI experience, see [IBM watsonx.data as a Service version 2.2.1 New Functionalities Introduced (NFI)](https://dataplatform.cloud.ibm.com/docs/content/wsj/wx-data/whats_new-wdp.html?context=wxd&audience=wdp#week-2025-9-23).
 {: note}
 
 ## 11 September 2025 - Version 2.2.1
