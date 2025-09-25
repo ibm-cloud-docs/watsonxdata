@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-09-24"
+lastupdated: "2025-09-25"
 
 keywords: watsonxdata, release notes
 
@@ -37,7 +37,10 @@ For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-p
 
 Metadata Service enhancement
 
-: The Metadata Service (MDS) in watsonx.data now supports issuing AWS S3 vended credentials through the Iceberg and Unity REST APIs. By requesting temporary AWS S3 credentials, external metadata consumers can now securely access the S3 data without the need to manage long-lived access keys. For more details, see [Adding Amazon S3 storages](/docs/watsonxdata?topic=watsonxdata-amazons_storage).
+: The Metadata Service (MDS) in watsonx.data now supports issuing vended credentials through the Iceberg and Unity REST APIs. By requesting temporary credentials, external metadata consumers can now securely access the S3 data without the need to manage long-lived access keys.
+
+The vended credentials support feature in {{site.data.keyword.lakehouse_short}} is available only for adding storages such as Amazon S3, Google Cloud Storage (GCS), and Azure Data Lake Storage. To enable vended credentials support for Amazon S3 storage, metadata consumers must specify the Role ARN (Amazon Resource Name) field when registering the S3 component in {{site.data.keyword.lakehouse_short}}. For more details, see [Adding Amazon S3 storages](/docs/watsonxdata?topic=watsonxdata-amazons_storage).
+{: important}
 
 ## 11 September 2025 - Version 2.2.1
 {: #lakehouse_11sept2025}
