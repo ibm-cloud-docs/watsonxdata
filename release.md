@@ -35,6 +35,9 @@ For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-p
 {{site.data.keyword.lakehouse_short}} 2.2.1 NFI version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.2.1 NFI release is available in your region, contact IBM Support.
 {: important}
 
+Release notes for 2.2.1 NFI version of watsonx.data as a Service on IBM Cloud with the generative AI experience, see [IBM watsonx.data as a Service version 2.2.1 New Functionalities Introduced (NFI)](https://dataplatform.cloud.ibm.com/docs/content/wsj/wx-data/whats_new-wdp.html?context=wxd&audience=wdp#week-2025-9-23).
+{: note}
+
 Metadata Service enhancement
 
 : The Metadata Service (MDS) in watsonx.data now supports issuing vended credentials through the Iceberg and Unity REST APIs. By requesting temporary credentials, external metadata consumers can now securely access the S3 data without the need to manage long-lived access keys.
@@ -42,8 +45,6 @@ Metadata Service enhancement
 The vended credentials support feature in {{site.data.keyword.lakehouse_short}} is available only for adding storages such as Amazon S3, Google Cloud Storage (GCS), and Azure Data Lake Storage. To enable vended credentials support for Amazon S3 storage, metadata consumers must specify the Role ARN (Amazon Resource Name) field when registering the S3 component in {{site.data.keyword.lakehouse_short}}. For more details, see [Adding Amazon S3 storages](/docs/watsonxdata?topic=watsonxdata-amazons_storage).
 {: important}
 
-Release notes for 2.2.1 NFI version of watsonx.data as a Service on IBM Cloud with the generative AI experience, see [IBM watsonx.data as a Service version 2.2.1 New Functionalities Introduced (NFI)](https://dataplatform.cloud.ibm.com/docs/content/wsj/wx-data/whats_new-wdp.html?context=wxd&audience=wdp#week-2025-9-23).
-{: note}
 
 ## 11 September 2025 - Version 2.2.1
 {: #lakehouse_11sept2025}
