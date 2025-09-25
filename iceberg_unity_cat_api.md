@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-11"
+lastupdated: "2025-09-25"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -275,7 +275,7 @@ Due to the constraint of not modifying the schema, the following features are no
 - As Hive is the catalog for all databases or namespaces in the DBS table, creating namespace is not supported even if it exists in catalogs other than Iceberg.
 - If you list the schema, only the namespaces for the current catalog with the specified prefix is returned. However, if you - attempt to create a namespace that exists in another catalog, a `Namespace Already Exists` exception is returned.
 - When listing tables, only Iceberg tables are returned. If you attempt to create a table with a name that exists as a Hive or Delta table in the same database or namespace, the creation of an Iceberg table with the same name is not allowed.
-- X-Iceberg-Access-Delegation is not supported.
+- X-Iceberg-Access-Delegation is supported for vended-credentials.
 - Metrics endpoint added as dummy only.
 - Presto cannot query views created using the Iceberg REST catalog API due to encoding incompatibility. This same incompatibility affects views created from Spark, which Presto also cannot query. However, Spark can query views created through the REST catalog API without any issues.
 

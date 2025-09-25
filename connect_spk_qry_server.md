@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-09-10"
+lastupdated: "2025-09-25"
 
 keywords: Spark, query, server,JDBC, Driver
 
@@ -234,6 +234,7 @@ To connect to the Spark query server using a Python program, do the following:
 
    ```
    {: .codeblock}
+
 
 
 4. Run using `python connect.py`.
