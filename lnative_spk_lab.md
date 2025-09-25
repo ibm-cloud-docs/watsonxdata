@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-08-26"
+lastupdated: "2025-09-25"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -22,6 +22,9 @@ The VS Code development environment is a Spark-based development environment tha
 
 It is available as a Visual Studio Code extension and you can install it in your local system to access Spark IDE using Visual Studio Code. It reduces the time for development and increases usability.
 
+
+The Spark labs experience is not available to users who are operating in Federal Risk and Authorization Management Program (FedRAMP) environments.
+{: important}
 
 ## Before you begin
 {: #lab_nsp-preq}
