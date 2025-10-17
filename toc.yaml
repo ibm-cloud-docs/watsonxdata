@@ -145,6 +145,7 @@ toc:
               - google_cloud_storage.md
               - adls_genblob_storage.md
               - ozone_storage.md
+              - custom_s3_storage.md
               - explor-buck-obj.md
               - edit-buck-tags.md
               - delete_bucket.md
