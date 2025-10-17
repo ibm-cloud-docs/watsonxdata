@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-11"
+lastupdated: "2025-10-17"
 
 keywords: watsonx.data, ikc, configuring, knowledgecatalog
 subcollection: watsonxdata
@@ -113,8 +113,10 @@ Both {{site.data.keyword.lakehouse_short}} and IKC must be present in the {{site
    | Field | Description |
    |-------|-------------|
    | Service | Select **IBM Knowledge Catalog**. |
-   | Storage catalogs | Select the applicable storage catalogs for IKC governance. |
+   | Supported catalogs | Select the applicable storage catalogs for IKC governance. |
    | IKC endpoint  | Configure the IKC API url by including `api.` after `https://`. For example, if the URL is `https://dataplatform.cloud.ibm.com`, the endpoint should be `https://api.dataplatform.cloud.ibm.com`. If the URL is with location (`https://<region>.dataplatform.cloud.ibm.com`), the endpoint should be `https://api.<region>.dataplatform.cloud.ibm.com`. |
+   | Enable Cross Account Integration | Select the checkbox to enable cross account integration. |
+   | IKC User Account ID | Enter the IKC user account ID. |
    {: caption="Ingrate service" caption-side="bottom"}
 
 1. Click **Integrate**.
