@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-20"
+lastupdated: "2025-10-21"
 
 keywords: lakehouse, cpdctl, watsonx.data, supporting commands, wx-data
 
@@ -313,8 +313,8 @@ The `access-control` command further supports the following commands:
 
 | Command | Description |
 |---------|-------------|
-| `./cpdctl wx-data access-control get-mds-status` | Get users and groups who have access to {{site.data.keyword.lakehouse_short}} instance.|
-| `./cpdctl wx-data access-control get-ces-status` | List resource access policies. |
-| `./cpdctl wx-data access-control get-cas-cpg-endpoint` | Update resource access policies. |
-| `./cpdctl wx-data access-control get-hms-status` | Revoke resource access policies. |
+| `./cpdctl wx-data access-control list-users-groups` | Get users and groups who have access to {{site.data.keyword.lakehouse_short}} instance.|
+| `./cpdctl wx-data access-control list-access` | List resource access policies. |
+| `./cpdctl wx-data access-control update-access` | Update resource access policies. |
+| `./cpdctl wx-data access-control revoke-access` | Revoke resource access policies. |
 {: caption="Supported commands by access-control" caption-side="bottom"}
