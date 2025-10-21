@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-17"
+lastupdated: "2025-10-21"
 
 keywords: watsonx.data, ikc, configuring, knowledgecatalog
 subcollection: watsonxdata
@@ -27,6 +27,7 @@ IBM Knowledge Catalog - {{site.data.keyword.lakehouse_short}} integration suppor
 * Mysql
 * SQL server
 * Db2
+* Teradata
 
 
  When integrating IBM Knowledge Catalog with IBM {{site.data.keyword.lakehouse_short}}, you can configure data protection rules for individual rows in a table, allowing users to access a subset of rows in a table. For more information, see [Filtering rows](https://dataplatform.cloud.ibm.com/docs/content/wsj/governance/filter-rows.html?context=cpdaas&audience=wdp){: external}.
@@ -113,7 +114,7 @@ Both {{site.data.keyword.lakehouse_short}} and IKC must be present in the {{site
    | Field | Description |
    |-------|-------------|
    | Service | Select **IBM Knowledge Catalog**. |
-   | Supported catalogs | Select the applicable storage catalogs for IKC governance. |
+   | Supported catalogs | Select the applicable catalogs for IKC governance. |
    | IKC endpoint  | Configure the IKC API url by including `api.` after `https://`. For example, if the URL is `https://dataplatform.cloud.ibm.com`, the endpoint should be `https://api.dataplatform.cloud.ibm.com`. If the URL is with location (`https://<region>.dataplatform.cloud.ibm.com`), the endpoint should be `https://api.<region>.dataplatform.cloud.ibm.com`. |
    {: caption="Ingrate service" caption-side="bottom"}
 
