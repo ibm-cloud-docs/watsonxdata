@@ -30,6 +30,7 @@ IBM Knowledge Catalog - {{site.data.keyword.lakehouse_short}} integration suppor
 * Teradata
 
 
+
  When integrating IBM Knowledge Catalog with IBM {{site.data.keyword.lakehouse_short}}, you can configure data protection rules for individual rows in a table, allowing users to access a subset of rows in a table. For more information, see [Filtering rows](https://dataplatform.cloud.ibm.com/docs/content/wsj/governance/filter-rows.html?context=cpdaas&audience=wdp){: external}.
 
 ## Before you begin
