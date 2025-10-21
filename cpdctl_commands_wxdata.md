@@ -298,7 +298,7 @@ The `component` command further supports the following commands:
 | `./cpdctl wx-data component get-console-status` | Check console status of watsonx.data instance {{site.data.keyword.lakehouse_short}} instance. |
  {: caption="Supported commands by component" caption-side="bottom"}
 
- ## access-control
+## access-control
 {: #cpdctl_commands_wxdataacscntrl}
 
 The `access-control` command is used for managing access policies for resources in {{site.data.keyword.lakehouse_short}}.
