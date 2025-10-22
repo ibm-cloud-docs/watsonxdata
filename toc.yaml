@@ -253,6 +253,7 @@ toc:
           - wxd_ranger.md
           - wxd_row-ranger.md
           - wxd_ranger_colmn.md
+          - cpg_plugin.md
       - driver_manager.md
       - billing_usage.md
       - hms_credentials.md
