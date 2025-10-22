@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-08-22"
+lastupdated: "2025-10-22"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -190,6 +190,10 @@ The API Customization patch must have the following as required fields `configur
                 "property_1": "property_value",
                 "property_2": "property_value"
             }
+        },
+        "optimizer_properties":{
+        "optplus.enable-query-optimizer-materialized-view": "true",
+        "optplus.show-rewritten-query": "true"
         },
         "global": {
             "property_1": "property_value",
