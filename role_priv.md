@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-12"
+lastupdated: "2025-10-23"
 
 keywords: lakehouse, watsonx data, privileges, roles, access
 
@@ -65,7 +65,6 @@ IAM formation non-admins (Operator, Editor, Viewer) have the default user access
 | Scale the Presto (Java) or Presto (C++) engines | ✓ |   |    |
 | Unregister any storage | ✓ |   |    |
 | Unregister any DB Connection | ✓ |   |    |
-| Activate cataloged storages (restart MDS) | ✓ |   |    |
 | Register and unregister own storage | ✓ | ✓ | ✓ |
 | Register and unregister own DB connection | ✓ | ✓ | ✓ |
 | Access the metastore | ✓ |   | ✓ |

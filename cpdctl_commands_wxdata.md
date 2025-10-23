@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-21"
+lastupdated: "2025-10-23"
 
 keywords: lakehouse, cpdctl, watsonx.data, supporting commands, wx-data
 
@@ -162,6 +162,9 @@ Syntax:
    {: codeblock}
 
 The `bucket` command further supports the following commands:
+
+{{site.data.keyword.lakehouse_short}}  automatically activates any newly created bucket without requiring an associated catalog, eliminating the need for manual activation.
+{: note}
 
 | Command | Description |
 |---------|-------------|

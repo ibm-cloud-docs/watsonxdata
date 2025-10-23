@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-11-29"
+  years: 2022, 2025
+lastupdated: "2025-10-23"
 
 keywords: lakehouse, watsonx data, iam, access, role
 
@@ -42,7 +42,6 @@ The following table describes the privileges that you can assign to platform man
 | Scale the internal MDS | Y | N |
 | Unregister own or an external bucket | Y | N |
 | Unregister any database  | Y | N |
-| Activate cataloged buckets (restart MDS) | Y | N |
 | Register own buckets | Y | Y |
 | Unregister own buckets | Y | Y |
 | Register own databases | Y | Y |
