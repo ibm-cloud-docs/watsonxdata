@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-25"
+lastupdated: "2025-10-23"
 
 keywords: high availability, disaster revecory, watsonx.data
 
@@ -136,15 +136,15 @@ Several minutes of unavailability or connection interruptions are not expected. 
 ## Disaster Recovery Strategy
 {: #diastr_rec_str}
 
-{{site.data.keyword.lakehouse_full}} provides mechanisms to protect your data and restore service functions. Business continuity plans are in place to achieve targeted recovery point objective (RPO) and recovery time objective (RTO) for the service. The following table outlines the targets for {{site.data.keyword.lakehouse_short}}.
+Recovery Time Objective (RTO) refers to the maximum acceptable duration of time that a system or service can be unavailable after a failure. It defines how quickly the system must be restored to avoid significant disruption to operations. RTO in watsonx.data depends on the following aspects:
 
-| Disaster recovery objective   | Target Value |
-|-------------------------------|:------------:|
-| RPO                           |  <= 24 hours |
-| RTO                           |  < 24 hours  |
-{: caption="Disaster Recovery Strategy" caption-side="bottom"}
+* The most recent backup point.
+* Log archiving status.
+* Manual steps required for metadata restoration.
 
-The backup interval is reduced for the service Milvus in SaaS to improve the restore RPO from 24 hours to 2 hours.
+Recovery Point Objective (RPO) refers to the maximum acceptable amount of data loss in the event of a failure. It indicates how far back in time the system can recover data, based on the most recent successful backup or snapshot. Recovery is based on the last successful metadata backup and log archive. There might be a delay between the failure and the restored state.
+
+To strengthen data resilience and minimize potential loss, the backup frequency for the Milvus service in the SaaS environment has been increased. This change reduces the Recovery Point Objective (RPO) to just 2 hours, ensuring that data can be restored from a much more recent point in time in the event of a failure.
 {: note}
 
 ## Locations
