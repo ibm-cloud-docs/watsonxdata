@@ -163,7 +163,7 @@ Syntax:
 
 The `bucket` command further supports the following commands:
 
-{{site.data.keyword.lakehouse_short}}  automatically activates any newly created bucket without requiring an associated catalog, eliminating the need for manual activation.
+{{site.data.keyword.lakehouse_short}}  automatically activates any newly created storage without requiring an associated catalog, eliminating the need for manual activation.
 {: note}
 
 | Command | Description |
