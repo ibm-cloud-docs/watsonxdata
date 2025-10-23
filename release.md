@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-09-26"
+lastupdated: "2025-10-23"
 
 keywords: watsonxdata, release notes
 
@@ -171,11 +171,11 @@ Service enhancements
 {: #lakehouse_11july2025}
 {: release-note}
 
-A new version of {{site.data.keyword.lakehouse_full}} was released on 11 July, 2025 with the following change:
+A new version of {{site.data.keyword.lakehouse_short}} was released on 11 July, 2025 with the following change:
 
 New region availability
 
-: {{site.data.keyword.lakehouse_full}} on AWS is now available in the Mumbai region.
+: {{site.data.keyword.lakehouse_short}} on AWS is now available in the Mumbai region.
 
 
 ## 07 July 2025 - Version 2.2.0 Hotfix 1
@@ -186,7 +186,7 @@ Version 2.2 hotfix of watsonx.data was released on 07 July, 2025. This release i
 
 Deprecated features
 
-: The IBM Client package is deprecated and shall be removed from the 2.2.2 release. The utilities and commands in the Client package are replaced with IBM CPDCTL CLI. Users are encouraged to migrate and explore CPDCTL. For more information about how to use IBM CPDCTL CLI, see [IBM cpdctl](/docs/watsonxdata?topic=watsonxdata-cpdctl_title).
+: The IBM Client package will be deprecated and the installation and support of the `ibm-lh-client` package shall not be available from the 2.3.0 release of {{site.data.keyword.lakehouse_short}}. The utilities and commands in the Client package are replaced with IBM CPDCTL CLI. Users are encouraged to migrate and explore CPDCTL. For more information about how to use IBM CPDCTL CLI, see [IBM cpdctl](/docs/watsonxdata?topic=watsonxdata-cpdctl_title).
 
 Use the following available tools for equivalent functionalities of the Client package:
 
