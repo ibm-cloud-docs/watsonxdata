@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-17"
+lastupdated: "2025-10-24"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
 
@@ -45,6 +45,6 @@ If you select **Custom S3 Storage** from the **Storage** section, configure the 
  | Endpoint | Enter the **Endpoint** URL. Test connection is enabled when the endpoint is provided. |
  | Access key<br>Secret key | If you are using secrets from vault, then select the **Access key** and **Secret key** from the respective drop-down lists. Otherwise, enter your **Access key** and **Secret key** in the respective fields. |
  | Connection status | Click the **Test connection** link to test the bucket connection. If the bucket connection is successful, a success message appears. |
- | Associate catalog | Select the checkbox to add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within. || Catalog type | Select the catalog type from the list. The recommended catalog is Apache Iceberg. The other options for catalog are Apache Hive, Apache Hudi, and Delta Lake. |
+ | Associate catalog | Enable the toggle switch to add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within. || Catalog type | Select the catalog type from the list. The recommended catalog is Apache Iceberg. The other options for catalog are Apache Hive, Apache Hudi, and Delta Lake. |
  | Catalog name | Enter the name of the associated catalog. |
  | Associate | Click **Associate** to create the storage. |
