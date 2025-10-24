@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-10-23"
+lastupdated: "2025-10-24"
 
 keywords: watsonxdata, release notes
 
@@ -63,7 +63,7 @@ Engine and service enhancements
 
 Query Optimizer enhancement
 
-: You can now monitor query performance improvements through the optimizer dashboard. The optimizer is actively managing query plans for the associated catalogs and improving performance for Presto (C++) engines. For more details, see [Monitoring query performance from Optimizer dashboard](/docs/watsonxdata?topic=watsonxdata-analyze_optimizer).
+: You can now monitor query performance improvements through the optimizer dashboard. The optimizer is actively managing query plans for the associated catalogs and improving performance for Presto (C++) engines. For more details, see [Managing statistical updates from Optimizer dashboard](/docs/watsonxdata?topic=watsonxdata-analyze_optimizer).
 
 Access management enhancements
 

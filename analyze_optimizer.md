@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-27"
+lastupdated: "2025-10-24"
 
 keywords: lakehouse, bucket, objects, watsonx.data
 
@@ -26,26 +26,26 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Monitoring query performance from Optimizer dashboard
+# Managing statistical updates from **Query Optimizer** dashboard
 {: #analyze_optimizer}
 
-Once the Query Optimizer is successfully activated for the Presto (C++) engine, it enables advanced query performance enhancements and optimization capabilities across multiple catalogs.
+Once the **Query Optimizer** is successfully activated for the Presto (C++) engine, it enables advanced query performance enhancements and optimization capabilities across multiple catalogs.
 {: shortdesc}
 
-The Query optimizer manager allows collecting, storing, and synchronizing table and column statistics for specified tables. These statistics provide essential insights into the data, including row counts, the number of distinct values, minimum and maximum values for each column, and overall data distribution. Only Hive and Iceberg catalogs are supported for the collection of statistics.
+The **Query optimizer** allows collecting, storing, and synchronizing table and column statistics for specified tables. These statistics provide essential insights into the data, including row counts, the number of distinct values, minimum and maximum values for each column, and overall data distribution. Only Hive and Iceberg catalogs are supported for the collection of statistics.
 
-The jobs described in this topic collect statistics and metadata and synchronize this information with the query optimizer, enabling more accurate and efficient query planning and execution. Only Hive and Iceberg catalogs are supported for the collection of statistics.
+The jobs outlined in this topic gather statistics and metadata, and synchronize them with the **Query Optimizer** to support more precise and efficient query planning and execution. Only Hive and Iceberg catalogs are supported for the collection of statistics.
 
 ## Viewing Presto (C++) engines
 {: #qry-view}
 
 1. From the navigation menu, select **Configurations** and click the **Query Optimizer Manager** tile. The **Query optimizer manager** page opens.
-1. Click **Engines** tab. It display the Presto (C++) engines, their status, and their associated catalogs.
+1. Click **Engines** tab. It display the Presto (C++) engines, status, and associated catalogs.
 
 ## Collecting statistical information from catalogs
 {: #qry-colct}
 
-You can do query analysis on catalogs (and tables) associated with the Presto (C++) engine.
+You can collect, store, and sync catalogs (and tables) associated with the Presto (C++) engine.
 
 1. From the navigation menu, select **Configurations** and click the **Query Optimizer Manager** tile. The **Query optimizer manager** page opens.
 1. Click **Catalogs** tab.
@@ -57,7 +57,9 @@ You can do query analysis on catalogs (and tables) associated with the Presto (C
    * Time since last analysis: Select this checkbox and provide the period (in days or months) to get the list of records processed during the specified period.
 
 1. Click the **Collect statistics** button. The **Collect statistics** page opens with the schemas and tables associated with the Presto (C++) engines. Select the tables and click **Create jobs** to create statistics for tables.
-1. You can also use the overflow menu next to each catalog on the **Query Optimizer Manager** page to initiate the creation of statistical data for the tables within the selected catalog.
+
+   You can also use the overflow menu next to each catalog on the **Query Optimizer Manager** page to initiate the collection of statistical data for the tables within the selected catalog.
+   {: note}
 
 ## View the status of the statistical jobs
 {: #qry-sts}
@@ -83,6 +85,6 @@ You can do query analysis on catalogs (and tables) associated with the Presto (C
 
       UNKNOWN: The task began execution, but the scheduler failed to record the outcome due to an unexpected condition.
 
-   **Queued** : If multiple jobs are initiated from the Collect Statistics page, only one will remain in the Active state at a time. All other jobs will be placed in a queue and listed here. From the overflow menu, you can select Remove from queue to remove the record from Queued state to Active state.
+   **Queued** : If multiple jobs are initiated from the Collect Statistics page, only one will remain in the Active state at a time. All other jobs will be listed and placed in a queue. From the overflow menu, you can select Remove from queue to remove the record from queue.
 
-   **Completed** : The jobs that have completed execution gets listed here. From the options available in the overflow menu, you can view the log, add the records to queue, or delete the records.
+   **Completed** : The jobs that have completed execution are listed here. From the options available in the overflow menu, you can view the log, add the records to queue, or delete the records.
