@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-08"
+lastupdated: "2025-10-24"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -53,5 +53,8 @@ For more information, see Working with native Spark engine section.
 External Spark engines are engines that exist in a different cluster from where {{site.data.keyword.lakehouse_short}} is provisioned. You can deploy them in the following environments:
 * Spark instance on Cloud
 * Spark on EMR
+
+The option to register external Spark engines in watsonx.data is deprecated and will be removed in version 2.3. watsonx.data already includes built-in Spark engines that you can provision and use directly, including the Gluten-accelerated Spark engine and the native watsonx.data Spark engine.
+{: important}
 
 For more information, see Working with external Spark engine section.
