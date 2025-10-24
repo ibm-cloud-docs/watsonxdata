@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-26"
+lastupdated: "2025-10-24"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -44,11 +44,22 @@ Following are some of the benefits of Materialized Views (MV):
 
 1. Install and activate Query Optimizer. For more information, see [Activating Query Optimizer](/docs/watsonxdata?topic=watsonxdata-install_optimizer).
 2. Sync Query Optimizer with watsonx.data meta store. For more information, see [Manually syncing Query Optimizer](/docs/watsonxdata?topic=watsonxdata-sync_optimizer_meta).
+3. You must run the commands from the **Query workspace** with engine as Presto (C++).
 
 ## Procedure
 {: #mv_optimizerprcdre}
 
-Follow the steps to enable Materialized View (MV) feature for **Query Optimizer** in {{site.data.keyword.lakehouse_short}}.
+Enable the **Materialized View (MV)** feature for the **Query Optimizer** in {{site.data.keyword.lakehouse_short}} using one of the methods below:
+
+### Enabling **Materialized View (MV)** through web console
+{: #mv_optimizerprcdreui}
+
+1. From the navigation menu, select **Configurations** and click the **Materialized view** tile. The **Materialized view** page opens.
+1. Use the toggle button to enable and disable **Materialized view**.
+
+
+### Enabling **Materialized View (MV)** through Query workspace
+{: #mv_optimizerprcdrewrkspace}
 
 1. Identify and select queries that are complex, frequently used, and involve joins or aggregations.
 

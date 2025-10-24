@@ -61,7 +61,7 @@ You can collect, store, and sync catalogs (and tables) associated with the Prest
    You can also use the overflow menu next to each catalog on the **Query Optimizer Manager** page to initiate the collection of statistical data for the tables within the selected catalog.
    {: note}
 
-## View the status of the statistical jobs
+## Viewing the status of the statistical jobs
 {: #qry-sts}
 
 
