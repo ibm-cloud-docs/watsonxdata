@@ -44,7 +44,7 @@ You can configure Snowflake using one of the following methods:
 
  | Field           | Description        |
  |------------------|--------------------|
- | Target persistence | Select the target persistence: \n * Watsonx.data instance - The instance console database stores the connection details exclusively. \n * Platform asset catalog - The default catalog in the data platform stores your connection details. If you select Platform Asset Catalog as the target persistence, you must specify a warehouse name.\n You can enable the Platform asset catalog option only if data platform services are active, a **Platform asset catalog** exists in the data platform, and you have access to it. |
+ | Target persistence | Select the target persistence: \n * Watsonx.data instance - The instance console database stores the connection details exclusively. \n * Platform asset catalog - The default catalog in the data platform stores your connection details. If you select Platform asset catalog as the target persistence, you must specify a warehouse name.\n You can enable the Platform asset catalog option only if data platform services are active, a **Platform asset catalog** exists in the data platform, and you have access to it. |
  | Display name    | Enter the data source name to be displayed on the screen. |
  | Database name     | Enter the name of your database.|
  | Account name            | Enter your Snowflake Account name. This may include region information (For example, account_name.region_id). If you do not have region information, use the account name that is provided by your Snowflake administrator.  |
