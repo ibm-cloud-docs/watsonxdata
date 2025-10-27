@@ -102,7 +102,7 @@ Query Optimizer enhancement
 
 Deprecated features
 
-: The IBM Client package will be deprecated and the installation and support of the `ibm-lh-client` package shall not be available from the 2.3.0 release of {{site.data.keyword.lakehouse_short}}. The utilities and commands in the Client package are replaced with IBM CPDCTL CLI. Users are encouraged to migrate and explore CPDCTL. For more information about how to use IBM CPDCTL CLI, see [IBM cpdctl](/docs/watsonxdata?topic=watsonxdata-cpdctl_title).
+: The IBM Client package is deprecated and the installation and support of the `ibm-lh-client` package shall not be available from the 2.3.0 release of {{site.data.keyword.lakehouse_short}}. The utilities and commands in the Client package are replaced with IBM CPDCTL CLI. Users are encouraged to migrate and explore CPDCTL. For more information about how to use IBM CPDCTL CLI, see [IBM cpdctl](/docs/watsonxdata?topic=watsonxdata-cpdctl_title).
 
 Use the following available tools for equivalent functionalities of the Client package:
 
