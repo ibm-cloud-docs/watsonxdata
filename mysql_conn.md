@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-25"
+lastupdated: "2025-10-27"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -44,6 +44,7 @@ You can configure MySQL using one of the following methods:
 
  | Field           | Description        |
  |------------------|--------------------|
+ | Target persistence | Select the target persistence: \n * Watsonx.data instance - The instance console database stores the connection details exclusively. \n * Platform asset catalog - The default catalog in the data platform stores your connection details. \n You can select the `Platform asset catalog` option only if data platform services are active, a **Platform asset catalog** exists in the data platform, and you have access to it. |
  | Display name    | Enter the data source name to be displayed on the screen. |
  | Database name     | Enter the name of your database. |
  | Hostname            | Enter the hostname.  |
@@ -64,6 +65,7 @@ You can configure MySQL using one of the following methods:
  | Field | Description |
 | --- | --- |
 | Select catalog | Use the dropdown to select a catalog. |
+| Target persistence | Select the target persistence: \n * Watsonx.data instance - The instance console database stores the connection details exclusively. \n * Platform asset catalog - The default catalog in the data platform stores your connection details. \n You can select the `Platform asset catalog` option only if data platform services are active, a **Platform asset catalog** exists in the data platform, and you have access to it. |
 | Select data source | Use the dropdown to select a data source from the selected catalog. |
 | Connection status | Click the Test connection link to test the database connection. If the database connection is successful, a success message appears. |
 | Display name | Enter the database name to be displayed on the screen. |
@@ -79,6 +81,7 @@ You can configure MySQL using one of the following methods:
 | Field | Description |
 | --- | --- |
 | Select project | Use the dropdown to select a project. |
+| Target persistence | Select the target persistence: \n * Watsonx.data instance - The instance console database stores the connection details exclusively. \n * Platform asset catalog - The default catalog in the data platform stores your connection details. \n You can select the `Platform asset catalog` option only if data platform services are active, a **Platform asset catalog** exists in the data platform, and you have access to it. |
 | Select data source | Use the dropdown to select a data source from the selected project |
 | Connection status | Click the Test connection link to test the database connection. If the database connection is successful, a success message appears. |
 | Display name | Enter the database name to be displayed on the screen. |
