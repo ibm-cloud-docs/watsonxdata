@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-10-24"
+lastupdated: "2025-10-27"
 
 keywords: watsonxdata, release notes
 
@@ -27,6 +27,79 @@ For watsonx.data as a Service on IBM Cloud with gen AI experience what's new, se
 For watsonx.data on-prem what's new, see [Release notes for watsonx.data](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.2.x?topic=overview-whats-new-in-watsonxdata).
 
 For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-prem Premium](https://www.ibm.com/docs/en/watsonx/watsonxdata-premium/2.2.x?topic=overview-whats-new-in-watsonxdata).
+
+## 28 October 2025 - Version 2.2.2
+{: #lakehouse_27oct2025}
+{: release-note}
+
+Engine and service enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
+
+   * Milvus in {{site.data.keyword.lakehouse_short}} now supports the following external storage types for storing vector data, index files, and binary logs: Google Cloud Storage (GCS), Azure Data Lake Storage (ADLS) Gen1, and S3-compatible storage types. For more information, see [Adding Milvus service](/docs/watsonxdata?topic=watsonxdata-adding-milvus-service).
+   * Milvus scaling functionality is now disabled for the Starter T-shirt size. You can no longer scale from the Milvus Starter T-shirt size to any other size. Scaling back to Starter from a larger configuration is also blocked. For more information, see [Adding Milvus service](/docs/watsonxdata?topic=watsonxdata-adding-milvus-service).
+
+Data sources and storage enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following data sources and storage enhancements:
+
+   * You can now apply IBM Knowledge Catalog governance policies to the data source, Teradata. For more information, see [Connecting to IBM Knowledge Catalog (IKC)](/docs/watsonxdata?topic=watsonxdata-ikc_integration).
+   * You can now create a storage in an active state without associating it to a catalog, removing the need for manual activation.
+   * Introduced disabling and enabling ACL features on an ACL-enabled storage in the topology view. For more information, see [Disabling or enabling ACL on an ACL-enabled storage](/docs/watsonxdata?topic=watsonxdata-enble_acl).
+   * You can now configure any S3 compatible object storage in {{site.data.keyword.lakehouse_short}} using the Custom S3 Storage option. For more information, see [Custom S3 Storage](/docs/watsonxdata?topic=watsonxdata-custom_s3_storage).
+   * You can now update credentials for Azure Data Lake Storage (ADLS) and Google Cloud Storage.
+   * You can now choose to save connection details either in the instance console database or in the default catalog within the data platform for the following data sources:
+      - IBM Db2
+      - IBM Netezza
+      - MySQL
+      - Oracle
+      - PostgreSQL
+      - Snowflake
+      - SQL Server
+
+Delta Lake catalogs now available with Spark access control extension
+
+: You can now use Delta Lake catalogs with the Spark access control extension, enabling enhanced security during Spark application submissions. The feature brings in additional authorization, ensuring that only authorized users can access and operate watsonx.data catalogs through Spark jobs. For more information, see [Enhancing Spark application submission using Spark access control extension](/docs/watsonxdata?topic=watsonxdata-spark-extnsn).
+
+Customize your Spark application payload
+
+: When you submit a Spark application in {{site.data.keyword.lakehouse_short}}, you can customize the application payload to include the following features:
+   
+   * Idempotency keys: Ensures that application submissions are processed only once, even in cases of client-server communication failures.
+   * Retry feature: Controls how many times your Spark application should automatically retry submission in case of failure.
+   * Maximum runtime controls: Defines a maximum execution time for Spark applications. If the timeout is not specified, jobs continue to run until completion, regardless of how long they take.
+   
+   For more information, see [Customizing parameters for Spark application submission](/docs/watsonxdata?topic=watsonxdata-sbmt_spk_cust).
+
+Customer Policy Gateway (CPG)
+
+: The Customer Policy Gateway (CPG) provisioning is now optional. You can create a watsonx.data instance without auto-provisioning CPG, unless a policy engine is explicitly required. With this feature, CPG provisioning is now fully optional and reversible. If a customer policy engine such as Ranger, or IKC is needed, CPG can be provisioned later.
+
+CPDCTL CLI enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancements to IBM Cloud Pak for Data Command Line Interface (IBM cpdctl):
+
+   * Use the new `access-control` command group to manage access policies for resources in your {{site.data.keyword.lakehouse_short}} instance, including viewing, updating, and revoking access for users and groups.
+
+Data manager enhancements
+
+: Users can now create schemas with custom paths to view and sync data at a more granular level. With this new feature, users can synchronize only a specific directory (for example, /test1 or /test1/schema1) to retrieve tables under that path, instead of syncing the entire catalog. This targeted sync capability improves performance and precision in data management. For more information, see [Creating schema](/docs/watsonxdata?topic=watsonxdata-create_schema).
+
+Integration enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following integration enhancements:
+
+   * IBM {{site.data.keyword.lakehouse_short}} now supports column-level lineage tracking for Presto by integrating with Manta. With this enhancement, users can now explore detailed column dependencies, relationships, and metadata changes, enabling deeper insights into data flows and improving traceability across pipelines.
+
+
+New lightweight, plugin‑based Common Policy Gateway (CPG) client
+
+: A new lightweight CPG is now available as a downloadable plugin, enabling seamless integration with any policy engine (for example, IBM Knowledge Catalog, Apache Ranger, Collibra).
+
+Query Optimizer enhancement
+
+: You can now enable or disable the Materialized View (MV) feature for the Query Optimizer directly from the web console in {{site.data.keyword.lakehouse_short}}. For more information, see [Optimizing queries using Materialized View (MV) in Query optimizer](/docs/watsonxdata?topic=watsonxdata-mv_optimizer).
+
 
 ## 23 September 2025 - Version 2.2.1 New Functionalities Introduced (NFI)
 {: #lakehouse_23sept2025}
