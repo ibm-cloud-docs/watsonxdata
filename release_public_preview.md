@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-12"
+lastupdated: "2025-10-27"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -31,6 +31,16 @@ subcollection: watsonxdata
 
 Read about the new features and enhancements in the current and previous releases of {{site.data.keyword.lakehouse_full}} (Public preview).
 {: shortdesc}
+
+## 28 October 2025 - Version 2.2.2
+{: #lakehouse_2810-pp}
+{: release-note-pp}
+
+This release includes the following new feature:
+
+New lightweight, plugin‑based Common Policy Gateway (CPG) client
+
+: A new lightweight CPG is now available as a downloadable plugin, enabling seamless integration with any policy engine (for example, IBM Knowledge Catalog, Apache Ranger, Collibra). For more information, see [Common Policy Gateway (CPG) connector](/docs/watsonxdata?topic=watsonxdata-plug_cpg).
 
 ## 11 June 2025 - Version 2.2
 {: #lakehouse_2apr212-pp}

@@ -66,7 +66,6 @@ Customize your Spark application payload
 : When you submit a Spark application in {{site.data.keyword.lakehouse_short}}, you can customize the application payload to include the following features:
 
    * Idempotency keys: Ensures that application submissions are processed only once, even in cases of client-server communication failures.
-   * Retry feature: Controls how many times your Spark application should automatically retry submission in case of failure.
    * Maximum runtime controls: Defines a maximum execution time for Spark applications. If the timeout is not specified, jobs continue to run until completion, regardless of how long they take.
 
    For more information, see [Customizing parameters for Spark application submission](/docs/watsonxdata?topic=watsonxdata-sbmt_spk_cust).
@@ -91,10 +90,6 @@ Integration enhancements
 
    * IBM {{site.data.keyword.lakehouse_short}} now supports column-level lineage tracking for Presto by integrating with Manta. With this enhancement, users can now explore detailed column dependencies, relationships, and metadata changes, enabling deeper insights into data flows and improving traceability across pipelines.
 
-
-New lightweight, plugin‑based Common Policy Gateway (CPG) client
-
-: A new lightweight CPG is now available as a downloadable plugin, enabling seamless integration with any policy engine (for example, IBM Knowledge Catalog, Apache Ranger, Collibra).
 
 Query Optimizer enhancement
 

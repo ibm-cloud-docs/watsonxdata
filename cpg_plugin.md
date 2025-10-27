@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-10-22"
+lastupdated: "2025-10-27"
 keywords: cpg
 subcollection: watsonxdata
 
@@ -30,7 +30,7 @@ You must:
 ## Downloading CPG package
 {: #plug_proc}
 
-1. Download the latest version of CPG light weight package from : [Download]().
+1. Contact IBM Support team and get the latest version of CPG light weight package.
 
 2. After downloading, unzip the package. The folder structure will look like this:
 
