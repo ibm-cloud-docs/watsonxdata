@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-24"
+lastupdated: "2025-10-27"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -42,12 +42,12 @@ For more information about provisioning the engine, see [Provisioning a Spark en
 **Native Spark engine**
 Native Spark engine is a compute engine that is available within {{site.data.keyword.lakehouse_short}} instance. With native Spark engine, you can fully manage Spark Engine configuration, manage access to Spark Engines and run applications by using watsonx.data UI and REST API endpoints.
 
-For more information, see Working with native Spark engine section.
+For more information, see [Provisioning a native Spark engine](/docs/watsonxdata?topic=watsonxdata-spl_engine){: external}.
 
 **Gluten accelerated Spark engine**
 Performance optimized data processing engine capable of processing Spark applications. It uses Gluten, which relies on Velox (C++) generic database acceleration library that optimize the queries. This is an effective solution to speed up and simplify your process if you work with very huge data set. For more information, see Gluten accelerated Spark engine.
 
-For more information, see Working with native Spark engine section.
+For more information, see [Provisioning Gluten accelerated Spark engine](/docs/watsonxdata?topic=watsonxdata-prov_cpp){: external}.
 
 **External Spark engine**
 External Spark engines are engines that exist in a different cluster from where {{site.data.keyword.lakehouse_short}} is provisioned. You can deploy them in the following environments:
@@ -56,5 +56,3 @@ External Spark engines are engines that exist in a different cluster from where 
 
 The option to register external Spark engines in watsonx.data is deprecated and will be removed in version 2.3. watsonx.data already includes built-in Spark engines that you can provision and use directly, including the Gluten-accelerated Spark engine and the native watsonx.data Spark engine.
 {: important}
-
-For more information, see Working with external Spark engine section.

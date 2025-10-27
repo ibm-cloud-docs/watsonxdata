@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-23"
+lastupdated: "2025-10-27"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -86,6 +86,9 @@ To add a Spark engine, complete the following steps.
 
 
 6. Click **Create**. The engine is provisioned and is displayed in the **Infrastructure Manager** page.
+
+
+To submit Spark applications using native Spark engine, see [Submitting a Spark application](/docs/watsonxdata?topic=group=submitting-spark-application-by-using-native-spark-engine).
 
 ## Related API
 {: #spark_api}
