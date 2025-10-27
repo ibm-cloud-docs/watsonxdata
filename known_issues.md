@@ -31,6 +31,11 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
+## Node assignment delay during engine restart
+{: #known_issue35619_1}
+
+During the restart phase, the engine fails to assign a node due to limited node availability. As a result, schema creation is significantly delayed.
+
 ## Storage Details page in Spark History UI loads as blank
 {: #known_issue27839}
 
