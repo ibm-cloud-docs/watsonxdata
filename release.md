@@ -64,11 +64,11 @@ Delta Lake catalogs now available with Spark access control extension
 Customize your Spark application payload
 
 : When you submit a Spark application in {{site.data.keyword.lakehouse_short}}, you can customize the application payload to include the following features:
-   
+
    * Idempotency keys: Ensures that application submissions are processed only once, even in cases of client-server communication failures.
    * Retry feature: Controls how many times your Spark application should automatically retry submission in case of failure.
    * Maximum runtime controls: Defines a maximum execution time for Spark applications. If the timeout is not specified, jobs continue to run until completion, regardless of how long they take.
-   
+
    For more information, see [Customizing parameters for Spark application submission](/docs/watsonxdata?topic=watsonxdata-sbmt_spk_cust).
 
 Customer Policy Gateway (CPG)
@@ -99,6 +99,16 @@ New lightweight, plugin‑based Common Policy Gateway (CPG) client
 Query Optimizer enhancement
 
 : You can now enable or disable the Materialized View (MV) feature for the Query Optimizer directly from the web console in {{site.data.keyword.lakehouse_short}}. For more information, see [Optimizing queries using Materialized View (MV) in Query optimizer](/docs/watsonxdata?topic=watsonxdata-mv_optimizer).
+
+Deprecated features
+
+: The IBM Client package will be deprecated and the installation and support of the `ibm-lh-client` package shall not be available from the 2.3.0 release of {{site.data.keyword.lakehouse_short}}. The utilities and commands in the Client package are replaced with IBM CPDCTL CLI. Users are encouraged to migrate and explore CPDCTL. For more information about how to use IBM CPDCTL CLI, see [IBM cpdctl](/docs/watsonxdata?topic=watsonxdata-cpdctl_title).
+
+Use the following available tools for equivalent functionalities of the Client package:
+
+* `python-run` / `dev-sandbox` – Use the standard Python environment to develop and run Spark scripts.
+* `presto-run` / Presto CLI – Use the official [Presto CLI](https://prestodb.io/docs/current/installation) to run SQL queries against watsonx.data.
+* `cert-mgmt` – Use the [`JVM` keytool](https://www.ibm.com/docs/en/sdk-java-technology/8?topic=guide-keytool) to manage `HTTPS` certificates.
 
 
 ## 23 September 2025 - Version 2.2.1 New Functionalities Introduced (NFI)
@@ -256,16 +266,6 @@ New region availability
 {: release-note}
 
 Version 2.2 hotfix of watsonx.data was released on 07 July, 2025. This release includes security updates and fixes.
-
-Deprecated features
-
-: The IBM Client package will be deprecated and the installation and support of the `ibm-lh-client` package shall not be available from the 2.3.0 release of {{site.data.keyword.lakehouse_short}}. The utilities and commands in the Client package are replaced with IBM CPDCTL CLI. Users are encouraged to migrate and explore CPDCTL. For more information about how to use IBM CPDCTL CLI, see [IBM cpdctl](/docs/watsonxdata?topic=watsonxdata-cpdctl_title).
-
-Use the following available tools for equivalent functionalities of the Client package:
-
-* `python-run` / `dev-sandbox` – Use the standard Python environment to develop and run Spark scripts.
-* `presto-run` / Presto CLI – Use the official [Presto CLI](https://prestodb.io/docs/current/installation) to run SQL queries against watsonx.data.
-* `cert-mgmt` – Use the [`JVM` keytool](https://www.ibm.com/docs/en/sdk-java-technology/8?topic=guide-keytool) to manage `HTTPS` certificates.
 
 
 ## 11 June 2025 - Version 2.2.0
