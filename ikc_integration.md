@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-21"
+lastupdated: "2025-10-27"
 
 keywords: watsonx.data, ikc, configuring, knowledgecatalog
 subcollection: watsonxdata
@@ -147,3 +147,7 @@ The owner can see the unmasked data. To verify whether masking is functioning co
 - Timestamp
 - Tinyint
 - Decimal
+- Char
+- Real
+- Time
+- Varbinary

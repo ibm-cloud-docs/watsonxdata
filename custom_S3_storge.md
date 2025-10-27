@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-24"
+lastupdated: "2025-10-27"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
 
@@ -32,7 +32,7 @@ subcollection: watsonxdata
 You can configure any S3 compatible object storage in {{site.data.keyword.lakehouse_short}} using the **Custom S3 Storage** option. This feature supports a wide range of third-party storage providers that implement the S3 API standard.
 {: shortdesc}
 
-IBM recommends using **NetApp** and **Oracle Cloud Infrastructure (OCI)** for optimal performance and support. The system also supports platforms such as **MinIO**, **Wasabi**, and others, suitable for large-scale data lake and analytics workloads
+IBM supports **NetApp** and **Oracle Cloud Infrastructure (OCI)**.
 {: note}
 
 If you select **Custom S3 Storage** from the **Storage** section, configure the following details:
@@ -41,7 +41,7 @@ If you select **Custom S3 Storage** from the **Storage** section, configure the 
  | --- | --- |
  | Display name | Enter the name to be displayed. |
  | Bucket name | Enter the name of your existing bucket. |
- | Region | Enter the region where the storage is available. |
+ | Region | Enter the S3 storage region if required for access. If not, leave this field blank. |
  | Endpoint | Enter the **Endpoint** URL. Test connection is enabled when the endpoint is provided. |
  | Access key<br>Secret key | If you are using secrets from vault, then select the **Access key** and **Secret key** from the respective drop-down lists. Otherwise, enter your **Access key** and **Secret key** in the respective fields. |
  | Connection status | Click the **Test connection** link to test the bucket connection. If the bucket connection is successful, a success message appears. |
