@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-10-27"
+lastupdated: "2025-10-28"
 
 keywords: watsonxdata, release notes
 
@@ -36,16 +36,15 @@ Engine and service enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
 
-   * Milvus in {{site.data.keyword.lakehouse_short}} now supports the following external storage types for storing vector data, index files, and binary logs: Google Cloud Storage (GCS), Azure Data Lake Storage (ADLS) Gen1, and S3-compatible storage types. For more information, see [Adding Milvus service](/docs/watsonxdata?topic=watsonxdata-adding-milvus-service).
-   * Milvus scaling functionality is now disabled for the Starter T-shirt size. You can no longer scale from the Milvus Starter T-shirt size to any other size. Scaling back to Starter from a larger configuration is also blocked. For more information, see [Adding Milvus service](/docs/watsonxdata?topic=watsonxdata-adding-milvus-service).
-
+   * Milvus in {{site.data.keyword.lakehouse_short}} now supports the following external storage types for storing vector data, index files, and binary logs: Google Cloud Storage (GCS), Azure Data Lake Storage (ADLS) Gen1, and S3-compatible storage types. 
+   * Milvus scaling functionality is now disabled for the Starter T-shirt size. You can no longer scale from the Milvus Starter T-shirt size to any other size. Scaling back to Starter from a larger configuration is also not allowed.
 Data sources and storage enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following data sources and storage enhancements:
 
    * You can now apply IBM Knowledge Catalog governance policies to the data source, Teradata. For more information, see [Connecting to IBM Knowledge Catalog (IKC)](/docs/watsonxdata?topic=watsonxdata-ikc_integration).
-   * You can now create a storage in an active state without associating it to a catalog, removing the need for manual activation.
-   * Introduced disabling and enabling ACL features on an ACL-enabled storage in the topology view. For more information, see [Disabling or enabling ACL on an ACL-enabled storage](/docs/watsonxdata?topic=watsonxdata-enble_acl).
+   * You can now create a storage in an active state without associating it to a catalog. This enhancement removes the need for manual activation.
+   * You can  now enable and disable ACL features on an ACL-enabled storage in the topology view. For more information, see [Disabling or enabling ACL on an ACL-enabled storage](/docs/watsonxdata?topic=watsonxdata-enble_acl).
    * You can now configure any S3 compatible object storage in {{site.data.keyword.lakehouse_short}} using the Custom S3 Storage option. For more information, see [Custom S3 Storage](/docs/watsonxdata?topic=watsonxdata-custom_s3_storage).
    * You can now update credentials for Azure Data Lake Storage (ADLS) and Google Cloud Storage.
    * You can now choose to save connection details either in the instance console database or in the default catalog within the data platform for the following data sources:
@@ -82,13 +81,11 @@ CPDCTL CLI enhancements
 
 Data manager enhancements
 
-: Users can now create schemas with custom paths to view and sync data at a more granular level. With this new feature, users can synchronize only a specific directory (for example, /test1 or /test1/schema1) to retrieve tables under that path, instead of syncing the entire catalog. This targeted sync capability improves performance and precision in data management. For more information, see [Creating schema](/docs/watsonxdata?topic=watsonxdata-create_schema).
+: Users can now create schemas with custom paths to view and sync data at a more granular level. With this new feature, users can synchronize only a specific directory (for example, /test1 or /test1/schema1) to retrieve tables under that path, instead of syncing the entire catalog. This targeted sync capability improves performance and precision in data management.
 
 Integration enhancements
 
-: This release of {{site.data.keyword.lakehouse_short}} introduces the following integration enhancements:
-
-   * IBM {{site.data.keyword.lakehouse_short}} now supports column-level lineage tracking for Presto by integrating with Manta. With this enhancement, users can now explore detailed column dependencies, relationships, and metadata changes, enabling deeper insights into data flows and improving traceability across pipelines.
+: IBM {{site.data.keyword.lakehouse_short}} now supports column-level lineage tracking for Presto by integrating with Manta. With this enhancement, users can now explore detailed column dependencies, relationships, and metadata changes, enabling deeper insights into data flows and improving traceability across pipelines.
 
 
 Query Optimizer enhancement
