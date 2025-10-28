@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-27"
+lastupdated: "2025-10-28"
 
 keywords: lakehouse
 
@@ -30,6 +30,13 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+## `EXT_METASTORE_SYNC` fails due to catalog name mismatch
+{: #known_issue49613}
+
+Users may not be aware of the catalog name stored in the metadata. Therefore, if the catalog name used in the {{site.data.keyword.lakehouse_short}} UI differs from the one specified in the metadata file, EXT_METASTORE_SYNC will fail, preventing use of the Query Optimizer.
+
+**Workaround:** Create catalog with same name as in metadata files.
 
 ## Node assignment delay during engine restart
 {: #known_issue35619_1}
@@ -132,7 +139,14 @@ After updating expired credentials for a storage or database resource associated
 ## Stats sync job remains stuck during execution
 {: #known_issue33503}
 
-Stats sync jobs may remain stuck during execution due to unknown conditions. When this occurs, users can check the logs to view the job status in the optimizer or Db2. If the job status is **NOTRECEIVED**, **NOTRUN**, or **UNKNOWN**, users must manually force delete the job and submit the next one in the queue.
+Stats sync jobs may remain stuck during execution due to unknown conditions. When this occurs, users can check the logs to view the job status in the optimizer or Db2. If the job status is **NOTRECEIVED**, **NOTRUN**, or **UNKNOWN**, users must manually force delete the job.
+
+After the stuck job is deleted:
+
+- If there are jobs currently in the **Queued** list, the first one will automatically move to **Active** and begin execution.
+- If no jobs are queued, users can manually submit a new job.
+
+**Status Definitions:**
 
 - **NOTRECEIVED**: The system did not receive a call for the given task ID.
 - **NOTRUN**: An error prevented the scheduler from invoking the task’s procedure.
