@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-28"
+lastupdated: "2025-10-29"
 
 keywords: lakehouse
 
@@ -66,12 +66,26 @@ When enabling QHMM in the console, users may experience a noticeable delay befor
 ## Prepared statement fails for long SQL queries due to header size limits in IBM watsonx.data Presto
 {: #known_issue26969}
 
-Prepared statements for long and complex SQL queries fail when executed through Flight service or JDBC clients (for example, DBeaver). The failure is due to internal server errors caused by exceeding default HTTP header size limits in the Presto engine. The issue is reproducible in Watsonx BI when enriching metric data assets with SQL queries around 14KB in size.
+Prepared statements for long and complex SQL queries may fail when executed through Flight service or JDBC clients (for example, DBeaver). This failure is caused by internal server errors resulting from exceeding default HTTP header size limits in the Presto engine. The issue is reproducible in Watsonx BI when enriching metric data assets with SQL queries around 14KB in size.
 
-**Workaround:** Update the Presto engine configuration with the following parameters:
+This is not a limitation of PrestoDB itself, but rather a consequence of how the JDBC PreparedStatement API works. When a client or BI tool uses PreparedStatement, the SQL text and parameter metadata are serialized and transmitted as part of the HTTP request headers to the Presto coordinator. This behavior is standard for JDBC driver implementations and not specific to Presto’s query engine.
 
-- `http-server.max-request-header-size=128kB`
-- `http-server.max-response-header-size=128kB`
+**Workaround:** To mitigate this issue, consider the following approaches depending on your workload:
+
+1. **Increase header size limits**
+
+   Update the Presto engine configuration with the following parameters to support larger queries:
+
+   - `http-server.max-request-header-size=128kB`
+   - `http-server.max-response-header-size=128kB`
+   These properties are already whitelisted and can be adjusted using the customization API.
+
+   The current default value is set based on typical query sizes. However, increasing the request header size limit by default can introduce certain trade-offs. A larger header size increases the risk of Denial-of-Service (DoS) attacks, as it allows more data to be sent in each request. Additionally, each HTTP request will consume more memory, which can become significant under high concurrency. Therefore, these values should be tuned cautiously based on your environment and query patterns.
+   {: note}
+
+2. **Avoid using `PreparedStatement` for large queries**
+
+   If your BI tool or workload tends to generate very large SQL queries, consider disabling `PreparedStatement` and using `createStatement` instead. This avoids transmitting large SQL payloads via HTTP headers and can be a more scalable approach.
 
 ## Milvus and Presto edit details page shows internal server error initially after creation
 {: #known_issue33725}
