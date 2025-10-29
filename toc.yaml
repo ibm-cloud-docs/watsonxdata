@@ -242,6 +242,7 @@ toc:
               - sbmt_spk_cnsl.md
               - sbmt_spk_mor_cow.md
               - spark-extnsn.md
+              - spark-streaming.md
               - ae_auto-scaling-serverless-apps.md
               - sbmt_spk_cust.md
           - topicgroup:
