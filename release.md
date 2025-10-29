@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-10-28"
+lastupdated: "2025-10-29"
 
 keywords: watsonxdata, release notes
 
@@ -45,6 +45,7 @@ Data sources and storage enhancements
    * You can now apply IBM Knowledge Catalog governance policies to the data source, Teradata. For more information, see [Connecting to IBM Knowledge Catalog (IKC)](/docs/watsonxdata?topic=watsonxdata-ikc_integration).
    * You can now create a storage in an active state without associating it to a catalog. This enhancement removes the need for manual activation.
    * You can  now enable and disable ACL features on an ACL-enabled storage in the topology view. For more information, see [Disabling or enabling ACL on an ACL-enabled storage](/docs/watsonxdata?topic=watsonxdata-enble_acl).
+   * You can now configure GlusterFS, a scalable distributed file system, as a supported storage backend with MinIO. For more information, see [Setting up GlusterFS replicated storage with MinIO](/docs/watsonxdata?topic=watsonxdata-setting_glusterfs).
    * You can now configure any S3 compatible object storage in {{site.data.keyword.lakehouse_short}} using the Custom S3 Storage option. For more information, see [Custom S3 Storage](/docs/watsonxdata?topic=watsonxdata-custom_s3_storage).
    * You can now update credentials for Azure Data Lake Storage (ADLS) and Google Cloud Storage.
    * You can now choose to save connection details either in the instance console database or in the default catalog within the data platform for the following data sources:

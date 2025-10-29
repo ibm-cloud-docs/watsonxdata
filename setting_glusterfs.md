@@ -133,18 +133,10 @@ Complete the following steps to set up GlusterFS replicated storage with MinIO.
    ```
    {: codeblock}
 
-    {%- capture gluster -%}
-   <md-block>
-
     **Login credentials:**
     
     - **Username**: `minioadmin`
     - **Password**: `minioadmin`
-
-   </md-block>
-   {%- endcapture %}
-
-   {% render "note.html", type: "note", text: gluster %}
 
 11. Create a storage, and upload a file.
 12. Run the following command on VM2 and VM3 to verify file replication on storage nodes.
