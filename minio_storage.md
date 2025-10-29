@@ -32,7 +32,8 @@ subcollection: watsonxdata
 MinIO is a high-performance, S3 compatible object store. It is built for large scale data lake and database workloads.
 {: shortdesc}
  
- You can integrate GlusterFS with MinIO in watsonx.data when using it as your storage backend. For more information, see [Setting up GlusterFS replicated storage with MinIO](/docs/watsonxdata?topic=watsonxdata-setting_glusterfs).
+ You can use GlusterFS as backend filesystem for MinIO. For more information, see [Setting up GlusterFS replicated storage with MinIO](/docs/watsonxdata?topic=watsonxdata-setting_glusterfs).
+ {: note}
 
  If you select **MinIO** from the **Storage** section, configure the following details:
 
