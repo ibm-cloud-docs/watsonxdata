@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-28"
+lastupdated: "2025-10-29"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -102,7 +102,7 @@ curl --request POST --url https://<region>.lakehouse.cloud.ibm.com/lakehouse/api
     "application_details": {
         "conf": {
             "spark.hadoop.wxd.apiKey": "Basic <encoded-api-key>"
-            
+            "spark.eventLog.logBlockUpdates.enabled":"true"
         },
         "application": "<storage>://<application-bucket-name>/iceberg.py"
     }
@@ -117,7 +117,7 @@ curl --request POST --url https://<region>.lakehouse.cloud.ibm.com/lakehouse/api
     "application_details": {
         "conf": {
             "spark.hadoop.wxd.apiKey": "Basic <encoded-api-key>"
-            
+            "spark.eventLog.logBlockUpdates.enabled":"true"
         },
         "application": "<storage>://<application-bucket-name>/iceberg.py"
     }
