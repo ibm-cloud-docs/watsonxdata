@@ -36,9 +36,9 @@ Engine and service enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
 
-   * Milvus in {{site.data.keyword.lakehouse_short}} now supports the following external storage types for storing vector data, index files, and binary logs: Google Cloud Storage (GCS), Azure Data Lake Storage (ADLS) Gen1, and S3-compatible storage types. 
+   * Milvus in {{site.data.keyword.lakehouse_short}} now supports the following external storage types for storing vector data, index files, and binary logs: Google Cloud Storage (GCS), Azure Data Lake Storage (ADLS) Gen1, and S3-compatible storage types.
    * Milvus scaling functionality is now disabled for the Starter T-shirt size. You can no longer scale from the Milvus Starter T-shirt size to any other size. Scaling back to Starter from a larger configuration is also not allowed.
-   
+
 Data sources and storage enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following data sources and storage enhancements:
@@ -73,7 +73,7 @@ Customize your Spark application payload
 
 Customer Policy Gateway (CPG)
 
-: The Customer Policy Gateway (CPG) provisioning is now optional. You can create a watsonx.data instance without auto-provisioning CPG, unless a policy engine is explicitly required. With this feature, CPG provisioning is now fully optional and reversible. If a customer policy engine such as Ranger, or IKC is needed, CPG can be provisioned later.
+: The Customer Policy Gateway (CPG) provisioning is now optional. You can create a watsonx.data instance without auto-provisioning CPG, unless a policy engine is explicitly required. With this feature, CPG provisioning is now fully optional and reversible. If a customer policy engine such as Ranger, or IKC is needed, CPG can be provisioned later. For more information, see [Enabling or disabling common policy gateway engines](/docs/watsonxdata?topic=watsonxdata-create_ebl_cpg)
 
 CPDCTL CLI enhancements
 
