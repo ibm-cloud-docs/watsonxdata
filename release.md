@@ -38,6 +38,7 @@ Engine and service enhancements
 
    * Milvus in {{site.data.keyword.lakehouse_short}} now supports the following external storage types for storing vector data, index files, and binary logs: Google Cloud Storage (GCS), Azure Data Lake Storage (ADLS) Gen1, and S3-compatible storage types. 
    * Milvus scaling functionality is now disabled for the Starter T-shirt size. You can no longer scale from the Milvus Starter T-shirt size to any other size. Scaling back to Starter from a larger configuration is also not allowed.
+   
 Data sources and storage enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following data sources and storage enhancements:
