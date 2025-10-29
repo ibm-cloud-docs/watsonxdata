@@ -43,8 +43,8 @@ If you select **Custom S3 Storage** from the **Storage** section, configure the 
  | Bucket name | Enter the name of your existing bucket. |
  | Region | Enter the S3 storage region if required for access. If not, leave this field blank. |
  | Endpoint | Enter the **Endpoint** URL. Test connection is enabled when the endpoint is provided. <br><br>**Note:** For **OCI storage**, the endpoint must follow this format:<br>`https://<namespace>.compat.objectstorage.<region>.oraclecloud.com` |
- | Input method <br><br>**Note:** This field is available only when use of secrets from an external vault (HashiCorp) is configured for your connections.| Choose the credential input method: /n * Enter credential manually /n * Use secret from vault <br>To use secrets from an external vault, select the `Use secret from vault` option and complete the following steps: /n 1. Click Select secret. /n 2. Select one or more secrets and click Select. |
- | Access key<br>Secret key | If you are using secrets from vault, then select the **Access key** and **Secret key** from the respective drop-down lists. Otherwise, enter your **Access key** and **Secret key** in the respective fields. |
+ | Access key  | Enter your access key. |
+ | Secret key  | Enter your secret key. |
  | Connection status | Click the **Test connection** link to test the bucket connection. If the bucket connection is successful, a success message appears. |
  | Associate catalog | Enable the toggle switch to add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within. || Catalog type | Select the catalog type from the list. The recommended catalog is Apache Iceberg. The other options for catalog are Apache Hive, Apache Hudi, and Delta Lake. |
  | Catalog name | Enter the name of the associated catalog. |
