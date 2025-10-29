@@ -151,6 +151,7 @@ toc:
               - delete_bucket.md
               - sync_logs.md
               - enable-acl.md
+              - setting_glusterfs.md
       - topicgroup:
           label: IBM Cloud Pak for Data Command Line Interface (IBM cpdctl)
           topics:
