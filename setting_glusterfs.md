@@ -30,7 +30,7 @@ subcollection: watsonxdata
 # Setting up GlusterFS replicated storage with MinIO
 {: #setting_glusterfs}
 
-You can integrate GlusterFS with MinIO in watsonx.data when using it as your storage backend.
+you can use GlusterFS as backend filesystem for minio.
 
 ## Before you begin
 {: #setting_glusterfs_pre}
