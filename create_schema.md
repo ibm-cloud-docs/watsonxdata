@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2025-10-29"
 
 keywords: watsonxdata, schema
 
@@ -62,19 +62,22 @@ You must have at minimum a `User` access with data policy for catalogs. See [Man
 
    c. Go to step 5.
 
-1. In the **Create schema** form, select the catalog. Enter schema name.
+1. In the **Create schema** form, provide the following details:
+   a. Select the catalog.
+   b. Enter schema name.
+   c. Enter the schema path. For example, `/test1/schema1`.
 
 1. Click **Create**. The schema is created under the selected catalog.
 
-   When you name a schema:
+When you name a schema:
 
-   a. Do not wrap the schema name in quotation marks. (Example: Use test instead of “test”.)
+* Do not wrap the schema name in quotation marks. (Example: Use test instead of “test”.)
 
-   b. Do not use semicolon [;], colon [:], single quotation mark ['], or double quotation mark ["] in the schema name.
+* Do not use semicolon [;], colon [:], single quotation mark ['], or double quotation mark ["] in the schema name.
 
-   c. Do not use leading space in the schema name.
+* Do not use leading space in the schema name.
 
-   d. Do not use special character such as question mark (?) or asterisk (*) in schema name.
+* Do not use special character such as question mark (?) or asterisk (*) in schema name.
 
 Make sure to fulfil the [requirements]({{site.data.keyword.ref-reg_bucket-link}}) before creating a schema against a registed storage. Otherwise, the system returns the following error message.
 
