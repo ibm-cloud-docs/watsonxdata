@@ -66,7 +66,7 @@ To provision a Lite plan instance, see [watsonx.data Lite plan](/docs/watsonxdat
 - The Lite instances are unrecoverable (no BCDR).
 - Engine scaling functionality is not available in the Lite plan.
 - Milvus back up is not available with the Lite plan.
-- In Lite plan instances of watsonx.data, users can view Milvus services but are restricted from performing any write operations or administrative tasks.
+- In Lite plan instances, users can view Milvus services but are restricted from performing any write operations or administrative tasks.
 
 You must be connected to your own bucket to save and backup any data that is external to the Lite instance before full consumption of the Lite plan resource units.
 {: important}
