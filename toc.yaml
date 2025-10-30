@@ -33,6 +33,8 @@ toc:
           - manta_overview.md
           - feature_parity_wxd.md
           - wxd_plfrm_dplmnt_cmpar.md
+          - wxd_astra_classic.md
+          - wxd_astra_db.md
       - release.md
       - topicgroup:
           label: Provisioning watsonx.data
