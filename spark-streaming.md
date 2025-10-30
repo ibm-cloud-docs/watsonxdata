@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-29"
+lastupdated: "2025-10-30"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -43,7 +43,7 @@ This section shows you how you can leverage Spark Streaming on {{site.data.keywo
 
 Sample Python Spark Streaming application:
 
-```python
+```bash
 #!/usr/bin/env python
 # coding: utf-8
 
@@ -126,23 +126,17 @@ To run the Spark application `kafka-stream-example.py`:
 
     In the following sample `payload.json`, the Spark application `kafka-stream-example.py` and the Kafka libraries are stored in the `data-vol` volume that is mounted to `s3a://my-bucket/`. The Python application and the comma-separated list of JARs included in the `jars` option are automatically transferred to the cluster. 
 
-    ```json
+    ```bash
     {
-        "application_details": {
-            "application": "s3a://my-bucket/kafka-stream-example.py",
-            "arguments": [""],
-            "conf": {
-                "spark.app.name": "SparkStreams",
-                "spark.eventLog.enabled": "true"
-            },
-            "jars": "s3a://my-bucket/spark-sql-kafka-0-10_2.12-3.3.0.jar,/myapp/spark-streaming-kafka-0-10-assembly_2.12-3.3.0.jar,/myapp/commons-pool2-2.11.1.jar"
-        },
-        "volumes": \[{
-            "name": "data-vol",
-            "mount_path": "s3a://my-bucket/",
-            "source_sub_path": ""
-        }\]
-    }
+       "application_details": {
+           "application": "s3a://my-bucket/kafka-stream-example.py",
+           "conf": {
+               "spark.app.name": "SparkStreams",
+               "spark.eventLog.enabled": "true"
+           },
+           "jars": "s3a://my-bucket/spark-sql-kafka-0-10_2.12-3.3.0.jar,s3a://my-bucket/spark-streaming-kafka-0-10-assembly_2.12-3.3.0.jar,s3a://my-bucket/commons-pool2-2.11.1.jar"
+       }
+   }
     ```
     {: .codeblock}
 
