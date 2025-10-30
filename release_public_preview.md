@@ -45,12 +45,6 @@ Query Optimizer enhancement
 
    * You can now enable or disable the Materialized View (MV) feature for the **Query Optimizer** directly from the web console in {{site.data.keyword.lakehouse_short}}. For more information, see [Optimizing queries using Materialized View (MV) in Query optimizer](/docs/watsonxdata?topic=watsonxdata-mv_optimizer).
 
-## 28 October 2025 - Version 2.2.2
-{: #lakehouse_2810-pp}
-{: release-note-pp}
-
-This release includes the following new feature:
-
 New lightweight, plugin‑based Common Policy Gateway (CPG) client
 
 : A new lightweight CPG is now available as a downloadable plugin, enabling seamless integration with any policy engine (for example, IBM Knowledge Catalog, Apache Ranger, Collibra). For more information, see [Common Policy Gateway (CPG) connector](/docs/watsonxdata?topic=watsonxdata-plug_cpg).
