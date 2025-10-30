@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-27"
+lastupdated: "2025-10-30"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -31,6 +31,19 @@ subcollection: watsonxdata
 
 Read about the new features and enhancements in the current and previous releases of {{site.data.keyword.lakehouse_full}} (Public preview).
 {: shortdesc}
+
+## 29 October 2025 - Version 2.2.2
+{: #lakehouse_29oct2025_pp}
+{: release-note}
+
+This release includes the following new feature:
+
+
+Query Optimizer enhancement
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following access **Query Optimizer** enhancements:
+
+   * You can now enable or disable the Materialized View (MV) feature for the **Query Optimizer** directly from the web console in {{site.data.keyword.lakehouse_short}}. For more information, see [Optimizing queries using Materialized View (MV) in Query optimizer](/docs/watsonxdata?topic=watsonxdata-mv_optimizer).
 
 ## 28 October 2025 - Version 2.2.2
 {: #lakehouse_2810-pp}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-10-29"
+lastupdated: "2025-10-30"
 
 keywords: watsonxdata, release notes
 
@@ -94,15 +94,16 @@ Query Optimizer enhancement
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following access Query Optimizer enhancements:
 
-   * You can now enable or disable the Materialized View (MV) feature for the Query Optimizer directly from the web console in {{site.data.keyword.lakehouse_short}}. For more information, see [Optimizing queries using Materialized View (MV) in Query optimizer](/docs/watsonxdata?topic=watsonxdata-mv_optimizer).
    * **Support for Hive and Iceberg Metastore Registration in Query Optimizer**
 
-   The Query Optimizer supports distinct metastore types for Hive and Iceberg catalogs. <br>Users can now register:
+   The Query Optimizer supports distinct metastore types for Hive and Iceberg catalogs.
+
+   Users can now register:
 
    - Hive catalogs using the watsonx-data-hive metastore type.
    - Iceberg catalogs using the iceberg-rest metastore type.
 
-   This enhancement allows more granular control and compatibility with evolving metastore architectures. Registration is done using the REGISTER_EXT_METASTORE procedure with updated syntax and properties.
+   This enhancement allows more granular control and compatibility with evolving metastore architectures. Registration is done using the `REGISTER_EXT_METASTORE` procedure with updated syntax and properties.
 
    From this release onwards, legacy support for the unified watsonx-data metastore type is no longer available.
 
