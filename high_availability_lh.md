@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-23"
+lastupdated: "2025-10-30"
 
 keywords: high availability, disaster revecory, watsonx.data
 
@@ -133,7 +133,7 @@ If a Presto coordinator node restarts, be it for maintenance purposes or due to 
 
 Several minutes of unavailability or connection interruptions are not expected. Open a support ticket with details if you have time periods longer than a minute with no connectivity so that the interruptions are investigated.
 
-## Disaster Recovery Strategy
+## Disaster recovery strategy
 {: #diastr_rec_str}
 
 Recovery Time Objective (RTO) refers to the maximum acceptable duration of time that a system or service can be unavailable after a failure. It defines how quickly the system must be restored to avoid significant disruption to operations. RTO in watsonx.data depends on the following aspects:
