@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-26"
+lastupdated: "2025-10-30"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -59,8 +59,8 @@ Complete the following steps to add Milvus as a service in {{site.data.keyword.l
     Running multiple Milvus instances that share the same `rootPath` within a single MinIO bucket is not recommended because it causes their data and metadata to overlap, leading to conflicts, and a high risk of data corruption or loss. To ensure data integrity and isolation, you must configure each Milvus instance with a unique `minio.rootPath` value in its configuration file before starting, even if they use the same bucket.
     {: note}
 
-    You can scale up the Milvus service between predefined T-shirt sizes (small, medium, and large) or custom sizes. Starting with {{site.data.keyword.lakehouse_short}} version 2.2.2, Milvus scaling is disabled for the Starter T-shirt size.
-    Scaling down Milvus might impact performance when reducing from a higher capacity. If collections no longer fit into memory after scaling down, service might be impacted. In case of a service impact, the only solution is to either drop the collection or scale back up. Even if the service do not crash, the collections that were previously loaded but now exceed available memory may encounter issues.
+    Starting with {{site.data.keyword.lakehouse_short}} version 2.2.2, Milvus scaling is disabled for the Starter T-shirt size. Scaling back to Starter from a larger configuration is also not allowed.
+    You can scale up the Milvus service between predefined T-shirt sizes (small, medium, and large) or custom sizes. Scaling down Milvus might impact performance when reducing from a higher capacity. If collections no longer fit into memory after scaling down, service might be impacted. In case of a service impact, the only solution is to either drop the collection or scale back up. Even if the service do not crash, the collections that were previously loaded but now exceed available memory may encounter issues.
     {: important}
 
     The scaling operation typically introduces a 5 to 10 minute service delay and ongoing operations can be disrupted during these transitions.
