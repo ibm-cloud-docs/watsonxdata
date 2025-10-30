@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-01"
+lastupdated: "2025-10-30"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -37,6 +37,7 @@ This topic provides details to verify that all expected tables have been success
 1. Install and activate **Query Optimizer** in {{site.data.keyword.lakehouse_short}}. See [Activating Query Optimizer Manager](/docs/watsonxdata?topic=watsonxdata-install_optimizer).
 1. Names of catalogs and schemas for the tables being synced must be known.
 1. The expected number of tables within each schema must be known.
+1. Run the following command `select count (*) from catalog.schema.table;` and record the table properties (such as number of rows) for comparison in Step 5.
 1. If the session parameter `is_query_rewriter_plugin_enabled` is set to `false`, you will not be able to execute the `ExecuteWxdQueryOptimizer` commands.
 
 ## Procedure
@@ -44,7 +45,7 @@ This topic provides details to verify that all expected tables have been success
 
 1. Log in to {{site.data.keyword.lakehouse_short}} console.
 
-1. Go to **Query workspace**.
+1. Go to **Query workspace** and select Presto (C++) engine.
 
 1. Run the following command to retrieve a list of potential schema names:
 
@@ -53,7 +54,7 @@ This topic provides details to verify that all expected tables have been success
    ```
    {: codeblock}
 
-1. Select the correct schema name (case-sensitive) from the results.
+   Select the correct schema name (case-sensitive) from the results.
 
 1. Run one of the following commands as needed:
 
@@ -80,7 +81,7 @@ This topic provides details to verify that all expected tables have been success
       ```
       {: codeblock}
 
-1. Run the following query to check table statistics (such as cardinality):
+1. Run the following query to check table properties (such as number of rows):
 
    ```bash
    ExecuteWxdQueryOptimizer 'select tabname, card from syscat.tables where tabschema = 'catalog.schema'';
