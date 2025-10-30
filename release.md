@@ -28,7 +28,7 @@ For watsonx.data on-prem what's new, see [Release notes for watsonx.data](https:
 
 For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-prem Premium](https://www.ibm.com/docs/en/watsonx/watsonxdata-premium/2.2.x?topic=overview-whats-new-in-watsonxdata).
 
-## 29 October 2025 - Version 2.2.2
+## 30 October 2025 - Version 2.2.2
 {: #lakehouse_27oct2025}
 {: release-note}
 

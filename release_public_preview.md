@@ -32,7 +32,7 @@ subcollection: watsonxdata
 Read about the new features and enhancements in the current and previous releases of {{site.data.keyword.lakehouse_full}} (Public preview).
 {: shortdesc}
 
-## 29 October 2025 - Version 2.2.2
+## 30 October 2025 - Version 2.2.2
 {: #lakehouse_29oct2025_pp}
 {: release-note}
 
