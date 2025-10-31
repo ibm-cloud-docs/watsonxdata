@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-10-30"
+lastupdated: "2025-10-31"
 
 keywords: watsonxdata, release notes
 
@@ -71,9 +71,9 @@ Customize your Spark application payload
 
    For more information, see [Customizing parameters for Spark application submission](/docs/watsonxdata?topic=watsonxdata-sbmt_spk_cust).
 
-Customer Policy Gateway (CPG)
+Common Policy Gateway (CPG)
 
-: The Customer Policy Gateway (CPG) provisioning is now optional. You can create a watsonx.data instance without auto-provisioning CPG, unless a policy engine is explicitly required. With this feature, CPG provisioning is now fully optional and reversible. If a customer policy engine such as Ranger, or IKC is needed, CPG can be provisioned later. For more information, see [Enabling or disabling common policy gateway engines](/docs/watsonxdata?topic=watsonxdata-create_ebl_cpg)
+: The Common Policy Gateway (CPG) provisioning is now optional. You can create a watsonx.data instance without auto-provisioning CPG, unless a policy engine is explicitly required. With this feature, CPG provisioning is now fully optional and reversible. If a customer policy engine such as Ranger, or IKC is needed, CPG can be provisioned later. For more information, see [Enabling or disabling common policy gateway engines](/docs/watsonxdata?topic=watsonxdata-create_ebl_cpg)
 
 CPDCTL CLI enhancements
 
