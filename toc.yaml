@@ -431,7 +431,6 @@ toc:
           - mv_optimizer.md
           - jdbc.md
           - db_ast.md
-          - sql_fed_plus.md
       - link:
           label: watsonx.data v2 APIs
           href: https://cloud.ibm.com/apidocs/watsonxdata

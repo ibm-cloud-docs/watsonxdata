@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-10-31"
+lastupdated: "2025-11-03"
 
 keywords: watsonxdata, release notes
 
@@ -28,9 +28,12 @@ For watsonx.data on-prem what's new, see [Release notes for watsonx.data](https:
 
 For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-prem Premium](https://www.ibm.com/docs/en/watsonx/watsonxdata-premium/2.2.x?topic=overview-whats-new-in-watsonxdata).
 
-## 30 October 2025 - Version 2.2.2
-{: #lakehouse_27oct2025}
+## 31 October 2025 - Version 2.2.2
+{: #lakehouse_31oct2025}
 {: release-note}
+
+{{site.data.keyword.lakehouse_short}} 2.2.2 version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.2.2 release is available in your region, contact IBM Support.
+{: important}
 
 Engine and service enhancements
 
@@ -122,9 +125,6 @@ Use the following available tools for equivalent functionalities of the Client p
 ## 23 September 2025 - Version 2.2.1 New Functionalities Introduced (NFI)
 {: #lakehouse_23sept2025}
 {: release-note}
-
-{{site.data.keyword.lakehouse_short}} 2.2.1 NFI version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.2.1 NFI release is available in your region, contact IBM Support.
-{: important}
 
 Release notes for 2.2.1 NFI version of watsonx.data as a Service on IBM Cloud with the generative AI experience, see [IBM watsonx.data as a Service version 2.2.1 New Functionalities Introduced (NFI)](https://dataplatform.cloud.ibm.com/docs/content/wsj/wx-data/whats_new-wdp.html?context=wxd&audience=wdp#week-2025-9-23).
 {: note}
