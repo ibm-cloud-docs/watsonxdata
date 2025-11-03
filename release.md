@@ -82,7 +82,7 @@ CPDCTL CLI enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancements to IBM Cloud Pak for Data Command Line Interface (IBM cpdctl):
 
-   * Use the new `access-control` command group to manage access policies for resources in your {{site.data.keyword.lakehouse_short}} instance, including viewing, updating, and revoking access for users and groups.
+   * Use the new `access-control` command group to manage access policies for resources in your {{site.data.keyword.lakehouse_short}} instance, including viewing, updating, and revoking access for users and groups. For more information, see [access-control](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata#cpdctl_commands_wxdataacscntrl).
 
 Data manager enhancements
 
