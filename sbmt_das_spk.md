@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-29"
+lastupdated: "2025-11-03"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -31,6 +31,7 @@ This topic provides the procedure to submit a Spark application by using native 
     {: note}
 
 * Associate the storage with the Spark engine. For information about how to associate with the Spark engine, see [Associating a catalog with an engine](/docs/watsonxdata?topic=watsonxdata-asso-cat-eng).
+
 
 ## Storages supported
 {: #nsppk_preq_1_stg}
@@ -136,6 +137,9 @@ curl --request POST --url https://<region>.lakehouse.cloud.ibm.com/lakehouse/api
 
 The following is the sample Python application to perform basic operations on data stored in an Iceberg catalog:
 
+As the spark schema is not selected in payload, and is selected within spark application, if you receive `[SCHEMA_NOT_FOUND] The schema \<schema_name>` error while trying to connect to the iceberg catalog, ensure the correct catalog and schema name are provided in spark application. Also ensure that the catalog under which you are looking for the schema is associated with the Spark engine.
+{: important}
+
 
 ```bash
 from pyspark.sql import SparkSession
@@ -172,6 +176,11 @@ if __name__ == '__main__':
 {: codeblock}
 
 
+## Troubleshooting
+
+* If you receive the error, `[REQUIRES_SINGLE_PART_NAMESPACE] spark_catalog requires a single-part namespace, but got \iceberg_data`.`results` while trying to create table with three part name likeiceberg_data.results.resultstable, ensure that the catalog is associated with the spark engine. If Spark is not configured with an Iceberg catalog, it won't have the necessary settings to recognize or use the three-part name format for the iceberg_data catalog.
+
+* As the spark schema is not selected in payload, and is selected within spark application, if you receive `[SCHEMA_NOT_FOUND] The schema \<schema_name>` error while trying to connect to the iceberg catalog, ensure the correct catalog and schema name are provided in spark application. Also ensure that the catalog under which you are looking for the schema is associated with the Spark engine.
 
 ## Related APIs
 {: #hudi_nsppi}
