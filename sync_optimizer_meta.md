@@ -133,15 +133,15 @@ To sync tables from {{site.data.keyword.lakehouse_short}}, the following items a
          ```
          {: codeblock}
 
-      - `type` - The type of metastore to which you are connecting. For the metastore managing Hive tables, the value is: `watsonx-data-hive`.
-      - `watsonx.data <CATALOG_NAME>` - as shown on the Infrastructure Manager page (case sensitive).
-      - `<THRIFT_URL>` - The URI of the {{site.data.keyword.lakehouse_short}} MDS thrift server. It must start with `https://`.
-      - MDS credentials (`<Username>` and `<Password>`) in `auth.plain.credentials` - Must be created on the watsonx.data side. See Connecting to watsonx.data on OpenShift. If the metastore requires PLAIN authentication, the credentials must be specified in the format `username:password` or `ibmlhapikey_username:apikey`. The password is stored securely in a software keystore.
-      - `auth.mode` - If the metastore requires authentication, indicates the mode of authentication to use. The `auth.mode` must be set to `PLAIN`.
-      - `use.SSL` - It must be true if the metastore requires an SSL connection.
-      - `<MDS certificate file path>` - This must be provided as a file on the db2u container as a certificate to validate the SSL connection. It is not necessary to pass a certificate if the SSL connection is established using a certificate issued by a well-known CA such as DigiCert or VeriSign. By default, the MDS certificates are available under the /secrets/external/ibm-lh-tls-secret/ca.crt path in Query optimizer.
+         - `type` - The type of metastore to which you are connecting. For the metastore managing Hive tables, the value is: `watsonx-data-hive`.
+         - `watsonx.data <CATALOG_NAME>` - as shown on the Infrastructure Manager page (case sensitive).
+         - `<THRIFT_URL>` - The URI of the {{site.data.keyword.lakehouse_short}} MDS thrift server. It must start with `https://`.
+         - MDS credentials (`<Username>` and `<Password>`) in `auth.plain.credentials` - Must be created on the watsonx.data side. See Connecting to watsonx.data    on OpenShift. If the metastore requires PLAIN authentication, the credentials must be specified in the format `username:password` or    `ibmlhapikey_username:apikey`. The password is stored securely in a software keystore.
+         - `auth.mode` - If the metastore requires authentication, indicates the mode of authentication to use. The `auth.mode` must be set to `PLAIN`.
+         - `use.SSL` - It must be true if the metastore requires an SSL connection.
+         - `<MDS certificate file path>` - This must be provided as a file on the db2u container as a certificate to validate the SSL connection. It is not    necessary to pass a certificate if the SSL connection is established using a certificate issued by a well-known CA such as DigiCert or VeriSign. By    default, the MDS certificates are available under the /secrets/external/ibm-lh-tls-secret/ca.crt path in Query optimizer.
 
-       2. Registering a Iceberg catalog from watsonx.data 2.2.2 and later:
+      2. Registering a Iceberg catalog from watsonx.data 2.2.2 and later:
 
          ```bash
          ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.REGISTER_EXT_METASTORE('<CATALOG_NAME>','type=iceberg-rest,catalog.name=<CATALOG_NAME>,uri=https://<REST_URL>/mds/iceberg,auth.mode=basic,ssl.cert=/secrets/external/ibm-lh-tls-secret/ca.crt,auth.plain.credentials=<USERNAME>:<PASSWORD>', ?, ?)';
@@ -155,13 +155,13 @@ To sync tables from {{site.data.keyword.lakehouse_short}}, the following items a
          ```
          {: codeblock}
 
-      - `type` - The type of metastore to which you are connecting. For the metastore managing Iceberg tables, the value is: `iceberg-rest`.
-      - `watsonx.data <CATALOG_NAME>` - as shown on the Infrastructure Manager page (case sensitive).
-      - `<THRIFT_URL>` - The URI of the {{site.data.keyword.lakehouse_short}} Iceberg REST MDS server. The URI must start with `https://` and contain the base path to the REST API catalog. For watsonx.data, the base path is `/mds/iceberg`.
-      - MDS credentials (`<Username>` and `<Password>`) in `auth.plain.credentials` - Must be created on the watsonx.data side. See Connecting to watsonx.data on OpenShift. If the metastore requires PLAIN authentication, the credentials must be specified in the format `username:password` or `ibmlhapikey_username:apikey`. The password is stored securely in a software keystore.
-      - `auth.mode` - If the metastore requires authentication, indicates the mode of authentication to use. The `auth.mode` must be set to `PLAIN`.
-      - `use.SSL` - It must be true if the metastore requires an SSL connection.
-      - `<MDS certificate file path>` - This must be provided as a file on the db2u container as a certificate to validate the SSL connection. It is not necessary to pass a certificate if the SSL connection is established using a certificate issued by a well-known CA such as DigiCert or VeriSign. By default, the MDS certificates are available under the /secrets/external/ibm-lh-tls-secret/ca.crt path in Query optimizer.
+         - `type` - The type of metastore to which you are connecting. For the metastore managing Iceberg tables, the value is: `iceberg-rest`.
+         - `watsonx.data <CATALOG_NAME>` - as shown on the Infrastructure Manager page (case sensitive).
+         - `<THRIFT_URL>` - The URI of the {{site.data.keyword.lakehouse_short}} Iceberg REST MDS server. The URI must start with `https://` and contain the base    path to the REST API catalog. For watsonx.data, the base path is `/mds/iceberg`.
+         - MDS credentials (`<Username>` and `<Password>`) in `auth.plain.credentials` - Must be created on the watsonx.data side. See Connecting to watsonx.data    on OpenShift. If the metastore requires PLAIN authentication, the credentials must be specified in the format `username:password` or    `ibmlhapikey_username:apikey`. The password is stored securely in a software keystore.
+         - `auth.mode` - If the metastore requires authentication, indicates the mode of authentication to use. The `auth.mode` must be set to `PLAIN`.
+         - `use.SSL` - It must be true if the metastore requires an SSL connection.
+         - `<MDS certificate file path>` - This must be provided as a file on the db2u container as a certificate to validate the SSL connection. It is not    necessary to pass a certificate if the SSL connection is established using a certificate issued by a well-known CA such as DigiCert or VeriSign. By    default, the MDS certificates are available under the /secrets/external/ibm-lh-tls-secret/ca.crt path in Query optimizer.
 
 4. Run the following command to register {{site.data.keyword.lakehouse_short}} catalog with **Query Optimizer**:
 

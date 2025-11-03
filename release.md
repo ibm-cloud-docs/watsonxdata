@@ -76,7 +76,7 @@ Customize your Spark application payload
 
 Common Policy Gateway (CPG)
 
-: The Common Policy Gateway (CPG) provisioning is now optional. You can create a watsonx.data instance without auto-provisioning CPG, unless a policy engine is explicitly required. With this feature, CPG provisioning is now fully optional and reversible. If a customer policy engine such as Ranger, or IKC is needed, CPG can be provisioned later. For more information, see [Enabling or disabling common policy gateway engines](/docs/watsonxdata?topic=watsonxdata-create_ebl_cpg)
+: The Common Policy Gateway (CPG) provisioning is now optional. You can create a watsonx.data instance without auto-provisioning CPG, unless a policy engine is explicitly required. With this feature, CPG provisioning is now fully optional and reversible. If a customer policy engine such as Ranger, or IKC is needed, CPG can be provisioned later. For more information, see [Enabling or disabling common policy gateway engines](/docs/watsonxdata?topic=watsonxdata-create_ebl_cpg).
 
 CPDCTL CLI enhancements
 
@@ -103,12 +103,12 @@ Query Optimizer enhancement
 
    Users can now register:
 
-   - Hive catalogs using the watsonx-data-hive metastore type.
-   - Iceberg catalogs using the iceberg-rest metastore type.
+   - Hive catalogs using the `watsonx-data-hive` metastore type.
+   - Iceberg catalogs using the `iceberg-rest` metastore type.
 
    This enhancement allows more granular control and compatibility with evolving metastore architectures. Registration is done using the `REGISTER_EXT_METASTORE` procedure with updated syntax and properties.
 
-   From this release onwards, legacy support for the unified watsonx-data metastore type is no longer available.
+   From this release onwards, legacy support for the unified `watsonx-data` metastore type is no longer available. For more information, see [Manually syncing Query Optimizer with metastore](/docs/watsonxdata?topic=watsonxdata-sync_optimizer_meta).
 
 
 Deprecated features
