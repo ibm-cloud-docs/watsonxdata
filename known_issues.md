@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-09-23"
+lastupdated: "2025-10-29"
 
 keywords: lakehouse
 
@@ -31,6 +31,67 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
+## `EXT_METASTORE_SYNC` fails due to catalog name mismatch
+{: #known_issue49613}
+
+Users may not be aware of the catalog name stored in the metadata. Therefore, if the catalog name used in the {{site.data.keyword.lakehouse_short}} UI differs from the one specified in the metadata file, EXT_METASTORE_SYNC will fail, preventing use of the Query Optimizer.
+
+**Workaround:** Create catalog with same name as in metadata files.
+
+## Node assignment delay during engine restart
+{: #known_issue35619_1}
+
+During the restart phase, the engine fails to assign a node due to limited node availability. As a result, schema creation is significantly delayed.
+
+## Storage Details page in Spark History UI loads as blank
+{: #known_issue27839}
+
+The Storage Details page within the Spark History UI fails to render any content. While the page loads, it remains completely blank, preventing users from viewing or managing storage-related information.
+To capture detailed storage (block update) information in the event logs, you must enable the configuration spark.eventLog.logBlockUpdates.enabled when submitting the application. For more information, see [Submitting Spark application by using native Spark engine](/docs/watsonxdata?topic=watsonxdata-smbit_nsp_1) and [Accessing the Spark history server](/docs/watsonxdata?topic=watsonxdata-wxd_spk_histry).
+
+## Spark application fails to run when filename contains spaces or special characters
+{: #known_issue29204}
+
+If you upload a Python (.py) file with spaces or special characters in its filename (e.g., wordcount (1).py), the Spark job fails to execute. The system does not handle such filenames, resulting in the following error during job submission.
+
+`/opt/ibm/entrypoint/start-spark-job-wrapper.sh: eval: line 293: syntax error near unexpected token (' /opt/ibm/entrypoint/start-spark-job-wrapper.sh: eval: line 293: spark-submit --master spark://spark-master-headless-b778988f-24ff-49c2-aa05-a56f3c204f0b:7077 s3a://sparkqa-donotdelete-pr-7aqi2frntm5vlz/spark_jobs/uploads/8f472c67-23aa-4f94-8ed6-c9f2dbe13e20/application/wordcount (1).py '/opt/ibm/spark/examples/src/main/resources/people.txt''`
+
+**Workaround:** To avoid this issue, you must rename the Python application file to remove spaces and special characters before uploading. For example, rename `wordcount (1).py` to `wordcount_1.py`.
+
+## Delay in QHMM diagnostic table creation due to backend engine initialization
+{: #known_issue35619}
+
+When enabling QHMM in the console, users may experience a noticeable delay before diagnostic tables appear. This is due to backend engine initialization and recipe sequencing, which are not immediately reflected in the UI.
+
+## Prepared statement fails for long SQL queries due to header size limits in IBM watsonx.data Presto
+{: #known_issue26969}
+
+Prepared statements for long and complex SQL queries may fail when executed through Flight service or JDBC clients (for example, DBeaver). This failure is caused by internal server errors resulting from exceeding default HTTP header size limits in the Presto engine. The issue is reproducible in Watsonx BI when enriching metric data assets with SQL queries around 14KB in size.
+
+This is not a limitation of PrestoDB itself, but rather a consequence of how the JDBC PreparedStatement API works. When a client or BI tool uses PreparedStatement, the SQL text and parameter metadata are serialized and transmitted as part of the HTTP request headers to the Presto coordinator. This behavior is standard for JDBC driver implementations and not specific to Presto’s query engine.
+
+**Workaround:** To mitigate this issue, consider the following approaches depending on your workload:
+
+1. **Increase header size limits**
+
+   Update the Presto engine configuration with the following parameters to support larger queries:
+
+   - `http-server.max-request-header-size=128kB`
+   - `http-server.max-response-header-size=128kB`
+   These properties are already whitelisted and can be adjusted using the customization API.
+
+   The current default value is set based on typical query sizes. However, increasing the request header size limit by default can introduce certain trade-offs. A larger header size increases the risk of Denial-of-Service (DoS) attacks, as it allows more data to be sent in each request. Additionally, each HTTP request will consume more memory, which can become significant under high concurrency. Therefore, these values should be tuned cautiously based on your environment and query patterns.
+   {: note}
+
+2. **Avoid using `PreparedStatement` for large queries**
+
+   If your BI tool or workload tends to generate very large SQL queries, consider disabling `PreparedStatement` and using `createStatement` instead. This avoids transmitting large SQL payloads via HTTP headers and can be a more scalable approach.
+
+## Milvus and Presto edit details page shows internal server error initially after creation
+{: #known_issue33725}
+
+You might encounter a 500 Internal Server Error when trying to edit the description on the Milvus and Presto engine details page shortly after creating the engine. This issue typically occurs during the first few attempts because the system delays policy propagation due to caching.
+
 ## Policy update delay
 {: #known_issue39182}
 
@@ -47,16 +108,6 @@ When using an external Spark engine to access data stored in an amazon_s3 bucket
 MOR to COW table conversion spark application is not supported in Spark 4.0.
 
 **Workaround:** Use Spark versions 3.4 or 3.5 to perform MOR to COW table conversion.
-
-## Adhoc storage ingestion fails due to missing bucket name
-{: #known_issue55277}
-
-This issue is specific to Snowflake.
-{: note}
-
-The ingestion job created using Adhoc Storage fails due to a missing or empty bucket_name in the request payload. The job enters a running state but eventually fails.
-
-**Workaround:** You can register the data source instead of using adhoc storage. Alternatively, persisting the connection allows ingestion to proceed.
 
 ## Preview dashboard displays null values with Presto(C++) engine due to hive catalog column name mismatch
 {: #known_issue54806}
@@ -102,9 +153,16 @@ After updating expired credentials for a storage or database resource associated
 ## Stats sync job remains stuck during execution
 {: #known_issue33503}
 
-Stats sync jobs may remain stuck during execution due to unknown conditions. When this occurs, users can check the logs to view the job status in the optimizer or Db2. If the job status is **NOTRECEIVED**, **NOTRUN**, or **UNKNOWN**, users must manually force delete the job and submit the next one in the queue.
+Stats sync jobs may remain stuck during execution due to unknown conditions. When this occurs, users can check the logs to view the job status in the optimizer or Db2. If the job status is **NOTRECEIVED**, **NOTRUN**, or **UNKNOWN**, users must manually force delete the job.
 
-- **NOTRECEIVED**: The system did not receive a call with a given task ID.
+After the stuck job is deleted:
+
+- If there are jobs currently in the **Queued** list, the first one will automatically move to **Active** and begin execution.
+- If no jobs are queued, users can manually submit a new job.
+
+**Status Definitions:**
+
+- **NOTRECEIVED**: The system did not receive a call for the given task ID.
 - **NOTRUN**: An error prevented the scheduler from invoking the task’s procedure.
 - **UNKNOWN**: The task began execution, but the scheduler failed to record the outcome due to an unexpected condition.
 

@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-09-09"
+  years: 2017, 2025
+lastupdated: "2025-10-28"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata

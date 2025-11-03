@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-23"
+lastupdated: "2025-10-29"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
 
@@ -44,6 +44,9 @@ To add a storage, complete the following steps:
 2. From the navigation menu, select **Infrastructure manager**.
 3. To define and connect a storage, click **Add component**.
 4. In the **Add component** window, select a storage from the **Storage** section and provide the details to establish the connection.
+
+Hadoop Distributed File System (HDFS) is not supported in Milvus.
+{: note}
 
 {{site.data.keyword.lakehouse_short}} supports the following data storage options:
    * [IBM Cloud Object Storage]({{site.data.keyword.ref-cos_storage-link}})

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-03"
+lastupdated: "2025-10-29"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
 
@@ -31,6 +31,9 @@ subcollection: watsonxdata
 
 MinIO is a high-performance, S3 compatible object store. It is built for large scale data lake and database workloads.
 {: shortdesc}
+ 
+ You can use GlusterFS as backend filesystem for MinIO. For more information, see [Setting up GlusterFS replicated storage with MinIO](/docs/watsonxdata?topic=watsonxdata-setting_glusterfs).
+ {: note}
 
  If you select **MinIO** from the **Storage** section, configure the following details:
 
@@ -42,8 +45,8 @@ MinIO is a high-performance, S3 compatible object store. It is built for large s
  | Access key | Enter your access key. |
  | Secret key | Enter your secret key. |
  | Connection Status | Click the Test connection link to test the storage connection. If the connection is successful, a success message appears.|
- | Designate this bucket as the ACL store | Select the checkbox to designate this bucket as the ACL store. \n This feature applies to {{site.data.keyword.lakehouse_short}} Premium, for more information see [Governance through Access Controlled Lists (AC)](https://dataplatform.cloud.ibm.com/docs/content/wsj/wx-data/gov_acl.html?context=wxd&audience=wdp). If you select the checkbox, the Associate catalog option is automatically selected, and you must specify a catalog to be used for ACLs.|
- | Associate Catalog | Select the checkbox to add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within. |
+ | Designate this bucket as the ACL store | Use the toggle switch to designate this bucket as the ACL store. If you enable the toggle switch, \n An **Enable Access Control List (ACL)?** dialog appears, Click **Enable**. \n This feature applies to {{site.data.keyword.lakehouse_short}} Premium, for more information see [Governance through Access Controlled Lists (AC)](https://dataplatform.cloud.ibm.com/docs/content/wsj/wx-data/gov_acl.html?context=wxd&audience=wdp). If you enable the toggle switch, the Associate catalog option is selected by default, with the Apache Iceberg catalog preselected. You cannot choose a different catalog for ACLs. You can designate only one storage as the ACL store per instance. After a storage is designated, this option will no longer be visible or available.|
+ | Associate Catalog | Enable the toggle switch to add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within. |
  | Catalog type | Select the catalog type from the list. The recommended catalog is Apache Iceberg. The other options for catalog are Apache Hive, Apache Hudi and Delta Lake.|
  | Catalog name | Enter the name of your catalog.|
  | Associate | Click Associate to create the storage. |

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2025-10-23"
 
 keywords: watsonxdata, qhmm
 
@@ -219,5 +219,3 @@ WITH (
 );`
 ```
 {: codeblock}
-
-3.	For instructions on diagnosing data in QHMM, follow instructions in [Managing diagnostic data by manual method]({{site.data.keyword.ref-mon_mng-link}}).

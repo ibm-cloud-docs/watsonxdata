@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-09-17"
+lastupdated: "2025-10-28"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata

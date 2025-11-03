@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-09-25"
+lastupdated: "2025-10-28"
 
 keywords: Spark, query, server,JDBC, Driver
 

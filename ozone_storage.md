@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-03"
+lastupdated: "2025-10-24"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
 
@@ -42,7 +42,7 @@ If you select **Apache Ozone** from the **Storage** section, configure the follo
  | Access key | Enter your access key. |
  | Secret key | Enter your secret key. |
  | Connection Status | Click the Test connection link to test the storage connection. If the connection is successful, a success message appears.|
- | Associate catalog | Select the checkbox to add a catalog for your storage. This catalog is automatically associated with your storage and serves as your query interface with the data stored within. |
+ | Associate catalog | Enable the toggle switch to add a catalog for your storage. This catalog is automatically associated with your storage and serves as your query interface with the data stored within. |
  | Catalog type | Apache Iceberg is the available catalog type.|
  | Catalog name | Enter the name of your catalog.|
  | Associate | Click Associate to create the storage. |

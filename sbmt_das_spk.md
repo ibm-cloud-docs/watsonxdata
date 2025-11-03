@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-09-10"
+lastupdated: "2025-10-29"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -29,6 +29,8 @@ This topic provides the procedure to submit a Spark application by using native 
 
     You can create different Cloud Object Storage buckets to store application code and the output. Register the data bucket, which stores the input data, and watsonx.data tables. You need not register the storage bucket, which maintains the application code with watsonx.data.
     {: note}
+
+* Associate the storage with the Spark engine. For information about how to associate with the Spark engine, see [Associating a catalog with an engine](/docs/watsonxdata?topic=watsonxdata-asso-cat-eng).
 
 ## Storages supported
 {: #nsppk_preq_1_stg}
@@ -100,6 +102,7 @@ curl --request POST --url https://<region>.lakehouse.cloud.ibm.com/lakehouse/api
     "application_details": {
         "conf": {
             "spark.hadoop.wxd.apiKey": "Basic <encoded-api-key>"
+            "spark.eventLog.logBlockUpdates.enabled":"true"
         },
         "application": "<storage>://<application-bucket-name>/iceberg.py"
     }
@@ -114,6 +117,7 @@ curl --request POST --url https://<region>.lakehouse.cloud.ibm.com/lakehouse/api
     "application_details": {
         "conf": {
             "spark.hadoop.wxd.apiKey": "Basic <encoded-api-key>"
+            "spark.eventLog.logBlockUpdates.enabled":"true"
         },
         "application": "<storage>://<application-bucket-name>/iceberg.py"
     }

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-09-16"
+lastupdated: "2025-10-21"
 
 keywords: watsonxdata, sal, auto enrichment
 
@@ -29,7 +29,7 @@ subcollection: watsonxdata
 # Modifying auto enrichment schedule metadata enrichment jobs
 {: #sal_modify_enrichmentrun}
 
-In {{site.data.keyword.lakehouse_full}}, the Semantic automation layer (SAL) automatically triggers metadata enrichment jobs at regular intervals. These jobs enrich metadata for all schema related assets in the Information Knowledge Catalog (IKC). While this ensures timely updates, frequent auto-runs may consume system resources unnecessarily, especially when no changes have occurred.
+In {{site.data.keyword.lakehouse_full}}, the Semantic automation layer (SAL) automatically triggers metadata enrichment jobs at regular intervals. These jobs enrich metadata for all schema related assets in the IBM Knowledge Catalog (IKC). While this ensures timely updates, frequent auto-runs may consume system resources unnecessarily, especially when no changes have occurred.
 
 To optimize performance, users can modify the schedule of these auto generated metadata enrichment jobs through the Software Hub console.
 

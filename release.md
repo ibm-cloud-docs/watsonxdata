@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-09-26"
+lastupdated: "2025-11-03"
 
 keywords: watsonxdata, release notes
 
@@ -28,12 +28,103 @@ For watsonx.data on-prem what's new, see [Release notes for watsonx.data](https:
 
 For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-prem Premium](https://www.ibm.com/docs/en/watsonx/watsonxdata-premium/2.2.x?topic=overview-whats-new-in-watsonxdata).
 
+## 31 October 2025 - Version 2.2.2
+{: #lakehouse_31oct2025}
+{: release-note}
+
+{{site.data.keyword.lakehouse_short}} 2.2.2 version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.2.2 release is available in your region, contact IBM Support.
+{: important}
+
+Engine and service enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
+
+   * Milvus in {{site.data.keyword.lakehouse_short}} now supports the following external storage types for storing vector data, index files, and binary logs: Google Cloud Storage (GCS), Azure Data Lake Storage (ADLS) Gen1, and S3-compatible storage types.
+   * Milvus scaling functionality is now disabled for the Starter T-shirt size. You can no longer scale from the Milvus Starter T-shirt size to any other size. Scaling back to Starter from a larger configuration is also not allowed.
+
+Data sources and storage enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following data sources and storage enhancements:
+
+   * You can now apply IBM Knowledge Catalog governance policies to the data source, Teradata. For more information, see [Connecting to IBM Knowledge Catalog (IKC)](/docs/watsonxdata?topic=watsonxdata-ikc_integration).
+   * You can now create a storage in an active state without associating it to a catalog. This enhancement removes the need for manual activation.
+   * You can  now enable and disable ACL features on an ACL-enabled storage in the topology view. For more information, see [Disabling or enabling ACL on an ACL-enabled storage](/docs/watsonxdata?topic=watsonxdata-enble_acl).
+   * You can now use GlusterFS, a scalable distributed file system, as a supported storage backend for MinIO. For more information, see [Setting up GlusterFS replicated storage with MinIO](/docs/watsonxdata?topic=watsonxdata-setting_glusterfs).
+   * You can now configure any S3 compatible object storage in {{site.data.keyword.lakehouse_short}} using the Custom S3 Storage option. For more information, see [Custom S3 Storage](/docs/watsonxdata?topic=watsonxdata-custom_s3_storage).
+   * You can now update credentials for Azure Data Lake Storage (ADLS) and Google Cloud Storage.
+   * You can now choose to save connection details either in the instance console database or in the default catalog within the data platform for the following data sources:
+      - IBM Db2
+      - IBM Netezza
+      - MySQL
+      - Oracle
+      - PostgreSQL
+      - Snowflake
+      - SQL Server
+
+Delta Lake catalogs now available with Spark access control extension
+
+: You can now use Delta Lake catalogs with the Spark access control extension, enabling enhanced security during Spark application submissions. The feature brings in additional authorization, ensuring that only authorized users can access and operate watsonx.data catalogs through Spark jobs. For more information, see [Enhancing Spark application submission using Spark access control extension](/docs/watsonxdata?topic=watsonxdata-spark-extnsn).
+
+Customize your Spark application payload
+
+: When you submit a Spark application in {{site.data.keyword.lakehouse_short}}, you can customize the application payload to include the following features:
+
+   * Idempotency keys: Ensures that application submissions are processed only once, even in cases of client-server communication failures.
+   * Maximum runtime controls: Defines a maximum execution time for Spark applications. If the timeout is not specified, jobs continue to run until completion, regardless of how long they take.
+
+   For more information, see [Customizing parameters for Spark application submission](/docs/watsonxdata?topic=watsonxdata-sbmt_spk_cust).
+
+Common Policy Gateway (CPG)
+
+: The Common Policy Gateway (CPG) provisioning is now optional. You can create a watsonx.data instance without auto-provisioning CPG, unless a policy engine is explicitly required. With this feature, CPG provisioning is now fully optional and reversible. If a customer policy engine such as Ranger, or IKC is needed, CPG can be provisioned later. For more information, see [Enabling or disabling common policy gateway engines](/docs/watsonxdata?topic=watsonxdata-create_ebl_cpg).
+
+CPDCTL CLI enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancements to IBM Cloud Pak for Data Command Line Interface (IBM cpdctl):
+
+   * Use the new `access-control` command group to manage access policies for resources in your {{site.data.keyword.lakehouse_short}} instance, including viewing, updating, and revoking access for users and groups. For more information, see [access-control](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata#cpdctl_commands_wxdataacscntrl).
+
+Data manager enhancements
+
+: Users can now create schemas with custom paths to view and sync data at a more granular level. With this new feature, users can synchronize only a specific directory (for example, /test1 or /test1/schema1) to retrieve tables under that path, instead of syncing the entire catalog. This targeted sync capability improves performance and precision in data management.
+
+Integration enhancements
+
+: IBM {{site.data.keyword.lakehouse_short}} now supports column-level lineage tracking for Presto by integrating with Manta. With this enhancement, users can now explore detailed column dependencies, relationships, and metadata changes, enabling deeper insights into data flows and improving traceability across pipelines.
+
+
+Query Optimizer enhancement
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following access Query Optimizer enhancements:
+
+   * **Support for Hive and Iceberg Metastore Registration in Query Optimizer**
+
+   The Query Optimizer supports distinct metastore types for Hive and Iceberg catalogs.
+
+   Users can now register:
+
+   - Hive catalogs using the `watsonx-data-hive` metastore type.
+   - Iceberg catalogs using the `iceberg-rest` metastore type.
+
+   This enhancement allows more granular control and compatibility with evolving metastore architectures. Registration is done using the `REGISTER_EXT_METASTORE` procedure with updated syntax and properties.
+
+   From this release onwards, legacy support for the unified `watsonx-data` metastore type is no longer available. For more information, see [Manually syncing Query Optimizer with metastore](/docs/watsonxdata?topic=watsonxdata-sync_optimizer_meta).
+
+
+Deprecated features
+
+: The IBM Client package is deprecated and the installation and support of the `ibm-lh-client` package shall not be available from the 2.3.0 release of {{site.data.keyword.lakehouse_short}}. The utilities and commands in the Client package are replaced with IBM CPDCTL CLI. Users are encouraged to migrate and explore CPDCTL. For more information about how to use IBM CPDCTL CLI, see [IBM cpdctl](/docs/watsonxdata?topic=watsonxdata-cpdctl_title).
+
+Use the following available tools for equivalent functionalities of the Client package:
+
+* `python-run` / `dev-sandbox` – Use the standard Python environment to develop and run Spark scripts.
+* `presto-run` / Presto CLI – Use the official [Presto CLI](https://prestodb.io/docs/current/installation) to run SQL queries against watsonx.data.
+* `cert-mgmt` – Use the [`JVM` keytool](https://www.ibm.com/docs/en/sdk-java-technology/8?topic=guide-keytool) to manage `HTTPS` certificates.
+
+
 ## 23 September 2025 - Version 2.2.1 New Functionalities Introduced (NFI)
 {: #lakehouse_23sept2025}
 {: release-note}
-
-{{site.data.keyword.lakehouse_short}} 2.2.1 NFI version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.2.1 NFI release is available in your region, contact IBM Support.
-{: important}
 
 Release notes for 2.2.1 NFI version of watsonx.data as a Service on IBM Cloud with the generative AI experience, see [IBM watsonx.data as a Service version 2.2.1 New Functionalities Introduced (NFI)](https://dataplatform.cloud.ibm.com/docs/content/wsj/wx-data/whats_new-wdp.html?context=wxd&audience=wdp#week-2025-9-23).
 {: note}
@@ -63,7 +154,7 @@ Engine and service enhancements
 
 Query Optimizer enhancement
 
-: You can now monitor query performance improvements through the optimizer dashboard. The optimizer is actively managing query plans for the associated catalogs and improving performance for Presto (C++) engines. For more details, see [Monitoring query performance from Optimizer dashboard](/docs/watsonxdata?topic=watsonxdata-analyze_optimizer).
+: You can now monitor query performance improvements through the optimizer dashboard. The optimizer is actively managing query plans for the associated catalogs and improving performance for Presto (C++) engines. For more details, see [Managing statistical updates from Optimizer dashboard](/docs/watsonxdata?topic=watsonxdata-analyze_optimizer).
 
 Access management enhancements
 
@@ -171,11 +262,11 @@ Service enhancements
 {: #lakehouse_11july2025}
 {: release-note}
 
-A new version of {{site.data.keyword.lakehouse_full}} was released on 11 July, 2025 with the following change:
+A new version of {{site.data.keyword.lakehouse_short}} was released on 11 July, 2025 with the following change:
 
 New region availability
 
-: {{site.data.keyword.lakehouse_full}} on AWS is now available in the Mumbai region.
+: {{site.data.keyword.lakehouse_short}} on AWS is now available in the Mumbai region.
 
 
 ## 07 July 2025 - Version 2.2.0 Hotfix 1
@@ -183,16 +274,6 @@ New region availability
 {: release-note}
 
 Version 2.2 hotfix of watsonx.data was released on 07 July, 2025. This release includes security updates and fixes.
-
-Deprecated features
-
-: The IBM Client package is deprecated and shall be removed from the 2.2.2 release. The utilities and commands in the Client package are replaced with IBM CPDCTL CLI. Users are encouraged to migrate and explore CPDCTL. For more information about how to use IBM CPDCTL CLI, see [IBM cpdctl](/docs/watsonxdata?topic=watsonxdata-cpdctl_title).
-
-Use the following available tools for equivalent functionalities of the Client package:
-
-* `python-run` / `dev-sandbox` – Use the standard Python environment to develop and run Spark scripts.
-* `presto-run` / Presto CLI – Use the official [Presto CLI](https://prestodb.io/docs/current/installation) to run SQL queries against watsonx.data.
-* `cert-mgmt` – Use the [`JVM` keytool](https://www.ibm.com/docs/en/sdk-java-technology/8?topic=guide-keytool) to manage `HTTPS` certificates.
 
 
 ## 11 June 2025 - Version 2.2.0

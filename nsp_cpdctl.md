@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-21"
+lastupdated: "2025-10-28"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata

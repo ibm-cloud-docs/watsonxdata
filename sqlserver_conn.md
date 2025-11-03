@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-25"
+lastupdated: "2025-10-29"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -44,6 +44,7 @@ You can configure SQL Server  using one of the following methods:
 
  | Field           | Description        |
  |------------------|--------------------|
+ | Target persistence | Select the target persistence: \n * Watsonx.data instance - The instance console database stores the connection details exclusively. \n * Platform asset catalog - The default catalog in the data platform stores your connection details. If you select Platform asset catalog as the target persistence, only Default (username and password) and NTLM authentication types are available. \n You can select the `Platform asset catalog` option only if data platform services are active, a **Platform asset catalog** exists in the data platform, and you have access to it. |
  | Display name    | Enter the data source name to be displayed on the screen. |
  | Database name     | Enter the name of your database.|
  | Hostname            | Enter the hostname.  |
@@ -64,6 +65,7 @@ You can configure SQL Server  using one of the following methods:
 | --- | --- |
 | Select catalog | Use the dropdown to select a catalog. |
 | Select data source | Use the dropdown to select a data source from the selected catalog. |
+| Target persistence | Select the target persistence: \n * Watsonx.data instance - The instance console database stores the connection details exclusively. \n * Platform asset catalog - The default catalog in the data platform stores your connection details. \n You can select the `Platform asset catalog` option only if data platform services are active, a **Platform asset catalog** exists in the data platform, and you have access to it. |
 | Connection status | Click the Test connection link to test the database connection. If the database connection is successful, a success message appears. |
 | Display name | Enter the database name to be displayed on the screen. |
 | Associate catalog | Select the checkbox to associate a catalog to the data source. This catalog is automatically associated with your data source and serves as your query interface with the data stored within. |
@@ -78,7 +80,8 @@ You can configure SQL Server  using one of the following methods:
 | Field | Description |
 | --- | --- |
 | Select project | Use the dropdown to select a project. |
-| Select data source | Use the dropdown to select a data source from the selected project |
+| Select data source | Use the dropdown to select a data source from the selected project. |
+| Target persistence | Select the target persistence: \n * Watsonx.data instance - The instance console database stores the connection details exclusively. \n * Platform asset catalog - The default catalog in the data platform stores your connection details. \n You can select the `Platform asset catalog` option only if data platform services are active, a **Platform asset catalog** exists in the data platform, and you have access to it. |
 | Connection status | Click the Test connection link to test the database connection. If the database connection is successful, a success message appears. |
 | Display name | Enter the database name to be displayed on the screen. |
 | Associate catalog | Select the checkbox to associate a catalog to the data source. This catalog is automatically associated with your data source and serves as your query interface with the data stored within. |

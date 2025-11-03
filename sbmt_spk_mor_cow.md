@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-23"
+lastupdated: "2025-10-28"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -104,3 +104,5 @@ Parameter values:
 - `<cow-table-name>` : The name of the CoW table that is synchronized with the MoR table.
 - `<primary-key>` : The primary key that is used for creating CoW table.
 - `<encoded-api-key>` : The value must be in the format echo -n"ibmlhapikey_<user_id>:<user’s api key>" | base64. Here, <user_id> is the IBM Cloud ID of the user whose api key is used to access the data bucket. The <IAM_APIKEY> here is the API key of the user accessing the Object store bucket. To generate an API key, login into the watsonx.data console and navigate to Profile > Profile and Settings > API Keys and generate a new API key.
+
+

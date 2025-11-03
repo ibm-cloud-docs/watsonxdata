@@ -1,375 +1,188 @@
 keyword:
-  dissociate-catalog-link:
-    /docs/watsonxdata?topic=watsonxdata-disso-cat-eng
-  ref-about_optimizer-link:
-    /docs/watsonxdata?topic=watsonxdata-about_optimizer
-  ref-adding-milvus-service-link:
-    /docs/watsonxdata?topic=watsonxdata-adding-milvus-service
-  ref-appl-auto-scaling-link:
-    /docs/watsonxdata?topic=watsonxdata-appl-auto-scaling
-  ref-wxd-ae_limits-link:
-    /docs/watsonxdata?topic=watsonxdata-wxd-ae_limits
-  ref-api_custom_ctg_pjcw-link:
-    /docs/watsonxdata?topic=watsonxdata-api_custom_ctg_pjcw
-  ref-api_custom_jvm_pjcw-link:
-    /docs/watsonxdata?topic=watsonxdata-api_custom_jvm_pjcw
-  ref-api_custom_ov-link:
-    /docs/watsonxdata?topic=watsonxdata-api_custom_ov
-  ref-aapi_custom_pcpp_cood-link:
-    /docs/watsonxdata?topic=watsonxdata-aapi_custom_pcpp_cood
-  ref-api_custom_pcpp_ctg-link:
-    /docs/watsonxdata?topic=watsonxdata-api_custom_pcpp_ctg
-  ref-api_custom_pcpp_vlx-link:
-    /docs/watsonxdata?topic=watsonxdata-api_custom_pcpp_vlx
-  ref-api_custom_prm_pjcw-link:
-    /docs/watsonxdata?topic=watsonxdata-api_custom_prm_pjcw
-  ref-api_custom_wkr_pcpp-link:
-    /docs/watsonxdata?topic=watsonxdata-api_custom_wkr_pcpp
-  ref-compute_isolation-link:
-    /docs/watsonxdata?topic=watsonxdata-compute_isolation
-  ref-arrow_database-link:
-    /docs/watsonxdata?topic=watsonxdata-arrow_database
-  ref-asso-cat-eng-link:
-    /docs/watsonxdata?topic=watsonxdata-asso-cat-eng
-  ref-at_events-link:
-    /docs/watsonxdata?topic=watsonxdata-at_events
-  ref-bigquery_database-link:
-    /docs/watsonxdata?topic=watsonxdata-bigquery_database
-  ref-manage_bill-link:
-    /docs/watsonxdata?topic=watsonxdata-manage_bill
-  ref-cas_ep_ov-link:
-    /docs/watsonxdata?topic=watsonxdata-cas_ep_ov
-  ref-cas_proxy-link:
-    /docs/watsonxdata?topic=watsonxdata-cas_proxy
-  ref-cassandra_database-link:
-    /docs/watsonxdata?topic=watsonxdata-cassandra_database
-  ref-cli_commands-link:
-    /docs/watsonxdata?topic=watsonxdata-cli_commands
-  ref-clickhouse_database-link:
-    /docs/watsonxdata?topic=watsonxdata-clickhouse_database
-  ref-lh-config-ae-link:
-    /docs/watsonxdata?topic=watsonxdata-lh-config-ae
-  ref-con-presto-serv-link:
-    /docs/watsonxdata?topic=watsonxdata-con-presto-serv
-  ref-conn-to-milvus-link:
-    /docs/watsonxdata?topic=watsonxdata-conn-to-milvus
-  ref-create_schema-link:
-    /docs/watsonxdata?topic=watsonxdata-create_schema
-  ref-create_table-link:
-    /docs/watsonxdata?topic=watsonxdata-create_table
-  ref-custom_database-link:
-    /docs/watsonxdata?topic=watsonxdata-custom_database
-  ref-data_policy-link:
-    /docs/watsonxdata?topic=watsonxdata-data_policy
-  ref-mng_data-link:
-    /docs/watsonxdata?topic=watsonxdata-mng_data
-  ref-db2_database-link:
-    /docs/watsonxdata?topic=watsonxdata-db2_database
-  ref-delete_engine-link:
-    /docs/watsonxdata?topic=watsonxdata-delete_engine
-  ref-delete_bucket-link:
-    /docs/watsonxdata?topic=watsonxdata-delete_bucket
-  ref-delete_database-link:
-    /docs/watsonxdata?topic=watsonxdata-delete_database
-  ref-delete_lh-link:
-    /docs/watsonxdata?topic=watsonxdata-delete_lh
-  ref-derby_database-link:
-    /docs/watsonxdata?topic=watsonxdata-derby_database
-  ref-disso-cat-eng-link:
-    /docs/watsonxdata?topic=watsonxdata-disso-cat-eng
-  ref-dvm_database-link:
-    /docs/watsonxdata?topic=watsonxdata-dvm_database
-  ref-edit-buck-tags-link:
-    /docs/watsonxdata?topic=watsonxdata-edit-buck-tags
-  ref-edit-db-tags-link:
-    /docs/watsonxdata?topic=watsonxdata-edit-db-tags
-  ref-edit-eng-tags-link:
-    /docs/watsonxdata?topic=watsonxdata-edit-eng-tags
-  ref-elasticsearch_database-link:
-    /docs/watsonxdata?topic=watsonxdata-elasticsearch_database
-  ref-event-notifications-events-link:
-    /docs/watsonxdata?topic=watsonxdata-event-notifications-events
-  ref-exec_inspect_optimizer-link:
-    /docs/watsonxdata?topic=watsonxdata-exec_inspect_optimizer
-  ref-exp_objects-link:
-    /docs/watsonxdata?topic=watsonxdata-exp_objects
-  ref-eximp-q-hist-link:
-    /docs/watsonxdata?topic=watsonxdata-eximp-q-hist
-  ref-explain_sql_query-link:
-    /docs/watsonxdata?topic=watsonxdata-explain_sql_query
-  ref-buck-obj-link:
-    /docs/watsonxdata?topic=watsonxdata-buck-obj
-  ref-exp-cat-obj-link:
-    /docs/watsonxdata?topic=watsonxdata-exp-cat-obj
-  ref-faqs-link:
-    /docs/watsonxdata?topic=watsonxdata-faqs
-  ref-help-and-support-link:
-    /docs/watsonxdata?topic=watsonxdata-help-and-support
-  ref-getting-started_1-link:
-    /docs/watsonxdata?topic=watsonxdata-getting-started_1
-  ref-getting-started-link:
-    /docs/watsonxdata?topic=watsonxdata-getting-started
-  ref-greenplum_database-link:
-    /docs/watsonxdata?topic=watsonxdata-greenplum_database
-  ref-hadr_wxd-link:
-    /docs/watsonxdata?topic=watsonxdata-hadr_wxd
-  ref-hms-link:
-    /docs/watsonxdata?topic=watsonxdata-hms
-  ref-iam-link:
-    /docs/watsonxdata?topic=watsonxdata-iam
-  ref-ikc_integration-link:
-    /docs/watsonxdata?topic=watsonxdata-ikc_integration
-  ref-informix_database-link:
-    /docs/watsonxdata?topic=watsonxdata-informix_database
-  ref-create_ingestioncli-link:
-    /docs/watsonxdata?topic=watsonxdata-create_ingestioncli
-  ref-create_ingestconfig-link:
-    /docs/watsonxdata?topic=watsonxdata-create_ingestconfig
-  ref-ingest_presto_cli-link:
-    /docs/watsonxdata?topic=watsonxdata-ingest_presto_cli
-  ref-ingest_rstapi_cli-link:
-    /docs/watsonxdata?topic=watsonxdata-ingest_rstapi_cli
-  ref-ingest_spark_cli-link:
-    /docs/watsonxdata?topic=watsonxdata-ingest_spark_cli
-  ref-ingest_spark_ui-link:
-    /docs/watsonxdata?topic=watsonxdata-ingest_spark_ui
-  ref-load_ingest_data-link:
-    /docs/watsonxdata?topic=watsonxdata-load_ingest_data
-  ref-install_optimizer-link:
-    /docs/watsonxdata?topic=watsonxdata-install_optimizer
-  ref-intro_nativespark-link:
-    /docs/watsonxdata?topic=watsonxdata-intro_nativespark
-  ref-kafka_database-link:
-    /docs/watsonxdata?topic=watsonxdata-kafka_database
-  ref-known_issues-link:
-    /docs/watsonxdata?topic=watsonxdata-known_issues
-  ref-tutorial_hp_intro-link:
-    /docs/watsonxdata?topic=watsonxdata-tutorial_hp_intro
-  ref-lab_nsp-link:
-    /docs/watsonxdata?topic=watsonxdata-lab_nsp
-  ref-log_analysis-link:
-    /docs/watsonxdata?topic=watsonxdata-log_analysis
-  ref-log_nsp-link:
-    /docs/watsonxdata?topic=watsonxdata-log_nsp
-  ref-manage_access-link:
-    /docs/watsonxdata?topic=watsonxdata-manage_access
-  ref-mariadb_database-link:
-    /docs/watsonxdata?topic=watsonxdata-mariadb_database
-  ref-whatismilvus-link:
-    /docs/watsonxdata?topic=watsonxdata-whatismilvus
-  ref-mixed_case_behavior-link:
-    /docs/watsonxdata?topic=watsonxdata-mixed_case_behavior
-  ref-mixed_case_overview-link:
-    /docs/watsonxdata?topic=watsonxdata-mixed_case_overview
-  ref-mng_appltn-link:
-    /docs/watsonxdata?topic=watsonxdata-mng_appltn
-  ref-manage_nsp-link:
-    /docs/watsonxdata?topic=watsonxdata-manage_nsp
-  ref-mongodb_database-link:
-    /docs/watsonxdata?topic=watsonxdata-mongodb_database
-  ref-monitor_wxd-link:
-    /docs/watsonxdata?topic=watsonxdata-monitor_wxd
-  ref-mysql_database-link:
-    /docs/watsonxdata?topic=watsonxdata-mysql_database
-  ref-netezza_database-link:
-    /docs/watsonxdata?topic=watsonxdata-netezza_database
-  ref-manage_notfications-link:
-    /docs/watsonxdata?topic=watsonxdata-manage_notfications
-  ref-lab_mon_nsp-link:
-    /docs/watsonxdata?topic=watsonxdata-lab_mon_nsp
-  ref-ts-nsp-cert-link:
-    /docs/watsonxdata?topic=watsonxdata-ts-nsp-cert
-  ref-ts-nsp-permsn-link:
-    /docs/watsonxdata?topic=watsonxdata-ts-nsp-permsn
-  ref-ts-nsp-time-link:
-    /docs/watsonxdata?topic=watsonxdata-ts-nsp-time
-  ref-oracle_database-link:
-    /docs/watsonxdata?topic=watsonxdata-oracle_database
-  ref-pause_engine-link:
-    /docs/watsonxdata?topic=watsonxdata-pause_engine
-  ref-pause_resume_milvus-link:
-    /docs/watsonxdata?topic=watsonxdata-pause_resume_milvus
-  ref-pcpp_ov-link:
-    /docs/watsonxdata?topic=watsonxdata-pcpp_ov
-  ref-pcpp_prov-link:
-    /docs/watsonxdata?topic=watsonxdata-pcpp_prov
-  ref-pinot_database-link:
-    /docs/watsonxdata?topic=watsonxdata-pinot_database
-  ref-postgresql_database-link:
-    /docs/watsonxdata?topic=watsonxdata-postgresql_database
-  ref-prepare_ingest_data-link:
-    /docs/watsonxdata?topic=watsonxdata-prepare_ingest_data
-  ref-presto_overview-link:
-    /docs/watsonxdata?topic=watsonxdata-presto_overview
-  ref-prometheus_database-link:
-    /docs/watsonxdata?topic=watsonxdata-prometheus_database
-  ref-prov_engine-link:
-    /docs/watsonxdata?topic=watsonxdata-prov_engine
-  ref-tutorial_prov_lite_1-link:
-    /docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1
-  ref-lh-provisioning-serverless-link:
-    /docs/watsonxdata?topic=watsonxdata-lh-provisioning-serverless
-  ref-prov_nspark-link:
-    /docs/watsonxdata?topic=watsonxdata-prov_nspark
-  ref-qhmm-link:
-    /docs/watsonxdata?topic=watsonxdata-qhmm
-  ref-ret_qhmm-link:
-    /docs/watsonxdata?topic=watsonxdata-ret_qhmm
-  ref-ovrvw_qhmm-link:
-    /docs/watsonxdata?topic=watsonxdata-ovrvw_qhmm
-  ref-query_history-link:
-    /docs/watsonxdata?topic=watsonxdata-query_history
-  ref-quick_start-link:
-    /docs/watsonxdata?topic=watsonxdata-quick_start
-  ref-redshift_database-link:
-    /docs/watsonxdata?topic=watsonxdata-redshift_database
-  ref-reg_bucket-link:
-    /docs/watsonxdata?topic=watsonxdata-reg_bucket
-  ref-reg_database-link:
-    /docs/watsonxdata?topic=watsonxdata-reg_database
-  ref-reg_engine-link:
-    /docs/watsonxdata?topic=watsonxdata-reg_engine
-  ref-release-link:
-    /docs/watsonxdata?topic=watsonxdata-release
-  ref-response-link:
-    /docs/watsonxdata?topic=watsonxdata-response
-  ref-resume_engine-link:
-    /docs/watsonxdata?topic=watsonxdata-resume_engine
-  ref-role_priv-link:
-    /docs/watsonxdata?topic=watsonxdata-role_priv
-  ref-delta_ext_sp-link:
-    /docs/watsonxdata?topic=watsonxdata-delta_ext_sp
-  ref-hudi_ext_sp-link:
-    /docs/watsonxdata?topic=watsonxdata-hudi_ext_sp
-  ref-hudi_nsp-link:
-    /docs/watsonxdata?topic=watsonxdata-hudi_nsp
-  ref-run_sql-link:
-    /docs/watsonxdata?topic=watsonxdata-run_sql
-  ref-s2s_auth-link:
-    /docs/watsonxdata?topic=watsonxdata-s2s_auth
-  ref-sal_enrichdata-link:
-    /docs/watsonxdata?topic=watsonxdata-sal_enrichdata
-  ref-sal_register-link:
-    /docs/watsonxdata?topic=watsonxdata-sal_register
-  ref-sal_title-link:
-    /docs/watsonxdata?topic=watsonxdata-sal_title
-  ref-salesforce_database-link:
-    /docs/watsonxdata?topic=watsonxdata-salesforce_database
-  ref-scl_nsp-link:
-    /docs/watsonxdata?topic=watsonxdata-scl_nsp
-  ref-scale_engine-link:
-    /docs/watsonxdata?topic=watsonxdata-scale_engine
-  ref-singlestore_database-link:
-    /docs/watsonxdata?topic=watsonxdata-singlestore_database
-  ref-snowflake_database-link:
-    /docs/watsonxdata?topic=watsonxdata-snowflake_database
-  ref-spark-emr-link:
-    /docs/watsonxdata?topic=watsonxdata-spark-emr
-  ref-wxd_spk_histry-link:
-    /docs/watsonxdata?topic=watsonxdata-wxd_spk_histry
-  ref-run_nb-link:
-    /docs/watsonxdata?topic=watsonxdata-run_nb
-  ref-table-run_samp_file-link:
-    /docs/watsonxdata?topic=watsonxdata-table-run_samp_file
-  ref-run_samp_file-link:
-    /docs/watsonxdata?topic=watsonxdata-run_samp_file
-  ref-wxd_spk_ui-link:
-    /docs/watsonxdata?topic=watsonxdata-wxd_spk_ui
-  ref-spk_ovrviw-link:
-    /docs/watsonxdata?topic=watsonxdata-spk_ovrviw
-  ref-sqlserver_database-link:
-    /docs/watsonxdata?topic=watsonxdata-sqlserver_database
-  ref-getstarted-console-link:
-    /docs/watsonxdata?topic=watsonxdata-getstarted-console
-  ref-sync_log-link:
-    /docs/watsonxdata?topic=watsonxdata-sync_log
-  ref-sync_optimizer_meta-link:
-    /docs/watsonxdata?topic=watsonxdata-sync_optimizer_meta
-  ref-teradata_database-link:
-    /docs/watsonxdata?topic=watsonxdata-teradata_database
-  ref-ts_cs-link:
-    /docs/watsonxdata?topic=watsonxdata-ts_cs
-  ref-ts_ip_restrict-link:
-    /docs/watsonxdata?topic=watsonxdata-ts_ip_restrict
-  ref-tutorial_prov_custbckt1-link:
-    /docs/watsonxdata?topic=watsonxdata-tutorial_prov_custbckt1
-  ref-Db2tutorial_join_data-link:
-    /docs/watsonxdata?topic=watsonxdata-Db2tutorial_join_data
-  ref-tutorial_get_strt-link:
-    /docs/watsonxdata?topic=watsonxdata-tutorial_get_strt
-  ref-uninstall_optimizer-link:
-    /docs/watsonxdata?topic=watsonxdata-uninstall_optimizer
-  ref-up-db-cred-link:
-    /docs/watsonxdata?topic=watsonxdata-up-db-cred
-  ref-update-wxd-link:
-    /docs/watsonxdata?topic=watsonxdata-update-wxd
-  ref-view_edit-link:
-    /docs/watsonxdata?topic=watsonxdata-view_edit
-  ref-view-end-link:
-    /docs/watsonxdata?topic=watsonxdata-view-end
-  ref-working_with_milvus-link:
-    /docs/watsonxdata?topic=watsonxdata-working_with_milvus
-  ref-ranger_1-link:
-    /docs/watsonxdata?topic=watsonxdata-ranger_1
-  ref-druid_database-link:
-    /docs/watsonxdata?topic=watsonxdata-druid_database
-  ref-conf_rcrs_grp-link:
-    /docs/watsonxdata?topic=watsonxdata-conf_rcrs_grp
-  ref-spl_engine-link:
-    /docs/watsonxdata?topic=watsonxdata-spl_engine
-  ref-gcs_storage-link:
-    /docs/watsonxdata?topic=watsonxdata-gcs_storage
-  ref-hdfs_storage-link:
-    /docs/watsonxdata?topic=watsonxdata-hdfs_storage
-  ref-minio_storage-link:
-    /docs/watsonxdata?topic=watsonxdata-minio_storage
-  ref-ceph_storage-link:
-    /docs/watsonxdata?topic=watsonxdata-ceph_storage
-  ref-amazons_storage-link:
-    /docs/watsonxdata?topic=watsonxdata-amazons_storage
-  ref-cos_storage-link:
-    /docs/watsonxdata?topic=watsonxdata-cos_storage
-  ref-ozone_storage-link:
-    /docs/watsonxdata?topic=watsonxdata-ozone_storage
-  ref-adls_genblob_storage-link:
-    /docs/watsonxdata?topic=watsonxdata-adls_genblob_storage
-  ref-ingest_sparklogshistory-link:
-    /docs/watsonxdata?topic=watsonxdata-ingest_sparklogshistory
-  ref-prepare_ingest_data2-link:
-    /docs/watsonxdata?topic=watsonxdata-prepare_ingest_data2
-  ref-qhmm_shell-link:
-    /docs/watsonxdata?topic=watsonxdata-qhmm_shell
-  ref-dc_integration-link:
-    /docs/watsonxdata?topic=watsonxdata-dc_integration
-  ref-abt_dbt-link:
-    /docs/watsonxdata?topic=watsonxdata-abt_dbt
-  ref-dbt_watsonx_presto-link:
-    /docs/watsonxdata?topic=watsonxdata-dbt_watsonx_presto
-  ref-dbt_watsonx_presto_conf-link:
-    /docs/watsonxdata?topic=watsonxdata-dbt_watsonx_presto_conf
-  ref-dbt_watsonx_presto_inst-link:
-    /docs/watsonxdata?topic=watsonxdata-dbt_watsonx_presto_inst
-  ref-dbt_watsonx_spark_inst-link:
-    /docs/watsonxdata?topic=watsonxdata-dbt_watsonx_spark_inst
-  ref-dbt_watsonx_spark_conf-link:
-    /docs/watsonxdata?topic=watsonxdata-dbt_watsonx_spark_conf
-  ref-abt_bi-link:
-    (/docs/watsonxdata?topic=watsonxdata-abt_bi
-  ref-tableau-link:
-    /docs/watsonxdata?topic=watsonxdata-tableau
-  ref-looker-link:
-    /docs/watsonxdata?topic=watsonxdata-looker
-  ref-domo-link:
-    /docs/watsonxdata?topic=watsonxdata-domo
-  ref-qlik-link:
-    /docs/watsonxdata?topic=watsonxdata-qlik
-  ref-bi_intro-link:
-    /docs/watsonxdata?topic=watsonxdata-bi_intro
-  ref-airflow-link:
-    /docs/watsonxdata?topic=watsonxdata-airflow
-  ref-redis_database-link:
-    /docs/watsonxdata?topic=watsonxdata-redis_database
-  ref-get_connection-link:
-    /docs/watsonxdata?topic=watsonxdata-get_connection
-  ref-resource_grp_pptys-link:
-    /docs/watsonxdata?topic=watsonxdata-resource_grp_pptys
+  dissociate-catalog-link: /docs/watsonxdata?topic=watsonxdata-disso-cat-eng
+  ref-about_optimizer-link: /docs/watsonxdata?topic=watsonxdata-about_optimizer
+  ref-adding-milvus-service-link: /docs/watsonxdata?topic=watsonxdata-adding-milvus-service
+  ref-appl-auto-scaling-link: /docs/watsonxdata?topic=watsonxdata-appl-auto-scaling
+  ref-wxd-ae_limits-link: /docs/watsonxdata?topic=watsonxdata-wxd-ae_limits
+  ref-api_custom_ctg_pjcw-link: /docs/watsonxdata?topic=watsonxdata-api_custom_ctg_pjcw
+  ref-api_custom_jvm_pjcw-link: /docs/watsonxdata?topic=watsonxdata-api_custom_jvm_pjcw
+  ref-api_custom_ov-link: /docs/watsonxdata?topic=watsonxdata-api_custom_ov
+  ref-aapi_custom_pcpp_cood-link: /docs/watsonxdata?topic=watsonxdata-aapi_custom_pcpp_cood
+  ref-api_custom_pcpp_ctg-link: /docs/watsonxdata?topic=watsonxdata-api_custom_pcpp_ctg
+  ref-api_custom_pcpp_vlx-link: /docs/watsonxdata?topic=watsonxdata-api_custom_pcpp_vlx
+  ref-api_custom_prm_pjcw-link: /docs/watsonxdata?topic=watsonxdata-api_custom_prm_pjcw
+  ref-api_custom_wkr_pcpp-link: /docs/watsonxdata?topic=watsonxdata-api_custom_wkr_pcpp
+  ref-compute_isolation-link: /docs/watsonxdata?topic=watsonxdata-compute_isolation
+  ref-arrow_database-link: /docs/watsonxdata?topic=watsonxdata-arrow_database
+  ref-asso-cat-eng-link: /docs/watsonxdata?topic=watsonxdata-asso-cat-eng
+  ref-at_events-link: /docs/watsonxdata?topic=watsonxdata-at_events
+  ref-bigquery_database-link: /docs/watsonxdata?topic=watsonxdata-bigquery_database
+  ref-manage_bill-link: /docs/watsonxdata?topic=watsonxdata-manage_bill
+  ref-cas_ep_ov-link: /docs/watsonxdata?topic=watsonxdata-cas_ep_ov
+  ref-cas_proxy-link: /docs/watsonxdata?topic=watsonxdata-cas_proxy
+  ref-cassandra_database-link: /docs/watsonxdata?topic=watsonxdata-cassandra_database
+  ref-cli_commands-link: /docs/watsonxdata?topic=watsonxdata-cli_commands
+  ref-clickhouse_database-link: /docs/watsonxdata?topic=watsonxdata-clickhouse_database
+  ref-lh-config-ae-link: /docs/watsonxdata?topic=watsonxdata-lh-config-ae
+  ref-con-presto-serv-link: /docs/watsonxdata?topic=watsonxdata-con-presto-serv
+  ref-conn-to-milvus-link: /docs/watsonxdata?topic=watsonxdata-conn-to-milvus
+  ref-create_schema-link: /docs/watsonxdata?topic=watsonxdata-create_schema
+  ref-create_table-link: /docs/watsonxdata?topic=watsonxdata-create_table
+  ref-custom_database-link: /docs/watsonxdata?topic=watsonxdata-custom_database
+  ref-data_policy-link: /docs/watsonxdata?topic=watsonxdata-data_policy
+  ref-mng_data-link: /docs/watsonxdata?topic=watsonxdata-mng_data
+  ref-db2_database-link: /docs/watsonxdata?topic=watsonxdata-db2_database
+  ref-delete_engine-link: /docs/watsonxdata?topic=watsonxdata-delete_engine
+  ref-delete_bucket-link: /docs/watsonxdata?topic=watsonxdata-delete_bucket
+  ref-delete_database-link: /docs/watsonxdata?topic=watsonxdata-delete_database
+  ref-delete_lh-link: /docs/watsonxdata?topic=watsonxdata-delete_lh
+  ref-derby_database-link: /docs/watsonxdata?topic=watsonxdata-derby_database
+  ref-disso-cat-eng-link: /docs/watsonxdata?topic=watsonxdata-disso-cat-eng
+  ref-dvm_database-link: /docs/watsonxdata?topic=watsonxdata-dvm_database
+  ref-edit-buck-tags-link: /docs/watsonxdata?topic=watsonxdata-edit-buck-tags
+  ref-edit-db-tags-link: /docs/watsonxdata?topic=watsonxdata-edit-db-tags
+  ref-edit-eng-tags-link: /docs/watsonxdata?topic=watsonxdata-edit-eng-tags
+  ref-elasticsearch_database-link: /docs/watsonxdata?topic=watsonxdata-elasticsearch_database
+  ref-event-notifications-events-link: /docs/watsonxdata?topic=watsonxdata-event-notifications-events
+  ref-exec_inspect_optimizer-link: /docs/watsonxdata?topic=watsonxdata-exec_inspect_optimizer
+  ref-exp_objects-link: /docs/watsonxdata?topic=watsonxdata-exp_objects
+  ref-eximp-q-hist-link: /docs/watsonxdata?topic=watsonxdata-eximp-q-hist
+  ref-explain_sql_query-link: /docs/watsonxdata?topic=watsonxdata-explain_sql_query
+  ref-buck-obj-link: /docs/watsonxdata?topic=watsonxdata-buck-obj
+  ref-exp-cat-obj-link: /docs/watsonxdata?topic=watsonxdata-exp-cat-obj
+  ref-faqs-link: /docs/watsonxdata?topic=watsonxdata-faqs
+  ref-help-and-support-link: /docs/watsonxdata?topic=watsonxdata-help-and-support
+  ref-getting-started_1-link: /docs/watsonxdata?topic=watsonxdata-getting-started_1
+  ref-getting-started-link: /docs/watsonxdata?topic=watsonxdata-getting-started
+  ref-greenplum_database-link: /docs/watsonxdata?topic=watsonxdata-greenplum_database
+  ref-hadr_wxd-link: /docs/watsonxdata?topic=watsonxdata-hadr_wxd
+  ref-hms-link: /docs/watsonxdata?topic=watsonxdata-hms
+  ref-iam-link: /docs/watsonxdata?topic=watsonxdata-iam
+  ref-ikc_integration-link: /docs/watsonxdata?topic=watsonxdata-ikc_integration
+  ref-informix_database-link: /docs/watsonxdata?topic=watsonxdata-informix_database
+  ref-create_ingestioncli-link: /docs/watsonxdata?topic=watsonxdata-create_ingestioncli
+  ref-create_ingestconfig-link: /docs/watsonxdata?topic=watsonxdata-create_ingestconfig
+  ref-ingest_presto_cli-link: /docs/watsonxdata?topic=watsonxdata-ingest_presto_cli
+  ref-ingest_rstapi_cli-link: /docs/watsonxdata?topic=watsonxdata-ingest_rstapi_cli
+  ref-ingest_spark_cli-link: /docs/watsonxdata?topic=watsonxdata-ingest_spark_cli
+  ref-ingest_spark_ui-link: /docs/watsonxdata?topic=watsonxdata-ingest_spark_ui
+  ref-load_ingest_data-link: /docs/watsonxdata?topic=watsonxdata-load_ingest_data
+  ref-install_optimizer-link: /docs/watsonxdata?topic=watsonxdata-install_optimizer
+  ref-intro_nativespark-link: /docs/watsonxdata?topic=watsonxdata-intro_nativespark
+  ref-kafka_database-link: /docs/watsonxdata?topic=watsonxdata-kafka_database
+  ref-known_issues-link: /docs/watsonxdata?topic=watsonxdata-known_issues
+  ref-tutorial_hp_intro-link: /docs/watsonxdata?topic=watsonxdata-tutorial_hp_intro
+  ref-lab_nsp-link: /docs/watsonxdata?topic=watsonxdata-lab_nsp
+  ref-log_analysis-link: /docs/watsonxdata?topic=watsonxdata-log_analysis
+  ref-log_nsp-link: /docs/watsonxdata?topic=watsonxdata-log_nsp
+  ref-manage_access-link: /docs/watsonxdata?topic=watsonxdata-manage_access
+  ref-mariadb_database-link: /docs/watsonxdata?topic=watsonxdata-mariadb_database
+  ref-whatismilvus-link: /docs/watsonxdata?topic=watsonxdata-whatismilvus
+  ref-mixed_case_behavior-link: /docs/watsonxdata?topic=watsonxdata-mixed_case_behavior
+  ref-mixed_case_overview-link: /docs/watsonxdata?topic=watsonxdata-mixed_case_overview
+  ref-mng_appltn-link: /docs/watsonxdata?topic=watsonxdata-mng_appltn
+  ref-manage_nsp-link: /docs/watsonxdata?topic=watsonxdata-manage_nsp
+  ref-mongodb_database-link: /docs/watsonxdata?topic=watsonxdata-mongodb_database
+  ref-monitor_wxd-link: /docs/watsonxdata?topic=watsonxdata-monitor_wxd
+  ref-mysql_database-link: /docs/watsonxdata?topic=watsonxdata-mysql_database
+  ref-netezza_database-link: /docs/watsonxdata?topic=watsonxdata-netezza_database
+  ref-manage_notfications-link: /docs/watsonxdata?topic=watsonxdata-manage_notfications
+  ref-lab_mon_nsp-link: /docs/watsonxdata?topic=watsonxdata-lab_mon_nsp
+  ref-ts-nsp-cert-link: /docs/watsonxdata?topic=watsonxdata-ts-nsp-cert
+  ref-ts-nsp-permsn-link: /docs/watsonxdata?topic=watsonxdata-ts-nsp-permsn
+  ref-ts-nsp-time-link: /docs/watsonxdata?topic=watsonxdata-ts-nsp-time
+  ref-oracle_database-link: /docs/watsonxdata?topic=watsonxdata-oracle_database
+  ref-pause_engine-link: /docs/watsonxdata?topic=watsonxdata-pause_engine
+  ref-pause_resume_milvus-link: /docs/watsonxdata?topic=watsonxdata-pause_resume_milvus
+  ref-pcpp_ov-link: /docs/watsonxdata?topic=watsonxdata-pcpp_ov
+  ref-pcpp_prov-link: /docs/watsonxdata?topic=watsonxdata-pcpp_prov
+  ref-pinot_database-link: /docs/watsonxdata?topic=watsonxdata-pinot_database
+  ref-postgresql_database-link: /docs/watsonxdata?topic=watsonxdata-postgresql_database
+  ref-prepare_ingest_data-link: /docs/watsonxdata?topic=watsonxdata-prepare_ingest_data
+  ref-presto_overview-link: /docs/watsonxdata?topic=watsonxdata-presto_overview
+  ref-prometheus_database-link: /docs/watsonxdata?topic=watsonxdata-prometheus_database
+  ref-prov_engine-link: /docs/watsonxdata?topic=watsonxdata-prov_engine
+  ref-tutorial_prov_lite_1-link: /docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1
+  ref-lh-provisioning-serverless-link: /docs/watsonxdata?topic=watsonxdata-lh-provisioning-serverless
+  ref-prov_nspark-link: /docs/watsonxdata?topic=watsonxdata-prov_nspark
+  ref-qhmm-link: /docs/watsonxdata?topic=watsonxdata-qhmm
+  ref-ret_qhmm-link: /docs/watsonxdata?topic=watsonxdata-ret_qhmm
+  ref-ovrvw_qhmm-link: /docs/watsonxdata?topic=watsonxdata-ovrvw_qhmm
+  ref-query_history-link: /docs/watsonxdata?topic=watsonxdata-query_history
+  ref-quick_start-link: /docs/watsonxdata?topic=watsonxdata-quick_start
+  ref-redshift_database-link: /docs/watsonxdata?topic=watsonxdata-redshift_database
+  ref-reg_bucket-link: /docs/watsonxdata?topic=watsonxdata-reg_bucket
+  ref-reg_database-link: /docs/watsonxdata?topic=watsonxdata-reg_database
+  ref-reg_engine-link: /docs/watsonxdata?topic=watsonxdata-reg_engine
+  ref-release-link: /docs/watsonxdata?topic=watsonxdata-release
+  ref-response-link: /docs/watsonxdata?topic=watsonxdata-response
+  ref-resume_engine-link: /docs/watsonxdata?topic=watsonxdata-resume_engine
+  ref-role_priv-link: /docs/watsonxdata?topic=watsonxdata-role_priv
+  ref-delta_ext_sp-link: /docs/watsonxdata?topic=watsonxdata-delta_ext_sp
+  ref-hudi_ext_sp-link: /docs/watsonxdata?topic=watsonxdata-hudi_ext_sp
+  ref-hudi_nsp-link: /docs/watsonxdata?topic=watsonxdata-hudi_nsp
+  ref-run_sql-link: /docs/watsonxdata?topic=watsonxdata-run_sql
+  ref-s2s_auth-link: /docs/watsonxdata?topic=watsonxdata-s2s_auth
+  ref-sal_enrichdata-link: /docs/watsonxdata?topic=watsonxdata-sal_enrichdata
+  ref-sal_register-link: /docs/watsonxdata?topic=watsonxdata-sal_register
+  ref-sal_title-link: /docs/watsonxdata?topic=watsonxdata-sal_title
+  ref-salesforce_database-link: /docs/watsonxdata?topic=watsonxdata-salesforce_database
+  ref-scl_nsp-link: /docs/watsonxdata?topic=watsonxdata-scl_nsp
+  ref-scale_engine-link: /docs/watsonxdata?topic=watsonxdata-scale_engine
+  ref-singlestore_database-link: /docs/watsonxdata?topic=watsonxdata-singlestore_database
+  ref-snowflake_database-link: /docs/watsonxdata?topic=watsonxdata-snowflake_database
+  ref-spark-emr-link: /docs/watsonxdata?topic=watsonxdata-spark-emr
+  ref-wxd_spk_histry-link: /docs/watsonxdata?topic=watsonxdata-wxd_spk_histry
+  ref-run_nb-link: /docs/watsonxdata?topic=watsonxdata-run_nb
+  ref-table-run_samp_file-link: /docs/watsonxdata?topic=watsonxdata-table-run_samp_file
+  ref-run_samp_file-link: /docs/watsonxdata?topic=watsonxdata-run_samp_file
+  ref-wxd_spk_ui-link: /docs/watsonxdata?topic=watsonxdata-wxd_spk_ui
+  ref-spk_ovrviw-link: /docs/watsonxdata?topic=watsonxdata-spk_ovrviw
+  ref-sqlserver_database-link: /docs/watsonxdata?topic=watsonxdata-sqlserver_database
+  ref-getstarted-console-link: /docs/watsonxdata?topic=watsonxdata-getstarted-console
+  ref-sync_log-link: /docs/watsonxdata?topic=watsonxdata-sync_log
+  ref-sync_optimizer_meta-link: /docs/watsonxdata?topic=watsonxdata-sync_optimizer_meta
+  ref-teradata_database-link: /docs/watsonxdata?topic=watsonxdata-teradata_database
+  ref-ts_cs-link: /docs/watsonxdata?topic=watsonxdata-ts_cs
+  ref-ts_ip_restrict-link: /docs/watsonxdata?topic=watsonxdata-ts_ip_restrict
+  ref-tutorial_prov_custbckt1-link: /docs/watsonxdata?topic=watsonxdata-tutorial_prov_custbckt1
+  ref-Db2tutorial_join_data-link: /docs/watsonxdata?topic=watsonxdata-Db2tutorial_join_data
+  ref-tutorial_get_strt-link: /docs/watsonxdata?topic=watsonxdata-tutorial_get_strt
+  ref-uninstall_optimizer-link: /docs/watsonxdata?topic=watsonxdata-uninstall_optimizer
+  ref-up-db-cred-link: /docs/watsonxdata?topic=watsonxdata-up-db-cred
+  ref-update-wxd-link: /docs/watsonxdata?topic=watsonxdata-update-wxd
+  ref-view_edit-link: /docs/watsonxdata?topic=watsonxdata-view_edit
+  ref-view-end-link: /docs/watsonxdata?topic=watsonxdata-view-end
+  ref-working_with_milvus-link: /docs/watsonxdata?topic=watsonxdata-working_with_milvus
+  ref-ranger_1-link: /docs/watsonxdata?topic=watsonxdata-ranger_1
+  ref-druid_database-link: /docs/watsonxdata?topic=watsonxdata-druid_database
+  ref-conf_rcrs_grp-link: /docs/watsonxdata?topic=watsonxdata-conf_rcrs_grp
+  ref-spl_engine-link: /docs/watsonxdata?topic=watsonxdata-spl_engine
+  ref-gcs_storage-link: /docs/watsonxdata?topic=watsonxdata-gcs_storage
+  ref-hdfs_storage-link: /docs/watsonxdata?topic=watsonxdata-hdfs_storage
+  ref-minio_storage-link: /docs/watsonxdata?topic=watsonxdata-minio_storage
+  ref-ceph_storage-link: /docs/watsonxdata?topic=watsonxdata-ceph_storage
+  ref-amazons_storage-link: /docs/watsonxdata?topic=watsonxdata-amazons_storage
+  ref-cos_storage-link: /docs/watsonxdata?topic=watsonxdata-cos_storage
+  ref-ozone_storage-link: /docs/watsonxdata?topic=watsonxdata-ozone_storage
+  ref-adls_genblob_storage-link: /docs/watsonxdata?topic=watsonxdata-adls_genblob_storage
+  ref-ingest_sparklogshistory-link: /docs/watsonxdata?topic=watsonxdata-ingest_sparklogshistory
+  ref-prepare_ingest_data2-link: /docs/watsonxdata?topic=watsonxdata-prepare_ingest_data2
+  ref-qhmm_shell-link: /docs/watsonxdata?topic=watsonxdata-qhmm_shell
+  ref-dc_integration-link: /docs/watsonxdata?topic=watsonxdata-dc_integration
+  ref-abt_dbt-link: /docs/watsonxdata?topic=watsonxdata-abt_dbt
+  ref-dbt_watsonx_presto-link: /docs/watsonxdata?topic=watsonxdata-dbt_watsonx_presto
+  ref-dbt_watsonx_presto_conf-link: /docs/watsonxdata?topic=watsonxdata-dbt_watsonx_presto_conf
+  ref-dbt_watsonx_presto_inst-link: /docs/watsonxdata?topic=watsonxdata-dbt_watsonx_presto_inst
+  ref-dbt_watsonx_spark_inst-link: /docs/watsonxdata?topic=watsonxdata-dbt_watsonx_spark_inst
+  ref-dbt_watsonx_spark_conf-link: /docs/watsonxdata?topic=watsonxdata-dbt_watsonx_spark_conf
+  ref-abt_bi-link: (/docs/watsonxdata?topic=watsonxdata-abt_bi
+  ref-tableau-link: /docs/watsonxdata?topic=watsonxdata-tableau
+  ref-looker-link: /docs/watsonxdata?topic=watsonxdata-looker
+  ref-domo-link: /docs/watsonxdata?topic=watsonxdata-domo
+  ref-qlik-link: /docs/watsonxdata?topic=watsonxdata-qlik
+  ref-bi_intro-link: /docs/watsonxdata?topic=watsonxdata-bi_intro
+  ref-airflow-link: /docs/watsonxdata?topic=watsonxdata-airflow
+  ref-redis_database-link: /docs/watsonxdata?topic=watsonxdata-redis_database
+  ref-get_connection-link: /docs/watsonxdata?topic=watsonxdata-get_connection
+  ref-resource_grp_pptys-link: /docs/watsonxdata?topic=watsonxdata-resource_grp_pptys

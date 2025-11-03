@@ -33,6 +33,8 @@ toc:
           - manta_overview.md
           - feature_parity_wxd.md
           - wxd_plfrm_dplmnt_cmpar.md
+          - wxd_astra_classic.md
+          - wxd_astra_db.md
       - release.md
       - topicgroup:
           label: Provisioning watsonx.data
@@ -47,7 +49,6 @@ toc:
       id: tutorial
       topics:
       - lite_plan.md
-      # - quick_start.md
       - quick_start_2.1.3.md
       - tut_query_db.md
       - tut_custbckt.md
@@ -55,22 +56,22 @@ toc:
       - topicgroup:
           label: Data federation use case
           topics:
-            - tut_data_federation.md
+          - tut_data_federation.md
       - topicgroup:
           label: Milvus use case
           topics:
-            - link:
-                  label: Build RAG with Llama Stack and watsonx.data Milvus
-                  href: https://community.ibm.com/community/user/blogs/divya13/2025/05/08/build-rag-with-llama-stack-and-watsonxdata-milvus
-            - link:
-                  label: Build RAG with LangChain and watsonx.data Milvus
-                  href: https://community.ibm.com/community/user/blogs/divya13/2025/04/22/build-rag-with-watsonxdata-milvus-and-langchain
-            - link:
-                  label: Build RAG with Haystack and watsonx.data Milvus
-                  href: https://community.ibm.com/community/user/blogs/divya13/2025/05/05/build-rag-with-watsonxdata-milvus-and-haystack
-            - link:
-                  label: Build RAG with LlamaIndex and Milvus using watsonx.ai Models
-                  href: https://community.ibm.com/community/user/blogs/divya13/2025/05/07/build-rag-with-llamaindex-and-milvus
+          - link:
+              label: Build RAG with Llama Stack and watsonx.data Milvus
+              href: https://community.ibm.com/community/user/blogs/divya13/2025/05/08/build-rag-with-llama-stack-and-watsonxdata-milvus
+          - link:
+              label: Build RAG with LangChain and watsonx.data Milvus
+              href: https://community.ibm.com/community/user/blogs/divya13/2025/04/22/build-rag-with-watsonxdata-milvus-and-langchain
+          - link:
+              label: Build RAG with Haystack and watsonx.data Milvus
+              href: https://community.ibm.com/community/user/blogs/divya13/2025/05/05/build-rag-with-watsonxdata-milvus-and-haystack
+          - link:
+              label: Build RAG with LlamaIndex and Milvus using watsonx.ai Models
+              href: https://community.ibm.com/community/user/blogs/divya13/2025/05/07/build-rag-with-llamaindex-and-milvus
   - navgroup:
       id: howto
       topics:
@@ -97,59 +98,62 @@ toc:
               - disso-cat-eng.md
               - conf_rcrs_grp.md
           - topicgroup:
-                  label: Data sources
-                  topics:
-                  - reg_database.md
-                  - redshift_conn.md
-                  - druid_conn.md
-                  - kafka_conn.md
-                  - phoenix_conn.md
-                  - pinot_conn.md
-                  - bigquery_conn.md
-                  - cassandra_conn.md
-                  - clickhouse_conn.md
-                  - elasticsearch_conn.md
-                  - saphana.md
-                  - dvm_conn.md
-                  - db2_conn.md
-                  - db2ibmi_conn.md
-                  - netezza_conn.md
-                  - informix_conn.md
-                  - mongodb_conn.md
-                  - mysql_conn.md
-                  - oracle_conn.md
-                  - postgresql_conn.md
-                  - prometheus_conn.md
-                  - redis_conn.md
-                  - singlestore_conn.md
-                  - snowflake_conn.md
-                  - sqlserver_conn.md
-                  - teradata_conn.md
-                  - custom_database.md
-                  - arrow_flight_service.md
-                  - derby_conn.md
-                  - greenplum_conn.md
-                  - mariadb_conn.md
-                  - salesforce_conn.md
-                  - update-db-cred.md
-                  - edit-db-tags.md
-                  - delete_database.md
+              label: Data sources
+              topics:
+              - reg_database.md
+              - redshift_conn.md
+              - druid_conn.md
+              - kafka_conn.md
+              - phoenix_conn.md
+              - pinot_conn.md
+              - bigquery_conn.md
+              - cassandra_conn.md
+              - clickhouse_conn.md
+              - elasticsearch_conn.md
+              - saphana.md
+              - dvm_conn.md
+              - db2_conn.md
+              - db2ibmi_conn.md
+              - netezza_conn.md
+              - informix_conn.md
+              - mongodb_conn.md
+              - mysql_conn.md
+              - oracle_conn.md
+              - postgresql_conn.md
+              - prometheus_conn.md
+              - redis_conn.md
+              - singlestore_conn.md
+              - snowflake_conn.md
+              - sqlserver_conn.md
+              - teradata_conn.md
+              - custom_database.md
+              - arrow_flight_service.md
+              - derby_conn.md
+              - greenplum_conn.md
+              - mariadb_conn.md
+              - salesforce_conn.md
+              - update-db-cred.md
+              - edit-db-tags.md
+              - delete_database.md
           - topicgroup:
-                  label: Storages
-                  topics:
-                  - reg_bucket.md
-                  - cos_storage.md
-                  - amazons_storage.md
-                  - ceph_storage.md
-                  - minio_storage.md
-                  - hdfs_storage.md
-                  - google_cloud_storage.md
-                  - adls_genblob_storage.md
-                  - ozone_storage.md
-                  - explor-buck-obj.md
-                  - edit-buck-tags.md
-                  - delete_bucket.md
-                  - sync_logs.md
+              label: Storages
+              topics:
+              - reg_bucket.md
+              - cos_storage.md
+              - amazons_storage.md
+              - ceph_storage.md
+              - minio_storage.md
+              - hdfs_storage.md
+              - google_cloud_storage.md
+              - adls_genblob_storage.md
+              - ozone_storage.md
+              - custom_S3_storge.md
+              - explor-buck-obj.md
+              - edit-buck-tags.md
+              - delete_bucket.md
+              - sync_logs.md
+              - enable-acl.md
+              - setting_glusterfs.md
       - topicgroup:
           label: IBM Cloud Pak for Data Command Line Interface (IBM cpdctl)
           topics:
@@ -186,137 +190,139 @@ toc:
       - topicgroup:
           label: Querying data
           topics:
-            - run_sql.md
-            - explain_sql_query.md
+          - run_sql.md
+          - explain_sql_query.md
       - topicgroup:
           label: Query Optimizer
           topics:
-            - install_optimizer.md
-            - sync_optimizer_verify.md
-            - sync_optimizer_meta.md
-            - optimizer_iceberg_stats.md
-            - exec_inspect_optimizer.md
-            - analyze_optimizer.md
-            - uninstall_optimizer.md
+          - install_optimizer.md
+          - sync_optimizer_verify.md
+          - sync_optimizer_meta.md
+          - optimizer_iceberg_stats.md
+          - exec_inspect_optimizer.md
+          - analyze_optimizer.md
+          - uninstall_optimizer.md
       - topicgroup:
           label: Query history
           topics:
-            - query_history.md
-            - exp-imp-qh.md
-            - topicgroup:
-                label: QHMM
-                topics:
-                - link:
-                      label: QHMM overview
-                      href: https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-ovrvw_qhmm
-                - qhmm.md
-                - qhmm_querying.md
-                - qhmm_ret.md
-                - shell_script.md
+          - query_history.md
+          - exp-imp-qh.md
+          - topicgroup:
+              label: QHMM
+              topics:
+              - link:
+                  label: QHMM overview
+                  href: https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-ovrvw_qhmm
+              - qhmm.md
+              - qhmm_querying.md
+              - qhmm_ret.md
+              - shell_script.md
       - conn-presto-thr-cli.md
-      # - presto_behavior.md
       - delete_lh.md
       - topicgroup:
-          label: Working with native Spark engine
+          label: Working with watsonx.data Spark
           topics:
-            - intro_nativespark.md
-            - spk_cpp_intro.md
-            - prov-native-spark.md
-            - spk_cpp.md
-            - topicgroup:
-                label: Managing native Spark engine details
-                topics:
-                  - mng-nspark-eng.md
-                  - view-edit-native-park.md
-                  - scale_nspark.md
-                  - mng_appln_nspark.md
-                  - ae_customizing-instance.md
-                  - ae_create-lib-set.md
-                  - ae_combining-lib-sets.md
-                  # - ae_cust-with-script.md
-                  - ae_use-lib-set.md
-            - topicgroup:
-                label: Submitting Spark application by using native Spark engine
-                topics:
-                  - sbmt_das_spk.md
-                  - sbmt_spk_cnsl.md
-                  - sbmt_spk_mor_cow.md
-                  - nsp_cpdctl.md
-                  - spark-table-maint.md
-                  - spark-extnsn.md
-                  - run_nativespk_hudi.md
-                  - ae_auto-scaling-serverless-apps.md
-            - topicgroup:
-                label: Native Spark Monitoring and logging
-                topics:
-                  - logs_native_spk.md
-                  - spark-history-ui.md
-                  - spark-user-interface.md
-                  - spark-databand.md
-                  - spark-db-trk.md
-            - topicgroup:
-                label: Working with Spark query server
-                topics:
-                  - spk_qry_server.md
-                  - connect_spk_qry_server.md
-            - topicgroup:
-                label: VS Code development environment - Spark labs
-                topics:
-                  - lnative_spk_lab.md
-                  - nsp_lab_mon.md
-            - spark-notebook-wxai.md
+          - intro_nativespark.md
+          - spk_cpp_intro.md
+          - ae_spark-app-rest-api.md
+          - topicgroup:
+              label: Provisioning and managing watsonx.data Spark
+              topics:
+              - prov-native-spark.md
+              - mng-nspark-eng.md
+              - view-edit-native-park.md
+              - scale_nspark.md
+              - mng_appln_nspark.md
+              - ae_customizing-instance.md
+              - ae_create-lib-set.md
+              - ae_combining-lib-sets.md
+              - ae_use-lib-set.md
+          - topicgroup:
+              label: Submitting Spark application by using native Spark engine
+              topics:
+              - sbmt_das_spk.md
+              - sbmt_spk_cnsl.md
+              - sbmt_spk_mor_cow.md
+              - spark-extnsn.md
+              - spark-streaming.md
+              - ae_auto-scaling-serverless-apps.md
+              - sbmt_spk_cust.md
+          - topicgroup:
+              label: Monitoring and debugging Spark application
+              topics:
+              - logs_native_spk.md
+              - spark-history-ui.md
+              - spark-user-interface.md
+              - spark-databand.md
+          - spark-notebook-wxai.md
+          - topicgroup:
+              label: Working with Spark query server
+              topics:
+              - spk_qry_server.md
+              - connect_spk_qry_server.md
+          - topicgroup:
+              label: VS Code development environment - Spark labs
+              topics:
+              - lnative_spk_lab.md
+              - nsp_lab_mon.md
+          - topicgroup:
+              label: Data management
+              topics:
+              - nsp_cpdctl.md
+              - run_nativespk_hudi.md
       - topicgroup:
           label: Working with external Spark engine
           topics:
-            - provisioning-spark.md
-            - config_spark.md
-            - topicgroup:
-                label: Submitting Spark application by using external Spark engine
-                topics:
-                  - spark-use-case.md
-                  - spark-extnsn-extnl.md
-                  - run_extspk_delta.md
-                  - run_extspk_hudi.md
-                  - spark-emr.md
-                  - spark-notebook.md
+          - provisioning-spark.md
+          - config_spark.md
+          - topicgroup:
+              label: Submitting Spark application by using external Spark engine
+              topics:
+              - spark-use-case.md
+              - spark-extnsn-extnl.md
+              - run_extspk_delta.md
+              - run_extspk_hudi.md
+              - spark-emr.md
+              - spark-notebook.md
       - topicgroup:
           label: Milvus
           topics:
-            - adding-milvus-service.md
-            - conn-to-milvus.md
-            - working_with_milvus.md
-            - pause-resume-milvus.md
-            - wxd_wxai_milvus_conn.md
-            - wxd_wxa_connection.md
-            - milvus_backup.md
-            - milvus_vts.md
+          - adding-milvus-service.md
+          - conn-to-milvus.md
+          - working_with_milvus.md
+          - pause-resume-milvus.md
+          - wxd_wxai_milvus_conn.md
+          - wxd_wxa_connection.md
+          - milvus_backup.md
+          - milvus_vts.md
       - topicgroup:
           label: Semantic automation for data enrichment
           topics:
-            - sal_register.md
-            - sal_enrich_data.md
-            - sal_modify_enrichmentrun.md
-            - sal_search.md
+          - sal_register.md
+          - sal_enrich_data.md
+          - sal_modify_enrichmentrun.md
+          - sal_search.md
       - topicgroup:
           label: Enhancing security
           topics:
-            - arch_wl_isolation.md
-            - data_security.md
+          - arch_wl_isolation.md
+          - data_security.md
       - iam.md
       - topicgroup:
           label: Access control
           topics:
-            - link:
-                  label: Access management overview
-                  href: https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-access_mgt
-            - manage_access.md
-            - role_priv.md
-            - data_policy.md
-            - cas-proxy.md
-            - cas-proxy-adls.md
-            - wxd_ranger.md
-            - wxd_row-ranger.md
-            - wxd_ranger_colmn.md
+          - link:
+              label: Access management overview
+              href: https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-access_mgt
+          - manage_access.md
+          - role_priv.md
+          - data_policy.md
+          - cas-proxy.md
+          - cas-proxy-adls.md
+          - wxd_ranger.md
+          - wxd_row-ranger.md
+          - wxd_ranger_colmn.md
+          - cpg_enable.md
       - driver_manager.md
       - billing_usage.md
       - hms_credentials.md
@@ -325,56 +331,56 @@ toc:
       - topicgroup:
           label: Logging and monitoring
           topics:
-            - at_events_docs.md
-            - log_analysis.md
-            - monitoring_wxdcloud.md
-            - jmx_metrics.md
-            - milvus_exp_mtrcs.md
+          - at_events_docs.md
+          - log_analysis.md
+          - monitoring_wxdcloud.md
+          - jmx_metrics.md
+          - milvus_exp_mtrcs.md
       - topicgroup:
           label: Configuring network endpoints
           topics:
-            - setup_vpe.md
+          - setup_vpe.md
       - topicgroup:
           label: Integrating with Data Build Tool(dbt)
           topics:
-            - about_dbt.md
-            - topicgroup:
-                label: dbt adapter for Presto
-                topics:
-                  - dbt-watsonx-presto.md
-                  - dbt-watsonx-presto-conf.md
-                  - dbt-watsonx-presto-inst.md
-            - topicgroup:
-                label: dbt adapter for Spark
-                topics:
-                  - dbt-watsonx-spk-inst.md
-                  - dbt-watsonx-spk-conf.md
+          - about_dbt.md
+          - topicgroup:
+              label: dbt adapter for Presto
+              topics:
+              - dbt-watsonx-presto.md
+              - dbt-watsonx-presto-conf.md
+              - dbt-watsonx-presto-inst.md
+          - topicgroup:
+              label: dbt adapter for Spark
+              topics:
+              - dbt-watsonx-spk-inst.md
+              - dbt-watsonx-spk-conf.md
       - topicgroup:
           label: Integrating with IBM Knowledge Catalog (IKC)
           topics:
-            - ikc_integration.md
-            - s2s_auth.md
+          - ikc_integration.md
+          - s2s_auth.md
       - ds_integration.md
       - wxd-dph.md
       - topicgroup:
           label: Integrating with BI visualization tools
           topics:
-            - bi_tools.md
-            - tableau.md
-            - looker.md
-            - Domo.md
-            - Qlik.md
-            - power_bi.md
-            - cognos.md
+          - bi_tools.md
+          - tableau.md
+          - looker.md
+          - Domo.md
+          - Qlik.md
+          - power_bi.md
+          - cognos.md
       - manta_integrate.md
       - ripasso.md
       - topicgroup:
           label: Workload Orchestration
           topics:
-            - topicgroup:
-                label: Orchestration using Apache Airflow
-                topics:
-                  - airflow.md
+          - topicgroup:
+              label: Orchestration using Apache Airflow
+              topics:
+              - airflow.md
       - idle_session_timeout.md
   - navgroup:
       id: reference
@@ -385,11 +391,11 @@ toc:
       - presto_exp_jmx.md
       - iceberg_unity_cat_api.md
       - link:
-            label: Presto SQL statements
-            href: https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=presto-sql-statements
+          label: Presto SQL statements
+          href: https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=presto-sql-statements
       - link:
-            label: Presto data types
-            href: https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=presto-data-types
+          label: Presto data types
+          href: https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=presto-data-types
       - mixed_case_behavior.md
       - response.md
       - high_availability_lh.md
@@ -399,43 +405,44 @@ toc:
           label: Customization through API
           topics:
           - topicgroup:
-                label: Presto (Java) properties
-                topics:
-                  - api_custom_prm_pjcw.md
-                  - api_custom_jvm_pjcw.md
-                  - api_custom_ctg_pjcw.md
-                  - api_custom_evlistn_pjcw.md
+              label: Presto (Java) properties
+              topics:
+              - api_custom_prm_pjcw.md
+              - api_custom_jvm_pjcw.md
+              - api_custom_ctg_pjcw.md
+              - api_custom_evlistn_pjcw.md
           - topicgroup:
-                label: Presto (C++) properties
-                topics:
-                  - api_custom_wkr_pcpp.md
-                  - api_custom_pcpp_cood.md
-                  - api_custom_pcpp_ctg.md
-                  - api_custom_pcpp_vlx.md
-                  - api_custom_jvm_pcpp.md
-                  - api_custom_gbl_pcpp.md
-                  - api_custom_logconfwrkr_pcpp.md
-                  - api_custom_logconfcord_pcpp.md
+              label: Presto (C++) properties
+              topics:
+              - api_custom_wkr_pcpp.md
+              - api_custom_pcpp_cood.md
+              - api_custom_pcpp_ctg.md
+              - api_custom_pcpp_vlx.md
+              - api_custom_jvm_pcpp.md
+              - api_custom_gbl_pcpp.md
+              - api_custom_logconfwrkr_pcpp.md
+              - api_custom_logconfcord_pcpp.md
           - resource_grp_pptys.md
       - topicgroup:
           label: Public preview
           topics:
-            - release_public_preview.md
-            - mv_optimizer.md
-            - jdbc.md
-            - db_ast.md
+          - release_public_preview.md
+          - cpg_plugin.md
+          - mv_optimizer.md
+          - jdbc.md
+          - db_ast.md
       - link:
-            label: watsonx.data v2 APIs
-            href: https://cloud.ibm.com/apidocs/watsonxdata
+          label: watsonx.data v2 APIs
+          href: https://cloud.ibm.com/apidocs/watsonxdata
       - link:
-            label: watsonx.data v3 APIs
-            href: https://cloud.ibm.com/apidocs/watsonxdata-v3
+          label: watsonx.data v3 APIs
+          href: https://cloud.ibm.com/apidocs/watsonxdata-v3
       - link:
-            label: MDS Unity Catalog API
-            href: https://cloud.ibm.com/apidocs/watsonxdata-mds-unity
+          label: MDS Unity Catalog API
+          href: https://cloud.ibm.com/apidocs/watsonxdata-mds-unity
       - link:
-            label: MDS Iceberg REST Catalog API
-            href: https://cloud.ibm.com/apidocs/watsonxdata-ibm-mds-iceberg
+          label: MDS Iceberg REST Catalog API
+          href: https://cloud.ibm.com/apidocs/watsonxdata-ibm-mds-iceberg
   - navgroup:
       id: help
       topics:
@@ -444,21 +451,21 @@ toc:
       - topicgroup:
           label: Troubleshooting
           topics:
-            - ts_sal_gls_enrch.md
-            - ts_optimizer.md
-            - ts_optimizer_iceberg_stats.md
-            - ts_cs_issue.md
-            - ts_ip_restrict_issue.md
-            - ranger_crash_trble.md
-            - topicgroup:
-                label: Spark
-                topics:
-                  - nsp_trbleshtng_cert-error.md
-                  - nsp_trbleshtng_permisn.md
-                  - nsp_trbleshtng_timout.md
-            - topicgroup:
-                label: Milvus
-                topics:
-                  - milvus_memory_ts.md
-                  - milvus_data_miss_ts.md
+          - ts_sal_gls_enrch.md
+          - ts_optimizer.md
+          - ts_optimizer_iceberg_stats.md
+          - ts_cs_issue.md
+          - ts_ip_restrict_issue.md
+          - ranger_crash_trble.md
+          - topicgroup:
+              label: Spark
+              topics:
+              - nsp_trbleshtng_cert-error.md
+              - nsp_trbleshtng_permisn.md
+              - nsp_trbleshtng_timout.md
+          - topicgroup:
+              label: Milvus
+              topics:
+              - milvus_memory_ts.md
+              - milvus_data_miss_ts.md
       - get-help.md

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-25"
+lastupdated: "2025-10-23"
 
 keywords: lakehouse, cpdctl, watsonx.data, supporting commands, wx-data
 
@@ -26,7 +26,7 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# wx-data Commands and Usage
+# `wx-data` Commands and Usage
 {: #cpdctl_commands_wxdata}
 
 The `wx-data` command further has different commands within, using which you can perform various operations specific to {{site.data.keyword.lakehouse_full}}. This topic lists the commands with a brief description of the tasks that can be performed.
@@ -40,7 +40,7 @@ Syntax:
    {: codeblock}
 
 
-The wx-data command supports the following commands:
+The `wx-data` command supports the following commands:
 
 - `ingestion`
 - `engine`
@@ -50,6 +50,7 @@ The wx-data command supports the following commands:
 - `tablemaint`
 - `service`
 - `component`
+- `access-control`
 
 ## How to Use `wx-data` Command --help (-h)
 {: #cpdctl_commands_wxdatahwto}
@@ -161,6 +162,9 @@ Syntax:
    {: codeblock}
 
 The `bucket` command further supports the following commands:
+
+{{site.data.keyword.lakehouse_short}}  automatically activates any newly created storage without requiring an associated catalog, eliminating the need for manual activation.
+{: note}
 
 | Command | Description |
 |---------|-------------|
@@ -296,3 +300,24 @@ The `component` command further supports the following commands:
 | `./cpdctl wx-data component get-hms-status` | List all HMS meta stores in {{site.data.keyword.lakehouse_short}} instance. |
 | `./cpdctl wx-data component get-console-status` | Check console status of watsonx.data instance {{site.data.keyword.lakehouse_short}} instance. |
  {: caption="Supported commands by component" caption-side="bottom"}
+
+## access-control
+{: #cpdctl_commands_wxdataacscntrl}
+
+The `access-control` command is used for managing access policies for resources in {{site.data.keyword.lakehouse_short}}.
+
+Syntax:
+   ```bash
+   ./cpdctl wx-data access-control [options]
+   ```
+   {: codeblock}
+
+The `access-control` command further supports the following commands:
+
+| Command | Description |
+|---------|-------------|
+| `./cpdctl wx-data access-control list-users-groups` | Get users and groups who have access to {{site.data.keyword.lakehouse_short}} instance.|
+| `./cpdctl wx-data access-control list-access` | List resource access policies. |
+| `./cpdctl wx-data access-control update-access` | Update resource access policies. |
+| `./cpdctl wx-data access-control revoke-access` | Revoke resource access policies. |
+{: caption="Supported commands by access-control" caption-side="bottom"}

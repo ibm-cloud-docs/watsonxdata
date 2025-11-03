@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-08-22"
+lastupdated: "2025-10-28"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -144,6 +144,9 @@ The API Customization patch must have the following as required fields `configur
 The API Customization patch must have the following as required fields `configuration`, `jvm`, `catalog`, `velox`, `log_config`, `global` and other fields as optional.
 {: note}
 
+`optimizer_properties` for presto (C++) cannot be customized if Materialized Query Tables are activated from the configuration tab.
+{: note}
+
 ```json
 {
     "description": "updated description for prestissimo engine",
@@ -190,6 +193,10 @@ The API Customization patch must have the following as required fields `configur
                 "property_1": "property_value",
                 "property_2": "property_value"
             }
+        },
+        "optimizer_properties":{
+                "property_1": "property_value",
+                "property_2": "property_value"
         },
         "global": {
             "property_1": "property_value",

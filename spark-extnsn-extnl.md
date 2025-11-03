@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-09-17"
+lastupdated: "2025-10-28"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -17,17 +17,17 @@ subcollection: watsonxdata
 When you submit a Spark application that uses external storage buckets registered in {{site.data.keyword.lakehouse_short}}, Spark access control extension allows additional authorization thereby enhancing security. If you enable the extension in the spark configuration, only authorized users are allowed to access and operate {{site.data.keyword.lakehouse_short}} catalogs through Spark jobs.
 {: shortdesc}
 
-The option to register external Spark engines in watsonx.data is deprecated in this release and will be removed in version 2.3. watsonx.data already includes built-in Spark engines that you can provision and use directly, including the Gluten-accelerated Spark engine and the native watsonx.data Spark engine.
+The option to register external Spark engines in watsonx.data is deprecated and will be removed in version 2.3. watsonx.data already includes built-in Spark engines that you can provision and use directly, including the Gluten-accelerated Spark engine and the native watsonx.data Spark engine.
 {: important}
 
-You can enable the Spark access control extension for Iceberg, Hive and Hudi catalogs.
+You can enable the Spark access control extension for Iceberg, Hive, Hudi and Delta Lake catalogs.
 {: note}
 
 
 
-You can either use Ranger or Access Management System (AMS) data policies to grant or deny access for users, user groups, catalog (Iceberg, Hive and Hudi), schema, table, and column. Besides data level authorization, storage privilege is also considered.
-For more information related to the using AMS on catalogs(Iceberg, Hive and Hudi), buckets, schemas and tables, see see [Managing roles and privileges](/docs/watsonxdata?topic=watsonxdata-role_priv){: external}.
-For more information on how to create Ranger policies (defined under Hadoop SQL service) and to enable them on catalogs(Iceberg, Hive and Hudi), buckets, schemas and tables, see see [Managing Ranger policies](/docs/watsonxdata?topic=watsonxdata-ranger_1){: external}.
+You can either use Ranger or Access Management System (AMS) data policies to grant or deny access for users, user groups, catalog (Iceberg, Hive, Hudi and Delta Lake), schema, table, and column. Besides data level authorization, storage privilege is also considered.
+For more information related to the using AMS on catalogs(Iceberg, Hive, Hudi and Delta Lake), buckets, schemas and tables, see see [Managing roles and privileges](/docs/watsonxdata?topic=watsonxdata-role_priv){: external}.
+For more information on how to create Ranger policies (defined under Hadoop SQL service) and to enable them on catalogs(Iceberg, Hive, Hudi and Delta Lake), buckets, schemas and tables, see see [Managing Ranger policies](/docs/watsonxdata?topic=watsonxdata-ranger_1){: external}.
 
 
 ## Prerequisites
@@ -48,7 +48,7 @@ Spark access control extension supports external Spark engine.
 
 2. Save the following Python application as iceberg.py.
 
-Iceberg is considered as an example. You can also use Hive and Hudi catalogs.
+Iceberg is considered as an example. You can also use Hive, Hudi and Delta Lake catalogs.
 {: note}
 
 
@@ -245,4 +245,4 @@ Limitations:
 * The user must have full access to create schema and table.
 * To create data policy, you must associate the catalog to Presto engine.
 * If you try to display schema that is not existing, the system throws nullpointer issue.
-* You can enable the Spark access control extension for Iceberg, Hive and Hudi catalogs.
+* You can enable the Spark access control extension for Iceberg, Hive, Hudi and Delta Lake catalogs.
