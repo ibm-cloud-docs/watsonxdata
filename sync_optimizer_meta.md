@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-27"
+lastupdated: "2025-11-03"
 
 keywords: lakehouse, MDS, {{site.data.keyword.lakehouse_short}}, hive, metastore
 
@@ -73,6 +73,95 @@ To sync tables from {{site.data.keyword.lakehouse_short}}, the following items a
    ANALYZE catalog_name.schema_name.table_name ;
    ```
    {: codeblock}
+
+4. Run the following command to manually register the metastore properties of catalog in the Query Optimizer:
+
+   ```bash
+   ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.REGISTER_EXT_METASTORE('<CATALOG_NAME>', '<ARGUMENTS>', ?, ?)';
+   ```
+   {: codeblock}
+
+   a. For {{site.data.keyword.lakehouse_short}} 2.2.1 and earlier: Use the legacy metastore type `watsonx-data` for both Hive and Iceberg catalogs:
+
+      ```bash
+      ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.REGISTER_EXT_METASTORE('<CATALOG_NAME>','type=watsonx-data,uri=thrift://<THRIFT_URL>,use.SSL=true,auth.mode=PLAIN,ssl.cert=/secrets/external/ibm-lh-tls-secret/ca.crt,auth.plain.credentials=<USERNAME>:<PASSWORD>', ?, ?)
+      ```
+      {: codeblock}
+
+   For example:
+
+      ```bash
+      ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.REGISTER_EXT_METASTORE('iceberg_data','type=watsonx-data,uri=thrift://ibm-lh-lakehouse-mds-thrift-svc.zen.svc.cluster.local:8380,use.SSL=true,auth.mode=PLAIN,ssl.cert=/secrets/external/ibm-lh-tls-secret/ca.crt,auth.plain.credentials=admin:password', ?, ?)';
+      ```
+      {: codeblock}
+
+      - `type` - The type of metastore to which you are connecting. Supported value is: `watsonx-data`.
+      - `watsonx.data <CATALOG_NAME>` - as shown on the Infrastructure Manager page (case sensitive).
+      - `<THRIFT_URL>` - As obtained from the Infrastructure Manager page (click on the catalog).
+      - MDS credentials (`<Username>` and `<Password>`) in `auth.plain.credentials` - Must be created on the watsonx.data side. See Connecting to watsonx.data on OpenShift. If the metastore requires PLAIN authentication, the credentials must be specified in the format username:password or ibmlhapikey_username:apikey. The password is stored securely in a software keystore.
+      - `auth.mode` - If the metastore requires authentication, indicates the mode of authentication to use. The auth.mode must be set to PLAIN
+      - `use.SSL` - It must be true if the metastore requires an SSL connection.
+      - `<MDS certificate file path>` - This must be provided as a file on the db2u container as a certificate to validate the SSL connection. It is not necessary to pass a certificate if the SSL connection is established using a certificate issued by a well-known CA such as DigiCert or VeriSign. By default, the MDS certificates are available under the /secrets/external/ibm-lh-tls-secret/ca.crt path in Query optimizer.
+
+         1. Run the following command to identify the db2u Query Optimizer head pod (OPT_POD).
+
+            ```bash
+            oc get pod | grep oaas-db2u
+            ```
+            {: codeblock}
+
+         2. Run the following command to generate certificate by substituting the values for <OPT_POD> and <Metastore Thrift endpoint>.
+
+            ```bash
+            oc exec -it <OPT_POD> -c db2u -- bash -c "echo QUIT | openssl s_client -showcerts -connect <Metastore Thrift endpoint> | awk '/-----BEGIN    CERTIFICATE-----/           {p=1}; p; /-----END CERTIFICATE-----/ {p=0}' > /tmp/mds.pem"
+            ```
+            {: codeblock}
+
+   b. For {{site.data.keyword.lakehouse_short}} 2.2.2 and later, Hive and Iceberg tables are managed using distinct metastore server types. Depending on your application needs, you must register metastore servers for Hive, Iceberg, or both.
+
+      1. Registering a Hive catalog from {{site.data.keyword.lakehouse_short}} 2.2.2 and later:
+
+         ```bash
+         ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.REGISTER_EXT_METASTORE('<CATALOG_NAME>','type=watsonx-data-hive,uri=https://<THRIFT_URL>/mds/thrift,use.SSL=true,auth.mode=PLAIN,ssl.cert=/secrets/external/ibm-lh-tls-secret/ca.crt,auth.plain.credentials=<USERNAME>:<PASSWORD>', ?, ?)';
+         ```
+         {: codeblock}
+
+         For example:
+
+         ```bash
+         ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.REGISTER_EXT_METASTORE('iceberg_data','type=watsonx-data,uri=thrift://ibm-lh-lakehouse-mds-thrift-svc.zen.svc.cluster.local:8380,use.SSL=true,auth.mode=PLAIN,ssl.cert=/secrets/external/ibm-lh-tls-secret/ca.crt,auth.plain.credentials=admin:password', ?, ?)';
+         ```
+         {: codeblock}
+
+      - `type` - The type of metastore to which you are connecting. For the metastore managing Hive tables, the value is: `watsonx-data-hive`.
+      - `watsonx.data <CATALOG_NAME>` - as shown on the Infrastructure Manager page (case sensitive).
+      - `<THRIFT_URL>` - The URI of the {{site.data.keyword.lakehouse_short}} MDS thrift server. It must start with `https://`.
+      - MDS credentials (`<Username>` and `<Password>`) in `auth.plain.credentials` - Must be created on the watsonx.data side. See Connecting to watsonx.data on OpenShift. If the metastore requires PLAIN authentication, the credentials must be specified in the format `username:password` or `ibmlhapikey_username:apikey`. The password is stored securely in a software keystore.
+      - `auth.mode` - If the metastore requires authentication, indicates the mode of authentication to use. The `auth.mode` must be set to `PLAIN`.
+      - `use.SSL` - It must be true if the metastore requires an SSL connection.
+      - `<MDS certificate file path>` - This must be provided as a file on the db2u container as a certificate to validate the SSL connection. It is not necessary to pass a certificate if the SSL connection is established using a certificate issued by a well-known CA such as DigiCert or VeriSign. By default, the MDS certificates are available under the /secrets/external/ibm-lh-tls-secret/ca.crt path in Query optimizer.
+
+       2. Registering a Iceberg catalog from watsonx.data 2.2.2 and later:
+
+         ```bash
+         ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.REGISTER_EXT_METASTORE('<CATALOG_NAME>','type=iceberg-rest,catalog.name=<CATALOG_NAME>,uri=https://<REST_URL>/mds/iceberg,auth.mode=basic,ssl.cert=/secrets/external/ibm-lh-tls-secret/ca.crt,auth.plain.credentials=<USERNAME>:<PASSWORD>', ?, ?)';
+         ```
+         {: codeblock}
+
+         For example:
+
+         ```bash
+         ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.REGISTER_EXT_METASTORE('iceberg_data','type=iceberg-rest,catalog.name=iceberg_data,uri=https://ibm-lh-lakehouse-mds-rest-svc.zen.svc.cluster.local:8180/mds/iceberg,auth.mode=basic,ssl.cert=/secrets/external/ibm-lh-tls-secret/ca.crt,auth.plain.credentials=admin:password', ?, ?)';
+         ```
+         {: codeblock}
+
+      - `type` - The type of metastore to which you are connecting. For the metastore managing Iceberg tables, the value is: `iceberg-rest`.
+      - `watsonx.data <CATALOG_NAME>` - as shown on the Infrastructure Manager page (case sensitive).
+      - `<THRIFT_URL>` - The URI of the {{site.data.keyword.lakehouse_short}} Iceberg REST MDS server. The URI must start with `https://` and contain the base path to the REST API catalog. For watsonx.data, the base path is `/mds/iceberg`.
+      - MDS credentials (`<Username>` and `<Password>`) in `auth.plain.credentials` - Must be created on the watsonx.data side. See Connecting to watsonx.data on OpenShift. If the metastore requires PLAIN authentication, the credentials must be specified in the format `username:password` or `ibmlhapikey_username:apikey`. The password is stored securely in a software keystore.
+      - `auth.mode` - If the metastore requires authentication, indicates the mode of authentication to use. The `auth.mode` must be set to `PLAIN`.
+      - `use.SSL` - It must be true if the metastore requires an SSL connection.
+      - `<MDS certificate file path>` - This must be provided as a file on the db2u container as a certificate to validate the SSL connection. It is not necessary to pass a certificate if the SSL connection is established using a certificate issued by a well-known CA such as DigiCert or VeriSign. By default, the MDS certificates are available under the /secrets/external/ibm-lh-tls-secret/ca.crt path in Query optimizer.
 
 4. Run the following command to register {{site.data.keyword.lakehouse_short}} catalog with **Query Optimizer**:
 
