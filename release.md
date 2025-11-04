@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-11-03"
+lastupdated: "2025-11-04"
 
 keywords: watsonxdata, release notes
 
@@ -172,7 +172,7 @@ CPDCTL CLI enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancements to IBM Cloud Pak for Data Command Line Interface (IBM cpdctl):
 
-* Starting from CPDCTL version 1.8.5, compatibility is limited to watsonx.data version 2.2.1 and above. This change is due to the deprecation of v2 API support as part of the major upgrade to v3 APIs. For users on older CPDCTL versions, refer to the CPDCTL release archive.
+* Starting from CPDCTL version 1.8.25, compatibility is limited to watsonx.data version 2.2.1 and above. This change is due to the deprecation of v2 API support as part of the major upgrade to v3 APIs. For users on older CPDCTL versions, refer to the [CPDCTL release archive](https://github.com/IBM/cpdctl/releases).
 
    Some commands might have changed due to updates in the API specification. Use the [`--help` option](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata#cpdctl_commands_wxdatahwto) to review and adapt to the latest command syntax.
    {: note}
