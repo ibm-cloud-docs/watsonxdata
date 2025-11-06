@@ -95,10 +95,10 @@ To sync tables from {{site.data.keyword.lakehouse_short}}, the following items a
    - `type` - The type of metastore to which you are connecting. Supported value is: `watsonx-data`.
    - `watsonx.data <CATALOG_NAME>` - as shown on the Infrastructure Manager page (case sensitive).
    - `<THRIFT_URL>` - As obtained from the Infrastructure Manager page (click on the catalog).
-   - MDS credentials (`<Username>` and `<Password>`) in `auth.plain.credentials` - Must be created on the watsonx.data side. See Connecting to watsonx.dataon OpenShift. If the metastore requires PLAIN authentication, the credentials must be specified in the format username:password oribmlhapikey_username:apikey. The password is stored securely in a software keystore.
+   - MDS credentials (`<Username>` and `<Password>`) in `auth.plain.credentials` - Must be created on the watsonx.data side. See Connecting to watsonx.dataon OpenShift. If the metastore requires PLAIN authentication, the credentials must be specified in the format `username:password` or `ibmlhapikey_<username>:apikey`. The password is stored securely in a software keystore.
    - `auth.mode` - If the metastore requires authentication, indicates the mode of authentication to use. The auth.mode must be set to PLAIN
    - `use.SSL` - It must be true if the metastore requires an SSL connection.
-   - `<MDS certificate file path>` - This must be provided as a file on the db2u container as a certificate to validate the SSL connection. It is notnecessary to pass a certificate if the SSL connection is established using a certificate issued by a well-known CA such as DigiCert or VeriSign. Bydefault, the MDS certificates are available under the /secrets/external/ibm-lh-tls-secret/ca.crt path in Query optimizer.
+   - `<MDS certificate file path>` - This must be provided as a file on the db2u container as a certificate to validate the SSL connection. It is notnecessary to pass a certificate if the SSL connection is established using a certificate issued by a well known CA such as DigiCert or VeriSign. Bydefault, the MDS certificates are available under the `/secrets/external/ibm-lh-tls-secret/ca.crt` path in Query optimizer.
       1. Run the following command to identify the db2u Query Optimizer head pod (OPT_POD).
 
          ```bash

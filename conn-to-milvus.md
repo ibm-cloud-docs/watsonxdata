@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-09-18"
+lastupdated: "2025-11-06"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -44,7 +44,7 @@ Make sure that the following items are installed or available:
 ## Procedure
 {: #conn-to-milvusapikey}
 
-Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats will be phased out in a future release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_username` and `ibmlhtoken_username`.
+Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats will be phased out in a future release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_<username>` and `ibmlhtoken_<username>`.
 {: important}
 
 You can connect to a Milvus service by using API key or IAM token.
