@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-10-27"
+lastupdated: "2025-11-06"
 keywords: cpg
 subcollection: watsonxdata
 
@@ -23,26 +23,30 @@ It is available as a downloadable JAR file that can be easily downloaded and use
 
 You must:
 
-   * Have the plugin JAR(s) (in PF4J format)
+   * Have the plugin JAR(s) (in PF4J format).
 
    * A policy mapping file defining the mapping of the plugins that should run for the corresponding policy engines.
 
 ## Downloading CPG package
 {: #plug_proc}
 
-1. Contact IBM Support team and get the latest version of CPG light weight package.
+1. Download the latest version of CPG light weight package from : [Download package](https://github.ibm.com/lakehouse/watsonx-data-public).
 
 2. After downloading, unzip the package. The folder structure will look like this:
 
    ``` bash
 
-   <bundle>/
-   ├─ cpg.jar                   # The executable runner
-   ├─ plugins/                  # Place your plugin JARs here
+   CPG-Plugin-Runner/
+   ├─ CPG-Plugin-Runner-1.0.0.jar      # The executable runner
+   ├─ plugins/                         # Place your plugin JARs here
    │  └─ <your-plugin>.jar
-   └─ config/
-      └─ policy-config.yaml     # Maps resource names to plugin IDs
-
+   ├─ config/
+      └─ plugin-resource-mapping.yaml  # Maps resource names to plugin IDs
+   ├─ plugin-templates
+      └─ java-access-plugin            # sample plugin project
+         ├─ src
+         └─ resources
+            └─ plugin.properties
    ```
    {: codeblock}
 
@@ -51,24 +55,22 @@ You must:
 
 The package includes:
 
-   * cpg.jar: The executable connector JAR that loads and runs your plugins.
+   * CPG-Plugin-Runner-1.0.0.jar: The executable connector JAR that loads and runs your plugins.
 
    * plugins/: Directory to place your custom plugin JARs.
 
-   * policy-config.yaml: Configuration file mapping watsonx.data resources to the policy engine plugin IDs. The following is an example of the `policy-config.yaml`.
+   * plugin-resource-mapping.yaml: Configuration file mapping watsonx.data resources to the policy engine plugin IDs. The following is an example of the `plugin-resource-mapping.yaml`.
 
    ``` bash
 
    plugin-mapping:
-     hive_data:
-       - java-access-plugin
-       - go-access-plugin
-     employee_table:
-       - python-access-plugin
-     iceberg:
-       - go-access-plugin
-     dicatalog/dischema/ditable/dicolumn:
-       - ranger-presto-plugin
+     java-access-plugin:
+       - iceberg
+     ranger-access-plugin:
+       - iceberg
+       - hive_data
+     python-access-plugin:
+       - hive_data
 
    ```
    {: codeblock}
@@ -102,7 +104,7 @@ To connect to the required policy engine of your choice, you must create a plugi
 
 2. Copy the JAR into the CPG connector's `plugins/` folder.
 
-3. Update `policy-config.yaml` to reference your plugin ID.
+3. Update `plugin-resource-mapping.yaml` to reference your plugin ID.
 
    Optional :To return row/column transforms, set them using: result.setTransformColumns(...); result.setTransformRows(...);
 
@@ -115,30 +117,40 @@ To connect to the required policy engine of your choice, you must create a plugi
    This will use the following default path for plugins and the config file.
 
    * plugins/ : ./plugins
-   * config/  : ./config/policy-config.yaml
+   * config/  : ./config/plugin-resource-mapping.yaml
 
    You can also customize the path by using the following command:
 
-   `java -jar cpg.jar <absolute/path/to/plugins> <absolute/path/to/config/policy-config.yaml>`.
+   `java -jar cpg.jar <absolute/path/to/plugins> <absolute/path/to/config/plugin-resource-mapping.yaml>`.
 
    The following displays the sample interactive session:
 
    ``` bash
 
-   Enter Username
+   Enter username : admin
    Enter resource_name (e.g., hive_data) or 'quit': hive_data
    Enter resource_type (e.g., table): table
    Enter actions (comma-separated, e.g., select,insert): select
 
-   [Runner] Params: resource=hive_data, type=table, actions=[select]
+   [Runner] Params: user=admin, resource=hive_data, type=table, actions=[select]
    [Runner] Plugins to run: [java-access-plugin]
-   [Runner] Results (1):
-     -> ResourceAccessResult{
-            resourceName='hive_data',
-            actionsResult=[{select=true}],
-            transformColumns={...},
-            transformRows=...
-     }
+   ======Result======
+   {
+     "status" : "SUCCESS",
+     "error" : null,
+     "plugin_id" : "java-access-plugin",
+     "resources" : [ {
+       "actions" : [ "select" ],
+       "resource_name" : "hive_data",
+       "resource_type" : "table",
+       "actions_result" : [ {
+         "select" : "true"
+       } ],
+       "transform_columns" : null,
+       "transform_rows" : null
+     } ]
+   }
+   =================
 
    ```
    {: codeblock}
@@ -159,13 +171,13 @@ If you get the above error, verify the following:
    * The plugins and directory exists and is not empty.
    * The JAR includes plugin.properties at its root.
    * The plugin class is annotated with @Extension and implements AccessPlugin.
-   * The plugin.id in plugin.properties matches the ID in policy-config.yaml.
+   * The plugin.id in plugin.properties matches the ID in plugin-resource-mapping.yaml.
 
 ### Error: Plugin Not Running for Resource
 
 If you get the above error, verify the following:
 
-   * The resource name in `policy-config.yaml` maps correctly to the plugin ID.
+   * The resource name in `plugin-resource-mapping.yaml` maps correctly to the plugin ID.
    * The plugin IDs match exactly (case-sensitive).
 
 ### Error: Custom Paths Not Picked Up

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-11-04"
+lastupdated: "2025-11-06"
 
 keywords: watsonxdata, release notes
 
@@ -369,7 +369,7 @@ Deprecated features
 
    * Azure Data Lake Storage (ADLS) Gen1 is now deprecated and will be removed in an upcoming release. You must transition to ADLS Gen2 because ADLS Gen1 is not available.
 
-   * The user authentication method of using ibmlhapikey and ibmlhtoken as the username is now deprecated and shall be removed in a future   release. You can use ibmlhapikey_username and ibmlhtoken_username instead. For more infromation, see [Access management and governance in watsonx.data](/docs/watsonxdata?topic=watsonxdata-access_mgt).
+   * The user authentication method of using ibmlhapikey and ibmlhtoken as the username is now deprecated and shall be removed in a future   release. You can use `ibmlhapikey_<username>` and `ibmlhtoken_<username>` instead. For more infromation, see [Access management and governance in watsonx.data](/docs/watsonxdata?topic=watsonxdata-access_mgt).
 
 
 

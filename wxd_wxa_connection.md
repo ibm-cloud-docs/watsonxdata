@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-09-18"
+lastupdated: "2025-11-06"
 
 keywords: lakehouse, **Query Optimizer**, {{site.data.keyword.lakehouse_short}}
 
@@ -39,7 +39,7 @@ To connect watsonx Assistant to Milvus in {{site.data.keyword.lakehouse_short}},
    - For information about inserting vectorized data into Milvus, see [Insert, Upsert & Delete](https://milvus.io/docs/insert-update-delete.md).
    - If you want to insert non-vectorized data, for example a PDF file, use embedding models to vectorize it. You can use watsonx.ai that has vectorizing embeddings. For more information, see [Milvus connection](https://dataplatform.cloud.ibm.com/docs/content/wsj/manage-data/conn-milvus.html?context=wx&audience=wdp) in watsonx.ai. Use `ibmlhapikey` as username and your [API key]({{site.data.keyword.ref-con-presto-serv-link}}#get-ibmapi-key) as password for the Milvus connection.
 
-   Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats will be phased out in a future release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_username` and `ibmlhtoken_username`.
+   Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats will be phased out in a future release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_<username>` and `ibmlhtoken_<username>`.
    {: important}
 
    For information about {{site.data.keyword.lakehouse_short}} Milvus configuration in watsonx.ai, see [Configuring IBM® watsonx.data Milvus in IBM watsonx.ai](/docs/watsonxdata?topic=watsonxdata-wxd_wxai_milvus_conn).
