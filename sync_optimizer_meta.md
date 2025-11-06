@@ -106,7 +106,7 @@ To sync tables from {{site.data.keyword.lakehouse_short}}, the following items a
          ```
          {: codeblock}
 
-      2. Run the following command to generate certificate by substituting the values for <OPT_POD> and <Metastore Thrift endpoint>.
+      2. Run the following command to generate certificate by substituting the values for `<OPT_POD>` and `<Metastore Thrift endpoint>`.
 
          ```bash
          oc exec -it <OPT_POD> -c db2u -- bash -c "echo QUIT | openssl s_client -showcerts -connect <Metastore Thrift endpoint> | awk '/-----BEGIN   CERTIFICATE-----/           {p=1}; p; /-----END CERTIFICATE-----/ {p=0}' > /tmp/mds.pem"
