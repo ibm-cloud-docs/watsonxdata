@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-29"
+lastupdated: "2025-11-06"
 
 keywords: lakehouse
 
@@ -30,6 +30,11 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+## Unauthorized column access across tables with identical schema fields
+{: #known_issue51051}
+
+If a user is granted access to a specific table within a schema, they are unexpectedly able to view and query columns from other tables in the same schema if those tables share the same column names. This occurs even though the user does not have explicit access policies for the other tables.
 
 ## `EXT_METASTORE_SYNC` fails due to catalog name mismatch
 {: #known_issue49613}
