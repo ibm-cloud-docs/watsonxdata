@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-11-06"
+lastupdated: "2025-11-07"
 
 keywords: lakehouse, MDS, {{site.data.keyword.lakehouse_short}}, hive, metastore
 
@@ -74,7 +74,7 @@ To sync tables from {{site.data.keyword.lakehouse_short}}, the following items a
    ```
    {: codeblock}
 
-4. Run the following command to manually register the metastore properties of catalog in the **Query Optimizer** {{ site.data.keyword.undata_short }} the legacy metastore type `watsonx-data` for both Hive and Iceberg catalogs:
+4. Run the following command to manually register the metastore properties of a catalog in the **Query Optimizer** using the legacy metastore type `watsonx-data` for both Hive and Iceberg catalogs:
 
    ```bash
    ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.REGISTER_EXT_METASTORE('<CATALOG_NAME>', '<ARGUMENTS>', ?, ?)';
