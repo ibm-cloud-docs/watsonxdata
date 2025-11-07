@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-11-06"
+lastupdated: "2025-11-07"
 
 keywords: lakehouse
 
@@ -30,6 +30,13 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+## ACL UI disablement does not prevent row filtering in Presto
+{: #known_issue51153}
+
+Disabling GenAI ACLs through the Console UI does not fully prevent row-level filtering in Presto. This happens because Presto checks ACL status by querying the `GET /acl_storage` API for the presence of the ACL bucket. If the bucket is still registered, filtering continues even if ACLs have been turned off in the UI.
+
+**Workaround:** After disabling ACLs through the UI, manually delete the ACL bucket from {{site.data.keyword.lakehouse_short}}.
 
 ## Unauthorized column access across tables with identical schema fields
 {: #known_issue51051}
