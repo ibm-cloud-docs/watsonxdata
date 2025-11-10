@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-11-06"
+lastupdated: "2025-11-10"
 
 keywords: watsonxdata, release notes
 
@@ -27,6 +27,14 @@ For watsonx.data as a Service on IBM Cloud with gen AI experience what's new, se
 For watsonx.data on-prem what's new, see [Release notes for watsonx.data](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.2.x?topic=overview-whats-new-in-watsonxdata).
 
 For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-prem Premium](https://www.ibm.com/docs/en/watsonx/watsonxdata-premium/2.2.x?topic=overview-whats-new-in-watsonxdata).
+
+## 12 November 2025 - Version 2.2.2 New Functionalities Introduced (NFI)
+{: #lakehouse_12nov2025}
+{: release-note}
+
+Deprecated features
+
+: The use cases High Performance BI and Data Engineering are deprecated when creating a {{site.data.keyword.lakehouse_short}} Lite instance through the UI. You can still create a {{site.data.keyword.lakehouse_short}} Lite instance with these use cases using the CLI. However, these use cases will be removed from CLI in version 2.3.1.
 
 ## 31 October 2025 - Version 2.2.2
 {: #lakehouse_31oct2025}
