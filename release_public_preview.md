@@ -32,20 +32,31 @@ subcollection: watsonxdata
 Read about the new features and enhancements in the current and previous releases of {{site.data.keyword.lakehouse_full}} (Public preview).
 {: shortdesc}
 
+## 12 November 2025 - Version 2.2.2 New Functionalities Introduced (NFI)
+{: #lakehouse_12nov2025_pp}
+{: release-note}
+
+This release includes the following new feature:
+
+OpenSearch integration
+
+: {{site.data.keyword.lakehouse_full}} now integrates with OpenSearch service enabling search and analytics capabilities on lakehouse-managed data. For more information see,
+[Adding and OpenSearch service](/docs/watsonxdata?topic=watsonxdata-add-opensearch)
+
 ## 30 October 2025 - Version 2.2.2
 {: #lakehouse_29oct2025_pp}
 {: release-note}
 
 This release includes the following new feature:
 
-
 Query Optimizer enhancement
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following access **Query Optimizer** enhancements:
 
    * You can now enable or disable the Materialized View (MV) feature for the **Query Optimizer** directly from the web console in {{site.data.keyword.lakehouse_short}}. For more information, see [Optimizing queries using Materialized View (MV) in Query optimizer](/docs/watsonxdata?topic=watsonxdata-mv_optimizer).
+New lightweight, plugin‑based Common Policy Gateway (CPG) client
 
-
+: A new lightweight CPG is now available as a downloadable plugin, enabling seamless integration with any policy engine (for example, IBM Knowledge Catalog, Apache Ranger, Collibra). For more information, see [Common Policy Gateway (CPG) connector](/docs/watsonxdata?topic=watsonxdata-plug_cpg).
 
 ## 11 June 2025 - Version 2.2
 {: #lakehouse_2apr212-pp}
