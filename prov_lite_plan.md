@@ -28,7 +28,7 @@ The **Lite** plan allows you to provision an {{site.data.keyword.lakehouse_full}
 
 Provisioning a Lite plan instance is use case driven. The {{site.data.keyword.lakehouse_short}} instance is configured based on this use case:
 
-When you provision a Lite plan instance through UI, {{site.data.keyword.lakehouse_short}} automatically configures it for **Generative AI**. You cannot provision instances for **High Performance BI** or **Data Engineering** using UI. To configure these options, you must use CLI.
+When you provision a Lite plan instance through UI, {{site.data.keyword.lakehouse_short}} automatically configures it for **Generative AI** use case. You cannot provision instances for **High Performance BI** or **Data Engineering** use cases using UI. To configure these options, you must use CLI.
 {: note}
 
 - **Generative AI**: AI developers or Data engineers can explore the Generative AI use cases using this option. The provisioned instance includes Presto, Milvus, Spark, a read-only sample IBM COS storage that is associated to the Presto engine, and sample worksheet with `GoSales` data in it.
