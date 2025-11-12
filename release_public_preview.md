@@ -29,7 +29,7 @@ subcollection: watsonxdata
 # What's new in {{site.data.keyword.lakehouse_short}} (Tech preview)
 {: #release_pp}
 
-Read about the new features and enhancements in the current and previous releases of {{site.data.keyword.lakehouse_full}} (Public preview).
+Read about the new features and enhancements in the current and previous releases of {{site.data.keyword.lakehouse_full}} (Tech preview).
 {: shortdesc}
 
 ## 12 November 2025 - Version 2.2.2 New Functionalities Introduced (NFI)
