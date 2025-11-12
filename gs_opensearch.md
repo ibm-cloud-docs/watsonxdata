@@ -53,6 +53,9 @@ Getting started with OpenSearch service
 
    After you provision the OpenSearch service, you can enable supporting services or add other engines such as Presto or Spark.
 
+   You can provision the Presto and Spark engines only after the supporting services are enabled and running.
+   {: note}
+
 **For existing users**
 
 You can enable OpenSearch as an optional add-on component without impacting your current services.
