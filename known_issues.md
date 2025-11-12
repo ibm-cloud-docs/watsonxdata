@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-11-07"
+lastupdated: "2025-11-12"
 
 keywords: lakehouse
 
@@ -30,6 +30,11 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+## Error connecting to watsonx.data from `Chat with Document` screen
+{: #known_issue52345}
+
+When attempting to establish a connection to {{site.data.keyword.lakehouse_short}} from the `Chat with Document` screen (specifically in the ca-tor region), users encounter the following error: Error: `A data source of the specified type [null] does not exist`.
 
 ## ACL UI disablement does not prevent row filtering in Presto
 {: #known_issue51153}
