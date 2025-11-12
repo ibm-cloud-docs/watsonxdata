@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-11-10"
+lastupdated: "2025-11-12"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -26,9 +26,14 @@ The **Lite** plan allows you to provision an {{site.data.keyword.lakehouse_full}
 {: shortdesc}
 
 
-Provisioning a Lite plan instance is use case driven. By default, use case is set to **Generative AI**. The {{site.data.keyword.lakehouse_short}} instance is configured based on this selected use case:
+Provisioning a Lite plan instance is use case driven. The {{site.data.keyword.lakehouse_short}} instance is configured based on this use case:
 
-**Generative AI**: AI developers or Data engineers can explore the Generative AI use cases using this option. The provisioned instance includes Presto, Milvus, Spark, a read-only sample IBM COS storage that is associated to the Presto engine, and sample worksheet with `GoSales` data in it.
+If you provision a Lite plan instance through UI, the {{site.data.keyword.lakehouse_short}} instance configures based on **Generative AI** use case. You can only configure **High Performance BI** and **Data Engineering** through CLI.
+{: note}
+
+- **Generative AI**: AI developers or Data engineers can explore the Generative AI use cases using this option. The provisioned instance includes Presto, Milvus, Spark, a read-only sample IBM COS storage that is associated to the Presto engine, and sample worksheet with `GoSales` data in it.
+- **High Performance BI**: Data engineers can explore BI visualization functionalities using this option. The provisioned instance includes Presto (C++), Spark, Query Optimizer, a read-only sample IBM COS storage that is associated to the Presto engine, and `tpcds` is available as the sample worksheet for benchmarking.
+- **Data Engineering**: Data engineers can explore various workload driven use cases using this option. The provisioned instance includes Presto (Java), Spark, a read-only sample IBM COS storage that is associated to the Presto engine, and sample worksheet with `GoSales` data in it.
 
 After provisioning the Lite plan instance, you can monitor the resource unit usage from the **Billing and Usage** page available in the {{site.data.keyword.lakehouse_short}} console. For more information, see [Billing and Usage](/docs/watsonxdata?topic=watsonxdata-manage_bill).
 
@@ -87,11 +92,6 @@ Perform the following steps to provision a Lite plan instance:
 
 
 1. Optional: Enter the tags and access management tags.
-
-1. In the **Use case** field, **Generative AI** is selected by default.
-
-   You can only configure a Lite instance based on the **Generative AI** use case. The provisioned instance includes Presto, Milvus and Spark.
-   {: note}
 
 1. In the **Summary** page, review the license agreement and select the checkbox to agree.
 
