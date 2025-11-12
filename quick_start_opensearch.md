@@ -25,7 +25,7 @@ To configure OpenSearch, complete the following steps:
 1. In the **Welcome** page, select the **Open search** tile and click **Next**.
 1. In the **Service** page, provide the following details:
    * Select the service. For example, **OpenSearch**.
-   * Select the suitable size. For example, **Starter** which includes one coordinator node and 1 worker node.
+   * Select the suitable size. For example, **Starter** which includes one coordinator node and one worker node.
 
 1. Click **Next**.
 The OpenSearch service is configured and displayed in the **Infrastructure Manager** page.

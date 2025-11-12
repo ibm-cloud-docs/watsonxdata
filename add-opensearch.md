@@ -41,7 +41,7 @@ Complete the following steps to add an OpenSearch service:
 
    * Select the service. For example, **OpenSearch**.
    * Select the suitable size. For example, **Starter**, which includes one coordinator
-   node and 1 worker node.
+   node and one worker node.
 5. Click **Create**.
 
 The OpenSearch service is created and displayed in the **Infrastructure Manager** page.
