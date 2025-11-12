@@ -41,7 +41,7 @@ This release includes the following new feature:
 OpenSearch integration (Private preview)
 
 : {{site.data.keyword.lakehouse_full}} now integrates with OpenSearch service enabling search and analytics capabilities on lakehouse-managed data. For more information see,
-[Adding an OpenSearch service](/docs/watsonxdata?topic=watsonxdata-add-opensearch).
+[Getting started with OpenSearch service](/docs/watsonxdata?topic=watsonxdata-gs_opensearch).
 
 ## 30 October 2025 - Version 2.2.2
 {: #lakehouse_29oct2025_pp}
