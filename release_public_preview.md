@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-11-10"
+lastupdated: "2025-11-12"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -26,7 +26,7 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# What's new in {{site.data.keyword.lakehouse_short}} (Public preview)
+# What's new in {{site.data.keyword.lakehouse_short}} (Tech preview)
 {: #release_pp}
 
 Read about the new features and enhancements in the current and previous releases of {{site.data.keyword.lakehouse_full}} (Public preview).
@@ -38,7 +38,7 @@ Read about the new features and enhancements in the current and previous release
 
 This release includes the following new feature:
 
-OpenSearch integration
+OpenSearch integration (Private preview)
 
 : {{site.data.keyword.lakehouse_full}} now integrates with OpenSearch service enabling search and analytics capabilities on lakehouse-managed data. For more information see,
 [Adding an OpenSearch service](/docs/watsonxdata?topic=watsonxdata-add-opensearch).
@@ -49,7 +49,7 @@ OpenSearch integration
 
 This release includes the following new feature:
 
-Query Optimizer enhancement
+Query Optimizer enhancement (Public preview)
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following access **Query Optimizer** enhancements:
 
@@ -64,6 +64,6 @@ New lightweight, plugin‑based Common Policy Gateway (CPG) client
 
 This release includes the following new feature:
 
-Gen AI-powered chat interface in {{site.data.keyword.lakehouse_short}}
+Gen AI-powered chat interface in {{site.data.keyword.lakehouse_short}} (Public preview)
 
 : You can now chat with a gen AI-powered chat interface, {{site.data.keyword.lakehouse_short}} Assistant to ask questions about {{site.data.keyword.lakehouse_full}}. The assistant answers your queries about {{site.data.keyword.lakehouse_short}} based on its knowledge on IBM product documentation. It helps to explore and learn about the product in an easier and faster way. To enable the feature and start using it, see [watsonx.data Assistant - genAI powered chat interface](/docs/watsonxdata?topic=watsonxdata-db_ast).

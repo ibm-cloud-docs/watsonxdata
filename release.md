@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-11-10"
+lastupdated: "2025-11-12"
 
 keywords: watsonxdata, release notes
 
@@ -34,7 +34,7 @@ For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-p
 
 Deprecated features
 
-: The use cases **High Performance BI** and **Data Engineering** are deprecated when creating a {{site.data.keyword.lakehouse_short}} Lite instance through the UI. You can still create a {{site.data.keyword.lakehouse_short}} Lite instance with these use cases using the CLI. However, these use cases will be removed from CLI in version 2.3.1.
+: The **High Performance BI** and **Data Engineering** use cases are deprecated when creating a {{site.data.keyword.lakehouse_short}} Lite instance through the UI. You can still create a {{site.data.keyword.lakehouse_short}} Lite instance with these use cases using the CLI. However, these use cases will be removed from CLI in version 2.3.1.
 
 ## 31 October 2025 - Version 2.2.2
 {: #lakehouse_31oct2025}

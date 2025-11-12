@@ -424,13 +424,15 @@ toc:
               - api_custom_logconfcord_pcpp.md
           - resource_grp_pptys.md
       - topicgroup:
-          label: Public preview
+          label: Tech preview
           topics:
           - release_public_preview.md
           - cpg_plugin.md
           - mv_optimizer.md
           - jdbc.md
           - db_ast.md
+          - quick_start_opensearch.md
+          - add-opensearch.md
       - link:
           label: watsonx.data v2 APIs
           href: https://cloud.ibm.com/apidocs/watsonxdata
