@@ -37,10 +37,13 @@ Complete the following steps to add an OpenSearch service:
 1. Log in to the {{site.data.keyword.lakehouse_short}} console.
 2. From the navigation menu, select **Infrastructure Manager**.
 3. To define and connect to a service, click **Add component**, select **OpenSearch**, and click **Next**.
-4. In the **Add component - OpenSearch** window, provide the following details.
+4. In the **Add component - OpenSearch** window, provide the following details:
+
    * Select the service. For example, **OpenSearch**.
-   * Select the suitable size. For example, **Starter, which includes one coordinator node and 1 worker node.
-6. Click **Create**.
+   * Select the suitable size. For example, **Starter**, which includes one coordinator
+   node and 1 worker node.
+5. Click **Create**.
+
 The OpenSearch service is created and displayed in the **Infrastructure Manager** page.
 You can create only one OpenSearch service in an instance and only instance administrators are authorized to do all the OpenSearch operations.
 {: note}
