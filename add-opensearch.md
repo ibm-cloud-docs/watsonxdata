@@ -26,7 +26,7 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Adding an OpenSearch service (Public preview)
+# Adding an OpenSearch service (Private preview)
 {: #add-opensearch}
 
 OpenSearch is an open source search and analytics engine that is designed to help you explore, analyze, and visualize large volumes of data in real time. It is built for use cases like log analytics, full-text search, application monitoring, and security event analysis.
