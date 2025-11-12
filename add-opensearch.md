@@ -45,5 +45,6 @@ Complete the following steps to add an OpenSearch service:
 5. Click **Create**.
 
 The OpenSearch service is created and displayed in the **Infrastructure Manager** page.
+
 You can create only one OpenSearch service in an instance and only instance administrators are authorized to do all the OpenSearch operations.
 {: note}
