@@ -32,7 +32,7 @@ subcollection: watsonxdata
 Read about the new features and enhancements in the current and previous releases of {{site.data.keyword.lakehouse_full}} (Technology preview).
 {: shortdesc}
 
-## 12 November 2025 - Version 2.2.2 New Functionalities Introduced (NFI)
+## 12 November 2025 - Version 2.2.2 New Feature 1 (NF1)
 {: #lakehouse_12nov2025_pp}
 {: release-note}
 
