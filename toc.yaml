@@ -427,16 +427,16 @@ toc:
           label: Technology preview
           topics:
           - release_public_preview.md
-          - cpg_plugin.md
-          - mv_optimizer.md
-          - jdbc.md
-          - db_ast.md
           - topicgroup:
               label: OpenSearch integration
               topics:
               - gs_opensearch.md
               - quick_start_opensearch.md
               - add-opensearch.md
+          - cpg_plugin.md
+          - mv_optimizer.md
+          - jdbc.md
+          - db_ast.md
       - link:
           label: watsonx.data v2 APIs
           href: https://cloud.ibm.com/apidocs/watsonxdata
