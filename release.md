@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-11-12"
+lastupdated: "2025-11-13"
 
 keywords: watsonxdata, release notes
 
@@ -30,8 +30,8 @@ For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-p
 
 Technology preview features: We also offer a Technology preview section that includes features currently in preview. These features are not generally available and may change before release. To view the release notes for technology preview items, see [Technology preview](/docs/watsonxdata?topic=watsonxdata-release_pp).
 
-## 12 November 2025 - Version 2.2.2 New Feature 1 (NF1)
-{: #lakehouse_12nov2025}
+## 13 November 2025 - Version 2.2.2 New Feature 1 (NF1)
+{: #lakehouse_13nov2025}
 {: release-note}
 
 {{site.data.keyword.lakehouse_short}} 2.2.2 NF1 version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.2.2 NF1 release is available in your region, contact IBM Support.
