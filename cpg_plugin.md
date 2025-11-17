@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-11-06"
+lastupdated: "2025-11-17"
 keywords: cpg
 subcollection: watsonxdata
 
@@ -30,7 +30,7 @@ You must:
 ## Downloading CPG package
 {: #plug_proc}
 
-1. Download the latest version of CPG light weight package from : [Download package](https://github.ibm.com/lakehouse/watsonx-data-public).
+1. Download the latest version of CPG light weight package from : [Download package](https://github.com/IBM/watsonx-data/tree/main/CPG-Plugin-Runner).
 
 2. After downloading, unzip the package. The folder structure will look like this:
 
