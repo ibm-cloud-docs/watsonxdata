@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-11-17"
+lastupdated: "2025-11-18"
 keywords: cpg
 subcollection: watsonxdata
 
@@ -27,12 +27,12 @@ You must:
 
    * A policy mapping file defining the mapping of the plugins that should run for the corresponding policy engines.
 
-## Downloading CPG package
+## Accessing CPG package
 {: #plug_proc}
 
-1. Download the latest version of CPG light weight package from : [Download package](https://github.com/IBM/watsonx-data/tree/main/CPG-Plugin-Runner).
+1. Clone the latest version of CPG light weight package from : [CPG package](https://github.com/IBM/watsonx-data/tree/main/CPG-Plugin-Runner).
 
-2. After downloading, unzip the package. The folder structure will look like this:
+2. After cloning,you can view the following folder structure:
 
    ``` bash
 
