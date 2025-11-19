@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-01"
+lastupdated: "2025-11-19"
 
 keywords: lakehouse, mixed-case behavior, watsonx.data
 
@@ -60,6 +60,15 @@ The following catalogs support the `case-sensitive-name-matching` property:
 - Greenplum
 - Apache Derby
 - MariaDB
+- Apache Cassandra
+- ClickHouse
+- Apache Druid
+- Elasticsearch
+- Apache Kafka
+- MongoDB
+- Apache Pinot
+- Redis
+- Prometheus
 
 Presto defaults the `case-sensitive-name-matching` configuration to `false` for all eligible catalogs.
 {: note}
