@@ -37,7 +37,9 @@ Technology preview features: We also offer a Technology preview section that inc
 {{site.data.keyword.lakehouse_short}} 2.2.2 NF1 version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.2.2 NF1 release is available in your region, contact IBM Support.
 {: important}
 
-For this release, additional updates and enhancements are available under Technology Preview features. To review the Technology Preview updates for this release, see, [Technology preview 2.2.2 NF1](/docs/watsonxdata?topic=watsonxdata-release_pp#lakehouse_13nov2025_pp).
+Technology preview features
+
+: For this release, additional updates and enhancements are available under Technology Preview features. To review the Technology Preview updates for this release, see, [Technology preview 2.2.2 NF1](/docs/watsonxdata?topic=watsonxdata-release_pp#lakehouse_13nov2025_pp).
 
 Deprecated features
 
