@@ -40,7 +40,11 @@ Data sources and storage enhancements
 
    * You can now apply IBM Knowledge Catalog governance policies to the data source, MongoDB. For more information, see [Connecting to IBM Knowledge Catalog (IKC)](/docs/watsonxdata?topic=watsonxdata-ikc_integration).
 
+Engine and service enhancements
 
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
+
+   * The Spark Engine creation process is now simplified by focusing only on essential details—engine name, Spark version, home bucket, and associated catalogs, while moving capacity reservation tasks to a new Capacity Management tab on the engine details page. This update removes capacity configuration from the creation flow, making engine setup faster and less complex. After creating an engine, you can manage VM flavors, configure node pools, and set on-demand fallback thresholds under the Capacity tab.
 
 ## 13 November 2025 - Version 2.2.2 New Feature 1 (NF1)
 {: #lakehouse_13nov2025}
