@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-11-19"
+lastupdated: "2025-11-25"
 
 keywords: watsonxdata, release notes
 
@@ -29,6 +29,18 @@ For watsonx.data on-prem what's new, see [Release notes for watsonx.data](https:
 For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-prem Premium](https://www.ibm.com/docs/en/watsonx/watsonxdata-premium/2.2.x?topic=overview-whats-new-in-watsonxdata).
 
 Technology preview features: We also offer a Technology preview section that includes features currently in preview. These features are not generally available and may change before release. To view the release notes for technology preview items, see [Technology preview](/docs/watsonxdata?topic=watsonxdata-release_pp).
+
+## 08 December 2025 - Version 2.3
+{: #lakehouse_08dec2025}
+{: release-note}
+
+Data sources and storage enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following data sources and storage enhancements:
+
+   * You can now apply IBM Knowledge Catalog governance policies to the data source, MongoDB. For more information, see [Connecting to IBM Knowledge Catalog (IKC)](/docs/watsonxdata?topic=watsonxdata-ikc_integration).
+
+
 
 ## 13 November 2025 - Version 2.2.2 New Feature 1 (NF1)
 {: #lakehouse_13nov2025}
