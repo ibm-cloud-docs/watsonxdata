@@ -385,6 +385,7 @@ toc:
   - navgroup:
       id: reference
       topics:
+      - new_arch_billing_usage.md
       - ae_limits.md
       - cluster_limits.md
       - connection_info.md
