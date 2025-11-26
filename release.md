@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-11-25"
+lastupdated: "2025-11-26"
 
 keywords: watsonxdata, release notes
 
@@ -45,6 +45,11 @@ Engine and service enhancements
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
 
    * The Spark Engine creation process is now simplified by focusing only on essential details—engine name, Spark version, home bucket, and associated catalogs, while moving capacity reservation tasks to a new Capacity Management tab on the engine details page. This update removes capacity configuration from the creation flow, making engine setup faster and less complex. After creating an engine, you can manage VM flavors, configure node pools, and set on-demand fallback thresholds under the Capacity tab.
+
+Billing enhancements
+: This release of watsonx.data introduces the following enhancements to the billing feature:
+
+   * Metering of {{site.data.keyword.lakehouse_short}} components now operates at the runtime level, capturing start, stop, and pause events for each runtime tied to an engine. It provides clear visibility into engine consumption and resource usage. For engines like Presto, this remains a one-to-one mapping, while Spark introduces multiple runtime subtypes (e.g., Kernel, HistoryServer, Application), each tracked individually for active and inactive hours. The user interface will reflect these changes by displaying runtime-level activity bars and event history links scoped to each runtime, ensuring clarity and precision.
 
 ## 13 November 2025 - Version 2.2.2 New Feature 1 (NF1)
 {: #lakehouse_13nov2025}
