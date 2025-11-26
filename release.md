@@ -46,7 +46,7 @@ Engine and service enhancements
 
    * The Spark Engine creation process is now simplified by focusing only on essential details—engine name, Spark version, home bucket, and associated catalogs, while moving capacity reservation tasks to a new Capacity Management tab on the engine details page. This update removes capacity configuration from the creation flow, making engine setup faster and less complex. After creating an engine, you can manage VM flavors, configure node pools, and set on-demand fallback thresholds under the Capacity tab.
 
-   * Spark Labs are now accessible from the Console under Infrastructure > Spark Engine, in addition to the VS Code extension. A new table view displays Spark Labs with a default filter set to ACTIVE, showing details such as Name, ID, Created On, Started On, and Stopped On, similar to the Spark Query Server interface. You can also stop a Spark Lab from the Console. For more information, see [Managing Spark labs from Console]().
+   * Spark Labs are now accessible from the Console under Infrastructure > Spark Engine, in addition to the VS Code extension. A new table view displays Spark Labs with a default filter set to ACTIVE, showing details such as Name, ID, Created On, Started On, and Stopped On, similar to the Spark Query Server interface. You can also stop a Spark Lab from the Console. For more information, see [Managing Spark labs from Console](/docs/watsonxdata?topic=watsonxdata-lab_console).
 
 Billing enhancements
 : This release of watsonx.data introduces the following enhancements to the billing feature:
