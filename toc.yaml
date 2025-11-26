@@ -265,6 +265,7 @@ toc:
               topics:
               - lnative_spk_lab.md
               - nsp_lab_mon.md
+              - spark_labs_tab.md
           - topicgroup:
               label: Data management
               topics:
