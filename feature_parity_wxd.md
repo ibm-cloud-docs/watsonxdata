@@ -63,6 +63,9 @@ For more information on how each deployment is classified based on its support f
 ### AWS availability
 {: #aws_avlty}
 
+AWS deployments are currently unavailable in Canada, Japan, and Korea but can be made avilable with 8–10 days’ notice; in the U.S., {{site.data.keyword.lakehouse_short}} is deployed only in N. Virginia, with Oregon available upon similar notice.
+{: note}
+
 | Region | Sub-region | Name | AstraDB serverless | watsonx.data | watsonx.data premium |
 |---|---|---|---|---|---|
 | NA | N. Virgina | us-east-1 | ✅ | ✅ | ❌ |
@@ -81,6 +84,7 @@ For more information on how each deployment is classified based on its support f
 | APAC | Hong Kong | ap-east-1 | ❌ | ❌ |❌|
 | SA | Sao Paulo | sa-east-1 | ❌ | ❌ |❌|
 {: caption="AWS availability" caption-side="bottom"}
+
 
 ### Microsoft Azure availability
 {: #microsft_azure_avlty}
