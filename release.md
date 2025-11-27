@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-11-26"
+lastupdated: "2025-11-27"
 
 keywords: watsonxdata, release notes
 
@@ -128,25 +128,6 @@ Data manager enhancements
 Integration enhancements
 
 : IBM {{site.data.keyword.lakehouse_short}} now supports column-level lineage tracking for Presto by integrating with Manta. With this enhancement, users can now explore detailed column dependencies, relationships, and metadata changes, enabling deeper insights into data flows and improving traceability across pipelines.
-
-
-Query Optimizer enhancement
-
-: This release of {{site.data.keyword.lakehouse_short}} introduces the following access Query Optimizer enhancements:
-
-   * **Support for Hive and Iceberg Metastore Registration in Query Optimizer**
-
-   The Query Optimizer supports distinct metastore types for Hive and Iceberg catalogs.
-
-   Users can now register:
-
-   - Hive catalogs using the `watsonx-data-hive` metastore type.
-   - Iceberg catalogs using the `iceberg-rest` metastore type.
-
-   This enhancement allows more granular control and compatibility with evolving metastore architectures. Registration is done using the `REGISTER_EXT_METASTORE` procedure with updated syntax and properties.
-
-   From this release onwards, legacy support for the unified `watsonx-data` metastore type is no longer available. For more information, see [Manually syncing Query Optimizer with metastore](/docs/watsonxdata?topic=watsonxdata-sync_optimizer_meta).
-
 
 Deprecated features
 
