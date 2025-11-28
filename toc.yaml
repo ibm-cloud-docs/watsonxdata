@@ -230,6 +230,7 @@ toc:
               topics:
               - prov-native-spark.md
               - mng-nspark-eng.md
+              - mng_capacity_newarch.md
               - view-edit-native-park.md
               - scale_nspark.md
               - mng_appln_nspark.md
