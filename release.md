@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-11-27"
+lastupdated: "2025-11-28"
 
 keywords: watsonxdata, release notes
 
@@ -44,14 +44,14 @@ Engine and service enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
 
-   * The Spark Engine creation process is now simplified by focusing only on essential details—engine name, Spark version, home bucket, and associated catalogs, while moving capacity reservation tasks to a new Capacity Management tab on the engine details page. This update removes capacity configuration from the creation flow, making engine setup faster and less complex. After creating an engine, you can manage VM flavors, configure node pools, and set on-demand fallback thresholds under the Capacity tab.
+   * The Spark Engine creation process is now simplified by focusing only on essential details—engine name, Spark version, home bucket, and associated catalogs, while moving capacity reservation tasks to a new Capacity Management tab on the engine details page. This update removes capacity configuration from the creation flow, making engine setup faster and less complex. After creating an engine, you can manage VM flavors, configure node pools, and set on-demand fallback thresholds under the Capacity tab. You can access this feature when using version 2.3 of {{site.data.keyword.lakehouse_short}}.
 
    * Spark Labs are now accessible from the Console under Infrastructure > Spark Engine, in addition to the VS Code extension. A new table view displays Spark Labs with a default filter set to ACTIVE, showing details such as Name, ID, Created On, Started On, and Stopped On, similar to the Spark Query Server interface. You can also stop a Spark Lab from the Console. For more information, see [Managing Spark labs from Console](/docs/watsonxdata?topic=watsonxdata-lab_console).
 
 Billing enhancements
 : This release of watsonx.data introduces the following enhancements to the billing feature:
 
-   * Metering of {{site.data.keyword.lakehouse_short}} components now operates at the runtime level, capturing start, stop, and pause events for each runtime tied to an engine. It provides clear visibility into engine consumption and resource usage. For engines like Presto, this remains a one-to-one mapping, while Spark introduces multiple runtime subtypes (e.g., Kernel, HistoryServer, Application), each tracked individually for active and inactive hours. The user interface will reflect these changes by displaying runtime-level activity bars and event history links scoped to each runtime, ensuring clarity and precision. For more information, see [Metering and usage experience](/docs/watsonxdata?topic=watsonxdata-manage_bil_newarch).
+   * Metering of {{site.data.keyword.lakehouse_short}} components now operates at the runtime level, capturing start, stop, and pause events for each runtime tied to an engine. It provides clear visibility into engine consumption and resource usage. For engines like Presto, this remains a one-to-one mapping, while Spark introduces multiple runtime subtypes (e.g., Kernel, HistoryServer, Application), each tracked individually for active and inactive hours. The user interface will reflect these changes by displaying runtime-level activity bars and event history links scoped to each runtime, ensuring clarity and precision. For more information, see [Metering and usage experience](/docs/watsonxdata?topic=watsonxdata-manage_bil_newarch). You can access this feature when using version 2.3 of {{site.data.keyword.lakehouse_short}}.
 
 ## 13 November 2025 - Version 2.2.2 New Feature 1 (NF1)
 {: #lakehouse_13nov2025}
