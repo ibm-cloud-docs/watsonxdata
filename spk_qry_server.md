@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-28"
+lastupdated: "2025-11-28"
 
 keywords: query, server, spark
 
@@ -40,9 +40,14 @@ For the Spark engine to integrate with dbt tool and work as a query engine, you 
 1. Click **Create query servers**. The **Create query servers** page opens.
 1. Provide the following details:
     * Name: Enter a name for the query server that you create.
-    * Driver and Executor cores and memory.
+    * You need to provide the following information when using version 2.3 or later of {{site.data.keyword.lakehouse_short}}.
+
+       Select the **Capacity type**. You can select **Dedicated** (if configured) or **On-demand**. Choose the capacity from the list and specify the CPU cores and memory details for driver and executor.
+
+    * Driver and Executor cores and memory. Specify this field if you are using a version earlier than 2.3 of {{site.data.keyword.lakehouse_short}}.
     * Username: The watsonx.data login username.
     * API key: Your API key. To generate an API key, see [Generating the API key](https://test.cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-con-presto-serv).
+    * Specify the configuration and environment variables and the values.
 
 1. Click **Create**. The query server is created and will be in ACCEPTED status. You can start using the server when the status becomes ACTIVE.
 
