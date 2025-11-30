@@ -31,6 +31,7 @@ toc:
           - resource_grp_ov.md
           - integration.md
           - manta_overview.md
+          - opntlmtry.md
           - feature_parity_wxd.md
           - wxd_plfrm_dplmnt_cmpar.md
           - wxd_astra_classic.md
@@ -304,6 +305,16 @@ toc:
           - sal_enrich_data.md
           - sal_modify_enrichmentrun.md
           - sal_search.md
+      - topicgroup:
+          label: OpenTelemetry
+          topics:
+          - opntlmtry_ui_2.1.2.md
+          - opntlmtry_inst_dash2.md
+          - topicgroup:
+              label: Customizing Instana and Grafana dashboards
+              topics:
+              - opntlmtry_instana_dashboard.md
+              - opntlmtry_prometheus_dashboard.md
       - topicgroup:
           label: Enhancing security
           topics:
