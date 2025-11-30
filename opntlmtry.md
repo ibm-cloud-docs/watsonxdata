@@ -47,4 +47,4 @@ OpenTelemetry is supported for Presto (Java), Presto (C++) engines, and Milvus s
 ## Related topics
 {: #opntlmtry_related}
 
-To learn more about OpenTelemetry in watsonx.data, explore the topics in
+To learn more about adding telemetry diagnostic tools in {{site.data.keyword.lakehouse_short}}, explore the topics in [OpenTelemetry](/docs/watsonxdata?topic=watsonxdata-opntlmtry_ui_2.1.2)
