@@ -30,7 +30,7 @@ For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-p
 
 Technology preview features: We also offer a Technology preview section that includes features currently in preview. These features are not generally available and may change before release. To view the release notes for technology preview items, see [Technology preview](/docs/watsonxdata?topic=watsonxdata-release_pp).
 
-## 08 December 2025 - Version 2.3
+## 03 December 2025 - Version 2.3
 {: #lakehouse_08dec2025}
 {: release-note}
 
@@ -54,6 +54,11 @@ Engine and service enhancements
    * The Spark Engine creation process is now simplified by focusing only on essential details—engine name, Spark version, home bucket, and associated catalogs, while moving capacity reservation tasks to a new Capacity Management tab on the engine details page. This update removes capacity configuration from the creation flow, making engine setup faster and less complex. After creating an engine, you can manage VM flavors, configure node pools, and set on-demand fallback thresholds under the Capacity tab. You can access this feature when using version 2.3 of {{site.data.keyword.lakehouse_short}}.
 
    * Spark Labs are now accessible from the Console under Infrastructure > Spark Engine, in addition to the VS Code extension. A new table view displays Spark Labs with a default filter set to ACTIVE, showing details such as Name, ID, Created On, Started On, and Stopped On, similar to the Spark Query Server interface. You can also stop a Spark Lab from the Console. For more information, see [Managing Spark labs from Console](/docs/watsonxdata?topic=watsonxdata-lab_console).
+
+Access management enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following access management enhancements:
+   * Administrators can create context-based restriction policies and define trusted IP addresses. You can now configure trusted IP addresses to enable secure access to watsonx.data UI for designated users. This capability adds an extra layer of protection by ensuring that only traffic originating from approved IP addresses can access the user interface. Any attempts to access watsonx.data UI from IPs outside the defined range will be blocked. For more information, see [Securing UI Access with IP-Based Controls](/docs/watsonxdata?topic=watsonxdata-access_rest).
 
 Billing enhancements
 : This release of watsonx.data introduces the following enhancements to the billing feature:
