@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-11-30"
+lastupdated: "2025-12-01"
 
 keywords: Instana, OpenTelemetry, dashboards, Presto, Milvus, customization
 
@@ -30,7 +30,7 @@ subcollection: watsonxdata
 # Customizing Instana dashboards to monitor engine performance
 {: #opntlmtry_instana_dashboard}
 
-IBM® Instana Observability dashboards provide a comprehensive view of the performance and health of your Presto and Milvus engines. You can use these dashboards to monitor key metrics, diagnose issues, and optimize resource allocation. While default templates are available, you can customize them to gain deeper insights by adding widgets and metrics.
+IBM® Instana Observability dashboards provide a comprehensive view of the performance and health of your Presto (Java) and Presto (C++) engines. You can use these dashboards to monitor key metrics, diagnose issues, and optimize resource allocation. While default templates are available, you can customize them to gain deeper insights by adding widgets and metrics.
 
 ## Procedure
 {: #opntlmtry_instana_dashboard_steps}

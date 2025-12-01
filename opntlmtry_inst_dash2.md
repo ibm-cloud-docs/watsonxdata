@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-11-30"
+lastupdated: "2025-12-01"
 
 keywords: watsonx.data, Presto, Milvus, dashboards, observability, metrics
 
@@ -30,7 +30,7 @@ subcollection: watsonxdata
 # Supporting dashboards
 {: #opntlmtry_inst_dash2}
 
-{{site.data.keyword.lakehouse_full}} Presto and Milvus offer comprehensive observability through a robust set of dashboards that provide visibility into performance metrics, enabling rapid issue diagnosis and optimizing resource allocation.
+{{site.data.keyword.lakehouse_full}} Presto (Java) offer comprehensive observability through a robust set of dashboards that provide visibility into performance metrics, enabling rapid issue diagnosis and optimizing resource allocation.
 
 The following are the supported dashboards:
 - System health
@@ -45,7 +45,7 @@ The following are the supported dashboards:
 The Grafana tool provides support only for the following four dashboards System health, Query performance health, Data and metadata health, and Workload health while the Instana tool supports all the eight dashboards.
 {: note}
 
-The following list represents the default set of Presto metrics. Users can extend this by adding additional metrics as needed. A full list of available metrics and their definitions can be found in [Presto exposed JMX metrics](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-presto_expd_jmx){: external}.
+The following list represents the default set of Presto (Java) metrics. Users can extend this by adding additional metrics as needed. A full list of available metrics and their definitions can be found in [Presto exposed JMX metrics](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-presto_expd_jmx){: external}.
 {: note}
 
 ## System health
@@ -53,7 +53,7 @@ The following list represents the default set of Presto metrics. Users can exten
 
 Monitoring the underlying infrastructure is paramount for Presto. Focuses on the foundational infrastructure, monitoring core resources like CPU, memory, and I/O to detect bottlenecks and ensure stable operations.
 
-**Presto engine:**
+**Presto (Java) engine:**
 
 - **CPU usage** - Monitors CPU usage across Presto instances.
    - `process_cpu_seconds_total`
@@ -105,29 +105,12 @@ Additionally, ensure the following configurations are included in the `jvm.confi
    - `watsonx_data_presto_fragment_cache_stats_cache_size_in_bytes`
    - `watsonx_data_presto_fragment_cache_stats_inflight_bytes`
 
-**Milvus:**
-
-- **CPU usage** - Monitors CPU usage across Milvus instances.
-   - `process_cpu_seconds_total`
-
-- **Memory usage** - Tracks total memory used versus available
-   - `process_resident_memory_bytes`
-   - `process_virtual_memory_bytes`
-
-- **Disk I/O** - Measures the number of storage operations performed.
-   - `milvus_storage_op_count`
-   - `internal_storage_op_count`
-
-- **Network bandwidth** - Observes inbound and outbound network traffic to assess connectivity and load.
-   - `process_network_receive_bytes_total`
-   - `process_network_transmit_bytes_total`
-
 ## Query performance
 {: #opntlmtry_inst_dash2_qryperf}
 
 Understanding query behavior is critical for a query engine. Query performance metrics include:
 
-**Presto engine:**
+**Presto (Java) engine:**
 
 - **Currently running queries** - Monitors the query request rate.
    - `watsonx_data_presto_query_manager_running_queries`
@@ -150,24 +133,12 @@ Understanding query behavior is critical for a query engine. Query performance m
    - `watsonx_data_presto_query_manager_internal_failures_five_minute_count`
    - `watsonx_data_presto_task_manager_failed_tasks_five_minute_count`
 
-**Milvus:**
-
-- **Requests count** - Tracks the total number of requests handled by the proxy.
-   - `milvus_proxy_req_count`
-
-- **Data processed** - Monitors the volume of vector data being searched and inserted.
-   - `milvus_proxy_search_vectors_count`
-   - `milvus_proxy_insert_vectors_count`
-
-- **Number of concurrent reads** - Measures the number of simultaneous read tasks handled by the query node.
-   - `milvus_querynode_read_task_concurrency`
-
 ## Data and metadata health
 {: #opntlmtry_inst_dash2_metadatahlth}
 
 For a system dealing with vast amounts of data, the health of data ingestion and metadata management is crucial.
 
-**Presto engine:**
+**Presto (Java) engine:**
 
 - **Data ingestion - Query manager** - Monitors the volume and rate of data being ingested into the system.
    - `watsonx_data_presto_query_manager_consumed_input_bytes_five_minute_count`
@@ -194,27 +165,12 @@ For a system dealing with vast amounts of data, the health of data ingestion and
    - `watsonx_data_presto_hive_cache_stats_mbean_stripe_footer_size`
    - `watsonx_data_presto_hive_cache_stats_mbean_stripe_stream_size`
 
-**Milvus:**
-
-- **Storage utilization** - Indicates the size of internal key-value storage used by Milvus.
-   - `internal_kv_storage_size`
-
-- **Data volume processed** - Tracks the total number of rows stored in Milvus.
-   - `milvus_datacoord_stored_rows_num`
-
-- **Processing latency** - Measures the latency of metadata-related operations and DDL (Data Definition Language) requests.
-   - `milvus_rootcoord_ddl_req_latency`
-   - `milvus_meta_request_latency`
-
-- **Queue metric** - Tracks request queue latency at the proxy layer, to identify potential bottlenecks.
-   - `milvus_proxy_req_in_queue_latency`
-
 ## Workload health
 {: #opntlmtry_inst_dash2_wrkldhlth}
 
 Understanding how different workloads interact with the system is key to resource optimization.
 
-**Presto engine:**
+**Presto (Java) engine:**
 
 - **Workload count** - Indicates the number of currently running queries.
    - `watsonx_data_presto_query_manager_running_queries`
@@ -243,29 +199,12 @@ Understanding how different workloads interact with the system is key to resourc
    - `watsonx_data_presto_query_manager_running_queries`
    - `watsonx_data_presto_dispatch_manager_queued_queries`
 
-**Milvus:**
-
-- **Number of entities** - Tracks the total number of entities stored across collections.
-   - `milvus_rootcoord_entity_num`
-
-- **Number of message stream objects** - Monitors the number of active message stream objects used for communication between components.
-   - `milvus_rootcoord_msgstream_obj_num`
-
-- **Number of DML channels** - Indicates the number of active DML (Data Manipulation Language) channels.
-   - `milvus_rootcoord_dml_channel_num`
-
-- **Number of collections** - Tracks the number of collections currently managed by the system.
-   - `milvus_rootcoord_collection_num`
-
-- **Number of partitions** - Shows how many partitions exist across all collections, to understand data distribution.
-   - `milvus_rootcoord_partition_num`
-
 ## Query lifecycle health
 {: #opntlmtry_inst_dash2_qrylfcyclhlth}
 
 It provides insight into each stage of a query’s journey from submission to execution helping to identify bottlenecks in queuing, task execution, and completion.
 
-**Presto engine:**
+**Presto (Java) engine:**
 
 - **Errors in each stage** - Tracks query execution failures across different stages of the Presto instances by identifying the problem areas in the pipeline where tasks are failing.
    - `watsonx_data_presto_task_manager_failed_tasks_five_minute_count`
@@ -289,30 +228,12 @@ It provides insight into each stage of a query’s journey from submission to ex
    - `watsonx_data_presto_query_manager_consumed_cpu_time_seconds_five_minute_count`
    - `watsonx_data_presto_task_executor_leaf_split_cpu_time_p99`
 
-**Milvus:**
-
-- **Request reception** - Measures the time queries spend waiting in the queue before execution.
-   - `milvus_querynode_sq_queue_latency`
-
-- **Query execution** - Tracks execution efficiency using metrics like Top-K search latency and entity size.
-   - `milvus_querynode_search_topk`
-   - `milvus_querynode_entity_size`
-
-- **Post Processing** - Captures latency during result merging and decoding at the proxy.
-   - `milvus_proxy_sq_reduce_result_latency`
-   - `milvus_proxy_sq_decode_result_latency`
-
-- **Performance** - Reflects overall data handling efficiency and resource usage.
-   - `milvus_querynode_consume_msg_count`
-   - `milvus_querynode_disk_cache_load_total`
-   - `milvus_querynode_disk_used_size`
-
 ## Query latency health
 {: #opntlmtry_inst_dash2_qryltncyhlth}
 
 Focuses on the execution phase of queries identifying latency sources and the impact of query complexity.
 
-**Presto engine:**
+**Presto (Java) engine:**
 
 - **Latency (ms)** - Measures execution time across various stages.
    - `watsonx_data_presto_query_manager_execution_time_five_minutes_p99`
@@ -326,31 +247,12 @@ Focuses on the execution phase of queries identifying latency sources and the im
    - `watsonx_data_presto_split_scheduler_stats_get_split_time_five_minutes_p99`
    - `watsonx_data_presto_task_executor_split_wall_time_five_minutes_count`
 
-**Milvus:**
-
-- **Query execution latency** - Time spent in the query node queue before processing.
-   - `milvus_querynode_sq_queue_latency`
-
-- **Latency (ms)** - Overall search query latency across components.
-   - `milvus_proxy_sq_latency`
-   - `milvus_querynode_sq_req_latency`
-   - `milvus_querynode_sq_core_latency`
-
-- **Latency breakdown** - Detailed view of latency across result wait, reduce, and decode stages.
-   - `milvus_proxy_sq_wait_result_latency`
-   - `milvus_proxy_sq_reduce_result_latency`
-   - `milvus_proxy_sq_decode_result_latency`
-
-- **Latency influencers** - Impact of query vector count (NQ) and entity size on latency.
-   - `milvus_querynode_search_nq`
-   - `milvus_querynode_entity_size`
-
 ## Log and error health
 {: #opntlmtry_inst_dash2_logerrhlth}
 
 Monitors errors and failures across the query execution pipeline, highlighting system stability and failure patterns.
 
-**Presto engine:**
+**Presto (Java) engine:**
 
 - **Query failure rate** - Tracks execution failures and bottlenecks.
    - `watsonx_data_presto_query_manager_failed_queries_five_minute_count`
@@ -389,36 +291,12 @@ Monitors errors and failures across the query execution pipeline, highlighting s
       - `watsonx_data_presto_task_executor_split_skipped_due_to_memory_pressure_total_count`
       - `watsonx_data_presto_task_executor_processor_executor_shutdown`
 
-**Milvus:**
-
-- **Timestamp and frequency** - Tracks process start times and synchronization delays.
-   - `process_start_time_seconds`
-   - `milvus_proxy_tt_lag_ms`
-   - `milvus_datanode_consume_tt_lag_ms`
-
-- **Service/component affected** - Captures failure-related request counts across Milvus services.
-   - `milvus_querycoord_release_req_count (status != success)`
-   - `milvus_proxy_req_count (status != success)`
-   - `milvus_datacoord_index_req_count (status != success)`
-   - `milvus_querycoord_load_req_count (status != success)`
-
-- **Severity level** - Highlights latency bottlenecks and performance hotspots.
-   - `milvus_querynode_sq_req_latency`
-   - `milvus_querynode_sq_queue_latency`
-   - `milvus_querynode_sq_segment_latency`
-
-- **Contextual information** - Correlates system behavior with cluster size and configuration.
-   - `milvus_rootcoord_proxy_num`
-   - `milvus_querycoord_querynode_num`
-   - `milvus_datacoord_datanode_num`
-   - `milvus_datacoord_index_node_num`
-
 ## Anomaly and trend insights
 {: #opntlmtry_inst_dash2_anmlytrnd}
 
 Highlights unexpected patterns or deviations in query behavior, helping detect performance degradation or improvements.
 
-**Presto engine:**
+**Presto (Java) engine:**
 
 - **Latency drift** - Tracks evolving query latencies.
    - `watsonx_data_presto_task_executor_split_wall_time_fifteen_minutes_avg`
@@ -449,22 +327,3 @@ Highlights unexpected patterns or deviations in query behavior, helping detect p
    - `watsonx_data_presto_task_executor_global_cpu_time_micros_total_count`
    - `watsonx_data_presto_cluster_memory_manager_cluster_total_memory_reservation`
    - `watsonx_data_presto_task_executor_blocked_quanta_wall_time_fifteen_minutes_avg`
-
-**Milvus:**
-
-- **Error rate vs baseline** - Tracks proxy request volume over time to detect anomalies.
-   - `milvus_proxy_req_count (status = total Vs status != success)`
-
-- **Query duration** - Measures end-to-end latency at proxy and query node levels.
-   - `milvus_querynode_sq_req_latency`
-   - `milvus_proxy_req_latency`
-
-- **Memory and GC time trend** - Monitors memory usage and garbage collection frequency.
-   - `milvus_datanode_consume_bytes_count`
-   - `milvus_querynode_consume_bytes_counter`
-   - `jvm_gc_collection_seconds_sum`
-
-- **Workload trend comparison** - Compares search and insert workload patterns over time.
-   - `milvus_proxy_req_count`
-   - `milvus_proxy_search_vectors_count`
-   - `milvus_proxy_insert_vectors_count`

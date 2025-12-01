@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-11-30"
+lastupdated: "2025-12-01"
 
 keywords: watsonx.data, OpenTelemetry, telemetry, diagnostics, Instana, Prometheus, Grafana
 
@@ -30,7 +30,7 @@ subcollection: watsonxdata
 # Adding telemetry diagnostic tools through the user interface
 {: #opntlmtry_ui_2.1.2}
 
-This topic provides the procedure to add telemetry diagnostic tools for your Presto (Java), Presto (C++), and Milvus engines through the user interface of {{site.data.keyword.lakehouse_full}}.
+This topic provides the procedure to add telemetry diagnostic tools for your Presto (Java) and Presto (C++) engines through the user interface of {{site.data.keyword.lakehouse_full}}.
 
 ## Before you begin
 {: #opntlmtry_ui_2.1.2_byb}

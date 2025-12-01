@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-11-30"
+lastupdated: "2025-12-01"
 
 keywords: watsonx.data, OpenTelemetry, traces, metrics, observability, Presto (Java), Presto (C++), Milvus
 
@@ -35,7 +35,7 @@ OpenTelemetry is a highly customizable serviceability framework designed to enha
 - **Trace:** Represents the lifecycle of a single operation or request as it propagates through a system, capturing spans to detail its execution across services.
 - **Metrics:** Provide numerical measurements that reflect the performance, health, or behavior of a system, such as request counts, error rates, or resource utilization over time.
 
-OpenTelemetry is supported for Presto (Java), Presto (C++) engines, and Milvus service in {{site.data.keyword.lakehouse_full}}.
+OpenTelemetry is supported for Presto (Java) engine in {{site.data.keyword.lakehouse_full}}.
 
 ## Advantages
 {: #opntlmtry_advantages}

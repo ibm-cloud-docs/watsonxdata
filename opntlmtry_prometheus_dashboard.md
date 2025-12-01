@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-11-30"
+lastupdated: "2025-12-01"
 
 keywords: Grafana, Prometheus, OpenTelemetry, dashboards, Presto, Milvus
 
@@ -30,7 +30,7 @@ subcollection: watsonxdata
 # Customizing Grafana dashboards to monitor engine performance
 {: #opntlmtry_prometheus_dashboard}
 
-Grafana dashboards provide a powerful and flexible way to visualize and monitor the performance and health of your Presto and Milvus engines. This guide outlines how to import default dashboards, apply filters, and customize them to suit your observability needs.
+Grafana dashboards provide a powerful and flexible way to visualize and monitor the performance and health of your Presto (Java) and Presto (C++) engines. This guide outlines how to import default dashboards, apply filters, and customize them to suit your observability needs.
 
 ## Before you begin
 {: #opntlmtry_prometheus_dashboard_byb}
@@ -45,7 +45,7 @@ Before importing dashboards, make sure:
 Follow the steps to create default dashboards in Grafana UI for **OpenTelemetry** data:
 
 1. **Importing the default JSON template**
-   You can import a predefined JSON dashboard template downloaded from [Milvus](https://www.ibm.com/docs/en/SSDZ38_2.2.x/lh-over/topics/MilvusDashboards.zip){: external} and [Presto](https://www.ibm.com/docs/en/SSDZ38_2.2.x/lh-over/topics/PrestoDashboards.zip){: external} using the following method:
+   You can import a predefined JSON dashboard template downloaded from [Presto (Java)](https://www.ibm.com/docs/en/SSDZ38_2.2.x/lh-over/topics/PrestoDashboards.zip){: external} using the following method:
 
    - After downloading the JSON dashboard template:
      1. In the Grafana UI, navigate to **Home → Dashboards → New → Import Dashboard**.
