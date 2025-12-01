@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-11-28"
+lastupdated: "2025-12-01"
 
 keywords: watsonxdata, release notes
 
@@ -39,6 +39,7 @@ Data sources and storage enhancements
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following data sources and storage enhancements:
 
    * You can now apply IBM Knowledge Catalog governance policies to the data source, MongoDB. For more information, see [Connecting to IBM Knowledge Catalog (IKC)](/docs/watsonxdata?topic=watsonxdata-ikc_integration).
+   * You can now associate Azure Data Lake Storage Gen2 with Presto (C++) using ServicePrincipal authentication.
 
 Engine and service enhancements
 
