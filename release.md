@@ -75,7 +75,20 @@ Query Optimizer enhancement
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancement to **Query Optimizer**.
 
-   The default query rewrite timeout for Query Optimizer is now configurable. Starting with version 2.3, you can change this timeout value using the PATCH API by updating the property `optplus.query-timeout-seconds`. For more information, see [Updating query rewrite timeout for Query Optimizer](/docs/watsonxdata?topic=watsonxdata-optimizer_timeout).
+   * The default query rewrite timeout for Query Optimizer is now configurable. Starting with version 2.3, you can change this timeout value using the PATCH API by updating the property `optplus.query-timeout-seconds`. For more information, see [Updating query rewrite timeout for Query Optimizer](/docs/watsonxdata?topic=watsonxdata-optimizer_timeout).
+
+   * Support for Hive and Iceberg metastore registration in **Query Optimizer** for Lite instances of {{site.data.keyword.lakehouse_short}}.
+
+   The Query Optimizer supports distinct metastore types for Hive and Iceberg catalogs.
+
+   Users can now register:
+
+   - Hive catalogs using the `watsonx-data-hive` metastore type.
+   - Iceberg catalogs using the `iceberg-rest` metastore type.
+
+   This enhancement allows more granular control and compatibility with evolving metastore architectures. Registration is done using the `REGISTER_EXT_METASTORE` procedure with updated syntax and properties.
+
+   From this release onwards, legacy support for the unified `watsonx-data` metastore type is continued to support in the Enterprise version while is no longer available for Lite instances. For more information, see [Manually syncing Query Optimizer with metastore](/docs/watsonxdata?topic=watsonxdata-sync_optimizer_meta).
 
 ## 13 November 2025 - Version 2.2.2 New Feature 1 (NF1)
 {: #lakehouse_13nov2025}

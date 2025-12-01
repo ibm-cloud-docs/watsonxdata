@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-11-12"
+lastupdated: "2025-12-01"
 
 keywords: lakehouse
 
@@ -30,6 +30,11 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+## Manual syncing of Query Optimizer metastore not available for Lite plan
+{: #known_issue49716}
+
+For Lite instances of {{site.data.keyword.lakehouse_short}}, manual syncing of **Query Optimizer** with the metastore using the procedure described in [Manually syncing Query Optimizer with metastore](/docs/watsonxdata?topic=watsonxdata-sync_optimizer_meta) is not supported in version 2.3.
 
 ## Error connecting to watsonx.data from `Chat with Document` screen
 {: #known_issue52345}
