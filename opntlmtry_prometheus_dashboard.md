@@ -30,7 +30,7 @@ subcollection: watsonxdata
 # Customizing Grafana dashboards to monitor engine performance
 {: #opntlmtry_prometheus_dashboard}
 
-Grafana dashboards provide a powerful and flexible way to visualize and monitor the performance and health of your Presto (Java) and Presto (C++) engines. This guide outlines how to import default dashboards, apply filters, and customize them to suit your observability needs.
+Grafana dashboards provide a powerful and flexible way to visualize and monitor the performance and health of your Presto (Java) engine. This guide outlines how to import default dashboards, apply filters, and customize them to suit your observability needs.
 
 ## Before you begin
 {: #opntlmtry_prometheus_dashboard_byb}

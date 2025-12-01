@@ -88,7 +88,7 @@ Ensure you have access to the {{site.data.keyword.lakehouse_short}} console and 
 **To see traces generated for a query:**
 
 1. Go to **Analytics** in the Instana UI and select **Services**.
-2. Choose the relevant service: **presto** for Presto (Java) or **milvus.<podname>** for Milvus.
+2. Choose the relevant service: **presto** for Presto (Java).
 3. Filter traces by **Service Name**, **Call Name**, or **Retention Period** (last 5, 10, or 30 minutes).
 4. Click on a specific trace to view details.
 
@@ -100,8 +100,6 @@ An Instana data source must be available.
 1. Go to **Analytics** → **Infrastructure** → **OpenTelemetry** in the Instana UI.
 2. Choose the relevant service:
     - **`presto-jmx-<instance-id>`** (Presto Java)
-    - **`prestissimo-jmx-<instance-id>`** (Presto C++)
-    - **`milvus-<instance-id>`** (Milvus), where `<instance-id>` is your {{site.data.keyword.lakehouse_short}} instance ID.
 
 3. Review the list of custom metrics and their attributes.
 4. Click on a specific metric to view the live time series.
