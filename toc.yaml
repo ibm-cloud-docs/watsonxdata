@@ -337,6 +337,7 @@ toc:
           - wxd_row-ranger.md
           - wxd_ranger_colmn.md
           - cpg_enable.md
+          - ip_whitelisting.md
       - driver_manager.md
       - billing_usage.md
       - hms_credentials.md
