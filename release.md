@@ -45,6 +45,12 @@ Engine and service enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
 
+   * Prestissimo now delivers improved performance when writing Apache Iceberg tables compared to Java implementations. The following capabilities are available:
+
+      * Partitioned table support - Prestissimo writes to partitioned Iceberg tables and applies partition transforms efficiently using batch evaluation. It supports identity, temporal transforms (year, month, day, hour), bucket, and truncate, and generates Iceberg-compliant partition directory paths.
+      * Data file statistics collection - During write operations, Prestissimo collects and reports essential data file statistics to Iceberg manifest files, including record count, file size, and partition details.
+      * Sorted table write support - Prestissimo supports writing sorted Iceberg tables to enable optimized query performance for workloads that benefit from sorted data.
+
    * The Spark Engine creation process is now simplified by focusing only on essential details—engine name, Spark version, home bucket, and associated catalogs, while moving capacity reservation tasks to a new Capacity Management tab on the engine details page. This update removes capacity configuration from the creation flow, making engine setup faster and less complex. After creating an engine, you can manage VM flavors, configure node pools, and set on-demand fallback thresholds under the Capacity tab. You can access this feature when using version 2.3 of {{site.data.keyword.lakehouse_short}}.
 
    * Spark Labs are now accessible from the Console under Infrastructure > Spark Engine, in addition to the VS Code extension. A new table view displays Spark Labs with a default filter set to ACTIVE, showing details such as Name, ID, Created On, Started On, and Stopped On, similar to the Spark Query Server interface. You can also stop a Spark Lab from the Console. For more information, see [Managing Spark labs from Console](/docs/watsonxdata?topic=watsonxdata-lab_console).
