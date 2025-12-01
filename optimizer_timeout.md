@@ -94,5 +94,3 @@ The default query rewrite timeout for **Query Optimizer** is 60 seconds. You can
    `<token>`: The bearer token for authorization.
 
 2. Update the value of `optplus.query-timeout-seconds` to the desired timeout in seconds.
-
-3. Restart the engine if required for the changes to take effect.
