@@ -197,6 +197,7 @@ toc:
           label: Query Optimizer
           topics:
           - install_optimizer.md
+          - optimizer_timeout.md
           - sync_optimizer_verify.md
           - sync_optimizer_meta.md
           - optimizer_iceberg_stats.md

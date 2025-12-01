@@ -54,6 +54,18 @@ Billing enhancements
 
    * Metering of {{site.data.keyword.lakehouse_short}} components now operates at the runtime level, capturing start, stop, and pause events for each runtime tied to an engine. It provides clear visibility into engine consumption and resource usage. For engines like Presto, this remains a one-to-one mapping, while Spark introduces multiple runtime subtypes (e.g., Kernel, HistoryServer, Application), each tracked individually for active and inactive hours. The user interface will reflect these changes by displaying runtime-level activity bars and event history links scoped to each runtime, ensuring clarity and precision. For more information, see [Metering and usage experience](/docs/watsonxdata?topic=watsonxdata-manage_bil_newarch). You can access this feature when using version 2.3 of {{site.data.keyword.lakehouse_short}}.
 
+OpenTelemetry enhancement
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following enhanced observability and monitoring for Presto (Java) engine.
+
+   You can now integrate **OpenTelemetry** with Presto (Java) engine to monitor query execution and system performance. **OpenTelemetry** enables capturing telemetry data such as traces and metrics, which can be visualized and analyzed using tools like Instana, Prometheus, and Grafana. For more information, see [OpenTelemetry](/docs/watsonxdata?topic=watsonxdata-opntlmtry).
+
+Query Optimizer enhancement
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancement to **Query Optimizer**.
+
+   The default query rewrite timeout for Query Optimizer is now configurable. Starting with version 2.3, you can change this timeout value using the PATCH API by updating the property `optplus.query-timeout-seconds`. For more information, see [Updating query rewrite timeout for Query Optimizer](/docs/watsonxdata?topic=watsonxdata-optimizer_timeout).
+
 ## 13 November 2025 - Version 2.2.2 New Feature 1 (NF1)
 {: #lakehouse_13nov2025}
 {: release-note}
