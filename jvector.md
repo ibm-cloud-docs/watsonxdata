@@ -35,6 +35,7 @@ This capability enables users to create vector indexes and run Approximate Neare
 
 **Overview**
 {: #jvector_intro}
+
 JVector is a lightweight JavaScript library that is designed for creating interactive, scalable vector maps in web applications. It uses SVG technology to deliver crisp, resolution-independent graphics and supports dynamic features such as zooming, tooltips, and region-based styling.
 
 
