@@ -31,6 +31,17 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
+## Failure to filter DATE, TIME, TIMESTAMP, and VARBINARY columns using WHERE clause in MongoDB Connector
+{: #known_issue51827}
+
+When using the MongoDB connector in Presto, queries with a `WHERE` clause fail to return records when filtering on columns of the following data types:
+
+- DATE
+- TIME
+- TIMESTAMP
+- VARBINARY
+This limitation impacts scenarios where governance rules such as `ROW FILTER` rely on the underlying `WHERE` clause for evaluation.
+
 ## Manual syncing of Query Optimizer metastore not available for Lite plan
 {: #known_issue49716}
 
