@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-23"
+lastupdated: "2025-12-02"
 
 keywords: lakehouse, cpdctl, watsonx.data, supporting commands, wx-data
 
@@ -174,6 +174,7 @@ The `bucket` command further supports the following commands:
 | `./cpdctl wx-data bucket delete` | Delete a storage from {{site.data.keyword.lakehouse_short}} instance. |
 | `./cpdctl wx-data bucket activate` | Activate a storage bucket in {{site.data.keyword.lakehouse_short}} on IBM Cloud instance only. |
 | `./cpdctl wx-data bucket deactivate` | Deactivate a storage bucket in {{site.data.keyword.lakehouse_short}} on IBM Cloud instance only. This option is not supported from {{site.data.keyword.lakehouse_short}} 2.2.1 version. |
+| `./cpdctl wx-data bucket list-objects` | List the objects in a storage bucket. |
  {: caption="Supported commands by bucket" caption-side="bottom"}
 
 ## database
@@ -304,7 +305,7 @@ The `component` command further supports the following commands:
 ## access-control
 {: #cpdctl_commands_wxdataacscntrl}
 
-The `access-control` command is used for managing access policies for resources in {{site.data.keyword.lakehouse_short}}.
+The `access-control` command is used for managing access policies for resources in {{site.data.keyword.lakehouse_short}} from CPDCTL version 1.8.33.
 
 Syntax:
    ```bash

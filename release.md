@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-12-01"
+lastupdated: "2025-12-02"
 
 keywords: watsonxdata, release notes
 
@@ -89,6 +89,16 @@ Query Optimizer enhancement
    This enhancement allows more granular control and compatibility with evolving metastore architectures. Registration is done using the `REGISTER_EXT_METASTORE` procedure with updated syntax and properties.
 
    From this release onwards, legacy support for the unified `watsonx-data` metastore type is continued to support in the Enterprise version while is no longer available for Lite instances. For more information, see [Manually syncing Query Optimizer with metastore](/docs/watsonxdata?topic=watsonxdata-sync_optimizer_meta).
+
+CPDCTL CLI enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancements to IBM Cloud Pak for Data Command Line Interface (IBM cpdctl):
+
+   * Backward compatibility has been enabled for the `bucket`, `engine`, `ingestion`, `component`, and `service` commands in CPDCTL.
+
+    Starting with CPDCTL version 1.x.xx, these commands can now connect to {{site.data.keyword.lakehouse_short}} releases prior to version 2.2.1, ensuring smoother integration and compatibility across environments.
+
+   * A new option under the `service` command `wx-data service list-objects` will list down the objects in a strage bucket added in {{site.data.keyword.lakehouse_short}}. For details about the service command for serviceability related operations in {{site.data.keyword.lakehouse_short}}, see [service](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata#cpdctl_commands_wxdatasvce).
 
 ## 13 November 2025 - Version 2.2.2 New Feature 1 (NF1)
 {: #lakehouse_13nov2025}
