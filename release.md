@@ -71,6 +71,12 @@ OpenTelemetry enhancement
 
    You can now integrate **OpenTelemetry** with Presto (Java) engine to monitor query execution and system performance. **OpenTelemetry** enables capturing telemetry data such as traces and metrics, which can be visualized and analyzed using tools like Instana, Prometheus, and Grafana. For more information, see [OpenTelemetry](/docs/watsonxdata?topic=watsonxdata-opntlmtry).
 
+Retrieval Service
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following Retrieval Service enhancements:
+
+   * You can now configure gpt-oss-120b AI model for Retrieval Service at the instance level in the {{site.data.keyword.lakehouse_short}} console. For information on Configure AI model for Retrieval Service, see [Configure AI model for Retrieval Service](/docs/watsonxdata?topic=watsonxdata-retsrvc).
+
 Query Optimizer enhancement
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancement to **Query Optimizer**.
