@@ -397,6 +397,7 @@ toc:
               topics:
               - airflow.md
       - idle_session_timeout.md
+      - retrieval_service.md
   - navgroup:
       id: reference
       topics:
