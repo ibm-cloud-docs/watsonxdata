@@ -29,7 +29,7 @@ subcollection: watsonxdata
 # Configure AI model for Retrieval Service
 {: #retsrvc}
 
-The Retrieval Service in {{site.data.keyword.lakehouse_short}} enables administrators to configure which foundation model powers retrieval-based tasks such as text-to-SQL, question answering, and RAG. At the instance level, you can choose between IBM Granite (default) and Meta LLaMA models, based on licensing and workload requirements.
+The Retrieval Service in {{site.data.keyword.lakehouse_short}} enables administrators to configure which foundation model powers retrieval-based tasks such as text-to-SQL, question answering, and RAG. At the instance level, you can choose between granite (default), llama and gpt models, based on licensing and workload requirements.
 
 ## Procedure
 {: #install_retsrvc}
