@@ -41,7 +41,7 @@ The Retrieval Service in {{site.data.keyword.lakehouse_short}} enables administr
    - **llama-3-3-70b-instruct**
    - **gpt-oss-120b**
 
-    <br>To use **gpt-oss-120b** with the Retrieval Service, you must first deploy the model. For detailed instructions, see [Deploying foundation models on demand (fast path)](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/deploy-on-demand-resource-hub.html?context=wx&audience=wdp).
+    <br>To use **gpt-oss-120b** with the Retrieval Service, you must first deploy the model in **toronto region**. For detailed instructions, see [Deploying foundation models on demand (fast path)](https://dataplatform.cloud.ibm.com/docs/content/wsj/analyze-data/deploy-on-demand-resource-hub.html?context=wx&audience=wdp).
     {: note}
 
 1. A confirmation dialog appears, click **Select**.
