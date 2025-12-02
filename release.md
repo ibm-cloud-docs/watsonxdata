@@ -106,6 +106,10 @@ CPDCTL CLI enhancements
 
    * A new option under the `service` command `wx-data service list-objects` will list down the objects in a strage bucket added in {{site.data.keyword.lakehouse_short}}. For details about the service command for serviceability related operations in {{site.data.keyword.lakehouse_short}}, see [service](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata#cpdctl_commands_wxdatasvce).
 
+Deprecated features
+
+: Support for Apache Spark 3.4 runtime is deprecated and will no longer be supported. You must upgrade to Spark 3.5 or 4.0.  To update the Apache Spark version, see [Editing the Spark engine details](/docs/watsonxdata?topic=watsonxdata-view-end#edit-dtls).
+
 ## 13 November 2025 - Version 2.2.2 New Feature 1 (NF1)
 {: #lakehouse_13nov2025}
 {: release-note}
