@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-01"
+lastupdated: "2025-12-02"
 
 keywords: watsonx.data, OpenTelemetry, telemetry, diagnostics, Instana, Prometheus, Grafana
 
@@ -30,7 +30,7 @@ subcollection: watsonxdata
 # Adding telemetry diagnostic tools through the user interface
 {: #opntlmtry_ui_2.1.2}
 
-This topic provides the procedure to add telemetry diagnostic tools for your Presto (Java) and Presto (C++) engines through the user interface of {{site.data.keyword.lakehouse_full}}.
+This topic provides the procedure to add telemetry diagnostic tools for your Presto (Java) engine through the user interface of {{site.data.keyword.lakehouse_full}}.
 
 ## Before you begin
 {: #opntlmtry_ui_2.1.2_byb}
@@ -54,7 +54,6 @@ Ensure you have access to the {{site.data.keyword.lakehouse_short}} console and 
    | **Telemetry Endpoint**        | Enter the endpoint URL of the selected tool. Format: `http://<host>:<port>/<path>` or `https://<host>:<port>/<path>`. Use port `4317` for OTLP over GRPC and `4318` for OTLP over HTTP.             |
    | **Host Name**                  | If the selected telemetry tool is Instana, enter the host ID of the tool. See [Configuring the resource attributes](https://www.ibm.com/docs/en/instana-observability/1.0.302?topic=instana-backend#configuring-the-resource-attributes){: external}. |
    | **Password**                   | Enter the Instana agent key or Prometheus password.                                                                                                                                                   |
-   | **TLS enabled**                | Use the **TLS enabled** toggle to secure the connection.                                                                                                                                              |
    | **Connection status**          | Click **Test connection** to validate the endpoint and credentials.                                                                                                                                  |
    | **Associated diagnostics**     | Select the checkbox to associate a diagnostic type (logs, metrics, traces) to the telemetry tool.   |
    {: caption="Add telemetry diagnostic details" caption-side="bottom"}
@@ -82,37 +81,49 @@ Ensure you have access to the {{site.data.keyword.lakehouse_short}} console and 
    - **Disable** the current diagnostic.
    - **Disassociate** it.
 
-### Checking telemetry data in Instana
+### Navigate to Diagnostic Telemetry Data
 {: #opntlmtry_ui_instana}
 
-**To see traces generated for a query:**
+To review diagnostic telemetry (including internal and synthetic calls):
 
-1. Go to **Analytics** in the Instana UI and select **Services**.
-2. Choose the relevant service: **presto** for Presto (Java).
-3. Filter traces by **Service Name**, **Call Name**, or **Retention Period** (last 5, 10, or 30 minutes).
-4. Click on a specific trace to view details.
+1. Log in to the Instana UI.
+2. Navigate to **Analytics → Applications → Calls**.
+3. In the left-side panel, locate the **Hidden calls** section.
+4. Enable the following options:
+   - **Show synthetic calls**
+   - **Show internal calls**
 
-**To see metrics generated for a query:**
+This ensures that all internal, system-generated, and synthetic call data relevant to diagnostics is visible in the UI.
 
-An Instana data source must be available.
-{: important}
+### Viewing traces for a specific query using CRN
+{: #opntlmtry_ui_traces}
 
-1. Go to **Analytics** → **Infrastructure** → **OpenTelemetry** in the Instana UI.
-2. Choose the relevant service:
-    - **`presto-jmx-<instance-id>`** (Presto Java)
+1. Go to **Analytics → Applications → Calls**.
+2. Select **Add filter**.
+3. In the filter search bar, type **OpenTelemetry → Custom → crn**.
+4. Choose the **crn** attribute and set it to the desired `<crn_value>`.
+5. Adjust the retention window to focus on recent trace activity:
+   - Last 5 minutes
+   - Last 10 minutes
+   - Last 30 minutes
 
-3. Review the list of custom metrics and their attributes.
-4. Click on a specific metric to view the live time series.
+These retention periods help ensure recent query execution traces are visible without noise from older calls.
 
-### Checking telemetry data in Grafana
-{: #opntlmtry_ui_grafana}
+### Viewing OpenTelemetry metrics in Instana
+{: #opntlmtry_ui_metrics}
 
-To see metrics generated for a query:
+1. Log in to the Instana UI and navigate to **Analyze Infrastructure**.
+2. In the data source selector, choose **OpenTelemetry** to view all OpenTelemetry resources.
+3. Click **Add filter**, select **OpenTelemetry Resource → otel.attribute → k8s.namespace.name**.
+   Enter the required {{site.data.keyword.lakehouse_short}} instance namespace to filter the view.
+4. From the filtered results, select the endpoint **metric-scraper-presto** associated with your instance.
+5. Use **Select metrics** to browse all available OpenTelemetry metrics exposed by the Presto metric scraper.
+6. Choose any metric to open its live time-series visualization, where you can analyze current values, trends, and attributes.
 
-A Prometheus and Grafana data source must be available, and Prometheus Remote Write receiver must be enabled using the flag `--web.enable-remote-write-receiver`.
-{: important}
+### Viewing Metrics in the Prometheus UI
+{: #opntlmtry_ui_prometheus}
 
-1. Select **Dashboards** from Grafana UI navigation menu and click **Add visualization**.
-2. Choose **Prometheus** data source.
-3. Select the Prometheus metrics you want to visualize from the query metric drop-down list.
-4. Adjust the retention period to specify the time range for the metrics you want to view.
+1. Access the Prometheus UI for your environment.
+2. In the **Expression** field, begin typing the metric name (for example, `presto_`).
+3. Prometheus will automatically display all metrics collected from **metric-scraper-presto**.
+4. Select the required metric and click **Execute** to view the result.
