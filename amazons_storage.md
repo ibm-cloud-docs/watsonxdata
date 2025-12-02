@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-27"
+lastupdated: "2025-12-02"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
 
@@ -48,6 +48,7 @@ If you select **Amazon S3** from the **Storage** section, configure the followin
  | Associate Catalog | Enable the toggle switch to add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within. |
  | Catalog type | Select the catalog type from the list. The recommended catalog is Apache Iceberg. The other options for catalog are Apache Hive, Apache Hudi, and Delta Lake.|
  | Catalog name | Enter the name of your catalog.|
+ | Base path (optional) <br>**Note:** /n This field is available only in the watsonx.data Lite instance. /n This field appears only when you select Apache Iceberg as the catalog type.| Enter the base path for the catalog in the object storage. This allows you to associate multiple Iceberg catalogs with a single storage. <br>**Note:** You cannot share a storage between Iceberg and non-Iceberg catalogs.|
  | Associate | Click Associate to create the storage. |
  {: caption="Register bucket" caption-side="bottom"}
 

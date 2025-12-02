@@ -40,6 +40,16 @@ Data sources and storage enhancements
 
    * You can now apply IBM Knowledge Catalog governance policies to the data source, MongoDB. For more information, see [Connecting to IBM Knowledge Catalog (IKC)](/docs/watsonxdata?topic=watsonxdata-ikc_integration).
    * You can now associate Azure Data Lake Storage Gen2 with Presto (C++) using ServicePrincipal authentication.
+   * You can now associate multiple Iceberg-type catalogs with a single object storage bucket or container. Each catalog must be configured with a unique, non-overlapping base path on the storage to ensure proper data isolation.
+
+   For example:
+   - `Catalog1` can be associated with `s3a://mybucket/foo/bar`
+   - `Catalog2` can be associated with `s3a://mybucket/lorem/ipsum`
+
+   This enhancement makes it easier to logically separate data within the same storage and reuse it across multiple catalogs, improving flexibility and organization. For more information, see [Adding multiple Apache Iceberg catalogs to a single storage](/docs/watsonxdata?topic=watsonxdata-muticatlog).
+
+   This feature is available only for watsonx.data Lite instances. Previously, each object storage bucket or container could only be linked to a single catalog.
+   {: note}
 
 Engine and service enhancements
 
@@ -54,6 +64,10 @@ Engine and service enhancements
    * The Spark Engine creation process is now simplified by focusing only on essential details—engine name, Spark version, home bucket, and associated catalogs, while moving capacity reservation tasks to a new Capacity Management tab on the engine details page. This update removes capacity configuration from the creation flow, making engine setup faster and less complex. After creating an engine, you can manage VM flavors, configure node pools, and set on-demand fallback thresholds under the Capacity tab. You can access this feature when using version 2.3 of {{site.data.keyword.lakehouse_short}}.
 
    * Spark Labs are now accessible from the Console under Infrastructure > Spark Engine, in addition to the VS Code extension. A new table view displays Spark Labs with a default filter set to ACTIVE, showing details such as Name, ID, Created On, Started On, and Stopped On, similar to the Spark Query Server interface. You can also stop a Spark Lab from the Console. For more information, see [Managing Spark labs from Console](/docs/watsonxdata?topic=watsonxdata-lab_console).
+
+Account-level component persistence for Lite Plan instance
+
+: You can now retain account-level components—such as catalogs, databases, buckets, and their metadata properties—independently of individual instances. When an instance is deleted, these components remain accessible from any other instance within the same account and region. This behavior applies to all new Lite plan instances, which are now account-scoped.
 
 Access management enhancements
 

@@ -155,6 +155,7 @@ toc:
               - sync_logs.md
               - enable-acl.md
               - setting_glusterfs.md
+              - add_multiple_catalog.md
       - topicgroup:
           label: IBM Cloud Pak for Data Command Line Interface (IBM cpdctl)
           topics:
