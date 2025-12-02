@@ -35,7 +35,7 @@ OpenTelemetry is a highly customizable serviceability framework designed to enha
 - **Trace:** Represents the lifecycle of a single operation or request as it propagates through a system, capturing spans to detail its execution across services.
 - **Metrics:** Provide numerical measurements that reflect the performance, health, or behavior of a system, such as request counts, error rates, or resource utilization over time.
 
-OpenTelemetry is available only for the Presto (Java) engine in the {{site.data.keyword.lakehouse_full}} Enterprise edition, and only in the jp-tok region.
+OpenTelemetry is available only for the Presto (Java) engine in the {{site.data.keyword.lakehouse_full}} Enterprise edition, and only in the `jp-tok` region.
 
 ## Advantages
 {: #opntlmtry_advantages}
