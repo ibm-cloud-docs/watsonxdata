@@ -67,7 +67,7 @@ Engine and service enhancements
 
 Account-level component persistence for Lite Plan instance
 
-: You can now retain account-level components—such as catalogs, databases, buckets, and their metadata properties—independently of individual instances. When an instance is deleted, these components remain accessible from any other instance within the same account and region. This behavior applies to all new Lite plan instances, which are now account-scoped.
+: You can now retain account-level components such as catalogs, databases, buckets, and their metadata properties independently of individual instances. When an instance is deleted, these components remain accessible from any other instance within the same account and region. This behavior applies to all new Lite plan instances, which are now account-scoped.
 
 Access management enhancements
 

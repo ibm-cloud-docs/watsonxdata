@@ -45,7 +45,7 @@ If you select **Apache Ozone** from the **Storage** section, configure the follo
  | Associate catalog | Enable the toggle switch to add a catalog for your storage. This catalog is automatically associated with your storage and serves as your query interface with the data stored within. |
  | Catalog type | Apache Iceberg is the available catalog type.|
  | Catalog name | Enter the name of your catalog.|
- | Base path (optional) <br> **Note:** /n This field is available only in the watsonx.data Lite instance. /n This field appears only when you select Apache Iceberg as the catalog type. | Enter the base path for the catalog in the object storage. This allows you to associate multiple Iceberg catalogs with a single storage. <br>**Note:** You cannot share a storage between Iceberg and non-Iceberg catalogs. |
+ | Base path (optional) <br> **Note:** This field is available only in the watsonx.data Lite instance. This field appears only when you select Apache Iceberg as the catalog type. | Enter the base path for the catalog in the object storage. This allows you to associate multiple Iceberg catalogs with a single storage. <br>**Note:** You cannot share a storage between Iceberg and non-Iceberg catalogs. |
  | Associate | Click Associate to create the storage. |
  {: caption="Register bucket" caption-side="bottom"}
 
