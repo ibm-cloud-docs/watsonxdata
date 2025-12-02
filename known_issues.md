@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-01"
+lastupdated: "2025-12-02"
 
 keywords: lakehouse
 
@@ -34,7 +34,7 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 ## Manual syncing of Query Optimizer metastore not available for Lite plan
 {: #known_issue49716}
 
-For Lite instances of {{site.data.keyword.lakehouse_short}}, manual syncing of **Query Optimizer** with the metastore using the procedure described in [Manually syncing Query Optimizer with metastore](/docs/watsonxdata?topic=watsonxdata-sync_optimizer_meta) is not supported in version 2.3.
+For Lite instances of {{site.data.keyword.lakehouse_short}}, both manual syncing and the initial metastore sync for **Query Optimizer** are not supported in version 2.3. If the initial sync fails, customer queries will fall back to the native optimizer of Presto instead of the **Query Optimizer**. Fore more information, see [Manually syncing Query Optimizer with metastore](/docs/watsonxdata?topic=watsonxdata-sync_optimizer_meta).
 
 ## Error connecting to watsonx.data from `Chat with Document` screen
 {: #known_issue52345}
