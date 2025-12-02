@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-11-26"
+lastupdated: "2025-12-02"
 
 keywords: watsonx.data, region, availability
 subcollection: watsonxdata
@@ -46,7 +46,6 @@ AWS deployments are currently unavailable in Canada, Japan, and Korea but can be
 
 {{site.data.keyword.lakehouse_full}} is available in the following regional data centers:
 
-   * Central(ca-central-1)
    * Frankfurt(eu-central-1)
    * Mumbai(ap-south-1)
    * Singapore(ap-southeast-1)
