@@ -124,7 +124,7 @@ Ingestion enhancement
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following ingestion enhancement:
 
-   * A new toggle is available in the Target panel of the ingestion screen to control the delete mode for ingested tables with **Copy-on-Write (COW)** as default mode. Switching to the **Merge-on-Read** mode enable row-level deletion during ingestion.
+   * A new toggle is available in the target panel of the ingestion screen to control the delete mode for ingested Iceberg format tables with **Copy-on-Write (COW)** as default mode. Switching to the **Merge-on-Read** mode enable row-level deletion during ingestion.
 
 
 Deprecated features

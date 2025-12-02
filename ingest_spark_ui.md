@@ -101,7 +101,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    xi. In the **Target table** section, select the target catalog from the **Select catalog** list. The selected catalog must be active to perform an ingestion job.
 
-      A toggle in the Target panel lets you choose the delete mode for ingested tables with **Copy-on-Write (COW)** as default mode. Toggle **Merge-on-Read** mode, which supports row level deletion during ingestion. This is supported only for Iceberg catalogs and new tables.
+      A toggle in the Target panel lets you choose the delete mode for ingested Iceberg format tables with **Copy-on-Write (COW)** as default mode. Toggle **Merge-on-Read** mode, which supports row level deletion during ingestion. This is supported only for Iceberg catalogs and new tables.
 
    xii. Choose one of the schema options:
 
@@ -232,7 +232,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 
    x. In the **Target table** window, select the target catalog from the **Select catalog** list. The selected catalog must be active to perform an ingestion job.
 
-      A toggle in the Target panel lets you choose the delete mode for ingested tables with **Copy-on-Write (COW)** as default mode. Toggle **Merge-on-Read** mode, which supports row level deletion during ingestion. This is supported only for Iceberg catalogs and new tables.
+      A toggle in the Target panel lets you choose the delete mode for ingested Iceberg format tables with **Copy-on-Write (COW)** as default mode. Toggle **Merge-on-Read** mode, which supports row level deletion during ingestion. This is supported only for Iceberg catalogs and new tables.
 
    xi. Choose one of the schema options:
 
