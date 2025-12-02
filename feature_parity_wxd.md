@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-11-26"
+lastupdated: "2025-12-02"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -42,10 +42,12 @@ The cloud availability is based on the features that you can handle through {{si
 
 For more information on how each deployment is classified based on its support for specific features and capabilities, refer to [Platform comparison: AstraDB versus IBM® {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=watsonxdata-wxd_plfrm_dplmnt_cmpar#wxd_plfrm_dplmnt2).
 
+*IBM watsonx.data Premium is available as on-premises software. For the watsonx.data Premium on SaaS, you need to provision separate service instances for watsonx.data, watsonx.ai Runtime, watsonx.ai Studio, watsonx.data Intelligence, and watsonx.data Integration.
+
 ### IBM Cloud availability
 {: #ibm_cloud}
 
-| Region | Sub-region | Name | AstraDB serverless | watsonx.data | watsonx.data premium |
+| Region | Sub-region | Name | AstraDB serverless | watsonx.data | watsonx.data premium* |
 | --- | --- | --- | --- | --- | --- |
 | NA | Dallas | us-south | ❌ | ✅ | ❌ |
 | NA | Washington | us-east | ❌ | ✅ | ❌ |
@@ -66,7 +68,7 @@ For more information on how each deployment is classified based on its support f
 AWS deployments are currently unavailable in Canada, Japan, and Korea but can be made avilable with 8–10 days’ notice; in the U.S., {{site.data.keyword.lakehouse_short}} is deployed only in N. Virginia, with Oregon available upon similar notice.
 {: note}
 
-| Region | Sub-region | Name | AstraDB serverless | watsonx.data | watsonx.data premium |
+| Region | Sub-region | Name | AstraDB serverless | watsonx.data | watsonx.data premium* |
 |---|---|---|---|---|---|
 | NA | N. Virgina | us-east-1 | ✅ | ✅ | ❌ |
 | NA | Oregon | us-west-2 | ✅ | ❌ | ❌ |
@@ -89,7 +91,7 @@ AWS deployments are currently unavailable in Canada, Japan, and Korea but can be
 ### Microsoft Azure availability
 {: #microsft_azure_avlty}
 
-| Region | Sub-region | Name | AstraDB serverless | watsonx.data | watsonx.data premium |
+| Region | Sub-region | Name | AstraDB serverless | watsonx.data | watsonx.data premium* |
 | --- | --- | --- | --- | --- | --- |
 |NA|Washington|westus2|✅|❌|❌|
 |NA|Virginia|eastus|✅|❌|❌|
@@ -109,7 +111,7 @@ AWS deployments are currently unavailable in Canada, Japan, and Korea but can be
 ### Google Cloud Platform
 {: #google_cld_plfrm}
 
-| Region | Sub-region | Name | AstraDB serverless | watsonx.data | watsonx.data premium |
+| Region | Sub-region | Name | AstraDB serverless | watsonx.data | watsonx.data premium* |
 | --- | --- | --- | --- | --- | --- |
 | NA | Moncks Corner, South Carolina | us-east1 | ✅ | ❌ |❌|
 | NA | Ashburn, Virginia | us-east4 | ✅ | ❌ |❌|
