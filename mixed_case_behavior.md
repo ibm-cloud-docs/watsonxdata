@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-11-19"
+lastupdated: "2025-12-02"
 
 keywords: lakehouse, mixed-case behavior, watsonx.data
 
@@ -57,6 +57,7 @@ The following catalogs support the `case-sensitive-name-matching` property:
 - Apache Phoenix
 - Snowflake
 - Teradata
+- BigQuery
 - Greenplum
 - Apache Derby
 - MariaDB
