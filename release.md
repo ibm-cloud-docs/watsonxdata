@@ -42,14 +42,14 @@ Data sources and storage enhancements
    * You can now associate Azure Data Lake Storage Gen2 with Presto (C++) using ServicePrincipal authentication.
    * You can now associate multiple Iceberg-type catalogs with a single object storage bucket or container. Each catalog must be configured with a unique, non-overlapping base path on the storage to ensure proper data isolation.
 
-   For example:
-   - `Catalog1` can be associated with `s3a://mybucket/foo/bar`
-   - `Catalog2` can be associated with `s3a://mybucket/lorem/ipsum`
+      For example:
+      - `Catalog1` can be associated with `s3a://mybucket/foo/bar`
+      - `Catalog2` can be associated with `s3a://mybucket/lorem/ipsum`
 
-   This enhancement makes it easier to logically separate data within the same storage and reuse it across multiple catalogs, improving flexibility and organization. For more information, see [Adding multiple Apache Iceberg catalogs to a single storage](/docs/watsonxdata?topic=watsonxdata-muticatlog).
+      This enhancement makes it easier to logically separate data within the same storage and reuse it across multiple catalogs, improving flexibility and organization. For more information, see [Adding multiple Apache Iceberg catalogs to a single storage](/docs/watsonxdata?topic=watsonxdata-muticatlog).
 
-   This feature is available only for watsonx.data Lite instances. Previously, each object storage bucket or container could only be linked to a single catalog.
-   {: note}
+      This feature is available only for watsonx.data Lite instances. Previously, each object storage bucket or container could only be linked to a single catalog.
+      {: note}
 
 Engine and service enhancements
 
