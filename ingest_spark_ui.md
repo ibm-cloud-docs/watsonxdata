@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-29"
+lastupdated: "2025-12-02"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -100,6 +100,8 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
    x. Click **Save** to save the changes.
 
    xi. In the **Target table** section, select the target catalog from the **Select catalog** list. The selected catalog must be active to perform an ingestion job.
+
+      A toggle in the Target panel lets you choose the delete mode for ingested tables with **Copy-on-Write (COW)** as default mode. Toggle **Merge-on-Read** mode, which supports row level deletion during ingestion. This is supported only for Iceberg catalogs and new tables.
 
    xii. Choose one of the schema options:
 
@@ -229,6 +231,8 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
    ix. Click **Save** to save the changes.
 
    x. In the **Target table** window, select the target catalog from the **Select catalog** list. The selected catalog must be active to perform an ingestion job.
+
+      A toggle in the Target panel lets you choose the delete mode for ingested tables with **Copy-on-Write (COW)** as default mode. Toggle **Merge-on-Read** mode, which supports row level deletion during ingestion. This is supported only for Iceberg catalogs and new tables.
 
    xi. Choose one of the schema options:
 

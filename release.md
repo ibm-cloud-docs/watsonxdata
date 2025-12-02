@@ -85,12 +85,6 @@ OpenTelemetry enhancement
 
    You can now integrate **OpenTelemetry** with Presto (Java) engine to monitor query execution and system performance. **OpenTelemetry** enables capturing telemetry data such as traces and metrics, which can be visualized and analyzed using tools like Instana, Prometheus, and Grafana. For more information, see [OpenTelemetry](/docs/watsonxdata?topic=watsonxdata-opntlmtry).
 
-Retrieval Service
-
-: This release of {{site.data.keyword.lakehouse_short}} introduces the following Retrieval Service enhancements:
-
-   * You can now configure gpt-oss-120b AI model for Retrieval Service at the instance level in the {{site.data.keyword.lakehouse_short}} console. For information on Configure AI model for Retrieval Service, see [Configure AI model for Retrieval Service](/docs/watsonxdata?topic=watsonxdata-retsrvc).
-
 Query Optimizer enhancement
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancement to **Query Optimizer**.
@@ -119,6 +113,19 @@ CPDCTL CLI enhancements
     Starting with CPDCTL version 1.x.xx, these commands can now connect to {{site.data.keyword.lakehouse_short}} releases prior to version 2.2.1, ensuring smoother integration and compatibility across environments.
 
    * A new option under the `service` command `wx-data service list-objects` will list down the objects in a strage bucket added in {{site.data.keyword.lakehouse_short}}. For details about the service command for serviceability related operations in {{site.data.keyword.lakehouse_short}}, see [service](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata#cpdctl_commands_wxdatasvce).
+
+Retrieval Service
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following Retrieval Service enhancements:
+
+   * You can now configure gpt-oss-120b AI model for Retrieval Service at the instance level in the {{site.data.keyword.lakehouse_short}} console. For information on Configure AI model for Retrieval Service, see [Configure AI model for Retrieval Service](/docs/watsonxdata?topic=watsonxdata-retsrvc).
+
+Ingestion enhancement
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following ingestion enhancement:
+
+   * A new toggle is available in the Target panel of the ingestion screen to control the delete mode for ingested tables with **Copy-on-Write (COW)** as default mode. Switching to the **Merge-on-Read** mode enable row-level deletion during ingestion.
+
 
 Deprecated features
 
