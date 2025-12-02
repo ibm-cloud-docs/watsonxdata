@@ -131,6 +131,10 @@ Deprecated features
 
 : Support for Apache Spark 3.4 runtime is deprecated and will no longer be supported. You must upgrade to Spark 3.5 or 4.0.  To update the Apache Spark version, see [Editing the Spark engine details](/docs/watsonxdata?topic=watsonxdata-view-end#edit-dtls).
 
+Technology preview features
+
+: For this release, additional updates and enhancements are available under Technology Preview features. To review the Technology Preview updates for this release, see, [Technology preview 2.3](/docs/watsonxdata?topic=watsonxdata-release_pp#lakehouse_5dec2025_pp).
+
 ## 13 November 2025 - Version 2.2.2 New Feature 1 (NF1)
 {: #lakehouse_13nov2025}
 {: release-note}
