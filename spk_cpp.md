@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-11-28"
+lastupdated: "2025-12-02"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -72,7 +72,7 @@ To add a Gluten accelerated Spark engine, complete the following steps.
 
       | Field | Description |
       | --- | --- |
-      | Default Spark version | Select the Spark runtime version that must be considered for processing the applications. Gluten accelerated Spark engine support version 3.4. |
+      | Default Spark version | Select the Spark runtime version that must be considered for processing the applications. Gluten accelerated Spark engine support version 3.5. |
       | Engine home bucket | Select the registered Cloud Object Storage bucket from the list to store the Spark events and logs that are generated while running spark applications. \n [Note]{: tag-purple} Make sure you do not select the IBM-managed bucket as Spark engine home. If you select an IBM-managed bucket, you cannot access it to view the logs. \n For more information, see [Before you begin]({{site.data.keyword.ref-prov_nspark-link}}#prereq_nspark_prov).|
       |Reserve capacity (Conditional)| Specify this field if you are using a version earlier than 2.3 of {{site.data.keyword.lakehouse_short}}. 1. Select the **Node Type**. \n 2. Enter the number of nodes in the **No of nodes** field.     |
       |Associated catalogs (optional)| Select the catalogs that must be associated with the engine.   |
