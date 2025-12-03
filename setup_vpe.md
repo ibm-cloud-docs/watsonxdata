@@ -2,7 +2,7 @@
 
 copyright:
   years: 2025
-lastupdated: "2025-03-25"
+lastupdated: "2025-12-03"
 
 keywords: watsonxdata, vpe
 
@@ -33,7 +33,7 @@ subcollection: watsonxdata
 You can configure network endpoints in {{site.data.keyword.lakehouse_short}} to view and manage access to your deployment.
 {: shortdesc}
 
-Private endpoints are not supported for Lite plans. Private endpoints are supported only in `ca-tor` and `au-syd` regions.
+Private endpoints are not supported for Lite plans. Private endpoints are only supported in `ca-tor`, `us-east`, `us-south`,  `eu-de`, and `au-syd` regions.
 {: important}
 
 ## Procedure
