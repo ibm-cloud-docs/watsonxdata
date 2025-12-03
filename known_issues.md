@@ -31,10 +31,10 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
-## Access denied error in Presto queries when Hadoop ranger service is integrated
+## Access denied error in Presto and Spark queries when Hadoop Ranger service is integrated
 {: #known_issue54244}
 
-When integrating the Hadoop Ranger service in {{site.data.keyword.lakehouse_short}}, SQL queries executed using the Presto engine fail with the error: `Access denied: USE`. This occurs during operations such as creating schemas in the default catalog through the Query Workspace.
+When integrating the Hadoop Ranger service in {{site.data.keyword.lakehouse_short}}, SQL queries executed using the Presto engine fail with the error: `Access denied: USE`. This occurs during operations such as creating schemas in the default catalog through the Query Workspace. Additionally, if the Presto Ranger service is configured and the query is executed using the Spark engine, the query will also fail with the same error.
 
 ## Failure to filter DATE, TIME, TIMESTAMP, and VARBINARY columns using WHERE clause in MongoDB Connector
 {: #known_issue51827}
