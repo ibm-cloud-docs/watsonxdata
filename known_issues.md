@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-02"
+lastupdated: "2025-12-03"
 
 keywords: lakehouse
 
@@ -96,11 +96,6 @@ If you upload a Python (.py) file with spaces or special characters in its filen
 `/opt/ibm/entrypoint/start-spark-job-wrapper.sh: eval: line 293: syntax error near unexpected token (' /opt/ibm/entrypoint/start-spark-job-wrapper.sh: eval: line 293: spark-submit --master spark://spark-master-headless-b778988f-24ff-49c2-aa05-a56f3c204f0b:7077 s3a://sparkqa-donotdelete-pr-7aqi2frntm5vlz/spark_jobs/uploads/8f472c67-23aa-4f94-8ed6-c9f2dbe13e20/application/wordcount (1).py '/opt/ibm/spark/examples/src/main/resources/people.txt''`
 
 **Workaround:** To avoid this issue, you must rename the Python application file to remove spaces and special characters before uploading. For example, rename `wordcount (1).py` to `wordcount_1.py`.
-
-## Delay in QHMM diagnostic table creation due to backend engine initialization
-{: #known_issue35619}
-
-When enabling QHMM in the console, users may experience a noticeable delay before diagnostic tables appear. This is due to backend engine initialization and recipe sequencing, which are not immediately reflected in the UI.
 
 ## Prepared statement fails for long SQL queries due to header size limits in IBM watsonx.data Presto
 {: #known_issue26969}
