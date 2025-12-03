@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-01"
+lastupdated: "2025-12-03"
 
 keywords: watsonx.data, Presto, Milvus, dashboards, observability, metrics
 
@@ -260,7 +260,13 @@ Monitors errors and failures across the query execution pipeline, highlighting s
    - `watsonx_data_presto_query_manager_user_error_failures_five_minute_count`
    - `watsonx_data_presto_task_executor_split_skipped_due_to_memory_pressure_five_minute_count`
 
-- **Service/component affected** - Identifies failing Presto components.
+- **Service/component affected - Hive S3 / FileSystem** - Identifies failing Presto components.
+   - `watsonx_data_presto_hive_s3_presto_s3_file_system_failed_uploads_total_count`
+   - `watsonx_data_presto_hive_s3_presto_s3_file_system_aws_retry_count_fifteen_minute_count`
+   - `watsonx_data_presto_hive_s3_presto_s3_file_system_get_metadata_errors_total_count`
+   - `watsonx_data_presto_hive_s3_presto_s3_file_system_socket_timeout_exceptions_total_count`
+
+- **Service/component affected - Task Executor** - Identifies failing Presto components.
    - `watsonx_data_presto_task_executor_split_wall_time_all_time_max_error`
    - `watsonx_data_presto_task_executor_blocked_quanta_wall_time_all_time_max_error`
    - `watsonx_data_presto_task_executor_leaf_split_cpu_time_max_error`
@@ -319,9 +325,6 @@ Highlights unexpected patterns or deviations in query behavior, helping detect p
 - **Memory trend** - Tracks memory usage and potential leaks.
    - `jvm_memory_bytes_used`
    - `watsonx_data_presto_memory_heap_memory_usage_used_bytes`
-
-- **GC time trend** - Monitors garbage collection time.
-   - `jvm_gc_collection_seconds_sum`
 
 - **Workload trend comparison** - Compares resource usage across time windows.
    - `watsonx_data_presto_task_executor_global_cpu_time_micros_total_count`
