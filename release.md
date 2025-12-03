@@ -46,7 +46,7 @@ Data sources and storage enhancements
       - `Catalog1` can be associated with `s3a://mybucket/foo/bar`
       - `Catalog2` can be associated with `s3a://mybucket/lorem/ipsum`
 
-      This enhancement makes it easier to logically separate data within the same storage and reuse it across multiple catalogs, improving flexibility and organization. For more information, see [Adding multiple Apache Iceberg catalogs to a single storage](/docs/watsonxdata?topic=watsonxdata-muticatlog).
+      This enhancement makes it easier to logically separate data within the same storage and reuse it across multiple catalogs, improving flexibility and organization. This behavior applies to all new Lite plan instances, which are now account-scoped. For more information, see [Adding multiple Apache Iceberg catalogs to a single storage](/docs/watsonxdata?topic=watsonxdata-muticatlog).
 
       This feature is available only for watsonx.data Lite instances. Previously, each object storage bucket or container could only be linked to a single catalog.
       {: note}
@@ -74,6 +74,8 @@ Schema name reuse across Iceberg catalogs for Lite Plan instance
 : Previously, when referencing a table using a three-part name (`<catalog>.<schema>.<table>`), schema names had to be unique across all catalogs within a watsonx.data instance. This restriction prevented the creation of schemas with the same name in different catalogs. This limitation is lifted for Iceberg catalogs. You can now reuse schema names across multiple Iceberg catalogs. For example:
 - `myiceberg_catalog1.abcschema.mytable`
 - `myiceberg_catalog2.abcschema.mytable`
+
+This behavior applies to all new Lite plan instances, which are now account-scoped.
 
 Schema names must still be unique across other catalog types such as Hive, Delta, and Hudi.
 {: note}
