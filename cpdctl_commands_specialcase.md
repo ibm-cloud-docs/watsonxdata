@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-09-23"
+lastupdated: "2025-12-03"
 
 keywords: lakehouse, database, tags, description, watsonx.data
 
@@ -62,7 +62,7 @@ This topic provides a few usage scenario guidance for the `cpdctl wx-data` comma
 
 You can input JSON formatted options for cpdctl wx-data commands in one of the 2 ways listed:
 
-   The example provided in this scenario is extracted partly from the --help output of Create for illustration purpose only.
+   The example provided in this scenario is extracted partly from the `--help` output of Create for illustration purpose only.
    {: remember}
 
    * Many cpdctl wx-data commands utilize JSON formatted key value pairs to specify complex set of commands in a single set. These JSON strings can be directly incorporated into the command line, as seen in the help examples.
@@ -112,3 +112,26 @@ You can input JSON formatted options for cpdctl wx-data commands in one of the 2
       --associated-catalog '{\"catalog_name\": \"hivecos\", \"catalog_tags\": [\"tag_1\", \"tag_2\"], \"catalog_type\": \"hive-hadoop2\"}'
       ```
       {: screen}
+
+## Scenario 4: Workaround for `--api-key` validation failure in `sparkjob` and `tablemaint` commands
+{: #cpdctl_commands_specialcase4}
+
+In some edge cases, the `--api-key` flag might fail validation when used with the `sparkjob create` and `tablemaint` commands. This issue can occur due to auto Base64 encoding problems. As a workaround, you can use the hidden flag `--en-apikey` to manually provide an encoded API key.
+
+For {{site.data.keyword.lakehouse_short}} software deployments, use the following format `--en-apikey "ZenApiKey <Encoded_API_Key>"`
+
+Create the encoded key:
+
+```bash
+echo -n "username:<CPD_API_KEY>" | base64
+```
+{: codeblock}
+
+For {{site.data.keyword.lakehouse_short}} SaaS deployments, use the following format `--en-apikey "Basic <Encoded_API_Key>"`
+
+Create the encoded key:
+
+```bash
+echo -n "ibmlhapikey_<username>:<SAAS_API_KEY>" | base64
+```
+{: codeblock}
