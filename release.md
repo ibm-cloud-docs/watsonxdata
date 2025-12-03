@@ -104,16 +104,16 @@ Query Optimizer enhancement
 
    * Support for Hive and Iceberg metastore registration in **Query Optimizer** for Lite instances of {{site.data.keyword.lakehouse_short}}.
 
-   The Query Optimizer supports distinct metastore types for Hive and Iceberg catalogs.
+      The Query Optimizer supports distinct metastore types for Hive and Iceberg catalogs.
 
-   Users can now register:
+      Users can now register:
 
-   - Hive catalogs using the `watsonx-data-hive` metastore type.
-   - Iceberg catalogs using the `iceberg-rest` metastore type.
+      - Hive catalogs using the `watsonx-data-hive` metastore type.
+      - Iceberg catalogs using the `iceberg-rest` metastore type.
 
-   This enhancement allows more granular control and compatibility with evolving metastore architectures. Registration is done using the `REGISTER_EXT_METASTORE` procedure with updated syntax and properties.
+      This enhancement allows more granular control and compatibility with evolving metastore architectures. Registration is done using the `REGISTER_EXT_METASTORE`    procedure with updated syntax and properties.
 
-   From this release onwards, legacy support for the unified `watsonx-data` metastore type is continued to support in the Enterprise version while is no longer available for Lite instances. For more information, see [Manually syncing Query Optimizer with metastore](/docs/watsonxdata?topic=watsonxdata-sync_optimizer_meta).
+      From this release onwards, legacy support for the unified `watsonx-data` metastore type is continued to support in the Enterprise version while is no longer    available for Lite instances. For more information, see [Manually syncing Query Optimizer with metastore](/docs/watsonxdata?   topic=watsonxdata-sync_optimizer_meta).
 
 CPDCTL CLI enhancements
 
