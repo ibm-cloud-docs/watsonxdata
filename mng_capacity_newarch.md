@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-11-28"
+lastupdated: "2025-12-03"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -24,11 +24,34 @@ The **Capacity** tab in a Spark engine instance provides a comprehensive view of
 {: #mng_capacity_key}
 
 * Each Spark engine can attach to multiple reservation pools (node pools with different flavors).
-* Dedicated Capacity supports min/max node pool configurations for flexibility.
+* Dedicated Workloads with Autoscaling: A dedicated environment provides users with their own reserved compute capacity, ensuring consistent performance and control. When combined with autoscaling, users get the best of both reliability and efficiency.
 * Quotas will be enforced for both Dedicated and On-Demand capacity.
 * If Dedicated Capacity is attached, workloads will run on it by default.
 * If no Dedicated Capacity is available, workloads automatically fall back to On-Demand Capacity.
 * For users who frequently run large or long jobs, it is recommended to attach Dedicated Capacity for predictable performance.
+
+## Serverless Spark
+{: #mng_capacity_serv}
+
+* Pay-per-use cost model: Customers only pay for the compute resources consumed when workloads run. This avoids paying for idle capacity when usage is intermittent or low.
+* Automatic scaling: Serverless platforms automatically scale resources up or down based on demand, eliminating the need for manual provisioning or capacity planning.
+* No infrastructure management: The platform handles patching, scaling, and maintenance, reducing operational overhead.
+* Fast time-to-value: Customers can deploy quickly without upfront planning or infrastructure sizing.
+
+## Benefits of having Dedicated capacity with autoscaling
+{: #mng_capacity_aut}
+
+
+* Stable baseline performance: Dedicated capacity ensures that workloads with long-running or continuous usage have guaranteed compute resources without competition.
+
+* Efficient scaling for peak demand: Autoscaling layers on top of the dedicated baseline to automatically add more capacity when usage spikes, ensuring performance is maintained even during unexpected surges.
+
+* Cost-optimized for sustained workloads: Customers pay for dedicated resources that they rely on consistently, while autoscaling prevents over-provisioning by only adding extra capacity when required.
+
+* Operational flexibility: Teams can configure both the minimum dedicated capacity for continuous workloads and an upper autoscaling cap to control spend.
+
+* Improved reliability: Scaling events happen automatically, reducing downtime risk and ensuring services handle fluctuating workloads without manual intervention.
+
 
 
 ## Before you begin
