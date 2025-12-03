@@ -112,7 +112,7 @@ CPDCTL CLI enhancements
 
     Starting with CPDCTL version 1.x.xx, these commands can now connect to {{site.data.keyword.lakehouse_short}} releases prior to version 2.2.1, ensuring smoother integration and compatibility across environments.
 
-   * A new option under the `bucket` command `wx-data bucket list-objects` lists down the objects in a storage bucket added in {{site.data.keyword.lakehouse_short}}. For details about the `bucket` command for serviceability related operations in {{site.data.keyword.lakehouse_short}}, see [bucket](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata#cpdctl_commands_wxdatabuck).
+   * A new option under the `bucket` command `wx-data bucket list-objects` lists down the objects in a bucket added in {{site.data.keyword.lakehouse_short}}. For details about the `bucket` command related operations in {{site.data.keyword.lakehouse_short}}, see [bucket](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata#cpdctl_commands_wxdatabuck).
 
    * A hidden flag as a workaround `--en-apikey` is now available to handle edge cases where the `--api-key` flag fails validation in `sparkjob` and `tablemaint` commands. For more information, see [Additional information about cpdctl wx-data command usage and examples](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_specialcase).
 

@@ -116,7 +116,7 @@ You can input JSON formatted options for cpdctl wx-data commands in one of the 2
 ## Scenario 4: Workaround for `--api-key` validation failure in `sparkjob` and `tablemaint` commands
 {: #cpdctl_commands_specialcase4}
 
-In some edge cases, the `--api-key` flag might fail validation when used with the `sparkjob create` and `tablemaint` commands. This issue can occur due to auto Base64 encoding problems. As a workaround, you can use the hidden flag `--en-apikey` to manually provide an encoded API key.
+In some edge cases, if the `--api-key` flag fails validation when used with the `sparkjob create` and `tablemaint` commands, you can alternatively use the hidden flag `--en-apikey` to manually provide an encoded API key.
 
 For {{site.data.keyword.lakehouse_short}} software deployments, use the following format `--en-apikey "ZenApiKey <Encoded_API_Key>"`
 

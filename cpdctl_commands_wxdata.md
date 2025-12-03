@@ -174,13 +174,13 @@ The `bucket` command further supports the following commands:
 | `./cpdctl wx-data bucket delete` | Delete a storage from {{site.data.keyword.lakehouse_short}} instance. |
 | `./cpdctl wx-data bucket activate` | Activate a storage bucket in {{site.data.keyword.lakehouse_short}} on IBM Cloud instance only. |
 | `./cpdctl wx-data bucket deactivate` | Deactivate a storage bucket in {{site.data.keyword.lakehouse_short}} on IBM Cloud instance only. This option is not supported from {{site.data.keyword.lakehouse_short}} 2.2.1 version. |
-| `./cpdctl wx-data bucket list-objects` | List the objects in a storage bucket. |
+| `./cpdctl wx-data bucket list-objects` | List all objects in the bucket. |
  {: caption="Supported commands by bucket" caption-side="bottom"}
 
 Limitations:
 
-* When using the `list-object` command, buckets with a large number of objects might not list all objects because of API timeouts.
-* When using the `--paginated` parameter with the `list-object` command, only top-level objects are listed. Nested objects are not expanded by default.
+* When using the `list-objects` command, buckets with a large number of objects might not list all objects because of API timeouts.
+* When using the `--paginated` parameter with the `list-objects` command, only top-level objects are listed. Nested objects are not expanded by default.
 
 ## database
 {: #cpdctl_commands_wxdatadatabs}
