@@ -223,7 +223,7 @@ The `sparkjob` command further supports the following commands:
 | `./cpdctl wx-data sparkjob get` | Get the status of a Spark application. |
  {: caption="Supported commands by sparkjob" caption-side="bottom"}
 
-For more information about how to Submit Spark application by using IBM cpdctl in {{site.data.keyword.lakehouse_short}} on IBM Cloud, see [Submitting Spark application by using IBM cpdctl](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-table-run_samp_file).
+For more information about how to Submit Spark application by using IBM cpdctl in {{site.data.keyword.lakehouse_short}} on IBM Cloud, see [Submitting Spark application by using IBM cpdctl](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-nsp_cpdctl).
 
 ## tablemaint
 {: #cpdctl_commands_tabmaint}
