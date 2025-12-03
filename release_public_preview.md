@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-01"
+lastupdated: "2025-12-03"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -42,6 +42,10 @@ JVector for similarity search in Presto (Private preview)
 
 :  Introduced JVector, a new Tech Preview feature in Presto that enables Approximate Nearest Neighbor (ANN) Top‑K similarity searches on embedding data that is stored in Iceberg tables. For more information see,
 [JVector integration in Presto](/docs/watsonxdata?topic=watsonxdata-jvector).
+
+Spark Labs are now accessible from the Console
+
+:  Spark Labs are now accessible from the Console under Infrastructure > Spark Engine, in addition to the VS Code extension. A new table view displays Spark Labs with a default filter set to ACTIVE, showing details such as Name, ID, Created On, Started On, and Stopped On, similar to the Spark Query Server interface. You can also stop a Spark Lab from the Console. For more information, see [Managing Spark labs from Console](/docs/watsonxdata?topic=watsonxdata-lab_console).
 
 ## 13 November 2025 - Version 2.2.2 New Feature 1 (NF1)
 {: #lakehouse_13nov2025_pp}

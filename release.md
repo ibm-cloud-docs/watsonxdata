@@ -61,9 +61,14 @@ Engine and service enhancements
       * Data file statistics collection - During write operations, Prestissimo collects and reports essential data file statistics to Iceberg manifest files, including record count, file size, and partition details.
       * Sorted table write support - Prestissimo supports writing sorted Iceberg tables to enable optimized query performance for workloads that benefit from sorted data.
 
-   * The Spark Engine creation process is now simplified by focusing only on essential details—engine name, Spark version, home bucket, and associated catalogs, while moving capacity reservation tasks to a new Capacity Management tab on the engine details page. This update removes capacity configuration from the creation flow, making engine setup faster and less complex. After creating an engine, you can manage VM flavors, configure node pools, and set on-demand fallback thresholds under the Capacity tab. You can access this feature when using version 2.3 of {{site.data.keyword.lakehouse_short}}.
+   * Serverless Spark Engine for Enterprise Plan
+        In the watsonx.data Enterprise plan, the Spark engine supports a serverless model while also offering the flexibility to allocate on-demand capacity when needed. Running Spark jobs on a serverless platform removes the requirement for dedicated nodes for each Spark engine.
+        The serverless Spark environment provides a shared pool of nodes with a maximum resource quota of 8 vCPUs and 32 GB memory. For workloads that require higher capacity, you can provision dedicated nodes with customizable memory configurations.
+        For more details on serverless and on-demand capacities, see [Managing Spark Capacity](/docs/watsonxdata?topic=watsonxdata-mng_capacity_spk).
 
-   * Spark Labs are now accessible from the Console under Infrastructure > Spark Engine, in addition to the VS Code extension. A new table view displays Spark Labs with a default filter set to ACTIVE, showing details such as Name, ID, Created On, Started On, and Stopped On, similar to the Spark Query Server interface. You can also stop a Spark Lab from the Console. For more information, see [Managing Spark labs from Console](/docs/watsonxdata?topic=watsonxdata-lab_console).
+
+        The Spark Engine creation process is now simplified by focusing only on essential details—engine name, Spark version, home bucket, and associated catalogs, while moving capacity reservation tasks to a new Capacity Management tab on the engine details page. This update removes capacity configuration from the creation flow, making engine setup faster and less complex. After creating an engine, you can manage VM flavors, configure node pools, and set on-demand fallback thresholds under the Capacity tab. You can access this feature when using version 2.3 of {{site.data.keyword.lakehouse_short}}.
+
 
 Account-level component persistence for Lite Plan instance
 
