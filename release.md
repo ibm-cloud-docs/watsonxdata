@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-12-03"
+lastupdated: "2025-12-04"
 
 keywords: watsonxdata, release notes
 
@@ -67,7 +67,7 @@ Engine and service enhancements
         For more details on serverless and on-demand capacities, see [Managing Spark Capacity](/docs/watsonxdata?topic=watsonxdata-mng_capacity_spk).
 
 
-        The Spark Engine creation process is now simplified by focusing only on essential details—engine name, Spark version, home bucket, and associated catalogs, while moving capacity reservation tasks to a new Capacity Management tab on the engine details page. This update removes capacity configuration from the creation flow, making engine setup faster and less complex. After creating an engine, you can manage VM flavors, configure node pools, and set on-demand fallback thresholds under the Capacity tab. You can access this feature when using version 2.3 of {{site.data.keyword.lakehouse_short}}.
+        The Spark Engine creation process is now simplified by focusing only on essential details—engine name, Spark version, home bucket, and associated catalogs, while moving capacity reservation tasks to a new Capacity Management tab on the engine details page. This update removes capacity configuration from the creation flow, making engine setup faster and less complex. After creating an engine, you can manage VM flavors, configure node pools, and set on-demand fallback thresholds under the Capacity tab. This behavior applies to all new {{site.data.keyword.lakehouse_short}} instances, which are now account-scoped.
 
 
 Account-level component persistence for Lite Plan instance
@@ -93,7 +93,13 @@ Access management enhancements
 Billing enhancements
 : This release of watsonx.data introduces the following enhancements to the billing feature:
 
-   * Metering of {{site.data.keyword.lakehouse_short}} components now operates at the runtime level, capturing start, stop, and pause events for each runtime tied to an engine. It provides clear visibility into engine consumption and resource usage. For engines like Presto, this remains a one-to-one mapping, while Spark introduces multiple runtime subtypes (e.g., Kernel, HistoryServer, Application), each tracked individually for active and inactive hours. The user interface will reflect these changes by displaying runtime-level activity bars and event history links scoped to each runtime, ensuring clarity and precision. For more information, see [Metering and usage experience](/docs/watsonxdata?topic=watsonxdata-manage_bil_newarch). You can access this feature when using version 2.3 of {{site.data.keyword.lakehouse_short}}.
+   * Metering of {{site.data.keyword.lakehouse_short}} components now operates at the runtime level, capturing start, stop, and pause events for each runtime tied to an engine. It provides clear visibility into engine consumption and resource usage. For engines like Presto, this remains a one-to-one mapping, while Spark introduces multiple runtime subtypes (e.g., Kernel, HistoryServer, Application), each tracked individually for active and inactive hours. The user interface will reflect these changes by displaying runtime-level activity bars and event history links scoped to each runtime, ensuring clarity and precision. For more information, see [Metering and usage experience](/docs/watsonxdata?topic=watsonxdata-manage_bil_newarch). This behavior applies to all new {{site.data.keyword.lakehouse_short}} instances, which are now account-scoped.
+
+Lite plan enhancements:
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancements to the Lite plan:
+
+   Lite plan provisioning in {{site.data.keyword.lakehouse_short}} is now simplified by removing support for multiple use cases. All new instances provision with the default `Generative AI` use case. The Data Engineering and Power BI use cases are deprecated and no longer available. The CLI provisioning method now allows only the default `Generative AI` use case, ensuring a consistent and streamlined experience.
 
 OpenTelemetry enhancement
 
