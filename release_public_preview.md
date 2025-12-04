@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-03"
+lastupdated: "2025-12-04"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -38,10 +38,10 @@ Read about the new features and enhancements in the current and previous release
 
 This release includes the following new feature:
 
-JVector for similarity search in Presto (Private preview)
+JVector integration with Presto (Private preview)
 
-:  Introduced JVector, a new Tech Preview feature in Presto that enables Approximate Nearest Neighbor (ANN) Top‑K similarity searches on embedding data that is stored in Iceberg tables. For more information see,
-[JVector integration in Presto](/docs/watsonxdata?topic=watsonxdata-jvector).
+:  {{site.data.keyword.lakehouse_full}} now integrates with JVector in Presto which enables Approximate Nearest Neighbor (ANN) Top‑K similarity searches on embedding data that is stored in Iceberg tables. For more information see,
+[JVector integration with Presto](/docs/watsonxdata?topic=watsonxdata-jvector).
 
 Spark Labs are now accessible from the Console
 

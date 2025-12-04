@@ -463,6 +463,9 @@ toc:
           label: watsonx.data v3 APIs
           href: https://cloud.ibm.com/apidocs/watsonxdata-v3
       - link:
+          label: watsonx.data AMS APIs
+          href: https://cloud.ibm.com/apidocs/watsonxdata-ams
+      - link:
           label: MDS Unity Catalog API
           href: https://cloud.ibm.com/apidocs/watsonxdata-mds-unity
       - link:

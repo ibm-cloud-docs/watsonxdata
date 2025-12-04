@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-02"
+lastupdated: "2025-12-04"
 
 keywords: lakehouse, jvector, watsonx.data
 
@@ -26,7 +26,7 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# JVector integration in Presto (Private preview)
+# JVector integration with Presto (Private preview)
 {: #jvector}
 
 Similarity Search by using JVector is available as a Private Preview feature in Presto.
