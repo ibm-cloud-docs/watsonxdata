@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-11-12"
+lastupdated: "2025-12-04"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -26,14 +26,9 @@ The **Lite** plan allows you to provision an {{site.data.keyword.lakehouse_full}
 {: shortdesc}
 
 
-Provisioning a Lite plan instance is use case driven. The {{site.data.keyword.lakehouse_short}} instance is configured based on this use case:
+The {{site.data.keyword.lakehouse_short}} Lite plan instance is configured based on the **Generative AI** use case.  The provisioned instance includes Presto (Java), Milvus, and Spark, a read-only sample IBM COS storage that is associated to the Presto engine, and sample worksheet with `GoSales` data in it.
 
-When you provision a Lite plan instance through UI, {{site.data.keyword.lakehouse_short}} automatically configures it for **Generative AI** use case. You cannot provision instances for **High Performance BI** or **Data Engineering** use cases using UI. To configure these options, you must use CLI.
-{: note}
 
-- **Generative AI**: AI developers or Data engineers can explore the Generative AI use cases using this option. The provisioned instance includes Presto, Milvus, Spark, a read-only sample IBM COS storage that is associated to the Presto engine, and sample worksheet with `GoSales` data in it.
-- **High Performance BI**: Data engineers can explore BI visualization functionalities using this option. The provisioned instance includes Presto (C++), Spark, Query Optimizer, a read-only sample IBM COS storage that is associated to the Presto engine, and `tpcds` is available as the sample worksheet for benchmarking.
-- **Data Engineering**: Data engineers can explore various workload driven use cases using this option. The provisioned instance includes Presto (Java), Spark, a read-only sample IBM COS storage that is associated to the Presto engine, and sample worksheet with `GoSales` data in it.
 
 After provisioning the Lite plan instance, you can monitor the resource unit usage from the **Billing and Usage** page available in the {{site.data.keyword.lakehouse_short}} console. For more information, see [Billing and Usage](/docs/watsonxdata?topic=watsonxdata-manage_bill).
 
@@ -144,7 +139,9 @@ Perform the following steps to provision a Lite plan instance by using CLI.
     - `cloud_type`:
        - `ibm`: For fully managed account instances (default).
        - `aws_vpc`: For customer-owned account instances.
-    - `use_case_template`: You can provision the Lite plan instance based on three use cases. The valid values accepted by the parameter are ai (Generative AI), workloads (Data Engineering), and performance (High Performance BI). The default value is `workloads`.
+    - `use_case_template`: The default value accepted by the parameter is `ai (Generative AI)`.
+
+       
 
          For availability and general information related to customer-owned account deployed instances, contact your IBM sales representative or [open a support ticket](https://cloud.ibm.com/unifiedsupport/cases/form).
          {: note}
@@ -152,7 +149,7 @@ Perform the following steps to provision a Lite plan instance by using CLI.
     Example 1 : Provision a Lite plan in `us-south` region.
 
     ```bash
-    ibmcloud resource service-instance-create watsonx.data-abc lakehouse lakehouse-lite us-south -g Default -p '{"datacenter": "ibm:us-east:wdc", "use_case": "workloads"}'
+    ibmcloud resource service-instance-create watsonx.data-abc lakehouse lakehouse-lite us-south -g Default -p '{"datacenter": "ibm:us-east:wdc", "use_case": "ai"}'
     ```
     {: codeblock}
 
