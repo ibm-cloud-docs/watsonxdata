@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-04"
+lastupdated: "2025-12-05"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -69,6 +69,7 @@ Query Optimizer enhancement (Public preview)
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following access **Query Optimizer** enhancements:
 
    * You can now enable or disable the Materialized View (MV) feature for the **Query Optimizer** directly from the web console in {{site.data.keyword.lakehouse_short}}. For more information, see [Optimizing queries using Materialized View (MV) in Query optimizer](/docs/watsonxdata?topic=watsonxdata-mv_optimizer).
+
 New lightweight, plugin‑based Common Policy Gateway (CPG) client
 
 : A new lightweight CPG is now available as a downloadable plugin, enabling seamless integration with any policy engine (for example, IBM Knowledge Catalog, Apache Ranger, Collibra). For more information, see [Common Policy Gateway (CPG) connector](/docs/watsonxdata?topic=watsonxdata-plug_cpg).
