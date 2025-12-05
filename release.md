@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-12-04"
+lastupdated: "2025-12-05"
 
 keywords: watsonxdata, release notes
 
@@ -88,7 +88,7 @@ Schema names must still be unique across other catalog types such as Hive, Delta
 Access management enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following access management enhancements:
-   * Administrators can create context-based restriction policies and define trusted IP addresses. You can now configure trusted IP addresses to enable secure access to watsonx.data UI for designated users. This capability adds an extra layer of protection by ensuring that only traffic originating from approved IP addresses can access the user interface. Any attempts to access watsonx.data UI from IPs outside the defined range will be blocked. For more information, see [Securing UI Access with IP-Based Controls](/docs/watsonxdata?topic=watsonxdata-access_rest).
+   * Administrators can create context-based restriction policies and define trusted IP addresses. You can now configure trusted IP addresses to enable secure access to watsonx.data (UI and API) for designated users. This capability adds an extra layer of protection by ensuring that only traffic originating from approved IP addresses can access the user interface and API. Any attempts to access watsonx.data from IPs outside the defined range will be blocked. For more information, see [Securing UI Access with IP-Based Controls](/docs/watsonxdata?topic=watsonxdata-access_rest).
 
 Billing enhancements
 : This release of watsonx.data introduces the following enhancements to the billing feature:
@@ -150,8 +150,6 @@ Ingestion enhancement
 
    * A new toggle is available in the target panel of the ingestion screen to control the delete mode for ingested Iceberg format tables with **Copy-on-Write (COW)** as default mode. Switching to the **Merge-on-Read** mode enable row-level deletion during ingestion.
 
-
-Deprecated features
 
 Technology preview features
 
