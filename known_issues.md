@@ -36,6 +36,9 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 When CBR (Context-Based Restrictions) is enabled, ingestion jobs fail. Additionally, other operations that require metastore administrator access also fail. Ingestion and admin-level operations work as expected when CBR is disabled.
 
+## CBR does not work for account-scoped lite instances
+{: #known_issue54941_1}
+
 ## Access denied error in Presto and Spark queries when Hadoop Ranger service is integrated
 {: #known_issue54244}
 
