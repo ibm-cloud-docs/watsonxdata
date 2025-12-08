@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-02"
+lastupdated: "2025-12-08"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -36,7 +36,7 @@ The Retrieval Service in {{site.data.keyword.lakehouse_short}} enables administr
 
 1. Log in to {{site.data.keyword.lakehouse_short}} console.
 1. From the navigation menu, select **Configurations** and click **Retrieval service model** tile.
-1. Under **Retrival service** section, choose one of the following avialble AI models:
+1. Under **Retrival service** section, choose one of the following available AI models:
    - **granite-3-8b-instruct**
    - **llama-3-3-70b-instruct**
    - **gpt-oss-120b**
@@ -45,7 +45,7 @@ The Retrieval Service in {{site.data.keyword.lakehouse_short}} enables administr
     {: note}
 
 1. A confirmation dialog appears, click **Select**.
-1. Under **Text to SQL**, choose on of the following avialble AI models:
+1. Under **Text to SQL**, choose on of the following available AI models:
    - **granite-3-8b-instruct**
    - **llama-3-3-70b-instruct**
 1. A confirmation dialog appears, click **Select**.
