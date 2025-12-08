@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-01"
+lastupdated: "2025-12-08"
 
 keywords: Instana, OpenTelemetry, dashboards, Presto, Milvus, customization
 
@@ -59,8 +59,8 @@ Follow the steps to create default dashboards in Instana UI for **OpenTelemetry*
 
    - Click on the filter option in the dashboard.
    - Add the following filters:
-     - `metric.tag.Instanceid`: Enter the desired {{site.data.keyword.lakehouse_short}} instance ID.
-     - `metric.tag.PodUid`: Enter the engine ID to filter data for a specific engine.
+     - `otel.attribute.k8s.namespace.name`: Enter the desired {{site.data.keyword.lakehouse_short}} instance ID.
+     - `otel.attribute.service.name`: Enter the engine type to filter data for a specific engine.
 
    These filters help isolate metrics relevant to the selected engine within the chosen instance.
    {: note}
