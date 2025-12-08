@@ -141,6 +141,19 @@ Query Optimizer enhancement
 
       From this release onwards, legacy support for the unified `watsonx-data` metastore type is continued to support in the Enterprise version while is no longer    available for Lite instances. For more information, see [Manually syncing Query Optimizer with metastore](/docs/watsonxdata?   topic=watsonxdata-sync_optimizer_meta).
 
+Thrift over HTTP protocol support in watsonx.data
+
+: The Metadata Service (MDS) in watsonx.data now runs the Thrift service over the HTTP protocol instead of the previous binary protocol. This change affects service endpoints and connection configurations.
+
+Key changes:
+ * thrift:// is now replaced with https://
+ * Port updated from 8380 to 8381
+ * Requires an additional query parameter: ?catalog_name=<catname>
+
+For Spark and Presto engines within watsonx.data, these updates are applied automatically for both new and migrated catalogs. For external engines such as Spark, Db2, and Netezza, users must manually update the connection settings to reflect the new protocol, port, and query parameter.
+{: note}
+
+
 CPDCTL CLI enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancements to IBM Cloud Pak for Data Command Line Interface (IBM cpdctl):
