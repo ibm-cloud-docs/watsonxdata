@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-11-06"
+lastupdated: "2025-12-08"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -198,7 +198,7 @@ Follow the steps to run the Spark sample python file.
     ```
     {: codeblock}
 
-1. Run the following commands to download the Metadata Service JAR file from the [location](https://github.com/IBM-Cloud/IBM-Analytics-Engine/tree/master/wxd-connectors/hms-connector) to your workstation:
+1. Run the following commands to download the Metadata Service JAR file from the [location](https://github.com/IBM-Cloud/IBM-Analytics-Engine/tree/master/wxd-connectors/mds-connectors) to your workstation:
 
     The JAR file must be present in the `/home/hadoop` location on all nodes of the cluster. Make a note of the `spark.driver.extraClassPath` and `spark.executor.extraClassPath`.
     {: important}

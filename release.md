@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-12-05"
+lastupdated: "2025-12-08"
 
 keywords: watsonxdata, release notes
 
@@ -61,13 +61,31 @@ Engine and service enhancements
       * Data file statistics collection - During write operations, Prestissimo collects and reports essential data file statistics to Iceberg manifest files, including record count, file size, and partition details.
       * Sorted table write support - Prestissimo supports writing sorted Iceberg tables to enable optimized query performance for workloads that benefit from sorted data.
 
-   * Serverless Spark Engine for Enterprise Plan
-        In the watsonx.data Enterprise plan, the Spark engine supports a serverless model while also offering the flexibility to allocate on-demand capacity when needed. Running Spark jobs on a serverless platform removes the requirement for dedicated nodes for each Spark engine.
-        The serverless Spark environment provides a shared pool of nodes with a maximum resource quota of 8 vCPUs and 32 GB memory. For workloads that require higher capacity, you can provision dedicated nodes with customizable memory configurations.
-        For more details on serverless and on-demand capacities, see [Managing Spark Capacity](/docs/watsonxdata?topic=watsonxdata-mng_capacity_spk).
+
+   * Serverless Spark with Flexible Capacity for Enterprise Plan
+
+      **On-Demand Capacity**
+
+         * In the {{site.data.keyword.lakehouse_short}} Enterprise plan, the Spark engine supports a serverless model while still offering the flexibility to allocate dedicated capacity when needed.
+         * Running Spark jobs on a serverless platform eliminates the need for dedicated nodes for each Spark engine.
+         * The serverless Spark environment provides a shared pool of nodes with a maximum resource quota of 8 vCPUs and 32 GB memory.
+
+      This behavior applies to all new watsonx.data instances, which are now account-scoped.
+
+      **Dedicated Capacity**
+
+         * For workloads that require higher capacity, you can provision dedicated nodes with customizable memory configurations. For more details on serverless and on-demand capacities, see Managing Spark Capacity.
+         * The Spark Engine creation process is now simplified by focusing only on essential details—engine name, Spark version, home bucket, and associated catalogs—while moving capacity reservation tasks to a new Capacity Management tab on the engine details page. This update removes capacity configuration from the creation flow, making engine setup faster and less complex.
+         * After creating an engine, you can manage VM flavors, configure node pools, and set on-demand fallback thresholds under the Capacity tab.
+
+      This behavior applies to all new watsonx.data instances, which are now account-scoped.
+
+      The maximum resource quota for the Enterprise plan is 256 vCPUs and 1024 GB of memory. To increase this limit, you must contact IBM support.
+
+      For more details on serverless and on-demand capacities, see [Managing Spark Capacity](/docs/watsonxdata?topic=watsonxdata-mng_capacity_spk).
 
 
-        The Spark Engine creation process is now simplified by focusing only on essential details—engine name, Spark version, home bucket, and associated catalogs, while moving capacity reservation tasks to a new Capacity Management tab on the engine details page. This update removes capacity configuration from the creation flow, making engine setup faster and less complex. After creating an engine, you can manage VM flavors, configure node pools, and set on-demand fallback thresholds under the Capacity tab. This behavior applies to all new {{site.data.keyword.lakehouse_short}} instances, which are now account-scoped.
+
 
 
 Account-level component persistence for Lite Plan instance
