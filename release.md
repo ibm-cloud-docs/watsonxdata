@@ -62,7 +62,7 @@ Engine and service enhancements
       * Sorted table write support - Prestissimo supports writing sorted Iceberg tables to enable optimized query performance for workloads that benefit from sorted data.
 
 
-   * Serverless Spark with Flexible Capacity for Enterprise Plan
+   * Serverless Spark with flexible fapacity for Enterprise Plan
 
       **On-Demand Capacity**
 
