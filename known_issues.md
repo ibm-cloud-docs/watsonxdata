@@ -31,6 +31,12 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
+## CPG Import/Export not supported for account-scoped {{site.data.keyword.lakehouse_short}} instances
+{: #known_issue53465}
+
+For the {{site.data.keyword.lakehouse_short}} instances, which are now account-scoped, the Common Policy Gateway (CPG) import/export functionality is not supported. Any attempt to use these features will fail and return the following error message:
+`import/export features will not be supported for this instance: <instanceID>`.
+
 ## Spark 4.0 fails to execute SQL queries in ANSI mode with provided configuration
 {: #known_issue52490}
 
