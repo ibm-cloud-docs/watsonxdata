@@ -120,7 +120,9 @@ OpenTelemetry enhancement
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following enhanced observability and monitoring for Presto (Java) engine.
 
-   You can now integrate **OpenTelemetry** with Presto (Java) engine to monitor query execution and system performance. **OpenTelemetry** enables capturing telemetry data such as traces and metrics, which can be visualized and analyzed using tools like Instana, Prometheus, and Grafana. For more information, see [OpenTelemetry](/docs/watsonxdata?topic=watsonxdata-opntlmtry).
+   * You can now integrate **OpenTelemetry** with Presto (Java) engine to monitor query execution and system performance. **OpenTelemetry** enables capturing telemetry data such as traces and metrics, which can be visualized and analyzed using tools like Instana, Prometheus, and Grafana. For more information, see [OpenTelemetry](/docs/watsonxdata?topic=watsonxdata-opntlmtry).
+
+   * New Instana and Grafana dashboards - You can now use the Instana and Grafana dashboards to monitor the performance and provide a more comprehensive view of system health and performance. For more details, see [Supporting dashboards](/docs/watsonxdata?topic=watsonxdata-opntlmtry_inst_dash2).
 
 Query Optimizer enhancement
 
