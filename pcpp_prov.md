@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-08-26"
+lastupdated: "2025-12-08"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -29,7 +29,8 @@ An engine in {{site.data.keyword.lakehouse_short}} runs SQL queries on your data
     | Type | Select the **Presto (C++)** engine from the list. |
     | Display name   | Enter your compute engine name.  |
     | Configuration mode | **Standard**: Select **Standard** for predefined engine sizes: |
-    |   |**Starter**: Includes 1 coordinator node and 1 worker node, both starter.   |
+    |   |**Lite**: Includes 1 coordinator node and 1 worker node. Note: The Presto (C++) Lite mode is available only in watsonx.data Lite plan.   |
+    |   |**Starter**: Includes 1 coordinator node and 1 worker node, both starter. Note: The Starter mode is not available for a Presto (C++) engine in watsonx.data Lite plan. |
     |   | **Small**: Includes 1 coordinator node and 3 worker nodes, all cache-optimized.  |
     |   | **Medium**: Includes 1 coordinator node and 6 worker nodes, all cache-optimized.  |
     |   |**Large**: Includes 1 coordinator node and 12 worker nodes, all cache-optimized.  |
