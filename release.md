@@ -148,9 +148,9 @@ Thrift over HTTP protocol support in watsonx.data Lite plan
 : The Metadata Service (MDS) in watsonx.data now runs the Thrift service over the HTTP protocol instead of the previous binary protocol. This change affects service endpoints and connection configurations.
 
    Key changes:
-   * thrift:// is now replaced with https://
-   * Port updated from 8380 to 8381
-   * Requires an additional query parameter: ?catalog_name=<catname>
+   * The MDS Thrift Protocol (`thrift://`) is changed to Thrift Over HTTP (`https://`).
+   * The `account_id` is mandatory for all Thrift API calls made to the MDS Thrift Service over HTTP.
+   * The catalog query parameter is required when invoking APIs involving the Iceberg catalog.
 
    For Spark and Presto engines within watsonx.data, these updates are applied automatically for both new and migrated catalogs. For external engines such as Spark, Db2, and Netezza, users must manually update the connection settings to reflect the new protocol, port, and query parameter.
    {: note}
