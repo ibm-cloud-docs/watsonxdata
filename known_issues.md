@@ -41,8 +41,13 @@ When you use Spark 4.0 as runtime, ANSI mode is enabled by default. This cause f
 
 When CBR (Context-Based Restrictions) is enabled, ingestion jobs fail. Additionally, other operations that require metastore administrator access also fail. Ingestion and admin-level operations work as expected when CBR is disabled.
 
-## CBR does not work for account-scoped lite instances
+## CBR does not work for lite instances
 {: #known_issue54941_1}
+
+## Text2Action skills fail for authorization when CBR is enabled
+{: #known_issue54697}
+
+When CBR is enabled for a user account, the orchestrate tools used by Lakehouse Assistant are excluded from the AMS whitelist. As a result, all console API calls involved in admin operations are blocked by AMS, causing Text2Action skills to fail authorization.
 
 ## Access denied error in Presto and Spark queries when Hadoop Ranger service is integrated
 {: #known_issue54244}
