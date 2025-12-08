@@ -31,10 +31,17 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
+## Spark 4.0 fails to execute SQL queries in ANSI mode with provided configuration
+{: #known_issue52490}
+
+When running SQL queries on Spark 4.0 with ANSI mode enabled (`spark.sql.ansi.enabled=true`), queries fail with `ExtendedAnalysisException` due to strict type enforcement in ANSI mode. This issue occurs even when using configurations that work on Spark 3.5.
+
+**Workaround:** Use non-ANSI mode by setting the parameter: `"spark.sql.ansi.enabled": "false"`
+
 ## Disable ANSI mode in Spark 4.0 to prevent TPC-DS query failures
 {: #known_issue52597}
 
-When you use Spark 4.0 as runtime, ANSI mode is enabled by default. This cause failures when executing standard TPC-DS queries. To avoid these issues, ANSI mode should be disabled in Spark 4.0 templates by setting the configuration `"spark.sql.ansi.enabled": "false"`. This ensures ANSI mode is not automatically activated and prevents query incompatibilities.
+When you use Spark 4.0 as runtime, ANSI mode is enabled by default. This cause failures when executing standard TPC-DS queries. To avoid these issues, ANSI mode should be disabled in Spark 4.0 templates by setting the configuration `spark.sql.ansi.enabled": "false"`. This ensures ANSI mode is not automatically activated and prevents query incompatibilities.
 
 ## Access failures when CBR is enabled
 {: #known_issue54941}
