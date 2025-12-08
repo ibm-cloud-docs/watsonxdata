@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-01"
+lastupdated: "2025-12-08"
 
 keywords: access, access control, access management
 
@@ -59,3 +59,9 @@ To configure trusted IP addresses for UI access, you must have Administrator pri
    The rule is created successfully.
 
    For more information, see [Creating context-based restrictions](https://cloud.ibm.com/docs/account?group=controlling-context-based-restrictions) and [Enforcing context-based restrictions](https://cloud.ibm.com/docs/account?topic=account-context-restrictions-create&interface=ui).
+
+
+## Limitation
+{: #limit_cbr}
+
+CBR does not work for account-scoped lite instances.
