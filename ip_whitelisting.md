@@ -29,7 +29,7 @@ subcollection: watsonxdata
 # Securing UI Access with IP-Based Controls
 {: #access_rest}
 
-This topic explains how to configure trusted IP addresses for UI access, allowing administrators to define which IP address can interact with specific user interface components. By implementing IP-based access controls, you can add an extra layer of protection, ensuring that only traffic from approved IP ranges can access {{site.data.keyword.lakehouse_short}}. For more information, see [What are context-based restrictions?](https://cloud.ibm.com/docs/account?topic=account-context-restrictions-whatis).
+This topic explains how to configure trusted IP addresses for UI and API access, allowing administrators to define which IP address can interact with specific user interface and API components. By implementing IP-based access controls, you can add an extra layer of protection, ensuring that only traffic from approved IP ranges can access {{site.data.keyword.lakehouse_short}}. For more information, see [What are context-based restrictions?](https://cloud.ibm.com/docs/account?topic=account-context-restrictions-whatis).
 {: shortdesc}
 
 ## Before you begin
