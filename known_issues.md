@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-06"
+lastupdated: "2025-12-08"
 
 keywords: lakehouse
 
@@ -31,10 +31,10 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
-## Ingestion fails when CBR is enabled
+## Access failures when CBR is enabled
 {: #known_issue54941}
 
-When CBR is enabled, ingestion jobs fail. Ingestion works as expected when CBR is disabled.
+When CBR (Context-Based Restrictions) is enabled, ingestion jobs fail. Additionally, other operations that require metastore administrator access also fail. Ingestion and admin-level operations work as expected when CBR is disabled.
 
 ## Access denied error in Presto and Spark queries when Hadoop Ranger service is integrated
 {: #known_issue54244}
