@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-12-08"
+lastupdated: "2025-12-09"
 
 keywords: watsonxdata, release notes
 
@@ -141,7 +141,7 @@ Query Optimizer enhancement
 
       This enhancement allows more granular control and compatibility with evolving metastore architectures. Registration is done using the `REGISTER_EXT_METASTORE`    procedure with updated syntax and properties.
 
-      From this release onwards, legacy support for the unified `watsonx-data` metastore type is continued to support in the Enterprise version while is no longer    available for Lite instances. For more information, see [Manually syncing Query Optimizer with metastore](/docs/watsonxdata?   topic=watsonxdata-sync_optimizer_meta).
+      From this release onwards, legacy support for the unified `watsonx-data` metastore type is continued to support in the Enterprise version while is no longer    available for Lite instances. For more information, see [Manually syncing Query Optimizer with metastore](/docs/watsonxdata?topic=watsonxdata-sync_optimizer_meta).
 
 Thrift over HTTP protocol support in watsonx.data Lite plan
 
