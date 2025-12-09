@@ -150,10 +150,19 @@ Thrift over HTTP protocol support in watsonx.data Lite plan
    Key changes:
    * The MDS Thrift Protocol (`thrift://`) is changed to Thrift Over HTTP (`https://`).
    * The `account_id` is mandatory for all Thrift API calls made to the MDS Thrift Service over HTTP.
-   * The catalog query parameter is required when invoking APIs involving the Iceberg catalog.
+   * The `catalog` query parameter is required when invoking APIs involving the Iceberg catalog.
 
    For Spark and Presto engines within watsonx.data, these updates are applied automatically for both new and migrated catalogs. For external engines such as Spark, Db2, and Netezza, users must manually update the connection settings to reflect the new protocol, port, and query parameter.
    {: note}
+
+Muti-tenant Metadata Service (MDS) enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancements to MDS.
+
+   * `AccountId` is now required for all direct calls to the MDS REST Service (Iceberg Catalog and Unity Catalog). Requests that do not include this header will fail.
+   * The endpoint for Iceberg operations is now updated from `/mds/iceberg` to `/api/v1/iceberg`.
+
+   For more information, see [API documentation](https://cloud.ibm.com/apidocs/watsonxdata-ibm-mds-iceberg).
 
 CPDCTL CLI enhancements
 
