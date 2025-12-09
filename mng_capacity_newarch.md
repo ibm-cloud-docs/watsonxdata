@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-12-03"
+lastupdated: "2025-12-09"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -26,8 +26,6 @@ The **Capacity** tab in a Spark engine instance provides a comprehensive view of
 * Each Spark engine can attach to multiple reservation pools (node pools with different flavors).
 * Dedicated Workloads with Autoscaling: A dedicated environment provides users with their own reserved compute capacity, ensuring consistent performance and control. When combined with autoscaling, users get the best of both reliability and efficiency.
 * Quotas will be enforced for both Dedicated and On-Demand capacity.
-* If Dedicated Capacity is attached, workloads will run on it by default.
-* If no Dedicated Capacity is available, workloads automatically fall back to On-Demand Capacity.
 * For users who frequently run large or long jobs, it is recommended to attach Dedicated Capacity for predictable performance.
 
 ## Serverless Spark
