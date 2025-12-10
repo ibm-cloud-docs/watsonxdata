@@ -450,7 +450,6 @@ toc:
               - gs_opensearch.md
               - quick_start_opensearch.md
               - add-opensearch.md
-          - spark_labs_tab.md
           - jvector.md
           - cpg_plugin.md
           - mv_optimizer.md
