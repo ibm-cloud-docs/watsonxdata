@@ -338,6 +338,7 @@ toc:
           - wxd_ranger_colmn.md
           - cpg_enable.md
           - ip_whitelisting.md
+          - cpg_plugin.md
       - driver_manager.md
       - billing_usage.md
       - hms_credentials.md
@@ -451,7 +452,6 @@ toc:
               - quick_start_opensearch.md
               - add-opensearch.md
           - jvector.md
-          - cpg_plugin.md
           - mv_optimizer.md
           - jdbc.md
           - db_ast.md

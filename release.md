@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-12-09"
+lastupdated: "2025-12-10"
 
 keywords: watsonxdata, release notes
 
@@ -104,6 +104,8 @@ Access management enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following access management enhancements:
    * Administrators can create context-based restriction policies and define trusted IP addresses. You can now configure trusted IP addresses to enable secure access to watsonx.data (UI and API) for designated users. This capability adds an extra layer of protection by ensuring that only traffic originating from approved IP addresses can access the user interface and API. Any attempts to access watsonx.data from IPs outside the defined range will be blocked. For more information, see [Securing UI Access with IP-Based Controls](/docs/watsonxdata?topic=watsonxdata-access_rest).
+
+   * A new lightweight CPG is now available as a downloadable plugin, enabling seamless integration with any policy engine (for example, IBM Knowledge Catalog, Apache Ranger, Collibra). For more information, see [Common Policy Gateway (CPG) connector](/docs/watsonxdata?topic=watsonxdata-plug_cpg).
 
 Billing enhancements
 : This release of watsonx.data introduces the following enhancements to the billing feature:
