@@ -52,18 +52,16 @@ When running SQL queries on Spark 4.0 with ANSI mode enabled (`spark.sql.ansi.en
 
 When you use Spark 4.0 as runtime, ANSI mode is enabled by default. This cause failures when executing standard TPC-DS queries. To avoid these issues, ANSI mode should be disabled in Spark 4.0 templates by setting the configuration `spark.sql.ansi.enabled": "false"`. This ensures ANSI mode is not automatically activated and prevents query incompatibilities.
 
-## Access failures when CBR is enabled
+## Access failures when `Context-based restrictions` is enabled
 {: #known_issue54941}
 
-When CBR (Context-Based Restrictions) is enabled, ingestion jobs fail. Additionally, other operations that require metastore administrator access also fail. Ingestion and admin-level operations work as expected when CBR is disabled.
+When `Context-based restrictions` is enabled, ingestion jobs fail. Additionally, other operations that require metastore administrator access also fail. Ingestion and admin-level operations work as expected when CBR is disabled.
 
-## CBR does not work for lite instances
-{: #known_issue54941_1}
 
-## Health check for {{site.data.keyword.lakehouse_short}} instance fails due to authentication issue
+## Health check in {{site.data.keyword.lakehouse_short}} assistant fails when `Context-based restrictions` is enabled
 {: #known_issue54697}
 
-When attempting to retrieve health information for a {{site.data.keyword.lakehouse_short}} instance, the request may fail with an authentication error. This occurs because the account does not have the necessary permissions or is restricted by account-level network policies. As a result, the watsonxdata Assistant cannot access the required APIs to display health status.
+When attempting to retrieve health information for a {{site.data.keyword.lakehouse_short}} instance in the {{site.data.keyword.lakehouse_short}} assistant when `Context-based restrictions` is enabled, the request may fail with an authentication error. This occurs because the account does not have the necessary permissions or is restricted by account-level network policies. As a result, the {{site.data.keyword.lakehouse_short}} assistant cannot access the required APIs to display health status.
 
 ## Access denied error in Presto and Spark queries when Hadoop Ranger service is integrated
 {: #known_issue54244}
