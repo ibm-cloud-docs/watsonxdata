@@ -58,10 +58,10 @@ When you use Spark 4.0 as runtime, ANSI mode is enabled by default. This cause f
 When `Context-based restrictions` is enabled, ingestion jobs fail. Additionally, other operations that require metastore administrator access also fail. Ingestion and admin-level operations work as expected when CBR is disabled.
 
 
-## Health check in {{site.data.keyword.lakehouse_short}} assistant fails when `Context-based restrictions` is enabled
+## {{site.data.keyword.lakehouse_short}} assistant operation fails due to `context-based restrictions` network policy
 {: #known_issue54697}
 
-When attempting to retrieve health information for a {{site.data.keyword.lakehouse_short}} instance in the {{site.data.keyword.lakehouse_short}} assistant when `Context-based restrictions` is enabled, the request may fail with an authentication error. This occurs because the account does not have the necessary permissions or is restricted by account-level network policies. As a result, the {{site.data.keyword.lakehouse_short}} assistant cannot access the required APIs to display health status.
+When attempting to retrieve information for a {{site.data.keyword.lakehouse_short}} instance through the {{site.data.keyword.lakehouse_short}} assistant, the request may fail with an authentication error if `Context-based restrictions` is enabled at the account level. This occurs when the {{site.data.keyword.lakehouse_short}} assistant is not included in the trusted IP addresses defined in the `Context-based restrictions` policy, resulting in the API request being denied.
 
 ## Access denied error in Presto and Spark queries when Hadoop Ranger service is integrated
 {: #known_issue54244}
