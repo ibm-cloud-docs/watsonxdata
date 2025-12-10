@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-08"
+lastupdated: "2025-12-10"
 
 keywords: lakehouse
 
@@ -57,10 +57,10 @@ When CBR (Context-Based Restrictions) is enabled, ingestion jobs fail. Additiona
 ## CBR does not work for lite instances
 {: #known_issue54941_1}
 
-## Text2Action skills fail for authorization when CBR is enabled
+## Health check for {{site.data.keyword.lakehouse_short}} instance fails due to authentication issue
 {: #known_issue54697}
 
-When CBR is enabled for a user account, the orchestrate tools used by Lakehouse Assistant are excluded from the AMS whitelist. As a result, all console API calls involved in admin operations are blocked by AMS, causing Text2Action skills to fail authorization.
+When attempting to retrieve health information for a {{site.data.keyword.lakehouse_short}} instance, the request may fail with an authentication error. This occurs because the account does not have the necessary permissions or is restricted by account-level network policies. As a result, the watsonxdata Assistant cannot access the required APIs to display health status.
 
 ## Access denied error in Presto and Spark queries when Hadoop Ranger service is integrated
 {: #known_issue54244}
