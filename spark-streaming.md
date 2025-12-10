@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-30"
+lastupdated: "2025-12-08"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -27,6 +27,7 @@ subcollection: watsonxdata
 
 
 # Run Spark Streaming applications
+{: #spark-streaming}
 
 Spark Streaming enables scalable, high-throughput, fault-tolerant stream processing of live streams of data, for example from log files or status update messages. HDFS directories, TCP sockets, and Kafka are some of the supported Spark Streaming data sources. The machine learning and graph processing methods in Spark can even be used on data streams and the processed data can be stored in databases and files.
 {: .shortdesc}
@@ -35,6 +36,7 @@ Spark Streaming takes live input data streams and breaks the streams up into bat
 
 
 ## Integrating with Kafka
+{: #spk_stream_1}
 
 {{site.data.keyword.lakehouse_short}} supports Kafka as a data source for real-time data streaming. The data is processed as it is streamed and can be stored in HDFS, databases or dashboards. 
 
@@ -93,6 +95,7 @@ test_result_small.show()
 {: .codeblock}
 
 ## Running your Spark applications
+{: #spk_stream_2}
 
 To run the Spark application `kafka-stream-example.py` using data that is streamed through Kafka, you need to preload the required Kafka and Spark streaming libraries to Spark. 
 

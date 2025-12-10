@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-21"
+lastupdated: "2025-12-04"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -27,7 +27,7 @@ completion-time: 0.16h
 {: toc-completion-time="0.16h"}
 
 
-The **Lite** plan allows you to provision an {{site.data.keyword.lakehouse_full}} instance that is free to use, with limits on capacity (2000 Resource Units), and features for a time frame of 30 days. You can use the account to create Lite plan instance based on three different use cases (Generative AI, High Performance BI and Data Engineering), explore and familiarize yourself with {{site.data.keyword.lakehouse_short}}. For more information about the features and limitations of Lite plan, see [Lite plan](/docs/watsonxdata?topic=watsonxdata-getting-started#limitations-lite){: external}.
+The **Lite** plan allows you to provision an {{site.data.keyword.lakehouse_full}} instance that is free to use, with limits on capacity (2000 Resource Units), and features for a time frame of 30 days. You can use the account to create Lite plan instance based on the  Generative AI use case, explore and familiarize yourself with {{site.data.keyword.lakehouse_short}}. For more information about the features and limitations of Lite plan, see [Lite plan](/docs/watsonxdata?topic=watsonxdata-getting-started#limitations-lite){: external}.
 {: shortdesc}
 
 When the allocated Resource Units or time runs out, all Lite instances become inactive and you can no longer access it.
@@ -61,7 +61,7 @@ To provision a Lite plan instance, see [Provisioning {{site.data.keyword.lakehou
 The Lite plan usage consumption starts after you provision the instance. The resource units (RU) are consumed even when the {{site.data.keyword.lakehouse_short}} instance is not being used. To monitor usage, see [Viewing usage](#hp_monitor_usg_lite). However, RU consumption reduces if you pause or delete the engine. Therefore, pause the engines and services when not in use, to maximize the IBM Cloud Lite plan availability. To pause an engine, see [Pausing an engine](/docs/watsonxdata?topic=watsonxdata-pause_engine) and to delete an engine, see [Deleting an engine](/docs/watsonxdata?topic=watsonxdata-delete_engine).
 {: attention}
 
-1. After you provision a Lite plan instance, you are directly presented with the **Welcome to {{site.data.keyword.lakehouse_short}}** window and the UI includes components (engines, services, and storages) based on the use case selected.
+1. After you provision a Lite plan instance, you are directly presented with the **Welcome to {{site.data.keyword.lakehouse_short}}** window and the UI includes components (engines, services, and storages).
 
 ## Selecting the guided workflow
 {: #hp_02}
@@ -93,8 +93,7 @@ Use the **Start working with data** option to query data. To allow a seamless qu
 
     * **Ingest data into watsonx.data** : Select this tile to perform data ingestion.
 
-    For **High performance BI** use cases, `tpcds` is available as the benchmarking worksheet for querying. For **Data engineering** and **GenAI** use cases, `Gosales` data is available as the sample worksheet.
-    {: note}
+    
 
 
 

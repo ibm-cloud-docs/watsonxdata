@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-11-13"
+lastupdated: "2025-12-10"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -32,6 +32,18 @@ subcollection: watsonxdata
 Read about the new features and enhancements in the current and previous releases of {{site.data.keyword.lakehouse_full}} (Technology preview).
 {: shortdesc}
 
+## 5 December 2025 - Version 2.3
+{: #lakehouse_5dec2025_pp}
+{: release-note}
+
+This release includes the following new feature:
+
+JVector integration with Presto (Private preview)
+
+:  {{site.data.keyword.lakehouse_full}} now integrates with JVector in Presto which enables Approximate Nearest Neighbor (ANN) Top‑K similarity searches on embedding data that is stored in Iceberg tables. For more information see,
+[JVector integration with Presto](/docs/watsonxdata?topic=watsonxdata-jvector).
+
+
 ## 13 November 2025 - Version 2.2.2 New Feature 1 (NF1)
 {: #lakehouse_13nov2025_pp}
 {: release-note}
@@ -54,9 +66,6 @@ Query Optimizer enhancement (Public preview)
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following access **Query Optimizer** enhancements:
 
    * You can now enable or disable the Materialized View (MV) feature for the **Query Optimizer** directly from the web console in {{site.data.keyword.lakehouse_short}}. For more information, see [Optimizing queries using Materialized View (MV) in Query optimizer](/docs/watsonxdata?topic=watsonxdata-mv_optimizer).
-New lightweight, plugin‑based Common Policy Gateway (CPG) client
-
-: A new lightweight CPG is now available as a downloadable plugin, enabling seamless integration with any policy engine (for example, IBM Knowledge Catalog, Apache Ranger, Collibra). For more information, see [Common Policy Gateway (CPG) connector](/docs/watsonxdata?topic=watsonxdata-plug_cpg).
 
 ## 11 June 2025 - Version 2.2
 {: #lakehouse_2apr212-pp}

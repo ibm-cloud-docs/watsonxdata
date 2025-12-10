@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-28"
+lastupdated: "2025-11-28"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -52,6 +52,7 @@ Your Spark application must be available in an accessible storage.
       | Spark configuration properties | Specify the Spark properties in the form of key-value pair ("<property_name>": "<property_value>") separated by comma. For more information about the different properties, see [Properties](https://spark.apache.org/docs/latest/configuration.html#available-properties). |
       | Spark environment properties | Specify the Spark environment properties as key=value pairs. For more information about the different properties, see [Environment properties](https://spark.apache.org/docs/latest/configuration.html#runtime-environment). |
       | Hardware configuration | Specify the number of CPU cores (Driver and Executor) and memory that is required for the workload. |
+      | Resource capacity (Conditional)      |  Specify this field if you are using a version 2.3 (or later) of {{site.data.keyword.lakehouse_short}}. Select the capacity type (On-demand or Dedicated) and choose the driver, executor memory values.  |
       | Dependencies | Specify the path to files and names of packages required by your application script or jar. |
       | Import from payload | Click this link to automatically import and furnish all fields under the Inputs tab if you have already specified the payload in the **Payload** tab. |
       {: caption="Configuration details " caption-side="bottom"}

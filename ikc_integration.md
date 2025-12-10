@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-27"
+lastupdated: "2025-11-25"
 
 keywords: watsonx.data, ikc, configuring, knowledgecatalog
 subcollection: watsonxdata
@@ -28,6 +28,7 @@ IBM Knowledge Catalog - {{site.data.keyword.lakehouse_short}} integration suppor
 * SQL server
 * Db2
 * Teradata
+* MongoDB
 
 
 

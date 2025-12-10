@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-27"
+lastupdated: "2025-12-03"
 
 subcollection: watsonxdata
 

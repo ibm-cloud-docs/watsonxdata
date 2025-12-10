@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2025-10-29"
+lastupdated: "2025-11-28"
 keywords: watsonx.data, history, Spark, server
 
 subcollection: watsonxdata
@@ -29,6 +29,12 @@ The Spark history server is a web UI where you can view the status of running an
 2. From the navigation menu, select **Infrastructure manager**.
 1. Click the name of the Spark engine (from list view or topology view). Engine information window opens.
 2. In the **Spark history** tab, click **Start history server**.
+
+   You need to provide the following information when using version 2.3 or later of {{site.data.keyword.lakehouse_short}}.
+
+   * Select the **Capacity type** to view the history details. You can select **Dedicated** (if configured) or **On-demand**. Choose the capacity from the list and specify the CPU cores and memory details.
+
+
 3. By default, the Spark history server consumes 1 CPU core and 4 GiB of memory while it is running. If you want your Spark history server to use more resources, select the **Cores** and **Memory** required for the server and click **Start**. The history server starts and the status is displayed as `STARTED`.
 3. Click **View Spark history**. The **History Server** page opens.
 4. The **History Server** page includes the following functionalities:

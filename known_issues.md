@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-11-12"
+lastupdated: "2025-12-10"
 
 keywords: lakehouse
 
@@ -30,6 +30,60 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+## `ANALYZE TABLE` operations on tables in the `sample_data` catalog are not supported
+{: #known_issue20273_1}
+
+## CPG Import/Export not supported for account-scoped {{site.data.keyword.lakehouse_short}} instances
+{: #known_issue53465}
+
+For the {{site.data.keyword.lakehouse_short}} instances, which are now account-scoped, the Common Policy Gateway (CPG) import/export functionality is not supported. Any attempt to use these features will fail and return the following error message:
+`import/export features will not be supported for this instance: <instanceID>`.
+
+## Spark 4.0 fails to execute SQL queries in ANSI mode with provided configuration
+{: #known_issue52490}
+
+When running SQL queries on Spark 4.0 with ANSI mode enabled (`spark.sql.ansi.enabled=true`), queries fail with `ExtendedAnalysisException` due to strict type enforcement in ANSI mode. This issue occurs even when using configurations that work on Spark 3.5.
+
+**Workaround:** Use non-ANSI mode by setting the parameter: `"spark.sql.ansi.enabled": "false"`
+
+## Disable ANSI mode in Spark 4.0 to prevent TPC-DS query failures
+{: #known_issue52597}
+
+When you use Spark 4.0 as runtime, ANSI mode is enabled by default. This cause failures when executing standard TPC-DS queries. To avoid these issues, ANSI mode should be disabled in Spark 4.0 templates by setting the configuration `spark.sql.ansi.enabled": "false"`. This ensures ANSI mode is not automatically activated and prevents query incompatibilities.
+
+## Access failures when `Context-based restrictions` is enabled
+{: #known_issue54941}
+
+When `Context-based restrictions` is enabled, ingestion jobs fail. Additionally, other operations that require metastore administrator access also fail. Ingestion and admin-level operations work as expected when CBR is disabled.
+
+
+## {{site.data.keyword.lakehouse_short}} assistant operation fails due to `context-based restrictions` network policy
+{: #known_issue54697}
+
+When attempting to retrieve information for a {{site.data.keyword.lakehouse_short}} instance through the {{site.data.keyword.lakehouse_short}} assistant, the request may fail with an authentication error if `Context-based restrictions` is enabled at the account level. This occurs when the {{site.data.keyword.lakehouse_short}} assistant is not included in the trusted IP addresses defined in the `Context-based restrictions` policy, resulting in the API request being denied.
+
+## Access denied error in Presto and Spark queries when Hadoop Ranger service is integrated
+{: #known_issue54244}
+
+When integrating the Hadoop Ranger service in {{site.data.keyword.lakehouse_short}}, SQL queries executed using the Presto engine fail with the error: `Access denied: USE`. This occurs during operations such as creating schemas in the default catalog through the Query Workspace. Additionally, if the Presto Ranger service is configured and the query is executed using the Spark engine, the query will also fail with the same error.
+
+## Failure to filter DATE, TIME, TIMESTAMP, and VARBINARY columns using WHERE clause in MongoDB Connector
+{: #known_issue51827}
+
+When using the MongoDB connector in Presto, queries with a `WHERE` clause fail to return records when filtering on columns of the following data types:
+
+- DATE
+- TIME
+- TIMESTAMP
+- VARBINARY
+
+This limitation impacts scenarios where governance rules such as `ROW FILTER` rely on the underlying `WHERE` clause for evaluation.
+
+## Manual syncing of Query Optimizer metastore not available for Lite plan
+{: #known_issue49716}
+
+For Lite instances of {{site.data.keyword.lakehouse_short}}, both manual syncing and the initial metastore sync for **Query Optimizer** are not supported in version 2.3. If the initial sync fails, customer queries will fall back to the native optimizer of Presto instead of the **Query Optimizer**. Fore more information, see [Manually syncing Query Optimizer with metastore](/docs/watsonxdata?topic=watsonxdata-sync_optimizer_meta).
 
 ## Error connecting to watsonx.data from `Chat with Document` screen
 {: #known_issue52345}
@@ -74,11 +128,6 @@ If you upload a Python (.py) file with spaces or special characters in its filen
 `/opt/ibm/entrypoint/start-spark-job-wrapper.sh: eval: line 293: syntax error near unexpected token (' /opt/ibm/entrypoint/start-spark-job-wrapper.sh: eval: line 293: spark-submit --master spark://spark-master-headless-b778988f-24ff-49c2-aa05-a56f3c204f0b:7077 s3a://sparkqa-donotdelete-pr-7aqi2frntm5vlz/spark_jobs/uploads/8f472c67-23aa-4f94-8ed6-c9f2dbe13e20/application/wordcount (1).py '/opt/ibm/spark/examples/src/main/resources/people.txt''`
 
 **Workaround:** To avoid this issue, you must rename the Python application file to remove spaces and special characters before uploading. For example, rename `wordcount (1).py` to `wordcount_1.py`.
-
-## Delay in QHMM diagnostic table creation due to backend engine initialization
-{: #known_issue35619}
-
-When enabling QHMM in the console, users may experience a noticeable delay before diagnostic tables appear. This is due to backend engine initialization and recipe sequencing, which are not immediately reflected in the UI.
 
 ## Prepared statement fails for long SQL queries due to header size limits in IBM watsonx.data Presto
 {: #known_issue26969}

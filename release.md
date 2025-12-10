@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-11-19"
+lastupdated: "2025-12-10"
 
 keywords: watsonxdata, release notes
 
@@ -29,6 +29,171 @@ For watsonx.data on-prem what's new, see [Release notes for watsonx.data](https:
 For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-prem Premium](https://www.ibm.com/docs/en/watsonx/watsonxdata-premium/2.2.x?topic=overview-whats-new-in-watsonxdata).
 
 Technology preview features: We also offer a Technology preview section that includes features currently in preview. These features are not generally available and may change before release. To view the release notes for technology preview items, see [Technology preview](/docs/watsonxdata?topic=watsonxdata-release_pp).
+
+## 03 December 2025 - Version 2.3
+{: #lakehouse_08dec2025}
+{: release-note}
+
+Data sources and storage enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following data sources and storage enhancements:
+
+   * You can now apply IBM Knowledge Catalog governance policies to the data source, MongoDB. For more information, see [Connecting to IBM Knowledge Catalog (IKC)](/docs/watsonxdata?topic=watsonxdata-ikc_integration).
+   * You can now associate Azure Data Lake Storage Gen2 with Presto (C++) using ServicePrincipal authentication.
+   * You can now associate multiple Iceberg-type catalogs with a single object storage bucket or container. Each catalog must be configured with a unique, non-overlapping base path on the storage to ensure proper data isolation.
+
+      For example:
+      - `Catalog1` can be associated with `s3a://mybucket/foo/bar`
+      - `Catalog2` can be associated with `s3a://mybucket/lorem/ipsum`
+
+      This enhancement makes it easier to logically separate data within the same storage and reuse it across multiple catalogs, improving flexibility and organization. This behavior applies to all new Lite plan instances, which are now account-scoped. For more information, see [Adding multiple Apache Iceberg catalogs to a single storage](/docs/watsonxdata?topic=watsonxdata-muticatlog).
+
+      This feature is available only for watsonx.data Lite instances. Previously, each object storage bucket or container could only be linked to a single catalog.
+      {: note}
+
+Engine and service enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
+
+   * Prestissimo now delivers improved performance when writing Apache Iceberg tables compared to Java implementations. The following capabilities are available:
+
+      * Partitioned table support - Prestissimo writes to partitioned Iceberg tables and applies partition transforms efficiently using batch evaluation. It supports identity, temporal transforms (year, month, day, hour), bucket, and truncate, and generates Iceberg-compliant partition directory paths.
+      * Data file statistics collection - During write operations, Prestissimo collects and reports essential data file statistics to Iceberg manifest files, including record count, file size, and partition details.
+      * Sorted table write support - Prestissimo supports writing sorted Iceberg tables to enable optimized query performance for workloads that benefit from sorted data.
+
+
+   * Serverless Spark with flexible fapacity for Enterprise Plan
+
+      **On-Demand Capacity**
+
+      * In the {{site.data.keyword.lakehouse_short}} Enterprise plan, the Spark engine supports a serverless model while still offering the flexibility to allocate dedicated capacity when needed.
+      * Running Spark jobs on a serverless platform eliminates the need for dedicated nodes for each Spark engine.
+      * The serverless Spark environment provides a shared pool of nodes with a maximum resource quota of 8 vCPUs and 32 GB memory.
+
+      This behavior applies to all new watsonx.data instances, which are now account-scoped.
+
+      **Dedicated Capacity**
+
+      * For workloads that require higher capacity, you can provision dedicated nodes with customizable memory configurations. For more details on serverless and on-demand capacities, see Managing Spark Capacity.
+      * The Spark Engine creation process is now simplified by focusing only on essential details—engine name, Spark version, home bucket, and associated catalogs—while moving capacity reservation tasks to a new Capacity Management tab on the engine details page. This update removes capacity configuration from the creation flow, making engine setup faster and less complex.
+      * After creating an engine, you can manage VM flavors, configure node pools, and set on-demand fallback thresholds under the Capacity tab.
+
+      This behavior applies to all new watsonx.data instances, which are now account-scoped.
+
+      The maximum resource quota for the Enterprise plan is 256 vCPUs and 1024 GB of memory. To increase this limit, you must contact IBM support.
+
+      For more details on serverless and on-demand capacities, see [Managing Spark Capacity](/docs/watsonxdata?topic=watsonxdata-mng_capacity_spk).
+
+
+Account-level component persistence for Lite Plan instance
+
+: You can now retain account-level components such as catalogs, databases, buckets, and their metadata properties independently of individual instances. When an instance is deleted, these components remain accessible from any other instance within the same account and region. This behavior applies to all new Lite plan instances, which are now account-scoped.
+
+Schema name reuse across Iceberg catalogs for Lite Plan instance
+
+: Previously, when referencing a table using a three-part name (`<catalog>.<schema>.<table>`), schema names had to be unique across all catalogs within a watsonx.data instance. This restriction prevented the creation of schemas with the same name in different catalogs. This limitation is lifted for Iceberg catalogs. You can now reuse schema names across multiple Iceberg catalogs. For example:
+- `myiceberg_catalog1.abcschema.mytable`
+- `myiceberg_catalog2.abcschema.mytable`
+
+This behavior applies to all new Lite plan instances, which are now account-scoped.
+
+Schema names must still be unique across other catalog types such as Hive, Delta, and Hudi.
+{: note}
+
+Access management enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following access management enhancements:
+   * Administrators can create context-based restriction policies and define trusted IP addresses. You can now configure trusted IP addresses to enable secure access to watsonx.data (UI and API) for designated users. This capability adds an extra layer of protection by ensuring that only traffic originating from approved IP addresses can access the user interface and API. Any attempts to access watsonx.data from IPs outside the defined range will be blocked. For more information, see [Securing UI Access with IP-Based Controls](/docs/watsonxdata?topic=watsonxdata-access_rest).
+
+   * A new lightweight CPG is now available as a downloadable plugin, enabling seamless integration with any policy engine (for example, IBM Knowledge Catalog, Apache Ranger, Collibra). For more information, see [Common Policy Gateway (CPG) connector](/docs/watsonxdata?topic=watsonxdata-plug_cpg).
+
+Billing enhancements
+: This release of watsonx.data introduces the following enhancements to the billing feature:
+
+   * Metering of {{site.data.keyword.lakehouse_short}} components now operates at the runtime level, capturing start, stop, and pause events for each runtime tied to an engine. It provides clear visibility into engine consumption and resource usage. For engines like Presto, this remains a one-to-one mapping, while Spark introduces multiple runtime subtypes (e.g., Kernel, HistoryServer, Application), each tracked individually for active and inactive hours. The user interface will reflect these changes by displaying runtime-level activity bars and event history links scoped to each runtime, ensuring clarity and precision. For more information, see [Metering and usage experience](/docs/watsonxdata?topic=watsonxdata-manage_bil_newarch). This behavior applies to all new {{site.data.keyword.lakehouse_short}} instances, which are now account-scoped.
+
+Lite plan enhancements:
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancements to the Lite plan:
+
+   Lite plan provisioning in {{site.data.keyword.lakehouse_short}} is now simplified by removing support for multiple use cases. All new instances provision with the default `Generative AI` use case. The Data Engineering and Power BI use cases are deprecated and no longer available. The CLI provisioning method now allows only the default `Generative AI` use case, ensuring a consistent and streamlined experience.
+
+OpenTelemetry enhancement
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following enhanced observability and monitoring for Presto (Java) engine.
+
+   * You can now integrate **OpenTelemetry** with Presto (Java) engine to monitor query execution and system performance. **OpenTelemetry** enables capturing telemetry data such as traces and metrics, which can be visualized and analyzed using tools like Instana, Prometheus, and Grafana. For more information, see [OpenTelemetry](/docs/watsonxdata?topic=watsonxdata-opntlmtry).
+
+   * New Instana and Grafana dashboards - You can now use the Instana and Grafana dashboards to monitor the performance and provide a more comprehensive view of system health and performance. For more details, see [Supporting dashboards](/docs/watsonxdata?topic=watsonxdata-opntlmtry_inst_dash2).
+
+Query Optimizer enhancement
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancement to **Query Optimizer**.
+
+   * The default query rewrite timeout for Query Optimizer is now configurable. Starting with version 2.3, you can change this timeout value using the PATCH API by updating the property `optplus.query-timeout-seconds`. For more information, see [Updating query rewrite timeout for Query Optimizer](/docs/watsonxdata?topic=watsonxdata-optimizer_timeout).
+
+   * Support for Hive and Iceberg metastore registration in **Query Optimizer** for Lite instances of {{site.data.keyword.lakehouse_short}}.
+
+      The Query Optimizer supports distinct metastore types for Hive and Iceberg catalogs.
+
+      Users can now register:
+
+      - Hive catalogs using the `watsonx-data-hive` metastore type.
+      - Iceberg catalogs using the `iceberg-rest` metastore type.
+
+      This enhancement allows more granular control and compatibility with evolving metastore architectures. Registration is done using the `REGISTER_EXT_METASTORE`    procedure with updated syntax and properties.
+
+      From this release onwards, legacy support for the unified `watsonx-data` metastore type is continued to support in the Enterprise version while is no longer    available for Lite instances. For more information, see [Manually syncing Query Optimizer with metastore](/docs/watsonxdata?topic=watsonxdata-sync_optimizer_meta).
+
+Thrift over HTTP protocol support in watsonx.data Lite plan
+
+: The Metadata Service (MDS) in watsonx.data now runs the Thrift service over the HTTP protocol instead of the previous binary protocol. This change affects service endpoints and connection configurations.
+
+   Key changes:
+   * The MDS Thrift Protocol (`thrift://`) is changed to Thrift Over HTTP (`https://`).
+   * The `account_id` is mandatory for all Thrift API calls made to the MDS Thrift Service over HTTP.
+   * The `catalog` query parameter is required when invoking APIs involving the Iceberg catalog.
+
+   For Spark and Presto engines within watsonx.data, these updates are applied automatically for both new and migrated catalogs. For external engines such as Spark, Db2, and Netezza, users must manually update the connection settings to reflect the new protocol, port, and query parameter.
+   {: note}
+
+Muti-tenant Metadata Service (MDS) enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancements to MDS.
+
+   * `AccountId` is now required for all direct calls to the MDS REST Service (Iceberg Catalog and Unity Catalog). Requests that do not include this header will fail.
+   * The endpoint for Iceberg operations is now updated from `/mds/iceberg` to `/api/v1/iceberg`.
+
+   For more information, see [API documentation](https://cloud.ibm.com/apidocs/watsonxdata-ibm-mds-iceberg).
+
+CPDCTL CLI enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancements to IBM Cloud Pak for Data Command Line Interface (IBM cpdctl):
+
+   * Backward compatibility has been enabled for the `bucket`, `engine`, `ingestion`, `component`, and `service` commands in CPDCTL.
+
+    Starting with CPDCTL version 1.x.xx, these commands can now connect to {{site.data.keyword.lakehouse_short}} releases prior to version 2.2.1, ensuring smoother integration and compatibility across environments.
+
+   * A new option under the `bucket` command `wx-data bucket list-objects` lists down the objects in a bucket added in {{site.data.keyword.lakehouse_short}}. For details about the `bucket` command related operations in {{site.data.keyword.lakehouse_short}}, see [bucket](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata#cpdctl_commands_wxdatabuck).
+
+   * A hidden flag as a workaround `--en-apikey` is now available to handle edge cases where the `--api-key` flag fails validation in `sparkjob create` and `tablemaint` commands. For more information, see [Additional information about cpdctl wx-data command usage and examples](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_specialcase).
+
+Retrieval Service
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following Retrieval Service enhancements:
+
+   * You can now configure gpt-oss-120b AI model for Retrieval Service at the instance level in the {{site.data.keyword.lakehouse_short}} console. For information on Configure AI model for Retrieval Service, see [Configure AI model for Retrieval Service](/docs/watsonxdata?topic=watsonxdata-retsrvc).
+
+Ingestion enhancement
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following ingestion enhancement:
+
+   * A new toggle is available in the target panel of the ingestion screen to control the delete mode for ingested Iceberg format tables with **Copy-on-Write (COW)** as default mode. Switching to the **Merge-on-Read** mode enable row-level deletion during ingestion.
+
+
+Technology preview features
+
+: For this release, additional updates and enhancements are available under Technology Preview features. To review the Technology Preview updates for this release, see, [Technology preview 2.3](/docs/watsonxdata?topic=watsonxdata-release_pp#lakehouse_5dec2025_pp).
 
 ## 13 November 2025 - Version 2.2.2 New Feature 1 (NF1)
 {: #lakehouse_13nov2025}
@@ -105,25 +270,6 @@ Data manager enhancements
 Integration enhancements
 
 : IBM {{site.data.keyword.lakehouse_short}} now supports column-level lineage tracking for Presto by integrating with Manta. With this enhancement, users can now explore detailed column dependencies, relationships, and metadata changes, enabling deeper insights into data flows and improving traceability across pipelines.
-
-
-Query Optimizer enhancement
-
-: This release of {{site.data.keyword.lakehouse_short}} introduces the following access Query Optimizer enhancements:
-
-   * **Support for Hive and Iceberg Metastore Registration in Query Optimizer**
-
-   The Query Optimizer supports distinct metastore types for Hive and Iceberg catalogs.
-
-   Users can now register:
-
-   - Hive catalogs using the `watsonx-data-hive` metastore type.
-   - Iceberg catalogs using the `iceberg-rest` metastore type.
-
-   This enhancement allows more granular control and compatibility with evolving metastore architectures. Registration is done using the `REGISTER_EXT_METASTORE` procedure with updated syntax and properties.
-
-   From this release onwards, legacy support for the unified `watsonx-data` metastore type is no longer available. For more information, see [Manually syncing Query Optimizer with metastore](/docs/watsonxdata?topic=watsonxdata-sync_optimizer_meta).
-
 
 Deprecated features
 
