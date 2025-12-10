@@ -31,6 +31,12 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
+## Optimizer feature does not function properly on {{site.data.keyword.lakehouse_short}} Lite instances
+{: #known_issue20273}
+
+## `ANALYZE TABLE` operations on tables in the `sample_data` catalog are not supported
+{: #known_issue20273_1}
+
 ## CPG Import/Export not supported for account-scoped {{site.data.keyword.lakehouse_short}} instances
 {: #known_issue53465}
 
