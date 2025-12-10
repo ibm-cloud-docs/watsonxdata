@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-03"
+lastupdated: "2025-12-10"
 
 keywords: lakehouse, cpdctl, watsonx.data, supporting commands, wx-data
 
@@ -181,6 +181,7 @@ Limitations:
 
 * When using the `list-objects` command, buckets with a large number of objects might not list all objects because of API timeouts.
 * When using the `--paginated` parameter with the `list-objects` command, only top-level objects are listed. Nested objects are not expanded by default.
+* Listing the objects using `list-objects` is not supported in ADLS and GCS buckets currently.
 
 ## database
 {: #cpdctl_commands_wxdatadatabs}
