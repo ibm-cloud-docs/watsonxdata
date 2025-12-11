@@ -37,12 +37,13 @@ The default query rewrite timeout for **Query Optimizer** is 60 seconds. You can
 1. Run the following PATCH API command to update the query rewrite timeout:
 
    ```bash
-   curl --request PATCH \
-     --url https://<CPD-URL>/lakehouse/api/v3/<INSTANCE_ID>/prestissimo_engines/<ENGINE_ID> \
-     --header 'Authinstanceid: <INSTANCE_ID>' \
-     --header 'Authorization: Bearer <BEARER_TOKEN>' \
-     --header 'content-type: application/json' \
-     --data '{
+   curl --request PATCH  \
+   --url https://{REGION}.lakehouse.cloud.ibm.com/lakehouse/api/v3/prestissimo_engines/{ENGINE_ID} \
+   --header 'accept: application/json' \
+    --header 'Content-Type: application/merge-patch+json' \
+    --header 'AuthInstanceId: {CRN}' \
+   --header 'Authorization: Bearer <BEARER_TOKEN>' \
+   -d '{
        "display_name": "prestissimo-small",
        "description": "",
        "properties": {

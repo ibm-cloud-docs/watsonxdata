@@ -172,7 +172,7 @@ CPDCTL CLI enhancements
 
    * Backward compatibility has been enabled for the `bucket`, `engine`, `ingestion`, `component`, and `service` commands in CPDCTL.
 
-    Starting with CPDCTL version 1.x.xx, these commands can now connect to {{site.data.keyword.lakehouse_short}} releases prior to version 2.2.1, ensuring smoother integration and compatibility across environments.
+    Starting with CPDCTL version 1.8.85, these commands can now connect to {{site.data.keyword.lakehouse_short}} releases prior to version 2.2.1, ensuring smoother integration and compatibility across environments.
 
    * A new option under the `bucket` command `wx-data bucket list-objects` lists down the objects in a bucket added in {{site.data.keyword.lakehouse_short}}. For details about the `bucket` command related operations in {{site.data.keyword.lakehouse_short}}, see [bucket](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata#cpdctl_commands_wxdatabuck).
 
