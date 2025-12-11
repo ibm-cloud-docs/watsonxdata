@@ -178,6 +178,10 @@ CPDCTL CLI enhancements
 
    * A hidden flag as a workaround `--en-apikey` is now available to handle edge cases where the `--api-key` flag fails validation in `sparkjob create` and `tablemaint` commands. For more information, see [Additional information about cpdctl wx-data command usage and examples](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_specialcase).
 
+Gen AI-powered chat interface in {{site.data.keyword.lakehouse_short}}
+
+: You can now chat with a gen AI-powered chat interface, {{site.data.keyword.lakehouse_short}} Assistant to ask questions about {{site.data.keyword.lakehouse_full}}. The assistant answers your queries about {{site.data.keyword.lakehouse_short}} based on its knowledge on IBM product documentation. It helps to explore and learn about the product in an easier and faster way. To enable the feature and start using it, see [watsonx.data Assistant - genAI powered chat interface](/docs/watsonxdata?topic=watsonxdata-db_ast).
+
 Retrieval Service
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following Retrieval Service enhancements:
