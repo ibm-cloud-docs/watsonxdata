@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-08"
+lastupdated: "2025-12-11"
 
 keywords: access, access control, access management
 
@@ -64,4 +64,4 @@ To configure trusted IP addresses for UI access, you must have Administrator pri
 ## Limitation
 {: #limit_cbr}
 
-CBR does not work for account-scoped lite instances.
+`Context-based restrictions` does not work for account-scoped lite instances.

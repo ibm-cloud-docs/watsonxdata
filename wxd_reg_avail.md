@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-12-02"
+lastupdated: "2025-12-11"
 
 keywords: watsonx.data, region, availability
 subcollection: watsonxdata
@@ -41,7 +41,7 @@ View the regional availability for every available service.
 ## Regional availability of the {{site.data.keyword.lakehouse_short}} on AWS
 {: #reg_aws}
 
-AWS deployments are currently unavailable in Canada, Japan, and Korea but can be made avilable with 8–10 days’ notice; in the U.S., {{site.data.keyword.lakehouse_short}} is deployed only in N. Virginia, with Oregon available upon similar notice.
+AWS deployments are currently unavailable in Canada, Japan, and Korea but can be made available with 8–10 days’ notice; in the U.S., {{site.data.keyword.lakehouse_short}} is deployed only in N. Virginia, with Oregon available upon similar notice.
 {: note}
 
 {{site.data.keyword.lakehouse_full}} is available in the following regional data centers:

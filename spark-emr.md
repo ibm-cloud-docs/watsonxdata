@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-08"
+lastupdated: "2025-12-11"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -198,22 +198,23 @@ Follow the steps to run the Spark sample python file.
     ```
     {: codeblock}
 
-1. Run the following commands to download the Metadata Service JAR file from the [location](https://github.com/IBM-Cloud/IBM-Analytics-Engine/tree/master/wxd-connectors/mds-connectors) to your workstation:
+1. Run the following commands to download the Metadata Service JAR file from the [location](https://github.com/IBM-Cloud/IBM-Analytics-Engine/tree/master/wxd-connectors/mds-connectors) to your workstation. You can choose the JAR files based on the Spark version.
 
     The JAR file must be present in the `/home/hadoop` location on all nodes of the cluster. Make a note of the `spark.driver.extraClassPath` and `spark.executor.extraClassPath`.
     {: important}
 
+   For example, if you are using Spark 3.x, include the following JAR files. For Spark 4.x, select the appropriate folder from [location](https://github.com/IBM-Cloud/IBM-Analytics-Engine/tree/master/wxd-connectors/mds-connectors).
 
     ```bash
 
-    wget https://github.com/IBM-Cloud/IBM-Analytics-Engine/raw/master/wxd-connectors/hms-connector/hive-exec-2.3.9-core.jar
-    wget https://github.com/IBM-Cloud/IBM-Analytics-Engine/raw/master/wxd-connectors/hms-connector/hive-common-2.3.9.jar
-    wget https://github.com/IBM-Cloud/IBM-Analytics-Engine/raw/master/wxd-connectors/hms-connector/hive-metastore-2.3.9.jar
+   wget https://github.com/IBM-Cloud/IBM-Analytics-Engine/raw/master/wxd-connectors/hms-connector/hive-exec-2.3.9-core.jar
+   wget https://github.com/IBM-Cloud/IBM-Analytics-Engine/raw/master/wxd-connectors/hms-connector/hive-common-2.3.9.jar
+   wget https://github.com/IBM-Cloud/IBM-Analytics-Engine/raw/master/wxd-connectors/hms-connector/hive-metastore-2.3.9.jar
     ```
     {: codeblock}
 
 
-3. Configure the MDS connection details in the AWS EMR cluster to connect to the {{site.data.keyword.lakehouse_short}} Metadata Service (MDS). A sample command to use spark-submit from an EMR-6.12.0 (Spark 3.4.1) based cluster is as follows:
+3. Configure the MDS connection details in the AWS EMR cluster to connect to the {{site.data.keyword.lakehouse_short}} Metadata Service (MDS). A sample command to use spark-submit from an EMR 7.3.0 (Spark 3.5.1) based cluster is as follows:
 
     Run the command from EMR on the EC2 cluster to submit the Sample spark job.
 
@@ -246,5 +247,5 @@ Parameter values:
 * <<change_endpoint>> : The Metadata Service URI endpoint to access the metastore. For more information on getting the MDS credentials, see [Getting Metadata Service (MDS) Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
 * <<change_pswd>> : The password to access the metastore. For more information on getting the MDS credentials, see [Getting Metadata Service (MDS) Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
 
-To run the Spark python file using EMR-6.15.0 (Spark 3.4) cluster, download the iceberg jars from the [location](https://repo1.maven.org/maven2/org/apache/iceberg/iceberg-spark-runtime-3.3_2.12/1.4.1/iceberg-spark-runtime-3.3_2.12-1.4.1.jar) and follow the same [procedure](#abt_emrsamp_run).
+To run the Spark python file using EMR 7.3.0 (Spark 3.5.1) cluster, download the iceberg jars from the [location](https://repo1.maven.org/maven2/org/apache/iceberg/iceberg-spark-3.5_2.12/1.4.0/iceberg-spark-3.5_2.12-1.4.0.jar) and follow the same [procedure](#abt_emrsamp_run).
 {: important}
