@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-10"
+lastupdated: "2025-12-11"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -32,7 +32,7 @@ subcollection: watsonxdata
 Read about the new features and enhancements in the current and previous releases of {{site.data.keyword.lakehouse_full}} (Technology preview).
 {: shortdesc}
 
-## 5 December 2025 - Version 2.3
+## 10 December 2025 - Version 2.3
 {: #lakehouse_5dec2025_pp}
 {: release-note}
 

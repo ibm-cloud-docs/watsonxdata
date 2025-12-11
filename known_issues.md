@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-10"
+lastupdated: "2025-12-11"
 
 keywords: lakehouse
 
@@ -30,6 +30,18 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+## {{site.data.keyword.lakehouse_short}} APIs return empty response for table details when using Bearer token in {{site.data.keyword.lakehouse_short}} Lite plan (sample_data catalog)
+{: #known_issue54577}
+
+A couple of {{site.data.keyword.lakehouse_short}} API endpoints, such as `/v3/table/{table_name}?catalog_name={catalog_name}&schema_name={schema_name}`, return an empty response for sample Hive catalogs that use IBM Cloud Object Storage buckets (for example, sample_data). This behavior prevents the {{site.data.keyword.lakehouse_short}} connector from verifying whether a specified table exists, which is required for write operations. Other catalogs, such as iceberg_data (Amazon S3), work as expected.
+
+## Spark applications not displayed in Console when using private endpoints
+{: #known_issue55049}
+
+When you enable Virtual Private Endpoints (VPE) for enhanced security, Spark applications submitted against private endpoints are not visible in the watsonx.data console. The application list appears only when public endpoints are also enabled.
+
+**Workaround:** You can access the application list from within your VPC using the VPE Gateway.
 
 ## `ANALYZE TABLE` operations on tables in the `sample_data` catalog are not supported
 {: #known_issue20273_1}

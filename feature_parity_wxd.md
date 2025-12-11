@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-02"
+lastupdated: "2025-12-11"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -65,7 +65,7 @@ For more information on how each deployment is classified based on its support f
 ### AWS availability
 {: #aws_avlty}
 
-AWS deployments are currently unavailable in Canada, Japan, and Korea but can be made avilable with 8–10 days’ notice; in the U.S., {{site.data.keyword.lakehouse_short}} is deployed only in N. Virginia, with Oregon available upon similar notice.
+AWS deployments are currently unavailable in Canada, Japan, and Korea but can be made available with 8–10 days’ notice; in the U.S., {{site.data.keyword.lakehouse_short}} is deployed only in N. Virginia, with Oregon available upon similar notice.
 {: note}
 
 | Region | Sub-region | Name | AstraDB serverless | watsonx.data | watsonx.data premium* |

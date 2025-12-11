@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-12-10"
+lastupdated: "2025-12-11"
 
 keywords: watsonxdata, release notes
 
@@ -30,7 +30,7 @@ For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-p
 
 Technology preview features: We also offer a Technology preview section that includes features currently in preview. These features are not generally available and may change before release. To view the release notes for technology preview items, see [Technology preview](/docs/watsonxdata?topic=watsonxdata-release_pp).
 
-## 03 December 2025 - Version 2.3
+## 10 December 2025 - Version 2.3
 {: #lakehouse_08dec2025}
 {: release-note}
 
@@ -177,6 +177,10 @@ CPDCTL CLI enhancements
    * A new option under the `bucket` command `wx-data bucket list-objects` lists down the objects in a bucket added in {{site.data.keyword.lakehouse_short}}. For details about the `bucket` command related operations in {{site.data.keyword.lakehouse_short}}, see [bucket](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata#cpdctl_commands_wxdatabuck).
 
    * A hidden flag as a workaround `--en-apikey` is now available to handle edge cases where the `--api-key` flag fails validation in `sparkjob create` and `tablemaint` commands. For more information, see [Additional information about cpdctl wx-data command usage and examples](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_specialcase).
+
+Gen AI-powered chat interface in {{site.data.keyword.lakehouse_short}}
+
+: You can now chat with a gen AI-powered chat interface, {{site.data.keyword.lakehouse_short}} Assistant to ask questions about {{site.data.keyword.lakehouse_full}}. The assistant answers your queries about {{site.data.keyword.lakehouse_short}} based on its knowledge on IBM product documentation. It helps to explore and learn about the product in an easier and faster way. To enable the feature and start using it, see [watsonx.data Assistant - genAI powered chat interface](/docs/watsonxdata?topic=watsonxdata-db_ast).
 
 Retrieval Service
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-01"
+lastupdated: "2025-12-11"
 
 keywords: lakehouse, watsonx.data, query optimizer, timeout
 
@@ -38,47 +38,47 @@ The default query rewrite timeout for **Query Optimizer** is 60 seconds. You can
 
    ```bash
    curl --request PATCH \
-     --url https://console-aws-usgoveast1.watsonxdata.prep.ibmforusgov.com/lakehouse/api/v3/20250819-0756-4270-23ea-c33f4aeffbbf/prestissimo_engines/prismo197 \
-     --header 'Authinstanceid: crn:v1:awsgov-staging:public:lakehouse:us-gov-east-1:sub/20250625-1243-0601-03a6-6951b59f6780:20250819-0756-4270-23ea-c33f4aeffbbf::' \
-     --header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.   eyJpc3MiOiJJQk1MSCIsInN1YiI6IlNlcnZpY2VJZC0xZmIzNWY3My05ZmY2LTQwMGQtODc1Ni02ZGZjZjNkZDdhZGQiLCJhdWQiOlsiQU1TIl0sImV4cCI6MTc1NzMxODczOCwiaWF0IjoxNzU3MzE3NTM4LCJ1a   WQiOiIxZmIzNWY3My05ZmY2LTQwMGQtODc1Ni02ZGZjZjNkZDdhZGQiLCJwZXJtaXNzaW9ucyI6bnVsbCwiZ3JvdXBzIjpbXSwiaW5zdGFuY2UiOnsidXNlcm5hbWUiOiJTZXJ2aWNlSWQtMWZiMzVmNzMtOWZmNi   00MDBkLTg3NTYtNmRmY2YzZGQ3YWRkIiwiaW5zdGFuY2VfbmFtZSI6IiIsImluc3RhbmNlX2lkIjoiY3JuOnYxOmF3c2dvdi1zdGFnaW5nOnB1YmxpYzpsYWtlaG91c2U6dXMtZ292LWVhc3QtMTpzdWIvMjAyNTA   2MjUtMTI0My0wNjAxLTAzYTYtNjk1MWI1OWY2NzgwOjIwMjUwODE5LTA3NTYtNDI3MC0yM2VhLWMzM2Y0YWVmZmJiZjo6Iiwicm9sZXMiOlsiU2VydmljZUFkbWluIiwiU2VydmljZVVzZXIiXX0sInVzZXJuYW1l   IjoiU2VydmljZUlkLTFmYjM1ZjczLTlmZjYtNDAwZC04NzU2LTZkZmNmM2RkN2FkZCIsImRpc3BsYXlfbmFtZSI6InBlcmYtd3hkIiwiY2VydF9zZXJpYWxfbnVtYmVyIjoiNDg2MTQ0MTUyNjkwNTUyMzg2NDY1M   TMzNzczMDY4NjY3NTc5NzEyMTMzIiwiYnNzX2FjY291bnRfaWQiOiIifQ.   H4lX4uGPezoTi2Xfinm8gYoIQMw2eaA6e1WyFXK843fVC3NAi1e4N9By30eLogaXUWnPp85vIYGYzfpKOYaPCag8vbHym1OjdUMstFmfn4y6tsrPnTFGMGjxZKjINl50pitcF76SSRh2GHT9wf09EatSZTWRia8yr   ORI5CJCyDrxVcTVwKwiE3ImUepsFCKg5VOJxV1ARI513T2mvvDP2aiOjr9w7xIXzBl2hNfLahv__CqnmvEpsZsSD-4IC1xDvtC6OH157IBf_3ZUwsW_PobRLzoSTi7V0tDol_G5cel8cjsxYI8PeZzay97tjuSnRd   4t_-04sEciil_nMvjibw' \
+     --url https://<CPD-URL>/lakehouse/api/v3/<INSTANCE_ID>/prestissimo_engines/<ENGINE_ID> \
+     --header 'Authinstanceid: <INSTANCE_ID>' \
+     --header 'Authorization: Bearer <BEARER_TOKEN>' \
      --header 'content-type: application/json' \
      --data '{
-   	"display_name": "prestissimo-small",
-   	"description": "",
-   	"properties": {
-   		"configuration": {
-   			"coordinator": {
-   				"query.max-history": "2000"
-   			},
-   			"worker": {
-   			}
-   		},
-   		"jvm": {
-   			"coordinator": {
-   			}
-   		},
-   		"catalog": {
-   			"hive_data": {
-   				"coordinator": {
-   				},
-   				"worker": {}
-   			}
-   		},
-   		"velox": {
-   		},
-   		"log_config": {
-   			"coordinator": {
-   			},
-   			"worker": {}
-   		},
-   		"optimizer_properties": {
-   			"optplus.query-timeout-seconds":"2000"
+       "display_name": "prestissimo-small",
+       "description": "",
+       "properties": {
+           "configuration": {
+               "coordinator": {
+                   "query.max-history": "2000"
+               },
+               "worker": {
+               }
+           },
+           "jvm": {
+               "coordinator": {
+               }
+           },
+           "catalog": {
+               "hive_data": {
+                   "coordinator": {
+                   },
+                   "worker": {}
+               }
+           },
+           "velox": {
+           },
+           "log_config": {
+               "coordinator": {
+               },
+               "worker": {}
+           },
+           "optimizer_properties": {
+               "optplus.query-timeout-seconds":"3000"
 
-   		},
-   		"global": {}
-   	},
-   	"restart_type": "force",
-   	"tags": []
+           },
+           "global": {}
+       },
+       "restart_type": "force",
+       "tags": []
    }'
    ```
    {: codeblock}

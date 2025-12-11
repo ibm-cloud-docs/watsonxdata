@@ -399,6 +399,7 @@ toc:
               - airflow.md
       - idle_session_timeout.md
       - retrieval_service.md
+      - db_ast.md
   - navgroup:
       id: reference
       topics:
@@ -454,7 +455,6 @@ toc:
           - jvector.md
           - mv_optimizer.md
           - jdbc.md
-          - db_ast.md
       - link:
           label: watsonx.data v2 APIs
           href: https://cloud.ibm.com/apidocs/watsonxdata
