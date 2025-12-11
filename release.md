@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-12-10"
+lastupdated: "2025-12-11"
 
 keywords: watsonxdata, release notes
 
@@ -30,7 +30,7 @@ For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-p
 
 Technology preview features: We also offer a Technology preview section that includes features currently in preview. These features are not generally available and may change before release. To view the release notes for technology preview items, see [Technology preview](/docs/watsonxdata?topic=watsonxdata-release_pp).
 
-## 03 December 2025 - Version 2.3
+## 10 December 2025 - Version 2.3
 {: #lakehouse_08dec2025}
 {: release-note}
 
