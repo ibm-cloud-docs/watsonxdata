@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-11"
+lastupdated: "2025-12-12"
 
 keywords: lakehouse
 
@@ -34,7 +34,20 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 ## {{site.data.keyword.lakehouse_short}} APIs return empty response for table details when using Bearer token in {{site.data.keyword.lakehouse_short}} Lite plan (sample_data catalog)
 {: #known_issue54577}
 
-A couple of {{site.data.keyword.lakehouse_short}} API endpoints, such as `/v3/table/{table_name}?catalog_name={catalog_name}&schema_name={schema_name}`, return an empty response for sample Hive catalogs that use IBM Cloud Object Storage buckets (for example, sample_data). This behavior prevents the {{site.data.keyword.lakehouse_short}} connector from verifying whether a specified table exists, which is required for write operations. Other catalogs, such as iceberg_data (Amazon S3), work as expected.
+The following {{site.data.keyword.lakehouse_short}} API endpoints return empty responses for sample hive catalogs (IBM COS bucket):
+
+**Unity APIs**
+
+- `/api/2.1/unity-catalog/schemas/{catalog_name}.{schema_name}`
+- `/api/2.1/unity-catalog/tables?catalog_name={catalog_name}&schema_name={schema_name}`
+
+**Console APIs**
+
+- `/v3/tables/{table_name}?catalog_name={catalog_name}&schema_name={schema_name}`
+- `/v3/columns?catalog={catalog_name}&schema={schema_name}`
+- `/v3/schemas/{schema_name}?catalog={catalog_name}`
+- `/v3/schemas?catalog={catalog_name}`
+
 
 ## Spark applications not displayed in Console when using private endpoints
 {: #known_issue55049}
