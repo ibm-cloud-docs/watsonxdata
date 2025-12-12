@@ -31,7 +31,7 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
-## {{site.data.keyword.lakehouse_short}} APIs return empty response for table details when using Bearer token in {{site.data.keyword.lakehouse_short}} Lite plan (sample_data catalog)
+## {{site.data.keyword.lakehouse_short}} APIs return empty response in {{site.data.keyword.lakehouse_short}} Lite plan (sample_data catalog)
 {: #known_issue54577}
 
 The following {{site.data.keyword.lakehouse_short}} API endpoints return empty responses for sample hive catalogs (IBM COS bucket):
