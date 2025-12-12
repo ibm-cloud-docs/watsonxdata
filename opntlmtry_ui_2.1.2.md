@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-02"
+lastupdated: "2025-12-12"
 
 keywords: watsonx.data, OpenTelemetry, telemetry, diagnostics, Instana, Prometheus, Grafana
 
@@ -36,6 +36,14 @@ This topic provides the procedure to add telemetry diagnostic tools for your Pre
 {: #opntlmtry_ui_2.1.2_byb}
 
 Ensure you have access to the {{site.data.keyword.lakehouse_short}} console and credentials for the telemetry tools (Instana or Prometheus).
+
+The Instana or Prometheus tool must be installed following the instruction provided below based on requirement:
+* **Instana installation:**
+
+   * [Self hosted](https://www.ibm.com/docs/en/instana-observability/1.0.309?topic=installing-configuring-self-hosted-instana-backend)
+   * [SaaS](https://www.ibm.com/docs/en/instana-observability/1.0.309?topic=installing-instana-agents)
+
+* [Prometheus installation](https://prometheus.io/docs/prometheus/latest/installation/)
 
 ## Procedure
 {: #opntlmtry_ui_2.1.2_steps}
