@@ -34,6 +34,13 @@ Technology preview features: We also offer a Technology preview section that inc
 {: #lakehouse_08dec2025}
 {: release-note}
 
+Instance provisioning enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancements:
+
+   You can now create watsonx.data instances with Virtual Private Endpoint (VPE) enabled across selected regions: Dallas (us-south), Washington (us-east), and Frankfurt (eu-de). For information on how to provision a VPE enabled instance , see [].
+
+
 Data sources and storage enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following data sources and storage enhancements:
@@ -198,8 +205,8 @@ Deprecated features
 
 : The following features are deprecated in this release:
 
-   * The usernames `ibmlhapikey` and `ibmlhtoken` used for user authentication were announced as deprecated from version 2.2.0 and marked for removal. Now, in 2.3.0 the support has been completely removed. 
-   
+   * The usernames `ibmlhapikey` and `ibmlhtoken` used for user authentication were announced as deprecated from version 2.2.0 and marked for removal. Now, in 2.3.0 the support has been completely removed.
+
    To authenticate, you must use the new format:
 
    `ibmlhapikey_<username>`
