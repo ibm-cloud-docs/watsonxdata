@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-12-11"
+lastupdated: "2025-12-15"
 
 keywords: watsonxdata, release notes
 
@@ -33,6 +33,7 @@ Technology preview features: We also offer a Technology preview section that inc
 ## 10 December 2025 - Version 2.3
 {: #lakehouse_08dec2025}
 {: release-note}
+
 
 Data sources and storage enhancements
 
@@ -194,6 +195,19 @@ Ingestion enhancement
 
    * A new toggle is available in the target panel of the ingestion screen to control the delete mode for ingested Iceberg format tables with **Copy-on-Write (COW)** as default mode. Switching to the **Merge-on-Read** mode enable row-level deletion during ingestion.
 
+Deprecated features
+
+: The following features are deprecated in this release:
+
+   * The usernames `ibmlhapikey` and `ibmlhtoken` used for user authentication were announced as deprecated from version 2.2.0 and marked for removal. Now, in 2.3.0 the support has been completely removed.
+
+   To authenticate, you must use the new format:
+
+   `ibmlhapikey_<username>`
+
+   `ibmlhtoken_<username>`
+
+   For more infromation, see [Access management and governance in watsonx.data](/docs/watsonxdata?topic=watsonxdata-access_mgt).
 
 Technology preview features
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-11"
+lastupdated: "2025-12-15"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -26,14 +26,14 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Cloud availability of IBM® {{site.data.keyword.lakehouse_short}} and AstraDB
+# Cloud availability of IBM® {{site.data.keyword.lakehouse_short}}
 {: #feature_parity_wxd}
 
 {{site.data.keyword.lakehouse_full}} can be deployed as a managed software as a service (SaaS) or installed on premises. As new features are added on each deployment's release cycle, it is important that you understand which features are available in a deployment, so you can make informed decisions based on your business’s requirements.
 
 Stay up to date with the latest features through [Release notes for {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=release).
 
-This topic covers details for IBM-managed watsonx.data and AstraDB instances in IBM Cloud, Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP).
+This topic covers details for IBM-managed watsonx.data instances in IBM Cloud, Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP).
 
 ## Cloud availability
 {: #cloudavilbilty}
@@ -118,18 +118,10 @@ AWS deployments are currently unavailable in Canada, Japan, and Korea but can be
 | NA | The Dalles, Oregon | us-west1 | ✅ | ❌ |❌|
 | NA | Montreal, Quebec | northamerica-northeast1 | ✅ | ❌ |❌|
 | NA | Council Bluffs, Iowa | us-central1 | ✅ | ❌ |❌|
-| NA | Las Vegas, Nevada | us-west4 | ❌ | ❌ |❌|
-| NA | Toronto, Canada | northamerica-northeast2 | ❌ | ❌ |❌|
 | EMEA | St. Ghislain, Belgium | europe-west1 | ✅ | ❌ |❌|
-| EMEA | London, England | europe-west2 | ❌ | ❌ |❌|
-| EMEA | Netherlands | europe-west4 | ❌ | ❌ |❌|
-| EMEA | Frankfurt | europe-west3 | ❌ | ❌ |❌|
 | EMEA | Hamina, Finland | europe-north1 | ✅ | ❌ |❌|
 | EMEA | Eemshaven, Netherlands | europe-west4 | ✅ | ❌ |❌|
-| APAC | Mumbai, India | asia-south1 | ❌ | ❌ |❌|
-| APAC | Tokyo, Japan | asia-northeast1 | ❌ | ❌ |❌|
 | APAC | Sydney, Australia | australia-southeast1 | ✅ | ❌ |❌|
-| APAC | Osaka | asia-northeast2 | ❌ | ❌ |❌|
 | APAC | Hong Kong | asia-east2 | ✅ | ❌ |❌|
 | APAC | Changhua County, Taiwan | asia-east1 | ✅ | ❌ |❌|
 {: caption="Google Cloud Platform" caption-side="bottom"}
