@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-11-06"
+lastupdated: "2025-12-15"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -75,7 +75,7 @@ Parameter value:
 * mds-user-from-watsonx.Data: The watsonx.data username.
 * mds-password-from-watsonx.Data: The watsonx.data password.
 
-   Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats will be phased out in a future release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_<username>` and `ibmlhtoken_<username>`.
+   Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats are phased out in 2.3.0 release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_<username>` and `ibmlhtoken_<username>`.
    {: important}
 
 ## Configuring {{site.data.keyword.iae_short}} instance by using {{site.data.keyword.iae_short}} API
@@ -123,7 +123,7 @@ Parameter value:
 * mds-user-from-watsonx.data: The {{site.data.keyword.lakehouse_short}} username.
 * mds-password-from-watsonx.data: The {{site.data.keyword.lakehouse_short}} password.
 
-   Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats will be phased out in a future release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_<username>` and `ibmlhtoken_<username>`.
+   Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats are phased out in 2.3.0 release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_<username>` and `ibmlhtoken_<username>`.
    {: important}
 
 ## Configuring {{site.data.keyword.iae_short}} instance by using {{site.data.keyword.iae_short}} CLI
@@ -165,7 +165,7 @@ Parameter value:
 * mds-user-from-watsonx.data: The {{site.data.keyword.lakehouse_short}} username. For more information on getting the MDS credentials, see [Getting Metadata Service (MDS) Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
 * mds-password-from-watsonx.data: The {{site.data.keyword.lakehouse_short}} password. For more information on getting the MDS credentials, see [Getting Metadata Service (MDS) Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
 
-   Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats will be phased out in a future release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_<username>` and `ibmlhtoken_<username>`.
+   Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats are phased out in 2.3.0 release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_<username>` and `ibmlhtoken_<username>`.
    {: important}
 
 To view logs of Spark application ran on {{site.data.keyword.iae_full_notm}} you have to enable logging. For more information, see [Configuring and viewing logs](https://cloud.ibm.com/docs/AnalyticsEngine?topic=AnalyticsEngine-viewing-logs){: external}.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-11-06"
+lastupdated: "2025-12-15"
 
 keywords: lakehouse, hms, {{site.data.keyword.lakehouse_short}}, hive, metastore
 
@@ -117,7 +117,7 @@ Running Presto (C++) queries:
       Username : The username is `ibmlhapikey` or `ibmlhapikey_<watsonx.datauser_id>`.
       Password : The API key of the {{site.data.keyword.lakehouse_short}} user. For more information about retrieving the API key, see [Generating the API key]({{site.data.keyword.ref-con-presto-serv-link}}).
 
-      Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats will be phased out in a future release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_<username>` and `ibmlhtoken_<username>`.
+      Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats are phased out in 2.3.0 release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_<username>` and `ibmlhtoken_<username>`.
       {: important}
 
    5. Click on the **Query ID** you want to verify. This will open the **Query Details** page.
