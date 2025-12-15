@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-11-06"
+lastupdated: "2025-12-15"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -56,7 +56,7 @@ You can connect to a Milvus service by using API key or IAM token.
 
          ```bash
          print(fmt.format("start connecting to Milvus"))
-         connections.connect(host="<host>", port="<port>", secure=True, user="ibmlhapikey", password="<api-key>")
+         connections.connect(host="<host>", port="<port>", secure=True, user="ibmlhapikey_<username>", password="<api-key>")
          has = utility.has_collection("hello_milvus")
          print(f"Does collection hello_milvus exist in Milvus: {has}")
          ```
@@ -71,7 +71,7 @@ You can connect to a Milvus service by using API key or IAM token.
             host=<host>,
             port=<port>,
             secure=True,
-            user="ibmlhapikey",
+            user="ibmlhapikey_<username>",
             password="<api-key>"
         )
          ```
@@ -83,7 +83,7 @@ You can connect to a Milvus service by using API key or IAM token.
      - Use one of the following commands to connect to Milvus using IAM token:
 
          ```bash
-         connections.connect(host="<host>", port="<port>", secure=True, user="ibmlhtoken", password="<token>")
+         connections.connect(host="<host>", port="<port>", secure=True, user="ibmlhtoken_<username>", password="<token>")
          ```
          {: codeblock}
 
@@ -92,7 +92,7 @@ You can connect to a Milvus service by using API key or IAM token.
         ```bash
         from pymilvus import MilvusClient, DataType
 
-        milvus_uri = "https://<ibmlhtoken>:<token>@<host>:<port>"
+        milvus_uri = "https://<ibmlhtoken_<username>>:<token>@<host>:<port>"
         client = MilvusClient(
             uri=milvus_uri,
             secure=True
@@ -107,7 +107,7 @@ You can connect to a Milvus service by using API key or IAM token.
 
          ```bash
          print(fmt.format("start connecting to Milvus"))
-         connections.connect( alias="default", uri="https://<host>:<grpc-port>", user = "ibmlhtoken", password = "<token>" )
+         connections.connect( alias="default", uri="https://<host>:<grpc-port>", user = "ibmlhtoken_<username>", password = "<token>" )
          has = utility.has_collection("hello_milvus")
          print(f"Does collection hello_milvus exist in Milvus: {has}")
          ```
@@ -118,7 +118,7 @@ You can connect to a Milvus service by using API key or IAM token.
          ```bash
         from pymilvus import MilvusClient, DataType
 
-        milvus_uri = "https://<ibmlhapikey>:<api-key>@<host>:<port>"
+        milvus_uri = "https://<ibmlhapikey_<username>>:<api-key>@<host>:<port>"
         client = MilvusClient(
             uri=milvus_uri,
             secure=True
@@ -163,7 +163,7 @@ You can connect to a Milvus service by using API key or IAM token.
     curl --request POST \
     --url "https://e633a638-420b-499c-9291-288e425a2d25.cdc406pd09pasng7elgg.lakehouse.dev.appdomain.cloud:32699/v2/vectordb/collections/list" \
     --header 'accept: application/json' \
-    --header "Authorization: Basic $(echo -n 'ibmlhapikey:<value of api key>' | base64)" \
+    --header "Authorization: Basic $(echo -n 'ibmlhapikey_<username>:<value of api key>' | base64)" \
     --header 'Content-Type: application/json'
     -d '{
         "dbName": "default"
