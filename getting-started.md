@@ -134,6 +134,59 @@ The access to provision IBM Cloud resources is governed by using [IAM access](ht
     {: codeblock}
 
 
+### Provisioning Virtual Private Endpoint (VPE) enabled instance
+{: #create-by-VPE}
+
+You can provision an IBM watsonx.data instance with VPE enabled to connect your IBM watsonx.data instance privately and securely to resources in your Virtual Private Cloud (VPC), eliminating exposure to the public internet. This configuration is supported in the following regions:
+
+* Dallas (us-south)
+* Washington DC (us-east)
+* Frankfurt (eu-de)
+* Sydney (au-syd)
+* Toronto (ca-tor)
+
+Currently, enabling VPE during provisioning requires adding the `vpe_required` parameter only for Dallas, Washington DC, and Frankfurt. Other regions such as Toronto and Sydney do not require this parameter. This is a temporary behavior and will be standardized in a future release.
+
+
+Examples:
+
+Region: Dallas
+
+
+```bash
+ibmcloud resource service-instance-create <instance_name> lakehouse lakehouse-enterprise us-south -g Default -p '{"cloud_type": "ibm", "region": "us-south", "datacenter": "ibm:us-south:dal", "vpe_required":"true"}'
+```
+{: codeblock}
+
+Region: Frankfurt
+
+```bash
+ibmcloud resource service-instance-create <instance-name> lakehouse lakehouse-enterprise eu-de -g Default -p '{"cloud_type": "ibm", "region": "eu-de", "datacenter": "ibm:eu-de:fra", "vpe_required":"true"}'
+```
+{: codeblock}
+
+Region: Washington DC
+
+```bash
+ibmcloud resource service-instance-create <instance_name> lakehouse lakehouse-enterprise us-east -g Default -p '{"cloud_type": "ibm", "region": "us-east", "datacenter": "ibm:us-east:wdc", "vpe_required":"true"}'
+```
+{: codeblock}
+
+- `instance-name`: Name of the instance. For example, watsonx.data-abc.
+- `lakehouse`: {{site.data.keyword.lakehouse_short}} service
+- `plan-id` : The plan-id is `lakehouse-enterprise` for regions `eu-de`, `us-east`, `us-south`, `au-syd`, and `ca-tor`regions.
+- `region`: The available regions are `eu-de`, `us-east`, `us-south`, `au-syd`, and `ca-tor`.
+- `datacenter`: Use one of the following. This parameter must match the region that you have selected.
+   - `ibm:us-south:dal`
+   - `ibm:us-east:wdc`
+   - `ibm:eu-de:fra`
+   - `ibm:au-syd:syd`
+   - `ibm:ca-tor:tor`
+- `cloud_type`:
+   - `ibm`: For fully managed account instances (default).
+   - `vpe_required`: This parameter must be set to `True` for `eu-de`, `us-east`, `us-south`. Toronto and Sydney do not require this parameter.
+
+
 
 ## Open the web console
 {: #open_console}

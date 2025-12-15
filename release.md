@@ -34,6 +34,12 @@ Technology preview features: We also offer a Technology preview section that inc
 {: #lakehouse_08dec2025}
 {: release-note}
 
+Instance provisioning enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancements:
+
+   You can now provision watsonx.data instances with Virtual Private Endpoint (VPE) enabled in the following new regions: Dallas (us-south), Washington DC (us-east), and Frankfurt (eu-de). To enable VPE during provisioning, add the parameter `"vpe_required":"true"` to the CLI command. For information on how to provision a VPE enabled instance , see [Provisioning Virtual Private Endpoint (VPE) enabled instance](docs/watsonxdata?topic=watsonxdata-getting-started_1#create-by-VPE).
+
 
 Data sources and storage enhancements
 
