@@ -141,11 +141,13 @@ You can provision an IBM watsonx.data instance with VPE enabled to ensure secure
 * Dallas (us-south)
 * Washington DC (us-east)
 * Frankfurt (eu-de)
+* Sydney (au-syd)
+* Toronto (ca-tor)
 
 Enabling VPE ensures that your Lakehouse instance communicates privately over IBM Cloud’s internal network, reducing exposure to the public internet.
 
 
-Use the following CLI command:
+Use the following examples:
 
 Region: Dallas
 
@@ -171,12 +173,14 @@ Region: Washington DC
 
     - `instance-name`: Name of the instance. For example, watsonx.data-abc.
     - `lakehouse`: {{site.data.keyword.lakehouse_short}} service
-    - `plan-id` : The plan-id is `lakehouse-enterprise` for regions `eu-de`, `us-east`, `us-south` regions.
-    - `region`: The available regions are `eu-de`, `us-east`, `us-south`.
+    - `plan-id` : The plan-id is `lakehouse-enterprise` for regions `eu-de`, `us-east`, `us-south`, `au-syd`, and `ca-tor`regions.
+    - `region`: The available regions are `eu-de`, `us-east`, `us-south`, `au-syd`, and `ca-tor`.
     - `datacenter`: Use one of the following. This parameter must match the region that you have selected.
        - `ibm:us-south:dal`
        - `ibm:us-east:wdc`
        - `ibm:eu-de:fra`
+       - `ibm:au-syd:syd`
+       - `ibm:ca-tor:tor`
     - `cloud_type`:
        - `ibm`: For fully managed account instances (default).
 
