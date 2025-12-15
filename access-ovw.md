@@ -149,7 +149,7 @@ You can see the connection information of {{site.data.keyword.lakehouse_short}} 
 ## Default username and password in {{site.data.keyword.lakehouse_short}} on IBM Cloud
 {: #conn_user_nme}
 
-   Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats will be phased out in a future release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_<username>` and `ibmlhtoken_<username>`.
+   Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats are phased out in 2.3.0 release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_<username>` and `ibmlhtoken_<username>`.
    {: important}
 
 **Username** – Username can either be `ibmlhapikey_<username>` or `ibmlhtoken_<username>`.

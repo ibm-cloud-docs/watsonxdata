@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-11-06"
+lastupdated: "2025-12-15"
 
 keywords: lakehouse, exporting, importing, query history, watsonx.data
 
@@ -37,7 +37,7 @@ It is recommended to periodically export the query history to avoid losing it.
 
 To import and export the query history, you must install the Presto CLI. For more information, see [Connecting to Presto server]({{site.data.keyword.ref-con-presto-serv-link}}){: external}.
 
-Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats will be phased out in a future release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_<username>` and `ibmlhtoken_<username>`.
+Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats are phased out in 2.3.0 release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_<username>` and `ibmlhtoken_<username>`.
 {: important}
 
 ## Exporting query history
