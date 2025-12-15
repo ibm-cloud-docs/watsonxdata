@@ -29,8 +29,12 @@ subcollection: watsonxdata
 # Access management and governance in {{site.data.keyword.lakehouse_short}}
 {: #access_mgt}
 
+
 This topic provides details about access management and governance in {{site.data.keyword.lakehouse_short}}.
 {: shortdesc}
+
+**Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats are phased out in 2.3.0 release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_<username>` and `ibmlhtoken_<username>`.**
+{: important}
 
 Access management is a critical aspect of security that ensures only authorized individuals can access {{site.data.keyword.lakehouse_short}} and also involves defining right access and privileges to right people to right components and services in {{site.data.keyword.lakehouse_short}}.
 
@@ -39,6 +43,7 @@ Access management in {{site.data.keyword.lakehouse_short}} includes three levels
 * [User authentication (Level 1)](#level1)
 * [User access to resources (Level 2)](#leve2)
 * [Advance User Access to resources (Level 3)](#leve3)
+
 
 
 ## User authentication (Level 1)
