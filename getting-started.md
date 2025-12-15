@@ -169,6 +169,16 @@ Region: Washington DC
     ```
     {: codeblock}
 
+    - `instance-name`: Name of the instance. For example, watsonx.data-abc.
+    - `lakehouse`: {{site.data.keyword.lakehouse_short}} service
+    - `plan-id` : The plan-id is `lakehouse-enterprise` for regions `eu-de`, `us-east`, `us-south` regions.
+    - `region`: The available regions are `eu-de`, `us-east`, `us-south`.
+    - `datacenter`: Use one of the following. This parameter must match the region that you have selected.
+       - `ibm:us-south:dal`
+       - `ibm:us-east:wdc`
+       - `ibm:eu-de:fra`
+    - `cloud_type`:
+       - `ibm`: For fully managed account instances (default).
 
 ## Open the web console
 {: #open_console}
