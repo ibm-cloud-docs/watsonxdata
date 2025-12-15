@@ -133,10 +133,11 @@ The access to provision IBM Cloud resources is governed by using [IAM access](ht
     ```
     {: codeblock}
 
+
 ### Provisioning Virtual Private Endpoint (VPE) enabled instance
 {: #create-by-VPE}
 
-You can provision an IBM watsonx.data instance with VPE enabled to ensure secure, private connectivity within your Virtual Private Cloud (VPC). This configuration is supported in the following regions:
+You can provision an IBM watsonx.data instance with VPE enabled to connect your IBM watsonx.data instance privately and securely to resources in your Virtual Private Cloud (VPC), eliminating exposure to the public internet. This configuration is supported in the following regions:
 
 * Dallas (us-south)
 * Washington DC (us-east)
@@ -144,7 +145,7 @@ You can provision an IBM watsonx.data instance with VPE enabled to ensure secure
 * Sydney (au-syd)
 * Toronto (ca-tor)
 
-Enabling VPE ensures that your Lakehouse instance communicates privately over IBM Cloud’s internal network, reducing exposure to the public internet.
+Currently, enabling VPE during provisioning requires adding the `vpe_required` parameter only for Dallas, Washington DC, and Frankfurt. Other regions such as Toronto and Sydney do not require this parameter. This is a temporary behavior and will be standardized in a future release.
 
 
 Examples:
@@ -183,6 +184,9 @@ ibmcloud resource service-instance-create <instance_name> lakehouse lakehouse-en
    - `ibm:ca-tor:tor`
 - `cloud_type`:
    - `ibm`: For fully managed account instances (default).
+   - `vpe_required`: This parameter must be set to `True` for `eu-de`, `us-east`, `us-south`. Toronto and Sydney do not require this parameter.
+
+
 
 ## Open the web console
 {: #open_console}
