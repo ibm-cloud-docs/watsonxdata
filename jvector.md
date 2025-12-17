@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-04"
+lastupdated: "2025-12-17"
 
 keywords: lakehouse, jvector, watsonx.data
 
@@ -62,7 +62,7 @@ This capability is intended for early experimentation and feedback only and is n
 
 * **Top‑K similarity search**: Users can perform efficient nearest neighbor searches by using the created vector indexes.
 
-* **Jupyter Notebook tutorial**: Availability of a sample notebook for hands-on experience with index creation and ANN search workflows.
+* [**Jupyter Notebook tutorial**](https://github.com/IBM/watsonx-data/tree/main/Tutorials/presto-jvector-integration){: external}: Availability of a sample notebook for hands-on experience with index creation and ANN search workflows.
 
 **Limitations**
 {: #jvector_limitations}
