@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-15"
+lastupdated: "2025-12-18"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -36,8 +36,6 @@ The topic provides the procedure to run Spark applications from Amazon Web Servi
     * MDS URL from {{site.data.keyword.lakehouse_short}}. For more information about getting the MDS credentials, see [Getting Metadata Service (MDS) Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
     * MDS Credentials from {{site.data.keyword.lakehouse_short}}. For more information about getting the MDS credentials, see [Getting Metadata Service (MDS) Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
 
-   Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats are phased out in 2.3.0 release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_<username>` and `ibmlhtoken_<username>`.
-   {: important}
 
 ## Overview
 {: #abt_emr_usecase}
@@ -232,7 +230,7 @@ Follow the steps to run the Spark sample python file.
     --conf spark.sql.catalog.lakehouse.type=hive \
     --conf spark.hive.metastore.uris==<<change_endpoint>> \
     --conf spark.hive.metastore.client.auth.mode=PLAIN \
-    --conf spark.hive.metastore.client.plain.username=ibmlhapikey \
+    --conf spark.hive.metastore.client.plain.username=ibmlhapikey_<username> \
     --conf spark.hive.metastore.client.plain.password=<<change_pswd>> \
     --conf spark.hive.metastore.use.SSL=true \
     --conf spark.hive.metastore.truststore.type=JKS \
