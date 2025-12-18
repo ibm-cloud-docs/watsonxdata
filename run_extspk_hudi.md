@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-12-15"
+lastupdated: "2025-12-18"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -31,9 +31,6 @@ The topic describes the procedure to run a Spark application that ingests data i
     * It creates a table inside the `<database_name>` database, namely <table_name>.
     * It inserts data into the <table_name> and does SELECT query operation.
     * It drops the table and schema after use.
-
-   Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats are phased out in 2.3.0 release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_<username>` and `ibmlhtoken_<username>`.
-   {: important}
 
     ```bash
         from pyspark.sql import SparkSession
@@ -88,7 +85,7 @@ The topic describes the procedure to run a Spark application that ingests data i
             "spark.hive.metastore.truststore.password" : "changeit",
             "spark.hive.metastore.truststore.type" : "JKS",
             "spark.hive.metastore.client.auth.mode" : "PLAIN",
-            "spark.hive.metastore.client.plain.username" : "ibmlhapikey",
+            "spark.hive.metastore.client.plain.username" : "ibmlhapikey_<username>",
             "spark.hive.metastore.client.plain.password" : "<wxd_api_key>",
             "spark.driver.extraJavaOptions" : "-Dcom.sun.jndi.ldap.object.disableEndpointIdentification=true -Djdk.tls.trustNameService=true",
             "spark.executor.extraJavaOptions" : "-Dcom.sun.jndi.ldap.object.disableEndpointIdentification=true -Djdk.tls.trustNameService=true",

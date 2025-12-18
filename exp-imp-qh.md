@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-15"
+lastupdated: "2025-12-18"
 
 keywords: lakehouse, exporting, importing, query history, watsonx.data
 
@@ -37,8 +37,6 @@ It is recommended to periodically export the query history to avoid losing it.
 
 To import and export the query history, you must install the Presto CLI. For more information, see [Connecting to Presto server]({{site.data.keyword.ref-con-presto-serv-link}}){: external}.
 
-Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats are phased out in 2.3.0 release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_<username>` and `ibmlhtoken_<username>`.
-{: important}
 
 ## Exporting query history
 {: #export-qh}
@@ -54,7 +52,7 @@ export PRESTO_PASSWORD=<your api_key>
 ```bash
 ./presto --server https://<port:host> --catalog system \
 --schemaruntime --execute "select * from queries" \
---user ibmlhapikey --output-format CSV_HEADER > history.csv --password
+--user ibmlhapikey_<username> --output-format CSV_HEADER > history.csv --password
 ```
 {: codeblock}
 
@@ -66,7 +64,7 @@ This command generates a CSV file, which contains exported query history.
 ./presto --server https://8dac613f-ba5b-4c3c-8c96-
 ce8de101f7cf.cdc406pd09pasng7elgg.databases.appdomain.cloud:30929 \
 --execute "select * from system.runtime.queries" --output-format CSV_HEADER \
---user ibmlhapikey output-format CSV > history.csv --password
+--user ibmlhapikey_<username> output-format CSV > history.csv --password
 ```
 {: codeblock}
 
@@ -87,7 +85,7 @@ ce8de101f7cf.cdc406pd09pasng7elgg.databases.appdomain.cloud:30929 \
     ce8de101f7cf.cdc406pd09pasng7elgg.databases.appdomain.cloud:30929 \
     --execute "create schema hive_data.query_history with \
     (location='s3a://8dac613f-ba5b-4c3c-8c96-ce8de101f7cf-customer/query_history')" \
-    --user ibmlhapikey --password
+    --user ibmlhapikey_<username> --password
     ```
     {: codeblock}
 
@@ -108,7 +106,7 @@ ce8de101f7cf.cdc406pd09pasng7elgg.databases.appdomain.cloud:30929 \
     ```bash
     ./presto --server https://8dac613f-ba5b-4c3c-8c96-ce8de101f7cf.cdc406pd09pasng7elgg.databases.appdomain.cloud:30929
     --execute "create table hive_data.query_history.queries as select * from system.runtime.queries where 1=0"
-    --user ibmlhapikey --password
+    --user ibmlhapikey_<username> --password
     ```
     {: codeblock}
 
@@ -129,7 +127,7 @@ ce8de101f7cf.cdc406pd09pasng7elgg.databases.appdomain.cloud:30929 \
     https://8dac613f-ba5b-4c3c-8c96-ce8de101f7cf.cdc406pd09pasng7elgg.databases.appdomain.cloud:3092 \
     –-execute "insert into hive_data.query_history.queries select * from system. runtime.queries \
     where query_id not in (select query_id from hive_data.query_history.queries)"
-    --user ibmlhapikey --password
+    --user ibmlhapikey_<username> --password
     ```
     {: codeblock}
 
@@ -147,6 +145,6 @@ ce8de101f7cf.cdc406pd09pasng7elgg.databases.appdomain.cloud:30929 \
     https://23b06b14-342b-4ed2-841d-7f02ca9ae788.cdc406pd09pasng7elgg.databases.appdomain.cloud:31530 \
     --execute " select * from hive_data.query_history.queries union \
     select * from system.runtime.queries order by created " \
-    --output-format=CSV_HEADER --user ibmlhapikey --password
+    --output-format=CSV_HEADER --user ibmlhapikey_<username> --password
     ```
     {: codeblock}

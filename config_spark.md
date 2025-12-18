@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-15"
+lastupdated: "2025-12-18"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -61,7 +61,7 @@ To configure your {{site.data.keyword.iae_short}} instance from the {{site.data.
     spark.sql.catalog.lakehouse.type = hive
     spark.sql.catalog.lakehouse.uri = <mds-thrift-endpoint-from-watsonx.data> for example (thrift://81823aaf-8a88-4bee-a0a1-6e76a42dc833.cfjag3sf0s5o87astjo0.databases.appdomain.cloud:32683)
     spark.hive.metastore.client.auth.mode = PLAIN
-    spark.hive.metastore.client.plain.username = <mds-user-from-watsonx.data> (for example, ibmlhapikey)
+    spark.hive.metastore.client.plain.username = <mds-user-from-watsonx.data> (for example, ibmlhapikey_<username>)
     spark.hive.metastore.client.plain.password = <mds-password-from-watsonx.data>
     spark.hive.metastore.use.SSL = true
     spark.hive.metastore.truststore.type = JKS
@@ -75,8 +75,6 @@ Parameter value:
 * mds-user-from-watsonx.Data: The watsonx.data username.
 * mds-password-from-watsonx.Data: The watsonx.data password.
 
-   Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats are phased out in 2.3.0 release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_<username>` and `ibmlhtoken_<username>`.
-   {: important}
 
 ## Configuring {{site.data.keyword.iae_short}} instance by using {{site.data.keyword.iae_short}} API
 {: #lh-api-config-ae}
@@ -107,7 +105,7 @@ Parameter value:
     "spark.sql.catalog.lakehouse.type": "hive",
     "spark.sql.catalog.lakehouse.uri": "<mds-thrift-endpoint-from-watsonx.data> for example (thrift://81823aaf-8a88-4bee-a0a1-6e76a42dc833.cfjag3sf0s5o87astjo0.databases.appdomain.cloud:32683) ",
     "spark.hive.metastore.client.auth.mode": "PLAIN",
-    "spark.hive.metastore.client.plain.username": "<mds-user-from-watsonx.data> (for example, ibmlhapikey)",
+    "spark.hive.metastore.client.plain.username": "<mds-user-from-watsonx.data> (for example, ibmlhapikey_<username>`)",
     "spark.hive.metastore.client.plain.password": "<mds-password-from-watsonx.data>",
     "spark.hive.metastore.use.SSL": "true",
     "spark.hive.metastore.truststore.type": "JKS",
@@ -123,8 +121,6 @@ Parameter value:
 * mds-user-from-watsonx.data: The {{site.data.keyword.lakehouse_short}} username.
 * mds-password-from-watsonx.data: The {{site.data.keyword.lakehouse_short}} password.
 
-   Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats are phased out in 2.3.0 release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_<username>` and `ibmlhtoken_<username>`.
-   {: important}
 
 ## Configuring {{site.data.keyword.iae_short}} instance by using {{site.data.keyword.iae_short}} CLI
 {: #lh-cli-config-ae}
@@ -150,7 +146,7 @@ Parameter value:
     "spark.sql.catalog.lakehouse.type": "hive",
     "spark.sql.catalog.lakehouse.uri": "<mds-thrift-endpoint-from-watsonx.data> for example (thrift://81823aaf-8a88-4bee-a0a1-6e76a42dc833.cfjag3sf0s5o87astjo0.databases.appdomain.cloud:32683) ",
     "spark.hive.metastore.client.auth.mode": "PLAIN",
-    "spark.hive.metastore.client.plain.username": "<mds-user-from-watsonx.data> (for example, ibmlhapikey)",
+    "spark.hive.metastore.client.plain.username": "<mds-user-from-watsonx.data> (for example, ibmlhapikey_<username>`)",
     "spark.hive.metastore.client.plain.password": "<mds-password-from-watsonx.data>",
     "spark.hive.metastore.use.SSL": "true",
     "spark.hive.metastore.truststore.type": "JKS",
@@ -165,8 +161,6 @@ Parameter value:
 * mds-user-from-watsonx.data: The {{site.data.keyword.lakehouse_short}} username. For more information on getting the MDS credentials, see [Getting Metadata Service (MDS) Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
 * mds-password-from-watsonx.data: The {{site.data.keyword.lakehouse_short}} password. For more information on getting the MDS credentials, see [Getting Metadata Service (MDS) Credentials]({{site.data.keyword.ref-hms-link}}){: external}.
 
-   Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats are phased out in 2.3.0 release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_<username>` and `ibmlhtoken_<username>`.
-   {: important}
 
 To view logs of Spark application ran on {{site.data.keyword.iae_full_notm}} you have to enable logging. For more information, see [Configuring and viewing logs](https://cloud.ibm.com/docs/AnalyticsEngine?topic=AnalyticsEngine-viewing-logs){: external}.
 {: note}
