@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-15"
+lastupdated: "2025-12-18"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -66,10 +66,7 @@ This topic gives the details to gather enhanced statistics for Iceberg tables th
 
    `<PRESTO_INTERNAL_HOST>`: The internal hostname of Presto engine of which the statistics is collected from. You can find the connection details of Presto engine by clicking on the engine in the Infrastructure manager page of {{site.data.keyword.lakehouse_short}}.
 
-   `<PRESTO_USER>`: The Presto username that is used to run the statistics collection. Username can be `ibmlhapikey` or `ibmlhtoken`. It is recommended to use `ibmlhapikey`.
-
-   Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats are phased out in 2.3.0 release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_<username>` and `ibmlhtoken_<username>`.
-   {: important}
+   `<PRESTO_USER>`: The Presto username that is used to run the statistics collection. Username can be `ibmlhapikey_<username>` or `ibmlhtoken_<username>`. It is recommended to use `ibmlhapikey_<username>`.
 
    `<PRESTO_PWD>`: The Presto password that is used to run the statistics collection. Password can be a base64 API key or token corresponding to the username.
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-25"
+lastupdated: "2025-12-18"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -36,7 +36,7 @@ When you connect to the Presto engine in {{site.data.keyword.lakehouse_short}}, 
 {: #bi_auth}
 
 Power BI uses Lightweight Directory Access Protocol (LDAP) authentication mechanism to connect to Presto. You need the following sign-in credentials:
-*   Username: Username is `ibmlhapikey` or `ibmlhapikey_<watsonx.datauser_id>`.
+*   Username: Username is `ibmlhapikey_<username>`.
 *   Password: The API key of the {{site.data.keyword.lakehouse_short}} user.
 
 
@@ -61,7 +61,7 @@ You can select one of the following ODBC drivers to connect to Presto from Power
     - Data source name : Enter a name for your data source connection.
     - Description : Provide a description for the Presto driver setup.
     - Authentication Type : Select LDAP from the list.
-    - Username : The username is `ibmlhapikey` or `ibmlhapikey_<watsonx.datauser_id>`.
+    - Username : The username is `ibmlhapikey_<username>`.
     - Password : The API key of the {{site.data.keyword.lakehouse_short}} user. For more information about retrieving the API key, see [Generating the API key]({{site.data.keyword.ref-con-presto-serv-link}}).
     - Host : Hostname of the Presto engine in watsonx.data that you want to connect to. For more information about retrieving the hostname, see [Getting connection information]({{site.data.keyword.ref-get_connection-link}}).
     - Port : For information about retrieving the port number, see [Getting connection information]({{site.data.keyword.ref-get_connection-link}}).
@@ -84,7 +84,7 @@ You can select one of the following ODBC drivers to connect to Presto from Power
     *	Server : Hostname of the Presto engine in {{site.data.keyword.lakehouse_short}} that you want to connect to. For more information about retrieving the hostname, see [Getting connection information]({{site.data.keyword.ref-get_connection-link}}).
     *	Port : For more information about retrieving the port number, see [Getting connection information]({{site.data.keyword.ref-get_connection-link}}).
     *	Auth Scheme : Select LDAP from the list.
-    *	Username : The username is `ibmlhapikey` or `ibmlhapikey_<watsonx.datauser_id>`.
+    *	Username : The username is `ibmlhapikey_<username>`.
     *	Password : The API key of the {{site.data.keyword.lakehouse_short}} user. For more information about retrieving the API key, see [Generating the API key]({{site.data.keyword.ref-con-presto-serv-link}}).
     *	Use SSL : Select **True** from the list.
 
@@ -104,7 +104,7 @@ You can select one of the following ODBC drivers to connect to Presto from Power
 7.	The **ODBC driver** page opens.
 8.	Provide username and password and click **Connect**.
 
-    Username : Username is `ibmlhapikey` or `ibmlhapikey_<watsonx.datauser_id>` and password is the API key of the {{site.data.keyword.lakehouse_short}} user. For more information about retrieving the API key, see [Generating the API key]({{site.data.keyword.ref-con-presto-serv-link}}).
+    Username : Username is `ibmlhapikey_<username>` and password is the API key of the {{site.data.keyword.lakehouse_short}} user. For more information about retrieving the API key, see [Generating the API key]({{site.data.keyword.ref-con-presto-serv-link}}).
 9.	The **Navigator** page opens with the list of schemas in the Presto engine.
 10.	Select a required table to view the preview of the table and click **Load** or **Transform Data** based on your requirement. You can build visuals by using the data.
 

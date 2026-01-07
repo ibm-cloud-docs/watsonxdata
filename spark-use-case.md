@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-12-15"
+lastupdated: "2025-12-18"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -267,11 +267,8 @@ If the submitted Spark application continue to be in running status for more tha
 To enable your Spark application to work with the watsonx.data catalog and storage, add the following configuration to your application payload:
 
 ```bash
-spark.hive.metastore.client.plain.username=ibmlhapikey
+spark.hive.metastore.client.plain.username=ibmlhapikey_<username>
 spark.hive.metastore.client.plain.password=<api-key-of-the-user-which-has-metastore-admin-role>
 spark.hadoop.wxd.apiKey=Basic base64(ibmlhapikey_ibmcloudid:apikey)
 ```
 {: codeblock}
-
-   Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats are phased out in 2.3.0 release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_<username>` and `ibmlhtoken_<username>`.
-   {: important}

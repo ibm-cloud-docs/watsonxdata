@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-12-15"
+lastupdated: "2025-12-18"
 
 keywords: watsonx.data, spark, emr
 subcollection: watsonxdata
@@ -214,8 +214,6 @@ curl --request POST   --url https://<region>/lakehouse/api/<api_version>/spark_e
 ```
 {: codeblock}
 
-   Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats are phased out in 2.3.0 release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_<username>` and `ibmlhtoken_<username>`.
-   {: important}
 
 Parameter values:
 
@@ -232,7 +230,7 @@ Parameter values:
 * `<secret_key>` : Provide the secret_access_key. For more information, see [storage details](/docs/watsonxdata?topic=watsonxdata-run_samp_file#insert_samp_usecase).
 * `<truststore_path>`  : Provide the COS path where the trustore certificate is uploaded. For example `cos://di-bucket.di-test/1902xx-truststore.jks`. For more information about generating the trustore, see [Importing self-signed certificates](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.0.x?topic=administering-importing-hms-self-signed-certificates-java-truststore).
 * `<cas_endpoint>` : The Data Access Service (DAS) endpoint. To get the DAS endpoint, see [Getting DAS endpoint](/docs/watsonxdata?topic=watsonxdata-cas_ep_ov).
-* `<username>` : The username for your watsonx.data instance. Here, ibmlhapikey.
+* `<username>` : The username for your watsonx.data instance. Here, ibmlhapikey_<username>.
 * `<apikey>` : The base64 encoded `ibmlhapikey_<user_id>:<IAM_APIKEY>. Here, <user_id> is the IBM Cloud id of the user whose apikey is used to access the data bucket. To generate API key, log in into the watsonx.data console and navigate to Profile > Profile and Settings > API Keys and generate a new API key.
 * `<OBJECT_NAME>`: The IBM Cloud Object Storage name.
 * `<BUCKET_NAME>`: The storage bucket where the application file resides.

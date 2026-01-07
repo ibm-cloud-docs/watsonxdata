@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-12-15"
+lastupdated: "2025-12-18"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -44,12 +44,10 @@ Watson Studio provides sample note books that allow to run small pieces of code 
 
     * <wxd_hms_endpoint> : Thrift endpoint. For example, thrift://81823aaf-8a88-4bee-a0a1-6e76a42dc833.cfjag3sf0s5o87astjo0.databases.appdomain.cloud:32683. To get the details, log in to your watsonx.data instance, Click on the Iceberg data catalog from Infrastructure manager. In the Details tab, copy Metastore host, which is your <wxd_hms_endpoint>.
 
-    * <wxd_hms_username> : This is by default `ibmlhapikey`.
+    * <wxd_hms_username> : This is by default `ibmlhapikey_<username>`.
 
     * <wxd_hms_password> : Hive Metastore (HMS) password. Get the password from the watsonx.data administrator.
 
-   Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats are phased out in 2.3.0 release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_<username>` and `ibmlhtoken_<username>`.
-   {: important}
 
 * Source bucket details: If you bring your own Jupiter notebook, you must require the following details of your source bucket where data resides.
 

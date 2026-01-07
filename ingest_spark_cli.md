@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-15"
+lastupdated: "2025-12-18"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -45,9 +45,6 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
 
 1. Set the mandatory environment variable `ENABLED_INGEST_MODE` to `SPARK_LEGACY` before starting an ingestion job by running the following command:
 
-   Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats are phased out in 2.3.0 release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_<username>` and `ibmlhtoken_<username>`.
-   {: important}
-
    ```bash
    export ENABLED_INGEST_MODE=SPARK_LEGACY
    ```
@@ -82,8 +79,8 @@ You can run the **ibm-lh** tool to ingest data into {{site.data.keyword.lakehous
    |-------|-----|
    |`IBM_LH_BEARER_TOKEN`|Authorization bearer token. For more information, see https://cloud.ibm.com/docs/account?topic=account-iamtoken_from_apikey. For `USE_EXTERNAL_SPARK=true`, the bearer token should be generated with external Spark engine API key.|
    |`IBM_LH_SPARK_JOB_ENDPOINT`|Spark applications v4 endpoint for CPD and v3 endpoint for SaaS. To retrieve SaaS Spark Endpoint: https://cloud.ibm.com/docs/AnalyticsEngine?topic=AnalyticsEngine-retrieve-endpoints-serverless|
-   |`HMS_CLIENT_USER`|User for Metadata Service client. SaaS Spark implementation uses `ibmlhapikey`.|
-   |`HMS_CLIENT_PASSWORD`|Password for Metadata Service client. For SaaS, you can use the API key named `ibmlhapikey` from the cloud account where {{site.data.keyword.lakehouse_short}} has been deployed.|
+   |`HMS_CLIENT_USER`|User for Metadata Service client. SaaS Spark implementation uses `ibmlhapikey_<username>`.|
+   |`HMS_CLIENT_PASSWORD`|Password for Metadata Service client. For SaaS, you can use the API key named `ibmlhapikey_<username>` from the cloud account where {{site.data.keyword.lakehouse_short}} has been deployed.|
    |`SOURCE_S3_CREDS`|S3 credentials for the source file storage in the format:`“AWS_ACCESS_KEY_ID=<access_key>,AWS_SECRET_ACCESS_KEY=<secret_key>,ENDPOINT_URL=<endpoint_url>,AWS_REGION=<region>,BUCKET_NAME=<bucket_name>”`|
    |`TARGET_S3_CREDS`|S3 credentials for the target table storage in the format: `“AWS_ACCESS_KEY_ID=<access_key>,AWS_SECRET_ACCESS_KEY=<secret_key>,ENDPOINT_URL=<endpoint_url>,AWS_REGION=<region>,BUCKET_NAME=<bucket_name>”`|
    |`IBM_LH_SPARK_EXECUTOR_CORES`|Optional spark engine configuration setting for executor cores.|

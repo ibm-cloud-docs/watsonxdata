@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-15"
+lastupdated: "2025-12-18"
 
 keywords: lakehouse, watsonx.data, presto, cli
 
@@ -109,19 +109,17 @@ If you enabled `External Identity Interactions Limited` feature, and using API k
       - If you are using API key, run the following command:
 
           ```bash
-          ./presto --server <https://Prestoengine host details> --catalog iceberg_data --schema default --user ibmlhapikey_<your-username> --password
+          ./presto --server <https://Prestoengine host details> --catalog iceberg_data --schema default --user ibmlhapikey_<username> --password
           ```
           {: codeblock}
 
       - If you are using IBM IAM token, run the following command:
 
           ```bash
-          ./presto --server <https://Prestoengine host details> --catalog iceberg_data --schema default --user ibmlhtoken_<your-username> --password
+          ./presto --server <https://Prestoengine host details> --catalog iceberg_data --schema default --user ibmlhtoken_<username> --password
           ```
           {: codeblock}
 
-      `<your-username>` is optional if you have multiple connections with different users and want to differentiate them.
-      {: note}
 
       Enter your IBM API key or IBM IAM token at the prompt.
 
@@ -146,7 +144,7 @@ If you enabled `External Identity Interactions Limited` feature, and using API k
        curl --location 'https://us-south.lakehouse.dev.cloud.ibm.com/lakehouse/api/v2/auth/authenticate/' \
        --header 'Content-Type: application/json' \
        --data-raw '{
-        "username": "ibmlhtoken_<user-name>",
+        "username": "ibmlhtoken_<username>",
         "password": "<IAM_TOKEN>",
         "instance_id": "<instance_id>",
         "instance_name": ""
@@ -185,10 +183,7 @@ If you enabled `External Identity Interactions Limited` feature, and using API k
 
 3. Get the API key.
 
-   Use `ibmlhapikey` as the username and API key as password. For more information, see [Getting IBM API Key](#get-ibmapi-key).
-
-   Starting with {{site.data.keyword.lakehouse_short}} version 2.2.0, authentication using `ibmlhapikey` and `ibmlhtoken` as usernames is deprecated. These formats are phased out in 2.3.0 release. To ensure compatibility with upcoming versions, use the new format:`ibmlhapikey_<username>` and `ibmlhtoken_<username>`.
-   {: important}
+   Use `ibmlhapikey_<username>` as the username and API key as password. For more information, see [Getting IBM API Key](#get-ibmapi-key).
 
 4. Get the hostname and port. For more information, see [Getting the Presto engine hostname and port details](#get-host-port).
 
@@ -273,7 +268,7 @@ If you enabled `External Identity Interactions Limited` feature, and using API k
    `<EMAIL_ID>` with your email ID
    `<API_KEY>` with the API key
 
-   If you are using IBM IAM token, replace `ibmapikey` with `ibmlhtoken` and pass the token.
+   If you are using IBM IAM token, replace `ibmlhapikey_<username>` with `ibmlhtoken_<username>` and pass the token.
    {: note}
 
 6. Compile and run the command.
