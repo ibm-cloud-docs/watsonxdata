@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-18"
+lastupdated: "2026-01-07"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -15,7 +15,7 @@ subcollection: watsonxdata
 {: #lh-config-ae}
 
 
-The option to register external Spark engines in watsonx.data is deprecated in this release and will be removed in version 2.3. watsonx.data already includes built-in Spark engines that you can provision and use directly, including the Gluten-accelerated Spark engine and the native watsonx.data Spark engine.
+The option to register external Spark engines in watsonx.data is deprecated in this release and will be removed in version 2.3. watsonx.data already includes built-in Spark engines that you can provision and use directly, including the Apache Gluten-accelerated Spark engine and the native watsonx.data Spark engine.
 {: important}
 
 You can configure {{site.data.keyword.iae_full_notm}} instance to connect to the {{site.data.keyword.lakehouse_full}} instance by setting {{site.data.keyword.lakehouse_short}} configurations and Spark related configuration as the default configuration for the {{site.data.keyword.iae_full_notm}} instance.

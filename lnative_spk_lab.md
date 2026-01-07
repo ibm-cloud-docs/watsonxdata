@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-10-28"
+lastupdated: "2026-01-07"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -15,7 +15,7 @@ subcollection: watsonxdata
 {: #lab_nsp}
 
 
-**Applies to** : [Spark engine]{: tag-blue}  [Gluten accelerated Spark engine]{: tag-green}
+**Applies to** : [Spark engine]{: tag-blue}  [Apache Gluten accelerated Spark engine]{: tag-green}
 
 
 The VS Code development environment is a Spark-based development environment that enables you to interactively program, debug, submit, and test Spark applications on a Spark cluster running on the Spark engine.

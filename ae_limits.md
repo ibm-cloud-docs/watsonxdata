@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-03"
+lastupdated: "2026-01-07"
 
 subcollection: watsonxdata
 
@@ -66,11 +66,11 @@ The following table shows the supported vCPU to memory size combinations.
 {: caption="Supported Spark versions" caption-side="top"}
 
 
-## Supported Spark version for Gluten accelerated Spark engine
+## Supported Spark version for Apache Gluten accelerated Spark engine
 {: #cpu-mem-spk_versn}
 
 
-{{site.data.keyword.lakehouse_full}} supports the following Spark runtime versions to run Spark workloads by using Gluten accelerated Spark engine.
+{{site.data.keyword.lakehouse_full}} supports the following Spark runtime versions to run Spark workloads by using Apache Gluten accelerated Spark engine.
 
 | Name | Status |
 | ------------|-------------|

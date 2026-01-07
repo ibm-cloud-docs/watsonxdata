@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-10-28"
+lastupdated: "2026-01-07"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -14,7 +14,7 @@ subcollection: watsonxdata
 # View and edit Native Spark engine details
 {: #view_edit}
 
-**Applies to** : [Spark engine]{: tag-blue}  [Gluten accelerated Spark engine]{: tag-green}
+**Applies to** : [Spark engine]{: tag-blue}  [Apache Gluten accelerated Spark engine]{: tag-green}
 
 You can use the {{site.data.keyword.lakehouse_full}} UI or API to view and edit the Native Spark details.
 
@@ -35,7 +35,7 @@ You can view the Native Spark engine details in list and topology views.
    | Tags | The tag that is specified at the time of registering an engine. |
    | Default Spark version | The Spark runtime version that is used by default for any application that is submitted to the Spark engine. |
    | Engine Home bucket | Specify the bucket name that store the events and logs related to Spark. |
-   | Type | The engine type (here, Spark and Gluten accelerated Spark). |
+   | Type | The engine type (here, Spark and Apache Gluten accelerated Spark). |
    | {{site.data.keyword.lakehouse_short}} application endpoint | The endpoint is used at the time of application submission. To submit an application by using API, see [API Docs][def2]. |
    | Spark engine endpoint | The Native Spark endpoint. |
    | Default Spark Configuration | The Spark configuration properties that are applied to any application that is submitted to the Spark engine. |

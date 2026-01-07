@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-23"
+lastupdated: "2026-01-07"
 
 keywords: lakehouse, watsonx data, privileges, roles, access
 
@@ -115,7 +115,7 @@ Formation admins (IAM) have the default admin access.
 | Run workloads against the engine | ✓ | ✓ | ✓ |     |
 {: caption="Resource-level permissions" caption-side="bottom"}
 
-## Engine (Native Spark and Gluten accelerated Spark)
+## Engine (Native Spark and Apache Gluten accelerated Spark)
 {: #native_spark}
 
 ### Default admin access

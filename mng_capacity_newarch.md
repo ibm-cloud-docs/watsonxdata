@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-12-09"
+lastupdated: "2026-01-07"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -15,7 +15,7 @@ subcollection: watsonxdata
 {: #mng_capacity_spk}
 
 
-**Applies to** : [Spark engine]{: tag-blue}  [Gluten accelerated Spark engine]{: tag-green}
+**Applies to** : [Spark engine]{: tag-blue}  [Apache Gluten accelerated Spark engine]{: tag-green}
 
 The **Capacity** tab in a Spark engine instance provides a comprehensive view of overall CPU and memory utilization, helping you monitor resource consumption effectively. By default, you can enjoy a serverless engine experience, which automatically scales resources based on workload demands. Additionally, for large-scale or high-performance workloads, you have the flexibility to allocate dedicated capacity, ensuring optimal performance and reliability.
 

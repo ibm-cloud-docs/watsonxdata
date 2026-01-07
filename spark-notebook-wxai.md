@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-10-28"
+lastupdated: "2026-01-07"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -14,7 +14,7 @@ subcollection: watsonxdata
 # Working with watsonx.ai Notebooks
 {: #run_nbwxai}
 
-**Applies to** : [Spark engine]{: tag-blue}  [Gluten accelerated Spark engine]{: tag-green}
+**Applies to** : [Spark engine]{: tag-blue}  [Apache Gluten accelerated Spark engine]{: tag-green}
 
 {{site.data.keyword.lakehouse_full}} integrates with watsonx.ai to allow a web-based working experience with Jupyter Notebook. You can use the watsonx.ai interface to build your own code in the Jupyter Notebook, and run it by using watsonx.data Spark as the runtime environment.
 {: shortdesc}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-03"
+lastupdated: "2026-01-07"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -48,7 +48,7 @@ To add a Spark engine, complete the following steps.
 
 5. In the **Add component** page, from the **Engines** section, select **IBM Spark**.
 
-6. In the **Add component - IBM Spark** page, choose the engine type from the **Type** list. You can select Spark or Gluten accelerated Spark. Configure the following details:
+6. In the **Add component - IBM Spark** page, choose the engine type from the **Type** list. You can select Spark or Apache Gluten accelerated Spark. Configure the following details:
 
       a. In the **Add component - IBM Spark** window, enter the **Display name** for your Spark engine.
 

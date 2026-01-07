@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-10-28"
+lastupdated: "2026-01-07"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -14,7 +14,7 @@ subcollection: watsonxdata
 # Provisioning watsonx.data Spark engine
 {: #prov_nspark}
 
-**Applies to** : [Spark engine]{: tag-blue}  [Gluten accelerated Spark engine]{: tag-green}
+**Applies to** : [Spark engine]{: tag-blue}  [Apache Gluten accelerated Spark engine]{: tag-green}
 
 {{site.data.keyword.lakehouse_full}} allows you to provision Native Spark engine to run complex analytical workloads.
 

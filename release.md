@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2025-12-15"
+lastupdated: "2026-01-07"
 
 keywords: watsonxdata, release notes
 
@@ -333,7 +333,7 @@ Engine and service enhancements
    * You can now provision {{site.data.keyword.lakehouse_short}} Spark engine with the Spark runtime set to Spark 4.0, which enables you to run Spark applications on Spark 4.0. For details about supported Spark versions, see [Supported Spark version](/docs/watsonxdata?topic=watsonxdata-wxd-ae_limits#cpu-mem-spk_versn).
    * The Milvus service in {{site.data.keyword.lakehouse_short}} is now upgraded to version 2.5.12.
    * You can now use the open-source Milvus backup tool to back up and restore data from Milvus within watsonx.data.
-   * The Gluten accelerated Spark engine in {{site.data.keyword.lakehouse_short}} is now able to run applications using Spark version 3.5. For details about supported Spark versions, see [Supported Spark version](/docs/watsonxdata?topic=watsonxdata-wxd-ae_limits#cpu-mem-spk_versn).
+   * The Apache Gluten accelerated Spark engine in {{site.data.keyword.lakehouse_short}} is now able to run applications using Spark version 3.5. For details about supported Spark versions, see [Supported Spark version](/docs/watsonxdata?topic=watsonxdata-wxd-ae_limits#cpu-mem-spk_versn).
    * You can now use the Vector Transport Service (VTS) with Milvus in watsonx.data to migrate or manage vector data across systems. For more details, see [Using the Vector Transport Service](/docs/watsonxdata?topic=watsonxdata-milvus_vts).
 
 Query Optimizer enhancement
@@ -397,7 +397,7 @@ Deprecated features
 
    {{site.data.keyword.lakehouse_short}} API version v2 is completely removed from the {{site.data.keyword.lakehouse_short}} developer edition starting with version 2.2.1. It will be completely removed from {{site.data.keyword.lakehouse_short}} software edition in version 2.3. You must migrate to the latest supported API version (v3) to ensure continued compatibility and access to new features.
 
-   * The option to register external Spark engines in {{site.data.keyword.lakehouse_short}} is deprecated in this release and will be removed in version 2.3. {{site.data.keyword.lakehouse_short}} already includes built-in Spark engines that you can provision and use directly, including the Gluten-accelerated Spark engine ([Provisioning Gluten accelerated Spark engine](/docs/watsonxdata?topic=watsonxdata-prov_cpp)) and the native {{site.data.keyword.lakehouse_short}} Spark engine ([Provisioning a Spark engine](/docs/watsonxdata?topic=watsonxdata-spl_engine)).
+   * The option to register external Spark engines in {{site.data.keyword.lakehouse_short}} is deprecated in this release and will be removed in version 2.3. {{site.data.keyword.lakehouse_short}} already includes built-in Spark engines that you can provision and use directly, including the Apache Gluten-accelerated Spark engine ([Provisioning Apache Gluten accelerated Spark engine](/docs/watsonxdata?topic=watsonxdata-prov_cpp)) and the native {{site.data.keyword.lakehouse_short}} Spark engine ([Provisioning a Spark engine](/docs/watsonxdata?topic=watsonxdata-spl_engine)).
 
 
 ## 05 August 2025 - Version 2.2.0 New Feature 1 (NF1)
@@ -470,7 +470,7 @@ Engine and service enhancements
 
    * Introduced new API versions for connecting to a Milvus service by using a proxy host route. For more information, see [Connecting to Milvus service](/docs/watsonxdata?topic=watsonxdata-conn-to-milvus).
    * For the Presto (C++) engines, the Hive and Iceberg catalogs are now enabled with region configuration. For more information, see [Provisioning a Presto (C++) engine](/docs/watsonxdata?topic=watsonxdata-pcpp_prov).
-   * New Gluten accelerated Spark engine: You can now provision Gluten accelerated Spark engine and use it to run complex analytical workloads by leveraging high scalability of Spark SQL framework and high performance of native libraries. For information about working with the new Gluten accelerated Spark engine, see [Working with Gluten accelerated Spark engine](/docs/watsonxdata?topic=watsonxdata-prov_cpp).
+   * New Apache Gluten accelerated Spark engine: You can now provision Apache Gluten accelerated Spark engine and use it to run complex analytical workloads by leveraging high scalability of Spark SQL framework and high performance of native libraries. For information about working with the new Apache Gluten accelerated Spark engine, see [Working with Apache Gluten accelerated Spark engine](/docs/watsonxdata?topic=watsonxdata-prov_cpp).
    * Run faster workspace queries by using a Spark job to transform Iceberg table data : To speed up the reading of Iceberg tables, you can now use a Spark job to transform Iceberg table data from Merge-on-Read (MOR) format to Copy-on-Write (COW) format. For more information, see [Submitting Spark jobs for MoR to CoW conversion](/docs/watsonxdata?topic=watsonxdata-sbmt_spk_mor_cow).
    * You can use the Spark API functionality to configure the limit of applications that can be listed and the filter criteria that you can use to filter the Spark applications.
 
