@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-01-07"
+lastupdated: "2026-01-08"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -63,11 +63,11 @@ To add Apache Gluten accelerated Spark engine, complete the following steps.
 
 3. To add Apache Gluten accelerated Spark engine, click **Add component**, Click **IBM Spark** and click **Next**.
 
-5. In the **Add component-IBM Spark** page, from the **Type** section, select **Apache Gluten accelerated Spark engine**.
+5. In the **Add component-IBM Spark** page, from the **Type** section, select **Gluten accelerated Spark engine**.
 
 6. In the **Add component - IBM Spark** page, configure the following details:
 
-      a. In the **Add component - Apache Gluten accelerated Spark engine** window, enter the **Display name** for your Apache Gluten accelerated Spark engine.
+      a. In the **Add component - Gluten accelerated Spark engine** window, enter the **Display name** for your Apache Gluten accelerated Spark engine.
       c. Configure the following details:
 
       | Field | Description |
@@ -121,7 +121,7 @@ To add Apache Gluten accelerated Spark engine, complete the following steps.
        ],
 
        "origin": "native",
-       "type": "Apache Gluten"
+       "type": "Gluten"
 
    }
 
