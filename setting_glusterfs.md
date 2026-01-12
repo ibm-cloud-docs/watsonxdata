@@ -63,7 +63,7 @@ Complete the following steps to set up GlusterFS replicated storage with MinIO.
     ```
     {: codeblock}
 
-2. Edit the `/etc/hosts` file on VM2 and VM3 to add the following entries.
+2. Edit the `/etc/hosts` file on each of the three nodes to add the following entries.
 
    ```bash
    <ip-of-vm1> vm1.fyre.ibm.com
