@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-18"
+lastupdated: "2026-01-13"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -17,7 +17,7 @@ subcollection: watsonxdata
 {{site.data.keyword.lakehouse_full}} integrates with multiple entities like Spark, Db2, {{site.data.keyword.netezza_short}}, and the like. You require {{site.data.keyword.lakehouse_short}} MDS credentials and enpoint to establish connection with the entities at the time of integration.
 {: shortdesc}
 
-MDS username is by default **ibmlhapikey_<username>**.
+MDS username is by default `ibmlhapikey_<username>`.
 
 
 ## Generating API key
