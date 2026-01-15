@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2026-01-07"
+lastupdated: "2026-01-15"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -17,7 +17,7 @@ subcollection: watsonxdata
 
 **Applies to** : [Spark engine]{: tag-blue}  [Apache Gluten accelerated Spark engine]{: tag-green}
 
-The **Capacity** tab in a Spark engine instance provides a comprehensive view of overall CPU and memory utilization, helping you monitor resource consumption effectively. By default, you can enjoy a serverless engine experience, which automatically scales resources based on workload demands. Additionally, for large-scale or high-performance workloads, you have the flexibility to allocate dedicated capacity, ensuring optimal performance and reliability.
+The **Capacity** tab in a Spark engine instance provides a comprehensive view of overall CPU and memory utilization, helping you monitor resource consumption effectively. By default, you can enjoy an on-demand engine experience, which automatically scales resources based on workload demands. Additionally, for large-scale or high-performance workloads, you have the flexibility to allocate dedicated capacity, ensuring optimal performance and reliability.
 
 
 ## Key features
@@ -28,11 +28,11 @@ The **Capacity** tab in a Spark engine instance provides a comprehensive view of
 * Quotas will be enforced for both Dedicated and On-Demand capacity.
 * For users who frequently run large or long jobs, it is recommended to attach Dedicated Capacity for predictable performance.
 
-## Serverless Spark
+## On-demand Spark
 {: #mng_capacity_serv}
 
 * Pay-per-use cost model: Customers only pay for the compute resources consumed when workloads run. This avoids paying for idle capacity when usage is intermittent or low.
-* Automatic scaling: Serverless platforms automatically scale resources up or down based on demand, eliminating the need for manual provisioning or capacity planning.
+* Automatic scaling: On-demand platforms automatically scale resources up or down based on demand, eliminating the need for manual provisioning or capacity planning.
 * No infrastructure management: The platform handles patching, scaling, and maintenance, reducing operational overhead.
 * Fast time-to-value: Customers can deploy quickly without upfront planning or infrastructure sizing.
 
@@ -69,13 +69,13 @@ To view the capacity tab, do the following:
 
    * **Overall Usage Metrics**: Displays total vCPUs and memory allocated, along with real-time CPU and memory consumption percentages.
    * **Dedicated**: Dedicated capacity for large workloads. It displays details of configured capacity pools, including vCPU and memory allocation, consumption levels, and options to manage pools (add, edit, pause, or delete).
-   * **On-Demand**: When a Spark engine is created, it automatically provides on-demand capacity—this is the default serverless option that scales resources dynamically based on workload requirements. It displays the memory consumption for your applications.
+   * **On-Demand**: When a Spark engine is created, it automatically provides on-demand capacity—this is the default option that scales resources dynamically based on workload requirements. It displays the memory consumption for your applications.
 
 
 ## On-demand Spark engine capacity
 {: #on-demnd}
 
-On-Demand Capacity is the default serverless execution model for Spark engines, designed to provide flexibility and simplicity without requiring upfront resource planning. When a Spark engine is created, it automatically includes on-demand capacity, enabling workloads to run. Resources are provisioned dynamically based on workload requirements, automatically scale them upto the maximum number of cores available for on-demand capacity within a Spark engine as specified.
+On-Demand Capacity is the default execution model for Spark engines, designed to provide flexibility and simplicity without requiring upfront resource planning. When a Spark engine is created, it automatically includes on-demand capacity, enabling workloads to run. Resources are provisioned dynamically based on workload requirements, automatically scale them upto the maximum number of cores available for on-demand capacity within a Spark engine as specified.
 
 To update the On-Demand capacity quota,
 
@@ -106,8 +106,6 @@ From the **Capacity** tab, click **Dedicated** tab. Click **Add node pool+**. Th
    |-------------------|-------------|------|--------------|--------------|--------------------|-------------------------------|--------------------------------------------------|
    | General Purpose   | bx2.16x64   | 16   | 64           | 14           | 60                 | 50                            | 900 GB / 10 IOPS-tier                           |
    | General Purpose   | bx2.32x128  | 32   | 128          | 30           | 124                | 50                            | 1600 GB / 10 IOPS-tier                          |
-   | Memory Intensive  | mx2.16x128  | 16   | 128          | 14           | 124                | 50                            | 900 GB / 10 IOPS-tier                           |
-   | Memory Intensive  | mx2.32x256  | 32   | 256          | 30           | 252                | 50                            | 1600 GB / 10 IOPS-tier                          |
    | Storage Intensive | mx2.16x128  | 16   | 128          | 14           | 124               | 100                           | 1600 GB / 10 IOPS-tier                          |
    | Storage Intensive | mx2.32x256  | 32   | 256          | 30          | 252                | 100                           | 3000 GB / 10 IOPS-tier |
    {: caption="Memory configurations" caption-side="bottom"}
