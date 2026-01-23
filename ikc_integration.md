@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-11-25"
+lastupdated: "2026-01-23"
 
 keywords: watsonx.data, ikc, configuring, knowledgecatalog
 subcollection: watsonxdata
@@ -91,7 +91,7 @@ Both {{site.data.keyword.lakehouse_short}} and IKC must be present in the {{site
    | Username | Enter your username (`ibmlhapikey_<EMAIL_ID>`). |
    | Password | Enter your IAM API key. To create one, see [Creating an API key](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key). |
    | SSL is enabled | Select the checkbox. |
-   | SSL Certificate | Download the certificate from the watsonx.data console by using a web browser and paste in this field. |
+   | SSL Certificate | Download the certificate from the watsonx.data console by using a web browser and include in this field. |
    | Engine's hostname or IP address | Enter the engine hostname available in the {{site.data.keyword.lakehouse_short}} console without port number and `:`. |
    | Engine ID | Enter the engine ID available in the {{site.data.keyword.lakehouse_short}} console. |
    | Engine's port | Enter the engine port number available with the engine host name. |

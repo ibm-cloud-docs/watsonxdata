@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-01-22"
+lastupdated: "2026-01-23"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -90,7 +90,7 @@ Complete the following steps to enable and configure Apache Ranger in watsonx.da
    |Username|	The admin credentials.|
    |Password	|The admin credentials.|
    |Port is SSL enabled  |Select the checkbox.    |
-   |Upload SSL Certificate | Download the certificate from the watsonx.data console by using a web browser and paste in this field. For information about how to retrieve the certificate, see [Generating cert](#ranger_18). |
+   |Upload SSL Certificate | Use the toggle switch to enable or disable SSL connection. Enabling the SSL connection ensures secure connection. If enabled, you must do the following: \n i. The Upload SSL certificate (.pem, .crt, .cert or .cer) link is enabled.\n ii. Click the Upload SSL certificate (.pem, .crt, .cert, or .cer) link. \n iii. Browse the SSL certificate and upload. \n For information about how to retrieve the certificate, see [Generating cert](#ranger_18). |
    |List resources|	Click the link to load the resources that are available in the Apache Ranger server.|
    |Resources	|Select the resource for which the Apache Ranger policy must be enabled.|
    |Policy Cache Time Configuration| The time taken to refresh the newly defined Ranger policies.|
