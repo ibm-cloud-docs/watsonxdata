@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-01-07"
+lastupdated: "2026-01-27"
 
 keywords: lakehouse, watsonx.data, Apache Gluten
 
@@ -26,7 +26,7 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Introduction to Apache Gluten accelerated Spark engine
+# Apache Gluten accelerated Spark engine
 {: #prov_cpp_gtn_intr}
 
 Apache Gluten accelerated Spark engine is an optimized, high-performance engine in {{site.data.keyword.lakehouse_short}}. The Spark engine uses Apache Gluten for offloading SQL execution to Velox, which is an open source execution engine(implemented in C++) thereby accelerating the computation of SparkSQL to reduce the cost for running the workloads.
