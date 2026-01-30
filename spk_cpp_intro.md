@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-01-27"
+lastupdated: "2026-01-30"
 
 keywords: lakehouse, watsonx.data, Apache Gluten
 
@@ -48,6 +48,22 @@ Apache Gluten serves as a native engine plugin designed to accelerate Spark SQL 
 * Faster Delta and Parquet writing using UPDATE, DELETE, MERGE INTO, INSERT, and CREATE TABLE AS SELECT, including wide tables that contain thousands of columns.
 
 * Replaces sort-merge joins with hash-joins by default.
+
+
+For more information about using Spark engine, see [Working with watsonx.data Spark](/docs/watsonxdata?group=working-with-watsonxdata-spark).
+
+## Supported Spark version for Apache Gluten accelerated Spark engine
+{: #cpu-mem-spk_versn}
+
+
+{{site.data.keyword.lakehouse_full}} supports the following Spark runtime versions to run Spark workloads by using Apache Gluten accelerated Spark engine.
+
+| Name | Status | Release date | End-of-support date |
+| ------------ | ------------- | ------ | ---- |
+| Apache Spark 3.4.4 | Supported | JAN 2025 | JUNE 2026 |
+| Apache Spark 3.5.4 | Supported | JUNE 2025 | FEB 2028 |
+{: caption="Supported Spark versions" caption-side="top"}
+
 
 ## Limitations
 {: #featu_cpp-limt}
