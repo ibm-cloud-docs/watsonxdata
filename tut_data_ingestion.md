@@ -166,9 +166,9 @@ This section of the tutorial guides you through the procedure to retrieve table 
 
 
  | Scenario           | Query        |      Result       |
- |------------------|--------------------|----------|
- |Retrieve data from the initial state by using snapshot ID.    | `SELECT * FROM iceberg_data.automobiles.cars FOR VERSION AS OF <Tran1SnapshotID> ORDER BY Snapshot ID;` | Result section displays 406 records. |
- | Retrieve data from the initial state by using timestamp.| `SELECT * FROM iceberg_data.automobiles.cars FOR TIMESTAMP AS OF CAST('<Tran1Time>' AS TIMESTAMP WITH TIME ZONE) ORDER BY Snapshot ID;` |  The result section displays 406 records.   |
+ | ------------------ | -------------------- | ---------- |
+ | Retrieve data from the initial state by using snapshot ID.    | `SELECT * FROM iceberg_data.automobiles.cars FOR VERSION AS OF <Tran1SnapshotID> ORDER BY Snapshot ID;` | Result section displays 406 records. |
+ | Retrieve data from the initial state by using timestamp. | `SELECT * FROM iceberg_data.automobiles.cars FOR TIMESTAMP AS OF CAST('<Tran1Time>' AS TIMESTAMP WITH TIME ZONE) ORDER BY Snapshot ID;` |  The result section displays 406 records.   |
  | Retrieve data post-second transaction by using snapshot ID.|`SELECT * FROM iceberg_data.automobiles.cars FOR VERSION AS OF <Tran2SnapshotID> ORDER BY Snapshot ID;` | The result section displays 408 records.   |
  | Retrieve data post-third transaction by using timestamp.| `SELECT * FROM iceberg_data.automobiles.cars FOR TIMESTAMP AS OF CAST('<Tran3Time>' AS TIMESTAMP WITH TIME ZONE) ORDER BY Snapshot ID;`|The result section displays 409 records.   |
  | Retrieve data from a point in time between the second and third transactions.| `SELECT * FROM iceberg_data.automobiles.cars FOR TIMESTAMP AS OF CAST('Choose-a-time-between-<Tran2Time>-and-<Tran3Time>' AS TIMESTAMP WITH TIME ZONE) ORDER BY Snapshot ID;`| The result section displays 408 records.   |
