@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-29"
+lastupdated: "2026-01-30"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -50,12 +50,10 @@ Following are some of the requirements or behavior of data ingestion:
 ## Loading or ingesting data through CLI
 {: #load_ingest_datacli}
 
-An ingestion job in {{site.data.keyword.lakehouse_short}} can be run with the **ibm-lh** tool. The tool must be pulled from the `ibm-lh-client` and installed in the local system to run the ingestion job through the CLI. For more details and instructions to install `ibm-lh-client` package and use the **ibm-lh** tool for ingestion, see [Installing ibm-lh-client](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=package-installing-lh-client){: external} and [Setting up the ibm-lh command-line utility](https://www.ibm.com/docs/en/watsonx/watsonxdata/2.1.x?topic=wlcp-establishing-connection-watsonxdata-using-lh-client-package-utilities){: external}.
-
-`ibm-lh-client` in IBM Client package is now deprecated and shall be removed in a future release. The **ibm-lh** tool is replaced with `./cpdctl wx-data ingestion` supported in the IBM CPDCTL CLI. For more information about how to use IBM CPDCTL CLI, see [IBM cpdctl](/docs/watsonxdata?topic=watsonxdata-cpdctl_title).
+The command `./cpdctl wx-data ingestion` in the IBM cpdctl is now used for all ingestion use cases. For more information about how to use IBM CPDCTL CLI, see [IBM cpdctl](/docs/watsonxdata?topic=watsonxdata-cpdctl_title).
 
 
-The **ibm-lh** tool and `./cpdctl wx-data ingestion`command supports the following features:
+The `./cpdctl wx-data ingestion`command supports the following features:
 
 - Auto-discovery of schema based on the source file or target table.
 - Advanced table configuration options for the CSV files:

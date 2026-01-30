@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-08"
+lastupdated: "2026-01-30"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -114,6 +114,7 @@ To run the Spark application `kafka-stream-example.py`:
 | `spark-sql-kafka` | 3.2.1 |[spark-sql-kafka-0-10_2.12-3.0.2.jar](https://mvnrepository.com/artifact/org.apache.spark/spark-sql-kafka-0-10_2.12/3.2.1){: external}|
 | `spark-streaming-kafka` | 3.2.1 |[spark-streaming-kafka-0-10-assembly_2.12-3.0.2.jar](https://mvnrepository.com/artifact/org.apache.spark/spark-sql-kafka-0-10_2.12/3.2.1){: external} |
 | `commons-pool2` | 3.2.1 |[commons-pool2-2.11.1.jar](https://mvnrepository.com/artifact/org.apache.commons/commons-pool2/2.11.0){: external} |
+{: caption="Python packages" caption-side="bottom"}
 
 {%endcomment%}
 

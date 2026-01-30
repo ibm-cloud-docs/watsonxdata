@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-09-17"
+lastupdated: "2026-01-30"
 
 keywords: ingestion, time travel, rollback,
 
@@ -75,7 +75,7 @@ The following video provides a visual method to learn the concepts and tasks in 
 ### Before you begin
 {: #bbingetn}
 
-* Download the `cars.csv` file from (https://ibm.box.com/v/data-cars-csv).
+* Here, `cars.csv` date file is used as an example.
 * You must have a Lite plan instance provisioned.
 * The Lite plan instance must include Spark and Presto engines in running state.
 * Associate a catalog to both Presto and Spark engines. Here, Apache Iceberg catalog.

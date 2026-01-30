@@ -180,16 +180,6 @@ toc:
           - ingest_spark_ui.md
           - ingest_sparklogshistory.md
           - prepare_ingest_data2.md
-          - prepare_ingest_data.md
-          - topicgroup:
-              label: Ingesting data by using command line interface (CLI)
-              topics:
-              - cli_commands.md
-              - ingest_presto_cli.md
-              - ingest_datafiles_cli.md
-              - ingest_datafiles_config.md
-              - ingest_rstapi_cli.md
-              - ingest_spark_cli.md
       - topicgroup:
           label: Querying data
           topics:

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-01-08"
+lastupdated: "2026-01-30"
 
 keywords: lakehouse, watsonx data, roles, access
 subcollection: watsonxdata
@@ -72,6 +72,7 @@ Total hourly usage:       .
 Usage history per engine:    .
 
 ## Viewing the usage details
+{: #plug_newarch}
 
 To view current billing and usage details, complete the following steps:
 

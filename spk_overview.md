@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-01-07"
+lastupdated: "2026-01-30"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -49,7 +49,7 @@ Performance optimized data processing engine capable of processing Spark applica
 
 For more information, see [Provisioning Apache Gluten accelerated Spark engine](/docs/watsonxdata?topic=watsonxdata-prov_cpp){: external}.
 
-**External Spark engine**
+**External Spark engine** (Deprecated)
 External Spark engines are engines that exist in a different cluster from where {{site.data.keyword.lakehouse_short}} is provisioned. You can deploy them in the following environments:
 * Spark instance on Cloud
 * Spark on EMR
