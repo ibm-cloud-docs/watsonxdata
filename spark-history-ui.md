@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2021
-lastupdated: "2025-11-28"
+lastupdated: "2026-01-07"
 keywords: watsonx.data, history, Spark, server
 
 subcollection: watsonxdata
@@ -20,7 +20,7 @@ subcollection: watsonxdata
 # Accessing the Spark history server
 {: #wxd_spk_histry}
 
-**Applies to** : [Spark engine]{: tag-blue}  [Gluten accelerated Spark engine]{: tag-green}
+**Applies to** : [Spark engine]{: tag-blue}  [Apache Gluten accelerated Spark engine]{: tag-green}
 
 The Spark history server is a web UI where you can view the status of running and completed Spark applications on a {{site.data.keyword.lakehouse_short}}instance. If you want to analyze how different stages of your Spark application performed, you can view the details in the Spark history server UI.
 

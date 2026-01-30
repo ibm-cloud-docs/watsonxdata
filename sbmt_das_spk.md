@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-11-03"
+lastupdated: "2026-01-30"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -14,7 +14,7 @@ subcollection: watsonxdata
 # Submitting Spark application by using native Spark engine
 {: #smbit_nsp_1}
 
-**Applies to** : [Spark engine]{: tag-blue}  [Gluten accelerated Spark engine]{: tag-green}
+**Applies to** : [Spark engine]{: tag-blue}  [Apache Gluten accelerated Spark engine]{: tag-green}
 
 
 This topic provides the procedure to submit a Spark application by using native Spark engine in {{site.data.keyword.lakehouse_short}} on IBM Cloud.
@@ -177,6 +177,7 @@ if __name__ == '__main__':
 
 
 ## Troubleshooting
+{: #plug_spktrb}
 
 * If you receive the error, `[REQUIRES_SINGLE_PART_NAMESPACE] spark_catalog requires a single-part namespace, but got \iceberg_data`.`results` while trying to create table with three part name likeiceberg_data.results.resultstable, ensure that the catalog is associated with the spark engine. If Spark is not configured with an Iceberg catalog, it won't have the necessary settings to recognize or use the three-part name format for the iceberg_data catalog.
 

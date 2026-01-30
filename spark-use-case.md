@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-12-18"
+lastupdated: "2026-01-07"
 
 keywords: watsonx.data, spark, table, maintenance
 subcollection: watsonxdata
@@ -17,7 +17,7 @@ subcollection: watsonxdata
 This topic provides the procedure to run Spark use cases for {{site.data.keyword.lakehouse_short}} by using Python samples. All the samples are written by using Spark Python APIs.
 {: shortdesc}
 
-The option to register external Spark engines in watsonx.data is deprecated in this release and will be removed in version 2.3. watsonx.data already includes built-in Spark engines that you can provision and use directly, including the Gluten-accelerated Spark engine and the native watsonx.data Spark engine.
+The option to register external Spark engines in watsonx.data is deprecated in this release and will be removed in version 2.3. watsonx.data already includes built-in Spark engines that you can provision and use directly, including the Apache Gluten-accelerated Spark engine and the native watsonx.data Spark engine.
 {: important}
 
 ## Prerequisites

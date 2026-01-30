@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-12"
+lastupdated: "2026-01-27"
 
 keywords: lakehouse
 
@@ -200,17 +200,6 @@ MOR to COW table conversion spark application is not supported in Spark 4.0.
 
 **Workaround:** Use Spark versions 3.4 or 3.5 to perform MOR to COW table conversion.
 
-## Preview dashboard displays null values with Presto(C++) engine due to hive catalog column name mismatch
-{: #known_issue54806}
-
-The Presto (C++) engine causes the preview dashboard to display all null values for certain tables due to a mismatch between the column names in the Parquet files and the Hive catalog configuration.
-
-**Workaround:** Apply the following session property:
-
-   ```bash
-      set session [catalog_name].file_column_names_read_as_lower_case=true;
-   ```
-   {: codeblock}
 
 ## Manta applications fail to run on Spark 4.0
 {: #known_issue43343}
@@ -544,13 +533,13 @@ Iceberg: Iceberg does support the time data type.
 
 The following special characters are not supported while creating schemas, tables, and storage location:
 
-Schemas (Hive and Iceberg): `$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `)`, and `/`.
+Schemas (Hive and Iceberg): `$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `)`, `/`, `"`, `\`, `:`, `;`, and `'`.
 
 Tables (Hive): `$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `)`, `/`, `}`, `"`, and `'`(Creation of tables within a schema name that starts with the special character `@` shall result in an error).
 
 Tables (Iceberg):`$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `)`, `/`, `@`, `}`, `"`, and `'`.
 
-Storage location: `$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `}`, `@`, `"`, and `'`.
+Storage location: `$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `}`, `@`, `"`, `'`, `\`, `)`, `:`, `;`, and `>`.
 
 It is recommended to not use special characters such as question mark (?), hyphen (-), asterisk (*) or delimiter characters like \r, \n, and \t in table, column, and schema names. Though these special characters are supported and tables, columns, and schemas can be created, using them might cause issues when running the INSERT command or applying access policies for the same.
 

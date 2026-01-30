@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-03-24"
+lastupdated: "2026-01-23"
 
 keywords: lakehouse, mixed-case, watsonx.data
 
@@ -95,6 +95,7 @@ You can use the following curl command to set the flag as true or false:
 			}
 		},
 		"global": {
+		   "enable-mixed-case-support": "true"
 		}
 	},
 	"engine_restart": "force",

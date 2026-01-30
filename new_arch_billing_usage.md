@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-11-26"
+lastupdated: "2026-01-30"
 
 keywords: lakehouse, watsonx data, roles, access
 subcollection: watsonxdata
@@ -59,7 +59,7 @@ Spark Engines: Multiple runtimes per engine, including subtypes like:
 {: #manage_run_activity}
 
 Runtime activity bars display active and inactive hours per runtime. The View History links are scoped to the runtime level for detailed event tracking.
-The UI captures start and end timestamps for every engine session (Presto++, Spark, Milvus, Gluten).
+The UI captures start and end timestamps for every engine session (Presto++, Spark, Milvus, Apache Gluten accelerated Spark).
 Record engine type and T-shirt size (S/M/L) for pricing alignment.
 Provide hourly RU usage data for billing reference.
 
@@ -72,6 +72,7 @@ Total hourly usage:       .
 Usage history per engine:    .
 
 ## Viewing the usage details
+{: #plug_newarch}
 
 To view current billing and usage details, complete the following steps:
 

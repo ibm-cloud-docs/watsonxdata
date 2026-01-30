@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-29"
+lastupdated: "2026-01-12"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
 
@@ -57,13 +57,13 @@ Complete the following steps to set up GlusterFS replicated storage with MinIO.
     dnf install centos-release-gluster -y
     dnf module enable glusterfs -y
     dnf install glusterfs-server -y
-    
+
     systemctl start glusterd.service
     systemctl status glusterd.service
     ```
     {: codeblock}
 
-2. Run the following command on VM2 and VM3 to create brick directory on server nodes.
+2. Edit the `/etc/hosts` file on each of the three nodes to add the following entries.
 
    ```bash
    <ip-of-vm1> vm1.fyre.ibm.com
@@ -134,7 +134,7 @@ Complete the following steps to set up GlusterFS replicated storage with MinIO.
    {: codeblock}
 
     **Login credentials:**
-    
+
     - **Username**: `minioadmin`
     - **Password**: `minioadmin`
 

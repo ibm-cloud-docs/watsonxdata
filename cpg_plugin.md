@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024, 2025
-lastupdated: "2025-11-18"
+lastupdated: "2026-01-30"
 keywords: cpg
 subcollection: watsonxdata
 
@@ -165,6 +165,7 @@ To connect to the required policy engine of your choice, you must create a plugi
 
 
 ### Error: “No AccessPlugin extensions found”
+{: #plug_trb-1}
 
 If you get the above error, verify the following:
 
@@ -174,6 +175,7 @@ If you get the above error, verify the following:
    * The plugin.id in plugin.properties matches the ID in plugin-resource-mapping.yaml.
 
 ### Error: Plugin Not Running for Resource
+{: #plug_trb-2}
 
 If you get the above error, verify the following:
 
@@ -181,6 +183,7 @@ If you get the above error, verify the following:
    * The plugin IDs match exactly (case-sensitive).
 
 ### Error: Custom Paths Not Picked Up
+{: #plug_trb-3}
 
 If you get the above error, ensure to use absolute paths or pass them through system properties.
 

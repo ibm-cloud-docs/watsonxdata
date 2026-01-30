@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-28"
+lastupdated: "2026-01-07"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -28,7 +28,7 @@ subcollection: watsonxdata
 # Submitting Spark jobs for MoR to CoW conversion
 {: #sbmt_spk_mor_cow}
 
-**Applies to** : [Spark engine]{: tag-blue}  [Gluten accelerated Spark engine]{: tag-green}
+**Applies to** : [Spark engine]{: tag-blue}  [Apache Gluten accelerated Spark engine]{: tag-green}
 
 This topic describes how to a run Spark job that helps to sync up Iceberg table data from Merge-on-Read (MoR) format to Copy-on-Write (CoW) format. Read operations are more efficient with Iceberg Copy-On-Write tables.
 {: shortdesc}
@@ -104,5 +104,3 @@ Parameter values:
 - `<cow-table-name>` : The name of the CoW table that is synchronized with the MoR table.
 - `<primary-key>` : The primary key that is used for creating CoW table.
 - `<encoded-api-key>` : The value must be in the format echo -n"ibmlhapikey_<user_id>:<user’s api key>" | base64. Here, <user_id> is the IBM Cloud ID of the user whose api key is used to access the data bucket. The <IAM_APIKEY> here is the API key of the user accessing the Object store bucket. To generate an API key, login into the watsonx.data console and navigate to Profile > Profile and Settings > API Keys and generate a new API key.
-
-

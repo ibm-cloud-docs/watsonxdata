@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-03"
+lastupdated: "2026-01-08"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -26,20 +26,20 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Provisioning Gluten accelerated Spark engine
+# Provisioning Apache Gluten accelerated Spark engine
 {: #prov_cpp}
 
-Gluten accelerated Spark engine is an optimized, high-performance engine in {{site.data.keyword.lakehouse_short}}. The Spark engine uses Gluten for offloading SQL execution to Velox, which is an open source execution engine(implemented in C++) thereby accelerating the computation of SparkSQL to reduce the cost for running the workloads.
+Apache Gluten accelerated Spark engine is an optimized, high-performance engine in {{site.data.keyword.lakehouse_short}}. The Spark engine uses Apache Gluten for offloading SQL execution to Velox, which is an open source execution engine(implemented in C++) thereby accelerating the computation of SparkSQL to reduce the cost for running the workloads.
 
 
-## Provisioning Gluten accelerated Spark engine
+## Provisioning Apache Gluten accelerated Spark engine
 {: #prov_cpp_1}
 
-**Applies to** :  [Gluten accelerated Spark engine]{: tag-green}
+**Applies to** :  [Apache Gluten accelerated Spark engine]{: tag-green}
 
-IBM watsonx.data allows you to provision a Gluten accelerated Spark engine to run complex large-scale workloads. Gluten delivers exceptional performance when run on large hardware.
+IBM watsonx.data allows you to provision Apache Gluten accelerated Spark engine to run complex large-scale workloads. Apache Gluten delivers exceptional performance when run on large hardware.
 
-You can use the following methods to provision Gluten Accelerated Spark engine:
+You can use the following methods to provision Apache Gluten Accelerated Spark engine:
 
 * Provisioning through Console
 * Provisioning through API
@@ -49,34 +49,34 @@ You can use the following methods to provision Gluten Accelerated Spark engine:
 
 
 - You must have a subscription of {{site.data.keyword.lakehouse_short}} on Cloud.
-- `<engine-home-bucket>` : You must create a storage in {{site.data.keyword.lakehouse_short}}, that will be associated with your Gluten Accelerated Spark engine to store the logs.
+- `<engine-home-bucket>` : You must create a storage in {{site.data.keyword.lakehouse_short}}, that will be associated with your Apache Gluten Accelerated Spark engine to store the logs.
 
 
 ### Provisioning through Console
 {: #prov_cpp_1}
 
-To add a Gluten accelerated Spark engine, complete the following steps.
+To add Apache Gluten accelerated Spark engine, complete the following steps.
 
 1. Log in to {{site.data.keyword.lakehouse_short}} console.
 
 2. From the navigation menu, select **Infrastructure manager**.
 
-3. To add a Gluten accelerated Spark engine, click **Add component**, Click **IBM Spark** and click **Next**.
+3. To add Apache Gluten accelerated Spark engine, click **Add component**, Click **IBM Spark** and click **Next**.
 
 5. In the **Add component-IBM Spark** page, from the **Type** section, select **Gluten accelerated Spark engine**.
 
 6. In the **Add component - IBM Spark** page, configure the following details:
 
-      a. In the **Add component - Gluten accelerated Spark engine** window, enter the **Display name** for your Gluten accelerated Spark engine.
+      a. In the **Add component - Gluten accelerated Spark engine** window, enter the **Display name** for your Apache Gluten accelerated Spark engine.
       c. Configure the following details:
 
       | Field | Description |
       | --- | --- |
-      | Default Spark version | Select the Spark runtime version that must be considered for processing the applications. Gluten accelerated Spark engine support version 3.4. |
+      | Default Spark version | Select the Spark runtime version that must be considered for processing the applications. Apache Gluten accelerated Spark engine support version 3.4. |
       | Engine home bucket | Select the registered Cloud Object Storage bucket from the list to store the Spark events and logs that are generated while running spark applications. \n [Note]{: tag-purple} Make sure you do not select the IBM-managed bucket as Spark engine home. If you select an IBM-managed bucket, you cannot access it to view the logs. \n For more information, see [Before you begin]({{site.data.keyword.ref-prov_nspark-link}}#prereq_nspark_prov).|
       |Reserve capacity (Conditional)| Specify this field if you are using a version earlier than 2.3 of {{site.data.keyword.lakehouse_short}}. 1. Select the **Node Type**. \n 2. Enter the number of nodes in the **No of nodes** field.     |
       |Associated catalogs (optional)| Select the catalogs that must be associated with the engine.   |
-      {: caption="Provisioning Gluten accelerated Spark engine" caption-side="bottom"}
+      {: caption="Provisioning Apache Gluten accelerated Spark engine" caption-side="bottom"}
 
 6. Click **Create**. The engine is provisioned and is displayed in the **Infrastructure Manager** page.
 
@@ -84,7 +84,7 @@ To add a Gluten accelerated Spark engine, complete the following steps.
 ### Provisioning through API
 {: #prov_cpp_2}
 
-1. Use the following CURL command to create a Gluten Accelerated Spark engine.
+1. Use the following CURL command to create Apache Gluten Accelerated Spark engine.
 
 
 #### V2 API
@@ -112,7 +112,7 @@ To add a Gluten accelerated Spark engine, complete the following steps.
 
        },
 
-       "engine_display_name": "`<gluten_engine_name>`",
+       "engine_display_name": "`<Apache Gluten_engine_name>`",
 
        "associated_catalogs": [
 
@@ -121,7 +121,7 @@ To add a Gluten accelerated Spark engine, complete the following steps.
        ],
 
        "origin": "native",
-       "type": "gluten"
+       "type": "Gluten"
 
    }
 
@@ -134,8 +134,8 @@ To add a Gluten accelerated Spark engine, complete the following steps.
    * `<region>`: The region where the {{site.data.keyword.lakehouse_short}} instance is available.
    * `<CRN>`: The {{site.data.keyword.lakehouse_short}} instance CRN. You can retrieve the CRN from the {{site.data.keyword.lakehouse_short}} information page.
    * `<engine-home-bucket>` : The storage that enables you to monitor and debug the Spark application.
-   * `<gluten_engine_name>`: Specify a name for the Gluten accelerated Spark engine.
-   * `<catalog_name>`: Specify a name for the catalog you use. Gluten accelerated Spark supports Iceberg, Hudi, Delta, and Hive catalogs.
+   * `<Apache Gluten_engine_name>`: Specify a name for the Apache Gluten accelerated Spark engine.
+   * `<catalog_name>`: Specify a name for the catalog you use. Apache Gluten accelerated Spark supports Iceberg, Hudi, Delta, and Hive catalogs.
 
 
 
@@ -153,4 +153,4 @@ To add a Gluten accelerated Spark engine, complete the following steps.
 
 
 
-To submit Spark applications using Gluten accelerated Spark engine, see [Submitting a Spark application](/docs/watsonxdata?topic=group=submitting-spark-application-by-using-native-spark-engine).
+To submit Spark applications using Apache Gluten accelerated Spark engine, see [Submitting a Spark application](/docs/watsonxdata?topic=group=submitting-spark-application-by-using-native-spark-engine).

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2025-12-11"
+lastupdated: "2026-01-30"
 
 keywords: watsonx.data, region, availability
 subcollection: watsonxdata
@@ -18,7 +18,7 @@ subcollection: watsonxdata
 
 View the regional availability for every available service.
 
-## Regional availability of the {{site.data.keyword.lakehouse_short}} on IBM Cloud
+## Regional availability of {{site.data.keyword.lakehouse_short}} on IBM Cloud
 {: #reg_cld}
 
 {{site.data.keyword.lakehouse_full}} is available in the following regional data centers:
@@ -29,7 +29,7 @@ View the regional availability for every available service.
    * eu-gb (London)
    * jp-tok (Tokyo)
 
-## Regional availability of the {{site.data.keyword.lakehouse_short}} on IBM RedHat OpenShift Kubernetes Service (ROKS)
+## Regional availability of {{site.data.keyword.lakehouse_short}} on Red Hat OpenShift Kubernetes Service (ROKS)
 {: #reg_roks}
 
 {{site.data.keyword.lakehouse_full}} is available in the following regional data centers:
@@ -38,7 +38,7 @@ View the regional availability for every available service.
    * au-syd (Sydney)
 
 
-## Regional availability of the {{site.data.keyword.lakehouse_short}} on AWS
+## Regional availability of {{site.data.keyword.lakehouse_short}} on Amazon Web Services (AWS)
 {: #reg_aws}
 
 AWS deployments are currently unavailable in Canada, Japan, and Korea but can be made available with 8–10 days’ notice; in the U.S., {{site.data.keyword.lakehouse_short}} is deployed only in N. Virginia, with Oregon available upon similar notice.
@@ -50,7 +50,7 @@ AWS deployments are currently unavailable in Canada, Japan, and Korea but can be
    * Mumbai(ap-south-1)
    * Singapore(ap-southeast-1)
    * N. Virginia(us-east-1)
-   * Oregon(us-west-2)
+
 
 
 ## Regional availability of Tiny Milvus on IBM Cloud

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-28"
+lastupdated: "2026-01-07"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -28,7 +28,7 @@ subcollection: watsonxdata
 # Customizing parameters for Spark application submission
 {: #sbmt_spk_cust}
 
-**Applies to** : [Spark engine]{: tag-blue}  [Gluten accelerated Spark engine]{: tag-green}
+**Applies to** : [Spark engine]{: tag-blue}  [Apache Gluten accelerated Spark engine]{: tag-green}
 
 
 This topic explains how to configure the Spark application payload to include idempotency keys, and set maximum runtime controls when submitting a Spark application in watsonx.data.
@@ -92,5 +92,3 @@ The following is a sample payload that shows how to configure the timeout_in_sec
    }'
    ```
    {: codeblock}
-
-

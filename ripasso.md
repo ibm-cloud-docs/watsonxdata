@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-30"
+lastupdated: "2026-01-22"
 
 keywords: watsonx.data, ripasso, watsonx BI
 subcollection: watsonxdata
@@ -49,4 +49,4 @@ The topic details the procedure to connect watsonx BI to Presto. The connection 
 
 
 
-For more information about connecting from watsonx BI, see [Connecting to watsonx.data from watsonx BI](https://cloud.ibm.com/docs/allowlist/watsonx-bi?topic=watsonx-bi-wxd).
+For more information about connecting from watsonx BI, see [Connecting to watsonx.data from watsonx BI](https://cloud.ibm.com/docs/watsonx-bi?topic=watsonx-bi-wxd).

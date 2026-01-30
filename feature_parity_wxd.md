@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-15"
+lastupdated: "2026-01-08"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -31,7 +31,7 @@ subcollection: watsonxdata
 
 {{site.data.keyword.lakehouse_full}} can be deployed as a managed software as a service (SaaS) or installed on premises. As new features are added on each deployment's release cycle, it is important that you understand which features are available in a deployment, so you can make informed decisions based on your business’s requirements.
 
-Stay up to date with the latest features through [Release notes for {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=release).
+Stay up to date with the latest features through [Release notes for {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=watsonxdata-release).
 
 This topic covers details for IBM-managed watsonx.data instances in IBM Cloud, Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform (GCP).
 

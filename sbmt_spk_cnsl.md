@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-11-28"
+lastupdated: "2026-01-07"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -15,7 +15,7 @@ subcollection: watsonxdata
 {: #smbit_cnsl_1}
 
 
-**Applies to** : [Spark engine]{: tag-blue}  [Gluten accelerated Spark engine]{: tag-green}
+**Applies to** : [Spark engine]{: tag-blue}  [Apache Gluten accelerated Spark engine]{: tag-green}
 
 
 You can submit a Spark application that is written in Python, Java, or Scala language from the {{site.data.keyword.lakehouse_short}} Console on IBM Cloud.

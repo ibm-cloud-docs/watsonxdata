@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-02-24"
+lastupdated: "2026-01-23"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -89,6 +89,8 @@ Complete the following steps to enable and configure Apache Ranger in watsonx.da
    |URL	|The URL of Apache Ranger.|
    |Username|	The admin credentials.|
    |Password	|The admin credentials.|
+   |Port is SSL enabled  |Select the checkbox.    |
+   |Upload SSL Certificate | Use the toggle switch to enable or disable SSL connection. Enabling the SSL connection ensures secure connection. If enabled, you must do the following: \n i. The Upload SSL certificate (.pem, .crt, .cert or .cer) link is enabled.\n ii. Click the Upload SSL certificate (.pem, .crt, .cert, or .cer) link. \n iii. Browse the SSL certificate and upload. \n For information about how to retrieve the certificate, see [Generating cert](#ranger_18). |
    |List resources|	Click the link to load the resources that are available in the Apache Ranger server.|
    |Resources	|Select the resource for which the Apache Ranger policy must be enabled.|
    |Policy Cache Time Configuration| The time taken to refresh the newly defined Ranger policies.|
@@ -122,6 +124,23 @@ Complete the following steps to grant permissions to the user:
 1. Scroll down to the bottom, click the **Save** button.
 
 1. Log in to watsonx.data instance and execute a query again. The access is allowed for the user after adding policies in the Ranger.
+
+## Generating a Keystore and a Key pair
+{: #ranger_18}
+
+
+1. Log into your Ranger server by using SSH and use the following command to generate a new keystore file containing a private key and a self-signed certificate.
+
+``` bash
+keytool -genkey -keyalg RSA -alias rangeradmin -keystore ranger-admin-keystore.jks -storepass <store_password> -validity 365 -keysize 2048 -dname "CN=<Ranger FQDN>, OU=<Organizational Unit>, O=<Organization>, L=<City>, ST=<State>, C=<Country>"
+```
+{: codeblock}
+
+
+Replace `<store_password>` with a strong password.
+Replace `<Ranger FQDN>` with the server's FQDN (e.g., ranger.example.com).
+Provide appropriate values for Organizational Unit (OU), Organization (O), Location (L), State (ST), and Country (C) when prompted, or by using the -dname parameter.
+
 
 ## Limitations
 {: #ranger_4}

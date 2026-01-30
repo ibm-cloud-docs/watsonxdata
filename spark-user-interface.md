@@ -2,7 +2,7 @@
 
 copyright:
   years: 2024
-lastupdated: "2025-10-28"
+lastupdated: "2026-01-07"
 keywords: spark, interface
 subcollection: watsonxdata
 
@@ -12,7 +12,7 @@ subcollection: watsonxdata
 
 
 
-**Applies to** : [Spark engine]{: tag-blue}  [Gluten accelerated Spark engine]{: tag-green}
+**Applies to** : [Spark engine]{: tag-blue}  [Apache Gluten accelerated Spark engine]{: tag-green}
 
 
 
