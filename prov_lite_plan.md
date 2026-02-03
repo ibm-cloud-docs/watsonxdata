@@ -45,6 +45,8 @@ In this tutorial, you learn how to provision {{site.data.keyword.lakehouse_short
 
 * [Provisioning {{site.data.keyword.lakehouse_short}} Lite plan through CLI](#create-lite-cli)
 
+* [Provisioning {{site.data.keyword.lakehouse_short}} Lite plan through Terraform module](#create-lite-tf-module)
+
 
 
 
@@ -166,6 +168,13 @@ Perform the following steps to provision a Lite plan instance by using CLI.
     ibmcloud resource service-instance <instance-name>
     ```
     {: codeblock}
+
+## Provisioning {{site.data.keyword.lakehouse_short}} Lite plan through Terraform module
+{: #create-lite-tf-module}
+
+You can use a pre-built, open-source and enterprise-ready [Terraform IBM modules](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) - [watsonx.data module](https://registry.terraform.io/modules/terraform-ibm-modules/watsonx-data/ibm/latest) to provision a Lite plan instance.
+
+Follow the instructions [provided](docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module) to deploy the Terraform module.
 
 ## Reference
 {: #gs_ns_2}
