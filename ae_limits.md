@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-01-30"
+lastupdated: "2026-02-03"
 
 subcollection: watsonxdata
 
@@ -31,9 +31,9 @@ The following table lists the default limits and quotas for the Spark engine.
 
 | Category                                |        Default         |
 | --------------------------------------- | ---------------------- |
-| Maximum number of Spark engines per watsonx.data instances |                      3 |
+| Maximum number of Spark engines per watsonx.data instances  | 3 |
 | Maximum number of nodes per Spark engine              |                    20 |
-| Shuffle space per core                  | approx. 30 GB (Not customizable) |
+| Shuffle space per core                  | approx. 30 GB (Not customizable)  |
 {: caption="Default limits and quotas for Spark instances" caption-side="top"}
 
 
