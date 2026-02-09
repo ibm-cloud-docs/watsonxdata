@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2024-08-02"
+  years: 2022, 2025
+lastupdated: "2026-02-09"
 
 keywords: watsonxdata, query history
 
@@ -29,18 +29,42 @@ subcollection: watsonxdata
 # Query history
 {: #query_history}
 
-A query history audits all the current and past queries across the existing engines in {{site.data.keyword.lakehouse_full}}.
+A query history audits all current and past queries that run across existing engines in {{site.data.keyword.lakehouse_full}}.
 {: shortdesc}
 
-The query history page in {{site.data.keyword.lakehouse_short}} provides the following details that are related to the queries that are run:
+The page provides a consolidated and searchable record of query execution activity, helping users monitor performance, review workload patterns, and understand resource consumption across engines.
+
+
+## What you can view in Query history
+{: #query_history1}
+
+The **Query history** page provides the following key information for every query:
 
 * Query ID
-* Query
-* State
-* Engine
+* Query text
+* State (such as Running, Finished, Failed)
+* Engine and Engine ID
 * User
-* Created
+* Source (where the query originated)
+* CPU
+* Memory (GB)
+* Usage (RUs)
 
-In the **Query history** page, you can search, refresh, filter, download, and customize the queries. You can select a **Query** from the page, view or copy the details of query statement, logical execution plan, distributed execution plan, and explain analyze. You can open the queries directly in a workspace, and also get the explain details of a query from the overflow menu of each query listed.
+
+Within the **Query history** page, you can:
+
+* **Search** for queries by ID, text, user, or other attributes.
+* Refresh the list to load the latest query activity.
+* Filter by engine, state, user, or other properties.
+* Customize the table by showing or hiding columns.
+* Download the full query history as a CSV file.
+* Select a specific Query to:
+   * View or copy the query statement.
+   * Review the logical execution plan.
+   * Explore the distributed execution plan.
+   * View EXPLAIN ANALYZE information.
+
+* Open queries directly in a workspace.
+* Access explain details from the overflow menu for each query.
 
 For more information about exporting and importing query history, see [Exporting and importing the query history]({{site.data.keyword.ref-eximp-q-hist-link}}).
