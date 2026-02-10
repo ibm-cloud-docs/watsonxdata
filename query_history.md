@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-02-09"
+lastupdated: "2026-02-10"
 
 keywords: watsonxdata, query history
 
@@ -48,8 +48,6 @@ The **Query history** page provides the following key information for every quer
 * Source (where the query originated)
 * CPU
 * Memory (GB)
-* Usage (RUs)
-
 
 Within the **Query history** page, you can:
 
