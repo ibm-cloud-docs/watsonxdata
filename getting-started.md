@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-15"
+lastupdated: "2026-02-11"
 
 keywords: lakehouse, watsonx data, provision, endpoint, resource
 subcollection: watsonxdata
@@ -133,11 +133,42 @@ The access to provision IBM Cloud resources is governed by using [IAM access](ht
     ```
     {: codeblock}
 
+### Provisioning an instance through Terraform module
+{: #create-by-tf-module}
+
+You can provision an instance by using a pre-built, open-source, enterprise-ready Terraform module. This method uses [Terraform IBM Modules (TIM)](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim), which are curated collections of Terraform modules that simplify creating, managing, and versioning complex, compliant environments on IBM Cloud.
+
+#### About the {{site.data.keyword.lakehouse_short}} Terraform module
+{: #create-by-tf-module1}
+
+The [{{site.data.keyword.lakehouse_short}} module](https://registry.terraform.io/modules/terraform-ibm-modules/watsonx-data/ibm/latest) is a purpose-built Terraform module that follows secure-by-default principles and aligns with IBM Cloud best practices. The module provides the following capabilities:
+
+- Standardized method for creating and working with IBM {{site.data.keyword.lakehouse_short}} instances
+- Comprehensive documentation with README files and examples
+- Multiple deployment scenarios through basic, advanced, and existing instance examples
+- Controlled versioning for safe updates and easier dependency management
+- Enterprise-ready configurations that are secure, scalable, and compliant
+
+#### Deploying the module
+{: #create-lite-tf-module2}
+
+To deploy the {{site.data.keyword.lakehouse_short}} enterprise plan by using this Terraform module, complete the steps in [Deploying a Terraform IBM Module by using Terraform CLI](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module).
+
+The deployment process includes the following steps:
+
+1. Verify that you have the required prerequisites: Git CLI, Terraform CLI, and IBM Cloud API key.
+2. Clone the GitHub repository that contains the Terraform module.
+3. Create a `terraform.tfvars` file to define input variables for your deployment.
+4. Run `terraform init` to download required providers and modules.
+5. Run `terraform plan` to preview the changes that Terraform will make to your infrastructure.
+6. Run `terraform apply` to provision your {{site.data.keyword.lakehouse_short}} instance.
+
+
 
 ### Provisioning Virtual Private Endpoint (VPE) enabled instance
 {: #create-by-VPE}
 
-You can provision an IBM watsonx.data instance with VPE enabled to connect your IBM watsonx.data instance privately and securely to resources in your Virtual Private Cloud (VPC), eliminating exposure to the public internet. This configuration is supported in the following regions:
+You can provision an IBM {{site.data.keyword.lakehouse_short}} instance with VPE enabled to connect your IBM {{site.data.keyword.lakehouse_short}} instance privately and securely to resources in your Virtual Private Cloud (VPC), eliminating exposure to the public internet. This configuration is supported in the following regions:
 
 * Dallas (us-south)
 * Washington DC (us-east)
