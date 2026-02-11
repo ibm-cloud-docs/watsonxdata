@@ -41,6 +41,7 @@ The access to provision IBM Cloud resources is governed by using [IAM access](ht
 
 * [Provision an instance through UI](#create-by-ui)
 * [Provision an instance through CLI](#create-by-cli)
+* [Provisioning an instance through Terraform module](#create-by-tf-module)
 
 ### Provision an instance through UI
 {: #create-by-ui}
