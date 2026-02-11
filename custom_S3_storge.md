@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-02"
+lastupdated: "2026-02-11"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
 
@@ -29,6 +29,9 @@ subcollection: watsonxdata
 # Custom S3 Storage
 {: #custom_s3_storage}
 
+If your S3 storage is available under one of the predefined storage providers (for example, IBM COS, Ceph, or AWS S3), use the respective provider instead of the Custom S3 option.
+{: important}
+
 You can configure any S3 compatible object storage in {{site.data.keyword.lakehouse_short}} using the **Custom S3 Storage** option. This feature supports a wide range of third-party storage providers that implement the S3 API standard.
 {: shortdesc}
 
@@ -42,6 +45,7 @@ If you select **Custom S3 Storage** from the **Storage** section, configure the 
  | Display name | Enter the name to be displayed. |
  | Bucket name | Enter the name of your existing bucket. |
  | Region | Enter the S3 storage region if required for access. If not, leave this field blank. |
+ | Endpoint Type | Select the endpoint access type. Options are **Path style access** or **Virtual host**. <br><br>**Note:** Verify which access type your storage uses and select the appropriate option accordingly. |
  | Endpoint | Enter the **Endpoint** URL. Test connection is enabled when the endpoint is provided. <br><br>**Note:** For **OCI storage**, the endpoint must follow this format:<br>`https://<namespace>.compat.objectstorage.<region>.oraclecloud.com` |
  | Access key  | Enter your access key. |
  | Secret key  | Enter your secret key. |
