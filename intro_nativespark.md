@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2026-01-30"
+lastupdated: "2026-02-11"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -33,7 +33,7 @@ For more information about using Spark engine, see [Working with watsonx.data Sp
 
 | Name | Status | Release date | End-of-support date |
 | ------------ | ------------- | ------- | ---- |
-| Apache Spark 3.4.4 | Supported | JUNE 2023 | JUNE 2026 |
+| Apache Spark 3.4.4 | Deprecated | JUNE 2023 | JUNE 2026 |
 | Apache Spark 3.5.4 | Supported | FEB 2025 | FEB 2028 |
 | Apache Spark 4.0 | Supported | AUG 2025 | AUG 2028 |
 {: caption="Supported Spark versions" caption-side="top"}

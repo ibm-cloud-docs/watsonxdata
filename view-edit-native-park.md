@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2026-01-08"
+lastupdated: "2026-02-11"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -35,7 +35,7 @@ You can view the Native Spark engine details in list and topology views.
    | Tags | The tag that is specified at the time of registering an engine. |
    | Default Spark version | The Spark runtime version that is used by default for any application that is submitted to the Spark engine. |
    | Engine Home bucket | Specify the bucket name that store the events and logs related to Spark. |
-   | Type | The engine type (here, Spark and Gluten accelerated Spark). |
+   | Type | The engine type (here, Spark and Apache Gluten accelerated Spark). |
    | {{site.data.keyword.lakehouse_short}} application endpoint | The endpoint is used at the time of application submission. To submit an application by using API, see [API Docs][def2]. |
    | Spark engine endpoint | The Native Spark endpoint. |
    | Default Spark Configuration | The Spark configuration properties that are applied to any application that is submitted to the Spark engine. |
@@ -131,7 +131,7 @@ Following are the details of the parameter values to be used in the curl command
          "spark.driver.cores": "1",
          "spark.driver.memory": "4g"
        },
-       "default_version": "3.4"
+       "default_version": "3.5"
      }
    }'
 ```
@@ -151,7 +151,7 @@ Following are the details of the parameter values to be used in the curl command
          "spark.driver.cores": "1",
          "spark.driver.memory": "4g"
        },
-       "default_version": "3.4"
+       "default_version": "3.5"
      }
    }'
 ```

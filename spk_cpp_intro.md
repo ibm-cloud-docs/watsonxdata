@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-02-03"
+lastupdated: "2026-02-11"
 
 keywords: lakehouse, watsonx.data, Apache Gluten
 
@@ -60,7 +60,7 @@ For more information about using Spark engine, see [Working with watsonx.data Sp
 
 | Name | Status | Release date | End-of-support date |
 | ------------ | ------------- | ------ | ---- |
-| Apache Spark 3.4.4 | Supported | JAN 2025 | JUNE 2026 |
+| Apache Spark 3.4.4 | Deprecated | JAN 2025 | JUNE 2026 |
 | Apache Spark 3.5.4 | Supported | JUNE 2025 | FEB 2028 |
 {: caption="Supported Spark versions" caption-side="top"}
 

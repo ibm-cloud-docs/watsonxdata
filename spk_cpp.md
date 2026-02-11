@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-01-08"
+lastupdated: "2026-02-11"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -63,16 +63,16 @@ To add Apache Gluten accelerated Spark engine, complete the following steps.
 
 3. To add Apache Gluten accelerated Spark engine, click **Add component**, Click **IBM Spark** and click **Next**.
 
-5. In the **Add component-IBM Spark** page, from the **Type** section, select **Gluten accelerated Spark engine**.
+5. In the **Add component-IBM Spark** page, from the **Type** section, select **ApacheGluten accelerated Spark engine**.
 
 6. In the **Add component - IBM Spark** page, configure the following details:
 
-      a. In the **Add component - Gluten accelerated Spark engine** window, enter the **Display name** for your Apache Gluten accelerated Spark engine.
+      a. In the **Add component - IBM Spark** window, enter the **Display name** for your Apache Gluten accelerated Spark engine.
       c. Configure the following details:
 
       | Field | Description |
       | --- | --- |
-      | Default Spark version | Select the Spark runtime version that must be considered for processing the applications. Apache Gluten accelerated Spark engine support version 3.4. |
+      | Default Spark version | Select the Spark runtime version that must be considered for processing the applications. |
       | Engine home bucket | Select the registered Cloud Object Storage bucket from the list to store the Spark events and logs that are generated while running spark applications. \n [Note]{: tag-purple} Make sure you do not select the IBM-managed bucket as Spark engine home. If you select an IBM-managed bucket, you cannot access it to view the logs. \n For more information, see [Before you begin]({{site.data.keyword.ref-prov_nspark-link}}#prereq_nspark_prov).|
       |Reserve capacity (Conditional)| Specify this field if you are using a version earlier than 2.3 of {{site.data.keyword.lakehouse_short}}. 1. Select the **Node Type**. \n 2. Enter the number of nodes in the **No of nodes** field.     |
       |Associated catalogs (optional)| Select the catalogs that must be associated with the engine.   |
