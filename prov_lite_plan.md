@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-04"
+lastupdated: "2026-02-11"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -22,7 +22,7 @@ subcollection: watsonxdata
 {: #tutorial_prov_lite_1}
 
 
-The **Lite** plan allows you to provision an {{site.data.keyword.lakehouse_full}} instance that is free to use, with capacity limit of 2000 Resource Units, and time frame limit of 30 days. You can use the account to explore and familiarize yourself with {{site.data.keyword.lakehouse_short}}. For more information about the features and limitations of Lite plan, see [Lite plan](/docs/watsonxdata?topic=watsonxdata-getting-started#lite-plan-1){: external}.
+The **Lite** plan allows you to provision an {{site.data.keyword.lakehouse_full}} instance that is free to use, with capacity limit of 500 Resource Units, and time frame limit of 30 days. You can use the account to explore and familiarize yourself with {{site.data.keyword.lakehouse_short}}. For more information about the features and limitations of Lite plan, see [Lite plan](/docs/watsonxdata?topic=watsonxdata-getting-started#lite-plan-1){: external}.
 {: shortdesc}
 
 
@@ -33,7 +33,7 @@ The {{site.data.keyword.lakehouse_short}} Lite plan instance is configured based
 After provisioning the Lite plan instance, you can monitor the resource unit usage from the **Billing and Usage** page available in the {{site.data.keyword.lakehouse_short}} console. For more information, see [Billing and Usage](/docs/watsonxdata?topic=watsonxdata-manage_bill).
 
 
-Only one active Lite plan instance is allowed for IBM Cloud trial or paid account users. However, if the existing Lite plan instance is deleted before consuming the 2000 RUs, a new instance can be created and the remaining RUs can be consumed. Paid account users can create multiple Lite plan instances in different [resource groups](https://cloud.ibm.com/docs/account?topic=account-rgs&interface=ui). If the account has multiple Lite instances active at the same time, the resource unit consumption for the account will be the sum of resource units consumed by each individual instance.
+Only one active Lite plan instance is allowed for IBM Cloud trial or paid account users. However, if the existing Lite plan instance is deleted before consuming the 500 RUs, a new instance can be created and the remaining RUs can be consumed. Paid account users can create multiple Lite plan instances in different [resource groups](https://cloud.ibm.com/docs/account?topic=account-rgs&interface=ui). If the account has multiple Lite instances active at the same time, the resource unit consumption for the account will be the sum of resource units consumed by each individual instance.
 
 When the limit is reached, any active Lite plan instance owned by the account is disabled and new Lite plan instances cannot be created.
 
@@ -70,7 +70,7 @@ Perform the following steps to provision a Lite plan instance:
     {: note}
 
 
-    Click **About** tab and read through to understand about the resource units consumed by engine/service, and estimate your consumption of 2000 RUs in the {{site.data.keyword.lakehouse_short}} Lite plan instance.
+    Click **About** tab and read through to understand about the resource units consumed by engine/service, and estimate your consumption of 500 RUs in the {{site.data.keyword.lakehouse_short}} Lite plan instance.
     {: note}
 
 

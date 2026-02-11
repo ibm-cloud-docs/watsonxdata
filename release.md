@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2026-01-07"
+lastupdated: "2026-02-11"
 
 keywords: watsonxdata, release notes
 
@@ -1147,7 +1147,7 @@ For more information, see [Azure Data Lake Storage Gen2](/docs/watsonxdata?topic
 **watsonx.data pricing plans**
 {: #31JULY_11_2024}
 
-* You can now delete the existing Lite plan instance before reaching the account cap limit of 2000 RUs, and create a new instance and consume the remaining resource units available in the account. For more information, see [watsonx.data Lite plan](/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1){: external}.
+* You can now delete the existing Lite plan instance before reaching the account cap limit of 500 RUs, and create a new instance and consume the remaining resource units available in the account. For more information, see [watsonx.data Lite plan](/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1){: external}.
 
 
 ## 03 July 2024 - Version 2.0.0
