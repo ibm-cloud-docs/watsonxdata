@@ -56,19 +56,19 @@ IAM formation non-admins (Operator, Editor, Viewer) have the default user access
 
 | Action | Admin | Manager | User | Metastore Access |
 |-------|------|------|------|---------|
-| Create Presto (Java) or Presto (C++) engines | ✓ |   |---|    |
-| Create or register Spark engines | ✓ |    |  |    |
-| Create Milvus services | ✓ |  |   |    |
+| Create Presto (Java) or Presto (C++) engines | ✓ |  ✓   |---|    |
+| Create or register Spark engines | ✓ |   ✓  |  |    |
+| Create Milvus services | ✓ |  ✓  |   |    |
 | Delete Milvus services | ✓ |  |   |    |
 | View Milvus services | ✓ |  |   |    |
 | Restart the internal MDS | ✓ |  |   |    |
 | Scale the Presto (Java) or Presto (C++) engines | ✓ |  |  |    |
 | Unregister any storage | ✓ |   |   |   |    |
 | Unregister any DB Connection | ✓ |   |   |    |
-| Register and unregister own storage | ✓ |  |  ✓ | ✓ |
-| Register and unregister own DB connection | ✓ |   |  ✓ | ✓ |
-| Access the metastore | ✓ |   |   | ✓ |
-| Run Spark ingestion jobs| ✓ |  |   | ✓ |
+| Register and unregister own storage | ✓ | ✓  |  ✓ | ✓ |
+| Register and unregister own DB connection | ✓ |  ✓   |  ✓ | ✓ |
+| Access the metastore | ✓ |  ✓   |   | ✓ |
+| Run Spark ingestion jobs| ✓ |  ✓  |   | ✓ |
 {: caption="Resource-level permissions" caption-side="bottom"}
 
 ## Engine (Presto (Java) or Presto (C++))
