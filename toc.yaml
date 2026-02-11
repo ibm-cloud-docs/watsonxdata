@@ -237,6 +237,7 @@ toc:
               - sbmt_das_spk.md
               - sbmt_spk_cnsl.md
               - sbmt_spk_mor_cow.md
+              - spk_icbrg_delta.md
               - spark-extnsn.md
               - spark-streaming.md
               - ae_auto-scaling-serverless-apps.md
