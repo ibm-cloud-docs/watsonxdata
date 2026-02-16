@@ -290,6 +290,7 @@ toc:
           - wxd_wxa_connection.md
           - milvus_backup.md
           - milvus_vts.md
+      - account_scope.md
       - topicgroup:
           label: Semantic automation for data enrichment
           topics:
