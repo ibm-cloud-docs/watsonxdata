@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-02-11"
+lastupdated: "2026-02-16"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -79,7 +79,7 @@ Submit a Spark job with the following payload. Specify the Delta table location,
    ```
    {: codeblock}
 
-Paremeter values:
+Parameter values:
 
 
    * `<path-to-delta-table>` : Delta Lake table location path.
@@ -131,7 +131,7 @@ Example application Payload:
    ```
    {: codeblock}
 
-Paremeter values:
+Parameter values:
 
    * migration_json : JSON configuration file path or inline JSON that defines the batch of tables to migrate.
    * table_property : Iceberg table property in key=value format; applies to all tables in the batch and can be specified multiple times.
@@ -162,7 +162,7 @@ Example migration JSON:
    ```
    {: codeblock}
 
-Paremeter values:
+Parameter values:
 
    * deltaTableLocation : Path to the Delta Lake table.
    * icebergTableLocation : Path for the Iceberg table location. If not provided, defaults to the Delta table location.
