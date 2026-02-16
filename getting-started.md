@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-02-11"
+lastupdated: "2026-02-16"
 
 keywords: lakehouse, watsonx data, provision, endpoint, resource
 subcollection: watsonxdata
@@ -158,8 +158,8 @@ To deploy the {{site.data.keyword.lakehouse_short}} enterprise plan by using thi
 The deployment process includes the following steps:
 
 1. Verify that you have the required prerequisites: Git CLI, Terraform CLI, and IBM Cloud API key.
-2. Clone the GitHub repository that contains the Terraform module.
-3. Create a `terraform.tfvars` file to define input variables for your deployment.
+2. Clone the GitHub repository that contains the Terraform module and use the provided code and examples to create your own configuration.
+3. Configure input variables for your deployment.
 4. Run `terraform init` to download required providers and modules.
 5. Run `terraform plan` to preview the changes that Terraform will make to your infrastructure.
 6. Run `terraform apply` to provision your {{site.data.keyword.lakehouse_short}} instance.
