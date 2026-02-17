@@ -116,7 +116,10 @@ This ensures that all internal, system-generated, and synthetic call data releva
    - Last 10 minutes
    - Last 30 minutes
 
-These retention periods help ensure recent query execution traces are visible without noise from older calls.
+   These retention periods help ensure recent query execution traces are visible without noise from older calls.
+
+   Currently, only Presto (Java) provides traces.
+   {: note}
 
 #### Viewing OpenTelemetry metrics in Instana
 {: #opntlmtry_ui_metrics}
