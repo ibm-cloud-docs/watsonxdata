@@ -124,7 +124,7 @@ These retention periods help ensure recent query execution traces are visible wi
 1. Log in to the Instana UI and navigate to **Analyze Infrastructure**.
 2. In the data source selector, choose **OpenTelemetry** to view all OpenTelemetry resources.
 3. Click **Add filter**, select **OpenTelemetry Resource → otel.attribute → k8s.namespace.name**.
-   Enter the required {{site.data.keyword.lakehouse_short}} instance namespace to filter the view.
+   Enter the required {{site.data.keyword.lakehouse_short}} instance namespace (`instance_id` for Presto (Java) and `spark-control` for Spark) to filter the view.
 4. From the filtered results, select the endpoint **metric-scraper-presto** for Presto (Java) or **metric-scraper-spark-metrics-aggr** for Spark associated with your instance.
 5. Use **Select metrics** to browse all available OpenTelemetry metrics exposed by the Presto (Java) and Spark metric scraper.
 6. Choose any metric to open its live time-series visualization, where you can analyze current values, trends, and attributes.
