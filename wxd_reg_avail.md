@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2026-01-30"
+lastupdated: "2026-02-17"
 
 keywords: watsonx.data, region, availability
 subcollection: watsonxdata
@@ -26,7 +26,7 @@ View the regional availability for every available service.
    * us-south (Dallas)
    * us-east (Washington DC) - Lite Plan not available
    * eu-de (Frankfurt)
-   * eu-gb (London)
+   * eu-gb (London) - Lite Plan not available
    * jp-tok (Tokyo)
 
 ## Regional availability of {{site.data.keyword.lakehouse_short}} on Red Hat OpenShift Kubernetes Service (ROKS)
@@ -34,8 +34,8 @@ View the regional availability for every available service.
 
 {{site.data.keyword.lakehouse_full}} is available in the following regional data centers:
 
-   * ca-tor (Toronto)
-   * au-syd (Sydney)
+   * ca-tor (Toronto) - Lite Plan not available
+   * au-syd (Sydney) - Lite Plan not available
 
 
 ## Regional availability of {{site.data.keyword.lakehouse_short}} on Amazon Web Services (AWS)
@@ -60,7 +60,7 @@ AWS deployments are currently unavailable in Canada, Japan, and Korea but can be
 
    * us-south (Dallas) - watsonx.data on IBM Cloud
    * eu-de (Frankfurt) - watsonx.data on IBM Cloud
-   * eu-gb (London) - watsonx.data on IBM Cloud
+   * eu-gb (London) - watsonx.data on IBM Cloud - Lite Plan not available
    * jp-tok (Tokyo) - watsonx.data on IBM Cloud
-   * ca-tor (Toronto) - watsonx.data on IBM ROKS
-   * au-syd (Sydney) - watsonx.data on IBM ROKS
+   * ca-tor (Toronto) - watsonx.data on IBM ROKS - Lite Plan not available
+   * au-syd (Sydney) - watsonx.data on IBM ROKS - Lite Plan not available

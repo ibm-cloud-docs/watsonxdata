@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-02-16"
+lastupdated: "2026-02-17"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -128,15 +128,17 @@ Perform the following steps to provision a Lite plan instance by using CLI.
 
     - `instance-name`: Name of the instance. For example, watsonx.data-abc.
     - `lakehouse`: {{site.data.keyword.lakehouse_short}} service.
-    - `plan-id` : The plan-id is `lakehouse-lite` for regions `eu-de`, `us-east`, `us-south`, `jp-tok`, and `eu-gb`. It must be `lakehouse-lite-mcsp` for `au-syd` and `ca-tor` regions.
-    - `region`: The available regions are `eu-de`, `us-south`, `jp-tok`, `eu-gb`, `au-syd`, and `ca-tor`.
+    - `plan-id` : The plan-id is `lakehouse-lite` for regions `eu-de`, `us-east`, `us-south`, `jp-tok`, and `eu-gb`.
+    - `region`: The available regions are `eu-de`, `us-south`, `jp-tok`, and `eu-gb`.
     - `resource-group`: Choose one of the available resource groups in your {{site.data.keyword.cloud_notm}} account. Most accounts have a `Default` group. For more information, see [Managing resource groups](https://cloud.ibm.com/docs/account?topic=account-rgs&interface=ui).
     - `datacenter`: Use one of the following. This parameter must match the region that you have selected.
        - `ibm:us-south:dal`
        - `ibm:eu-de:fra`
        - `ibm:eu-gb:lon`
-       - `ibm:au-syd:syd`
-       - `ibm:ca-tor:tor`
+
+       
+       
+
        - `ibm:jp-tok:tok`
     - `cloud_type`:
        - `ibm`: For fully managed account instances (default).
@@ -155,12 +157,7 @@ Perform the following steps to provision a Lite plan instance by using CLI.
     ```
     {: codeblock}
 
-    Example 2 : Provision a Lite plan in `Sydney` region.
-
-    ```bash
-    ibmcloud resource service-instance-create <instance-name> lakehouse lakehouse-lite-mcsp au-syd -g <resource-group> -p '{"datacenter": "ibm:au-syd:syd"}'
-    ```
-    {: codeblock}
+    
 
 4. Check the status of the new instance.
 
