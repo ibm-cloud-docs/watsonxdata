@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2026-02-11"
+lastupdated: "2026-02-17"
 
 keywords: watsonxdata, release notes
 
@@ -29,6 +29,37 @@ For watsonx.data on-prem what's new, see [Release notes for watsonx.data](https:
 For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-prem Premium](https://www.ibm.com/docs/en/watsonx/watsonxdata-premium/2.2.x?topic=overview-whats-new-in-watsonxdata).
 
 Technology preview features: We also offer a Technology preview section that includes features currently in preview. These features are not generally available and may change before release. To view the release notes for technology preview items, see [Technology preview](/docs/watsonxdata?topic=watsonxdata-release_pp).
+
+## 24 February 2026 - Version 2.3.1
+{: #lakehouse_24feb2026}
+{: release-note}
+
+Account-level component persistence for Enterprise plan instances
+
+: You can now retain account-level components such as catalogs, databases, buckets, and their metadata properties independently of individual instances. When an instance is deleted, these components remain accessible from any other instance within the same account and region. This behavior applies to all new Enterprise plan instances, which are now account-scoped.
+
+Schema name reuse across Iceberg catalogs for Enterprise plan instances
+
+: Previously, when referencing a table using a three-part name (`<catalog>.<schema>.<table>`), schema names had to be unique across all catalogs within a watsonx.data instance. This restriction prevented the creation of schemas with the same name in different catalogs. This limitation is lifted for Iceberg catalogs. You can now reuse schema names across multiple Iceberg catalogs. For example:
+- `myiceberg_catalog1.abcschema.mytable`
+- `myiceberg_catalog2.abcschema.mytable`
+
+This behavior applies to all new Enterprise plan instances, which are now account-scoped.
+
+Schema names must still be unique across other catalog types such as Hive, Delta, and Hudi.
+{: note}
+
+Thrift over HTTP protocol support in watsonx.data Enterprise plan
+
+: The Metadata Service (MDS) in watsonx.data now runs the Thrift service over the HTTP protocol instead of the previous binary protocol. This change affects service endpoints and connection configurations.
+
+   Key changes:
+   * The MDS Thrift Protocol (`thrift://`) is changed to Thrift Over HTTP (`https://`).
+   * The `account_id` is mandatory for all Thrift API calls made to the MDS Thrift Service over HTTP.
+   * The `catalog` query parameter is required when invoking APIs involving the Iceberg catalog.
+
+   For Spark and Presto engines within watsonx.data, these updates are applied automatically for both new and migrated catalogs. For external engines such as Spark, Db2, and Netezza, users must manually update the connection settings to reflect the new protocol, port, and query parameter.
+   {: note}
 
 ## 10 December 2025 - Version 2.3
 {: #lakehouse_08dec2025}
