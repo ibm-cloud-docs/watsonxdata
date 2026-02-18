@@ -185,6 +185,7 @@ toc:
           topics:
           - run_sql.md
           - explain_sql_query.md
+          - optm_jdbc_query.md
       - topicgroup:
           label: Query Optimizer
           topics:
