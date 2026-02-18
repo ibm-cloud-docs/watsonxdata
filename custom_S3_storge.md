@@ -29,7 +29,7 @@ subcollection: watsonxdata
 # Custom S3 Storage
 {: #custom_s3_storage}
 
-If your S3 storage is available under one of the predefined storage providers (for example, IBM COS, Ceph, or AWS S3), use the respective provider instead of the Custom S3 option.
+If your S3 storage is already available under one of the predefined storage providers (for example, IBM COS, Ceph, or AWS S3), use the respective provider instead of the Custom S3 option.
 {: important}
 
 You can configure any S3 compatible object storage in {{site.data.keyword.lakehouse_short}} using the **Custom S3 Storage** option. This feature supports a wide range of third-party storage providers that implement the S3 API standard.
