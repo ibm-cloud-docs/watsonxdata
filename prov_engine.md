@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-26"
+lastupdated: "2026-02-18"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -54,6 +54,14 @@ To provision a Presto (Java) engine, complete the following steps.
    |    |  **Custom**: Select **Custom** for customized engine configuration:  |
    |    |  **Coordinator nodes (max. 1)**: Select the run rate for coordinator node (you can have a maximum of 1 node).  |
    |    |  **Worker nodes (max. 18)**: Select the number of worker nodes and run rate (you can have a maximum of 18 nodes).  |
+   | Auto-scaling (optional) | Enable auto-scaling to automatically adjust worker nodes based on workload. Auto-scaling cannot be disabled or edited after configuring engine. |
+   |    | **Type**: CPU (only CPU-based autoscaling is supported) |
+   |    | **Target (%)**: Target CPU utilization percentage (default: 40, range: 1-100) |
+   |    | **Minimum worker node count**: Minimum number of worker nodes (range: 1-17, must be lower than maximum) |
+   |    | **Maximum worker node count (max. 18)**: Maximum number of worker nodes (range: 1-18, must be higher than minimum) |
+   |    | **Scaling step size (Nodes)**: Number of worker nodes to add or remove during each scaling operation |
+   |    | **Scale in time window (minutes)**: Time in minutes before scaling down worker nodes (default: 30) |
+   |    | **Query termination grace period (minutes)**: Time allowed for running queries to complete before worker nodes are terminated |
    | Associated catalogs (optional) | Associate the available catalogs with the engine if necessary. HANA and MySQL catalogs do not display due to the Bring Your Own JAR (BYOJ) process. |
    {: caption="Provision engine" caption-side="bottom"}
 
