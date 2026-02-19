@@ -369,6 +369,8 @@ toc:
           topics:
           - ikc_integration.md
           - s2s_auth.md
+          - ikc_ad_integration.md
+          - ikc_ad_saas.md
       - ds_integration.md
       - wxd-dph.md
       - topicgroup:
