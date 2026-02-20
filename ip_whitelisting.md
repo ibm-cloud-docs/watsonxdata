@@ -67,11 +67,11 @@ To configure trusted IP addresses for UI access, you must have Administrator pri
 7. Click **Continue**. Specify the contexts from where your resource can be accessed.  See [Contexts](/docs/watsonxdata?topic=account-context-restrictions-whatis&interface=ui#restriction-context).
 
 
-Turn **On** the Endpoints to specify the endpoint that receives the connection. Only Public endpoints are supported.
+   Turn **On** the Endpoints to specify the endpoint that receives the connection. Only Public endpoints are supported.
 
    ![Endpoints](images/cbr_endpoint.png){: caption="Endpoints" caption-side="bottom"}
 
-From the **Network zones**, click **Create** and provide the list of IP addresses in the **Allowed IP addresses** field. See [](/docs/watsonxdata?topic=account-context-restrictions-whatis&interface=ui#network-zones-whatis).
+   From the **Network zones**, click **Create** and provide the list of IP addresses in the **Allowed IP addresses** field. See [](/docs/watsonxdata?topic=account-context-restrictions-whatis&interface=ui#network-zones-whatis).
 
 
    ![Network](images/cbr_net.png){: caption="Network" caption-side="bottom"}
