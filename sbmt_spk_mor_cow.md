@@ -125,7 +125,7 @@ Convert multiple MoR tables within the same schema in a single job execution by 
 - `--parallelism`: Number of parallel syncs.
 - `--output_path`: Output path for sync results Parquet file.
 
-When using Multiple Tables Mode, the CoW table names are automatically generated as `{morTable}_cow` for each MoR table.. Individual CoW table names cannot be specified in this mode.
+When using Multiple Tables Mode, the CoW table names are automatically generated as `{morTable}_cow` for each MoR table. Individual CoW table names cannot be specified in this mode.
 {: note}
 
 ### Schema Level Mode

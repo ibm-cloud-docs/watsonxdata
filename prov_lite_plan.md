@@ -167,6 +167,7 @@ Perform the following steps to provision a Lite plan instance by using CLI.
     ```
     {: codeblock}
 
+
 ## Provisioning {{site.data.keyword.lakehouse_short}} Lite plan through Terraform module
 {: #create-lite-tf-module}
 

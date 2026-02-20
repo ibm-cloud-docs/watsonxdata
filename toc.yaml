@@ -185,7 +185,6 @@ toc:
           topics:
           - run_sql.md
           - explain_sql_query.md
-          - optm_jdbc_query.md
       - topicgroup:
           label: Query Optimizer
           topics:
@@ -479,6 +478,7 @@ toc:
           - ts_cs_issue.md
           - ts_ip_restrict_issue.md
           - ranger_crash_trble.md
+          - optm_jdbc_query.md
           - topicgroup:
               label: Spark
               topics:

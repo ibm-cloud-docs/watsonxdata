@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-02-18"
+lastupdated: "2026-02-20"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -11,72 +11,82 @@ subcollection: watsonxdata
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Optimizing JDBC metadata queries for Presto engines (Java and C++)
+# Optimizing JDBC metadata queries for Presto (Java) engine
 {: #jdbc_metadata_optimization}
 
-When using JDBC metadata APIs with Presto engine, query performance depends on the filters you specify. Understanding how to optimize these queries can significantly reduce execution time.
+Slow performance when querying metadata through Presto JDBC.
 {: shortdesc}
 
-## About JDBC metadata queries
+## What's happening
 {: #jdbc_metadata_optimization1}
 
-JDBC metadata methods such as `getColumns()`, `getTables()`, and `getSchemas()` are used by applications to discover database structure programmatically. These methods query the metastore to retrieve information about catalogs, schemas, tables, and columns.
+Metadata queries using `getColumns(catalog, null, null, "%")` through Presto JDBC take 5–8 minutes to complete.
 
-Without proper filtering, metadata queries can take 5-8 minutes or longer to complete, depending on the size of your catalog. This occurs because Presto must enumerate all schemas, tables, and columns by querying the metastore when no filters are specified.
-
-
-## Best practices
+## Why it's happening
 {: #jdbc_metadata_optimization2}
 
-To optimize JDBC metadata query performance, follow these recommendations:
+This is expected behavior when querying all columns across an entire catalog without filters. The operation requires Presto to enumerate all schemas, tables, and columns by querying the Hive Metastore. No engine-side optimization is available for this type of broad metadata query.
+
+Presto's metadata query behavior is determined by how it interacts with the metastore:
+
+- Exact filters allow early metadata pruning at the metastore level
+- Wildcard queries require full catalog enumeration
+- No filters force Presto to retrieve and process all metadata
+
+This is expected engine behavior. Metadata calls to the metastore can only use filters that are explicitly specified in the query. Without filters, Presto must scan the entire catalog, which takes time proportional to the catalog size.
+
+For more information about connecting to Presto, see Connecting to Presto (Java) engine.
+
+## How to fix it
+{: #jdbc_metadata_optimization3}
+
+To improve performance, always specify filters in your metadata queries:
 
 ### Always specify schema filters
-{: #jdbc_metadata_optimization3}
+{: #jdbc_metadata_optimization4}
 
 Limit the metadata scan scope by specifying the schema name. This is the most effective way to improve performance.
 
 When calling JDBC metadata methods:
+
 - Specify the schema name parameter instead of using `null`
 - This limits the scope to a single schema
 - Reduces query time from 5-8 minutes to under 1 minute
 
+
 ### Add table name filters when possible
-{: #jdbc_metadata_optimization4}
+{: #jdbc_metadata_optimization5}
 
 Further reduce the metadata scan by specifying table names or patterns.
 
 When you know the specific table or table pattern:
+
 - Specify the table name parameter
 - Use table name patterns when appropriate
 - This provides the fastest execution time
 
+
 ### Use proper escaping for special characters
-{: #jdbc_metadata_optimization5}
+{: #jdbc_metadata_optimization6}
 
 Schema and table names containing underscores require proper escaping for exact matching.
 
 For names with underscores:
+
 - Use the escape character (backslash `\`) before underscores
 - Example: `gosales\_1021` for exact match of `gosales_1021`
 - Without escaping, underscore acts as a wildcard character
 
 ### Enumerate schemas individually for multiple schemas
-{: #jdbc_metadata_optimization6}
+{: #jdbc_metadata_optimization7}
 
 If you need metadata for multiple schemas, query them individually rather than using wildcards.
 
 Recommended approach:
+
 1. First, retrieve the list of schemas using `getSchemas()`
 2. Then, query each schema individually with specific schema filters
 3. This provides better performance than querying all schemas at once
 
-## Why metadata queries can be slow
-{: #jdbc_metadata_optimization7}
-
-Presto's metadata query behavior is determined by how it interacts with the metastore:
-
-- **Exact filters** allow early metadata pruning at the metastore level
-- **Wildcard queries** require full catalog enumeration
-- **No filters** force Presto to retrieve and process all metadata
-
-This is expected engine behavior. Metadata calls to the metastore can only use filters that are explicitly specified in the query. Without filters, Presto must scan the entire catalog, which takes time proportional to the catalog size.
+Querying metadata without filters across an entire catalog is not recommended for production use.
+{: note}
