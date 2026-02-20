@@ -71,6 +71,10 @@ Data sources and storage enhancements
 
 The Custom S3 Storage configuration now includes an `Endpoint Type` field that allows you to select the endpoint access type. Options are `Path style access` or `Virtual host`.  For more information, see [Custom S3 Storage](/docs/watsonxdata?topic=watsonxdata-custom_s3_storage)
 
+Enhanced handling for reserved keywords in Salesforce connector
+
+: The Salesforce connector automatically handles reserved keywords in column names, improving your experience when querying Salesforce data. Previously, you encountered errors when querying columns with reserved keyword names such as `GROUP`. With the `data-source.identifier-quote="` property now configured by default, the connector seamlessly escapes these keywords, enabling you to query all Salesforce columns without errors or manual setup. If you are on an earlier version prior to 2.3.1, you can manually add this property to your Salesforce connector's catalog.properties file and then restart your pod via the backend. Do not delete your pods. If you face any issues, reach out to support for assistance.
+
 
 ## 10 December 2025 - Version 2.3
 {: #lakehouse_08dec2025}
