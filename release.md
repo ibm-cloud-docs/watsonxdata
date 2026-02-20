@@ -34,6 +34,10 @@ Technology preview features: We also offer a Technology preview section that inc
 {: #lakehouse_24feb2026}
 {: release-note}
 
+Terraform module for {{site.data.keyword.lakehouse_short}} deployment
+
+: You can now use the {{site.data.keyword.lakehouse_short}} Terraform module to create and manage {{site.data.keyword.lakehouse_short}} instances through infrastructure as code. The module provides a standardized, secure-by-default method that follows IBM Cloud best practices. It offers multiple deployment scenarios through basic and advanced examples, controlled versioning for safe updates, and enterprise-ready configurations that are secure, scalable, and compliant. To deploy a {{site.data.keyword.lakehouse_short}} Lite or Enterprise plan instance using this module, you need Terraform CLI and an IBM Cloud API key. You can create your Terraform configuration based on the provided examples, configure input variables, then run terraform init, terraform plan, and terraform apply to provision your instance. For detailed deployment instructions, see [{{site.data.keyword.lakehouse_short}} enterprise plan](/docs/watsonxdata?topic=watsonxdata-getting-started_1#create-by-tf-module) and [{{site.data.keyword.lakehouse_short}} Lite plan](/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1#create-lite-tf-module)
+
 Account-level component persistence for Enterprise plan instances
 
 : You can now retain account-level components such as catalogs, databases, buckets, and their metadata properties independently of individual instances. When an instance is deleted, these components remain accessible from any other instance within the same account and region. This behavior applies to all new Enterprise plan instances, which are now account-scoped. For more information, see [Resource scoping at account level](/docs/watsonxdata?topic=watsonxdata-account_scope).
