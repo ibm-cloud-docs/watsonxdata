@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-02-17"
+lastupdated: "2026-02-20"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -190,8 +190,8 @@ To deploy the {{site.data.keyword.lakehouse_short}} Lite plan by using this Terr
 
 The deployment process includes the following steps:
 
-1. Verify that you have the required prerequisites: Git CLI, Terraform CLI, and IBM Cloud API key.
-2. Clone the GitHub repository that contains the Terraform module and use the provided code and examples to create your own configuration.
+1. Verify that you have the required prerequisites: Terraform CLI and IBM Cloud API key.
+2. Create the Terraform configuration based on the code and examples provided.
 3. Configure input variables for your deployment.
 4. Run `terraform init` to download required providers and modules.
 5. Run `terraform plan` to preview the changes that Terraform will make to your infrastructure.
