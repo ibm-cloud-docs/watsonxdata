@@ -65,6 +65,11 @@ Enhanced data consistency and configurable locking for Iceberg connector
 
 : The Iceberg connector now performs commit operations atomically as a single transaction instead of two separate operations, improving data consistency and reliability. Previously, the connector executed `replaceTable` and `updateTableStatistics` as separate operations, which could result in an inconsistent state if one operation succeeded while the other failed. The improved implementation combines these operations into a single atomic transaction for both file-based and Glue-based metastores, ensuring data integrity during commits. Additionally, a new configuration property `iceberg.engine.hive.lock-enabled` allows you to enable or disable Hive table locks when the Iceberg connector accesses Hive tables. This property can be overridden at the table level using the `engine.hive.lock-enabled` table property. Disabling locks can improve performance in environments where concurrent access is controlled externally, though it may affect atomicity guarantees. This configuration is relevant only for file-based and Thrift-based metastores, as Glue does not use metastore locks by default.
 
+Data sources and storage enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following data sources and storage enhancements:
+
+The Custom S3 Storage configuration now includes an `Endpoint Type` field that allows you to select the endpoint access type. Options are `Path style access` or `Virtual host`.  For more information, see [Custom S3 Storage](/docs/watsonxdata?topic=watsonxdata-custom_s3_storage)
 
 
 ## 10 December 2025 - Version 2.3
