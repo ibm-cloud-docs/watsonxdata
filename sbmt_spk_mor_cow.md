@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-02-18"
+lastupdated: "2026-02-20"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -106,7 +106,7 @@ Convert multiple MoR tables within the same schema in a single job execution by 
       "--mor_table", "<table1>,<table2>,<table3>"
     ],
     "conf": {
-      "spark.hadoop.wxd.apikey": "ZenApiKey <encoded key>"
+      "spark.hadoop.wxd.apikey": "Basic <encoded key>"
     }
   }
 }
@@ -118,9 +118,14 @@ Convert multiple MoR tables within the same schema in a single job execution by 
 - `<catalog-name>`: The Iceberg catalog where the MoR tables are available.
 - `<database-name>`: The database where the MoR tables are available.
 - `<table1>,<table2>,<table3>`: Comma-separated list of MoR table names to convert.
-- `<encoded key>`: The value must be in the format: `echo -n "<username>:<your Zen API key>" | base64`.
+- `<encoded key>`: The value must be in the format echo -n"ibmlhapikey_<user_id>:<user’s api key>" | base64. Here, <user_id> is the IBM Cloud ID of the user whose api key is used to access the data bucket. The <IAM_APIKEY> here is the API key of the user accessing the Object store bucket. To generate an API key, login into the {{site.data.keyword.lakehouse_short}} console and navigate to Profile > Profile and Settings > API Keys and generate a new API key.
 
-When using Multiple Tables Mode, the CoW table names are automatically generated based on the MoR table names. Individual CoW table names cannot be specified in this mode.
+**Optional Arguments:**
+
+- `--parallelism`: Number of parallel syncs.
+- `--output_path`: Output path for sync results Parquet file.
+
+When using Multiple Tables Mode, the CoW table names are automatically generated as `{morTable}_cow` for each MoR table.. Individual CoW table names cannot be specified in this mode.
 {: note}
 
 ### Schema Level Mode
@@ -140,7 +145,7 @@ Convert all MoR tables within a schema by specifying only the schema name. This 
       "--schema", "<database-name>"
     ],
     "conf": {
-      "spark.hadoop.wxd.apikey": "ZenApiKey <encoded key>"
+      "spark.hadoop.wxd.apikey": "Basic <encoded key>"
     }
   }
 }
@@ -151,7 +156,12 @@ Convert all MoR tables within a schema by specifying only the schema name. This 
 
 - `<catalog-name>`: The Iceberg catalog where the schema is available.
 - `<database-name>`: The schema name containing MoR tables to convert.
-- `<encoded key>`: The value must be in the format: `echo -n "<username>:<your Zen API key>" | base64`.
+- `<encoded key>`: The value must be in the format echo -n"ibmlhapikey_<user_id>:<user’s api key>" | base64. Here, <user_id> is the IBM Cloud ID of the user whose api key is used to access the data bucket. The <IAM_APIKEY> here is the API key of the user accessing the Object store bucket. To generate an API key, login into the {{site.data.keyword.lakehouse_short}} console and navigate to Profile > Profile and Settings > API Keys and generate a new API key.
+
+**Optional Arguments:**
+
+- `--parallelism`: Number of parallel syncs.
+- `--output_path`: Output path for sync results Parquet file.
 
 ### Batch Conversion Mode
 {: #sbmt_spk_mor_cowrcta4}
@@ -167,10 +177,10 @@ Process multiple schemas or tables using a batch configuration file. This mode i
     "class": "com.ibm.iceberg.apps.RegisterCowTable",
     "arguments": [
       "--batch_file", "<path-to-batch-config>",
-      "--output_path", "s3a://<bucket-name>/path/to/sync_results.parquet"
+      "--output_path", "<path-to-sync_results>"
     ],
     "conf": {
-      "spark.hadoop.wxd.apikey": "ZenApiKey <encoded key>"
+      "spark.hadoop.wxd.apikey": "Basic <encoded key>"
     }
   }
 }
@@ -180,25 +190,29 @@ Process multiple schemas or tables using a batch configuration file. This mode i
 **Parameter values:**
 
 - `<path-to-batch-config>`: Path to the batch configuration file containing the list of catalogs, schemas, and tables to process.
-- `<bucket-name>`: Your Object store bucket name.
-- `<encoded key>`: The value must be in the format: `echo -n "<username>:<your Zen API key>" | base64`.
+- `<encoded key>`: The value must be in the format echo -n"ibmlhapikey_<user_id>:<user’s api key>" | base64. Here, <user_id> is the IBM Cloud ID of the user whose api key is used to access the data bucket. The <IAM_APIKEY> here is the API key of the user accessing the Object store bucket. To generate an API key, login into the {{site.data.keyword.lakehouse_short}} console and navigate to Profile > Profile and Settings > API Keys and generate a new API key.
 
-The `--output_path` parameter must always specify a bucket path (e.g., `s3a://bucket-name/path/to/results.parquet`). Local file system paths are not supported for storing conversion results.
-{: important}
+**Optional Arguments:**
+
+- `--parallelism`: Number of parallel syncs.
+- `--output_path`: Output path for sync results Parquet file.
+
 
 **Batch configuration file format:**
 
 ```bash
 {
-  "conversions": [
+  "syncs": [
     {
-      "catalog": "catalog1",
-      "schema": "schema1"
+      "catalog": "<catalog_name>",
+      "schema": "<schema_name>",
+      "morTable": "<mor_table_name>",
+      "cowTable": "<cow_table_name>"
     },
     {
-      "catalog": "catalog2",
-      "schema": "schema2",
-      "tables": ["table1", "table2"]
+      "catalog": "<another_catalog_name>",
+      "schema": "<another_schema_name>",
+      "morTable": "<another_mor_table_name>"
     }
   ]
 }
