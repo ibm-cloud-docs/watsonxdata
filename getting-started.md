@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-02-22"
+lastupdated: "2026-02-23"
 
 keywords: lakehouse, watsonx data, provision, endpoint, resource
 subcollection: watsonxdata
@@ -135,12 +135,12 @@ The access to provision IBM Cloud resources is governed by using [IAM access](ht
     {: codeblock}
 
 ### Provisioning an instance through Terraform module
-{: #create-by-tf-module}
+{: #create-ent-tf-module}
 
 You can provision an instance by using a pre-built, open-source, enterprise-ready Terraform module. This method uses [Terraform IBM Modules (TIM)](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim), which are curated collections of Terraform modules that simplify creating, managing, and versioning complex, compliant environments on IBM Cloud.
 
 #### About the {{site.data.keyword.lakehouse_short}} Terraform module
-{: #create-by-tf-module1}
+{: #create-ent-tf-module1}
 
 The [{{site.data.keyword.lakehouse_short}} module](https://registry.terraform.io/modules/terraform-ibm-modules/watsonx-data/ibm/latest) is a purpose-built Terraform module that follows secure-by-default principles and aligns with IBM Cloud best practices. The module provides the following capabilities:
 
@@ -151,7 +151,7 @@ The [{{site.data.keyword.lakehouse_short}} module](https://registry.terraform.io
 - Enterprise-ready configurations that are secure, scalable, and compliant
 
 #### Deploying the module
-{: #create-lite-tf-module2}
+{: #create-ent-tf-module2}
 
 To deploy the {{site.data.keyword.lakehouse_short}} enterprise plan by using this Terraform module, complete the steps in [Deploying a Terraform IBM Module by using Terraform CLI](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module).
 
@@ -163,7 +163,6 @@ The deployment process includes the following steps:
 4. Run `terraform init` to download required providers and modules.
 5. Run `terraform plan` to preview the changes that Terraform will make to your infrastructure.
 6. Run `terraform apply` to provision your {{site.data.keyword.lakehouse_short}} instance.
-
 
 
 ### Provisioning Virtual Private Endpoint (VPE) enabled instance
