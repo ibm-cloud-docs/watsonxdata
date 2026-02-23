@@ -31,6 +31,13 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
+## Spark application logs not displaying correctly in UI
+{: #known_issue54254}
+
+Spark application logs displayed in the UI are not rendering correctly for short-running applications that fail before the Spark context is initialized. The logs appear incorrect or incomplete in the UI. However, when the same logs are downloaded using the download option, the downloaded file contains the correct and complete log data.
+
+**Workaround:** Download the logs manually using the "Download logs" button in the UI. The downloaded log file will contain the correct and complete log data, including errors that occurred before Spark context initialization.
+
 ## ACL UI disablement does not prevent row filtering in Presto
 {: #known_issue51153}
 
