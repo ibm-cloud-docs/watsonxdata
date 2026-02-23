@@ -26,21 +26,18 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Resource scoping at account level
+# Component scoping at account level
 {: #account_scope}
 
-In {{site.data.keyword.lakehouse_full}}, the resource scope feature allows administrators to restrict visibility and access so that users can see and work with only the resources that belong to their current IBM Cloud account.
+In {{site.data.keyword.lakehouse_full}}, the account scoping feature enables you to retain the account level components such as catalogs, databases, buckets, and their metadata properties independently of individual instances.
 {: shortdesc}
-
-An **Account‑scoped** tag that is displayed next to the **Welcome** heading in the {{site.data.keyword.lakehouse_short}} interface indicates that the watsonx.data instance is restricted to a single IBM Cloud account.
 
 In {{site.data.keyword.lakehouse_short}} 2.3.1 release, the **Account‑scoped** mode is available for the {{site.data.keyword.lakehouse_short}} Enterprise edition in Tokyo and Sydney SaaS regions only.
 {: note}
 
-The Account‑scoped tag signals that the instance is operating with account‑level resource scope, meaning:
+An **Account‑scoped** tag that is displayed next to the **Welcome** heading in the {{site.data.keyword.lakehouse_short}} interface indicates that the watsonx.data instance is restricted to a single IBM Cloud account. Users can see and access resources that belong only to the same IBM Cloud account the instance is tied to.
 
-* Users can see and access resources that belong only to the same IBM Cloud account the instance is tied to.
-* Projects, catalogs, spaces, and other assets outside that account are not visible or accessible, even if a user has memberships or roles in other accounts.
+When an instance is deleted, the account level components such as catalogs, databases, and buckets are not removed. They remain fully accessible from any other instance within the same account and region.
 
 ## Limitations
 {: #account_scope_limit}
@@ -56,7 +53,12 @@ To identify whether an instance is in account scope or instance scope, use the f
 
 `GET /v1/instance/{instance_id}/mds`
 
-Account scope:
+**Requirements**:
+* The `catalog` query parameter is required when invoking APIs involving the Iceberg catalog.
+* The `account_id` is mandatory for all Thrift API calls made to the MDS Thrift Service over HTTP.
+* The `AccountId` is required for all direct calls to the MDS REST Service (Iceberg Catalog and Unity Catalog).
+
+**Account scope**:
 
 ```bash
 {
@@ -68,7 +70,7 @@ Account scope:
 ```
 {: codeblock}
 
-Instance scope:
+**Instance scope**:
 
 ```bash
 {
@@ -79,5 +81,8 @@ Instance scope:
 }
 ```
 {: codeblock}
+
+The endpoint for Iceberg operations is updated from `/mds/iceberg` to `/api/v1/iceberg`.
+{: note}
 
 For more information, see [Account-scope API](https://cloud.ibm.com/apidocs/watsonxdata-infra-services#get-mds).

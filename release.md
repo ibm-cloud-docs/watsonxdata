@@ -47,7 +47,7 @@ Terraform module for {{site.data.keyword.lakehouse_short}} deployment
 
 Account-level component persistence for Enterprise plan instances
 
-: You can now retain account-level components such as catalogs, databases, buckets, and their metadata properties independently of individual instances. When an instance is deleted, these components remain accessible from any other instance within the same account and region. This behavior applies to all new Enterprise plan instances, which are now account-scoped. For more information, see [Resource scoping at account level](/docs/watsonxdata?topic=watsonxdata-account_scope).
+: You can now retain account-level components such as catalogs, databases, buckets, and their metadata properties independently of individual instances. When an instance is deleted, these components remain accessible from any other instance within the same account and region. This behavior applies to all new Enterprise plan instances, which are now account-scoped. For more information, see [Component scoping at account level](/docs/watsonxdata?topic=watsonxdata-account_scope).
 
 
 Schema name reuse across Iceberg catalogs for Enterprise plan instances
