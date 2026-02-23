@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-02-20"
+lastupdated: "2026-02-23"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -11,7 +11,7 @@ subcollection: watsonxdata
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Optimizing JDBC metadata queries for Presto (Java) engine
+# Optimizing JDBC metadata queries for Presto (Java and C++) engines
 {: #jdbc_metadata_optimization}
 
 Slow performance when querying metadata through Presto JDBC.
@@ -35,7 +35,6 @@ Presto's metadata query behavior is determined by how it interacts with the meta
 
 This is expected engine behavior. Metadata calls to the metastore can only use filters that are explicitly specified in the query. Without filters, Presto must scan the entire catalog, which takes time proportional to the catalog size.
 
-For more information about connecting to Presto, see Connecting to Presto (Java) engine.
 
 ## How to fix it
 {: #jdbc_metadata_optimization3}
