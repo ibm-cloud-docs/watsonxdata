@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-02-20"
+lastupdated: "2026-02-23"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -176,7 +176,7 @@ Process multiple schemas or tables using a batch configuration file. This mode i
     "application": "/opt/ibm/spark/builtin-apps/iceberg/iceberg-apps.jar",
     "class": "com.ibm.iceberg.apps.RegisterCowTable",
     "arguments": [
-      "--batch_file", "<path-to-batch-config>",
+      "--sync_json", "<path-to-sync-json>",
       "--output_path", "<path-to-sync_results>"
     ],
     "conf": {
@@ -189,7 +189,7 @@ Process multiple schemas or tables using a batch configuration file. This mode i
 
 **Parameter values:**
 
-- `<path-to-batch-config>`: Path to the batch configuration file containing the list of catalogs, schemas, and tables to process.
+- `<path-to-sync-json>`: Path to the sync json file containing the list of catalogs, schemas, and tables to process.
 - `<encoded key>`: The value must be in the format echo -n"ibmlhapikey_<user_id>:<user’s api key>" | base64. Here, <user_id> is the IBM Cloud ID of the user whose api key is used to access the data bucket. The <IAM_APIKEY> here is the API key of the user accessing the Object store bucket. To generate an API key, login into the {{site.data.keyword.lakehouse_short}} console and navigate to Profile > Profile and Settings > API Keys and generate a new API key.
 
 **Optional Arguments:**
@@ -198,7 +198,7 @@ Process multiple schemas or tables using a batch configuration file. This mode i
 - `--output_path`: Output path for sync results Parquet file.
 
 
-**Batch configuration file format:**
+**Sync json configuration file format:**
 
 ```bash
 {
@@ -218,6 +218,9 @@ Process multiple schemas or tables using a batch configuration file. This mode i
 }
 ```
 {: codeblock}
+
+When using Schema Level Mode, the CoW table parameter is optional. If not provided, the CoW table name is automatically generated as `{morTable}_cow` for each MoR table.
+{: note}
 
 ### Change Data Capture (CDC) approach
 {: #sbmt_spk_mor_cowrcdc}
