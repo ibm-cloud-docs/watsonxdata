@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2026-02-20"
+lastupdated: "2026-02-23"
 
 keywords: watsonxdata, release notes
 
@@ -34,6 +34,12 @@ Technology preview features: We also offer a Technology preview section that inc
 {: #lakehouse_24feb2026}
 {: release-note}
 
+Engine and service enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
+
+   * Faster Migration from Delta Lake to watsonx.data Iceberg : You can now migrate your Delta Lake tables to watsonx.data Iceberg much faster and with significantly optimized resource usage by using a Spark application. During migration, the system preserves your existing data files, table properties, and partitioning, eliminating unnecessary rewrites. For more information, see [Submitting Spark jobs to migrate Delta Lake tables to Apache Iceberg](/docs/watsonxdata?topic=watsonxdata-migrate_ic_del).
+
 Terraform module for {{site.data.keyword.lakehouse_short}} deployment
 
 : You can now use the {{site.data.keyword.lakehouse_short}} Terraform module to create and manage {{site.data.keyword.lakehouse_short}} instances through infrastructure as code. The module provides a standardized, secure-by-default method that follows IBM Cloud best practices. It offers multiple deployment scenarios through basic and advanced examples, controlled versioning for safe updates, and enterprise-ready configurations that are secure, scalable, and compliant. To deploy a {{site.data.keyword.lakehouse_short}} Lite or Enterprise plan instance using this module, you need Terraform CLI and an IBM Cloud API key. You can create your Terraform configuration based on the provided examples, configure input variables, then run terraform init, terraform plan, and terraform apply to provision your instance. For detailed deployment instructions, see [{{site.data.keyword.lakehouse_short}} enterprise plan](/docs/watsonxdata?topic=watsonxdata-getting-started_1#create-by-tf-module) and [{{site.data.keyword.lakehouse_short}} Lite plan](/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1#create-lite-tf-module)
@@ -41,6 +47,7 @@ Terraform module for {{site.data.keyword.lakehouse_short}} deployment
 Account-level component persistence for Enterprise plan instances
 
 : You can now retain account-level components such as catalogs, databases, buckets, and their metadata properties independently of individual instances. When an instance is deleted, these components remain accessible from any other instance within the same account and region. This behavior applies to all new Enterprise plan instances, which are now account-scoped. For more information, see [Resource scoping at account level](/docs/watsonxdata?topic=watsonxdata-account_scope).
+
 
 Schema name reuse across Iceberg catalogs for Enterprise plan instances
 
@@ -73,7 +80,9 @@ Storage enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following data sources and storage enhancements:
 
-The Custom S3 Storage configuration now includes an `Endpoint Type` field that allows you to select the endpoint access type. Options are `Path style access` or `Virtual host`. For more information, see [Custom S3 Storage](/docs/watsonxdata?topic=watsonxdata-custom_s3_storage)
+   * The Custom S3 Storage configuration now includes an `Endpoint Type` field that allows you to select the endpoint access type. Options are `Path style access` or `Virtual host`. For more information, see [Custom S3 Storage](/docs/watsonxdata?topic=watsonxdata-custom_s3_storage).
+
+   * The storages or catalogs you have access to will be visible to you across all instances in your account, rather than being restricted to one instance.For more information about how to use the existing catalog, see [Quickstart](/docs/watsonxdata?topic=watsonxdata-quick_start_213).
 
 Enhanced handling for reserved keywords in Salesforce connector
 
@@ -83,6 +92,29 @@ Private key authentication for Snowflake connector
 
 : The Snowflake connector now provides private key-based authentication for enhanced security. When adding a Snowflake connection, select between `Default` (username and password) or `Private key` authentication from the `Authentication type` dropdown. Private key authentication eliminates password storage, improves compliance with enterprise security policies, simplifies automation for service accounts, and supports optional passphrase protection for encrypted keys. To use this feature, select `Private key` as the authentication type, upload your private key file in PEM format, and optionally provide a passphrase if your key is encrypted. For more information, see [Snowflake](/docs/watsonxdata?topic=watsonxdata-snowflake_database)
 
+Lite plan enhancements:
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancements to the Lite plan:
+
+   **Optimized resource allocation for an enhanced Trial experience** : The watsonx.data trial experience now includes 500 Resource Units (RUs) valid for 30 days.
+   This updated RU allocation aligns with the improved efficiency of the new architecture, allowing your 500 RUs to better support your exploration of core watsonx.data capabilities.
+   Trial (Lite) instances are automatically deleted when either the 500 RUs are fully consumed or the 30‑day period expires, whichever comes first. For more information, see [watsonx.data Lite plan](/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1).
+
+Access management enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following access management enhancements:
+
+   * **New Manager role for independent resource administration** : With the new Manager role, you can to create and manage your own engines, services in addition to all User-level privileges. This role grants full administrative control over the resources you create, while ensuring complete isolation from other scoped admins. Engines and services created by one admin remain visible and accessible only to that admin, and other admins with the same role cannot view or manage them, ensuring strong separation, clear ownership, and secure, independent administration. For more information, see [User authentication (Level 1)](/docs/watsonxdata?topic=watsonxdata-access_mgt#levelauth).
+
+Integration enhancements
+: This release of watsonx.data introduces the following enhanced integration with other services:
+   * Azure Active Directory (Microsoft Entra ID) integration for watsonx.data : You can now dynamically mask sensitive data in watsonx.data using IBM Knowledge Catalog (IKC), regardless of whether IKC is deployed as a SaaS service or on Cloud Pak for Data (CPD) Software. You can centralize governance in your preferred deployment model, while ensuring that watsonx.data queries consistently enforce masking and data protection rules.This ensures consistent protection for sensitive information across hybrid architectures and eliminating the previous limitation that required both services to be deployed on the same platform. For more information, see [Configuring watsonx.data on IBM Software Hub with Azure Active Directory](/docs/watsonxdata?topic=watsonxdata-ikc_integration_ad) and [Configuring watsonx.data on IBM Cloud with Azure Active Directory](/docs/watsonxdata?topic=watsonxdata-ikc_integration_ad_saas).
+
+Deprecated features
+
+: The following features are deprecated in this release:
+
+   * Support for Spark 3.4 runtime is deprecated and the default version is changed to Spark 3.5 runtime. To ensure a seamless experience and to leverage the latest features and improvements, switch to Spark 3.5. To update the Apache Spark version, see [Editing the Spark engine](/docs/watsonxdata?topic=watsonxdata-view-end#edit-dtls).
 
 ## 10 December 2025 - Version 2.3
 {: #lakehouse_08dec2025}
