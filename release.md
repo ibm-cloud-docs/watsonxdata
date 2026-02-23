@@ -104,7 +104,7 @@ Access management enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following access management enhancements:
 
-   * **New Manager role for independent resource administration** : With the new Manager role, you can to create and manage your own engines, services in addition to all User-level privileges. This role grants full administrative control over the resources you create, while ensuring complete isolation from other scoped admins. Engines and services created by one admin remain visible and accessible only to that admin, and other admins with the same role cannot view or manage them, ensuring strong separation, clear ownership, and secure, independent administration. For more information, see [User authentication (Level 1)](/docs/watsonxdata?topic=watsonxdata-access_mgt#levelauth).
+   * **Manager role for independent resource administration** : With the Manager role, you can create and manage your own engines, services in addition to all User-level privileges. This role grants full administrative control over the resources you create, while ensuring complete isolation from other scoped admins. Engines and services created by one Manager remain visible and accessible only to that Manager, and other Manager with the same role cannot view or manage them, ensuring strong separation, clear ownership, and secure, independent administration.. For more information, see [User authentication (Level 1)](/docs/watsonxdata?topic=watsonxdata-access_mgt#levelauth).
 
 Integration enhancements
 : This release of watsonx.data introduces the following enhanced integration with other services:
