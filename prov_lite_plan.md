@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2025
-lastupdated: "2026-02-20"
+  years: 2022, 2025, 2026
+lastupdated: "2026-02-23"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -166,7 +166,6 @@ Perform the following steps to provision a Lite plan instance by using CLI.
     ibmcloud resource service-instance <instance-name>
     ```
     {: codeblock}
-
 
 ## Provisioning {{site.data.keyword.lakehouse_short}} Lite plan through Terraform module
 {: #create-lite-tf-module}
