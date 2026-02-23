@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-02-16"
+lastupdated: "2026-02-23"
 
 keywords: watsonxdata, scope, resource
 
@@ -42,6 +42,13 @@ The Account‑scoped tag signals that the instance is operating with account‑l
 * Users can see and access resources that belong only to the same IBM Cloud account the instance is tied to.
 * Projects, catalogs, spaces, and other assets outside that account are not visible or accessible, even if a user has memberships or roles in other accounts.
 
+## Limitations
+{: #account_scope_limit}
+
+* Within a single account, the catalog names and bucket names must be unique across all instances in that account. For example, if `test_1` is created as a catalog in account A in any instance, no other catalog in account A can be named `test_1`.
+
+* Within a single account, only one catalog can be designated as the ACL (Access Control List) catalog.
+
 ## Identifying scope by using API
 {: #account_scope_api}
 
@@ -72,3 +79,5 @@ Instance scope:
 }
 ```
 {: codeblock}
+
+For more information, see [Account-scope API](https://cloud.ibm.com/apidocs/watsonxdata-infra-services#get-mds).
