@@ -45,8 +45,6 @@ To start {{site.data.keyword.lakehouse_full}} web console, complete the followin
 
 The home page provides information about the logged in user, the login timestamp, and region where the {{site.data.keyword.lakehouse_short}} is created.
 
-The home page provides information about the logged in user, the login timestamp, and region where the {{site.data.keyword.lakehouse_short}} is created.
-
 ## Homepage tiles
 {: #getstarted-console_1}
 
