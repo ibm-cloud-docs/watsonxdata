@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-02-19"
+lastupdated: "2026-02-24"
 
 keywords: watsonx.data, ikc, configuring, knowledgecatalog
 subcollection: watsonxdata
@@ -25,7 +25,8 @@ You can configure Azure Active Directory (now Microsoft Entra ID) as your SAML i
 To enable IKC integration, ensure the following pre-requisites are met:
 
 - A working {{site.data.keyword.lakehouse_short}} instance on IBM Cloud.
-- A working {{site.data.keyword.lakehouse_short}} on IBM Software Hub.
+- A working watsonx.data on IBM Software Hub.
+- IBM Knowledge Catalog (IKC) on IBM Software Hub.
 - Subscription to Microsoft Azure.
 
 
@@ -109,6 +110,8 @@ Complete these steps from watsonx.data on IBM Cloud.
 2. You should now be on the **Identity Provider Details** page.
 
 3. Upload the XML file created in [Configuring Azure Active Directory application](#connect_import_ad_cpd). This automatically populates the required fields.
+
+3. After uploading the XML file, if you encounter an issue with the IAM claim name in the assertion mapping section, map the SAML assertion `http://schemas.microsoft.com/identity/claims/displayname` to the IAM claim name.
 
 4. Click **Verify** to test the SAML connection between IBM Cloud (Service Provider) and Azure AD (Identity Provider).
 

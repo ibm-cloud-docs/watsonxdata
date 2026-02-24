@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-02-19"
+lastupdated: "2026-02-24"
 
 keywords: watsonx.data, ikc, configuring, knowledgecatalog
 subcollection: watsonxdata
@@ -24,7 +24,8 @@ This topic describes how to integrate Azure Active Directory (Azure AD) as a SAM
 To enable IKC integration, ensure the following pre-requisites are met:
 
 - A working {{site.data.keyword.lakehouse_short}} instance on IBM Cloud.
-- A working {{site.data.keyword.lakehouse_short}} on IBM Software Hub.
+- A working watsonx.data on IBM Software Hub.
+- IBM Knowledge Catalog (IKC) on IBM Software Hub.
 - Subscription to Microsoft Azure.
 
 
@@ -45,7 +46,7 @@ To enable IKC integration, ensure the following pre-requisites are met:
 {: step}
 
 
-Complete the [configuration steps](https://www.ibm.com/docs/en/cloud-paks/foundational-services/4.x_cd?topic=configuration-integrating-saml-azure-active-directory#configure-your-azure-active-directory-application-with-saml-sso__title__1) in the [Microsoft Azure portal](https://portal.azure.com/auth/login/) and save the Federation Metadata XML to your local drive.
+Complete the [configuration steps](https://www.ibm.com/docs/en/cloud-paks/foundational-services/4.x_cd?topic=configuration-integrating-saml-entra-id#ariaid-title5) in the [Microsoft Azure portal](https://portal.azure.com/auth/login/) and save the Federation Metadata XML to your local drive.
 
 
 ## Upload the Federation Metadata XML configuration to watsonx.data on IBM Software Hub
@@ -62,13 +63,17 @@ Complete these steps from watsonx.data on IBM Software Hub.
 
 1. Click **Token attribute mapping**.
 
-1. Update the token attribute-mapping fields such as Email, Family name, Given name, Groups abnd Sub from the Azure Active Directory Federation Metadata XML file that you downloaded in the Set up SSO section.
+1. Update the token attribute-mapping fields such as Email, Family name, Given name, Groups and Sub with the following values:
+
+   * Email : http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress
+   * Family name : http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname
+   * Given name : http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname
+   * Groups : http://schemas.microsoft.com/ws/2008/06/identity/claims/groups
+   * Sub : http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress
 
 1. In the **From identity provider** section, upload the Federation Metadata XML file that you saved in [Configuring Azure Active Directory application](#connect_import_ad_cpd) section.
 
 1. Click **Save**.
-
-
 
 
 ## Verify the configuration by testing the intergration
