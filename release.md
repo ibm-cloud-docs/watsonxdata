@@ -47,31 +47,25 @@ Terraform module for {{site.data.keyword.lakehouse_short}} deployment
 
 Account-level component persistence for Enterprise plan instances
 
-: You can now retain account-level components such as catalogs, databases, buckets, and their metadata properties independently of individual instances. When an instance is deleted, these components remain accessible from any other instance within the same account and region. This behavior applies to all new Enterprise plan instances, which are now account-scoped. For more information, see [Component scoping at account level](/docs/watsonxdata?topic=watsonxdata-account_scope).
+: You can now retain account-level components such as catalogs, databases, buckets, and their metadata properties independently of individual instances. When an instance is deleted, these components remain accessible from any other instance within the same account and region. This behavior applies to all new Enterprise plan instances, which are now account-scoped.
 
-
-Schema name reuse across Iceberg catalogs for Enterprise plan instances
-
-: Previously, when referencing a table using a three-part name (`<catalog>.<schema>.<table>`), schema names had to be unique across all catalogs within a watsonx.data instance. This restriction prevented the creation of schemas with the same name in different catalogs. This limitation is lifted for Iceberg catalogs. You can now reuse schema names across multiple Iceberg catalogs. For example:
-- `myiceberg_catalog1.abcschema.mytable`
-- `myiceberg_catalog2.abcschema.mytable`
-
-This behavior applies to all new Enterprise plan instances, which are now account-scoped.
-
-Schema names must still be unique across other catalog types such as Hive, Delta, and Hudi.
+   * Previously, when referencing a table using a three-part name (`<catalog>.<schema>.<table>`), schema names had to be unique across all catalogs within a watsonx.data instance. This restriction prevented the creation of schemas with the same name in different catalogs. This limitation is lifted for Iceberg catalogs. You can now reuse schema names across multiple Iceberg catalogs. For example:
+      - `myiceberg_catalog1.abcschema.mytable`
+      - `myiceberg_catalog2.abcschema.mytable`
+      Schema names must still be unique across other catalog types such as Hive, Delta, and Hudi.
 {: note}
 
-Thrift over HTTP protocol support in watsonx.data Enterprise plan
+   * The Metadata Service (MDS) in watsonx.data now runs the Thrift service over the HTTP protocol instead of the previous binary protocol. This change affects service endpoints and connection configurations.
 
-: The Metadata Service (MDS) in watsonx.data now runs the Thrift service over the HTTP protocol instead of the previous binary protocol. This change affects service endpoints and connection configurations.
+      Key changes:
+      * The MDS Thrift Protocol (`thrift://`) is changed to Thrift Over HTTP (`https://`).
+      * The `account_id` is mandatory for all Thrift API calls made to the MDS Thrift Service over HTTP.
+      * The `catalog` query parameter is required when invoking APIs involving the Iceberg catalog.
 
-   Key changes:
-   * The MDS Thrift Protocol (`thrift://`) is changed to Thrift Over HTTP (`https://`).
-   * The `account_id` is mandatory for all Thrift API calls made to the MDS Thrift Service over HTTP.
-   * The `catalog` query parameter is required when invoking APIs involving the Iceberg catalog.
-
-   For Spark and Presto engines within watsonx.data, these updates are applied automatically for both new and migrated catalogs. For external engines such as Spark, Db2, and Netezza, users must manually update the connection settings to reflect the new protocol, port, and query parameter.
+      For Spark and Presto engines within watsonx.data, these updates are applied automatically for both new and migrated catalogs. For external engines such as Spark, Db2, and Netezza, users must manually update the connection settings to reflect the new protocol, port, and query parameter.
    {: note}
+
+   For more information, see [Component scoping at account level](/docs/watsonxdata?topic=watsonxdata-account_scope).
 
 Enhanced data consistency and configurable locking for Iceberg connector
 

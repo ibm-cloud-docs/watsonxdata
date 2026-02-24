@@ -37,7 +37,9 @@ In {{site.data.keyword.lakehouse_short}} 2.3.1 release, the **Account‑scoped**
 
 An **Account‑scoped** tag that is displayed next to the **Welcome** heading in the {{site.data.keyword.lakehouse_short}} interface indicates that the watsonx.data instance is restricted to a single IBM Cloud account. Users can see and access resources that belong only to the same IBM Cloud account the instance is tied to.
 
-When an instance is deleted, the account level components such as catalogs, databases, and buckets are not removed. They remain fully accessible from any other instance within the same account and region.
+When an instance is deleted in {{site.data.keyword.lakehouse_short}}, the account level components such as catalogs, databases, and buckets are not removed. These componenets remain fully accessible to any other instance within the same account and region. However, if a catalog-bucket pair is assigned to an engine within any instance in the same account, that catalog cannot be deleted until the association is removed.
+
+For account-scoped resources, only one catalog can be designated as the ACL (Access Control List) catalog. The catalog names and bucket names must also be unique across all instances in that account. For example, if a catalog named `test_1` exists in any instance within account A, no other catalog in that account can be created with the same name.
 
 **Requirements**:
 
@@ -46,13 +48,6 @@ When an instance is deleted, the account level components such as catalogs, data
 
 The endpoint for Iceberg operations is updated from `/mds/iceberg` to `/api/v1/iceberg`.
 {: note}
-
-## Limitations
-{: #account_scope_limit}
-
-* Within a single account, the catalog names and bucket names must be unique across all instances in that account. For example, if `test_1` is created as a catalog in account A in any instance, no other catalog in account A can be named `test_1`.
-
-* Within a single account, only one catalog can be designated as the ACL (Access Control List) catalog.
 
 ## Identifying scope by using API
 {: #account_scope_api}
