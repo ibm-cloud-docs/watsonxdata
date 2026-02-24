@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-02-23"
+lastupdated: "2026-02-24"
 
 keywords: lakehouse, watsonx data, provision, endpoint, resource
 subcollection: watsonxdata
@@ -229,7 +229,9 @@ ibmcloud resource service-instance-create <instance_name> lakehouse lakehouse-en
 
 
 
-4. If you provisioned watsonx.data Enterprise in the ca-tor region, you have two options. Click **Open Admin console** to launch {{site.data.keyword.lakehouse_short}} web console experience. Click **watsonx** to launch the watsonx.data experience on the watsonx platform and work with unstructured data. See the [IBM watsonx.data as a Service documentation](https://dataplatform.cloud.ibm.com/docs/content/wsj/wx-data/intro-wdp.html?context=wxd&audience=wdp).
+4. If you provisioned watsonx.data Enterprise in the ca-tor region, you have two options. Click **Open Admin console** to launch {{site.data.keyword.lakehouse_short}} web console experience. You must complete the quick start steps, see [Quick start {{site.data.keyword.lakehouse_short}} console](/docs/watsonxdata?topic=watsonxdata-quick_start_213).
+
+Click **watsonx** to launch the watsonx.data experience on the watsonx platform and work with unstructured data. See the [IBM watsonx.data as a Service documentation](https://dataplatform.cloud.ibm.com/docs/content/wsj/wx-data/intro-wdp.html?context=wxd&audience=wdp).
 
     
 

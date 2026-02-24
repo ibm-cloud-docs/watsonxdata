@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-02-17"
+lastupdated: "2026-02-24"
 
 keywords: lakehouse, watsonx data, quick start, engine, catalog, bucket
 subcollection: watsonxdata
@@ -141,7 +141,7 @@ In the **Summary** page, complete the following steps:
 
 2. Click **Finish and go**.
 
-When the setup is complete, the {{site.data.keyword.lakehouse_short}} home page appears. Resource Unit consumption begins soon after creating the support services by using the quick start wizard. You can view the run rate that is submitted for billing from the billing and usage tab. For more information, see [Billing and usage]({{site.data.keyword.ref-manage_bill-link}}){: external}.
+When the setup is complete, the {{site.data.keyword.lakehouse_short}} home page appears. For information about the home page, see [Getting started with the web console](/docs/watsonxdata?topic=watsonxdata-getstarted-console). Resource Unit consumption begins soon after creating the support services by using the quick start wizard. You can view the run rate that is submitted for billing from the billing and usage tab. For more information, see [Billing and usage]({{site.data.keyword.ref-manage_bill-link}}){: external}.
 
 ## Next steps
 {: #qs_next_steps_213}
