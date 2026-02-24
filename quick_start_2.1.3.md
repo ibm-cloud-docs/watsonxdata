@@ -37,11 +37,12 @@ In the **Configure storage and catalog** section, complete the following steps:
 
 1. Select one of the following options and provide details.
    - **Use existing pair** : {{site.data.keyword.lakehouse_short}} automatically lists all storage-catalog pairs in your account that you have access to, allowing you to select an existing pair, avoid duplicate resources, and reduce setup time.
-   - **Discover COS instance** : Selects an existing IBM COS instance and an attached bucket on your IBM Cloud account. If multiple IBM COS instances and buckets are detected, select the IBM COS instance that contains the desired bucket to register with {{site.data.keyword.lakehouse_short}}.
+   - **Discover COS instance** : Selects an existing IBM COS instance and an attached bucket on your IBM Cloud account. If multiple IBM COS instances and buckets are detected, select the IBM COS instance that contains the desired bucket to register with {{site.data.keyword.lakehouse_short}}. You must specify the catalog name that needs to be associated with the storage in the **Catalog name** field.
    - **Register my own** :  You can use any existing IBM COS bucket from an existing instance or provision a new instance. To provision a new IBM COS instance, provide the following details:
 
      | Field | Description |
      |--------------------------|----------------|
+     | Catalog name | Specify the catalog name that needs to be associated with the storage. |
      | Bucket Type | Select from Amazon S3, IBM Storage Ceph, or IBM Cloud Object Storage.|
      |Region | The region where the data bucket is available.|
      | Bucket Name | Enter your bucket name.|
@@ -69,11 +70,12 @@ In the **Query monitoring** section, complete the following steps:
 2. If you enable the QHMM feature, you must configure the storage details for storing QHMM data. Select one of the following options and provide details.
 
    - **Use existing pair** : {{site.data.keyword.lakehouse_short}} automatically lists all storage-catalog pairs in your account that you have access to, allowing you to select an existing pair. Select a storage-catalog pair as the QHMM storage.
-   - **Discover COS instance** : Selects an existing IBM COS instance and an attached bucket on your IBM Cloud account. If multiple IBM COS instances and buckets are detected, select the IBM COS instance that contains the desired bucket to register with {{site.data.keyword.lakehouse_short}}.
+   - **Discover COS instance** : Selects an existing IBM COS instance and an attached storage on your IBM Cloud account. If multiple IBM COS instances and storages are detected, select the IBM COS instance that contains the desired storage to register with {{site.data.keyword.lakehouse_short}}. You must specify the catalog name that needs to be associated with the storage in the **Catalog name** field.
    - **Register my own** : You can register an existing bucket as a QHMM bucket. Only the following bucket types can be registered as a QHMM bucket: Amazon S3, IBM Storage Ceph, or IBM Cloud Object Storage. To register an existing bucket as QHMM bucket, provide the following details:
 
      | Field | Description |
      |--------------------------|----------------|
+     | Catalog name | Specify the catalog name that needs to be associated with the storage. |
      | Bucket Type | Select from Amazon S3, IBM Storage Ceph, or IBM Cloud Object Storage.|
      |Region | The region where the data bucket is available.|
      | Bucket Name | Enter your bucket name.|
