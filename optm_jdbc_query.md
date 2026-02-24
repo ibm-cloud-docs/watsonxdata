@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-02-23"
+lastupdated: "2026-02-24"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -20,12 +20,22 @@ Slow performance when querying metadata through Presto JDBC.
 ## What's happening
 {: #jdbc_metadata_optimization1}
 
-Metadata queries using `getColumns(catalog, null, null, "%")` through Presto JDBC take 5–8 minutes to complete.
+Metadata queries using `getColumns(catalog, null, null, "%")` through Presto JDBC might take 5–8 minutes or more to complete.
+
+The `getColumns()` method signature is: `ResultSet getColumns(String catalog, String schemaPattern, String tableNamePattern, String columnNamePattern)`
+
+Where:
+- **catalog**: Specify the catalog name exactly as it appears in the database. Use `""` (an empty string) to retrieve entries without a catalog, or use `null` to avoid using the catalog name as a filter.
+- **schemaPattern**: Specify the schema name pattern exactly as it appears in the database. Use `""` (an empty string) to retrieve entries without a schema, or use `null` to avoid using the schema name to filter the search.
+- **tableNamePattern**: Specify the table name pattern exactly as it appears in the database.
+- **columnNamePattern**: Specify the column name pattern exactly as it appears in the database.
+
+When you pass `null` for schema and table parameters, Presto cannot apply any filters at the metastore level, forcing it to scan the entire catalog.
 
 ## Why it's happening
 {: #jdbc_metadata_optimization2}
 
-This is expected behavior when querying all columns across an entire catalog without filters. The operation requires Presto to enumerate all schemas, tables, and columns by querying the Hive Metastore. No engine-side optimization is available for this type of broad metadata query.
+This is expected behavior when querying all columns across an entire catalog without filters. The operation requires Presto to enumerate all schemas, tables, and columns by querying the Hive Metastore.
 
 Presto's metadata query behavior is determined by how it interacts with the metastore:
 
@@ -39,7 +49,7 @@ This is expected engine behavior. Metadata calls to the metastore can only use f
 ## How to fix it
 {: #jdbc_metadata_optimization3}
 
-To improve performance, always specify filters in your metadata queries:
+Specify filters in your metadata queries and configure metastore caching to improve performance:
 
 ### Always specify schema filters
 {: #jdbc_metadata_optimization4}
@@ -48,9 +58,16 @@ Limit the metadata scan scope by specifying the schema name. This is the most ef
 
 When calling JDBC metadata methods:
 
-- Specify the schema name parameter instead of using `null`
-- This limits the scope to a single schema
-- Reduces query time from 5-8 minutes to under 1 minute
+- Specify the schema name parameter instead of using `null`.
+- This limits the scope to a single schema.
+
+Example query:
+
+```bash
+   getColumns(<catalog_name>, <schema_pattern>, null, "%")
+
+```
+{: codeblock}
 
 
 ### Add table name filters when possible
@@ -60,10 +77,16 @@ Further reduce the metadata scan by specifying table names or patterns.
 
 When you know the specific table or table pattern:
 
-- Specify the table name parameter
-- Use table name patterns when appropriate
-- This provides the fastest execution time
+- Specify the table name parameter.
+- Use table name patterns when appropriate. This provides the fastest execution time.
 
+Example query:
+
+```bash
+   getColumns(<catalog_name>, <schema_pattern>, <table_pattern>, "%")
+
+```
+{: codeblock}
 
 ### Use proper escaping for special characters
 {: #jdbc_metadata_optimization6}
@@ -72,9 +95,15 @@ Schema and table names containing underscores require proper escaping for exact 
 
 For names with underscores:
 
-- Use the escape character (backslash `\`) before underscores
-- Example: `gosales\_1021` for exact match of `gosales_1021`
-- Without escaping, underscore acts as a wildcard character
+- Use the escape character (backslash `\`) before underscores. For example: `gosales\_1021` for exact match of `gosales_1021`
+- For the `LIKE` operator, when you do not escape, underscore acts as a wildcard character.
+
+   ```bash
+   SELECT * FROM (VALUES ('abc'), ('bcd'), ('cde')) AS t (name)
+   WHERE name LIKE '%b%'
+
+   ```
+   {: codeblock}
 
 ### Enumerate schemas individually for multiple schemas
 {: #jdbc_metadata_optimization7}
@@ -83,9 +112,18 @@ If you need metadata for multiple schemas, query them individually rather than u
 
 Recommended approach:
 
-1. First, retrieve the list of schemas using `getSchemas()`
-2. Then, query each schema individually with specific schema filters
-3. This provides better performance than querying all schemas at once
+1. Retrieve the list of schemas using `getSchemas()`.
+2. Query each schema individually with specific schema filters. This provides better performance than querying all schemas at once.
 
 Querying metadata without filters across an entire catalog is not recommended for production use.
 {: note}
+
+### Configure metastore caching
+{: #jdbc_metadata_optimization8}
+
+Configure metastore caching to improve metadata query performance:
+
+- **hive.metastore-cache-scope**: Possible values are `ALL` and `PARTITION`. This setting controls whether the system caches only partition‑related metadata or caches all metadata, including partition details, table names, database names, roles, and more.
+- **hive.metastore-cache-ttl**: Specifies the duration for how long you want cached metastore data to be considered valid.
+- **hive.metastore-refreshIntegererval**: Asynchronously refreshes cached metastore data after access when it is older than this interval but not yet expired, allowing subsequent accesses to use fresh data.
+- **hive.metastore-cache-maximum-size**: Sets the metastore cache maximum size.
