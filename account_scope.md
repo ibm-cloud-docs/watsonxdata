@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-02-23"
+lastupdated: "2026-02-24"
 
 keywords: watsonxdata, scope, resource
 
@@ -39,6 +39,11 @@ An **Account‑scoped** tag that is displayed next to the **Welcome** heading in
 
 When an instance is deleted, the account level components such as catalogs, databases, and buckets are not removed. They remain fully accessible from any other instance within the same account and region.
 
+**Requirements**:
+
+* The `account_id` is mandatory for all Thrift API calls made to the MDS Thrift Service over HTTP.
+* The `AccountId` is required for all direct calls to the MDS REST Service (Iceberg Catalog and Unity Catalog).
+
 ## Limitations
 {: #account_scope_limit}
 
@@ -52,11 +57,6 @@ When an instance is deleted, the account level components such as catalogs, data
 To identify whether an instance is in account scope or instance scope, use the following API:
 
 `GET /v1/instance/{instance_id}/mds`
-
-**Requirements**:
-* The `catalog` query parameter is required when invoking APIs involving the Iceberg catalog.
-* The `account_id` is mandatory for all Thrift API calls made to the MDS Thrift Service over HTTP.
-* The `AccountId` is required for all direct calls to the MDS REST Service (Iceberg Catalog and Unity Catalog).
 
 **Account scope**:
 
