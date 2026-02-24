@@ -44,6 +44,9 @@ When an instance is deleted, the account level components such as catalogs, data
 * The `account_id` is mandatory for all Thrift API calls made to the MDS Thrift Service over HTTP.
 * The `AccountId` is required for all direct calls to the MDS REST Service (Iceberg Catalog and Unity Catalog).
 
+The endpoint for Iceberg operations is updated from `/mds/iceberg` to `/api/v1/iceberg`.
+{: note}
+
 ## Limitations
 {: #account_scope_limit}
 
@@ -81,8 +84,5 @@ To identify whether an instance is in account scope or instance scope, use the f
 }
 ```
 {: codeblock}
-
-The endpoint for Iceberg operations is updated from `/mds/iceberg` to `/api/v1/iceberg`.
-{: note}
 
 For more information, see [Account-scope API](https://cloud.ibm.com/apidocs/watsonxdata-infra-services#get-mds).
