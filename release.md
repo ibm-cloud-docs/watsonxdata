@@ -119,6 +119,18 @@ Deprecated features
 
    * Support for Spark 3.4 runtime is deprecated and the default version is changed to Spark 3.5 runtime. To ensure a seamless experience and to leverage the latest features and improvements, switch to Spark 3.5. To update the Apache Spark version, see [Editing the Spark engine](/docs/watsonxdata?topic=watsonxdata-view-end#edit-dtls).
 
+   * Python 3.10 is deprecated. To ensure a seamless experience when submitting Spark applications, you need to update your runtime to Python 3.11. Until you complete the migration to Python 3.11, you can use the following workaround to continue running Python 3.10:
+
+   ``` bash
+
+   "conf": {
+   "export RUNTIME_PYTHON_ENV": "python310"
+   }
+
+   ```
+   {: codeblock}
+
+
 ## 10 December 2025 - Version 2.3
 {: #lakehouse_08dec2025}
 {: release-note}
