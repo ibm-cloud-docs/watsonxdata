@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-02-24"
+lastupdated: "2026-02-25"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -43,7 +43,7 @@ Presto's metadata query behavior is determined by how it interacts with the meta
 - Wildcard queries require full catalog enumeration
 - No filters force Presto to retrieve and process all metadata
 
-This is expected engine behavior. Metadata calls to the metastore can only use filters that are explicitly specified in the query. Without filters, Presto must scan the entire catalog, which takes time proportional to the catalog size.
+Metadata calls to the metastore can only use filters that are explicitly specified in the query. Without filters, Presto must scan the entire catalog, which takes time proportional to the catalog size.
 
 
 ## How to fix it
@@ -88,7 +88,7 @@ Example query:
 ```
 {: codeblock}
 
-### Use proper escaping for special characters
+### Use proper escaping for special characters when using `LIKE` operator
 {: #jdbc_metadata_optimization6}
 
 Schema and table names containing underscores require proper escaping for exact matching.
@@ -99,8 +99,9 @@ For names with underscores:
 - For the `LIKE` operator, when you do not escape, underscore acts as a wildcard character.
 
    ```bash
-   SELECT * FROM (VALUES ('abc'), ('bcd'), ('cde')) AS t (name)
-   WHERE name LIKE '%b%'
+   SELECT TABLE_CAT, TABLE_SCHEM, TABLE_NAME, COLUMN_NAME, DATA_TYPE
+   FROM system.jdbc.columns
+   WHERE TABLE_CAT = 'hive_data' AND TABLE_SCHEM LIKE 'gosales\_1021' ESCAPE '\'
 
    ```
    {: codeblock}
@@ -118,12 +119,21 @@ Recommended approach:
 Querying metadata without filters across an entire catalog is not recommended for production use.
 {: note}
 
-### Configure metastore caching
+### Configure metastore caching on coordinator
 {: #jdbc_metadata_optimization8}
 
 Configure metastore caching to improve metadata query performance:
 
-- **hive.metastore-cache-scope**: Possible values are `ALL` and `PARTITION`. This setting controls whether the system caches only partition‑related metadata or caches all metadata, including partition details, table names, database names, roles, and more.
+- **hive.metastore-cache-scope**: This setting controls whether the system caches only partition‑related metadata or caches all metadata, including partition details, table names, database names, roles, and more. Possible values are `ALL` and `PARTITION`.
 - **hive.metastore-cache-ttl**: Specifies the duration for how long you want cached metastore data to be considered valid.
-- **hive.metastore-refreshIntegererval**: Asynchronously refreshes cached metastore data after access when it is older than this interval but not yet expired, allowing subsequent accesses to use fresh data.
+- **hive.metastore-refreshInterval**: Asynchronously refreshes cached metastore data after access when it is older than this interval but not yet expired, allowing subsequent accesses to use fresh data.
 - **hive.metastore-cache-maximum-size**: Sets the metastore cache maximum size.
+
+Example sample configuration values for above parameter:
+
+```bash
+   hive.metastore-cache-scope=ALL
+  hive.metastore-cache-ttl=120m
+  hive.metastore-refreshInterval=60m
+  hive.metastore-cache-maximum-size=1000
+```
