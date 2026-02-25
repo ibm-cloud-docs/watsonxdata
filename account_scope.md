@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-02-24"
+lastupdated: "2026-02-25"
 
 keywords: watsonxdata, scope, resource
 
@@ -41,13 +41,17 @@ When an instance is deleted in {{site.data.keyword.lakehouse_short}}, the accoun
 
 For account-scoped resources, only one catalog can be designated as the ACL (Access Control List) catalog. The catalog names and bucket names must also be unique across all instances in that account. For example, if a catalog named `test_1` exists in any instance within account A, no other catalog in that account can be created with the same name.
 
-**Requirements**:
+You can reuse schema names across multiple Iceberg catalogs in account scoped resources. For example:
+- `myiceberg_catalog1.abcschema.mytable`
+- `myiceberg_catalog2.abcschema.mytable`
 
-* The `account_id` is mandatory for all Thrift API calls made to the MDS Thrift Service over HTTP.
-* The `AccountId` is required for all direct calls to the MDS REST Service (Iceberg Catalog and Unity Catalog).
-
-The endpoint for Iceberg operations is updated from `/mds/iceberg` to `/api/v1/iceberg`.
-{: note}
+The Metadata Service (MDS) in account scoped resources support Thrift over HTTP protocol.
+   Key changes:
+   * The MDS Thrift Protocol (`thrift://`) is changed to Thrift Over HTTP (`https://`).
+   * The `account_id` is mandatory for all Thrift API calls made to the MDS Thrift Service over HTTP.
+   * The `catalog` query parameter is required when invoking APIs involving the Iceberg catalog.
+   * The `AccountId` is required for all direct calls to the MDS REST Service (Iceberg Catalog and Unity Catalog).
+   * The endpoint for Iceberg operations is updated from `/mds/iceberg` to `/api/v1/iceberg`.
 
 ## Identifying scope by using API
 {: #account_scope_api}
