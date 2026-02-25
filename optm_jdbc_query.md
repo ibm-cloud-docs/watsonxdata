@@ -129,7 +129,7 @@ Configure metastore caching to improve metadata query performance:
 - **hive.metastore-refreshInterval**: Asynchronously refreshes cached metastore data after access when it is older than this interval but not yet expired, allowing subsequent accesses to use fresh data.
 - **hive.metastore-cache-maximum-size**: Sets the metastore cache maximum size.
 
-Example sample configuration values for above parameter:
+Example sample configuration values for above parameters:
 
 ```bash
    hive.metastore-cache-scope=ALL
