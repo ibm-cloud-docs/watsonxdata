@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2025, 2026
-lastupdated: "2026-02-23"
+  years: 2022, 2026
+lastupdated: "2026-02-25"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -45,7 +45,7 @@ In this tutorial, you learn how to provision {{site.data.keyword.lakehouse_short
 
 * [Provisioning {{site.data.keyword.lakehouse_short}} Lite plan through CLI](#create-lite-cli)
 
-* [Provisioning {{site.data.keyword.lakehouse_short}} Lite plan through Terraform module](#create-lite-tf-module)
+* [Provisioning {{site.data.keyword.lakehouse_short}} Lite plan through Terraform module](#create-lite-terra)
 
 
 
@@ -168,12 +168,12 @@ Perform the following steps to provision a Lite plan instance by using CLI.
     {: codeblock}
 
 ## Provisioning {{site.data.keyword.lakehouse_short}} Lite plan through Terraform module
-{: #create-lite-tf-module}
+{: #create-lite-terra}
 
 You can provision a {{site.data.keyword.lakehouse_short}} Lite plan instance by using a pre-built, open-source, enterprise-ready Terraform module. This method uses [Terraform IBM Modules (TIM)](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim), which are curated collections of Terraform modules that simplify creating, managing, and versioning complex, compliant environments on IBM Cloud.
 
 ### About the {{site.data.keyword.lakehouse_short}} Terraform module
-{: #create-lite-tf-module1}
+{: #create-lite-terra-1}
 
 The [{{site.data.keyword.lakehouse_short}} module](https://registry.terraform.io/modules/terraform-ibm-modules/watsonx-data/ibm/latest) is a purpose-built Terraform module that follows secure-by-default principles and aligns with IBM Cloud best practices. The module provides the following capabilities:
 
@@ -184,7 +184,7 @@ The [{{site.data.keyword.lakehouse_short}} module](https://registry.terraform.io
 - Enterprise-ready configurations that are secure, scalable, and compliant
 
 ### Deploying the module
-{: #create-lite-tf-module2}
+{: #create-lite-terra-2}
 
 To deploy the {{site.data.keyword.lakehouse_short}} Lite plan by using this Terraform module, complete the steps in [Deploying a Terraform IBM Module by using Terraform CLI](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module).
 
