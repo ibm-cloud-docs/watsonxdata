@@ -122,7 +122,7 @@ Querying metadata without filters across an entire catalog is not recommended fo
 ### Configure metastore caching on coordinator
 {: #jdbc_metadata_optimization8}
 
-This section is only applicable for hive catalogs.
+This section is applicable only to Hive catalogs.
 {: note}
 
 Configure metastore caching to improve metadata query performance:
