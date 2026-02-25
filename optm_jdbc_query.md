@@ -122,11 +122,14 @@ Querying metadata without filters across an entire catalog is not recommended fo
 ### Configure metastore caching on coordinator
 {: #jdbc_metadata_optimization8}
 
+This section is only applicable for hive catalogs.
+{: note}
+
 Configure metastore caching to improve metadata query performance:
 
 - **hive.metastore-cache-scope**: This setting controls whether the system caches only partition‑related metadata or caches all metadata, including partition details, table names, database names, roles, and more. Possible values are `ALL` and `PARTITION`.
 - **hive.metastore-cache-ttl**: Specifies the duration for how long you want cached metastore data to be considered valid.
-- **hive.metastore-refreshInterval**: Asynchronously refreshes cached metastore data after access when it is older than this interval but not yet expired, allowing subsequent accesses to use fresh data.
+- **hive.metastore-refresh-interval**: Asynchronously refreshes cached metastore data after access when it is older than this interval but not yet expired, allowing subsequent accesses to use fresh data.
 - **hive.metastore-cache-maximum-size**: Sets the metastore cache maximum size.
 
 Example sample configuration values for above parameters:
@@ -134,6 +137,6 @@ Example sample configuration values for above parameters:
 ```bash
    hive.metastore-cache-scope=ALL
   hive.metastore-cache-ttl=120m
-  hive.metastore-refreshInterval=60m
+  hive.metastore-refresh-interval=60m
   hive.metastore-cache-maximum-size=1000
 ```
