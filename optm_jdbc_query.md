@@ -135,7 +135,7 @@ Configure metastore caching to improve metadata query performance:
 Example sample configuration values for above parameters:
 
 ```bash
-   hive.metastore-cache-scope=ALL
+  hive.metastore-cache-scope=ALL
   hive.metastore-cache-ttl=120m
   hive.metastore-refresh-interval=60m
   hive.metastore-cache-maximum-size=1000
