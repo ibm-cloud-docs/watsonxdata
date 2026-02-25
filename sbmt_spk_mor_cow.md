@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-02-23"
+lastupdated: "2026-02-25"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -219,7 +219,7 @@ Process multiple schemas or tables using a batch configuration file. This mode i
 ```
 {: codeblock}
 
-When using Schema Level Mode, the CoW table parameter is optional. If not provided, the CoW table name is automatically generated as `{morTable}_cow` for each MoR table.
+When using Batch Conversion Mode, the CoW table parameter is optional. If not provided, the CoW table name is automatically generated as `{morTable}_cow` for each MoR table.
 {: note}
 
 ### Change Data Capture (CDC) approach
