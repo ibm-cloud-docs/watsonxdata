@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2026-02-25"
+lastupdated: "2026-02-26"
 
 keywords: watsonxdata, release notes
 
@@ -47,9 +47,11 @@ Terraform module for {{site.data.keyword.lakehouse_short}} deployment
 
 Account-level component persistence for Enterprise plan instances
 
+
 : You can now retain account-level components such as catalogs, databases, buckets, and their metadata properties independently of individual instances. When an instance is deleted, these components remain accessible from any other instance within the same account and region. This behavior applies to all new Enterprise plan instances, which are now account-scoped. For more information, see [Component scoping at account level](/docs/watsonxdata?topic=watsonxdata-account_scope).
 
 Schema name reuse across Iceberg catalogs for Enterprise plan instances
+
 
 : Previously, when referencing a table using a three-part name (`<catalog>.<schema>.<table>`), schema names had to be unique across all catalogs within a watsonx.data instance. This restriction prevented the creation of schemas with the same name in different catalogs. This limitation is lifted for Iceberg catalogs. You can now reuse schema names across multiple Iceberg catalogs. For example:
 - `myiceberg_catalog1.abcschema.mytable`
@@ -61,6 +63,7 @@ Schema names must still be unique across other catalog types such as Hive, Delta
 {: note}
 
 Thrift over HTTP protocol support in watsonx.data Enterprise plan
+
 
 : The Metadata Service (MDS) in watsonx.data now runs the Thrift service over the HTTP protocol instead of the previous binary protocol. This change affects service endpoints and connection configurations.
 
