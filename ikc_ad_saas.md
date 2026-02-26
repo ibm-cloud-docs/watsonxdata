@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-02-24"
+lastupdated: "2026-02-26"
 
 keywords: watsonx.data, ikc, configuring, knowledgecatalog
 subcollection: watsonxdata
@@ -25,7 +25,6 @@ You can configure Azure Active Directory (now Microsoft Entra ID) as your SAML i
 To enable IKC integration, ensure the following pre-requisites are met:
 
 - A working {{site.data.keyword.lakehouse_short}} instance on IBM Cloud.
-- A working watsonx.data on IBM Software Hub.
 - IBM Knowledge Catalog (IKC) on IBM Software Hub.
 - Subscription to Microsoft Azure.
 
@@ -48,6 +47,7 @@ To enable IKC integration, ensure the following pre-requisites are met:
 5. Click **Save**.
 
 6. Click **Download configuration** to download the metadata service provider configuration.
+
 
 
 ## Configuring Azure Active Directory application
@@ -133,7 +133,7 @@ Complete these steps from watsonx.data on IBM Cloud.
 
 
 ## Configure IKC in {{site.data.keyword.lakehouse_full}} UI
-{: #conf_ikc-saas}
+{: #conf_ikc}
 {: step}
 
 1. Log in to {{site.data.keyword.lakehouse_full}}.
@@ -145,15 +145,36 @@ Complete these steps from watsonx.data on IBM Cloud.
    | Field | Description |
    |-------|-------------|
    | Service | Select **IBM Knowledge Catalog**. |
-   | Cluster type | Select **SaaS** |
+   | Cluster type | Select **Software** |
    | Supported catalogs | Select the applicable catalogs for IKC governance. |
-   | IKC endpoint  | Configure the IKC API url by including `api.` after `https://`. For example, if the URL is `https://dataplatform.cloud.ibm.com`, the endpoint should be `https://api.dataplatform.cloud.ibm.com`. If the URL is with location (`https://<region>.dataplatform.cloud.ibm.com`), the endpoint should be `https://api.<region>.dataplatform.cloud.ibm.com`. |
-   | Enable cross account integration |  Turn this on to use an IKC that exists in a different account from your watsonx.data account.    |
-   | IKC User Account ID |   Specify the account ID of the account where the IKC is located.    |
+   | IKC endpoint  | Specify the Knowledge Catalog endpoint URL. For example, https://<instance>.ibm.com. |
+   | Username | Enter your username (`ibmlhapikey_<EMAIL_ID>`). |
+   | Password | Specify the Zen API key. For more information, see [Generating token](https://www.ibm.com/docs/en/software-hub/5.3.x?topic=keys-generating-zenapikey-authorization-tokens). |
+   |Port is SSL enabled | Use the toggle switch to enable or disable SSL connection. Enabling the SSL connection ensures secure connection.  |
+   |Upload Certificate | If SSL is enabled, \n i. The Upload SSL certificate (.pem, .crt, .cert, or .cer) link is enabled. \n ii. Click the Upload SSL certificate (.pem, .crt, .cert, or .cer) link. \n iii. Browse the SSL certificate and upload. \n From the cluster where IKC is installed, you can retrieve the certificate using the following steps: \n a. Click on Not Secure in the address bar. \n b. Select Certificate details from the drop-down. \n c. Switch from the General tab to the Details tab. \n d. Click on Export to save the certificate. |
    | Test connection | Click the Test connection link to verify the connection. If the connection is successful, you can view a success message. |
    {: caption="Ingrate service" caption-side="bottom"}
 
 1. Click **Integrate**.
+
+### Generating a Keystore and a Key pair
+{: #ikc}
+
+
+1. Log into your IKC server by using SSH and use the following command to generate a new keystore file containing a private key and a self-signed certificate.
+
+``` bash
+keytool -genkey -keyalg RSA -alias ikcadmin -keystore ikc-admin-keystore.jks -storepass <store_password> -validity 365 -keysize 2048 -dname "CN=<Ikc FQDN>, OU=<Organizational Unit>, O=<Organization>, L=<City>, ST=<State>, C=<Country>"
+```
+{: codeblock}
+
+
+Replace `<store_password>` with a strong password.
+Replace `<Ikc FQDN>` with the server's FQDN (e.g., ikc.example.com).
+Provide appropriate values for Organizational Unit (OU), Organization (O), Location (L), State (ST), and Country (C) when prompted, or by using the -dname parameter.
+
+
+
 
 ## Verify the masking functionality as per the rules in IKC
 {: #verify_mask-saas}
