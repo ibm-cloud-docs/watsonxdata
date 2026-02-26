@@ -37,7 +37,7 @@
   "section_devtools": {
     "api": "/apidocs/watsonxdata",
     "cli": "/docs/acme-test",
-    "terraform": "https://registry.terraform.io/providers/IBM-Cloud/ibm/latest/docs/resources/iam_access_group"
+    "terraform": "https://registry.terraform.io/modules/terraform-ibm-modules/watsonx-data/ibm/latest"
   },
   "section_updates": {
     "view_more": "/docs/watsonxdata?topic=watsonxdata-release"

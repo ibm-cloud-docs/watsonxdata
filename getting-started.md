@@ -41,6 +41,7 @@ The access to provision IBM Cloud resources is governed by using [IAM access](ht
 
 * [Provision an instance through UI](#create-by-ui)
 * [Provision an instance through CLI](#create-by-cli)
+* [Provision an instance through Terraform module](#create-by-tf-module)
 
 ### Provision an instance through UI
 {: #create-by-ui}
@@ -186,7 +187,12 @@ ibmcloud resource service-instance-create <instance_name> lakehouse lakehouse-en
    - `ibm`: For fully managed account instances (default).
    - `vpe_required`: This parameter must be set to `True` for `eu-de`, `us-east`, `us-south`. Toronto and Sydney do not require this parameter.
 
+### Provisioning {{site.data.keyword.lakehouse_short}} an instance through Terraform module
+{: #create-by-tf-module}
 
+You can use a pre-built, open-source and enterprise-ready [Terraform IBM modules](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim) - [watsonx.data module](https://registry.terraform.io/modules/terraform-ibm-modules/watsonx-data/ibm/latest) to provision a Enterprise plan instance.
+
+Follow the instructions [provided](docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module) to deploy the Terraform module.
 
 ## Open the web console
 {: #open_console}
