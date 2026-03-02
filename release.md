@@ -46,11 +46,11 @@ Terraform module for {{site.data.keyword.lakehouse_short}} deployment
 
 : You can now use the {{site.data.keyword.lakehouse_short}} Terraform module to create and manage {{site.data.keyword.lakehouse_short}} instances through infrastructure as code. The module provides a standardized, secure-by-default method that follows IBM Cloud best practices. It offers multiple deployment scenarios through basic and advanced examples, controlled versioning for safe updates, and enterprise-ready configurations that are secure, scalable, and compliant. For detailed deployment instructions, see [{{site.data.keyword.lakehouse_short}} enterprise plan](/docs/watsonxdata?topic=watsonxdata-getting-started_1#create-by-tf-module) and [{{site.data.keyword.lakehouse_short}} Lite plan](/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1#create-lite-tf-module)
 
-Account-level component persistence for Enterprise plan instances
+Account-level component persistence for Enterprise plan instances 
 
 : You can now retain account-level components such as catalogs, databases, buckets, and their metadata properties independently of individual instances. When an instance is deleted, these components remain accessible from any other instance within the same account and region. This behavior applies to all new Enterprise plan instances, which are now account-scoped. For more information, see [Component scoping at account level](/docs/watsonxdata?topic=watsonxdata-account_scope).
 
-Schema name reuse across Iceberg catalogs for Enterprise plan instances
+Schema name reuse across Iceberg catalogs for Enterprise plan instances 
 
 : Previously, when referencing a table using a three-part name (`<catalog>.<schema>.<table>`), schema names had to be unique across all catalogs within a watsonx.data instance. This restriction prevented the creation of schemas with the same name in different catalogs. This limitation is lifted for Iceberg catalogs. You can now reuse schema names across multiple Iceberg catalogs. For example:
 - `myiceberg_catalog1.abcschema.mytable`
@@ -61,7 +61,7 @@ This behavior applies to all new Enterprise plan instances, which are now accoun
 Schema names must still be unique across other catalog types such as Hive, Delta, and Hudi.
 {: note}
 
-Thrift over HTTP protocol support in watsonx.data Enterprise plan
+Thrift over HTTP protocol support in watsonx.data Enterprise plan 
 
 : The Metadata Service (MDS) in watsonx.data now runs the Thrift service over the HTTP protocol instead of the previous binary protocol. This change affects service endpoints and connection configurations.
 
