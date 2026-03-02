@@ -141,9 +141,17 @@ CPDCTL CLI enhancements
 
    * Backward compatibility has been enabled for the `sparkjob`, `tablemaint`, and `database` commands in CPDCTL. 
 
-    Starting with CPDCTL version 1.x.xx, these commands can now connect to {{site.data.keyword.lakehouse_short}} releases prior to version 2.2.1, ensuring smoother integration and compatibility across environments.
+    Starting with CPDCTL version 1.8.150, these commands can now connect to {{site.data.keyword.lakehouse_short}} releases prior to version 2.2.1, ensuring smoother integration and compatibility across environments.
 
    * You can now use either `--id` or `--name` for the options `revoke`, `update`, and `list-access` under the `access-control` command. 
+
+   * A new option under the `bucket` command `wx-data bucket upload` can upload a file from local filesystem to a {{site.data.keyword.lakehouse_short}} object storage bucket. For details about the `bucket` command related operations in {{site.data.keyword.lakehouse_short}}, see [bucket](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata#cpdctl_commands_wxdatabuck). 
+
+Ingestion enhancement
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following ingestion enhancement:
+
+   * You can ingest files smaller than 2 MB using the Lite ingestion option without provisioning a Spark engine. For files larger than 2 MB, you must continue to have a Spark engine to run the ingestion job. 
 
 Deprecated features
 
