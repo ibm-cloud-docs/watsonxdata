@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-30"
+lastupdated: "2026-03-02"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -52,11 +52,11 @@ Complete the following steps to add Milvus as a service in {{site.data.keyword.l
     |  | **Medium**: Recommended for **50 million vectors**, 64 index parameters, 1024 segment size, and 384 dimensions. |
     |  | **Large**: Recommended for **100 million vectors**, 64 index parameters, 1024 segment size, and 384 dimensions. |
     |  | **Custom**: Recommended for upto **3 billion vectors**, 64 index parameters, and 1024 segment. The actual number of vectors and dimensions supported depends on the index type and the maximum supported vCPU configuration. \n - IVF_SQ8 - Up to 3 billion vectors. \n - IVF_FLAT - Up to 1.3 billion vectors. \n - HNSW - Up to 1 billion vectors. |
-    | Add storage bucket | Associate an external storage for the **Small**, **Medium**, or **Large** sizes. For **Starter** size, you can also select an IBM-managed storage. To associate an external storage, you must have the storage configured.|
+    | Add storage | Associate an external storage for the **Small**, **Medium**, or **Large** sizes. For **Starter** size, you can also select an IBM-managed storage. To associate an external storage, you must have the storage configured.|
     | Path | For external storages, specify the path where you want to store vectorized data files.|
     {: caption="Adding Milvus service" caption-side="bottom"}
 
-    Running multiple Milvus instances that share the same `rootPath` within a single MinIO bucket is not recommended because it causes their data and metadata to overlap, leading to conflicts, and a high risk of data corruption or loss. To ensure data integrity and isolation, you must configure each Milvus instance with a unique `minio.rootPath` value in its configuration file before starting, even if they use the same bucket.
+    Running multiple Milvus instances that share the same `rootPath` within a single MinIO storage is not recommended because it causes their data and metadata to overlap, leading to conflicts, and a high risk of data corruption or loss. To ensure data integrity and isolation, you must configure each Milvus instance with a unique `minio.rootPath` value in its configuration file before starting, even if they use the same storage.
     {: note}
 
     Starting with {{site.data.keyword.lakehouse_short}} version 2.2.2, Milvus scaling is disabled for the Starter T-shirt size. Scaling back to Starter from a larger configuration is also not allowed.
@@ -77,7 +77,7 @@ Complete the following steps to add Milvus as a service in {{site.data.keyword.l
     You must provide the endpoint for storages used by Milvus with the region for region-specific storages like S3 and without trailing slashes. For example: `https://s3.<REGION>.amazonaws.com`.
     {: important}
 
-    Bucket credential updates for a Milvus engine's home bucket require a manual engine pause and resume to take effect.
+    Storage credential updates for a Milvus engine's home storage require a manual engine pause and resume to take effect.
      {: note}
 
 5. Click **Create**.
