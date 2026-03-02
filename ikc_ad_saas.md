@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-02-26"
+lastupdated: "2026-03-02"
 
 keywords: watsonx.data, ikc, configuring, knowledgecatalog
 subcollection: watsonxdata
@@ -12,7 +12,7 @@ subcollection: watsonxdata
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Configuring watsonx.data on IBM Cloud with Azure Active Directory
+# Masking your data in watsonx.data on IBM Cloud with Azure Active Directory
 {: #ikc_integration_ad_saas}
 
 
@@ -30,9 +30,13 @@ To enable IKC integration, ensure the following pre-requisites are met:
 - Subscription to Microsoft Azure.
 
 
-## Retrieving the SAML metadata file from your watsonx.data on IBM Cloud
-{: #connect_import_ad-saas}
+## Configuring Azure Active Directory application on IBM Cloud
+{: #connect_prcd_saas}
 {: step}
+
+### Retrieving the SAML metadata file from your watsonx.data on IBM Cloud
+{: #connect_import_ad-saas}
+
 
 1. Log in to your IBM Cloud account.
 
@@ -49,37 +53,9 @@ To enable IKC integration, ensure the following pre-requisites are met:
 
 6. Click **Download configuration** to download the metadata service provider configuration.
 
-## Configuring Azure Active Directory application on IBM Software Hub
+
+### Configuring Azure Active Directory application
 {: #connect_import_ad_cpd}
-{: step}
-
-
-Complete the [configuration steps](https://www.ibm.com/docs/en/cloud-paks/foundational-services/4.x_cd?topic=configuration-integrating-saml-entra-id#ariaid-title5) in the [Microsoft Azure portal](https://portal.azure.com/auth/login/) and save the Federation Metadata XML to your local drive.
-
-
-## Upload the Federation Metadata XML configuration to watsonx.data on IBM Software Hub
-{: #upload_import_ad_cpd}
-{: step}
-
-1. Complete these steps from IBM Software Hub. For information, see [Upload the Federation Metadata XML configuration](https://www.ibm.com/docs/en/cloud-paks/foundational-services/4.x_cd?topic=configuration-integrating-saml-entra-id#ariaid-title9).
-
-1. Update the token attribute-mapping fields such as Email, Family name, Given name, Groups and Sub with the following values:
-
-   * Email : http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress
-   * Family name : http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname
-   * Given name : http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname
-   * Groups : http://schemas.microsoft.com/ws/2008/06/identity/claims/groups
-   * Sub : http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress
-
-1. In the **From identity provider** section, upload the Federation Metadata XML file that you saved in [Configuring Azure Active Directory application](#connect_import_ad_cpd) section.
-
-1. Click **Save**.
-
-
-
-## Configuring Azure Active Directory application
-{: #connect_import_ad_cpd}
-{: step}
 
 1. Log in to your Azure portal. Select the **Manage Microsoft Entra ID** tile and click **View**.
 
@@ -122,8 +98,22 @@ Complete the [configuration steps](https://www.ibm.com/docs/en/cloud-paks/founda
 
 14. Ensure that the user accounts in Entra ID have all required attributes populated (email, first name, last name, and display name).
 
+## Configuring Azure Active Directory application on IBM Software Hub
+{: #connect_import_ad_cpd}
+{: step}
 
-## Upload the Federation Metadata XML configuration to watsonx.data on IBM Cloud
+
+1. Complete the [configuration steps](https://www.ibm.com/docs/en/cloud-paks/foundational-services/4.x_cd?topic=configuration-integrating-saml-entra-id#ariaid-title5) in the [Microsoft Azure portal](https://portal.azure.com/auth/login/) and save the Federation Metadata XML to your local drive.
+
+When you upload the Federation Metadata XML configuration to watsonx.data on IBM Software Hub, update the token attribute-mapping fields such as Email, Family name, Given name, Groups and Sub with the following values: \n
+   * Email : http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress
+   * Family name : http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname
+   * Given name : http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname
+   * Groups : http://schemas.microsoft.com/ws/2008/06/identity/claims/groups
+   * Sub : http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress
+{: important}
+
+### Upload the Federation Metadata XML configuration to watsonx.data on IBM Cloud
 {: #upload_import_ad_-saas}
 {: step}
 
