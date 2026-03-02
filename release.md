@@ -297,7 +297,7 @@ Thrift over HTTP protocol support in watsonx.data Lite plan
    For Spark and Presto engines within watsonx.data, these updates are applied automatically for both new and migrated catalogs. For external engines such as Spark, Db2, and Netezza, users must manually update the connection settings to reflect the new protocol, port, and query parameter.
    {: note}
 
-Muti-tenant Metadata Service (MDS) enhancements
+Metadata Service (MDS) enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancements to MDS.
 
