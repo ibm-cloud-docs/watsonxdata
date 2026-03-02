@@ -34,6 +34,7 @@ Technology preview features: We also offer a Technology preview section that inc
 {: #lakehouse_24feb2026}
 {: release-note}
 
+
 Engine and service enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
@@ -108,10 +109,22 @@ Access management enhancements
    * **Manager role for independent resource administration** : With the Manager role, you can create and manage your own engines, services in addition to all User-level privileges. This role grants full administrative control over the resources you create, while ensuring complete isolation from other scoped admins. Engines and services created by one Manager remain visible and accessible only to that Manager, and other Manager with the same role cannot view or manage them, ensuring strong separation, clear ownership, and secure, independent administration.. For more information, see [User authentication (Level 1)](/docs/watsonxdata?topic=watsonxdata-access_mgt#levelauth).
 
 Integration enhancements
-: This release of watsonx.data introduces the following enhanced integration with other services:
-   * Azure Active Directory (Microsoft Entra ID) integration for watsonx.data : You can now dynamically mask sensitive data in watsonx.data using IBM Knowledge Catalog (IKC), regardless of whether IKC is deployed as a SaaS service or on Cloud Pak for Data (CPD) Software. You can centralize governance in your preferred deployment model, while ensuring that watsonx.data queries consistently enforce masking and data protection rules.This ensures consistent protection for sensitive information across hybrid architectures and eliminating the previous limitation that required both services to be deployed on the same platform. For more information, see [Configuring watsonx.data on IBM Software Hub with Azure Active Directory](/docs/watsonxdata?topic=watsonxdata-ikc_integration_ad) and [Configuring watsonx.data on IBM Cloud with Azure Active Directory](/docs/watsonxdata?topic=watsonxdata-ikc_integration_ad_saas).
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following enhanced integration with other services:
+   * Azure Active Directory (Microsoft Entra ID) integration for {{site.data.keyword.lakehouse_short}} : You can now dynamically mask sensitive data in watsonx.data using IBM Knowledge Catalog (IKC), regardless of whether IKC is deployed as a SaaS service or on Cloud Pak for Data (CPD) Software. You can centralize governance in your preferred deployment model, while ensuring that watsonx.data queries consistently enforce masking and data protection rules.This ensures consistent protection for sensitive information across hybrid architectures and eliminating the previous limitation that required both services to be deployed on the same platform. For more information, see [Configuring watsonx.data on IBM Software Hub with Azure Active Directory](/docs/watsonxdata?topic=watsonxdata-ikc_integration_ad) and [Configuring watsonx.data on IBM Cloud with Azure Active Directory](/docs/watsonxdata?topic=watsonxdata-ikc_integration_ad_saas).
 
    * Validate Your IKC–WXD connection: You can now quickly confirm that your configuration works and that IKC can successfully connect to WXD. The Test Connection button available in the IKC integration page helps you to immediately verify that your IKC–WXD configuration is correct and the connection is active. For more information, see [Connecting to IBM Knowledge Catalog (IKC)](/docs/watsonxdata?topic=watsonxdata-ikc_integration#conf_ikc).
+
+Console enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following console changes:
+
+   * Query level CPU and memory metrics added to Query history. 
+
+      To include detailed query-level usage metrics and provide deeper visibility into cost drivers, two new columns have been added to the **Query history** page in {{site.data.keyword.lakehouse_short}}.
+
+      * CPU – CPU units consumed by the query
+      * Memory (GB) – Maximum memory footprint during execution
 
 Deprecated features
 
