@@ -123,6 +123,19 @@ Console enhancements
       * CPU – CPU units consumed by the query
       * Memory (GB) – Maximum memory footprint during execution
 
+Serviceability enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following serviceability enhancements:
+
+   OpenTelemetry is now available for the Spark engine in addition to the existing Presto (Java) engine. This expanded capability provides a unified way to collect and export telemetry data (traces and metrics) from the two engines, giving you a more complete picture of your system's performance. For more information, see [Adding telemetry diagnostic tools through the user interface](/docs/watsonxdata?topic=watsonxdata-ikc_opntlmtry_ui_2.1.2). 
+
+Semantic automation for data enrichment
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following Semantic automation enhancements:
+
+   You can now provision {{site.data.keyword.lakehouse_short}} instances with Semantic automation enrichment layer (SAL) enabled in the following new regions: Sydney (au-syd) and Toronto (ca-tor). To register Semantic automation enrichment layer (SAL), see [Registering and activating semantic layer](/docs/watsonxdata?topic=watsonxdata-sal_register). 
+
+
 Deprecated features
 
 : The following features are deprecated in this release:

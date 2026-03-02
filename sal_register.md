@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-08"
+lastupdated: "2026-03-02"
 
 keywords: lakehouse, semantic automation, {{site.data.keyword.lakehouse_short}}, data enrichment, register
 
@@ -29,7 +29,7 @@ subcollection: watsonxdata
 # Registering and activating semantic layer
 {: #sal_register}
 
-Follow the instructions in this topic to activate semantic enrichment in {{site.data.keyword.lakehouse_full}}. in your IBM Cloud account. Currently, this is available only in the `us-south` region.
+Follow the instructions in this topic to activate semantic enrichment in {{site.data.keyword.lakehouse_full}}. in your IBM Cloud account. Currently, this is available in the `us-south`, `au-syd`, and `ca-tor` region.
 
 ## Before you begin
 {: #sal_registerbyb}
