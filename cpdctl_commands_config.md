@@ -222,7 +222,7 @@ Syntax:
    ```
    {: codeblock}
 
-   When `--auth-scope` is set to `services`, `--auth-id` must be the watsonx.data instance ID. If the API key is generated against a service ID, use `ServiceId-<actual-service-id>` as `--username`, otherwise use the personal ID.
+   When `--auth-scope` is set to `services`, `--auth-id` must be the watsonx.data instance ID. If the API key is generated against a service ID, use `ServiceId-<actual-service-id>` as `--username`, otherwise use the username associated with the generated API key.
 
 Example:
    ```bash

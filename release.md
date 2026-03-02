@@ -139,11 +139,11 @@ CPDCTL CLI enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancements to IBM Cloud Pak for Data Command Line Interface (IBM cpdctl):
 
-   * Backward compatibility has been enabled for the `sparkjob`, `tablemaint`, and `database` commands in CPDCTL.
+   * Backward compatibility has been enabled for the `sparkjob`, `tablemaint`, and `database` commands in CPDCTL. 
 
     Starting with CPDCTL version 1.x.xx, these commands can now connect to {{site.data.keyword.lakehouse_short}} releases prior to version 2.2.1, ensuring smoother integration and compatibility across environments.
 
-   * You can now use either `--id` or `--name` for the options `revoke`, `update`, and `list-access` under the `access-control` command.
+   * You can now use either `--id` or `--name` for the options `revoke`, `update`, and `list-access` under the `access-control` command. 
 
 Deprecated features
 
