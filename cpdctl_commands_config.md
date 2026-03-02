@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-08-25"
+lastupdated: "2026-03-02"
 
 keywords: lakehouse, cpdctl, watsonx.data, supporting commands, config
 
@@ -85,12 +85,12 @@ Syntax:
 
 The `user` command further supports the following commands:
 
-| Options | Description |
-| ---- | --- |
-|`./cpdctl config user set [commands]`|Set the credentials for a user in cpdctl configuration to connect to {{site.data.keyword.lakehouse_short}} instance.|
-|`./cpdctl config user list`|List the credentials stored in cpdctl configuration that is used to connect to {{site.data.keyword.lakehouse_short}} instance.|
-|`./cpdctl config user get <username>`|Get the credentials of a user stored in cpdctl configuration that is used to connect to {{site.data.keyword.lakehouse_short}} instance.|
-|`./cpdctl config user unset <username>`|Remove the currently set username from the cpdctl configuration of {{site.data.keyword.lakehouse_short}} instance.|
+|Options|Description|
+|----|---|
+|`./cpdctl config user set [commands]`|Set the credentials for a user in cpdctl configuration to connect to {{site.data.keyword.lakehouse_short}}   instance.|
+|`./cpdctl config user list`|List the credentials stored in cpdctl configuration that is used to connect to {{site.data.keyword.lakehouse_short}}   instance.|
+|`./cpdctl config user get <username>`|Get the credentials of a user stored in cpdctl configuration that is used to connect to {{site.data.keyword.  lakehouse_short}} instance.|
+|`./cpdctl config user unset <username>`|Remove the currently set username from the cpdctl configuration of {{site.data.keyword.lakehouse_short}}   instance.|
  {: caption="Supported commands by user" caption-side="bottom"}
 
 `./cpdctl config user set [commands]` further supports the following commands as options to be used for setting the credentials:
@@ -137,7 +137,7 @@ Syntax:
 The `profile` command supports the following commands:
 
 |Options|Description|
-| ---- | ---- |
+|----|----|
 |`./cpdctl config profile set [commands]`|Set {{site.data.keyword.lakehouse_short}} environment profile in cpdctl configuration.|
 |`./cpdctl config profile list`|List all {{site.data.keyword.lakehouse_short}} environment profiles set in cpdctl configuration.|
 |`./cpdctl config profile get <profilename>`|Get details of the {{site.data.keyword.lakehouse_short}} environment profile from cpdctl configuration.|
@@ -182,10 +182,10 @@ Example setting up a profile using teh `user` configuration set earlier in a clo
    ```
    {: codeblock}
 
-## Using the commands user and profile together
+## Using the commands `user` and `profile` together (Recommended)
 {: #cpdctl_commands_configboth}
 
-You can combine the 2 commands user and profile together to configure instance profile in cpdctl configuration. A sample illustration of how to use the combination is provided below:
+You can combine the 2 commands `user` and `profile` together to configure instance profile in cpdctl configuration. A sample illustration of how to use the combination is provided below:
 
 **Setting up a cloud instance profile:**
 
@@ -207,10 +207,40 @@ Example:
 
 For {{site.data.keyword.lakehouse_short}} on IBM Cloud, it is recommended to use `--username` and `--apikey` which are used to login to the console. For more information see, [Get API key](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-con-presto-serv#get-ibmapi-key).
 
+**Setting up an MCSP instance profile:**
+
+Syntax:
+   ```bash
+   cpdctl config profile set <profile_name> \
+   --auth-scope <type of scope> \
+   --auth-id <authentication-id> \
+   --username <username>
+   --apikey <apikey> --url <mcsp_url> \
+   --region <region_name> \
+     --env "WATSONX_DATA_INSTANCE_ID=<crn>" \
+     --env "WATSONX_DATA_URL=<WXD-base-url>"
+   ```
+   {: codeblock}
+
+   When `--auth-scope` is set to `services`, `--auth-id` must be the watsonx.data instance ID. If the API key is generated against a service ID, use `ServiceId-<actual-service-id>` as `--username`, otherwise use the personal ID.
+
+Example:
+   ```bash
+   cpdctl config profile set aws-testsaas \
+   --auth-scope services \
+   --auth-id 6343297492 \
+   --username ServiceId-3d388-9c8a-46d0-aa1e-f023523dc497 or (--username WXD-SRE-Automation@ibm.com)
+   --apikey <apikey> --url https://aws.console.dev.saas.ibm.com/ \
+   --region eu-central-1 \
+      --env "WATSONX_DATA_INSTANCE_ID=crn:v1:aws-staging:public:lakehouse:eu-central-1:sub/20240301-2217-2804-10db-9f85ef3e0651:20250708-1207-3732-200d-84006d5910b8::" \
+      --env "WATSONX_DATA_URL=https://console-aws-eucentral1.lakehouse.dev.saas.ibm.com"
+   ```
+   {: codeblock}
+
 ## Setting the instance ID as environment variable
 {: #cpdctl_commands_configinstid}
 
-Starting from cpdctl version 1.8.5, users no longer need to set the `instance ID` as environment variable. This method is deprecated and will be completely removed in a future release. Instead, you must set the `instance ID` directly using the <codeph>profile</codeph> command, as described in [Using the commands user and profile together](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_config#cpdctl_commands_configinstid)
+Starting from cpdctl version 1.8.5, users no longer need to set the `instance ID` as environment variable. This method is deprecated and will be completely removed in a future release. Instead, you must set the `instance ID` directly using the `profile` command, as described in [Using the commands user and profile together](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_config#cpdctl_commands_configinstid).
 {: important}
 
 You must set an instance ID to access the corresponding environment to run the cpdctl commands. To set the instance ID, you can use the `WX_DATA_INSTANCE_ID` environment variable. This allows you to avoid specifying the instance ID with each command.

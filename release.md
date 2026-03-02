@@ -135,6 +135,15 @@ Semantic automation for data enrichment
 
    You can now provision {{site.data.keyword.lakehouse_short}} instances with Semantic automation enrichment layer (SAL) enabled in the following new regions: Sydney (au-syd) and Toronto (ca-tor). To register Semantic automation enrichment layer (SAL), see [Registering and activating semantic layer](/docs/watsonxdata?topic=watsonxdata-sal_register). 
 
+CPDCTL CLI enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancements to IBM Cloud Pak for Data Command Line Interface (IBM cpdctl):
+
+   * Backward compatibility has been enabled for the `sparkjob`, `tablemaint`, and `database` commands in CPDCTL.
+
+    Starting with CPDCTL version 1.x.xx, these commands can now connect to {{site.data.keyword.lakehouse_short}} releases prior to version 2.2.1, ensuring smoother integration and compatibility across environments.
+
+   * You can now use either `--id` or `--name` for the options `revoke`, `update`, and `list-access` under the `access-control` command.
 
 Deprecated features
 
