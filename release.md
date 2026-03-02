@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2026-02-26"
+lastupdated: "2026-03-02"
 
 keywords: watsonxdata, release notes
 
@@ -77,11 +77,8 @@ This behavior applies to all new Lite plan instances, which are now account-scop
    For Spark and Presto engines within watsonx.data, these updates are applied automatically for both new and migrated catalogs. For external engines such as Spark, Db2, and Netezza, users must manually update the connection settings to reflect the new protocol, port, and query parameter.
    {: note}
 
-Enhanced data consistency and configurable locking for Iceberg connector
 
-: The Iceberg connector now performs commit operations atomically as a single transaction instead of two separate operations, improving data consistency and reliability. Previously, the connector executed `replaceTable` and `updateTableStatistics` as separate operations, which could result in an inconsistent state if one operation succeeded while the other failed. The improved implementation combines these operations into a single atomic transaction for both file-based and Glue-based metastores, ensuring data integrity during commits. Additionally, a new configuration property `iceberg.engine.hive.lock-enabled` allows you to enable or disable Hive table locks when the Iceberg connector accesses Hive tables. This property can be overridden at the table level using the `engine.hive.lock-enabled` table property. Disabling locks can improve performance in environments where concurrent access is controlled externally, though it may affect atomicity guarantees. This configuration is relevant only for file-based and Thrift-based metastores, as Glue does not use metastore locks by default.
-
-Storage enhancements
+Storage and connector enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following data sources and storage enhancements:
 
@@ -89,13 +86,12 @@ Storage enhancements
 
    * The storages or catalogs you have access to will be visible to you across all instances in your account, rather than being restricted to one instance.For more information about how to use the existing catalog, see [Quickstart](/docs/watsonxdata?topic=watsonxdata-quick_start_213).
 
-Enhanced handling for reserved keywords in Salesforce connector
+   * The Iceberg connector now performs commit operations atomically as a single transaction instead of two separate operations, improving data consistency and reliability. Previously, the connector executed `replaceTable` and `updateTableStatistics` as separate operations, which could result in an inconsistent state if one operation succeeded while the other failed. The improved implementation combines these operations into a single atomic transaction for both file-based and Glue-based metastores, ensuring data integrity during commits. Additionally, a new configuration property `iceberg.engine.hive.lock-enabled` allows you to enable or disable Hive table locks when the Iceberg connector accesses Hive tables. This property can be overridden at the table level using the `engine.hive.lock-enabled` table property. Disabling locks can improve performance in environments where concurrent access is controlled externally, though it may affect atomicity guarantees. This configuration is relevant only for file-based and Thrift-based metastores, as Glue does not use metastore locks by default.
 
-: The Salesforce connector automatically handles reserved keywords in column names, improving your experience when querying Salesforce data. Previously, you encountered errors when querying columns with reserved keyword names such as `GROUP`. With the `data-source.identifier-quote="` property now configured by default, the connector seamlessly escapes these keywords, enabling you to query all Salesforce columns without errors or manual setup. If you are on an earlier version prior to 2.3.1, you can manually add this property to your Salesforce connector's catalog.properties file and then restart your pod via the backend. Do not delete your pods. If you face any issues, reach out to support for assistance.
+   * The Snowflake connector now provides private key-based authentication for enhanced security. When adding a Snowflake connection, select between `Default` (username and password) or `Private key` authentication from the `Authentication type` dropdown. Private key authentication eliminates password storage, improves compliance with enterprise security policies, simplifies automation for service accounts, and supports optional passphrase protection for encrypted keys. To use this feature, select `Private key` as the authentication type, upload your private key file in PEM format, and provide a passphrase if your key is encrypted. For more information, see [Snowflake](/docs/watsonxdata?topic=watsonxdata-snowflake_database).
 
-Private key authentication for Snowflake connector
+   * The Salesforce connector automatically handles reserved keywords in column names, improving your experience when querying Salesforce data. Previously, you encountered errors when querying columns with reserved keyword names such as `GROUP`. With the `data-source.identifier-quote="` property now configured by default, the connector seamlessly escapes these keywords, enabling you to query all Salesforce columns without errors or manual setup. If you are on an earlier version prior to 2.3.1, you can manually add this property to your Salesforce connector's catalog.properties file and then restart your pod via the backend. Do not delete your pods. If you face any issues, reach out to support for assistance.
 
-: The Snowflake connector now provides private key-based authentication for enhanced security. When adding a Snowflake connection, select between `Default` (username and password) or `Private key` authentication from the `Authentication type` dropdown. Private key authentication eliminates password storage, improves compliance with enterprise security policies, simplifies automation for service accounts, and supports optional passphrase protection for encrypted keys. To use this feature, select `Private key` as the authentication type, upload your private key file in PEM format, and optionally provide a passphrase if your key is encrypted. For more information, see [Snowflake](/docs/watsonxdata?topic=watsonxdata-snowflake_database)
 
 Lite plan enhancements:
 
