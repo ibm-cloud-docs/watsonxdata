@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-02-24"
+lastupdated: "2026-03-02"
 
 keywords: lakehouse, watsonx data, provision, endpoint, resource
 subcollection: watsonxdata
@@ -41,7 +41,7 @@ The access to provision IBM Cloud resources is governed by using [IAM access](ht
 
 * [Provision an instance through UI](#create-by-ui)
 * [Provision an instance through CLI](#create-by-cli)
-* [Provisioning an instance through Terraform module](#create-by-tf-module)
+* [Provisioning an instance through Terraform module](#create-by-tf-module-1)
 
 ### Provision an instance through UI
 {: #create-by-ui}
@@ -135,12 +135,12 @@ The access to provision IBM Cloud resources is governed by using [IAM access](ht
     {: codeblock}
 
 ### Provisioning an instance through Terraform module
-{: #create-ent-tf-module}
+{: #create-ent-tf-module-1}
 
 You can provision an instance by using a pre-built, open-source, enterprise-ready Terraform module. This method uses [Terraform IBM Modules (TIM)](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim), which are curated collections of Terraform modules that simplify creating, managing, and versioning complex, compliant environments on IBM Cloud.
 
 #### About the {{site.data.keyword.lakehouse_short}} Terraform module
-{: #create-ent-tf-module1}
+{: #create-ent-tf-module-3}
 
 The [{{site.data.keyword.lakehouse_short}} module](https://registry.terraform.io/modules/terraform-ibm-modules/watsonx-data/ibm/latest) is a purpose-built Terraform module that follows secure-by-default principles and aligns with IBM Cloud best practices. The module provides the following capabilities:
 
@@ -151,7 +151,7 @@ The [{{site.data.keyword.lakehouse_short}} module](https://registry.terraform.io
 - Enterprise-ready configurations that are secure, scalable, and compliant
 
 #### Deploying the module
-{: #create-ent-tf-module2}
+{: #create-ent-tf-module-2}
 
 To deploy the {{site.data.keyword.lakehouse_short}} enterprise plan by using this Terraform module, complete the steps in [Deploying a Terraform IBM Module by using Terraform CLI](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module).
 
