@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-02-20"
+lastupdated: "2026-03-03"
 
 keywords: access, access control, access management
 
@@ -71,7 +71,7 @@ To configure trusted IP addresses for UI access, you must have Administrator pri
 
    ![Endpoints](images/cbr_endpoint.png){: caption="Endpoints" caption-side="bottom"}
 
-   From the **Network zones**, click **Create** and provide the list of IP addresses in the **Allowed IP addresses** field. See [](/docs/watsonxdata?topic=account-context-restrictions-whatis&interface=ui#network-zones-whatis).
+   From the **Network zones**, click **Create** and list the IP addresses that needs to be allowed in the **Allowed IP addresses** field. You can also list the  IP addressed that needs to be denied access in the **Denied IP addresses** field. See [Network zone](https://cloud.ibm.com/docs/account?topic=account-context-restrictions-whatis&interface=ui#network-zones-whatis).
 
 
    ![Network](images/cbr_net.png){: caption="Network" caption-side="bottom"}
