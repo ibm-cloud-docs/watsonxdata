@@ -52,7 +52,7 @@ You can configure Snowflake using one of the following methods:
  | Warehouse name (optional)         | Enter the Warehouse name. \n **Note:** You must provide a warehouse name when using **Private key** authentication type. |
  | Username           | Enter the username.  |
  | Password           | Enter the password. This field is displayed when **Default** authentication type is selected.  |
- | Passphrase | Enter the passphrase for the private key if it is encrypted. This field is displayed when **Private key** authentication type is selected. \n **Note**: Passphrase is optional for unencrypted private keys.|
+ | Passphrase | This field is displayed when **Private key** authentication type is selected. Enter the passphrase for the private key if it is encrypted. \n **Note**: Passphrase is optional for unencrypted private keys.|
  | Private key | Upload the private key file (.pem format). This field is displayed and required when **Private key** authentication type is selected. |
  | Connection status   | Click the Test connection link to test the database connection. If the database connection is successful, a success message appears. |
  | Associate catalog  | Select the checkbox to associate a catalog to the data source. This catalog is automatically associated with your data source and serves as your query interface with the data stored within. |
