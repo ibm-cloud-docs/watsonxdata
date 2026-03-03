@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-03-02"
+lastupdated: "2026-03-03"
 
 keywords: watsonx.data, ikc, configuring, knowledgecatalog
 subcollection: watsonxdata
@@ -113,7 +113,7 @@ When you upload the Federation Metadata XML configuration to watsonx.data on IBM
    * Sub : http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress
 {: important}
 
-### Upload the Federation Metadata XML configuration to watsonx.data on IBM Cloud
+## Upload the Federation Metadata XML configuration to watsonx.data on IBM Cloud
 {: #upload_import_ad_-saas}
 {: step}
 
