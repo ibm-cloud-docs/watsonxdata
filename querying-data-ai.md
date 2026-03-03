@@ -114,9 +114,9 @@ You must have access to the following IBM {{site.data.keyword.lakehouse_short}} 
 
 - **{{site.data.keyword.lakehouse_short}} instance**: A provisioned and running instance
 
-   - [Provision a lite plan instance](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1) and [Provision an enterprice plan instance](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-getting-started_1)
+   - [Provision a lite plan instance](/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1) and [Provision an enterprice plan instance](/docs/watsonxdata?topic=watsonxdata-getting-started_1)
 
-   - [Set up {{site.data.keyword.lakehouse_short}} lite plan](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-tutorial_hp_intro)
+   - [Set up {{site.data.keyword.lakehouse_short}} lite plan](/docs/watsonxdata?topic=watsonxdata-tutorial_hp_intro)
 
 - **IBM Cloud API key**: An API key with appropriate permissions
 
@@ -212,15 +212,15 @@ Complete the steps below to locate the MCP server executable based on your opera
 
 After locating the MCP server executable, configure your agents to connect to the server. See the following topics for specific instructions:
 
-- [Configuring Claude Desktop](../wx-data/configuring-claude.html)
-- [Configuring IBM Bob](../wx-data/configuring-bob.html)
+- [Configuring Claude Desktop](/docs/watsonxdata?topic=watsonxdata-configuring-claude)
+- [Configuring IBM Bob](/docs/watsonxdata?topic=watsonxdata-configuring-bob)
 
 ### Working with the MCP Tool
 {: #squerying-data-ai-wrkm}
 
 The following topic provides detailed guidance on using the MCP server tools to interact with your {{site.data.keyword.lakehouse_short}} instance.
 
-- [Working with the MCP Tool](../wx-data/working_with_MCP_server.html)
+- [Working with the MCP Tool](/docs/watsonxdata?topic=watsonxdata-working_with_MCP_server)
 
 ## Limitations
 {: #squerying-data-ai-lti}
