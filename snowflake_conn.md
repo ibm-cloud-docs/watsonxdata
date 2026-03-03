@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-03-02"
+lastupdated: "2026-03-03"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -49,7 +49,7 @@ You can configure Snowflake using one of the following methods:
  | Database name     | Enter the name of your database.|
  | Account name            | Enter your Snowflake Account name. This may include region information (For example, account_name.region_id). If you do not have region information, use the account name that is provided by your Snowflake administrator.  |
  | Authentication type | Select the authentication method: \n * Default - Use username and password authentication. \n * Private key - Use private key-based authentication. |
- | Warehouse name (optional)         | Enter the Warehouse name.  |
+ | Warehouse name (optional)         | Enter the Warehouse name. \n **Note:** You must provide a warehouse name when using **Private key** authentication type. |
  | Username           | Enter the username.  |
  | Password           | Enter the password. This field is displayed when **Default** authentication type is selected.  |
  | Passphrase | Enter the passphrase for the private key if it is encrypted. This field is displayed when **Private key** authentication type is selected. \n **Note**: Passphrase is optional for unencrypted private keys.|
