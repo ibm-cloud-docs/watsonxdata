@@ -30,9 +30,26 @@ To enable IKC integration, ensure the following pre-requisites are met:
 - Subscription to Microsoft Azure.
 
 
+## Configuring Azure Active Directory application on IBM Software Hub
+{: #connect_import_ad_cpd}
+
+
+
+1. Complete the [configuration steps](https://www.ibm.com/docs/en/cloud-paks/foundational-services/4.x_cd?topic=configuration-integrating-saml-entra-id#ariaid-title5) in the [Microsoft Azure portal](https://portal.azure.com/auth/login/) and save the Federation Metadata XML to your local drive.
+
+When you upload the Federation Metadata XML configuration to watsonx.data on IBM Software Hub, update the token attribute-mapping fields such as Email, Family name, Given name, Groups and Sub with the following values:
+   * Email : http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress
+   * Family name : http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname
+   * Given name : http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname
+   * Groups : http://schemas.microsoft.com/ws/2008/06/identity/claims/groups
+   * Sub : http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress
+{: important}
+
+
+
 ## Configuring Azure Active Directory application on IBM Cloud
 {: #connect_prcd_saas}
-{: step}
+
 
 ### Retrieving the SAML metadata file from your watsonx.data on IBM Cloud
 {: #connect_import_ad-saas}
@@ -98,24 +115,10 @@ To enable IKC integration, ensure the following pre-requisites are met:
 
 14. Ensure that the user accounts in Entra ID have all required attributes populated (email, first name, last name, and display name).
 
-## Configuring Azure Active Directory application on IBM Software Hub
-{: #connect_import_ad_cpd}
-{: step}
-
-
-1. Complete the [configuration steps](https://www.ibm.com/docs/en/cloud-paks/foundational-services/4.x_cd?topic=configuration-integrating-saml-entra-id#ariaid-title5) in the [Microsoft Azure portal](https://portal.azure.com/auth/login/) and save the Federation Metadata XML to your local drive.
-
-When you upload the Federation Metadata XML configuration to watsonx.data on IBM Software Hub, update the token attribute-mapping fields such as Email, Family name, Given name, Groups and Sub with the following values: \n
-   * Email : http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress
-   * Family name : http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname
-   * Given name : http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname
-   * Groups : http://schemas.microsoft.com/ws/2008/06/identity/claims/groups
-   * Sub : http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress
-{: important}
 
 ## Upload the Federation Metadata XML configuration to watsonx.data on IBM Cloud
 {: #upload_import_ad_-saas}
-{: step}
+
 
 Complete these steps from watsonx.data on IBM Cloud.
 
@@ -143,15 +146,9 @@ Complete these steps from watsonx.data on IBM Cloud.
 9. Copy the **Login URL** from the provider tile and share it with Azure AD users. Each user must authenticate at least once using this URL to be added to the IBM Cloud account.
 
 
-
-## Verify the configuration by testing the intergration
-{: #upload_import_ad_-saas}
-{: step}
-
-
 ## Configure IKC in {{site.data.keyword.lakehouse_full}} UI
 {: #conf_ikc}
-{: step}
+
 
 1. Log in to {{site.data.keyword.lakehouse_full}}.
 1. From the left pane, go to **Access control**.
@@ -195,7 +192,7 @@ Provide appropriate values for Organizational Unit (OU), Organization (O), Locat
 
 ## Verify the masking functionality as per the rules in IKC
 {: #verify_mask-saas}
-{: step}
+
 
 1. Log in to IBM Knowledge Catalog.
 1. From the left pane, go to **Governance** > **Rules**.
