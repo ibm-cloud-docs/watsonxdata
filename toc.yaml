@@ -393,6 +393,13 @@ toc:
       - idle_session_timeout.md
       - retrieval_service.md
       - db_ast.md
+      - topicgroup:
+          label: Querying data with agents
+          topics:
+          - querying-data-ai.md
+          - configuring-claude.md
+          - configuring-bob.md
+          - working_with_MCP_server.md
   - navgroup:
       id: reference
       topics:
