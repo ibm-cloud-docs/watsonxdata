@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-02-24"
+lastupdated: "2026-03-03"
 
 keywords: lakehouse, watsonx data, quick start, engine, catalog, bucket
 subcollection: watsonxdata
@@ -31,18 +31,22 @@ The wizard guides you through the initial configuration process for the infrastr
 {: #qs_bucket_213}
 {: step}
 
-Your {{site.data.keyword.lakehouse_short}} needs an object storage bucket to store your raw data files. You can use an existing storage or provision a new IBM-managed bucket or register your own bucket. You can also configure the query monitoring details. You can enable or disable the query monitoring to store and manage your diagonostic data.
+Your {{site.data.keyword.lakehouse_short}} needs an object storage bucket to store your raw data files. You can use an existing storage (available only for Tokyo and Sydney regions) or provision a new IBM-managed bucket or register your own bucket. You can also configure the query monitoring details. You can enable or disable the query monitoring to store and manage your diagonostic data.
 
 In the **Configure storage and catalog** section, complete the following steps:
 
 1. Select one of the following options and provide details.
    - **Use existing pair** : {{site.data.keyword.lakehouse_short}} automatically lists all storage-catalog pairs in your account that you have access to, allowing you to select an existing pair, avoid duplicate resources, and reduce setup time.
+
+   In watsonx.data 2.3.1 release, this field is available for the watsonx.data Enterprise edition in Tokyo and Sydney SaaS regions.
+   {: important}
+
    - **Discover COS instance** : Selects an existing IBM COS instance and an attached bucket on your IBM Cloud account. If multiple IBM COS instances and buckets are detected, select the IBM COS instance that contains the desired bucket to register with {{site.data.keyword.lakehouse_short}}. You must specify the catalog name that needs to be associated with the storage in the **Catalog name** field.
    - **Register my own** :  You can use any existing IBM COS bucket from an existing instance or provision a new instance. To provision a new IBM COS instance, provide the following details:
 
      | Field | Description |
      |--------------------------|----------------|
-     | Catalog name | Specify the catalog name that needs to be associated with the storage. |
+     | Catalog name | Specify the catalog name that needs to be associated with the storage. In watsonx.data 2.3.1 release, this field is available for the watsonx.data Enterprise edition in Tokyo and Sydney SaaS regions. |
      | Bucket Type | Select from Amazon S3, IBM Storage Ceph, or IBM Cloud Object Storage.|
      |Region | The region where the data bucket is available.|
      | Bucket Name | Enter your bucket name.|
@@ -70,12 +74,16 @@ In the **Query monitoring** section, complete the following steps:
 2. If you enable the QHMM feature, you must configure the storage details for storing QHMM data. Select one of the following options and provide details.
 
    - **Use existing pair** : {{site.data.keyword.lakehouse_short}} automatically lists all storage-catalog pairs in your account that you have access to, allowing you to select an existing pair. Select a storage-catalog pair as the QHMM storage.
+
+   In watsonx.data 2.3.1 release, this field is available for the watsonx.data Enterprise edition in Tokyo and Sydney SaaS regions.
+   {: important}
+
    - **Discover COS instance** : Selects an existing IBM COS instance and an attached storage on your IBM Cloud account. If multiple IBM COS instances and storages are detected, select the IBM COS instance that contains the desired storage to register with {{site.data.keyword.lakehouse_short}}. You must specify the catalog name that needs to be associated with the storage in the **Catalog name** field.
    - **Register my own** : You can register an existing bucket as a QHMM bucket. Only the following bucket types can be registered as a QHMM bucket: Amazon S3, IBM Storage Ceph, or IBM Cloud Object Storage. To register an existing bucket as QHMM bucket, provide the following details:
 
      | Field | Description |
      |--------------------------|----------------|
-     | Catalog name | Specify the catalog name that needs to be associated with the storage. |
+     | Catalog name | Specify the catalog name that needs to be associated with the storage. In watsonx.data 2.3.1 release, this field is available for the watsonx.data Enterprise edition in Tokyo and Sydney SaaS regions. |
      | Bucket Type | Select from Amazon S3, IBM Storage Ceph, or IBM Cloud Object Storage.|
      |Region | The region where the data bucket is available.|
      | Bucket Name | Enter your bucket name.|
