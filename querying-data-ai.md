@@ -36,7 +36,7 @@ The IBM {{site.data.keyword.lakehouse_short}} Model Context Protocol (MCP) Serve
 
 The following diagram illustrates the high-level architecture of the IBM {{site.data.keyword.lakehouse_short}} MCP Server:
 
-![architecture diagram](images/mcp-query-execution-flow.png){: caption="Figure 1. Architecture diagram" caption-side="bottom"}{: width="1500px"}
+![architecture diagram](images/mcp-query-execution-flow.svg){: caption="Figure 1. Architecture diagram" caption-side="bottom"}{: width="1500px"}
 
 The architecture consists of the following components:
 
