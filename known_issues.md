@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-02-23"
+lastupdated: "2026-03-03"
 
 keywords: lakehouse
 
@@ -30,6 +30,16 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+## Group-based policies do not work for account-scoped APIs when using IAM token or API key
+{: #known_issue59626}
+
+When consuming multi-tenant MDS (Metadata Service) APIs with an IAM token or API key, group-based policies do not work.
+
+## Unable to access tables using Snowflake connector with private key authentication when warehouse name is not specified
+{: #known_issue65588}
+
+When a Snowflake connector is configured with private key authentication and the warehouse name field is left empty, you can access schemas but cannot query tables.
 
 ## Spark application logs not displaying correctly in UI
 {: #known_issue54254}
