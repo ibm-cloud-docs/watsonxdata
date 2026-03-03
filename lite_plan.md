@@ -216,4 +216,4 @@ If you choose to continue using watsonx.data by creating an Enterprise {{site.da
 
 4. Go to the **Quick start watsonx.data console** > **Configure your storage** page, specify the COS bucket details that you own (which stores data from the Lite plan). For more information, see [Quick start {{site.data.keyword.lakehouse_short}} console](/docs/watsonxdata?topic=watsonxdata-quick_start_213).
 
-When the setup is complete, the watsonx.data home page (enterprise plan) opens. From the navigation menu, select **Data manager** to view the COS storage bucket with data from the Lite plan.
+When the setup is complete, the watsonx.data home page (enterprise plan) opens. From the navigation menu, select **Data manager** to view the COS storage with data from the Lite plan.
