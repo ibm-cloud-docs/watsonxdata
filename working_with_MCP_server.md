@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-03-03"
+lastupdated: "2026-03-04"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
 
@@ -27,21 +27,10 @@ subcollection: watsonxdata
 {:video: .video}
 
 
-# Working with the MCP Tool
+# Querying data with the MCP tool
 {: #working_with_MCP_server}
 
 After configuration with AI agents, you can interact with your {{site.data.keyword.lakehouse_short}} instance through natural language conversations with your agent.
-
-## Understanding the interaction model
-{: #working_with_MCP_server-uim}
-
-The MCP server enables conversational data access through the following workflow:
-
-1. You submit a natural language query to your agent
-2. The agent interprets your request and selects the appropriate MCP tool
-3. The MCP server executes the operation against your {{site.data.keyword.lakehouse_short}} instance
-4. Results are returned to the agent
-5. The agent presents the results in a conversational format
 
 ## Verifying connectivity
 {: #working_with_MCP_server-vc}

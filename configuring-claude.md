@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-03-03"
+lastupdated: "2026-03-04"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
 
@@ -26,10 +26,10 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Configuring Claude Desktop
+# Configuring Claude Desktop to connect to the MCP server
 {: #configuring-claude}
 
-This section explains how to configure Claude Desktop to connect to the MCP server using the server executable.
+After you install the MCP server on your local machine, you must configure Claude Desktop to connect to the MCP server.
 
 ## Locating the configuration file
 {: #configuring-claude-lcf}
@@ -72,4 +72,4 @@ The Claude Desktop configuration file location varies by operating system:
 
 4. Restart Claude Desktop.
 
-To configure Claud Desktop for development setup, refer [IBM {{site.data.keyword.lakehouse_short}} MCP Server](https://github.com/IBM/ibm-watsonxdata-mcp-server?tab=readme-ov-file).
+To configure Claude Desktop for development setup, refer [IBM {{site.data.keyword.lakehouse_short}} MCP Server](https://github.com/IBM/ibm-watsonxdata-mcp-server?tab=readme-ov-file).
