@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-03-03"
+lastupdated: "2026-03-04"
 
 keywords: lakehouse, watsonx data, provision, endpoint, resource
 subcollection: watsonxdata
@@ -40,7 +40,7 @@ The access to provision IBM Cloud resources is governed by using [IAM access](ht
 {: step}
 
 * [Provision an instance through UI](#create-by-ui)
-* [Provisioning an instance through Terraform module](#create-by-tf-module-1)
+* [Provisioning an instance through Terraform module](#create-ent-tf-module-1)
 * [Provision an instance through CLI](#create-by-cli)
 
 ### Provision an instance through UI
