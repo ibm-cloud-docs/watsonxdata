@@ -97,7 +97,7 @@ The MCP server enables conversational data access through the following workflow
 
 The following diagram illustrates the process of querying data through the MCP server.
 
-![architecture diagram](images/mcp-query-execution-flow.svg){: caption="Figure 1. Architecture diagram" caption-side="bottom"}{: width="1500px"}
+![architecture diagram](images/mcp-query-execution-flow.svg){: caption="Architecture diagram" caption-side="bottom"}{: width="1500px"}
 
 The MCP server enables conversational data access through the following workflow:
 
