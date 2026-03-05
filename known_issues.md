@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-03-03"
+lastupdated: "2026-03-05"
 
 keywords: lakehouse
 
@@ -41,6 +41,20 @@ When consuming multi-tenant MDS (Metadata Service) APIs with an IAM token or API
 
 When a Snowflake connector is configured with private key authentication and the warehouse name field is left empty, you can access schemas but cannot query tables.
 
+## Statistics synchronization job fails during collection
+{: #known_issue60900}
+
+The statistics synchronization job fails when you run a [collection statistics job](/docs/watsonxdata?topic=watsonxdata-sync_optimizer_metaanalyze_optimizer) using the **Query optimizer**.
+
+**Workaround:** Cancel the current job and run it again.
+
+## Login redirection loop is preventing provisioning the instance
+{: #known_issue59324}
+
+You might experience continuous redirection to the login page when you provision {{site.data.keyword.lakehouse_short}} with multiple instances open in the same browser. This occurs because large cookie headers cause pre-authentication failures.
+
+**Workaround:** Clear your browser cookies and site data, or start a fresh browser session. Avoid opening multiple instances simultaneously.
+
 ## Spark application logs not displaying correctly in UI
 {: #known_issue54254}
 
@@ -60,17 +74,15 @@ Disabling GenAI ACLs through the Console UI does not fully prevent row-level fil
 
 The following {{site.data.keyword.lakehouse_short}} API endpoints return empty responses for sample hive catalogs (IBM COS bucket):
 
-**Unity APIs**
+   **Unity APIs**
+      - `/api/2.1/unity-catalog/schemas/{catalog_name}.{schema_name}`
+      - `/api/2.1/unity-catalog/tables?catalog_name={catalog_name}&schema_name={schema_name}`
 
-- `/api/2.1/unity-catalog/schemas/{catalog_name}.{schema_name}`
-- `/api/2.1/unity-catalog/tables?catalog_name={catalog_name}&schema_name={schema_name}`
-
-**Console APIs**
-
-- `/v3/tables/{table_name}?catalog_name={catalog_name}&schema_name={schema_name}`
-- `/v3/columns?catalog={catalog_name}&schema={schema_name}`
-- `/v3/schemas/{schema_name}?catalog={catalog_name}`
-- `/v3/schemas?catalog={catalog_name}`
+   **Console APIs**
+      - `/v3/tables/{table_name}?catalog_name={catalog_name}&schema_name={schema_name}`
+      - `/v3/columns?catalog={catalog_name}&schema={schema_name}`
+      - `/v3/schemas/{schema_name}?catalog={catalog_name}`
+      - `/v3/schemas?catalog={catalog_name}`
 
 
 ## Spark applications not displayed in Console when using private endpoints
@@ -106,7 +118,6 @@ When you use Spark 4.0 as runtime, ANSI mode is enabled by default. This cause f
 
 When `Context-based restrictions` is enabled, ingestion jobs fail. Additionally, other operations that require metastore administrator access also fail. Ingestion and admin-level operations work as expected when CBR is disabled.
 
-
 ## {{site.data.keyword.lakehouse_short}} assistant operation fails due to `context-based restrictions` network policy
 {: #known_issue54697}
 
@@ -129,20 +140,15 @@ When using the MongoDB connector in Presto, queries with a `WHERE` clause fail t
 
 This limitation impacts scenarios where governance rules such as `ROW FILTER` rely on the underlying `WHERE` clause for evaluation.
 
-## Manual syncing of Query Optimizer metastore not available for Lite plan
+## Manual syncing of Query optimizer metastore not available for Lite plan
 {: #known_issue49716}
 
-For Lite instances of {{site.data.keyword.lakehouse_short}}, both manual syncing and the initial metastore sync for **Query Optimizer** are not supported in version 2.3. If the initial sync fails, customer queries will fall back to the native optimizer of Presto instead of the **Query Optimizer**. Fore more information, see [Manually syncing Query Optimizer with metastore](/docs/watsonxdata?topic=watsonxdata-sync_optimizer_meta).
+For Lite instances of {{site.data.keyword.lakehouse_short}}, both manual syncing and the initial metastore sync for **Query optimizer** are not supported in version 2.3. If the initial sync fails, customer queries will fall back to the native optimizer of Presto instead of the **Query optimizer**. Fore more information, see [Manually syncing Query Optimizer with metastore](/docs/watsonxdata?topic=watsonxdata-sync_optimizer_meta).
 
 ## Error connecting to watsonx.data from `Chat with Document` screen
 {: #known_issue52345}
 
 When attempting to establish a connection to {{site.data.keyword.lakehouse_short}} from the `Chat with Document` screen (specifically in the ca-tor region), users encounter the following error: Error: `A data source of the specified type [null] does not exist`.
-
-## ACL UI disablement does not prevent row filtering in Presto
-{: #known_issue51153}
-
-Disabling GenAI ACLs through the Console UI does not fully prevent row-level filtering in Presto. This happens because Presto checks ACL status by querying the `GET /acl_storage` API for the presence of the ACL bucket. If the bucket is still registered, filtering continues even if ACLs have been turned off in the UI.
 
 **Workaround:** After disabling ACLs through the UI, manually delete the ACL bucket from {{site.data.keyword.lakehouse_short}}.
 
@@ -193,6 +199,7 @@ This is not a limitation of PrestoDB itself, but rather a consequence of how the
 
    - `http-server.max-request-header-size=128kB`
    - `http-server.max-response-header-size=128kB`
+
    These properties are already whitelisted and can be adjusted using the customization API.
 
    The current default value is set based on typical query sizes. However, increasing the request header size limit by default can introduce certain trade-offs. A larger header size increases the risk of Denial-of-Service (DoS) attacks, as it allows more data to be sent in each request. Additionally, each HTTP request will consume more memory, which can become significant under high concurrency. Therefore, these values should be tuned cautiously based on your environment and query patterns.
