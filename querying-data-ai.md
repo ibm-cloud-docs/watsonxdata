@@ -87,6 +87,9 @@ The following diagram illustrates the process of querying data through the MCP s
 
 ![architecture diagram](images/mcp-query-execution-flow.svg){: caption="Architecture diagram" caption-side="bottom"}{: width="1500px"}
 
+### Understanding the interaction model
+{: #squerying-data-ai-uim}
+
 The MCP server enables conversational data access through the following workflow:
 
 1. You submit a natural language query to your agent.
