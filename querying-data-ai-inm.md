@@ -154,9 +154,7 @@ After locating the MCP server executable, configure your agents to connect to th
 - [Configuring Claude Desktop](/docs/watsonxdata?topic=watsonxdata-configuring-claude)
 - [Configuring IBM Bob](/docs/watsonxdata?topic=watsonxdata-configuring-bob)
 
-### Working with the MCP Tool
+### Querying data with the MCP tool
 {: #squerying-data-ai-wrkm}
 
-The following topic provides detailed guidance on using the MCP server tools to interact with your {{site.data.keyword.lakehouse_short}} instance.
-
-- [Working with the MCP Tool](/docs/watsonxdata?topic=watsonxdata-working_with_MCP_server)
+After configuration with AI agents, you can interact with your {{site.data.keyword.lakehouse_short}} instance through natural language conversations with your agent. For more information, see [Querying data with the MCP tool](/docs/watsonxdata?topic=watsonxdata-working_with_MCP_server).
