@@ -86,7 +86,7 @@ Collect the following information before installation:
 
 You can install the IBM {{site.data.keyword.lakehouse_short}} MCP Server using one of the following methods:
 
-## Installing with pipx
+### Installing with pipx
 {: #squerying-data-ai-pix}
 
 1. Run the following code to install pipx if not already installed.
@@ -104,7 +104,7 @@ You can install the IBM {{site.data.keyword.lakehouse_short}} MCP Server using o
    {: codeblock}
 
 
-## Installing with pip
+### Installing with pip
 {: #squerying-data-ai-pip}
 
 Use this method if you prefer to install the server in your user Python environment.
