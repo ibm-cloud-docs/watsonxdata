@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2026-03-03"
+lastupdated: "2026-03-05"
 
 keywords: watsonxdata, release notes
 
@@ -30,7 +30,7 @@ For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-p
 
 Technology preview features: We also offer a Technology preview section that includes features currently in preview. These features are not generally available and may change before release. To view the release notes for technology preview items, see [Technology preview](/docs/watsonxdata?topic=watsonxdata-release_pp).
 
-## 24 February 2026 - Version 2.3.1
+## 05 March 2026 - Version 2.3.1
 {: #lakehouse_24feb2026}
 {: release-note}
 
@@ -74,6 +74,10 @@ This behavior applies to all new Lite plan instances, which are now account-scop
 
    For Spark and Presto engines within watsonx.data, these updates are applied automatically for both new and migrated catalogs. For external engines such as Spark, Db2, and Netezza, users must manually update the connection settings to reflect the new protocol, port, and query parameter.
    {: note}
+
+Querying data through agents by using the MCP server
+
+: You can now use the IBM {{site.data.keyword.lakehouse_short}} Model Context Protocol (MCP) Server to enable agents to interact with IBM watsonx.data lakehouse instances through natural language interfaces. The MCP server provides secure, read‑only access to lakehouse data and metadata through the Model Context Protocol, ensuring data integrity while supporting seamless agent integration. For more information, see [Querying data through agents by using the MCP server](/docs/watsonxdata?topic=watsonxdata-querying-data-ai)
 
 
 Storage and connector enhancements

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-03-04"
+lastupdated: "2026-03-05"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -77,7 +77,7 @@ The IBM {{site.data.keyword.lakehouse_short}} MCP Server provides the following 
 
 To configure the MCP server, complete these main tasks:
 
-1. Install and configure the MCP server on your local computer. See Installing and configuring the MCP server for querying data.
+1. Install and configure the MCP server on your local computer. See [Installing and configuring the MCP server for querying data](/docs/watsonxdata?topic=watsonxdata-querying-data-ai-inm).
 2. Configure your AI agent to work with the MCP server and connect to {{site.data.keyword.lakehouse_short}}. See [Configuring IBM Bob](/docs/watsonxdata?topic=watsonxdata-configuring-bob) or [Configuring Claude Desktop](/docs/watsonxdata?topic=watsonxdata-configuring-claude).
 
 ## Understanding the interaction model

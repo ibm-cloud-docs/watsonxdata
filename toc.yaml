@@ -397,9 +397,7 @@ toc:
           label: Querying data with agents
           topics:
           - querying-data-ai.md
-          - querying-data-ai-sq.md
           - querying-data-ai-inm.md
-          - querying-data-ai-cnf.md
           - configuring-claude.md
           - configuring-bob.md
           - working_with_MCP_server.md
