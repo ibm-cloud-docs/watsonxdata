@@ -80,18 +80,6 @@ To configure the MCP server, complete these main tasks:
 1. Install and configure the MCP server on your local computer. See [Installing and configuring the MCP server for querying data](/docs/watsonxdata?topic=watsonxdata-querying-data-ai-inm).
 2. Configure your AI agent to work with the MCP server and connect to {{site.data.keyword.lakehouse_short}}. See [Configuring IBM Bob](/docs/watsonxdata?topic=watsonxdata-configuring-bob) or [Configuring Claude Desktop](/docs/watsonxdata?topic=watsonxdata-configuring-claude).
 
-## Understanding the interaction model
-{: #working_with_MCP_server-uim}
-
-The MCP server enables conversational data access through the following workflow:
-
-1. You submit a natural language query to your agent
-2. The agent interprets your request and selects the appropriate MCP tool
-3. The MCP server executes the operation against your {{site.data.keyword.lakehouse_short}} instance
-4. Results are returned to the agent
-5. The agent presents the results in a conversational format
-
-
 ## MCP server architecture
 {: #squerying-data-ai-ar}
 
