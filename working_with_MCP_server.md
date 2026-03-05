@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-03-04"
+lastupdated: "2026-03-05"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
 
@@ -44,7 +44,7 @@ Verify that the MCP server can successfully connect to your {{site.data.keyword.
 2. Submit the following query:
 
    ```bash
-   What is my {{site.data.keyword.lakehouse_short}} instance status?
+   What is my watsonx.data instance status?
    ```
    {: codeblock}
 
@@ -60,7 +60,7 @@ Discover the schemas and tables available in your {{site.data.keyword.lakehouse_
 1. To list available schemas:
 
    ```bash
-   What schemas are available in my {{site.data.keyword.lakehouse_short}} instance?
+   What schemas are available in my watsonx.data instance?
    ```
    {: codeblock}
 
