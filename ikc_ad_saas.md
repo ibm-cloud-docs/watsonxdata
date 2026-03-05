@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-03-03"
+lastupdated: "2026-03-05"
 
 keywords: watsonx.data, ikc, configuring, knowledgecatalog
 subcollection: watsonxdata
@@ -12,11 +12,11 @@ subcollection: watsonxdata
 
 {{site.data.keyword.attribute-definition-list}}
 
-# Masking your data in watsonx.data on IBM Cloud with Azure Active Directory
+# Masking your data in watsonx.data on IBM Cloud with IBM Knowledge Catalog on software
 {: #ikc_integration_ad_saas}
 
 
-This topic describes how to integrate Azure Active Directory (Azure AD) as a SAML identity provider with watsonx.data on IBM Cloud .
+This topic describes how to integrate Azure Active Directory (Azure AD) as a SAML identity provider with watsonx.data on IBM Cloud.
 You can configure Azure Active Directory (now Microsoft Entra ID) as your SAML identity provider to enable single sign-on (SSO) for watsonx.data IBM Cloud.
 
 ## Before you begin
@@ -26,7 +26,7 @@ To enable IKC integration, ensure the following pre-requisites are met:
 
 - A working {{site.data.keyword.lakehouse_short}} instance on IBM Cloud.
 - Access to IBM Software Hub
-- IBM Knowledge Catalog (IKC) on IBM Software Hub.
+- IBM Knowledge Catalog (IKC) service on IBM Software Hub.
 - Subscription to Microsoft Azure.
 
 
