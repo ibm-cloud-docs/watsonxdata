@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-03-05"
+lastupdated: "2026-03-06"
 
 keywords: lakehouse
 
@@ -30,6 +30,27 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+## Table Analyzer job runs fail for GCS and Azure buckets
+{: #known_issue65943}
+
+When you set optimizer configurations for GCS and Azure buckets, the Table Analyzer job runs fail with an access denied error.
+
+**Workaround**: Manually update the Spark engine configuration with the correct storage provider scheme for the warehouse location.
+
+For GCS buckets, use:
+
+```bash
+spark.sql.catalog.gcs_catalog.warehouse=gs://gcpconsoletestbucket/
+```
+{: codeblock}
+
+For Azure buckets, use:
+
+```bash
+spark.sql.catalog.gen1_catalog.warehouse=wasbs://lhcasblob2@lhcastest2.blob.core.windows.net
+```
+{: codeblock}
 
 ## Group-based policies do not work for account-scoped APIs when using IAM token or API key
 {: #known_issue59626}
