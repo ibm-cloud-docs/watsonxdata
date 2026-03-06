@@ -41,14 +41,21 @@ When you set optimizer configurations for GCS and Azure buckets, the Table Analy
 For GCS buckets, use:
 
 ```bash
-spark.sql.catalog.gcs_catalog.warehouse=gs://gcpconsoletestbucket/
+spark.sql.catalog.<catalog_name>.warehouse=gs://<bucket_name>
 ```
 {: codeblock}
 
 For Azure buckets, use:
 
 ```bash
-spark.sql.catalog.gen1_catalog.warehouse=wasbs://lhcasblob2@lhcastest2.blob.core.windows.net
+spark.sql.catalog.<catalog_name>.warehouse=wasbs://<container_name>@<storage_account_name>.blob.core.windows.net
+```
+{: codeblock}
+
+For Azure Data Lake Storage Gen2, use:
+
+```bash
+spark.sql.catalog.<catalog_name>.warehouse=abfs://<container_name>@<storage_account_name>.dfs.core.windows.net
 ```
 {: codeblock}
 
