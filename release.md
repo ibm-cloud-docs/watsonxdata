@@ -30,10 +30,12 @@ For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-p
 
 Technology preview features: We also offer a Technology preview section that includes features currently in preview. These features are not generally available and may change before release. To view the release notes for technology preview items, see [Technology preview](/docs/watsonxdata?topic=watsonxdata-release_pp).
 
-## 05 March 2026 - Version 2.3.1
+## 09 March 2026 - Version 2.3.1
 {: #lakehouse_24feb2026}
 {: release-note}
 
+{{site.data.keyword.lakehouse_short}} 2.3.1 version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.3.1 release is available in your region, contact IBM Support.
+{: important}
 
 Engine and service enhancements
 
@@ -50,14 +52,14 @@ Metadata scoping at account level
 
 : {{site.data.keyword.lakehouse_full}} introduces a new account‑scoped metadata model designed to centralize and streamline metadata management across all instances within the same IBM Cloud account and region. This enhancement improves consistency, governance, and operational efficiency by enabling a unified metadata experience.
 
-  With account-scoped metadata, catalogs, schemas, tables, data sources, and object storages are now shared across all {{site.data.keyword.lakehouse_short}} instances operating within the same account and region.
-  Previously, each instance maintained its own isolated metastore. Under the account-scoped model:
+   With account-scoped metadata, catalogs, schemas, tables, data sources, and object storages are now shared across all {{site.data.keyword. lakehouse_short}} instances operating within the same account and region.
+   Previously, each instance maintained its own isolated metastore. Under the account-scoped model:
 
-  * All instances in the same region automatically connect to a common metastore.
-  * Metadata created in one instance becomes visible and accessible (subject to permissions) from any other instance in that region.
-  * Engines such as Spark and Presto can be associated with this shared metadata, enabling consistent data access patterns across instances.
+   * All instances in the same region automatically connect to a common metastore.
+   * Metadata created in one instance becomes visible and accessible (subject to permissions) from any other instance in that region.
+   * Engines such as Spark and Presto can be associated with this shared metadata, enabling consistent data access patterns across instances.
 
-  For more information, see [Metadata scoping at account level](/docs/watsonxdata?topic=watsonxdata-account_scope).
+   For more information, see [Metadata scoping at account level](/docs/watsonxdata?topic=watsonxdata-account_scope).
 
 
 Schema name reuse across Iceberg catalogs for Enterprise plan instances 
@@ -377,9 +379,6 @@ Technology preview features
 ## 13 November 2025 - Version 2.2.2 New Feature 1 (NF1)
 {: #lakehouse_13nov2025}
 {: release-note}
-
-{{site.data.keyword.lakehouse_short}} 2.2.2 NF1 version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.2.2 NF1 release is available in your region, contact IBM Support.
-{: important}
 
 Technology preview features
 
