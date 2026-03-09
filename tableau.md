@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-09-09"
+lastupdated: "2026-02-18"
 
 keywords: watsonx.data, spark, analytics, configuring
 subcollection: watsonxdata
@@ -29,8 +29,8 @@ You can use one of the following ways to connect to Presto:
 
 
 * Tableau desktop: Download and install the latest desktop version of Tableau on your computer.
-* Subscription to watsonx.data on IBM Cloud.
-* Provision watsonx.data instance with Presto engine.
+* Subscription to {{site.data.keyword.lakehouse_short}} on IBM Cloud.
+* Provision {{site.data.keyword.lakehouse_short}} instance with Presto engine.
 * Download the Presto JDBC driver from [JDBC Driver](https://www.tableau.com/support/drivers). To download:
 
     a. Log in to [**Tableau**](https://www.tableau.com/support/drivers?_gl=1*1gv0jop*_ga*MjQxNjI5OTQuMTczMTM5MTE3NQ..*_ga_8YLN0SNXVS*MTczMTU2NTUxNC40LjEuMTczMTU2NjA2MS4wLjAuMA..&_ga=2.24815162.1807389645.1731521698-24162994.1731391175).
@@ -66,7 +66,7 @@ Tableau uses Lightweight Directory Access Protocol (LDAP) authentication mechani
 2.	Click **More** and select **Presto**. The **Presto** window opens.
 3.	In the **General** tab, provide the following details:
 
-    * Server : Hostname of the Presto engine in watsonx.data that you want to connect to. For more information about retrieving the hostname, see [Getting connection information]({{site.data.keyword.ref-get_connection-link}}).
+    * Server : Hostname of the Presto engine in {{site.data.keyword.lakehouse_short}} that you want to connect to. For more information about retrieving the hostname, see [Getting connection information]({{site.data.keyword.ref-get_connection-link}}).
     * Port : For more information about retrieving the port number, see [Getting connection information]({{site.data.keyword.ref-get_connection-link}}).
     * Catalog : Enter the Iceberg catalog that is associated with the Presto engine in watsonx.data.
     * Schema (Optional) : Enter the name of the schema that is associated with your data.
@@ -81,11 +81,11 @@ Tableau uses Lightweight Directory Access Protocol (LDAP) authentication mechani
 ## Connecting to Presto by using TDS file
 {: #tableau_tds}
 
-In this method, you can select the catalog that you want to analyse in Tableau from the watsonx.data console and watsonx.data generates a Data source files (TDS). This file can be used to access watsonx.data catalog directly in Tableau without any Presto configurations.
+In this method, you can select the catalog that you want to analyse in Tableau from the {{site.data.keyword.lakehouse_short}} console and {{site.data.keyword.lakehouse_short}} generates a Data source files (TDS). This file can be used to access {{site.data.keyword.lakehouse_short}} catalog directly in Tableau without any Presto configurations.
 
 TDS files are shortcuts for quickly connecting to the original data that you use often. Data source files do not contain the actual data but rather the information necessary to connect to the actual data. For more information, see [Save Data Sources](https://help.tableau.com/current/pro/desktop/en-us/export_connection.htm).
 
-1. Log in to the watsonx.data instance.
+1. Log in to the {{site.data.keyword.lakehouse_short}} instance.
 1. Go to **Configurations**.
 1. Click **Connection information** page.
 1. Expand **BI Tools** and select **Tableau**.

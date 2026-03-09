@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-12"
+lastupdated: "2026-02-17"
 
 keywords: watsonx.data, OpenTelemetry, telemetry, diagnostics, Instana, Prometheus, Grafana
 
@@ -30,7 +30,7 @@ subcollection: watsonxdata
 # Adding telemetry diagnostic tools through the user interface
 {: #opntlmtry_ui_2.1.2}
 
-This topic provides the procedure to add telemetry diagnostic tools for your Presto (Java) engine through the user interface of {{site.data.keyword.lakehouse_full}}.
+This topic provides the procedure to add telemetry diagnostic tools for your Presto (Java) and Spark engines through the user interface of {{site.data.keyword.lakehouse_full}}.
 
 ## Before you begin
 {: #opntlmtry_ui_2.1.2_byb}
@@ -38,6 +38,7 @@ This topic provides the procedure to add telemetry diagnostic tools for your Pre
 Ensure you have access to the {{site.data.keyword.lakehouse_short}} console and credentials for the telemetry tools (Instana or Prometheus).
 
 The Instana or Prometheus tool must be installed following the instruction provided below based on requirement:
+
 * **Instana installation:**
 
    * [Self hosted](https://www.ibm.com/docs/en/instana-observability/1.0.309?topic=installing-configuring-self-hosted-instana-backend)
@@ -89,7 +90,7 @@ The Instana or Prometheus tool must be installed following the instruction provi
    - **Disable** the current diagnostic.
    - **Disassociate** it.
 
-### Navigate to Diagnostic Telemetry Data
+### Navigate to diagnostic telemetry data in Instana
 {: #opntlmtry_ui_instana}
 
 To review diagnostic telemetry (including internal and synthetic calls):
@@ -101,9 +102,9 @@ To review diagnostic telemetry (including internal and synthetic calls):
    - **Show synthetic calls**
    - **Show internal calls**
 
-This ensures that all internal, system-generated, and synthetic call data relevant to diagnostics is visible in the UI.
+This ensures that all internal, system-generated, and synthetic call data relevant to diagnostics are visible in the Instana UI.
 
-### Viewing traces for a specific query using CRN
+#### Viewing traces for a specific query using CRN
 {: #opntlmtry_ui_traces}
 
 1. Go to **Analytics → Applications → Calls**.
@@ -115,23 +116,26 @@ This ensures that all internal, system-generated, and synthetic call data releva
    - Last 10 minutes
    - Last 30 minutes
 
-These retention periods help ensure recent query execution traces are visible without noise from older calls.
+   These retention periods help ensure recent query execution traces are visible without noise from older calls.
 
-### Viewing OpenTelemetry metrics in Instana
+   Currently, only Presto (Java) provides traces.
+   {: note}
+
+#### Viewing OpenTelemetry metrics in Instana
 {: #opntlmtry_ui_metrics}
 
 1. Log in to the Instana UI and navigate to **Analyze Infrastructure**.
 2. In the data source selector, choose **OpenTelemetry** to view all OpenTelemetry resources.
 3. Click **Add filter**, select **OpenTelemetry Resource → otel.attribute → k8s.namespace.name**.
-   Enter the required {{site.data.keyword.lakehouse_short}} instance namespace to filter the view.
-4. From the filtered results, select the endpoint **metric-scraper-presto** associated with your instance.
-5. Use **Select metrics** to browse all available OpenTelemetry metrics exposed by the Presto metric scraper.
+   Enter the required {{site.data.keyword.lakehouse_short}} instance namespace (`instance_id` for Presto (Java) and `spark-control` for Spark) to filter the view.
+4. From the filtered results, select the endpoint **metric-scraper-presto** for Presto (Java) or **metric-scraper-spark-metrics-aggr** for Spark associated with your instance.
+5. Use **Select metrics** to browse all available OpenTelemetry metrics exposed by the Presto (Java) and Spark metric scraper.
 6. Choose any metric to open its live time-series visualization, where you can analyze current values, trends, and attributes.
 
-### Viewing Metrics in the Prometheus UI
+### Navigating to and viewing metrics in the Prometheus UI
 {: #opntlmtry_ui_prometheus}
 
 1. Access the Prometheus UI for your environment.
 2. In the **Expression** field, begin typing the metric name (for example, `presto_`).
-3. Prometheus will automatically display all metrics collected from **metric-scraper-presto**.
+3. Prometheus will automatically display all metrics collected from **metric-scraper-presto** or **metric-scraper-spark-metrics-aggr**.
 4. Select the required metric and click **Execute** to view the result.

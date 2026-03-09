@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-02"
+lastupdated: "2026-03-02"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -38,6 +38,7 @@ You can ingest data into {{site.data.keyword.lakehouse_full}} through the web co
 * Add and register Spark. See [Provisioning a Spark engine]({{site.data.keyword.ref-spl_engine-link}}).
 * For the target table, an active Iceberg catalog connected to a running Presto engine is required. See [Adding a storage-catalog pair]({{site.data.keyword.ref-reg_bucket-link}}). The storage must have `Writer` access at minimum.
 * To ingest data, you must have at minimum a `User` access to Presto engine and Spark engine.
+* Lite ingestion of files smaller than 2 MB does not require a Spark engine. For files 2 MB or larger, you must provision a Spark engine before ingestion.
 * To ingest data, you must have at minimum a `User` access with data plicy for catalogs. See [Managing data policy rules](/docs/watsonxdata?topic=watsonxdata-data_policy).
 * Add remote storage for source data files. See [Adding a storage-catalog pair]({{site.data.keyword.ref-reg_bucket-link}}).
 * Add data sources for source data files. See [Adding a data source-catalog pair]({{site.data.keyword.ref-reg_database-link}}).

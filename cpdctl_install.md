@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-11"
+lastupdated: "2026-03-02"
 
 keywords: lakehouse, cpdctl, watsonx.data, download, install
 
@@ -74,6 +74,7 @@ You can learn more about IBM cpdctl from the official [README](https://github.co
    | v2.2.1 (V3 API) | v1.8.25 and later |
    | v2.2.2 | v1.8.33 and later |
    | v2.3.0 | v1.8.85 and later |
+   | v2.3.1 | v1.8.150 and later |
    {: caption="Supported cpdctl versions" caption-side="bottom"}
 
    MCSP is supported for CPDCTL from version v1.8.0 and later.

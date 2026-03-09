@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-07-18"
+lastupdated: "2026-03-03"
 
 keywords: watsonxdata, qhmm
 
@@ -46,7 +46,7 @@ QHMM supports only Hive storage.
 
 You can enable the QHMM feature in one of the following ways:
 
-* From quick start wizard while provisioning watsonx.data. See [Configure query monitoring](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-quick_start#qs_montr).
+* From quick start wizard while provisioning watsonx.data. See [Configure query monitoring](/docs/watsonxdata?topic=watsonxdata-quick_start_213&q=query+monitoring&tags=watsonxdata#qs_bucket_213).
 * From [{{site.data.keyword.lakehouse_short}} console](#cnsl_qhmm) > **Query monitoring** page.
 
 You can retrieve the history files to analyze, debug, or monitor the queries. From the Query workspace see, [Retrieving query information from QHMM data]({{site.data.keyword.ref-ret_qhmm-link}}).

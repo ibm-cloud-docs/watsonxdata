@@ -1,9 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2025
-
-lastupdated: "2026-02-17"
+  years: 2022, 2026
+lastupdated: "2026-02-26"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -23,7 +22,7 @@ subcollection: watsonxdata
 {: #tutorial_prov_lite_1}
 
 
-The **Lite** plan allows you to provision an {{site.data.keyword.lakehouse_full}} instance that is free to use, with capacity limit of 2000 Resource Units, and time frame limit of 30 days. You can use the account to explore and familiarize yourself with {{site.data.keyword.lakehouse_short}}. For more information about the features and limitations of Lite plan, see [Lite plan](/docs/watsonxdata?topic=watsonxdata-getting-started#lite-plan-1){: external}.
+The **Lite** plan allows you to provision an {{site.data.keyword.lakehouse_full}} instance that is free to use, with capacity limit of 500 Resource Units, and time frame limit of 30 days. You can use the account to explore and familiarize yourself with {{site.data.keyword.lakehouse_short}}. For more information about the features and limitations of Lite plan, see [Lite plan](/docs/watsonxdata?topic=watsonxdata-getting-started#lite-plan-1){: external}.
 {: shortdesc}
 
 
@@ -34,7 +33,7 @@ The {{site.data.keyword.lakehouse_short}} Lite plan instance is configured based
 After provisioning the Lite plan instance, you can monitor the resource unit usage from the **Billing and Usage** page available in the {{site.data.keyword.lakehouse_short}} console. For more information, see [Billing and Usage](/docs/watsonxdata?topic=watsonxdata-manage_bill).
 
 
-Only one active Lite plan instance is allowed for IBM Cloud trial or paid account users. However, if the existing Lite plan instance is deleted before consuming the 2000 RUs, a new instance can be created and the remaining RUs can be consumed. Paid account users can create multiple Lite plan instances in different [resource groups](https://cloud.ibm.com/docs/account?topic=account-rgs&interface=ui). If the account has multiple Lite instances active at the same time, the resource unit consumption for the account will be the sum of resource units consumed by each individual instance.
+Only one active Lite plan instance is allowed for IBM Cloud trial or paid account users. However, if the existing Lite plan instance is deleted before consuming the 500 RUs, a new instance can be created and the remaining RUs can be consumed. Paid account users can create multiple Lite plan instances in different [resource groups](https://cloud.ibm.com/docs/account?topic=account-rgs&interface=ui). If the account has multiple Lite instances active at the same time, the resource unit consumption for the account will be the sum of resource units consumed by each individual instance.
 
 When the limit is reached, any active Lite plan instance owned by the account is disabled and new Lite plan instances cannot be created.
 
@@ -44,7 +43,10 @@ In this tutorial, you learn how to provision {{site.data.keyword.lakehouse_short
 
 * [Provisioning {{site.data.keyword.lakehouse_short}} Lite plan through UI](#hp_view_1)
 
+* [Provisioning {{site.data.keyword.lakehouse_short}} Lite plan through Terraform module](#create-lite-terra)
+
 * [Provisioning {{site.data.keyword.lakehouse_short}} Lite plan through CLI](#create-lite-cli)
+
 
 
 
@@ -71,7 +73,7 @@ Perform the following steps to provision a Lite plan instance:
     {: note}
 
 
-    Click **About** tab and read through to understand about the resource units consumed by engine/service, and estimate your consumption of 2000 RUs in the {{site.data.keyword.lakehouse_short}} Lite plan instance.
+    Click **About** tab and read through to understand about the resource units consumed by engine/service, and estimate your consumption of 500 RUs in the {{site.data.keyword.lakehouse_short}} Lite plan instance.
     {: note}
 
 
@@ -102,6 +104,36 @@ You can have only one active Spark engine in the {{site.data.keyword.lakehouse_s
 
 
 
+
+## Provisioning {{site.data.keyword.lakehouse_short}} Lite plan through Terraform module
+{: #create-lite-terra}
+
+You can provision a {{site.data.keyword.lakehouse_short}} Lite plan instance by using a pre-built, open-source, enterprise-ready Terraform module. This method uses [Terraform IBM Modules (TIM)](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim), which are curated collections of Terraform modules that simplify creating, managing, and versioning complex, compliant environments on IBM Cloud.
+
+### About the {{site.data.keyword.lakehouse_short}} Terraform module
+{: #create-lite-terra-1}
+
+The [{{site.data.keyword.lakehouse_short}} module](https://registry.terraform.io/modules/terraform-ibm-modules/watsonx-data/ibm/latest) is a purpose-built Terraform module that follows secure-by-default principles and aligns with IBM Cloud best practices. The module provides the following capabilities:
+
+- Standardized method for creating and working with IBM {{site.data.keyword.lakehouse_short}} instances
+- Comprehensive documentation with README files and examples
+- Multiple deployment scenarios through basic, advanced, and existing instance examples
+- Controlled versioning for safe updates and easier dependency management
+- Enterprise-ready configurations that are secure, scalable, and compliant
+
+### Deploying the module
+{: #create-lite-terra-2}
+
+To deploy the {{site.data.keyword.lakehouse_short}} Lite plan by using this Terraform module, complete the steps in [Deploying a Terraform IBM Module by using Terraform CLI](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module).
+
+The deployment process includes the following steps:
+
+1. Verify that you have the required prerequisites: Terraform CLI and IBM Cloud API key.
+2. Create the Terraform configuration based on the code and examples provided.
+3. Configure input variables for your deployment.
+4. Run `terraform init` to download required providers and modules.
+5. Run `terraform plan` to preview the changes that Terraform will make to your infrastructure.
+6. Run `terraform apply` to provision your {{site.data.keyword.lakehouse_short}} lite plan instance.
 
 
 ## Provisioning {{site.data.keyword.lakehouse_short}} Lite plan through CLI
@@ -165,6 +197,7 @@ Perform the following steps to provision a Lite plan instance by using CLI.
     ibmcloud resource service-instance <instance-name>
     ```
     {: codeblock}
+
 
 ## Reference
 {: #gs_ns_2}

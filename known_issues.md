@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-01-27"
+lastupdated: "2026-03-06"
 
 keywords: lakehouse
 
@@ -31,22 +31,86 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
+## Table Analyzer job runs fail for GCS and Azure buckets
+{: #known_issue65943}
+
+When you set optimizer configurations for GCS and Azure buckets, the Table Analyzer job runs fail with an access denied error.
+
+**Workaround**: Manually update the Spark engine configuration with the correct storage provider scheme for the warehouse location.
+
+For GCS buckets, use:
+
+```bash
+spark.sql.catalog.<catalog_name>.warehouse=gs://<bucket_name>
+```
+{: codeblock}
+
+For Azure buckets, use:
+
+```bash
+spark.sql.catalog.<catalog_name>.warehouse=wasbs://<container_name>@<storage_account_name>.blob.core.windows.net
+```
+{: codeblock}
+
+For Azure Data Lake Storage Gen2, use:
+
+```bash
+spark.sql.catalog.<catalog_name>.warehouse=abfs://<container_name>@<storage_account_name>.dfs.core.windows.net
+```
+{: codeblock}
+
+## Group-based policies do not work for account-scoped APIs when using IAM token or API key
+{: #known_issue59626}
+
+When consuming multi-tenant MDS (Metadata Service) APIs with an IAM token or API key, group-based policies do not work.
+
+## Unable to access tables using Snowflake connector with private key authentication when warehouse name is not specified
+{: #known_issue65588}
+
+When a Snowflake connector is configured with private key authentication and the warehouse name field is left empty, you can access schemas but cannot query tables.
+
+## Statistics synchronization job fails during collection
+{: #known_issue60900}
+
+The statistics synchronization job fails when you run a [collection statistics job](/docs/watsonxdata?topic=watsonxdata-sync_optimizer_metaanalyze_optimizer) using the **Query optimizer**.
+
+**Workaround:** Cancel the current job and run it again.
+
+## Login redirection loop is preventing provisioning the instance
+{: #known_issue59324}
+
+You might experience continuous redirection to the login page when you provision {{site.data.keyword.lakehouse_short}} with multiple instances open in the same browser. This occurs because large cookie headers cause pre-authentication failures.
+
+**Workaround:** Clear your browser cookies and site data, or start a fresh browser session. Avoid opening multiple instances simultaneously.
+
+## Spark application logs not displaying correctly in UI
+{: #known_issue54254}
+
+Spark application logs displayed in the UI are not rendering correctly for short-running applications that fail before the Spark context is initialized. The logs appear incorrect or incomplete in the UI. However, when the same logs are downloaded using the download option, the downloaded file contains the correct and complete log data.
+
+**Workaround:** Download the logs manually using the "Download logs" button in the UI. The downloaded log file will contain the correct and complete log data, including errors that occurred before Spark context initialization.
+
+## ACL UI disablement does not prevent row filtering in Presto
+{: #known_issue51153}
+
+Disabling GenAI ACLs through the Console UI does not fully prevent row-level filtering in Presto. This happens because Presto only checks for the presence of the ACL bucket irrespective of ACL services being enabled. If the bucket is still registered, filtering continues even if ACLs have been turned off in the UI.
+
+**Workaround:** After disabling ACLs through the UI, manually delete the ACL bucket from {{site.data.keyword.lakehouse_short}}.
+
 ## {{site.data.keyword.lakehouse_short}} APIs return empty response in {{site.data.keyword.lakehouse_short}} Lite plan (sample_data catalog)
 {: #known_issue54577}
 
 The following {{site.data.keyword.lakehouse_short}} API endpoints return empty responses for sample hive catalogs (IBM COS bucket):
 
-**Unity APIs**
+   **Unity APIs**
+      - `/api/2.1/unity-catalog/schemas/{catalog_name}.{schema_name}`
+      - `/api/2.1/unity-catalog/tables?catalog_name={catalog_name}&schema_name={schema_name}`
 
-- `/api/2.1/unity-catalog/schemas/{catalog_name}.{schema_name}`
-- `/api/2.1/unity-catalog/tables?catalog_name={catalog_name}&schema_name={schema_name}`
-
-**Console APIs**
-
-- `/v3/tables/{table_name}?catalog_name={catalog_name}&schema_name={schema_name}`
-- `/v3/columns?catalog={catalog_name}&schema={schema_name}`
-- `/v3/schemas/{schema_name}?catalog={catalog_name}`
-- `/v3/schemas?catalog={catalog_name}`
+   **Console APIs**
+      - `/v3/tables/{table_name}?catalog_name={catalog_name}&schema_name={schema_name}`
+      - `/v3/columns?catalog={catalog_name}&schema={schema_name}`
+      - `/v3/schemas/{schema_name}?catalog={catalog_name}`
+      - `/v3/schemas?catalog={catalog_name}`
 
 
 ## Spark applications not displayed in Console when using private endpoints
@@ -82,7 +146,6 @@ When you use Spark 4.0 as runtime, ANSI mode is enabled by default. This cause f
 
 When `Context-based restrictions` is enabled, ingestion jobs fail. Additionally, other operations that require metastore administrator access also fail. Ingestion and admin-level operations work as expected when CBR is disabled.
 
-
 ## {{site.data.keyword.lakehouse_short}} assistant operation fails due to `context-based restrictions` network policy
 {: #known_issue54697}
 
@@ -105,20 +168,15 @@ When using the MongoDB connector in Presto, queries with a `WHERE` clause fail t
 
 This limitation impacts scenarios where governance rules such as `ROW FILTER` rely on the underlying `WHERE` clause for evaluation.
 
-## Manual syncing of Query Optimizer metastore not available for Lite plan
+## Manual syncing of Query optimizer metastore not available for Lite plan
 {: #known_issue49716}
 
-For Lite instances of {{site.data.keyword.lakehouse_short}}, both manual syncing and the initial metastore sync for **Query Optimizer** are not supported in version 2.3. If the initial sync fails, customer queries will fall back to the native optimizer of Presto instead of the **Query Optimizer**. Fore more information, see [Manually syncing Query Optimizer with metastore](/docs/watsonxdata?topic=watsonxdata-sync_optimizer_meta).
+For Lite instances of {{site.data.keyword.lakehouse_short}}, both manual syncing and the initial metastore sync for **Query optimizer** are not supported in version 2.3. If the initial sync fails, customer queries will fall back to the native optimizer of Presto instead of the **Query optimizer**. Fore more information, see [Manually syncing Query Optimizer with metastore](/docs/watsonxdata?topic=watsonxdata-sync_optimizer_meta).
 
 ## Error connecting to watsonx.data from `Chat with Document` screen
 {: #known_issue52345}
 
 When attempting to establish a connection to {{site.data.keyword.lakehouse_short}} from the `Chat with Document` screen (specifically in the ca-tor region), users encounter the following error: Error: `A data source of the specified type [null] does not exist`.
-
-## ACL UI disablement does not prevent row filtering in Presto
-{: #known_issue51153}
-
-Disabling GenAI ACLs through the Console UI does not fully prevent row-level filtering in Presto. This happens because Presto checks ACL status by querying the `GET /acl_storage` API for the presence of the ACL bucket. If the bucket is still registered, filtering continues even if ACLs have been turned off in the UI.
 
 **Workaround:** After disabling ACLs through the UI, manually delete the ACL bucket from {{site.data.keyword.lakehouse_short}}.
 
@@ -169,6 +227,7 @@ This is not a limitation of PrestoDB itself, but rather a consequence of how the
 
    - `http-server.max-request-header-size=128kB`
    - `http-server.max-response-header-size=128kB`
+
    These properties are already whitelisted and can be adjusted using the customization API.
 
    The current default value is set based on typical query sizes. However, increasing the request header size limit by default can introduce certain trade-offs. A larger header size increases the risk of Denial-of-Service (DoS) attacks, as it allows more data to be sent in each request. Additionally, each HTTP request will consume more memory, which can become significant under high concurrency. Therefore, these values should be tuned cautiously based on your environment and query patterns.

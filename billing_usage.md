@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-09-03"
+lastupdated: "2026-02-16"
 
 keywords: lakehouse, watsonx data, roles, access
 subcollection: watsonxdata
@@ -67,17 +67,17 @@ The usage time which, is monitored in seconds will be internally converted to ho
 
 | Component |  Runtime calculation(in seconds (s)) \n Metering | Runtime calculation (in hours (h)) \n Billing | Unit Price (1RUs/h = $1USD) | Total Price (1 RU = $1.00 USD)|
 | --- | --- | -- | ---| ---|
-| Presto C++ starter with 1 coordinator |  (14 * 60) s + 30 s = 870 s| (870/3600) h |1.5 RU| 0.2416 h * 1.5 RU = 0.3652 RU =$0.3652 USD|
-| Presto C++ starter with 1 worker node| (14 * 60) s + 30 s = 870 s| (870/3600) h | 1.5 RU | 0.2416 h * 1.5 RU = 0.3652 RU =$0.3652 USD|
+| Presto C++ starter with 1 coordinator |  (14 * 60) s + 30 s = 870 s| (870/3600) h |2 RU| 0.2416 h * 2 RU = 0.4832 RU =$0.4832 USD|
+| Presto C++ starter with 1 worker node| (14 * 60) s + 30 s = 870 s| (870/3600) h | 2 RU | 0.2416 h * 2 RU = 0.4832 RU =$00.4832 USD|
 | Supporting services | (14 * 60) s + 30 s = 870 s | (870/3600) h |  3 RU| 0.2416 h * 3 RU = 0.725 RU = $0.725 USD|
-|Total | 1740 s| 0.4833 h |6RUs|1.4496 RU = $1.4496 USD = $1.45 USD|
+|Total | 1740 s| 0.4833 h |7RUs|1.6914 RU = $1.6914 USD = $1.6914 USD|
 {: caption="Presto C++ starter instance usage calculation" caption-side="bottom"}
 
 
 **Scenario 2: Instance with Presto C++ starter and Milvus starter**
 
 
-You create a {{site.data.keyword.lakehouse_short}} instance with the following configuration:
+You create a {{site.data.keyword.lakehouse_short}} instance with the following configuration :
 
 Presto C++ starter, Milvus starter size and support services enabled.
 
@@ -85,11 +85,11 @@ The following table displays the metering calculation when you run the instance 
 
 | Component |  Runtime calculation(in seconds (s)) \n Metering | Runtime calculation (in hours (h)) \n Billing |Unit Price (1RUs/h = $1.00 USD) | Total Price (1 RU = $1.00 USD)|
 | --- | --- | -- | ---| ---|
-| Presto C++ starter with 1 coordinator |  (14 * 60) s + 30 s = 870 s| (870/3600) h |1.5 RU| 0.2416 h * 1.5 RU = 0.3652 RU =$0.3652 USD|
-| Presto C++ starter with 1 worker node| (14 * 60) s + 30 s = 870 s| (870/3600) h | 1.5 RU | 0.2416 h * 1.5 RU = 0.3652 RU =$0.3652 USD|
+| Presto C++ starter with 1 coordinator |  (14 * 60) s + 30 s = 870 s| (870/3600) h |2 RU| 0.2416 h * 2 RU = 0.4832 RU =$0.4832 USD|
+| Presto C++ starter with 1 worker node| (14 * 60) s + 30 s = 870 s| (870/3600) h | 2 RU | 0.2416 h * 2 RU = 0.4832 RU =$0.4832 USD|
 | Milvus starter| (14 * 60) s + 30 s = 870 s| (870/3600) h | 1.25 RU | 0.2416 h * 1.25 RU = 0.302 RU =$0.302 USD|
 | Supporting services | (35 * 60) s + 30 s = 2130 s | (2130/3600) h |  3 RU| 0.592 h * 3 RU = 1.775 RU = $1.775 USD|
-|Total | 4740 s| 1.3166 h |7.25RUs|2.807 RU = $2.807 USD = $2.81 USD|
+|Total | 4740 s| 1.3166 h |8.25RUs|3.0434 RU = $3.0434 USD = $3.04 USD|
 {: caption="Presto C++ starter instance usage calculation" caption-side="bottom"}
 
 

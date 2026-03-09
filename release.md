@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2026-01-07"
+lastupdated: "2026-03-09"
 
 keywords: watsonxdata, release notes
 
@@ -29,6 +29,163 @@ For watsonx.data on-prem what's new, see [Release notes for watsonx.data](https:
 For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-prem Premium](https://www.ibm.com/docs/en/watsonx/watsonxdata-premium/2.2.x?topic=overview-whats-new-in-watsonxdata).
 
 Technology preview features: We also offer a Technology preview section that includes features currently in preview. These features are not generally available and may change before release. To view the release notes for technology preview items, see [Technology preview](/docs/watsonxdata?topic=watsonxdata-release_pp).
+
+## 09 March 2026 - Version 2.3.1
+{: #lakehouse_24feb2026}
+{: release-note}
+
+{{site.data.keyword.lakehouse_short}} 2.3.1 version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.3.1 release is available in your region, contact IBM Support.
+{: important}
+
+Engine and service enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
+
+   * Faster Migration from Delta Lake to watsonx.data Iceberg : You can now migrate your Delta Lake tables to watsonx.data Iceberg much faster and with significantly optimized resource usage by using a Spark application. During migration, the system preserves your existing data files, table properties, and partitioning, eliminating unnecessary rewrites. For more information, see [Submitting Spark jobs to migrate Delta Lake tables to Apache Iceberg](/docs/watsonxdata?topic=watsonxdata-migrate_ic_del).
+   * The Presto (Java) engine now provides autoscaling for Custom configuration mode, allowing worker nodes to automatically scale based on CPU utilization. When provisioning a Presto engine with Custom configuration, you can enable the optional Auto-scaling feature to dynamically adjust the number of worker nodes in response to workload demand. Autoscaling is CPU-based and uses configurable parameters including target CPU percentage (default: 40%, range: 1-100%), minimum and maximum worker node counts (range: 1-18), scaling step size, scale-in time window (default: 30 minutes), and query termination grace period (range: 1-120 minutes). After autoscaling is enabled during engine provisioning, updating the existing autoscaling configurations is allowed on a running engine; however, disabling autoscaling is not allowed once it has been enabled. Manual scaling is not available for autoscaling-enabled engines. Autoscaling remains active until the engine is deleted. For more information, see [Provisioning a Presto (Java) engine](/docs/watsonxdata?topic=watsonxdata-prov_engine)
+
+Terraform module for {{site.data.keyword.lakehouse_short}} deployment
+
+: You can now use the {{site.data.keyword.lakehouse_short}} Terraform module to create and manage {{site.data.keyword.lakehouse_short}} instances through infrastructure as code. The module provides a standardized, secure-by-default method that follows IBM Cloud best practices. It offers multiple deployment scenarios through basic and advanced examples, controlled versioning for safe updates, and enterprise-ready configurations that are secure, scalable, and compliant. For detailed deployment instructions, see [{{site.data.keyword.lakehouse_short}} enterprise plan](/docs/watsonxdata?topic=watsonxdata-getting-started_1#create-by-tf-module) and [{{site.data.keyword.lakehouse_short}} Lite plan](/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1#create-lite-tf-module) 
+
+Metadata scoping at account level 
+
+: {{site.data.keyword.lakehouse_full}} introduces a new account‑scoped metadata model designed to centralize and streamline metadata management across all instances within the same IBM Cloud account and region. This enhancement improves consistency, governance, and operational efficiency by enabling a unified metadata experience.
+
+   With account-scoped metadata, catalogs, schemas, tables, data sources, and object storages are now shared across all {{site.data.keyword. lakehouse_short}} instances operating within the same account and region.
+   Previously, each instance maintained its own isolated metastore. Under the account-scoped model:
+
+   * All instances in the same region automatically connect to a common metastore.
+   * Metadata created in one instance becomes visible and accessible (subject to permissions) from any other instance in that region.
+   * Engines such as Spark and Presto can be associated with this shared metadata, enabling consistent data access patterns across instances.
+
+   For more information, see [Metadata scoping at account level](/docs/watsonxdata?topic=watsonxdata-account_scope).
+
+
+Schema name reuse across Iceberg catalogs for Enterprise plan instances 
+
+: Previously, when referencing a table using a three-part name (`<catalog>.<schema>.<table>`), schema names had to be unique across all catalogs within a watsonx.data instance. This restriction prevented the creation of schemas with the same name in different catalogs. This limitation is lifted for Iceberg catalogs. You can now reuse schema names across multiple Iceberg catalogs. For example:
+- `myiceberg_catalog1.abcschema.mytable`
+- `myiceberg_catalog2.abcschema.mytable`
+
+This behavior applies to all new Enterprise plan instances, which are now account-scoped.
+
+Schema names must still be unique across other catalog types such as Hive, Delta, and Hudi.
+{: note}
+
+Thrift over HTTP protocol support in watsonx.data Enterprise plan 
+
+: The Metadata Service (MDS) in watsonx.data now runs the Thrift service over the HTTP protocol instead of the previous binary protocol. This change affects service endpoints and connection configurations.
+
+   Key changes:
+   * The MDS Thrift Protocol (`thrift://`) is changed to Thrift Over HTTP (`https://`).
+   * The `account_id` is mandatory for all Thrift API calls made to the MDS Thrift Service over HTTP.
+   * The `catalog` query parameter is required when invoking APIs involving the Iceberg catalog.
+
+This behavior applies to all new Lite plan instances, which are now account-scoped.
+
+   For Spark and Presto engines within watsonx.data, these updates are applied automatically for both new and migrated catalogs. For external engines such as Spark, Db2, and Netezza, users must manually update the connection settings to reflect the new protocol, port, and query parameter.
+   {: note}
+
+Querying data through agents by using the MCP server
+
+: You can now use the IBM {{site.data.keyword.lakehouse_short}} Model Context Protocol (MCP) Server to enable agents to interact with IBM watsonx.data lakehouse instances through natural language interfaces. The MCP server provides secure, read‑only access to lakehouse data and metadata through the Model Context Protocol, ensuring data integrity while supporting seamless agent integration. For more information, see [Querying data through agents by using the MCP server](/docs/watsonxdata?topic=watsonxdata-querying-data-ai)
+
+
+Storage and connector enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following data sources and storage enhancements:
+
+   * The Custom S3 Storage configuration now includes an `Endpoint Type` field that allows you to select the endpoint access type. Options are `Path style access` or `Virtual host`. For more information, see [Custom S3 Storage](/docs/watsonxdata?topic=watsonxdata-custom_s3_storage). 
+
+   * The storages or catalogs you have access to will be visible to you across all instances in your account, rather than being restricted to one instance.For more information about how to use the existing catalog, see [Quickstart](/docs/watsonxdata?topic=watsonxdata-quick_start_213).
+
+   * The Iceberg connector now performs commit operations atomically as a single transaction instead of two separate operations, improving data consistency and reliability. Previously, the connector executed `replaceTable` and `updateTableStatistics` as separate operations, which could result in an inconsistent state if one operation succeeded while the other failed. The improved implementation combines these operations into a single atomic transaction for both file-based and Glue-based metastores, ensuring data integrity during commits. Additionally, a new configuration property `iceberg.engine.hive.lock-enabled` allows you to enable or disable Hive table locks when the Iceberg connector accesses Hive tables. This property can be overridden at the table level using the `engine.hive.lock-enabled` table property. Disabling locks can improve performance in environments where concurrent access is controlled externally, though it may affect atomicity guarantees. This configuration is relevant only for file-based and Thrift-based metastores, as Glue does not use metastore locks by default. 
+
+   * The Snowflake connector now provides private key-based authentication for enhanced security. When adding a Snowflake connection, select between `Default` (username and password) or `Private key` authentication from the `Authentication type` dropdown. Private key authentication eliminates password storage, improves compliance with enterprise security policies, simplifies automation for service accounts, and supports optional passphrase protection for encrypted keys. To use this feature, select `Private key` as the authentication type, upload your private key file in PEM format, and provide a passphrase if your key is encrypted. For more information, see [Snowflake](/docs/watsonxdata?topic=watsonxdata-snowflake_database). 
+
+   * The Salesforce connector automatically handles reserved keywords in column names, improving your experience when querying Salesforce data. Previously, you encountered errors when querying columns with reserved keyword names such as `GROUP`. With the `data-source.identifier-quote="` property now configured by default, the connector seamlessly escapes these keywords, enabling you to query all Salesforce columns without errors or manual setup. If you are on an earlier version prior to 2.3.1, you can manually add this property to your Salesforce connector's catalog.properties file and then restart your pod via the backend. Do not delete your pods. If you face any issues, reach out to support for assistance. 
+
+
+Lite plan enhancements:
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancements to the Lite plan:
+
+   **Optimized resource allocation for an enhanced Trial experience** : The watsonx.data trial experience now includes 500 Resource Units (RUs) valid for 30 days.
+   This updated RU allocation aligns with the improved efficiency of the new architecture, allowing your 500 RUs to better support your exploration of core watsonx.data capabilities.
+   Trial (Lite) instances are automatically deleted when either the 500 RUs are fully consumed or the 30‑day period expires, whichever comes first. For more information, see [watsonx.data Lite plan](/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1).
+
+Access management enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following access management enhancements:
+
+   * **Manager role for independent resource administration** : With the Manager role, you can create and manage your own engines, services in addition to all User-level privileges. This role grants full administrative control over the resources you create, while ensuring complete isolation from other scoped admins. Engines and services created by one Manager remain visible and accessible only to that Manager, and other Manager with the same role cannot view or manage them, ensuring strong separation, clear ownership, and secure, independent administration.. For more information, see [User authentication (Level 1)](/docs/watsonxdata?topic=watsonxdata-access_mgt#levelauth).
+
+Integration enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following enhanced integration with other services:
+   * Azure Active Directory (Microsoft Entra ID) integration for {{site.data.keyword.lakehouse_short}} : You can now dynamically mask sensitive data in watsonx.data using IBM Knowledge Catalog (IKC), regardless of whether IKC is deployed as a SaaS service or on Cloud Pak for Data (CPD) Software. You can centralize governance in your preferred deployment model, while ensuring that watsonx.data queries consistently enforce masking and data protection rules.This ensures consistent protection for sensitive information across hybrid architectures and eliminating the previous limitation that required both services to be deployed on the same platform. For more information, see [Configuring watsonx.data on IBM Cloud with Azure Active Directory](/docs/watsonxdata?topic=watsonxdata-ikc_integration_ad_saas).
+
+   * Validate Your IKC–WXD connection: You can now quickly confirm that your configuration works and that IKC can successfully connect to WXD. The Test Connection button available in the IKC integration page helps you to immediately verify that your IKC–WXD configuration is correct and the connection is active. For more information, see [Connecting to IBM Knowledge Catalog (IKC)](/docs/watsonxdata?topic=watsonxdata-ikc_integration#conf_ikc).
+
+Console enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following console changes:
+
+   * Query level CPU and memory metrics added to Query history. 
+
+      To include detailed query-level usage metrics and provide deeper visibility into cost drivers, two new columns have been added to the **Query history** page in {{site.data.keyword.lakehouse_short}}.
+
+      * CPU – CPU units consumed by the query
+      * Memory (GB) – Maximum memory footprint during execution
+
+Serviceability enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following serviceability enhancements:
+
+   OpenTelemetry is now available for the Spark engine in addition to the existing Presto (Java) engine. This expanded capability provides a unified way to collect and export telemetry data (traces and metrics) from the two engines, giving you a more complete picture of your system's performance. For more information, see [Adding telemetry diagnostic tools through the user interface](/docs/watsonxdata?topic=watsonxdata-ikc_opntlmtry_ui_2.1.2). 
+
+Semantic automation for data enrichment
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following Semantic automation enhancements:
+
+   You can now provision {{site.data.keyword.lakehouse_short}} instances with Semantic automation enrichment layer (SAL) enabled in the following new regions: Sydney (au-syd) and Toronto (ca-tor). To register Semantic automation enrichment layer (SAL), see [Registering and activating semantic layer](/docs/watsonxdata?topic=watsonxdata-sal_register). 
+
+CPDCTL CLI enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancements to IBM Cloud Pak for Data Command Line Interface (IBM cpdctl):
+
+   * Backward compatibility has been enabled for the `sparkjob`, `tablemaint`, and `database` commands in CPDCTL. 
+
+    Starting with CPDCTL version 1.8.150, these commands can now connect to {{site.data.keyword.lakehouse_short}} releases prior to version 2.2.1, ensuring smoother integration and compatibility across environments.
+
+   * You can now use either `--id` or `--name` for the options `revoke`, `update`, and `list-access` under the `access-control` command. 
+
+   * A new option under the `bucket` command `wx-data bucket upload` can upload a file from local filesystem to a {{site.data.keyword.lakehouse_short}} object storage bucket. For details about the `bucket` command related operations in {{site.data.keyword.lakehouse_short}}, see [bucket](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata#cpdctl_commands_wxdatabuck). 
+
+Ingestion enhancement
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following ingestion enhancement:
+
+   * You can ingest files smaller than 2 MB using the Lite ingestion option without provisioning a Spark engine. For files larger than 2 MB, you must continue to have a Spark engine to run the ingestion job. 
+
+Deprecated features
+
+: The following features are deprecated in this release:
+
+   * Support for Spark 3.4 runtime is deprecated and the default version is changed to Spark 3.5 runtime. To ensure a seamless experience and to leverage the latest features and improvements, switch to Spark 3.5. To update the Apache Spark version, see [Editing the Spark engine](/docs/watsonxdata?topic=watsonxdata-view-end#edit-dtls).
+
+   * Python 3.10 is deprecated. To ensure a seamless experience when submitting Spark applications, you need to update your runtime to Python 3.11. Until you complete the migration to Python 3.11, you can use the following workaround to continue running Python 3.10:
+
+   ``` bash
+
+   "conf": {
+   "export RUNTIME_PYTHON_ENV": "python310"
+   }
+
+   ```
+   {: codeblock}
+
 
 ## 10 December 2025 - Version 2.3
 {: #lakehouse_08dec2025}
@@ -164,7 +321,7 @@ Thrift over HTTP protocol support in watsonx.data Lite plan
    For Spark and Presto engines within watsonx.data, these updates are applied automatically for both new and migrated catalogs. For external engines such as Spark, Db2, and Netezza, users must manually update the connection settings to reflect the new protocol, port, and query parameter.
    {: note}
 
-Muti-tenant Metadata Service (MDS) enhancements
+Metadata Service (MDS) enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancements to MDS.
 
@@ -222,9 +379,6 @@ Technology preview features
 ## 13 November 2025 - Version 2.2.2 New Feature 1 (NF1)
 {: #lakehouse_13nov2025}
 {: release-note}
-
-{{site.data.keyword.lakehouse_short}} 2.2.2 NF1 version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.2.2 NF1 release is available in your region, contact IBM Support.
-{: important}
 
 Technology preview features
 

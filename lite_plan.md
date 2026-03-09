@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-04"
+lastupdated: "2026-03-03"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -27,7 +27,7 @@ completion-time: 0.16h
 {: toc-completion-time="0.16h"}
 
 
-The **Lite** plan allows you to provision an {{site.data.keyword.lakehouse_full}} instance that is free to use, with limits on capacity (2000 Resource Units), and features for a time frame of 30 days. You can use the account to create Lite plan instance based on the  Generative AI use case, explore and familiarize yourself with {{site.data.keyword.lakehouse_short}}. For more information about the features and limitations of Lite plan, see [Lite plan](/docs/watsonxdata?topic=watsonxdata-getting-started#limitations-lite){: external}.
+The **Lite** plan allows you to provision an {{site.data.keyword.lakehouse_full}} instance that is free to use, with limits on capacity (500 Resource Units), and features for a time frame of 30 days. You can use the account to create Lite plan instance based on the  Generative AI use case, explore and familiarize yourself with {{site.data.keyword.lakehouse_short}}. For more information about the features and limitations of Lite plan, see [Lite plan](/docs/watsonxdata?topic=watsonxdata-getting-started#limitations-lite){: external}.
 {: shortdesc}
 
 When the allocated Resource Units or time runs out, all Lite instances become inactive and you can no longer access it.
@@ -214,6 +214,6 @@ If you choose to continue using watsonx.data by creating an Enterprise {{site.da
 
 3. Either before or after your lite plan has concluded, create an enterprise plan instance. For more information, see [Enterprise plan](/docs/watsonxdata?topic=watsonxdata-getting-started_1).
 
-4. Go to the **Quick start watsonx.data console** > **Configure bucket** page, specify the COS bucket details that you own (which stores data from the Lite plan). For more information, see [Quick start {{site.data.keyword.lakehouse_short}} console](/docs/watsonxdata?topic=watsonxdata-quick_start_213).
+4. Go to the **Quick start watsonx.data console** > **Configure your storage** page, specify the COS bucket details that you own (which stores data from the Lite plan). For more information, see [Quick start {{site.data.keyword.lakehouse_short}} console](/docs/watsonxdata?topic=watsonxdata-quick_start_213).
 
-When the setup is complete, the watsonx.data home page (enterprise plan) opens. From the navigation menu, select **Data manager** to view the COS storage bucket with data from the Lite plan.
+When the setup is complete, the watsonx.data home page (enterprise plan) opens. From the navigation menu, select **Data manager** to view the COS storage with data from the Lite plan.

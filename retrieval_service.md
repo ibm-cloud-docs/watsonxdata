@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-08"
+lastupdated: "2026-02-11"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -29,10 +29,18 @@ subcollection: watsonxdata
 # Configure AI model for Retrieval Service
 {: #retsrvc}
 
-The Retrieval Service in {{site.data.keyword.lakehouse_short}} enables administrators to configure which foundation model powers retrieval-based tasks such as text-to-SQL, question answering, and RAG. At the instance level, you can choose between granite (default), llama and gpt models, based on licensing and workload requirements.
+This configuration is available only with the Gen AI experience.
+{: note}
 
-## Procedure
-{: #install_retsrvc}
+Configure the foundation model that powers retrieval-based tasks in {{site.data.keyword.lakehouse_short}}.
+
+## About this task
+{: #abtist}
+
+The Retrieval Service in {{site.data.keyword.lakehouse_short}} enables administrators to configure which foundation model powers retrieval-based tasks such as text-to-SQL, question answering, and RAG. At the instance level, you can choose between granite (default), llama and gpt models, based on licensing and workload requirements
+
+## Configuring the retrieval service model
+{: #congretm}
 
 1. Log in to {{site.data.keyword.lakehouse_short}} console.
 1. From the navigation menu, select **Configurations** and click **Retrieval service model** tile.
@@ -45,7 +53,11 @@ The Retrieval Service in {{site.data.keyword.lakehouse_short}} enables administr
     {: note}
 
 1. A confirmation dialog appears, click **Select**.
-1. Under **Text to SQL**, choose on of the following available AI models:
+
+## Configuring the Text to SQL model
+{: #contts}
+
+1. In the **Text to SQL** section, select the AI model to use for Text to SQL conversion:
    - **granite-3-8b-instruct**
    - **llama-3-3-70b-instruct**
 1. A confirmation dialog appears, click **Select**.

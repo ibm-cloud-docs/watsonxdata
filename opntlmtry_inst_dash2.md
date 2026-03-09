@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-03"
+lastupdated: "2026-02-17"
 
 keywords: watsonx.data, Presto, Milvus, dashboards, observability, metrics
 
@@ -27,7 +27,7 @@ subcollection: watsonxdata
 {:video: .video}
 
 
-# Supporting dashboards
+# Supporting dashboards metrics for Presto (Java)
 {: #opntlmtry_inst_dash2}
 
 {{site.data.keyword.lakehouse_full}} Presto (Java) offer comprehensive observability through a robust set of dashboards that provide visibility into performance metrics, enabling rapid issue diagnosis and optimizing resource allocation.
@@ -42,7 +42,7 @@ The following are the supported dashboards:
 - Anomaly and trend insights
 - Log and error health
 
-The Grafana tool provides support only for the following four dashboards System health, Query performance health, Data and metadata health, and Workload health while the Instana tool supports all the eight dashboards.
+The Grafana tool provides support only for the following four dashboards System health, Query performance health, Data and metadata health, and Workload health while the Instana tool supports all the eight dashboards. The metrics dashboard template for Grafana is available at [Presto (Java)](https://www.ibm.com/docs/en/SSDZ38_2.2.x/lh-over/topics/PrestoDashboards.zip){: external}.
 {: note}
 
 The following list represents the default set of Presto (Java) metrics. Users can extend this by adding additional metrics as needed. A full list of available metrics and their definitions can be found in [Presto exposed JMX metrics](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-presto_expd_jmx){: external}.

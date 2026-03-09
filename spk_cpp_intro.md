@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-01-30"
+lastupdated: "2026-02-11"
 
 keywords: lakehouse, watsonx.data, Apache Gluten
 
@@ -60,15 +60,13 @@ For more information about using Spark engine, see [Working with watsonx.data Sp
 
 | Name | Status | Release date | End-of-support date |
 | ------------ | ------------- | ------ | ---- |
-| Apache Spark 3.4.4 | Supported | JAN 2025 | JUNE 2026 |
+| Apache Spark 3.4.4 | Deprecated | JAN 2025 | JUNE 2026 |
 | Apache Spark 3.5.4 | Supported | JUNE 2025 | FEB 2028 |
 {: caption="Supported Spark versions" caption-side="top"}
 
 
 ## Limitations
 {: #featu_cpp-limt}
-
-* Using Amazon S3 object stores support DAS for application submission, but other object stores like ADLS and GCS requires explicit credentials to be passed.
 
 
 * Smaller queries are not accelerated.
@@ -99,7 +97,6 @@ For more information about using Spark engine, see [Working with watsonx.data Sp
 
    * For more detailed info on Apache Gluten limitations, see [Limitation](https://github.com/apache/incubator-Apache Gluten/blob/main/docs/velox-backend-limitations.md).
 
-* Apache Gluten is not supported for FIPS enabled environment.
 
 
 

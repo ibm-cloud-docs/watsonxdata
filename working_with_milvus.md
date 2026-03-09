@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2022, 2024
-lastupdated: "2025-02-24"
+  years: 2022, 2025
+lastupdated: "2026-03-02"
 
 keywords: lakehouse, milvus, watsonx.data
 subcollection: watsonxdata
@@ -129,7 +129,7 @@ utility.drop_collection(<collection name>)
 
 Following are some best practices:
 
-- If there are long Varchar fields (greater than 256 characters), keep non-vector fields outside of Milvus. You can keep them in a COS bucket or storage bucket and perform a referential search.
+- If there are long Varchar fields (greater than 256 characters), keep non-vector fields outside of Milvus. You can keep them in a COS storage or storage and perform a referential search.
 - Make sure that the PyMilvus version is 2.4.0 or later. Milvus 2.4.0 or later versions support sparse vector search, hybrid search (`sparse_dense`), and multi vector search.
 - While loading collections by using batch insert, follow the pattern: Insert in a batch, release the memory, and then repeat the process.
 - Don't ingest in parallel to all of the collections at once. Ingest sequentially and flush between ingests.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-01-07"
+lastupdated: "2026-02-11"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -48,7 +48,7 @@ Your Spark application must be available in an accessible storage.
       | Application path | Specify the path to your application. This is a mandatory field. \n Example: `s3a://<application-bucket-name>/iceberg.py` |
       | Application name | Specify a name for the application. |
       | Arguments | Use the Add argument button to specify all arguments required by the application. |
-      | Spark version | Enter the Spark version for running your application. Spark 3.4 and 3.5 are the versions available. |
+      | Spark version | Enter the Spark version for running your application. |
       | Spark configuration properties | Specify the Spark properties in the form of key-value pair ("<property_name>": "<property_value>") separated by comma. For more information about the different properties, see [Properties](https://spark.apache.org/docs/latest/configuration.html#available-properties). |
       | Spark environment properties | Specify the Spark environment properties as key=value pairs. For more information about the different properties, see [Environment properties](https://spark.apache.org/docs/latest/configuration.html#runtime-environment). |
       | Hardware configuration | Specify the number of CPU cores (Driver and Executor) and memory that is required for the workload. |

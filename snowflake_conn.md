@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-29"
+lastupdated: "2026-03-03"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -44,13 +44,16 @@ You can configure Snowflake using one of the following methods:
 
  | Field           | Description        |
  |------------------|--------------------|
- | Target persistence | Select the target persistence: \n * Watsonx.data instance - The instance console database stores the connection details exclusively. \n * Platform asset catalog - The default catalog in the data platform stores your connection details. If you select `Platform asset catalog` as the target persistence, you must specify a warehouse name.\n You can enable the Platform asset catalog option only if data platform services are active, a **Platform asset catalog** exists in the data platform, and you have access to it. |
+ | Target persistence | Select the target persistence: \n * {{site.data.keyword.lakehouse_short}} instance - The instance console database stores the connection details exclusively. \n * Platform asset catalog - The default catalog in the data platform stores your connection details. If you select `Platform asset catalog` as the target persistence, you must specify a warehouse name.\n You can enable the Platform asset catalog option only if data platform services are active, a **Platform asset catalog** exists in the data platform, and you have access to it. |
  | Display name    | Enter the data source name to be displayed on the screen. |
  | Database name     | Enter the name of your database.|
  | Account name            | Enter your Snowflake Account name. This may include region information (For example, account_name.region_id). If you do not have region information, use the account name that is provided by your Snowflake administrator.  |
- | Warehouse name (optional)         | Enter the Warehouse name.  |
+ | Authentication type | Select the authentication method: \n * Default - Use username and password authentication. \n * Private key - Use private key-based authentication. |
+ | Warehouse name (optional)         | Enter the Warehouse name. \n **Note:** You must provide a warehouse name when using **Private key** authentication type. |
  | Username           | Enter the username.  |
- | Password           | Enter the password.  |
+ | Password           | Enter the password. This field is displayed when **Default** authentication type is selected.  |
+ | Passphrase | This field is displayed when **Private key** authentication type is selected. Enter the passphrase for the private key if it is encrypted. \n **Note**: Passphrase is optional for unencrypted private keys.|
+ | Private key | Upload the private key file (.pem format). This field is displayed and required when **Private key** authentication type is selected. |
  | Connection status   | Click the Test connection link to test the database connection. If the database connection is successful, a success message appears. |
  | Associate catalog  | Select the checkbox to associate a catalog to the data source. This catalog is automatically associated with your data source and serves as your query interface with the data stored within. |
  | Catalog name | Enter the name of the catalog. |
@@ -64,7 +67,7 @@ You can configure Snowflake using one of the following methods:
 | --- | --- |
 | Select catalog | Use the dropdown to select a catalog. |
 | Select data source | Use the dropdown to select a data source from the selected catalog. |
-| Target persistence | Select the target persistence: \n * Watsonx.data instance - The instance console database stores the connection details exclusively. \n * Platform asset catalog - The default catalog in the data platform stores your connection details. \n You can select the `Platform asset catalog` option only if data platform services are active, a **Platform asset catalog** exists in the data platform, and you have access to it. |
+| Target persistence | Select the target persistence: \n * {{site.data.keyword.lakehouse_short}} instance - The instance console database stores the connection details exclusively. \n * Platform asset catalog - The default catalog in the data platform stores your connection details. \n You can select the `Platform asset catalog` option only if data platform services are active, a **Platform asset catalog** exists in the data platform, and you have access to it. |
 | Connection status | Click the Test connection link to test the database connection. If the database connection is successful, a success message appears. |
 | Display name | Enter the database name to be displayed on the screen. |
 | Associate catalog | Select the checkbox to associate a catalog to the data source. This catalog is automatically associated with your data source and serves as your query interface with the data stored within. |
@@ -80,7 +83,7 @@ You can configure Snowflake using one of the following methods:
 | --- | --- |
 | Select project | Use the dropdown to select a project. |
 | Select data source | Use the dropdown to select a data source from the selected project. |
-| Target persistence | Select the target persistence: \n * Watsonx.data instance - The instance console database stores the connection details exclusively. \n * Platform asset catalog - The default catalog in the data platform stores your connection details. \n You can select the `Platform asset catalog` option only if data platform services are active, a **Platform asset catalog** exists in the data platform, and you have access to it. |
+| Target persistence | Select the target persistence: \n * {{site.data.keyword.lakehouse_short}} instance - The instance console database stores the connection details exclusively. \n * Platform asset catalog - The default catalog in the data platform stores your connection details. \n You can select the `Platform asset catalog` option only if data platform services are active, a **Platform asset catalog** exists in the data platform, and you have access to it. |
 | Connection status | Click the Test connection link to test the database connection. If the database connection is successful, a success message appears. |
 | Display name | Enter the database name to be displayed on the screen. |
 | Associate catalog | Select the checkbox to associate a catalog to the data source. This catalog is automatically associated with your data source and serves as your query interface with the data stored within. |

@@ -237,6 +237,7 @@ toc:
               - sbmt_das_spk.md
               - sbmt_spk_cnsl.md
               - sbmt_spk_mor_cow.md
+              - spk_icbrg_delta.md
               - spark-extnsn.md
               - spark-streaming.md
               - ae_auto-scaling-serverless-apps.md
@@ -289,6 +290,7 @@ toc:
           - wxd_wxa_connection.md
           - milvus_backup.md
           - milvus_vts.md
+      - account_scope.md
       - topicgroup:
           label: Semantic automation for data enrichment
           topics:
@@ -366,6 +368,7 @@ toc:
           topics:
           - ikc_integration.md
           - s2s_auth.md
+          - ikc_ad_saas.md
       - ds_integration.md
       - wxd-dph.md
       - topicgroup:
@@ -390,6 +393,14 @@ toc:
       - idle_session_timeout.md
       - retrieval_service.md
       - db_ast.md
+      - topicgroup:
+          label: Querying data with agents
+          topics:
+          - querying-data-ai.md
+          - querying-data-ai-inm.md
+          - configuring-claude.md
+          - configuring-bob.md
+          - working_with_MCP_server.md
   - navgroup:
       id: reference
       topics:
@@ -474,6 +485,7 @@ toc:
           - ts_cs_issue.md
           - ts_ip_restrict_issue.md
           - ranger_crash_trble.md
+          - optm_jdbc_query.md
           - topicgroup:
               label: Spark
               topics:

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-10"
+lastupdated: "2026-03-02"
 
 keywords: lakehouse, cpdctl, watsonx.data, supporting commands, wx-data
 
@@ -121,7 +121,7 @@ Syntax:
 The `ingestion` command further supports the following commands:
 
 | Command | Description |
-|---------|-------------|
+| --------- | ------------- |
 | `./cpdctl wx-data ingestion list` | Lists the ingestion jobs executed in {{site.data.keyword.lakehouse_short}} instance. |
 | `./cpdctl wx-data ingestion create` | Create an ingestion job in {{site.data.keyword.lakehouse_short}} instance. |
 | `./cpdctl wx-data ingestion get` | Get the details of an ingestion job executed in {{site.data.keyword.lakehouse_short}} instance. |
@@ -142,7 +142,7 @@ Syntax:
 The `engine` command further supports the following commands:
 
 | Command | Description |
-|---------|-------------|
+| --------- | ------------- |
 | `./cpdctl wx-data engine list` | Lists all the engines available in {{site.data.keyword.lakehouse_short}} instance. |
 | `./cpdctl wx-data engine create` | Create or register an engine in {{site.data.keyword.lakehouse_short}} instance. |
 | `./cpdctl wx-data engine delete` | Delete an engine from {{site.data.keyword.lakehouse_short}} instance. |
@@ -167,14 +167,15 @@ The `bucket` command further supports the following commands:
 {: note}
 
 | Command | Description |
-|---------|-------------|
+| --------- | ------------- |
 | `./cpdctl wx-data bucket list` | Lists all the storages available in {{site.data.keyword.lakehouse_short}} instance. |
-| `./cpdctl wx-data bucket create` | Register a storage in {{site.data.keyword.lakehouse_short}} instance. Use of secrets from an external vault (HashiCorp) is enabled with `create` option.|
+| `./cpdctl wx-data bucket create` | Register a storage in {{site.data.keyword.lakehouse_short}} instance. Use of secrets from an external vault (HashiCorp) is enabled with `create` option. |
 | `./cpdctl wx-data bucket get` | Get the details of a registered storage in {{site.data.keyword.lakehouse_short}} instance. |
 | `./cpdctl wx-data bucket delete` | Delete a storage from {{site.data.keyword.lakehouse_short}} instance. |
 | `./cpdctl wx-data bucket activate` | Activate a storage bucket in {{site.data.keyword.lakehouse_short}} on IBM Cloud instance only. |
 | `./cpdctl wx-data bucket deactivate` | Deactivate a storage bucket in {{site.data.keyword.lakehouse_short}} on IBM Cloud instance only. This option is not supported from {{site.data.keyword.lakehouse_short}} 2.2.1 version. |
 | `./cpdctl wx-data bucket list-objects` | List all objects in the bucket. |
+| `./cpdctl wx-data bucket upload` | Upload a file from local filesystem to a {{site.data.keyword.lakehouse_short}} object storage bucket. |
  {: caption="Supported commands by bucket" caption-side="bottom"}
 
 Limitations:
@@ -197,9 +198,9 @@ Syntax:
 The `database` command further supports the following commands:
 
 | Command | Description |
-|---------|-------------|
+| --------- | ------------- |
 | `./cpdctl wx-data database list` | Lists all the data sources available in {{site.data.keyword.lakehouse_short}} instance. |
-| `./cpdctl wx-data database create` | Create or add a data source in {{site.data.keyword.lakehouse_short}} instance. Use of secrets from an external vault (HashiCorp) is enabled with `create` option.|
+| `./cpdctl wx-data database create` | Create or add a data source in {{site.data.keyword.lakehouse_short}} instance. Use of secrets from an external vault (HashiCorp) is enabled with `create` option. |
 | `./cpdctl wx-data database get` | Get the details of a registered data source in {{site.data.keyword.lakehouse_short}} instance. |
 | `./cpdctl wx-data database delete` | Delete a data source from {{site.data.keyword.lakehouse_short}} instance. |
  {: caption="Supported commands by database" caption-side="bottom"}
@@ -218,7 +219,7 @@ Syntax:
 The `sparkjob` command further supports the following commands:
 
 | Command | Description |
-|---------|-------------|
+| --------- | ------------- |
 | `./cpdctl wx-data sparkjob list` | List all applications available in a Spark engine. |
 | `./cpdctl wx-data sparkjob create` | Submit a Spark application. |
 | `./cpdctl wx-data sparkjob get` | Get the status of a Spark application. |
@@ -242,17 +243,17 @@ Syntax:
 
 The tablemaint command supports the following commands:
 
-| Options | Description |
+|Options|Description|
 |---------|-------------|
 |`./cpdctl wx-data tablemaint rollback-to-snapshot`|Roll back, or restore the table to a specific snapshot ID.|
-|`./cpdctl wx-data tablemaint rollback-to-timestamp`	|Roll back a table to the snapshot at a specific timestamp.|
-|`./cpdctl wx-data tablemaint set-current-snapshot`	|Sets the current snapshot ID for a table.|
-|`./cpdctl wx-data tablemaint cherrypick-snapshot`	|Cherry-picks changes from a snapshot into the current table state. Cherry-picking creates a new snapshot from an existing snapshot without altering or removing the original.|
-|`./cpdctl wx-data tablemaint expire-snapshot` |Remove older snapshots and their files which are no longer needed.|
-|`./cpdctl wx-data tablemaint remove-orphan` |Remove files that are not referenced in any metadata files of an Iceberg table and can thus be considered "orphaned".|
-|`./cpdctl wx-data tablemaint rewrite-data`	|Rewrites the data files.|
-|`./cpdctl wx-data tablemaint rewrite-manifests`	|Rewrite manifests for a table to optimize scan planning.|
-|`./cpdctl wx-data tablemaint register-table`	|Creates a table.|
+|`./cpdctl wx-data tablemaint rollback-to-timestamp`|Roll back a table to the snapshot at a specific timestamp.|
+|`./cpdctl wx-data tablemaint set-current-snapshot`|Sets the current snapshot ID for a table.|
+|`./cpdctl wx-data tablemaint cherrypick-snapshot`|Cherry-picks changes from a snapshot into the current table state. Cherry-picking creates a new snapshot from an existing snapshot without altering or removing the original.|
+|`./cpdctl wx-data tablemaint expire-snapshot`|Remove older snapshots and their files which are no longer needed.|
+|`./cpdctl wx-data tablemaint remove-orphan`|Remove files that are not referenced in any metadata files of an Iceberg table and can thus be considered "orphaned".|
+|`./cpdctl wx-data tablemaint rewrite-data`|Rewrites the data files.|
+|`./cpdctl wx-data tablemaint rewrite-manifests`|Rewrite manifests for a table to optimize scan planning.|
+|`./cpdctl wx-data tablemaint register-table`|Creates a table.|
  {: caption="Supported commands by tablemaint" caption-side="bottom"}
 
 The following flags are listed when you run each table maintenance command:
@@ -278,8 +279,8 @@ Syntax:
 The `service` command further supports the following commands:
 
 | Command | Description |
-|---------|-------------|
-| `./cpdctl wx-data service list-tables` | Lists all table names of hive or iceberg connectors in {{site.data.keyword.lakehouse_short}} instance.|
+| --------- | ------------- |
+| `./cpdctl wx-data service list-tables` | Lists all table names of hive or iceberg connectors in {{site.data.keyword.lakehouse_short}} instance. |
 | `./cpdctl wx-data service get-qhmm-config` | Get the qhmm enabled bucket name in {{site.data.keyword.lakehouse_short}} instance. |
 | `./cpdctl wx-data service monitor` | To run stats and qhmm related queries in {{site.data.keyword.lakehouse_short}} instance. |
 | `./cpdctl wx-data service generate-engine-dump` | Generate heap or thread dump specific to Presto worker or coordinator {{site.data.keyword.lakehouse_short}} instance. |
@@ -300,8 +301,8 @@ Syntax:
 The `component` command further supports the following commands:
 
 | Command | Description |
-|---------|-------------|
-| `./cpdctl wx-data component get-mds-status` | Get configuration for Metadata Service (MDS) in {{site.data.keyword.lakehouse_short}} instance.|
+| --------- | ------------- |
+| `./cpdctl wx-data component get-mds-status` | Get configuration for Metadata Service (MDS) in {{site.data.keyword.lakehouse_short}} instance. |
 | `./cpdctl wx-data component get-ces-status` | Get CES status in {{site.data.keyword.lakehouse_short}} instance. |
 | `./cpdctl wx-data component get-cas-cpg-endpoint` | Get CPG and CAS endpoints in {{site.data.keyword.lakehouse_short}} instance. |
 | `./cpdctl wx-data component get-hms-status` | List all HMS meta stores in {{site.data.keyword.lakehouse_short}} instance. |
@@ -322,8 +323,8 @@ Syntax:
 The `access-control` command further supports the following commands:
 
 | Command | Description |
-|---------|-------------|
-| `./cpdctl wx-data access-control list-users-groups` | Get users and groups who have access to {{site.data.keyword.lakehouse_short}} instance.|
+| --------- | ------------- |
+| `./cpdctl wx-data access-control list-users-groups` | Get users and groups who have access to {{site.data.keyword.lakehouse_short}} instance. |
 | `./cpdctl wx-data access-control list-access` | List resource access policies. |
 | `./cpdctl wx-data access-control update-access` | Update resource access policies. |
 | `./cpdctl wx-data access-control revoke-access` | Revoke resource access policies. |

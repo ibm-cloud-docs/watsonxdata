@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-04-01"
+lastupdated: "2026-02-17"
 
 keywords: watsonxdata, faq
 
@@ -253,7 +253,7 @@ For commands supported in the command-line interface during ingestion, see [Load
 **Where can I learn more about each pricing plan?**
 
 {{site.data.keyword.lakehouse_short}} as a service offers three pricing plans:
-1. Lite plan: It provides a free usage limit of 2000 Resource Units (monitored on the Billing and usage page of IBM Cloud) within a time frame of 30 days. The cap value is displayed on the IBM Cloud catalog provisioning page and is reflected on your billing page within your {{site.data.keyword.lakehouse_short}} instance upon provisioning.
+1. Lite plan: It provides a free usage limit of 500 Resource Units (monitored on the Billing and usage page of IBM Cloud) within a time frame of 30 days. The cap value is displayed on the IBM Cloud catalog provisioning page and is reflected on your billing page within your {{site.data.keyword.lakehouse_short}} instance upon provisioning.
 2. Enterprise plan: You pay by hour for each infrastructure resource that you add. Start with support services then build the engines and services that you want. This has an hourly rate that is computed in Resource Units that maps to your payment method whether ‘Pay as You Go’ or ‘Subscription’.
 
 For more information, see [Subscription plans](/docs/watsonxdata?topic=watsonxdata-getting-started).
@@ -264,7 +264,7 @@ For more information, see [Subscription plans](/docs/watsonxdata?topic=watsonxda
 
 **Is the lite plan credit card free?**
 
-Yes, if you use an IBM cloud trial account the lite plan is credit card free. You have a set amount of free usage limit of 2000 Resource Units within a time frame of 30 days, whichever ends first to try the product. For more information, see [Subscription plans](/docs/watsonxdata?topic=watsonxdata-getting-started).
+Yes, if you use an IBM cloud trial account the lite plan is credit card free. You have a set amount of free usage limit of 500 Resource Units within a time frame of 30 days, whichever ends first to try the product. For more information, see [Subscription plans](/docs/watsonxdata?topic=watsonxdata-getting-started).
 
 **What's included in the lite plan?**
 
@@ -277,7 +277,7 @@ Key supported features:
 
 Limitations:
 1. It is limited to provisioning a single instance per resource group.
-2. It is limited to 2000 resource units (RUs) before the instance is suspended. The cap value is displayed on the [{{site.data.keyword.Bluemix_notm}} catalog provisioning][def] page and is reflected on your billing page within your {{site.data.keyword.lakehouse_short}} instance upon provisioning. Your license expires on reaching either the cap limit of 2000 RUs or exceeding the trial period of 30 days.
+2. It is limited to 500 resource units (RUs) before the instance is suspended. The cap value is displayed on the [{{site.data.keyword.Bluemix_notm}} catalog provisioning][def] page and is reflected on your billing page within your {{site.data.keyword.lakehouse_short}} instance upon provisioning. Your license expires on reaching either the cap limit of 500 RUs or exceeding the trial period of 30 days.
 3. It is limited to a maximum of one Presto engine or Milvus service with starter size (1.25 RUs per hour) or both.
 4. It is limited to the smallest node sizes and profiles for each engine and service. You cannot increase the node size.
 5. The lite instances cannot be used for production purposes.
@@ -286,7 +286,7 @@ Limitations:
 
 **What is the limit for using the lite plan?**
 
-The lite plan of {{site.data.keyword.lakehouse_short}} instance is typically a trial account that is free to use, with limits on capacity (2000 Resource Units), features for a time frame of 30 days. You can use the account to explore and familiarize yourself with watsonx.data. You need to create a paid IBM cloud account (either 'Pay as you go' or 'Subscription') and then provision an enterprise plan instance to access all the features and functions.
+The lite plan of {{site.data.keyword.lakehouse_short}} instance is typically a trial account that is free to use, with limits on capacity (500 Resource Units), features for a time frame of 30 days. You can use the account to explore and familiarize yourself with watsonx.data. You need to create a paid IBM cloud account (either 'Pay as you go' or 'Subscription') and then provision an enterprise plan instance to access all the features and functions.
 
 **I have exhausted all my resource units. How do I delete my lite plan instance?**
 

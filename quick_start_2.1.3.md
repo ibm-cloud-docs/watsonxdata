@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-06-26"
+lastupdated: "2026-03-03"
 
 keywords: lakehouse, watsonx data, quick start, engine, catalog, bucket
 subcollection: watsonxdata
@@ -27,15 +27,19 @@ When you log in to the {{site.data.keyword.lakehouse_full}} web console for the 
 
 The wizard guides you through the initial configuration process for the infrastructure components of {{site.data.keyword.lakehouse_short}}.
 
-## Configure a storage
+## Configure a storage and catalog
 {: #qs_bucket_213}
 {: step}
 
-Your {{site.data.keyword.lakehouse_short}} needs an object storage bucket to store your raw data files. You can provision a new IBM-managed bucket or register your own bucket. You can add more buckets and register them later. You can also configure the query monitoring details. You can enable or disable the query monitoring to store and manage your diagonostic data.
+Your {{site.data.keyword.lakehouse_short}} needs an object storage bucket to store your raw data files. You can provision a new IBM-managed bucket or register your own bucket. You can also configure the query monitoring details. You can enable or disable the query monitoring to store and manage your diagonostic data.
 
-In the **Configure storage** section, complete the following steps:
+In the **Configure storage and catalog** section, complete the following steps:
+
+Starting with version 2.3.1, you can complete your {{site.data.keyword.lakehouse_short}} Quick Start setup by using the new feature that lets you specify and reuse an existing catalog–storage pair. This capability is available only in the Tokyo and Sydney SaaS regions. In this case, you can choose the **Use existing pair** option to aautomatically lists all storage-catalog pairs in your account that you have access to, allowing you to select an existing pair, avoid duplicate resources, and reduce setup time. If you select the **Discover COS instance** option, you must explicitly enter the catalog name to support this account‑scoped behavior. To learn more about account‑scoped behavior, see [Component scoping at account level](/docs/watsonxdata?topic=watsonxdata-account_scope).
+{: important}
 
 1. Select one of the following options and provide details.
+
    - **Discover COS instance** : Selects an existing IBM COS instance and an attached bucket on your IBM Cloud account. If multiple IBM COS instances and buckets are detected, select the IBM COS instance that contains the desired bucket to register with {{site.data.keyword.lakehouse_short}}.
    - **Register my own** :  You can use any existing IBM COS bucket from an existing instance or provision a new instance. To provision a new IBM COS instance, provide the following details:
 
@@ -67,7 +71,11 @@ In the **Query monitoring** section, complete the following steps:
 
 2. If you enable the QHMM feature, you must configure the storage details for storing QHMM data. Select one of the following options and provide details.
 
-   - **Discover COS instance** : Selects an existing IBM COS instance and an attached bucket on your IBM Cloud account. If multiple IBM COS instances and buckets are detected, select the IBM COS instance that contains the desired bucket to register with {{site.data.keyword.lakehouse_short}}.
+   Starting with version 2.3.1, you can complete your {{site.data.keyword.lakehouse_short}} Quick Start setup by using the new feature that lets you specify and reuse an existing catalog–storage pair. This capability is available only in the Tokyo and Sydney SaaS regions. In this case, you can choose the **Use existing pair** option to aautomatically lists all storage-catalog pairs in your account that you have access to, allowing you to select an existing pair, avoid duplicate resources, and reduce setup time. If you select the **Discover COS instance** option, you must explicitly enter the catalog name to support this account‑scoped behavior. To learn more about account‑scoped behavior, see [Component scoping at account level](/docs/watsonxdata?topic=watsonxdata-account_scope).
+   {: important}
+
+
+   - **Discover COS instance** : Selects an existing IBM COS instance and an attached storage on your IBM Cloud account. If multiple IBM COS instances and storages are detected, select the IBM COS instance that contains the desired storage to register with {{site.data.keyword.lakehouse_short}}. You must specify the catalog name that needs to be associated with the storage in the **Catalog name** field.
    - **Register my own** : You can register an existing bucket as a QHMM bucket. Only the following bucket types can be registered as a QHMM bucket: Amazon S3, IBM Storage Ceph, or IBM Cloud Object Storage. To register an existing bucket as QHMM bucket, provide the following details:
 
      | Field | Description |
@@ -139,7 +147,7 @@ In the **Summary** page, complete the following steps:
 
 2. Click **Finish and go**.
 
-When the setup is complete, the {{site.data.keyword.lakehouse_short}} home page appears. Resource Unit consumption begins soon after creating the support services by using the quick start wizard. You can view the run rate that is submitted for billing from the billing and usage tab. For more information, see [Billing and usage]({{site.data.keyword.ref-manage_bill-link}}){: external}.
+When the setup is complete, the {{site.data.keyword.lakehouse_short}} home page appears. For information about the home page, see [Getting started with the web console](/docs/watsonxdata?topic=watsonxdata-getstarted-console). Resource Unit consumption begins soon after creating the support services by using the quick start wizard. You can view the run rate that is submitted for billing from the billing and usage tab. For more information, see [Billing and usage]({{site.data.keyword.ref-manage_bill-link}}){: external}.
 
 ## Next steps
 {: #qs_next_steps_213}

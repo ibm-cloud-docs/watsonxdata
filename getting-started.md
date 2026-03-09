@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-15"
+lastupdated: "2026-03-04"
 
 keywords: lakehouse, watsonx data, provision, endpoint, resource
 subcollection: watsonxdata
@@ -40,6 +40,7 @@ The access to provision IBM Cloud resources is governed by using [IAM access](ht
 {: step}
 
 * [Provision an instance through UI](#create-by-ui)
+* [Provisioning an instance through Terraform module](#create-ent-tf-module-1)
 * [Provision an instance through CLI](#create-by-cli)
 
 ### Provision an instance through UI
@@ -72,6 +73,37 @@ The access to provision IBM Cloud resources is governed by using [IAM access](ht
     After you click **Create**, the system displays a message to say that the instance is being provisioned, which returns you to the **Resource list**. From the **Resource list**, under **Databases** category, you see that the status for your instance is, `Provision in progress`.
 
 11. When the status changes to `Active`, select the instance.
+
+
+### Provisioning an instance through Terraform module
+{: #create-ent-tf-module-1}
+
+You can provision an instance by using a pre-built, open-source, enterprise-ready Terraform module. This method uses [Terraform IBM Modules (TIM)](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-about-tim), which are curated collections of Terraform modules that simplify creating, managing, and versioning complex, compliant environments on IBM Cloud.
+
+#### About the {{site.data.keyword.lakehouse_short}} Terraform module
+{: #create-ent-tf-module-3}
+
+The [{{site.data.keyword.lakehouse_short}} module](https://registry.terraform.io/modules/terraform-ibm-modules/watsonx-data/ibm/latest) is a purpose-built Terraform module that follows secure-by-default principles and aligns with IBM Cloud best practices. The module provides the following capabilities:
+
+- Standardized method for creating and working with IBM {{site.data.keyword.lakehouse_short}} instances
+- Comprehensive documentation with README files and examples
+- Multiple deployment scenarios through basic, advanced, and existing instance examples
+- Controlled versioning for safe updates and easier dependency management
+- Enterprise-ready configurations that are secure, scalable, and compliant
+
+#### Deploying the module
+{: #create-ent-tf-module-2}
+
+To deploy the {{site.data.keyword.lakehouse_short}} enterprise plan by using this Terraform module, complete the steps in [Deploying a Terraform IBM Module by using Terraform CLI](https://cloud.ibm.com/docs/ibm-cloud-provider-for-terraform?topic=ibm-cloud-provider-for-terraform-deploy-tim-module).
+
+The deployment process includes the following steps:
+
+1. Verify that you have the required prerequisites: Terraform CLI and IBM Cloud API key.
+2. Create the Terraform configuration based on the code and examples provided.
+3. Configure input variables for your deployment.
+4. Run `terraform init` to download required providers and modules.
+5. Run `terraform plan` to preview the changes that Terraform will make to your infrastructure.
+6. Run `terraform apply` to provision your {{site.data.keyword.lakehouse_short}} instance.
 
 ### Provision an instance through CLI
 {: #create-by-cli}
@@ -137,7 +169,7 @@ The access to provision IBM Cloud resources is governed by using [IAM access](ht
 ### Provisioning Virtual Private Endpoint (VPE) enabled instance
 {: #create-by-VPE}
 
-You can provision an IBM watsonx.data instance with VPE enabled to connect your IBM watsonx.data instance privately and securely to resources in your Virtual Private Cloud (VPC), eliminating exposure to the public internet. This configuration is supported in the following regions:
+You can provision an IBM {{site.data.keyword.lakehouse_short}} instance with VPE enabled to connect your IBM {{site.data.keyword.lakehouse_short}} instance privately and securely to resources in your Virtual Private Cloud (VPC), eliminating exposure to the public internet. This configuration is supported in the following regions:
 
 * Dallas (us-south)
 * Washington DC (us-east)
@@ -196,7 +228,11 @@ ibmcloud resource service-instance-create <instance_name> lakehouse lakehouse-en
 
 2. Click your {{site.data.keyword.lakehouse_short}} instance link. The service instance page opens.
 
-3. Click **Open web console**. The {{site.data.keyword.lakehouse_short}} web console opens.
+
+
+3. If you provisioned watsonx.data Enterprise in the ca-tor region, you have two options. Click **Open Admin console** to launch {{site.data.keyword.lakehouse_short}} web console experience. You must complete the quick start steps, see [Quick start {{site.data.keyword.lakehouse_short}} console](/docs/watsonxdata?topic=watsonxdata-quick_start_213).
+
+Click **watsonx** to launch the watsonx.data experience on the watsonx platform and work with unstructured data. See the [IBM watsonx.data as a Service documentation](https://dataplatform.cloud.ibm.com/docs/content/wsj/wx-data/intro-wdp.html?context=wxd&audience=wdp).
 
     
 

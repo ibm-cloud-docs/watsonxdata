@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-28"
+lastupdated: "2026-02-11"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -252,7 +252,7 @@ You can use this API to stop an application in the following states: `accepted`,
 
 You can use the `"runtime"` section under `"application_details"` in the payload JSON script to pass the Spark runtime version when submitting an application. The Spark version passed through the `"runtime"` section overrides the default runtime Spark version set at the instance level.
 
-Example of the `"runtime"` section to run an application in Spark 3.4:
+Example of the `"runtime"` section to run an application in Spark 3.5:
 
 ```json
 {
@@ -262,7 +262,7 @@ Example of the `"runtime"` section to run an application in Spark 3.4:
             "/opt/ibm/spark/examples/src/main/resources/people.txt"
             ],
         "runtime": {
-            "spark_version": "3.4"
+            "spark_version": "3.5"
         }
     }
 }
