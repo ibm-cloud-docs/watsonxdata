@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2026-03-05"
+lastupdated: "2026-03-09"
 
 keywords: watsonxdata, release notes
 
@@ -46,9 +46,19 @@ Terraform module for {{site.data.keyword.lakehouse_short}} deployment
 
 : You can now use the {{site.data.keyword.lakehouse_short}} Terraform module to create and manage {{site.data.keyword.lakehouse_short}} instances through infrastructure as code. The module provides a standardized, secure-by-default method that follows IBM Cloud best practices. It offers multiple deployment scenarios through basic and advanced examples, controlled versioning for safe updates, and enterprise-ready configurations that are secure, scalable, and compliant. For detailed deployment instructions, see [{{site.data.keyword.lakehouse_short}} enterprise plan](/docs/watsonxdata?topic=watsonxdata-getting-started_1#create-by-tf-module) and [{{site.data.keyword.lakehouse_short}} Lite plan](/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1#create-lite-tf-module) 
 
-Account-level component persistence for Enterprise plan instances 
+Metadata scoping at account level 
 
-: You can now retain account-level components such as catalogs, databases, buckets, and their metadata properties independently of individual instances. When an instance is deleted, these components remain accessible from any other instance within the same account and region. This behavior applies to all new Enterprise plan instances, which are now account-scoped. For more information, see [Component scoping at account level](/docs/watsonxdata?topic=watsonxdata-account_scope).
+: {{site.data.keyword.lakehouse_full}} introduces a new account‑scoped metadata model designed to centralize and streamline metadata management across all instances within the same IBM Cloud account and region. This enhancement improves consistency, governance, and operational efficiency by enabling a unified metadata experience.
+
+  With account-scoped metadata, catalogs, schemas, tables, data sources, and object storages are now shared across all {{site.data.keyword.lakehouse_short}} instances operating within the same account and region.
+  Previously, each instance maintained its own isolated metastore. Under the account-scoped model:
+
+  * All instances in the same region automatically connect to a common metastore.
+  * Metadata created in one instance becomes visible and accessible (subject to permissions) from any other instance in that region.
+  * Engines such as Spark and Presto can be associated with this shared metadata, enabling consistent data access patterns across instances.
+
+  For more information, see [Metadata scoping at account level](/docs/watsonxdata?topic=watsonxdata-account_scope).
+
 
 Schema name reuse across Iceberg catalogs for Enterprise plan instances 
 

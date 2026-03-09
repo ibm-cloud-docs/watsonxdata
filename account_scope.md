@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-02-25"
+lastupdated: "2026-03-09"
 
 keywords: watsonxdata, scope, resource
 
@@ -26,62 +26,77 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Component scoping at account level
+# Account‑scoped metadata model
 {: #account_scope}
 
-In {{site.data.keyword.lakehouse_full}}, the account scoping feature enables you to retain the account level components such as catalogs, databases, buckets, and their metadata properties independently of individual instances.
+The account‑scoped metadata model centralizes the management of metadata objects across all {{site.data.keyword.lakehouse_full}} instances that belong to the same IBM Cloud account and region. Instead of isolating metadata within a single instance, the platform now stores catalogs, schemas, tables, data sources, and object storages at the account level. This model enables consistent governance, easier reuse, and unified visibility across instances.
 {: shortdesc}
 
 In {{site.data.keyword.lakehouse_short}} 2.3.1 release, the **Account‑scoped** mode is available for the {{site.data.keyword.lakehouse_short}} Enterprise edition in Tokyo and Sydney SaaS regions only.
 {: note}
 
-An **Account‑scoped** tag that is displayed next to the **Welcome** heading in the {{site.data.keyword.lakehouse_short}} interface indicates that the watsonx.data instance is restricted to a single IBM Cloud account. Users can see and access resources that belong only to the same IBM Cloud account the instance is tied to.
+# Overview of the account‑scoped model
+{: #account_scope_1}
 
-When an instance is deleted in {{site.data.keyword.lakehouse_short}}, the account level components such as catalogs, databases, and buckets are not removed. These componenets remain fully accessible to any other instance within the same account and region. However, if a catalog-bucket pair is assigned to an engine within any instance in the same account, that catalog cannot be deleted until the association is removed.
+In earlier versions, each instance used its own metastore. Catalogs and schemas created in one instance were not visible in other instances in the same account. In the account‑scoped model, all instances that you create in the same region share a common metastore.
+When you provision a new instance in that region, the instance automatically connects to the shared metadata. Engines such as Spark and Presto in each instance use this common metadata for analytics workflows.
+If you create an instance in a different region, {{site.data.keyword.lakehouse_short}} creates a separate metastore for that region.
 
-For account-scoped resources, only one catalog can be designated as the ACL (Access Control List) catalog. The catalog names and bucket names must also be unique across all instances in that account. For example, if a catalog named `test_1` exists in any instance within account A, no other catalog in that account can be created with the same name.
+# Metadata object behavior
+{: #account_scope_2}
 
-You can reuse schema names across multiple Iceberg catalogs in account scoped resources. For example:
-- `myiceberg_catalog1.abcschema.mytable`
-- `myiceberg_catalog2.abcschema.mytable`
+**Catalogs, data sources, and object storages**
 
-The Metadata Service (MDS) in account scoped resources support Thrift over HTTP protocol.
-   Key changes:
-   * The MDS Thrift Protocol (`thrift://`) is changed to Thrift Over HTTP (`https://`).
-   * The `account_id` is mandatory for all Thrift API calls made to the MDS Thrift Service over HTTP.
-   * The `catalog` query parameter is required when invoking APIs involving the Iceberg catalog.
-   * The `AccountId` is required for all direct calls to the MDS REST Service (Iceberg Catalog and Unity Catalog).
-   * The endpoint for Iceberg operations is updated from `/mds/iceberg` to `/api/v1/iceberg`.
+The system now treats catalogs, data sources, and object storages as account‑level resources. As a result, the platform applies the following constraints:
 
-## Identifying scope by using API
-{: #account_scope_api}
+* A catalog name must be unique within the account and region.
+* An object storage bucket name must be unique within the account and region.
+* Only one catalog in the account and region can function as the ACL catalog.
+* The system continues to provision a QHMM catalog for each instance.
 
-To identify whether an instance is in account scope or instance scope, use the following API:
+If any engine in any instance references a catalog, you cannot delete that catalog until you remove the engine association.
 
+**Schemas**
+
+Schema constraints depend on the catalog type:
+
+* For Hive, Delta, and Hudi catalogs, schema names must be unique across catalogs in the account and region.
+* For Iceberg catalogs, schema names can repeat across different catalogs.
+
+**User experience in the UI**
+
+Users with the appropriate access see the same catalogs, data sources, and storages across all instances in the account.
+
+**Governance model**
+
+The governance model for metadata also moves to the account level. Policies that control access to catalogs, schemas, and tables apply uniformly across all instances in the same account and region.
+If your organization previously relied on separate instances to isolate teams, you can achieve similar logical separation by using IAM access groups and applying catalog‑level access policies to each group.
+
+**Metadata service behavior**
+
+The Metadata Service (MDS) provides REST and Thrift interfaces. In the account‑scoped model:
+
+* The Thrift interface uses the Thrift‑HTTP protocol (`https://`) instead of the Thrift‑Binary protocol used in instance‑scoped instances.
+* All Thrift API calls must include the `account_id` parameter.
+* The `catalog` query parameter is required when invoking APIs involving the Iceberg catalog.
+* The `AccountId` is required for all direct calls to the MDS REST Service (Iceberg Catalog and Unity Catalog).
+* Iceberg operations use the updated REST endpoint `/api/v1/iceberg` instead of `/mds/iceberg`.
+
+IBM watsonx.data automatically configures these parameters for Spark and Presto engines.
+
+**Instance lifecycle behavior**
+
+When you delete an instance, the system does not delete its catalogs, schemas, data sources, or storages. These resources remain accessible to other instances within the same account and region.
+Even if you delete every instance in the account, the metadata persists until you explicitly delete it.
+
+# How to identify the scope of an instance
+{: #account_scope_3}
+
+**In the UI**
+An instance displays an **Account‑scoped** label in the interface when it operates in account‑scoped mode.
+
+**By API**
+You can determine the scope of an instance by running the following API:
 `GET /v1/instance/{instance_id}/mds`
-
-**Account scope**:
-
-```bash
-{
-    "scope": "account",
-    "mds_host": "https://us-south.lakehouse.dev.cloud.ibm.com/",
-    "mds_thrift_port": 443,
-    "mds_https_port": 443
-}
-```
-{: codeblock}
-
-**Instance scope**:
-
-```bash
-{
-    "scope": "instance",
-    "mds_host": "16375c7a-cd6e-495a-89f9-cdc05e66b3b9.cs2bek7w0ooo0psc7qdg.lakehouse.dev.ibmappdomain.cloud",
-    "mds_thrift_port": 32176,
-    "mds_https_port": 32616
-}
-```
-{: codeblock}
 
 For more information, see [Account-scope API](https://cloud.ibm.com/apidocs/watsonxdata-infra-services#get-mds).
