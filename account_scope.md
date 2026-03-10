@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-03-09"
+lastupdated: "2026-03-10"
 
 keywords: watsonxdata, scope, resource
 
@@ -38,8 +38,10 @@ In {{site.data.keyword.lakehouse_short}} 2.3.1 release, the **Account‑scoped**
 # Overview of the account‑scoped model
 {: #account_scope_1}
 
-In earlier versions, each instance used its own metastore. Catalogs and schemas created in one instance were not visible in other instances in the same account. In the account‑scoped model, all instances that you create in the same region share a common metastore.
+In earlier versions, each instance used its own metastore. Catalogs and schemas that are created in one instance were not visible in other instances in the same account. In the account‑scoped model, all instances that you create in the same region share a common metastore.
+
 When you provision a new instance in that region, the instance automatically connects to the shared metadata. Engines such as Spark and Presto in each instance use this common metadata for analytics workflows.
+
 If you create an instance in a different region, {{site.data.keyword.lakehouse_short}} creates a separate metastore for that region.
 
 # Metadata object behavior
@@ -50,7 +52,7 @@ If you create an instance in a different region, {{site.data.keyword.lakehouse_s
 The system now treats catalogs, data sources, and object storages as account‑level resources. As a result, the platform applies the following constraints:
 
 * A catalog name must be unique within the account and region.
-* An object storage bucket name must be unique within the account and region.
+* An object storage or bucket name must be unique within the account and region.
 * Only one catalog in the account and region can function as the ACL catalog.
 * The system continues to provision a QHMM catalog for each instance.
 
@@ -70,16 +72,17 @@ Users with the appropriate access see the same catalogs, data sources, and stora
 **Governance model**
 
 The governance model for metadata also moves to the account level. Policies that control access to catalogs, schemas, and tables apply uniformly across all instances in the same account and region.
+
 If your organization previously relied on separate instances to isolate teams, you can achieve similar logical separation by using IAM access groups and applying catalog‑level access policies to each group.
 
 **Metadata service behavior**
 
 The Metadata Service (MDS) provides REST and Thrift interfaces. In the account‑scoped model:
 
-* The Thrift interface uses the Thrift‑HTTP protocol (`https://`) instead of the Thrift‑Binary protocol used in instance‑scoped instances.
+* The Thrift interface uses the Thrift‑HTTP protocol (`https://`) instead of the Thrift‑Binary protocol that is used in instance‑scoped instances.
 * All Thrift API calls must include the `account_id` parameter.
-* The `catalog` query parameter is required when invoking APIs involving the Iceberg catalog.
-* The `AccountId` is required for all direct calls to the MDS REST Service (Iceberg Catalog and Unity Catalog).
+* The `catalog` query parameter is required when the APIs involving the Iceberg catalog are invoked.
+* The `AccountId` is required for all direct calls to the MDS REST Service (Iceberg catalog and Unity catalog).
 * Iceberg operations use the updated REST endpoint `/api/v1/iceberg` instead of `/mds/iceberg`.
 
 IBM watsonx.data automatically configures these parameters for Spark and Presto engines.
@@ -87,15 +90,18 @@ IBM watsonx.data automatically configures these parameters for Spark and Presto 
 **Instance lifecycle behavior**
 
 When you delete an instance, the system does not delete its catalogs, schemas, data sources, or storages. These resources remain accessible to other instances within the same account and region.
+
 Even if you delete every instance in the account, the metadata persists until you explicitly delete it.
 
 # How to identify the scope of an instance
 {: #account_scope_3}
 
-**In the UI**
+**UI**
+
 An instance displays an **Account‑scoped** label in the interface when it operates in account‑scoped mode.
 
-**By API**
+**API**
+
 You can determine the scope of an instance by running the following API:
 `GET /v1/instance/{instance_id}/mds`
 
