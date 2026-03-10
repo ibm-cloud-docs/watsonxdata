@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2026-03-09"
+lastupdated: "2026-03-10"
 
 keywords: watsonxdata, release notes
 
@@ -52,7 +52,7 @@ Metadata scoping at account level
 
 : {{site.data.keyword.lakehouse_full}} introduces a new account‑scoped metadata model designed to centralize and streamline metadata management across all instances within the same IBM Cloud account and region. This enhancement improves consistency, governance, and operational efficiency by enabling a unified metadata experience.
 
-   With account-scoped metadata, catalogs, schemas, tables, data sources, and object storages are now shared across all {{site.data.keyword. lakehouse_short}} instances operating within the same account and region.
+   With account-scoped metadata, catalogs, schemas, tables, data sources, and object storages are now shared across all {{site.data.keyword.lakehouse_short}} instances operating within the same account and region.
    Previously, each instance maintained its own isolated metastore. Under the account-scoped model:
 
    * All instances in the same region automatically connect to a common metastore.
