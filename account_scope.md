@@ -35,7 +35,7 @@ The account‑scoped metadata model centralizes the management of metadata objec
 In {{site.data.keyword.lakehouse_short}} 2.3.1 release, the **Account‑scoped** mode is available for the {{site.data.keyword.lakehouse_short}} Enterprise edition in Tokyo and Sydney SaaS regions only.
 {: note}
 
-# Overview of the account‑scoped model
+## Overview of the account‑scoped model
 {: #account_scope_1}
 
 In earlier versions, each instance used its own metastore. Catalogs and schemas that are created in one instance were not visible in other instances in the same account. In the account‑scoped model, all instances that you create in the same region share a common metastore.
@@ -44,7 +44,7 @@ When you provision a new instance in that region, the instance automatically con
 
 If you create an instance in a different region, {{site.data.keyword.lakehouse_short}} creates a separate metastore for that region.
 
-# Metadata object behavior
+## Metadata object behavior
 {: #account_scope_2}
 
 **Catalogs, data sources, and object storages**
@@ -93,7 +93,7 @@ When you delete an instance, the system does not delete its catalogs, schemas, d
 
 Even if you delete every instance in the account, the metadata persists until you explicitly delete it.
 
-# How to identify the scope of an instance
+## How to identify the scope of an instance
 {: #account_scope_3}
 
 **UI**
