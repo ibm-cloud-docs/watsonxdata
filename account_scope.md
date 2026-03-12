@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-03-10"
+lastupdated: "2026-03-12"
 
 keywords: watsonxdata, scope, resource
 
@@ -57,6 +57,9 @@ The system now treats catalogs, data sources, and object storages as account‑l
 * The system continues to provision a QHMM catalog for each instance.
 
 If any engine in any instance references a catalog, you cannot delete that catalog until you remove the engine association.
+
+When an instance is configured in account‑scoped mode, only the owner of the bucket or catalog can view it. Other users cannot see or manage these resources from their account.
+{: note}
 
 **Schemas**
 
