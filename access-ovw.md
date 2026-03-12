@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-18"
+lastupdated: "2026-03-12"
 
 keywords: access, access control, access management
 
@@ -75,9 +75,10 @@ In addition to the authentication, in IBM cloud, the IAM platform roles are assi
 
 The following table provides the service role details that are specific to watsonx.data  on IBM Cloud and AWS. Metastore Admin role is used for Db2, Netezza, and Spark. Metastore Admin has full access to HMS Thrift API. Metastore Viewer role has read access to HMS Rest API. The Data Access role is used only for IKC integration on data profiling.
 
-| Field | Description |
-|--------------------------|----------------|
-|Service roles	|Actions	|Permissions|
+
+| Field | Action | Description |
+|--------------------------|----------------| ----- |
+| Manager | lakehouse.dashboard.view \n lakehouse.metastore.admin \n lakehouse.service.manage | Scoped admin access for resources|
 |Metastore Admin| lakehouse.metastore.admin	| Manage metastore data|
 |Metastore Viewer	| lakehouse.metastore.view	|View metastore data|
 |Data Access (primarily used for service to service integration. For example, IKC integration with WXD)	| lakehouse.data.access |	Access data|
