@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-03-05"
+lastupdated: "2026-03-13"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -27,7 +27,7 @@ subcollection: watsonxdata
 {:video: .video}
 
 # Querying data through agents by using the MCP server
-{: #squerying-data-ai}
+{: #querying-data-ai}
 
 The IBM {{site.data.keyword.lakehouse_short}} Model Context Protocol (MCP) Server enables agents to interact with IBM {{site.data.keyword.lakehouse_short}} lakehouse instances through natural language interfaces. You can use this server to securely access and explore your lakehouse data and metadata through the Model Context Protocol, with built-in read-only protection to ensure data integrity.
 
