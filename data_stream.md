@@ -26,12 +26,12 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Integrating data streaming platforms with watsonx.data
+# Integrating data streaming platforms
 {: #data_stream}
 
 IBM watsonx.data supports integration with modern data streaming platforms that enable real-time data ingestion and analytics. These platforms convert streaming data into query-ready table formats like Apache Iceberg or Delta Lake, eliminating the need for complex ETL pipelines.
 
-# Supported platforms
+## Supported platforms
 {: #data_stream1}
 
 watsonx.data integrates with the following data streaming platforms:
