@@ -62,7 +62,7 @@ Data streaming platforms materialize streaming data into table formats in cloud 
 ### Next steps
 {: #data_stream5}
 
-- [Integrating Confluent TableFlow with watsonx.data](#)
+- [Integrating Confluent TableFlow with watsonx.data](/docs/watsonxdata?topic=watsonxdata-data_stream_confluent)
 - [Integrating Databricks with watsonx.data](#) (coming soon)
 
 ---
