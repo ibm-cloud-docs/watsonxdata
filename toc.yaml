@@ -217,7 +217,7 @@ toc:
       - topicgroup:
           label: Data streaming platforms integration
           topics:
-          - sdata_stream_confluent.md
+          - data_stream_confluent.md
       - topicgroup:
           label: Working with watsonx.data Spark
           topics:
