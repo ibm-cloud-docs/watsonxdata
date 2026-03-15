@@ -31,6 +31,7 @@ toc:
           - mixed_case_overview.md
           - resource_grp_ov.md
           - integration.md
+          - data_stream.md
           - manta_overview.md
           - opntlmtry.md
           - feature_parity_wxd.md
@@ -213,6 +214,10 @@ toc:
               - shell_script.md
       - conn-presto-thr-cli.md
       - delete_lh.md
+      - topicgroup:
+          label: Data streaming platforms integration
+          topics:
+          - sdata_stream_confluent.md
       - topicgroup:
           label: Working with watsonx.data Spark
           topics:
