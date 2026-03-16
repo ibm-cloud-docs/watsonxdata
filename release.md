@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2026-03-11"
+lastupdated: "2026-03-16"
 
 keywords: watsonxdata, release notes
 
@@ -190,6 +190,8 @@ Deprecated features
 
    ```
    {: codeblock}
+
+   * {{site.data.keyword.lakehouse_short}} API version v2 is completely removed from the {{site.data.keyword.lakehouse_short}} starting with version 2.3.1. You must migrate to the latest supported API version (v3) to ensure continued compatibility and access to new features.
 
 
 ## 10 December 2025 - Version 2.3
