@@ -35,9 +35,8 @@ subcollection: watsonxdata
 {: #data_stream1}
 
 {{site.data.keyword.lakehouse_full}} integrates with the following data streaming platforms:
-- Confluent TableFlow
-- Databricks (coming soon)
-- Additional platforms (coming soon)
+- Confluent Tableflow
+- Databricks
 
 ## Key capabilities
 {: #data_stream2}

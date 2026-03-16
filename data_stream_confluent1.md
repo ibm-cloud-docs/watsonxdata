@@ -26,7 +26,7 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Integrating Confluent Tableflow
+# Integrating Confluent Tableflow in {{site.data.keyword.lakehouse_short}}
 {: #data_stream_confluent1}
 
 Confluent offers a data streaming platform that acts as a central nervous system for real-time data, enabling businesses to connect, store, and manage data streams across cloud and on-premise environments.
