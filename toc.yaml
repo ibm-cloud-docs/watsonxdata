@@ -218,8 +218,8 @@ toc:
           label: Data streaming platforms integration
           topics:
           - data_stream_confluent1.md
-          - data_stream_confluent2spark.md
           - data_stream_confluent3presto.md
+          - data_stream_confluent2spark.md
       - topicgroup:
           label: Working with watsonx.data Spark
           topics:
