@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-03-15"
+lastupdated: "2026-03-16"
 
 keywords: lakehouse, data streaming, confluent, {{site.data.keyword.lakehouse_short}}
 
@@ -26,20 +26,20 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Integrating Confluent TableFlow
+# Integrating Confluent Tableflow
 {: #data_stream_confluent1}
 
 Confluent offers a data streaming platform that acts as a central nervous system for real-time data, enabling businesses to connect, store, and manage data streams across cloud and on-premise environments.
 
-Confluent TableFlow automatically converts Apache Kafka topics into ready-to-query Apache Iceberg tables, enabling real-time, zero-ETL analytics. It eliminates complex data pipelines by materializing data in user-owned or managed storage with automated maintenance.
+Confluent Tableflow automatically converts Apache Kafka topics into ready-to-query Apache Iceberg tables, enabling real-time, zero-ETL analytics. It eliminates complex data pipelines by materializing data in user-owned or managed storage with automated maintenance.
 
 ## How it works
 {: #data_stream_confluent1_1}
 
-1. Create a Kafka cluster in Confluent Cloud
-2. Create topics to stream your data
-3. Enable TableFlow for topics to convert them into Iceberg tables
-4. Query the tables using watsonx.data Spark or Presto engines
+1. Create a Kafka cluster in Confluent Cloud.
+2. Create topics to stream your data.
+3. Enable Tableflow for topics to convert them into Iceberg tables.
+4. Query the tables using {{site.data.keyword.lakehouse_full}} Spark or Presto engines.
 
 ## Storage options
 {: #data_stream_confluent1_2}
@@ -53,13 +53,13 @@ Confluent TableFlow automatically converts Apache Kafka topics into ready-to-que
 - Real-time data availability in Iceberg format
 - Automatic schema evolution
 - Zero-ETL analytics
-- Integration with watsonx.data compute engines
+- Integration with {{site.data.keyword.lakehouse_short}} compute engines
 
 ## Important limitations
 {: #data_stream_confluent1_4}
 
-- TableFlow tables are read-only from external compute engines
-- Write operations (INSERT, CREATE TABLE, UPDATE, DELETE) are not supported
+- Tableflow tables are read-only from external compute engines.
+- Write operations (`INSERT`, `CREATE TABLE`, `UPDATE`, `DELETE`) are not supported.
 - Data can only be modified by publishing messages to the source Kafka topic
 
 For more information, see [Confluent TableFlow documentation](https://docs.confluent.io/cloud/current/topics/tableflow/overview.html).
@@ -67,7 +67,7 @@ For more information, see [Confluent TableFlow documentation](https://docs.confl
 ## Next steps
 {: #data_stream_confluent1_5}
 
-- [Querying Confluent TableFlow using Spark engine](#)
-- [Querying Confluent TableFlow using Presto engine](#)
+- [Querying Confluent TableFlow using Spark engine](/docs/watsonxdata?topic=watsonxdata-data_stream_confluent2spark)
+- [Querying Confluent TableFlow using Presto engine](/docs/watsonxdata?topic=watsonxdata-data_stream_confluent3presto)
 
 ---
