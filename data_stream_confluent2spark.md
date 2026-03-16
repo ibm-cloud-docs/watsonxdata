@@ -49,15 +49,15 @@ You can query Confluent Tableflow tables using the {{site.data.keyword.lakehouse
    3. Create a new API key and note the key and secret
    4. Copy the REST Catalog endpoint (format: `https://tableflow.{region}.aws.confluent.cloud/iceberg/catalog/organizations/{org-id}/environments/{env-id}`)
 
-   **{{site.data.keyword.lakehouse_short}} requirements:**
-   - Provisioned Spark engine
-   - Network connectivity to Confluent Cloud endpoints
+**{{site.data.keyword.lakehouse_short}} requirements:**
+- Provisioned Spark engine
+- Network connectivity to Confluent Cloud endpoint
 
-   **Storage-specific requirements:**
-   - **Confluent Managed Storage**: No additional requirements
-   - **Provider Integration (AWS S3)**:
-      - S3 bucket in the same region as your Kafka cluster
-      - S3 access key and secret key
+**Storage-specific requirements:**
+- **Confluent Managed Storage**: No additional requirements
+- **Provider Integration (AWS S3)**:
+   - S3 bucket in the same region as your Kafka cluster
+   - S3 access key and secret key
 
 ## Procedure
 {: #data_stream_confluent2spark_3}
@@ -109,8 +109,8 @@ You can query Confluent Tableflow tables using the {{site.data.keyword.lakehouse
    | Method | Best for | Documentation |
    | -------- | ---------- | --------------- |
    | SparkLab (VS Code) | Interactive development, testing, debugging | [VS Code Development Environment](/docs/watsonxdata?topic=watsonxdata-sparklabs) |
-   | REST API | Automation, CI/CD pipelines, programmatic control | [Submitting Spark Application by using REST API](/docs/watsonxdata?   topic=watsonxdata-spark-api) |
-   | CPDCTL CLI | Command-line submissions, shell scripts, DevOps workflows | [Submitting Spark Application by using CPDCTL](/docs/watsonxdata?   topic=watsonxdata-spark-cpdctl) |
+   | REST API | Automation, CI/CD pipelines, programmatic control | [Submitting Spark Application by using REST API](/docs/watsonxdata?topic=watsonxdata-spark-api) |
+   | CPDCTL CLI | Command-line submissions, shell scripts, DevOps workflows | [Submitting Spark Application by using CPDCTL](/docs/watsonxdata?topic=watsonxdata-spark-cpdctl) |
    {: caption="Querying methods"}
 
 3. Query Tableflow tables
