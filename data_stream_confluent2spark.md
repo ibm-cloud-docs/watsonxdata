@@ -99,7 +99,8 @@ You can query Confluent Tableflow tables using the {{site.data.keyword.lakehouse
    - `{APIKEY}:{SECRET}`: Your Tableflow API credentials
    - `{S3_ACCESS_KEY}`, `{S3_SECRET_KEY}`, `{S3_REGION}`: Your S3 credentials (for provider integration only)
 
-   **Note**: The catalog name `tableflow` is a local alias. You can use any name.
+   The catalog name `tableflow` is a local alias. You can use any name.
+   {: note}
 
 2. Choose a submission method
 
@@ -111,8 +112,6 @@ You can query Confluent Tableflow tables using the {{site.data.keyword.lakehouse
    | REST API | Automation, CI/CD pipelines, programmatic control | [Submitting Spark Application by using REST API](/docs/watsonxdata?   topic=watsonxdata-spark-api) |
    | CPDCTL CLI | Command-line submissions, shell scripts, DevOps workflows | [Submitting Spark Application by using CPDCTL](/docs/watsonxdata?   topic=watsonxdata-spark-cpdctl) |
    {: caption="Querying methods"}
-
-
 
 3. Query Tableflow tables
 

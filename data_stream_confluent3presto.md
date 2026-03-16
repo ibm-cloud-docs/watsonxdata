@@ -26,7 +26,7 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-## Querying Confluent Tableflow using Presto engine
+# Querying Confluent Tableflow using Presto engine
 {: #data_stream_confluent3presto}
 
 ## About this task
@@ -34,7 +34,8 @@ subcollection: watsonxdata
 
 You can query Confluent Tableflow tables using the {{site.data.keyword.lakehouse_full}} Presto engine by registering Tableflow as a custom data source.
 
-**Important**: Presto does not support vended-credentials. You must use provider-integrated storage (AWS S3, Azure Blob, or Google Cloud Storage) with explicit credentials. Confluent Managed Storage is not supported with Presto.
+   Presto does not support vended-credentials. You must use provider-integrated storage (AWS S3, Azure Blob, or Google Cloud Storage) with explicit credentials. Confluent Managed Storage is not supported with Presto.
+   {: important}
 
 ## Before you begin
 {: #data_stream_confluent3presto_2}
@@ -125,7 +126,8 @@ You can query Confluent Tableflow tables using the {{site.data.keyword.lakehouse
       SELECT COUNT(*) FROM confluent_catalog."{namespace}".{table_name};
       ```
 
-   **Note**: Namespace names (Kafka cluster IDs) often contain hyphens and must be enclosed in double quotes.
+   Namespace names (Kafka cluster IDs) often contain hyphens and must be enclosed in double quotes.
+   {: note}
 
 ### Results
 {: #data_stream_confluent3presto_4}
