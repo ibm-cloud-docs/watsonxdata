@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2026-03-16"
+lastupdated: "2026-03-17"
 
 keywords: watsonxdata, release notes
 
@@ -150,7 +150,7 @@ Semantic automation for data enrichment
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following Semantic automation enhancements:
 
-   You can now provision {{site.data.keyword.lakehouse_short}} instances with Semantic automation enrichment layer (SAL) enabled in the following new regions: Sydney (au-syd) and Toronto (ca-tor). To register Semantic automation enrichment layer (SAL), see [Registering and activating semantic layer](/docs/watsonxdata?topic=watsonxdata-sal_register). 
+   You can now provision {{site.data.keyword.lakehouse_short}} instances with Semantic automation enrichment layer (SAL) enabled in the following new regions: `au-syd` (Sydney), `ca-tor` (Toronto), `eu-de` (Frankfurt), `eu-gb` (London), and `jp-tok` (Tokyo) region. To register Semantic automation enrichment layer (SAL), see [Registering and activating semantic layer](/docs/watsonxdata?topic=watsonxdata-sal_register). 
 
 CPDCTL CLI enhancements
 
@@ -175,8 +175,6 @@ Deprecated features
 : The following features are deprecated in this release:
 
    * Support for Spark 3.4 runtime is deprecated and the default version is changed to Spark 3.5 runtime. To ensure a seamless experience and to leverage the latest features and improvements, switch to Spark 3.5. To update the Apache Spark version, see [Editing the Spark engine](/docs/watsonxdata?topic=watsonxdata-view-end#edit-dtls). 
-
-
 
 
    * Python 3.10 is deprecated. To ensure a seamless experience when submitting Spark applications, you need to update your runtime to Python 3.11. Until you complete the migration to Python 3.11, you can use the following workaround to continue running Python 3.10:
