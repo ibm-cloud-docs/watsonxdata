@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-03-16"
+lastupdated: "2026-03-17"
 
 keywords: lakehouse, data streaming, confluent, {{site.data.keyword.lakehouse_short}}
 
@@ -69,5 +69,3 @@ For more information, see [Confluent TableFlow documentation](https://docs.confl
 
 - [Querying Confluent TableFlow using Spark engine](/docs/watsonxdata?topic=watsonxdata-data_stream_confluent2spark)
 - [Querying Confluent TableFlow using Presto engine](/docs/watsonxdata?topic=watsonxdata-data_stream_confluent3presto)
-
----
