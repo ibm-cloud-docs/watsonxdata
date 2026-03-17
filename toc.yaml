@@ -350,7 +350,7 @@ toc:
           topics:
           - setup_vpe.md
       - topicgroup:
-          label: Integrating real-time data streaming platforms
+          label: Data sharing platform integration
           topics:
           - data_stream_confluent1.md
           - data_stream_confluent2spark.md
