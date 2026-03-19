@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-03-16"
+lastupdated: "2026-03-19"
 
 keywords: lakehouse, data streaming, confluent, {{site.data.keyword.lakehouse_short}}
 
@@ -32,7 +32,7 @@ subcollection: watsonxdata
 ## About this task
 {: #data_stream_confluent2spark_1}
 
-You can query Confluent Tableflow tables using the {{site.data.keyword.lakehouse_full}} Spark engine. Spark supports both Confluent Managed Storage and provider-integrated storage options.
+You can query remote Confluent Tableflow tables using the {{site.data.keyword.lakehouse_full}} Spark engine through zero-copy data federation. Spark supports both Confluent Managed Storage and provider-integrated storage options.
 
 ## Before you begin
 {: #data_stream_confluent2spark_2}
@@ -55,18 +55,18 @@ You can query Confluent Tableflow tables using the {{site.data.keyword.lakehouse
 
 **Storage-specific requirements:**
 - **Confluent Managed Storage**: No additional requirements
-- **Provider Integration (AWS S3)**:
+- **Customer integration (AWS S3)**:
    - S3 bucket in the same region as your Kafka cluster
    - S3 access key and secret key
 
 ## Procedure
 {: #data_stream_confluent2spark_3}
 
-1. Configure Spark catalog properties
+1. Configure Spark catalog properties for remote lakehouse access.
 
-   Create a configuration dictionary with your Tableflow connection details.
+   Create a configuration dictionary with your Tableflow connection details to enable zero-copy querying.
 
-   **For Confluent Managed Storage:**
+   **For Confluent managed storage:**
 
    ```python
    tableflow_config = {
@@ -81,7 +81,7 @@ You can query Confluent Tableflow tables using the {{site.data.keyword.lakehouse
    }
    ```
 
-   **For Provider Integration (AWS S3):**
+   **For Customer integration (AWS S3):**
 
    Add these additional properties:
 
@@ -104,7 +104,7 @@ You can query Confluent Tableflow tables using the {{site.data.keyword.lakehouse
 
 2. Choose a submission method
 
-   You can query Tableflow tables using one of three methods:
+   You can query remote TableFlow tables using one of three methods:
 
    | Method | Best for | Documentation |
    | -------- | ---------- | --------------- |
@@ -113,7 +113,7 @@ You can query Confluent Tableflow tables using the {{site.data.keyword.lakehouse
    | CPDCTL CLI | Command-line submissions, shell scripts, DevOps workflows | [Submitting Spark Application by using CPDCTL](/docs/watsonxdata?topic=watsonxdata-spark-cpdctl) |
    {: caption="Querying methods"}
 
-3. Query Tableflow tables
+3. Query remote Tableflow tables
 
    **Using SparkLab:**
 
@@ -202,7 +202,8 @@ You can query Confluent Tableflow tables using the {{site.data.keyword.lakehouse
 ### Results
 {: #data_stream_confluent2spark_4}
 
-You can now query real-time streaming data from Confluent Tableflow. The tables automatically reflect new messages published to Kafka topics.
+You can now query remote streaming data from Confluent Tableflow without copying data. The tables automatically reflect new messages published to Kafka topics.
+
 
 ### Example output
 {: #data_stream_confluent2spark_5}

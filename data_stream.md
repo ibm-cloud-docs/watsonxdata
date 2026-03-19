@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-03-17"
+lastupdated: "2026-03-19"
 
 keywords: lakehouse, data streaming, {{site.data.keyword.lakehouse_short}}
 
@@ -26,56 +26,62 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Data sharing platforms
+# Remote lakehouse access
 {: #data_stream}
 
-Real-time data sharing platforms enable continuous data ingestion and processing, allowing organizations to capture, store, and analyze data as it flows through their systems. These platforms act as a central nervous system for real-time data, connecting various data sources and making sharing data immediately available for analytics.
+Remote lakehouse platforms enable continuous data ingestion and processing, allowing organizations to capture, store, and analyze data as it flows through their systems. These platforms act as a central nervous system for real-time data, connecting various data sources and making sharing data immediately available for analytics.
 
-{{site.data.keyword.lakehouse_full}} integrates with leading real-time data sharing platforms to provide seamless access to sharing data without complex ETL pipelines. These integrations enable you to query live data streams using familiar SQL interfaces and powerful compute engines.
+{{site.data.keyword.lakehouse_full}} integrates with leading third-party lakehouse platforms to provide seamless access to remote data without copying or moving it. These integrations enable you to query remote data using familiar SQL interfaces and powerful compute engines.
 
 
-## How data sharing platform integrations work
+## How remote lakehouse integrations work
 {: #data_stream1}
 
-Real-time data sharing platforms automatically convert sharing data into query-ready table formats such as Apache Iceberg. This process, often called "zero-ETL analytics," eliminates the need for traditional data pipelines by:
+Third-party lakehouse platforms automatically convert streaming data into query-ready table formats such as Apache Iceberg. This zero-copy approach, often called "data federation" or "query federation," eliminates the need for traditional data pipelines by:
+
 
 1. Capturing sharing data from various sources (applications, IoT devices, databases, etc.)
 2. Materializing data into open table formats in cloud storage (AWS S3, Azure Blob Storage, Google Cloud Storage)
 3. Maintaining tables automatically with schema evolution, compaction, and optimization
 4. Exposing data through REST catalog endpoints for external query engines
-5. {{site.data.keyword.lakehouse_short}} compute engines connect directly to these materialized tables, enabling real-time analytics without data duplication or movement.
+
+{{site.data.keyword.lakehouse_short}} compute engines connect directly to these remote tables, enabling zero-copy analytics without data duplication or movement.
+
+
 
 ## Key capabilities
 {: #data_stream2}
 
-When you integrate real-time data sharing platforms with {{site.data.keyword.lakehouse_short}}, you can:
+When you integrate third-party lakehouse platforms with {{site.data.keyword.lakehouse_short}}, you can:
 
-- Query sharing data in real-time: Access the latest data as it arrives, with minimal latency
-- Eliminate ETL complexity: Remove the need for custom data pipelines and transformation jobs
-- Use familiar SQL interfaces: Query sharing data using standard SQL through Spark or Presto engines
+- Query remote data in real-time: Access the latest data as it arrives, with minimal latency
+- Eliminate data copying and ETL complexity: Remove the need for custom data pipelines and transformation jobs
+- Use familiar SQL interfaces: Query remote lakehouse data using standard SQL through Spark or Presto engines
 - Leverage open table formats: Work with industry-standard formats like Apache Iceberg and Delta Lake
-- Maintain data governance: Apply watsonx.data's security and governance policies to sharing data
+- Maintain data governance: Apply watsonx.data's security and governance policies to remote
 - Scale independently: Separate storage and compute for flexible scaling and cost optimization
 - Preserve data lineage: Track data from source to analytics with built-in metadata management
 
 ## Integration architecture
 {: #data_stream3}
 
-Data sharing platforms materialize sharing data into table formats in cloud storage (AWS S3, Azure Blob, Google Cloud Storage). {{site.data.keyword.lakehouse_short}} engines connect to these tables through REST catalog endpoints, enabling direct querying without data duplication.
+Remote lakehouse platforms materialize remote data into table formats in cloud storage (AWS S3, Azure Blob, Google Cloud Storage). {{site.data.keyword.lakehouse_short}} engines connect to these tables through REST catalog endpoints, enabling direct querying without data duplication.
 
 ## Storage options
 {: #data_stream4}
 
-Real-time data sharing platforms typically offer two storage models:
+Third-party lakehouse platforms typically offer two storage models:
 
-- Platform-managed storage: The sharing platform automatically provisions and manages cloud storage, simplifying setup and maintenance.
+- Platform-managed storage: The lakehouse platform automatically provisions and manages cloud storage, simplifying setup and maintenance.
 - Customer-managed storage: You provide your own cloud storage (AWS S3, Azure Blob, or Google Cloud Storage), maintaining full control over data location, access policies, and lifecycle management.
+
+Both options are supported by {{site.data.keyword.lakehouse_short}}, though specific engine capabilities may vary.
 
 ## Choosing an engine
 {: #data_stream5}
 
-- **Spark engine**: Supports both managed and provider-integrated storage, full Iceberg feature support.
-- **Presto engine**: Supports provider-integrated storage (AWS S3, Azure, GCS) with some limitations on managed storage.
+- **Spark engine**: Supports both managed and customer-managed storage, full Iceberg feature support.
+- **Presto engine**: Supports customer-managed storage (AWS S3, Azure, GCS) with some limitations on managed storage.
 
 ### Next steps
 {: #data_stream6}

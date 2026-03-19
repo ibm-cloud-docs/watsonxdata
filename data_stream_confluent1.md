@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-03-17"
+lastupdated: "2026-03-19"
 
 keywords: lakehouse, data streaming, confluent, {{site.data.keyword.lakehouse_short}}
 
@@ -29,9 +29,9 @@ subcollection: watsonxdata
 # Integrating Confluent Tableflow in {{site.data.keyword.lakehouse_short}}
 {: #data_stream_confluent1}
 
-Confluent offers a data streaming platform that acts as a central nervous system for real-time data, enabling businesses to connect, store, and manage data streams across cloud and on-premise environments.
+You can integrate Confluent TableFlow with {{site.data.keyword.lakehouse_full}} to enable zero-copy querying of streaming data. Confluent offers a data streaming platform that acts as a central nervous system for real-time data, enabling businesses to connect, store, and manage data streams across cloud and on-premise environments.
 
-Confluent Tableflow automatically converts Apache Kafka topics into ready-to-query Apache Iceberg tables, enabling real-time, zero-ETL analytics. It eliminates complex data pipelines by materializing data in user-owned or managed storage with automated maintenance.
+Confluent TableFlow automatically converts Apache Kafka topics into ready-to-query Apache Iceberg tables, enabling zero-copy, real-time analytics through data federation. It eliminates complex data pipelines by materializing data in user-owned or managed storage with automated maintenance.
 
 ## How it works
 {: #data_stream_confluent1_1}
@@ -39,27 +39,28 @@ Confluent Tableflow automatically converts Apache Kafka topics into ready-to-que
 1. Create a Kafka cluster in Confluent Cloud.
 2. Create topics to stream your data.
 3. Enable Tableflow for topics to convert them into Iceberg tables.
-4. Query the tables using {{site.data.keyword.lakehouse_full}} Spark or Presto engines.
+4. Query the remote tables using {{site.data.keyword.lakehouse_full}} Spark or Presto engines without copying data.
 
 ## Storage options
 {: #data_stream_confluent1_2}
 
-- **Confluent Managed Storage**: Confluent automatically provisions and manages AWS S3 storage. No additional setup required.
-- **Provider Integration**: Use your own cloud storage (AWS S3, Azure Blob, or Google Cloud Storage) with full control over data location and access.
+- **Confluent managed storage**: Confluent automatically provisions and manages AWS S3 storage. No additional setup required.
+- **Customer integration**: Use your own cloud storage (AWS S3, Azure Blob, or Google Cloud Storage) with full control over data location and access.
 
 ## Key features
 {: #data_stream_confluent1_3}
 
+- Zero-copy data access
 - Real-time data availability in Iceberg format
 - Automatic schema evolution
-- Zero-ETL analytics
+- Query federation through {{site.data.keyword.lakehouse_short}}
 - Integration with {{site.data.keyword.lakehouse_short}} compute engines
 
 ## Important limitations
 {: #data_stream_confluent1_4}
 
 - Tableflow tables are read-only from external compute engines.
-- Write operations (`INSERT`, `CREATE TABLE`, `UPDATE`, `DELETE`) are not supported.
+- Write operations (`INSERT`, `CREATE TABLE`, `UPDATE`, `DELETE`) are not supported when querying through {{site.data.keyword.lakehouse_short}}.
 - Data can only be modified by publishing messages to the source Kafka topic
 
 For more information, see [Confluent TableFlow documentation](https://docs.confluent.io/cloud/current/topics/tableflow/overview.html).

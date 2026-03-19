@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-03-17"
+lastupdated: "2026-03-19"
 
 keywords: lakehouse, data streaming, confluent, {{site.data.keyword.lakehouse_short}}
 
@@ -32,9 +32,9 @@ subcollection: watsonxdata
 ## About this task
 {: #data_stream_confluent3presto_1}
 
-You can query Confluent Tableflow tables using the {{site.data.keyword.lakehouse_full}} Presto engine by registering Tableflow as a custom data source.
+You can query remote Confluent Tableflow tables using the {{site.data.keyword.lakehouse_full}} Presto engine by registering Tableflow as a custom data source for zero-copy data federation.
 
-   Presto does not support vended-credentials. You must use provider-integrated storage (AWS S3, Azure Blob, or Google Cloud Storage) with explicit credentials. Confluent Managed Storage is not supported with Presto.
+   Presto does not support vended-credentials. You must use provider-integrated storage (AWS S3, Azure Blob, or Google Cloud Storage) with explicit credentials. Confluent managed storage is not supported with Presto.
    {: important}
 
 ## Before you begin
@@ -42,22 +42,23 @@ You can query Confluent Tableflow tables using the {{site.data.keyword.lakehouse
 
 - **Confluent requirements:**
    - Active Confluent Cloud account
-   - Kafka cluster with Tableflow-enabled topics using **provider-integrated storage** (not Confluent Managed Storage)
+   - Kafka cluster with Tableflow-enabled topics using **provider-integrated storage**
    - Tableflow API key and secret
    - REST Catalog endpoint
+- **Table information requirements**:
+   - List of Kafka topic names with TableFlow enabled
+   - Kafka cluster ID (namespace) where topics are located
 - **{{site.data.keyword.lakehouse_short}} requirements:**
    - Provisioned Presto engine
    - Network connectivity to Confluent Cloud endpoints
 - **Storage requirements:**
    - AWS S3, Azure Blob Storage, or Google Cloud Storage configured as Tableflow storage
    - Storage access credentials (access key and secret key for AWS S3)
-- List of Kafka topic names with Tableflow enabled
-- Kafka cluster ID (namespace) where topics are located
 
 ## Procedure
 {: #data_stream_confluent3presto_3}
 
-1. Register Tableflow as a custom data source.
+1. Register Tableflow as a custom data source for remote lakehouse access.
 
    1. In the {{site.data.keyword.lakehouse_short}} console, click **Infrastructure manager**.
    2. Click **Add component** > **Add data source**.
@@ -101,13 +102,13 @@ You can query Confluent Tableflow tables using the {{site.data.keyword.lakehouse
    4. Select the catalog you created (`confluent_catalog`).
    5. Click **Associate**.
 
-   The catalog is now available for querying through the Presto engine.
+   The catalog is now available for querying remote data through the Presto engine.
 
 4. Query Tableflow tables
 
    1. Click **Query workspace**.
    2. Select your Presto engine from the engine dropdown.
-   3. Run queries against your Tableflow tables using fully qualified table names:
+   3. Run queries against your remote Tableflow tables using fully qualified table names:
 
       ```sql
       -- List available schemas (Kafka cluster IDs)
