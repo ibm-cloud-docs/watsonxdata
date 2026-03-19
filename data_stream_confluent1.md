@@ -4,7 +4,7 @@ copyright:
   years: 2022, 2026
 lastupdated: "2026-03-19"
 
-keywords: lakehouse, data streaming, confluent, {{site.data.keyword.lakehouse_short}}
+keywords: lakehouse, remote data, confluent, {{site.data.keyword.lakehouse_short}}
 
 subcollection: watsonxdata
 
@@ -29,7 +29,7 @@ subcollection: watsonxdata
 # Integrating Confluent Tableflow in {{site.data.keyword.lakehouse_short}}
 {: #data_stream_confluent1}
 
-You can integrate Confluent TableFlow with {{site.data.keyword.lakehouse_full}} to enable zero-copy querying of streaming data. Confluent offers a data streaming platform that acts as a central nervous system for real-time data, enabling businesses to connect, store, and manage data streams across cloud and on-premise environments.
+You can integrate Confluent TableFlow with {{site.data.keyword.lakehouse_full}} to enable zero-copy querying of remote data. Confluent offers a data platform that acts as a central nervous system for real-time data, enabling businesses to connect, store, and manage data across cloud and on-premise environments.
 
 Confluent TableFlow automatically converts Apache Kafka topics into ready-to-query Apache Iceberg tables, enabling zero-copy, real-time analytics through data federation. It eliminates complex data pipelines by materializing data in user-owned or managed storage with automated maintenance.
 

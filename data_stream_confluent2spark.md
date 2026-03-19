@@ -4,7 +4,7 @@ copyright:
   years: 2022, 2026
 lastupdated: "2026-03-19"
 
-keywords: lakehouse, data streaming, confluent, {{site.data.keyword.lakehouse_short}}
+keywords: lakehouse, remote data, confluent, {{site.data.keyword.lakehouse_short}}
 
 subcollection: watsonxdata
 
@@ -202,7 +202,7 @@ You can query remote Confluent Tableflow tables using the {{site.data.keyword.la
 ### Results
 {: #data_stream_confluent2spark_4}
 
-You can now query remote streaming data from Confluent Tableflow without copying data. The tables automatically reflect new messages published to Kafka topics.
+You can now query remote data from Confluent Tableflow without copying data. The tables automatically reflect new messages published to Kafka topics.
 
 
 ### Example output

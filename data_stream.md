@@ -4,7 +4,7 @@ copyright:
   years: 2022, 2026
 lastupdated: "2026-03-19"
 
-keywords: lakehouse, data streaming, {{site.data.keyword.lakehouse_short}}
+keywords: lakehouse, remote data, {{site.data.keyword.lakehouse_short}}
 
 subcollection: watsonxdata
 
@@ -37,7 +37,7 @@ Remote lakehouse platforms enable continuous data ingestion and processing, allo
 ## How remote lakehouse integrations work
 {: #data_stream1}
 
-Third-party lakehouse platforms automatically convert streaming data into query-ready table formats such as Apache Iceberg. This zero-copy approach, often called "data federation" or "query federation," eliminates the need for traditional data pipelines by:
+Third-party lakehouse platforms automatically convert remote data into query-ready table formats such as Apache Iceberg. This zero-copy approach, often called "data federation" or "query federation," eliminates the need for traditional data pipelines by:
 
 
 1. Capturing sharing data from various sources (applications, IoT devices, databases, etc.)
