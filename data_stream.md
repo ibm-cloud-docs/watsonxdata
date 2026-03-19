@@ -87,3 +87,5 @@ Both options are supported by {{site.data.keyword.lakehouse_short}}, though spec
 {: #data_stream6}
 
 - [Integrating Confluent Tableflow](/docs/watsonxdata?topic=watsonxdata-data_stream_confluent1)
+- [Querying Confluent Tableflow using Spark engine](/docs/watsonxdata?topic=watsonxdata-data_stream_confluent2)
+- [Querying Confluent Tableflow using Presto engine](/docs/watsonxdata?topic=watsonxdata-data_stream_confluent3)
