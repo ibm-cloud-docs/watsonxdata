@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2026-03-17"
+lastupdated: "2026-03-19"
 
 keywords: watsonxdata, release notes
 
@@ -182,7 +182,7 @@ Deprecated features
    
    ``` bash
 
-   "conf": {
+   "env": {
    "export RUNTIME_PYTHON_ENV": "python310"
    }
 
