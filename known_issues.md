@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-03-06"
+lastupdated: "2026-03-19"
 
 keywords: lakehouse
 
@@ -30,6 +30,11 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+## Databand-enabled Spark jobs fail on Spark 4.0 in {{site.data.keyword.lakehouse_short}}
+{: #known_issue50405}
+
+Spark jobs with Databand-enabled fails when using Spark 4.0. The failure occurs during job submission due to incompatibilities between Databand Spark instrumentation and Spark 4.0 APIs.
 
 ## Table Analyzer job runs fail for GCS and Azure buckets
 {: #known_issue65943}
