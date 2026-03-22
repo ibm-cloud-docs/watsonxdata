@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2026-03-19"
+lastupdated: "2026-03-22"
 
 keywords: watsonxdata, release notes
 
@@ -29,6 +29,16 @@ For watsonx.data on-prem what's new, see [Release notes for watsonx.data](https:
 For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-prem Premium](https://www.ibm.com/docs/en/watsonx/watsonxdata-premium/2.2.x?topic=overview-whats-new-in-watsonxdata).
 
 Technology preview features: We also offer a Technology preview section that includes features currently in preview. These features are not generally available and may change before release. To view the release notes for technology preview items, see [Technology preview](/docs/watsonxdata?topic=watsonxdata-release_pp).
+
+## 17 March 2026
+{: #lakehouse_17mar2026}
+{: release-note}
+
+Zero-copy access to third-party lakehouses
+
+: You can now query data in third-party lakehouse platforms directly from {{site.data.keyword.lakehouse_short}} without copying or moving data. This zero-copy approach, also known as data federation or query federation, enables you to access remote data using Spark and Presto engines while maintaining a single source of truth.
+
+Supported integrations include Confluent Tableflow, with additional platforms also being capable for integration. This capability eliminates the need for complex ETL pipelines and reduces storage costs by querying data where it resides. For more information, see [Remote lakehouse access](/docs/watsonxdata?topic=watsonxdata-data_stream).
 
 ## 09 March 2026 - Version 2.3.1
 {: #lakehouse_24feb2026}
