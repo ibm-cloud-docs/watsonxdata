@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-03-05"
+lastupdated: "2026-03-17"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -27,7 +27,7 @@ subcollection: watsonxdata
 {:video: .video}
 
 # Installing and configuring the MCP server
-{: #squerying-data-ai-inm}
+{: #querying-data-ai-inm}
 
 You must install and configure the MCP server on your local computer.
 

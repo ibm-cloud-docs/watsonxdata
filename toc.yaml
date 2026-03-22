@@ -31,6 +31,7 @@ toc:
           - mixed_case_overview.md
           - resource_grp_ov.md
           - integration.md
+          - data_stream.md
           - manta_overview.md
           - opntlmtry.md
           - feature_parity_wxd.md
@@ -348,6 +349,12 @@ toc:
           label: Configuring network endpoints
           topics:
           - setup_vpe.md
+      - topicgroup:
+          label: Third-party lakehouse integrations
+          topics:
+          - data_stream_confluent1.md
+          - data_stream_confluent2spark.md
+          - data_stream_confluent3presto.md
       - topicgroup:
           label: Integrating with Data Build Tool(dbt)
           topics:

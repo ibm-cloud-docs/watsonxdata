@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2026-03-10"
+lastupdated: "2026-03-22"
 
 keywords: watsonxdata, release notes
 
@@ -30,6 +30,16 @@ For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-p
 
 Technology preview features: We also offer a Technology preview section that includes features currently in preview. These features are not generally available and may change before release. To view the release notes for technology preview items, see [Technology preview](/docs/watsonxdata?topic=watsonxdata-release_pp).
 
+## 17 March 2026
+{: #lakehouse_17mar2026}
+{: release-note}
+
+Zero-copy access to third-party lakehouses
+
+: You can now query data in third-party lakehouse platforms directly from {{site.data.keyword.lakehouse_short}} without copying or moving data. This zero-copy approach, also known as data federation or query federation, enables you to access remote data using Spark and Presto engines while maintaining a single source of truth.
+
+   Supported integrations include Confluent Tableflow, with additional platforms also being capable for integration. This capability eliminates the need for complex ETL pipelines and reduces storage costs by querying data where it resides. For more information, see [Remote lakehouse access](/docs/watsonxdata?topic=watsonxdata-data_stream).
+
 ## 09 March 2026 - Version 2.3.1
 {: #lakehouse_24feb2026}
 {: release-note}
@@ -41,7 +51,8 @@ Engine and service enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following engine and service enhancements:
 
-   * Faster Migration from Delta Lake to watsonx.data Iceberg : You can now migrate your Delta Lake tables to watsonx.data Iceberg much faster and with significantly optimized resource usage by using a Spark application. During migration, the system preserves your existing data files, table properties, and partitioning, eliminating unnecessary rewrites. For more information, see [Submitting Spark jobs to migrate Delta Lake tables to Apache Iceberg](/docs/watsonxdata?topic=watsonxdata-migrate_ic_del).
+   * Faster Migration from Delta Lake to watsonx.data Iceberg : You can now migrate your Delta Lake tables to watsonx.data Iceberg much faster and with significantly optimized resource usage by using a Spark application. During migration, the system preserves your existing data files, table properties, and partitioning, eliminating unnecessary rewrites. For more information, see [Submitting Spark jobs to migrate Delta Lake tables to Apache Iceberg](/docs/watsonxdata?topic=watsonxdata-migrate_ic_del). 
+
    * The Presto (Java) engine now provides autoscaling for Custom configuration mode, allowing worker nodes to automatically scale based on CPU utilization. When provisioning a Presto engine with Custom configuration, you can enable the optional Auto-scaling feature to dynamically adjust the number of worker nodes in response to workload demand. Autoscaling is CPU-based and uses configurable parameters including target CPU percentage (default: 40%, range: 1-100%), minimum and maximum worker node counts (range: 1-18), scaling step size, scale-in time window (default: 30 minutes), and query termination grace period (range: 1-120 minutes). After autoscaling is enabled during engine provisioning, updating the existing autoscaling configurations is allowed on a running engine; however, disabling autoscaling is not allowed once it has been enabled. Manual scaling is not available for autoscaling-enabled engines. Autoscaling remains active until the engine is deleted. For more information, see [Provisioning a Presto (Java) engine](/docs/watsonxdata?topic=watsonxdata-prov_engine)
 
 Terraform module for {{site.data.keyword.lakehouse_short}} deployment
@@ -98,7 +109,7 @@ Storage and connector enhancements
 
    * The Custom S3 Storage configuration now includes an `Endpoint Type` field that allows you to select the endpoint access type. Options are `Path style access` or `Virtual host`. For more information, see [Custom S3 Storage](/docs/watsonxdata?topic=watsonxdata-custom_s3_storage). 
 
-   * The storages or catalogs you have access to will be visible to you across all instances in your account, rather than being restricted to one instance.For more information about how to use the existing catalog, see [Quickstart](/docs/watsonxdata?topic=watsonxdata-quick_start_213).
+   * The storages or catalogs you have access to will be visible to you across all instances in your account, rather than being restricted to one instance.For more information about how to use the existing catalog, see [Quickstart](/docs/watsonxdata?topic=watsonxdata-quick_start_213). 
 
    * The Iceberg connector now performs commit operations atomically as a single transaction instead of two separate operations, improving data consistency and reliability. Previously, the connector executed `replaceTable` and `updateTableStatistics` as separate operations, which could result in an inconsistent state if one operation succeeded while the other failed. The improved implementation combines these operations into a single atomic transaction for both file-based and Glue-based metastores, ensuring data integrity during commits. Additionally, a new configuration property `iceberg.engine.hive.lock-enabled` allows you to enable or disable Hive table locks when the Iceberg connector accesses Hive tables. This property can be overridden at the table level using the `engine.hive.lock-enabled` table property. Disabling locks can improve performance in environments where concurrent access is controlled externally, though it may affect atomicity guarantees. This configuration is relevant only for file-based and Thrift-based metastores, as Glue does not use metastore locks by default. 
 
@@ -113,13 +124,13 @@ Lite plan enhancements:
 
    **Optimized resource allocation for an enhanced Trial experience** : The watsonx.data trial experience now includes 500 Resource Units (RUs) valid for 30 days.
    This updated RU allocation aligns with the improved efficiency of the new architecture, allowing your 500 RUs to better support your exploration of core watsonx.data capabilities.
-   Trial (Lite) instances are automatically deleted when either the 500 RUs are fully consumed or the 30‑day period expires, whichever comes first. For more information, see [watsonx.data Lite plan](/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1).
+   Trial (Lite) instances are automatically deleted when either the 500 RUs are fully consumed or the 30‑day period expires, whichever comes first. For more information, see [watsonx.data Lite plan](/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1). 
 
 Access management enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following access management enhancements:
 
-   * **Manager role for independent resource administration** : With the Manager role, you can create and manage your own engines, services in addition to all User-level privileges. This role grants full administrative control over the resources you create, while ensuring complete isolation from other scoped admins. Engines and services created by one Manager remain visible and accessible only to that Manager, and other Manager with the same role cannot view or manage them, ensuring strong separation, clear ownership, and secure, independent administration.. For more information, see [User authentication (Level 1)](/docs/watsonxdata?topic=watsonxdata-access_mgt#levelauth).
+   * **Manager role for independent resource administration** : With the Manager role, you can create and manage your own engines, services in addition to all User-level privileges. This role grants full administrative control over the resources you create, while ensuring complete isolation from other scoped admins. Engines and services created by one Manager remain visible and accessible only to that Manager, and other Manager with the same role cannot view or manage them, ensuring strong separation, clear ownership, and secure, independent administration.. For more information, see [User authentication (Level 1)](/docs/watsonxdata?topic=watsonxdata-access_mgt#levelauth). 
 
 Integration enhancements
 
@@ -149,7 +160,7 @@ Semantic automation for data enrichment
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following Semantic automation enhancements:
 
-   You can now provision {{site.data.keyword.lakehouse_short}} instances with Semantic automation enrichment layer (SAL) enabled in the following new regions: Sydney (au-syd) and Toronto (ca-tor). To register Semantic automation enrichment layer (SAL), see [Registering and activating semantic layer](/docs/watsonxdata?topic=watsonxdata-sal_register). 
+   You can now provision {{site.data.keyword.lakehouse_short}} instances with Semantic automation enrichment layer (SAL) enabled in the following new regions: `au-syd` (Sydney), `ca-tor` (Toronto), `eu-de` (Frankfurt), `eu-gb` (London), and `jp-tok` (Tokyo) region. To register Semantic automation enrichment layer (SAL), see [Registering and activating semantic layer](/docs/watsonxdata?topic=watsonxdata-sal_register). 
 
 CPDCTL CLI enhancements
 
@@ -173,18 +184,22 @@ Deprecated features
 
 : The following features are deprecated in this release:
 
-   * Support for Spark 3.4 runtime is deprecated and the default version is changed to Spark 3.5 runtime. To ensure a seamless experience and to leverage the latest features and improvements, switch to Spark 3.5. To update the Apache Spark version, see [Editing the Spark engine](/docs/watsonxdata?topic=watsonxdata-view-end#edit-dtls).
+   * Support for Spark 3.4 runtime is deprecated and the default version is changed to Spark 3.5 runtime. To ensure a seamless experience and to leverage the latest features and improvements, switch to Spark 3.5. To update the Apache Spark version, see [Editing the Spark engine](/docs/watsonxdata?topic=watsonxdata-view-end#edit-dtls). 
+
 
    * Python 3.10 is deprecated. To ensure a seamless experience when submitting Spark applications, you need to update your runtime to Python 3.11. Until you complete the migration to Python 3.11, you can use the following workaround to continue running Python 3.10:
 
+   
    ``` bash
 
-   "conf": {
+   "env": {
    "export RUNTIME_PYTHON_ENV": "python310"
    }
 
    ```
    {: codeblock}
+
+   * {{site.data.keyword.lakehouse_short}} API version v2 is completely removed from the {{site.data.keyword.lakehouse_short}} starting with version 2.3.1. You must migrate to the latest supported API version (v3) to ensure continued compatibility and access to new features.
 
 
 ## 10 December 2025 - Version 2.3

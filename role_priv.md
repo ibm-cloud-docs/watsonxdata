@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-02-11"
+lastupdated: "2026-03-12"
 
 keywords: lakehouse, watsonx data, privileges, roles, access
 
@@ -284,6 +284,9 @@ The following tables are applicable only if you are using IBM Spark that by defa
 | Delete | DELETE; POST with `?delete` parameter |
 {: caption="Data-object-level access control in Access control > Policies" caption-side="bottom"}
 
+For account-scoped instances, only the owner of the object storage can view it.
+{: note}
+
 ## Database
 {: #db_connection}
 
@@ -303,6 +306,9 @@ Formation admins (IAM) have the default admin access.
 | Modify database objects | ✓ | ✓ |    |     |
 | View (UI and API) | ✓ | ✓ | ✓ | ✓ |
 {: caption="Resource-level permissions" caption-side="bottom"}
+
+For account-scoped instances, only the owner of the database can view it.
+{: note}
 
 ## Catalog
 {: #catalog}
@@ -327,6 +333,9 @@ IAM formation non-admins (Operator, Editor, Viewer) have the Default user access
 | Access to data | ✓ | Based on data policy |     |
 | View (UI and API) | ✓ | ✓ |     |
 {: caption="Resource-level permissions" caption-side="bottom"}
+
+For account-scoped instances, only the owner of the catalog can view it.
+{: note}
 
 ## Schema
 {: #schema}
