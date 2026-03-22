@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-03-19"
+lastupdated: "2026-03-22"
 
 keywords: lakehouse, remote data, {{site.data.keyword.lakehouse_short}}
 
@@ -58,7 +58,7 @@ When you integrate third-party lakehouse platforms with {{site.data.keyword.lake
 - Eliminate data copying and ETL complexity: Remove the need for custom data pipelines and transformation jobs
 - Use familiar SQL interfaces: Query remote lakehouse data using standard SQL through Spark or Presto engines
 - Leverage open table formats: Work with industry-standard formats like Apache Iceberg and Delta Lake
-- Maintain data governance: Apply watsonx.data's security and governance policies to remote
+- Maintain data governance: Apply {{site.data.keyword.lakehouse_short}} security and governance policies to remote
 - Scale independently: Separate storage and compute for flexible scaling and cost optimization
 - Preserve data lineage: Track data from source to analytics with built-in metadata management
 

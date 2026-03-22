@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-03-19"
+lastupdated: "2026-03-22"
 
 keywords: lakehouse, remote data, confluent, {{site.data.keyword.lakehouse_short}}
 
@@ -29,9 +29,9 @@ subcollection: watsonxdata
 # Integrating Confluent Tableflow in {{site.data.keyword.lakehouse_short}}
 {: #data_stream_confluent1}
 
-You can integrate Confluent TableFlow with {{site.data.keyword.lakehouse_full}} to enable zero-copy querying of remote data. Confluent offers a data platform that acts as a central nervous system for real-time data, enabling businesses to connect, store, and manage data across cloud and on-premise environments.
+You can integrate Confluent Tableflow with {{site.data.keyword.lakehouse_full}} to enable zero-copy querying of remote data. Confluent offers a data platform that acts as a central nervous system for real-time data, enabling businesses to connect, store, and manage data across cloud and on-premise environments.
 
-Confluent TableFlow automatically converts Apache Kafka topics into ready-to-query Apache Iceberg tables, enabling zero-copy, real-time analytics through data federation. It eliminates complex data pipelines by materializing data in user-owned or managed storage with automated maintenance.
+Confluent Tableflow automatically converts Apache Kafka topics into ready-to-query Apache Iceberg tables, enabling zero-copy, real-time analytics through data federation. It eliminates complex data pipelines by materializing data in user-owned or managed storage with automated maintenance.
 
 ## How it works
 {: #data_stream_confluent1_1}
@@ -39,7 +39,7 @@ Confluent TableFlow automatically converts Apache Kafka topics into ready-to-que
 1. Create a Kafka cluster in Confluent Cloud.
 2. Create topics to stream your data.
 3. Enable Tableflow for topics to convert them into Iceberg tables.
-4. Query the remote tables using {{site.data.keyword.lakehouse_full}} Spark or Presto engines without copying data.
+4. Query the remote tables using {{site.data.keyword.lakehouse_short}} Spark or Presto engines without copying data.
 
 ## Storage options
 {: #data_stream_confluent1_2}

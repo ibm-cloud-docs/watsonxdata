@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-03-19"
+lastupdated: "2026-03-22"
 
 keywords: lakehouse, remote data, confluent, {{site.data.keyword.lakehouse_short}}
 
@@ -46,7 +46,7 @@ You can query remote Confluent Tableflow tables using the {{site.data.keyword.la
    - Tableflow API key and secret
    - REST Catalog endpoint
 - **Table information requirements**:
-   - List of Kafka topic names with TableFlow enabled
+   - List of Kafka topic names with Tableflow enabled
    - Kafka cluster ID (namespace) where topics are located
 - **{{site.data.keyword.lakehouse_short}} requirements:**
    - Provisioned Presto engine
