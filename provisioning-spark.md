@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2025
-lastupdated: "2026-02-11"
+lastupdated: "2026-03-24"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -16,8 +16,10 @@ subcollection: watsonxdata
 
 **Applies to** : [Spark engine]{: tag-blue}
 
-The option to register external Spark engines in watsonx.data is deprecated in this release and will be removed in version 2.3. watsonx.data already includes built-in Spark engines that you can provision and use directly, including the Apache Gluten-accelerated Spark engine and the native watsonx.data Spark engine.
+The option to register external Spark engines in watsonx.data is deprecated in this release and will be removed in version 2.3. You cannot modify access control settings or edit existing applications. watsonx.data already includes built-in Spark engines that you can provision and use directly, including the Apache Gluten-accelerated Spark engine and the native watsonx.data Spark engine.
 {: important}
+
+
 
 For {{site.data.keyword.lakehouse_short}}, it is recommended to use {{site.data.keyword.iae_full_notm}} Spark to achieve below use-cases:
 1. Ingesting large volumes of data into {{site.data.keyword.lakehouse_short}} tables. You can also cleanse and transform data before ingestion.
