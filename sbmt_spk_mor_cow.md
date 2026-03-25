@@ -46,9 +46,9 @@ The CDC approach is deprecated and will be removed in a future release. Use the 
 
 Before executing MoR to  CoW conversion jobs in IBM watsonx.data, ensure that the following prerequisites are met:
 
-1. Associate a catalog with the engine: You must [associate the catalog](/docs/watsonxdata?topic=watsonxdata-asso-cat-eng) used in the conversion job with a Spark engine. When a catalog is associated with a Spark engine, all required connection properties for the catalog are automatically added to the Spark engine’s default configuration. Spark applications can access the catalog without manually adding storage connection properties or Hive Metastore (HMS) configurations in the Spark job payload.
+1. Associating the catalog with the engine: You must [associate the catalog](/docs/watsonxdata?topic=watsonxdata-asso-cat-eng) used in the conversion job with a Spark engine. When a catalog is associated with a Spark engine, all required connection properties for the catalog are automatically added to the Spark engine’s default configuration. Spark applications can access the catalog without manually adding storage connection properties or Hive Metastore (HMS) configurations in the Spark job payload.
 
-2. Role permissions: The API key used to submit the MoR to  CoW conversion job must be associated with a user who has the required admin access or editor access on the catalog used in the Spark job. For more information on catalog roles and privileges, see the [Predefined roles and permissions in watsonx.data](/docs/watsonxdata?topic=watsonxdata-role_priv).
+2. Defining the role permissions: The API key used to submit the MoR to  CoW conversion job must be associated with a user who has the required admin access or editor access on the catalog used in the Spark job. For more information on catalog roles and privileges, see the [Predefined roles and permissions in watsonx.data](/docs/watsonxdata?topic=watsonxdata-role_priv).
 
 ## About this task
 {: #sbmt_spk_mor_cowatt}
