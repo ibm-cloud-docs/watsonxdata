@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2026-03-22"
+lastupdated: "2026-03-26"
 
 keywords: watsonxdata, release notes
 
@@ -29,6 +29,8 @@ For watsonx.data on-prem what's new, see [Release notes for watsonx.data](https:
 For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-prem Premium](https://www.ibm.com/docs/en/watsonx/watsonxdata-premium/2.2.x?topic=overview-whats-new-in-watsonxdata).
 
 Technology preview features: We also offer a Technology preview section that includes features currently in preview. These features are not generally available and may change before release. To view the release notes for technology preview items, see [Technology preview](/docs/watsonxdata?topic=watsonxdata-release_pp).
+
+
 
 ## 17 March 2026
 {: #lakehouse_17mar2026}
