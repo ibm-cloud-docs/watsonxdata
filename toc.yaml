@@ -461,6 +461,7 @@ toc:
               - quick_start_opensearch.md
               - add-opensearch.md
           - jvector.md
+          - jvector_spark.md
           - mv_optimizer.md
           - jdbc.md
       - link:
