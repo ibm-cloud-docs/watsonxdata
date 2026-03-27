@@ -103,7 +103,7 @@ To sync tables from {{site.data.keyword.lakehouse_short}}, the following items a
       - `use.SSL` - It must be true if the metastore requires an SSL connection.
       - `<MDS certificate file path>` - This must be provided as a file on the db2u container as a certificate to validate the SSL connection. It is not necessary to pass a certificate if the SSL connection is established using a certificate issued by a well-known CA such as DigiCert or VeriSign. By default, the MDS certificates are available under the /secrets/external/ibm-lh-tls-secret/ca.crt path in Query optimizer.
 
-         1. Run the following command to identify the db2u Query Optimizer head pod (OPT_POD).
+         1. Run the following command to identify the db2u Query Optimizer head pod (`OPT_POD`).
 
             ```bash
             oc get pod | grep oaas-db2u
@@ -119,7 +119,7 @@ To sync tables from {{site.data.keyword.lakehouse_short}}, the following items a
 
 6.  For {{site.data.keyword.lakehouse_short}} Enterprise version, Hive and Iceberg tables are managed using distinct metastore server types. Depending on your application needs, you must register metastore servers for Hive, Iceberg, or both.
 
-      1. Registering a Hive catalog in {{site.data.keyword.lakehouse_short}} Lite version:
+      1. Registering a Hive catalog in {{site.data.keyword.lakehouse_short}} Enterprise version:
 
          ```bash
          ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.REGISTER_EXT_METASTORE('<CATALOG_NAME>','type=watsonx-data-hive,uri=https://<THRIFT_URL>/mds/thrift,use.SSL=true,auth.mode=PLAIN,ssl.cert=/secrets/external/ibm-lh-tls-secret/ca.crt,auth.plain.credentials=<USERNAME>:<PASSWORD>', ?, ?)';
@@ -141,7 +141,7 @@ To sync tables from {{site.data.keyword.lakehouse_short}}, the following items a
          - `use.SSL` - It must be true if the metastore requires an SSL connection.
          - `<MDS certificate file path>` - This must be provided as a file on the db2u container as a certificate to validate the SSL connection. It is not    necessary to pass a certificate if the SSL connection is established using a certificate issued by a well-known CA such as DigiCert or VeriSign. By    default, the MDS certificates are available under the /secrets/external/ibm-lh-tls-secret/ca.crt path in Query optimizer.
 
-      2. Registering a Iceberg catalog from {{site.data.keyword.lakehouse_short}} Lite version:
+      2. Registering a Iceberg catalog from {{site.data.keyword.lakehouse_short}} Enterprise version:
 
          ```bash
          ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.REGISTER_EXT_METASTORE('<CATALOG_NAME>','type=iceberg-rest,catalog.name=<CATALOG_NAME>,uri=https://<REST_URL>/mds/iceberg,auth.mode=basic,ssl.cert=/secrets/external/ibm-lh-tls-secret/ca.crt,auth.plain.credentials=<USERNAME>:<PASSWORD>', ?, ?)';
