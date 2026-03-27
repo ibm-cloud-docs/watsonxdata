@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-03-19"
+lastupdated: "2026-03-27"
 
 keywords: lakehouse
 
@@ -30,6 +30,27 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+## Manual sync not working in watsonx.data 2.3.1 Multi-Tenant instances
+{: #known_issue60909}
+
+Manual synchronization of optimizer metadata does not work in watsonx.data version 2.3.1 multi-tenant instances when following the standard manual sync procedure.
+
+The manual sync process [Synchronizing optimizer metadata](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-sync_optimizer_meta) fails to execute properly in multi-tenant deployments of watsonx.data 2.3.1.
+
+**Workarounds**: Two alternative approaches are available to address this issue:
+
+1. Manually collect statistics through the watsonx.data dashboard interface:
+
+   1. Navigate to the Query optimizer management section.
+   2. Follow the procedure outlined in [Managing statistical updates from dashboard](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-analyze_optimizer#qry-colct)
+   3. Trigger the statistical collection process manually
+
+2. Force an automatic synchronization by cycling the Query optimizer:
+
+   1. Deactivate the Query optimizer.
+   2. Reactivate the Query optimizer.
+   3. The initial auto-sync will execute automatically upon reactivation.
 
 ## Databand-enabled Spark jobs fail on Spark 4.0 in {{site.data.keyword.lakehouse_short}}
 {: #known_issue50405}
@@ -73,11 +94,6 @@ When consuming multi-tenant MDS (Metadata Service) APIs with an IAM token or API
 {: #known_issue65588}
 
 When a Snowflake connector is configured with private key authentication and the warehouse name field is left empty, you can access schemas but cannot query tables.
-
-## Statistics synchronization job fails during collection
-{: #known_issue60900}
-
-The statistics synchronization job fails when you run a [collection statistics job](/docs/watsonxdata?topic=watsonxdata-sync_optimizer_metaanalyze_optimizer) using the **Query optimizer**.
 
 **Workaround:** Cancel the current job and run it again.
 
