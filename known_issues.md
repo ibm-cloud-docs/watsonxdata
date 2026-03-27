@@ -34,7 +34,7 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 ## Manual sync not working in watsonx.data 2.3.1 Multi-Tenant instances
 {: #known_issue60909}
 
-Manual synchronization of optimizer metadata does not work in watsonx.data version 2.3.1 multi-tenant instances when following the standard manual sync procedure.
+Manual synchronization of optimizer metadata does not work in watsonx.data version 2.3.1 multi-tenant instances for Iceberg catalogs when following the standard manual sync procedure.
 
 The manual sync process [Synchronizing optimizer metadata](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-sync_optimizer_meta) fails to execute properly in multi-tenant deployments of watsonx.data 2.3.1.
 
