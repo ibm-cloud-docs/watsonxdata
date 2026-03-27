@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-08"
+lastupdated: "2026-03-27"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -48,6 +48,15 @@ subcollection: watsonxdata
  | Catalog name | Enter the name of the catalog.|
  | Create | Click Create to create the data source. |
  {: caption="Register data source" caption-side="bottom"}
+
+## Additional Information
+{: #db2fori_addi}
+
+The IBM Db2 for i connector uses [table and column statistics](https://prestodb.io/docs/current/optimizer/statistics.html) to perform [cost-based optimizations](https://prestodb.io/docs/current/optimizer/cost-based-optimizations.html), enabling more efficient query processing based on the actual data in the source. IBM Db2 for i generates and maintains these statistics, and the connector retrieves them during query planning to improve query performance.
+
+To collect statistics for a table in IBM Db2 for i, use `IBM i Access Client Solutions (ACS)`.
+
+For detailed instructions on manually collecting or refreshing statistics, refer [Manually collecting and refreshing statistics](https://www.ibm.com/docs/en/i/7.6.0?topic=manager-manual-collection-refresh).
 
 ## Limitations for SQL statements
 {: #db2fori_limitations}
