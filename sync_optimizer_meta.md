@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-01"
+lastupdated: "2026-03-27"
 
 keywords: lakehouse, MDS, {{site.data.keyword.lakehouse_short}}, hive, metastore
 
@@ -83,7 +83,7 @@ To sync tables from {{site.data.keyword.lakehouse_short}}, the following items a
    ```
    {: codeblock}
 
-   a. For {{site.data.keyword.lakehouse_short}} Enterprise version, use the legacy metastore type `watsonx-data` for both Hive and Iceberg catalogs:
+   For {{site.data.keyword.lakehouse_short}} Enterprise version of AWS clusters, use the legacy metastore type `watsonx-data` for both Hive and Iceberg catalogs:
 
       ```bash
       ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.REGISTER_EXT_METASTORE('<CATALOG_NAME>','type=watsonx-data,uri=thrift://<THRIFT_URL>,use.SSL=true,auth.mode=PLAIN,ssl.cert=/secrets/external/ibm-lh-tls-secret/ca.crt,auth.plain.credentials=<USERNAME>:<PASSWORD>', ?, ?)
@@ -119,7 +119,7 @@ To sync tables from {{site.data.keyword.lakehouse_short}}, the following items a
             ```
             {: codeblock}
 
-   b. For {{site.data.keyword.lakehouse_short}} Lite version, Hive and Iceberg tables are managed using distinct metastore server types. Depending on your application needs, you must register metastore servers for Hive, Iceberg, or both.
+5.  For {{site.data.keyword.lakehouse_short}} Enterprise version, Hive and Iceberg tables are managed using distinct metastore server types. Depending on your application needs, you must register metastore servers for Hive, Iceberg, or both.
 
       1. Registering a Hive catalog in {{site.data.keyword.lakehouse_short}} Lite version:
 
@@ -131,7 +131,7 @@ To sync tables from {{site.data.keyword.lakehouse_short}}, the following items a
          For example:
 
          ```bash
-         ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.REGISTER_EXT_METASTORE('iceberg_data','type=watsonx-data,uri=thrift://ibm-lh-lakehouse-mds-thrift-svc.zen.svc.cluster.local:8380,use.SSL=true,auth.mode=PLAIN,ssl.cert=/secrets/external/ibm-lh-tls-secret/ca.crt,auth.plain.credentials=admin:password', ?, ?)';
+         ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.REGISTER_EXT_METASTORE('hive_data','type=watsonx-data-hive,uri=https://ibm-lh-lakehouse-mds-thrift-svc.cpd-instance.svc.cluster.local:8381/mds/thrift,use.SSL=true,auth.mode=PLAIN,ssl.cert=/secrets/external/ibm-lh-tls-secret/ca.crt,auth.plain.credentials=username:password', ?, ?)';
          ```
          {: codeblock}
 
@@ -153,7 +153,7 @@ To sync tables from {{site.data.keyword.lakehouse_short}}, the following items a
          For example:
 
          ```bash
-         ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.REGISTER_EXT_METASTORE('iceberg_data','type=iceberg-rest,catalog.name=iceberg_data,uri=https://ibm-lh-lakehouse-mds-rest-svc.zen.svc.cluster.local:8180/mds/iceberg,auth.mode=basic,ssl.cert=/secrets/external/ibm-lh-tls-secret/ca.crt,auth.plain.credentials=admin:password', ?, ?)';
+         ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.REGISTER_EXT_METASTORE('iceberg_data','type=iceberg-rest,catalog.name=iceberg_rest,uri=https://ibm-lh-lakehouse-mds-rest-svc.cpd-instance.svc.cluster.local:8180/mds/iceberg,auth.mode=basic,ssl.cert=/secrets/external/ibm-lh-tls-secret/ca.crt,auth.plain.credentials=username:password', ?, ?)';
          ```
          {: codeblock}
 
