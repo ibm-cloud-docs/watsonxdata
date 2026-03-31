@@ -63,7 +63,7 @@ To connect to the remote MCP server, use the following endpoint:
 
 `https://<your-instance-url>/api/v1/mcp/watsonxdata`
 
-Replace `<your-instance-url>` with the URL of your specific {{ site.data.keyword.wxdata }} instance.
+Replace `<your-instance-url>` with the URL of your specific {{site.data.keyword.lakehouse_short}} instance.
 
 ### Connect your Agents with remote MCP Server
 {: #remote-querying-data-ai-cng}

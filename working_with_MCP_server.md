@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-03-05"
+lastupdated: "2026-03-31"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
 
@@ -122,3 +122,5 @@ Submit queries using either natural language or SQL syntax:
    ```
 
 **Expected result:** The agent executes the query and presents results in a formatted table.
+
+For detailed information about MCP tools, refer [https://github.com/IBM/ibm-watsonxdata-mcp-server/blob/main/TOOLS.md](https://github.com/IBM/ibm-watsonxdata-mcp-server/blob/main/TOOLS.md).
