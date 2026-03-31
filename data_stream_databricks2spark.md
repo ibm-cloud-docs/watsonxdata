@@ -34,12 +34,12 @@ subcollection: watsonxdata
 
 You can query remote Databricks Unity Catalog tables using the IBM® watsonx.data Spark engine through zero-copy data federation. Spark supports querying both Delta Lake and Iceberg tables stored in Databricks Unity Catalog without copying data.
 
-For general information about Databricks Unity Catalog integration, see [Integrating Databricks Unity Catalog in watsonx.data](data_stream_databricks1.md).
+For general information about Databricks Unity Catalog integration, see [Integrating Databricks Unity Catalog in watsonx.data](/docs/watsonxdata?topic=watsonxdata-data_stream_databricks1.md).
 
 ## Before you begin
 {: #data_stream_databricks2spark2}
 
-Complete the prerequisites outlined in [Integrating Databricks Unity Catalog in watsonx.data](databricks-unity-catalog-overview.md), including:
+Complete the prerequisites outlined in [Integrating Databricks Unity Catalog in watsonx.data](/docs/watsonxdata?topic=watsonxdata-databricks-unity-catalog-overview.md), including:
 
 - Databricks workspace with Unity Catalog enabled
 - OAuth credentials or Personal Access Token
@@ -231,6 +231,6 @@ Data (first 20 rows):
 ## Related information
 {: #data_stream_databricks2spark6}
 
-- [Integrating Databricks Unity Catalog in watsonx.data](data_stream_databricks1.md)
+- [Integrating Databricks Unity Catalog in watsonx.data](/docs/watsonxdata?topic=watsonxdata-data_stream_databricks1.md)
 - [Databricks Unity Catalog documentation](https://docs.databricks.com/data-governance/unity-catalog/index.html)
 - [Unity Catalog privileges and securable objects](https://docs.databricks.com/data-governance/unity-catalog/manage-privileges/privileges.html)

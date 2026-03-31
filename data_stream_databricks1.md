@@ -66,17 +66,17 @@ Ensure you have the following:
 
 **Obtaining Databricks credentials:**
 
-1. Log in to your Databricks workspace.
-2. Navigate to **Settings > Identity and access**.
-3. Click **Manage** on **Service principals**.
-4. Click **Add service principal** and create a new OAuth application.
-5. Note the **Client ID** and **Client Secret**.
-6. Alternatively, generate a Personal Access Token:
-   - Go to **User Settings > Developer > Manage** on **Access Tokens**.
-   - Click **Generate new token**.
-   - Ensure the token has the `unity-catalog` API scope.
-7. Note your workspace URL (format: `https://<workspace-id>.cloud.databricks.com`).
-8. Identify your catalog name, schema name, and table names.
+   1. Log in to your Databricks workspace.
+   2. Navigate to **Settings > Identity and access**.
+   3. Click **Manage** on **Service principals**.
+   4. Click **Add service principal** and create a new OAuth application.
+   5. Note the **Client ID** and **Client Secret**.
+   6. Alternatively, generate a Personal Access Token:
+      - Go to **User Settings > Developer > Manage** on **Access Tokens**.
+      - Click **Generate new token**.
+      - Ensure the token has the `unity-catalog` API scope.
+   7. Note your workspace URL (format: `https://<workspace-id>.cloud.databricks.com`).
+   8. Identify your catalog name, schema name, and table names.
 
 **Databricks permissions setup:**
 
@@ -96,31 +96,34 @@ For detailed information on privilege inheritance, see [Unity Catalog privilege 
 
 Grant all privileges at the catalog level for broad access to all schemas and tables:
 
-1. Log in to your Databricks workspace.
-2. Navigate to **Catalog** in the left sidebar.
-3. Select your catalog, then click the **Permissions** tab.
-4. Click **Grant** and add your service principal or user.
-5. Assign the following privileges at the catalog level:
-   - **USE CATALOG** - Access to the catalog and all its schemas
-   - **USE SCHEMA** - Access to all schemas within the catalog
-   - **SELECT** - Read data from all tables in all schemas
-   - **EXTERNAL USE SCHEMA** - Access all schemas with external storage locations (required if using external storage)
+   1. Log in to your Databricks workspace.
+   2. Navigate to **Catalog** in the left sidebar.
+   3. Select your catalog, then click the **Permissions** tab.
+   4. Click **Grant** and add your service principal or user.
+   5. Assign the following privileges at the catalog level:
+      - **USE CATALOG** - Access to the catalog and all its schemas
+      - **USE SCHEMA** - Access to all schemas within the catalog
+      - **SELECT** - Read data from all tables in all schemas
+      - **EXTERNAL USE SCHEMA** - Access all schemas with external storage locations (required if using external storage)
 
 **Granular multi-level grants (Recommended for production):**
 
 For fine-grained access control, grant privileges at specific levels:
 
    **Catalog level:**
-   1. Navigate to **Catalog → Select your catalog → Permissions** tab.
-   2. Grant **USE CATALOG** to allow access to the catalog.
+
+      1. Navigate to **Catalog → Select your catalog → Permissions** tab.
+      2. Grant **USE CATALOG** to allow access to the catalog.
 
    **Schema level:**
-   1. Navigate to **Catalog → Select your catalog → Select a schema → Permissions** tab.
-   2. Grant **USE SCHEMA** and **EXTERNAL USE SCHEMA** (if using external storage) for specific schemas.
+
+      1. Navigate to **Catalog → Select your catalog → Select a schema → Permissions** tab.
+      2. Grant **USE SCHEMA** and **EXTERNAL USE SCHEMA** (if using external storage) for specific schemas.
 
    **Table level:**
-   1. Navigate to **Catalog → Select your catalog → Select a schema → Select a table → Permissions** tab.
-   2. Grant **SELECT** on specific tables you want to query.
+
+      1. Navigate to **Catalog → Select your catalog → Select a schema → Select a table → Permissions** tab.
+      2. Grant **SELECT** on specific tables you want to query.
 
 For detailed information on Unity Catalog permissions, see [Unity Catalog privileges and securable objects](https://docs.databricks.com/data-governance/unity-catalog/manage-privileges/privileges.html) in the Databricks documentation.
 
@@ -175,8 +178,8 @@ Choose the appropriate integration method based on your query engine and table f
 ## Next steps
 {: #data_stream_databricks7}
 
-- [Querying Databricks Unity Catalog using Spark engine](data_stream_databricks2spark.md)
-- [Querying Databricks Iceberg tables using Presto engine](data_stream_databricks3presto.md)
+- [Querying Databricks Unity Catalog using Spark engine](/docs/watsonxdata?topic=watsonxdata-data_stream_databricks2spark.md)
+- [Querying Databricks Iceberg tables using Presto engine](/docs/watsonxdata?topic=watsonxdata-data_stream_databricks3presto.md)
 
 ## Related information
 {: #data_stream_databricks8}

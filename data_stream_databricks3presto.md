@@ -38,12 +38,12 @@ You can query remote Databricks Iceberg tables using the IBM® watsonx.data Pres
 - Presto does not currently support vended-credentials for Databricks integration.
 - You must configure explicit storage credentials (AWS S3, Azure Blob Storage, or Google Cloud Storage) to access the underlying data files.
 - Presto supports Iceberg tables only; Delta Lake tables are not supported.
-- For general information about Databricks Unity Catalog integration, see [Integrating Databricks Unity Catalog in watsonx.data](data_stream_databricks1.md).
+- For general information about Databricks Unity Catalog integration, see [Integrating Databricks Unity Catalog in watsonx.data](/docs/watsonxdata?topic=watsonxdata-data_stream_databricks1.md).
 
 ## Before you begin
 {: #data_stream_databricks3presto2}
 
-Complete the prerequisites outlined in [Integrating Databricks Unity Catalog in watsonx.data](data_stream_databricks1.md), including:
+Complete the prerequisites outlined in [Integrating Databricks Unity Catalog in watsonx.data](/docs/watsonxdata?topic=watsonxdata-data_stream_databricks1.md), including:
 
 - Databricks workspace with Unity Catalog enabled
 - Iceberg tables created in Databricks Unity Catalog
@@ -216,6 +216,6 @@ Output:
 ## Related information
 {: #data_stream_databricks3presto6}
 
-- [Integrating Databricks Unity Catalog in watsonx.data](data_stream_databricks1.md)
+- [Integrating Databricks Unity Catalog in watsonx.data](/docs/watsonxdata?topic=watsonxdata-data_stream_databricks1.md)
 - [Databricks Unity Catalog documentation](https://docs.databricks.com/data-governance/unity-catalog/index.html)
 - [Unity Catalog privileges and securable objects](https://docs.databricks.com/data-governance/unity-catalog/manage-privileges/privileges.html)
