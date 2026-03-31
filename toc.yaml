@@ -44,7 +44,6 @@ toc:
           topics:
           - prov_wxd.md
           - prov_lite_plan.md
-          - prov_spk_lite.md
           - getting-started.md
           - wxd_reg_avail.md
       - wxd_api_chg_log.md
@@ -88,6 +87,7 @@ toc:
               topics:
               - prov_engine.md
               - pcpp_prov.md
+              - prov_spk_lite.md
               - prov_spk_engine.md
               - spk_cpp.md
               - reg_engine.md
