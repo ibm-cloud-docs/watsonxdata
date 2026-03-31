@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-03-04"
+lastupdated: "2026-03-31"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
 
@@ -47,24 +47,48 @@ The IBM Bob configuration file is located at:
 
 1. Open the IBM Bob configuration file in a text editor.
 
-2. Add the following configuration:
+2. Add the following configuration, replacing placeholder values with your actual credentials:
 
-   ```bash
-   {
+   - **For remote MCP server use the following configuration**
+
+     ```bash
+     {
      "mcpServers": {
-       "IBM watsonx.data MCP Server": {
-         "command": "/path/to/ibm-watsonxdata-mcp-server",
-         "args": ["--transport", "stdio"],
-         "env": {
-           "WATSONX_DATA_BASE_URL": ""https://<your-instance>.lakehouse.cloud.ibm.com/lakehouse/api",
-           "WATSONX_DATA_API_KEY": "<your_api_key_here>",
-           "WATSONX_DATA_INSTANCE_ID": "crn:v1:<bluemix:public:lakehouse:us-south/a/...>"
+     "watsonx-data-gateway": {
+     "command": "npx",
+     "args": [
+     "-y",
+     "mcp-remote",
+     "https: <PLACEHOLDER>",
+     "--header",
+     "apikey: <YOUR_IBM_CLOUD_API_KEY>",
+     "--header",
+     "authinstanceid: <YOUR_WATSONXDATA_INSTANCE_CRN>"
+     ]
+     }
+     }
+     }
+     ```
+     {: codeblock}
+
+   - **For local MCP server use the following configuration**
+
+     ```bash
+     {
+       "mcpServers": {
+         "IBM watsonx.data MCP Server": {
+           "command": "/path/to/ibm-watsonxdata-mcp-server",
+           "args": ["--transport", "stdio"],
+           "env": {
+             "WATSONX_DATA_BASE_URL": ""https://<your-instance>.lakehouse.cloud.ibm.com/lakehouse/api",
+             "WATSONX_DATA_API_KEY": "<your_api_key_here>",
+             "WATSONX_DATA_INSTANCE_ID": "crn:v1:<bluemix:public:lakehouse:us-south/a/...>"
+           }
          }
        }
      }
-   }
-   ```
-   {: codeblock}
+     ```
+     {: codeblock}
 
 3. Save the configuration file.
 

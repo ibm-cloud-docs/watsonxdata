@@ -405,6 +405,7 @@ toc:
           label: Querying data with agents
           topics:
           - querying-data-ai.md
+          - remote-querying-data-ai-end.md
           - querying-data-ai-inm.md
           - configuring-claude.md
           - configuring-bob.md
