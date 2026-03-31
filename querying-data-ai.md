@@ -100,7 +100,10 @@ The IBM {{site.data.keyword.lakehouse_short}} MCP Server provides the following 
 **Transport mechanisms**
 {: #squerying-data-ai-trm}
 
-- stdio transport for local subprocess communication. For implementation guidelines and security best practices, refer [MCP Transports Specification](https://modelcontextprotocol.io/specification/2025-11-25/basic/transports).
+- **stdio** transport for local subprocess communication
+- **Streamable HTTP** for remote server connections
+
+For implementation guidelines and security best practices, refer [MCP Transports Specification](https://modelcontextprotocol.io/specification/2025-11-25/basic/transports).
 
 **AI agent integrations**
 {: #squerying-data-ai-aiag}

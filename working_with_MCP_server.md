@@ -82,7 +82,7 @@ View the structure and metadata of a specific table.
 
 1. Submit a query in the following format:
 
-   ```
+   ```bash
 
    Describe the [table_name] table in [schema_name]
    ```
