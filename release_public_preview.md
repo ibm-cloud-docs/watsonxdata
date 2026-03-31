@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-11"
+lastupdated: "2026-03-31"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -31,6 +31,17 @@ subcollection: watsonxdata
 
 Read about the new features and enhancements in the current and previous releases of {{site.data.keyword.lakehouse_full}} (Technology preview).
 {: shortdesc}
+
+## Version 2.3.2
+{: #lakehouse_1apr2026_pp}
+{: release-note}
+
+This release includes the following new feature:
+
+JVector integration with Spark (Private preview)
+:  {{site.data.keyword.lakehouse_full}} now integrates with JVector in Spark which enables Approximate Nearest Neighbor (ANN) Top‑K similarity searches on embedding data that is stored in Iceberg tables. For more information see,
+[JVector integration with Spark](/docs/watsonxdata?topic=watsonxdata-jvector-spk).
+
 
 ## 10 December 2025 - Version 2.3
 {: #lakehouse_5dec2025_pp}
