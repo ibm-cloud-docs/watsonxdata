@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-03-27"
+lastupdated: "2026-04-01"
 
 keywords: lakehouse
 
@@ -30,6 +30,11 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+## `WHERE` clause comparison fails for `TIMESTAMP(n)` datatypes when precision greater than 3
+{: #known_issue50717}
+
+When querying tables that contain `TIMESTAMP(n)` columns with precision greater than 3 (where n > 3) or resolution greater than milliseconds (for example, microseconds, nanoseconds, and so on), WHERE clause comparisons fail to return matching rows, even when matching records exist in the table.
 
 ## Manual sync not working in watsonx.data 2.3.1 Multi-Tenant instances
 {: #known_issue60909}
