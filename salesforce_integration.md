@@ -4,14 +4,27 @@ copyright:
   years: 2022, 2026
 lastupdated: "2026-04-01"
 
-keywords: {{site.data.keyword.lakehouse_short}}, ikc, configuring, knowledgecatalog
-subcollection: watsonxdata
+keywords: lakehouse, remote data, confluent, {{site.data.keyword.lakehouse_short}}
 
+subcollection: watsonxdata
 
 ---
 
-{{site.data.keyword.attribute-definition-list}}
-
+{:javascript: #javascript .ph data-hd-programlang='javascript'}
+{:java: #java .ph data-hd-programlang='java'}
+{:ruby: #ruby .ph data-hd-programlang='ruby'}
+{:php: #php .ph data-hd-programlang='php'}
+{:python: #python .ph data-hd-programlang='python'}
+{:external: target="_blank" .external}
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
+{:pre: .pre}
+{:video: .video}
 
 # Integrating Salesforce Data Cloud with {{site.data.keyword.lakehouse_short}}
 {: #salesforce_integration}
