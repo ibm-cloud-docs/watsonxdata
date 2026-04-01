@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-03-31"
+lastupdated: "2026-04-01"
 
 keywords: lakehouse, remote data, confluent, {{site.data.keyword.lakehouse_short}}
 
@@ -26,17 +26,17 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Integrating Databricks Unity Catalog in watsonx.data
+# Integrating Databricks Unity Catalog in {{site.data.keyword.lakehouse_short}}
 {: #data_stream_databricks1}
 
-Databricks Unity Catalog is a unified governance solution for data and AI assets in Databricks. By integrating Unity Catalog with watsonx.data, you can query remote Databricks tables without copying data, enabling seamless data federation across your data landscape.
+Databricks Unity Catalog is a unified governance solution for data and AI assets in Databricks. By integrating Unity Catalog with {{site.data.keyword.lakehouse_full}}, you can query remote Databricks tables without copying data, enabling seamless data federation across your data landscape.
 
-watsonx.data supports querying Databricks Unity Catalog tables through:
+{{site.data.keyword.lakehouse_short}} supports querying Databricks Unity Catalog tables through:
 - **Spark engine** - Query both Delta Lake and Iceberg tables using PySpark
 - **Presto engine** - Query Iceberg tables through the Iceberg REST Catalog API
 
 This integration enables:
-- Zero-copy data federation across Databricks and watsonx.data
+- Zero-copy data federation across Databricks and {{site.data.keyword.lakehouse_short}}
 - Unified access to data stored in external locations (AWS S3, Azure Blob Storage, Google Cloud Storage)
 - Consistent governance and security policies across platforms
 
@@ -47,7 +47,7 @@ The integration works through the following components:
 
 1. **Databricks Unity Catalog** - Centralized metadata and governance layer
 2. **Iceberg REST Catalog API** - Standard interface for accessing table metadata
-3. **watsonx.data engines** - Spark or Presto engines that execute queries
+3. **{{site.data.keyword.lakehouse_short}} engines** - Spark or Presto engines that execute queries
 4. **External storage** - AWS S3, Azure Blob Storage, or Google Cloud Storage where data resides
 
 ## Before you begin
@@ -127,7 +127,7 @@ For fine-grained access control, grant privileges at specific levels:
 
 For detailed information on Unity Catalog permissions, see [Unity Catalog privileges and securable objects](https://docs.databricks.com/data-governance/unity-catalog/manage-privileges/privileges.html) in the Databricks documentation.
 
-**watsonx.data requirements:**
+**{{site.data.keyword.lakehouse_short}} requirements:**
 
 - Provisioned Spark engine (version 3.5 or later) for querying Delta Lake and Iceberg tables
 - Provisioned Presto engine for querying Iceberg tables
@@ -178,8 +178,8 @@ Choose the appropriate integration method based on your query engine and table f
 ## Next steps
 {: #data_stream_databricks7}
 
-- [Querying Databricks Unity Catalog using Spark engine](/docs/watsonxdata?topic=watsonxdata-data_stream_databricks2spark.md)
-- [Querying Databricks Iceberg tables using Presto engine](/docs/watsonxdata?topic=watsonxdata-data_stream_databricks3presto.md)
+- [Querying Databricks Unity Catalog using Spark engine](/docs/watsonxdata?topic=watsonxdata-data_stream_databricks2spark)
+- [Querying Databricks Iceberg tables using Presto engine](/docs/watsonxdata?topic=watsonxdata-data_stream_databricks3presto)
 
 ## Related information
 {: #data_stream_databricks8}

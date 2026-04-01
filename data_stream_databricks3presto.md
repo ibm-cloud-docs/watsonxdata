@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-03-31"
+lastupdated: "2026-04-01"
 
 keywords: lakehouse, remote data, confluent, {{site.data.keyword.lakehouse_short}}
 
@@ -32,25 +32,25 @@ subcollection: watsonxdata
 ## About this task
 {: #data_stream_databricks3presto1}
 
-You can query remote Databricks Iceberg tables using the IBM® watsonx.data Presto engine by registering Databricks as a custom data source for zero-copy data federation.
+You can query remote Databricks Iceberg tables using the IBM® {{site.data.keyword.lakehouse_full}} Presto engine by registering Databricks as a custom data source for zero-copy data federation.
 
 - Presto connects to Databricks through the Iceberg REST Catalog API interface, not Unity Catalog API directly.
 - Presto does not currently support vended-credentials for Databricks integration.
 - You must configure explicit storage credentials (AWS S3, Azure Blob Storage, or Google Cloud Storage) to access the underlying data files.
 - Presto supports Iceberg tables only; Delta Lake tables are not supported.
-- For general information about Databricks Unity Catalog integration, see [Integrating Databricks Unity Catalog in watsonx.data](/docs/watsonxdata?topic=watsonxdata-data_stream_databricks1.md).
+- For general information about Databricks Unity Catalog integration, see [Integrating Databricks Unity Catalog in {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=watsonxdata-data_stream_databricks1).
 
 ## Before you begin
 {: #data_stream_databricks3presto2}
 
-Complete the prerequisites outlined in [Integrating Databricks Unity Catalog in watsonx.data](/docs/watsonxdata?topic=watsonxdata-data_stream_databricks1.md), including:
+Complete the prerequisites outlined in [Integrating Databricks Unity Catalog in {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=watsonxdata-data_stream_databricks1), including:
 
 - Databricks workspace with Unity Catalog enabled
 - Iceberg tables created in Databricks Unity Catalog
 - Personal Access Token with `unity-catalog` API scope
 - **Workspace URL:** `https://<workspace-instance>.cloud.databricks.com`
 - Unity Catalog permissions configured
-- Provisioned Presto engine in watsonx.data
+- Provisioned Presto engine in {{site.data.keyword.lakehouse_short}}
 - **Iceberg REST Catalog endpoint:** `https://<workspace-instance>.cloud.databricks.com/api/2.1/unity-catalog/iceberg-rest`
 - **Catalog name:** Name of the Unity Catalog containing Iceberg tables
 - Access credentials for the external storage location (AWS S3, Azure, or GCS)
@@ -64,7 +64,7 @@ Use of vended credentials is currently not supported. Hence, Presto requires exp
 
 1. Register Databricks as a custom data source
 
-   1. In the watsonx.data console, click **Infrastructure manager**.
+   1. In the {{site.data.keyword.lakehouse_short}} console, click **Infrastructure manager**.
    2. Click **Add component > Add data source**.
    3. Select **Custom** as the data source type.
    4. Enter a display name (e.g., `databricks_iceberg`).
@@ -75,7 +75,7 @@ Use of vended credentials is currently not supported. Hence, Presto requires exp
       ```properties
       connector.name=iceberg
       iceberg.catalog.type=rest
-      iceberg.rest.uri=https://<workspace-instance>.cloud.   databricks.   com/api/2.1/unity-catalog/iceberg-rest
+      iceberg.rest.uri=https://<workspace-instance>.cloud.databricks.com/api/2.1/unity-catalog/iceberg-rest
       iceberg.rest.auth.type=OAUTH2
       iceberg.rest.auth.oauth2.token=<databricks-access-token>
       iceberg.catalog.warehouse=<catalog-name>
@@ -89,7 +89,7 @@ Use of vended credentials is currently not supported. Hence, Presto requires exp
       ```properties
       connector.name=iceberg
       iceberg.catalog.type=rest
-      iceberg.rest.uri=https://<workspace-instance>.cloud.   databricks.   com/api/2.1/unity-catalog/iceberg-rest
+      iceberg.rest.uri=https://<workspace-instance>.cloud.databricks.com/api/2.1/unity-catalog/iceberg-rest
       iceberg.rest.auth.type=OAUTH2
       iceberg.rest.auth.oauth2.token=<databricks-access-token>
       iceberg.catalog.warehouse=<catalog-name>
@@ -103,7 +103,7 @@ Use of vended credentials is currently not supported. Hence, Presto requires exp
       ```properties
       connector.name=iceberg
       iceberg.catalog.type=rest
-      iceberg.rest.uri=https://<workspace-instance>.cloud.   databricks.   com/api/2.1/unity-catalog/iceberg-rest
+      iceberg.rest.uri=https://<workspace-instance>.cloud.databricks.com/api/2.1/unity-catalog/iceberg-rest
       iceberg.rest.auth.type=OAUTH2
       iceberg.rest.auth.oauth2.token=<databricks-access-token>
       iceberg.catalog.warehouse=<catalog-name>
@@ -112,9 +112,9 @@ Use of vended credentials is currently not supported. Hence, Presto requires exp
       {: codeblock}
 
       Replace the placeholders:
-      - `<workspace-instance>`: Your Databricks workspace instance    name    (e.g., `dbc-a1b2c3d4-e5f6`)
-      - `<databricks-access-token>`: Your Databricks personal    access    token
-      - `<catalog-name>`: The Unity Catalog name containing your       Iceberg tables
+      - `<workspace-instance>`: Your Databricks workspace instance name (e.g., `dbc-a1b2c3d4-e5f6`)
+      - `<databricks-access-token>`: Your Databricks personal access token
+      - `<catalog-name>`: The Unity Catalog name containing your Iceberg tables
       - Storage credential placeholders with your actual credentials
 
    6. Click **Create**.
@@ -125,7 +125,7 @@ Use of vended credentials is currently not supported. Hence, Presto requires exp
    2. Click **Create catalog**.
    3. Select **Iceberg** as the catalog type.
    4. Enter a catalog name (e.g., `databricks_catalog`).
-   5. In the **Data source** field, select the custom data source    you created (`databricks_iceberg`).
+   5. In the **Data source** field, select the custom data source you created (`databricks_iceberg`).
    6. Click **Create**.
 
 3. Associate the catalog with Presto engine
@@ -140,7 +140,7 @@ Use of vended credentials is currently not supported. Hence, Presto requires exp
 
    1. Click **Query workspace**.
    2. Select your Presto engine from the engine dropdown.
-   3. Run queries against your remote Databricks Iceberg tables    using fully qualified table names:
+   3. Run queries against your remote Databricks Iceberg tables using fully qualified table names:
 
       ```sql
       -- List available schemas (namespaces)
@@ -153,10 +153,10 @@ Use of vended credentials is currently not supported. Hence, Presto requires exp
       DESCRIBE databricks_catalog.<schema_name>.<table_name>;
 
       -- Query data
-      SELECT * FROM databricks_catalog.<schema_name>.<table_name>    LIMIT    10;
+      SELECT * FROM databricks_catalog.<schema_name>.<table_name>LIMIT 10;
 
       -- Get row count
-      SELECT COUNT(*) FROM databricks_catalog.<schema_name>.      <table_name>;
+      SELECT COUNT(*) FROM databricks_catalog.<schema_name>.<table_name>;
 
       -- Filter and aggregate
       SELECT
@@ -173,7 +173,7 @@ Use of vended credentials is currently not supported. Hence, Presto requires exp
 ## Results
 {: #data_stream_databricks3presto4}
 
-You can now query Iceberg tables from Databricks Unity Catalog using Presto. The queries execute directly on the data in the external storage location without copying data into watsonx.data.
+You can now query Iceberg tables from Databricks Unity Catalog using Presto. The queries execute directly on the data in the external storage location without copying data into {{site.data.keyword.lakehouse_short}}.
 
 ## Example queries and outputs
 {: #data_stream_databricks3presto5}
@@ -200,7 +200,7 @@ Output:
 Query a table:
 
    ```sql
-   SELECT * FROM databricks_catalog.feb14schema.iceberg_orders LIMIT    10;
+   SELECT * FROM databricks_catalog.feb14schema.iceberg_orders LIMIT 10;
    ```
    {: codeblock}
 
@@ -216,6 +216,6 @@ Output:
 ## Related information
 {: #data_stream_databricks3presto6}
 
-- [Integrating Databricks Unity Catalog in watsonx.data](/docs/watsonxdata?topic=watsonxdata-data_stream_databricks1.md)
+- [Integrating Databricks Unity Catalog in {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=watsonxdata-data_stream_databricks1)
 - [Databricks Unity Catalog documentation](https://docs.databricks.com/data-governance/unity-catalog/index.html)
 - [Unity Catalog privileges and securable objects](https://docs.databricks.com/data-governance/unity-catalog/manage-privileges/privileges.html)
