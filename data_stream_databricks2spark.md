@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-04-01"
+lastupdated: "2026-04-02"
 
 keywords: lakehouse, remote data, confluent, {{site.data.keyword.lakehouse_short}}
 
@@ -32,14 +32,14 @@ subcollection: watsonxdata
 ## About this task
 {: #data_stream_databricks2spark1}
 
-You can query remote Databricks Unity Catalog tables using the IBM® {{site.data.keyword.lakehouse_full}} Spark engine through zero-copy data federation. Spark supports querying both Delta Lake and Iceberg tables stored in Databricks Unity Catalog without copying data.
+You can query remote Databricks Unity Catalog tables using the {{site.data.keyword.lakehouse_full}} Spark engine through zero-copy data federation. Spark supports querying both Delta Lake and Iceberg tables stored in Databricks Unity Catalog without copying data.
 
 For general information about Databricks Unity Catalog integration, see [Integrating Databricks Unity Catalog in {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=watsonxdata-data_stream_databricks1).
 
 ## Before you begin
 {: #data_stream_databricks2spark2}
 
-Complete the prerequisites outlined in [Integrating Databricks Unity Catalog in {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=watsonxdata-databricks-unity-catalog-overview), including:
+Complete the prerequisites outlined in [Integrating Databricks Unity Catalog in {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=watsonxdata-data_stream_databricks1), including:
 
 - Databricks workspace with Unity Catalog enabled
 - OAuth credentials or Personal Access Token
@@ -58,7 +58,7 @@ Complete the prerequisites outlined in [Integrating Databricks Unity Catalog in 
    from pyspark.sql import SparkSession
 
    WORKSPACE_URL = "https://<workspace-id>.cloud.databricks.com"
-   UNITY_CATALOG_URL = f"{WORKSPACE_URL}/api/2.1/unity-catalog/   iceberg-rest"
+   UNITY_CATALOG_URL = f"{WORKSPACE_URL}/api/2.1/unity-catalog/iceberg-rest"
    CATALOG_NAME = "your_catalog_name"
    OAUTH_CLIENT_ID = "your_oauth_client_id"
    OAUTH_CLIENT_SECRET = "your_oauth_client_secret"
@@ -77,16 +77,16 @@ Complete the prerequisites outlined in [Integrating Databricks Unity Catalog in 
            "org.apache.iceberg.spark.SparkCatalog") \
        .config(f"spark.sql.catalog.{CATALOG_NAME}.type", "rest") \
        .config(f"spark.sql.catalog.{CATALOG_NAME}.uri", UNITY_CATALOG_URL) \
-       .config(f"spark.sql.catalog.{CATALOG_NAME}.warehouse",CATALOG_NAME) \
+       .config(f"spark.sql.catalog.{CATALOG_NAME}.warehouse", CATALOG_NAME) \
        .config(f"spark.sql.catalog.{CATALOG_NAME}.scope", "all-apis") \
-       .config(f"spark.sql.catalog.{CATALOG_NAME}.rest.auth.type",    "oauth2") \
+       .config(f"spark.sql.catalog.{CATALOG_NAME}.rest.auth.type", "oauth2") \
        .config(f"spark.sql.catalog.{CATALOG_NAME}.oauth2-server-uri",
            f"{WORKSPACE_URL}/oidc/v1/token") \
        .config(f"spark.sql.catalog.{CATALOG_NAME}.credential",
            f"{OAUTH_CLIENT_ID}:{OAUTH_CLIENT_SECRET}") \
        .config("spark.hadoop.fs.s3a.access.key", AWS_ACCESS_KEY_ID) \
        .config("spark.hadoop.fs.s3a.secret.key", AWS_SECRET_ACCESS_KEY) \
-       .config("spark.hadoop.fs.s3a.endpoint", f"s3.{S3_REGION}.   amazonaws.com") \
+       .config("spark.hadoop.fs.s3a.endpoint", f"s3.{S3_REGION}.amazonaws.com") \
        .getOrCreate()
    ```
    {: codeblock}

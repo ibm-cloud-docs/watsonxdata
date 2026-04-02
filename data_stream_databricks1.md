@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-04-01"
+lastupdated: "2026-04-02"
 
 keywords: lakehouse, remote data, confluent, {{site.data.keyword.lakehouse_short}}
 
@@ -112,17 +112,17 @@ For fine-grained access control, grant privileges at specific levels:
 
    **Catalog level:**
 
-      1. Navigate to **Catalog → Select your catalog → Permissions** tab.
+      1. Navigate to **Catalog** → **Select your catalog** → **Permissions** tab**.
       2. Grant **USE CATALOG** to allow access to the catalog.
 
    **Schema level:**
 
-      1. Navigate to **Catalog → Select your catalog → Select a schema → Permissions** tab.
+      1. Navigate to **Catalog** → **Select your catalog** → **Select a schema** → **Permissions** tab.
       2. Grant **USE SCHEMA** and **EXTERNAL USE SCHEMA** (if using external storage) for specific schemas.
 
    **Table level:**
 
-      1. Navigate to **Catalog → Select your catalog → Select a schema → Select a table → Permissions** tab.
+      1. Navigate to **Catalog** → **Select your catalog** → **Select a schema** → **Select a table** → **Permissions** tab**.
       2. Grant **SELECT** on specific tables you want to query.
 
 For detailed information on Unity Catalog permissions, see [Unity Catalog privileges and securable objects](https://docs.databricks.com/data-governance/unity-catalog/manage-privileges/privileges.html) in the Databricks documentation.

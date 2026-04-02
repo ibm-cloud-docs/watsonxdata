@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-04-01"
+lastupdated: "2026-04-02"
 
 keywords: lakehouse, remote data, confluent, {{site.data.keyword.lakehouse_short}}
 
@@ -32,11 +32,11 @@ subcollection: watsonxdata
 ## About this task
 {: #data_stream_databricks3presto1}
 
-You can query remote Databricks Iceberg tables using the IBM® {{site.data.keyword.lakehouse_full}} Presto engine by registering Databricks as a custom data source for zero-copy data federation.
+You can query remote Databricks Iceberg tables using the {{site.data.keyword.lakehouse_full}} Presto engine by registering Databricks as a custom data source for zero-copy data federation.
 
 - Presto connects to Databricks through the Iceberg REST Catalog API interface, not Unity Catalog API directly.
 - Presto does not currently support vended-credentials for Databricks integration.
-- You must configure explicit storage credentials (AWS S3, Azure Blob Storage, or Google Cloud Storage) to access the underlying data files.
+- You must configure explicit storage credentials (AWS S3 and Azure Data Lake Storage Gen2) to access the underlying data files.
 - Presto supports Iceberg tables only; Delta Lake tables are not supported.
 - For general information about Databricks Unity Catalog integration, see [Integrating Databricks Unity Catalog in {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=watsonxdata-data_stream_databricks1).
 
@@ -53,7 +53,7 @@ Complete the prerequisites outlined in [Integrating Databricks Unity Catalog in 
 - Provisioned Presto engine in {{site.data.keyword.lakehouse_short}}
 - **Iceberg REST Catalog endpoint:** `https://<workspace-instance>.cloud.databricks.com/api/2.1/unity-catalog/iceberg-rest`
 - **Catalog name:** Name of the Unity Catalog containing Iceberg tables
-- Access credentials for the external storage location (AWS S3, Azure, or GCS)
+- Access credentials for the external storage location (AWS S3 or Azure)
 
 Use of vended credentials is currently not supported. Hence, Presto requires explicit storage credentials.
 {: note}
@@ -84,35 +84,23 @@ Use of vended credentials is currently not supported. Hence, Presto requires exp
       ```
       {: codeblock}
 
-      **For Azure Blob Storage:**
+      **For Azure Data Lake Storage Gen2:**
 
       ```properties
       connector.name=iceberg
       iceberg.catalog.type=rest
-      iceberg.rest.uri=https://<workspace-instance>.cloud.databricks.com/api/2.1/unity-catalog/iceberg-rest
+      iceberg.rest.uri=https://<workspace-url>/api/2.1/unity-catalog/iceberg-rest
       iceberg.rest.auth.type=OAUTH2
       iceberg.rest.auth.oauth2.token=<databricks-access-token>
       iceberg.catalog.warehouse=<catalog-name>
-      hive.azure.wasb-storage-account=<storage-account-name>
-      hive.azure.wasb-access-key=<storage-account-key>
+      hive.azure.abfs-storage-account=<storage-account-name>
+      hive.azure.abfs-access-key=<storage-account-key>
       ```
       {: codeblock}
 
-      **For Google Cloud Storage:**
-
-      ```properties
-      connector.name=iceberg
-      iceberg.catalog.type=rest
-      iceberg.rest.uri=https://<workspace-instance>.cloud.databricks.com/api/2.1/unity-catalog/iceberg-rest
-      iceberg.rest.auth.type=OAUTH2
-      iceberg.rest.auth.oauth2.token=<databricks-access-token>
-      iceberg.catalog.warehouse=<catalog-name>
-      hive.gcs.json-key-file-path=<path-to-service-account-key>
-      ```
-      {: codeblock}
-
-      Replace the placeholders:
+      Replace the placeholders in the 2 storage properties as follows:
       - `<workspace-instance>`: Your Databricks workspace instance name (e.g., `dbc-a1b2c3d4-e5f6`)
+      - `<workspace-url>`: Your Databricks workspace URL
       - `<databricks-access-token>`: Your Databricks personal access token
       - `<catalog-name>`: The Unity Catalog name containing your Iceberg tables
       - Storage credential placeholders with your actual credentials
