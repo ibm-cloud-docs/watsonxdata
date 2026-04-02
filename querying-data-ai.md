@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-03-31"
+lastupdated: "2026-04-02"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -26,7 +26,7 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Querying data through agents by using the MCP server
+# Interacting with data through an MCP server
 {: #querying-data-ai}
 
 You can securely access and explore your lakehouse data and metadata through natural language by using {{site.data.keyword.lakehouse_short}} Model Context Protocol (MCP) server and your AI agent.
@@ -112,6 +112,7 @@ For implementation guidelines and security best practices, refer [MCP Transports
 
    - IBM Bob
    - Claude Desktop
+   - Other MCP-compatible clients (only for remote MCP server)
 
 ## Configuration workflow
 {: #squerying-data-ai-cfwr}
@@ -124,7 +125,7 @@ The configuration process varies depending on whether you choose the remote or l
 To configure the Remote MCP server, complete these main tasks:
 
 1. [Obtain the endpoint for the remote MCP server](/docs/watsonxdata?topic=watsonxdata-remote-querying-data-ai-end)
-2. Configure your AI agent to work with the MCP server and connect to {{site.data.keyword.lakehouse_short}}. See [Configuring IBM Bob](/docs/watsonxdata?topic=watsonxdata-configuring-bob) or [Configuring Claude Desktop](/docs/watsonxdata?topic=watsonxdata-configuring-claude).
+2. Configure your AI agent to work with the MCP server and connect to {{site.data.keyword.lakehouse_short}}. See [Configuring IBM Bob](/docs/watsonxdata?topic=watsonxdata-configuring-bob), [Configuring Claude Desktop](/docs/watsonxdata?topic=watsonxdata-configuring-claude), or [Configuring other MCP clients](/docs/watsonxdata?topic=watsonxdata-configuring-other-agents).
 
 **For local MCP server**
 {: #squerying-data-ai-cfwr-flm}
@@ -151,7 +152,8 @@ The following diagram illustrates the process of querying data through the local
 The MCP server enables conversational data access through the following workflow:
 
 1. You submit a natural language query to your agent.
-2. The agent interprets your request and selects the appropriate MCP tool.
-3. The MCP server executes the operation against your watsonx.data instance.
-4. Results are returned to the agent.
-5. The agent presents the results in a conversational format.
+2. The agent interprets your request and determines the appropriate action.
+3. The agent communicates with the MCP server, which then forwards the request to your {{ site.data.keyword.wxdata }} instance.
+4. The MCP server executes the operation against your {{ site.data.keyword.wxdata }} instance.
+5. {{site.data.keyword.lakehouse_short}} processes the request and returns results to the MCP server.
+6. The agent presents the results in a conversational format.

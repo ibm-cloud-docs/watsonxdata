@@ -405,13 +405,14 @@ toc:
       - retrieval_service.md
       - db_ast.md
       - topicgroup:
-          label: Querying data with agents
+          label: Interacting with data with agents
           topics:
           - querying-data-ai.md
           - remote-querying-data-ai-end.md
           - querying-data-ai-inm.md
           - configuring-claude.md
           - configuring-bob.md
+          - configuring-other-agents.md
           - working_with_MCP_server.md
   - navgroup:
       id: reference

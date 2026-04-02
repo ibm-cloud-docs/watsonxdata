@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-03-31"
+lastupdated: "2026-04-02"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -26,7 +26,7 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Obtain the endpoint for the remote MCP server
+# Getting start with the remote MCP server
 {: #remote-querying-data-ai-end}
 
 To connect your AI agent with {{site.data.keyword.lakehouse_short}} tools, you must obtain the endpoint for the remote MCP server.
@@ -38,7 +38,7 @@ Before connecting to the Remote MCP Server, ensure you have:
 
 - **{{site.data.keyword.lakehouse_short}} instance** - A provisioned and running instance
 
-   - [Provision a lite plan instance](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1) and [Provision an enterprice plan instance](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-getting-started_1)
+   - [Provision a lite plan instance](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1) or [Provision an enterprice plan instance](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-getting-started_1)
 
    - [Set up {{site.data.keyword.lakehouse_short}} lite plan](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-tutorial_hp_intro)
 
@@ -61,9 +61,7 @@ Before connecting to the Remote MCP Server, ensure you have:
 
 To connect to the remote MCP server, use the following endpoint:
 
-`https://<your-instance-url>/api/v1/mcp/watsonxdata`
-
-Replace `<your-instance-url>` with the URL of your specific {{site.data.keyword.lakehouse_short}} instance.
+`https://eu-de.lakehouse.dev.cloud.ibm.com/api/v1/mcp/watsonxdata`
 
 ### Connect your Agents with remote MCP Server
 {: #remote-querying-data-ai-cng}
@@ -72,6 +70,7 @@ After connecting the remote MCP server, configure your agents to connect to the 
 
 - [Configuring Claude Desktop](/docs/watsonxdata?topic=watsonxdata-configuring-claude)
 - [Configuring IBM Bob](/docs/watsonxdata?topic=watsonxdata-configuring-bob)
+- [Configuring other MCP clients](/docs/watsonxdata?topic=watsonxdata-configuring-other-agents)
 
 ### Querying data with the MCP tool
 {: #remote-querying-data-ai-qdw}
