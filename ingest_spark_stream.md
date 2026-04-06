@@ -10,21 +10,7 @@ subcollection: watsonxdata
 
 ---
 
-{:javascript: #javascript .ph data-hd-programlang='javascript'}
-{:java: #java .ph data-hd-programlang='java'}
-{:ruby: #ruby .ph data-hd-programlang='ruby'}
-{:php: #php .ph data-hd-programlang='php'}
-{:python: #python .ph data-hd-programlang='python'}
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:tip: .tip}
-{:important: .important}
-{:note: .note}
-{:deprecated: .deprecated}
-{:pre: .pre}
-{:video: .video}
+{{site.data.keyword.attribute-definition-list}}
 
 # Ingesting streaming data by using Spark Stream (Experimental)
 {: #ingest_spark_stream}
@@ -38,7 +24,7 @@ This feature is experimental and subject to change. It is not recommended for pr
 {: #ingest_spark_stream1}
 
 - Review the [prerequisites](/docs/watsonxdata?topic=watsonxdata-ingest_spark_ui#ingest_spark_ui3) for using the Spark ingestion UI.
-- **Important:** Create the target schema and table before you start the streaming job.
+- Create the target schema and table before you start the streaming job.
 - Streaming sources must be pre-configured by administrators. Contact your administrator if no streaming sources are available.
 - An API key is required for streaming jobs.
 
@@ -52,7 +38,6 @@ This feature is experimental and subject to change. It is not recommended for pr
 5. In the **Source configuration** section:
 
    1. **Streaming source**: Select a streaming source from the dropdown.
-      - If no streaming sources are available, the message "No streaming sources available" is displayed.
 
    2. **Topic**: Enter the topic name for the streaming source.
 
@@ -78,22 +63,22 @@ This feature is experimental and subject to change. It is not recommended for pr
 
 7. In the **Target table** section:
 
-   1. **Select catalog**: Choose the target catalog from the dropdown (e.g., "shibil_catalog").
+   1. **Select catalog**: Choose the target catalog from the dropdown.
 
-   2. **Select schema**: Choose the target schema from the dropdown (e.g., "testsch1").
+   2. **Select schema**: Choose the target schema from the dropdown.
 
-   3. **Select table**: Choose the target table from the dropdown (e.g., "test1").
+   3. **Select table**: Choose the target table from the dropdown.
 
-The schema and table must exist before starting the streaming job, and the table schema must be compatible with the streaming data schema.
-{: note}
+   The schema and table must exist before starting the streaming job, and the table schema must be compatible with the streaming data schema.
+   {: note}
 
 8. In the **Job details** section:
 
-   1. **Job ID**: A unique job identifier is automatically generated (e.g., "migration-1774936096761").
+   1. **Job ID**: A unique job identifier is automatically generated.
 
    2. **API key (required for streaming jobs)**: Enter an API key for authentication.
 
-   3. **Select engine**: Choose the Spark engine to use for the streaming job from the dropdown (default: "(Spark) Spark").
+   3. **Select engine**: Choose the Spark engine to use for the streaming job from the dropdown.
 
 9. Click **Submit** to start the streaming job, or **Cancel** to discard the configuration.
 

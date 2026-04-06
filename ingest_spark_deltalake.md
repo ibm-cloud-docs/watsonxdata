@@ -10,21 +10,7 @@ subcollection: watsonxdata
 
 ---
 
-{:javascript: #javascript .ph data-hd-programlang='javascript'}
-{:java: #java .ph data-hd-programlang='java'}
-{:ruby: #ruby .ph data-hd-programlang='ruby'}
-{:php: #php .ph data-hd-programlang='php'}
-{:python: #python .ph data-hd-programlang='python'}
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:tip: .tip}
-{:important: .important}
-{:note: .note}
-{:deprecated: .deprecated}
-{:pre: .pre}
-{:video: .video}
+{{site.data.keyword.attribute-definition-list}}
 
 # Migrating data from Delta Lake to Iceberg tables
 {: #ingest_spark_deltalake}
@@ -49,30 +35,25 @@ You can migrate data from Delta Lake tables to Iceberg tables in {{site.data.key
       - **Latest snapshot only** (default): Migrate only the current version of the Delta Lake table
       - **All snapshots (full history)**: Migrate the complete history of the Delta Lake table, preserving all versions
 
-   2. **Select storage**: Choose the storage location containing the Delta Lake tables from the dropdown (e.g., "bucketcos").
+   2. **Select storage**: Choose the storage location containing the Delta Lake tables from the dropdown.
 
-   3. **All tables**: The section displays the number of available tables (e.g., "All tables (1)").
-      - Below this, you'll see the message: "Select tables to map to target catalog"
+   3. **All tables**: The section displays the number of available tables.
 
    4. **Search tables**: Use the search box to filter tables by name.
 
-   5. **Select tables**: Click the checkbox next to each table you want to migrate (e.g., "new/test1").
+   5. **Select tables**: Click the checkbox next to each table you want to migrate.
 
 6. In the **Target Iceberg table** section:
 
-   1. **Select Catalog**: Choose the target catalog from the dropdown (e.g., "shibil_catalog").
-
-   2. **Table selection status**: The section displays "0 tables selected" until you select source tables.
-      - After selecting source tables, the message changes to: "Select tables to begin mapping to target"
-      - Additional guidance: "Selected tables will appear here. Please select tables from the source panel."
+   1. **Select Catalog**: Choose the target catalog from the dropdown.
 
    3. After selecting source tables, the mapping interface allows you to map each source Delta Lake table to a target Iceberg table.
 
 7. In the **Job details** section:
 
-   1. **Job ID**: A unique job identifier is automatically generated (e.g., "migration-1774936072150").
+   1. **Job ID**: A unique job identifier is automatically generated.
 
-   2. **Select engine**: Choose the Spark engine to use for the migration job from the dropdown (default: "(Spark) Spark").
+   2. **Select engine**: Choose the Spark engine to use for the migration job from the dropdown.
 
    3. **Configuration**: Expand this section to configure additional settings:
 

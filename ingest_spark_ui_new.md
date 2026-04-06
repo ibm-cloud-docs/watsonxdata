@@ -10,21 +10,7 @@ subcollection: watsonxdata
 
 ---
 
-{:javascript: #javascript .ph data-hd-programlang='javascript'}
-{:java: #java .ph data-hd-programlang='java'}
-{:ruby: #ruby .ph data-hd-programlang='ruby'}
-{:php: #php .ph data-hd-programlang='php'}
-{:python: #python .ph data-hd-programlang='python'}
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:tip: .tip}
-{:important: .important}
-{:note: .note}
-{:deprecated: .deprecated}
-{:pre: .pre}
-{:video: .video}
+{{site.data.keyword.attribute-definition-list}}
 
 # Ingesting data by using the Spark ingestion UI
 {: #ingest_spark_ui_new}
@@ -41,29 +27,6 @@ The Spark ingestion UI supports the following ingestion flows:
 - **[Database](/docs/watsonxdata?topic=watsonxdata-ingest_spark_database)** - Ingest data from external databases (Db2, MySQL, PostgreSQL, Teradata)
 - **[Spark Stream (Experimental)](/docs/watsonxdata?topic=watsonxdata-ingest_spark_stream)** - Ingest streaming data using Spark Structured Streaming
 - **[Delta Lake source](/docs/watsonxdata?topic=watsonxdata-ingest_spark_deltalake)** - Ingest data from Delta Lake tables
-
-## Ingestion workflow
-{: #ingest_spark_ui2}
-
-The following diagram illustrates the common workflow for all ingestion flows:
-
-```mermaid
-graph TD
-    A[Start Ingestion] --> B[Select Ingestion Flow]
-    B --> C[Configure Source]
-    C --> D[Configure File Details]
-    D --> E[Configure Target Table]
-    E --> F[Configure Job Details]
-    F --> G[Review Configuration]
-    G --> H[Submit Job]
-    H --> I[Monitor Job Status]
-    I --> J{Job Complete?}
-    J -->|Success| K[View Results]
-    J -->|Failed| L[Review Logs]
-    L --> M[Troubleshoot and Retry]
-    M --> C
-```
-{: screen}
 
 ## Prerequisites
 {: #ingest_spark_ui3}
@@ -144,10 +107,3 @@ After submitting an ingestion job, you can monitor its progress:
    - Start and end times
    - Execution logs
    - Error messages (if applicable)
-
-## Related information
-{: #ingest_spark_ui9}
-
-- [Managing Spark engines](link-to-spark-engines.md)
-- [Working with catalogs and schemas](link-to-catalogs.md)
-- [Monitoring jobs](link-to-monitoring.md)

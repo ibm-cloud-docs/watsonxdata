@@ -10,21 +10,7 @@ subcollection: watsonxdata
 
 ---
 
-{:javascript: #javascript .ph data-hd-programlang='javascript'}
-{:java: #java .ph data-hd-programlang='java'}
-{:ruby: #ruby .ph data-hd-programlang='ruby'}
-{:php: #php .ph data-hd-programlang='php'}
-{:python: #python .ph data-hd-programlang='python'}
-{:external: target="_blank" .external}
-{:shortdesc: .shortdesc}
-{:codeblock: .codeblock}
-{:screen: .screen}
-{:tip: .tip}
-{:important: .important}
-{:note: .note}
-{:deprecated: .deprecated}
-{:pre: .pre}
-{:video: .video}
+{{site.data.keyword.attribute-definition-list}}
 
 # Ingesting data from databases
 {: #ingest_spark_database}
@@ -49,7 +35,7 @@ You can ingest data from connected databases into {{site.data.keyword.lakehouse_
 6. If you need to add a new database connection, click **Add** next to the database selector.
 7. After selecting a database, the available schemas are displayed in the **Schemas** panel.
 8. In the **Database** panel on the left:
-   - The **Schemas** section displays the number of schemas available (e.g., "Schemas (0)")
+   - The **Schemas** section displays the number of schemas available
    - Use the **Find schema** search box to filter schemas by name
    - If no schemas are displayed, the message "No schemas in this database" appears with guidance to try selecting a different database
 9. In the **Browse Table** panel in the center:
