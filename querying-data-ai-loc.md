@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-04-02"
+lastupdated: "2026-04-06"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -26,16 +26,16 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Installing and configuring the MCP server
-{: #querying-data-ai-inm}
+# Installing and configuring the local MCP server
+{: #querying-data-ai-loc}
 
-You must install and configure the MCP server on your local computer.
+You must install and configure the local MCP server on your local computer.
 
 ## System requirements
-{: #squerying-data-ai-sq}
+{: #querying-loc-1}
 
 **Software prerequisites**
-{: #squerying-data-ai-sp}
+{: #querying-loc-2}
 
 Before you begin, ensure that your system meets the following requirements:
 
@@ -47,7 +47,7 @@ Before you begin, ensure that your system meets the following requirements:
 {: caption="System requirements" caption-side="bottom"}
 
 **IBM {{site.data.keyword.lakehouse_short}} requirements**
-{: #squerying-data-ai-reqi}
+{: #querying-loc-3}
 
 You must have access to the following IBM {{site.data.keyword.lakehouse_short}} resources:
 
@@ -62,7 +62,7 @@ You must have access to the following IBM {{site.data.keyword.lakehouse_short}} 
    - [Create an API key](https://cloud.ibm.com/iam/apikeys)
 
 **Required configuration information**
-{: #squerying-data-ai-cnf}
+{: #querying-loc-4}
 
 Collect the following information before installation:
 
@@ -82,12 +82,12 @@ Collect the following information before installation:
 - **IAM API Key**: Your IBM Cloud API key with {{site.data.keyword.lakehouse_short}} access permissions.
 
 ## Installing the MCP Server
-{: #squerying-data-ai-pixist}
+{: #querying-loc-5}
 
 You can install the IBM {{site.data.keyword.lakehouse_short}} MCP Server using one of the following methods:
 
 ### Installing with pipx
-{: #squerying-data-ai-pix}
+{: #querying-loc-6}
 
 1. Run the following code to install pipx if not already installed.
 
@@ -105,7 +105,7 @@ You can install the IBM {{site.data.keyword.lakehouse_short}} MCP Server using o
 
 
 ### Installing with pip
-{: #squerying-data-ai-pip}
+{: #querying-loc-7}
 
 Use this method if you prefer to install the server in your user Python environment.
 
@@ -119,12 +119,12 @@ Use this method if you prefer to install the server in your user Python environm
 To install MCP sever for development setup, refer [IBM {{site.data.keyword.lakehouse_short}} MCP Server](https://github.com/IBM/ibm-watsonxdata-mcp-server?tab=readme-ov-file).
 
 ## Configuring the MCP server
-{: #squerying-data-ai-cnf}
+{: #querying-loc-8}
 
 After installation, configure your agents to communicate with the MCP server.
 
 ### Find the MCP server executable
-{: #squerying-data-ai-srv}
+{: #querying-loc-9}
 
 Complete the steps below to locate the MCP server executable based on your operating system. You will use this path when configuring your agents.
 
@@ -147,7 +147,7 @@ Complete the steps below to locate the MCP server executable based on your opera
    {: codeblock}
 
 ### Connect your Agents with MCP Server
-{: #squerying-data-ai-caw}
+{: #querying-loc-10}
 
 After locating the MCP server executable, configure your agents to connect to the server. See the following topics for specific instructions:
 
@@ -155,6 +155,6 @@ After locating the MCP server executable, configure your agents to connect to th
 - [Configuring IBM Bob](/docs/watsonxdata?topic=watsonxdata-configuring-bob)
 
 ### Querying data with the MCP tool
-{: #squerying-data-ai-wrkm}
+{: #querying-loc-11}
 
 After configuration with AI agents, you can interact with your {{site.data.keyword.lakehouse_short}} instance through natural language conversations with your agent. For more information, see [Querying data with the MCP tool](/docs/watsonxdata?topic=watsonxdata-working_with_MCP_server).
