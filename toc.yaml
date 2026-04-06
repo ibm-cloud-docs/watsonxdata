@@ -182,7 +182,7 @@ toc:
           - topicgroup:
               label: Ingesting data
               topics:
-              - ingest_spark_ui.md
+              - ingest_spark_ui_new.md
               - ingest_spark_local.md
               - ingest_spark_storage.md
               - ingest_spark_database.md
