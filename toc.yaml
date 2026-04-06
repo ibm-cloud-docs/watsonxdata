@@ -179,6 +179,15 @@ toc:
           topics:
           - ingestdata.md
           - ingest_spark_ui.md
+          - topicgroup:
+              label: Ingesting data
+              topics:
+              - ingest_spark_ui.md
+              - ingest_spark_local.md
+              - ingest_spark_storage.md
+              - ingest_spark_database.md
+              - ingest_spark_deltalake.md
+              - ingest_spark_stream.md
           - ingest_sparklogshistory.md
           - prepare_ingest_data2.md
       - topicgroup:
