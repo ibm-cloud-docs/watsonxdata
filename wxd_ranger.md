@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-01-23"
+lastupdated: "2026-04-06"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -86,7 +86,7 @@ Complete the following steps to enable and configure Apache Ranger in watsonx.da
    | Field | Description |
    |--------------------------|----------------|
    |Service	|Select Apache Ranger.|
-   |URL	|The URL of Apache Ranger.|
+   |URL	|The URL of Apache Ranger. \n **Note:** You must use HTTPS URLs only.|
    |Username|	The admin credentials.|
    |Password	|The admin credentials.|
    |Port is SSL enabled  |Select the checkbox.    |
@@ -147,3 +147,4 @@ Provide appropriate values for Organizational Unit (OU), Organization (O), Locat
 
 * In Apache Iceberg catalog, an error occurs if a policy is not defined for the snapshots views related to the tables in Ranger. You must manually define policies in Apache Ranger to eliminate the error.
 * watsonx.data supports only access control feature for Apache Ranger integration in 2.0.0 release.
+* Apache Ranger integration does not support HTTP URLs; you must use HTTPS URLs only.
