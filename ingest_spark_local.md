@@ -1,7 +1,7 @@
 ---
 
 copyright:
-  years: 2022, 2025
+  years: 2022, 2026
 lastupdated: "2026-04-06"
 
 keywords: {{site.data.keyword.lakehouse_short}}, data ingestion, source file
@@ -70,6 +70,7 @@ You can upload files from your local system and ingest them into {{site.data.key
 14. Configure format-specific options:
 
    **For CSV files:**
+
    - **Delimiter**: Specify the delimiter character (default: comma)
    - **Header**: Select whether the first row contains column headers
    - **Infer schema**: Enable to automatically detect column data types
@@ -77,10 +78,12 @@ You can upload files from your local system and ingest them into {{site.data.key
    - **Escape character**: Specify the character used for escaping special characters (default: backslash)
 
    **For JSON files:**
+
    - **Multi-line**: Enable if each JSON record spans multiple lines
    - **Infer schema**: Enable to automatically detect the schema from the JSON structure
 
    **For Parquet, Avro, and ORC files:**
+
    - Schema is automatically detected from the file metadata
 
 15. Click **Preview data** to view a sample of the data with the current configuration.
