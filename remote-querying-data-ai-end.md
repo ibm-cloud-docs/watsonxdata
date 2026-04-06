@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-04-02"
+lastupdated: "2026-04-06"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -61,7 +61,7 @@ Before connecting to the Remote MCP Server, ensure you have:
 
 To connect to the remote MCP server, use the following endpoint:
 
-`https://eu-de.lakehouse.dev.cloud.ibm.com/api/v1/mcp/watsonxdata`
+`https://us-east.lakehouse.cloud.ibm.com/api/v1/watsonxdata/mcp`
 
 ### Connect your Agents with remote MCP Server
 {: #remote-querying-data-ai-cng}
