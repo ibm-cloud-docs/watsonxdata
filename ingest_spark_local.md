@@ -4,7 +4,7 @@ copyright:
   years: 2022, 2026
 lastupdated: "2026-04-07"
 
-keywords: {{site.data.keyword.lakehouse_short}}, data ingestion, source file
+keywords: watsonx.data, data ingestion, source file
 
 subcollection: watsonxdata
 
