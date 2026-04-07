@@ -168,11 +168,6 @@ When running SQL queries on Spark 4.0 with ANSI mode enabled (`spark.sql.ansi.en
 
 When you use Spark 4.0 as runtime, ANSI mode is enabled by default. This cause failures when executing standard TPC-DS queries. To avoid these issues, ANSI mode should be disabled in Spark 4.0 templates by setting the configuration `spark.sql.ansi.enabled": "false"`. This ensures ANSI mode is not automatically activated and prevents query incompatibilities.
 
-## Access failures when `Context-based restrictions` is enabled
-{: #known_issue54941}
-
-When `Context-based restrictions` is enabled, ingestion jobs fail. Additionally, other operations that require metastore administrator access also fail. Ingestion and admin-level operations work as expected when CBR is disabled.
-
 ## {{site.data.keyword.lakehouse_short}} assistant operation fails due to `context-based restrictions` network policy
 {: #known_issue54697}
 
