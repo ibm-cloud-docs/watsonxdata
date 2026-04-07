@@ -68,12 +68,30 @@ Querying data through agents by using the remote MCP server
 
 : You can now use the IBM {{site.data.keyword.lakehouse_short}} remote Model Context Protocol (MCP) Server to enable agents to interact with IBM watsonx.data lakehouse instances through natural language interfaces. The remote MCP server provides comprehensive access to lakehouse data and metadata through the Model Context Protocol, supporting data exploration, query execution (SELECT, INSERT, UPDATE), engine management, Spark application control, and data ingestion operations while ensuring data integrity through controlled access. For more information, see [Querying data through agents by using the MCP server](/docs/watsonxdata?topic=watsonxdata-querying-data-ai). 
 
+Ingestion enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following ingestion enhancements:
+
+
+   * **Spark Stream ingestion (Experimental)**
+
+   Ingest real-time streaming data into watsonx.data through the Spark ingestion UI. Configure streaming sources, set trigger intervals and retry behavior, and continuously load data into Iceberg tables.
+
+   This feature is experimental and not recommended for production use.
+
+   See [Ingesting streaming data by using Spark Stream](/docs/watsonxdata?topic=watsonxdata-ingest_spark_stream).
+
+   * **Delta Lake to Iceberg migrations**
+
+   Migrate Delta Lake tables to Iceberg format directly through the Spark ingestion UI. Choose to migrate the latest snapshot or complete version history, map multiple tables in parallel, and leverage Iceberg's advanced features including hidden partitioning and improved metadata management.
+
+   See [Migrating data from Delta Lake to Iceberg tables](/docs/watsonxdata?topic=watsonxdata-ingest_spark_deltalake).
+
 Serviceability enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following serviceability enhancements:
 
    OpenTelemetry is now available for the Gluten engine in addition to the existing Presto (Java) and Spark engines. This expanded capability provides a unified way to collect and export telemetry data (metrics) from the two engines, giving you a more complete picture of your system's performance. For more information, see [Adding telemetry diagnostic tools through the user interface](/docs/watsonxdata?topic=watsonxdata-opntlmtry_ui_2.1.2). 
-
 
 Deprecated features
 
@@ -200,25 +218,6 @@ Console enhancements
 
       * CPU – CPU units consumed by the query
       * Memory (GB) – Maximum memory footprint during execution
-
-Ingestion enhancements
-
-: This release of {{site.data.keyword.lakehouse_short}} introduces the following ingestion enhancements:
-
-
-   * **Spark Stream ingestion (Experimental)**
-
-   Ingest real-time streaming data into watsonx.data through the Spark ingestion UI. Configure streaming sources, set trigger intervals and retry behavior, and continuously load data into Iceberg tables.
-
-   This feature is experimental and not recommended for production use.
-
-   See [Ingesting streaming data by using Spark Stream](/docs/watsonxdata?topic=watsonxdata-ingest_spark_stream).
-
-   * **Delta Lake to Iceberg migrations**
-
-   Migrate Delta Lake tables to Iceberg format directly through the Spark ingestion UI. Choose to migrate the latest snapshot or complete version history, map multiple tables in parallel, and leverage Iceberg's advanced features including hidden partitioning and improved metadata management.
-
-   See [Migrating data from Delta Lake to Iceberg tables](/docs/watsonxdata?topic=watsonxdata-ingest_spark_deltalake).
 
 Serviceability enhancements
 
