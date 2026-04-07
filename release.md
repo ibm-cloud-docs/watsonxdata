@@ -201,6 +201,25 @@ Console enhancements
       * CPU – CPU units consumed by the query
       * Memory (GB) – Maximum memory footprint during execution
 
+Ingestion enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following ingestion enhancements:
+
+
+   * **Spark Stream ingestion (Experimental)**
+
+   Ingest real-time streaming data into watsonx.data through the Spark ingestion UI. Configure streaming sources, set trigger intervals and retry behavior, and continuously load data into Iceberg tables.
+
+   This feature is experimental and not recommended for production use.
+
+   See [Ingesting streaming data by using Spark Stream](/docs/watsonxdata?topic=watsonxdata-ingest_spark_stream).
+
+   * **Delta Lake to Iceberg migrations**
+
+   Migrate Delta Lake tables to Iceberg format directly through the Spark ingestion UI. Choose to migrate the latest snapshot or complete version history, map multiple tables in parallel, and leverage Iceberg's advanced features including hidden partitioning and improved metadata management.
+
+   See [Migrating data from Delta Lake to Iceberg tables](/docs/watsonxdata?topic=watsonxdata-ingest_spark_deltalake).
+
 Serviceability enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following serviceability enhancements:
