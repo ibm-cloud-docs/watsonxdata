@@ -15,7 +15,16 @@ subcollection: watsonxdata
 # Migrating data from Delta Lake to Iceberg tables
 {: #ingest_spark_deltalake}
 
-You can migrate data from Delta Lake tables to Iceberg tables in {{site.data.keyword.lakehouse_full}} by using the Spark ingestion UI. This flow enables you to select source Delta Lake tables, map them to target Iceberg tables, and configure migration jobs.
+You can migrate data from Delta Lake tables to Iceberg tables in {{site.data.keyword.lakehouse_full}} by using the Spark ingestion UI. This is an **in-place migration** where the underlying Parquet data files remain unchanged, and only the table format metadata is converted from Delta Lake to Iceberg.
+{: shortdesc}
+
+This migration process converts Delta Lake table metadata to Iceberg format without moving or copying the underlying Parquet data files. The migration:
+
+- Preserves the existing Parquet data files in their original location
+- Creates new Iceberg metadata that references the same data files
+- Maintains data integrity while enabling Iceberg-specific features
+
+This approach provides a fast and storage-efficient migration path from Delta Lake to Iceberg.
 
 ## Before you begin
 {: #ingest_spark_deltalake1}
@@ -75,8 +84,10 @@ You can migrate data from Delta Lake tables to Iceberg tables in {{site.data.key
 After the migration job completes successfully:
 
 - The Delta Lake tables are converted to Iceberg format in the target catalog.
-- The source Delta Lake tables remain unchanged in the original storage location.
-- If "All snapshots (full history)" was selected, the complete version history is preserved in the Iceberg table.
+- The underlying Parquet data files remain in their original location, unchanged.
+- New Iceberg metadata is created that references the existing data files.
+- The source Delta Lake tables remain accessible in the original storage location.
+- If "All snapshots (full history)" was selected, the complete version history is preserved in the Iceberg metadata.
 
 ## Related information
 {: #ingest_spark_deltalake4}
