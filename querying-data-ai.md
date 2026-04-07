@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-04-02"
+lastupdated: "2026-04-07"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -40,7 +40,7 @@ The IBM {{site.data.keyword.lakehouse_short}} MCP Server is designed for the fol
 ## Connection models
 {: #querying-data-ai-cm}
 
-{{ site.data.keyword.wxdata }}supports two MCP server connection models. You can choose the type of MCP server that best fits your needs. Both types provide the same tools and capabilities.
+{{site.data.keyword.lakehouse_short}} supports two MCP server connection models. You can choose the type of MCP server that best fits your needs. Both types provide the same tools and capabilities.
 
 ### Remote MCP server
 {: #querying-data-ai-rmcp}
