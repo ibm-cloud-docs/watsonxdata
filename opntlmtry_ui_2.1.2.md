@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-02-17"
+lastupdated: "2026-04-07"
 
 keywords: watsonx.data, OpenTelemetry, telemetry, diagnostics, Instana, Prometheus, Grafana
 
@@ -30,7 +30,7 @@ subcollection: watsonxdata
 # Adding telemetry diagnostic tools through the user interface
 {: #opntlmtry_ui_2.1.2}
 
-This topic provides the procedure to add telemetry diagnostic tools for your Presto (Java) and Spark engines through the user interface of {{site.data.keyword.lakehouse_full}}.
+This topic provides the procedure to add telemetry diagnostic tools for your Presto (Java), Spark, and Gluten engines through the user interface of {{site.data.keyword.lakehouse_full}}.
 
 ## Before you begin
 {: #opntlmtry_ui_2.1.2_byb}
@@ -127,9 +127,9 @@ This ensures that all internal, system-generated, and synthetic call data releva
 1. Log in to the Instana UI and navigate to **Analyze Infrastructure**.
 2. In the data source selector, choose **OpenTelemetry** to view all OpenTelemetry resources.
 3. Click **Add filter**, select **OpenTelemetry Resource → otel.attribute → k8s.namespace.name**.
-   Enter the required {{site.data.keyword.lakehouse_short}} instance namespace (`instance_id` for Presto (Java) and `spark-control` for Spark) to filter the view.
-4. From the filtered results, select the endpoint **metric-scraper-presto** for Presto (Java) or **metric-scraper-spark-metrics-aggr** for Spark associated with your instance.
-5. Use **Select metrics** to browse all available OpenTelemetry metrics exposed by the Presto (Java) and Spark metric scraper.
+   Enter the required {{site.data.keyword.lakehouse_short}} instance namespace (`instance_id` for Presto (Java) and `spark-control` for Spark and Gluten) to filter the view.
+4. From the filtered results, select the endpoint **metric-scraper-presto** for Presto (Java) or **metric-scraper-spark-metrics-aggr** for Spark and Gluten associated with your instance.
+5. Use **Select metrics** to browse all available OpenTelemetry metrics exposed by the Presto (Java), Spark, and Gluten metric scraper.
 6. Choose any metric to open its live time-series visualization, where you can analyze current values, trends, and attributes.
 
 ### Navigating to and viewing metrics in the Prometheus UI
