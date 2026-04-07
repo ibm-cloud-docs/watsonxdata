@@ -68,6 +68,7 @@ The IBM Bob configuration file is located at:
      {: codeblock}
 
      The `<console-host>` value is location specific. For the appropriate value to use, see [Remote MCP server endpoint](/docs/watsonxdata?topic=watsonxdata-remote-querying-data-ai-end#remote-querying-data-ai-rmcp)
+     {: note}
 
    - **For local MCP server use the following configuration**
 
