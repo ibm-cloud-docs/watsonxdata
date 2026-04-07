@@ -422,7 +422,6 @@ toc:
           - configuring-claude.md
           - configuring-bob.md
           - configuring-other-agents.md
-          - working_with_MCP_server.md
   - navgroup:
       id: reference
       topics:

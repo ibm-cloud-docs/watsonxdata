@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-04-06"
+lastupdated: "2026-04-07"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -154,7 +154,7 @@ After locating the MCP server executable, configure your agents to connect to th
 - [Configuring Claude Desktop](/docs/watsonxdata?topic=watsonxdata-configuring-claude)
 - [Configuring IBM Bob](/docs/watsonxdata?topic=watsonxdata-configuring-bob)
 
-### Querying data with the MCP tool
+### Using the MCP tool
 {: #querying-loc-11}
 
-After configuration with AI agents, you can interact with your {{site.data.keyword.lakehouse_short}} instance through natural language conversations with your agent. For more information, see [Querying data with the MCP tool](/docs/watsonxdata?topic=watsonxdata-working_with_MCP_server).
+For detailed information on MCP tools and their usage, refer [https://github.com/IBM/ibm-watsonxdata-mcp-server/blob/main/TOOLS.md](https://github.com/IBM/ibm-watsonxdata-mcp-server/blob/main/TOOLS.md).

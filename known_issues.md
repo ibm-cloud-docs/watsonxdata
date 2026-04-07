@@ -31,10 +31,6 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
-## Snapshots not displayed for tables or schemas with pipe character
-{: #known_issue55613}
-
-Snapshots are not displayed in the Time Travel tab when schema names or table names contain the pipe character (`|`).
 
 ## `WHERE` clause comparison fails for `TIMESTAMP(n)` datatypes when precision greater than 3
 {: #known_issue50717}
@@ -631,7 +627,7 @@ Tables (Iceberg):`$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `)`, `/`, `@`, `}`, `"`
 
 Storage location: `$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `}`, `@`, `"`, `'`, `\`, `)`, `:`, `;`, and `>`
 
-It is recommended to not use special characters such as question mark (?), hyphen (-), asterisk (*) or delimiter characters like \r, \n, and \t in table, column, and schema names. Though these special characters are supported and tables, columns, and schemas can be created, using them might cause issues when running the INSERT command or applying access policies for the same.
+It is recommended to not use special characters such as question mark (?), hyphen (-), asterisk (*), pipe(|) or delimiter characters like \r, \n, and \t in table, column, and schema names. Though these special characters are supported and tables, columns, and schemas can be created, using them might cause issues when running the INSERT command or applying access policies for the same.
 
 To ensure a seamless experience, please follow the list below:
 - Schema names can contain letters, numbers or one of `!`, `#`, `&`, `]`, `}`, `<`, `>`, `=`, `%`, `@`. `,`, `.`, and `~`

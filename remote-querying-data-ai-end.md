@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-04-06"
+lastupdated: "2026-04-07"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -61,7 +61,13 @@ Before connecting to the Remote MCP Server, ensure you have:
 
 To connect to the remote MCP server, use the following endpoint:
 
-`https://us-east.lakehouse.cloud.ibm.com/api/v1/watsonxdata/mcp`
+`https://<console-host>/api/v1/watsonxdata/mcp`
+
+Replace the `<console-host>` placeholder with the appropriate value for your location from the following list:
+
+- Washington DC: `us-east.lakehouse.cloud.ibm.com`
+- Dallas: `us-south.lakehouse.cloud.ibm.com`
+- Frankfurt: `eu-de.lakehouse.cloud.ibm.com`
 
 ### Connect your Agents with remote MCP Server
 {: #remote-querying-data-ai-cng}
@@ -72,7 +78,7 @@ After connecting the remote MCP server, configure your agents to connect to the 
 - [Configuring IBM Bob](/docs/watsonxdata?topic=watsonxdata-configuring-bob)
 - [Configuring other MCP clients](/docs/watsonxdata?topic=watsonxdata-configuring-other-agents)
 
-### Querying data with the MCP tool
+### Using the MCP tool
 {: #remote-querying-data-ai-qdw}
 
-After configuration with AI agents, you can interact with your {{site.data.keyword.lakehouse_short}} instance through natural language conversations with your agent. For more information, see [Querying data with the MCP tool](/docs/watsonxdata?topic=watsonxdata-working_with_MCP_server).
+For detailed information on MCP tools and their usage, refer [https://github.com/IBM/ibm-watsonxdata-mcp-server/blob/main/TOOLS.md](https://github.com/IBM/ibm-watsonxdata-mcp-server/blob/main/TOOLS.md).
