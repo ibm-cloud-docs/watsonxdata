@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-04-01"
+lastupdated: "2026-04-07"
 
 keywords: lakehouse
 
@@ -30,6 +30,11 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+## Snapshots not displayed for tables or schemas with pipe character
+{: #known_issue55613}
+
+Snapshots are not displayed in the Time Travel tab when schema names or table names contain the pipe character (`|`).
 
 ## `WHERE` clause comparison fails for `TIMESTAMP(n)` datatypes when precision greater than 3
 {: #known_issue50717}
@@ -618,20 +623,20 @@ Iceberg: Iceberg does support the time data type.
 
 The following special characters are not supported while creating schemas, tables, and storage location:
 
-Schemas (Hive and Iceberg): `$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `)`, `/`, `"`, `\`, `:`, `;`, and `'`.
+Schemas (Hive and Iceberg): `$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `)`, `/`, `"`, `\`, `:`, `;`, and `'`
 
-Tables (Hive): `$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `)`, `/`, `}`, `"`, and `'`(Creation of tables within a schema name that starts with the special character `@` shall result in an error).
+Tables (Hive): `$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `)`, `/`, `}`, `"`, and `'`(Creation of tables within a schema name that starts with the special character `@` shall result in an error)
 
-Tables (Iceberg):`$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `)`, `/`, `@`, `}`, `"`, and `'`.
+Tables (Iceberg):`$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `)`, `/`, `@`, `}`, `"`, and `'`
 
-Storage location: `$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `}`, `@`, `"`, `'`, `\`, `)`, `:`, `;`, and `>`.
+Storage location: `$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `}`, `@`, `"`, `'`, `\`, `)`, `:`, `;`, and `>`
 
 It is recommended to not use special characters such as question mark (?), hyphen (-), asterisk (*) or delimiter characters like \r, \n, and \t in table, column, and schema names. Though these special characters are supported and tables, columns, and schemas can be created, using them might cause issues when running the INSERT command or applying access policies for the same.
 
 To ensure a seamless experience, please follow the list below:
-- Schema names can contain letters, numbers or one of `!`, `#`, `&`, `]`, `}`, `<`, `>`, `=`, `%`, and `@`.
-- Table names can contain letters, numbers or one of `!`, `#`, `&`, `]`, `}`, `<`, `>`, `=`, and `;`.
-- Columns can contain letters, numbers one of `!`, `#`, `&`, `[`, `]`, `<` `>`, `_`, `:`, and `@`.
+- Schema names can contain letters, numbers or one of `!`, `#`, `&`, `]`, `}`, `<`, `>`, `=`, `%`, `@`. `,`, `.`, and `~`
+- Table names can contain letters, numbers or one of `!`, `#`, `&`, `]`, `}`, `<`, `>`, `=`, `;`, `,`, `.`, and `~`
+- Columns can contain letters, numbers one of `!`, `#`, `&`, `[`, `]`, `<` `>`, `_`, `:`, `@`, `%`, `(`, `)`, `-`, `=`, `{`, `}`, `,`, `.`, and `~`
 
 ## `ALTER TABLE` operation fails in Spark job submission
 {: #known_issues13596}
