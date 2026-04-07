@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-04-06"
+lastupdated: "2026-04-07"
 
 keywords: {{site.data.keyword.lakehouse_short}}, data ingestion, source file
 
@@ -22,7 +22,8 @@ You can upload files from your local system and ingest them into {{site.data.key
 
 - Review the [prerequisites](/docs/watsonxdata?topic=watsonxdata-ingest_spark_ui#ingest_spark_ui3) for using the Spark ingestion UI.
 - A transient storage bucket must be configured in your {{site.data.keyword.lakehouse_short}} instance for temporary file storage.
-- The maximum cumulative file size for local uploads is 2 GB. For larger files, use the [remote storage ingestion flow](/docs/watsonxdata?topic=watsonxdata-ingest_spark_storage).
+- The maximum cumulative file size for local uploads is 2 GB and individual file sizes must not exceed 200 MB limit. For larger files, use the [remote storage ingestion flow](/docs/watsonxdata?topic=watsonxdata-ingest_spark_storage).
+- Lite ingestion of files smaller than 2 MB does not require a Spark engine. For files 2 MB or larger, you must provision a Spark engine before ingestion.
 - Only one file type is supported per ingestion job.
 
 ## Supported file formats

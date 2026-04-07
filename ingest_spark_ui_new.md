@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-04-06"
+lastupdated: "2026-04-07"
 
 keywords: watsonx.data, data ingestion, source file
 
@@ -54,6 +54,9 @@ The following procedures are common across all ingestion flows:
 
 ### Configuring target table settings
 {: #ingest_spark_ui6}
+
+During intermediate writes in the data ingestion process, the target catalog bucket itself is now used to store both logs and temporary files.
+{: note}
 
 When configuring the target table for ingestion, you can specify the following settings:
 
