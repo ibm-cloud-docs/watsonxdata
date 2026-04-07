@@ -72,7 +72,7 @@ Serviceability enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following serviceability enhancements:
 
-   OpenTelemetry is now available for the Gluten engine in addition to the existing Presto (Java) and Spark engines. This expanded capability provides a unified way to collect and export telemetry data (metrics) from the two engines, giving you a more complete picture of your system's performance. For more information, see [Adding telemetry diagnostic tools through the user interface](/docs/watsonxdata?topic=watsonxdata-ikc_opntlmtry_ui_2.1.2). 
+   OpenTelemetry is now available for the Gluten engine in addition to the existing Presto (Java) and Spark engines. This expanded capability provides a unified way to collect and export telemetry data (metrics) from the two engines, giving you a more complete picture of your system's performance. For more information, see [Adding telemetry diagnostic tools through the user interface](/docs/watsonxdata?topic=watsonxdata-opntlmtry_ui_2.1.2). 
 
 
 Deprecated features
@@ -205,7 +205,7 @@ Serviceability enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following serviceability enhancements:
 
-   OpenTelemetry is now available for the Spark engine in addition to the existing Presto (Java) engine. This expanded capability provides a unified way to collect and export telemetry data (traces and metrics) from the two engines, giving you a more complete picture of your system's performance. For more information, see [Adding telemetry diagnostic tools through the user interface](/docs/watsonxdata?topic=watsonxdata-ikc_opntlmtry_ui_2.1.2). 
+   OpenTelemetry is now available for the Spark engine in addition to the existing Presto (Java) engine. This expanded capability provides a unified way to collect and export telemetry data (traces and metrics) from the two engines, giving you a more complete picture of your system's performance. For more information, see [Adding telemetry diagnostic tools through the user interface](/docs/watsonxdata?topic=watsonxdata-opntlmtry_ui_2.1.2). 
 
 Semantic automation for data enrichment
 
