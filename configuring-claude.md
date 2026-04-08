@@ -94,7 +94,7 @@ The Claude Desktop configuration file location varies by operating system:
      {: codeblock}
 
 
-     <br>- The `<console-host>` value is location specific. For the appropriate value to use, see [Remote MCP server endpoint](/docs/watsonxdata?topic=watsonxdata-remote-querying-data-ai-end#remote-querying-data-ai-rmcp){: external}. <br>- To a Base64-encoded value for API key authentication, refer [Prerequisites](/docs/watsonxdata?topic=watsonxdata-remote-querying-data-ai-end#remote-querying-data-ai-en-pre){: external}. <br>- To generate an Bearer Token, refer [Generating an IBM Cloud IAM token by using an API key](https://cloud.ibm.com/docs/account?topic=account-iamtoken_from_apikey&interface=ui){: external}.
+     <br>- The `<console-host>` value is location specific. For the appropriate value to use, see [Remote MCP server endpoint](/docs/watsonxdata?topic=watsonxdata-remote-querying-data-ai-end#remote-querying-data-ai-rmcp){: external}. <br>- To generate a Base64-encoded value for API key authentication, refer [Prerequisites](/docs/watsonxdata?topic=watsonxdata-remote-querying-data-ai-end#remote-querying-data-ai-en-pre){: external}. <br>- To generate an Bearer Token, refer [Generating an IBM Cloud IAM token by using an API key](https://cloud.ibm.com/docs/account?topic=account-iamtoken_from_apikey&interface=ui){: external}.
      {: note}
 
    - **For local MCP server use the following configuration**

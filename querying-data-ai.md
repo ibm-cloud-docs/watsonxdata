@@ -103,7 +103,7 @@ The IBM {{site.data.keyword.lakehouse_short}} MCP Server provides the following 
 - **stdio** transport for local subprocess communication
 - **Streamable HTTP** for remote server connections
 
-For implementation guidelines and security best practices, refer [MCP Transports Specification](https://modelcontextprotocol.io/specification/2025-11-25/basic/transports).
+For implementation guidelines and security best practices, refer [MCP Transports Specification](https://modelcontextprotocol.io/specification/2025-11-25/basic/transports){: external}.
 
 **AI agent integrations**
 {: #squerying-data-ai-aiag}
