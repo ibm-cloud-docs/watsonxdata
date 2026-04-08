@@ -44,9 +44,9 @@ Before connecting to the Remote MCP Server, ensure you have:
 
 - **IBM Cloud API key** - An API key with appropriate permissions to access your {{site.data.keyword.lakehouse_short}} instance. To create IBM Cloud API key, see [Creating an API key](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key).
 
-- **IBM Cloud IAM token** - To generate an IAM token, refer [Generating an IBM Cloud IAM token by using an API key](https://cloud.ibm.com/docs/account?topic=account-iamtoken_from_apikey&interface=ui).
+- **IBM Cloud IAM token** - If you use npx or streamable http for agent configuration, you must generate an IAM token. To generate an IAM token, refer [Generating an IBM Cloud IAM token by using an API key](https://cloud.ibm.com/docs/account?topic=account-iamtoken_from_apikey&interface=ui).
 
-- **ApiKey authorization token** - Complete the following step to generate ApiKey authorization token:
+- **ApiKey authorization token** - If you use npx or streamable http for agent configuration, you must generate an ApiKey authorization token. Complete the following step to generate ApiKey authorization token:
 
    1. Generate the ApiKey authorization token by using the following command.
 

@@ -93,7 +93,7 @@ The Claude Desktop configuration file location varies by operating system:
      ```
      {: codeblock}
 
-    **If you are using http, use the following configuration**
+    **If you are using streamable http, use the following configuration**
 
      ```bash
           {
