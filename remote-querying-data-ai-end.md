@@ -44,6 +44,17 @@ Before connecting to the Remote MCP Server, ensure you have:
 
 - **IBM Cloud API key** - An API key with appropriate permissions to access your {{site.data.keyword.lakehouse_short}} instance. To create IBM Cloud API key, see [Creating an API key](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key).
 
+- **IBM Cloud IAM token** - To generate an IAM token, refer [Generating an IBM Cloud IAM token by using an API key](https://cloud.ibm.com/docs/account?topic=account-iamtoken_from_apikey&interface=ui).
+
+- **ApiKey authorization token** - Complete the following step to generate ApiKey authorization token:
+
+   1. Generate the ApiKey authorization token by using the following command.
+
+     ```bash
+     echo "ibmlhapikey_<userId>@ibm.com:<apikey>" | base64
+     ```
+     {: codeblock}
+
 - **Instance CRN**: The Cloud Resource Name of your instance. To find CRN, refer [Getting connection information](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-get_connection).
 
    - Format: `crn:v1:bluemix:public:lakehouse:us-south/a/...`

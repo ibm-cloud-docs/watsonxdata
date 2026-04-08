@@ -72,6 +72,45 @@ The Claude Desktop configuration file location varies by operating system:
      ```
      {: codeblock}
 
+    **If you are using npx, use the following configuration**
+
+     ```bash
+         {
+       "mcpServers": {
+         "watsonx.data-mcp-server": {
+           "command": "npx",
+           "args": [
+             "mcp-remote",
+             "https://<console-host>/api/v1/watsonxdata/mcp",
+             "--header",
+             "authorization: Authorization: Bearer <YOUR_TOKEN>",
+             "--header",
+             "authinstanceid: <YOUR_WATSONXDATA_INSTANCE_CRN>"
+           ]
+         }
+       }
+     }
+     ```
+     {: codeblock}
+
+    **If you are using http, use the following configuration**
+
+     ```bash
+          {
+       "mcpServers": {
+         "watsonx.data-mcp-server": {
+           "type": "streamable-http",
+           "url": "https://<console-host>/api/v1/watsonxdata/mcp",
+           "headers": {
+             "authorization": "Authorization: Bearer <YOUR_TOKEN>",
+             "authinstanceid": "<YOUR_WATSONXDATA_INSTANCE_CRN>"
+           }
+         }
+       }
+     }
+     ```
+     {: codeblock}
+
      The `<console-host>` value is location specific. For the appropriate value to use, see [Remote MCP server endpoint](/docs/watsonxdata?topic=watsonxdata-remote-querying-data-ai-end#remote-querying-data-ai-rmcp).
      {: note}
 
