@@ -13,7 +13,7 @@
   </defs>
   
   <!-- Title -->
-  <text x="40" y="60" class="title">Querying data with a remote MCP server</text>
+  <text x="40" y="60" class="title">Interacting with data with a remote MCP server</text>
   
   <!-- User's local computer section -->
   <text x="40" y="130" class="section-title">User's local computer</text>
