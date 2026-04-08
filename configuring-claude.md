@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-04-07"
+lastupdated: "2026-04-08"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
 
@@ -57,12 +57,15 @@ The Claude Desktop configuration file location varies by operating system:
      {
        "mcpServers": {
          "watsonx.data-mcp-server": {
-           "type": "streamable-http",
-           "url": "https://<console-host>/api/v1/watsonxdata/mcp",
-           "headers": {
-             "authorization": "Basic <base64(ibmlhapikey_user@ibm.com:apikey)",
-             "authinstanceid": "<YOUR_WATSONXDATA_INSTANCE_CRN>"
-           }
+           "command": "npx",
+           "args": [
+             "mcp-remote",
+             "https://<console-host>/api/v1/watsonxdata/mcp",
+             "--header",
+             "authorization: Basic <base64(ibmlhapikey_user@ibm.com:apikey)>",
+             "--header",
+             "authinstanceid: <YOUR_WATSONXDATA_INSTANCE_CRN>"
+           ]
          }
        }
      }

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-04-07"
+lastupdated: "2026-04-08"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -65,9 +65,14 @@ To connect to the remote MCP server, use the following endpoint:
 
 Replace the `<console-host>` placeholder with the appropriate value for your location from the following list:
 
-- Washington DC: `us-east.lakehouse.cloud.ibm.com`
-- Dallas: `us-south.lakehouse.cloud.ibm.com`
-- Frankfurt: `eu-de.lakehouse.cloud.ibm.com`
+- Sydney, Australia (Asia Pacific): `console-ibm-ausyd.lakehouse.saas.ibm.com`
+- Toronto, Canada (North America): `console-ibm-cator.lakehouse.saas.ibm.com`
+- Frankfurt, Germany (Europe): `eu-de.lakehouse.cloud.ibm.com`
+- London, United Kingdom (Europe): `eu-gb.lakehouse.cloud.ibm.com`
+- Tokyo, Japan (Asia Pacific): `jp-tok.lakehouse.cloud.ibm.com`
+- Washington DC, USA (North America): `us-east.lakehouse.cloud.ibm.com`
+- Dallas, USA (North America): `us-south.lakehouse.cloud.ibm.com`
+
 
 ### Connect your Agents with remote MCP Server
 {: #remote-querying-data-ai-cng}
