@@ -51,7 +51,7 @@ The Claude Desktop configuration file location varies by operating system:
 
 2. Add the following configuration, replacing placeholder values with your actual credentials:
 
-   - **For remote MCP server use the following configuration**
+   - **For a remote MCP server using an API key, use the following configuration**
 
      ```bash
      {
@@ -72,7 +72,7 @@ The Claude Desktop configuration file location varies by operating system:
      ```
      {: codeblock}
 
-    **If you are using npx, use the following configuration**
+   - **For a remote MCP server using a Bearer token, use the following configuration**
 
      ```bash
          {
@@ -93,25 +93,8 @@ The Claude Desktop configuration file location varies by operating system:
      ```
      {: codeblock}
 
-    **If you are using streamable http, use the following configuration**
 
-     ```bash
-          {
-       "mcpServers": {
-         "watsonx.data-mcp-server": {
-           "type": "streamable-http",
-           "url": "https://<console-host>/api/v1/watsonxdata/mcp",
-           "headers": {
-             "authorization": "Authorization: Bearer <YOUR_TOKEN>",
-             "authinstanceid": "<YOUR_WATSONXDATA_INSTANCE_CRN>"
-           }
-         }
-       }
-     }
-     ```
-     {: codeblock}
-
-     The `<console-host>` value is location specific. For the appropriate value to use, see [Remote MCP server endpoint](/docs/watsonxdata?topic=watsonxdata-remote-querying-data-ai-end#remote-querying-data-ai-rmcp).
+     <br>- The `<console-host>` value is location specific. For the appropriate value to use, see [Remote MCP server endpoint](/docs/watsonxdata?topic=watsonxdata-remote-querying-data-ai-end#remote-querying-data-ai-rmcp). <br>- To a Base64-encoded value for API key authentication, refer [Prerequisites](/docs/watsonxdata?topic=watsonxdata-remote-querying-data-ai-end#remote-querying-data-ai-en-pre). <br>- To generate an Bearer Token, refer [Generating an IBM Cloud IAM token by using an API key](https://cloud.ibm.com/docs/account?topic=account-iamtoken_from_apikey&interface=ui).
      {: note}
 
    - **For local MCP server use the following configuration**

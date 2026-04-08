@@ -44,14 +44,56 @@ Before connecting to the Remote MCP Server, ensure you have:
 
 - **IBM Cloud API key** - An API key with appropriate permissions to access your {{site.data.keyword.lakehouse_short}} instance. To create IBM Cloud API key, see [Creating an API key](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key).
 
-- **IBM Cloud IAM token** - If you use npx or streamable http for agent configuration, you must generate an IAM token. To generate an IAM token, refer [Generating an IBM Cloud IAM token by using an API key](https://cloud.ibm.com/docs/account?topic=account-iamtoken_from_apikey&interface=ui).
+- **Bearer token** - If remote MCP server using a Bearer token, you must generate a Bearer token. To generate Bearer token, refer [Generating an IBM Cloud IAM token by using an API key](https://cloud.ibm.com/docs/account?topic=account-iamtoken_from_apikey&interface=ui).
 
-- **ApiKey authorization token** - If you use npx or streamable http for agent configuration, you must generate an ApiKey authorization token. Complete the following step to generate ApiKey authorization token:
+- **ApiKey authorization token** - The API key cannot be used directly; you must generate a Base64‑encoded authorization token.
 
-   1. Generate the ApiKey authorization token by using the following command.
+   1. Build the credential string using the following format.
 
      ```bash
-     echo "ibmlhapikey_<userId>@ibm.com:<apikey>" | base64
+     ibmlhapikey_<your-email>:<your-apikey>
+     ```
+     {: codeblock}
+
+     Example:
+
+     ```bash
+     ibmlhapikey_john.doe@ibm.com:abcd1234apikey
+     ```
+
+   2. Open a terminal on your system and run the following command.
+
+     Mac or Linux:
+
+     ```bash
+     echo -n "ibmlhapikey_<your-email>:<your-apikey>" | base64
+     ```
+     {: codeblock}
+
+
+     Example:
+
+     ```bash
+     echo -n "ibmlhapikey_john.doe@ibm.com:abcd1234apikey" | base64
+     ```
+
+     Windows PowerShell:
+
+     ```bash
+     [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes("ibmlhapikey_<your-email>:<your-apikey>"))
+     ```
+     {: codeblock}
+
+     Example:
+
+     ```bash
+     [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes("ibmlhapikey_john.doe@ibm.com:abcd1234apikey"))
+     ```
+
+   3. Use the encoded value in the configuration file in the following format.
+
+     ```bash
+     authorization: Basic <base64-encoded-value>
      ```
      {: codeblock}
 
