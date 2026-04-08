@@ -16,7 +16,7 @@
   </defs>
   
   <!-- Title -->
-  <text x="40" y="60" class="title">Interacting with data with a local agent and MCP server</text>
+  <text x="40" y="60" class="title">Interacting with data using a local agent and an MCP server</text>
   
   <!-- User's local computer section -->
   <text x="40" y="120" class="section-title">User's local computer</text>
