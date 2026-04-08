@@ -38,13 +38,13 @@ Before connecting to the Remote MCP Server, ensure you have:
 
 - **{{site.data.keyword.lakehouse_short}} instance** - A provisioned and running instance
 
-   - [Provision a lite plan instance](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1) or [Provision an enterprice plan instance](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-getting-started_1)
+   - [Provision a lite plan instance](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1){: external} or [Provision an enterprice plan instance](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-getting-started_1){: external}
 
-   - [Set up {{site.data.keyword.lakehouse_short}} lite plan](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-tutorial_hp_intro)
+   - [Set up {{site.data.keyword.lakehouse_short}} lite plan](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-tutorial_hp_intro){: external}
 
-- **IBM Cloud API key** - An API key with appropriate permissions to access your {{site.data.keyword.lakehouse_short}} instance. To create IBM Cloud API key, see [Creating an API key](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key).
+- **IBM Cloud API key** - An API key with appropriate permissions to access your {{site.data.keyword.lakehouse_short}} instance. To create IBM Cloud API key, see [Creating an API key](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key){: external}.
 
-- **Bearer token** - If remote MCP server using a Bearer token, you must generate a Bearer token. To generate Bearer token, refer [Generating an IBM Cloud IAM token by using an API key](https://cloud.ibm.com/docs/account?topic=account-iamtoken_from_apikey&interface=ui).
+- **Bearer token** - If remote MCP server using a Bearer token, you must generate a Bearer token. To generate Bearer token, refer [Generating an IBM Cloud IAM token by using an API key](https://cloud.ibm.com/docs/account?topic=account-iamtoken_from_apikey&interface=ui){: external}.
 
 - **ApiKey authorization token** - The API key cannot be used directly; you must generate a Base64‑encoded authorization token.
 
@@ -97,7 +97,7 @@ Before connecting to the Remote MCP Server, ensure you have:
      ```
      {: codeblock}
 
-- **Instance CRN**: The Cloud Resource Name of your instance. To find CRN, refer [Getting connection information](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-get_connection).
+- **Instance CRN**: The Cloud Resource Name of your instance. To find CRN, refer [Getting connection information](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-get_connection){: external}.
 
    - Format: `crn:v1:bluemix:public:lakehouse:us-south/a/...`
 
@@ -132,11 +132,11 @@ Replace the `<console-host>` placeholder with the appropriate value for your loc
 
 After connecting the remote MCP server, configure your agents to connect to the server. See the following topics for specific instructions:
 
-- [Configuring Claude Desktop](/docs/watsonxdata?topic=watsonxdata-configuring-claude)
-- [Configuring IBM Bob](/docs/watsonxdata?topic=watsonxdata-configuring-bob)
-- [Configuring other MCP clients](/docs/watsonxdata?topic=watsonxdata-configuring-other-agents)
+- [Configuring Claude Desktop](/docs/watsonxdata?topic=watsonxdata-configuring-claude){: external}
+- [Configuring IBM Bob](/docs/watsonxdata?topic=watsonxdata-configuring-bob){: external}
+- [Configuring other MCP clients](/docs/watsonxdata?topic=watsonxdata-configuring-other-agents){: external}
 
 ### Using the MCP tool
 {: #remote-querying-data-ai-qdw}
 
-For detailed information on MCP tools and their usage, refer [https://github.com/IBM/ibm-watsonxdata-mcp-server/blob/main/TOOLS.md](https://github.com/IBM/ibm-watsonxdata-mcp-server/blob/main/TOOLS.md).
+For detailed information on MCP tools and their usage, refer [https://github.com/IBM/ibm-watsonxdata-mcp-server/blob/main/TOOLS.md](https://github.com/IBM/ibm-watsonxdata-mcp-server/blob/main/TOOLS.md){: external}.

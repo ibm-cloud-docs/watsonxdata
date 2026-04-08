@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-04-07"
+lastupdated: "2026-04-08"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
 
@@ -67,7 +67,7 @@ The IBM Bob configuration file is located at:
      ```
      {: codeblock}
 
-     The `<console-host>` value is location specific. For the appropriate value to use, see [Remote MCP server endpoint](/docs/watsonxdata?topic=watsonxdata-remote-querying-data-ai-end#remote-querying-data-ai-rmcp).
+     The `<console-host>` value is location specific. For the appropriate value to use, see [Remote MCP server endpoint](/docs/watsonxdata?topic=watsonxdata-remote-querying-data-ai-end#remote-querying-data-ai-rmcp){: external}.
      {: note}
 
    - **For local MCP server use the following configuration**

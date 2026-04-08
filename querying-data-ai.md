@@ -132,8 +132,8 @@ To configure the Remote MCP server, complete these main tasks:
 
 To configure the MCP server, complete these main tasks:
 
-1. Install and configure the MCP server on your local computer. See [Installing and configuring the MCP server for querying data](/docs/watsonxdata?topic=watsonxdata-querying-data-ai-inm).
-2. Configure your AI agent to work with the MCP server and connect to {{site.data.keyword.lakehouse_short}}. See [Configuring IBM Bob](/docs/watsonxdata?topic=watsonxdata-configuring-bob) or [Configuring Claude Desktop](/docs/watsonxdata?topic=watsonxdata-configuring-claude).
+1. Install and configure the MCP server on your local computer. See [Installing and configuring the MCP server for querying data](/docs/watsonxdata?topic=watsonxdata-querying-data-ai-loc){: external}.
+2. Configure your AI agent to work with the MCP server and connect to {{site.data.keyword.lakehouse_short}}. See [Configuring IBM Bob](/docs/watsonxdata?topic=watsonxdata-configuring-bob){: external} or [Configuring Claude Desktop](/docs/watsonxdata?topic=watsonxdata-configuring-claude){: external}.
 
 ## MCP server architecture
 {: #squerying-data-ai-ar}
