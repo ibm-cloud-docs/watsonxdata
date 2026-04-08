@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-04-07"
+lastupdated: "2026-04-08"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -124,7 +124,7 @@ The configuration process varies depending on whether you choose the remote or l
 
 To configure the Remote MCP server, complete these main tasks:
 
-1. [Obtain the endpoint for the remote MCP server](/docs/watsonxdata?topic=watsonxdata-remote-querying-data-ai-end)
+1. [Obtain the instance details, authentication credentials, and the MCP server endpoint](/docs/watsonxdata?topic=watsonxdata-remote-querying-data-ai-end).
 2. Configure your AI agent to work with the MCP server and connect to {{site.data.keyword.lakehouse_short}}. See [Configuring IBM Bob](/docs/watsonxdata?topic=watsonxdata-configuring-bob), [Configuring Claude Desktop](/docs/watsonxdata?topic=watsonxdata-configuring-claude), or [Configuring other MCP clients](/docs/watsonxdata?topic=watsonxdata-configuring-other-agents).
 
 **For local MCP server**
