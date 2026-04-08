@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-04-02"
+lastupdated: "2026-04-08"
 
 keywords: lakehouse, remote data, confluent, {{site.data.keyword.lakehouse_short}}
 
@@ -99,7 +99,6 @@ Use of vended credentials is currently not supported. Hence, Presto requires exp
       {: codeblock}
 
       Replace the placeholders in the 2 storage properties as follows:
-      - `<workspace-instance>`: Your Databricks workspace instance name (e.g., `dbc-a1b2c3d4-e5f6`)
       - `<workspace-url>`: Your Databricks workspace URL
       - `<databricks-access-token>`: Your Databricks personal access token
       - `<catalog-name>`: The Unity Catalog name containing your Iceberg tables
@@ -141,7 +140,7 @@ Use of vended credentials is currently not supported. Hence, Presto requires exp
       DESCRIBE databricks_catalog.<schema_name>.<table_name>;
 
       -- Query data
-      SELECT * FROM databricks_catalog.<schema_name>.<table_name>LIMIT 10;
+      SELECT * FROM databricks_catalog.<schema_name>.<table_name> LIMIT 10;
 
       -- Get row count
       SELECT COUNT(*) FROM databricks_catalog.<schema_name>.<table_name>;
@@ -166,6 +165,27 @@ You can now query Iceberg tables from Databricks Unity Catalog using Presto. The
 ## Example queries and outputs
 {: #data_stream_databricks3presto5}
 
+List schemas in a catalog:
+
+   ```sql
+   SHOW SCHEMAS IN databricks_catalog;
+   ```
+   {: codeblock}
+
+Output:
+
+   ```sql
+   Schema
+   --------------------------
+   default
+   delta_share_demo
+   feb14schema
+   information_schema
+   mrmadira_external_schema
+   tpcdsdbiceberg_10tb_partitioned_uc
+   ```
+   {: screen}
+
 List tables in a schema:
 
    ```sql
@@ -182,6 +202,25 @@ Output:
    cims_test_result
    iceberg_orders
    mrmadira_csv_table
+   ```
+   {: screen}
+
+Describe table structure:
+
+   ```sql
+   DESCRIBE databricks_catalog.feb14schema.iceberg_orders;
+   ```
+   {: codeblock}
+
+Output:
+
+   ```sql
+   Column       | Type                  | Extra | Comment
+   -------------|-----------------------|-------|--------
+   order_id     | bigint               |       |
+   customer_id  | bigint               |       |
+   order_ts     | timestamp(6)         |       |
+   total_amt    | decimal(12,2)        |       |
    ```
    {: screen}
 

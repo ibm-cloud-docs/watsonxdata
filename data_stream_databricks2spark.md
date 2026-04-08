@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-04-02"
+lastupdated: "2026-04-08"
 
 keywords: lakehouse, remote data, confluent, {{site.data.keyword.lakehouse_short}}
 
@@ -187,6 +187,21 @@ You can now query remote data from Databricks Unity Catalog without copying data
 
 ## Example output
 {: #data_stream_databricks2spark5}
+
+Namespaces in catalog: `spark_deegandh`
+
+   ```sql
+   +---------------------------+
+   |namespace                  |
+   +---------------------------+
+   |default                    |
+   |delta_share_demo           |
+   |feb14schema                |
+   |information_schema         |
+   |mrmadira_external_schema   |
+   +---------------------------+
+   ```
+   {: screen}
 
 Tables in namespace: `spark_deegandh.feb14schema`:
 

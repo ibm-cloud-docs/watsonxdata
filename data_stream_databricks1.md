@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-04-02"
+lastupdated: "2026-04-08"
 
 keywords: lakehouse, remote data, confluent, {{site.data.keyword.lakehouse_short}}
 
@@ -33,11 +33,11 @@ Databricks Unity Catalog is a unified governance solution for data and AI assets
 
 {{site.data.keyword.lakehouse_short}} supports querying Databricks Unity Catalog tables through:
 - **Spark engine** - Query both Delta Lake and Iceberg tables using PySpark
-- **Presto engine** - Query Iceberg tables through the Iceberg REST Catalog API
+- **Presto engine** - Query Iceberg tables and Uniform-enabled Delta tables through the Iceberg REST Catalog API
 
 This integration enables:
 - Zero-copy data federation across Databricks and {{site.data.keyword.lakehouse_short}}
-- Unified access to data stored in external locations (AWS S3, Azure Blob Storage, Google Cloud Storage)
+- Unified access to data stored in external locations (AWS S3 and Azure Data Lake Storage Gen2)
 - Consistent governance and security policies across platforms
 
 ## Architecture overview
@@ -48,7 +48,7 @@ The integration works through the following components:
 1. **Databricks Unity Catalog** - Centralized metadata and governance layer
 2. **Iceberg REST Catalog API** - Standard interface for accessing table metadata
 3. **{{site.data.keyword.lakehouse_short}} engines** - Spark or Presto engines that execute queries
-4. **External storage** - AWS S3, Azure Blob Storage, or Google Cloud Storage where data resides
+4. **External storage** - AWS S3 and Azure Data Lake Storage Gen2 where data resides
 
 ## Before you begin
 {: #data_stream_databricks3}
@@ -135,11 +135,10 @@ For detailed information on Unity Catalog permissions, see [Unity Catalog privil
 
 **Storage requirements:**
 
-- AWS S3, Azure Blob Storage, or Google Cloud Storage configured as external location in Databricks
+- AWS S3 and Azure Data Lake Storage Gen2 configured as external location in Databricks
 - Storage access credentials:
    - **AWS S3:** Access key and secret key, S3 region information
-   - **Azure Blob Storage:** Storage account name and access key
-   - **Google Cloud Storage:** Service account key
+   - **Azure Data Lake Storage Gen2:** Storage account name and access key
 
 ## Integration methods
 {: #data_stream_databricks4}
@@ -166,14 +165,6 @@ Choose the appropriate integration method based on your query engine and table f
 - All queries execute with the permissions of the authenticated user or service principal
 - Unity Catalog enforces row-level and column-level security policies
 - Storage credentials must have appropriate read permissions on external locations
-
-## Limitations
-{: #data_stream_databricks6}
-
-- **Presto engine:** Does not support vended credentials; explicit storage credentials required
-- **Presto engine:** Iceberg tables only; Delta Lake tables not supported
-- **Write operations:** Currently read-only; write operations to Databricks tables not supported
-- **Table formats:** Ensure tables are in supported formats (Delta Lake for Spark, Iceberg for both)
 
 ## Next steps
 {: #data_stream_databricks7}
