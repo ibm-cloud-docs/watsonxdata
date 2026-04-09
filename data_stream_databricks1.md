@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-04-08"
+lastupdated: "2026-04-09"
 
 keywords: lakehouse, remote data, confluent, {{site.data.keyword.lakehouse_short}}
 
@@ -139,17 +139,6 @@ For detailed information on Unity Catalog permissions, see [Unity Catalog privil
 - Storage access credentials:
    - **AWS S3:** Access key and secret key, S3 region information
    - **Azure Data Lake Storage Gen2:** Storage account name and access key
-
-## Integration methods
-{: #data_stream_databricks4}
-
-Choose the appropriate integration method based on your query engine and table format:
-
-| Engine | Supported Table Formats | Authentication | Use Case |
-| -------- | ------------------------ | ---------------- | ---------- |
-| Spark | Delta Lake, Iceberg | OAuth, PAT | Interactive development, complex transformations, batch processing |
-| Presto | Iceberg only | PAT | SQL analytics, ad-hoc queries, BI tool integration |
-{: caption="Integration methods"}
 
 ## Security considerations
 {: #data_stream_databricks5}
