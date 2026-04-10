@@ -41,13 +41,11 @@ External data platforms automatically convert remote data into query-ready table
 
 
 1. Capturing sharing data from various sources (applications, IoT devices, databases, etc.)
-2. Materializing data into open table formats in cloud storage (AWS S3, Azure Blob Storage, Google Cloud Storage)
+2. Materializing data into open table formats in cloud storage (AWS S3, Azure Data Lake Storage Gen2, Google Cloud Storage)
 3. Maintaining tables automatically with schema evolution, compaction, and optimization
 4. Exposing data through REST catalog endpoints for external query engines
 
 {{site.data.keyword.lakehouse_short}} compute engines connect directly to these remote tables, enabling zero-copy analytics without data duplication or movement.
-
-
 
 ## Key capabilities
 {: #data_stream2}
