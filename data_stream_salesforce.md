@@ -26,13 +26,13 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Integrating Salesforce Data Cloud with {{site.data.keyword.lakehouse_short}}
+# Integrating Salesforce Data Cloud
 {: #salesforce_integration}
 
 ## About this task
 {: #salesforce_integration1}
 
-Salesforce Data Cloud provides a native connector that enables you to federate data from Salesforce into {{site.data.keyword.lakehouse_full}}. This integration allows you to query Salesforce Data Cloud objects directly from {{site.data.keyword.lakehouse_short}} and combine Salesforce data with other data sources for advanced analytics.
+Salesforce Data Cloud provides a native connector that enables you to federate data in {{site.data.keyword.lakehouse_full}}. This integration allows you to query objects directly from {{site.data.keyword.lakehouse_short}} using Salesforce Data Cloud and combine with other data sources for advanced analytics.
 
 This integration is configured from within Salesforce Data Cloud, not from the {{site.data.keyword.lakehouse_short}} console.
 
