@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-04-08"
+lastupdated: "2026-04-10"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
 
@@ -79,7 +79,7 @@ The IBM Bob configuration file is located at:
            "command": "/path/to/ibm-watsonxdata-mcp-server",
            "args": ["--transport", "stdio"],
            "env": {
-             "WATSONX_DATA_BASE_URL": ""https://<your-instance>.lakehouse.cloud.ibm.com/lakehouse/api",
+             "WATSONX_DATA_BASE_URL": "https://<console-host>.lakehouse.cloud.ibm.com/lakehouse/api",
              "WATSONX_DATA_API_KEY": "<your_api_key_here>",
              "WATSONX_DATA_INSTANCE_ID": "crn:v1:<bluemix:public:lakehouse:us-south/a/...>"
            }
