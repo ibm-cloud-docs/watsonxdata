@@ -178,9 +178,8 @@ toc:
           label: Ingesting data
           topics:
           - ingestdata.md
-          - ingest_spark_ui.md
           - topicgroup:
-              label: Ingesting data
+              label: Ingestion job workflows
               topics:
               - ingest_spark_ui_new.md
               - ingest_spark_local.md
@@ -358,9 +357,8 @@ toc:
           label: Configuring network endpoints
           topics:
           - setup_vpe.md
-      - salesforce_integration.md
       - topicgroup:
-          label: Third-party lakehouse integrations
+          label: External data platform integrations
           topics:
           - data_stream_confluent1.md
           - data_stream_confluent2spark.md
@@ -368,6 +366,7 @@ toc:
           - data_stream_databricks1.md
           - data_stream_databricks2spark.md
           - data_stream_databricks3presto.md
+          - salesforce_integration.md
       - topicgroup:
           label: Integrating with Data Build Tool(dbt)
           topics:

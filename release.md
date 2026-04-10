@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2026-04-07"
+lastupdated: "2026-04-10"
 
 keywords: watsonxdata, release notes
 
@@ -30,8 +30,8 @@ For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-p
 
 Technology preview features: We also offer a Technology preview section that includes features currently in preview. These features are not generally available and may change before release. To view the release notes for technology preview items, see [Technology preview](/docs/watsonxdata?topic=watsonxdata-release_pp).
 
-## 07 April 2026 - Version 2.3.2
-{: #lakehouse_07apr2026}
+## 09 April 2026 - Version 2.3.2
+{: #lakehouse_09apr2026}
 {: release-note}
 
 {{site.data.keyword.lakehouse_short}} 2.3.2 version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.3.2 release is available in your region, contact IBM Support.
@@ -79,19 +79,25 @@ Ingestion enhancements
 
    This feature is experimental and not recommended for production use.
 
-   See [Ingesting streaming data by using Spark Stream](/docs/watsonxdata?topic=watsonxdata-ingest_spark_stream).
+   See [Ingesting streaming data by using Spark Stream](/docs/watsonxdata?topic=watsonxdata-ingest_spark_stream). 
 
    * **Delta Lake to Iceberg migrations**
 
    Migrate Delta Lake tables to Iceberg format directly through the Spark ingestion UI. Choose to migrate the latest snapshot or complete version history, map multiple tables in parallel, and leverage Iceberg's advanced features including hidden partitioning and improved metadata management.
 
-   See [Migrating data from Delta Lake to Iceberg tables](/docs/watsonxdata?topic=watsonxdata-ingest_spark_deltalake).
+   See [Migrating data from Delta Lake to Iceberg tables](/docs/watsonxdata?topic=watsonxdata-ingest_spark_deltalake). 
 
 Serviceability enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following serviceability enhancements:
 
    OpenTelemetry is now available for the Gluten engine in addition to the existing Presto (Java) and Spark engines. This expanded capability provides a unified way to collect and export telemetry data (metrics) from the two engines, giving you a more complete picture of your system's performance. For more information, see [Adding telemetry diagnostic tools through the user interface](/docs/watsonxdata?topic=watsonxdata-opntlmtry_ui_2.1.2). 
+
+Zero-copy access to external data platforms
+
+: You can query data in more supported external data platforms directly from {{site.data.keyword.lakehouse_short}} without copying or moving data. This zero-copy approach, also known as data federation or query federation, enables you to access remote data using Spark and Presto engines while maintaining a single source of truth.
+
+   Supported integrations include Databricks Unity Catalog and Salesforce Data Cloud along with Confluent Tableflow with additional platforms also being capable for integration. This capability eliminates the need for complex ETL pipelines and reduces storage costs by querying data where it resides. For more information, see [Accessing data in external data platforms with watsonx.data](/docs/watsonxdata?topic=watsonxdata-data_stream). 
 
 Deprecated features
 
@@ -103,11 +109,11 @@ Deprecated features
 {: #lakehouse_17mar2026}
 {: release-note}
 
-Zero-copy access to third-party lakehouses
+Zero-copy access to external data platforms
 
-: You can now query data in third-party lakehouse platforms directly from {{site.data.keyword.lakehouse_short}} without copying or moving data. This zero-copy approach, also known as data federation or query federation, enables you to access remote data using Spark and Presto engines while maintaining a single source of truth.
+: You can now query data in supported external data platforms directly from {{site.data.keyword.lakehouse_short}} without copying or moving data. This zero-copy approach, also known as data federation or query federation, enables you to access remote data using Spark and Presto engines while maintaining a single source of truth.
 
-   Supported integrations include Confluent Tableflow, with additional platforms also being capable for integration. This capability eliminates the need for complex ETL pipelines and reduces storage costs by querying data where it resides. For more information, see [Remote lakehouse access](/docs/watsonxdata?topic=watsonxdata-data_stream).
+   Supported integrations include Confluent Tableflow with additional platforms also being capable for integration. This capability eliminates the need for complex ETL pipelines and reduces storage costs by querying data where it resides. For more information, see [Accessing data in external data platforms with watsonx.data](/docs/watsonxdata?topic=watsonxdata-data_stream).
 
 ## 09 March 2026 - Version 2.3.1
 {: #lakehouse_24feb2026}
