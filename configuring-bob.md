@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-03-04"
+lastupdated: "2026-04-10"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
 
@@ -47,24 +47,47 @@ The IBM Bob configuration file is located at:
 
 1. Open the IBM Bob configuration file in a text editor.
 
-2. Add the following configuration:
+2. Add the following configuration, replacing placeholder values with your actual credentials:
 
-   ```bash
-   {
-     "mcpServers": {
-       "IBM watsonx.data MCP Server": {
-         "command": "/path/to/ibm-watsonxdata-mcp-server",
-         "args": ["--transport", "stdio"],
-         "env": {
-           "WATSONX_DATA_BASE_URL": ""https://<your-instance>.lakehouse.cloud.ibm.com/lakehouse/api",
-           "WATSONX_DATA_API_KEY": "<your_api_key_here>",
-           "WATSONX_DATA_INSTANCE_ID": "crn:v1:<bluemix:public:lakehouse:us-south/a/...>"
+   - **For remote MCP server use the following configuration**
+
+     ```bash
+     {
+       "mcpServers": {
+         "watsonx.data-mcp-server": {
+           "type": "streamable-http",
+           "url": "https://<console-host>/api/v1/watsonxdata/mcp",
+           "headers": {
+             "authorization": "Basic <base64(ibmlhapikey_user@ibm.com:apikey)",
+             "authinstanceid": "<YOUR_WATSONXDATA_INSTANCE_CRN>"
+           }
          }
        }
      }
-   }
-   ```
-   {: codeblock}
+     ```
+     {: codeblock}
+
+     The `<console-host>` value is location specific. For the appropriate value to use, see [Remote MCP server endpoint](/docs/watsonxdata?topic=watsonxdata-remote-querying-data-ai-end#remote-querying-data-ai-rmcp){: external}.
+     {: note}
+
+   - **For local MCP server use the following configuration**
+
+     ```bash
+     {
+       "mcpServers": {
+         "IBM watsonx.data MCP Server": {
+           "command": "/path/to/ibm-watsonxdata-mcp-server",
+           "args": ["--transport", "stdio"],
+           "env": {
+             "WATSONX_DATA_BASE_URL": "https://<console-host>.lakehouse.cloud.ibm.com/lakehouse/api",
+             "WATSONX_DATA_API_KEY": "<your_api_key_here>",
+             "WATSONX_DATA_INSTANCE_ID": "crn:v1:<bluemix:public:lakehouse:us-south/a/...>"
+           }
+         }
+       }
+     }
+     ```
+     {: codeblock}
 
 3. Save the configuration file.
 

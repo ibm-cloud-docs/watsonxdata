@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-03-04"
+lastupdated: "2026-04-10"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
 
@@ -51,25 +51,73 @@ The Claude Desktop configuration file location varies by operating system:
 
 2. Add the following configuration, replacing placeholder values with your actual credentials:
 
-   ```bash
-   {
-     "mcpServers": {
-       "IBM watsonx.data MCP Server": {
-         "command": "/path/to/ibm-watsonxdata-mcp-server",
-         "args": ["--transport", "stdio"],
-         "env": {
-           "WATSONX_DATA_BASE_URL": ""https://<your-instance>.lakehouse.cloud.ibm.com/lakehouse/api",
-           "WATSONX_DATA_API_KEY": "<your_api_key_here>",
-           "WATSONX_DATA_INSTANCE_ID": "crn:v1:<bluemix:public:lakehouse:us-south/a/...>"
+   - **For a remote MCP server using an API key, use the following configuration**
+
+     ```bash
+     {
+       "mcpServers": {
+         "watsonx.data-mcp-server": {
+           "command": "npx",
+           "args": [
+             "mcp-remote",
+             "https://<console-host>/api/v1/watsonxdata/mcp",
+             "--header",
+             "authorization: Basic <base64(ibmlhapikey_user@ibm.com:apikey)>",
+             "--header",
+             "authinstanceid: <YOUR_WATSONXDATA_INSTANCE_CRN>"
+           ]
          }
        }
      }
-   }
-   ```
-   {: codeblock}
+     ```
+     {: codeblock}
+
+   - **For a remote MCP server using a Bearer token, use the following configuration**
+
+     ```bash
+         {
+       "mcpServers": {
+         "watsonx.data-mcp-server": {
+           "command": "npx",
+           "args": [
+             "mcp-remote",
+             "https://<console-host>/api/v1/watsonxdata/mcp",
+             "--header",
+             "authorization: Bearer <YOUR_TOKEN>",
+             "--header",
+             "authinstanceid: <YOUR_WATSONXDATA_INSTANCE_CRN>"
+           ]
+         }
+       }
+     }
+     ```
+     {: codeblock}
+
+
+     <br>- The `<console-host>` value is location specific. For the appropriate value to use, see [Remote MCP server endpoint](/docs/watsonxdata?topic=watsonxdata-remote-querying-data-ai-end#remote-querying-data-ai-rmcp){: external}. <br>- To generate a Base64-encoded value for API key authentication, refer [Prerequisites](/docs/watsonxdata?topic=watsonxdata-remote-querying-data-ai-end#remote-querying-data-ai-en-pre){: external}. <br>- To generate an Bearer Token, refer [Generating an IBM Cloud IAM token by using an API key](https://cloud.ibm.com/docs/account?topic=account-iamtoken_from_apikey&interface=ui){: external}.
+     {: note}
+
+   - **For local MCP server use the following configuration**
+
+     ```bash
+     {
+       "mcpServers": {
+         "IBM watsonx.data MCP Server": {
+           "command": "/path/to/ibm-watsonxdata-mcp-server",
+           "args": ["--transport", "stdio"],
+           "env": {
+             "WATSONX_DATA_BASE_URL": "https://<console-host>.lakehouse.cloud.ibm.com/lakehouse/api",
+             "WATSONX_DATA_API_KEY": "<your_api_key_here>",
+             "WATSONX_DATA_INSTANCE_ID": "crn:v1:<bluemix:public:lakehouse:us-south/a/...>"
+           }
+         }
+       }
+     }
+     ```
+     {: codeblock}
 
 3. Save the configuration file.
 
 4. Restart Claude Desktop.
 
-To configure Claude Desktop for development setup, refer [IBM {{site.data.keyword.lakehouse_short}} MCP Server](https://github.com/IBM/ibm-watsonxdata-mcp-server?tab=readme-ov-file).
+To configure Claude Desktop for development setup, refer [IBM {{site.data.keyword.lakehouse_short}} MCP Server](https://github.com/IBM/ibm-watsonxdata-mcp-server?tab=readme-ov-file){: external}.

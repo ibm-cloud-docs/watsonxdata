@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-02-25"
+lastupdated: "2026-03-25"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -35,11 +35,20 @@ This topic describes how to a run Spark job that helps to sync up Iceberg table 
 
 
 You can use one of the following methods for the conversion:
-- [Register COW Table](#sbmt_spk_mor_cowrcta) : This approach creates a named reference for the MoR table by using Iceberg [Register_table](https://www.ibm.com/links?url=https%3A%2F%2Ficeberg.apache.org%2Fdocs%2F1.6.0%2Fspark-procedures%2F%3Fh%3Dregister%23register_table) API, which points to a compacted consistent version of the MoR table and serves as the CoW table. This method is recommended and is more cost-effective.
+- [Register CoW Table](#sbmt_spk_mor_cowrcta) : This approach creates a named reference for the MoR table by using Iceberg [Register_table](https://www.ibm.com/links?url=https%3A%2F%2Ficeberg.apache.org%2Fdocs%2F1.6.0%2Fspark-procedures%2F%3Fh%3Dregister%23register_table) API, which points to a compacted consistent version of the MoR table and serves as the CoW table. This method is recommended and is more cost-effective.
 - [Change Data Capture (CDC)](#sbmt_spk_mor_cowrcdc): This approach maintains two copies of the table. One is the MoR table where the updates are made and the second is a CoW table, which serves as a mirror of the MoR table. The Spark job retrieves the changes from MoR table between last synced snapshot and latest snapshot by using [Iceberg CDC](https://www.ibm.com/links?url=https%3A%2F%2Ficeberg.apache.org%2Fdocs%2F1.7.1%2Fspark-procedures%2F%23change-data-capture) procedure and merge them into CoW table. This approach is costlier than Register Table approach since it maintain a replica of MoR table.
 
-The CDC approach is deprecated and will be removed in a future release. Use the Register COW Table approach for all new implementations.
+The CDC approach is deprecated and will be removed in a future release. Use the Register CoW Table approach for all new implementations.
 {: note}
+
+## Before you begin
+{: #sbmt_bfb_mor_cow}
+
+Before executing MoR to  CoW conversion jobs in IBM watsonx.data, ensure that the following prerequisites are met:
+
+1. Associating the catalog with the engine: You must [associate the catalog](/docs/watsonxdata?topic=watsonxdata-asso-cat-eng) used in the conversion job with a Spark engine. When a catalog is associated with a Spark engine, all required connection properties for the catalog are automatically added to the Spark engine’s default configuration. Spark applications can access the catalog without manually adding storage connection properties or Hive Metastore (HMS) configurations in the Spark job payload.
+
+2. Defining the role permissions: The API key used to submit the MoR to  CoW conversion job must be associated with a user who has the required admin access or editor access on the catalog used in the Spark job. For more information on catalog roles and privileges, see the [Predefined roles and permissions in watsonx.data](/docs/watsonxdata?topic=watsonxdata-role_priv).
 
 ## About this task
 {: #sbmt_spk_mor_cowatt}

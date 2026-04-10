@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-12-01"
+lastupdated: "2026-03-27"
 
 keywords: lakehouse, MDS, {{site.data.keyword.lakehouse_short}}, hive, metastore
 
@@ -76,14 +76,12 @@ To sync tables from {{site.data.keyword.lakehouse_short}}, the following items a
 
 4. Run the following command to manually register the metastore properties of a catalog in the **Query Optimizer** using the legacy metastore type `watsonx-data` for both Hive and Iceberg catalogs:
 
-
-
    ```bash
    ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.REGISTER_EXT_METASTORE('<CATALOG_NAME>', '<ARGUMENTS>', ?, ?)';
    ```
    {: codeblock}
 
-   a. For {{site.data.keyword.lakehouse_short}} Enterprise version, use the legacy metastore type `watsonx-data` for both Hive and Iceberg catalogs:
+5. For {{site.data.keyword.lakehouse_short}} Enterprise version of AWS clusters, use the legacy metastore type `watsonx-data` for both Hive and Iceberg catalogs:
 
       ```bash
       ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.REGISTER_EXT_METASTORE('<CATALOG_NAME>','type=watsonx-data,uri=thrift://<THRIFT_URL>,use.SSL=true,auth.mode=PLAIN,ssl.cert=/secrets/external/ibm-lh-tls-secret/ca.crt,auth.plain.credentials=<USERNAME>:<PASSWORD>', ?, ?)
@@ -105,7 +103,7 @@ To sync tables from {{site.data.keyword.lakehouse_short}}, the following items a
       - `use.SSL` - It must be true if the metastore requires an SSL connection.
       - `<MDS certificate file path>` - This must be provided as a file on the db2u container as a certificate to validate the SSL connection. It is not necessary to pass a certificate if the SSL connection is established using a certificate issued by a well-known CA such as DigiCert or VeriSign. By default, the MDS certificates are available under the /secrets/external/ibm-lh-tls-secret/ca.crt path in Query optimizer.
 
-         1. Run the following command to identify the db2u Query Optimizer head pod (OPT_POD).
+         1. Run the following command to identify the db2u Query Optimizer head pod (`OPT_POD`).
 
             ```bash
             oc get pod | grep oaas-db2u
@@ -119,9 +117,9 @@ To sync tables from {{site.data.keyword.lakehouse_short}}, the following items a
             ```
             {: codeblock}
 
-   b. For {{site.data.keyword.lakehouse_short}} Lite version, Hive and Iceberg tables are managed using distinct metastore server types. Depending on your application needs, you must register metastore servers for Hive, Iceberg, or both.
+6.  For {{site.data.keyword.lakehouse_short}} Enterprise version, Hive and Iceberg tables are managed using distinct metastore server types. Depending on your application needs, you must register metastore servers for Hive, Iceberg, or both.
 
-      1. Registering a Hive catalog in {{site.data.keyword.lakehouse_short}} Lite version:
+      1. Registering a Hive catalog in {{site.data.keyword.lakehouse_short}} Enterprise version:
 
          ```bash
          ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.REGISTER_EXT_METASTORE('<CATALOG_NAME>','type=watsonx-data-hive,uri=https://<THRIFT_URL>/mds/thrift,use.SSL=true,auth.mode=PLAIN,ssl.cert=/secrets/external/ibm-lh-tls-secret/ca.crt,auth.plain.credentials=<USERNAME>:<PASSWORD>', ?, ?)';
@@ -131,7 +129,7 @@ To sync tables from {{site.data.keyword.lakehouse_short}}, the following items a
          For example:
 
          ```bash
-         ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.REGISTER_EXT_METASTORE('iceberg_data','type=watsonx-data,uri=thrift://ibm-lh-lakehouse-mds-thrift-svc.zen.svc.cluster.local:8380,use.SSL=true,auth.mode=PLAIN,ssl.cert=/secrets/external/ibm-lh-tls-secret/ca.crt,auth.plain.credentials=admin:password', ?, ?)';
+         ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.REGISTER_EXT_METASTORE('hive_data','type=watsonx-data-hive,uri=https://ibm-lh-lakehouse-mds-thrift-svc.cpd-instance.svc.cluster.local:8381/mds/thrift,use.SSL=true,auth.mode=PLAIN,ssl.cert=/secrets/external/ibm-lh-tls-secret/ca.crt,auth.plain.credentials=username:password', ?, ?)';
          ```
          {: codeblock}
 
@@ -143,7 +141,7 @@ To sync tables from {{site.data.keyword.lakehouse_short}}, the following items a
          - `use.SSL` - It must be true if the metastore requires an SSL connection.
          - `<MDS certificate file path>` - This must be provided as a file on the db2u container as a certificate to validate the SSL connection. It is not    necessary to pass a certificate if the SSL connection is established using a certificate issued by a well-known CA such as DigiCert or VeriSign. By    default, the MDS certificates are available under the /secrets/external/ibm-lh-tls-secret/ca.crt path in Query optimizer.
 
-      2. Registering a Iceberg catalog from {{site.data.keyword.lakehouse_short}} Lite version:
+      2. Registering a Iceberg catalog from {{site.data.keyword.lakehouse_short}} Enterprise version:
 
          ```bash
          ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.REGISTER_EXT_METASTORE('<CATALOG_NAME>','type=iceberg-rest,catalog.name=<CATALOG_NAME>,uri=https://<REST_URL>/mds/iceberg,auth.mode=basic,ssl.cert=/secrets/external/ibm-lh-tls-secret/ca.crt,auth.plain.credentials=<USERNAME>:<PASSWORD>', ?, ?)';
@@ -153,7 +151,7 @@ To sync tables from {{site.data.keyword.lakehouse_short}}, the following items a
          For example:
 
          ```bash
-         ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.REGISTER_EXT_METASTORE('iceberg_data','type=iceberg-rest,catalog.name=iceberg_data,uri=https://ibm-lh-lakehouse-mds-rest-svc.zen.svc.cluster.local:8180/mds/iceberg,auth.mode=basic,ssl.cert=/secrets/external/ibm-lh-tls-secret/ca.crt,auth.plain.credentials=admin:password', ?, ?)';
+         ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.REGISTER_EXT_METASTORE('iceberg_data','type=iceberg-rest,catalog.name=iceberg_rest,uri=https://ibm-lh-lakehouse-mds-rest-svc.cpd-instance.svc.cluster.local:8180/mds/iceberg,auth.mode=basic,ssl.cert=/secrets/external/ibm-lh-tls-secret/ca.crt,auth.plain.credentials=username:password', ?, ?)';
          ```
          {: codeblock}
 
@@ -165,7 +163,7 @@ To sync tables from {{site.data.keyword.lakehouse_short}}, the following items a
          - `use.SSL` - It must be true if the metastore requires an SSL connection.
          - `<MDS certificate file path>` - This must be provided as a file on the db2u container as a certificate to validate the SSL connection. It is not    necessary to pass a certificate if the SSL connection is established using a certificate issued by a well-known CA such as DigiCert or VeriSign. By    default, the MDS certificates are available under the /secrets/external/ibm-lh-tls-secret/ca.crt path in Query optimizer.
 
-4. Run the following command to register {{site.data.keyword.lakehouse_short}} catalog with **Query Optimizer**:
+7. Run the following command to register {{site.data.keyword.lakehouse_short}} catalog with **Query Optimizer**:
 
    ```bash
    ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.REGISTER_EXT_METASTORE('<CATALOG_NAME>','type=watsonx-data,uri=thrift://<Metastore_Thrift_endpoint>,use.SSL=true,auth.mode=PLAIN,auth.plain.credentials=<Username>:<apikey>', ?, ?)';
@@ -179,7 +177,7 @@ To sync tables from {{site.data.keyword.lakehouse_short}}, the following items a
    Registering the catalog with the **Query Optimizer** allows watsonx.data tables to be synced into the **Query Optimizer**, enabling query optimization. This needs to be run one time for each catalog.
    {: note}
 
-5. Run the following command to synchronize the tables for each schema in the catalog:
+8. Run the following command to synchronize the tables for each schema in the catalog:
 
    ```bash
    ExecuteWxdQueryOptimizer 'CALL SYSHADOOP.EXT_METASTORE_SYNC('<CATALOG_NAME>', '<SCHEMA_NAME>', '.*', '<SYNC MODE>', 'CONTINUE', 'OAAS')';
@@ -197,7 +195,7 @@ To sync tables from {{site.data.keyword.lakehouse_short}}, the following items a
    Verify the sync operation in a few minutes by following the procedure in [Verifying table sync in watsonx.data](/docs/watsonxdata?topic=watsonxdata-sync_optimizer_verify).
    {: note}
 
-6. Identify the list of catalogs and schemas in watsonx.data that you require for **Query Optimizer**.
+9. Identify the list of catalogs and schemas in watsonx.data that you require for **Query Optimizer**.
 
    Provide an SQL file to define the constraints for the **Query Optimizer** to use. In the SQL file, identify primary keys, foreign keys, and not null columns where applicable for each table in your data set.
 

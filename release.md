@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2026-03-22"
+lastupdated: "2026-04-10"
 
 keywords: watsonxdata, release notes
 
@@ -30,15 +30,90 @@ For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-p
 
 Technology preview features: We also offer a Technology preview section that includes features currently in preview. These features are not generally available and may change before release. To view the release notes for technology preview items, see [Technology preview](/docs/watsonxdata?topic=watsonxdata-release_pp).
 
+## 09 April 2026 - Version 2.3.2
+{: #lakehouse_09apr2026}
+{: release-note}
+
+{{site.data.keyword.lakehouse_short}} 2.3.2 version is releasing to different geographic regions in stages and is not available in all regions. To know if the 2.3.2 release is available in your region, contact IBM Support.
+{: important}
+
+Provisioning enhancements
+
+: This release includes the following enhancements:
+   You can now quickly set up {{site.data.keyword.lakehouse_short}} instance using the enhanced Quick Start Wizard in just a few steps. This experience helps you to configure core infrastructure components based on their primary goal—either optimizing cost‑efficient data processing with Spark or running scalable analytics using Presto and Spark together. The wizard simplifies engine selection, storage setup, and catalog association. It﻿﻿﻿ streamlines initial setup, reduces configuration time, and helps you quickly start processing and analyzing data. For information, see [Quick start {{site.data.keyword.lakehouse_short}} console](/docs/watsonxdata?topic=watsonxdata-quick_start_213). 
+
+Engine and service enhancements
+
+: This release includes the following engine and service enhancements:
+
+   * **Presto-compatible scalar functions**: You can use the following Presto-compatible scalar functions to improve date, time, and internal query capabilities:
+
+      * `current_timestamp` – Returns the current date and time, including the time zone, at the start of query evaluation.
+      * `current_time` – Returns the current time with time zone.
+      * `localtimestamp` – Returns the current timestamp without a time zone.
+      * `now` – A synonym for `current_timestamp` that provides compatibility with existing Presto queries.
+      * `key_sampling_percent` – An inlined SQL function that Presto uses internally to determine key sampling behavior.
+
+      These functions expand support for standard Presto datetime semantics and internal functions. 
+
+   * **Delta Lake read support in Presto (C++)**: You can now use Presto (C++) to read Delta Lake tables without requiring symlink manifests. This support includes basic Delta log parsing and provides read access without partition pruning or time travel. You can run analytics on existing Delta datasets without a Databricks or Spark dependency. 
+
+   * **Table value functions in Presto**: You can now use table value functions (TVFs) in Presto (Java) functions that return tabular results directly with SQL. Presto evaluates functions that produce rows and columns and exposes the results as virtual tables at query time. 
+
+   * **Iceberg data compaction support in Presto**: You can now compact Iceberg tables in Presto (Java) by rewriting data files to reduce the number of small files and optimize file layout. This capability merges existing data files into fewer, larger files using the latest partition specification, helping improve query performance by reducing metadata overhead and file open costs. Compaction can be applied to the entire table or limited to specific partitions, and optionally re-sorts data during rewrite for more efficient reads. 
+
+   * The Apache Gluten accelerated Spark engine in watsonx.data is now able to run applications using Spark version 4.0. For details about supported Spark versions, see [Supported Spark version](/docs/watsonxdata?topic=watsonxdata-prov_cpp_gtn_intr#cpu-mem-spk_versn). 
+
+Querying data through agents by using the remote MCP server
+
+: You can now use the IBM {{site.data.keyword.lakehouse_short}} remote Model Context Protocol (MCP) Server to enable agents to interact with IBM watsonx.data lakehouse instances through natural language interfaces. The remote MCP server provides comprehensive access to lakehouse data and metadata through the Model Context Protocol, supporting data exploration, query execution (SELECT, INSERT, UPDATE), engine management, Spark application control, and data ingestion operations while ensuring data integrity through controlled access. For more information, see [Querying data through agents by using the MCP server](/docs/watsonxdata?topic=watsonxdata-querying-data-ai). 
+
+Ingestion enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following ingestion enhancements:
+
+
+   * **Spark Stream ingestion (Experimental)**
+
+   Ingest real-time streaming data into watsonx.data through the Spark ingestion UI. Configure streaming sources, set trigger intervals and retry behavior, and continuously load data into Iceberg tables.
+
+   This feature is experimental and not recommended for production use.
+
+   See [Ingesting streaming data by using Spark Stream](/docs/watsonxdata?topic=watsonxdata-ingest_spark_stream). 
+
+   * **Delta Lake to Iceberg migrations**
+
+   Migrate Delta Lake tables to Iceberg format directly through the Spark ingestion UI. Choose to migrate the latest snapshot or complete version history, map multiple tables in parallel, and leverage Iceberg's advanced features including hidden partitioning and improved metadata management.
+
+   See [Migrating data from Delta Lake to Iceberg tables](/docs/watsonxdata?topic=watsonxdata-ingest_spark_deltalake). 
+
+Serviceability enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following serviceability enhancements:
+
+   OpenTelemetry is now available for the Gluten engine in addition to the existing Presto (Java) and Spark engines. This expanded capability provides a unified way to collect and export telemetry data (metrics) from the two engines, giving you a more complete picture of your system's performance. For more information, see [Adding telemetry diagnostic tools through the user interface](/docs/watsonxdata?topic=watsonxdata-opntlmtry_ui_2.1.2). 
+
+Zero-copy access to external data platforms
+
+: You can query data in more supported external data platforms directly from {{site.data.keyword.lakehouse_short}} without copying or moving data. This zero-copy approach, also known as data federation or query federation, enables you to access remote data using Spark and Presto engines while maintaining a single source of truth.
+
+   Supported integrations include Databricks Unity Catalog and Salesforce Data Cloud along with Confluent Tableflow with additional platforms also being capable for integration. This capability eliminates the need for complex ETL pipelines and reduces storage costs by querying data where it resides. For more information, see [Accessing data in external data platforms with watsonx.data](/docs/watsonxdata?topic=watsonxdata-data_stream). 
+
+Deprecated features
+
+: The following features are deprecated in this release:
+
+   * The Spark Small T‑shirt size is deprecated and will be removed in version 2.3.3.  ﻿Workloads that currently use this size are automatically transitioned to an appropriate Spark capacity based on the number of nodes in use. Single‑node (1 node) workloads are seamlessly migrated to On‑Demand Spark, while multi‑node (≥ 2 nodes) workloads move to the closest equivalent dedicated capacity. Going forward, On-Demand Spark replaces the Spark Small T-shirt size as the default option for smaller workloads. For more details, see the [On-Demand Spark capacity and Dedicated capacity](/docs/watsonxdata?topic=watsonxdata-mng_capacity_spk#mng_capacity_serv). 
+
 ## 17 March 2026
 {: #lakehouse_17mar2026}
 {: release-note}
 
-Zero-copy access to third-party lakehouses
+Zero-copy access to external data platforms
 
-: You can now query data in third-party lakehouse platforms directly from {{site.data.keyword.lakehouse_short}} without copying or moving data. This zero-copy approach, also known as data federation or query federation, enables you to access remote data using Spark and Presto engines while maintaining a single source of truth.
+: You can now query data in supported external data platforms directly from {{site.data.keyword.lakehouse_short}} without copying or moving data. This zero-copy approach, also known as data federation or query federation, enables you to access remote data using Spark and Presto engines while maintaining a single source of truth.
 
-   Supported integrations include Confluent Tableflow, with additional platforms also being capable for integration. This capability eliminates the need for complex ETL pipelines and reduces storage costs by querying data where it resides. For more information, see [Remote lakehouse access](/docs/watsonxdata?topic=watsonxdata-data_stream).
+   Supported integrations include Confluent Tableflow with additional platforms also being capable for integration. This capability eliminates the need for complex ETL pipelines and reduces storage costs by querying data where it resides. For more information, see [Accessing data in external data platforms with watsonx.data](/docs/watsonxdata?topic=watsonxdata-data_stream).
 
 ## 09 March 2026 - Version 2.3.1
 {: #lakehouse_24feb2026}
@@ -154,7 +229,7 @@ Serviceability enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following serviceability enhancements:
 
-   OpenTelemetry is now available for the Spark engine in addition to the existing Presto (Java) engine. This expanded capability provides a unified way to collect and export telemetry data (traces and metrics) from the two engines, giving you a more complete picture of your system's performance. For more information, see [Adding telemetry diagnostic tools through the user interface](/docs/watsonxdata?topic=watsonxdata-ikc_opntlmtry_ui_2.1.2). 
+   OpenTelemetry is now available for the Spark engine in addition to the existing Presto (Java) engine. This expanded capability provides a unified way to collect and export telemetry data (traces and metrics) from the two engines, giving you a more complete picture of your system's performance. For more information, see [Adding telemetry diagnostic tools through the user interface](/docs/watsonxdata?topic=watsonxdata-opntlmtry_ui_2.1.2). 
 
 Semantic automation for data enrichment
 

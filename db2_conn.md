@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-29"
+lastupdated: "2026-03-27"
 
 keywords: lakehouse, data source, watsonx.data
 
@@ -92,7 +92,7 @@ You can configure IBM Db2 using one of the following methods:
  You can now query the nicknames that are created in IBM Db2 and the virtualized tables from Watson Query instances.
 {: note}
 
-## Features
+## Additional Information
 {: #features_connectors}
 
 * You can perform the following operations for `BLOB` and `CLOB` data types for IBM Db2 data source:
@@ -117,6 +117,18 @@ You can configure IBM Db2 using one of the following methods:
    INSERT INTO <table_name> VALUES (CAST('<blob text>' AS BLOB));
    ```
    {: codeblock}
+
+* The IBM Db2 connector uses [table and column statistics](https://prestodb.io/docs/current/optimizer/statistics.html) to perform [cost-based optimizations](https://prestodb.io/docs/current/optimizer/cost-based-optimizations.html), enabling more efficient query processing based on the actual data in the source. IBM Db2 generates and maintains these statistics, and the connector retrieves them during query planning to improve query performance.
+
+   To collect statistics for a table in Db2, run the following command:
+
+   ```bash
+   CALL SYSPROC.ADMIN_CMD('RUNSTATS ON TABLE table_name');
+   ```
+   {: codeblock}
+
+   For more information, see [RUNSTATS command](https://www.ibm.com/docs/en/db2/11.5.x?topic=commands-runstats).
+
 
 ## Limitations for SQL statements
 {: #connector_limitations}

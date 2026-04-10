@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 500" width="1700" height="500">
+  <defs>
+    <style>
+      .title { font-family: 'IBM Plex Sans', Arial, sans-serif; font-size: 32px; font-weight: 600; fill: #161616; }
+      .section-title { font-family: 'IBM Plex Sans', Arial, sans-serif; font-size: 24px; font-weight: 600; fill: #161616; }
+      .component-box { fill: white; stroke: #0f62fe; stroke-width: 2; }
+      .container-box { fill: #f4f4f4; stroke: #0f62fe; stroke-width: 2; }
+      .component-text { font-family: 'IBM Plex Sans', Arial, sans-serif; font-size: 16px; font-weight: 500; fill: #161616; text-anchor: middle; }
+      .arrow-label { font-family: 'IBM Plex Sans', Arial, sans-serif; font-size: 12px; fill: #161616; text-anchor: middle; }
+      .note-text { font-family: 'IBM Plex Sans', Arial, sans-serif; font-size: 12px; fill: #525252; font-style: italic; text-anchor: middle; }
+      .arrow-line { stroke: #161616; stroke-width: 2; fill: none; }
+    </style>
+  </defs>
+  
+  <!-- Title -->
+  <text x="40" y="60" class="title">Interacting with data with a remote MCP server</text>
+  
+  <!-- User's local computer section -->
+  <text x="40" y="130" class="section-title">User's local computer</text>
+  <rect x="40" y="150" width="580" height="280" rx="4" class="container-box"/>
+  
+  <!-- User component -->
+  <rect x="70" y="240" width="150" height="60" rx="4" class="component-box"/>
+  <text x="145" y="275" class="component-text">User</text>
+  
+  <!-- Arrows between User and AI agent -->
+  <!-- Forward arrow -->
+  <text x="295" y="235" class="arrow-label">Asks a question</text>
+  <text x="295" y="250" class="arrow-label">about data</text>
+  <line x1="240" y1="260" x2="430" y2="260" class="arrow-line"/>
+  <polygon points="430,260 420,255 420,265" fill="#161616"/>
+  
+  <!-- Reverse arrow -->
+  <line x1="430" y1="300" x2="240" y2="300" class="arrow-line"/>
+  <polygon points="240,300 250,295 250,305" fill="#161616"/>
+  <text x="295" y="320" class="arrow-label">Shows results</text>
+  
+  <!-- AI agent component -->
+  <rect x="450" y="240" width="150" height="60" rx="4" class="component-box"/>
+  <text x="525" y="275" class="component-text">AI agent</text>
+  
+  <!-- Connecting arrows between sections -->
+  <!-- Forward arrow -->
+  <line x1="640" y1="260" x2="890" y2="260" class="arrow-line"/>
+  <polygon points="890,260 880,255 880,265" fill="#161616"/>
+  
+  <!-- Reverse arrow -->
+  <line x1="890" y1="300" x2="640" y2="300" class="arrow-line"/>
+  <polygon points="640,300 650,295 650,305" fill="#161616"/>
+  
+  <!-- watsonx.data section -->
+  <text x="910" y="130" class="section-title">watsonx.data</text>
+  <rect x="910" y="150" width="580" height="280" rx="4" class="container-box"/>
+  
+  <!-- MCP tool component -->
+  <rect x="940" y="240" width="150" height="60" rx="4" class="component-box"/>
+  <text x="1015" y="268" class="component-text">MCP tool on</text>
+  <text x="1015" y="285" class="component-text">MCP server</text>
+  
+  <!-- Arrows between MCP tool and Spark/Presto -->
+  <!-- Forward arrow -->
+  <text x="1165" y="245" class="arrow-label">Sends query</text>
+  <line x1="1110" y1="260" x2="1300" y2="260" class="arrow-line"/>
+  <polygon points="1300,260 1290,255 1290,265" fill="#161616"/>
+  
+  <!-- Reverse arrow -->
+  <line x1="1300" y1="300" x2="1110" y2="300" class="arrow-line"/>
+  <polygon points="1110,300 1120,295 1120,305" fill="#161616"/>
+  <text x="1165" y="320" class="arrow-label">Returns results</text>
+  
+  <!-- Spark or Presto engines component -->
+  <rect x="1320" y="240" width="150" height="60" rx="4" class="component-box"/>
+  <text x="1395" y="268" class="component-text">Spark or Presto</text>
+  <text x="1395" y="285" class="component-text">engines</text>
+  <text x="1395" y="320" class="note-text">Runs SQL query</text>
+</svg>
+
+<!-- Made with Bob -->

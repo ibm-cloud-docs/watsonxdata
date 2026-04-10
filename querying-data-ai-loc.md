@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-03-17"
+lastupdated: "2026-04-08"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -26,50 +26,50 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Installing and configuring the MCP server
-{: #querying-data-ai-inm}
+# Installing and configuring the local MCP server
+{: #querying-data-ai-loc}
 
-You must install and configure the MCP server on your local computer.
+You must install and configure the local MCP server on your local computer.
 
 ## System requirements
-{: #squerying-data-ai-sq}
+{: #querying-loc-1}
 
 **Software prerequisites**
-{: #squerying-data-ai-sp}
+{: #querying-loc-2}
 
 Before you begin, ensure that your system meets the following requirements:
 
 | Component | Requirement | Notes |
 |-----------|-------------|-------|
-| Python | Version 3.11 or later | [Download Python](https://www.python.org/downloads/) |
-| Package manager | uv | [Install uv](https://github.com/astral-sh/uv) |
-| IBM Cloud account | Active account | [Register for IBM Cloud](https://cloud.ibm.com/registration) |
+| Python | Version 3.11 or later | [Download Python](https://www.python.org/downloads/){: external} |
+| Package manager | uv | [Install uv](https://github.com/astral-sh/uv){: external} |
+| IBM Cloud account | Active account | [Register for IBM Cloud](https://cloud.ibm.com/registration){: external} |
 {: caption="System requirements" caption-side="bottom"}
 
 **IBM {{site.data.keyword.lakehouse_short}} requirements**
-{: #squerying-data-ai-reqi}
+{: #querying-loc-3}
 
 You must have access to the following IBM {{site.data.keyword.lakehouse_short}} resources:
 
 - **{{site.data.keyword.lakehouse_short}} instance**: A provisioned and running instance
 
-   - [Provision a lite plan instance](/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1) and [Provision an enterprice plan instance](/docs/watsonxdata?topic=watsonxdata-getting-started_1)
+   - [Provision a lite plan instance](/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1){: external} or [Provision an enterprice plan instance](/docs/watsonxdata?topic=watsonxdata-getting-started_1){: external}
 
-   - [Set up {{site.data.keyword.lakehouse_short}} lite plan](/docs/watsonxdata?topic=watsonxdata-tutorial_hp_intro)
+   - [Set up {{site.data.keyword.lakehouse_short}} lite plan](/docs/watsonxdata?topic=watsonxdata-tutorial_hp_intro){: external}
 
 - **IBM Cloud API key**: An API key with appropriate permissions
 
-   - [Create an API key](https://cloud.ibm.com/iam/apikeys)
+   - [Create an API key](https://cloud.ibm.com/iam/apikeys){: external}
 
 **Required configuration information**
-{: #squerying-data-ai-cnf}
+{: #querying-loc-4}
 
 Collect the following information before installation:
 
 - **Base URL**: The URL of your {{site.data.keyword.lakehouse_short}} instance
    - Format: `"https://your-instance.lakehouse.cloud.ibm.com/lakehouse/api/lakehouse/api`
 
-- **Instance CRN**: The Cloud Resource Name of your instance. To find CRN, refer [Getting connection information](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-get_connection).
+- **Instance CRN**: The Cloud Resource Name of your instance. To find CRN, refer [Getting connection information](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-get_connection){: external}.
 
    - Format: `crn:v1:bluemix:public:lakehouse:us-south/a/...`
 
@@ -82,12 +82,12 @@ Collect the following information before installation:
 - **IAM API Key**: Your IBM Cloud API key with {{site.data.keyword.lakehouse_short}} access permissions.
 
 ## Installing the MCP Server
-{: #squerying-data-ai-pixist}
+{: #querying-loc-5}
 
 You can install the IBM {{site.data.keyword.lakehouse_short}} MCP Server using one of the following methods:
 
 ### Installing with pipx
-{: #squerying-data-ai-pix}
+{: #querying-loc-6}
 
 1. Run the following code to install pipx if not already installed.
 
@@ -105,7 +105,7 @@ You can install the IBM {{site.data.keyword.lakehouse_short}} MCP Server using o
 
 
 ### Installing with pip
-{: #squerying-data-ai-pip}
+{: #querying-loc-7}
 
 Use this method if you prefer to install the server in your user Python environment.
 
@@ -116,15 +116,15 @@ Use this method if you prefer to install the server in your user Python environm
    ```
    {: codeblock}
 
-To install MCP sever for development setup, refer [IBM {{site.data.keyword.lakehouse_short}} MCP Server](https://github.com/IBM/ibm-watsonxdata-mcp-server?tab=readme-ov-file).
+To install MCP sever for development setup, refer [IBM {{site.data.keyword.lakehouse_short}} MCP Server](https://github.com/IBM/ibm-watsonxdata-mcp-server?tab=readme-ov-file){: external}.
 
 ## Configuring the MCP server
-{: #squerying-data-ai-cnf}
+{: #querying-loc-8}
 
 After installation, configure your agents to communicate with the MCP server.
 
 ### Find the MCP server executable
-{: #squerying-data-ai-srv}
+{: #querying-loc-9}
 
 Complete the steps below to locate the MCP server executable based on your operating system. You will use this path when configuring your agents.
 
@@ -147,14 +147,14 @@ Complete the steps below to locate the MCP server executable based on your opera
    {: codeblock}
 
 ### Connect your Agents with MCP Server
-{: #squerying-data-ai-caw}
+{: #querying-loc-10}
 
 After locating the MCP server executable, configure your agents to connect to the server. See the following topics for specific instructions:
 
-- [Configuring Claude Desktop](/docs/watsonxdata?topic=watsonxdata-configuring-claude)
-- [Configuring IBM Bob](/docs/watsonxdata?topic=watsonxdata-configuring-bob)
+- [Configuring Claude Desktop](/docs/watsonxdata?topic=watsonxdata-configuring-claude){: external}
+- [Configuring IBM Bob](/docs/watsonxdata?topic=watsonxdata-configuring-bob){: external}
 
-### Querying data with the MCP tool
-{: #squerying-data-ai-wrkm}
+### Using the MCP tool
+{: #querying-loc-11}
 
-After configuration with AI agents, you can interact with your {{site.data.keyword.lakehouse_short}} instance through natural language conversations with your agent. For more information, see [Querying data with the MCP tool](/docs/watsonxdata?topic=watsonxdata-working_with_MCP_server).
+For detailed information on MCP tools and their usage, refer [https://github.com/IBM/ibm-watsonxdata-mcp-server/blob/main/TOOLS.md](https://github.com/IBM/ibm-watsonxdata-mcp-server/blob/main/TOOLS.md){: external}.

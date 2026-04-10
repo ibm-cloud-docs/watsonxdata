@@ -44,7 +44,6 @@ toc:
           topics:
           - prov_wxd.md
           - prov_lite_plan.md
-          - prov_spk_lite.md
           - getting-started.md
           - wxd_reg_avail.md
       - wxd_api_chg_log.md
@@ -87,6 +86,7 @@ toc:
               topics:
               - prov_engine.md
               - pcpp_prov.md
+              - prov_spk_lite.md
               - prov_spk_engine.md
               - spk_cpp.md
               - reg_engine.md
@@ -178,7 +178,15 @@ toc:
           label: Ingesting data
           topics:
           - ingestdata.md
-          - ingest_spark_ui.md
+          - topicgroup:
+              label: Ingestion job workflows
+              topics:
+              - ingest_spark_ui_new.md
+              - ingest_spark_local.md
+              - ingest_spark_storage.md
+              - ingest_spark_database.md
+              - ingest_spark_deltalake.md
+              - ingest_spark_stream.md
           - ingest_sparklogshistory.md
           - prepare_ingest_data2.md
       - topicgroup:
@@ -350,11 +358,15 @@ toc:
           topics:
           - setup_vpe.md
       - topicgroup:
-          label: Third-party lakehouse integrations
+          label: External data platform integrations
           topics:
           - data_stream_confluent1.md
           - data_stream_confluent2spark.md
           - data_stream_confluent3presto.md
+          - data_stream_databricks1.md
+          - data_stream_databricks2spark.md
+          - data_stream_databricks3presto.md
+          - data_stream_salesforce.md
       - topicgroup:
           label: Integrating with Data Build Tool(dbt)
           topics:
@@ -401,13 +413,14 @@ toc:
       - retrieval_service.md
       - db_ast.md
       - topicgroup:
-          label: Querying data with agents
+          label: Interacting with data with agents
           topics:
           - querying-data-ai.md
-          - querying-data-ai-inm.md
+          - remote-querying-data-ai-end.md
+          - querying-data-ai-loc.md
           - configuring-claude.md
           - configuring-bob.md
-          - working_with_MCP_server.md
+          - configuring-other-agents.md
   - navgroup:
       id: reference
       topics:
@@ -461,6 +474,7 @@ toc:
               - quick_start_opensearch.md
               - add-opensearch.md
           - jvector.md
+          - jvector_spark.md
           - mv_optimizer.md
           - jdbc.md
       - link:

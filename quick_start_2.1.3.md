@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-03-03"
+lastupdated: "2026-03-31"
 
 keywords: lakehouse, watsonx data, quick start, engine, catalog, bucket
 subcollection: watsonxdata
@@ -10,7 +10,7 @@ subcollection: watsonxdata
 content-type: tutorial
 services:
 account-plan: paid
-completion-time: 20m
+completion-time: 10m
 
 ---
 
@@ -20,27 +20,65 @@ completion-time: 20m
 {: #quick_start_213}
 {: toc-content-type="tutorial"}
 {: toc-services=""}
-{: toc-completion-time="20m"}
+{: toc-completion-time="10m"}
 
 When you log in to the {{site.data.keyword.lakehouse_full}} web console for the first time, you are presented with the quick start wizard. In this tutorial, you learn how to use the quick start wizard to configure the core components and get started with {{site.data.keyword.lakehouse_short}} in a few minutes.
 {: shortdesc}
 
 The wizard guides you through the initial configuration process for the infrastructure components of {{site.data.keyword.lakehouse_short}}.
 
-## Configure a storage and catalog
-{: #qs_bucket_213}
+
+## Selecting your primary goal
+{: #qs_bucket_213_new}
 {: step}
 
-Your {{site.data.keyword.lakehouse_short}} needs an object storage bucket to store your raw data files. You can provision a new IBM-managed bucket or register your own bucket. You can also configure the query monitoring details. You can enable or disable the query monitoring to store and manage your diagonostic data.
+1. The **Welcome to IBM watsonx.data** page is the entry point for setting up your {{site.data.keyword.lakehouse_short}}. It introduces the core value of {{site.data.keyword.lakehouse_short}} and helps you choose an initial configuration based on your data management needs.
 
-In the **Configure storage and catalog** section, complete the following steps:
+   ### Available Goals
+   {: #qs_bucket_goals}
 
-Starting with version 2.3.1, you can complete your {{site.data.keyword.lakehouse_short}} Quick Start setup by using the new feature that lets you specify and reuse an existing catalog–storage pair. This capability is available only in the Tokyo and Sydney SaaS regions. In this case, you can choose the **Use existing pair** option to aautomatically lists all storage-catalog pairs in your account that you have access to, allowing you to select an existing pair, avoid duplicate resources, and reduce setup time. If you select the **Discover COS instance** option, you must explicitly enter the catalog name to support this account‑scoped behavior. To learn more about account‑scoped behavior, see [Component scoping at account level](/docs/watsonxdata?topic=watsonxdata-account_scope).
-{: important}
+   **Optimize performance for cost‑efficient data processing (with Spark)**
+   : Select this option if your primary objective is to process large datasets efficiently while minimizing infrastructure and compute costs. It uses Spark engine. This configuration is ideal for:
 
-1. Select one of the following options and provide details.
+      * Batch data processing
 
-   - **Discover COS instance** : Selects an existing IBM COS instance and an attached bucket on your IBM Cloud account. If multiple IBM COS instances and buckets are detected, select the IBM COS instance that contains the desired bucket to register with {{site.data.keyword.lakehouse_short}}.
+      * ETL and ELT workloads
+
+      * Data preparation and transformation
+
+      * Cost-sensitive analytics pipelines
+
+
+   **Run scalable analytics and data processing workloads**
+   : Select this option if you need flexible, high-performance analytics across large datasets. It uses Engines: Presto, and Spark.
+   By combining Presto for fast, interactive SQL queries and Spark for large-scale processing, this option is well-suited for analytical and data processing use cases.
+
+2. Click **Next**. The **Configure details** page opens.
+
+## Configuring engine and storage details
+{: #qs_engine_new}
+{: step}
+
+To work with your data, you must configure the engine and storage details. Based on the selected goal, specify the details.
+
+   * [Optimize performance for cost‑efficient data processing (with Spark)](#qs_engine_g1) :  You must setup the Spark engine and storage.
+   * [Run scalable analytics and data processing workloads](#qs_engine_g2) : You must setup the Spark engine, Presto engine, and storage.
+
+
+### Selected goal: Optimize performance for cost‑efficient data processing
+{: #qs_engine_g1}
+
+a. In the **Setup Spark** section, select the Spark version, Spark size, and the number of Spark nodes to deploy. Click **Next**. The **Setup storage** section expands.
+
+b. In the **Setup storage** section, select one of the following options and provide details.
+
+   - **Use existing pair** : you can reuse an existing catalog–storage pair. This capability is available only in the Tokyo and Sydney SaaS regions. In this case, you can choose the **Use existing pair** option to aautomatically lists all storage-catalog pairs in your account that you have access to, allowing you to select an existing pair, avoid duplicate resources, and reduce setup time.
+
+   - **Discover COS instance** : Selects an existing IBM COS instance and an attached bucket on your IBM Cloud account. If multiple IBM COS instances and buckets are detected, select the IBM COS instance that contains the desired bucket to register with {{site.data.keyword.lakehouse_short}}. You must specify the catalog name that needs to be associated with the storage in the **Catalog name** field.
+
+   If you select the **Discover COS instance** option and your instance is provisioned in Tokyo and Sydney SaaS regions, you must explicitly enter the catalog name to support this account‑scoped behavior. To learn more about account‑scoped behavior, see [Component scoping at account level](/docs/watsonxdata?topic=watsonxdata-account_scope).
+   {: important}
+
    - **Register my own** :  You can use any existing IBM COS bucket from an existing instance or provision a new instance. To provision a new IBM COS instance, provide the following details:
 
      | Field | Description |
@@ -61,8 +99,31 @@ Starting with version 2.3.1, you can complete your {{site.data.keyword.lakehouse
    When you register your own bucket, ensure to provide the correct details for bucket configuration. The quick start wizard does not validate the bucket configuration details and you cannot modify them later.
    {: note}
 
-In the **Query monitoring** section, complete the following steps:
 
+### Selected goal: Run scalable analytics and data processing workloads
+{: #qs_engine_g2}
+
+a. In the **Setup Presto** section, select the Presto engine type. Click **Next**. The **Setup storage** section expands.
+
+b. For information about setting up Spark and storage details, see [Optimize performance for cost‑efficient data processing (with Spark)](#qs_engine_g1).
+
+
+
+## Finishing the setup
+{: #qs_summary_finl}
+{: step}
+
+2. Click **Finish and go**. The **Preparing your journey** page opens with a progress bar.
+
+When the setup is complete, the {{site.data.keyword.lakehouse_short}} home page appears. For information about the home page, see [Getting started with the web console](/docs/watsonxdata?topic=watsonxdata-getstarted-console). Resource Unit consumption begins soon after creating the support services by using the quick start wizard. You can view the run rate that is submitted for billing from the billing and usage tab. For more information, see [Billing and usage]({{site.data.keyword.ref-manage_bill-link}}){: external}.
+
+
+
+## Enabling query monitoring (Optional)
+
+
+If you have selected the **Run scalable analytics and data processing workloads** goal, the {{site.data.keyword.lakehouse_short}} home page displays an information message to enable monitoring of the queries.
+Click **Query monitoring** link from the information message and do the following:
 
 1. Use the toggle switch to enable (or disable) the query monitoring feature.
 
@@ -93,61 +154,8 @@ In the **Query monitoring** section, complete the following steps:
    The storage (default or BYOB) can be changed at later point from the {{site.data.keyword.lakehouse_short}} console page. See [Query monitoring]({{site.data.keyword.ref-qhmm-link}}){: external}.
    {: important}
 
-4. Click **Next**.
+4. Click **Next**. The **Infrastructure manager** opens.
 
-
-
-## Configure a catalog
-{: #qs_catalogs_213}
-{: step}
-
-Your {{site.data.keyword.lakehouse_short}} needs metadata catalogs to manage your table schemas. Creating the support services for the metadata catalog adds 3 RUs/Hr to your instance run rate when you complete the quickstart process.
-
-In the **Configure catalog** page, complete the following steps:
-
-1. Select the table format for managing your data. Apache Hive and Apache Iceberg catalogs are available.
-
-To enable [Query monitoring]({{site.data.keyword.ref-qhmm-link}}){: external} feature, you must select Apache Hive catalog.
-{: attention}
-
-2. Click **Next**.
-
-## Configure an engine
-{: #qs_engine}
-{: step}
-
-Your {{site.data.keyword.lakehouse_short}} needs a query engine to work with your data.
-
-In the **Configure engine** page, complete the following steps:
-
-1. Select the engine to run and process the data that you attached.
-
-2. Select the size of the engine based on the requirements of your workload.
-
-   | Size | Description |
-   |--------------------------|----------------|
-   | Starter/Lite (IBM) (2 RUs/hour) | Includes 1 coordinator node and 1 worker node. All nodes are **Starter**. |
-   | Starter (AWS) (5.6 RUs/hour) | Includes 1 coordinator node and 1 worker node. All nodes are cache-optimized. |
-   | Small (11.2 RUs/hour) | Includes 1 coordinator node and 3 worker nodes. All nodes are cache-optimized. |
-   | Medium (19.6 RUs/hour) | Includes 1 coordinator node and 6 worker nodes. All nodes are cache-optimized. |
-   | Large (36.4 RUs/hour) | Includes 1 coordinator node and 12 worker nodes. All nodes are cache-optimized. |
-   {: caption="Engine size " caption-side="bottom"}
-
-3. Click **Next**.
-
-
-
-## Review the configuration details
-{: #qs_summary_213}
-{: step}
-
-In the **Summary** page, complete the following steps:
-
-1. Review the configurations before you finish setting up your {{site.data.keyword.lakehouse_short}}.
-
-2. Click **Finish and go**.
-
-When the setup is complete, the {{site.data.keyword.lakehouse_short}} home page appears. For information about the home page, see [Getting started with the web console](/docs/watsonxdata?topic=watsonxdata-getstarted-console). Resource Unit consumption begins soon after creating the support services by using the quick start wizard. You can view the run rate that is submitted for billing from the billing and usage tab. For more information, see [Billing and usage]({{site.data.keyword.ref-manage_bill-link}}){: external}.
 
 ## Next steps
 {: #qs_next_steps_213}

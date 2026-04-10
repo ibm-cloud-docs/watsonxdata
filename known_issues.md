@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-03-19"
+lastupdated: "2026-04-07"
 
 keywords: lakehouse
 
@@ -30,6 +30,33 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+
+## `WHERE` clause comparison fails for `TIMESTAMP(n)` datatypes when precision greater than 3
+{: #known_issue50717}
+
+When querying tables that contain `TIMESTAMP(n)` columns with precision greater than 3 (where n > 3) or resolution greater than milliseconds (for example, microseconds, nanoseconds, and so on), WHERE clause comparisons fail to return matching rows, even when matching records exist in the table.
+
+## Manual sync not working in watsonx.data 2.3.1 Multi-Tenant instances
+{: #known_issue60909}
+
+Manual synchronization of optimizer metadata does not work in watsonx.data version 2.3.1 multi-tenant instances for Iceberg catalogs when following the standard manual sync procedure.
+
+The manual sync process [Synchronizing optimizer metadata](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-sync_optimizer_meta) fails to execute properly in multi-tenant deployments of watsonx.data 2.3.1.
+
+**Workarounds**: Two alternative approaches are available to address this issue:
+
+1. Manually collect statistics through the watsonx.data dashboard interface:
+
+   1. Navigate to the Query optimizer management section.
+   2. Follow the procedure outlined in [Managing statistical updates from dashboard](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-analyze_optimizer#qry-colct)
+   3. Trigger the statistical collection process manually
+
+2. Force an automatic synchronization by cycling the Query optimizer:
+
+   1. Deactivate the Query optimizer.
+   2. Reactivate the Query optimizer.
+   3. The initial auto-sync will execute automatically upon reactivation.
 
 ## Databand-enabled Spark jobs fail on Spark 4.0 in {{site.data.keyword.lakehouse_short}}
 {: #known_issue50405}
@@ -73,11 +100,6 @@ When consuming multi-tenant MDS (Metadata Service) APIs with an IAM token or API
 {: #known_issue65588}
 
 When a Snowflake connector is configured with private key authentication and the warehouse name field is left empty, you can access schemas but cannot query tables.
-
-## Statistics synchronization job fails during collection
-{: #known_issue60900}
-
-The statistics synchronization job fails when you run a [collection statistics job](/docs/watsonxdata?topic=watsonxdata-sync_optimizer_metaanalyze_optimizer) using the **Query optimizer**.
 
 **Workaround:** Cancel the current job and run it again.
 
@@ -145,11 +167,6 @@ When running SQL queries on Spark 4.0 with ANSI mode enabled (`spark.sql.ansi.en
 {: #known_issue52597}
 
 When you use Spark 4.0 as runtime, ANSI mode is enabled by default. This cause failures when executing standard TPC-DS queries. To avoid these issues, ANSI mode should be disabled in Spark 4.0 templates by setting the configuration `spark.sql.ansi.enabled": "false"`. This ensures ANSI mode is not automatically activated and prevents query incompatibilities.
-
-## Access failures when `Context-based restrictions` is enabled
-{: #known_issue54941}
-
-When `Context-based restrictions` is enabled, ingestion jobs fail. Additionally, other operations that require metastore administrator access also fail. Ingestion and admin-level operations work as expected when CBR is disabled.
 
 ## {{site.data.keyword.lakehouse_short}} assistant operation fails due to `context-based restrictions` network policy
 {: #known_issue54697}
@@ -597,20 +614,20 @@ Iceberg: Iceberg does support the time data type.
 
 The following special characters are not supported while creating schemas, tables, and storage location:
 
-Schemas (Hive and Iceberg): `$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `)`, `/`, `"`, `\`, `:`, `;`, and `'`.
+Schemas (Hive and Iceberg): `$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `)`, `/`, `"`, `\`, `:`, `;`, and `'`
 
-Tables (Hive): `$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `)`, `/`, `}`, `"`, and `'`(Creation of tables within a schema name that starts with the special character `@` shall result in an error).
+Tables (Hive): `$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `)`, `/`, `}`, `"`, and `'`(Creation of tables within a schema name that starts with the special character `@` shall result in an error)
 
-Tables (Iceberg):`$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `)`, `/`, `@`, `}`, `"`, and `'`.
+Tables (Iceberg):`$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `)`, `/`, `@`, `}`, `"`, and `'`
 
-Storage location: `$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `}`, `@`, `"`, `'`, `\`, `)`, `:`, `;`, and `>`.
+Storage location: `$`, `^`, `+`, `?`, `*`, `{`, `[`, `(`, `}`, `@`, `"`, `'`, `\`, `)`, `:`, `;`, and `>`
 
-It is recommended to not use special characters such as question mark (?), hyphen (-), asterisk (*) or delimiter characters like \r, \n, and \t in table, column, and schema names. Though these special characters are supported and tables, columns, and schemas can be created, using them might cause issues when running the INSERT command or applying access policies for the same.
+It is recommended to not use special characters such as question mark (?), hyphen (-), asterisk (*), pipe(|) or delimiter characters like \r, \n, and \t in table, column, and schema names. Though these special characters are supported and tables, columns, and schemas can be created, using them might cause issues when running the INSERT command or applying access policies for the same.
 
 To ensure a seamless experience, please follow the list below:
-- Schema names can contain letters, numbers or one of `!`, `#`, `&`, `]`, `}`, `<`, `>`, `=`, `%`, and `@`.
-- Table names can contain letters, numbers or one of `!`, `#`, `&`, `]`, `}`, `<`, `>`, `=`, and `;`.
-- Columns can contain letters, numbers one of `!`, `#`, `&`, `[`, `]`, `<` `>`, `_`, `:`, and `@`.
+- Schema names can contain letters, numbers or one of `!`, `#`, `&`, `]`, `}`, `<`, `>`, `=`, `%`, `@`. `,`, `.`, and `~`
+- Table names can contain letters, numbers or one of `!`, `#`, `&`, `]`, `}`, `<`, `>`, `=`, `;`, `,`, `.`, and `~`
+- Columns can contain letters, numbers one of `!`, `#`, `&`, `[`, `]`, `<` `>`, `_`, `:`, `@`, `%`, `(`, `)`, `-`, `=`, `{`, `}`, `,`, `.`, and `~`
 
 ## `ALTER TABLE` operation fails in Spark job submission
 {: #known_issues13596}
