@@ -26,7 +26,7 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Accessing data in external data platforms with watsonx.data
+# Accessing data in external data platforms
 {: #data_stream}
 
 External data platforms enable continuous data ingestion and processing, allowing organizations to capture, store, and analyze data as it flows through their systems. These platforms act as a central nervous system for real-time data, connecting various data sources and making sharing data immediately available for analytics.
