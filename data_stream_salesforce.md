@@ -27,7 +27,7 @@ subcollection: watsonxdata
 {:video: .video}
 
 # Integrating Salesforce Data Cloud
-{: #salesforce_integration}
+{: #data_stream_salesforce}
 
 ## About this task
 {: #salesforce_integration1}
