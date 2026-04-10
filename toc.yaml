@@ -366,7 +366,7 @@ toc:
           - data_stream_databricks1.md
           - data_stream_databricks2spark.md
           - data_stream_databricks3presto.md
-          - salesforce_integration.md
+          - data_stream_salesforce.md
       - topicgroup:
           label: Integrating with Data Build Tool(dbt)
           topics:
