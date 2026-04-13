@@ -59,30 +59,30 @@ Ensure that the following prerequisites are met before proceeding.
 ## Procedure
 {: #data_stream_snowflake2spark3}
 
-### Step 1: Create Catalog Integration (Snowflake)
+### Step 1: Create catalog integration (Snowflake)
 {: #data_stream_snowflake2spark4}
 
 Run in Snowflake Query Workspace:
 
 ```sql
 CREATE OR REPLACE CATALOG INTEGRATION <catalog_integration_name>
-  CATALOG_SOURCE=POLARIS 
-  TABLE_FORMAT=ICEBERG 
+  CATALOG_SOURCE=POLARIS
+  TABLE_FORMAT=ICEBERG
   REST_CONFIG = (
-    CATALOG_URI = '<catalog_uri>' 
+    CATALOG_URI = '<catalog_uri>'
     CATALOG_NAME = '<open_catalog_name>'
   )
   REST_AUTHENTICATION = (
-    TYPE = OAUTH 
-    OAUTH_CLIENT_ID = 'abc123xyz' 
-    OAUTH_CLIENT_SECRET = 'secret456def' 
-    OAUTH_ALLOWED_SCOPES = ('PRINCIPAL_ROLE:ALL') 
-  ) 
+    TYPE = OAUTH
+    OAUTH_CLIENT_ID = 'abc123xyz'
+    OAUTH_CLIENT_SECRET = 'secret456def'
+    OAUTH_ALLOWED_SCOPES = ('PRINCIPAL_ROLE:ALL')
+  )
   ENABLED=TRUE;
 ```
 {: codeblock}
 
-### Step 2: Create External Volume
+### Step 2: Create external volume
 {: #data_stream_snowflake2spark5}
 
 1. Navigate to Snowflake UI.
@@ -93,7 +93,7 @@ CREATE OR REPLACE CATALOG INTEGRATION <catalog_integration_name>
    - **Storage Location:** `gs://<gcs_bucket_name>/<path>`
    - **Storage Integration:** Select or create GCS storage integration
 
-### Step 3: Create Catalog-Linked Database
+### Step 3: Create Catalog-linked database
 {: #data_stream_snowflake2spark6}
 
 ```sql
@@ -105,7 +105,7 @@ CREATE OR REPLACE DATABASE <database_name>
 ```
 {: codeblock}
 
-### Step 4: Create Schema (if not exists)
+### Step 4: Create schema (if not exists)
 {: #data_stream_snowflake2spark7}
 
 ```sql
@@ -116,7 +116,7 @@ CREATE SCHEMA IF NOT EXISTS <database_name>.<catalog_integration_name>;
 Within {{site.data.keyword.lakehouse_short}} Spark, object names are treated as case-insensitive by default. As a result, the use of quoted identifiers is not required when accessing schemas and tables that are created in Snowflake.
 {: note}
 
-### Step 5: Create Iceberg Table
+### Step 5: Create Iceberg table
 {: #data_stream_snowflake2spark8}
 
 ```sql
@@ -128,10 +128,7 @@ CREATE OR REPLACE ICEBERG TABLE <database_name>.<catalog_name>.<table_name>(
 ```
 {: codeblock}
 
-Within {{site.data.keyword.lakehouse_short}} Spark, object names are treated as case-insensitive by default. As a result, the use of quoted identifiers is not required when accessing schemas and tables that are created in Snowflake.
-{: note}
-
-### Step 6: Insert Data
+### Step 6: Insert data
 {: #data_stream_snowflake2spark9}
 
 ```sql
@@ -144,10 +141,7 @@ VALUES
 ```
 {: codeblock}
 
-Within {{site.data.keyword.lakehouse_short}} Spark, object names are treated as case-insensitive by default. As a result, the use of quoted identifiers is not required when accessing schemas and tables that are created in Snowflake.
-{: note}
-
-### Step 7: Validate Table in Snowflake
+### Step 7: Validate table in Snowflake
 {: #data_stream_snowflake2spark10}
 
 ```sql
@@ -217,7 +211,7 @@ confVal='{
 ```
 {: codeblock}
 
-#### Python Script (Generic Template)
+#### Python script (Generic template)
 {: #data_stream_snowflake2spark14}
 
 ```python
@@ -245,19 +239,19 @@ CONFIG_FILE_PATH = "<path_to_the_json_key_file>"
 def init_spark() -> SparkSession:
     """
     Initialize Spark session with GCS configuration.
-    
+
     Returns:
         SparkSession: Configured Spark session
     """
     logger.info("Initializing Spark session...")
-    
+
     conf = SparkConf()
-    
+
     spark = SparkSession.builder \
         .appName("Snowflake-GCS-Integration") \
         .config(conf=conf) \
         .getOrCreate()
-    
+
     logger.info("Spark session initialized successfully")
     return spark
 
@@ -265,19 +259,19 @@ def init_spark() -> SparkSession:
 def query_table(spark: SparkSession) -> None:
     """
     Query the Snowflake table through Spark.
-    
+
     Args:
         spark: Active Spark session
     """
     logger.info(f"Querying table: {CATALOG_NAME}.{SCHEMA_NAME}.{TABLE_NAME}")
-    
+
     # Query the table
     df = spark.sql(f"SELECT * FROM {CATALOG_NAME}.{SCHEMA_NAME}.{TABLE_NAME}")
-    
+
     # Show results
     logger.info("Query results:")
     df.show()
-    
+
     # Get row count
     count = df.count()
     logger.info(f"Total rows: {count}")
@@ -290,12 +284,12 @@ def main():
     try:
         # Initialize Spark session
         spark = init_spark()
-        
+
         # Query the table
         query_table(spark)
-        
+
         logger.info("Job completed successfully")
-        
+
     except Exception as e:
         logger.error(f"Job failed with error: {str(e)}")
         raise
