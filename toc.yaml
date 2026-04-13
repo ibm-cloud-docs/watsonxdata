@@ -366,9 +366,9 @@ toc:
           - data_stream_databricks1.md
           - data_stream_databricks2spark.md
           - data_stream_databricks3presto.md
-          - data_stream_snowflake1
-          - data_stream_snowflake2spark
-          - data_stream_snowflake3presto
+          - data_stream_snowflake1.md
+          - data_stream_snowflake2spark.md
+          - data_stream_snowflake3presto.md
           - data_stream_salesforce.md
       - topicgroup:
           label: Integrating with Data Build Tool(dbt)
