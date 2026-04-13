@@ -149,16 +149,7 @@ SELECT * FROM <database_name>.<catalog_name>.<table_name>;
 ```
 {: codeblock}
 
-### Step 8: Enable Auto Refresh (Metadata Sync)
-{: #data_stream_snowflake2spark10a}
-
-```sql
-ALTER ICEBERG TABLE <database_name>.<catalog_name>.<table_name>
-SET AUTO_REFRESH = TRUE;
-```
-{: codeblock}
-
-### Step 9: Steps to access the table in {{site.data.keyword.lakehouse_short}} using Spark
+### Step 8: Steps to access the table in {{site.data.keyword.lakehouse_short}} using Spark
 {: #data_stream_snowflake2spark11}
 
 #### Components
