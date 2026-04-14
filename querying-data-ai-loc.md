@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-04-08"
+lastupdated: "2026-04-14"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -53,7 +53,7 @@ You must have access to the following IBM {{site.data.keyword.lakehouse_short}} 
 
 - **{{site.data.keyword.lakehouse_short}} instance**: A provisioned and running instance
 
-   - [Provision a lite plan instance](/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1){: external} or [Provision an enterprice plan instance](/docs/watsonxdata?topic=watsonxdata-getting-started_1){: external}
+   - [Provision a lite plan instance](/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1){: external} or [Provision an enterprise plan instance](/docs/watsonxdata?topic=watsonxdata-getting-started_1){: external}
 
    - [Set up {{site.data.keyword.lakehouse_short}} lite plan](/docs/watsonxdata?topic=watsonxdata-tutorial_hp_intro){: external}
 

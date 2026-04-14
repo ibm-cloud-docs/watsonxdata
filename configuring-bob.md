@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-04-10"
+lastupdated: "2026-04-14"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
 
@@ -29,7 +29,7 @@ subcollection: watsonxdata
 # Configuring IBM Bob to connect to the MCP server
 {: #configuring-bob}
 
-After you install the MCP server on your local machine, you must configure IBM Bob to connect to the MCP server.
+After installing the MCP server locally or connecting to the remote MCP server through the endpoint, you must configure IBM Bob to connect to the MCP server.
 
 ## Configuration file location
 {: #configuring-bob-cfl}
