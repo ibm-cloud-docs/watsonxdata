@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-04-13"
+lastupdated: "2026-04-14"
 
 keywords: lakehouse, remote data, snowflake, {{site.data.keyword.lakehouse_short}}
 
@@ -63,42 +63,36 @@ Ensure that the following prerequisites are met before proceeding.
 ## Procedure
 {: #data_stream_snowflake3presto3}
 
-### Step 1: Create Catalog Integration (Snowflake)
-{: #data_stream_snowflake3presto4}
-
-Run in Snowflake Query Workspace:
+1. Run the following in Snowflake workspace to create catalog integration
 
 ```sql
 CREATE OR REPLACE CATALOG INTEGRATION <catalog_integration_name>
-  CATALOG_SOURCE=POLARIS 
-  TABLE_FORMAT=ICEBERG 
+  CATALOG_SOURCE=POLARIS
+  TABLE_FORMAT=ICEBERG
   REST_CONFIG = (
-    CATALOG_URI = '<catalog_uri>' 
+    CATALOG_URI = '<catalog_uri>'
     CATALOG_NAME = '<open_catalog_name>'
   )
   REST_AUTHENTICATION = (
-    TYPE = OAUTH 
-    OAUTH_CLIENT_ID = 'abc123xyz' 
-    OAUTH_CLIENT_SECRET = 'secret456def' 
-    OAUTH_ALLOWED_SCOPES = ('PRINCIPAL_ROLE:ALL') 
-  ) 
+    TYPE = OAUTH
+    OAUTH_CLIENT_ID = 'abc123xyz'
+    OAUTH_CLIENT_SECRET = 'secret456def'
+    OAUTH_ALLOWED_SCOPES = ('PRINCIPAL_ROLE:ALL')
+  )
   ENABLED=TRUE;
 ```
 {: codeblock}
 
-### Step 2: Create External Volume
-{: #data_stream_snowflake3presto5}
+2. Create an external volume by following the steps:
+   1. Navigate to Snowflake UI.
+   2. Go to **Data** → **Databases** → **External Volumes**.
+   3. Click **Configure External Volume**.
+   4. Configure with GCS bucket details:
+      - **Name:** Choose a descriptive name
+      - **Storage Location:** `gs://<gcs_bucket_name>/<path>`
+      - **Storage Integration:** Select or create GCS storage integration
 
-1. Navigate to Snowflake UI.
-2. Go to **Data** → **Databases** → **External Volumes**.
-3. Click **Configure External Volume**.
-4. Configure with GCS bucket details:
-   - **Name:** Choose a descriptive name
-   - **Storage Location:** `gs://<gcs_bucket_name>/<path>`
-   - **Storage Integration:** Select or create GCS storage integration
-
-### Step 3: Create Catalog-Linked Database
-{: #data_stream_snowflake3presto6}
+3. Create a catalog-linked database.
 
 ```sql
 CREATE OR REPLACE DATABASE <database_name>
@@ -109,8 +103,7 @@ CREATE OR REPLACE DATABASE <database_name>
 ```
 {: codeblock}
 
-### Step 4: Create Schema (if not exists)
-{: #data_stream_snowflake3presto7}
+4. Create a schema if it does not exist.
 
 ```sql
 CREATE SCHEMA IF NOT EXISTS <database_name>."<catalog_integration_name>";
@@ -120,8 +113,7 @@ CREATE SCHEMA IF NOT EXISTS <database_name>."<catalog_integration_name>";
 Enclose the catalog name inside double quotes. In this context, since Presto recognizes object names in lowercase, it is recommended to define all schema and table names in lowercase within double quotes to ensure consistent and reliable access across the federation layer.
 {: important}
 
-### Step 5: Create Iceberg Table
-{: #data_stream_snowflake3presto8}
+5. Create Iceberg table.
 
 ```sql
 CREATE OR REPLACE ICEBERG TABLE <database_name>."<catalog_name>"."<table_name>" (
@@ -132,11 +124,7 @@ CREATE OR REPLACE ICEBERG TABLE <database_name>."<catalog_name>"."<table_name>" 
 ```
 {: codeblock}
 
-Enclose the catalog name and table name inside double quotes. In this context, since Presto recognizes object names in lowercase, it is recommended to define all schema and table names in lowercase within double quotes to ensure consistent and reliable access across the federation layer.
-{: important}
-
-### Step 6: Insert Data
-{: #data_stream_snowflake3presto9}
+6. Insert data into the Iceberg table.
 
 ```sql
 INSERT INTO <database_name>."<catalog_name>"."<table_name>"
@@ -148,11 +136,7 @@ VALUES
 ```
 {: codeblock}
 
-Enclose the catalog name and table name inside double quotes.
-{: note}
-
-### Step 7: Validate Table in Snowflake
-{: #data_stream_snowflake3presto10}
+7. Validate the table in Snowflake
 
 ```sql
 SELECT * FROM <database_name>."<catalog_name>"."<table_name>";
@@ -162,8 +146,7 @@ SELECT * FROM <database_name>."<catalog_name>"."<table_name>";
 Enclose the catalog name and table name inside double quotes.
 {: note}
 
-### Step 8: Enable Auto Refresh (Metadata Sync)
-{: #data_stream_snowflake3presto11}
+8. Enable auto refresh (Metadata sync)
 
 ```sql
 ALTER ICEBERG TABLE <database_name>."<catalog_name>"."<table_name>"
@@ -171,90 +154,75 @@ SET AUTO_REFRESH = TRUE;
 ```
 {: codeblock}
 
-Enclose the catalog name and table name inside double quotes.
-{: note}
 
-### Step 9: Access in {{site.data.keyword.lakehouse_short}}
-{: #data_stream_snowflake3presto12}
+9. Follow the steps to access {{site.data.keyword.lakehouse_short}} and configure GCS Storage.
 
-In {{site.data.keyword.lakehouse_short}}:
+   **Create or Select Presto Engine:**
 
-#### Step 9.1: Configure GCS Storage in {{site.data.keyword.lakehouse_short}}
-{: #data_stream_snowflake3presto13}
+   1. Navigate to **{{site.data.keyword.lakehouse_short}}** → **Infrastructure Manager**.
+   2. Create a new Presto engine or select an existing one.
 
-**Create or Select Presto Engine:**
+   **Add GCS Storage Component:**
 
-1. Navigate to **{{site.data.keyword.lakehouse_short}}** → **Infrastructure Manager**.
-2. Create a new Presto engine or select an existing one.
+   1. Click **Add Component** in Infrastructure Manager.
+   2. Select **Storage Component**.
+   3. Create a new GCS Storage Bucket.
+   4. Provide the GCS endpoint URL.
 
-**Add GCS Storage Component:**
+   **Upload GCS Service Account Key:**
 
-1. Click **Add Component** in Infrastructure Manager.
-2. Select **Storage Component**.
-3. Create a new GCS Storage Bucket.
-4. Provide the GCS endpoint URL.
+   Upload a JSON key file with the following structure:
 
-**Upload GCS Service Account Key:**
+   ```json
+   {
+     "type": "service_account",
+     "project_id": "<your_gcs_project_id>",
+     "private_key_id": "<your_private_key_id>",
+     "private_key": "-----BEGIN PRIVATE KEY-----\n<your_private_key>\n-----END PRIVATE KEY-----\n",
+     "client_email": "<service_account_email>",
+     "client_id": "<your_client_id>",
+     "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+     "token_uri": "https://oauth2.googleapis.com/token",
+     "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+     "client_x509_cert_url": "<your_cert_url>",
+     "universe_domain": "googleapis.com"
+   }
+   ```
+   {: codeblock}
 
-Upload a JSON key file with the following structure:
+   **Associate Catalog:**
 
-```json
-{
-  "type": "service_account",
-  "project_id": "<your_gcs_project_id>",
-  "private_key_id": "<your_private_key_id>",
-  "private_key": "-----BEGIN PRIVATE KEY-----\n<your_private_key>\n-----END PRIVATE KEY-----\n",
-  "client_email": "<service_account_email>",
-  "client_id": "<your_client_id>",
-  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
-  "token_uri": "https://oauth2.googleapis.com/token",
-  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
-  "client_x509_cert_url": "<your_cert_url>",
-  "universe_domain": "googleapis.com"
-}
-```
-{: codeblock}
+   1. Toggle **Associate Catalog** button to ON.
+   2. Create a new catalog to associate with this storage component.
 
-**Associate Catalog:**
+10. In Infrastructure Manager, create a new Custom Data Storage component with the following configuration:
 
-1. Toggle **Associate Catalog** button to ON.
-2. Create a new catalog to associate with this storage component.
+   ```properties
+   connector.name=iceberg
+   iceberg.catalog.type=rest
+   iceberg.rest.uri=<snowflake_polaris_rest_uri>
+   iceberg.rest.auth.oauth2.credential=<client_id>:<client_secret>
+   iceberg.rest.auth.type=OAUTH2
+   iceberg.rest.auth.oauth2.scope=PRINCIPAL_ROLE:writer
+   iceberg.catalog.warehouse=<warehouse_name>
+   hive.s3.endpoint=https://storage.googleapis.com
+   hive.gcs.json-key-file-path=<path_to_gcs_json_key>
+   hive.gcs.use-access-token=false
+   ```
+   {: codeblock}
 
-#### Step 9.2: Configure Iceberg REST Catalog
-{: #data_stream_snowflake3presto14}
+11. Associate a catalog to this custom component.
 
-**Create Custom Data Storage Component:**
+12. Go to Query Workspace and follow the instructions:
+   a. Navigate to your custom catalog.
+   b. Refresh the catalog.
+   c. Expand the schema.
+   d. Query the table:
 
-In Infrastructure Manager, create a new Custom Data Storage component with the following configuration:
-
-```properties
-connector.name=iceberg
-iceberg.catalog.type=rest
-iceberg.rest.uri=<snowflake_polaris_rest_uri>
-iceberg.rest.auth.oauth2.credential=<client_id>:<client_secret>
-iceberg.rest.auth.type=OAUTH2
-iceberg.rest.auth.oauth2.scope=PRINCIPAL_ROLE:writer
-iceberg.catalog.warehouse=<warehouse_name>
-hive.s3.endpoint=https://storage.googleapis.com
-hive.gcs.json-key-file-path=<path_to_gcs_json_key>
-hive.gcs.use-access-token=false
-```
-{: codeblock}
-
-Associate a catalog to this custom component.
-
-#### Step 9.3: Go to Query Workspace
-{: #data_stream_snowflake3presto15}
-
-1. Navigate to your custom catalog.
-2. Refresh the catalog.
-3. Expand the schema.
-4. Query the table:
-
-```sql
-SELECT * FROM <schema_name>.<table_name>;
-```
-{: codeblock}
+      ```sql
+      SELECT * FROM <schema_name>.<table_name>;
+      ```
+      {: codeblock}
 
 ## Results
 {: #data_stream_snowflake3presto16}

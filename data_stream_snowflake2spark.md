@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-04-13"
+lastupdated: "2026-04-14"
 
 keywords: lakehouse, remote data, snowflake, {{site.data.keyword.lakehouse_short}}
 
@@ -59,10 +59,7 @@ Ensure that the following prerequisites are met before proceeding.
 ## Procedure
 {: #data_stream_snowflake2spark3}
 
-### Step 1: Create catalog integration (Snowflake)
-{: #data_stream_snowflake2spark4}
-
-Run in Snowflake Query Workspace:
+1. Run the following in Snowflake workspace to create catalog integration
 
 ```sql
 CREATE OR REPLACE CATALOG INTEGRATION <catalog_integration_name>
@@ -82,19 +79,16 @@ CREATE OR REPLACE CATALOG INTEGRATION <catalog_integration_name>
 ```
 {: codeblock}
 
-### Step 2: Create external volume
-{: #data_stream_snowflake2spark5}
+2. Create an external volume by following the steps:
+   1. Navigate to Snowflake UI.
+   2. Go to **Data** → **Databases** → **External Volumes**.
+   3. Click **Configure External Volume**.
+   4. Configure with GCS bucket details:
+      - **Name:** Choose a descriptive name
+      - **Storage Location:** `gs://<gcs_bucket_name>/<path>`
+      - **Storage Integration:** Select or create GCS storage integration
 
-1. Navigate to Snowflake UI.
-2. Go to **Data** → **Databases** → **External Volumes**.
-3. Click **Configure External Volume**.
-4. Configure with GCS bucket details:
-   - **Name:** Choose a descriptive name
-   - **Storage Location:** `gs://<gcs_bucket_name>/<path>`
-   - **Storage Integration:** Select or create GCS storage integration
-
-### Step 3: Create Catalog-linked database
-{: #data_stream_snowflake2spark6}
+3. Create a catalog-linked database.
 
 ```sql
 CREATE OR REPLACE DATABASE <database_name>
@@ -105,8 +99,7 @@ CREATE OR REPLACE DATABASE <database_name>
 ```
 {: codeblock}
 
-### Step 4: Create schema (if not exists)
-{: #data_stream_snowflake2spark7}
+4. Create a schema if it does not exist.
 
 ```sql
 CREATE SCHEMA IF NOT EXISTS <database_name>.<catalog_integration_name>;
@@ -116,8 +109,7 @@ CREATE SCHEMA IF NOT EXISTS <database_name>.<catalog_integration_name>;
 Within {{site.data.keyword.lakehouse_short}} Spark, object names are treated as case-insensitive by default. As a result, the use of quoted identifiers is not required when accessing schemas and tables that are created in Snowflake.
 {: note}
 
-### Step 5: Create Iceberg table
-{: #data_stream_snowflake2spark8}
+5. Create Iceberg table.
 
 ```sql
 CREATE OR REPLACE ICEBERG TABLE <database_name>.<catalog_name>.<table_name>(
@@ -128,8 +120,7 @@ CREATE OR REPLACE ICEBERG TABLE <database_name>.<catalog_name>.<table_name>(
 ```
 {: codeblock}
 
-### Step 6: Insert data
-{: #data_stream_snowflake2spark9}
+6. Insert data into the Iceberg table.
 
 ```sql
 INSERT INTO <database_name>.<catalog_name>.<table_name>
@@ -141,19 +132,14 @@ VALUES
 ```
 {: codeblock}
 
-### Step 7: Validate table in Snowflake
-{: #data_stream_snowflake2spark10}
+7. Validate the table in Snowflake
 
 ```sql
 SELECT * FROM <database_name>.<catalog_name>.<table_name>;
 ```
 {: codeblock}
 
-### Step 8: Steps to access the table in {{site.data.keyword.lakehouse_short}} using Spark
-{: #data_stream_snowflake2spark11}
-
-#### Components
-{: #data_stream_snowflake2spark12}
+8. Follow the steps to access the table in {{site.data.keyword.lakehouse_short}} using Spark
 
 **Shell Script:**
 
@@ -161,14 +147,7 @@ SELECT * FROM <database_name>.<catalog_name>.<table_name>;
 - Configures Spark runtime properties
 - References the Python application stored in object storage
 
-**Python Script:**
-
-- Initializes Spark session
-- Connects to the Iceberg REST catalog
-- Queries and validates table data
-
-#### Shell Script (Generic Template)
-{: #data_stream_snowflake2spark13}
+Shell Script (Generic Template)
 
 ```bash
 #!/bin/bash
@@ -211,8 +190,13 @@ confVal='{
 ```
 {: codeblock}
 
-#### Python script (Generic template)
-{: #data_stream_snowflake2spark14}
+**Python Script:**
+
+- Initializes Spark session
+- Connects to the Iceberg REST catalog
+- Queries and validates table data
+
+Python script (Generic template)
 
 ```python
 from pyspark.sql import SparkSession
