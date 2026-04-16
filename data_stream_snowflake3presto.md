@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-04-14"
+lastupdated: "2026-04-16"
 
 keywords: lakehouse, remote data, snowflake, {{site.data.keyword.lakehouse_short}}
 
@@ -85,12 +85,14 @@ CREATE OR REPLACE CATALOG INTEGRATION <catalog_integration_name>
 
 2. Create an external volume by following the steps:
    1. Navigate to Snowflake UI.
-   2. Go to **Data** → **Databases** → **External Volumes**.
-   3. Click **Configure External Volume**.
-   4. Configure with GCS bucket details:
+   2. Go to **Catalog** → **External Data** → **External Volumes**.
+   3. Click **create**.
+   4. Choose cloud provider as **Google cloud storage** and click **Next**.
+   5. Go to Google Cloud console and create a custom role that has the permissions required to access the GCS bucket. Once completed go to Snowflake UI and click **Next**.
+   6. Configure with GCS bucket details and click **Next**:
       - **Name:** Choose a descriptive name
-      - **Storage Location:** `gs://<gcs_bucket_name>/<path>`
-      - **Storage Integration:** Select or create GCS storage integration
+      - **Storage Location:** `gcs://<gcs_bucket_name>/<path>`
+   7. Once connection is verified, click on **create**.
 
 3. Create a catalog-linked database.
 
