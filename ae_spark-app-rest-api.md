@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-02-11"
+lastupdated: "2026-04-20"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -48,7 +48,7 @@ Before you can submit a Spark application, you need to get authentication creden
 ## Submitting a Spark application
 {: #spark-submit-app}
 
-{{site.data.keyword.iae_short}} Serverless provides you with a REST interface to submit Spark applications. The payload passed to the REST API maps to various command-line arguments supported by the `spark-submit` command. See [Parameters for submitting Spark applications](#spark-submit-parms) for more details.
+{{site.data.keyword.lakehouse_short}} provides you with a REST interface to submit Spark applications. The payload passed to the REST API maps to various command-line arguments supported by the `spark-submit` command. See [Parameters for submitting Spark applications](#spark-submit-parms) for more details.
 
 When you submit a Spark application, you need to reference the application file. To help you to get started quickly and learn how to use the AE serverless Spark APIs, this section begins with an example that uses pre-bundled Spark application files that are referenced in the submit application API payload. The subsequent section shows you how to run applications that are stored in an {{site.data.keyword.cos_short}} bucket.
 
