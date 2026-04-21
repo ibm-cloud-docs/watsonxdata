@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2026-04-14"
+lastupdated: "2026-04-21"
 
 keywords: watsonxdata, release notes
 
@@ -97,7 +97,7 @@ Zero-copy access to external data platforms
 
 : You can query data in more supported external data platforms directly from {{site.data.keyword.lakehouse_short}} without copying or moving data. This zero-copy approach, also known as data federation or query federation, enables you to access remote data using Spark and Presto engines while maintaining a single source of truth.
 
-   Supported integrations include Databricks Unity Catalog and Salesforce Data Cloud along with Confluent Tableflow with additional platforms also being capable for integration. This capability eliminates the need for complex ETL pipelines and reduces storage costs by querying data where it resides. For more information, see [Accessing data in external data platforms with watsonx.data](/docs/watsonxdata?topic=watsonxdata-data_stream). 
+   Supported integrations include Databricks Unity Catalog, Snowflake Open Catalog, Salesforce Data Cloud along with Confluent Tableflow with additional platforms also being capable for integration. This capability eliminates the need for complex ETL pipelines and reduces storage costs by querying data where it resides. For more information, see [Accessing data in external data platforms with watsonx.data](/docs/watsonxdata?topic=watsonxdata-data_stream). 
 
 Deprecated features
 

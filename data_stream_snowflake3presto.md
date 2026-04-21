@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-04-16"
+lastupdated: "2026-04-21"
 
 keywords: lakehouse, remote data, snowflake, {{site.data.keyword.lakehouse_short}}
 
@@ -206,9 +206,9 @@ SET AUTO_REFRESH = TRUE;
    iceberg.rest.auth.oauth2.credential=<client_id>:<client_secret>
    iceberg.rest.auth.type=OAUTH2
    iceberg.rest.auth.oauth2.scope=PRINCIPAL_ROLE:writer
-   iceberg.catalog.warehouse=<warehouse_name>
+   iceberg.catalog.warehouse=<snowflake_polaris_catalog_name>
    hive.s3.endpoint=https://storage.googleapis.com
-   hive.gcs.json-key-file-path=<path_to_gcs_json_key>
+   hive.gcs.json-key-file-path=/opt/presto/etc/<previously_created_catalog_name_for_GCS_in_wxd>/keyfile.json.encrypted
    hive.gcs.use-access-token=false
    ```
    {: codeblock}
