@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-04-10"
+lastupdated: "2026-04-13"
 
 keywords: lakehouse, remote data, {{site.data.keyword.lakehouse_short}}
 
@@ -87,3 +87,4 @@ Both options are supported by {{site.data.keyword.lakehouse_short}}, though spec
 - [Integrating Confluent Tableflow](/docs/watsonxdata?topic=watsonxdata-data_stream_confluent1)
 - [Integrating Databricks Unity Catalog in watsonx.data](/docs/watsonxdata?topic=watsonxdata-data_stream_databricks1)
 - [Integrating Salesforce Data Cloud with watsonx.data](/docs/watsonxdata?topic=watsonxdata-data_stream_salesforce)
+- [Integrating Snowflake Open Catalog in watsonx.data](/docs/watsonxdata?topic=watsonxdata-data_stream_snowflake1)

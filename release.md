@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2026-04-10"
+lastupdated: "2026-04-14"
 
 keywords: watsonxdata, release notes
 
@@ -66,7 +66,7 @@ Engine and service enhancements
 
 Querying data through agents by using the remote MCP server
 
-: You can now use the IBM {{site.data.keyword.lakehouse_short}} remote Model Context Protocol (MCP) Server to enable agents to interact with IBM watsonx.data lakehouse instances through natural language interfaces. The remote MCP server provides comprehensive access to lakehouse data and metadata through the Model Context Protocol, supporting data exploration, query execution (SELECT, INSERT, UPDATE), engine management, Spark application control, and data ingestion operations while ensuring data integrity through controlled access. For more information, see [Querying data through agents by using the MCP server](/docs/watsonxdata?topic=watsonxdata-querying-data-ai). 
+: You can now use the IBM {{site.data.keyword.lakehouse_short}} remote Model Context Protocol (MCP) Server to enable agents to interact with IBM watsonx.data lakehouse instances through natural language interfaces. The remote MCP server provides comprehensive access to lakehouse data and metadata through the Model Context Protocol, supporting data exploration, query execution (SELECT, INSERT, UPDATE), engine management, Spark application control, and data ingestion operations while ensuring data integrity through controlled access. For more information, see [Interacting with data through an MCP server](/docs/watsonxdata?topic=watsonxdata-querying-data-ai). 
 
 Ingestion enhancements
 

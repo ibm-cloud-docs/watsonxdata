@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-04-08"
+lastupdated: "2026-04-14"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -63,7 +63,7 @@ The IBM {{site.data.keyword.lakehouse_short}} MCP Server provides the following 
 - Full lifecycle management of Presto and Spark engines (create, update, scale, pause, resume, restart, and delete)
 - Engine discovery and status monitoring
 
-**Catalog perations**
+**Catalog operations**
 {: #querying-data-ai-co}
 
 - Schema and table discovery across catalogs
@@ -153,7 +153,7 @@ The MCP server enables conversational data access through the following workflow
 
 1. You submit a natural language query to your agent.
 2. The agent interprets your request and determines the appropriate action.
-3. The agent communicates with the MCP server, which then forwards the request to your {{ site.data.keyword.wxdata }} instance.
-4. The MCP server executes the operation against your {{ site.data.keyword.wxdata }} instance.
+3. The agent communicates with the MCP server, which then forwards the request to your {{site.data.keyword.lakehouse_short}} instance.
+4. The MCP server executes the operation against your {{site.data.keyword.lakehouse_short}} instance.
 5. {{site.data.keyword.lakehouse_short}} processes the request and returns results to the MCP server.
 6. The agent presents the results in a conversational format.

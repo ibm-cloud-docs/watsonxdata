@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-04-10"
+lastupdated: "2026-04-14"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
 
@@ -29,7 +29,7 @@ subcollection: watsonxdata
 # Configuring Claude Desktop to connect to the MCP server
 {: #configuring-claude}
 
-After you install the MCP server on your local machine, you must configure Claude Desktop to connect to the MCP server.
+After installing the MCP server locally or connecting to the remote MCP server through the endpoint, you must configure Claude Desktop to connect to the MCP server.
 
 ## Locating the configuration file
 {: #configuring-claude-lcf}

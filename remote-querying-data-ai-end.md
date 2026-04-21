@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-04-08"
+lastupdated: "2026-04-14"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -26,7 +26,7 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Getting start with the remote MCP server
+# Getting started with the remote MCP server
 {: #remote-querying-data-ai-end}
 
 To connect your AI agent with {{site.data.keyword.lakehouse_short}} tools, you must obtain the endpoint for the remote MCP server.
@@ -38,7 +38,7 @@ Before connecting to the Remote MCP Server, ensure you have:
 
 - **{{site.data.keyword.lakehouse_short}} instance** - A provisioned and running instance
 
-   - [Provision a lite plan instance](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1){: external} or [Provision an enterprice plan instance](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-getting-started_1){: external}
+   - [Provision a lite plan instance](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1){: external} or [Provision an enterprise plan instance](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-getting-started_1){: external}
 
    - [Set up {{site.data.keyword.lakehouse_short}} lite plan](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-tutorial_hp_intro){: external}
 
@@ -50,52 +50,52 @@ Before connecting to the Remote MCP Server, ensure you have:
 
    1. Build the credential string using the following format.
 
-     ```bash
-     ibmlhapikey_<your-email>:<your-apikey>
-     ```
-     {: codeblock}
+       ```bash
+       ibmlhapikey_<your-email>:<your-apikey>
+       ```
+       {: codeblock}
 
-     Example:
+       Example:
 
-     ```bash
-     ibmlhapikey_john.doe@ibm.com:abcd1234apikey
-     ```
+       ```bash
+       ibmlhapikey_john.doe@ibm.com:abcd1234apikey
+       ```
 
    2. Open a terminal on your system and run the following command.
 
-     Mac or Linux:
+       Mac or Linux:
 
-     ```bash
-     echo -n "ibmlhapikey_<your-email>:<your-apikey>" | base64
-     ```
-     {: codeblock}
+       ```bash
+       echo -n "ibmlhapikey_<your-email>:<your-apikey>" | base64
+       ```
+       {: codeblock}
 
 
-     Example:
+       Example:
 
-     ```bash
-     echo -n "ibmlhapikey_john.doe@ibm.com:abcd1234apikey" | base64
-     ```
+       ```bash
+       echo -n "ibmlhapikey_john.doe@ibm.com:abcd1234apikey" | base64
+       ```
 
-     Windows PowerShell:
+       Windows PowerShell:
 
-     ```bash
-     [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes("ibmlhapikey_<your-email>:<your-apikey>"))
-     ```
-     {: codeblock}
+       ```bash
+       [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes("ibmlhapikey_<your-email>:<your-apikey>"))
+       ```
+       {: codeblock}
 
-     Example:
+       Example:
 
-     ```bash
-     [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes("ibmlhapikey_john.doe@ibm.com:abcd1234apikey"))
-     ```
+       ```bash
+       [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes("ibmlhapikey_john.doe@ibm.com:abcd1234apikey"))
+       ```
 
    3. Use the encoded value in the configuration file in the following format.
 
-     ```bash
-     authorization: Basic <base64-encoded-value>
-     ```
-     {: codeblock}
+       ```bash
+       authorization: Basic <base64-encoded-value>
+       ```
+       {: codeblock}
 
 - **Instance CRN**: The Cloud Resource Name of your instance. To find CRN, refer [Getting connection information](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-get_connection){: external}.
 
@@ -116,7 +116,7 @@ To connect to the remote MCP server, use the following endpoint:
 
 `https://<console-host>/api/v1/watsonxdata/mcp`
 
-Replace the `<console-host>` placeholder with the appropriate value for your location from the following list:
+Replace the `<console-host>` placeholder with the appropriate value for instance location from the following list:
 
 - Sydney, Australia (Asia Pacific): `console-ibm-ausyd.lakehouse.saas.ibm.com`
 - Toronto, Canada (North America): `console-ibm-cator.lakehouse.saas.ibm.com`
