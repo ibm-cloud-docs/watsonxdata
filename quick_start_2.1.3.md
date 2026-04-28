@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-04-27"
+lastupdated: "2026-04-28"
 
 keywords: lakehouse, watsonx data, quick start, engine, catalog, bucket
 subcollection: watsonxdata
@@ -53,6 +53,8 @@ The wizard guides you through the initial configuration process for the infrastr
    : Select this option if you need flexible, high-performance analytics across large datasets. It uses Engines: Presto, and Spark.
    By combining Presto for fast, interactive SQL queries and Spark for large-scale processing, this option is well-suited for analytical and data processing use cases.
 
+
+
 2. Click **Next**. The **Configure details** page opens.
 
 ## Configuring engine and storage details
@@ -63,6 +65,7 @@ To work with your data, you must configure the engine and storage details. Based
 
    * [Optimize performance for cost‑efficient data processing (with Spark)](#qs_engine_g1) :  You must setup the Spark engine and storage.
    * [Run scalable analytics and data processing workloads](#qs_engine_g2) : You must setup the Spark engine, Presto engine, and storage.
+
 
 
 ### Selected goal: Optimize performance for cost‑efficient data processing
@@ -106,6 +109,7 @@ b. In the **Setup storage** section, select one of the following options and pro
 a. In the **Setup Presto** section, select the Presto engine type. Click **Next**. The **Setup storage** section expands.
 
 b. For information about setting up Spark and storage details, see [Optimize performance for cost‑efficient data processing (with Spark)](#qs_engine_g1).
+
 
 
 
