@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-03-31"
+lastupdated: "2026-04-28"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -31,6 +31,16 @@ subcollection: watsonxdata
 
 Read about the new features and enhancements in the current and previous releases of {{site.data.keyword.lakehouse_full}} (Technology preview).
 {: shortdesc}
+
+## 29 April 2026
+{: #lakehouse_29april2026}
+{: release-note}
+
+This release includes the following new feature:
+
+OpenRAG integration (Private preview)
+
+:  {{site.data.keyword.lakehouse_full}} now integrates with OpenRAG service to support retrieval‑augmented generation (RAG) workflows over governed enterprise data, improving the relevance and accuracy of generative AI responses. For more information, see [Integrating with OpenRAG service](/docs/watsonxdata?topic=watsonxdata-openrag_intro).
 
 ## Version 2.3.2
 {: #lakehouse_1apr2026_pp}

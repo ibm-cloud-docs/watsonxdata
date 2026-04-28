@@ -471,6 +471,12 @@ toc:
           topics:
           - release_public_preview.md
           - topicgroup:
+              label: OpenRAG integration
+              topics:
+              - openrag_intro.md
+              - qs_openrag.md
+              - add_openrag.md
+          - topicgroup:
               label: OpenSearch integration
               topics:
               - gs_opensearch.md
