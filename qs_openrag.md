@@ -56,8 +56,8 @@ Complete the following steps to provision and configure OpenRAG:
 1. Review the available provider options:
     - Anthropic
     - OpenAPI
-    - IBM {{site.data.keyword.watsonx_ai_short}}
-1. Select **IBM {{site.data.keyword.watsonx_ai_short}}**.
+    - IBM watsonx.ai
+1. Select **IBM watsonx.ai**.
 1. Complete the following fields:
     - **watsonx.ai API Endpoint**
     - **watsonx ProjectID**
