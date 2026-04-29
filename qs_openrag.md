@@ -65,7 +65,7 @@ If provisioning is still in progress, the console redirects you to the **Infrast
 
 After provisioning is complete, sign in to OpenRAG.
 
-1. On the home page, select the **OpenRAG for .data** tile.
+1. On the home page, select the **OpenRAG** tile.
 1. Enter your OpenRAG **Username** and **Password**, and then click **Continue**.
    - Your username follows the pattern `ibmlhapikey_<ibm-email>`. For example, `ibmlhapikey_john.doe@ibm.com`.
    - Your password is your IBM Cloud API key. To create or retrieve an API key, go to https://cloud.ibm.com/iam/apikeys.
