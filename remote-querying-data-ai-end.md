@@ -161,7 +161,7 @@ To configure the agent:
 3. Save the file.
 4. Restart the agent.
 
-# Next steps
+## Next steps
 {: #remote-querying-data-ai-rmcp-nxt1}
 
 - **Configure tools:** For detailed information on MCP tools and their usage, see [https://github.com/IBM/ibm-watsonxdata-mcp-server/blob/main/TOOLS.md](https://github.com/IBM/ibm-watsonxdata-mcp-server/blob/main/TOOLS.md).

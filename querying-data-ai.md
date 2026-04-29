@@ -116,7 +116,7 @@ The MCP server enables conversational data access through the following workflow
 4. {{site.data.keyword.lakehouse_short}} processes the request and returns results to the MCP server.
 5. The agent presents the results in a conversational format.
 
-# Next steps
+## Next steps
 {: #querying-data-ai-nxt}
 
 - [Remote MCP server setup](/docs/watsonxdata?topic=watsonxdata-remote-querying-data-ai-end){: external}
