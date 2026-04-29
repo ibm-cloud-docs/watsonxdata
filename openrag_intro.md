@@ -15,7 +15,7 @@ subcollection: watsonxdata
 # Introduction to OpenRAG (Private preview)
 {: #openrag_intro}
 
-OpenRAG is an advanced capability in {{site.data.keyword.lakehouse_full}} that transforms unstructured data into actionable context for AI applications through retrieval-augmented generation (RAG) technology.
+OpenRAG is an advanced capability in {{site.data.keyword.lakehouse_full}} that transforms unstructured data into actionable context for AI applications through agentic RAG technology.
 {: shortdesc}
 
 ## What is OpenRAG?
