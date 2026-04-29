@@ -31,47 +31,60 @@ OpenRAG combines OpenSearch with retrieval-augmented generation (RAG) technology
 {: #setup-openrag-from-home-prereqs}
 
 Before you start, make sure that you have:
-
 - Access to the {{site.data.keyword.lakehouse_short}} web console
 - Permission to provision services in your {{site.data.keyword.lakehouse_short}} environment
-- Your OpenRAG user name and password
-- Your watsonx.ai API endpoint and project ID
+- Your OpenRAG sign-in credentials:
+  - **Username**: Follows the pattern `ibmlhapikey_<ibm-email>`. For example, `ibmlhapikey_john.doe@ibm.com`.
+  - **Password**: Your IBM Cloud API key. To create or retrieve an API key, go to [IBM Cloud API keys](https://cloud.ibm.com/iam/apikeys){: external}.
+- Credentials for at least one supported language model provider:
+  - Anthropic API key
+  - OpenAI API key
+  - IBM watsonx.ai API endpoint, project ID, and API key
+- Credentials for at least one supported embedding model provider:
+  - OpenAI API key
+  - IBM watsonx.ai API endpoint, project ID, and API key
 
-## Setting up OpenRAG
+## Provision OpenRAG and OpenSearch
 {: #setup-openrag-from-home-task}
 
 Complete the following steps to provision and configure OpenRAG:
 
 1. Open the {{site.data.keyword.lakehouse_short}} web console.
 1. On the welcome page, select the tile that matches your goal.
-1. To use the OpenRAG service, select **Develop RAG pipelines that connect LLMs to your data**, and then click **Next**.
+1. To use OpenRAG, select **Develop RAG pipelines that connect LLMs to your data**, and then click **Next**.
+
+   The OpenRAG tile is displayed only if IBM enabled the private preview on your cluster.
+   {: note}
+
 1. On the **Configure Details** page, define the details to configure OpenRAG.
 1. Keep the **Starter** cluster selection, which is selected by default.
-1. Review the configuration. OpenSearch is added automatically when you add OpenRAG.
-1. Click **Finish and go**.
-1. Wait for the {{site.data.keyword.lakehouse_short}} console home page to open.
+1. Review the configuration. OpenSearch is required for OpenRAG and is added automatically when you provision OpenRAG.
+1. Click **Finish and go** to start provisioning.
+
+If provisioning is still in progress, the console redirects you to the **Infrastructure Manager** page so that you can monitor status. If provisioning is complete, the home page is displayed.
+
+After provisioning is complete, sign in to OpenRAG.
+
 1. On the home page, select the **OpenRAG for .data** tile.
 1. Enter your OpenRAG **Username** and **Password**, and then click **Continue**.
-1. On the setup page, set up your LLM provider.
-1. Review the available provider options:
-    - Anthropic
-    - OpenAPI
-    - IBM watsonx.ai
-1. Select **IBM watsonx.ai**.
-1. Complete the following fields:
-    - **watsonx.ai API Endpoint**
-    - **watsonx ProjectID**
-1. Choose whether to use the environment API key:
-    - To use the environment key, turn on **Use environment watsonx API key**.
-    - To provide a key manually, leave the toggle off and enter your **watsonx API key**.
-1. Click **Complete**.
+   - Your username follows the pattern `ibmlhapikey_<ibm-email>`. For example, `ibmlhapikey_john.doe@ibm.com`.
+   - Your password is your IBM Cloud API key. To create or retrieve an API key, go to https://cloud.ibm.com/iam/apikeys.
 
-After setup finishes, both the OpenSearch and OpenRAG services are provisioned and displayed on the **Infrastructure Manager** page. You can select a service to view its details page.
+1. On the OpenRAG onboarding page, set up the language model and embedding model providers.
+1. Select a language model provider from the available options:
+   - Anthropic
+   - OpenAPI
+   - IBM watsonx.ai
+1. Enter the credentials for the selected provider, choose a language model from the dropdown, and then click **Complete**.
+1. Wait for OpenRAG to verify the provider credentials and open the embedding provider step. The following embedding providers are available:
+   - OpenAI
+   - IBM watsonx.ai
+1. Enter the credentials for the embedding provider, select an embedding model from the list, and then click **Complete**.
+1. Wait while OpenRAG ingests the default documents. You can change the language model and embedding model settings later from the OpenRAG **Settings** page.
+1. After ingestion is complete, click **What is OpenRAG?** to run your first query.
+1. Confirm that the query runs successfully.
+1. Choose what you want to do next:
+   - Click **Add a document** to ingest another document source.
+   - Click **Skip overview** to open the OpenRAG home page.
 
-## Next steps
-{: #setup-openrag-from-home-next}
-
-After you complete the setup, you can:
-
-- Review service status and details from the **Infrastructure Manager** page
-- Continue with your OpenRAG workflow configuration.
+You have now completed the initial OpenRAG setup.

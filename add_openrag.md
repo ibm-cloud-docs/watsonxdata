@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-04-28"
+lastupdated: "2026-04-29"
 
 keywords: lakehouse, openrag, opensearch, watsonx.data, infrastructure manager, add component
 
@@ -24,7 +24,7 @@ Complete the following steps to add an OpenRAG service:
 1. From the navigation menu, select **Infrastructure Manager**.
 1. In the **Services** section, select **OpenRAG** and click **Next**.
 
-   The OpenRAG tile is displayed only when OpenRAG is enabled in the corresponding Cloud Framework (CF) value.
+   The OpenRAG tile is displayed only if IBM enabled the private preview on your cluster.
    {: note}
 
 1. In the **Add component - OpenRAG** window, provide the following details:
