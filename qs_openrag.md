@@ -2,7 +2,7 @@
 
 copyright:
   years: 2026
-lastupdated: "2026-04-28"
+lastupdated: "2026-04-29"
 
 keywords: openrag, watsonx.data, opensearch, watsonx.ai, home page, setup, quick start
 
@@ -35,8 +35,7 @@ Before you start, make sure that you have:
 - Access to the {{site.data.keyword.lakehouse_short}} web console
 - Permission to provision services in your {{site.data.keyword.lakehouse_short}} environment
 - Your OpenRAG user name and password
-- Your {{site.data.keyword.watsonx_ai_short}} API endpoint and project ID
-- A {{site.data.keyword.watsonx_ai_short}} API key, unless you plan to use the environment API key option
+- Your watsonx.ai API endpoint and project ID
 
 ## Setting up OpenRAG
 {: #setup-openrag-from-home-task}
