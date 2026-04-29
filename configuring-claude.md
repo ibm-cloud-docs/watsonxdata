@@ -1,0 +1,123 @@
+---
+
+copyright:
+  years: 2022, 2025
+lastupdated: "2026-04-29"
+
+keywords: lakehouse, bucket, catalog, watsonx.data
+
+subcollection: watsonxdata
+
+---
+
+{:javascript: #javascript .ph data-hd-programlang='javascript'}
+{:java: #java .ph data-hd-programlang='java'}
+{:ruby: #ruby .ph data-hd-programlang='ruby'}
+{:php: #php .ph data-hd-programlang='php'}
+{:python: #python .ph data-hd-programlang='python'}
+{:external: target="_blank" .external}
+{:shortdesc: .shortdesc}
+{:codeblock: .codeblock}
+{:screen: .screen}
+{:tip: .tip}
+{:important: .important}
+{:note: .note}
+{:deprecated: .deprecated}
+{:pre: .pre}
+{:video: .video}
+
+# Configuring Claude Desktop to connect to the MCP server
+{: #configuring-claude}
+
+After installing the MCP server locally or connecting to the remote MCP server through the endpoint, you must configure Claude Desktop to connect to the MCP server.
+
+## Locating the configuration file
+{: #configuring-claude-lcf}
+
+The Claude Desktop configuration file location varies by operating system:
+
+| Operating System | Configuration File Path |
+|-----------------|-------------------------|
+| macOS | `~/Library/Application Support/Claude/claude_desktop_config.json` |
+| Windows | `%APPDATA%\Claude\claude_desktop_config.json` |
+| Linux | `~/.config/Claude/claude_desktop_config.json` |
+{: caption="Configuration file location" caption-side="bottom"}
+
+## Configuration procedure
+{: #configuring-claude-cp}
+
+
+1. Open the Claude Desktop configuration file in a text editor.
+
+2. Add the following configuration, replacing placeholder values with your actual credentials:
+
+   - **For a remote MCP server using an API key, use the following configuration**
+
+     ```bash
+     {
+       "mcpServers": {
+         "watsonx.data-mcp-server": {
+           "command": "npx",
+           "args": [
+             "mcp-remote",
+             "https://<console-host>/api/v1/watsonxdata/mcp",
+             "--header",
+             "authorization: Basic <base64(ibmlhapikey_user@ibm.com:apikey)>",
+             "--header",
+             "authinstanceid: <YOUR_WATSONXDATA_INSTANCE_CRN>"
+           ]
+         }
+       }
+     }
+     ```
+     {: codeblock}
+
+   - **For a remote MCP server using a Bearer token, use the following configuration**
+
+     ```bash
+         {
+       "mcpServers": {
+         "watsonx.data-mcp-server": {
+           "command": "npx",
+           "args": [
+             "mcp-remote",
+             "https://<console-host>/api/v1/watsonxdata/mcp",
+             "--header",
+             "authorization: Bearer <YOUR_TOKEN>",
+             "--header",
+             "authinstanceid: <YOUR_WATSONXDATA_INSTANCE_CRN>"
+           ]
+         }
+       }
+     }
+     ```
+     {: codeblock}
+
+
+     <br>- The `<console-host>` value is location specific. For the appropriate value to use, see [Remote MCP server endpoint](/docs/watsonxdata?topic=watsonxdata-remote-querying-data-ai-end#remote-querying-data-ai-rmcp){: external}. <br>- To generate a Base64-encoded value for API key authentication, refer [Prerequisites](/docs/watsonxdata?topic=watsonxdata-remote-querying-data-ai-end#remote-querying-data-ai-en-pre){: external}. <br>- To generate an Bearer Token, refer [Generating an IBM Cloud IAM token by using an API key](https://cloud.ibm.com/docs/account?topic=account-iamtoken_from_apikey&interface=ui){: external}.
+     {: note}
+
+   - **For local MCP server use the following configuration**
+
+     ```bash
+     {
+       "mcpServers": {
+         "IBM watsonx.data MCP Server": {
+           "command": "/path/to/ibm-watsonxdata-mcp-server",
+           "args": ["--transport", "stdio"],
+           "env": {
+             "WATSONX_DATA_BASE_URL": "https://<console-host>.lakehouse.cloud.ibm.com/lakehouse/api",
+             "WATSONX_DATA_API_KEY": "<your_api_key_here>",
+             "WATSONX_DATA_INSTANCE_ID": "crn:v1:<bluemix:public:lakehouse:us-south/a/...>"
+           }
+         }
+       }
+     }
+     ```
+     {: codeblock}
+
+3. Save the configuration file.
+
+4. Restart Claude Desktop.
+
+To configure Claude Desktop for development setup, refer [IBM {{site.data.keyword.lakehouse_short}} MCP Server](https://github.com/IBM/ibm-watsonxdata-mcp-server?tab=readme-ov-file){: external}.
