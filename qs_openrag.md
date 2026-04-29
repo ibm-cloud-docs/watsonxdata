@@ -22,10 +22,10 @@ completion-time: 10m
 {: toc-services="watsonxdata"}
 {: toc-completion-time="10m"}
 
-This tutorial guides you through the initial configuration of OpenRAG in {{site.data.keyword.lakehouse_full}} to help you quickly start building AI-powered search applications with retrieval-augmented generation.
+This tutorial guides you through the initial configuration of OpenRAG in {{site.data.keyword.lakehouse_full}} to help you quickly start building AI-powered search applications with agentic RAG.
 {: shortdesc}
 
-OpenRAG combines OpenSearch with retrieval-augmented generation (RAG) technology to transform unstructured data into actionable context for AI applications. It enables semantic search, vector embeddings, and seamless integration with large language models.
+OpenRAG combines OpenSearch with agentic RAG technology to transform unstructured data into actionable context for AI applications. It enables semantic search, vector embeddings, and seamless integration with large language models.
 
 ## Before you begin
 {: #setup-openrag-from-home-prereqs}

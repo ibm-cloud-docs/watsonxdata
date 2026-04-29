@@ -21,7 +21,7 @@ OpenRAG is an advanced capability in {{site.data.keyword.lakehouse_full}} that t
 ## What is OpenRAG?
 {: #openrag_what}
 
-OpenRAG is an enterprise-grade Agentic RAG framework, available as a fully managed service on watsonx.data SaaS. It combines the power of OpenSearch with retrieval-augmented generation (RAG) to enable AI-powered enterprise search. OpenRAG allows you to unlock insights from unstructured data sources such as documents, logs, and text files by converting them into searchable, AI-ready context.
+OpenRAG is an enterprise-grade agentic RAG framework, available as a fully managed service on watsonx.data SaaS. It combines the power of OpenSearch with agentic RAG to enable AI-powered enterprise search. OpenRAG allows you to unlock insights from unstructured data sources such as documents, logs, and text files by converting them into searchable, AI-ready context.
 
 ## Key features
 {: #openrag_features}

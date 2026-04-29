@@ -15,7 +15,7 @@ subcollection: watsonxdata
 # Adding an OpenRAG service (Private preview)
 {: #add_openrag}
 
-OpenRAG enables retrieval-augmented generation (RAG) workflows in {{site.data.keyword.lakehouse_full}} by using OpenSearch as the required search backend.
+OpenRAG enables agentic RAG workflows in {{site.data.keyword.lakehouse_full}} by using OpenSearch as the required search backend.
 {: shortdesc}
 
 Complete the following steps to add an OpenRAG service:
