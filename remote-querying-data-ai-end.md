@@ -52,108 +52,116 @@ To get your credentials and instance information:
 4. Get your {{site.data.keyword.lakehouse_short}} instance CRN by copying the CRN value. The CRN has the following format: `crn:v1:bluemix:public:lakehouse:us-south/a/...`
 5. If you want to use your IBM Cloud API key as your authorization credentials, follow these steps to create a base64 credential string:
 
-   1. If you do not have an existing key, create your API key. See [Creating an API key](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key){: external}.
-   2.
+    1. If you do not have an existing key, create your API key.See [Creating an API key](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key){: external}.
+    2. Open a terminal and run the following command, replacing the placeholders with your values:
 
-- **{{site.data.keyword.lakehouse_short}} instance** - A provisioned and running instance
+       - Mac or Linux:
 
-   - [Provision a lite plan instance](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1){: external} or [Provision an enterprise plan instance](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-getting-started_1){: external}
+         ```bash
+          echo -n "ibmlhapikey_<your-email>:<your-apikey>" | base64
+         ```
+         {: codeblock}
 
-   - [Set up {{site.data.keyword.lakehouse_short}} lite plan](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-tutorial_hp_intro){: external}
+       - Windows PowerShell:
 
-- **IBM Cloud API key** - An API key with appropriate permissions to access your {{site.data.keyword.lakehouse_short}} instance. To create IBM Cloud API key, see [Creating an API key](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key){: external}.
+         ```bash
+          [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes("ibmlhapikey_<your-email>:<your-apikey>"))
+         ```
+         {: codeblock}
 
-- **Bearer token** - If remote MCP server using a Bearer token, you must generate a Bearer token. To generate Bearer token, refer [Generating an IBM Cloud IAM token by using an API key](https://cloud.ibm.com/docs/account?topic=account-iamtoken_from_apikey&interface=ui){: external}.
+6. If you want to use your IBM Cloud bearer token as your authorization credentials, copy or generate your bearer token. See [Generating an IBM Cloud IAM token by using an API key](https://cloud.ibm.com/docs/account?topic=account-iamtoken_from_apikey&interface=ui){: external}.
 
-- **ApiKey authorization token** - The API key cannot be used directly; you must generate a Base64‑encoded authorization token.
-
-   1. Build the credential string using the following format.
-
-       ```bash
-       ibmlhapikey_<your-email>:<your-apikey>
-       ```
-       {: codeblock}
-
-       Example:
-
-       ```bash
-       ibmlhapikey_john.doe@ibm.com:abcd1234apikey
-       ```
-
-   2. Open a terminal on your system and run the following command.
-
-       Mac or Linux:
-
-       ```bash
-       echo -n "ibmlhapikey_<your-email>:<your-apikey>" | base64
-       ```
-       {: codeblock}
-
-
-       Example:
-
-       ```bash
-       echo -n "ibmlhapikey_john.doe@ibm.com:abcd1234apikey" | base64
-       ```
-
-       Windows PowerShell:
-
-       ```bash
-       [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes("ibmlhapikey_<your-email>:<your-apikey>"))
-       ```
-       {: codeblock}
-
-       Example:
-
-       ```bash
-       [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes("ibmlhapikey_john.doe@ibm.com:abcd1234apikey"))
-       ```
-
-   3. Use the encoded value in the configuration file in the following format.
-
-       ```bash
-       authorization: Basic <base64-encoded-value>
-       ```
-       {: codeblock}
-
-- **Instance CRN**: The Cloud Resource Name of your instance. To find CRN, refer [Getting connection information](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-get_connection){: external}.
-
-   - Format: `crn:v1:bluemix:public:lakehouse:us-south/a/...`
-
-   - To locate your Instance CRN:
-
-    1. Log in to the {{site.data.keyword.lakehouse_short}} console.
-    2. On the **Instance details** or **Configuration** page, locate the **CRN** field in the details section.
-    3. Click the copy icon next to the CRN to copy it to your clipboard.
-
-- **MCP-compatible client** - An AI assistant or application that supports the Model Context Protocol (Claude Desktop, or IBM Bob)
-
-## Remote MCP server endpoint
+## Configuring the agent
 {: #remote-querying-data-ai-rmcp}
 
-To connect to the remote MCP server, use the following endpoint:
+You configure the agent to connect to the MCP server by editing the agent configuration file:
 
-`https://<console-host>/api/v1/watsonxdata/mcp`
+- The IBM Bob configuration file is (file path).
 
-Replace the `<console-host>` placeholder with the appropriate value for instance location from the following list:
+    ```bash
+     ~/Library/Application Support/Bob-IDE/User/globalStorage/ibm.bob-code/settings/mcp_settings.json
+    ```
 
-- Sydney, Australia (Asia Pacific): `console-ibm-ausyd.lakehouse.saas.ibm.com`
-- Toronto, Canada (North America): `console-ibm-cator.lakehouse.saas.ibm.com`
-- Frankfurt, Germany (Europe): `eu-de.lakehouse.cloud.ibm.com`
-- London, United Kingdom (Europe): `eu-gb.lakehouse.cloud.ibm.com`
-- Tokyo, Japan (Asia Pacific): `jp-tok.lakehouse.cloud.ibm.com`
-- Washington DC, USA (North America): `us-east.lakehouse.cloud.ibm.com`
-- Dallas, USA (North America): `us-south.lakehouse.cloud.ibm.com`
+- The Claude Desktop configuration file location varies by operating system:
 
+    | Operating System | Configuration File Path |
+    |-----------------|-------------------------|
+    | macOS | `~/Library/Application Support/Claude/claude_desktop_config.json` |
+    | Windows | `%APPDATA%\Claude\claude_desktop_config.json` |
+    | Linux | `~/.config/Claude/claude_desktop_config.json` |
+    {: caption="Configuration file location" caption-side="bottom"}
 
-### Connect your Agents with remote MCP Server
-{: #remote-querying-data-ai-cng}
+- For other agents, you must determine the appropriate file for the local MCP server configuration.
 
-After connecting the remote MCP server, configure your agents to connect to the server. See the following topics for specific instructions:
+To configure the agent:
 
-- [Configuring Claude Desktop](/docs/watsonxdata?topic=watsonxdata-configuring-claude){: external}
-- [Configuring IBM Bob](/docs/watsonxdata?topic=watsonxdata-configuring-bob){: external}
-- [Configuring other MCP clients](/docs/watsonxdata?topic=watsonxdata-configuring-other-agents){: external}
+1. Open the configuration file in a text editor.
+2. Add the following configuration, replacing placeholder values with your actual credentials:
 
-### Using the MCP tool
-{: #remote-querying-data-ai-qdw}
+   - **For API credentials:**
+
+     ```bash
+     {
+       "mcpServers": {
+         "watsonx.data-mcp-server": {
+           "command": "npx",
+           "args": [
+             "mcp-remote",
+             "https://<console-host>/api/v1/watsonxdata/mcp",
+             "--header",
+             "authorization: Basic <base64-encoded-value>",
+             "--header",
+             "authinstanceid: <YOUR_WATSONXDATA_INSTANCE_CRN>"
+           ]
+         }
+       }
+     }
+     ```
+     {: codeblock}
+
+   - **For bearer token:**
+
+     ```bash
+         {
+       "mcpServers": {
+         "watsonx.data-mcp-server": {
+           "command": "npx",
+           "args": [
+             "mcp-remote",
+             "https://<console-host>/api/v1/watsonxdata/mcp",
+             "--header",
+             "authorization: Bearer <YOUR_TOKEN>",
+             "--header",
+             "authinstanceid: <YOUR_WATSONXDATA_INSTANCE_CRN>"
+           ]
+         }
+       }
+     }
+     ```
+     {: codeblock}
+
+     - **For streamable-http type:**
+
+     ```bash
+     {
+       "mcpServers": {
+         "watsonx.data-mcp-server": {
+           "type": "streamable-http",
+           "url": "https://<console-host>/api/v1/watsonxdata/mcp",
+           "headers": {
+             "authorization": "Basic <base64-encoded-value>",
+             "authinstanceid": "<YOUR_WATSONXDATA_INSTANCE_CRN>"
+           }
+         }
+       }
+     }
+     ```
+     {: codeblock}
+
+3. Save the file.
+4. Restart the agent.
+
+# Next steps
+{: #remote-querying-data-ai-rmcp-nxt1}
+
+- **Configure tools:** For detailed information on MCP tools and their usage, see [https://github.com/IBM/ibm-watsonxdata-mcp-server/blob/main/TOOLS.md](https://github.com/IBM/ibm-watsonxdata-mcp-server/blob/main/TOOLS.md).

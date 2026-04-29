@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-04-14"
+lastupdated: "2026-04-29"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -26,16 +26,13 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Installing and configuring the local MCP server
+# Setting up a local MCP server
 {: #querying-data-ai-loc}
 
 You must install and configure the local MCP server on your local computer.
 
-## System requirements
+## Prerequisite software
 {: #querying-loc-1}
-
-**Software prerequisites**
-{: #querying-loc-2}
 
 Before you begin, ensure that your system meets the following requirements:
 
@@ -43,43 +40,7 @@ Before you begin, ensure that your system meets the following requirements:
 |-----------|-------------|-------|
 | Python | Version 3.11 or later | [Download Python](https://www.python.org/downloads/){: external} |
 | Package manager | uv | [Install uv](https://github.com/astral-sh/uv){: external} |
-| IBM Cloud account | Active account | [Register for IBM Cloud](https://cloud.ibm.com/registration){: external} |
 {: caption="System requirements" caption-side="bottom"}
-
-**IBM {{site.data.keyword.lakehouse_short}} requirements**
-{: #querying-loc-3}
-
-You must have access to the following IBM {{site.data.keyword.lakehouse_short}} resources:
-
-- **{{site.data.keyword.lakehouse_short}} instance**: A provisioned and running instance
-
-   - [Provision a lite plan instance](/docs/watsonxdata?topic=watsonxdata-tutorial_prov_lite_1){: external} or [Provision an enterprise plan instance](/docs/watsonxdata?topic=watsonxdata-getting-started_1){: external}
-
-   - [Set up {{site.data.keyword.lakehouse_short}} lite plan](/docs/watsonxdata?topic=watsonxdata-tutorial_hp_intro){: external}
-
-- **IBM Cloud API key**: An API key with appropriate permissions
-
-   - [Create an API key](https://cloud.ibm.com/iam/apikeys){: external}
-
-**Required configuration information**
-{: #querying-loc-4}
-
-Collect the following information before installation:
-
-- **Base URL**: The URL of your {{site.data.keyword.lakehouse_short}} instance
-   - Format: `"https://your-instance.lakehouse.cloud.ibm.com/lakehouse/api/lakehouse/api`
-
-- **Instance CRN**: The Cloud Resource Name of your instance. To find CRN, refer [Getting connection information](https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-get_connection){: external}.
-
-   - Format: `crn:v1:bluemix:public:lakehouse:us-south/a/...`
-
-   - To locate your Instance CRN:
-
-    1. Log in to the {{site.data.keyword.lakehouse_short}} console.
-    2. On the **Instance details** or **Configuration** page, locate the **CRN** field in the details section.
-    3. Click the copy icon next to the CRN to copy it to your clipboard.
-
-- **IAM API Key**: Your IBM Cloud API key with {{site.data.keyword.lakehouse_short}} access permissions.
 
 ## Installing the MCP Server
 {: #querying-loc-5}
@@ -146,15 +107,91 @@ Complete the steps below to locate the MCP server executable based on your opera
    ```
    {: codeblock}
 
-### Connect your Agents with MCP Server
+## Getting the required configuration information
 {: #querying-loc-10}
 
-After locating the MCP server executable, configure your agents to connect to the server. See the following topics for specific instructions:
+You need to provide values for the following variables in the agent configuration file:
 
-- [Configuring Claude Desktop](/docs/watsonxdata?topic=watsonxdata-configuring-claude){: external}
-- [Configuring IBM Bob](/docs/watsonxdata?topic=watsonxdata-configuring-bob){: external}
+- `path/to/ibm-watsonxdata-mcp-server`: The MCP server executable location
+- `WATSONX_DATA_BASE_URL`: The `<console-host>` portion of your {{site.data.keyword.lakehouse_short}} instance URL for the MCP server endpoint. The MCP server endpoint has the following format:
+   - `https://<console-host>/lakehouse/api`
+- `WATSONX_DATA_API_KEY`: Your IBM Cloud API key
+- `WATSONX_DATA_INSTANCE_ID`: The Cloud Resource Name (CRN) of {{site.data.keyword.lakehouse_short}} instance
 
-### Using the MCP tool
+To get the required information:
+
+1. To get the MCP server executable location, open a terminal and run the appropriate command:
+
+   - **macOS or Linux**
+
+     1. Open a terminal and run:
+
+        ```bash
+        which ibm-watsonxdata-mcp-server
+        ```
+        {: codeblock}
+
+   - **Windows (PowerShell)**
+
+      1. Open PowerShell and run:
+
+        ```bash
+        where.exe ibm-watsonxdata-mcp-server
+        ```
+        {: codeblock}
+
+2. Log into IBM Cloud.
+3. To find the `<console-host>` and CRN values, go to **Resources** and select your {{site.data.keyword.lakehouse_short}} instance.
+4. Get the value of `<console-host>` by copying the first part of the web console URL. For example: `console-ibm-cator.lakehouse.saas.ibm.com`
+5. Get your {{site.data.keyword.lakehouse_short}} instance CRN by copying the CRN value. The CRN has the following format: `crn:v1:bluemix:public:lakehouse:us-south/a/...`
+6. Copy your IBM Cloud API key or if necessary, create one. See [Creating an API key](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key){: external}.
+
+## Configuring the agent
 {: #querying-loc-11}
 
-For detailed information on MCP tools and their usage, refer [https://github.com/IBM/ibm-watsonxdata-mcp-server/blob/main/TOOLS.md](https://github.com/IBM/ibm-watsonxdata-mcp-server/blob/main/TOOLS.md){: external}.
+You must configure the agent to connect to the MCP server by editing the agent configuration file:
+
+- The IBM Bob configuration file is (file path).
+
+    ```bash
+     ~/Library/Application Support/Bob-IDE/User/globalStorage/ibm.bob-code/settings/mcp_settings.json
+    ```
+
+- The Claude Desktop configuration file location varies by operating system:
+
+    | Operating System | Configuration File Path |
+    |-----------------|-------------------------|
+    | macOS | `~/Library/Application Support/Claude/claude_desktop_config.json` |
+    | Windows | `%APPDATA%\Claude\claude_desktop_config.json` |
+    | Linux | `~/.config/Claude/claude_desktop_config.json` |
+    {: caption="Configuration file location" caption-side="bottom"}
+
+To configure the agent:
+
+1. Open the configuration file in a text editor.
+2. Add the following configuration, replacing placeholder values with your actual credentials:
+
+     ```bash
+     {
+       "mcpServers": {
+         "IBM watsonx.data MCP Server": {
+           "command": "/path/to/ibm-watsonxdata-mcp-server",
+           "args": ["--transport", "stdio"],
+           "env": {
+             "WATSONX_DATA_BASE_URL": "https://<console-host>.lakehouse.cloud.ibm.com/lakehouse/api",
+             "WATSONX_DATA_API_KEY": "<your_api_key_here>",
+             "WATSONX_DATA_INSTANCE_ID": "crn:v1:<bluemix:public:lakehouse:us-south/a/...>"
+           }
+         }
+       }
+     }
+     ```
+     {: codeblock}
+
+3. Save the file.
+4. Restart the agent.
+
+# Next steps
+{: #remote-querying-data-ai-rmcp-nxt1}
+
+- **Configure tools:** For detailed information on MCP tools and their usage, see [https://github.com/IBM/ibm-watsonxdata-mcp-server/blob/main/TOOLS.md](https://github.com/IBM/ibm-watsonxdata-mcp-server/blob/main/TOOLS.md).
