@@ -466,6 +466,26 @@ toc:
               - api_custom_logconfwrkr_pcpp.md
               - api_custom_logconfcord_pcpp.md
           - resource_grp_pptys.md
+      - topicgroup:
+          label: Technology preview
+          topics:
+          - release_public_preview.md
+          - topicgroup:
+              label: OpenRAG integration
+              topics:
+              - openrag_intro.md
+              - qs_openrag.md
+              - add_openrag.md
+          - topicgroup:
+              label: OpenSearch integration
+              topics:
+              - gs_opensearch.md
+              - quick_start_opensearch.md
+              - add-opensearch.md
+          - jvector.md
+          - jvector_spark.md
+          - mv_optimizer.md
+          - jdbc.md
       - link:
           label: watsonx.data v2 APIs
           href: https://cloud.ibm.com/apidocs/watsonxdata
