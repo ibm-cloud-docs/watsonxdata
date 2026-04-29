@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-04-14"
+lastupdated: "2026-04-29"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -26,15 +26,34 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Getting started with the remote MCP server
+# Setting up the remote MCP server
 {: #remote-querying-data-ai-end}
 
-To connect your AI agent with {{site.data.keyword.lakehouse_short}} tools, you must obtain the endpoint for the remote MCP server.
+To set up the remote MCP server with your local agent, you add the MCP server information to the agent configuration file.
 
-## Prerequisites
+## Getting the required credentials and instance information
 {: #remote-querying-data-ai-en-pre}
 
-Before connecting to the Remote MCP Server, ensure you have:
+You need to provide values for the following variables in the agent configuration file:
+
+- The `<console-host>` portion of your {{site.data.keyword.lakehouse_short}} instance URL for the MCP server endpoint, which has the following format: </br>`https://<console-host>/api/v1/watsonxdata/mcp`
+- Your credentials:
+
+   - Your IBM Cloud API key in a base64 credentials string
+   - Your IBM Cloud bearer token
+
+- The Cloud Resource Name (CRN) of your {{site.data.keyword.lakehouse_short}} instance
+
+To get your credentials and instance information:
+
+1. Log into IBM Cloud.
+2. To find the `<console-host>` and CRN values, go to **Resources** and select your {{site.data.keyword.lakehouse_short}} instance.
+3. Get the value of `<console-host>` by copying the first part of the web console URL. For example: `console-ibm-cator.lakehouse.saas.ibm.com`
+4. Get your {{site.data.keyword.lakehouse_short}} instance CRN by copying the CRN value. The CRN has the following format: `crn:v1:bluemix:public:lakehouse:us-south/a/...`
+5. If you want to use your IBM Cloud API key as your authorization credentials, follow these steps to create a base64 credential string:
+
+   1. If you do not have an existing key, create your API key. See [Creating an API key](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key){: external}.
+   2.
 
 - **{{site.data.keyword.lakehouse_short}} instance** - A provisioned and running instance
 
@@ -138,5 +157,3 @@ After connecting the remote MCP server, configure your agents to connect to the 
 
 ### Using the MCP tool
 {: #remote-querying-data-ai-qdw}
-
-For detailed information on MCP tools and their usage, refer [https://github.com/IBM/ibm-watsonxdata-mcp-server/blob/main/TOOLS.md](https://github.com/IBM/ibm-watsonxdata-mcp-server/blob/main/TOOLS.md){: external}.

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-04-14"
+lastupdated: "2026-04-29"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -40,100 +40,62 @@ The IBM {{site.data.keyword.lakehouse_short}} MCP Server is designed for the fol
 ## Connection models
 {: #querying-data-ai-cm}
 
-{{site.data.keyword.lakehouse_short}} supports two MCP server connection models. You can choose the type of MCP server that best fits your needs. Both types provide the same tools and capabilities.
+You can choose between a remote or a local MCP server. Both types provide the same tools and capabilities. 
 
-### Remote MCP server
-{: #querying-data-ai-rmcp}
+Remote MCP server
 
-The remote MCP server is a hosted endpoint on IBM Cloud.
+: A fully managed endpoint that is hosted on IBM Cloud.
 
-### Local MCP server
-{: #querying-data-ai-lmcp}
+Local MCP server
 
-The local MCP server runs on your local machine.
+: A locally installed server that runs on your local system.
+
+The following table compares the characteristics of the remote and local MCP server implementations.
+
+| Characteristic | Remote MCP server | Local MCP server |
+|----------------|-------------------|------------------|
+| Installation and resource requirements | None. Maintained by IBM. | Local installation and resource access required. |
+| Intended use | Production | Development and testing |
+| Connectivity environment | Internet connection required. | Suitable for offline or air-gapped environments. |
+| Supported agents | Any MCP-compliant agent | IBM Bob </br>Claude |
+| Advanced integrations and customizations? | Not supported | Supported. The local MCP server runs on your machine, providing you with full control over the environment. This makes it well suited for developer-driven implementations and proof-of-concept scenarios. |
+{: caption="Characteristics of remote and local MCP servers" caption-side="bottom"}
 
 ## Capabilities
 {: #squerying-data-ai-ft}
 
-The IBM {{site.data.keyword.lakehouse_short}} MCP Server provides the following capabilities:
+Both remote and local MCP servers provide the same capabilities. The IBM {{site.data.keyword.lakehouse_short}} MCP Server provides the following capabilities:
 
-**Engine management**
-{: #querying-data-ai-em}
+Query execution
 
-- Full lifecycle management of Presto and Spark engines (create, update, scale, pause, resume, restart, and delete)
-- Engine discovery and status monitoring
+: Execute SQL queries against your lakehouse data by using natural language.
 
-**Catalog operations**
-{: #querying-data-ai-co}
+Catalog operations
 
-- Schema and table discovery across catalogs
-- Table structure inspection and metadata exploration
-- Schema creation and table modifications (rename tables, add/rename columns)
+: Browse, search, and retrieve metadata from your data catalog.
 
-**Query execution**
-{: #querying-data-ai-qe}
+Data ingestion
 
-- Read operations with SELECT queries
-- Write operations with INSERT and UPDATE queries (DELETE not supported)
-- Query optimization with EXPLAIN and EXPLAIN ANALYZE
+: Load and manage data into your watsonx.data instance.
 
-**Spark applications**
-{: #querying-data-ai-spa}
+Engine management
 
-- Submit and manage Spark jobs (JAR, Python, R)
-- Monitor application status and progress
-- Control running applications
+: Monitor and interact with your query engines.
 
-**Data ingestion**
-{: #querying-data-ai-din}
+Data security
 
-- Bulk data loading from S3/COS (CSV, Parquet, JSON)
-- Ingestion job management and monitoring
+: Secure your data through IBM Cloud Identity and Access Management (IAM) authentication with automatic token refresh. Write access is controlled to allow `INSERT` and `UPDATE` operations while restricting `DELETE` operations.
 
-**Data security**
-{: #querying-data-ai-dse}
+For the complete list of available tools and detailed use cases, refer [https://github.com/IBM/ibm-watsonxdata-mcp-server/blob/main/TOOLS.md](https://github.com/IBM/ibm-watsonxdata-mcp-server/blob/main/TOOLS.md){: external}.
 
-- IBM Cloud Identity and Access Management (IAM) authentication
-- Automatic token refresh mechanism
-- Controlled write access (INSERT and UPDATE supported; DELETE operations not permitted)
-
-**Transport mechanisms**
-{: #squerying-data-ai-trm}
-
-- **stdio** transport for local subprocess communication
-- **Streamable HTTP** for remote server connections
-
-For implementation guidelines and security best practices, refer [MCP Transports Specification](https://modelcontextprotocol.io/specification/2025-11-25/basic/transports){: external}.
-
-**AI agent integrations**
+## AI agent integrations
 {: #squerying-data-ai-aiag}
 
-- Integrates with the following AI agents on your local computer:
+You can use the IBM {{site.data.keyword.lakehouse_short}} MCP server with the following widely adopted MCP hosts:
 
    - IBM Bob
    - Claude Desktop
-   - Other MCP-compatible clients (only for remote MCP server)
-
-## Configuration workflow
-{: #squerying-data-ai-cfwr}
-
-The configuration process varies depending on whether you choose the remote or local MCP server connection model. The remote MCP server requires only the endpoint, while the local MCP server requires installation and local setup before configuration. Follow the workflow that matches your chosen connection model.
-
-**For remote MCP server**
-{: #squerying-data-ai-cfwr-frm}
-
-To configure the Remote MCP server, complete these main tasks:
-
-1. [Obtain the instance details, authentication credentials, and the MCP server endpoint](/docs/watsonxdata?topic=watsonxdata-remote-querying-data-ai-end){: external}.
-2. Configure your AI agent to work with the MCP server and connect to {{site.data.keyword.lakehouse_short}}. See [Configuring IBM Bob](/docs/watsonxdata?topic=watsonxdata-configuring-bob){: external}, [Configuring Claude Desktop](/docs/watsonxdata?topic=watsonxdata-configuring-claude){: external}, or [Configuring other MCP clients](/docs/watsonxdata?topic=watsonxdata-configuring-other-agents){: external}.
-
-**For local MCP server**
-{: #squerying-data-ai-cfwr-flm}
-
-To configure the MCP server, complete these main tasks:
-
-1. Install and configure the MCP server on your local computer. See [Installing and configuring the MCP server for querying data](/docs/watsonxdata?topic=watsonxdata-querying-data-ai-loc){: external}.
-2. Configure your AI agent to work with the MCP server and connect to {{site.data.keyword.lakehouse_short}}. See [Configuring IBM Bob](/docs/watsonxdata?topic=watsonxdata-configuring-bob){: external} or [Configuring Claude Desktop](/docs/watsonxdata?topic=watsonxdata-configuring-claude){: external}.
+   - Other MCP-compatible clients. Any client that supports the MCP protocol can connect to the remote server
 
 ## MCP server architecture
 {: #squerying-data-ai-ar}
@@ -146,14 +108,16 @@ The following diagram illustrates the process of querying data through the local
 
 ![architecture diagram](images/mcp-query-execution-flow.svg){: caption="Local MCP architecture diagram" caption-side="bottom"}{: width="1500px"}
 
-### Understanding the interaction model
-{: #squerying-data-ai-uim}
-
 The MCP server enables conversational data access through the following workflow:
 
 1. You submit a natural language query to your agent.
 2. The agent interprets your request and determines the appropriate action.
 3. The agent communicates with the MCP server, which then forwards the request to your {{site.data.keyword.lakehouse_short}} instance.
-4. The MCP server executes the operation against your {{site.data.keyword.lakehouse_short}} instance.
-5. {{site.data.keyword.lakehouse_short}} processes the request and returns results to the MCP server.
-6. The agent presents the results in a conversational format.
+4. {{site.data.keyword.lakehouse_short}} processes the request and returns results to the MCP server.
+5. The agent presents the results in a conversational format.
+
+# Next steps
+{: #querying-data-ai-nxt}
+
+- [Remote MCP server setup](/docs/watsonxdata?topic=watsonxdata-remote-querying-data-ai-end){: external}
+- [Local MCP server setup](/docs/watsonxdata?topic=watsonxdata-querying-data-ai-loc){: external}
