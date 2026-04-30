@@ -370,7 +370,8 @@ toc:
           - data_stream_snowflake2spark.md
           - data_stream_snowflake3presto.md
           - data_stream_cloudera1.md
-          - data_stream_cloudera_presto.md
+          - data_stream_cloudera_presto_setup.md
+          - data_stream_cloudera_presto_query.md
           - data_stream_salesforce.md
       - topicgroup:
           label: Integrating with Data Build Tool(dbt)
