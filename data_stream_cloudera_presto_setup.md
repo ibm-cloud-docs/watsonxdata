@@ -48,14 +48,12 @@ Ensure that the following prerequisites are met before proceeding.
 - Network connectivity between {{site.data.keyword.lakehouse_short}} and Cloudera cluster
 - HDFS NameNode hostname and port
 - Hive Metastore URI (format: `thrift://<metastore-host>:<port>`)
-
-**How to download the required configuration files:**
-
-1. Log in to Cloudera Manager.
-2. Navigate to **Clusters**.
-3. Select **HDFS** from the list.
-4. Click on **Actions**.
-5. Choose **Download Client Configuration** from the dropdown menu.
+- Download the required configuration files:
+   1. Log in to Cloudera Manager.
+   2. Navigate to **Clusters**.
+   3. Select **HDFS** from the list.
+   4. Click on **Actions**.
+   5. Choose **Download Client Configuration** from the dropdown menu.
 
 **Authentication requirements:**
 
@@ -84,15 +82,15 @@ Choose one of the following authentication methods:
    1. Log in to Cloudera Hue interface.
    2. Navigate to Hive editor from the left menu.
    3. Create a new database or use an existing one.
-   
+
       ```sql
       CREATE DATABASE IF NOT EXISTS <database_name>;
       USE <database_name>;
       ```
       {: codeblock}
-   
+
    4. Create a Hive table with desired schema.
-   
+
       ```sql
       CREATE TABLE <database_name>.<table_name> (
           id INT,
@@ -104,9 +102,9 @@ Choose one of the following authentication methods:
       LOCATION '/user/hive/warehouse/<database_name>.db.<table_name>';
       ```
       {: codeblock}
-   
+
    5. Insert data into the table.
-   
+
       ```sql
       INSERT INTO <database_name>.<table_name> VALUES
           (1, 'John Doe', 'IT', 75000),
@@ -114,9 +112,9 @@ Choose one of the following authentication methods:
           (3, 'Bob Johnson', 'Finance', 80000);
       ```
       {: codeblock}
-   
+
    6. Query the table to verify the data inserted in the table.
-   
+
       ```sql
       SELECT * FROM <database_name>.<table_name>;
       ```
@@ -144,7 +142,7 @@ Choose one of the following authentication methods:
          2. Upload `core-site.xml`.
          3. Upload `hdfs-site.xml`.
          4. Verify files are uploaded successfully.
-   
+
       - **For Kerberos authentication:**
          1. Upload the following files in order:
             - `core-site.xml` - HDFS core configuration
@@ -155,6 +153,7 @@ Choose one of the following authentication methods:
 
       Ensure all required files are uploaded successfully before proceeding.
       {: important}
+
    10. Click **Test Connection** button.
    11. Wait for validation to complete (Kerberos authentication validation if applicable).
    12. Verify success message appears.
@@ -175,6 +174,7 @@ Choose one of the following authentication methods:
 
       While creating component, the only available option under Associated catalog is Apache Hive.
       {: note}
+
    15. Click **Create** or **Save** button.
    16. Wait for component creation to complete (may take longer for Kerberos setup).
    17. Verify component appears in Infrastructure Manager list with Active status.
