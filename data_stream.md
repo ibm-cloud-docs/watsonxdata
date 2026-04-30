@@ -75,14 +75,14 @@ Access Apache Iceberg tables managed by Snowflake Open Catalog for cloud-native 
 
 Access streaming data tables managed by Confluent Tableflow for real-time analytics and event-driven architectures.
 
-**Learn more:** [Querying Confluent Tableflow using Spark engine](/docs/watsonxdata?topic=watsonxdata-data_stream_confluent2spark)
+**Learn more:** [Integrating Confluent Tableflow in watsonx.data](/docs/watsonxdata?topic=watsonxdata-data_stream_confluent1)
 
 ### Salesforce
 {: #data_stream_salesforce}
 
 Connect to Salesforce data through Arrow Flight service for CRM analytics and customer data integration.
 
-**Learn more:** [Salesforce](/docs/watsonxdata?topic=watsonxdata-salesforce_database)
+**Learn more:** [Salesforce](/docs/watsonxdata?topic=watsonxdata-data_stream_salesforce)
 
 ## How it works
 {: #data_stream_architecture}
@@ -126,5 +126,5 @@ For detailed setup instructions, see the integration guide for your specific pla
 - [Integrating Cloudera in {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=watsonxdata-data_stream_cloudera1)
 - [Integrating Databricks Unity Catalog in {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=watsonxdata-data_stream_databricks1)
 - [Integrating Snowflake Open Catalog in {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=watsonxdata-data_stream_snowflake1)
-- [Querying Confluent Tableflow using Spark engine](/docs/watsonxdata?topic=watsonxdata-data_stream_confluent2spark)
-- [Salesforce](/docs/watsonxdata?topic=watsonxdata-salesforce_database)
+- [Integrating Confluent Tableflow in watsonx.data](/docs/watsonxdata?topic=watsonxdata-data_stream_confluent1)
+- [Salesforce](/docs/watsonxdata?topic=watsonxdata-data_stream_salesforce)
