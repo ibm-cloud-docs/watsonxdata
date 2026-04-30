@@ -154,21 +154,7 @@ Choose one of the following authentication methods:
       Ensure all required files are uploaded successfully before proceeding.
       {: important}
 
-   10. Click **Test Connection** button.
-   11. Wait for validation to complete (Kerberos authentication validation if applicable).
-   12. Verify success message appears.
-
-      If connection fails:
-      - Verify HDFS URI and Hive Metastore URI are correct
-      - Check network connectivity to Cloudera cluster
-      - Ensure Hive Metastore is running and accessible
-      - **For Non-Kerberos:** Verify HDFS user has appropriate permissions
-      - **For Kerberos:**
-         - Verify Kerberos principal is correct
-         - Check keytab file is valid and not expired
-         - Ensure `krb5.conf` has correct KDC information
-         - Verify network connectivity to KDC
-         - Check Hive Metastore supports Kerberos authentication
+   10. Click **Test Connection** button to validate successful connection.
    13. Select **Apache Hive** as Catalog Type.
    14. Provide a **Catalog Name** (e.g., `sparkcatalog` for non-Kerberos or `<<catalog>>` for Kerberos).
 
