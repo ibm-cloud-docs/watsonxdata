@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-04-29"
+lastupdated: "2026-05-04"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -58,7 +58,7 @@ The following table compares the characteristics of the remote and local MCP ser
 | Intended use | Production | Development and testing |
 | Connectivity environment | Internet connection required. | Suitable for offline or air-gapped environments. |
 | Supported agents | Any MCP-compliant agent | IBM Bob </br>Claude |
-| Advanced integrations and customizations? | Not supported | Supported. The local MCP server runs on your machine, providing you with full control over the environment. This makes it well suited for developer-driven implementations and proof-of-concept scenarios. |
+| Advanced integrations and customizations | Managed service with standard configurations. | The local MCP server runs on your machine, providing you with full control over the environment. This makes it well suited for developer-driven implementations and proof-of-concept scenarios. |
 {: caption="Characteristics of remote and local MCP servers" caption-side="bottom"}
 
 ## Capabilities

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-04-29"
+lastupdated: "2026-05-04"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -82,12 +82,12 @@ To install MCP sever for development setup, refer [IBM {{site.data.keyword.lakeh
 ## Configuring the MCP server
 {: #querying-loc-8}
 
-After installation, configure your agents to communicate with the MCP server.
+After installation, configure your hosts to communicate with the MCP server.
 
 ### Find the MCP server executable
 {: #querying-loc-9}
 
-Complete the steps below to locate the MCP server executable based on your operating system. You will use this path when configuring your agents.
+Complete the steps below to locate the MCP server executable based on your operating system. You will use this path when configuring your hosts.
 
 - **macOS or Linux**
 
@@ -110,7 +110,7 @@ Complete the steps below to locate the MCP server executable based on your opera
 ## Getting the required configuration information
 {: #querying-loc-10}
 
-You need to provide values for the following variables in the agent configuration file:
+You need to provide values for the following variables in the host configuration file:
 
 - `path/to/ibm-watsonxdata-mcp-server`: The MCP server executable location
 - `WATSONX_DATA_BASE_URL`: The `<console-host>` portion of your {{site.data.keyword.lakehouse_short}} instance URL for the MCP server endpoint. The MCP server endpoint has the following format:
@@ -146,10 +146,10 @@ To get the required information:
 5. Get your {{site.data.keyword.lakehouse_short}} instance CRN by copying the CRN value. The CRN has the following format: `crn:v1:bluemix:public:lakehouse:us-south/a/...`
 6. Copy your IBM Cloud API key or if necessary, create one. See [Creating an API key](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key){: external}.
 
-## Configuring the agent
+## Configuring the host
 {: #querying-loc-11}
 
-You must configure the agent to connect to the MCP server by editing the agent configuration file:
+You must configure the host to connect to the MCP server by editing the host configuration file:
 
 - The IBM Bob configuration file is (file path).
 
@@ -166,7 +166,7 @@ You must configure the agent to connect to the MCP server by editing the agent c
     | Linux | `~/.config/Claude/claude_desktop_config.json` |
     {: caption="Configuration file location" caption-side="bottom"}
 
-To configure the agent:
+To configure the host:
 
 1. Open the configuration file in a text editor.
 2. Add the following configuration, replacing placeholder values with your actual credentials:
@@ -189,7 +189,7 @@ To configure the agent:
      {: codeblock}
 
 3. Save the file.
-4. Restart the agent.
+4. Restart the host.
 
 ## Next steps
 {: #remote-querying-data-nxt1}

@@ -424,9 +424,6 @@ toc:
           - querying-data-ai.md
           - remote-querying-data-ai-end.md
           - querying-data-ai-loc.md
-          - configuring-claude.md
-          - configuring-bob.md
-          - configuring-other-agents.md
   - navgroup:
       id: reference
       topics:
