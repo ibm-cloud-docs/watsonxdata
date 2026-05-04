@@ -61,23 +61,26 @@ To get the configuration from the web console:
    **Available tools**
 
    : A list of MCP tools that you can use with your hosts, including:
-   - Manage Presto & Spark engines
-   - Explore and modify schemas and tables
-   - Run and optimize queries (SELECT, INSERT, UPDATE)
-   - Submit and control Spark jobs
-   - Ingest data
+
+      - Manage Presto & Spark engines
+      - Explore and modify schemas and tables
+      - Run and optimize queries (SELECT, INSERT, UPDATE)
+      - Submit and control Spark jobs
+      - Ingest data
 
    **MCP configuration**
 
    : Pre-configured code snippets for different hosts. You can select from the following options:
-   - **Bob**: Configuration for IBM Bob host
-   - **Claude**: Configuration for Claude Desktop
-   - **Other**: Generic configuration for other MCP-compatible clients
+
+      - **Bob**: Configuration for IBM Bob host
+      - **Claude**: Configuration for Claude Desktop
+      - **Other**: Generic configuration for other MCP-compatible clients
 
 4. Select the appropriate option based on your host type:
-   - **Bob**: Configuration for IBM Bob host
-   - **Claude**: Configuration for Claude Desktop
-   - **Other**: Generic configuration for other MCP-compatible clients
+
+      - **Bob**: Configuration for IBM Bob host
+      - **Claude**: Configuration for Claude Desktop
+      - **Other**: Generic configuration for other MCP-compatible clients
 
 5. Copy the complete configuration snippet displayed. The snippet includes all required credentials and is ready to use.
 
