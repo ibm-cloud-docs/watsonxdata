@@ -55,10 +55,10 @@ The following table compares the characteristics of the remote and local MCP ser
 | Characteristic | Remote MCP server | Local MCP server |
 |----------------|-------------------|------------------|
 | Installation and resource requirements | None. Maintained by IBM. | Local installation and resource access required. |
-| Intended use | Production | Development and testing |
+| Intended use | Managed, scalable, and governed access | Highly customizable, environment-specific |
 | Connectivity environment | Internet connection required. | Suitable for offline or air-gapped environments. |
-| Supported agents | Any MCP-compliant agent | IBM Bob </br>Claude |
-| Advanced integrations and customizations | Managed service with standard configurations. | The local MCP server runs on your machine, providing you with full control over the environment. This makes it well suited for developer-driven implementations and proof-of-concept scenarios. |
+| Supported hosts | Any MCP-compliant host | Any MCP-compliant host |
+| Integration and customization | Standardized integration | Custom integration |
 {: caption="Characteristics of remote and local MCP servers" caption-side="bottom"}
 
 ## Capabilities

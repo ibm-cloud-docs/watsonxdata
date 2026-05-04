@@ -82,9 +82,12 @@ To get the configuration from the web console:
       - **Claude**: Configuration for Claude Desktop
       - **Other**: Generic configuration for other MCP-compatible clients
 
-5. Copy the complete configuration snippet displayed. The snippet includes all required credentials and is ready to use.
+5. Copy the complete configuration snippet displayed. The snippet includes all required credentials except the Base64-encoded key.
 
-6. If you do not have an existing API key, click **API key** to create one. For more information, see [Creating an API key](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key){: external}.
+6. Create the Base64-encoded key:
+   1. If you do not have an existing API key, click **API key** to create your API key. For more information, see [Creating an API key](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key){: external}.
+   2. Transform your API key into a Base64-encoded value as described in [Creating a base64 credential string](#getting-mcp-config-base64).
+   3. Replace the `<base64-encoded-value>` placeholder in the configuration snippet with your encoded value.
 
 ### Manually gathering configuration information
 {: #getting-mcp-config-manual}
@@ -96,8 +99,7 @@ You need to provide values for the following variables in the host configuration
 - The `<console-host>` portion of your {{site.data.keyword.lakehouse_short}} instance URL for the MCP server endpoint, which has the following format: </br>`https://<console-host>/api/v1/watsonxdata/mcp`
 - Your credentials:
 
-   - Your IBM Cloud API key in a base64 credentials string
-   - Your IBM Cloud bearer token
+   - Your IBM Cloud API key in a base64 credentials string OR your IBM Cloud bearer token
 
 - The Cloud Resource Name (CRN) of your {{site.data.keyword.lakehouse_short}} instance
 
@@ -107,7 +109,9 @@ To get your credentials and instance information:
 2. To find the `<console-host>` and CRN values, go to **Resources list** from the navigation menu and select your {{site.data.keyword.lakehouse_short}} instance from **Database** dropdown.
 3. Get the value of `<console-host>` by copying the first part of the web console URL. For example: `console-ibm-cator.lakehouse.saas.ibm.com`
 4. Get your {{site.data.keyword.lakehouse_short}} instance CRN by copying the CRN value. The CRN has the following format: `crn:v1:bluemix:public:lakehouse:us-south/a/...`
-5. If you do not have an existing key, create your API key. See [Creating an API key](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key){: external}.
+5. Create the Base64-encoded key:
+   1. If you do not have an existing API key, create your API key. For more information, see [Creating an API key](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key){: external}.
+   2. Transform your API key into a Base64-encoded value as described in [Creating a base64 credential string](#getting-mcp-config-base64).
 
 6. If you want to use your IBM Cloud bearer token as your authorization credentials (for Claude only), copy or generate your bearer token. See [Generating an IBM Cloud IAM token by using an API key](https://cloud.ibm.com/docs/account?topic=account-iamtoken_from_apikey&interface=ui){: external}.
 
