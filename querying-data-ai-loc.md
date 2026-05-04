@@ -141,7 +141,7 @@ To get the required information:
         {: codeblock}
 
 2. Log into IBM Cloud.
-3. To find the `<console-host>` and CRN values, go to **Resources** and select your {{site.data.keyword.lakehouse_short}} instance.
+3. To find the `<console-host>` and CRN values, go to **Resources list** from the navigation menu and select your {{site.data.keyword.lakehouse_short}} instance from **Database** dropdown.
 4. Get the value of `<console-host>` by copying the first part of the web console URL. For example: `console-ibm-cator.lakehouse.saas.ibm.com`
 5. Get your {{site.data.keyword.lakehouse_short}} instance CRN by copying the CRN value. The CRN has the following format: `crn:v1:bluemix:public:lakehouse:us-south/a/...`
 6. Copy your IBM Cloud API key or if necessary, create one. See [Creating an API key](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key){: external}.
