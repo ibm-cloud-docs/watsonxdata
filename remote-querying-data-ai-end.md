@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-05-04"
+lastupdated: "2026-05-05"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -113,7 +113,7 @@ To get your credentials and instance information:
    1. If you do not have an existing API key, create your API key. For more information, see [Creating an API key](https://cloud.ibm.com/docs/account?topic=account-userapikey&interface=ui#create_user_key){: external}.
    2. Transform your API key into a Base64-encoded value as described in [Creating a base64 credential string](#getting-mcp-config-base64).
 
-6. If you want to use your IBM Cloud bearer token as your authorization credentials (for Claude only), copy or generate your bearer token. See [Generating an IBM Cloud IAM token by using an API key](https://cloud.ibm.com/docs/account?topic=account-iamtoken_from_apikey&interface=ui){: external}.
+6. If you want to use your IBM Cloud bearer token as your authorization credentials, copy or generate your bearer token. See [Generating an IBM Cloud IAM token by using an API key](https://cloud.ibm.com/docs/account?topic=account-iamtoken_from_apikey&interface=ui){: external}.
 
 ### Creating a base64 credential string
 {: #getting-mcp-config-base64}
@@ -183,7 +183,7 @@ To configure the host:
      ```
      {: codeblock}
 
-     **For Claude Desktop (using API credentials):**
+     **For Claude (using API credentials):**
 
      ```bash
      {
@@ -204,7 +204,7 @@ To configure the host:
      ```
      {: codeblock}
 
-     **For Claude Desktop (using bearer token):**
+     **For Claude and Bob (using bearer token):**
 
      ```bash
      {
