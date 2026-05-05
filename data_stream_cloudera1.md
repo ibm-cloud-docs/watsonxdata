@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-04-30"
+lastupdated: "2026-05-05"
 
 keywords: lakehouse, remote data, cloudera, {{site.data.keyword.lakehouse_short}}
 
@@ -71,7 +71,7 @@ The integration works through the following components:
 
 - Only Presto engine is supported for querying Cloudera tables
 - Tables are read-only from {{site.data.keyword.lakehouse_short}}
-- Write operations (`INSERT`, `CREATE TABLE`, `UPDATE`, `DELETE`) are not supported when querying through {{site.data.keyword.lakehouse_short}}
+- `UPDATE` and `DELETE` operations are not supported when querying Hive tables through {{site.data.keyword.lakehouse_short}}
 - Data modifications must be performed directly in Cloudera
 
 ## Security considerations
