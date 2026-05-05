@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2026-04-21"
+lastupdated: "2026-05-05"
 
 keywords: watsonxdata, release notes
 
@@ -29,6 +29,16 @@ For watsonx.data on-prem what's new, see [Release notes for watsonx.data](https:
 For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-prem Premium](https://www.ibm.com/docs/en/watsonx/watsonxdata-premium/2.2.x?topic=overview-whats-new-in-watsonxdata).
 
 Technology preview features: We also offer a Technology preview section that includes features currently in preview. These features are not generally available and may change before release. To view the release notes for technology preview items, see [Technology preview](/docs/watsonxdata?topic=watsonxdata-release_pp).
+
+## 13 May 2026 - Version 2.3.3
+{: #lakehouse_13may2026}
+{: release-note}
+
+
+Integration enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following enhanced integration with other services:
+   You can now apply Ranger policies to the following catalogs. For more information, see [Enabling Apache Ranger policy for resources](docs/watsonxdata?topic=watsonxdata-ranger_1).  
 
 ## 09 April 2026 - Version 2.3.2
 {: #lakehouse_09apr2026}
