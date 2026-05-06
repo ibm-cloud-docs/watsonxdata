@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-09-25"
+lastupdated: "2026-05-06"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -179,7 +179,7 @@ If extra values are passed in the properties of request object, they are not sto
 As the open source Unity Catalog specification does not support the `BIGINT` data type, columns defined as `BIGINT` when creating tables via Presto will behave the same as `LONG` when accessed from the Unity API.
 {: note}
 
-For more information, see [API documentation](https://cloud.ibm.com/apidocs/watsonxdata-mds-unity).
+For more information, see [API documentation](https://cloud.ibm.com/apidocs/watsonxdata-mds).
 
 ## Iceberg Catalog REST API
 {: #iceberg_cat_api}
@@ -279,7 +279,7 @@ Due to the constraint of not modifying the schema, the following features are no
 - Metrics endpoint added as dummy only.
 - Presto cannot query views created using the Iceberg REST catalog API due to encoding incompatibility. This same incompatibility affects views created from Spark, which Presto also cannot query. However, Spark can query views created through the REST catalog API without any issues.
 
-For more information, see [API documentation](https://cloud.ibm.com/apidocs/watsonxdata-ibm-mds-iceberg).
+For more information, see [API documentation](https://cloud.ibm.com/apidocs/watsonxdata-mds).
 
 ## Common limitation: Unsupported attributes in catalog and table creation
 {: #known_issues20302}

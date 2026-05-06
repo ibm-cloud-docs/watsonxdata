@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2026-05-05"
+lastupdated: "2026-05-06"
 
 keywords: watsonxdata, release notes
 
@@ -428,7 +428,7 @@ Metadata Service (MDS) enhancements
    * `AccountId` is now required for all direct calls to the MDS REST Service (Iceberg Catalog and Unity Catalog). Requests that do not include this header will fail.
    * The endpoint for Iceberg operations is now updated from `/mds/iceberg` to `/api/v1/iceberg`.
 
-   For more information, see [API documentation](https://cloud.ibm.com/apidocs/watsonxdata-ibm-mds-iceberg).
+   For more information, see [API documentation](https://cloud.ibm.com/apidocs/watsonxdata-mds).
 
 CPDCTL CLI enhancements
 
