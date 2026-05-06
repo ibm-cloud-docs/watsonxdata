@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-05-05"
+lastupdated: "2026-05-06"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -45,37 +45,6 @@ To get the configuration from the web console:
 
 1. Log in to your watsonx.data web console.
 2. From the navigation menu, select **Configurations** and click **MCP server**.
-
-   The page displays the following information:
-
-   **MCP URL endpoint**
-
-   : The complete URL endpoint for connecting to the MCP server. This URL has the format:
-   `https://<console-host>/api/v1/watsonxdata/mcp`
-
-   **Instance CRN**
-
-   : The Cloud Resource Name (CRN) of your watsonx.data instance. The CRN has the format:
-   `crn:v1:staging:public:lakehouse:ca-tor:a/<account-id>:<instance-id>::`
-
-   **Available tools**
-
-   : A list of MCP tools that you can use with your hosts, including:
-
-      - Manage Presto & Spark engines
-      - Explore and modify schemas and tables
-      - Run and optimize queries (SELECT, INSERT, UPDATE)
-      - Submit and control Spark jobs
-      - Ingest data
-
-   **MCP configuration**
-
-   : Pre-configured code snippets for different hosts. You can select from the following options:
-
-      - **Bob**: Configuration for IBM Bob host
-      - **Claude**: Configuration for Claude Desktop
-      - **Other**: Generic configuration for other MCP-compatible clients
-
 4. Select the appropriate option based on your host type:
 
       - **Bob**: Configuration for IBM Bob host

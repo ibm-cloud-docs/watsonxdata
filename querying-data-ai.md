@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-05-05"
+lastupdated: "2026-05-06"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -58,7 +58,7 @@ The following table compares the characteristics of the remote and local MCP ser
 | Intended use | Managed, scalable, and governed access | Highly customizable, environment-specific |
 | Connectivity environment | Internet connection required. | Internet connection required. |
 | Supported hosts | Any MCP-compliant host | Any MCP-compliant host |
-| Integration and customization | Standardized integration | Custom integration |
+| Integration and customization | Standardized, platform-defined integration | Fully customizable, user-defined integration |
 {: caption="Characteristics of remote and local MCP servers" caption-side="bottom"}
 
 ## Capabilities
