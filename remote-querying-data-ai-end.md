@@ -45,7 +45,7 @@ To get the configuration from the web console:
 
 1. Log in to your watsonx.data web console.
 2. From the navigation menu, select **Configurations** and click **MCP server**.
-4. Select the appropriate option based on your host type:
+4. From the **MCP configuration** section, select the appropriate option based on your host type:
 
       - **Bob**: Configuration for IBM Bob host
       - **Claude**: Configuration for Claude Desktop
