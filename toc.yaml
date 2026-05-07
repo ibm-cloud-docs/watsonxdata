@@ -493,6 +493,7 @@ toc:
           - ts_ip_restrict_issue.md
           - ranger_crash_trble.md
           - optm_jdbc_query.md
+          - troubleshooting-hdfs-catalog-issues.md
           - topicgroup:
               label: Spark
               topics:
