@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-05-05"
+lastupdated: "2026-05-08"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -149,3 +149,4 @@ Provide appropriate values for Organizational Unit (OU), Organization (O), Locat
 * In Apache Iceberg catalog, an error occurs if a policy is not defined for the snapshots views related to the tables in Ranger. You must manually define policies in Apache Ranger to eliminate the error.
 * watsonx.data supports only access control feature for Apache Ranger integration in 2.0.0 release.
 * Apache Ranger integration does not support HTTP URLs; you must use HTTPS URLs only.
+* When configuring Ranger integration using an HTTP URL, you may encounter an error stating "SSL and certificate must be provided for Ranger" even though certificates are not required for HTTP connections.
