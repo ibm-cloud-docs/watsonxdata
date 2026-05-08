@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2026-05-06"
+lastupdated: "2026-05-08"
 
 keywords: watsonxdata, release notes
 
@@ -38,7 +38,7 @@ Technology preview features: We also offer a Technology preview section that inc
 Integration enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following enhanced integration with other services:
-   You can now apply Ranger policies to the following catalogs. For more information, see [Enabling Apache Ranger policy for resources](docs/watsonxdata?topic=watsonxdata-ranger_1).  
+   You can now apply Ranger policies to catalogs. For more information, see [Enabling Apache Ranger policy for resources](docs/watsonxdata?topic=watsonxdata-ranger_1).  
 
 ## 09 April 2026 - Version 2.3.2
 {: #lakehouse_09apr2026}
