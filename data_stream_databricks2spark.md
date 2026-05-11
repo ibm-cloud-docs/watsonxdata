@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-05-08"
+lastupdated: "2026-05-11"
 
 keywords: lakehouse, remote data, confluent, {{site.data.keyword.lakehouse_short}}
 
@@ -127,7 +127,7 @@ Complete the prerequisites outlined in [Integrating Databricks Unity Catalog in 
    - `your_aws_access_key`: AWS access key (for Amazon S3 storage)
    - `your_aws_secret_key`: AWS secret key (for Amazon S3 storage)
 
-   The OAuth client ID and secret can be obtained from Service Principals in Databricks. For more information, see the IBM Cloud documentation.
+   The OAuth client ID and secret can be obtained from Service Principals in Databricks. For more information, see [Integrating Databricks Unity Catalog in {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=watsonxdata-data_stream_databricks1).
    {: note}
 
 2. Choose a submission method
@@ -221,50 +221,53 @@ Complete the prerequisites outlined in [Integrating Databricks Unity Catalog in 
 
    You can query managed Delta tables that use Unity Catalog-managed (native) storage from {{site.data.keyword.lakehouse_short}} Spark by reading them as Iceberg tables through the Iceberg REST API.
 
-   To enable this capability, you must first configure the Delta table in Databricks to support the UniForm format.
+   1. To enable this capability, you must first configure the Delta table in Databricks to support the Uniform format.
 
-   **Note:** Ensure that you have the required permissions to modify table properties and run maintenance operations on the target table in Databricks.
+      Ensure that you have the required permissions to modify table properties and run maintenance operations on the target table in Databricks.
+      {: note}
 
-   Run the following commands in the Databricks SQL Editor.
+   2. Run the following commands in the Databricks SQL Editor:
 
-   ```sql
-   ALTER TABLE spark_deegandh.test_schema.sensor_readings
-   SET TBLPROPERTIES (
-     'delta.enableDeletionVectors' = 'false'
-   );
+      ```sql
+      ALTER TABLE spark_deegandh.test_schema.sensor_readings
+      SET TBLPROPERTIES (
+        'delta.enableDeletionVectors' = 'false'
+      );
 
-   REORG TABLE spark_deegandh.test_schema.sensor_readings APPLY (PURGE);
+      REORG TABLE spark_deegandh.test_schema.sensor_readings APPLY (PURGE);
 
-   ALTER TABLE spark_deegandh.test_schema.sensor_readings
-   SET TBLPROPERTIES (
-     'delta.enableIcebergCompatV2' = 'true',
-     'delta.columnMapping.mode' = 'name',
-     'delta.universalFormat.enabledFormats' = 'iceberg'
-   );
+      ALTER TABLE spark_deegandh.test_schema.sensor_readings
+      SET TBLPROPERTIES (
+        'delta.enableIcebergCompatV2' = 'true',
+        'delta.columnMapping.mode' = 'name',
+        'delta.universalFormat.enabledFormats' = 'iceberg'
+      );
 
-   SHOW TBLPROPERTIES spark_deegandh.test_schema.sensor_readings;
-   ```
-   {: codeblock}
+      SHOW TBLPROPERTIES spark_deegandh.test_schema.sensor_readings;
+      ```
+      {: codeblock}
 
-   After completing these steps, the Delta table is enabled for UniForm and can be accessed as an Iceberg table through the Unity Catalog Iceberg REST API.
+
+   After completing these steps, the Delta table is enabled for Uniform and can be accessed as an Iceberg table through the Unity Catalog Iceberg REST API.
 
    You should see the following properties in the output:
 
    - `delta.universalFormat.enabledFormats = iceberg`
    - `delta.enableIcebergCompatV2 = true`
 
-   You can then query the Delta table from {{site.data.keyword.lakehouse_short}} Spark by using the same script, leveraging credential vending through the Unity Catalog Iceberg REST API endpoint (`/unity-catalog/iceberg-rest`), as described in the previous step.
+   3. You can then query the Delta table from {{site.data.keyword.lakehouse_short}} Spark by using the same script, leveraging credential vending through the Unity Catalog Iceberg REST API endpoint (`/unity-catalog/iceberg-rest`), as described in the previous step.
 
-   **Note:** Deletion vectors must be disabled and fully purged before enabling Iceberg compatibility. If this step is skipped, the configuration will fail.
+      Deletion vectors must be disabled and fully purged before enabling Iceberg compatibility. If this step is skipped, the configuration will fail.
+      {: note}
 
-   **Additional information:** For more details about UniForm and creating Delta tables with UniForm (universal format) enabled, see the official Databricks documentation: [Delta UniForm: Universal Format for Lakehouse Interoperability](https://docs.databricks.com/en/delta/uniform.html).
+      For more details about Uniform and creating Delta tables with Uniform (universal format) enabled, see the official Databricks documentation: [Delta Uniform: Universal Format for Lakehouse Interoperability](https://docs.databricks.com/en/delta/uniform.html).
 
 ## Results
 {: #data_stream_databricks2spark4}
 
 You can now query remote data from Databricks Unity Catalog without copying data. The queries execute directly against the data in the external storage location.
 
-## Example output
+## Example output for Iceberg table
 {: #data_stream_databricks2spark5}
 
 Namespaces in catalog: `spark_deegandh`
@@ -323,67 +326,68 @@ Data (first 20 rows):
    Total records: 1
 
 ## Example output for the Delta table
+{: #data_stream_databricks2spark6}
 
 Query:
 
-```python
-spark.sql(f"SHOW NAMESPACES IN {CATALOG_NAME}").show(truncate=False)
-```
-{: codeblock}
+   ```python
+   spark.sql(f"SHOW NAMESPACES IN {CATALOG_NAME}").show(truncate=False)
+   ```
+   {: codeblock}
 
 Output:
 
 Namespaces in catalog: `spark_deegandh`
 
-```sql
-+----------------------------------+
-|namespace                         |
-+----------------------------------+
-|default                           |
-|delta_share_demo                  |
-|feb14schema                       |
-|information_schema                |
-|mrmadira_external_schema          |
-|test_schema                       |
-|tpcdsdbiceberg_10tb_partitioned_uc|
-+----------------------------------+
-```
-{: screen}
+   ```sql
+   +----------------------------------+
+   |namespace                         |
+   +----------------------------------+
+   |default                           |
+   |delta_share_demo                  |
+   |feb14schema                       |
+   |information_schema                |
+   |mrmadira_external_schema          |
+   |test_schema                       |
+   |tpcdsdbiceberg_10tb_partitioned_uc|
+   +----------------------------------+
+   ```
+   {: screen}
 
 Query:
 
-```python
-spark.sql(f"SHOW TABLES IN {CATALOG_NAME}.{SCHEMA_NAME}").show(truncate=False)
-```
-{: codeblock}
+   ```python
+   spark.sql(f"SHOW TABLES IN {CATALOG_NAME}.{SCHEMA_NAME}").show(truncate=False)
+   ```
+   {: codeblock}
 
 Output:
 
-Tables in namespace: `spark_deegandh.test_schema`:
+   Tables in namespace: `spark_deegandh.test_schema`:
 
-```sql
-+-----------+---------------+-----------+
-|namespace  |tableName      |isTemporary|
-+-----------+---------------+-----------+
-|test_schema|sensor_readings|false      |
-+-----------+---------------+-----------+
-```
-{: screen}
+   ```sql
+   +-----------+---------------+-----------+
+   |namespace  |tableName      |isTemporary|
+   +-----------+---------------+-----------+
+   |test_schema|sensor_readings|false      |
+   +-----------+---------------+-----------+
+   ```
+   {: screen}
 
 Query:
 
-```python
-df = spark.sql(f"SELECT * FROM {full_table_name}")
+   ```python
+   df = spark.sql(f"SELECT * FROM {full_table_name}")
 
-df.printSchema()
+   df.printSchema()
 
-df.show(20, truncate=False)
+   df.show(20, truncate=False)
 
-count = df.count()
+   count = df.count()
 
-print(f"Total records: {count}")
-```
-{: codeblock}
+   print(f"Total records: {count}")
+   ```
+   {: codeblock}
 
 Output:
 
@@ -391,37 +395,37 @@ Querying: `spark_deegandh.test_schema.sensor_readings`:
 
 Schema:
 
-```sql
-root
- |-- sensor_id: integer (nullable = true)
- |-- location: string (nullable = true)
- |-- temperature: double (nullable = true)
- |-- humidity: double (nullable = true)
- |-- battery_level: double (nullable = true)
- |-- reading_timestamp: string (nullable = true)
- |-- is_active: boolean (nullable = true)
-```
-{: screen}
+   ```sql
+   root
+    |-- sensor_id: integer (nullable = true)
+    |-- location: string (nullable = true)
+    |-- temperature: double (nullable = true)
+    |-- humidity: double (nullable = true)
+    |-- battery_level: double (nullable = true)
+    |-- reading_timestamp: string (nullable = true)
+    |-- is_active: boolean (nullable = true)
+   ```
+   {: screen}
 
 Data (first 20 rows):
 
-```sql
-+---------+-----------+-----------+--------+-------------+-------------------+---------+
-|sensor_id|location   |temperature|humidity|battery_level|reading_timestamp  |is_active|
-+---------+-----------+-----------+--------+-------------+-------------------+---------+
-|1001     |Warehouse-A|24.5       |60.2    |89.5         |2026-04-01 10:00:00|true     |
-|1002     |Warehouse-B|26.1       |58.0    |76.3         |2026-04-01 10:05:00|true     |
-|1003     |Warehouse-C|22.8       |65.4    |54.2         |2026-04-01 10:10:00|false    |
-|1004     |Warehouse-A|25.0       |61.5    |88.0         |2026-04-01 10:15:00|true     |
-|1005     |Warehouse-B|27.3       |55.2    |70.1         |2026-04-01 10:20:00|true     |
-|1006     |Warehouse-C|23.5       |66.8    |49.9         |2026-04-01 10:25:00|false    |
-|1007     |Warehouse-A|24.8       |62.1    |85.7         |2026-04-01 10:30:00|true     |
-|1008     |Warehouse-B|26.9       |57.6    |72.4         |2026-04-01 10:35:00|true     |
-|1009     |Warehouse-C|22.2       |67.0    |45.3         |2026-04-01 10:40:00|false    |
-|1010     |Warehouse-A|25.3       |60.9    |87.2         |2026-04-01 10:45:00|true     |
-+---------+-----------+-----------+--------+-------------+-------------------+---------+
-```
-{: screen}
+   ```sql
+   +---------+-----------+-----------+--------+-------------+-------------------+---------+
+   |sensor_id|location   |temperature|humidity|battery_level|reading_timestamp  |is_active|
+   +---------+-----------+-----------+--------+-------------+-------------------+---------+
+   |1001     |Warehouse-A|24.5       |60.2    |89.5         |2026-04-01 10:00:00|true     |
+   |1002     |Warehouse-B|26.1       |58.0    |76.3         |2026-04-01 10:05:00|true     |
+   |1003     |Warehouse-C|22.8       |65.4    |54.2         |2026-04-01 10:10:00|false    |
+   |1004     |Warehouse-A|25.0       |61.5    |88.0         |2026-04-01 10:15:00|true     |
+   |1005     |Warehouse-B|27.3       |55.2    |70.1         |2026-04-01 10:20:00|true     |
+   |1006     |Warehouse-C|23.5       |66.8    |49.9         |2026-04-01 10:25:00|false    |
+   |1007     |Warehouse-A|24.8       |62.1    |85.7         |2026-04-01 10:30:00|true     |
+   |1008     |Warehouse-B|26.9       |57.6    |72.4         |2026-04-01 10:35:00|true     |
+   |1009     |Warehouse-C|22.2       |67.0    |45.3         |2026-04-01 10:40:00|false    |
+   |1010     |Warehouse-A|25.3       |60.9    |87.2         |2026-04-01 10:45:00|true     |
+   +---------+-----------+-----------+--------+-------------+-------------------+---------+
+   ```
+   {: screen}
 
 Total records: `10`
 
