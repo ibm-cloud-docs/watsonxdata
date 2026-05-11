@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-02-16"
+lastupdated: "2026-05-11"
 
 keywords: lakehouse, watsonx data, roles, access
 subcollection: watsonxdata
@@ -28,7 +28,7 @@ subcollection: watsonxdata
 # Metering and usage experience
 {: #manage_bil_newarch}
 
-The metering service in {{site.data.keyword.lakehouse_full}} provides users with real-time visibility on engine consumption and resource usage. The Billing and Usage screen provides a comprehensive view of resource consumption and cost metrics for your instance. It helps you monitor billable infrastructure components, and track Resource Unit (RU) usage.
+The metering service in {{site.data.keyword.lakehouse_full}} provides users with real-time visibility on engine consumption and resource usage. The Resource Usage screen provides a comprehensive view of resource consumption and cost metrics for your instance. It helps you monitor billable infrastructure components, and track Resource Unit (RU) usage.
 {: shortdesc}
 
 It captures engine session runtime, engine type with T-shirt size, and hourly Resource Unit (RU) usage data, creating a unified view that helps you track usage, understand costs, and optimize resources.
@@ -41,6 +41,8 @@ The following charge matrices apply to {{site.data.keyword.lakehouse_short}}:
 * Compute cluster: Consists of coordinator and worker nodes that run the query engine. Each node consumes a set of resource units per hour (as defined by the {{site.data.keyword.Bluemix_short}}) until the node is paused or deleted.
 
 * Support services: Consists of supporting services such as metadata storage and access control. Metering for support services starts when you launch the instance and initiate the Quick Start step, and continue until you delete the instance.
+
+* Common Policy Gateway(CPG): The Common Policy Gateway (CPG) is a critical component in watsonx.data that serves as a centralized gateway for integrating external policy engines (IBM Knowledge Catalog, Apache Ranger).
 
 
 ## Runtime-Level metering
@@ -74,11 +76,11 @@ Usage history per engine:    .
 ## Viewing the usage details
 {: #plug_newarch}
 
-To view current billing and usage details, complete the following steps:
+To view current resource usage details, complete the following steps:
 
 1. Log in to the {{site.data.keyword.lakehouse_short}} console.
 
-1. From the navigation menu, select **Billing and usage**. The **Billing and usage** page opens. You can view the following:
+1. From the navigation menu, select **Resource usage**. The **Resource usage** page opens. You can view the following:
 
 
    * **Total usage**
@@ -105,7 +107,7 @@ To view current billing and usage details, complete the following steps:
    | Total Usage (RUs)            | Cumulative RU consumption. |
    | Total Uptime             | Duration the component was active. |
    | Owner.  |   Associated user or team.|
-   {: caption="Billing and usage" caption-side="bottom"}
+   {: caption="Resource usage" caption-side="bottom"}
 
    When you select an engine (e.g., Presto Java), you can view the detailed metrics:
 
@@ -147,7 +149,7 @@ This fine-grained metering allows for greater transparency and control, capturin
 
 For example:
 
-**Scenario 1: Presto C++ starter instance usage**
+**Scenario 1: Instance with Presto C++ starter and CPG service**
 
 You create a {{site.data.keyword.lakehouse_short}} instance configured with Presto C++ starter, which includes:
 
@@ -161,7 +163,8 @@ The usage time which, is monitored in seconds will be internally converted to ho
 | Presto C++ starter with 1 coordinator |  (14 * 60) s + 30 s = 870 s| (870/3600) h |2 RU| 0.2416 h * 2 RU = 0.4832 RU =$0.4832 USD|
 | Presto C++ starter with 1 worker node| (14 * 60) s + 30 s = 870 s| (870/3600) h | 2 RU | 0.2416 h * 2 RU = 0.4832 RU =$0.4832 USD|
 | Supporting services | (14 * 60) s + 30 s = 870 s | (870/3600) h |  3 RU| 0.2416 h * 3 RU = 0.725 RU = $0.725 USD|
-|Total | 1740 s| 0.4833 h |7RUs|1.6914 RU = $1.6914 USD = $1.69 USD|
+| CPG | (14 * 60) s + 30 s = 870 s | (870/3600) h |  0.08 RU| 0.2416 h * 0.08 RU = 0.019328 RU = $0.019328 USD|
+|Total | 3480 s| 0.9667 h |7.08 RU |1.7107 RU = $1.7107 USD = $1.711 USD|
 {: caption="Presto C++ starter instance usage calculation" caption-side="bottom"}
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2026-05-08"
+lastupdated: "2026-05-11"
 
 keywords: watsonxdata, release notes
 
@@ -39,6 +39,13 @@ Integration enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following enhanced integration with other services:
    You can now apply Ranger policies to catalogs. For more information, see [Enabling Apache Ranger policy for resources](docs/watsonxdata?topic=watsonxdata-ranger_1).  
+
+Access management enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following access management enhancements:
+   When you enable Common Policy Gateway(CPG) services as part of an AMS integration, it operates as a metered service and incurs charges while in use. AMS automatically generates metering events when you provision CPG to start billing, and it stops billing when you disable the service. This approach ensures you are charged only for the time during which CPG is actively running, providing clear and accurate usage-based billing. For information about the Billing details, see [IBM Cloud billing](https://cloud.ibm.com/billing) page. For information about the resource unit usage, see [Metering and usage experience](/docs/watsonxdata?topic=watsonxdata-manage_bil_newarch).
+
+
 
 ## 09 April 2026 - Version 2.3.2
 {: #lakehouse_09apr2026}
