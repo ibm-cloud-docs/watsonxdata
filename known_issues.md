@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-04-07"
+lastupdated: "2026-05-11"
 
 keywords: lakehouse
 
@@ -30,6 +30,16 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+## Catalog creation with mixed-case names causes "Catalog does not exist" error
+{: #known_issue69460}
+
+When you create an Apache Iceberg catalog with a mixed-case name (containing both uppercase and lowercase characters) during the default IBM COS bucket creation flow, subsequent operations fail with a "Catalog does not exist" error.
+
+**Workarounds**: To resolve this issue, complete the following steps:
+
+1. Delete the catalog that was created with mixed-case names.
+2. Recreate the catalog in lowercase.
 
 
 ## `WHERE` clause comparison fails for `TIMESTAMP(n)` datatypes when precision greater than 3

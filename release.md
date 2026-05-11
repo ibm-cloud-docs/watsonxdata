@@ -46,6 +46,13 @@ Access management enhancements
    When you enable Common Policy Gateway(CPG) services as part of an AMS integration, it operates as a metered service and incurs charges while in use. AMS automatically generates metering events when you provision CPG to start billing, and it stops billing when you disable the service. This approach ensures you are charged only for the time during which CPG is actively running, providing clear and accurate usage-based billing. For information about the Billing details, see [IBM Cloud billing](https://cloud.ibm.com/billing) page. For information about the resource unit usage, see [Metering and usage experience](/docs/watsonxdata?topic=watsonxdata-manage_bil_newarch).
 
 
+Deprecated features
+
+: The following features are deprecated in this release:
+
+   * Azure Data Lake Storage (ADLS) Gen1 is deprecated and removed. Existing ADLS Gen1 storages will continue to work. You must transition to ADLS Gen2 for new storage configurations as ADLS Gen1 is no longer available for new deployments.  For more information about configuring ADLS Gen2, see [Azure Data Lake Storage](/docs/watsonxdata?topic=watsonxdata-adls_genblob_storage).
+
+
 
 ## 09 April 2026 - Version 2.3.2
 {: #lakehouse_09apr2026}
