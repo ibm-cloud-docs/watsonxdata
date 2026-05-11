@@ -31,6 +31,11 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
+## Ranger integration requires certificate upload for self-signed certificates
+{: #known_issue71068}
+
+Ranger integration does not work if you add a Ranger instance over HTTPS using a self-signed certificate without uploading the certificate
+
 ## Column masking policies in Ranger do not support integer and bigint data types.
 {: #known_issue71724}
 
