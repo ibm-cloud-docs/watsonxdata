@@ -31,13 +31,10 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
-## Column masking does not support integer and bigint data types
+## Column masking policies in Ranger do not support integer and bigint data types.
 {: #known_issue71724}
 
-Column masking policies do not support integer and bigint data types. When you attempt to apply column masking to columns with these data types, the operation fails.
-
-This limitation applies to both Ranger and AMS (Access Management Service) integrations.
-{: note}
+Column masking policies in Ranger do not support integer and bigint data types. When you attempt to apply column masking to columns with these data types, the operation fails.
 
 ## Tables created externally do not appear immediately in Data Manager
 {: #known_issue71368}
