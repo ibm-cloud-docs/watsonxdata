@@ -31,6 +31,57 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
+## Tables created externally do not appear immediately in Data Manager
+{: #known_issue71368}
+
+When a table is created using Spark or any external engine, and the `SHOW TABLES` result is already cached in Presto, the newly created tables may not appear immediately in Data Manager until the metastore cache is refreshed. However, you can still query the table directly.
+
+The metastore cache is refreshed automatically based on the configured cache interval (default: 240 minutes). You can manually invalidate the cache using the following procedures.
+
+
+1. Ensure that the `system.invalidate_metastore_cache` procedure is enabled by setting the following property to `true`:
+
+   ```bash
+   hive.invalidate-metastore-cache-procedure-enabled=true
+   ```
+   {: codeblock}
+
+2. Run one of the following commands based on your requirement:
+
+   **To invalidate all metastore caches:**
+
+   ```bash
+   CALL system.invalidate_metastore_cache();
+   ```
+   {: codeblock}
+
+   **To invalidate cache for a specific schema:**
+
+   ```bash
+   CALL system.invalidate_metastore_cache('schema_name');
+   ```
+   {: codeblock}
+
+   **To invalidate cache for a specific table:**
+
+   ```bash
+   CALL system.invalidate_metastore_cache('schema_name', 'table_name');
+   ```
+   {: codeblock}
+
+   **To invalidate cache for a specific partition:**
+
+   ```bash
+   CALL system.invalidate_metastore_cache(
+       'schema_name',
+       'table_name',
+       ARRAY['partition_column'],
+       ARRAY['partition_value']
+   );
+   ```
+   {: codeblock}
+
+
 ## Catalog creation with mixed-case names causes "Catalog does not exist" error
 {: #known_issue69460}
 
