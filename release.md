@@ -58,7 +58,9 @@ Remote MCP configuration details available in web console
 Access management enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following access management enhancements:
-   When you enable Common Policy Gateway(CPG) services as part of an AMS integration, it operates as a metered service and incurs charges while in use. AMS automatically generates metering events when you provision CPG to start billing, and it stops billing when you disable the service. This approach ensures you are charged only for the time during which CPG is actively running, providing clear and accurate usage-based billing. For information about the Billing details, see [IBM Cloud billing](https://cloud.ibm.com/billing) page. For information about the resource unit usage, see [Metering and usage experience](/docs/watsonxdata?topic=watsonxdata-manage_bil_newarch).
+   * When you enable Common Policy Gateway(CPG) services as part of an AMS integration, it operates as a metered service and incurs charges while in use. AMS automatically generates metering events when you provision CPG to start billing, and it stops billing when you disable the service. This approach ensures you are charged only for the time during which CPG is actively running, providing clear and accurate usage-based billing. For information about the Billing details, see [IBM Cloud billing](https://cloud.ibm.com/billing) page. For information about the resource unit usage, see [Metering and usage experience](/docs/watsonxdata?topic=watsonxdata-manage_bil_newarch).
+
+   * Introduced new API for access management related functionalities. See [watsonx.data AMS APIs](https://cloud.ibm.com/apidocs/watsonxdata-ams).
 
 
 Deprecated features
