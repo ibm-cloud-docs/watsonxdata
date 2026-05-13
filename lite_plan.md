@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-03-03"
+lastupdated: "2026-05-13"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -93,6 +93,8 @@ Use the **Start working with data** option to query data. To allow a seamless qu
 
     * **Ingest data into watsonx.data** : Select this tile to perform data ingestion.
 
+    * **Build NoSQL and AI applications** : Data Engineer, and Platform Administrator can create their own data base and explore the product.
+
     
 
 
@@ -172,6 +174,13 @@ You cannot scale the existing engine or service or add a new engine (or service)
 You can add only one Presto (Java) engine, Spark engine (single node, small size - 8 vCPU, 32GB node) and Milvus service (Milvus with size specification, Starter - 1 Million vectors, Index Parameters - 64, Segment size (1024)). To understand the restrictions, see [Lite plan features and restrictions](/docs/watsonxdata?topic=watsonxdata-getting-started#limitations-lite){: external}.
 {: important}
 
+## Building scalable, real-time NoSQL and AI applications with Astra DB
+{: #astra}
+{: step}
+
+Use the **Build NoSQL and AI applications** option to build scalable, real-time NoSQL and AI applications with Astra DB.
+
+When you select the **Build NoSQL and AI applications** option, the Astra DB sign up page opens. Singn In top continnue to Astra DB user interface.
 
 
 ## Exploring the Query History Monitoring and Management

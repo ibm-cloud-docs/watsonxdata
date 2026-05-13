@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-02-26"
+lastupdated: "2026-05-13"
 
 keywords: watsonx.data, lite, plan, instance
 
@@ -153,7 +153,7 @@ Perform the following steps to provision a Lite plan instance by using CLI.
 3. Create a new formation.
 
     ```bash
-    ibmcloud resource service-instance-create <instance-name> lakehouse <plan-id> <region> -g <resource-group> -p '{"datacenter": "<data-center>","cloud_type": "<cloud-type>","use_case": "<use_case_template>"}'
+    ibmcloud resource service-instance-create <instance-name> lakehouse <plan-id> <region> -g <resource-group> -p '{"datacenter": "<data-center>","cloud_type": "<cloud-type>"}'
     ```
     {: codeblock}
 
@@ -175,7 +175,8 @@ Perform the following steps to provision a Lite plan instance by using CLI.
     - `cloud_type`:
        - `ibm`: For fully managed account instances (default).
        - `aws_vpc`: For customer-owned account instances.
-    - `use_case_template`: The default value accepted by the parameter is `ai (Generative AI)`.
+
+    
 
        
 
@@ -185,7 +186,7 @@ Perform the following steps to provision a Lite plan instance by using CLI.
     Example 1 : Provision a Lite plan in `us-south` region.
 
     ```bash
-    ibmcloud resource service-instance-create watsonx.data-abc lakehouse lakehouse-lite us-south -g Default -p '{"datacenter": "ibm:us-east:wdc", "use_case": "ai"}'
+    ibmcloud resource service-instance-create watsonx.data-abc lakehouse lakehouse-lite us-south -g Default -p '{"datacenter": "ibm:us-east:wdc"}'
     ```
     {: codeblock}
 

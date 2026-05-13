@@ -35,6 +35,12 @@ Technology preview features: We also offer a Technology preview section that inc
 {: release-note}
 
 
+Lite plan enhancements:
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancements to the Lite plan:
+
+   **Explore AstraDB Capabilities in Lite plan** : The watsonx.data Lite plan users can now explore AstraDB capabilities directly from the onboarding experience through a newly introduced tile. This enhancement allows you to seamlessly access AstraDB, where they can build NoSQL and AI applications by creating and exploring databases without additional setup. By simply selecting this option, you are guided into the AstraDB experience, enabling faster evaluation and adoption as part of the trial journey.  For more information, see [Working with the watsonx.data Lite plan](docs/watsonxdata?topic=watsonxdata-tutorial_hp_intro).  
+
 Integration enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following enhanced integration with other services:
