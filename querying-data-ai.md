@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-05-06"
+lastupdated: "2026-05-13"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -28,6 +28,11 @@ subcollection: watsonxdata
 
 # Interacting with data through an MCP server
 {: #querying-data-ai}
+
+
+   The {{site.data.keyword.lakehouse_short}} MCP server is currently available only for instance administrators. Users with non-admin roles (such as USER role) cannot access MCP tools or use the {{site.data.keyword.lakehouse_short}} assistant's MCP functionality, even if they have been granted access to engines.
+   {: note}
+
 
 You can securely access and explore your lakehouse data and metadata through natural language by using {{site.data.keyword.lakehouse_short}} Model Context Protocol (MCP) server and your AI agent.
 

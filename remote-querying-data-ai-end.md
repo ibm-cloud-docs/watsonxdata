@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-05-06"
+lastupdated: "2026-05-13"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -45,12 +45,7 @@ To get the configuration from the web console:
 
 1. Log in to your watsonx.data web console.
 2. From the navigation menu, select **Configurations** and click **MCP server**.
-4. From the **MCP configuration** section, select the appropriate option based on your host type:
-
-      - **Bob**: Configuration for IBM Bob host
-      - **Claude**: Configuration for Claude Desktop
-      - **Other**: Generic configuration for other MCP-compatible clients
-
+4. From the **MCP configuration** section, select the appropriate option based on your host type.
 5. Copy the complete configuration snippet displayed. The snippet includes all required credentials except the Base64-encoded key.
 
 6. Create the Base64-encoded key:
