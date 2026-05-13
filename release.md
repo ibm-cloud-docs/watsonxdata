@@ -45,6 +45,10 @@ Storage enhancements
 
 : You can now quickly confirm that your configuration works and that your system can successfully connect to Hadoop Distributed File System (HDFS) storage. The Test Connection button available on the HDFS configuration page helps you immediately verify that your HDFS configuration is correct and the connection is active. For more information, see [Hadoop Distributed File System](/docs/watsonxdata?topic=watsonxdata-hdfs_storage). 
 
+Remote MCP configuration details available in web console
+
+: You can now obtain the MCP URL endpoint, instance CRN, and pre-configured code snippets directly from the watsonx.data web console for remote MCP server setup. This enhancement simplifies the configuration process by providing all necessary connection details in one convenient location. For more information, see [Setting up the remote MCP server](/docs/watsonxdata?topic=watsonxdata-remote-querying-data-ai-end). 
+
 Access management enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following access management enhancements:
