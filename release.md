@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2026-05-11"
+lastupdated: "2026-05-13"
 
 keywords: watsonxdata, release notes
 
@@ -39,6 +39,11 @@ Integration enhancements
 
 : This release of {{site.data.keyword.lakehouse_short}} introduces the following enhanced integration with other services:
    You can now apply Ranger policies to catalogs. For more information, see [Enabling Apache Ranger policy for resources](docs/watsonxdata?topic=watsonxdata-ranger_1).  
+
+
+Storage enhancements
+
+: You can now quickly confirm that your configuration works and that your system can successfully connect to Hadoop Distributed File System (HDFS) storage. The Test Connection button available on the HDFS configuration page helps you immediately verify that your HDFS configuration is correct and the connection is active. For more information, see [Hadoop Distributed File System](/docs/watsonxdata?topic=watsonxdata-hdfs_storage). 
 
 Access management enhancements
 

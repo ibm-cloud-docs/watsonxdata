@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-05-07"
+lastupdated: "2026-05-13"
 
 keywords: watsonxdata, troubleshoot, case sensitivity
 
@@ -26,7 +26,7 @@ subcollection: watsonxdata
 {:pre: .pre}
 {:video: .video}
 
-# Troubleshooting HDFS catalog issues
+# Troubleshooting HDFS catalog errors
 {: #troubleshooting-hdfs-catalog-issues}
 
 The following issues might occur when creating an HDFS catalog in watsonx.data.
@@ -112,37 +112,6 @@ The HDFS or Hive service is unreachable from the client machine.
 
 4. Verify that the client machine has proper network routing to the cluster.
 
-## Missing XInclude file
-{: #hdfs-missing-xinclude-file}
-
-When you try to establish a connection with HDFS catalog, you might encounter an error related to a missing XInclude file.
-
-
-```bash
-java.io.IOException: Fetch fail on include for 'hdfs-site-refreshable.xml' with no fallback
-```
-
-### Why it's happening
-{: #hdfs-xinclude-why}
-
-The `hdfs-site.xml` file declares an XInclude namespace and references a missing file (`hdfs-site-refreshable.xml`) that was not provided.
-
-### How to fix it
-{: #hdfs-xinclude-fix}
-
-Remove the XInclude namespace declaration from `hdfs-site.xml`:
-
-**Before:**
-
-```bash
-<configuration xmlns:xi="http://www.w3.org/2001/XInclude">
-```
-
-**After:**
-
-```bash
-<configuration>
-```
 
 ## No route to host
 {: #hdfs-no-route-to-host}

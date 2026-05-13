@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-05-07"
+lastupdated: "2026-05-13"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
 
@@ -48,6 +48,9 @@ Hadoop Distributed File System (HDFS) is a file system that manages large data s
  | Catalog name | Enter the name of your catalog. |
  | Associate | Click Associate to create the storage. |
  {: caption="Register bucket" caption-side="bottom"}
+
+If you encounter any errors, refer [Troubleshooting HDFS catalog errors](/docs/watsonxdata?topic=watsonxdata-troubleshooting-hdfs-catalog-issues).
+{: note}
 
 ## Related API
 {: #hdfs_api}
