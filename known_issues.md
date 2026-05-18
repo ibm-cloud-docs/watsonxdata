@@ -31,6 +31,11 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
+## New architecture Presto (C++) engine remains in restarting state after deleting properties through API customization
+{: #known_issue72293}
+
+When deleting properties on a new architecture Presto (C++) engine through API customization using the `remove_engine_properties` parameter, the engine enters a restarting state. At the backend, the properties have empty values, and GET API calls also return properties with empty values.
+
 ## {{site.data.keyword.lakehouse_short}} assistant returns context length exceeded error after multiple tool invocations
 {: #known_issue72238}
 
