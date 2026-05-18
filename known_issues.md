@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-05-11"
+lastupdated: "2026-05-18"
 
 keywords: lakehouse
 
@@ -30,6 +30,16 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+## {{site.data.keyword.lakehouse_short}} assistant returns context length exceeded error after multiple tool invocations
+{: #known_issue72238}
+
+When using the {{site.data.keyword.lakehouse_short}} assistant and invoking multiple tools in sequence, users may encounter a context length exceeded error. The assistant returns an HTTP 400 error with the following message:
+
+```bash
+Error code: 400 - {'error': {'message': 'groq error: Please reduce the length of the messages or completion.', 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}, 'provider': 'groq'}
+```
+**Workaround:** Start a new conversation thread in the {{site.data.keyword.lakehouse_short}} assistant.
 
 ## Ranger integration requires certificate upload for self-signed certificates
 {: #known_issue71068}
