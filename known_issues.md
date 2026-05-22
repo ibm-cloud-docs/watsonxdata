@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-05-18"
+lastupdated: "2026-05-22"
 
 keywords: lakehouse
 
@@ -35,6 +35,8 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 {: #known_issue72293}
 
 When deleting properties on a new architecture Presto (C++) engine through API customization using the `remove_engine_properties` parameter, the engine enters a restarting state. At the backend, the properties have empty values, and GET API calls also return properties with empty values.
+
+**Workaround:** Instead of removing the property, patch the default value to reverse the change.
 
 ## {{site.data.keyword.lakehouse_short}} assistant returns context length exceeded error after multiple tool invocations
 {: #known_issue72238}
