@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-03-02"
+lastupdated: "2026-05-26"
 
 keywords: lakehouse, cpdctl, watsonx.data, supporting commands, wx-data
 
@@ -169,7 +169,7 @@ The `bucket` command further supports the following commands:
 | Command | Description |
 | --------- | ------------- |
 | `./cpdctl wx-data bucket list` | Lists all the storages available in {{site.data.keyword.lakehouse_short}} instance. |
-| `./cpdctl wx-data bucket create` | Register a storage in {{site.data.keyword.lakehouse_short}} instance. Use of secrets from an external vault (HashiCorp) is enabled with `create` option. |
+| `./cpdctl wx-data bucket create` | Register a storage in {{site.data.keyword.lakehouse_short}} instance. Use of secrets from an external vault (HashiCorp) is enabled with `create` option. Custom S3 storage creation is supported from CPDCTL version [v1.8.219](https://github.com/IBM/cpdctl/releases/tag/v1.8.219) and later. |
 | `./cpdctl wx-data bucket get` | Get the details of a registered storage in {{site.data.keyword.lakehouse_short}} instance. |
 | `./cpdctl wx-data bucket delete` | Delete a storage from {{site.data.keyword.lakehouse_short}} instance. |
 | `./cpdctl wx-data bucket activate` | Activate a storage bucket in {{site.data.keyword.lakehouse_short}} on IBM Cloud instance only. |
