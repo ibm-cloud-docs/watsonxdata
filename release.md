@@ -62,6 +62,11 @@ Access management enhancements
 
    * Introduced new APIs to support access management–related functionalities. See [watsonx.data AMS APIs](https://cloud.ibm.com/apidocs/watsonxdata-ams).
 
+CPDCTL CLI enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancements to IBM Cloud Pak for Data Command Line Interface (IBM cpdctl):
+
+   * Use the `./cpdctl wx-data bucket create` command in your watsonx.data instance to create custom S3 storages using the CPDCTL version ([v1.8.219](https://github.com/IBM/cpdctl/releases/tag/v1.8.219) and above). For more information, see [bucket](/docs/watsonxdata?topic=watsonxdata-cpdctl_commands_wxdata#cpdctl_commands_wxdatabuck). 
 
 Deprecated features
 
