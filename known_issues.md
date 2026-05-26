@@ -36,8 +36,6 @@ The following limitations and known issues apply to {{site.data.keyword.lakehous
 
 When you attempt to create a table with 3000 columns in Presto, the operation fails with a `java.net.SocketTimeoutException: Read timed out` error. The error message displays `Table already exists` even though the table was not successfully created.
 
-This issue occurs because the default Hive metastore timeout is insufficient for operations involving tables with a large number of columns.
-
 **Workaround:** To resolve this issue, increase the Hive metastore timeout value in the Presto catalog configuration:
 
 1. Add the following property to your catalog properties file located at `/opt/presto/etc/catalogs/<catalog_name>.properties`:
@@ -47,7 +45,7 @@ This issue occurs because the default Hive metastore timeout is insufficient for
    ```
    {: codeblock}
 
-   **Note:** A timeout value of 25 minutes is recommended for tables with 3000 columns. For smaller tables, you can use a lower value such as `120s` (2 minutes).
+   **Note:** A timeout value of 25 minutes is recommended for tables with 3000 columns. For smaller tables, you can use a lower value such as `120 seconds` (2 minutes).
 
 2. Restart the Presto server for the changes to take effect.
 
