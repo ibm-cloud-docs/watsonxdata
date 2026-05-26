@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-01-30"
+lastupdated: "2026-05-11"
 
 keywords: watsonx.data, spark, analytics, provisioning
 subcollection: watsonxdata
@@ -39,7 +39,7 @@ This topic provides the procedure to submit a Spark application by using native 
 * Azure Data Lake Storage (ADLS)
 
 
-   Azure Data Lake Storage (ADLS) Gen1 is deprecated and will be removed in an upcoming release. You must transition to ADLS Gen2 as ADLS Gen1 will no longer be available.
+   Azure Data Lake Storage (ADLS) Gen1 is deprecated and removed. Existing ADLS Gen1 storages will continue to work. You must transition to ADLS Gen2 for new storage configurations as ADLS Gen1 is no longer available for new deployments.
    {: important}
 
 * Amazon S3

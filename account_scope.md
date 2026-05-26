@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-03-12"
+lastupdated: "2026-05-14"
 
 keywords: watsonxdata, scope, resource
 
@@ -81,6 +81,9 @@ If your organization previously relied on separate instances to isolate teams, y
 **Metadata service behavior**
 
 The Metadata Service (MDS) provides REST and Thrift interfaces. In the account‑scoped model:
+
+For Azure BYOC deployments, use the **subscription ID** of the instance wherever `account_id` is required.
+{: note}
 
 * The Thrift interface uses the Thrift‑HTTP protocol (`https://`) instead of the Thrift‑Binary protocol that is used in instance‑scoped instances.
 * All Thrift API calls must include the `account_id` parameter.

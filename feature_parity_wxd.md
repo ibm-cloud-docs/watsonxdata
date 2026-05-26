@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-01-08"
+lastupdated: "2026-04-29"
 
 keywords: lakehouse, milvus, watsonx.data
 
@@ -76,15 +76,15 @@ AWS deployments are currently unavailable in Canada, Japan, and Korea but can be
 | NA | Montréal, Québec | ca-central-1 | ✅ | ❌ | ❌ |
 | EMEA | Frankfurt | eu-central-1 | ✅ | ✅ | ❌ |
 | EMEA | Ireland | eu-west-1 | ✅ | ❌ | ❌ |
-| EMEA | London | eu-west-2 | ✅ | ❌ |❌|
-| EMEA | UAE | me-central-1 | ❌ | ❌ |❌|
-| APAC | Singapore | ap-southeast-1 | ✅ |✅ |❌|
-| APAC | Mumbai, India | ap-south-1 | ✅ | ✅ |❌|
-| APAC | Tokyo, Japan | ap-northeast-1 | ✅ |❌|❌|
-| APAC | Osaka, Japan | ap-northeast-2 | ✅ | ❌ |❌|
-| APAC | Sydney | ap-southeast-2 | ✅ | ✅ |❌|
-| APAC | Hong Kong | ap-east-1 | ❌ | ❌ |❌|
-| SA | Sao Paulo | sa-east-1 | ❌ | ❌ |❌|
+| EMEA | London | eu-west-2 | ✅ | ❌ | ❌ |
+| EMEA | UAE | me-central-1 | ❌ | ❌ | ❌ |
+| APAC | Singapore | ap-southeast-1 | ✅ | ✅ | ❌ |
+| APAC | Mumbai, India | ap-south-1 | ✅ | ✅ | ❌ |
+| APAC | Tokyo, Japan | ap-northeast-1 | ✅ | ❌ | ❌ |
+| APAC | Osaka, Japan | ap-northeast-2 | ✅ | ❌ | ❌ |
+| APAC | Sydney | ap-southeast-2 | ✅ | ✅ | ❌ |
+| APAC | Hong Kong | ap-east-1 | ❌ | ❌ | ❌ |
+| SA | Sao Paulo | sa-east-1 | ❌ | ❌ | ❌ |
 {: caption="AWS availability" caption-side="bottom"}
 
 
@@ -118,10 +118,15 @@ AWS deployments are currently unavailable in Canada, Japan, and Korea but can be
 | NA | The Dalles, Oregon | us-west1 | ✅ | ❌ |❌|
 | NA | Montreal, Quebec | northamerica-northeast1 | ✅ | ❌ |❌|
 | NA | Council Bluffs, Iowa | us-central1 | ✅ | ❌ |❌|
+| NA | Dallas | us-south | ✅ | ❌ | ❌ |
+| NV | Las Vegas | us-west4 | ✅ | ❌ | ❌ |
+| EMEA | Frankfurt | eu-central-1 | ✅ | ❌ | ❌ |
+| EMEA | London | eu-west-2 | ✅ | ❌ | ❌ |
 | EMEA | St. Ghislain, Belgium | europe-west1 | ✅ | ❌ |❌|
 | EMEA | Hamina, Finland | europe-north1 | ✅ | ❌ |❌|
 | EMEA | Eemshaven, Netherlands | europe-west4 | ✅ | ❌ |❌|
 | APAC | Sydney, Australia | australia-southeast1 | ✅ | ❌ |❌|
 | APAC | Hong Kong | asia-east2 | ✅ | ❌ |❌|
 | APAC | Changhua County, Taiwan | asia-east1 | ✅ | ❌ |❌|
+| APAC | Mumbai, India | ap-south-1 | ✅ | ❌ |❌|
 {: caption="Google Cloud Platform" caption-side="bottom"}

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-29"
+lastupdated: "2026-05-11"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
 
@@ -81,11 +81,6 @@ Hadoop Distributed File System (HDFS) is not supported in Milvus.
     * `INT` to `BIGINT`
     * `FLOAT` to `DOUBLE`
     * `DECIMAL` (num1, dec_digits) to `DECIMAL` (num2, dec_digits), where num2>num1.
-
-## Limitations
-{: #a_limitations}
-
-* Use separate containers and storage accounts for ADLS Gen1 and ADLS Gen2 storage for complete metadata synchronization, including tables. Otherwise, a PARTIAL SUCCESS message appears in the sync logs when SYNC finishes.
 
 ## Limitations for SQL statements
 {: #sql_limitations}

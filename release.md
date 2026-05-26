@@ -2,7 +2,7 @@
 
 copyright:
   years: 2023, 2024
-lastupdated: "2026-04-21"
+lastupdated: "2026-05-21"
 
 keywords: watsonxdata, release notes
 
@@ -29,6 +29,47 @@ For watsonx.data on-prem what's new, see [Release notes for watsonx.data](https:
 For watsonx.data Premium Edition on-prem what's new, see [Release notes for on-prem Premium](https://www.ibm.com/docs/en/watsonx/watsonxdata-premium/2.2.x?topic=overview-whats-new-in-watsonxdata).
 
 Technology preview features: We also offer a Technology preview section that includes features currently in preview. These features are not generally available and may change before release. To view the release notes for technology preview items, see [Technology preview](/docs/watsonxdata?topic=watsonxdata-release_pp).
+
+## 21 May 2026 - Version 2.3.3
+{: #lakehouse_21may2026}
+{: release-note}
+
+
+Lite plan enhancements:
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following enhancements to the Lite plan:
+
+   **Explore AstraDB Capabilities in Lite plan** : The watsonx.data Lite plan users can now explore AstraDB capabilities directly from the onboarding experience through a newly introduced tile. This enhancement allows you to seamlessly access AstraDB, where they can build NoSQL and AI applications by creating and exploring databases without additional setup. By simply selecting this option, you are guided into the AstraDB experience, enabling faster evaluation and adoption as part of the trial journey.  For more information, see [Working with the watsonx.data Lite plan](/docs/watsonxdata?topic=watsonxdata-tutorial_hp_intro). 
+
+Integration enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following enhanced integration with other services:
+   You can now apply Ranger policies to catalogs. For more information, see [Enabling Apache Ranger policy for resources](/docs/watsonxdata?topic=watsonxdata-ranger_1). 
+
+
+Storage enhancements
+
+: You can now quickly confirm that your configuration works and that your system can successfully connect to Hadoop Distributed File System (HDFS) storage. The Test Connection button available on the HDFS configuration page helps you immediately verify that your HDFS configuration is correct and the connection is active. For more information, see [Hadoop Distributed File System](/docs/watsonxdata?topic=watsonxdata-hdfs_storage). 
+
+Remote MCP configuration details available in web console
+
+: You can now obtain the MCP URL endpoint, instance CRN, and pre-configured code snippets directly from the watsonx.data web console for remote MCP server setup. This enhancement simplifies the configuration process by providing all necessary connection details in one convenient location. For more information, see [Setting up the remote MCP server](/docs/watsonxdata?topic=watsonxdata-remote-querying-data-ai-end). 
+
+Access management enhancements
+
+: This release of {{site.data.keyword.lakehouse_short}} introduces the following access management enhancements:
+   * When you enable Common Policy Gateway(CPG) services as part of an AMS integration, it operates as a metered service and incurs charges while in use. AMS automatically generates metering events when you provision CPG to start billing, and it stops billing when you disable the service. This approach ensures you are charged only for the time during which CPG is actively running, providing clear and accurate usage-based billing. For information about the Billing details, see [IBM Cloud billing](https://cloud.ibm.com/billing) page. For information about the resource unit usage, see [Metering and usage experience](/docs/watsonxdata?topic=watsonxdata-manage_bil_newarch).
+
+   * Introduced new APIs to support access management–related functionalities. See [watsonx.data AMS APIs](https://cloud.ibm.com/apidocs/watsonxdata-ams).
+
+
+Deprecated features
+
+: The following features are deprecated in this release:
+
+   * Azure Data Lake Storage (ADLS) Gen1 is deprecated and removed. Existing ADLS Gen1 storages will continue to work. You must transition to ADLS Gen2 for new storage configurations as ADLS Gen1 is no longer available for new deployments.  For more information about configuring ADLS Gen2, see [Azure Data Lake Storage](/docs/watsonxdata?topic=watsonxdata-adls_genblob_storage).
+
+
 
 ## 09 April 2026 - Version 2.3.2
 {: #lakehouse_09apr2026}
@@ -418,7 +459,7 @@ Metadata Service (MDS) enhancements
    * `AccountId` is now required for all direct calls to the MDS REST Service (Iceberg Catalog and Unity Catalog). Requests that do not include this header will fail.
    * The endpoint for Iceberg operations is now updated from `/mds/iceberg` to `/api/v1/iceberg`.
 
-   For more information, see [API documentation](https://cloud.ibm.com/apidocs/watsonxdata-ibm-mds-iceberg).
+   For more information, see [API documentation](https://cloud.ibm.com/apidocs/watsonxdata-mds).
 
 CPDCTL CLI enhancements
 

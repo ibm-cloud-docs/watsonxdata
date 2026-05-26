@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-03-27"
+lastupdated: "2026-05-08"
 
 keywords: lakehouse, MDS, {{site.data.keyword.lakehouse_short}}, hive, metastore
 
@@ -46,8 +46,7 @@ Activating **Query Optimizer** automatically synchronizes metadata for catalogs 
 
 To sync tables from {{site.data.keyword.lakehouse_short}}, the following items are required:
 
-   The instructions in this topic can now be executed using the enhanced feature [Managing statistical updates from the Optimizer dashboard](/docs/watsonxdata?topic=watsonxdata-analyze_optimizer), which enables advanced query performance enhancements and optimization capabilities across multiple
-   catalogs.
+   The statistics collection and synchronization steps in this topic can now be executed using the enhanced feature [Managing statistical updates from the Optimizer dashboard](/docs/watsonxdata?topic=watsonxdata-analyze_optimizer), which enables advanced query performance enhancements and optimization capabilities across multiple catalogs.
    {: note}
 
 1. Verify that all expected tables are synced by following the procedure in [Verifying table sync in watsonx.data](/docs/watsonxdata?topic=watsonxdata-sync_optimizer_verify).

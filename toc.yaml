@@ -369,6 +369,9 @@ toc:
           - data_stream_snowflake1.md
           - data_stream_snowflake2spark.md
           - data_stream_snowflake3presto.md
+          - data_stream_cloudera1.md
+          - data_stream_cloudera_presto_setup.md
+          - data_stream_cloudera_presto_query.md
           - data_stream_salesforce.md
       - topicgroup:
           label: Integrating with Data Build Tool(dbt)
@@ -421,9 +424,6 @@ toc:
           - querying-data-ai.md
           - remote-querying-data-ai-end.md
           - querying-data-ai-loc.md
-          - configuring-claude.md
-          - configuring-bob.md
-          - configuring-other-agents.md
   - navgroup:
       id: reference
       topics:
@@ -466,20 +466,6 @@ toc:
               - api_custom_logconfwrkr_pcpp.md
               - api_custom_logconfcord_pcpp.md
           - resource_grp_pptys.md
-      - topicgroup:
-          label: Technology preview
-          topics:
-          - release_public_preview.md
-          - topicgroup:
-              label: OpenSearch integration
-              topics:
-              - gs_opensearch.md
-              - quick_start_opensearch.md
-              - add-opensearch.md
-          - jvector.md
-          - jvector_spark.md
-          - mv_optimizer.md
-          - jdbc.md
       - link:
           label: watsonx.data v2 APIs
           href: https://cloud.ibm.com/apidocs/watsonxdata
@@ -490,11 +476,8 @@ toc:
           label: watsonx.data AMS APIs
           href: https://cloud.ibm.com/apidocs/watsonxdata-ams
       - link:
-          label: MDS Unity Catalog API
-          href: https://cloud.ibm.com/apidocs/watsonxdata-mds-unity
-      - link:
-          label: MDS Iceberg REST Catalog API
-          href: https://cloud.ibm.com/apidocs/watsonxdata-ibm-mds-iceberg
+          label: MDS Unity Catalog API and Iceberg REST Catalog API
+          href: https://cloud.ibm.com/apidocs/watsonxdata-mds
   - navgroup:
       id: help
       topics:
@@ -510,6 +493,7 @@ toc:
           - ts_ip_restrict_issue.md
           - ranger_crash_trble.md
           - optm_jdbc_query.md
+          - troubleshooting-hdfs-catalog-issues.md
           - topicgroup:
               label: Spark
               topics:

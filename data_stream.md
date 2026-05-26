@@ -2,9 +2,9 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-04-13"
+lastupdated: "2026-04-30"
 
-keywords: lakehouse, remote data, {{site.data.keyword.lakehouse_short}}
+keywords: lakehouse, remote data, external data, data federation, {{site.data.keyword.lakehouse_short}}
 
 subcollection: watsonxdata
 
@@ -29,62 +29,102 @@ subcollection: watsonxdata
 # Accessing data in external data platforms
 {: #data_stream}
 
-External data platforms enable continuous data ingestion and processing, allowing organizations to capture, store, and analyze data as it flows through their systems. These platforms act as a central nervous system for real-time data, connecting various data sources and making sharing data immediately available for analytics.
+{{site.data.keyword.lakehouse_full}} enables you to query data from multiple external data platforms without copying or moving the data. This capability provides seamless access to data across your data landscape while maintaining data in its original location.
+{: shortdesc}
 
-{{site.data.keyword.lakehouse_full}} integrates with leading external data platforms to provide seamless access to remote data without copying or moving it. These integrations enable you to query remote data using familiar SQL interfaces and powerful compute engines.
+## Overview
+{: #data_stream_overview}
 
+With {{site.data.keyword.lakehouse_short}}, you can access and query data from external platforms through direct connections. This approach eliminates the need to replicate data, providing:
 
-## How external data platforms integrations work
-{: #data_stream1}
+- **Real-time access** - Query the most current data without synchronization delays
+- **Cost efficiency** - Eliminate storage duplication and data transfer costs
+- **Simplified architecture** - Reduce data pipeline complexity and maintenance overhead
+- **Unified governance** - Apply consistent security and access policies across data sources
 
-External data platforms automatically convert remote data into query-ready table formats such as Apache Iceberg. This zero-copy approach, often called "data federation" or "query federation," eliminates the need for traditional data pipelines by:
+This integration method is commonly known as zero-copy data federation, where queries are executed directly on remote data through secure connections.
 
+## Supported external data platforms
+{: #data_stream_platforms}
 
-1. Capturing sharing data from various sources (applications, IoT devices, databases, etc.)
-2. Materializing data into open table formats in cloud storage (AWS S3, Azure Data Lake Storage Gen2, Google Cloud Storage)
-3. Maintaining tables automatically with schema evolution, compaction, and optimization
-4. Exposing data through REST catalog endpoints for external query engines
+{{site.data.keyword.lakehouse_short}} supports querying data from the following external platforms:
 
-{{site.data.keyword.lakehouse_short}} compute engines connect directly to these remote tables, enabling zero-copy analytics without data duplication or movement.
+### Cloudera
+{: #data_stream_cloudera}
 
-## Key capabilities
-{: #data_stream2}
+Access Hive tables stored in Cloudera HDFS for enterprise data warehousing and Hadoop ecosystem integration.
 
-When you integrate external data platforms with {{site.data.keyword.lakehouse_short}}, you can:
+**Learn more:** [Integrating Cloudera in {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=watsonxdata-data_stream_cloudera1)
 
-- Query remote data in real-time: Access the latest data as it arrives, with minimal latency
-- Eliminate data copying and ETL complexity: Remove the need for custom data pipelines and transformation jobs
-- Use familiar SQL interfaces: Query external data platforms using standard SQL through Spark or Presto engines
-- Leverage open table formats: Work with industry-standard formats like Apache Iceberg and Delta Lake
-- Maintain data governance: Apply {{site.data.keyword.lakehouse_short}} security and governance policies to remote
-- Scale independently: Separate storage and compute for flexible scaling and cost optimization
-- Preserve data lineage: Track data from source to analytics with built-in metadata management
+### Databricks Unity Catalog
+{: #data_stream_databricks}
 
-## Integration architecture
-{: #data_stream3}
+Access Delta Lake and Iceberg tables stored in Databricks Unity Catalog for multi-cloud data analytics and unified data governance.
 
-External data platforms materialize remote data into table formats in cloud storage (AWS S3, Azure Blob, Google Cloud Storage). {{site.data.keyword.lakehouse_short}} engines connect to these tables through REST catalog endpoints, enabling direct querying without data duplication.
+**Learn more:** [Integrating Databricks Unity Catalog in {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=watsonxdata-data_stream_databricks1)
 
-## Storage options
-{: #data_stream4}
+### Snowflake Open Catalog
+{: #data_stream_snowflake}
 
-External data platforms typically offer two storage models:
+Access Apache Iceberg tables managed by Snowflake Open Catalog for cloud-native data analytics and cross-platform data access.
 
-- Platform-managed storage: The data platform automatically provisions and manages cloud storage, simplifying setup and maintenance.
-- Customer-managed storage: You provide your own cloud storage (AWS S3, Azure Blob, or Google Cloud Storage), maintaining full control over data location, access policies, and lifecycle management.
+**Learn more:** [Integrating Snowflake Open Catalog in {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=watsonxdata-data_stream_snowflake1)
 
-Both options are supported by {{site.data.keyword.lakehouse_short}}, though specific engine capabilities may vary.
+### Confluent Tableflow
+{: #data_stream_confluent}
 
-## Choosing an engine
-{: #data_stream5}
+Access streaming data tables managed by Confluent Tableflow for real-time analytics and event-driven architectures.
 
-- **Spark engine**: Supports both managed and customer-managed storage, full Iceberg feature support.
-- **Presto engine**: Supports customer-managed storage (AWS S3, Azure, GCS) with some limitations on managed storage.
+**Learn more:** [Integrating Confluent Tableflow in watsonx.data](/docs/watsonxdata?topic=watsonxdata-data_stream_confluent1)
 
-### Next steps
-{: #data_stream6}
+### Salesforce
+{: #data_stream_salesforce}
 
-- [Integrating Confluent Tableflow](/docs/watsonxdata?topic=watsonxdata-data_stream_confluent1)
-- [Integrating Databricks Unity Catalog in watsonx.data](/docs/watsonxdata?topic=watsonxdata-data_stream_databricks1)
-- [Integrating Salesforce Data Cloud with watsonx.data](/docs/watsonxdata?topic=watsonxdata-data_stream_salesforce)
-- [Integrating Snowflake Open Catalog in watsonx.data](/docs/watsonxdata?topic=watsonxdata-data_stream_snowflake1)
+Connect to Salesforce data through Arrow Flight service for CRM analytics and customer data integration.
+
+**Learn more:** [Salesforce](/docs/watsonxdata?topic=watsonxdata-data_stream_salesforce)
+
+## How it works
+{: #data_stream_architecture}
+
+Accessing external data in {{site.data.keyword.lakehouse_short}} works through the following components:
+
+1. **External data platform** - The remote system where data resides
+2. **Metadata layer** - Catalog or metastore that provides table definitions and schema information
+3. **{{site.data.keyword.lakehouse_short}} engines** - Presto or Spark engines that execute queries
+4. **Storage layer** - External storage systems where data files are stored
+5. **Authentication layer** - Security mechanisms for secure access
+
+## Query engines
+{: #data_stream_engines}
+
+{{site.data.keyword.lakehouse_short}} supports querying external data through two query engines:
+
+- **Presto engine** - Optimized for interactive analytics with SQL-based querying
+- **Spark engine** - Optimized for batch processing and complex transformations with PySpark and Scala support
+
+For details on which platforms support which engines, see the platform-specific integration guides.
+
+## Getting started
+{: #data_stream_getting_started}
+
+To access data from external platforms:
+
+1. **Identify data platforms** - Determine which external platforms you need to access
+2. **Review prerequisites** - Ensure you meet the requirements for each platform
+3. **Gather credentials** - Obtain necessary authentication credentials and connection details
+4. **Configure connections** - Set up storage components and catalogs in {{site.data.keyword.lakehouse_short}}
+5. **Associate engines** - Connect catalogs to appropriate query engines
+6. **Test queries** - Validate connectivity and query functionality
+
+For detailed setup instructions, see the integration guide for your specific platform.
+
+## Related information
+{: #data_stream_related}
+
+**Integration guides:**
+- [Integrating Cloudera in {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=watsonxdata-data_stream_cloudera1)
+- [Integrating Databricks Unity Catalog in {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=watsonxdata-data_stream_databricks1)
+- [Integrating Snowflake Open Catalog in {{site.data.keyword.lakehouse_short}}](/docs/watsonxdata?topic=watsonxdata-data_stream_snowflake1)
+- [Integrating Confluent Tableflow in watsonx.data](/docs/watsonxdata?topic=watsonxdata-data_stream_confluent1)
+- [Salesforce](/docs/watsonxdata?topic=watsonxdata-data_stream_salesforce)

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-04-07"
+lastupdated: "2026-05-26"
 
 keywords: lakehouse
 
@@ -30,6 +30,114 @@ subcollection: watsonxdata
 {: #known_issues}
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
+
+## Table creation with 3000 columns fails with socket timeout error
+{: #known_issue20996}
+
+When you attempt to create a table with 3000 columns in Presto, the operation fails with a `java.net.SocketTimeoutException: Read timed out` error. The error message displays `Table already exists` even though the table was not successfully created.
+
+**Workaround:** To resolve this issue, increase the Hive metastore timeout value in the Presto catalog configuration:
+
+1. Add the following property to your catalog properties file located at `/opt/presto/etc/catalogs/<catalog_name>.properties`:
+
+   ```bash
+   hive.metastore-timeout=25m
+   ```
+   {: codeblock}
+
+   **Note:** A timeout value of 25 minutes is recommended for tables with 3000 columns. For smaller tables, you can use a lower value such as `120 seconds` (2 minutes).
+
+2. Restart the Presto server for the changes to take effect.
+
+3. Retry the table creation operation.
+
+## New architecture Presto (C++) engine remains in restarting state after deleting properties through API customization
+{: #known_issue72293}
+
+When deleting properties on a new architecture Presto (C++) engine through API customization using the `remove_engine_properties` parameter, the engine enters a restarting state. At the backend, the properties have empty values, and GET API calls also return properties with empty values.
+
+**Workaround:** Instead of removing the property, patch the default value to reverse the change.
+
+## {{site.data.keyword.lakehouse_short}} assistant returns context length exceeded error after multiple tool invocations
+{: #known_issue72238}
+
+When using the {{site.data.keyword.lakehouse_short}} assistant and invoking multiple tools in sequence, users may encounter a context length exceeded error. The assistant returns an HTTP 400 error with the following message:
+
+```bash
+Error code: 400 - {'error': {'message': 'groq error: Please reduce the length of the messages or completion.', 'type': 'invalid_request_error', 'param': 'messages', 'code': 'context_length_exceeded'}, 'provider': 'groq'}
+```
+**Workaround:** Start a new conversation thread in the {{site.data.keyword.lakehouse_short}} assistant.
+
+## Ranger integration requires certificate upload for self-signed certificates
+{: #known_issue71068}
+
+Ranger integration does not work if you add a Ranger instance over HTTPS using a self-signed certificate without uploading the certificate
+
+## Column masking policies in Ranger do not support integer and bigint data types.
+{: #known_issue71724}
+
+Column masking policies in Ranger do not support integer and bigint data types. When you attempt to apply column masking to columns with these data types, the operation fails.
+
+## Tables created externally do not appear immediately in Data Manager
+{: #known_issue71368}
+
+When a table is created using Spark or any external engine, and the `SHOW TABLES` result is already cached in Presto, the newly created tables may not appear immediately in Data Manager until the metastore cache is refreshed. However, you can still query the table directly.
+
+The metastore cache is refreshed automatically based on the configured cache interval (default: 240 minutes). You can manually invalidate the cache using the following procedures.
+
+
+1. Ensure that the `system.invalidate_metastore_cache` procedure is enabled by setting the following property to `true`:
+
+   ```bash
+   hive.invalidate-metastore-cache-procedure-enabled=true
+   ```
+   {: codeblock}
+
+2. Run one of the following commands based on your requirement:
+
+   **To invalidate all metastore caches:**
+
+   ```bash
+   CALL system.invalidate_metastore_cache();
+   ```
+   {: codeblock}
+
+   **To invalidate cache for a specific schema:**
+
+   ```bash
+   CALL system.invalidate_metastore_cache('schema_name');
+   ```
+   {: codeblock}
+
+   **To invalidate cache for a specific table:**
+
+   ```bash
+   CALL system.invalidate_metastore_cache('schema_name', 'table_name');
+   ```
+   {: codeblock}
+
+   **To invalidate cache for a specific partition:**
+
+   ```bash
+   CALL system.invalidate_metastore_cache(
+       'schema_name',
+       'table_name',
+       ARRAY['partition_column'],
+       ARRAY['partition_value']
+   );
+   ```
+   {: codeblock}
+
+
+## Catalog creation with mixed-case names causes "Catalog does not exist" error
+{: #known_issue69460}
+
+When you create an Apache Iceberg catalog with a mixed-case name (containing both uppercase and lowercase characters) during the default IBM COS bucket creation flow, subsequent operations fail with a "Catalog does not exist" error.
+
+**Workarounds**: To resolve this issue, complete the following steps:
+
+1. Delete the catalog that was created with mixed-case names.
+2. Recreate the catalog in lowercase.
 
 
 ## `WHERE` clause comparison fails for `TIMESTAMP(n)` datatypes when precision greater than 3

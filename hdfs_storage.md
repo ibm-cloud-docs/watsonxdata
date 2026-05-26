@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2024-08-01"
+lastupdated: "2026-05-13"
 
 keywords: lakehouse, bucket, catalog, watsonx.data
 
@@ -42,11 +42,15 @@ Hadoop Distributed File System (HDFS) is a file system that manages large data s
  | Kerberos authentication | Use the toggle switch to enable or disable **Kerberos authentication**. If enabled, enter the following information:  \n a. Enter the following information: \n i. HDFS principal \n ii. Hive client principal \n iii. Hive server principal \n b. Upload the following files: \n i. Core site file (.xml) \n ii. HDFS site (.xml) \n iii. Kerberos config file (.config) \n iiii. HDFS keytab file (.keytab) \n iiiii. Hive keytab file (.keytab) |
  | Upload core site file (.xml) | Upload core site file (.xml) |
  | Upload HDFS site file (.xml) | Upload HDFS site file (.xml) |
+ | Connection status	| Click the Test connection link to test the storage connection. If the storage connection is successful, a success message appears. |
  | Associate catalog | Add a catalog for your storage. This catalog is associated with your storage and serves as your query interface with the data stored within. |
  | Catalog type | The supported catalog is Apache Hive.|
  | Catalog name | Enter the name of your catalog. |
  | Associate | Click Associate to create the storage. |
  {: caption="Register bucket" caption-side="bottom"}
+
+If you encounter any errors, refer [Troubleshooting HDFS catalog errors](/docs/watsonxdata?topic=watsonxdata-troubleshooting-hdfs-catalog-issues).
+{: note}
 
 ## Related API
 {: #hdfs_api}

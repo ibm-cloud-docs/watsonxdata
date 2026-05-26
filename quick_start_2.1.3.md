@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-03-31"
+lastupdated: "2026-04-28"
 
 keywords: lakehouse, watsonx data, quick start, engine, catalog, bucket
 subcollection: watsonxdata
@@ -53,6 +53,8 @@ The wizard guides you through the initial configuration process for the infrastr
    : Select this option if you need flexible, high-performance analytics across large datasets. It uses Engines: Presto, and Spark.
    By combining Presto for fast, interactive SQL queries and Spark for large-scale processing, this option is well-suited for analytical and data processing use cases.
 
+
+
 2. Click **Next**. The **Configure details** page opens.
 
 ## Configuring engine and storage details
@@ -65,6 +67,7 @@ To work with your data, you must configure the engine and storage details. Based
    * [Run scalable analytics and data processing workloads](#qs_engine_g2) : You must setup the Spark engine, Presto engine, and storage.
 
 
+
 ### Selected goal: Optimize performance for cost‑efficient data processing
 {: #qs_engine_g1}
 
@@ -72,7 +75,7 @@ a. In the **Setup Spark** section, select the Spark version, Spark size, and the
 
 b. In the **Setup storage** section, select one of the following options and provide details.
 
-   - **Use existing pair** : you can reuse an existing catalog–storage pair. This capability is available only in the Tokyo and Sydney SaaS regions. In this case, you can choose the **Use existing pair** option to aautomatically lists all storage-catalog pairs in your account that you have access to, allowing you to select an existing pair, avoid duplicate resources, and reduce setup time.
+   - **Use existing pair** : you can reuse an existing catalog–storage pair. This capability is available only in the Tokyo and Sydney SaaS regions. In this case, you can choose the **Use existing pair** option to automatically lists all storage-catalog pairs in your account that you have access to, allowing you to select an existing pair, avoid duplicate resources, and reduce setup time.
 
    - **Discover COS instance** : Selects an existing IBM COS instance and an attached bucket on your IBM Cloud account. If multiple IBM COS instances and buckets are detected, select the IBM COS instance that contains the desired bucket to register with {{site.data.keyword.lakehouse_short}}. You must specify the catalog name that needs to be associated with the storage in the **Catalog name** field.
 
@@ -109,6 +112,7 @@ b. For information about setting up Spark and storage details, see [Optimize per
 
 
 
+
 ## Finishing the setup
 {: #qs_summary_finl}
 {: step}
@@ -132,7 +136,7 @@ Click **Query monitoring** link from the information message and do the followin
 
 2. If you enable the QHMM feature, you must configure the storage details for storing QHMM data. Select one of the following options and provide details.
 
-   Starting with version 2.3.1, you can complete your {{site.data.keyword.lakehouse_short}} Quick Start setup by using the new feature that lets you specify and reuse an existing catalog–storage pair. This capability is available only in the Tokyo and Sydney SaaS regions. In this case, you can choose the **Use existing pair** option to aautomatically lists all storage-catalog pairs in your account that you have access to, allowing you to select an existing pair, avoid duplicate resources, and reduce setup time. If you select the **Discover COS instance** option, you must explicitly enter the catalog name to support this account‑scoped behavior. To learn more about account‑scoped behavior, see [Component scoping at account level](/docs/watsonxdata?topic=watsonxdata-account_scope).
+   Starting with version 2.3.1, you can complete your {{site.data.keyword.lakehouse_short}} Quick Start setup by using the new feature that lets you specify and reuse an existing catalog–storage pair. This capability is available only in the Tokyo and Sydney SaaS regions. In this case, you can choose the **Use existing pair** option to automatically lists all storage-catalog pairs in your account that you have access to, allowing you to select an existing pair, avoid duplicate resources, and reduce setup time. If you select the **Discover COS instance** option, you must explicitly enter the catalog name to support this account‑scoped behavior. To learn more about account‑scoped behavior, see [Component scoping at account level](/docs/watsonxdata?topic=watsonxdata-account_scope).
    {: important}
 
 

@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2026
-lastupdated: "2026-03-19"
+lastupdated: "2026-05-08"
 
 keywords: lakehouse, remote data, confluent, {{site.data.keyword.lakehouse_short}}
 
@@ -187,16 +187,20 @@ You can query remote Confluent Tableflow tables using the {{site.data.keyword.la
    **Using CPDCTL CLI:**
 
    ```bash
-   cpdctl spark application-submit \
+   cpdctl wx-data sparkjob create \
      --engine-id {engine_id} \
-     --application s3://bucket/query_tableflow.py \
-     --conf spark.sql.catalog.tableflow=org.apache.iceberg.spark.SparkCatalog \
-     --conf spark.sql.catalog.tableflow.type=rest \
-     --conf spark.sql.catalog.tableflow.uri=https://tableflow.us-east-1.aws.confluent.cloud/iceberg/catalog/organizations/{ORG_ID}/environments/{ENV_ID} \
-     --conf spark.sql.catalog.tableflow.credential={apikey}:{secret} \
-     --conf spark.sql.catalog.tableflow.io-impl=org.apache.iceberg.aws.s3.S3FileIO \
-     --conf spark.sql.catalog.tableflow.s3.remote-signing-enabled=true \
-     --conf spark.sql.catalog.tableflow.client.region=us-east-1
+     --path s3://{bucket_name}/query_tableflow.py \
+     --conf '{
+       "spark.app.name":"{spark_app_name}",
+       "spark.sql.catalog.tableflow":"org.apache.iceberg.spark.SparkCatalog",
+       "spark.sql.catalog.tableflow.type":"rest",
+       "spark.sql.catalog.tableflow.uri":"https://tableflow.us-east-1.aws.confluent.cloud/iceberg/catalog/organizations/{ORG_ID}/environments/{ENV_ID}",
+       "spark.sql.catalog.tableflow.credential":"{apikey}:{secret}",
+       "spark.sql.catalog.tableflow.io-impl":"org.apache.iceberg.aws.s3.S3FileIO",
+       "spark.sql.catalog.tableflow.s3.remote-signing-enabled":"true",
+       "spark.sql.catalog.tableflow.client.region":"us-east-1"
+     }' \
+     --api-key {api_key}
    ```
 
 ### Results

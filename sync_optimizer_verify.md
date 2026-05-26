@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2025-10-30"
+lastupdated: "2026-05-08"
 
 keywords: lakehouse, watsonx.data, query optimizer, install
 
@@ -50,7 +50,7 @@ This topic provides details to verify that all expected tables have been success
 1. Run the following command to retrieve a list of potential schema names:
 
    ```bash
-   ExecuteWxdQueryOptimizer 'select distinct tabschema from syscat.tables where UPPER(tabschema) like '%SAMPLE_DATA%'';
+   ExecuteWxdQueryOptimizer 'select id_to_extsch(name) AS CATALOG_SCHEMA, name AS "SCHEMAID"  from SYSIBM.sysschemata where name != qualifier1';
    ```
    {: codeblock}
 
@@ -61,14 +61,14 @@ This topic provides details to verify that all expected tables have been success
    a. Run this command to count the number of tables within the specified schema:
 
       ```bash
-      ExecuteWxdQueryOptimizer 'select count(1) from syscat.tables where tabschema = 'catalog.schema'';
+      ExecuteWxdQueryOptimizer 'select count(1) AS schema_table_count from SYSIBM.SYSTABLES WHERE CREATOR=EXTSCH_TO_ID('catalog_name', 'schema_name')';
       ```
       {: codeblock}
 
       For example:
 
       ```bash
-      ExecuteWxdQueryOptimizer 'select count(1) from syscat.tables where tabschema = 'sample_data.TPCDS_10GB'';
+      ExecuteWxdQueryOptimizer 'select count(1) AS schema_table_count from SYSIBM.SYSTABLES WHERE CREATOR=EXTSCH_TO_ID('sample_data', 'TPCDS_10GB')';
       ```
       {: codeblock}
 
@@ -77,23 +77,27 @@ This topic provides details to verify that all expected tables have been success
    b. Run this command to list all tables within the specified schema:
 
       ```bash
-      ExecuteWxdQueryOptimizer 'select TABLEORG,TABSCHEMA,TABNAME from SYSCAT.TABLES where TABSCHEMA LIKE 'iceberg_data%'';
+      ExecuteWxdQueryOptimizer 'SELECT NAME AS TABLE_NAME, id_to_extsch(creator) AS CATALOG_SCHEMA FROM SYSIBM.SYSTABLES WHERE CREATOR=EXTSCH_TO_ID('catalog_name', 'schema_name')';
+      ```
+      {: codeblock}
+
+      For example:
+
+      ```bash
+      ExecuteWxdQueryOptimizer 'SELECT NAME AS TABLE_NAME, id_to_extsch(creator) AS CATALOG_SCHEMA FROM SYSIBM.SYSTABLES WHERE CREATOR=EXTSCH_TO_ID('sample_data', 'TPCDS_10GB')';
       ```
       {: codeblock}
 
 1. Run the following query to check table properties (such as number of rows):
 
    ```bash
-   ExecuteWxdQueryOptimizer 'select tabname, card from syscat.tables where tabschema = 'catalog.schema'';
+   ExecuteWxdQueryOptimizer 'select name AS tablename, card from SYSIBM.SYSTABLES WHERE CREATOR=EXTSCH_TO_ID('catalog_name', 'schema_name')';
    ```
    {: codeblock}
 
    For example:
 
       ```bash
-      ExecuteWxdQueryOptimizer 'select tabname, card from syscat.tables where tabschema = 'sample_data.TPCDS_10GB'';
+      ExecuteWxdQueryOptimizer 'select name AS tablename, card from SYSIBM.SYSTABLES WHERE CREATOR=EXTSCH_TO_ID('sample_data', 'TPCDS_10GB')';
       ```
       {: codeblock}
-
-   The syscat views provide information about database objects. You can explore other system catalog views (example, syscat.columns, syscat.indexes) to verify other aspects of the synced tables as needed.
-   {: note}

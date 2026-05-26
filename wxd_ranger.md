@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-04-06"
+lastupdated: "2026-05-11"
 
 keywords: lakehouse, engine, watsonx.data
 subcollection: watsonxdata
@@ -89,6 +89,7 @@ Complete the following steps to enable and configure Apache Ranger in watsonx.da
    |URL	|The URL of Apache Ranger. \n **Note:** You must use HTTPS URLs only.|
    |Username|	The admin credentials.|
    |Password	|The admin credentials.|
+   | Supported catalogs | Select the applicable catalogs for associating Ranger policies. |
    |Port is SSL enabled  |Select the checkbox.    |
    |Upload SSL Certificate | Use the toggle switch to enable or disable SSL connection. Enabling the SSL connection ensures secure connection. If enabled, you must do the following: \n i. The Upload SSL certificate (.pem, .crt, .cert or .cer) link is enabled.\n ii. Click the Upload SSL certificate (.pem, .crt, .cert, or .cer) link. \n iii. Browse the SSL certificate and upload. \n For information about how to retrieve the certificate, see [Generating cert](#ranger_18). |
    |List resources|	Click the link to load the resources that are available in the Apache Ranger server.|
@@ -148,3 +149,4 @@ Provide appropriate values for Organizational Unit (OU), Organization (O), Locat
 * In Apache Iceberg catalog, an error occurs if a policy is not defined for the snapshots views related to the tables in Ranger. You must manually define policies in Apache Ranger to eliminate the error.
 * watsonx.data supports only access control feature for Apache Ranger integration in 2.0.0 release.
 * Apache Ranger integration does not support HTTP URLs; you must use HTTPS URLs only.
+* When configuring Ranger integration using an HTTP URL, you may encounter an error stating `SSL and certificate must be provided for Ranger` even though certificates are not required for HTTP connections.
