@@ -1,8 +1,8 @@
 ---
 
 copyright:
-  years: 2017, 2024
-lastupdated: "2024-12-11"
+  years: 2017, 2025
+lastupdated: "2026-05-29"
 
 keywords: watsonx.data, presto,
 subcollection: watsonxdata
@@ -12,7 +12,7 @@ subcollection: watsonxdata
 {{site.data.keyword.attribute-definition-list}}
 
 # LogConfig worker properties for Presto (C++)
-{: #api_custom_wkr_pcpp}
+{: #api_custom_logconfwrkr_pcpp}
 
 You can customize the LogConfig worker properties through an API for Presto (C++).
 
