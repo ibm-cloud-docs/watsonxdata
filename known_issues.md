@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-05-26"
+lastupdated: "2026-06-03"
 
 keywords: lakehouse
 
@@ -31,10 +31,10 @@ subcollection: watsonxdata
 
 The following limitations and known issues apply to {{site.data.keyword.lakehouse_full}}.
 
-## Table creation with 3000 columns fails with socket timeout error
+## Table creation with large number of columns fails with socket timeout error
 {: #known_issue20996}
 
-When you attempt to create a table with 3000 columns in Presto, the operation fails with a `java.net.SocketTimeoutException: Read timed out` error. The error message displays `Table already exists` even though the table was not successfully created.
+When you attempt to create a table with a large number of columns in Presto, the operation fails with a `java.net.SocketTimeoutException: Read timed out` error. The error message displays `Table already exists` even though the table was not successfully created.
 
 **Workaround:** To resolve this issue, increase the Hive metastore timeout value in the Presto catalog configuration:
 
