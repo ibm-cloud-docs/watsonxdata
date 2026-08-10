@@ -48,7 +48,7 @@ Apache Cassandra is an open source NoSQL distributed data source that handles a 
  | Create | Click Create to create the data source. |
  {: caption="Register data source" caption-side="bottom"}
 
-## Limitations for SQL statements
+## Limitations for CQL statements
 {: #connector_limitations}
 
 * Standard `INSERT INTO` statement is not supported.
