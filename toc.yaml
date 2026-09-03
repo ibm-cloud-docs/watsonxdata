@@ -12,6 +12,7 @@ toc:
   - navgroup:
       id: learn
       topics:
+      - docs-moved.md
       - topicgroup:
           label: Overview
           topics:
