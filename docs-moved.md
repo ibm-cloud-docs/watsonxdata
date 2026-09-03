@@ -43,7 +43,7 @@ All {{site.data.keyword.lakehouse_full}} topics, tutorials, reference material, 
 
 {{site.data.keyword.lakehouse_full}} documentation has been consolidated onto the IBM Documentation portal (`ibm.com/docs`) to provide a unified experience across all IBM product documentation. This move enables:
 
-- A single destination for all {{site.data.keyword.lakehouse_full}} deployment types, including SaaS, software, and on-premises editions.
+- A single destination for all {{site.data.keyword.lakehouse_full}} deployment types, including SaaS and software (on-premises) editions.
 - Consistent navigation and search experience across IBM product documentation.
 - Improved discoverability and cross-product linking.
 
