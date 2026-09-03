@@ -29,20 +29,14 @@ subcollection: watsonxdata
 # {{site.data.keyword.lakehouse_full}} documentation has moved
 {: #docs_moved}
 
-This IBM Cloud documentation site (`cloud.ibm.com/docs/watsonxdata`) is no longer maintained. All content has been migrated to the new IBM Documentation portal.
+This page is no longer maintained. The {{site.data.keyword.lakehouse_full}} documentation has moved to a new location — update your bookmarks now.
 {: deprecated}
 
-The {{site.data.keyword.lakehouse_full}} documentation previously published at `https://cloud.ibm.com/docs/watsonxdata` has been migrated to a new location. Please update your bookmarks and any links that reference this site.
+**Find the documentation at its new home: [https://www.ibm.com/docs/en/watsonxdata/saas](https://www.ibm.com/docs/en/watsonxdata/saas){: external}**
+{: important}
+
+All {{site.data.keyword.lakehouse_full}} topics, tutorials, reference material, and release notes are fully available at the new location. The content has been preserved in its entirety during the migration.
 {: shortdesc}
-
-## New documentation location
-{: #docs_moved_new_location}
-
-The {{site.data.keyword.lakehouse_full}} documentation is now published at:
-
-**[https://www.ibm.com/docs/en/watsonxdata/saas](https://www.ibm.com/docs/en/watsonxdata/saas){: external}**
-
-All topics, tutorials, reference material, and release notes are available at the new location. The content has been fully preserved during the migration.
 
 ## Why was the documentation moved?
 {: #docs_moved_reason}

@@ -11,20 +11,20 @@
         "href": "/docs/watsonxdata?topic=watsonxdata-docs_moved"
       },
       {
-        "title": "Go to the new documentation site",
-        "href": "https://www.ibm.com/docs/en/watsonxdata/saas"
+        "title": "Getting started",
+        "href": "/docs/watsonxdata?topic=watsonxdata-docs_moved"
       },
       {
-        "title": "Getting started (new site)",
-        "href": "https://www.ibm.com/docs/en/watsonxdata/saas?topic=getting-started"
+        "title": "What's new",
+        "href": "/docs/watsonxdata?topic=watsonxdata-docs_moved"
       },
       {
-        "title": "What's new (new site)",
-        "href": "https://www.ibm.com/docs/en/watsonxdata/saas?topic=watsonxdata-release-notes"
+        "title": "Known issues",
+        "href": "/docs/watsonxdata?topic=watsonxdata-docs_moved"
       },
       {
-        "title": "Known issues (new site)",
-        "href": "https://www.ibm.com/docs/en/watsonxdata/saas?topic=watsonxdata-known-issues"
+        "title": "FAQs",
+        "href": "/docs/watsonxdata?topic=watsonxdata-docs_moved"
       }
     ]
   },
@@ -32,7 +32,7 @@
     {
       "title": "Documentation has moved",
       "description": "All IBM watsonx.data documentation previously at cloud.ibm.com/docs/watsonxdata has moved to www.ibm.com/docs/en/watsonxdata/saas. Update your bookmarks.",
-      "href": "/docs/watsonxdata?topic=watsonxdata-docs_moved",
+      "href": "https://www.ibm.com/docs/en/watsonxdata/saas",
       "type": "blog",
       "recommended": true
     },
