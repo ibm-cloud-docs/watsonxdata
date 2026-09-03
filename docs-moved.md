@@ -29,11 +29,11 @@ subcollection: watsonxdata
 # {{site.data.keyword.lakehouse_full}} documentation has moved
 {: #docs_moved}
 
-The {{site.data.keyword.lakehouse_full}} documentation previously published at `https://cloud.ibm.com/docs/watsonxdata` has been migrated to a new location.
-{: shortdesc}
+This IBM Cloud documentation site (`cloud.ibm.com/docs/watsonxdata`) is no longer maintained. All content has been migrated to the new IBM Documentation portal.
+{: deprecated}
 
-All content from this IBM Cloud documentation site has been moved to the unified IBM Documentation portal. If you arrived here from a bookmarked link, a search result, or an external reference, you are seeing this page because the documentation has been relocated.
-{: important}
+The {{site.data.keyword.lakehouse_full}} documentation previously published at `https://cloud.ibm.com/docs/watsonxdata` has been migrated to a new location. Please update your bookmarks and any links that reference this site.
+{: shortdesc}
 
 ## New documentation location
 {: #docs_moved_new_location}
@@ -42,14 +42,14 @@ The {{site.data.keyword.lakehouse_full}} documentation is now published at:
 
 **[https://www.ibm.com/docs/en/watsonxdata/saas](https://www.ibm.com/docs/en/watsonxdata/saas){: external}**
 
-All topics, tutorials, reference material, and release notes are available at the new location. The content has been preserved in its entirety during the migration.
+All topics, tutorials, reference material, and release notes are available at the new location. The content has been fully preserved during the migration.
 
 ## Why was the documentation moved?
 {: #docs_moved_reason}
 
 {{site.data.keyword.lakehouse_full}} documentation has been consolidated onto the IBM Documentation portal (`ibm.com/docs`) to provide a unified experience across all IBM product documentation. This move enables:
 
-- A single destination for all {{site.data.keyword.lakehouse_full}} deployment types, including SaaS and software editions.
+- A single destination for all {{site.data.keyword.lakehouse_full}} deployment types, including SaaS, software, and on-premises editions.
 - Consistent navigation and search experience across IBM product documentation.
 - Improved discoverability and cross-product linking.
 
@@ -69,13 +69,18 @@ Use the following resources to find the content you need:
 
 Update any saved bookmarks, internal wikis, or documentation references to point to the new base URL:
 
-| Previous URL | New URL |
+| Old URL | New URL |
 |---|---|
 | `https://cloud.ibm.com/docs/watsonxdata` | `https://www.ibm.com/docs/en/watsonxdata/saas` |
 {: caption="Documentation URL change" caption-side="top"}
 
-Replace `https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-<topic-id>` with the corresponding topic on the IBM Documentation portal.
+Individual topic links follow the pattern shown below. Replace the old base URL and topic parameter with the corresponding path on the new site.
 {: tip}
+
+| Old topic URL pattern | New URL base |
+|---|---|
+| `https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-<topic-id>` | `https://www.ibm.com/docs/en/watsonxdata/saas` |
+{: caption="Topic URL migration pattern" caption-side="top"}
 
 ## Need help?
 {: #docs_moved_help}
