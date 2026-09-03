@@ -1,45 +1,36 @@
 {
   "version": 2,
-  "title": "IBM watsonx.data documentation has moved",
-  "introduction": "The IBM watsonx.data documentation has moved to a new location. Visit the new documentation site at https://www.ibm.com/docs/en/watsonxdata/saas for the latest content.",
+  "title": "watsonx.data docs",
+  "introduction": "Welcome to the watsonx.data product documentation.",
   "product_page": "https://www.ibm.com/products/watsonx-data",
   "console_page": "/catalog/services/lakehouse",
   "section_topics": {
     "links": [
       {
-        "title": "Documentation has moved — read this first",
-        "href": "/docs/watsonxdata?topic=watsonxdata-docs_moved"
-      },
-      {
         "title": "Getting started",
-        "href": "/docs/watsonxdata?topic=watsonxdata-docs_moved"
-      },
-      {
-        "title": "What's new",
-        "href": "/docs/watsonxdata?topic=watsonxdata-docs_moved"
-      },
-      {
-        "title": "Known issues",
-        "href": "/docs/watsonxdata?topic=watsonxdata-docs_moved"
+        "href": "/docs/watsonxdata?topic=watsonxdata-getting-started"
       },
       {
         "title": "FAQs",
-        "href": "/docs/watsonxdata?topic=watsonxdata-docs_moved"
+        "href": "/docs/watsonxdata?topic=watsonxdata-faqs"
+      },
+      {
+        "title": "Known issues (Limitations)",
+        "href": "/docs/watsonxdata?topic=watsonxdata-known_issues"
       }
     ]
   },
   "section_highlights": [
     {
-      "title": "Documentation has moved",
-      "description": "All IBM watsonx.data documentation previously at cloud.ibm.com/docs/watsonxdata has moved to www.ibm.com/docs/en/watsonxdata/saas. Update your bookmarks.",
-      "href": "https://www.ibm.com/docs/en/watsonxdata/saas",
-      "type": "blog",
-      "recommended": true
+      "title": "Public preview",
+      "description": "Some early access features are available in IBM watsonx.data as public preview.",
+      "href": "https://early-access.ibm.com/software/support/trial/cst/programwebsite.wss?siteId=2129&h=&tabId=5971",
+      "type": "blog"
     },
     {
-      "title": "Go to the new documentation site",
-      "description": "Find all watsonx.data documentation, tutorials, and reference material at the new unified IBM Documentation portal.",
-      "href": "https://www.ibm.com/docs/en/watsonxdata/saas",
+      "title": "Resource title",
+      "description": "Trainings offered for watsonx.data.",
+      "href": "https://www.ibm.com/training/cloud",
       "type": "blog"
     }
   ],
@@ -49,12 +40,6 @@
     "terraform": "https://registry.terraform.io/modules/terraform-ibm-modules/watsonx-data/ibm/latest"
   },
   "section_updates": {
-    "view_more": "/docs/watsonxdata?topic=watsonxdata-docs_moved",
-    "tiles": [
-      {
-        "date": "2025-07-14",
-        "title": "Important: IBM watsonx.data documentation has moved to www.ibm.com/docs/en/watsonxdata/saas. This IBM Cloud documentation site is no longer maintained. Update your bookmarks and links to the new location."
-      }
-    ]
+    "view_more": "/docs/watsonxdata?topic=watsonxdata-release"
   }
 }
