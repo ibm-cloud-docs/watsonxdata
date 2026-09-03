@@ -29,7 +29,7 @@ subcollection: watsonxdata
 # {{site.data.keyword.lakehouse_full}} documentation has moved
 {: #docs_moved}
 
-This page is no longer maintained. The {{site.data.keyword.lakehouse_full}} documentation has moved to a new location — update your bookmarks now.
+This documentation collection is no longer maintained. The {{site.data.keyword.lakehouse_full}} documentation has moved to a new location — update your bookmarks now.
 {: deprecated}
 
 **Find the documentation at its new home: [https://www.ibm.com/docs/en/watsonxdata/saas](https://www.ibm.com/docs/en/watsonxdata/saas){: external}**
