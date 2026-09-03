@@ -68,15 +68,5 @@ Update any saved bookmarks, internal wikis, or documentation references to point
 | `https://cloud.ibm.com/docs/watsonxdata` | `https://www.ibm.com/docs/en/watsonxdata/saas` |
 {: caption="Documentation URL change" caption-side="top"}
 
-Individual topic links follow the pattern shown below. Replace the old base URL and topic parameter with the corresponding path on the new site.
+For individual topic links, replace the old base URL and topic parameter with the corresponding path on the new site.
 {: tip}
-
-| Old topic URL pattern | New URL base |
-|---|---|
-| `https://cloud.ibm.com/docs/watsonxdata?topic=watsonxdata-<topic-id>` | `https://www.ibm.com/docs/en/watsonxdata/saas` |
-{: caption="Topic URL migration pattern" caption-side="top"}
-
-## Need help?
-{: #docs_moved_help}
-
-If you cannot find the content you need at the new documentation location, contact IBM Support or visit the [IBM watsonx.data community](https://community.ibm.com/community/user/watsonx/communities/community-home?CommunityKey=f8d95b65-6d5e-4138-8d64-2e8f7e47e6d9){: external} for assistance.
