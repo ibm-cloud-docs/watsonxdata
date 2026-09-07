@@ -2,7 +2,7 @@
 
 copyright:
   years: 2022, 2025
-lastupdated: "2026-04-22"
+lastupdated: "2026-06-01"
 
 keywords: lakehouse, astra db, watsonx.data, pricing
 
@@ -351,7 +351,7 @@ The following private link pricing applies to all available providers and region
 
 | Type | Rate |
 | --- | --- |
-| Private link active | 1.20 RU per hour |
-| Private link ingress | 1.20 RU per GB |
-| Private link egress | 1.20 RU per GB |
+| Private link active | 0.012 RU per hour |
+| Private link ingress | 0.012 RU per GB |
+| Private link egress | 0.012 RU per GB |
 {: caption="Private link pricing" caption-side="top"}
