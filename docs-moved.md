@@ -29,21 +29,20 @@ subcollection: watsonxdata
 # {{site.data.keyword.lakehouse_full}} documentation has moved
 {: #docs_moved}
 
-This documentation collection is no longer maintained. The {{site.data.keyword.lakehouse_full}} documentation has moved to a new location — update your bookmarks now.
+This IBM Cloud documentation site (`cloud.ibm.com/docs/watsonxdata`) is no longer maintained. All {{site.data.keyword.lakehouse_full}} content for all SaaS deployments (IBM Cloud, AWS, Microsoft Azure, and Google Cloud Platform) has moved to **[https://www.ibm.com/docs/en/watsonxdata/saas](https://www.ibm.com/docs/en/watsonxdata/saas){: external}**. Make sure to update your bookmarks. 
 {: deprecated}
 
-**Find the documentation at its new home: [https://www.ibm.com/docs/en/watsonxdata/saas](https://www.ibm.com/docs/en/watsonxdata/saas){: external}**
-{: important}
-
-All {{site.data.keyword.lakehouse_full}} topics, tutorials, reference material, and release notes are fully available at the new location. The content has been preserved in its entirety during the migration.
+All topics, tutorials, reference material, and release notes have been fully preserved and are available at the new location.
 {: shortdesc}
+
+
 
 ## Why was the documentation moved?
 {: #docs_moved_reason}
 
 {{site.data.keyword.lakehouse_full}} documentation has been consolidated onto the IBM Documentation portal (`ibm.com/docs`) to provide a unified experience across all IBM product documentation. This move enables:
 
-- A single destination for all {{site.data.keyword.lakehouse_full}} deployment types, including SaaS and software (on-premises) editions.
+- A single destination for all {{site.data.keyword.lakehouse_full}} SaaS deployment types, including IBM Cloud, AWS, Microsoft Azure, and Google Cloud Platform.
 - Consistent navigation and search experience across IBM product documentation.
 - Improved discoverability and cross-product linking.
 
